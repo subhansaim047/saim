@@ -85,9 +85,20 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-white text-xs sm:text-lg md:text-xl font-bold tracking-widest uppercase mb-2 sm:mb-3 self-start bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/10"
+                className="flex flex-col gap-0.5 mb-2 sm:mb-3 self-start"
               >
-                FULL STACK DEV | NODE.JS | NEXT.JS | VITE | REACT | TAILWIND
+                <span
+                  className="text-white font-extrabold tracking-widest uppercase"
+                  style={{ fontFamily: "'Inter', 'Helvetica Now Var', sans-serif", fontSize: 'clamp(14px, 1.6vw, 22px)', letterSpacing: '0.18em', opacity: 0.95 }}
+                >
+                  Full Stack Dev
+                </span>
+                <span
+                  className="text-white/55 font-medium tracking-wider uppercase"
+                  style={{ fontFamily: "'Inter', 'Helvetica Now Var', sans-serif", fontSize: 'clamp(10px, 1vw, 14px)', letterSpacing: '0.14em' }}
+                >
+                  Next.js · Node.js · Vite · React · Tailwind
+                </span>
               </motion.div>
 
               <motion.div
