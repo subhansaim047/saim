@@ -97,12 +97,14 @@ export const ChatPanel = ({
     >
       {/* Header */}
       <div className="flex items-center gap-3 px-4 py-3.5 border-b border-white/10 shrink-0">
-        <div className="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-white/80">
-          <MIcon name="auto_awesome" size={14} />
-        </div>
+        <img
+          src="/saim-dev-logo.jpg"
+          alt="Saim Dev"
+          className="w-7 h-7 rounded-full object-cover border border-white/10 flex-shrink-0"
+        />
         <div className="flex flex-col">
           <span className="text-sm font-medium text-white leading-tight">
-            Saim Dev AI Studio
+            Saim Dev
           </span>
           <span className="text-[11px] text-white/40 leading-tight">
             Custom Web Architecture & Lead Generation

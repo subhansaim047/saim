@@ -1,5 +1,5 @@
 import { FadeUp } from "./FadeUp";
-import { Sparkles, PhoneCall, Compass, Code2, Rocket } from "lucide-react";
+import { PhoneCall, Compass, Code2, Rocket } from "lucide-react";
 
 const processSteps = [
   {
@@ -38,12 +38,7 @@ export const ProcessSection = () => {
       <div className="mx-auto max-w-[1080px] px-4 sm:px-6">
         {/* HEADER */}
         <div className="text-center max-w-xl mx-auto mb-14">
-          <FadeUp>
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-landing-surface border border-white/10 px-3.5 py-1 text-xs text-foreground/80 backdrop-blur">
-              <Sparkles className="w-3.5 h-3.5 text-primary" />
-              <span>WORKFLOW</span>
-            </span>
-          </FadeUp>
+
 
           <FadeUp delay={0.1}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-white mb-4">

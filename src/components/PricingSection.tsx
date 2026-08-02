@@ -214,7 +214,7 @@ export const PricingSection = () => {
           <div className="max-w-2xl">
             <FadeUp>
               <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-landing-surface border border-white/10 px-3 py-1 text-xs text-foreground/80 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-foreground/70" />
+                <span className="h-1.5 w-1.5 rounded-full bg-white/90" />
                 Pricing
               </span>
             </FadeUp>
