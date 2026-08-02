@@ -81,35 +81,95 @@ export const HeroSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-end">
             {/* Left 8 columns: Bold "WEB ARCHITECT" & Giant Bold Heading */}
             <div className="lg:col-span-8 flex flex-col justify-end">
+              {/* ── Hero Label Group ── */}
               <motion.div
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="flex flex-col gap-0.5 mb-2 sm:mb-3 self-start"
+                transition={{ duration: 0.6, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
+                className="flex flex-col gap-1.5 mb-3 sm:mb-4 self-start"
               >
-                <span
-                  className="text-white font-extrabold tracking-widest uppercase"
-                  style={{ fontFamily: "'Inter', 'Helvetica Now Var', sans-serif", fontSize: 'clamp(14px, 1.6vw, 22px)', letterSpacing: '0.18em', opacity: 0.95 }}
-                >
-                  Full Stack Dev
-                </span>
-                <span
-                  className="text-white/55 font-medium tracking-wider uppercase"
-                  style={{ fontFamily: "'Inter', 'Helvetica Now Var', sans-serif", fontSize: 'clamp(10px, 1vw, 14px)', letterSpacing: '0.14em' }}
-                >
-                  Next.js · Node.js · Vite · React · Tailwind
-                </span>
-              </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className="self-start mb-2 sm:mb-3"
-              >
-                <span className="text-white font-extrabold tracking-tight" style={{ fontSize: 'clamp(13px, 1.2vw, 18px)', fontFamily: "'Inter', sans-serif" }}>
-                  Business growth starts with a <strong className="text-primary font-extrabold underline decoration-primary/60 underline-offset-4">better website</strong>.
-                </span>
+                {/* Row 1: accent bar + FULL STACK DEV */}
+                <div className="flex items-center gap-2.5">
+                  <span
+                    className="block flex-shrink-0 rounded-full bg-primary"
+                    style={{ width: '3px', height: 'clamp(14px, 1.6vw, 22px)', opacity: 0.85 }}
+                  />
+                  <span
+                    style={{
+                      fontFamily: "'Inter', sans-serif",
+                      fontSize: 'clamp(13px, 1.35vw, 19px)',
+                      fontWeight: 800,
+                      letterSpacing: '0.22em',
+                      color: '#DEDBC8',
+                      textTransform: 'uppercase',
+                      lineHeight: 1,
+                    }}
+                  >
+                    Full Stack Dev
+                  </span>
+                </div>
+
+                {/* Row 2: tech stack — muted, tight spacing */}
+                <div className="flex items-center gap-0 pl-[1.4rem]">
+                  {['Next.js', 'Node.js', 'Vite', 'React', 'Tailwind'].map((tech, i, arr) => (
+                    <span key={tech} className="flex items-center">
+                      <span
+                        style={{
+                          fontFamily: "'Inter', sans-serif",
+                          fontSize: 'clamp(9px, 0.85vw, 12px)',
+                          fontWeight: 500,
+                          letterSpacing: '0.13em',
+                          color: 'rgba(222,219,200,0.45)',
+                          textTransform: 'uppercase',
+                        }}
+                      >
+                        {tech}
+                      </span>
+                      {i < arr.length - 1 && (
+                        <span style={{ color: 'rgba(222,219,200,0.25)', margin: '0 6px', fontSize: '9px' }}>▪</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Thin separator */}
+                <div
+                  className="pl-[1.4rem] mt-0.5"
+                >
+                  <div
+                    style={{ width: 'clamp(80px, 8vw, 130px)', height: '1px', background: 'linear-gradient(to right, rgba(222,219,200,0.3), transparent)' }}
+                  />
+                </div>
+
+                {/* Row 3: Business growth quote — elegant italic */}
+                <div className="pl-[1.4rem]">
+                  <span
+                    style={{
+                      fontFamily: "'Instrument Serif', serif",
+                      fontSize: 'clamp(12px, 1.05vw, 16px)',
+                      fontWeight: 400,
+                      fontStyle: 'italic',
+                      color: 'rgba(222,219,200,0.7)',
+                      letterSpacing: '0.01em',
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    Business growth starts with a{' '}
+                    <span
+                      style={{
+                        color: '#DEDBC8',
+                        fontWeight: 400,
+                        borderBottom: '1.5px solid rgba(222,219,200,0.55)',
+                        paddingBottom: '1px',
+                      }}
+                    >
+                      better website
+                    </span>
+                    .
+                  </span>
+                </div>
+
               </motion.div>
 
               <WordsPullUp
