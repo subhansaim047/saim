@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2 } from "lucide-react";
+import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft } from "lucide-react";
+import { FooterSection } from "./FooterSection";
 
 interface DemoItem {
   id: string;
@@ -32,121 +33,168 @@ const demos: DemoItem[] = [
   }
 ];
 
-export const DemosPage: React.FC = () => {
+interface DemosPageProps {
+  onBack?: () => void;
+}
+
+export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
   const [selectedDemo, setSelectedDemo] = useState<DemoItem | null>(null);
   const [viewportMode, setViewportMode] = useState<"desktop" | "tablet" | "mobile">("desktop");
 
+  const handleBack = () => {
+    if (onBack) {
+      onBack();
+    } else {
+      window.location.hash = "";
+    }
+  };
+
   return (
-    <section id="demos" className="relative z-10 py-20 px-4 sm:px-8 max-w-7xl mx-auto bg-black text-[#E1E0CC]">
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono tracking-widest uppercase mb-3 text-primary">
-          <span>⚡ Live Interactive Templates</span>
-        </div>
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white">
-          Demo Sites & Client Templates
-        </h2>
-        <p className="mt-3 text-sm sm:text-base text-white/70 max-w-2xl mx-auto">
-          Explore high-performance interactive website demos built with pixel-perfect design, smooth micro-animations, and responsive layouts.
-        </p>
-      </div>
+    <main className="min-h-screen bg-black text-[#E1E0CC] selection:bg-primary selection:text-black flex flex-col justify-between">
+      {/* Background Glow */}
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-primary/10 via-primary/5 to-transparent blur-[120px] pointer-events-none z-0" />
 
-      {/* Demos Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {demos.map((demo) => (
-          <div
-            key={demo.id}
-            className="group bg-[#0E0E0E] rounded-2xl border border-white/15 overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-2xl flex flex-col"
-          >
-            {/* Thumbnail */}
-            <div className="relative aspect-video overflow-hidden bg-black/60 border-b border-white/10">
-              <img
-                src={demo.previewImage}
-                alt={demo.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              {demo.badge && (
-                <span className="absolute top-3 left-3 bg-primary text-black font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
-                  {demo.badge}
-                </span>
-              )}
-
-              <div className="absolute bottom-3 right-3 flex items-center gap-2">
-                <button
-                  onClick={() => setSelectedDemo(demo)}
-                  className="bg-black/80 backdrop-blur-md hover:bg-white hover:text-black text-white p-2 rounded-xl border border-white/20 transition-all shadow-lg cursor-pointer"
-                  title="Interactive Preview Modal"
-                >
-                  <Eye className="w-4 h-4" />
-                </button>
-                <a
-                  href={demo.demoUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-primary hover:bg-white text-black p-2 rounded-xl transition-all shadow-lg cursor-pointer"
-                  title="Open Fullscreen Demo"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
+      {/* Header Navigation Bar */}
+      <nav className="sticky top-0 z-40 backdrop-blur-md bg-black/80 border-b border-white/10 px-6 py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <button onClick={handleBack} className="flex items-center gap-3 group cursor-pointer">
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors">
+              <img src="/saim-dev-logo.png" alt="Saim Dev Logo" className="w-full h-full object-cover" />
             </div>
+            <span className="font-semibold text-lg text-white tracking-tight">Saim Dev</span>
+          </button>
 
-            {/* Content */}
-            <div className="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <span className="text-white/50 text-xs font-mono uppercase tracking-wider">
-                  {demo.category}
-                </span>
-                <h3 className="text-lg font-bold text-white mt-1 group-hover:text-primary transition-colors">
-                  {demo.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-white/70 mt-2 leading-relaxed">
-                  {demo.description}
-                </p>
+          <div className="flex items-center gap-6">
+            <button
+              onClick={handleBack}
+              className="text-sm text-[#E1E0CC]/70 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer font-medium"
+            >
+              <ArrowLeft className="w-4 h-4" /> Back to Home
+            </button>
+            <a
+              href="https://wa.me/12498984111"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-primary hover:bg-white text-black font-semibold text-sm px-5 py-2 rounded-full transition-all shadow-lg"
+            >
+              Get Custom Site
+            </a>
+          </div>
+        </div>
+      </nav>
 
-                <div className="mt-4 space-y-2">
-                  {demo.features.map((feat, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs text-white/80">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+      {/* Main Content */}
+      <div className="relative z-10 py-16 px-4 sm:px-8 max-w-7xl mx-auto flex-1 w-full">
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/15 text-xs font-mono tracking-widest uppercase mb-4 text-primary">
+            <span>⚡ Live Interactive Templates</span>
+          </div>
+          <h1 className="text-3xl sm:text-6xl font-bold tracking-tight text-white max-w-4xl mx-auto">
+            Experience Live Client Websites & Demos
+          </h1>
+          <p className="mt-4 text-sm sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+            Browse through live interactive website demos built with high-performance web architecture, ultra-smooth 60fps animations, and responsive UI engineering.
+          </p>
+        </div>
 
-              <div className="mt-6 pt-4 border-t border-white/10">
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {demo.tags.map((t) => (
-                    <span key={t} className="bg-white/5 border border-white/10 text-[10px] text-white/60 px-2 py-0.5 rounded">
-                      {t}
-                    </span>
-                  ))}
-                </div>
+        {/* Demos Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {demos.map((demo) => (
+            <div
+              key={demo.id}
+              className="group bg-[#0E0E0E] rounded-2xl border border-white/15 overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-2xl flex flex-col"
+            >
+              {/* Thumbnail */}
+              <div className="relative aspect-video overflow-hidden bg-black/60 border-b border-white/10">
+                <img
+                  src={demo.previewImage}
+                  alt={demo.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                {demo.badge && (
+                  <span className="absolute top-3 left-3 bg-primary text-black font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+                    {demo.badge}
+                  </span>
+                )}
 
-                <div className="grid grid-cols-2 gap-2">
+                <div className="absolute bottom-3 right-3 flex items-center gap-2">
                   <button
                     onClick={() => setSelectedDemo(demo)}
-                    className="w-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold py-2 px-3 rounded-xl border border-white/10 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="bg-black/80 backdrop-blur-md hover:bg-white hover:text-black text-white p-2.5 rounded-xl border border-white/20 transition-all shadow-lg cursor-pointer"
+                    title="Interactive Modal Preview"
                   >
-                    <Eye className="w-3.5 h-3.5" /> Interactive
+                    <Eye className="w-4 h-4" />
                   </button>
                   <a
                     href={demo.demoUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full bg-primary hover:bg-white text-black text-xs font-bold py-2 px-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-1 cursor-pointer"
+                    className="bg-primary hover:bg-white text-black p-2.5 rounded-xl transition-all shadow-lg cursor-pointer"
+                    title="Open Fullscreen Demo"
                   >
-                    <span>Live Site</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
+                    <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
               </div>
+
+              {/* Details */}
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <span className="text-white/50 text-xs font-mono uppercase tracking-wider">
+                    {demo.category}
+                  </span>
+                  <h3 className="text-xl font-bold text-white mt-1 group-hover:text-primary transition-colors">
+                    {demo.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-white/70 mt-2 leading-relaxed">
+                    {demo.description}
+                  </p>
+
+                  <div className="mt-4 space-y-2">
+                    {demo.features.map((feat, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-xs text-white/80">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                        <span>{feat}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-white/10">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {demo.tags.map((t) => (
+                      <span key={t} className="bg-white/5 border border-white/10 text-[10px] text-white/60 px-2 py-0.5 rounded">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      onClick={() => setSelectedDemo(demo)}
+                      className="w-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold py-2.5 px-3 rounded-xl border border-white/10 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                    >
+                      <Eye className="w-3.5 h-3.5" /> Interactive
+                    </button>
+                    <a
+                      href={demo.demoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-full bg-primary hover:bg-white text-black text-xs font-bold py-2.5 px-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-1 cursor-pointer"
+                    >
+                      <span>Live Site</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      {/* Interactive Modal */}
+      {/* Modal */}
       {selectedDemo && (
         <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col justify-between p-3 sm:p-6">
           <div className="flex items-center justify-between pb-3 border-b border-white/15">
@@ -212,6 +260,8 @@ export const DemosPage: React.FC = () => {
           </div>
         </div>
       )}
-    </section>
+
+      <FooterSection />
+    </main>
   );
 };

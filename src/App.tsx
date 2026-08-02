@@ -17,7 +17,7 @@ import { ServicesPage } from "./components/ServicesPage";
 
 export function App() {
   const [currentView, setCurrentView] = useState<
-    "home" | "privacy" | "terms" | "contact" | "technologies" | "case-studies" | "services"
+    "home" | "privacy" | "terms" | "contact" | "technologies" | "case-studies" | "services" | "demos"
   >("home");
 
   useEffect(() => {
@@ -41,6 +41,9 @@ export function App() {
       } else if (hash === "#services") {
         setCurrentView("services");
         window.scrollTo(0, 0);
+      } else if (hash === "#demos") {
+        setCurrentView("demos");
+        window.scrollTo(0, 0);
       } else {
         setCurrentView("home");
       }
@@ -63,6 +66,7 @@ export function App() {
   if (currentView === "technologies") return <TechnologiesPage onBack={goHome} />;
   if (currentView === "case-studies") return <CaseStudiesPage onBack={goHome} />;
   if (currentView === "services") return <ServicesPage onBack={goHome} />;
+  if (currentView === "demos") return <DemosPage onBack={goHome} />;
 
   return (
     <main className="min-h-screen bg-black text-[#E1E0CC] overflow-x-hidden selection:bg-primary selection:text-black">
