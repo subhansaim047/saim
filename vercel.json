@@ -55,18 +55,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.saimdev.site"
-        }
-      ],
-      "destination": "https://saimdev.site/:path*",
-      "permanent": true
-    }
   ]
 }
