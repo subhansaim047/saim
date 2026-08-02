@@ -12,6 +12,7 @@ import { TermsOfService } from "./components/TermsOfService";
 import { ContactPage } from "./components/ContactPage";
 import { TechnologiesPage } from "./components/TechnologiesPage";
 import { CaseStudiesPage } from "./components/CaseStudiesPage";
+import { DemosPage } from "./components/DemosPage";
 import { ServicesPage } from "./components/ServicesPage";
 
 export function App() {
