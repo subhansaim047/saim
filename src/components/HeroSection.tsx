@@ -148,9 +148,9 @@ export const HeroSection = () => {
                     style={{
                       fontFamily: "'Instrument Serif', serif",
                       fontSize: 'clamp(12px, 1.05vw, 16px)',
-                      fontWeight: 400,
+                      fontWeight: 700,
                       fontStyle: 'italic',
-                      color: 'rgba(222,219,200,0.7)',
+                      color: '#DEDBC8',
                       letterSpacing: '0.01em',
                       lineHeight: 1.4,
                     }}
