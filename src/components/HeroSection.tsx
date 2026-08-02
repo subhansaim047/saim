@@ -87,7 +87,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-white text-xs sm:text-lg md:text-xl font-bold tracking-widest uppercase mb-2 sm:mb-3 self-start bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/10"
               >
-                Web Architect
+                FULL STACK DEV | NODE.JS | NEXT.JS | VITE | REACT | TAILWIND
               </motion.div>
 
               <motion.div
