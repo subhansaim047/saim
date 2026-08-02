@@ -105,10 +105,9 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-black/60 border border-white/20 backdrop-blur-md self-start mb-2 sm:mb-3 shadow-lg"
+                className="self-start mb-2 sm:mb-3"
               >
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-white text-xs sm:text-sm font-bold tracking-tight">
+                <span className="text-white font-extrabold tracking-tight" style={{ fontSize: 'clamp(13px, 1.2vw, 18px)', fontFamily: "'Inter', sans-serif" }}>
                   Business growth starts with a <strong className="text-primary font-extrabold underline decoration-primary/60 underline-offset-4">better website</strong>.
                 </span>
               </motion.div>
