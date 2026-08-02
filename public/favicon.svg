@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="96" fill="#000000" />
+  <g transform="translate(48, 48) scale(0.8125)">
+    <!-- Blue Outer S Shape -->
+    <path fill="#2563EB" d="M 256 32 L 416 192 L 320 288 L 384 352 L 256 480 L 96 320 L 192 224 L 128 160 Z" />
+    <!-- Black Inner Geometric Accent -->
+    <path fill="#0F172A" d="M 224 112 L 352 240 L 272 320 L 192 240 L 272 160 Z" />
+    <!-- Light Blue Wing -->
+    <path fill="#60A5FA" d="M 144 192 L 256 304 L 176 384 L 80 288 Z" />
+    <!-- Dark Accent Fold -->
+    <path fill="#020617" d="M 288 208 L 352 272 L 288 336 L 224 272 Z" />
+  </g>
+</svg>

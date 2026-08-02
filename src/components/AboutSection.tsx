@@ -1,84 +1,81 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ContactButton } from './ContactButton';
+import { useRef } from "react";
+import { useScroll } from "framer-motion";
+import { WordsPullUpMultiStyle } from "./WordsPullUpMultiStyle";
+import { AnimatedLetter } from "./AnimatedLetter";
 
-export const AboutSection: React.FC = () => {
+const aboutSegments = [
+  { text: "I am a web architect,", className: "font-normal text-[#E1E0CC]" },
+  { text: "engineering high-converting platforms.", className: "italic font-serif text-[#E1E0CC]" },
+  {
+    text: "Specialized in bespoke web design, lead conversion, and performance optimization.",
+    className: "font-normal text-[#E1E0CC]",
+  },
+];
+
+const paragraphText =
+  "Over the last seven years, I have built fast, modern, high-converting websites for service leaders — dentists, mechanics, salons, contractors, and ambitious brands. Together, we craft digital platforms designed to rank, load instantly, and turn visitors into loyal, paying clients.";
+
+export const AboutSection = () => {
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: paragraphRef,
+    offset: ["start 0.8", "end 0.2"],
+  });
+
+  const words = paragraphText.split(" ");
+  const totalChars = paragraphText.length;
+
+  let globalCharIndex = 0;
+
   return (
-    <section id="about" className="min-h-screen bg-[#0C0C0C] relative flex flex-col items-center justify-center text-center px-6 py-24 sm:py-32 font-['Kanit'] overflow-hidden">
-      
-      {/* Decorative 3D Images */}
-      <motion.img
-        initial={{ opacity: 0, x: -60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.9, delay: 0.1 }}
-        src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png"
-        alt="Moon 3D Icon"
-        className="absolute top-[5%] left-[2%] sm:left-[4%] w-[110px] sm:w-[160px] md:w-[210px] pointer-events-none drop-shadow-2xl"
-      />
+    <section id="our-story" className="bg-black py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8">
+      <div className="bg-[#101010] rounded-3xl md:rounded-[2rem] max-w-6xl mx-auto p-8 sm:p-12 md:p-16 lg:p-20 text-center border border-white/5 shadow-2xl">
+        {/* Top small label */}
+        <span className="text-primary text-[10px] sm:text-xs tracking-widest uppercase mb-6 sm:mb-8 inline-block font-medium">
+          Web Architecture & Growth
+        </span>
 
-      <motion.img
-        initial={{ opacity: 0, x: -60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.9, delay: 0.25 }}
-        src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png"
-        alt="3D Sphere Object"
-        className="absolute bottom-[8%] left-[3%] sm:left-[6%] w-[90px] sm:w-[140px] md:w-[180px] pointer-events-none drop-shadow-2xl"
-      />
+        {/* Main Heading with 3 styled segments */}
+        <div className="max-w-4xl mx-auto">
+          <WordsPullUpMultiStyle
+            segments={aboutSegments}
+            containerClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[0.95] sm:leading-[0.9] text-center"
+          />
+        </div>
 
-      <motion.img
-        initial={{ opacity: 0, x: 60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.9, delay: 0.15 }}
-        src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png"
-        alt="Lego 3D Icon"
-        className="absolute top-[5%] right-[2%] sm:right-[4%] w-[110px] sm:w-[160px] md:w-[210px] pointer-events-none drop-shadow-2xl"
-      />
-
-      <motion.img
-        initial={{ opacity: 0, x: 60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.9, delay: 0.3 }}
-        src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png"
-        alt="3D Group Icon"
-        className="absolute bottom-[8%] right-[3%] sm:right-[6%] w-[120px] sm:w-[170px] md:w-[220px] pointer-events-none drop-shadow-2xl"
-      />
-
-      {/* Main Content */}
-      <div className="max-w-2xl mx-auto z-10 flex flex-col items-center gap-8 sm:gap-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="hero-heading font-black uppercase tracking-tight text-5xl sm:text-7xl md:text-8xl leading-none"
+        {/* Body paragraph with scroll-linked character opacity reveal */}
+        <p
+          ref={paragraphRef}
+          className="text-[#DEDBC8] text-xs sm:text-sm md:text-base max-w-2xl mx-auto mt-10 md:mt-14 leading-relaxed font-light"
         >
-          About me
-        </motion.h2>
+          {words.map((word, wordIndex) => {
+            const wordChars = word.split("");
+            const wordStartIndex = globalCharIndex;
+            globalCharIndex += word.length + 1;
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-[#D7E2EA] font-medium text-base sm:text-xl md:text-2xl leading-relaxed max-w-xl text-center"
-        >
-          With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!
-        </motion.p>
+            return (
+              <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.3em]">
+                {wordChars.map((char, charIndex) => (
+                  <AnimatedLetter
+                    key={charIndex}
+                    char={char}
+                    index={wordStartIndex + charIndex}
+                    totalChars={totalChars}
+                    progress={scrollYProgress}
+                  />
+                ))}
+              </span>
+            );
+          })}
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-        >
-          <ContactButton />
-        </motion.div>
+        {/* AI-Friendly Business Description (LLMO & Search Indexing) */}
+        <div className="mt-12 pt-8 border-t border-white/10 max-w-2xl mx-auto">
+          <p className="text-white/80 text-xs sm:text-sm font-light leading-relaxed">
+            Saim Dev is a freelance web developer specializing in custom business websites, landing pages, SEO-friendly development, performance optimization, and AI-powered web solutions.
+          </p>
+        </div>
       </div>
-
     </section>
   );
 };
