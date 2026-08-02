@@ -47,96 +47,167 @@
     <link href="https://db.onlinewebfonts.com/c/e66905e07608167a84e6ad52f638c3c6?family=Helvetica+Now+Var" rel="stylesheet">
 
     <!-- Structured Data JSON-LD Schemas -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://saimdev.site/#website",
-          "url": "https://saimdev.site",
-          "name": "Saim Dev",
-          "description": "Custom websites that help businesses attract more customers and grow online."
+    
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://saimdev.site/#website",
+        "url": "https://saimdev.site",
+        "name": "Saim Dev",
+        "description": "Custom websites that help businesses attract more customers and grow online.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": { "@type": "EntryPoint", "urlTemplate": "https://saimdev.site/?q={search_term_string}" },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://saimdev.site/#organization",
+        "name": "Saim Dev",
+        "alternateName": "Saim Dev Web Architecture",
+        "url": "https://saimdev.site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://saimdev.site/saim-dev-logo.jpg",
+          "width": 512,
+          "height": 512
         },
-        {
-          "@type": "Organization",
-          "@id": "https://saimdev.site/#organization",
-          "name": "Saim Dev",
-          "url": "https://saimdev.site",
-          "logo": "https://saimdev.site/saim-dev-logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-249-898-4111",
-            "contactType": "customer service"
-          }
+        "image": "https://saimdev.site/saim-dev-logo.jpg",
+        "description": "Full-stack web developer specializing in high-performance, SEO-optimized, and business-growth-focused websites using Next.js, React, Node.js, and Vite.",
+        "telephone": "+1-249-898-4111",
+        "email": "contact@saimdev.site",
+        "sameAs": [
+          "https://wa.me/12498984111"
+        ],
+        "areaServed": {
+          "@type": "GeoShape",
+          "description": "Worldwide — Remote Web Development Services"
         },
-        {
-          "@type": "Person",
-          "@id": "https://saimdev.site/#person",
-          "name": "Saim Dev",
-          "jobTitle": "Full-Stack Web Architect",
-          "url": "https://saimdev.site",
-          "telephone": "+1-249-898-4111"
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://saimdev.site/#service",
-          "name": "Saim Dev Web Architecture Services",
-          "image": "https://saimdev.site/saim-dev-logo.png",
-          "url": "https://saimdev.site",
-          "telephone": "+1-249-898-4111",
-          "priceRange": "$300 - $600",
-          "description": "Custom websites that help businesses attract more customers and grow online."
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://saimdev.site/#faq",
-          "mainEntity": [
+        "serviceType": [
+          "Web Design",
+          "Web Development",
+          "SEO Optimization",
+          "E-Commerce Development",
+          "Landing Page Design",
+          "Full-Stack Development"
+        ],
+        "priceRange": "$300 - $600",
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Bank Transfer, Wise, PayPal",
+        "openingHours": "Mo-Sa 09:00-22:00",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Web Development Services",
+          "itemListElement": [
             {
-              "@type": "Question",
-              "name": "How long does a website take?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Starter websites are typically completed within 5–7 business days. Full Business Plan websites take 7–10 days from initial discovery to final deployment."
-              }
+              "@type": "Offer",
+              "name": "Starter Website Package",
+              "description": "5-7 day turnaround custom business website with SEO, mobile-responsive design, and Google indexing.",
+              "price": "300",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://saimdev.site/#pricing"
             },
             {
-              "@type": "Question",
-              "name": "Do you provide hosting?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes! I guide you through selecting and setting up ultra-fast cloud hosting, custom domain configuration, and free SSL security setup for sub-second page loads."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I edit content myself?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Absolutely. Your website is engineered with clean content architecture and clear instructions so you can easily update text, images, blog posts, and services whenever needed."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you offer support after launch?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes! Every project includes 14 to 30 days of free dedicated technical support post-launch to handle minor tweaks, bug fixes, backups, and security checks."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What's included in SEO?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "On-page SEO includes optimized title tags, meta descriptions, structured schema markup, sub-second page speed optimization, mobile responsiveness, and Google Search Console indexing setup."
-              }
+              "@type": "Offer",
+              "name": "Business Growth Website Package",
+              "description": "Full-featured 7-10 day website with advanced SEO, lead capture, booking integration, and 30-day support.",
+              "price": "600",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://saimdev.site/#pricing"
             }
           ]
+        },
+        "founder": {
+          "@type": "Person",
+          "@id": "https://saimdev.site/#person",
+          "name": "Saim",
+          "jobTitle": "Full-Stack Web Developer",
+          "url": "https://saimdev.site",
+          "telephone": "+1-249-898-4111",
+          "knowsAbout": ["Web Development", "Next.js", "React", "Node.js", "SEO", "Vite", "Tailwind CSS"]
         }
-      ]
-    }
-    </script>
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://saimdev.site/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long does a website take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Starter websites are typically completed within 5–7 business days. Full Business Plan websites take 7–10 days from initial discovery to final deployment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide hosting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! I guide you through selecting and setting up ultra-fast cloud hosting, custom domain configuration, and free SSL security setup for sub-second page loads."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I edit content myself?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Your website is engineered with clean content architecture and clear instructions so you can easily update text, images, blog posts, and services whenever needed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer support after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Every project includes 14 to 30 days of free dedicated technical support post-launch to handle minor tweaks, bug fixes, backups, and security checks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's included in SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On-page SEO includes optimized title tags, meta descriptions, structured schema markup, sub-second page speed optimization, mobile responsiveness, and Google Search Console indexing setup."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What technologies do you use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I specialize in modern full-stack technologies: Next.js, React, Node.js, Vite, Tailwind CSS, TypeScript, and deploy on Vercel for maximum performance and SEO."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with international clients?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! I work with businesses worldwide. All communication is handled via WhatsApp or email, and projects are delivered remotely with full transparency."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://saimdev.site/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://saimdev.site/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://saimdev.site/#services" },
+          { "@type": "ListItem", "position": 3, "name": "Pricing", "item": "https://saimdev.site/#pricing" },
+          { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://saimdev.site/#contact" }
+        ]
+      }
+    ]
+  }
+  </script>
   </head>
   <body class="bg-black text-[#E1E0CC] antialiased selection:bg-primary selection:text-black">
     <div id="root"></div>
