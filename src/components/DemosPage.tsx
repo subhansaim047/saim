@@ -86,9 +86,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
       {/* Main Content */}
       <div className="relative z-10 py-16 px-4 sm:px-8 max-w-7xl mx-auto flex-1 w-full">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/15 text-xs font-mono tracking-widest uppercase mb-4 text-primary">
-            <span>⚡ Live Interactive Templates</span>
-          </div>
+          
           <h1 className="text-3xl sm:text-6xl font-bold tracking-tight text-white max-w-4xl mx-auto">
             Experience Live Client Websites & Demos
           </h1>
