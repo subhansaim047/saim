@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState, type FormEvent } from "react";
 import {
   ArrowLeft,
@@ -68,7 +69,7 @@ export const ContactPage = ({ onBack }: { onBack: () => void }) => {
       <div className="max-w-4xl mx-auto">
         {/* Top Back Navigation */}
         <button
-          onClick={onBack}
+          onClick={() => navigate('/')}
           className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />

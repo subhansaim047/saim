@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft } from "lucide-react";
 import { FooterSection } from "./FooterSection";
@@ -43,7 +44,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
 
   const handleBack = () => {
     if (onBack) {
-      onBack();
+      navigate('/');
     } else {
       window.location.hash = "";
     }

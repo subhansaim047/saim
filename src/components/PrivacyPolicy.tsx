@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 export const PrivacyPolicy = ({ onBack }: { onBack: () => void }) => {
@@ -11,7 +12,7 @@ export const PrivacyPolicy = ({ onBack }: { onBack: () => void }) => {
       <div className="max-w-4xl mx-auto">
         {/* Top Back Navigation */}
         <button
-          onClick={onBack}
+          onClick={() => navigate('/')}
           className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />

@@ -1,22 +1,7 @@
-interface FooterSectionProps {
-  onOpenPrivacy?: () => void;
-  onOpenTerms?: () => void;
-  onOpenContact?: () => void;
-  onOpenServices?: () => void;
-  onOpenTech?: () => void;
-  onOpenCaseStudies?: () => void;
-  onOpenBlogs?: () => void;
-}
+import { useNavigate } from "react-router-dom";
 
-export const FooterSection = ({
-  onOpenPrivacy,
-  onOpenTerms,
-  onOpenContact,
-  onOpenServices,
-  onOpenTech,
-  onOpenCaseStudies,
-  onOpenBlogs,
-}: FooterSectionProps) => {
+export const FooterSection = () => {
+  const navigate = useNavigate();
   return (
     <footer className="site-footer">
       {/* ANIMATED DOTS STRIP */}
@@ -34,27 +19,9 @@ export const FooterSection = ({
 
           <nav className="site-footer__nav" aria-label="Page sections navigation">
             <a href="#our-story">Our Story</a>
-            {onOpenServices ? (
-              <button onClick={onOpenServices} className="hover:text-white transition-colors cursor-pointer text-left">
-                Services
-              </button>
-            ) : (
-              <a href="#services">Services</a>
-            )}
-            {onOpenTech ? (
-              <button onClick={onOpenTech} className="hover:text-white transition-colors cursor-pointer text-left">
-                Tech Stack
-              </button>
-            ) : (
-              <a href="#technologies">Tech Stack</a>
-            )}
-            {onOpenCaseStudies ? (
-              <button onClick={onOpenCaseStudies} className="hover:text-white transition-colors cursor-pointer text-left">
-                Case Studies
-              </button>
-            ) : (
-              <a href="#case-studies">Case Studies</a>
-            )}
+            <a href="/services">Services</a>
+            <a href="/technologies">Tech Stack</a>
+            <a href="/case-studies">Case Studies</a>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Explore navigation">
@@ -62,35 +29,15 @@ export const FooterSection = ({
             <a href="#process">My Process</a>
             <a href="#pricing">Pricing Plans</a>
             <a href="#faq">FAQ</a>
-            {onOpenBlogs ? (
-              <button onClick={onOpenBlogs} className="hover:text-white transition-colors cursor-pointer text-left">
-                Blogs
-              </button>
-            ) : (
-              <a href="#blogs">Blogs</a>
-            )}
-            {onOpenContact ? (
-              <button onClick={onOpenContact} className="hover:text-white transition-colors cursor-pointer text-left">
-                Contact Page
-              </button>
-            ) : (
-              <a href="#contact">Contact Page</a>
-            )}
+            <a href="/blogs">Blogs</a>
+            <a href="/contact">Contact Page</a>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Contact navigation">
-            <a
-              href="https://wa.me/12498984111"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://wa.me/12498984111" target="_blank" rel="noreferrer">
               WhatsApp Direct
             </a>
-            <a
-              href="https://wa.me/12498984111"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://wa.me/12498984111" target="_blank" rel="noreferrer">
               +1 (249) 898-4111
             </a>
           </nav>
@@ -98,11 +45,7 @@ export const FooterSection = ({
 
         {/* BRAND ROW */}
         <div className="site-footer__brand-row">
-          <a
-            href="/"
-            className="site-footer__brand"
-            aria-label="Saim Dev home"
-          >
+          <a href="/" className="site-footer__brand" aria-label="Saim Dev home">
             <span className="site-footer__mark" aria-hidden="true">
               <img
                 src="/saim-dev-logo.jpg"
@@ -117,22 +60,8 @@ export const FooterSection = ({
         {/* LEGAL LINE */}
         <div className="site-footer__legal">
           <p>© 2026 Saim Dev. All rights reserved.</p>
-          {onOpenPrivacy && (
-            <button
-              onClick={onOpenPrivacy}
-              className="hover:text-white transition-colors cursor-pointer"
-            >
-              Privacy Policy
-            </button>
-          )}
-          {onOpenTerms && (
-            <button
-              onClick={onOpenTerms}
-              className="hover:text-white transition-colors cursor-pointer"
-            >
-              Terms of Service
-            </button>
-          )}
+          <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
         </div>
       </div>
     </footer>

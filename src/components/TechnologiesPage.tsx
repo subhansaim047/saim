@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Code2, Zap, Search, Bot, Cpu, ArrowRight } from "lucide-react";
 
 export const TechnologiesPage = ({ onBack }: { onBack: () => void }) => {
@@ -11,7 +12,7 @@ export const TechnologiesPage = ({ onBack }: { onBack: () => void }) => {
       <div className="max-w-6xl mx-auto">
         {/* Top Back Navigation */}
         <button
-          onClick={onBack}
+          onClick={() => navigate('/')}
           className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />

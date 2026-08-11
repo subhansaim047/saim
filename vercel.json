@@ -42,7 +42,7 @@
         },
         {
           "key": "Cache-Control",
-          "value": "public, max-age=86400, s-maxage=86400"
+          "value": "public, max-age=86400"
         }
       ]
     },
@@ -54,6 +54,12 @@
           "value": "public, max-age=86400"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!assets|saim-dev-logo|favicon|robots\\.txt|sitemap\\.xml|icons).*)",
+      "destination": "/index.html"
     }
   ]
 }

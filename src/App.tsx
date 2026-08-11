@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import { BenefitsSection } from "./components/BenefitsSection";
@@ -16,133 +16,45 @@ import { DemosPage } from "./components/DemosPage";
 import { ServicesPage } from "./components/ServicesPage";
 import { BlogsPage } from "./components/BlogsPage";
 import { BlogPost1Page } from "./components/BlogPost1Page";
+import { Helmet } from "react-helmet-async";
+
+const HomePage = () => (
+  <main className="min-h-screen bg-black text-[#E1E0CC] overflow-x-hidden selection:bg-primary selection:text-black">
+    <Helmet>
+      <title>Saim Dev — Full Stack Web Developer | Next.js, React, Node.js</title>
+      <meta name="description" content="Custom high-performance websites for businesses. Built with Next.js, React, and Node.js. Fast delivery in 5-10 days. Starting from $300." />
+      <link rel="canonical" href="https://www.saimdev.site/" />
+      <meta property="og:title" content="Saim Dev — Full Stack Web Developer" />
+      <meta property="og:description" content="Custom high-performance websites for businesses. Fast delivery in 5-10 days." />
+      <meta property="og:url" content="https://www.saimdev.site/" />
+      <meta property="og:type" content="website" />
+    </Helmet>
+    <HeroSection />
+    <AboutSection />
+    <BenefitsSection />
+    <ProcessSection />
+    <PricingSection />
+    <FaqSection />
+    <CtaSection />
+    <FooterSection />
+  </main>
+);
 
 export function App() {
-  const [currentView, setCurrentView] = useState<
-    "home" | "privacy" | "terms" | "contact" | "technologies" | "case-studies" | "services" | "demos" | "blogs" | "blog-post-1"
-  >("home");
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash === "#privacy") {
-        setCurrentView("privacy");
-        window.scrollTo(0, 0);
-      } else if (hash === "#terms") {
-        setCurrentView("terms");
-        window.scrollTo(0, 0);
-      } else if (hash === "#contact") {
-        setCurrentView("contact");
-        window.scrollTo(0, 0);
-      } else if (hash === "#technologies") {
-        setCurrentView("technologies");
-        window.scrollTo(0, 0);
-      } else if (hash === "#case-studies") {
-        setCurrentView("case-studies");
-        window.scrollTo(0, 0);
-      } else if (hash === "#services") {
-        setCurrentView("services");
-        window.scrollTo(0, 0);
-      } else if (hash === "#demos") {
-        setCurrentView("demos");
-        window.scrollTo(0, 0);
-      } else if (hash === "#blogs") {
-        setCurrentView("blogs");
-        window.scrollTo(0, 0);
-      } else if (hash === "#blog-post-1") {
-        setCurrentView("blog-post-1");
-        window.scrollTo(0, 0);
-      } else {
-        setCurrentView("home");
-      }
-    };
-
-    handleHashChange();
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
-
-  const goHome = () => {
-    window.location.hash = "";
-    setCurrentView("home");
-    window.scrollTo(0, 0);
-  };
-
-  if (currentView === "privacy") return <PrivacyPolicy onBack={goHome} />;
-  if (currentView === "terms") return <TermsOfService onBack={goHome} />;
-  if (currentView === "contact") return <ContactPage onBack={goHome} />;
-  if (currentView === "technologies") return <TechnologiesPage onBack={goHome} />;
-  if (currentView === "case-studies") return <CaseStudiesPage onBack={goHome} />;
-  if (currentView === "services") return <ServicesPage onBack={goHome} />;
-  if (currentView === "demos") return <DemosPage onBack={goHome} />;
-  if (currentView === "blogs") return (
-    <BlogsPage
-      onBack={goHome}
-      onOpenPost={(slug) => {
-        window.location.hash = slug;
-        setCurrentView(slug.replace("#", "") as "blog-post-1");
-        window.scrollTo(0, 0);
-      }}
-    />
-  );
-  if (currentView === "blog-post-1") return (
-    <BlogPost1Page
-      onBack={goHome}
-      onBackToBlogs={() => {
-        window.location.hash = "#blogs";
-        setCurrentView("blogs");
-        window.scrollTo(0, 0);
-      }}
-    />
-  );
-
   return (
-    <main className="min-h-screen bg-black text-[#E1E0CC] overflow-x-hidden selection:bg-primary selection:text-black">
-      <HeroSection />
-      <AboutSection />
-      <BenefitsSection />
-      <ProcessSection />
-      <PricingSection />
-      <FaqSection />
-      <CtaSection />
-      <FooterSection
-        onOpenPrivacy={() => {
-          window.location.hash = "#privacy";
-          setCurrentView("privacy");
-          window.scrollTo(0, 0);
-        }}
-        onOpenTerms={() => {
-          window.location.hash = "#terms";
-          setCurrentView("terms");
-          window.scrollTo(0, 0);
-        }}
-        onOpenContact={() => {
-          window.location.hash = "#contact";
-          setCurrentView("contact");
-          window.scrollTo(0, 0);
-        }}
-        onOpenServices={() => {
-          window.location.hash = "#services";
-          setCurrentView("services");
-          window.scrollTo(0, 0);
-        }}
-        onOpenTech={() => {
-          window.location.hash = "#technologies";
-          setCurrentView("technologies");
-          window.scrollTo(0, 0);
-        }}
-        onOpenCaseStudies={() => {
-          window.location.hash = "#case-studies";
-          setCurrentView("case-studies");
-          window.scrollTo(0, 0);
-        }}
-        onOpenBlogs={() => {
-          window.location.hash = "#blogs";
-          setCurrentView("blogs");
-          window.scrollTo(0, 0);
-        }}
-      />
-    </main>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/services" element={<ServicesPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/technologies" element={<TechnologiesPage />} />
+      <Route path="/case-studies" element={<CaseStudiesPage />} />
+      <Route path="/demos" element={<DemosPage />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsOfService />} />
+      <Route path="/blogs" element={<BlogsPage />} />
+      <Route path="/blog/why-small-business-needs-website-2026" element={<BlogPost1Page />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 
