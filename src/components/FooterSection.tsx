@@ -5,6 +5,7 @@ interface FooterSectionProps {
   onOpenServices?: () => void;
   onOpenTech?: () => void;
   onOpenCaseStudies?: () => void;
+  onOpenBlogs?: () => void;
 }
 
 export const FooterSection = ({
@@ -14,6 +15,7 @@ export const FooterSection = ({
   onOpenServices,
   onOpenTech,
   onOpenCaseStudies,
+  onOpenBlogs,
 }: FooterSectionProps) => {
   return (
     <footer className="site-footer">
@@ -60,6 +62,13 @@ export const FooterSection = ({
             <a href="#process">My Process</a>
             <a href="#pricing">Pricing Plans</a>
             <a href="#faq">FAQ</a>
+            {onOpenBlogs ? (
+              <button onClick={onOpenBlogs} className="hover:text-white transition-colors cursor-pointer text-left">
+                Blogs
+              </button>
+            ) : (
+              <a href="#blogs">Blogs</a>
+            )}
             {onOpenContact ? (
               <button onClick={onOpenContact} className="hover:text-white transition-colors cursor-pointer text-left">
                 Contact Page

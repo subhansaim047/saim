@@ -9,6 +9,7 @@ const navItems = [
   { label: "Tech Stack", href: "#technologies" },
   { label: "Case Studies", href: "#case-studies" },
   { label: "Demo Sites", href: "#demos" },
+  { label: "Blogs", href: "#blogs" },
   { label: "Benefits", href: "#benefits" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
