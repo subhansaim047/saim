@@ -108,7 +108,8 @@ const caseStudiesData: CaseStudy[] = [
   },
 ];
 
-export const CaseStudiesPage = ({ onBack }: { onBack: () => void }) => {
+export const CaseStudiesPage = () => {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const filteredStudies =

@@ -135,10 +135,10 @@ export const BlogPost1Page = () => {
           <ArrowLeft className="w-4 h-4" />
           All Blogs
         </button>
-        <div className="flex items-center gap-2.5">
+        <button onClick={() => navigate('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white hidden sm:block">Saim Dev</span>
-        </div>
+        </button>
       </header>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">

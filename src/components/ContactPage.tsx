@@ -13,7 +13,8 @@ import {
   MessageSquare,
 } from "lucide-react";
 
-export const ContactPage = ({ onBack }: { onBack: () => void }) => {
+export const ContactPage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     businessName: "",

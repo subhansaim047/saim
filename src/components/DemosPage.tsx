@@ -40,6 +40,7 @@ interface DemosPageProps {
 }
 
 export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
+  const navigate = useNavigate();
   const [selectedDemo, setSelectedDemo] = useState<DemoItem | null>(null);
   const [viewportMode, setViewportMode] = useState<"desktop" | "tablet" | "mobile">("desktop");
 

@@ -150,7 +150,8 @@ const serviceFaqs = [
   },
 ];
 
-export const ServicesPage = ({ onBack }: { onBack: () => void }) => {
+export const ServicesPage = () => {
+  const navigate = useNavigate();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   return (

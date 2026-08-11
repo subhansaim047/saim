@@ -2,7 +2,8 @@ import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
-export const PrivacyPolicy = ({ onBack }: { onBack: () => void }) => {
+export const PrivacyPolicy = () => {
+  const navigate = useNavigate();
   return (
     <div
       className="min-h-screen bg-black text-white px-4 sm:px-6 md:px-12 py-12 select-none"
