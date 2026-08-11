@@ -34,10 +34,10 @@ export const FooterSection = () => {
           </nav>
 
           <nav className="site-footer__nav" aria-label="Contact navigation">
-            <a href="https://wa.me/12498984111" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/12498984111" target="_blank" rel="nofollow noreferrer">
               WhatsApp Direct
             </a>
-            <a href="https://wa.me/12498984111" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/12498984111" target="_blank" rel="nofollow noreferrer">
               +1 (249) 898-4111
             </a>
           </nav>

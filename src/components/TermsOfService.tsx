@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
@@ -9,6 +10,16 @@ export const TermsOfService = ({ onBack }: { onBack: () => void }) => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
+      <Helmet>
+        <title>Terms of Service | Saim Dev</title>
+        <meta name="description" content="Review the Saim Dev terms of service. These terms govern your use of our website and any web development services you engage with." />
+        <link rel="canonical" href="https://www.saimdev.site/terms" />
+        <meta property="og:title" content="Terms of Service | Saim Dev" />
+        <meta property="og:description" content="Review the Saim Dev terms of service. These terms govern your use of our website and any web development services you engage with." />
+        <meta property="og:url" content="https://www.saimdev.site/terms" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="max-w-4xl mx-auto">
         {/* Top Back Navigation */}
         <button

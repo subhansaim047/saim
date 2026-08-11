@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Code2, Zap, Search, Bot, Cpu, ArrowRight } from "lucide-react";
 
@@ -9,6 +10,16 @@ export const TechnologiesPage = ({ onBack }: { onBack: () => void }) => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
+      <Helmet>
+        <title>Tech Stack | Next.js, React, Node.js, Vite | Saim Dev</title>
+        <meta name="description" content="Every website I build uses a modern, proven tech stack — Next.js, React, Node.js, Vite, and Tailwind CSS — for maximum performance, SEO, and reliability." />
+        <link rel="canonical" href="https://www.saimdev.site/technologies" />
+        <meta property="og:title" content="Tech Stack | Next.js, React, Node.js, Vite | Saim Dev" />
+        <meta property="og:description" content="Every website I build uses a modern, proven tech stack — Next.js, React, Node.js, Vite, and Tailwind CSS — for maximum performance, SEO, and reliability." />
+        <meta property="og:url" content="https://www.saimdev.site/technologies" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="max-w-6xl mx-auto">
         {/* Top Back Navigation */}
         <button

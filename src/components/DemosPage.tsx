@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft } from "lucide-react";
@@ -52,6 +53,16 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
 
   return (
     <main className="min-h-screen bg-black text-[#E1E0CC] selection:bg-primary selection:text-black flex flex-col justify-between">
+      <Helmet>
+        <title>Live Website Templates & Demos | Saim Dev</title>
+        <meta name="description" content="Browse live interactive website demos built by Saim Dev. See real examples of fast, professional websites for restaurants, agencies, and local businesses." />
+        <link rel="canonical" href="https://www.saimdev.site/demos" />
+        <meta property="og:title" content="Live Website Templates & Demos | Saim Dev" />
+        <meta property="og:description" content="Browse live interactive website demos built by Saim Dev. See real examples of fast, professional websites for restaurants, agencies, and local businesses." />
+        <meta property="og:url" content="https://www.saimdev.site/demos" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       {/* Background Glow */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-primary/10 via-primary/5 to-transparent blur-[120px] pointer-events-none z-0" />
 

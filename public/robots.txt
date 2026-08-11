@@ -1,11 +1,21 @@
 # Saim Dev — robots.txt
-# https://saimdev.site
+# https://www.saimdev.site
 
 User-agent: *
 Allow: /
 Disallow: /api/
 
-# AI Crawlers — allowed
+# Googlebot explicit
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# AI crawlers — allowed
 User-agent: GPTBot
 Allow: /
 
@@ -15,12 +25,5 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-Sitemap: https://saimdev.site/sitemap.xml
+# Sitemaps
+Sitemap: https://www.saimdev.site/sitemap.xml

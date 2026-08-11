@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
@@ -9,6 +10,16 @@ export const PrivacyPolicy = ({ onBack }: { onBack: () => void }) => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
+      <Helmet>
+        <title>Privacy Policy | Saim Dev</title>
+        <meta name="description" content="Read the Saim Dev privacy policy. Learn how your data is collected, used, and protected when you use our website or engage our web development services." />
+        <link rel="canonical" href="https://www.saimdev.site/privacy" />
+        <meta property="og:title" content="Privacy Policy | Saim Dev" />
+        <meta property="og:description" content="Read the Saim Dev privacy policy. Learn how your data is collected, used, and protected when you use our website or engage our web development services." />
+        <meta property="og:url" content="https://www.saimdev.site/privacy" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="max-w-4xl mx-auto">
         {/* Top Back Navigation */}
         <button

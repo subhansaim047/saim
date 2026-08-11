@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import {
@@ -122,6 +123,16 @@ export const CaseStudiesPage = ({ onBack }: { onBack: () => void }) => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
+      <Helmet>
+        <title>Case Studies | Real Business Website Results | Saim Dev</title>
+        <meta name="description" content="Real-world examples of how professional websites helped small businesses attract more customers online. See the design, technology, and results behind each project." />
+        <link rel="canonical" href="https://www.saimdev.site/case-studies" />
+        <meta property="og:title" content="Case Studies | Real Business Website Results | Saim Dev" />
+        <meta property="og:description" content="Real-world examples of how professional websites helped small businesses attract more customers online. See the design, technology, and results behind each project." />
+        <meta property="og:url" content="https://www.saimdev.site/case-studies" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="max-w-6xl mx-auto">
         {/* Top Back Navigation */}
         <button

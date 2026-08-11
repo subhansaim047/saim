@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { useState, type FormEvent } from "react";
 import {
@@ -66,6 +67,16 @@ export const ContactPage = ({ onBack }: { onBack: () => void }) => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
+      <Helmet>
+        <title>Contact Saim Dev | Get a Free Website Quote</title>
+        <meta name="description" content="Get in touch for a free consultation or website quote. I build professional websites for small businesses starting from $300. Delivery in 5-10 days." />
+        <link rel="canonical" href="https://www.saimdev.site/contact" />
+        <meta property="og:title" content="Contact Saim Dev | Get a Free Website Quote" />
+        <meta property="og:description" content="Get in touch for a free consultation or website quote. I build professional websites for small businesses starting from $300. Delivery in 5-10 days." />
+        <meta property="og:url" content="https://www.saimdev.site/contact" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="max-w-4xl mx-auto">
         {/* Top Back Navigation */}
         <button

@@ -29,6 +29,8 @@ export const HeroSection = () => {
           loop
           muted
           playsInline
+          title="Saim Dev — Full Stack Web Developer"
+          aria-label="Background video showing a professional web development environment"
           className="absolute inset-0 w-full h-full object-cover object-[45%_30%] sm:object-center"
         >
           <source

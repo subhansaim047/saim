@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, HelpCircle, ChevronDown, CheckCircle2, Clock } from "lucide-react";
@@ -159,6 +160,16 @@ export const ServicesPage = ({ onBack }: { onBack: () => void }) => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
+      <Helmet>
+        <title>Web Development Services | Saim Dev</title>
+        <meta name="description" content="Professional web design and development services for small businesses. Custom websites, landing pages, e-commerce, and full-stack solutions built with React, Next.js, and Node.js." />
+        <link rel="canonical" href="https://www.saimdev.site/services" />
+        <meta property="og:title" content="Web Development Services | Saim Dev" />
+        <meta property="og:description" content="Professional web design and development services for small businesses. Custom websites, landing pages, e-commerce, and full-stack solutions built with React, Next.js, and Node.js." />
+        <meta property="og:url" content="https://www.saimdev.site/services" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="max-w-5xl mx-auto">
         {/* Top Back Navigation */}
         <button
