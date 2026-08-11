@@ -15,10 +15,11 @@ import { CaseStudiesPage } from "./components/CaseStudiesPage";
 import { DemosPage } from "./components/DemosPage";
 import { ServicesPage } from "./components/ServicesPage";
 import { BlogsPage } from "./components/BlogsPage";
+import { BlogPost1Page } from "./components/BlogPost1Page";
 
 export function App() {
   const [currentView, setCurrentView] = useState<
-    "home" | "privacy" | "terms" | "contact" | "technologies" | "case-studies" | "services" | "demos" | "blogs"
+    "home" | "privacy" | "terms" | "contact" | "technologies" | "case-studies" | "services" | "demos" | "blogs" | "blog-post-1"
   >("home");
 
   useEffect(() => {
@@ -48,6 +49,9 @@ export function App() {
       } else if (hash === "#blogs") {
         setCurrentView("blogs");
         window.scrollTo(0, 0);
+      } else if (hash === "#blog-post-1") {
+        setCurrentView("blog-post-1");
+        window.scrollTo(0, 0);
       } else {
         setCurrentView("home");
       }
@@ -71,7 +75,26 @@ export function App() {
   if (currentView === "case-studies") return <CaseStudiesPage onBack={goHome} />;
   if (currentView === "services") return <ServicesPage onBack={goHome} />;
   if (currentView === "demos") return <DemosPage onBack={goHome} />;
-  if (currentView === "blogs") return <BlogsPage onBack={goHome} />;
+  if (currentView === "blogs") return (
+    <BlogsPage
+      onBack={goHome}
+      onOpenPost={(slug) => {
+        window.location.hash = slug;
+        setCurrentView(slug.replace("#", "") as "blog-post-1");
+        window.scrollTo(0, 0);
+      }}
+    />
+  );
+  if (currentView === "blog-post-1") return (
+    <BlogPost1Page
+      onBack={goHome}
+      onBackToBlogs={() => {
+        window.location.hash = "#blogs";
+        setCurrentView("blogs");
+        window.scrollTo(0, 0);
+      }}
+    />
+  );
 
   return (
     <main className="min-h-screen bg-black text-[#E1E0CC] overflow-x-hidden selection:bg-primary selection:text-black">

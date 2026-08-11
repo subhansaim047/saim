@@ -3,19 +3,20 @@ import { ArrowLeft, Calendar, Clock, Tag, ArrowRight } from "lucide-react";
 
 interface BlogsPageProps {
   onBack: () => void;
+  onOpenPost?: (slug: string) => void;
 }
 
 const blogs = [
   {
     id: 1,
-    title: "Why Your Business Needs a Website in 2026",
+    title: "Why Every Small Business Needs a Professional Website in 2026",
     excerpt:
-      "In today's digital world, not having a website means losing customers to competitors. Here's why a professional website is your most powerful business tool.",
-    date: "Aug 10, 2026",
-    readTime: "5 min read",
+      "97% of consumers search online before making a purchase. If your business isn't showing up professionally, you're handing customers straight to your competitors — every single day.",
+    date: "Aug 11, 2026",
+    readTime: "8 min read",
     tag: "Business Growth",
     tagColor: "#DEDBC8",
-    slug: "#blog-1",
+    slug: "#blog-post-1",
   },
   {
     id: 2,
@@ -74,7 +75,7 @@ const blogs = [
   },
 ];
 
-export const BlogsPage = ({ onBack }: BlogsPageProps) => {
+export const BlogsPage = ({ onBack, onOpenPost }: BlogsPageProps) => {
   return (
     <div className="min-h-screen bg-black text-[#E1E0CC]">
       {/* ── Header Bar ── */}
@@ -127,6 +128,7 @@ export const BlogsPage = ({ onBack }: BlogsPageProps) => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: i * 0.07 }}
+              onClick={() => onOpenPost && onOpenPost(blog.slug)}
               className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 cursor-pointer overflow-hidden"
             >
               {/* Glow on hover */}
