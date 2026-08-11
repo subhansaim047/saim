@@ -18,61 +18,6 @@ const blogs = [
     tagColor: "#DEDBC8",
     slug: "#blog-post-1",
   },
-  {
-    id: 2,
-    title: "Next.js vs WordPress — Which is Better for Your Business?",
-    excerpt:
-      "WordPress is popular but slow. Next.js is fast but technical. Let's break down exactly which platform suits your business goals in 2026.",
-    date: "Aug 5, 2026",
-    readTime: "7 min read",
-    tag: "Web Development",
-    tagColor: "#DEDBC8",
-    slug: "#blog-2",
-  },
-  {
-    id: 3,
-    title: "5 Signs Your Website is Killing Your Sales",
-    excerpt:
-      "A slow, outdated, or confusing website silently drives away customers every single day. Check if your site is making any of these critical mistakes.",
-    date: "Jul 28, 2026",
-    readTime: "4 min read",
-    tag: "SEO & Performance",
-    tagColor: "#DEDBC8",
-    slug: "#blog-3",
-  },
-  {
-    id: 4,
-    title: "How to Rank #1 on Google in 2026 — Complete SEO Guide",
-    excerpt:
-      "SEO isn't dead — it's evolved. This complete guide covers everything from technical SEO, schema markup, page speed, and content strategy to help you dominate search rankings.",
-    date: "Jul 20, 2026",
-    readTime: "10 min read",
-    tag: "SEO",
-    tagColor: "#DEDBC8",
-    slug: "#blog-4",
-  },
-  {
-    id: 5,
-    title: "The True Cost of a Cheap Website",
-    excerpt:
-      "Saving $50 on a website can cost you $5,000 in lost business. Here's the real mathematics of why investing in quality web architecture pays off.",
-    date: "Jul 12, 2026",
-    readTime: "6 min read",
-    tag: "Business Growth",
-    tagColor: "#DEDBC8",
-    slug: "#blog-5",
-  },
-  {
-    id: 6,
-    title: "What Makes a Website Load in Under 1 Second?",
-    excerpt:
-      "Page speed is a Google ranking factor and directly impacts your conversion rate. Here's the exact tech stack and techniques I use to build sub-second websites.",
-    date: "Jul 2, 2026",
-    readTime: "8 min read",
-    tag: "Web Development",
-    tagColor: "#DEDBC8",
-    slug: "#blog-6",
-  },
 ];
 
 export const BlogsPage = ({ onBack, onOpenPost }: BlogsPageProps) => {
