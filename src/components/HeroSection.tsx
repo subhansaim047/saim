@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { WordsPullUp } from "./WordsPullUp";
@@ -48,33 +49,58 @@ export const HeroSection = () => {
         <nav className="absolute top-0 left-0 right-0 z-20 flex justify-center px-1 sm:px-4">
           {/* Mobile Multi-Row Wrap Layout */}
           <div className="flex sm:hidden flex-wrap items-center justify-center gap-1.5 p-2 bg-black/95 backdrop-blur-md rounded-b-xl border-x border-b border-white/15 max-w-full">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-[10px] font-bold tracking-tight text-[#E1E0CC] bg-white/10 border border-white/15 px-2 py-0.5 rounded-md hover:bg-primary hover:text-black transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-[10px] font-bold tracking-tight text-[#E1E0CC] bg-white/10 border border-white/15 px-2 py-0.5 rounded-md hover:bg-primary hover:text-black transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-[10px] font-bold tracking-tight text-[#E1E0CC] bg-white/10 border border-white/15 px-2 py-0.5 rounded-md hover:bg-primary hover:text-black transition-colors"
+                >
+                  {item.label}
+                </a>
+              )
+            )}
           </div>
 
           {/* Desktop Single Row Layout */}
           <div className="hidden sm:flex bg-black/90 backdrop-blur-md rounded-b-3xl px-6 py-2.5 items-center justify-center gap-5 border-x border-b border-white/10">
-            {navItems.map((item, index) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onMouseEnter={() => setHoveredNav(index)}
-                onMouseLeave={() => setHoveredNav(null)}
-                className="text-xs md:text-sm font-medium tracking-wide transition-colors duration-200 whitespace-nowrap cursor-pointer"
-                style={{
-                  color: hoveredNav === index ? "#E1E0CC" : "rgba(225, 224, 204, 0.8)",
-                }}
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item, index) =>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  onMouseEnter={() => setHoveredNav(index)}
+                  onMouseLeave={() => setHoveredNav(null)}
+                  className="text-xs md:text-sm font-medium tracking-wide transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                  style={{
+                    color: hoveredNav === index ? "#E1E0CC" : "rgba(225, 224, 204, 0.8)",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onMouseEnter={() => setHoveredNav(index)}
+                  onMouseLeave={() => setHoveredNav(null)}
+                  className="text-xs md:text-sm font-medium tracking-wide transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                  style={{
+                    color: hoveredNav === index ? "#E1E0CC" : "rgba(225, 224, 204, 0.8)",
+                  }}
+                >
+                  {item.label}
+                </a>
+              )
+            )}
           </div>
         </nav>
 

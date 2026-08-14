@@ -1,7 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const FooterSection = () => {
-  const navigate = useNavigate();
   return (
     <footer className="site-footer">
       {/* ANIMATED DOTS STRIP */}
@@ -19,9 +18,10 @@ export const FooterSection = () => {
 
           <nav className="site-footer__nav" aria-label="Page sections navigation">
             <a href="#our-story">Our Story</a>
-            <a href="/services">Services</a>
-            <a href="/technologies">Tech Stack</a>
-            <a href="/case-studies">Case Studies</a>
+            <Link to="/services">Services</Link>
+            <Link to="/technologies">Tech Stack</Link>
+            <Link to="/case-studies">Case Studies</Link>
+            <Link to="/demos">Demo Sites</Link>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Explore navigation">
@@ -29,15 +29,15 @@ export const FooterSection = () => {
             <a href="#process">My Process</a>
             <a href="#pricing">Pricing Plans</a>
             <a href="#faq">FAQ</a>
-            <a href="/blogs">Blogs</a>
-            <a href="/contact">Contact Page</a>
+            <Link to="/blogs">Blogs</Link>
+            <Link to="/contact">Contact Page</Link>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Contact navigation">
             <a href="https://wa.me/12498984111" target="_blank" rel="nofollow noreferrer">
               WhatsApp Direct
             </a>
-            <a href="https://wa.me/12498984111" target="_blank" rel="nofollow noreferrer">
+            <a href="https://wa.me/12498984111" target="_blank" rel="noreferrer">
               +1 (249) 898-4111
             </a>
           </nav>
@@ -45,7 +45,7 @@ export const FooterSection = () => {
 
         {/* BRAND ROW */}
         <div className="site-footer__brand-row">
-          <a href="/" className="site-footer__brand" aria-label="Saim Dev home">
+          <Link to="/" className="site-footer__brand" aria-label="Saim Dev home">
             <span className="site-footer__mark" aria-hidden="true">
               <img
                 src="/saim-dev-logo.jpg"
@@ -54,14 +54,14 @@ export const FooterSection = () => {
               />
             </span>
             <span className="site-footer__wordmark">Saim Dev</span>
-          </a>
+          </Link>
         </div>
 
         {/* LEGAL LINE */}
         <div className="site-footer__legal">
           <p>© 2026 Saim Dev. All rights reserved.</p>
-          <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+          <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
         </div>
       </div>
     </footer>
