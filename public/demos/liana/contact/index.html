@@ -3,6 +3,81 @@
 <!-- Published Jun 23, 2026, 7:51 AM UTC -->
 <html lang="en" data-redirect-timezone="1" dir="ltr">
 <head>
+<script id="liana-title-guard">
+(function() {
+  var targetTitle = "Contact Us — LIANA Luxury Hair & Beauty Salon";
+  
+  function clean(t) {
+    if (!t || typeof t !== 'string') return targetTitle;
+    var res = t
+      .replace(/Salonix/gi, 'LIANA')
+      .replace(/Framer Template/gi, '')
+      .replace(/Template/gi, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    if (res.endsWith('-') || res.endsWith('—') || res.endsWith('|')) {
+      res = res.slice(0, -1).trim();
+    }
+    if (/service/i.test(res) && !/LIANA/i.test(res)) res = 'Services — LIANA Luxury Hair & Beauty Salon';
+    else if (/about/i.test(res) && !/LIANA/i.test(res)) res = 'About Us — LIANA Luxury Hair & Beauty Salon';
+    else if (/contact/i.test(res) && !/LIANA/i.test(res)) res = 'Contact Us — LIANA Luxury Hair & Beauty Salon';
+    else if (!/LIANA/i.test(res)) res = targetTitle;
+    return res;
+  }
+
+  var _t = targetTitle;
+
+  // 1. Lock document.title
+  try {
+    Object.defineProperty(document, 'title', {
+      get: function() {
+        return _t;
+      },
+      set: function(val) {
+        _t = clean(val);
+        var el = document.querySelector('title');
+        if (el && el.textContent !== _t) el.textContent = _t;
+      },
+      configurable: true,
+      enumerable: true
+    });
+  } catch(e) {}
+
+  // 2. Head MutationObserver
+  var obs = new MutationObserver(function() {
+    var el = document.querySelector('title');
+    if (el && (/Salonix|Template/i.test(el.textContent) || el.textContent !== _t)) {
+      _t = clean(el.textContent);
+      el.textContent = _t;
+    }
+    var metas = document.querySelectorAll('meta[content*="Salonix" i], meta[content*="alonix" i]');
+    metas.forEach(function(m) {
+      m.setAttribute('content', clean(m.getAttribute('content')));
+    });
+  });
+
+  if (document.head) {
+    obs.observe(document.head, { childList: true, subtree: true, characterData: true });
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      if (document.head) obs.observe(document.head, { childList: true, subtree: true, characterData: true });
+    });
+  }
+
+  // 3. Persistent polling lock
+  var polls = 0;
+  var interval = setInterval(function() {
+    polls++;
+    var el = document.querySelector('title');
+    if (el && (/Salonix|Template/i.test(el.textContent) || el.textContent !== _t)) {
+      _t = clean(el.textContent);
+      el.textContent = _t;
+    }
+    if (polls > 60) clearInterval(interval);
+  }, 100);
+})();
+</script>
+
 	<meta charset="utf-8">
 	
 	
@@ -12,7 +87,7 @@
     <!-- End of headStart -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 	
-	<title>Contact - LIANA Luxury Hair &amp; Beauty Salon</title>
+	<title>Contact Us — LIANA Luxury Hair & Beauty Salon</title>
     <meta name="description" content="Reach out to LIANA for bookings, general enquiries, or directions to our studio. We are always happy to help.">
     
     
