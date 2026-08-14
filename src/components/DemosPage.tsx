@@ -18,22 +18,6 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
-    id: "liana",
-    title: "LIANA — Hair & Beauty Salon Premium Template",
-    category: "Beauty Salon & Booking",
-    description: "An exact 100% pixel-perfect clone of the LIANA Beauty Salon template. Features interactive online booking, services showcase, team showcase, and responsive mobile layout.",
-    demoUrl: "/demos/liana/index.html",
-    previewImage: "/demos/liana/preview.png",
-    tags: ["Framer Template", "Beauty Salon", "Booking System", "100% Asset Bundled"],
-    features: [
-      "Exact 100% Framer Pixel-Perfect Layout",
-      "Interactive Services & Team Showcase",
-      "100% Local Fonts & Asset Bundling (68 images + 20 fonts)",
-      "Fully Responsive Mobile, Tablet & Desktop Views"
-    ],
-    badge: "Featured Live Demo"
-  },
-  {
     id: "woshico",
     title: "Woshico — Auto Detailing & Car Wash Premium Template",
     category: "Auto Services & E-Commerce",
