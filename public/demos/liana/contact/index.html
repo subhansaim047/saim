@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment — LIANA Hair Salon</title>
+  <meta name="description" content="Schedule your luxury hair styling appointment at LIANA. Located in the USA. Contact liana@gmail.com for inquiries.">
+  <link rel="stylesheet" href="/demos/liana/styles.css">
+</head>
+<body>
+  
+<header class="header">
+  <div class="header-container">
+    <a href="/demos/liana/index.html" class="brand-logo">
+      <img src="/demos/liana/images/logo.png" alt="LIANA Logo" />
+      <span>LIANA</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/demos/liana/index.html" class="nav-link ">Home</a></li>
+      <li><a href="/demos/liana/services/index.html" class="nav-link ">Services</a></li>
+      <li><a href="/demos/liana/about/index.html" class="nav-link ">About & Team</a></li>
+      <li><a href="/demos/liana/contact/index.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <a href="/demos/liana/contact/index.html" class="cta-button">
+      <span>Book Appointment</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</header>
+
+
+  <main class="section">
+    <div class="section-header">
+      <span class="badge">Online Booking</span>
+      <h1 class="heading-xl">Reserve Your Appointment</h1>
+      <p class="text-sub">Select your desired service and preferred date. Our team will confirm your reservation within 2 hours.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px;">
+      <!-- Contact Form -->
+      <div class="card" style="padding: 40px;">
+        <h2 class="card-title" style="margin-bottom: 24px;">Appointment Request</h2>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your appointment request has been submitted to LIANA Hair Salon.');">
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--dark-accent);">Your Full Name</label>
+            <input type="text" required placeholder="Jane Doe" style="width: 100%; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); font-size: 14px; font-family: var(--font-body);">
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--dark-accent);">Email Address</label>
+            <input type="email" required placeholder="liana@gmail.com" style="width: 100%; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); font-size: 14px; font-family: var(--font-body);">
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--dark-accent);">Select Service</label>
+            <select style="width: 100%; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); font-size: 14px; font-family: var(--font-body); background: #fff;">
+              <option>Precision Haircut & Blowout ($95)</option>
+              <option>Signature Custom Balayage ($220)</option>
+              <option>Keratin Silk Smoothing ($180)</option>
+              <option>Scalp Therapy & Consultation ($75)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="cta-button" style="width: 100%; padding: 16px; font-size: 16px;">
+            Confirm Reservation
+          </button>
+        </form>
+      </div>
+
+      <!-- Studio Information -->
+      <div style="display: flex; flex-direction: column; justify-content: center; gap: 32px;">
+        <div>
+          <h3 class="card-title">Studio Location</h3>
+          <p class="text-sub">📍 USA Studio Location</p>
+        </div>
+
+        <div>
+          <h3 class="card-title">Direct Inquiries</h3>
+          <p class="text-sub">✉️ Email: <a href="mailto:liana@gmail.com" style="color: var(--primary-red); font-weight: 600;">liana@gmail.com</a></p>
+          <p class="text-sub" style="margin-top: 8px;">📸 Instagram: <a href="https://www.instagram.com/lianahairartistry/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-red); font-weight: 600;">@lianahairartistry</a></p>
+        </div>
+
+        <div>
+          <h3 class="card-title">Opening Hours</h3>
+          <p class="text-sub">Tuesday – Saturday: 9:00 AM – 7:00 PM</p>
+          <p class="text-sub">Sunday – Monday: Closed</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  
+<footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-brand">LIANA</div>
+      <p class="footer-text">Elevate your hair with bespoke styling, premium products, and unmatched luxury salon care in the USA.</p>
+    </div>
+    <div>
+      <div class="footer-title">Navigation</div>
+      <ul class="footer-links">
+        <li><a href="/demos/liana/index.html" class="footer-link">Home</a></li>
+        <li><a href="/demos/liana/services/index.html" class="footer-link">Services</a></li>
+        <li><a href="/demos/liana/about/index.html" class="footer-link">About & Team</a></li>
+        <li><a href="/demos/liana/contact/index.html" class="footer-link">Book Appointment</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">Contact & Location</div>
+      <ul class="footer-links">
+        <li><span class="footer-link">📍 Location: USA</span></li>
+        <li><a href="mailto:liana@gmail.com" class="footer-link">✉️ liana@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/lianahairartistry/" target="_blank" rel="noopener noreferrer" class="footer-link">📸 Instagram: @lianahairartistry</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 LIANA Hair & Beauty Salon. All rights reserved.</p>
+    <p>High Performance Web Architecture by Saim Dev</p>
+  </div>
+</footer>
+
+</body>
+</html>
