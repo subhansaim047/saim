@@ -18,6 +18,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "salonix",
+    title: "Salonix — Hair & Beauty Salon Premium Framer Template",
+    category: "Beauty Salon & Booking",
+    description: "An exact 100% pixel-perfect clone of the Salonix Framer template. Features interactive online booking, services showcase, team showcase, and responsive mobile layout.",
+    demoUrl: "/demos/salonix/index.html",
+    previewImage: "/demos/salonix/preview.png",
+    tags: ["Framer Template", "Beauty Salon", "Booking System", "100% Asset Bundled"],
+    features: [
+      "Exact 100% Framer Pixel-Perfect Layout",
+      "Interactive Services & Team Showcase",
+      "100% Local Fonts & Asset Bundling (68 images + 20 fonts)",
+      "Fully Responsive Mobile, Tablet & Desktop Views"
+    ],
+    badge: "Featured Live Demo"
+  },
+  {
     id: "woshico",
     title: "Woshico — Auto Detailing & Car Wash Premium Template",
     category: "Auto Services & E-Commerce",
@@ -30,8 +46,7 @@ const demos: DemoItem[] = [
       "Interactive Hero Video & Slider Transcode",
       "100% Offline Asset & Local Font Bundling",
       "Fully Responsive Mobile & Tablet Layouts"
-    ],
-    badge: "Featured Live Demo"
+    ]
   }
 ];
 
