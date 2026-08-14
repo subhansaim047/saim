@@ -91,9 +91,11 @@
     
     <!-- End of bodyEnd -->
 
+
+
 <script id="liana-branding-patcher">
 (function() {
-  // Text node replacer — replaces Salonix/SALONIX with LIANA in DOM text
+  // 1. Text node replacer — replaces Salonix/SALONIX with LIANA in DOM text
   function patchTextNodes(root) {
     var walker = document.createTreeWalker(
       root || document.body,
@@ -110,7 +112,6 @@
           .replace(/salonix/g, 'liana');
       }
     }
-    // Also patch alt attributes and aria-labels
     var imgs = (root || document).querySelectorAll('[alt*="alonix"], [aria-label*="alonix"], [title*="alonix"]');
     imgs.forEach(function(el) {
       if (el.alt) el.alt = el.alt.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
@@ -119,16 +120,40 @@
     });
   }
 
-  // Run immediately on whatever is in DOM
-  if (document.body) patchTextNodes(document.body);
+  // 2. Attach Instagram click & hover handler to all Gallery images
+  function connectGalleryInstagram() {
+    // Select all gallery cards, ticker items, and framer-IEC60 links
+    var galleryCards = document.querySelectorAll('.framer-1xjrpv6 a, .framer-1xjrpv6 .ticker-item, a[class*="framer-IEC60"], [data-framer-name="Variant 1"]');
+    galleryCards.forEach(function(card) {
+      card.style.cursor = 'pointer';
+      card.setAttribute('title', 'View on Instagram @lianahairartistry');
+      card.setAttribute('href', 'https://www.instagram.com/lianahairartistry/');
+      card.setAttribute('target', '_blank');
+      card.setAttribute('rel', 'noopener noreferrer');
 
-  // Watch for Framer React hydration adding new nodes
+      // Ensure click opens Instagram
+      card.onclick = function(e) {
+        // Allow default link behavior or open in new tab
+        window.open('https://www.instagram.com/lianahairartistry/', '_blank');
+      };
+    });
+  }
+
+  // Run immediately
+  if (document.body) {
+    patchTextNodes(document.body);
+    connectGalleryInstagram();
+  }
+
+  // Watch for React hydration mutations
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
       mutation.addedNodes.forEach(function(node) {
-        if (node.nodeType === 1) patchTextNodes(node); // Element node
+        if (node.nodeType === 1) {
+          patchTextNodes(node);
+          connectGalleryInstagram();
+        }
         if (node.nodeType === 3 && /[Ss][Aa][Ll][Oo][Nn][Ii][Xx]/.test(node.nodeValue)) {
-          // Direct text node
           node.nodeValue = node.nodeValue
             .replace(/SALONIX/g, 'LIANA')
             .replace(/Salonix/g, 'LIANA')
@@ -138,16 +163,17 @@
     });
   });
 
-  // Start observing once DOM is ready
   function startObserver() {
     observer.observe(document.body, {
       childList: true,
       subtree: true,
       characterData: true
     });
-    // Run patch again after 500ms, 1500ms, 3000ms (after Framer hydration completes)
-    [500, 1500, 3000].forEach(function(delay) {
-      setTimeout(function() { patchTextNodes(document.body); }, delay);
+    [300, 800, 1500, 3000].forEach(function(delay) {
+      setTimeout(function() {
+        patchTextNodes(document.body);
+        connectGalleryInstagram();
+      }, delay);
     });
   }
 
@@ -159,7 +185,7 @@
 
   // Hide Framer badge
   var style = document.createElement('style');
-  style.textContent = '#__framer-badge-container{display:none!important}';
+  style.textContent = '#__framer-badge-container{display:none!important} .framer-1xjrpv6 a, .framer-1xjrpv6 .ticker-item { cursor: pointer !important; }';
   document.head.appendChild(style);
 })();
 </script>
