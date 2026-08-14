@@ -66,12 +66,9 @@ export const CtaSection = () => {
       </motion.div>
 
       {/* Foreground grass — in front of dashboard, parallax Y */}
-      <motion.img
-        src="https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1780586778/cta-bg_mlwy5s.png"
-        alt=""
+      <div
         aria-hidden
-        style={{ y: grassY }}
-        className="pointer-events-none select-none absolute left-0 right-0 bottom-[-40px] sm:bottom-[-80px] lg:bottom-[-140px] w-full z-30 object-cover"
+        className="pointer-events-none select-none absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent z-30 pointer-events-none"
       />
     </section>
   );

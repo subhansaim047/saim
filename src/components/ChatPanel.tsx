@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, type KeyboardEvent } from "react";
-import { MIcon } from "./MIcon";
+import { ArrowUp } from "lucide-react";
 import { FadeUp } from "./FadeUp";
 
 interface Message {
@@ -163,7 +163,7 @@ export const ChatPanel = ({
             onClick={handleSend}
             className="bg-white text-black rounded-xl p-2 hover:bg-white/90 transition-colors shrink-0 flex items-center justify-center cursor-pointer"
           >
-            <MIcon name="arrow_upward" size={16} />
+            <ArrowUp className="w-4 h-4 text-black" />
           </button>
         </div>
       </div>

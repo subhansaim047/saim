@@ -1,0 +1,16 @@
+# Saim Dev — Full Stack Web Developer & Architecture
+
+> High-performance, custom full-stack web developer specializing in Next.js, React, Node.js, and SEO for small business growth.
+
+## Core Services
+
+- [Web Development Services](https://www.saimdev.site/services): Custom website development, landing pages, e-commerce, and speed optimization.
+- [Pricing Plans](https://www.saimdev.site/#pricing): Transparent pricing plans starting from $300 to $600 with delivery in 5–10 days.
+- [Case Studies](https://www.saimdev.site/case-studies): Real business website case studies and measurable performance results.
+- [Blog](https://www.saimdev.site/blogs): Insights on small business web development, SEO, and digital growth.
+
+## Contact & Location
+
+- [Contact & Free Audit](https://www.saimdev.site/contact): Request a free website audit or project quote.
+- Direct Contact: WhatsApp +1 (249) 898-4111
+- Primary Domain: https://www.saimdev.site

@@ -31,8 +31,7 @@ export const BenefitsSection = () => {
             {/* Card 2: Video Card (Center) */}
             <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-neutral-950 overflow-hidden flex flex-col">
               <div className="relative w-full overflow-hidden" style={{ height: "75%" }}>
-                <video
-                  autoPlay
+                <video preload="metadata" autoPlay
                   loop
                   muted
                   playsInline

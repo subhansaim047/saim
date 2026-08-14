@@ -24,8 +24,7 @@ export const HeroSection = () => {
     <section className="h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-black relative box-border overflow-hidden">
       <div className="relative h-full w-full rounded-xl sm:rounded-2xl md:rounded-[2rem] overflow-hidden">
         {/* Background Video (Centering the person sitting on the hill directly in the middle on mobile) */}
-        <video
-          autoPlay
+        <video preload="metadata" autoPlay
           loop
           muted
           playsInline

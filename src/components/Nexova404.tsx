@@ -178,8 +178,7 @@ export const Nexova404 = () => {
       }}
     >
       {/* Cinematic Background Video */}
-      <video
-        autoPlay
+      <video preload="metadata" autoPlay
         muted
         loop
         playsInline

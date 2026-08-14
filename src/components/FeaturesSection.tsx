@@ -60,8 +60,7 @@ export const FeaturesSection = () => {
           {/* Card 1 - Video Card */}
           <AnimatedFeatureCard index={0}>
             <div className="relative rounded-2xl overflow-hidden min-h-[360px] lg:h-full flex flex-col justify-end p-6 sm:p-8 group shadow-xl">
-              <video
-                autoPlay
+              <video preload="metadata" autoPlay
                 loop
                 muted
                 playsInline

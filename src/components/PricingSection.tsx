@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { Check, X, ChevronUp, ChevronDown } from "lucide-react";
 import { FadeUp } from "./FadeUp";
-import { MIcon } from "./MIcon";
 import { PrimaryButton } from "./PrimaryButton";
 import { SecondaryButton } from "./SecondaryButton";
 import { SpotlightBorder } from "./SpotlightBorder";
@@ -171,13 +171,9 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
                   )}
                 >
                   {f.included ? (
-                    <MIcon name="check" size={12} className="text-foreground" />
+                    <Check className="w-3 h-3 text-foreground" />
                   ) : (
-                    <MIcon
-                      name="close"
-                      size={12}
-                      className="text-foreground/50"
-                    />
+                    <X className="w-3 h-3 text-foreground/50" />
                   )}
                 </span>
                 {f.text}
@@ -193,10 +189,7 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
               <span>
                 {expanded ? "Show Less" : `View More (+${remainingCount} features)`}
               </span>
-              <MIcon
-                name={expanded ? "expand_less" : "expand_more"}
-                size={16}
-              />
+              {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </button>
           )}
         </FadeUp>
