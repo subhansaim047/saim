@@ -331,6 +331,48 @@
   }
 </style>
 
+
+<style id="liana-contact-location-remover">
+  /* 1. Hide the Location Card (3rd card) completely */
+  .framer-zaxhun-container,
+  .framer-zaxhun-container-host,
+  .ssr-variant:has(.framer-zaxhun-container),
+  div:has(> .framer-zaxhun-container) {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 2. Format the remaining 2 cards (Email & Phone) evenly across the row */
+  @media (min-width: 810px) {
+    .framer-huutt .framer-1ua6wtk,
+    .framer-1ua6wtk {
+      grid-template-columns: repeat(2, minmax(50px, 1fr)) !important;
+    }
+  }
+  @media (max-width: 809.98px) {
+    .framer-huutt .framer-1ua6wtk,
+    .framer-1ua6wtk {
+      grid-template-columns: repeat(1, minmax(50px, 1fr)) !important;
+    }
+  }
+
+  /* 3. Hide the Google Map container and any iframe completely */
+  .framer-9jj5ej-container,
+  .framer-9jj5ej-container-host,
+  #INpW2lhX4,
+  iframe[src*="google.com/maps"],
+  iframe[src*="maps.google.com"] {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+</style>
+
 </head>
 <body>
 	<script async src="" data-fid="f4712a6eb2b56addb24327c337026bd501bda726a24f9fdac96acd4a47830f17" data-no-nt></script>
