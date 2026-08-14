@@ -21,8 +21,8 @@ type Plan = {
 const plans: Plan[] = [
   {
     name: "Starter Plan",
-    price: "300",
-    originalPrice: "500",
+    price: "$500 – $1,000",
+    
     description: "Delivery: 5–7 Days. Essential business presence.",
     bg: "#161616",
     features: [
@@ -42,8 +42,8 @@ const plans: Plan[] = [
   },
   {
     name: "Business Plan",
-    price: "600",
-    originalPrice: "1000",
+    price: "$1,000 – $5,000",
+    
     description: "Delivery: 7–10 Days. Full growth engine.",
     bg: "#252525",
     features: [
@@ -108,8 +108,8 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
 
         <FadeUp delay={0.1}>
           <div className="mt-8 flex items-baseline gap-2">
-            <span className="text-[2.75rem] leading-none font-normal tracking-tight text-foreground">
-              ${plan.price}
+            <span className="text-3xl sm:text-[2.25rem] leading-none font-normal tracking-tight text-foreground">
+              {plan.price}
             </span>
             {plan.originalPrice && (
               <span className="text-lg text-foreground/40 line-through">

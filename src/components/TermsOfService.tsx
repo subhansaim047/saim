@@ -46,7 +46,7 @@ export const TermsOfService = () => {
           <section>
             <h2 className="text-white text-xl font-medium mb-3">1. Scope of Services</h2>
             <p>
-              Saim Dev provides custom web architecture, e-commerce solutions, mobile responsive development, speed optimization, and SEO setup. Services are provided under two main plans: Starter Plan ($300, 5–7 days delivery) and Business Plan ($600, 7–10 days delivery).
+              Saim Dev provides custom web architecture, e-commerce solutions, mobile responsive development, speed optimization, and SEO setup. Services are provided under two main plans: Starter Plan ($500 – $1,000, 5–7 days delivery) and Business Plan ($1,000 – $5,000, 7–10 days delivery).
             </p>
           </section>
 

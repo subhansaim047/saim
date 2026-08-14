@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "How much does a professional small business website cost?",
-    a: "A professionally built, custom website typically starts from $300–$600 for small businesses. That's a one-time investment. Compare that to the revenue you lose each month without one — most businesses recover the cost within weeks through a single new customer.",
+    a: "A professionally built, custom website typically starts from $500–$1,000 for small businesses. That's a one-time investment. Compare that to the revenue you lose each month without one — most businesses recover the cost within weeks through a single new customer.",
   },
   {
     q: "How long does it take to build a small business website?",
@@ -394,7 +394,7 @@ export const BlogPost1Page = () => {
                   ["Lost revenue per week", "$400"],
                   ["Lost revenue per month", "$1,600"],
                   ["Lost revenue per year", "$19,200"],
-                  ["Cost of a professional website", "$300–$600 (once)"],
+                  ["Cost of a professional website", "$500–$1,000 (once)"],
                 ].map(([label, value], i) => (
                   <div key={i} className={`flex justify-between items-center py-1.5 ${i === 4 ? "border-t border-primary/20 pt-3 mt-1" : ""}`}>
                     <span className={`text-white/60 ${i === 4 ? "font-semibold text-white" : ""}`}>{label}</span>

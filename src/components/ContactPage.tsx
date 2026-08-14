@@ -20,7 +20,7 @@ export const ContactPage = () => {
     businessName: "",
     email: "",
     website: "",
-    budget: "$300 - $600",
+    budget: "$500 - $1,000",
     details: "",
   });
 
@@ -70,10 +70,10 @@ export const ContactPage = () => {
     >
       <Helmet>
         <title>Contact Saim Dev | Get a Free Website Quote</title>
-        <meta name="description" content="Get in touch for a free consultation or website quote. I build professional websites for small businesses starting from $300. Delivery in 5-10 days." />
+        <meta name="description" content="Get in touch for a free consultation or website quote. I build professional websites for small businesses starting from $500. Delivery in 5-10 days." />
         <link rel="canonical" href="https://www.saimdev.site/contact" />
         <meta property="og:title" content="Contact Saim Dev | Get a Free Website Quote" />
-        <meta property="og:description" content="Get in touch for a free consultation or website quote. I build professional websites for small businesses starting from $300. Delivery in 5-10 days." />
+        <meta property="og:description" content="Get in touch for a free consultation or website quote. I build professional websites for small businesses starting from $500. Delivery in 5-10 days." />
         <meta property="og:url" content="https://www.saimdev.site/contact" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
@@ -229,8 +229,8 @@ export const ContactPage = () => {
                   }
                   className="w-full bg-[#161616] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors"
                 >
-                  <option value="$300 - $600">$300 - $600 (Starter Website)</option>
-                  <option value="$600 - $1200">$600 - $1,200 (Full Business Plan)</option>
+                  <option value="$500 - $1,000">$500 - $1,000 (Starter Website)</option>
+                  <option value="$1,000 - $5,000">$1,000 - $5,000 (Full Business Plan)</option>
                   <option value="$1200+">$1,200+ (Custom Web Architecture / AI App)</option>
                 </select>
               </div>

@@ -141,7 +141,7 @@ const serviceFaqs = [
   {
     question: "Which plan or service is right for my business?",
     answer:
-      "If you need a fast, essential business presence with up to 5 pages, the Starter Plan ($300) is ideal. For comprehensive multi-page websites with advanced animations, AI chatbot, and full SEO, choose the Business Plan ($600).",
+      "If you need a fast, essential business presence with up to 5 pages, the Starter Plan ($500 – $1,000) is ideal. For comprehensive multi-page websites with advanced animations, AI chatbot, and full SEO, choose the Business Plan ($1,000 – $5,000).",
   },
   {
     question: "Do I get full ownership of the website?",
