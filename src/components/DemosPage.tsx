@@ -18,12 +18,12 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
-    id: "salonix",
-    title: "Salonix — Hair & Beauty Salon Premium Framer Template",
+    id: "liana",
+    title: "LIANA — Hair & Beauty Salon Premium Template",
     category: "Beauty Salon & Booking",
-    description: "An exact 100% pixel-perfect clone of the Salonix Framer template. Features interactive online booking, services showcase, team showcase, and responsive mobile layout.",
-    demoUrl: "/demos/salonix/index.html",
-    previewImage: "/demos/salonix/preview.png",
+    description: "An exact 100% pixel-perfect clone of the LIANA Beauty Salon template. Features interactive online booking, services showcase, team showcase, and responsive mobile layout.",
+    demoUrl: "/demos/liana/index.html",
+    previewImage: "/demos/liana/preview.png",
     tags: ["Framer Template", "Beauty Salon", "Booking System", "100% Asset Bundled"],
     features: [
       "Exact 100% Framer Pixel-Perfect Layout",
