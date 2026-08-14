@@ -314,7 +314,6 @@
 
 <script id="liana-branding-patcher">
 (function() {
-  // 1. Text node replacer — replaces Salonix/SALONIX with LIANA in DOM text
   function patchTextNodes(root) {
     var walker = document.createTreeWalker(
       root || document.body,
@@ -339,7 +338,6 @@
     });
   }
 
-  // 2. Attach Instagram click & hover handler to all Gallery images
   function connectGalleryInstagram() {
     var galleryCards = document.querySelectorAll('.framer-1xjrpv6 a, .framer-1xjrpv6 .ticker-item, a[class*="framer-IEC60"], [data-framer-name="Variant 1"]');
     galleryCards.forEach(function(card) {
@@ -351,13 +349,11 @@
       card.onclick = function() { window.open('https://www.instagram.com/lianahairartistry/', '_blank'); };
     });
 
-    // Enforce button accessibility in hydrated DOM
     document.querySelectorAll('button:not([aria-label])').forEach(function(btn) {
       var name = btn.getAttribute('data-framer-name') || 'Interactive Button';
       btn.setAttribute('aria-label', name);
     });
 
-    // Enforce crawlable links on anchor elements without href
     document.querySelectorAll('a:not([href])').forEach(function(a) {
       a.setAttribute('href', '/demos/liana/index.html');
     });
@@ -370,18 +366,39 @@
     }
   }
 
-  // One-shot initialization on immediate load / DOMContentLoaded and single 1000ms safety timeout
+  var isScrolling = false;
+  var scrollTimeout;
+  window.addEventListener('scroll', function() {
+    isScrolling = true;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function() {
+      isScrolling = false;
+      init(); // Catch up after scroll
+    }, 150);
+  }, { passive: true });
+
+  var throttleTimeout = null;
+  var observer = new MutationObserver(function() {
+    if (isScrolling) return; // Completely decouple from scroll loop!
+    if (throttleTimeout) return;
+    throttleTimeout = setTimeout(function() {
+      init();
+      throttleTimeout = null;
+    }, 100);
+  });
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       init();
-      setTimeout(init, 1000);
+      observer.observe(document.body, { childList: true, subtree: true, characterData: true });
     });
   } else {
     init();
-    setTimeout(init, 1000);
+    if (document.body) {
+      observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+    }
   }
 
-  // Hide Framer badge & pointer styles
   var style = document.createElement('style');
   style.textContent = '#__framer-badge-container{display:none!important} .framer-1xjrpv6 a, .framer-1xjrpv6 .ticker-item { cursor: pointer !important; }';
   document.head.appendChild(style);
@@ -407,15 +424,37 @@
     }
   }
 
-  // One-shot execution on immediate / DOMContentLoaded and single 1000ms safety timeout
+  var isScrolling = false;
+  var scrollTimeout;
+  window.addEventListener('scroll', function() {
+    isScrolling = true;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function() {
+      isScrolling = false;
+      fixBottleImages();
+    }, 150);
+  }, { passive: true });
+
+  var throttleTimeout = null;
+  var observer = new MutationObserver(function() {
+    if (isScrolling) return;
+    if (throttleTimeout) return;
+    throttleTimeout = setTimeout(function() {
+      fixBottleImages();
+      throttleTimeout = null;
+    }, 100);
+  });
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       fixBottleImages();
-      setTimeout(fixBottleImages, 1000);
+      observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['src', 'srcset'] });
     });
   } else {
     fixBottleImages();
-    setTimeout(fixBottleImages, 1000);
+    if (document.body) {
+      observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['src', 'srcset'] });
+    }
   }
 })();
 </script>
