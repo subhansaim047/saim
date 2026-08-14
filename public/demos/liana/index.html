@@ -108,5 +108,111 @@
 	<!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
+
+<div id="liana-instagram-gallery" style="padding:72px 24px;text-align:center;background:#f6efe5;font-family:inherit;">
+  <p style="font-size:12px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b82020;margin-bottom:10px;">Our Work</p>
+  <h2 style="font-size:clamp(28px,4vw,40px);font-weight:800;color:#48120e;margin-bottom:8px;letter-spacing:-0.02em;">@lianahairartistry</h2>
+  <p style="font-size:15px;color:rgba(69,48,48,0.65);margin-bottom:40px;">Follow our latest hair artistry on Instagram</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:860px;margin:0 auto 36px auto;">
+    <a href="https://www.instagram.com/lianahairartistry/" target="_blank" rel="noopener noreferrer" style="display:block;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#e8ddd0;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      <img src="/demos/liana/images/ElX4fEQ6C8zxD0lIUJQrxdMn6Q.png" alt="LIANA Hair Artistry" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    </a>
+    <a href="https://www.instagram.com/lianahairartistry/" target="_blank" rel="noopener noreferrer" style="display:block;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#e8ddd0;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      <img src="/demos/liana/images/Cd1Oi6r6B7DwrBRRjyoutIiQ2Y.png" alt="LIANA Hair Artistry" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    </a>
+    <a href="https://www.instagram.com/lianahairartistry/" target="_blank" rel="noopener noreferrer" style="display:block;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#e8ddd0;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      <img src="/demos/liana/images/7CD5jmvTOqiobkYbxDJEWkkh9Ok.png" alt="LIANA Hair Artistry" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    </a>
+    <a href="https://www.instagram.com/lianahairartistry/" target="_blank" rel="noopener noreferrer" style="display:block;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#e8ddd0;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      <img src="/demos/liana/images/lMgG5LpyBymyEToxu3PVZAp88ho.jpeg" alt="LIANA Hair Artistry" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    </a>
+    <a href="https://www.instagram.com/lianahairartistry/" target="_blank" rel="noopener noreferrer" style="display:block;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#e8ddd0;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      <img src="/demos/liana/images/XlpRhVIEtKMtCrAkBDdPvsgAPnE.jpg" alt="LIANA Hair Artistry" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    </a>
+    <a href="https://www.instagram.com/lianahairartistry/" target="_blank" rel="noopener noreferrer" style="display:block;aspect-ratio:1;overflow:hidden;border-radius:10px;background:#e8ddd0;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      <img src="/demos/liana/images/SIc6tZteZpE2Zkjymz1CicZqJg.jpg" alt="LIANA Hair Artistry" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    </a>
+  </div>
+  <a href="https://www.instagram.com/lianahairartistry/" target="_blank" rel="noopener noreferrer"
+    style="display:inline-flex;align-items:center;gap:10px;background:#48120e;color:#fff;padding:14px 34px;border-radius:100px;text-decoration:none;font-weight:700;font-size:15px;transition:background 0.2s ease,transform 0.2s ease;"
+    onmouseover="this.style.background='#b82020';this.style.transform='translateY(-2px)'"
+    onmouseout="this.style.background='#48120e';this.style.transform='translateY(0)'">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    Follow @lianahairartistry
+  </a>
+</div>
+
+<script id="liana-branding-patcher">
+(function() {
+  // Text node replacer — replaces Salonix/SALONIX with LIANA in DOM text
+  function patchTextNodes(root) {
+    var walker = document.createTreeWalker(
+      root || document.body,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+    var node;
+    while ((node = walker.nextNode())) {
+      if (node.nodeValue && /[Ss][Aa][Ll][Oo][Nn][Ii][Xx]/.test(node.nodeValue)) {
+        node.nodeValue = node.nodeValue
+          .replace(/SALONIX/g, 'LIANA')
+          .replace(/Salonix/g, 'LIANA')
+          .replace(/salonix/g, 'liana');
+      }
+    }
+    // Also patch alt attributes and aria-labels
+    var imgs = (root || document).querySelectorAll('[alt*="alonix"], [aria-label*="alonix"], [title*="alonix"]');
+    imgs.forEach(function(el) {
+      if (el.alt) el.alt = el.alt.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
+      if (el.ariaLabel) el.ariaLabel = el.ariaLabel.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
+      if (el.title) el.title = el.title.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
+    });
+  }
+
+  // Run immediately on whatever is in DOM
+  if (document.body) patchTextNodes(document.body);
+
+  // Watch for Framer React hydration adding new nodes
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) patchTextNodes(node); // Element node
+        if (node.nodeType === 3 && /[Ss][Aa][Ll][Oo][Nn][Ii][Xx]/.test(node.nodeValue)) {
+          // Direct text node
+          node.nodeValue = node.nodeValue
+            .replace(/SALONIX/g, 'LIANA')
+            .replace(/Salonix/g, 'LIANA')
+            .replace(/salonix/g, 'liana');
+        }
+      });
+    });
+  });
+
+  // Start observing once DOM is ready
+  function startObserver() {
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+    // Run patch again after 500ms, 1500ms, 3000ms (after Framer hydration completes)
+    [500, 1500, 3000].forEach(function(delay) {
+      setTimeout(function() { patchTextNodes(document.body); }, delay);
+    });
+  }
+
+  if (document.body) {
+    startObserver();
+  } else {
+    document.addEventListener('DOMContentLoaded', startObserver);
+  }
+
+  // Hide Framer badge
+  var style = document.createElement('style');
+  style.textContent = '#__framer-badge-container{display:none!important}';
+  document.head.appendChild(style);
+})();
+</script>
 </body>
 </html>

@@ -88,5 +88,78 @@
 	<!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
+
+<script id="liana-branding-patcher">
+(function() {
+  // Text node replacer — replaces Salonix/SALONIX with LIANA in DOM text
+  function patchTextNodes(root) {
+    var walker = document.createTreeWalker(
+      root || document.body,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+    var node;
+    while ((node = walker.nextNode())) {
+      if (node.nodeValue && /[Ss][Aa][Ll][Oo][Nn][Ii][Xx]/.test(node.nodeValue)) {
+        node.nodeValue = node.nodeValue
+          .replace(/SALONIX/g, 'LIANA')
+          .replace(/Salonix/g, 'LIANA')
+          .replace(/salonix/g, 'liana');
+      }
+    }
+    // Also patch alt attributes and aria-labels
+    var imgs = (root || document).querySelectorAll('[alt*="alonix"], [aria-label*="alonix"], [title*="alonix"]');
+    imgs.forEach(function(el) {
+      if (el.alt) el.alt = el.alt.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
+      if (el.ariaLabel) el.ariaLabel = el.ariaLabel.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
+      if (el.title) el.title = el.title.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
+    });
+  }
+
+  // Run immediately on whatever is in DOM
+  if (document.body) patchTextNodes(document.body);
+
+  // Watch for Framer React hydration adding new nodes
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) patchTextNodes(node); // Element node
+        if (node.nodeType === 3 && /[Ss][Aa][Ll][Oo][Nn][Ii][Xx]/.test(node.nodeValue)) {
+          // Direct text node
+          node.nodeValue = node.nodeValue
+            .replace(/SALONIX/g, 'LIANA')
+            .replace(/Salonix/g, 'LIANA')
+            .replace(/salonix/g, 'liana');
+        }
+      });
+    });
+  });
+
+  // Start observing once DOM is ready
+  function startObserver() {
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+    // Run patch again after 500ms, 1500ms, 3000ms (after Framer hydration completes)
+    [500, 1500, 3000].forEach(function(delay) {
+      setTimeout(function() { patchTextNodes(document.body); }, delay);
+    });
+  }
+
+  if (document.body) {
+    startObserver();
+  } else {
+    document.addEventListener('DOMContentLoaded', startObserver);
+  }
+
+  // Hide Framer badge
+  var style = document.createElement('style');
+  style.textContent = '#__framer-badge-container{display:none!important}';
+  document.head.appendChild(style);
+})();
+</script>
 </body>
 </html>
