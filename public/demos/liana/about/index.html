@@ -312,5 +312,37 @@
   document.head.appendChild(style);
 })();
 </script>
+<script id="bottle-image-patch">
+(function() {
+  var b1 = './images/JLhaZrelp56AZEpvoeS5QVPj7Q.png?v=liana_final';
+  var b2 = './images/1z6VeaAVMfdvmGYYix7ugTnpSg.png?v=liana_final';
+  
+  function fixBottleImages() {
+    var imgs = document.querySelectorAll('img');
+    for (var i = 0; i < imgs.length; i++) {
+      var img = imgs[i];
+      if (img.src && img.src.indexOf('JLhaZrelp56AZEpvoeS5QVPj7Q') !== -1 && img.src.indexOf('v=liana_final') === -1) {
+        img.src = b1;
+        img.srcset = b1;
+      }
+      if (img.src && img.src.indexOf('1z6VeaAVMfdvmGYYix7ugTnpSg') !== -1 && img.src.indexOf('v=liana_final') === -1) {
+        img.src = b2;
+        img.srcset = b2;
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fixBottleImages);
+  } else {
+    fixBottleImages();
+  }
+
+  var observer = new MutationObserver(function() {
+    fixBottleImages();
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 </body>
 </html>
