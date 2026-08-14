@@ -77,13 +77,28 @@
     box-sizing: border-box !important;
   }
 
-  /* 3. Hero Section Mobile Optimization */
+  /* 3. Hero Section Mobile Optimization: All 3 Slides Fit Fully */
   @media (max-width: 810px) {
-    /* Fix Hero Slider container from hardcoded 1240px x 800px */
+    /* Hero header wrapper */
+    .framer-b2blfj,
+    header[data-framer-name="Hero Section"] {
+      height: 100svh !important;
+      min-height: 540px !important;
+      max-height: 820px !important;
+      padding-top: 80px !important;
+      width: 100% !important;
+      max-width: 100vw !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    /* Slider Container */
     .framer-41ynnv-container,
     .framer-ksWeu,
     .framer-ksWeu.framer-1bi4jjp,
-    .framer-ksWeu.framer-v-1bi4jjp {
+    .framer-ksWeu.framer-v-1bi4jjp,
+    .framer-ksWeu.framer-v-c3ymox,
+    .framer-ksWeu.framer-v-hyg6ji {
       width: 100% !important;
       max-width: 100vw !important;
       height: 100% !important;
@@ -94,7 +109,7 @@
       overflow: hidden !important;
     }
 
-    /* Make sure all slides fit mobile viewport */
+    /* All 3 Slides (01, 02, 03) - Remove zoom scale so full lady figure/face is visible */
     .framer-ksWeu .framer-lbou3z,
     .framer-ksWeu .framer-vyq5l8,
     .framer-ksWeu .framer-hyg6ji {
@@ -102,54 +117,45 @@
       height: 100% !important;
       position: absolute !important;
       inset: 0 !important;
-      transform: scale(1.02) !important;
+      transform: none !important;
+      overflow: hidden !important;
     }
 
-    /* Center and properly position hero background images */
+    /* All 3 Background Images in Slider - Perfect Framing & Fit */
     .framer-ksWeu div[data-framer-background-image-wrapper="true"],
     .framer-ksWeu div[data-framer-background-image-wrapper="true"] img,
-    header[data-framer-name="Hero Section"] div[data-framer-background-image-wrapper="true"] img,
     .framer-b2blfj div[data-framer-background-image-wrapper="true"] img,
-    img[src*="EICbiBGjWoxqYIkuS2LukwjiUQ"] {
+    header[data-framer-name="Hero Section"] img {
       width: 100% !important;
       height: 100% !important;
       object-fit: cover !important;
       object-position: center 20% !important;
     }
 
-    /* Slider pagination dots aligned properly */
-    .framer-ksWeu .framer-1nmx31v {
-      max-width: 100% !important;
-      width: 100% !important;
-      padding: 0 20px 24px !important;
-      place-content: center flex-end !important;
-      z-index: 10 !important;
-    }
-
-    /* Dark gradient on hero for readable text */
+    /* Subtle gradient overlay on mobile: Clear top/center so ladies are prominent, readable text at bottom */
     .framer-ksWeu .framer-1bhigsy {
       width: 100% !important;
       height: 100% !important;
       inset: 0 !important;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.65) 100%) !important;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.25) 45%, rgba(0, 0, 0, 0.75) 100%) !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
       mask: none !important;
       -webkit-mask: none !important;
     }
 
-    /* Hero header containers */
-    .framer-b2blfj,
-    header[data-framer-name="Hero Section"] {
-      height: 100svh !important;
-      min-height: 560px !important;
-      max-height: 860px !important;
-      padding-top: 100px !important;
+    /* Pagination Dots on Mobile */
+    .framer-ksWeu .framer-1nmx31v {
+      max-width: 100% !important;
       width: 100% !important;
-      max-width: 100vw !important;
-      position: relative !important;
+      padding: 0 20px 20px !important;
+      place-content: center flex-end !important;
+      z-index: 10 !important;
     }
 
+    /* Hero Text & Buttons positioned at the bottom */
     .framer-13g7ki7 {
-      padding: 0 20px 30px !important;
+      padding: 0 20px 24px !important;
       justify-content: flex-end !important;
       z-index: 5 !important;
       width: 100% !important;
@@ -158,24 +164,7 @@
     .framer-3x75ru {
       max-width: 100% !important;
       width: 100% !important;
-    }
-
-    /* About page Hero image */
-    img[src*="6koqjWt4775JyZaobUhF2whJqoI"] {
-      width: 100% !important;
-      max-height: 420px !important;
-      object-fit: cover !important;
-      object-position: center top !important;
-      border-radius: 16px !important;
-    }
-
-    /* Contact page Hero image */
-    img[src*="HP6FFojOSOXx6e7xHUG8MpYxkw"] {
-      width: 100% !important;
-      max-height: 380px !important;
-      object-fit: cover !important;
-      object-position: center 20% !important;
-      border-radius: 16px !important;
+      gap: 14px !important;
     }
 
     /* General responsive images */
