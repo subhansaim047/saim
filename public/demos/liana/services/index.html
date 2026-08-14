@@ -3,6 +3,42 @@
 <!-- Published Jun 23, 2026, 7:51 AM UTC -->
 <html lang="en" data-redirect-timezone="1" dir="ltr">
 <head>
+
+<style id="liana-global-location-remover">
+  /* Permanently hide Location card and Google Map across SPA client-side route transitions */
+  .framer-zaxhun-container,
+  .framer-zaxhun-container-host,
+  .ssr-variant:has(.framer-zaxhun-container),
+  div:has(> .framer-zaxhun-container),
+  .framer-9jj5ej-container,
+  .framer-9jj5ej-container-host,
+  #INpW2lhX4,
+  iframe[src*="google.com/maps"],
+  iframe[src*="maps.google.com"] {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  @media (min-width: 810px) {
+    .framer-huutt .framer-1ua6wtk,
+    .framer-1ua6wtk {
+      grid-template-columns: repeat(2, minmax(50px, 1fr)) !important;
+    }
+  }
+  @media (max-width: 809.98px) {
+    .framer-huutt .framer-1ua6wtk,
+    .framer-1ua6wtk {
+      grid-template-columns: repeat(1, minmax(50px, 1fr)) !important;
+    }
+  }
+</style>
+
 <script id="liana-title-guard">
 (function() {
   var targetTitle = "Services — LIANA Luxury Hair & Beauty Salon";
@@ -412,10 +448,25 @@
     });
   }
 
+  function removeLocationAndMap() {
+    var locEls = document.querySelectorAll('.framer-zaxhun-container, .framer-9jj5ej-container, iframe[src*="maps"], #INpW2lhX4');
+    locEls.forEach(function(el) {
+      el.style.setProperty('display', 'none', 'important');
+      el.style.setProperty('height', '0px', 'important');
+      el.style.setProperty('min-height', '0px', 'important');
+      el.style.setProperty('visibility', 'hidden', 'important');
+    });
+    var grid = document.querySelector('.framer-huutt .framer-1ua6wtk, .framer-1ua6wtk');
+    if (grid && window.innerWidth >= 810) {
+      grid.style.setProperty('grid-template-columns', 'repeat(2, minmax(50px, 1fr))', 'important');
+    }
+  }
+
   function init() {
     if (document.body) {
       patchTextNodes(document.body);
       connectGalleryInstagram();
+      removeLocationAndMap();
     }
   }
 
@@ -426,13 +477,13 @@
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(function() {
       isScrolling = false;
-      init(); // Catch up after scroll
+      init();
     }, 150);
   }, { passive: true });
 
   var throttleTimeout = null;
   var observer = new MutationObserver(function() {
-    if (isScrolling) return; // Completely decouple from scroll loop!
+    if (isScrolling) return;
     if (throttleTimeout) return;
     throttleTimeout = setTimeout(function() {
       init();
