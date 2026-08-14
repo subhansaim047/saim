@@ -58,7 +58,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets|saim-dev-logo|favicon|robots\\.txt|sitemap\\.xml|icons).*)",
+      "source": "/((?!assets|demos|saim-dev-logo|favicon|robots\\.txt|sitemap\\.xml|icons|llms\\.txt).*)",
       "destination": "/index.html"
     }
   ]
