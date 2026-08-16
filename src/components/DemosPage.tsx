@@ -18,6 +18,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "studio-dbrickell",
+    title: "Studio-D Brickell — Luxury Beauty Salon & Spa",
+    category: "Beauty Salon & Miami Luxury Services",
+    description: "A 100% pixel-perfect 1:1 clone of the premier Studio-D Brickell salon in Miami, FL. Features top announcement discounts, luxury service showcases, Kérastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
+    demoUrl: "/demos/studio-dbrickell/index.html",
+    previewImage: "/demos/studio-dbrickell/assets/images/branding/og-image.jpg",
+    tags: ["1:1 Pixel Clone", "Beauty Salon", "Luxury Spa", "Mobile First"],
+    features: [
+      "100% 1:1 Pixel-Perfect Visual Fidelity",
+      "Kérastase & Shu Uemura Luxury Spotlight",
+      "Interactive Online Booking & Mangomint Integration",
+      "Mobile Sticky Bar & Responsive Fluid Grids"
+    ],
+    badge: "New 1:1 Clone"
+  },
+  {
     id: "liana",
     title: "LIANA — Hair & Beauty Salon Native Template",
     category: "Beauty Salon & Online Booking",
