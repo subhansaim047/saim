@@ -18,6 +18,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "valeria",
+    title: "VALÈRIA — Luxury Beauty Salon & Cosmetics",
+    category: "Beauty Salon & High-End Aesthetics",
+    description: "An ultra-luxurious, editorial aesthetic beauty salon template featuring animated hero marquees, comprehensive multi-page service menus, curated lookbook gallery, and interactive booking inquiry.",
+    demoUrl: "/demos/valeria/index.html",
+    previewImage: "/demos/valeria/preview.png",
+    tags: ["Luxury Design", "Beauty & Cosmetics", "Editorial Aesthetic", "Full Template"],
+    features: [
+      "High-Fashion Editorial Aesthetic & Italiana Typography",
+      "Full 18-Page Ecosystem (Services, Lookbook, Team, Blog, Pricing)",
+      "Interactive Consult & Shine Appointment System",
+      "100% Offline Asset Bundling & Smooth Animations"
+    ],
+    badge: "Latest Release"
+  },
+  {
     id: "studio-dbrickell",
     title: "Studio-D Brickell — Luxury Beauty Salon & Spa",
     category: "Beauty Salon & Miami Luxury Services",
