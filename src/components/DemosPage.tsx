@@ -18,6 +18,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "serenia",
+    title: "SERENIA — Luxury Wellness & Beauty Spa",
+    category: "Wellness Sanctuary & Day Spa",
+    description: "A tranquil, nature-inspired luxury wellness and day spa website featuring full appointment booking, 8 signature therapy showcases, organic cosmetics shop, treatment pricing, and sanctuary lookbook.",
+    demoUrl: "/demos/serenia/index.html",
+    previewImage: "/demos/serenia/preview.png",
+    tags: ["Wellness & Spa", "Appointment Booking", "Cosmetics Shop", "Full Template"],
+    features: [
+      "Tranquil Earth-Toned Aesthetic & Belleza Typography",
+      "Comprehensive 8-Therapy Service Catalog & Day Passes",
+      "Organic Beauty & Skincare E-Commerce Showcase",
+      "Interactive Appointment Reservation & 100% Offline Assets"
+    ],
+    badge: "Featured Template"
+  },
+  {
     id: "valeria",
     title: "VALÈRIA — Luxury Beauty Salon & Cosmetics",
     category: "Beauty Salon & High-End Aesthetics",
