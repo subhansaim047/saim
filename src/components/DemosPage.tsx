@@ -18,6 +18,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "atelier-noir",
+    title: "ATELIER NOIR — Luxury Interior Architecture & Design",
+    category: "Interior Architecture & Luxury Living",
+    description: "A minimalist, editorial interior design and architecture studio showcase featuring high-end residential case studies, filterable project portfolios, and architectural project inquiry flows.",
+    demoUrl: "/demos/atelier-noir/index.html",
+    previewImage: "/demos/atelier-noir/preview.png",
+    tags: ["Interior Design", "Architecture", "Minimalist Luxury", "Editorial Layout"],
+    features: [
+      "Editorial Minimalist Aesthetic & Geist Typography",
+      "Comprehensive 5-Project Deep-Dive Case Studies",
+      "Curated Residential & Penthouse Visual Portfolio",
+      "Interactive Architecture Project Consultation System"
+    ],
+    badge: "Featured Template"
+  },
+  {
     id: "serenia",
     title: "SERENIA — Luxury Wellness & Beauty Spa",
     category: "Wellness Sanctuary & Day Spa",

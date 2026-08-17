@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50" fill="none">
+  <!-- Minimalist Architectural Symbol -->
+  <rect x="8" y="10" width="28" height="28" stroke="#111111" stroke-width="1.5" fill="none"/>
+  <line x1="8" y1="24" x2="36" y2="24" stroke="#111111" stroke-width="1"/>
+  <line x1="22" y1="10" x2="22" y2="38" stroke="#111111" stroke-width="1"/>
+  <!-- Typography -->
+  <text x="46" y="27" font-family="'Geist', 'Helvetica Neue', sans-serif" font-size="16" font-weight="600" fill="#111111" letter-spacing="3.5">ATELIER NOIR</text>
+  <text x="47" y="38" font-family="'Geist Mono', monospace" font-size="8" font-weight="400" fill="#777777" letter-spacing="2">ARCHITECTURE &amp; INTERIORS</text>
+</svg>
