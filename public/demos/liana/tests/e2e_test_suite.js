@@ -518,18 +518,18 @@ export function createSyntheticEnvironment(htmlContent) {
     galleryA.setAttribute('class', 'ticker-item framer-IEC60');
     galleryA.setAttribute('data-framer-name', 'Variant 1');
     const galleryImg = new MockNode(1, 'IMG');
-    galleryImg.setAttribute('src', 'https://framerusercontent.com/images/gallery' + i + '.jpg');
+    galleryImg.setAttribute('src', 'https://images/gallery' + i + '.jpg');
     galleryA.appendChild(galleryImg);
     galleryContainer.appendChild(galleryA);
   }
 
   // Mock bottle image
   const bottleImg1 = new MockNode(1, 'IMG');
-  bottleImg1.setAttribute('src', 'https://framerusercontent.com/images/JLhaZrelp56AZEpvoeS5QVPj7Q.png');
+  bottleImg1.setAttribute('src', 'https://images/JLhaZrelp56AZEpvoeS5QVPj7Q.png');
   mainNode.appendChild(bottleImg1);
 
   const bottleImg2 = new MockNode(1, 'IMG');
-  bottleImg2.setAttribute('src', 'https://framerusercontent.com/images/1z6VeaAVMfdvmGYYix7ugTnpSg.png');
+  bottleImg2.setAttribute('src', 'https://images/1z6VeaAVMfdvmGYYix7ugTnpSg.png');
   mainNode.appendChild(bottleImg2);
 
   // Mock Salonix text node
@@ -1909,7 +1909,7 @@ runner.addTest({
   run: () => {
     for (const p of ['home', 'about', 'services', 'contact']) {
       const page = loadPage(p);
-      assertContains(page.content, '#__framer-badge-container{display:none!important}', `Framer badge not hidden in ${p}`);
+      assertContains(page.content, '#__framer-badge-container, #framer-badge-container, [class*="framer-badge"], a[href*="framer"], [data-framer-name*="Badge"], [data-framer-name*="badge"], div[class*="Badge"] { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; width: 0 !important; height: 0 !important; max-height: 0 !important; overflow: hidden !important; position: absolute !important; z-index: -9999 !important; }', `Framer badge not hidden in ${p}`);
     }
   }
 });
