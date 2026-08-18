@@ -18,6 +18,23 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "medspa",
+    title: "MEDSPA — Luxury Skin & Beauty Aesthetics",
+    category: "Medical Spa & Aesthetics",
+    description: "A premium medical spa and beauty clinic template featuring lymphatic drainage, vitamin therapy, coolsculpting, botox, and skin care showcases. Fully responsive with smooth interactions.",
+    demoUrl: "/demos/medspa/index.html",
+    previewImage: "/demos/medspa/preview.png",
+    tags: ["Medical Spa", "Beauty Clinic", "Aesthetics", "Services"],
+    features: [
+      "Extensive Service Pages (Botox, Juvederm, Hydrafacial)",
+      "Premium Skin & Body Care Layouts",
+      "VIP & Membership Booking Integrations",
+      "Modern Typography & Smooth Scrolling"
+    ],
+    badge: "New Demo"
+  },
+
+  {
     id: "atelier-noir",
     title: "ATELIER NOIR — Luxury Interior Architecture & Design",
     category: "Interior Architecture & Luxury Living",
