@@ -36,12 +36,12 @@
 <link href="/demos/beauticiansonthego/images/EiH86eavUoO3L3EXOrCXc5n1kAc.png" media="(prefers-color-scheme: dark)" rel="icon"/>
 <!-- Open Graph / Facebook -->
 <meta content="website" property="og:type"/>
-<meta content="Face - Luxe Medical Spa" property="og:title"/>
+<meta content="Face - Beauticians On The Go" property="og:title"/>
 <meta content="Botox, dermal fillers, PDO threads, laser facials &amp; microneedling. Facial treatments for lift, volume &amp; glass skin." property="og:description"/>
 <meta content="/demos/beauticiansonthego/images/NKxZ9EB72pEoqK997spYmSndIeQ.png?width=1024&amp;height=1024" property="og:image"/>
 <!-- Twitter -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Face - Luxe Medical Spa" name="twitter:title"/>
+<meta content="Face - Beauticians On The Go" name="twitter:title"/>
 <meta content="Botox, dermal fillers, PDO threads, laser facials &amp; microneedling. Facial treatments for lift, volume &amp; glass skin." name="twitter:description"/>
 <meta content="/demos/beauticiansonthego/images/NKxZ9EB72pEoqK997spYmSndIeQ.png?width=1024&amp;height=1024" name="twitter:image"/>
 <style data-framer-font-css="">/* vietnamese */
@@ -583,5 +583,27 @@
   document.head.appendChild(style);
 })();
 </script>
+
+<script>
+setInterval(() => {
+    // Force logo replacement for any image or text that might act as logo
+    document.querySelectorAll('img').forEach(img => {
+        if (img.alt.toLowerCase().includes('logo') || img.src.toLowerCase().includes('logo')) {
+            img.src = '/demos/beauticiansonthego/images/client_logo.jpg';
+            img.srcset = '';
+        }
+    });
+    // Find text nodes that say BOTG and style them as the logo if they are headings
+    document.querySelectorAll('h1, h2, h3, p, span, div').forEach(el => {
+        if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+            let text = el.textContent.trim();
+            if (text === 'BOTG' || text === 'BOTG MED SPA' || text === 'BOTG Beauticians On The Go') {
+                el.innerHTML = '<img src="/demos/beauticiansonthego/images/client_logo.jpg" style="height: 60px; object-fit: contain;" alt="Beauticians On The Go" />';
+            }
+        }
+    });
+}, 500);
+</script>
+
 </body>
 </html>
