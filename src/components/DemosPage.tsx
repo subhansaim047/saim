@@ -17,40 +17,7 @@ interface DemoItem {
 }
 
 const demos: DemoItem[] = [
-  {
-    id: "beauticiansonthego",
-    title: "Beauticians On The Go | Luxury Mobile Day Spa",
-    category: "Mobile Day Spa & Beauty Services",
-    description: "An elite $50k agency-grade flagship redesign featuring filterable service menus, real client pricing, bridal sanctuaries, live appointment drawers, and hospital-grade sanitization showcases.",
-    demoUrl: "/demos/beauticiansonthego/index.html",
-    previewImage: "/demos/beauticiansonthego/images/botg_client_img_1.jpg",
-    tags: ["Mobile Spa", "Bespoke Flagship", "Editorial Luxury", "Direct Booking"],
-    features: [
-      "Custom Filterable Service Menu (Facials, Massages, Hair, Nails)",
-      "VIP Bridal & Bachelorette Suite Integration",
-      "Interactive Appointment & Quote Request Drawer",
-      "Multi-City Coverage Hubs (AZ, CA, NV, TN)"
-    ],
-    badge: "Agency Redesign"
-  },
-  {
-    id: "medspa",
-    title: "MEDSPA — Luxury Skin & Beauty Aesthetics",
-    category: "Medical Spa & Aesthetics",
-    description: "A premium medical spa and beauty clinic template featuring lymphatic drainage, vitamin therapy, coolsculpting, botox, and skin care showcases. Fully responsive with smooth interactions.",
-    demoUrl: "/demos/medspa/index.html",
-    previewImage: "/demos/medspa/preview.png",
-    tags: ["Medical Spa", "Beauty Clinic", "Aesthetics", "Services"],
-    features: [
-      "Extensive Service Pages (Botox, Juvederm, Hydrafacial)",
-      "Premium Skin & Body Care Layouts",
-      "VIP & Membership Booking Integrations",
-      "Modern Typography & Smooth Scrolling"
-    ],
-    badge: "New Demo"
-  },
-
-  {
+      {
     id: "atelier-noir",
     title: "ATELIER NOIR — Luxury Interior Architecture & Design",
     category: "Interior Architecture & Luxury Living",
