@@ -9,12 +9,15 @@
   function d(s) { return s; }
   
   var TEXT_MAP = [
-    [d("Cape Verde's Premiere Medical Spa"), "Phoenix, AZ Mobile Beauty Services"],
-    [d("CAPE VERDE'S PREMIERE MEDICAL SPA"), "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
-    [d("Cape Verde"), "Phoenix, AZ"],
-    [d("CAPE VERDE"), "PHOENIX, AZ"],
+    [d("Cape Verde's Premiere Medical Spa"), "Beauticians On The Go"],
+    [d("CAPE VERDE'S PREMIERE MEDICAL SPA"), "BEAUTICIANS ON THE GO"],
+    [d("PHOENIX, AZ MOBILE BEAUTY SERVICES"), "BEAUTICIANS ON THE GO"],
+    [d("Cape Verde"), "Arizona, Napa, Vegas and Nashville"],
+    [d("CAPE VERDE"), "ARIZONA, NAPA, VEGAS AND NASHVILLE"],
     ["You deserve the very best.", "Where Beauty Never Ends."],
     ["You deserve the very best", "Where Beauty Never Ends"],
+    ["Where Beauty Never Ends.", "Welcome,\nTo A Full Beauty On The Go Experience.\nWhere Beauty Never Ends."],
+    ["Where Beauty Never Ends", "Welcome,\nTo A Full Beauty On The Go Experience.\nWhere Beauty Never Ends."],
     [d("Luxe Med Spa"), "Beauticians On The Go"],
     [d("Luxe Medical Spa"), "Beauticians On The Go"],
     [d("LUXE MED SPA"), "BEAUTICIANS ON THE GO"],
@@ -26,7 +29,7 @@
     ["415-434-4567", "(602) 803-2827"],
     ["306 Redding St", "2390 E Camelback Rd, Ste 130"],
     ["306 Redding", "2390 E Camelback Rd, Ste 130"],
-    [d("Filmont"), "Arizona / Napa / Vegas / Nashville"],
+    [d("Filmont"), "Arizona, Napa, Vegas and Nashville"],
     ["Book a free consultation", "Book Your Mobile Appointment"],
     ["Ready For The Experience?", "Ready For A Royal Beauty Experience?"],
     ["PURCHASE NOW", "GET A QUOTE"],
@@ -50,9 +53,6 @@
     ["Barb A.", "Kristen H."],
     ["Alyssa S.", "Natalie B."],
     ["Hayley R.", "Rebecca B."],
-    ["The attention to detail and the friendly staff make every visit memorable.", "I hired these amazing women for my bachelorette party and they did such a great job giving us all our mani/pedi and they were fun to have around! Saira also did my makeup and hair for my wedding!"],
-    ["I've been a member for over a year, and it's the best investment I've made.", "I love these ladies! Prompt, professional and sweet. From haircuts to color to makeup, Saira always listens to what I want. The makeup looked perfect and lasted all day/night!"],
-    ["A slice of paradise in the heart of the city.", "My mom has dementia and severe back pain, but her hair has to be done. Saira handled her sensitivities with such care and made her look stunning. Surpassed all expectations!"],
     ["Dr. Jane Doe", "Carla Olivares"],
     ["Jane Doe", "Carla Olivares"],
     ["Founder & Medical Director", "President & Founder (25+ Yrs Exp)"],
@@ -69,16 +69,18 @@
   ];
 
   var CONTAINER_MAP = [
-    ["CAPE VERDE", "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
-    ["PREMIERE MEDICAL", "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
-    ["Cape Verde's", "Phoenix, AZ Mobile Beauty Services"],
-    ["You deserve the very best", "Where Beauty Never Ends."],
+    ["CAPE VERDE", "BEAUTICIANS ON THE GO"],
+    ["PREMIERE MEDICAL", "BEAUTICIANS ON THE GO"],
+    ["PHOENIX, AZ", "BEAUTICIANS ON THE GO"],
+    ["Cape Verde's", "Beauticians On The Go"],
+    ["Where Beauty Never Ends", "Welcome,\nTo A Full Beauty On The Go Experience.\nWhere Beauty Never Ends."],
+    ["You deserve the very best", "Welcome,\nTo A Full Beauty On The Go Experience.\nWhere Beauty Never Ends."],
     ["Barb A.", "Kristen H."],
     ["Alyssa S.", "Natalie B."],
     ["Hayley R.", "Rebecca B."],
-    ["Allergan", "25+ Yrs"],
-    ["TOP", "EXCELLENCE"],
-    ["250", "WOMAN OWNED"]
+    ["Allergan", "25+ Years in Business"],
+    ["TOP", "Follow on Instagram"],
+    ["250", "@beauticiansonthego"]
   ];
 
   function patchNode(node) {
@@ -115,7 +117,7 @@
       patchNode(document.body);
     }
     if (document.title && (document.title.indexOf('Luxe') !== -1 || document.title.indexOf('Med') !== -1)) {
-      document.title = 'Beauticians On The Go Mobile Spa & Beauty Services | Phoenix, AZ';
+      document.title = 'Beauticians On The Go | Where Beauty Never Ends';
     }
   }
 
@@ -146,6 +148,7 @@
   }
 })();
 </script>
+
 
 
 
