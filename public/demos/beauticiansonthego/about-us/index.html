@@ -8,9 +8,8 @@
 (function() {
   function d(s) { return s; }
   
-  var TEXT_REPLACEMENTS = [
+  var TEXT_MAP = [
     [d("Cape Verde's Premiere Medical Spa"), "Phoenix, AZ Mobile Beauty Services"],
-    [d("CAPE VERDE'S PREMIERE MEDICAL SPA"), "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
     [d("CAPE VERDE'S PREMIERE MEDICAL SPA"), "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
     [d("Cape Verde"), "Phoenix, AZ"],
     [d("CAPE VERDE"), "PHOENIX, AZ"],
@@ -51,6 +50,9 @@
     ["Barb A.", "Kristen H."],
     ["Alyssa S.", "Natalie B."],
     ["Hayley R.", "Rebecca B."],
+    ["The attention to detail and the friendly staff make every visit memorable.", "I hired these amazing women for my bachelorette party and they did such a great job giving us all our mani/pedi and they were fun to have around! Saira also did my makeup and hair for my wedding!"],
+    ["I've been a member for over a year, and it's the best investment I've made.", "I love these ladies! Prompt, professional and sweet. From haircuts to color to makeup, Saira always listens to what I want. The makeup looked perfect and lasted all day/night!"],
+    ["A slice of paradise in the heart of the city.", "My mom has dementia and severe back pain, but her hair has to be done. Saira handled her sensitivities with such care and made her look stunning. Surpassed all expectations!"],
     ["Dr. Jane Doe", "Carla Olivares"],
     ["Jane Doe", "Carla Olivares"],
     ["Founder & Medical Director", "President & Founder (25+ Yrs Exp)"],
@@ -66,11 +68,14 @@
     ["What Payment Do You Accept?", "Do you offer group spa parties and bachelorette events?"]
   ];
 
-  var CONTAINER_REPLACEMENTS = [
+  var CONTAINER_MAP = [
     ["CAPE VERDE", "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
     ["PREMIERE MEDICAL", "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
     ["Cape Verde's", "Phoenix, AZ Mobile Beauty Services"],
     ["You deserve the very best", "Where Beauty Never Ends."],
+    ["Barb A.", "Kristen H."],
+    ["Alyssa S.", "Natalie B."],
+    ["Hayley R.", "Rebecca B."],
     ["Allergan", "25+ Yrs"],
     ["TOP", "EXCELLENCE"],
     ["250", "WOMAN OWNED"]
@@ -81,20 +86,20 @@
       var v = node.nodeValue;
       if (!v || !v.trim()) return;
       var changed = false;
-      for (var i = 0; i < TEXT_REPLACEMENTS.length; i++) {
-        if (v.indexOf(TEXT_REPLACEMENTS[i][0]) !== -1) {
-          v = v.split(TEXT_REPLACEMENTS[i][0]).join(TEXT_REPLACEMENTS[i][1]);
+      for (var i = 0; i < TEXT_MAP.length; i++) {
+        if (v.indexOf(TEXT_MAP[i][0]) !== -1) {
+          v = v.split(TEXT_MAP[i][0]).join(TEXT_MAP[i][1]);
           changed = true;
         }
       }
       if (changed) node.nodeValue = v;
     } else if (node.nodeType === 1 && node.tagName !== "SCRIPT" && node.tagName !== "STYLE") {
       var tag = node.tagName.toLowerCase();
-      if (tag === 'h1' || tag === 'h2' || tag === 'h3' || tag === 'h4' || tag === 'h5' || tag === 'h6' || tag === 'p' || tag === 'a') {
+      if (tag === 'h1' || tag === 'h2' || tag === 'h3' || tag === 'h4' || tag === 'h5' || tag === 'h6' || tag === 'p' || tag === 'a' || tag === 'span') {
         var it = node.innerText || '';
-        for (var c = 0; c < CONTAINER_REPLACEMENTS.length; c++) {
-          if (it.indexOf(CONTAINER_REPLACEMENTS[c][0]) !== -1) {
-            node.innerText = CONTAINER_REPLACEMENTS[c][1];
+        for (var c = 0; c < CONTAINER_MAP.length; c++) {
+          if (it.indexOf(CONTAINER_MAP[c][0]) !== -1) {
+            node.innerText = CONTAINER_MAP[c][1];
             return;
           }
         }
@@ -141,6 +146,7 @@
   }
 })();
 </script>
+
 
 
 
