@@ -18,23 +18,6 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
-    id: "beauticiansonthego",
-    title: "Beauticians On The Go | Mobile Day Spa",
-    category: "Mobile Beauty Services",
-    description: "A luxury mobile day spa and beauty salon website pitch featuring onsite massages, manicures, and bridal hair and makeup services. 100% custom-branded for Beauticians On The Go.",
-    demoUrl: "/demos/beauticiansonthego/index.html",
-    previewImage: "/demos/medspa/preview.png",
-    tags: ["Mobile Spa", "VIP Pitch", "Aesthetics", "Services"],
-    features: [
-      "Custom Brand Integration (Beauticians On The Go)",
-      "Direct Booking Link integration (Book Online)",
-      "Real Client Testimonial Showcases",
-      "Mobile-First Premium Lookbook"
-    ],
-    badge: "Exclusive VIP Pitch"
-  },
-
-  {
     id: "medspa",
     title: "MEDSPA — Luxury Skin & Beauty Aesthetics",
     category: "Medical Spa & Aesthetics",
