@@ -4,52 +4,61 @@
 <!-- Published May 29, 2026, 12:22 PM UTC -->
 <html data-redirect-timezone="1" lang="en">
 <head>
-<script>
+<script id="botg-override">
 (function() {
+  // Encoded to survive HTML text replacement passes
+  function d(s) { return s; } // identity
   var R = [
-    ["Phoenix, AZ Mobile Beauty Services", "Phoenix, AZ Mobile Beauty Services"],
-    ["PHOENIX, AZ MOBILE BEAUTY SERVICES", "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
-    ["Phoenix, AZ", "Phoenix, AZ"],
+    [d("Cape Verde's Premiere Medical Spa"), "Phoenix, AZ Mobile Beauty Services"],
+    [d("CAPE VERDE'S PREMIERE MEDICAL SPA"), "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
+    [d("CAPE VERDE'S PREMIERE MEDICAL SPA"), "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
+    [d("Cape Verde"), "Phoenix, AZ"],
     ["You deserve the very best.", "Where Beauty Never Ends."],
     ["You deserve the very best", "Where Beauty Never Ends"],
-    ["Luxe Med Spa", "Beauticians On The Go"],
-    ["Luxe Medical Spa", "Beauticians On The Go"],
-    ["LUXE MED SPA", "BEAUTICIANS ON THE GO"],
+    [d("Luxe Med Spa"), "Beauticians On The Go"],
+    [d("Luxe Medical Spa"), "Beauticians On The Go"],
+    [d("LUXE MED SPA"), "BEAUTICIANS ON THE GO"],
     ["1-415-434- 4567", "+1 (602) 456-7890"],
     ["1-415-434-4567", "+1 (602) 456-7890"],
     ["306 Redding St", "2390 E Camelback Rd"],
-    ["Filmont", "Arizona / Napa / Vegas / Nashville"],
+    [d("Filmont"), "Arizona / Napa / Vegas / Nashville"],
     ["Book a free consultation", "Book Your Mobile Appointment"],
-    ["Ready For The Experience?", "Ready For A Royal Beauty Experience?"],
-    ["EXPLORE SERVICES", "BOOK APPOINTMENT"]
+    ["Ready For The Experience?", "Ready For A Royal Beauty Experience?"]
   ];
   function patchNode(node) {
     if (node.nodeType === 3) {
       var v = node.nodeValue;
-      if (!v) return;
-      for (var i=0; i<R.length; i++) { if (v.indexOf(R[i][0]) !== -1) { v = v.split(R[i][0]).join(R[i][1]); } }
-      if (v !== node.nodeValue) node.nodeValue = v;
+      if (!v || !v.trim()) return;
+      var changed = false;
+      for (var i=0; i<R.length; i++) {
+        if (v.indexOf(R[i][0]) !== -1) { v = v.split(R[i][0]).join(R[i][1]); changed = true; }
+      }
+      if (changed) node.nodeValue = v;
     } else if (node.nodeType === 1 && node.tagName !== "SCRIPT" && node.tagName !== "STYLE") {
       for (var j=0; j<node.childNodes.length; j++) { patchNode(node.childNodes[j]); }
     }
   }
   function patchAll() { if (document.body) patchNode(document.body); }
-  document.addEventListener("DOMContentLoaded", function() {
-    patchAll();
-    var obs = new MutationObserver(function(muts) {
-      muts.forEach(function(m) {
-        m.addedNodes.forEach(function(n) { patchNode(n); });
-        if (m.type === "characterData") patchNode(m.target);
-      });
+  var obs = new MutationObserver(function(muts) {
+    muts.forEach(function(m) {
+      m.addedNodes.forEach(function(n) { patchNode(n); });
+      if (m.type === "characterData") patchNode(m.target);
     });
-    obs.observe(document.body, {childList:true, subtree:true, characterData:true});
-    setTimeout(patchAll, 300);
-    setTimeout(patchAll, 1000);
-    setTimeout(patchAll, 2500);
-    setTimeout(patchAll, 5000);
   });
+  function init() {
+    patchAll();
+    obs.observe(document.body, {childList:true, subtree:true, characterData:true});
+    setTimeout(patchAll, 200);
+    setTimeout(patchAll, 800);
+    setTimeout(patchAll, 2000);
+    setTimeout(patchAll, 4000);
+    setTimeout(patchAll, 8000);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
 })();
 </script>
+
 <script id="medspa-route-guard">
 (function() {
   document.addEventListener('click', function(e) {
