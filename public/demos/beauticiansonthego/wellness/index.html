@@ -6,9 +6,9 @@
 <head>
 <script id="botg-override">
 (function() {
-  // Encoded to survive HTML text replacement passes
-  function d(s) { return s; } // identity
-  var R = [
+  function d(s) { return s; }
+  
+  var TEXT_REPLACEMENTS = [
     [d("Cape Verde's Premiere Medical Spa"), "Phoenix, AZ Mobile Beauty Services"],
     [d("CAPE VERDE'S PREMIERE MEDICAL SPA"), "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
     [d("CAPE VERDE'S PREMIERE MEDICAL SPA"), "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
@@ -25,39 +25,83 @@
     ["Book a free consultation", "Book Your Mobile Appointment"],
     ["Ready For The Experience?", "Ready For A Royal Beauty Experience?"]
   ];
+
+  var CONTAINER_REPLACEMENTS = [
+    ["CAPE VERDE", "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
+    ["PREMIERE MEDICAL", "PHOENIX, AZ MOBILE BEAUTY SERVICES"],
+    ["Cape Verde's", "Phoenix, AZ Mobile Beauty Services"],
+    ["You deserve the very best", "Where Beauty Never Ends."]
+  ];
+
   function patchNode(node) {
     if (node.nodeType === 3) {
       var v = node.nodeValue;
       if (!v || !v.trim()) return;
       var changed = false;
-      for (var i=0; i<R.length; i++) {
-        if (v.indexOf(R[i][0]) !== -1) { v = v.split(R[i][0]).join(R[i][1]); changed = true; }
+      for (var i = 0; i < TEXT_REPLACEMENTS.length; i++) {
+        if (v.indexOf(TEXT_REPLACEMENTS[i][0]) !== -1) {
+          v = v.split(TEXT_REPLACEMENTS[i][0]).join(TEXT_REPLACEMENTS[i][1]);
+          changed = true;
+        }
       }
       if (changed) node.nodeValue = v;
     } else if (node.nodeType === 1 && node.tagName !== "SCRIPT" && node.tagName !== "STYLE") {
-      for (var j=0; j<node.childNodes.length; j++) { patchNode(node.childNodes[j]); }
+      // Check if this is a leaf-level heading/paragraph container containing character-split spans
+      var tag = node.tagName.toLowerCase();
+      if (tag === 'h1' || tag === 'h2' || tag === 'h3' || tag === 'h4' || tag === 'h5' || tag === 'h6') {
+        var it = node.innerText || '';
+        for (var c = 0; c < CONTAINER_REPLACEMENTS.length; c++) {
+          if (it.indexOf(CONTAINER_REPLACEMENTS[c][0]) !== -1) {
+            node.innerText = CONTAINER_REPLACEMENTS[c][1];
+            return;
+          }
+        }
+      }
+      
+      for (var j = 0; j < node.childNodes.length; j++) {
+        patchNode(node.childNodes[j]);
+      }
     }
   }
-  function patchAll() { if (document.body) patchNode(document.body); }
+
+  function patchAll() {
+    if (document.body) {
+      patchNode(document.body);
+    }
+    // Also patch title
+    if (document.title && document.title.indexOf('Luxe') !== -1) {
+      document.title = 'Beauticians On The Go | Mobile Day Spa';
+    }
+  }
+
   var obs = new MutationObserver(function(muts) {
     muts.forEach(function(m) {
       m.addedNodes.forEach(function(n) { patchNode(n); });
       if (m.type === "characterData") patchNode(m.target);
     });
   });
+
   function init() {
     patchAll();
-    obs.observe(document.body, {childList:true, subtree:true, characterData:true});
-    setTimeout(patchAll, 200);
+    if (document.body) {
+      obs.observe(document.body, { childList: true, subtree: true, characterData: true });
+    }
+    setTimeout(patchAll, 100);
+    setTimeout(patchAll, 300);
     setTimeout(patchAll, 800);
-    setTimeout(patchAll, 2000);
-    setTimeout(patchAll, 4000);
-    setTimeout(patchAll, 8000);
+    setTimeout(patchAll, 1500);
+    setTimeout(patchAll, 3000);
+    setTimeout(patchAll, 6000);
   }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
-  else init();
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
 </script>
+
 
 <script id="medspa-route-guard">
 (function() {
