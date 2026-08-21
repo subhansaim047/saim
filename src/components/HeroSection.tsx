@@ -247,16 +247,13 @@ export const HeroSection = () => {
             className="hidden lg:flex flex-col items-end justify-center w-full lg:w-[50%] xl:w-[52%] h-full max-h-[75vh] flex-shrink-0"
           >
             <div className="relative w-full h-full overflow-hidden">
-              <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#080808] via-[#080808]/60 to-transparent z-10 pointer-events-none" />
-              <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#080808] via-[#080808]/70 to-transparent z-10 pointer-events-none" />
-              <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#080808] via-[#080808]/50 to-transparent z-10 pointer-events-none" />
-              <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-[#080808] via-[#080808]/60 to-transparent z-10 pointer-events-none" />
               <img
                 src="/hero-dev.png"
                 alt="Saim Dev — Full Stack Developer Portfolio Preview"
                 className="w-full h-full object-cover object-center"
+                style={{ imageRendering: "high-quality" }}
                 loading="eager"
-                decoding="async"
+                decoding="sync"
               />
             </div>
           </motion.div>
@@ -265,5 +262,7 @@ export const HeroSection = () => {
     </section>
   );
 };
+
+
 
 

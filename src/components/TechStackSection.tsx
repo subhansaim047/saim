@@ -13,21 +13,14 @@ export const TechStackSection = () => (
   <section className="bg-black text-[#E1E0CC] px-6 sm:px-12 md:px-20 lg:px-28 py-24 md:py-32 overflow-hidden">
     <div className="max-w-7xl mx-auto">
 
-      {/* Heading */}
+      {/* Heading - same font as My Process */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        style={{
-          fontFamily: "'Instrument Serif', serif",
-          fontSize: "clamp(2.2rem, 4vw, 3.6rem)",
-          fontWeight: 700,
-          lineHeight: 1.1,
-          color: "#E1E0CC",
-          maxWidth: "18ch",
-          marginBottom: "3.5rem",
-        }}
+        className="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-white leading-tight"
+        style={{ maxWidth: "18ch", marginBottom: "3.5rem" }}
       >
         Tools and technologies we love to use
       </motion.h2>
@@ -62,10 +55,8 @@ export const TechStackSection = () => (
             </div>
           </motion.div>
         ))}
-        {/* Bottom border line */}
         <div className="border-t border-white/10" />
       </div>
-
     </div>
   </section>
 );
