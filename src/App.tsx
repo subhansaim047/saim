@@ -37,7 +37,6 @@ const HomePage = () => (
     <BenefitsSection />
     <ProcessSection />
     <PerformanceSection />
-    <BackendSection />
     <TechStackSection />
     <PricingSection />
     <FaqSection />
@@ -65,4 +64,6 @@ export function App() {
 }
 
 export default App;
+
+
 

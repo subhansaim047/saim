@@ -246,15 +246,19 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="hidden lg:flex flex-col items-end justify-center w-full lg:w-[50%] xl:w-[52%] h-full max-h-[75vh] flex-shrink-0"
           >
-            <div className="relative w-full h-full overflow-hidden">
-              <img
-                src="/hero-dev.png"
-                alt="Saim Dev — Full Stack Developer Portfolio Preview"
-                className="w-full h-full object-contain object-right"
-                style={{ imageRendering: "high-quality" }}
-                loading="eager"
-                decoding="sync"
-              />
+            <div className="relative w-full h-full overflow-hidden flex items-center justify-end">
+              <picture className="w-full h-full flex items-center justify-end">
+                <source srcSet="/hero-dev.webp" type="image/webp" />
+                <img
+                  src="/hero-dev.webp"
+                  alt="Saim Dev — Full Stack Developer Portfolio Preview"
+                  className="w-full h-full object-contain object-right"
+                  style={{ imageRendering: "high-quality" }}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </motion.div>
         </div>
@@ -262,6 +266,7 @@ export const HeroSection = () => {
     </section>
   );
 };
+
 
 
 
