@@ -8,7 +8,6 @@ const navItems = [
   { label: "Our story", href: "#our-story" },
   { label: "Services", href: "/services" },
   { label: "Tech Stack", href: "/technologies" },
-  { label: "Case Studies", href: "/case-studies" },
   { label: "Demo Sites", href: "/demos" },
   { label: "Blogs", href: "/blogs" },
   { label: "Benefits", href: "#benefits" },
@@ -266,6 +265,7 @@ export const HeroSection = () => {
     </section>
   );
 };
+
 
 
 

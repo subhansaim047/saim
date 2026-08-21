@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+﻿import { Helmet } from "react-helmet-async";
+import { useNavigate, Link } from "react-router-dom";
 import React, { useState } from "react";
 import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft } from "lucide-react";
 import { FooterSection } from "./FooterSection";
@@ -19,7 +19,7 @@ interface DemoItem {
 const demos: DemoItem[] = [
       {
     id: "atelier-noir",
-    title: "ATELIER NOIR — Luxury Interior Architecture & Design",
+    title: "ATELIER NOIR â€” Luxury Interior Architecture & Design",
     category: "Interior Architecture & Luxury Living",
     description: "A minimalist, editorial interior design and architecture studio showcase featuring high-end residential case studies, filterable project portfolios, and architectural project inquiry flows.",
     demoUrl: "/demos/atelier-noir/index.html",
@@ -35,7 +35,7 @@ const demos: DemoItem[] = [
   },
   {
     id: "serenia",
-    title: "SERENIA — Luxury Wellness & Beauty Spa",
+    title: "SERENIA â€” Luxury Wellness & Beauty Spa",
     category: "Wellness Sanctuary & Day Spa",
     description: "A tranquil, nature-inspired luxury wellness and day spa website featuring full appointment booking, 8 signature therapy showcases, organic cosmetics shop, treatment pricing, and sanctuary lookbook.",
     demoUrl: "/demos/serenia/index.html",
@@ -51,7 +51,7 @@ const demos: DemoItem[] = [
   },
   {
     id: "valeria",
-    title: "VALÈRIA — Luxury Beauty Salon & Cosmetics",
+    title: "VALÃˆRIA â€” Luxury Beauty Salon & Cosmetics",
     category: "Beauty Salon & High-End Aesthetics",
     description: "An ultra-luxurious, editorial aesthetic beauty salon template featuring animated hero marquees, comprehensive multi-page service menus, curated lookbook gallery, and interactive booking inquiry.",
     demoUrl: "/demos/valeria/index.html",
@@ -67,15 +67,15 @@ const demos: DemoItem[] = [
   },
   {
     id: "studio-dbrickell",
-    title: "Studio-D Brickell — Luxury Beauty Salon & Spa",
+    title: "Studio-D Brickell â€” Luxury Beauty Salon & Spa",
     category: "Beauty Salon & Miami Luxury Services",
-    description: "A 100% pixel-perfect 1:1 clone of the premier Studio-D Brickell salon in Miami, FL. Features top announcement discounts, luxury service showcases, Kérastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
+    description: "A 100% pixel-perfect 1:1 clone of the premier Studio-D Brickell salon in Miami, FL. Features top announcement discounts, luxury service showcases, KÃ©rastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
     demoUrl: "/demos/studio-dbrickell/index.html",
     previewImage: "/demos/studio-dbrickell/assets/images/branding/og-image.jpg",
     tags: ["1:1 Pixel Clone", "Beauty Salon", "Luxury Spa", "Mobile First"],
     features: [
       "100% 1:1 Pixel-Perfect Visual Fidelity",
-      "Kérastase & Shu Uemura Luxury Spotlight",
+      "KÃ©rastase & Shu Uemura Luxury Spotlight",
       "Interactive Online Booking & Mangomint Integration",
       "Mobile Sticky Bar & Responsive Fluid Grids"
     ],
@@ -83,7 +83,7 @@ const demos: DemoItem[] = [
   },
   {
     id: "liana",
-    title: "LIANA — Hair & Beauty Salon Native Template",
+    title: "LIANA â€” Hair & Beauty Salon Native Template",
     category: "Beauty Salon & Online Booking",
     description: "A pixel-perfect, ultra-fast native recreation of the luxury LIANA Hair & Beauty Salon template. Features online booking, signature treatments menu, master stylists showcase, and responsive mobile-first design.",
     demoUrl: "/demos/liana/index.html",
@@ -99,7 +99,7 @@ const demos: DemoItem[] = [
   },
   {
     id: "woshico",
-    title: "Woshico — Auto Detailing & Car Wash Premium Template",
+    title: "Woshico â€” Auto Detailing & Car Wash Premium Template",
     category: "Auto Services & E-Commerce",
     description: "A 100% pixel-perfect, high-performance interactive website featuring smooth 60fps micro-animations, hero video transcode, and responsive pricing grids.",
     demoUrl: "/demos/woshico/index.html",
@@ -123,13 +123,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
   const [selectedDemo, setSelectedDemo] = useState<DemoItem | null>(null);
   const [viewportMode, setViewportMode] = useState<"desktop" | "tablet" | "mobile">("desktop");
 
-  const handleBack = () => {
-    if (onBack) {
-      navigate('/');
-    } else {
-      window.location.hash = "";
-    }
-  };
+  const handleBack = () => { if (onBack) { onBack(); } else { navigate("/"); } };
 
   return (
     <main className="min-h-screen bg-black text-[#E1E0CC] selection:bg-primary selection:text-black flex flex-col justify-between">
@@ -149,20 +143,15 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
       {/* Header Navigation Bar */}
       <nav className="sticky top-0 z-40 backdrop-blur-md bg-black/80 border-b border-white/10 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <button onClick={handleBack} className="flex items-center gap-3 group cursor-pointer">
+          <Link to="/" className="flex items-center gap-3 group cursor-pointer">
             <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors">
               <img src="/saim-dev-logo.png" alt="Saim Dev Logo" className="w-full h-full object-cover" />
             </div>
             <span className="font-semibold text-lg text-white tracking-tight">Saim Dev</span>
-          </button>
+          </Link>
 
           <div className="flex items-center gap-6">
-            <button
-              onClick={handleBack}
-              className="text-sm text-[#E1E0CC]/70 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer font-medium"
-            >
-              <ArrowLeft className="w-4 h-4" /> Back to Home
-            </button>
+            <Link to="/" className="text-sm text-[#E1E0CC]/70 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer font-medium"><ArrowLeft className="w-4 h-4" /> Back to Home</Link>
             <a
               href="https://wa.me/12498984111"
               target="_blank"
@@ -332,7 +321,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                 onClick={() => setSelectedDemo(null)}
                 className="bg-white/10 hover:bg-white/20 text-white p-2 rounded-xl transition-colors cursor-pointer"
               >
-                ✕
+                âœ•
               </button>
             </div>
           </div>
@@ -355,3 +344,4 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+

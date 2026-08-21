@@ -9,6 +9,7 @@ import { TechStackSection } from "./components/TechStackSection";
 import { PricingSection } from "./components/PricingSection";
 import { FaqSection } from "./components/FaqSection";
 import { CtaSection } from "./components/CtaSection";
+import { ContactSection } from "./components/ContactSection";
 import { FooterSection } from "./components/FooterSection";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
 import { TermsOfService } from "./components/TermsOfService";
@@ -41,6 +42,7 @@ const HomePage = () => (
     <PricingSection />
     <FaqSection />
     <CtaSection />
+    <ContactSection />
     <FooterSection />
   </main>
 );
@@ -52,7 +54,6 @@ export function App() {
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/technologies" element={<TechnologiesPage />} />
-      <Route path="/case-studies" element={<CaseStudiesPage />} />
       <Route path="/demos" element={<DemosPage />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsOfService />} />
@@ -64,6 +65,8 @@ export function App() {
 }
 
 export default App;
+
+
 
 
 

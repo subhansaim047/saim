@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 
 export const FooterSection = () => {
   return (
@@ -20,7 +20,6 @@ export const FooterSection = () => {
             <a href="#our-story">Our Story</a>
             <Link to="/services">Services</Link>
             <Link to="/technologies">Tech Stack</Link>
-            <Link to="/case-studies">Case Studies</Link>
             <Link to="/demos">Demo Sites</Link>
           </nav>
 
@@ -30,7 +29,7 @@ export const FooterSection = () => {
             <a href="#pricing">Pricing Plans</a>
             <a href="#faq">FAQ</a>
             <Link to="/blogs">Blogs</Link>
-            <Link to="/contact">Contact Page</Link>
+            <a href="#contact">Contact</a>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Contact navigation">
@@ -59,7 +58,7 @@ export const FooterSection = () => {
 
         {/* LEGAL LINE */}
         <div className="site-footer__legal">
-          <p>© 2026 Saim Dev. All rights reserved.</p>
+          <p>Â© 2026 Saim Dev. All rights reserved.</p>
           <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
           <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
         </div>
@@ -67,3 +66,4 @@ export const FooterSection = () => {
     </footer>
   );
 };
+
