@@ -1,4 +1,4 @@
-{
+﻿{
   "headers": [
     {
       "source": "/(.*)",
@@ -58,7 +58,11 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets|demos|saim-dev-logo|favicon|robots\\.txt|sitemap\\.xml|icons|llms\\.txt).*)",
+      "source": "/demos/:demo*/:path*",
+      "destination": "/demos/:demo*/:path*"
+    },
+    {
+      "source": "/((?!assets|saim-dev-logo|favicon|robots\\.txt|sitemap\\.xml|icons|llms\\.txt|hero-dev|section-).*)",
       "destination": "/index.html"
     }
   ]
