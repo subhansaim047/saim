@@ -250,7 +250,7 @@ export const HeroSection = () => {
               <img
                 src="/hero-dev.png"
                 alt="Saim Dev — Full Stack Developer Portfolio Preview"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-contain object-right"
                 style={{ imageRendering: "high-quality" }}
                 loading="eager"
                 decoding="sync"
@@ -262,6 +262,7 @@ export const HeroSection = () => {
     </section>
   );
 };
+
 
 
 
