@@ -50,7 +50,7 @@ export const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative w-full bg-black text-[#E1E0CC] px-4 sm:px-8 md:px-12 lg:px-20 py-24 sm:py-32 overflow-hidden border-t border-white/10"
+      className="relative w-full bg-black text-[#E1E0CC] px-4 sm:px-8 md:px-12 lg:px-20 py-24 sm:py-32 overflow-hidden"
     >
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[140px] pointer-events-none z-0" />
@@ -63,7 +63,7 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-primary text-xs font-mono tracking-widest uppercase mb-4"
+            className="inline-flex items-center gap-2 text-primary text-xs font-mono tracking-widest uppercase mb-3"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Direct WhatsApp Inquiry</span>
@@ -284,3 +284,4 @@ export const ContactSection = () => {
     </section>
   );
 };
+
