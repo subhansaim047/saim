@@ -1,4 +1,5 @@
 ﻿{
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/(.*)",
@@ -58,11 +59,15 @@
   ],
   "rewrites": [
     {
-      "source": "/demos/:demo*/:path*",
-      "destination": "/demos/:demo*/:path*"
+      "source": "/demos",
+      "destination": "/index.html"
     },
     {
-      "source": "/((?!assets|saim-dev-logo|favicon|robots\\.txt|sitemap\\.xml|icons|llms\\.txt|hero-dev|section-).*)",
+      "source": "/demos/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/((?!assets|demos|saim-dev-logo|favicon|robots\\.txt|sitemap\\.xml|icons|llms\\.txt|hero-dev|section-).*)",
       "destination": "/index.html"
     }
   ]
