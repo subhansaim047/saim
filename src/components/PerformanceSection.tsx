@@ -1,66 +1,54 @@
 ﻿import { motion } from "framer-motion";
 
 export const PerformanceSection = () => (
-  <section className="bg-black text-[#E1E0CC] px-4 sm:px-10 md:px-16 lg:px-24 py-20 md:py-28 overflow-hidden">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section className="bg-black text-[#E1E0CC] px-6 sm:px-12 md:px-20 lg:px-28 py-24 md:py-32 overflow-hidden">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-      {/* LEFT: Text */}
+      {/* LEFT: Big heading only */}
       <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="flex flex-col gap-6"
       >
         <h2
           style={{
             fontFamily: "'Instrument Serif', serif",
-            fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
+            fontSize: "clamp(2.2rem, 4vw, 3.6rem)",
             fontWeight: 700,
             lineHeight: 1.1,
             color: "#E1E0CC",
+            maxWidth: "12ch",
           }}
         >
-          Performance as a<br />key to success
+          Performance as a key to success
         </h2>
-        <p className="text-[#E1E0CC]/60 text-sm sm:text-base leading-relaxed max-w-md">
-          Good performance is crucial for the success of your website. Fast loading times increase
-          session durations, boost conversion rates and improve search engine ranking. Optimized
-          code, compressed data and the right server configuration provide you with a decisive
-          competitive edge in the digital world.
-        </p>
-        <div className="flex flex-col gap-3 mt-2">
-          {[
-            { label: "Page Speed", value: "99/100" },
-            { label: "Core Web Vitals", value: "All Green" },
-            { label: "SEO Score", value: "100/100" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex items-center gap-4">
-              <div className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent" />
-              <span className="text-xs font-mono text-[#E1E0CC]/40 uppercase tracking-widest">{stat.label}</span>
-              <span className="text-sm font-bold text-primary">{stat.value}</span>
-            </div>
-          ))}
-        </div>
       </motion.div>
 
-      {/* RIGHT: Screenshot */}
+      {/* RIGHT: Description + Chart visual */}
       <motion.div
-        initial={{ opacity: 0, x: 30 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-        className="relative w-full"
+        transition={{ duration: 0.7, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+        className="flex flex-col gap-8"
       >
-        <div className="relative rounded-xl overflow-hidden">
-          <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+        <p style={{ color: "rgba(225,224,204,0.65)", fontSize: "clamp(0.88rem, 1.1vw, 1.05rem)", lineHeight: 1.75 }}>
+          Good performance is crucial for the success of your website. Fast loading times
+          increase session durations, boost conversion rates and improve search engine
+          ranking. Optimized code, compressed data and the right server configuration
+          provide you with a decisive competitive edge in the digital world.
+        </p>
+
+        {/* Chart image — mix-blend-mode:screen removes the dark bg */}
+        <div className="relative w-full overflow-hidden" style={{ borderRadius: "0.5rem" }}>
+          <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
           <img
-            src="/section-performance.png"
-            alt="Performance chart showing Views and Clicks growth"
-            className="w-full h-auto object-cover"
+            src="/section-perf-chart.png"
+            alt="Analytics chart showing Views 3,024 (+47%) and Clicks 1,274 (+53%)"
+            className="w-full h-auto"
+            style={{ mixBlendMode: "screen", opacity: 0.92 }}
             loading="lazy"
             decoding="async"
           />
