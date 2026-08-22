@@ -37,6 +37,71 @@
     
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <style>
+        .home-service-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none !important;
+            color: inherit;
+        }
+        .home-service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(235,87,139,0.18);
+            border-color: #eb578b;
+        }
+        .home-service-card .img-thumb {
+            flex-shrink: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .home-service-card .img-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .home-service-card:hover .img-thumb img {
+            transform: scale(1.1);
+        }
+        .home-service-card .card-info {
+            flex-grow: 1;
+        }
+        .home-service-card .price-badge {
+            background-color: #eb578b;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        .ref-commitment-box {
+            position: relative;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border-left: 5px solid #eb578b;
+        }
+        @media (min-width: 992px) {
+            .ref-commitment-box {
+                margin-left: -50px;
+                z-index: 2;
+            }
+        }
+    </style>
+
 </head>
 
 <body id="bg">
@@ -411,42 +476,79 @@
             </div>
             <!-- WELCOME SECTION END -->
 
-            <!-- ABOUT COMPANY SECTION START -->
+            <!-- SECTION 1 (REFERENCE 1): TRANSFORMING YOUR LOOK START -->
             <div class="section-full p-t100 p-b70 bg-white">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-12 m-b30">
-                            <div class="about-pic-block">
-                                <img src="images/about-pic.jpg" class="radius-bx" alt="Beauticians On The Go Mobile Spa">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12 m-b30">
+                        <div class="col-lg-7 col-md-12 m-b30">
                             <div class="section-head text-left">
-                                <h2><span class="site-text-primary">About</span> Beauticians On The Go</h2>
-                                <div class="wt-separator-outer">
+                                <h2 class="text-uppercase font-weight-700 m-b20">
+                                    Transforming Your Look, <span class="site-text-primary">Boost Your Confidence!</span>
+                                </h2>
+                                <div class="wt-separator-outer m-b20">
                                     <div class="wt-separator style-icon">
-                                        <i class="fa fa-leaf text-black"></i>
+                                        <i class="fa fa-spa text-black"></i>
                                         <span class="separator-left site-bg-primary"></span>
                                         <span class="separator-right site-bg-primary"></span>
-                                    </div>                            
+                                    </div>
                                 </div>
-                                <h4 class="font-weight-600 text-uppercase m-b20">Where Beauty Meets Convenience • 25+ Years Experience</h4>
-                                <p><strong>Beauticians On The Go, PLLC</strong> is an upscale, woman-owned mobile day spa and beauty salon enterprise that brings licensed specialists and professional equipment directly to clients' doors. Founded 17 years ago by Carla Olivares (ASU '16) alongside COO Jose Olivares (MBA '07), we deliver unparalleled convenience and compassionate care from age 4 to 100+.</p>
-                                <p>We cater to private residences, vacation rentals (Airbnb & VRBO), luxury hotels, corporate employee wellness days, wedding venues, hospitals, assisted living, and hospice facilities across Arizona, California, Nevada, and Tennessee.</p>
-                                <ul class="list-check-circle primary m-b30">
-                                    <li>100% Fully Equipped Mobile Setup (treatment tables, products & hospital-grade sanitation)</li>
-                                    <li>State-Licensed Specialists with 5 to 15 Years of Salon & Spa Experience</li>
-                                    <li>Inclusive Care: Bridal Glam, Kids Diva Parties, Corporate Wellness & Senior Care</li>
-                                    <li>Multi-State Hubs: Phoenix, Scottsdale, Sedona, Los Angeles, Las Vegas & Nashville</li>
-                                </ul>
-                                <a href="about-1.html" class="site-button text-uppercase radius-sm font-weight-700 m-r15">Learn More</a>
-                                <a href="contact-1.html" class="site-button-secondry text-uppercase radius-sm font-weight-700">Book Appointment</a>
+                                <p class="font-16 text-muted m-b20" style="line-height: 1.8;">
+                                    Are you ready to welcome your inner beauty and improve your outer radiance? Look no further because you've just discovered your ultimate destination for all things about beauty.<br>
+                                    Welcome to <strong>Beauticians On The Go Mobile Spa & Beauty Services</strong>, a haven where beauty never ends!
+                                </p>
+                                <p class="font-15 text-muted m-b30" style="line-height: 1.8;">
+                                    Beauticians On The Go Mobile Spa & Beauty Services understand that beauty is more than just skin deep; it is also about faith, self-expression, and overall well-being. Our team of dependable and highly talented beauticians and make-up artists are here to guide you through this delightful trip, offering a wide choice of treatments adapted to your specific requirements.
+                                </p>
+                                <div class="m-t20">
+                                    <a href="about-1.html" class="site-button text-uppercase radius-sm font-weight-700 m-r15">Learn More</a>
+                                    <a href="contact-1.html" class="site-button-secondry text-uppercase radius-sm font-weight-700">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-12 m-b30">
+                            <div class="shadow-lg radius-sm overflow-hidden" style="border-radius: 12px;">
+                                <img src="images/transform_look_spa.jpg" alt="Transforming Your Look - Spa Relaxation" class="img-responsive" style="width: 100%; height: auto; object-fit: cover; display: block;">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ABOUT COMPANY SECTION END -->
+            <!-- SECTION 1 END -->
+
+            <!-- SECTION 2 (REFERENCE 2): OUR COMMITMENT TO BEAUTY & WELLNESS START -->
+            <div class="section-full p-t80 p-b80 bg-gray-light">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12 m-b30">
+                            <div class="shadow-lg radius-sm overflow-hidden" style="border-radius: 12px;">
+                                <img src="images/commitment_bridal_makeup.jpg" alt="Our Commitment to Beauty & Wellness" class="img-responsive" style="width: 100%; height: auto; object-fit: cover; display: block;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 m-b30">
+                            <div class="ref-commitment-box">
+                                <h3 class="text-uppercase font-weight-700 m-b15" style="color: #222;">
+                                    Our Commitment to <span class="site-text-primary">Beauty & Wellness</span>
+                                </h3>
+                                <div class="wt-separator-outer m-b20">
+                                    <div class="wt-separator style-icon">
+                                        <i class="fa fa-heart text-black"></i>
+                                        <span class="separator-left site-bg-primary"></span>
+                                        <span class="separator-right site-bg-primary"></span>
+                                    </div>
+                                </div>
+                                <p class="font-15 text-muted m-b15" style="line-height: 1.8;">
+                                    Our attitude is based on the belief that everyone deserves to look and feel their best. We can provide you with a reviving <em>Facial</em>, a calming <em>Massage</em>, dazzling <em>Pedicures and Manicures</em> and fabulous services for <em>Make-up and Hair for brides</em>.
+                                </p>
+                                <p class="font-15 text-muted m-b25" style="line-height: 1.8;">
+                                    Our beauticians are enthusiastic about their work, and their dedication to your beauty and wellness is evident in every treatment they provide.
+                                </p>
+                                <a href="services-1.html" class="site-button text-uppercase radius-sm font-weight-700">Explore All Services <i class="fa fa-arrow-right m-l5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SECTION 2 END -->
 
             <!-- PRICING SECTION START -->
             <div class="section-full p-t100 p-b70 our-pricing-content bg-cover bg-no-repeat" style="background-image:url(images/background/bg-2.jpg);">
@@ -455,12 +557,12 @@
                         <h2><span class="site-text-primary">Featured</span> Treatment Menu</h2>
                         <div class="wt-separator-outer">
                             <div class="wt-separator style-icon">
-                                <i class="fa fa-leaf text-black"></i>
+                                <i class="fa fa-spa text-black"></i>
                                 <span class="separator-left site-bg-primary"></span>
                                 <span class="separator-right site-bg-primary"></span>
                             </div>                            
                         </div>
-                        <p>Upscale on-location mobile treatments. State-licensed specialists bring tables, equipment, and salon-grade setups directly to your door.</p>
+                        <p>Upscale on-location mobile treatments. Click any service to view full details and book your on-site appointment.</p>
                     </div>
 
                     <div class="section-content">
@@ -477,59 +579,83 @@
                             <!-- TAB 1: BRIDAL & GLAM -->
                             <div class="tab-pane fade show active" id="tab-bridal">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Brides- Combo Hair Updo + Make Up + Lashes</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>2 hr | Full bridal updo, makeup application and premium false lashes</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_bridal_combo.jpg" alt="Brides- Combo Hair Updo + Make Up + Lashes"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Brides- Combo Hair Updo + Make Up + Lashes</h5>
+                                                    <span class="price-badge">$380</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Full bridal updo, makeup application & premium false lashes.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$380</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Combo- Bride Make Up + Lashes + Hair-UpDo</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>2 hr | Budget bridal bundle with makeup, lashes, and hair updo</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_bridal_budget.jpg" alt="Combo- Bride Make Up + Lashes + Hair-UpDo"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Combo- Bride Make Up + Lashes + Hair-UpDo</h5>
+                                                    <span class="price-badge">$300</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Budget bridal bundle with camera-ready makeup, lashes & hair updo.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$300</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Bride / Make Up + Fake Lashes (Only)</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>50 min | Bridal camera-ready makeup with false lashes</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_bridal_makeup.jpg" alt="Bride / Make Up + Fake Lashes (Only)"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Bride / Make Up + Fake Lashes (Only)</h5>
+                                                    <span class="price-badge">$210</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 50 min duration</p>
+                                                <p class="font-13 text-muted m-a0">Bridal camera-ready makeup with precision contouring & false lashes.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$210</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Bride Up Do (Only)</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr | Bridal hair updo (extensions curl is +$25; thick hair +$40-60)</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_bridal_updo.jpg" alt="Bride Up Do (Only)"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Bride Up Do (Only)</h5>
+                                                    <span class="price-badge">$185</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Custom bridal hair updo styling with volume and secure hold.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$185</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Bridesmaid Hair & Make Up (3+ Min)</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr 45 min | On-location bridesmaid styling and makeup</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_bridesmaid.jpg" alt="Bridesmaid Hair & Make Up (3+ Min)"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Bridesmaid Hair & Make Up (3+ Min)</h5>
+                                                    <span class="price-badge">$380</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr 45 min duration</p>
+                                                <p class="font-13 text-muted m-a0">On-location bridesmaid styling and makeup for wedding parties.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$380</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Flower Girls Hair Style or Updo (3+ Min)</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr | Flower girls styling / updo (thick hair +$25)</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_flower_girl.jpg" alt="Flower Girls Hair Style or Updo"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Flower Girls Hair Style or Updo (3+ Min)</h5>
+                                                    <span class="price-badge">$55</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Flower girls styling / updo with gentle, kid-friendly care.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$55</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -537,59 +663,83 @@
                             <!-- TAB 2: HAIR & BARBERING -->
                             <div class="tab-pane fade" id="tab-hair">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Men's Precision Barbering</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>45 min | Men's precision haircut, beard trim, edge-up & style</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_men_barbering.jpg" alt="Men's Precision Barbering"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Men's Precision Barbering</h5>
+                                                    <span class="price-badge">$125</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 45 min duration</p>
+                                                <p class="font-13 text-muted m-a0">Precision haircut, beard trim, razor edge-up & hot towel styling.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$125</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Haircut + Blow Dry Style</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>55 min | Custom haircut followed by professional blowout & style</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_haircut_blowdry.jpg" alt="Haircut + Blow Dry Style"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Haircut + Blow Dry Style</h5>
+                                                    <span class="price-badge">$165</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 55 min duration</p>
+                                                <p class="font-13 text-muted m-a0">Custom cut followed by salon blowout & styling at your location.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$165</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Balayage Dimensional Blonding</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>2 - 3 hr | Hand-painted balayage for short, medium & long hair</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_blowdry_curls.jpg" alt="Blow Dry & Soft Curls / Updos"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Blow Dry & Soft Curls / Updos</h5>
+                                                    <span class="price-badge">$175</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 45 min duration</p>
+                                                <p class="font-13 text-muted m-a0">Voluminous blowout & soft curls for any special occasion.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$185 - $325</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Full Foil Highlights + Toner + Style</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>2 - 3 hr | Full head multi-tonal foils + custom toner & blowout</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_balayage.jpg" alt="Balayage Blonding"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Balayage Blonding (Short / Med / Long)</h5>
+                                                    <span class="price-badge">$185 - $325</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 - 3 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Hand-painted dimensional balayage blonding with custom toner.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$250 - $420</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Perms & Spiral Waves + Trim</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1.5 - 3 hr | Permanent wave texturizing + haircut trim</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_highlights.jpg" alt="Full Foil Highlights + Toner + Style"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Full Foil Highlights + Toner + Style</h5>
+                                                    <span class="price-badge">$250 - $420</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 - 3 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Full head multi-tonal foils + toner + professional finish style.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$200 - $450</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Blow Dry & Soft Curls / Updos</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>45 min | Voluminous blowout & soft curls (updos +$25)</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_retouch_color.jpg" alt="Retouch Color / Blow Dry Style"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Retouch Color / Blow Dry Style</h5>
+                                                    <span class="price-badge">$180</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr 30 min duration</p>
+                                                <p class="font-13 text-muted m-a0">Root touch-up, single tone refresh & blowout.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$175</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -597,41 +747,57 @@
                             <!-- TAB 3: MOBILE NAILS -->
                             <div class="tab-pane fade" id="tab-nails">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Manicure Regular Polish</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>30 min | Nail shaping, cuticle grooming, hand massage & polish</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_manicure.jpg" alt="Manicure Regular Polish"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Manicure Regular Polish</h5>
+                                                    <span class="price-badge">$75</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 30 min duration</p>
+                                                <p class="font-13 text-muted m-a0">Nail shaping, cuticle grooming, hand massage & polish.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$75</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Pedicure Regular Polish</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>30 min | Steam towels, foot scrub, nail shaping, cuticle care & polish</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_pedicure.jpg" alt="Pedicure Regular Polish"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Pedicure Regular Polish</h5>
+                                                    <span class="price-badge">$85</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 30 min duration</p>
+                                                <p class="font-13 text-muted m-a0">Steam towels, foot scrub, shaping, cuticle care & polish.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$85</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Men's Pedicure & Manicure Combo</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr | Full hand & foot grooming, callus buff, massage</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_men_mani_pedi.jpg" alt="Men's Pedicure & Manicure Combo"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Men's Pedicure & Manicure Combo</h5>
+                                                    <span class="price-badge">$140</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Full hand & foot grooming, callus buff, relaxing massage.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$140</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Acrylic Nails + Gel Polish + Design</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr | Full set acrylic extensions with gel polish & nail design</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_acrylic_nails.jpg" alt="Acrylic Nails + Gel Polish + Design"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Acrylic Nails + Gel Polish + Design</h5>
+                                                    <span class="price-badge">$175</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Full set acrylic extensions with long-lasting gel polish & nail design.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$175</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -639,90 +805,122 @@
                             <!-- TAB 4: MASSAGE & FACIALS -->
                             <div class="tab-pane fade" id="tab-massage">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Full Body Therapeutic Massage</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr | Full body therapeutic massage with essential oils & custom pressure</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_massage.jpg" alt="Full Body Therapeutic Massage"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Full Body Therapeutic Massage</h5>
+                                                    <span class="price-badge">$160</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Full body massage with essential oils & custom pressure.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$160</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Custom Deep Cleansing Facial</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr (30m express $85, 45m $150) | Custom pore cleanse & hydration</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_facial.jpg" alt="Custom Deep Cleansing Facial"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Custom Deep Cleansing Facial</h5>
+                                                    <span class="price-badge">$170</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Custom pore cleanse, exfoliation, hydration & rejuvenation.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$170</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Collagen Induction Micro-Needling</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr | Advanced therapy for pores, scars, wrinkles & tone</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_microneedling.jpg" alt="Collagen Induction Micro-Needling"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Collagen Induction Micro-Needling</h5>
+                                                    <span class="price-badge">$350</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
+                                                <p class="font-13 text-muted m-a0">Advanced therapy for pores, scars, wrinkles & youthful tone.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$350</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Semi-Permanent Microblading</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr 20 min | Eyebrow micro-pigmentation (touch-up $150)</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_microblading.jpg" alt="Semi-Permanent Microblading"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Semi-Permanent Microblading</h5>
+                                                    <span class="price-badge">$450</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr 20 min duration</p>
+                                                <p class="font-13 text-muted m-a0">Precision eyebrow micro-pigmentation for fuller natural brows.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$450</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- TAB 5: SPECIALS & PACKAGES -->
+                            <!-- TAB 5: SPECIALS & COMBOS -->
                             <div class="tab-pane fade" id="tab-specials">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">February Special: Massage or Facial</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr | Minimum 2 people required ($145 per person)</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_massage.jpg" alt="February Special: Massage or Facial"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">February Special: 1-Hr Massage or Facial</h5>
+                                                    <span class="price-badge">$145 / person</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr | Min 2 people</p>
+                                                <p class="font-13 text-muted m-a0">On-site therapeutic massage or customized facial delivered to your door.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$145 / person</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Full Beauty Combo Package</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>Comprehensive | Pedicure + Manicure + Haircut + Blow Dry + Style</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_special_combo.jpg" alt="Full Beauty Combo Package"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Full Beauty Combo Package</h5>
+                                                    <span class="price-badge">$240</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 hr 30 min duration</p>
+                                                <p class="font-13 text-muted m-a0">Pedicure + Manicure + Haircut + Blow Dry + Style package.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$240</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Senior Haircuts + Style Special</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>45 min | Minimum 4 people required ($65 per person)</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_senior_care.jpg" alt="Senior Haircuts + Style Special"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Senior Haircuts + Style Special</h5>
+                                                    <span class="price-badge">$65 / person</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 45 min | Min 4 people</p>
+                                                <p class="font-13 text-muted m-a0">Compassionate hair styling for seniors and dementia care.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$65 / person</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 m-b20">
-                                        <div class="p-a20 bg-gray-light radius-sm d-flex justify-content-between align-items-start">
-                                            <div>
-                                                <h4 class="m-a0 font-18">Adult Group Spa: Mani + Pedi Combo (6+ ppl)</h4>
-                                                <p class="font-13 text-muted m-b5"><i class="fa fa-clock m-r5"></i>1 hr | 30 min manicure + 30 min pedicure per guest</p>
+                                    <div class="col-lg-6 col-md-12">
+                                        <a href="services-1.html" class="home-service-card">
+                                            <div class="img-thumb"><img src="images/services/service_corporate_wellness.jpg" alt="Corporate Express Wellness Events"></div>
+                                            <div class="card-info">
+                                                <div class="d-flex justify-content-between align-items-start m-b5">
+                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Corporate Express Wellness Events</h5>
+                                                    <span class="price-badge">$150 / hr</span>
+                                                </div>
+                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 4-hr minimum duration</p>
+                                                <p class="font-13 text-muted m-a0">Seated chair massage, express facials & manicures for office teams.</p>
                                             </div>
-                                            <span class="badge bg-primary font-16 p-a10">$150 / person</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
                         
-                        <div class="text-center m-t30">
+                        <div class="text-center m-t40">
                             <a href="services-1.html" class="site-button text-uppercase radius-sm font-weight-700 m-r15 button-lg">View All 65 Services</a>
                             <a href="contact-1.html" class="site-button-secondry text-uppercase radius-sm font-weight-700 button-lg">Book Service Now</a>
                         </div>
