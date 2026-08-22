@@ -201,7 +201,7 @@
                     </div>
                     <div class="m-a30 wt-box border-2 p-a30 bg-gray-light radius-sm">
                     
-                        <form id="quote-request-form" onsubmit="event.preventDefault(); alert('Thank you for your request! Beauticians On The Go will contact you shortly.');">
+                        <form id="quote-request-form" onsubmit="sendViaWhatsApp(event);">
                             <div class="row">
                             
                                 <div class="col-md-6 m-b20">
@@ -281,7 +281,7 @@
                                 </div>
 
                                 <div class="col-md-12 text-right">
-                                    <button name="submit" type="submit" class="site-button text-uppercase radius-sm font-weight-700 button-lg">Send us your request</button>
+                                    <button name="submit" type="submit" class="site-button text-uppercase radius-sm font-weight-700 button-lg" style="background-color: #25D366; border-color: #25D366; color: #fff; box-shadow: 0 4px 15px rgba(37,211,102,0.3);"><i class="fab fa-whatsapp font-20 m-r10"></i> Send Request via WhatsApp</button>
                                 </div>
                             
                             </div>
