@@ -41,6 +41,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     
  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body id="bg">
@@ -128,17 +129,8 @@
             <div class="wt-contact-wrap row ">
             
                 <!-- MAP BLOCK START -->
-                <div class="contact-left-part" style="position: relative;">
-                    <div class="gmap-outline" style="position: relative;">
-                        <div id="gmap_canvas" class="google-map" style="position: relative;">
-                            <iframe src="https://maps.google.com/maps?q=38.299179,-122.287804&amp;z=15&amp;output=embed" width="100%" height="100%" frameborder="0" style="border:0; min-height: 600px;" allowfullscreen></iframe>
-                            <div style="position: absolute; bottom: 20px; left: 20px; z-index: 999; background: #ffffff; padding: 12px 18px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                                <h6 style="margin: 0 0 6px 0; font-size: 14px; font-weight: 700; color: #222;"><i class="fa-solid fa-location-dot" style="color: #eb578b; margin-right: 6px;"></i>Beauticians On The Go</h6>
-                                <p style="margin: 0 0 8px 0; font-size: 12px; color: #666;">Mobile Day Spa & Beauty Salon Services</p>
-                                <a href="https://www.google.com/maps?q=38.299179,-122.287804" target="_blank" class="site-button text-uppercase radius-sm font-weight-700" style="font-size: 11px; padding: 6px 12px; display: inline-block;">Open in Google Maps <i class="fa fa-arrow-up-right-from-square m-l5"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="contact-left-part" style="min-height: 620px; position: relative;">
+                    <div id="botg-leaflet-map" style="width: 100%; height: 100%; min-height: 620px; border-radius: 4px; z-index: 1;"></div>
                 </div>
                 <!-- MAP BLOCK END -->
                 
@@ -507,6 +499,50 @@
 <script   src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
 <script   src="js/shortcode.js"></script><!-- SHORTCODE FUCTIONS  -->
 <script   src="js/switcher.js"></script><!-- SWITCHER FUCTIONS  -->
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof L !== 'undefined' && document.getElementById('botg-leaflet-map')) {
+        var lat = 38.299179;
+        var lng = -122.287804;
+        var map = L.map('botg-leaflet-map', {
+            scrollWheelZoom: false
+        }).setView([lat, lng], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        var customIcon = L.divIcon({
+            className: 'custom-map-pin',
+            html: '<div style="background-color: #eb578b; width: 38px; height: 38px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.35); border: 2px solid #ffffff;"><i class="fa fa-spa" style="transform: rotate(45deg); color: #ffffff; font-size: 18px;"></i></div>',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var marker = L.marker([lat, lng], {icon: customIcon}).addTo(map);
+
+        var bingUrl = "https://www.bing.com/maps/directions?ty=0&v=2&sV=1&style=r&rtp=%7Epos.38.29917907714844_-122.28780364990234__Beauticians%2520On%2520The%2520Go%2520Mobile%2520Day%2520Spa%2520%2526%2520Beauty%2520Salon%2520Services_&cp=38.299179%7E-122.287804&lvl=16";
+        var googleUrl = "https://www.google.com/maps/search/?api=1&query=38.299179,-122.287804";
+
+        var popupContent = '<div style="padding: 8px; font-family: Poppins, sans-serif; min-width: 230px;">' +
+            '<h5 style="margin: 0 0 4px 0; font-weight: 700; color: #222; font-size: 15px;">Beauticians On The Go</h5>' +
+            '<p style="margin: 0 0 8px 0; font-size: 12px; color: #eb578b; font-weight: 600;">Mobile Day Spa & Beauty Salon Services</p>' +
+            '<p style="margin: 0 0 12px 0; font-size: 12px; color: #555; line-height: 1.4;">Coordinates: 38.299179, -122.287804<br>On-site luxury beauty across AZ, CA, NV & TN</p>' +
+            '<div style="display: flex; flex-direction: column; gap: 6px;">' +
+            '<a href="' + bingUrl + '" target="_blank" rel="noopener noreferrer" style="background: #008272; color: #fff; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; text-align: center; font-weight: 600; display: block;">Open in Bing Maps <i class="fa fa-external-link" style="margin-left: 4px;"></i></a>' +
+            '<a href="' + googleUrl + '" target="_blank" rel="noopener noreferrer" style="background: #eb578b; color: #fff; padding: 7px 12px; border-radius: 4px; font-size: 12px; text-decoration: none; text-align: center; font-weight: 600; display: block;">Open in Google Maps <i class="fa fa-external-link" style="margin-left: 4px;"></i></a>' +
+            '</div>' +
+            '</div>';
+
+        marker.bindPopup(popupContent).openPopup();
+    }
+});
+</script>
 
 </body>
 
