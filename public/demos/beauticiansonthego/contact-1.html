@@ -200,8 +200,23 @@
                         </div>
                     </div>
                     <div class="m-a30 wt-box border-2 p-a30 bg-gray-light radius-sm">
-                    
-                        <form id="quote-request-form" onsubmit="sendViaWhatsApp(event);">
+                        
+                        <!-- SUCCESS NOTIFICATION BANNER -->
+                        <div id="form-success-banner" style="display: none;" class="alert alert-success p-a20 radius-sm m-b30">
+                            <h4 class="alert-heading font-weight-700 m-b10"><i class="fa fa-check-circle m-r10"></i> Request Sent Successfully!</h4>
+                            <p class="m-a0 font-15">Thank you for contacting <strong>Beauticians On The Go</strong>. Your service details have been delivered directly to <strong>beauticiansonthego@gmail.com</strong>. Our team will review your appointment requirements and contact you shortly.</p>
+                        </div>
+
+                        <!-- ERROR BANNER -->
+                        <div id="form-error-banner" style="display: none;" class="alert alert-danger p-a20 radius-sm m-b30">
+                            <p class="m-a0 font-15"><i class="fa fa-exclamation-triangle m-r10"></i> Something went wrong while submitting. Please call us directly at <strong>602-803-2827</strong> or email <strong>beauticiansonthego@gmail.com</strong>.</p>
+                        </div>
+
+                        <form id="quote-request-form" action="https://formspree.io/f/xbjnedpn" method="POST" onsubmit="handleFormSubmit(event);">
+                            <!-- Hidden Subject & Destination Info -->
+                            <input type="hidden" name="_subject" value="New Service Request from Website - Beauticians On The Go">
+                            <input type="hidden" name="_to" value="beauticiansonthego@gmail.com">
+
                             <div class="row">
                             
                                 <div class="col-md-6 m-b20">
@@ -281,13 +296,14 @@
                                 </div>
 
                                 <div class="col-md-12 text-right">
-                                    <button name="submit" type="submit" class="site-button text-uppercase radius-sm font-weight-700 button-lg" style="background-color: #25D366; border-color: #25D366; color: #fff; box-shadow: 0 4px 15px rgba(37,211,102,0.3);"><i class="fab fa-whatsapp font-20 m-r10"></i> Send Request via WhatsApp</button>
+                                    <button id="submit-btn" type="submit" class="site-button text-uppercase radius-sm font-weight-700 button-lg">
+                                        <i class="fa fa-paper-plane m-r10"></i> Submit Request to Gmail
+                                    </button>
                                 </div>
                             
                             </div>
                         </form>
                     </div>
-                
                 </div>
             </div>
             <!-- FOOTER START -->
