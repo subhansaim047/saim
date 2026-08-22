@@ -1,4 +1,4 @@
-﻿{
+{
   "cleanUrls": true,
   "headers": [
     {
@@ -27,10 +27,6 @@
         {
           "key": "Strict-Transport-Security",
           "value": "max-age=31536000; includeSubDomains; preload"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "upgrade-insecure-requests"
         }
       ]
     },
@@ -59,15 +55,7 @@
   ],
   "rewrites": [
     {
-      "source": "/demos",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/demos/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/((?!assets|demos|saim-dev-logo|favicon|robots\\.txt|sitemap\\.xml|icons|llms\\.txt|hero-dev|section-).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
