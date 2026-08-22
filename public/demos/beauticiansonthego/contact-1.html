@@ -509,7 +509,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var lng = -122.287804;
         var map = L.map('botg-leaflet-map', {
             scrollWheelZoom: false
-        }).setView([38.3035, lng], 15);
+        }).setView([lat, lng], 15);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -528,14 +528,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var bingUrl = "https://www.bing.com/maps/directions?ty=0&v=2&sV=1&style=r&rtp=%7Epos.38.29917907714844_-122.28780364990234__Beauticians%2520On%2520The%2520Go%2520Mobile%2520Day%2520Spa%2520%2526%2520Beauty%2520Salon%2520Services_&cp=38.299179%7E-122.287804&lvl=16";
 
-        var popupContent = '<div style="padding: 8px; font-family: Poppins, sans-serif; min-width: 230px;">' +
+        var popupContent = '<div style="padding: 10px 8px; font-family: Poppins, sans-serif; min-width: 230px;">' +
             '<h5 style="margin: 0 0 4px 0; font-weight: 700; color: #222; font-size: 15px;">Beauticians On The Go</h5>' +
-            '<p style="margin: 0 0 8px 0; font-size: 12px; color: #eb578b; font-weight: 600;">Mobile Day Spa & Beauty Salon Services</p>' +
+            '<p style="margin: 0 0 8px 0; font-size: 12px; color: #eb578b; font-weight: 600;">Mobile Day Spa & Beauty Salon</p>' +
             '<p style="margin: 0 0 12px 0; font-size: 12px; color: #555; line-height: 1.4;">Coordinates: 38.299179, -122.287804<br>On-site luxury beauty across AZ, CA, NV & TN</p>' +
             '<a href="' + bingUrl + '" target="_blank" rel="noopener noreferrer" style="background: #008272; color: #fff; padding: 9px 14px; border-radius: 5px; font-size: 13px; text-decoration: none; text-align: center; font-weight: 600; display: block; box-shadow: 0 2px 6px rgba(0,0,0,0.15);"><i class="fa fa-map-location-dot" style="margin-right: 6px;"></i>Open in Bing Maps <i class="fa fa-external-link" style="margin-left: 4px;"></i></a>' +
             '</div>';
 
-        marker.bindPopup(popupContent).openPopup();
+        marker.bindPopup(popupContent, { autoPan: true, closeButton: false }).openPopup();
+        setTimeout(function() {
+            map.invalidateSize();
+            map.panTo([lat, lng]);
+        }, 400);
     }
 });
 </script>
