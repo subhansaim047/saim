@@ -23,7 +23,7 @@ const demos: DemoItem[] = [
     category: "Mobile Day Spa & Beauty Salon",
     description: "An upscale on-demand mobile day spa and beauty salon website with full service pricing catalogs, Revolution Slider hero, founder story, interactive FAQs, and quote request booking flow.",
     demoUrl: "/demos/beauticiansonthego/index.html",
-    previewImage: "/demos/beauticiansonthego/images/main-slider/slider2/slide1.jpg",
+    previewImage: "/demos/beauticiansonthego/preview.png",
     tags: ["Mobile Spa", "Beauty Salon", "Full Catalog", "Quote Booking"],
     features: [
       "Full 5-Page Multi-Page Ecosystem (Home, About, Services, FAQ, Contact)",
