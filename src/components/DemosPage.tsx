@@ -17,6 +17,22 @@ interface DemoItem {
 }
 
 const demos: DemoItem[] = [
+  {
+    id: "beauticiansonthego",
+    title: "Beauticians On The Go — Mobile Day Spa & Beauty Salon",
+    category: "Mobile Day Spa & Beauty Salon",
+    description: "An upscale on-demand mobile day spa and beauty salon website with full service pricing catalogs, Revolution Slider hero, founder story, interactive FAQs, and quote request booking flow.",
+    demoUrl: "/demos/beauticiansonthego/index.html",
+    previewImage: "/demos/beauticiansonthego/images/main-slider/slider2/slide1.jpg",
+    tags: ["Mobile Spa", "Beauty Salon", "Full Catalog", "Quote Booking"],
+    features: [
+      "Full 5-Page Multi-Page Ecosystem (Home, About, Services, FAQ, Contact)",
+      "Comprehensive 65-Service Pricing Catalog & Specials",
+      "Interactive Get-a-Quote & Service Request System",
+      "100% Offline Asset & Revolution Slider Architecture"
+    ],
+    badge: "New Client Release"
+  },
       {
     id: "atelier-noir",
     title: "ATELIER NOIR â€” Luxury Interior Architecture & Design",
