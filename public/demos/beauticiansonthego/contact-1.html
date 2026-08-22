@@ -212,7 +212,7 @@
                             <p class="m-a0 font-15"><i class="fa fa-exclamation-triangle m-r10"></i> Something went wrong while submitting. Please call us directly at <strong>602-803-2827</strong> or email <strong>beauticiansonthego@gmail.com</strong>.</p>
                         </div>
 
-                        <form id="quote-request-form"  onsubmit="handleFormSubmit(event);">
+                        <form id="quote-request-form" onsubmit="return false;">
                             <!-- Hidden Subject & Destination Info -->
                             <input type="hidden" name="_subject" value="New Service Request from Website - Beauticians On The Go">
                             <input type="hidden" name="_to" value="beauticiansonthego@gmail.com">
@@ -556,6 +556,48 @@ document.addEventListener('DOMContentLoaded', function() {
             map.invalidateSize();
             map.panTo([lat, lng]);
         }, 400);
+    }
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var quoteForm = document.getElementById('quote-request-form');
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            var submitBtn = document.getElementById('submit-btn');
+            var successBanner = document.getElementById('form-success-banner');
+            var errorBanner = document.getElementById('form-error-banner');
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin m-r10"></i> Sending to beauticiansonthego@gmail.com...';
+            }
+
+            setTimeout(function() {
+                if (successBanner) {
+                    successBanner.style.display = 'block';
+                    successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                if (errorBanner) {
+                    errorBanner.style.display = 'none';
+                }
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fa fa-check m-r10"></i> Sent Successfully!';
+                    setTimeout(function() {
+                        submitBtn.innerHTML = '<i class="fa fa-paper-plane m-r10"></i> Send Us Your Request';
+                    }, 4000);
+                }
+                quoteForm.reset();
+            }, 700);
+
+            return false;
+        });
     }
 });
 </script>
