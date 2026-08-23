@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+    <!-- Performance Preconnect Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
     <base href="/demos/beauticiansonthego/">
 
 
@@ -185,6 +190,50 @@
                 </div>
             </div>
             <!-- BREADCRUMB ROW END -->
+
+            <!-- CATEGORY FILTER BAR START -->
+            <div class="category-filter-nav-wrap bg-white p-tb30 shadow-sm" style="border-bottom: 1px solid #f0f0f0; position: sticky; top: 70px; z-index: 99; backdrop-filter: blur(8px); background: rgba(255,255,255,0.95);">
+                <div class="container">
+                    <div class="d-flex justify-content-center align-items-center flex-wrap" style="gap: 10px;" id="serviceCategoryFilters">
+                        <button class="cat-filter-btn active" data-category="all"><i class="fa fa-star m-r5"></i> All Services (65)</button>
+                        <button class="cat-filter-btn" data-category="bridal"><i class="fa fa-heart m-r5"></i> Bridal & Weddings</button>
+                        <button class="cat-filter-btn" data-category="hair"><i class="fa fa-scissors m-r5"></i> Hair & Barbering</button>
+                        <button class="cat-filter-btn" data-category="nails"><i class="fa fa-hand-sparkles m-r5"></i> Mobile Nails</button>
+                        <button class="cat-filter-btn" data-category="massage"><i class="fa fa-spa m-r5"></i> Massage & Facials</button>
+                        <button class="cat-filter-btn" data-category="group"><i class="fa fa-users m-r5"></i> Group Spa & Senior Care</button>
+                    </div>
+                </div>
+            </div>
+            <!-- CATEGORY FILTER BAR END -->
+            <style>
+                .cat-filter-btn {
+                    background: #f8f9fa;
+                    color: #444;
+                    border: 1px solid #e2e8f0;
+                    padding: 8px 18px;
+                    border-radius: 30px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.25s ease;
+                    text-transform: uppercase;
+                    letter-spacing: 0.3px;
+                }
+                .cat-filter-btn:hover {
+                    background: #eb578b;
+                    color: #fff;
+                    border-color: #eb578b;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(235,87,139,0.25);
+                }
+                .cat-filter-btn.active {
+                    background: #eb578b;
+                    color: #fff;
+                    border-color: #eb578b;
+                    box-shadow: 0 4px 15px rgba(235,87,139,0.35);
+                }
+            </style>
+            
             
             <!-- SERVICES CONTENT SECTION -->
             <div class="section-full p-t80 p-b50 bg-gray-light">
@@ -230,7 +279,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_bridal_combo.jpg" alt="Brides- Combo Hair Updo + Make Up + Lashes">
+                                        <img loading="lazy" decoding="async" src="images/services/service_bridal_combo.jpg" alt="Brides- Combo Hair Updo + Make Up + Lashes">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -246,7 +295,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_bridal_budget.jpg" alt="Combo- Bride Make Up + Lashes + Hair-UpDo">
+                                        <img loading="lazy" decoding="async" src="images/services/service_bridal_budget.jpg" alt="Combo- Bride Make Up + Lashes + Hair-UpDo">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -262,7 +311,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_bridal_makeup.jpg" alt="Bride / Make Up + Fake Lashes (Only)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_bridal_makeup.jpg" alt="Bride / Make Up + Fake Lashes (Only)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -278,7 +327,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_bridal_updo.jpg" alt="Bride Up Do (Only)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_bridal_updo.jpg" alt="Bride Up Do (Only)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -294,7 +343,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_bridesmaid.jpg" alt="Bridesmaid Hair & Make Up (3+ Min)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_bridesmaid.jpg" alt="Bridesmaid Hair & Make Up (3+ Min)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -310,7 +359,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_prom_hair.jpg" alt="Prom Hair and Makeup (3+ Min)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_prom_hair.jpg" alt="Prom Hair and Makeup (3+ Min)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -326,7 +375,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_flower_girl.jpg" alt="Flower Girls Hair Style or Updo (3+ Min)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_flower_girl.jpg" alt="Flower Girls Hair Style or Updo (3+ Min)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -341,7 +390,9 @@
                         </div>
                     </div>
 
-                    <!-- CATEGORY 2: HAIRCUTS, BARBERING, COLORING & STYLING -->
+                    </div>
+<!-- CATEGORY 2: HAIRCUTS, BARBERING, COLORING & STYLING -->
+<div class="service-category-block" data-cat="hair">
                     <div class="m-b40">
                         <div class="m-b25 pb-2" style="border-bottom: 2px solid #eb578b;">
                             <h3 class="text-uppercase m-a0 font-weight-700"><i class="fa fa-scissors site-text-primary m-r10"></i> Haircuts, Barbering, Coloring & Styling</h3>
@@ -351,7 +402,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_men_barbering.jpg" alt="Men's Precision Barbering">
+                                        <img loading="lazy" decoding="async" src="images/services/service_men_barbering.jpg" alt="Men's Precision Barbering">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -367,7 +418,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_haircut_blowdry.jpg" alt="Haircut + Blow Dry Style">
+                                        <img loading="lazy" decoding="async" src="images/services/service_haircut_blowdry.jpg" alt="Haircut + Blow Dry Style">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -383,7 +434,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_blowdry_curls.jpg" alt="Blow Dry & Soft Curls / Updos">
+                                        <img loading="lazy" decoding="async" src="images/services/service_blowdry_curls.jpg" alt="Blow Dry & Soft Curls / Updos">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -399,7 +450,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_retouch_color.jpg" alt="Retouch Color / Blow Dry Style">
+                                        <img loading="lazy" decoding="async" src="images/services/service_retouch_color.jpg" alt="Retouch Color / Blow Dry Style">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -415,7 +466,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_balayage.jpg" alt="Balayage Blonding (Short / Med / Long)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_balayage.jpg" alt="Balayage Blonding (Short / Med / Long)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -431,7 +482,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_highlights.jpg" alt="Full Foil Highlights + Toner + Style">
+                                        <img loading="lazy" decoding="async" src="images/services/service_highlights.jpg" alt="Full Foil Highlights + Toner + Style">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -447,7 +498,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_perms_waves.jpg" alt="Perms & Spiral Waves + Trim">
+                                        <img loading="lazy" decoding="async" src="images/services/service_perms_waves.jpg" alt="Perms & Spiral Waves + Trim">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -463,7 +514,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_night_out_glam.jpg" alt="Night Out Glam Hair & Makeup (3+ Min)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_night_out_glam.jpg" alt="Night Out Glam Hair & Makeup (3+ Min)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -478,7 +529,9 @@
                         </div>
                     </div>
 
-                    <!-- CATEGORY 3: MOBILE NAILS, MANICURES & PEDICURES -->
+                    </div>
+<!-- CATEGORY 3: MOBILE NAILS, MANICURES & PEDICURES -->
+<div class="service-category-block" data-cat="nails">
                     <div class="m-b40">
                         <div class="m-b25 pb-2" style="border-bottom: 2px solid #eb578b;">
                             <h3 class="text-uppercase m-a0 font-weight-700"><i class="fa fa-hand-sparkles site-text-primary m-r10"></i> Mobile Nails, Manicures & Pedicures</h3>
@@ -488,7 +541,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_manicure.jpg" alt="Manicure Regular Polish">
+                                        <img loading="lazy" decoding="async" src="images/services/service_manicure.jpg" alt="Manicure Regular Polish">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -504,7 +557,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_pedicure.jpg" alt="Pedicure Regular Polish">
+                                        <img loading="lazy" decoding="async" src="images/services/service_pedicure.jpg" alt="Pedicure Regular Polish">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -520,7 +573,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_men_mani_pedi.jpg" alt="Men's Pedicure & Manicure Combo">
+                                        <img loading="lazy" decoding="async" src="images/services/service_men_mani_pedi.jpg" alt="Men's Pedicure & Manicure Combo">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -536,7 +589,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_acrylic_nails.jpg" alt="Acrylic Nails + Gel Polish + Design">
+                                        <img loading="lazy" decoding="async" src="images/services/service_acrylic_nails.jpg" alt="Acrylic Nails + Gel Polish + Design">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -552,7 +605,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_polish_change.jpg" alt="Nail Polish Changes">
+                                        <img loading="lazy" decoding="async" src="images/services/service_polish_change.jpg" alt="Nail Polish Changes">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -567,7 +620,9 @@
                         </div>
                     </div>
 
-                    <!-- CATEGORY 4: MASSAGE THERAPY, FACIALS & AESTHETICS -->
+                    </div>
+<!-- CATEGORY 4: MASSAGE THERAPY, FACIALS & AESTHETICS -->
+<div class="service-category-block" data-cat="massage">
                     <div class="m-b40">
                         <div class="m-b25 pb-2" style="border-bottom: 2px solid #eb578b;">
                             <h3 class="text-uppercase m-a0 font-weight-700"><i class="fa fa-spa site-text-primary m-r10"></i> Massage Therapy, Facials & Aesthetics</h3>
@@ -577,7 +632,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_massage.jpg" alt="Full Body Therapeutic Massage">
+                                        <img loading="lazy" decoding="async" src="images/services/service_massage.jpg" alt="Full Body Therapeutic Massage">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -593,7 +648,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_facial.jpg" alt="Custom Deep Cleansing Facial">
+                                        <img loading="lazy" decoding="async" src="images/services/service_facial.jpg" alt="Custom Deep Cleansing Facial">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -609,7 +664,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_microneedling.jpg" alt="Collagen Induction Micro-Needling">
+                                        <img loading="lazy" decoding="async" src="images/services/service_microneedling.jpg" alt="Collagen Induction Micro-Needling">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -625,7 +680,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_microblading.jpg" alt="Semi-Permanent Microblading">
+                                        <img loading="lazy" decoding="async" src="images/services/service_microblading.jpg" alt="Semi-Permanent Microblading">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -640,7 +695,9 @@
                         </div>
                     </div>
 
-                    <!-- CATEGORY 5: GROUP SPA PACKAGES, CORPORATE & SENIOR CARE -->
+                    </div>
+<!-- CATEGORY 5: GROUP SPA PACKAGES, CORPORATE & SENIOR CARE -->
+<div class="service-category-block" data-cat="group">
                     <div class="m-b40">
                         <div class="m-b25 pb-2" style="border-bottom: 2px solid #eb578b;">
                             <h3 class="text-uppercase m-a0 font-weight-700"><i class="fa fa-users site-text-primary m-r10"></i> Group Spa Packages, Corporate & Senior Care</h3>
@@ -650,7 +707,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_corporate_wellness.jpg" alt="Corporate Express Wellness Events">
+                                        <img loading="lazy" decoding="async" src="images/services/service_corporate_wellness.jpg" alt="Corporate Express Wellness Events">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -666,7 +723,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_adult_spa_party.jpg" alt="Adult Spa Party: Mani + Pedi Combo (6+ ppl)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_adult_spa_party.jpg" alt="Adult Spa Party: Mani + Pedi Combo (6+ ppl)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -682,7 +739,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_teens_spa.jpg" alt="Teens Spa Party: Hair Style + Makeup (6+ ppl)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_teens_spa.jpg" alt="Teens Spa Party: Hair Style + Makeup (6+ ppl)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -698,7 +755,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_kids_diva.jpg" alt="Kids Diva Party Hair Style & Makeup (3+ kids)">
+                                        <img loading="lazy" decoding="async" src="images/services/service_kids_diva.jpg" alt="Kids Diva Party Hair Style & Makeup (3+ kids)">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -714,7 +771,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_senior_care.jpg" alt="Senior & Compassionate Care Haircuts + Style">
+                                        <img loading="lazy" decoding="async" src="images/services/service_senior_care.jpg" alt="Senior & Compassionate Care Haircuts + Style">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -730,7 +787,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="service-photo-card">
                                     <div class="service-img-wrap">
-                                        <img src="images/services/service_special_combo.jpg" alt="Full Beauty Combo Package">
+                                        <img loading="lazy" decoding="async" src="images/services/service_special_combo.jpg" alt="Full Beauty Combo Package">
                                     </div>
                                     <div class="service-info">
                                         <div class="d-flex justify-content-between align-items-start m-b5">
@@ -794,7 +851,7 @@
                             <div class="widget widget_about">
                                 <h4 class="widget-title">About Company</h4>
                                 <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img src="images/logo-white.png" style="max-height: 45px; width: auto;" alt="Beauticians On The Go"></a>
+                                    <a href="index.html"><img loading="lazy" decoding="async" src="images/logo-white.png" style="max-height: 45px; width: auto;" alt="Beauticians On The Go"></a>
                                 </div>
                                 <p>Beauticians On The Go, PLLC is an upscale on-demand mobile day spa & beauty salon enterprise. We bring state-licensed specialists, treatment tables, and hospital-grade sanitation directly to private residences, luxury resorts, wedding venues, corporate offices, and assisted living facilities.</p>  
                             </div>
@@ -881,5 +938,43 @@
 <script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
 <script src="js/shortcode.js"></script><!-- SHORTCODE FUCTIONS  -->
 
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/16028032827?text=Hi%20Beauticians%20On%20The%20Go,%20I%20would%20like%20to%20inquire%20about%20your%20mobile%20spa%20and%20beauty%20services!" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" style="position: fixed; bottom: 25px; right: 25px; z-index: 9999; width: 56px; height: 56px; background-color: #25D366; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(37,211,102,0.45); text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp" style="font-size: 32px;"></i>
+    </a>
+    <style>
+        .floating-whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 24px rgba(37,211,102,0.65);
+        }
+    </style>
+
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var buttons = document.querySelectorAll('.cat-filter-btn');
+                var blocks = document.querySelectorAll('.service-category-block');
+
+                buttons.forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        buttons.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+
+                        var targetCat = this.getAttribute('data-category');
+                        blocks.forEach(function(block) {
+                            if (targetCat === 'all' || block.getAttribute('data-cat') === targetCat) {
+                                block.style.display = 'block';
+                                block.style.opacity = '0';
+                                setTimeout(() => { block.style.transition = 'opacity 0.4s ease'; block.style.opacity = '1'; }, 10);
+                            } else {
+                                block.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            });
+            </script>
+            
 </body>
 </html>
