@@ -124,6 +124,228 @@
 
     </style>
 
+
+    <!-- INSTANT LUXURY HERO STYLES (0ms FCP & LCP) -->
+    <style>
+        .instant-hero-slider-wrap {
+            position: relative;
+            width: 100%;
+            min-height: 580px;
+            height: 78vh;
+            max-height: 750px;
+            overflow: hidden;
+            background-color: #fdf2f7;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-slides-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease-out;
+            transform: scale(1.03);
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            z-index: 2;
+        }
+        .hero-overlay-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 45%, rgba(255,255,255,0.15) 100%);
+            z-index: 1;
+        }
+        @media (max-width: 767px) {
+            .instant-hero-slider-wrap {
+                min-height: 620px;
+                height: auto;
+                max-height: none;
+                padding: 40px 0 60px;
+            }
+            .hero-overlay-gradient {
+                background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 60%, rgba(255,255,255,0.3) 100%);
+            }
+        }
+        .hero-content-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 680px;
+            padding: 20px 0;
+        }
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            background: #ffffff;
+            color: #eb578b;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 16px;
+            border-radius: 30px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 15px rgba(235,87,139,0.15);
+            border: 1px solid rgba(235,87,139,0.25);
+        }
+        .hero-title-main {
+            font-size: 46px;
+            font-weight: 800;
+            color: #272727;
+            text-transform: uppercase;
+            line-height: 1.15;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
+        }
+        .hero-subtitle-sub {
+            font-size: 34px;
+            font-weight: 700;
+            color: #272727;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin: 0 0 18px 0;
+            letter-spacing: -0.3px;
+        }
+        .text-pink {
+            color: #eb578b !important;
+        }
+        .hero-desc-text {
+            font-size: 16px;
+            line-height: 1.65;
+            color: #555555;
+            margin: 0 0 28px 0;
+            font-weight: 400;
+        }
+        .hero-actions-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+        }
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .hero-btn-pink {
+            background-color: #eb578b;
+            color: #ffffff !important;
+            border: 2px solid #eb578b;
+        }
+        .hero-btn-pink:hover {
+            background-color: #d63f73;
+            border-color: #d63f73;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(235,87,139,0.35);
+        }
+        .hero-btn-dark {
+            background-color: #272727;
+            color: #ffffff !important;
+            border: 2px solid #272727;
+        }
+        .hero-btn-dark:hover {
+            background-color: #000000;
+            border-color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+        .hero-nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.85);
+            color: #272727;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.25s ease;
+            backdrop-filter: blur(4px);
+        }
+        .hero-nav-arrow:hover {
+            background: #eb578b;
+            color: #ffffff;
+            border-color: #eb578b;
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 4px 15px rgba(235,87,139,0.4);
+        }
+        .hero-prev {
+            left: 20px;
+        }
+        .hero-next {
+            right: 20px;
+        }
+        .hero-dots-wrap {
+            position: absolute;
+            bottom: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        .hero-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(39,39,39,0.3);
+            border: 2px solid #ffffff;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        .hero-dot.active {
+            background: #eb578b;
+            width: 28px;
+            border-radius: 10px;
+            border-color: #eb578b;
+        }
+        @media (max-width: 991px) {
+            .hero-title-main { font-size: 36px; }
+            .hero-subtitle-sub { font-size: 26px; }
+            .hero-nav-arrow { display: none; }
+        }
+        @media (max-width: 575px) {
+            .hero-title-main { font-size: 28px; }
+            .hero-subtitle-sub { font-size: 22px; }
+            .hero-desc-text { font-size: 14px; }
+            .hero-btn { width: 100%; }
+        }
+    </style>
+
 </head>
 
 <body id="bg">
@@ -191,229 +413,73 @@
         <!-- CONTENT START -->
         <div class="page-content">
         
-            <!-- SLIDER START -->
-            <div id="rev_slider_1050_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="webproduct-light" data-source="gallery" style="background-color:transparent;padding:0px;">
-                <div id="rev_slider_1050_1" class="slider-dots rev_slider fullscreenbanner" style="min-height:550px;" data-version="5.4.1">
-                    <ul>	
-                        <!-- SLIDE 1 -->
-                        <li data-index="rs-2938" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/main-slider/slider2/slide1.jpg" data-rotate="0" data-fsslotamount="7" data-saveperformance="off" data-title="" data-param1="Additional Text" data-description="">
-                            <img src="images/main-slider/slider2/slide1.jpg" alt="Beauticians On The Go" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                            
-                            <div class="tp-caption WebProduct-Title tp-resizeme" 
-                                id="slide-2938-layer-01" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['-80','-80','200','130']" 
-                                data-fontsize="['57','55','55','30']"
-                                data-lineheight="['65','65','65','65']"
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":400,"to":"o:1;","delay":100,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index: 11; white-space: nowrap; text-transform:uppercase;">
-                                <div class="text-secondry"> BEAUTICIANS <span class="site-text-primary"> ON THE GO</span></div>
-                            </div>
-                    
-                            <div class="tp-caption WebProduct-SubTitle tp-resizeme" 
-                                id="slide-2938-layer-02" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['0','0','280','180']" 
-                                data-fontsize="['55','55','55','30']"
-                                data-lineheight="['75','75','75','75']"
-                                data-width="['700','700','700','300']"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":400,"to":"o:1;","delay":200,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index: 12; white-space: nowrap; text-transform:uppercase; font-weight: 700;">
-                                <div class="text-secondry">
-                                	<span class="site-text-primary">WHERE BEAUTY</span> NEVER ENDS
+                        <!-- INSTANT ZERO-DELAY LUXURY HERO SLIDER START -->
+            <section class="instant-hero-slider-wrap" id="instantHeroSlider" aria-label="Featured Showcase">
+                <div class="hero-slides-container">
+                    <!-- SLIDE 1 -->
+                    <div class="hero-slide active" data-index="0" style="background-image: url('images/main-slider/slider2/slide1.jpg');">
+                        <div class="hero-overlay-gradient"></div>
+                        <div class="container">
+                            <div class="hero-content-inner">
+                                <span class="hero-badge-pill"><i class="fa fa-sparkles m-r5"></i> On-Demand Mobile Day Spa</span>
+                                <h1 class="hero-title-main">BEAUTICIANS <span class="text-pink">ON THE GO</span></h1>
+                                <h2 class="hero-subtitle-sub"><span class="text-pink">WHERE BEAUTY</span> NEVER ENDS</h2>
+                                <p class="hero-desc-text">Upscale on-demand mobile day spa & beauty salon bringing state-licensed specialists, treatment tables, and hospital-grade sanitized care directly to your door.</p>
+                                <div class="hero-actions-wrap">
+                                    <a href="services-1.html" class="hero-btn hero-btn-pink">VIEW SERVICES <i class="fa fa-arrow-right m-l10"></i></a>
+                                    <a href="contact-1.html" class="hero-btn hero-btn-dark">BOOK APPOINTMENT <i class="fa fa-calendar-check m-l10"></i></a>
                                 </div>
                             </div>
-                    
-                            <div class="tp-caption WebProduct-Content tp-resizeme" 
-                                 id="slide-2938-layer-03" 
-                                 data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                 data-y="['middle','middle','top','top']" data-voffset="['80','80','380','250']" 
-                                data-fontsize="['21','21','24','18']"
-                                data-lineheight="['28','28','32','26']"
-                                data-width="['700','700','700','300']"
-                                data-height="['none','none','76','68']"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":400,"to":"o:1;","delay":300,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index: 13; white-space: normal;">
-                                <div class="text-secondry"> Upscale on-demand mobile day spa & beauty salon bringing licensed specialists directly to your door.</div>
-                            </div>
-                    
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2938-layer-04" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" 
-                                data-responsive_offset="on" data-responsive="on"
-                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":500,"to":"o:1;","delay":400,"ease":"Power4.easeOut"},{"delay":"wait","speed":400,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="services-1.html" class="site-button radius-sm button-lg">VIEW SERVICES</a>
-                            </div>
-                            
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2938-layer-05" 
-                                data-x="['left','left','left','left']" data-hoffset="['240','240','200','200']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" 
-                                data-responsive_offset="on" data-responsive="on"
-                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":500,"to":"o:1;","delay":400,"ease":"Power4.easeOut"},{"delay":"wait","speed":400,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="contact-1.html" class="site-button-secondry radius-sm button-lg">BOOK APPOINTMENT</a>
-                            </div>
-                        </li>
+                        </div>
+                    </div>
 
-                        <!-- SLIDE 2 -->
-                        <li data-index="rs-2939" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/main-slider/slider2/slide2.jpg" data-rotate="0" data-saveperformance="off" data-title="" data-description="">
-                            <img src="images/main-slider/slider2/slide2.jpg" alt="Beauticians On The Go" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                           
-                            <div class="tp-caption WebProduct-Title tp-resizeme" 
-                                id="slide-2939-layer-01" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['-80','-80','200','130']" 
-                                data-fontsize="['57','55','55','30']" data-lineheight="['65','65','65','65']"
-                                data-type="text" data-responsive_offset="on" 
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":400,"to":"o:1;","delay":100,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index: 11; white-space: nowrap; text-transform:uppercase;">
-                                <div class="text-secondry"> REDEFINING <span class="site-text-primary"> COMFORT</span></div>
-                            </div>
-                    
-                            <div class="tp-caption WebProduct-SubTitle tp-resizeme" 
-                                id="slide-2939-layer-02" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['0','0','280','180']" 
-                                data-fontsize="['55','55','55','30']" data-lineheight="['75','75','75','75']"
-                                data-width="['700','700','700','300']" data-type="text" data-responsive_offset="on" 
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":400,"to":"o:1;","delay":200,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index: 12; white-space: nowrap; text-transform:uppercase; font-weight: 700;">
-                                <div class="text-secondry">
-                                	<span class="site-text-primary">LUXURY ON-DEMAND</span> BEAUTY
+                    <!-- SLIDE 2 -->
+                    <div class="hero-slide" data-index="1" style="background-image: url('images/main-slider/slider2/slide2.jpg');">
+                        <div class="hero-overlay-gradient"></div>
+                        <div class="container">
+                            <div class="hero-content-inner">
+                                <span class="hero-badge-pill"><i class="fa fa-gem m-r5"></i> Luxury Mobile Experience</span>
+                                <h2 class="hero-title-main">REDEFINING <span class="text-pink">COMFORT</span></h2>
+                                <h2 class="hero-subtitle-sub"><span class="text-pink">LUXURY ON-DEMAND</span> BEAUTY</h2>
+                                <p class="hero-desc-text">Serving private residences, luxury vacation rentals (Airbnb & VRBO), resort hotels, corporate offices, wedding venues, and assisted living facilities across AZ, CA, NV & TN.</p>
+                                <div class="hero-actions-wrap">
+                                    <a href="services-1.html" class="hero-btn hero-btn-pink">EXPLORE SERVICES <i class="fa fa-arrow-right m-l10"></i></a>
+                                    <a href="tel:6028032827" class="hero-btn hero-btn-dark"><i class="fa fa-phone m-r10"></i> CALL 602-803-2827</a>
                                 </div>
                             </div>
-                    
-                            <div class="tp-caption WebProduct-Content tp-resizeme" 
-                                 id="slide-2939-layer-03" 
-                                 data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                 data-y="['middle','middle','top','top']" data-voffset="['80','80','380','250']" 
-                                data-fontsize="['21','21','24','18']" data-lineheight="['28','28','32','26']"
-                                data-width="['700','700','700','300']" data-type="text" data-responsive_offset="on" 
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":400,"to":"o:1;","delay":300,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index: 13; white-space: normal;">
-                                <div class="text-secondry"> Serving private residences, vacation rentals, luxury resorts, wedding venues & corporate wellness days.</div>
-                            </div>
-                    
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2939-layer-04" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" 
-                                data-responsive_offset="on" data-responsive="on"
-                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":500,"to":"o:1;","delay":400,"ease":"Power4.easeOut"},{"delay":"wait","speed":400,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="services-1.html" class="site-button radius-sm button-lg">EXPLORE SERVICES</a>
-                            </div>
-                            
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2939-layer-05" 
-                                data-x="['left','left','left','left']" data-hoffset="['240','240','200','200']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" 
-                                data-responsive_offset="on" data-responsive="on"
-                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":500,"to":"o:1;","delay":400,"ease":"Power4.easeOut"},{"delay":"wait","speed":400,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="tel:6028032827" class="site-button-secondry radius-sm button-lg">CALL 602-803-2827</a>
-                            </div>
-                        </li>
+                        </div>
+                    </div>
 
-                        <!-- SLIDE 3 -->
-                        <li data-index="rs-2940" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/main-slider/slider2/slide3.jpg" data-rotate="0" data-fsslotamount="7" data-saveperformance="off" data-title="" data-description="">
-                            <img src="images/main-slider/slider2/slide3.jpg" alt="Beauticians On The Go" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                           
-                            <div class="tp-caption WebProduct-Title tp-resizeme" 
-                                id="slide-2940-layer-01" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['-80','-80','200','130']" 
-                                data-fontsize="['57','55','55','30']" data-lineheight="['65','65','65','65']"
-                                data-type="text" data-responsive_offset="on" 
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":400,"to":"o:1;","delay":100,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index: 11; white-space: nowrap; text-transform:uppercase;">
-                                <div class="text-secondry"> TRANSFORM YOUR <span class="site-text-primary"> LOOK</span></div>
-                            </div>
-                    
-                            <div class="tp-caption WebProduct-SubTitle tp-resizeme" 
-                                id="slide-2940-layer-02" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['0','0','280','180']" 
-                                data-fontsize="['55','55','55','30']" data-lineheight="['75','75','75','75']"
-                                data-width="['700','700','700','300']" data-type="text" data-responsive_offset="on" 
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":400,"to":"o:1;","delay":200,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index: 12; white-space: nowrap; text-transform:uppercase; font-weight: 700;">
-                                <div class="text-secondry">
-                                	<span class="site-text-primary">BOOST YOUR</span> CONFIDENCE
+                    <!-- SLIDE 3 -->
+                    <div class="hero-slide" data-index="2" style="background-image: url('images/main-slider/slider2/slide3.jpg');">
+                        <div class="hero-overlay-gradient"></div>
+                        <div class="container">
+                            <div class="hero-content-inner">
+                                <span class="hero-badge-pill"><i class="fa fa-shield-heart m-r5"></i> 17+ Years of Excellence</span>
+                                <h2 class="hero-title-main">HOSPITAL-GRADE <span class="text-pink">SAFETY</span></h2>
+                                <h2 class="hero-subtitle-sub"><span class="text-pink">TRUSTED & LICENSED</span> EXPERTS</h2>
+                                <p class="hero-desc-text">Autoclave sterilized tools, disposable liners, hospital-grade disinfectants, and compassionate beauty care tailored for brides, executives, families, and seniors.</p>
+                                <div class="hero-actions-wrap">
+                                    <a href="about-1.html" class="hero-btn hero-btn-pink">OUR STORY <i class="fa fa-arrow-right m-l10"></i></a>
+                                    <a href="contact-1.html" class="hero-btn hero-btn-dark">GET A QUOTE <i class="fa fa-file-invoice m-l10"></i></a>
                                 </div>
                             </div>
-                    
-                            <div class="tp-caption WebProduct-Content tp-resizeme" 
-                                 id="slide-2940-layer-03" 
-                                 data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                 data-y="['middle','middle','top','top']" data-voffset="['80','80','380','250']" 
-                                data-fontsize="['21','21','24','18']" data-lineheight="['28','28','32','26']"
-                                data-width="['700','700','700','300']" data-type="text" data-responsive_offset="on" 
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":400,"to":"o:1;","delay":300,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index: 13; white-space: normal;">
-                                <div class="text-secondry"> Hospital-grade sanitation, state-licensed specialists, and compassionate care for clients from age 4 to 100+.</div>
-                            </div>
-                    
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2940-layer-04" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" 
-                                data-responsive_offset="on" data-responsive="on"
-                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":500,"to":"o:1;","delay":400,"ease":"Power4.easeOut"},{"delay":"wait","speed":400,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="services-1.html" class="site-button radius-sm button-lg">OUR SERVICES</a>
-                            </div>
-                            
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2940-layer-05" 
-                                data-x="['left','left','left','left']" data-hoffset="['240','240','200','200']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" 
-                                data-responsive_offset="on" data-responsive="on"
-                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":500,"to":"o:1;","delay":400,"ease":"Power4.easeOut"},{"delay":"wait","speed":400,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
-                                data-textAlign="['left','left','left','left']"
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="contact-1.html" class="site-button-secondry radius-sm button-lg">GET A QUOTE</a>
-                            </div>
-                        </li>                                                
-                    </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!-- SLIDER END -->
+
+                <!-- SLIDER CONTROLS -->
+                <button class="hero-nav-arrow hero-prev" id="heroPrevBtn" aria-label="Previous Slide"><i class="fa fa-chevron-left"></i></button>
+                <button class="hero-nav-arrow hero-next" id="heroNextBtn" aria-label="Next Slide"><i class="fa fa-chevron-right"></i></button>
+
+                <!-- SLIDER DOTS -->
+                <div class="hero-dots-wrap" id="heroDotsWrap">
+                    <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+                    <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+                    <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
+                </div>
+            </section>
+            <!-- INSTANT ZERO-DELAY LUXURY HERO SLIDER END -->
             
             <!-- WELCOME SECTION START -->
             <div class="section-full p-t100 p-b70 bg-bottom-center bg-full-width bg-no-repeat" style="background-image:url(images/background/bg-1.png);">
@@ -1157,11 +1223,7 @@
 <script src="js/custom.js"></script>
 <script src="js/shortcode.js"></script>
 
-<!-- REVOLUTION JS FILES -->
-<script src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="plugins/revolution/revolution/js/extensions/revolution-plugin.js"></script>
-<script src="js/rev-script-1.js"></script>
+
 
 
 <!-- FLOATING WHATSAPP BUTTON -->
@@ -1180,6 +1242,89 @@
             box-shadow: 0 6px 24px rgba(37,211,102,0.65);
         }
     </style>
+
+
+    <!-- INSTANT HERO SLIDER SCRIPT -->
+    <script>
+    (function() {
+        var slider = document.getElementById('instantHeroSlider');
+        if (!slider) return;
+
+        var slides = slider.querySelectorAll('.hero-slide');
+        var dots = slider.querySelectorAll('.hero-dot');
+        var prevBtn = document.getElementById('heroPrevBtn');
+        var nextBtn = document.getElementById('heroNextBtn');
+        var current = 0;
+        var total = slides.length;
+        var timer = null;
+
+        function showSlide(index) {
+            if (index < 0) index = total - 1;
+            if (index >= total) index = 0;
+            current = index;
+
+            slides.forEach(function(s, i) {
+                if (i === current) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+
+            dots.forEach(function(d, i) {
+                if (i === current) {
+                    d.classList.add('active');
+                } else {
+                    d.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            showSlide(current + 1);
+        }
+
+        function prevSlide() {
+            showSlide(current - 1);
+        }
+
+        function startTimer() {
+            stopTimer();
+            timer = setInterval(nextSlide, 5500);
+        }
+
+        function stopTimer() {
+            if (timer) clearInterval(timer);
+        }
+
+        if (nextBtn) nextBtn.addEventListener('click', function() { nextSlide(); startTimer(); });
+        if (prevBtn) prevBtn.addEventListener('click', function() { prevSlide(); startTimer(); });
+
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                var idx = parseInt(this.getAttribute('data-index'), 10);
+                showSlide(idx);
+                startTimer();
+            });
+        });
+
+        slider.addEventListener('mouseenter', stopTimer);
+        slider.addEventListener('mouseleave', startTimer);
+
+        // Touch Swipe Support
+        var touchStartX = 0;
+        slider.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        slider.addEventListener('touchend', function(e) {
+            var diff = e.changedTouches[0].screenX - touchStartX;
+            if (diff > 45) { prevSlide(); startTimer(); }
+            else if (diff < -45) { nextSlide(); startTimer(); }
+        }, { passive: true });
+
+        startTimer();
+    })();
+    </script>
 
 </body>
 </html>
