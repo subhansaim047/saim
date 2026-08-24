@@ -145,14 +145,14 @@
     </style>
 
 
-    <!-- INSTANT LUXURY HERO STYLES (0ms FCP & LCP) -->
+    <!-- IDENTICAL LAPTOP & MOBILE LUXURY HERO STYLES -->
     <style>
         .instant-hero-slider-wrap {
             position: relative;
             width: 100%;
-            min-height: 600px;
-            height: 75vh;
-            max-height: 750px;
+            min-height: 520px;
+            height: 72vh;
+            max-height: 700px;
             overflow: hidden;
             background-color: #fdf2f7;
             font-family: 'Poppins', sans-serif;
@@ -191,14 +191,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.82) 48%, rgba(255,255,255,0.18) 100%);
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.80) 48%, rgba(255,255,255,0.12) 100%);
             z-index: 1;
         }
         .hero-content-inner {
             position: relative;
             z-index: 2;
-            max-width: 680px;
-            padding: 30px 0;
+            max-width: 620px;
+            padding: 20px 0;
         }
         .hero-badge-pill {
             display: inline-flex;
@@ -216,7 +216,7 @@
             border: 1px solid rgba(235,87,139,0.25);
         }
         .hero-title-main {
-            font-size: 46px;
+            font-size: 44px;
             font-weight: 800;
             color: #272727;
             text-transform: uppercase;
@@ -225,7 +225,7 @@
             letter-spacing: -0.5px;
         }
         .hero-subtitle-sub {
-            font-size: 34px;
+            font-size: 32px;
             font-weight: 700;
             color: #272727;
             text-transform: uppercase;
@@ -339,68 +339,73 @@
             border-color: #eb578b;
         }
 
-        /* RESPONSIVE MOBILE FIXES */
+        /* 📱 MOBILE SAME LOOK AS LAPTOP (HALF FACE ON RIGHT, TEXT & BUTTONS ON LEFT) */
         @media (max-width: 991px) {
-            .hero-title-main { font-size: 34px; }
-            .hero-subtitle-sub { font-size: 24px; }
+            .hero-title-main { font-size: 32px; }
+            .hero-subtitle-sub { font-size: 22px; }
             .hero-nav-arrow { display: none; }
         }
         @media (max-width: 767px) {
             .instant-hero-slider-wrap {
-                min-height: auto;
-                height: auto;
-                max-height: none;
-                padding: 0;
+                min-height: 440px;
+                height: 56vh;
+                max-height: 480px;
             }
             .hero-slide {
-                position: relative;
-                height: auto;
-                min-height: 480px;
-                display: none;
-                align-items: flex-start;
-                padding: 24px 0 36px;
-            }
-            .hero-slide.active {
-                display: flex;
-                opacity: 1;
-                visibility: visible;
+                background-position: 90% center;
+                background-size: cover;
             }
             .hero-overlay-gradient {
-                background: linear-gradient(180deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.90) 68%, rgba(255,255,255,0.45) 100%);
+                background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.05) 100%);
             }
             .hero-content-inner {
-                padding: 10px 0 20px;
+                max-width: 220px;
+                padding: 10px 0;
             }
             .hero-badge-pill {
-                font-size: 11px;
-                padding: 4px 12px;
-                margin-bottom: 10px;
+                font-size: 9px;
+                padding: 3px 8px;
+                margin-bottom: 6px;
+                letter-spacing: 0.5px;
             }
             .hero-title-main {
-                font-size: 25px;
-                line-height: 1.15;
-                margin-bottom: 4px;
+                font-size: 18px;
+                line-height: 1.12;
+                margin-bottom: 2px;
             }
             .hero-subtitle-sub {
-                font-size: 19px;
-                line-height: 1.15;
-                margin-bottom: 10px;
+                font-size: 13.5px;
+                line-height: 1.12;
+                margin-bottom: 6px;
             }
             .hero-desc-text {
-                font-size: 13px;
-                line-height: 1.5;
-                margin-bottom: 16px;
-            }
-            .hero-btn {
-                padding: 11px 18px;
-                font-size: 12px;
-                width: 100%;
+                font-size: 11px;
+                line-height: 1.35;
+                margin-bottom: 12px;
             }
             .hero-actions-wrap {
-                gap: 8px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                max-width: 170px;
+            }
+            .hero-btn {
+                padding: 7px 12px;
+                font-size: 10px;
+                letter-spacing: 0.4px;
+                border-radius: 4px;
+                justify-content: center;
+                text-align: center;
             }
             .hero-dots-wrap {
                 bottom: 8px;
+            }
+            .hero-dot {
+                width: 7px;
+                height: 7px;
+            }
+            .hero-dot.active {
+                width: 16px;
             }
         }
     </style>
@@ -472,7 +477,7 @@
         <!-- CONTENT START -->
         <div class="page-content">
         
-                        <!-- INSTANT ZERO-DELAY LUXURY HERO SLIDER START -->
+                                                                        <!-- INSTANT ZERO-DELAY LUXURY HERO SLIDER (SAME ON LAPTOP & MOBILE) -->
             <section class="instant-hero-slider-wrap" id="instantHeroSlider" aria-label="Featured Showcase">
                 <div class="hero-slides-container">
                     <!-- SLIDE 1 -->
@@ -483,10 +488,10 @@
                                 <span class="hero-badge-pill"><i class="fa fa-sparkles m-r5"></i> On-Demand Mobile Day Spa</span>
                                 <h1 class="hero-title-main">BEAUTICIANS <span class="text-pink">ON THE GO</span></h1>
                                 <h2 class="hero-subtitle-sub"><span class="text-pink">WHERE BEAUTY</span> NEVER ENDS</h2>
-                                <p class="hero-desc-text">Upscale on-demand mobile day spa & beauty salon bringing state-licensed specialists, treatment tables, and hospital-grade sanitized care directly to your door.</p>
+                                <p class="hero-desc-text">Upscale on-demand mobile day spa & beauty salon bringing state-licensed specialists directly to your door.</p>
                                 <div class="hero-actions-wrap">
-                                    <a href="services-1.html" class="hero-btn hero-btn-pink">VIEW SERVICES <i class="fa fa-arrow-right m-l10"></i></a>
-                                    <a href="contact-1.html" class="hero-btn hero-btn-dark">BOOK APPOINTMENT <i class="fa fa-calendar-check m-l10"></i></a>
+                                    <a href="services-1.html" class="hero-btn hero-btn-pink">VIEW SERVICES <i class="fa fa-arrow-right m-l5"></i></a>
+                                    <a href="contact-1.html" class="hero-btn hero-btn-dark">BOOK APPOINTMENT <i class="fa fa-calendar-check m-l5"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -500,10 +505,10 @@
                                 <span class="hero-badge-pill"><i class="fa fa-gem m-r5"></i> Luxury Mobile Experience</span>
                                 <h2 class="hero-title-main">REDEFINING <span class="text-pink">COMFORT</span></h2>
                                 <h2 class="hero-subtitle-sub"><span class="text-pink">LUXURY ON-DEMAND</span> BEAUTY</h2>
-                                <p class="hero-desc-text">Serving private residences, luxury vacation rentals (Airbnb & VRBO), resort hotels, corporate offices, wedding venues, and assisted living facilities across AZ, CA, NV & TN.</p>
+                                <p class="hero-desc-text">Serving private residences, luxury vacation rentals, resort hotels, corporate offices, and weddings.</p>
                                 <div class="hero-actions-wrap">
-                                    <a href="services-1.html" class="hero-btn hero-btn-pink">EXPLORE SERVICES <i class="fa fa-arrow-right m-l10"></i></a>
-                                    <a href="tel:6028032827" class="hero-btn hero-btn-dark"><i class="fa fa-phone m-r10"></i> CALL 602-803-2827</a>
+                                    <a href="services-1.html" class="hero-btn hero-btn-pink">EXPLORE SERVICES <i class="fa fa-arrow-right m-l5"></i></a>
+                                    <a href="tel:6028032827" class="hero-btn hero-btn-dark"><i class="fa fa-phone m-r5"></i> CALL NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -517,10 +522,10 @@
                                 <span class="hero-badge-pill"><i class="fa fa-shield-heart m-r5"></i> 17+ Years of Excellence</span>
                                 <h2 class="hero-title-main">HOSPITAL-GRADE <span class="text-pink">SAFETY</span></h2>
                                 <h2 class="hero-subtitle-sub"><span class="text-pink">TRUSTED & LICENSED</span> EXPERTS</h2>
-                                <p class="hero-desc-text">Autoclave sterilized tools, disposable liners, hospital-grade disinfectants, and compassionate beauty care tailored for brides, executives, families, and seniors.</p>
+                                <p class="hero-desc-text">Autoclave sterilized tools, single-use liners, and compassionate beauty care tailored for you.</p>
                                 <div class="hero-actions-wrap">
-                                    <a href="about-1.html" class="hero-btn hero-btn-pink">OUR STORY <i class="fa fa-arrow-right m-l10"></i></a>
-                                    <a href="contact-1.html" class="hero-btn hero-btn-dark">GET A QUOTE <i class="fa fa-file-invoice m-l10"></i></a>
+                                    <a href="about-1.html" class="hero-btn hero-btn-pink">OUR STORY <i class="fa fa-arrow-right m-l5"></i></a>
+                                    <a href="contact-1.html" class="hero-btn hero-btn-dark">GET A QUOTE <i class="fa fa-file-invoice m-l5"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1303,16 +1308,16 @@
     </style>
 
 
-    <!-- INSTANT HERO SLIDER SCRIPT -->
+    <!-- LUXURY HERO SLIDER JAVASCRIPT -->
     <script>
     (function() {
-        var slider = document.getElementById('instantHeroSlider');
+        var slider = document.getElementById('luxuryHeroSection');
         if (!slider) return;
 
-        var slides = slider.querySelectorAll('.hero-slide');
-        var dots = slider.querySelectorAll('.hero-dot');
-        var prevBtn = document.getElementById('heroPrevBtn');
-        var nextBtn = document.getElementById('heroNextBtn');
+        var slides = slider.querySelectorAll('.luxury-slide');
+        var dots = slider.querySelectorAll('.h-dot');
+        var prevBtn = document.getElementById('heroPrevSlide');
+        var nextBtn = document.getElementById('heroNextSlide');
         var current = 0;
         var total = slides.length;
         var timer = null;
@@ -1349,7 +1354,7 @@
 
         function startTimer() {
             stopTimer();
-            timer = setInterval(nextSlide, 5500);
+            timer = setInterval(nextSlide, 6000);
         }
 
         function stopTimer() {
@@ -1370,7 +1375,7 @@
         slider.addEventListener('mouseenter', stopTimer);
         slider.addEventListener('mouseleave', startTimer);
 
-        // Touch Swipe Support
+        // Touch Swipe
         var touchStartX = 0;
         slider.addEventListener('touchstart', function(e) {
             touchStartX = e.changedTouches[0].screenX;
