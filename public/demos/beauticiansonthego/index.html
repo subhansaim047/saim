@@ -163,9 +163,22 @@
             height: 100%;
         }
         .hero-slide {
-                background-position: 28% center;
-                background-size: cover;
-            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: right center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease-out;
+            transform: scale(1.02);
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
         .hero-slide.active {
             opacity: 1;
             visibility: visible;
@@ -180,6 +193,7 @@
             height: 100%;
             background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.80) 48%, rgba(255,255,255,0.12) 100%);
             z-index: 1;
+            pointer-events: none;
         }
         .hero-content-inner {
             position: relative;
@@ -464,847 +478,283 @@
         <!-- CONTENT START -->
         <div class="page-content">
         
-                                                                        <!-- INSTANT ZERO-DELAY LUXURY HERO SLIDER (SAME ON LAPTOP & MOBILE) -->
-            <section class="instant-hero-slider-wrap" id="instantHeroSlider" aria-label="Featured Showcase">
-                <div class="hero-slides-container">
-                    <!-- SLIDE 1 -->
-                    <div class="hero-slide active" data-index="0" style="background-image: url('images/main-slider/slider2/slide1.jpg');">
-                        <div class="hero-overlay-gradient"></div>
-                        <div class="container">
-                            <div class="hero-content-inner">
-                                <span class="hero-badge-pill"><i class="fa fa-sparkles m-r5"></i> On-Demand Mobile Day Spa</span>
-                                <h1 class="hero-title-main">BEAUTICIANS <span class="text-pink">ON THE GO</span></h1>
-                                <h2 class="hero-subtitle-sub"><span class="text-pink">WHERE BEAUTY</span> NEVER ENDS</h2>
-                                <p class="hero-desc-text">Upscale on-demand mobile day spa & beauty salon bringing state-licensed specialists directly to your door.</p>
-                                <div class="hero-actions-wrap">
-                                    <a href="services-1.html" class="hero-btn hero-btn-pink">VIEW SERVICES <i class="fa fa-arrow-right m-l5"></i></a>
-                                    <a href="contact-1.html" class="hero-btn hero-btn-dark">BOOK APPOINTMENT <i class="fa fa-calendar-check m-l5"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 2 -->
-                    <div class="hero-slide" data-index="1" style="background-image: url('images/main-slider/slider2/slide2.jpg');">
-                        <div class="hero-overlay-gradient"></div>
-                        <div class="container">
-                            <div class="hero-content-inner">
-                                <span class="hero-badge-pill"><i class="fa fa-gem m-r5"></i> Luxury Mobile Experience</span>
-                                <h2 class="hero-title-main">REDEFINING <span class="text-pink">COMFORT</span></h2>
-                                <h2 class="hero-subtitle-sub"><span class="text-pink">LUXURY ON-DEMAND</span> BEAUTY</h2>
-                                <p class="hero-desc-text">Serving private residences, luxury vacation rentals, resort hotels, corporate offices, and weddings.</p>
-                                <div class="hero-actions-wrap">
-                                    <a href="services-1.html" class="hero-btn hero-btn-pink">EXPLORE SERVICES <i class="fa fa-arrow-right m-l5"></i></a>
-                                    <a href="tel:6028032827" class="hero-btn hero-btn-dark"><i class="fa fa-phone m-r5"></i> CALL NOW</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 3 -->
-                    <div class="hero-slide" data-index="2" style="background-image: url('images/main-slider/slider2/slide3.jpg');">
-                        <div class="hero-overlay-gradient"></div>
-                        <div class="container">
-                            <div class="hero-content-inner">
-                                <span class="hero-badge-pill"><i class="fa fa-shield-heart m-r5"></i> 17+ Years of Excellence</span>
-                                <h2 class="hero-title-main">HOSPITAL-GRADE <span class="text-pink">SAFETY</span></h2>
-                                <h2 class="hero-subtitle-sub"><span class="text-pink">TRUSTED & LICENSED</span> EXPERTS</h2>
-                                <p class="hero-desc-text">Autoclave sterilized tools, single-use liners, and compassionate beauty care tailored for you.</p>
-                                <div class="hero-actions-wrap">
-                                    <a href="about-1.html" class="hero-btn hero-btn-pink">OUR STORY <i class="fa fa-arrow-right m-l5"></i></a>
-                                    <a href="contact-1.html" class="hero-btn hero-btn-dark">GET A QUOTE <i class="fa fa-file-invoice m-l5"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SLIDER CONTROLS -->
-                <button class="hero-nav-arrow hero-prev" id="heroPrevBtn" aria-label="Previous Slide"><i class="fa fa-chevron-left"></i></button>
-                <button class="hero-nav-arrow hero-next" id="heroNextBtn" aria-label="Next Slide"><i class="fa fa-chevron-right"></i></button>
-
-                <!-- SLIDER DOTS -->
-                <div class="hero-dots-wrap" id="heroDotsWrap">
-                    <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
-                    <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
-                    <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
-                </div>
-            </section>
-            <!-- INSTANT ZERO-DELAY LUXURY HERO SLIDER END -->
-            
-            <!-- WELCOME SECTION START -->
-            <div class="section-full p-t100 p-b70 bg-bottom-center bg-full-width bg-no-repeat" style="background-image:url(images/background/bg-1.png);">
-                <div class="container">
-                    <div class="section-head text-center">
-                        <h2><span class="site-text-primary"> Welcome to </span> Beauticians On The Go</h2>
-                        <div class="wt-separator-outer">
-                            <div class="wt-separator style-icon">
-                                <i class="fa fa-leaf text-black"></i>
-                                <span class="separator-left site-bg-primary"></span>
-                                <span class="separator-right site-bg-primary"></span>
-                            </div>                            
-                        </div>
-                        
-                        <p class="font-18"><strong>
-                        Upscale On-Demand Mobile Day Spa & Beauty Salon Services — Where Beauty Never Ends.
-                        </strong></p>
-                    </div>
-                    
-                    <div class="section-content text-center about-spa m-b30">
-                    	<p class="font-16">
-                        Beauticians On The Go brings state-licensed specialists, treatment tables, and hospital-grade sterilized equipment directly to your location. Founded 17 years ago by Carla Olivares (ASU '16) alongside COO Jose Olivares (MBA '07), we cater to private homes, vacation rentals (Airbnb & VRBO), luxury hotels, weddings, assisted living, and corporate wellness events across Arizona, California, Nevada, and Tennessee.
-                        </p>
-                        
-                        <div class="row d-flex justify-content-center m-t40">
-                            <!-- Pillar 1 -->
-                            <div class="col-lg-4 col-md-6 m-b30">
-                                <a href="services-1.html" class="wt-box d-block bg-white radius-sm shadow-sm overflow-hidden pillar-hover-card" style="text-decoration: none; color: inherit; border: 1px solid #f0f0f0; border-radius: 12px; transition: all 0.3s ease;">
-                                    <div style="width: 100%; height: 230px; overflow: hidden; position: relative;">
-                                        <img loading="lazy" decoding="async" src="images/pillar_spa_massage.jpg" alt="Mobile Day Spa & Massage" class="pillar-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-                                        <div style="position: absolute; top: 12px; right: 12px; background: rgba(235,87,139,0.95); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Spa & Wellness</div>
-                                    </div>
-                                    <div class="p-a25 text-center">
-                                        <h4 class="text-uppercase font-weight-700 m-b10 font-18" style="color: #222;">Mobile Day Spa & Massage</h4>
-                                        <p class="font-14 text-muted m-b15" style="line-height: 1.6;">Full body therapeutic massages, express corporate chair massages & reflexology treatments directly on-site.</p>
-                                        <span class="site-text-primary font-weight-700 font-13 text-uppercase">Explore Services <i class="fa fa-arrow-right m-l5"></i></span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- Pillar 2 -->
-                            <div class="col-lg-4 col-md-6 m-b30">
-                                <a href="services-1.html" class="wt-box d-block bg-white radius-sm shadow-sm overflow-hidden pillar-hover-card" style="text-decoration: none; color: inherit; border: 1px solid #f0f0f0; border-radius: 12px; transition: all 0.3s ease;">
-                                    <div style="width: 100%; height: 230px; overflow: hidden; position: relative;">
-                                        <img loading="lazy" decoding="async" src="images/pillar_hair_barbering.jpg" alt="On-Site Hair & Barbering" class="pillar-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-                                        <div style="position: absolute; top: 12px; right: 12px; background: rgba(235,87,139,0.95); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Hair & Styling</div>
-                                    </div>
-                                    <div class="p-a25 text-center">
-                                        <h4 class="text-uppercase font-weight-700 m-b10 font-18" style="color: #222;">On-Site Hair & Barbering</h4>
-                                        <p class="font-14 text-muted m-b15" style="line-height: 1.6;">Custom haircuts, voluminous blowouts, perms, balayage blonding, and men's precision barbering & beard trims.</p>
-                                        <span class="site-text-primary font-weight-700 font-13 text-uppercase">Explore Services <i class="fa fa-arrow-right m-l5"></i></span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- Pillar 3 -->
-                            <div class="col-lg-4 col-md-6 m-b30">
-                                <a href="services-1.html" class="wt-box d-block bg-white radius-sm shadow-sm overflow-hidden pillar-hover-card" style="text-decoration: none; color: inherit; border: 1px solid #f0f0f0; border-radius: 12px; transition: all 0.3s ease;">
-                                    <div style="width: 100%; height: 230px; overflow: hidden; position: relative;">
-                                        <img loading="lazy" decoding="async" src="images/pillar_bridal_glam.jpg" alt="Bridal & Event Glam" class="pillar-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-                                        <div style="position: absolute; top: 12px; right: 12px; background: rgba(235,87,139,0.95); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Bridal & Glam</div>
-                                    </div>
-                                    <div class="p-a25 text-center">
-                                        <h4 class="text-uppercase font-weight-700 m-b10 font-18" style="color: #222;">Bridal & Event Glam</h4>
-                                        <p class="font-14 text-muted m-b15" style="line-height: 1.6;">Bridal updos, camera-ready makeup with false lashes, bachelorette parties, teens glam & kids diva spa days.</p>
-                                        <span class="site-text-primary font-weight-700 font-13 text-uppercase">Explore Services <i class="fa fa-arrow-right m-l5"></i></span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="text-center m-t20">
-                            <a href="services-1.html" class="site-button text-uppercase radius-sm font-weight-700 m-r15 button-lg">See Our Plans</a>
-                            <a href="about-1.html" class="site-button-secondry text-uppercase radius-sm font-weight-700 button-lg">More Detail</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- WELCOME SECTION END -->
-
-            <!-- SECTION 1 (REFERENCE 1): TRANSFORMING YOUR LOOK START -->
-            <div class="section-full p-t100 p-b70 bg-white">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7 col-md-12 m-b30">
-                            <div class="section-head text-left">
-                                <h2 class="text-uppercase font-weight-700 m-b20">
-                                    Transforming Your Look, <span class="site-text-primary">Boost Your Confidence!</span>
-                                </h2>
-                                <div class="wt-separator-outer m-b20">
-                                    <div class="wt-separator style-icon">
-                                        <i class="fa fa-spa text-black"></i>
-                                        <span class="separator-left site-bg-primary"></span>
-                                        <span class="separator-right site-bg-primary"></span>
-                                    </div>
-                                </div>
-                                <p class="font-16 text-muted m-b20" style="line-height: 1.8;">
-                                    Are you ready to welcome your inner beauty and improve your outer radiance? Look no further because you've just discovered your ultimate destination for all things about beauty.<br>
-                                    Welcome to <strong>Beauticians On The Go Mobile Spa & Beauty Services</strong>, a haven where beauty never ends!
-                                </p>
-                                <p class="font-15 text-muted m-b30" style="line-height: 1.8;">
-                                    Beauticians On The Go Mobile Spa & Beauty Services understand that beauty is more than just skin deep; it is also about faith, self-expression, and overall well-being. Our team of dependable and highly talented beauticians and make-up artists are here to guide you through this delightful trip, offering a wide choice of treatments adapted to your specific requirements.
-                                </p>
-                                <div class="m-t20">
-                                    <a href="about-1.html" class="site-button text-uppercase radius-sm font-weight-700 m-r15">Learn More</a>
-                                    <a href="contact-1.html" class="site-button-secondry text-uppercase radius-sm font-weight-700">Book Appointment</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-12 m-b30">
-                            <div class="shadow-lg radius-sm overflow-hidden" style="border-radius: 12px;">
-                                <img loading="lazy" decoding="async" src="images/transform_look_spa.jpg" alt="Transforming Your Look - Spa Relaxation" class="img-responsive" style="width: 100%; height: auto; object-fit: cover; display: block;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- SECTION 1 END -->
-
-            <!-- SECTION 2 (REFERENCE 2): OUR COMMITMENT TO BEAUTY & WELLNESS START -->
-            <div class="section-full p-t80 p-b80 bg-gray-light">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-12 m-b30">
-                            <div class="shadow-lg radius-sm overflow-hidden" style="border-radius: 12px;">
-                                <img loading="lazy" decoding="async" src="images/commitment_bridal_makeup.jpg" alt="Our Commitment to Beauty & Wellness" class="img-responsive" style="width: 100%; height: auto; object-fit: cover; display: block;">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12 m-b30">
-                            <div class="ref-commitment-box">
-                                <h3 class="text-uppercase font-weight-700 m-b15" style="color: #222;">
-                                    Our Commitment to <span class="site-text-primary">Beauty & Wellness</span>
-                                </h3>
-                                <div class="wt-separator-outer m-b20">
-                                    <div class="wt-separator style-icon">
-                                        <i class="fa fa-heart text-black"></i>
-                                        <span class="separator-left site-bg-primary"></span>
-                                        <span class="separator-right site-bg-primary"></span>
-                                    </div>
-                                </div>
-                                <p class="font-15 text-muted m-b15" style="line-height: 1.8;">
-                                    Our attitude is based on the belief that everyone deserves to look and feel their best. We can provide you with a reviving <em>Facial</em>, a calming <em>Massage</em>, dazzling <em>Pedicures and Manicures</em> and fabulous services for <em>Make-up and Hair for brides</em>.
-                                </p>
-                                <p class="font-15 text-muted m-b25" style="line-height: 1.8;">
-                                    Our beauticians are enthusiastic about their work, and their dedication to your beauty and wellness is evident in every treatment they provide.
-                                </p>
-                                <a href="services-1.html" class="site-button text-uppercase radius-sm font-weight-700">Explore All Services <i class="fa fa-arrow-right m-l5"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- SECTION 2 END -->
-
-            <!-- PRICING SECTION START -->
-            <div class="section-full p-t100 p-b70 our-pricing-content bg-cover bg-no-repeat" style="background-image:url(images/background/bg-2.jpg);">
-            	<div class="container">
-                    <div class="section-head text-center">
-                        <h2><span class="site-text-primary">Featured</span> Treatment Menu</h2>
-                        <div class="wt-separator-outer">
-                            <div class="wt-separator style-icon">
-                                <i class="fa fa-spa text-black"></i>
-                                <span class="separator-left site-bg-primary"></span>
-                                <span class="separator-right site-bg-primary"></span>
-                            </div>                            
-                        </div>
-                        <p>Upscale on-location mobile treatments. Click any service to view full details and book your on-site appointment.</p>
-                    </div>
-
-                    <div class="section-content">
-                        <div class="nav nav-pills justify-content-center m-b30" id="pricingMainTabs" style="gap: 10px;">
-                            <button class="nav-link active font-weight-700 text-uppercase site-button radius-sm" data-bs-toggle="pill" data-bs-target="#tab-bridal"><i class="fa fa-heart m-r5"></i> Bridal & Glam</button>
-                            <button class="nav-link font-weight-700 text-uppercase site-button-secondry radius-sm" data-bs-toggle="pill" data-bs-target="#tab-hair"><i class="fa fa-scissors m-r5"></i> Hair & Barbering</button>
-                            <button class="nav-link font-weight-700 text-uppercase site-button-secondry radius-sm" data-bs-toggle="pill" data-bs-target="#tab-nails"><i class="fa fa-hand-sparkles m-r5"></i> Mobile Nails</button>
-                            <button class="nav-link font-weight-700 text-uppercase site-button-secondry radius-sm" data-bs-toggle="pill" data-bs-target="#tab-massage"><i class="fa fa-spa m-r5"></i> Massage & Facials</button>
-                            <button class="nav-link font-weight-700 text-uppercase site-button-secondry radius-sm" data-bs-toggle="pill" data-bs-target="#tab-specials"><i class="fa fa-gift m-r5"></i> Specials & Combos</button>
-                        </div>
-
-                        <div class="tab-content bg-white p-a30 radius-sm shadow">
-                            
-                            <!-- TAB 1: BRIDAL & GLAM -->
-                            <div class="tab-pane fade show active" id="tab-bridal">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridal_combo.jpg" alt="Brides- Combo Hair Updo + Make Up + Lashes"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Brides- Combo Hair Updo + Make Up + Lashes</h5>
-                                                    <span class="price-badge">$380</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Full bridal updo, makeup application & premium false lashes.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridal_budget.jpg" alt="Combo- Bride Make Up + Lashes + Hair-UpDo"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Combo- Bride Make Up + Lashes + Hair-UpDo</h5>
-                                                    <span class="price-badge">$300</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Budget bridal bundle with camera-ready makeup, lashes & hair updo.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridal_makeup.jpg" alt="Bride / Make Up + Fake Lashes (Only)"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Bride / Make Up + Fake Lashes (Only)</h5>
-                                                    <span class="price-badge">$210</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 50 min duration</p>
-                                                <p class="font-13 text-muted m-a0">Bridal camera-ready makeup with precision contouring & false lashes.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridal_updo.jpg" alt="Bride Up Do (Only)"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Bride Up Do (Only)</h5>
-                                                    <span class="price-badge">$185</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Custom bridal hair updo styling with volume and secure hold.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridesmaid.jpg" alt="Bridesmaid Hair & Make Up (3+ Min)"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Bridesmaid Hair & Make Up (3+ Min)</h5>
-                                                    <span class="price-badge">$380</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr 45 min duration</p>
-                                                <p class="font-13 text-muted m-a0">On-location bridesmaid styling and makeup for wedding parties.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_flower_girl.jpg" alt="Flower Girls Hair Style or Updo"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Flower Girls Hair Style or Updo (3+ Min)</h5>
-                                                    <span class="price-badge">$55</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Flower girls styling / updo with gentle, kid-friendly care.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- TAB 2: HAIR & BARBERING -->
-                            <div class="tab-pane fade" id="tab-hair">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_men_barbering.jpg" alt="Men's Precision Barbering"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Men's Precision Barbering</h5>
-                                                    <span class="price-badge">$125</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 45 min duration</p>
-                                                <p class="font-13 text-muted m-a0">Precision haircut, beard trim, razor edge-up & hot towel styling.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_haircut_blowdry.jpg" alt="Haircut + Blow Dry Style"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Haircut + Blow Dry Style</h5>
-                                                    <span class="price-badge">$165</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 55 min duration</p>
-                                                <p class="font-13 text-muted m-a0">Custom cut followed by salon blowout & styling at your location.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_blowdry_curls.jpg" alt="Blow Dry & Soft Curls / Updos"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Blow Dry & Soft Curls / Updos</h5>
-                                                    <span class="price-badge">$175</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 45 min duration</p>
-                                                <p class="font-13 text-muted m-a0">Voluminous blowout & soft curls for any special occasion.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_balayage.jpg" alt="Balayage Blonding"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Balayage Blonding (Short / Med / Long)</h5>
-                                                    <span class="price-badge">$185 - $325</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 - 3 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Hand-painted dimensional balayage blonding with custom toner.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_highlights.jpg" alt="Full Foil Highlights + Toner + Style"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Full Foil Highlights + Toner + Style</h5>
-                                                    <span class="price-badge">$250 - $420</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 - 3 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Full head multi-tonal foils + toner + professional finish style.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_retouch_color.jpg" alt="Retouch Color / Blow Dry Style"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Retouch Color / Blow Dry Style</h5>
-                                                    <span class="price-badge">$180</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr 30 min duration</p>
-                                                <p class="font-13 text-muted m-a0">Root touch-up, single tone refresh & blowout.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- TAB 3: MOBILE NAILS -->
-                            <div class="tab-pane fade" id="tab-nails">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_manicure.jpg" alt="Manicure Regular Polish"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Manicure Regular Polish</h5>
-                                                    <span class="price-badge">$75</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 30 min duration</p>
-                                                <p class="font-13 text-muted m-a0">Nail shaping, cuticle grooming, hand massage & polish.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_pedicure.jpg" alt="Pedicure Regular Polish"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Pedicure Regular Polish</h5>
-                                                    <span class="price-badge">$85</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 30 min duration</p>
-                                                <p class="font-13 text-muted m-a0">Steam towels, foot scrub, shaping, cuticle care & polish.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_men_mani_pedi.jpg" alt="Men's Pedicure & Manicure Combo"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Men's Pedicure & Manicure Combo</h5>
-                                                    <span class="price-badge">$140</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Full hand & foot grooming, callus buff, relaxing massage.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_acrylic_nails.jpg" alt="Acrylic Nails + Gel Polish + Design"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Acrylic Nails + Gel Polish + Design</h5>
-                                                    <span class="price-badge">$175</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Full set acrylic extensions with long-lasting gel polish & nail design.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- TAB 4: MASSAGE & FACIALS -->
-                            <div class="tab-pane fade" id="tab-massage">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_massage.jpg" alt="Full Body Therapeutic Massage"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Full Body Therapeutic Massage</h5>
-                                                    <span class="price-badge">$160</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Full body massage with essential oils & custom pressure.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_facial.jpg" alt="Custom Deep Cleansing Facial"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Custom Deep Cleansing Facial</h5>
-                                                    <span class="price-badge">$170</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Custom pore cleanse, exfoliation, hydration & rejuvenation.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_microneedling.jpg" alt="Collagen Induction Micro-Needling"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Collagen Induction Micro-Needling</h5>
-                                                    <span class="price-badge">$350</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr duration</p>
-                                                <p class="font-13 text-muted m-a0">Advanced therapy for pores, scars, wrinkles & youthful tone.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_microblading.jpg" alt="Semi-Permanent Microblading"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Semi-Permanent Microblading</h5>
-                                                    <span class="price-badge">$450</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr 20 min duration</p>
-                                                <p class="font-13 text-muted m-a0">Precision eyebrow micro-pigmentation for fuller natural brows.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- TAB 5: SPECIALS & COMBOS -->
-                            <div class="tab-pane fade" id="tab-specials">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_massage.jpg" alt="February Special: Massage or Facial"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">February Special: 1-Hr Massage or Facial</h5>
-                                                    <span class="price-badge">$145 / person</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 1 hr | Min 2 people</p>
-                                                <p class="font-13 text-muted m-a0">On-site therapeutic massage or customized facial delivered to your door.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_special_combo.jpg" alt="Full Beauty Combo Package"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Full Beauty Combo Package</h5>
-                                                    <span class="price-badge">$240</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 2 hr 30 min duration</p>
-                                                <p class="font-13 text-muted m-a0">Pedicure + Manicure + Haircut + Blow Dry + Style package.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_senior_care.jpg" alt="Senior Haircuts + Style Special"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Senior Haircuts + Style Special</h5>
-                                                    <span class="price-badge">$65 / person</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 45 min | Min 4 people</p>
-                                                <p class="font-13 text-muted m-a0">Compassionate hair styling for seniors and dementia care.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12">
-                                        <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_corporate_wellness.jpg" alt="Corporate Express Wellness Events"></div>
-                                            <div class="card-info">
-                                                <div class="d-flex justify-content-between align-items-start m-b5">
-                                                    <h5 class="font-weight-700 m-a0 font-15 text-black">Corporate Express Wellness Events</h5>
-                                                    <span class="price-badge">$150 / hr</span>
-                                                </div>
-                                                <p class="font-12 site-text-primary font-weight-600 m-b5"><i class="fa fa-clock m-r5"></i> 4-hr minimum duration</p>
-                                                <p class="font-13 text-muted m-a0">Seated chair massage, express facials & manicures for office teams.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        
-                        <div class="text-center m-t40">
-                            <a href="services-1.html" class="site-button text-uppercase radius-sm font-weight-700 m-r15 button-lg">View All 65 Services</a>
-                            <a href="contact-1.html" class="site-button-secondry text-uppercase radius-sm font-weight-700 button-lg">Book Service Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- PRICING SECTION END -->
-
-            
-
-            <!-- OUR TESTIMONIAL SECTION START -->
-            <div class="section-full bg-gray bg-repeat p-t100 p-b70" style="background-image:url(images/background/bg-6.jpg);">
-                <div class="container">
-                    <div class="section-head text-center">
-                        <h2><span class="site-text-primary">What</span> Our Clients Say</h2>
-                        <div class="wt-separator-outer ">
-                            <div class="wt-separator style-icon">
-                                <i class="fa fa-leaf text-black"></i>
-                                <span class="separator-left site-bg-primary"></span>
-                                <span class="separator-right site-bg-primary"></span>
-                            </div>                            
-                        </div>
-                        <p>Real stories from brides, families, and wellness organizers across Arizona & California.</p>
-                    </div>
-                    <div class="section-content">
-                        <div class="owl-carousel home-carousel-1 m-b30">
-                            <!-- Testimonial 1: Kristen H. -->
-                            <div class="item">
-                                <div class="testimonial-5 bg-white radius-sm">
-                                    <div class="testimonial-pic-block radius-bx"> 
-                                        <div class="testimonial-pic radius">
-                                            <img loading="lazy" decoding="async" src="images/testimonials/pic1.jpg" width="132" height="132" alt="Kristen H.">
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-text clearfix">
-                                        <div class="testimonial-paragraph">
-                                            <span class="fa fa-quote-left site-text-primary"></span>
-                                            <p>"I hired these amazing women for my bachelorette party and it was such a nice treat for my girls! They did such a great job giving us all our mani/pedi and they were fun to have around! Saira also did my make up and hair on the day of my wedding and it was perfect! I got so many compliments on how great the makeup came out!"</p>
-                                        </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <strong class="testimonial-name">Kristen H.</strong>
-                                            <span class="testimonial-position site-text-primary p-t10">Bachelorette Party & Wedding Bride</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Testimonial 2: Rebecca B. -->
-                            <div class="item">
-                                <div class="testimonial-5 bg-white radius-sm">
-                                    <div class="testimonial-pic-block radius-bx"> 
-                                        <div class="testimonial-pic radius">
-                                            <img loading="lazy" decoding="async" src="images/testimonials/pic2.jpg" width="132" height="132" alt="Rebecca B.">
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-text clearfix">
-                                        <div class="testimonial-paragraph">
-                                            <span class="fa fa-quote-left site-text-primary"></span>
-                                            <p>"I am in love with this service. My need was for my mom who has dementia and terrible back pain. Saira arrived and handled my mom's sensitivities and fears with such gentleness, making her look stunning. We are now making standing appointments. This place will surpass your expectations."</p>
-                                        </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <strong class="testimonial-name">Rebecca B.</strong>
-                                            <span class="testimonial-position site-text-primary p-t10">In-Home Senior & Dementia Care</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Testimonial 3: Natalie B. -->
-                            <div class="item">
-                                <div class="testimonial-5 bg-white radius-sm">
-                                    <div class="testimonial-pic-block radius-bx"> 
-                                        <div class="testimonial-pic radius">
-                                            <img loading="lazy" decoding="async" src="images/testimonials/pic1.jpg" width="132" height="132" alt="Natalie B.">
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-text clearfix">
-                                        <div class="testimonial-paragraph">
-                                            <span class="fa fa-quote-left site-text-primary"></span>
-                                            <p>"I love these ladies! They are prompt, professional and so sweet. From haircuts to color to makeup I've never been disappointed. The last wedding I went to my makeup looked perfect and lasted the whole day and night. It's totally worth it!"</p>
-                                        </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <strong class="testimonial-name">Natalie B.</strong>
-                                            <span class="testimonial-position site-text-primary p-t10">Regular Styling & Wedding Guest</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- OUR TESTIMONIAL SECTION END -->
-
-            <!-- SPECIAL OFFER BANNER -->
-            <div class="section-full p-t80 p-b80 site-bg-primary text-white text-center">
-                <div class="container">
-                    <h2 class="text-white m-b15">FEBRUARY SPECIAL: 1-HOUR MASSAGE OR FACIAL — $145</h2>
-                    <p class="font-18 text-white m-b30">Book our February 1-hr Massage or Facial Special ($145/person, min 2 people), or our Full Beauty Combo Package (Pedi + Mani + Haircut + Blow Dry + Style for $240). On-site luxury delivered directly to your doorstep.</p>
-                    <a href="contact-1.html" class="site-button-secondry text-uppercase radius-sm font-weight-700 button-lg">BOOK NOW: 602-803-2827</a>
-                </div>
-            </div>
-
-        </div>
-        <!-- CONTENT END -->
-        
-        <!-- FOOTER START -->
-        <footer class="site-footer footer-dark">
-            <!-- CALL TO ACTION -->
-            <div class="call-to-action-wrap site-bg-primary p-tb30">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-9">
-                            <h3 class="text-white m-a0">Ready to experience on-demand luxury beauty and wellness?</h3>
-                            <p class="text-white m-a0 font-14">Call 602-803-2827 to schedule your mobile appointment 7 days a week.</p>
-                        </div>
-                        <div class="col-md-3 text-right">
-                            <a href="contact-1.html" class="site-button-secondry text-uppercase radius-sm font-weight-700">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FOOTER BLOCKS START -->  
-            <div class="footer-top overlay-wraper">
-                <div class="overlay-main"></div>
-                <div class="container">
-                    <div class="row">
-                        <!-- ABOUT COMPANY -->
-                        <div class="col-lg-4 col-md-6">  
-                            <div class="widget widget_about">
-                                <h4 class="widget-title">About Company</h4>
-                                <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img loading="lazy" decoding="async" src="images/logo-white.png" style="max-height: 45px; width: auto;" alt="Beauticians On The Go"></a>
-                                </div>
-                                <p>Beauticians On The Go, PLLC is an upscale on-demand mobile day spa & beauty salon enterprise. We bring state-licensed specialists, treatment tables, and hospital-grade sanitation directly to private residences, luxury resorts, wedding venues, corporate offices, and assisted living facilities.</p>  
-                            </div>
-                        </div> 
-
-                        <!-- USEFUL LINKS -->
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="widget widget_services">
-                                <h4 class="widget-title">Useful links</h4>
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about-1.html">About Us</a></li>
-                                    <li><a href="services-1.html">Services & Pricing</a></li>
-                                    <li><a href="faq-1.html">FAQ</a></li>
-                                    <li><a href="contact-1.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- CORPORATE OFFICE -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="widget widget_newsletter">
-                                <h4 class="widget-title">Corporate Office</h4>
-                                <p class="text-white m-b10"><i class="fa fa-map-marker site-text-primary m-r10"></i> 2390 East Camelback Rd, Suite 130, Phoenix, AZ 85016</p>
-                                <p class="text-white m-b10"><i class="fa fa-phone site-text-primary m-r10"></i> <a href="tel:6028032827" class="text-white">602-803-2827</a></p>
-                                <p class="text-white m-b20"><i class="fa fa-envelope site-text-primary m-r10"></i> <a href="mailto:beauticiansonthego@gmail.com" class="text-white">beauticiansonthego@gmail.com</a></p>
-                            </div>
-                            <!-- SOCIAL LINKS -->
-                            <div class="widget widget_social_inks">
-                                <h4 class="widget-title">Follow Us</h4>
-                                <ul class="social-icons social-square social-darkest">
-                                    <li><a href="https://www.facebook.com/Beauticiansonthegosalon" target="_blank" class="fa-brands fa-facebook-f"></a></li>
-                                    <li><a href="https://www.instagram.com/beauticiansonthego" target="_blank" class="fa-brands fa-instagram"></a></li>
-                                    <li><a href="https://www.tiktok.com/@beauticiansonthego?_t=8fsgspReBYp&_r=1" target="_blank" class="fa-brands fa-tiktok"></a></li>
-                                    <li><a href="https://www.yelp.com/biz/beauticians-on-the-go-scottsdale-2" target="_blank" class="fa-brands fa-yelp"></a></li>
-                                    <li><a href="https://www.linkedin.com/in/carla-olivares/" target="_blank" class="fa-brands fa-linkedin-in"></a></li>
-                                    <li><a href="https://twitter.com/BOTG_salon" target="_blank" class="fa-brands fa-x-twitter"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- FOOTER COPYRIGHT -->
-            <div class="footer-bottom overlay-wraper">
-                <div class="overlay-main"></div>
-                <div class="constrot-strip"></div>
-                <div class="container p-t30">
-                    <div class="row ftr-btm">
-                        <div class="wt-footer-bot-left">
-                            <span class="copyrights-text">© 2026 Beauticians On The Go, PLLC. All Rights Reserved.</span>
-                        </div>
-                        <div class="wt-footer-bot-right">
-                            <ul class="copyrights-nav pull-right"> 
-                                <li><a href="about-1.html">Terms & Condition</a></li>
-                                <li><a href="about-1.html">Privacy Policy</a></li>
-                                <li><a href="contact-1.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- FOOTER END -->
-
-        <!-- BUTTON TOP START -->
-        <button class="scroltop fa fa-chevron-up"></button>
-        
-    </div>
-
-<!-- JAVASCRIPT FILES ========================================= --> 
-<script src="js/jquery-3.7.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-select.min.js"></script>
-<script src="js/magnific-popup.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/counterup.min.js"></script>
-<script src="js/waypoints-sticky.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/scrolla.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/shortcode.js"></script>
-
-
-
-
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/16028032827?text=Hi%20Beauticians%20On%20The%20Go%2C%20I%20would%20like%20to%20inquire%20about%20your%20mobile%20spa%20and%20salon%20services!" target="_blank" class="floating-wa-btn" title="Chat on WhatsApp" style="position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background-color: #25D366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 6px 20px rgba(37,211,102,0.45); z-index: 99999; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/16028032827?text=Hi%20Beauticians%20On%20The%20Go,%20I%20would%20like%20to%20inquire%20about%20your%20mobile%20spa%20and%20beauty%20services!" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" style="position: fixed; bottom: 25px; right: 25px; z-index: 9999; width: 56px; height: 56px; background-color: #25D366; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(37,211,102,0.45); text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp" style="font-size: 32px;"></i>
-    </a>
+                                                                        <!-- IDENTICAL LAPTOP & MOBILE LUXURY HERO STYLES -->
     <style>
-        .floating-whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 24px rgba(37,211,102,0.65);
+        .instant-hero-slider-wrap {
+            position: relative;
+            width: 100%;
+            min-height: 520px;
+            height: 72vh;
+            max-height: 700px;
+            overflow: hidden;
+            background-color: #fdf2f7;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-slides-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: right center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease-out;
+            transform: scale(1.02);
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            z-index: 2;
+        }
+        .hero-overlay-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.80) 48%, rgba(255,255,255,0.12) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-content-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 620px;
+            padding: 20px 0;
+        }
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            background: #ffffff;
+            color: #eb578b;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 16px;
+            border-radius: 30px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(235,87,139,0.15);
+            border: 1px solid rgba(235,87,139,0.25);
+        }
+        .hero-title-main {
+            font-size: 44px;
+            font-weight: 800;
+            color: #272727;
+            text-transform: uppercase;
+            line-height: 1.15;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
+        }
+        .hero-subtitle-sub {
+            font-size: 32px;
+            font-weight: 700;
+            color: #272727;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin: 0 0 16px 0;
+            letter-spacing: -0.3px;
+        }
+        .text-pink {
+            color: #eb578b !important;
+        }
+        .hero-desc-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555555;
+            margin: 0 0 24px 0;
+            font-weight: 400;
+        }
+        .hero-actions-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 26px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .hero-btn-pink {
+            background-color: #eb578b;
+            color: #ffffff !important;
+            border: 2px solid #eb578b;
+        }
+        .hero-btn-pink:hover {
+            background-color: #d63f73;
+            border-color: #d63f73;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(235,87,139,0.35);
+        }
+        .hero-btn-dark {
+            background-color: #272727;
+            color: #ffffff !important;
+            border: 2px solid #272727;
+        }
+        .hero-btn-dark:hover {
+            background-color: #000000;
+            border-color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+        .hero-nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            background: rgba(255,255,255,0.85);
+            color: #272727;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.25s ease;
+            backdrop-filter: blur(4px);
+        }
+        .hero-nav-arrow:hover {
+            background: #eb578b;
+            color: #ffffff;
+            border-color: #eb578b;
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 4px 15px rgba(235,87,139,0.4);
+        }
+        .hero-prev { left: 20px; }
+        .hero-next { right: 20px; }
+        .hero-dots-wrap {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        .hero-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(39,39,39,0.3);
+            border: 2px solid #ffffff;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        .hero-dot.active {
+            background: #eb578b;
+            width: 24px;
+            border-radius: 10px;
+            border-color: #eb578b;
+        }
+
+        /* 📱 MOBILE SAME LOOK AS LAPTOP (HALF FACE ON RIGHT, TEXT & BUTTONS ON LEFT) */
+        @media (max-width: 991px) {
+            .hero-title-main { font-size: 32px; }
+            .hero-subtitle-sub { font-size: 22px; }
+            .hero-nav-arrow { display: none; }
+        }
+        @media (max-width: 767px) {
+            .instant-hero-slider-wrap {
+                min-height: 440px;
+                height: 56vh;
+                max-height: 480px;
+            }
+            .hero-slide {
+                background-position: 28% center;
+                background-size: cover;
+            }
+            .hero-overlay-gradient {
+                background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.05) 100%);
+            }
+            .hero-content-inner {
+                max-width: 220px;
+                padding: 10px 0;
+            }
+            .hero-badge-pill {
+                font-size: 9px;
+                padding: 3px 8px;
+                margin-bottom: 6px;
+                letter-spacing: 0.5px;
+            }
+            .hero-title-main {
+                font-size: 18px;
+                line-height: 1.12;
+                margin-bottom: 2px;
+            }
+            .hero-subtitle-sub {
+                font-size: 13.5px;
+                line-height: 1.12;
+                margin-bottom: 6px;
+            }
+            .hero-desc-text {
+                font-size: 11px;
+                line-height: 1.35;
+                margin-bottom: 12px;
+            }
+            .hero-actions-wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                max-width: 170px;
+            }
+            .hero-btn {
+                padding: 7px 12px;
+                font-size: 10px;
+                letter-spacing: 0.4px;
+                border-radius: 4px;
+                justify-content: center;
+                text-align: center;
+            }
+            .hero-dots-wrap {
+                bottom: 8px;
+            }
+            .hero-dot {
+                width: 7px;
+                height: 7px;
+            }
+            .hero-dot.active {
+                width: 16px;
+            }
         }
     </style>
 
 
-    <!-- LUXURY HERO SLIDER JAVASCRIPT -->
+    <!-- INSTANT HERO SLIDER SCRIPT -->
     <script>
     (function() {
-        var slider = document.getElementById('luxuryHeroSection');
+        var slider = document.getElementById('instantHeroSlider');
         if (!slider) return;
 
-        var slides = slider.querySelectorAll('.luxury-slide');
-        var dots = slider.querySelectorAll('.h-dot');
-        var prevBtn = document.getElementById('heroPrevSlide');
-        var nextBtn = document.getElementById('heroNextSlide');
+        var slides = slider.querySelectorAll('.hero-slide');
+        var dots = slider.querySelectorAll('.hero-dot');
+        var prevBtn = document.getElementById('heroPrevBtn');
+        var nextBtn = document.getElementById('heroNextBtn');
         var current = 0;
         var total = slides.length;
         var timer = null;
