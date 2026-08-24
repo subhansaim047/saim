@@ -29,8 +29,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
-    <base href="/demos/beauticiansonthego/">
-
     <!-- META -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -417,6 +415,7 @@
         }
     </style>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body id="bg">
@@ -838,6 +837,19 @@
         startTimer();
     })();
     </script>
+
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/16028032827?text=Hello%20Beauticians%20On%20The%20Go%2C%20I%20would%20like%20to%20inquire%20about%20your%20mobile%20beauty%20and%20spa%20services." target="_blank" class="floating-wa-btn" aria-label="Chat on WhatsApp" style="position: fixed; bottom: 25px; right: 25px; width: 56px; height: 56px; background-color: #25d366; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 6px 20px rgba(37,211,102,0.4); z-index: 9999; transition: all 0.3s ease; text-decoration: none;">
+        <i class="fa-brands fa-whatsapp" style="font-family: 'Font Awesome 6 Brands', 'FontAwesome'; font-style: normal;"></i>
+    </a>
+    <style>
+        .floating-wa-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37,211,102,0.6);
+            color: #ffffff !important;
+        }
+    </style>
 
 </body>
 </html>
