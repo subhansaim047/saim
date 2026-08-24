@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-    <!-- Performance Preconnect Hints -->
+    <base href="/demos/beauticiansonthego/">
+    <!-- SPEED: Preload LCP Hero Image (slide1) -->
+    <link rel="preload" href="/demos/beauticiansonthego/images/main-slider/slider2/slide1.jpg" as="image" fetchpriority="high">
+    <!-- SPEED: Preload critical CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
-    <base href="/demos/beauticiansonthego/">
 
     <!-- META -->
     <meta charset="utf-8">
@@ -43,7 +45,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
     
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
     <style>
         .home-service-card {
@@ -155,7 +157,7 @@
                     <div class="container">
                         <div class="logo-header">
                             <a href="index.html">
-                                <img src="images/logo.png" style="max-height: 48px; width: auto;" alt="Beauticians On The Go">
+                                <img src="images/logo.png" style="max-height: 48px; width: auto;" alt="Beauticians On The Go" width="180" height="48" fetchpriority="high">
                             </a>
                         </div>
                         
@@ -195,7 +197,7 @@
                     <ul>	
                         <!-- SLIDE 1 -->
                         <li data-index="rs-2938" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="/demos/beauticiansonthego/images/main-slider/slider2/slide1.jpg" data-rotate="0" data-fsslotamount="7" data-saveperformance="off" data-title="" data-param1="Additional Text" data-description="">
-                            <img src="/demos/beauticiansonthego/images/main-slider/slider2/slide1.jpg" alt="Beauticians On The Go" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                            <img src="/demos/beauticiansonthego/images/main-slider/slider2/slide1.jpg" alt="Beauticians On The Go" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina fetchpriority="high" decoding="sync">
                             
                             <div class="tp-caption WebProduct-Title tp-resizeme" 
                                 id="slide-2938-layer-01" 
@@ -277,7 +279,7 @@
 
                         <!-- SLIDE 2 -->
                         <li data-index="rs-2939" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="/demos/beauticiansonthego/images/main-slider/slider2/slide2.jpg" data-rotate="0" data-saveperformance="off" data-title="" data-description="">
-                            <img src="/demos/beauticiansonthego/images/main-slider/slider2/slide2.jpg" alt="Beauticians On The Go" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                            <img src="/demos/beauticiansonthego/images/main-slider/slider2/slide2.jpg" alt="Beauticians On The Go" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina decoding="async">
                            
                             <div class="tp-caption WebProduct-Title tp-resizeme" 
                                 id="slide-2939-layer-01" 
@@ -344,7 +346,7 @@
 
                         <!-- SLIDE 3 -->
                         <li data-index="rs-2940" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="/demos/beauticiansonthego/images/main-slider/slider2/slide3.jpg" data-rotate="0" data-fsslotamount="7" data-saveperformance="off" data-title="" data-description="">
-                            <img src="/demos/beauticiansonthego/images/main-slider/slider2/slide3.jpg" alt="Beauticians On The Go" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                            <img src="/demos/beauticiansonthego/images/main-slider/slider2/slide3.jpg" alt="Beauticians On The Go" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina decoding="async">
                            
                             <div class="tp-caption WebProduct-Title tp-resizeme" 
                                 id="slide-2940-layer-01" 
@@ -1168,16 +1170,7 @@
 </a>
 
 
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/16028032827?text=Hi%20Beauticians%20On%20The%20Go,%20I%20would%20like%20to%20inquire%20about%20your%20mobile%20spa%20and%20beauty%20services!" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" style="position: fixed; bottom: 25px; right: 25px; z-index: 9999; width: 56px; height: 56px; background-color: #25D366; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(37,211,102,0.45); text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp" style="font-size: 32px;"></i>
-    </a>
-    <style>
-        .floating-whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 24px rgba(37,211,102,0.65);
-        }
-    </style>
+    <!-- WhatsApp button (duplicate removed) -->
 
 </body>
 </html>
