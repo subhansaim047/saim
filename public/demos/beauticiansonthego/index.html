@@ -145,7 +145,7 @@
     </style>
 
 
-    <!-- IDENTICAL LAPTOP & MOBILE LUXURY HERO STYLES -->
+    <!-- LUXURY HERO STYLES (DESKTOP FULL IMAGE + MOBILE HALF-FACE CUT) -->
     <style>
         .instant-hero-slider-wrap {
             position: relative;
@@ -191,7 +191,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.80) 48%, rgba(255,255,255,0.12) 100%);
+            background: linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0.18) 75%, rgba(255,255,255,0) 100%);
             z-index: 1;
             pointer-events: none;
         }
@@ -200,6 +200,7 @@
             z-index: 2;
             max-width: 620px;
             padding: 20px 0;
+            text-align: left;
         }
         .hero-badge-pill {
             display: inline-flex;
@@ -340,7 +341,7 @@
             border-color: #eb578b;
         }
 
-        /* 📱 MOBILE SAME LOOK AS LAPTOP (HALF FACE ON RIGHT, TEXT & BUTTONS ON LEFT) */
+        /* 📱 MOBILE VIEWPORT (HALF-FACE ON RIGHT EDGE, CRISP TEXT & BUTTONS ON LEFT) */
         @media (max-width: 991px) {
             .hero-title-main { font-size: 32px; }
             .hero-subtitle-sub { font-size: 22px; }
@@ -348,41 +349,45 @@
         }
         @media (max-width: 767px) {
             .instant-hero-slider-wrap {
-                min-height: 440px;
-                height: 56vh;
-                max-height: 480px;
+                min-height: 460px;
+                height: 58vh;
+                max-height: 500px;
             }
             .hero-slide {
                 background-position: 28% center;
                 background-size: cover;
             }
             .hero-overlay-gradient {
-                background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.05) 100%);
+                background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 48%, rgba(255,255,255,0.18) 75%, rgba(255,255,255,0) 100%);
             }
             .hero-content-inner {
-                max-width: 220px;
+                max-width: 58%;
                 padding: 10px 0;
             }
             .hero-badge-pill {
-                font-size: 9px;
-                padding: 3px 8px;
+                font-size: 9.5px;
+                padding: 4px 10px;
                 margin-bottom: 6px;
                 letter-spacing: 0.5px;
             }
             .hero-title-main {
-                font-size: 18px;
-                line-height: 1.12;
+                font-size: 19px;
+                line-height: 1.15;
                 margin-bottom: 2px;
             }
             .hero-subtitle-sub {
-                font-size: 13.5px;
-                line-height: 1.12;
+                font-size: 14px;
+                line-height: 1.15;
                 margin-bottom: 6px;
             }
             .hero-desc-text {
                 font-size: 11px;
                 line-height: 1.35;
                 margin-bottom: 12px;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
             .hero-actions-wrap {
                 display: flex;
@@ -391,12 +396,13 @@
                 max-width: 170px;
             }
             .hero-btn {
-                padding: 7px 12px;
-                font-size: 10px;
+                padding: 8px 14px;
+                font-size: 10.5px;
                 letter-spacing: 0.4px;
                 border-radius: 4px;
                 justify-content: center;
                 text-align: center;
+                width: auto;
             }
             .hero-dots-wrap {
                 bottom: 8px;
@@ -477,425 +483,8 @@
         
         <!-- CONTENT START -->
         <div class="page-content">
-<!-- IDENTICAL LAPTOP & MOBILE LUXURY HERO STYLES -->
-    <style>
-        .instant-hero-slider-wrap {
-            position: relative;
-            width: 100%;
-            min-height: 520px;
-            height: 72vh;
-            max-height: 700px;
-            overflow: hidden;
-            background-color: #fdf2f7;
-            font-family: 'Poppins', sans-serif;
-        }
-        .hero-slides-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        .hero-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: right center;
-            background-repeat: no-repeat;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease-out;
-            transform: scale(1.02);
-            display: flex;
-            align-items: center;
-            z-index: 1;
-        }
-        .hero-slide.active {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1);
-            z-index: 2;
-        }
-        .hero-overlay-gradient {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.80) 48%, rgba(255,255,255,0.12) 100%);
-            z-index: 1;
-            pointer-events: none;
-        }
-        .hero-content-inner {
-            position: relative;
-            z-index: 2;
-            max-width: 620px;
-            padding: 20px 0;
-        }
-        .hero-badge-pill {
-            display: inline-flex;
-            align-items: center;
-            background: #ffffff;
-            color: #eb578b;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 6px 16px;
-            border-radius: 30px;
-            margin-bottom: 16px;
-            box-shadow: 0 4px 15px rgba(235,87,139,0.15);
-            border: 1px solid rgba(235,87,139,0.25);
-        }
-        .hero-title-main {
-            font-size: 44px;
-            font-weight: 800;
-            color: #272727;
-            text-transform: uppercase;
-            line-height: 1.15;
-            margin: 0 0 8px 0;
-            letter-spacing: -0.5px;
-        }
-        .hero-subtitle-sub {
-            font-size: 32px;
-            font-weight: 700;
-            color: #272727;
-            text-transform: uppercase;
-            line-height: 1.2;
-            margin: 0 0 16px 0;
-            letter-spacing: -0.3px;
-        }
-        .text-pink {
-            color: #eb578b !important;
-        }
-        .hero-desc-text {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555555;
-            margin: 0 0 24px 0;
-            font-weight: 400;
-        }
-        .hero-actions-wrap {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-        }
-        .hero-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 13px 26px;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .hero-btn-pink {
-            background-color: #eb578b;
-            color: #ffffff !important;
-            border: 2px solid #eb578b;
-        }
-        .hero-btn-pink:hover {
-            background-color: #d63f73;
-            border-color: #d63f73;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(235,87,139,0.35);
-        }
-        .hero-btn-dark {
-            background-color: #272727;
-            color: #ffffff !important;
-            border: 2px solid #272727;
-        }
-        .hero-btn-dark:hover {
-            background-color: #000000;
-            border-color: #000000;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-        }
-        .hero-nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 46px;
-            height: 46px;
-            background: rgba(255,255,255,0.85);
-            color: #272727;
-            border: 1px solid rgba(0,0,0,0.08);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            cursor: pointer;
-            z-index: 10;
-            transition: all 0.25s ease;
-            backdrop-filter: blur(4px);
-        }
-        .hero-nav-arrow:hover {
-            background: #eb578b;
-            color: #ffffff;
-            border-color: #eb578b;
-            transform: translateY(-50%) scale(1.08);
-            box-shadow: 0 4px 15px rgba(235,87,139,0.4);
-        }
-        .hero-prev { left: 20px; }
-        .hero-next { right: 20px; }
-        .hero-dots-wrap {
-            position: absolute;
-            bottom: 18px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            z-index: 10;
-        }
-        .hero-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(39,39,39,0.3);
-            border: 2px solid #ffffff;
-            cursor: pointer;
-            padding: 0;
-            transition: all 0.3s ease;
-        }
-        .hero-dot.active {
-            background: #eb578b;
-            width: 24px;
-            border-radius: 10px;
-            border-color: #eb578b;
-        }
-
-        /* 📱 MOBILE SAME LOOK AS LAPTOP (HALF FACE ON RIGHT, TEXT & BUTTONS ON LEFT) */
-        @media (max-width: 991px) {
-            .hero-title-main { font-size: 32px; }
-            .hero-subtitle-sub { font-size: 22px; }
-            .hero-nav-arrow { display: none; }
-        }
-        @media (max-width: 767px) {
-            .instant-hero-slider-wrap {
-                min-height: 440px;
-                height: 56vh;
-                max-height: 480px;
-            }
-            .hero-slide {
-                background-position: 28% center;
-                background-size: cover;
-            }
-            .hero-overlay-gradient {
-                background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.05) 100%);
-            }
-            .hero-content-inner {
-                max-width: 220px;
-                padding: 10px 0;
-            }
-            .hero-badge-pill {
-                font-size: 9px;
-                padding: 3px 8px;
-                margin-bottom: 6px;
-                letter-spacing: 0.5px;
-            }
-            .hero-title-main {
-                font-size: 18px;
-                line-height: 1.12;
-                margin-bottom: 2px;
-            }
-            .hero-subtitle-sub {
-                font-size: 13.5px;
-                line-height: 1.12;
-                margin-bottom: 6px;
-            }
-            .hero-desc-text {
-                font-size: 11px;
-                line-height: 1.35;
-                margin-bottom: 12px;
-            }
-            .hero-actions-wrap {
-                display: flex;
-                flex-direction: column;
-                gap: 6px;
-                max-width: 170px;
-            }
-            .hero-btn {
-                padding: 7px 12px;
-                font-size: 10px;
-                letter-spacing: 0.4px;
-                border-radius: 4px;
-                justify-content: center;
-                text-align: center;
-            }
-            .hero-dots-wrap {
-                bottom: 8px;
-            }
-            .hero-dot {
-                width: 7px;
-                height: 7px;
-            }
-            .hero-dot.active {
-                width: 16px;
-            }
-        }
-    </style>
-
-    <!-- INSTANT ZERO-DELAY LUXURY HERO SLIDER START -->
-    <section class="instant-hero-slider-wrap" id="instantHeroSlider" aria-label="Featured Showcase">
-        <div class="hero-slides-container">
-            <!-- SLIDE 1 -->
-            <div class="hero-slide active" data-index="0" style="background-image: url('images/main-slider/slider2/slide1.jpg');">
-                <div class="hero-overlay-gradient"></div>
-                <div class="container">
-                    <div class="hero-content-inner">
-                        <span class="hero-badge-pill"><i class="fa fa-sparkles m-r5"></i> On-Demand Mobile Day Spa</span>
-                        <h1 class="hero-title-main">BEAUTICIANS <span class="text-pink">ON THE GO</span></h1>
-                        <h2 class="hero-subtitle-sub"><span class="text-pink">WHERE BEAUTY</span> NEVER ENDS</h2>
-                        <p class="hero-desc-text">Upscale on-demand mobile day spa & beauty salon bringing state-licensed specialists, treatment tables, and hospital-grade sanitized care directly to your door.</p>
-                        <div class="hero-actions-wrap">
-                            <a href="services-1.html" class="hero-btn hero-btn-pink">VIEW SERVICES <i class="fa fa-arrow-right m-l5"></i></a>
-                            <a href="contact-1.html" class="hero-btn hero-btn-dark">BOOK APPOINTMENT <i class="fa fa-calendar-check m-l5"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SLIDE 2 -->
-            <div class="hero-slide" data-index="1" style="background-image: url('images/main-slider/slider2/slide2.jpg');">
-                <div class="hero-overlay-gradient"></div>
-                <div class="container">
-                    <div class="hero-content-inner">
-                        <span class="hero-badge-pill"><i class="fa fa-gem m-r5"></i> Luxury Mobile Experience</span>
-                        <h2 class="hero-title-main">REDEFINING <span class="text-pink">COMFORT</span></h2>
-                        <h2 class="hero-subtitle-sub"><span class="text-pink">LUXURY ON-DEMAND</span> BEAUTY</h2>
-                        <p class="hero-desc-text">Serving private residences, luxury vacation rentals (Airbnb & VRBO), resort hotels, corporate offices, wedding venues, and assisted living facilities across AZ, CA, NV & TN.</p>
-                        <div class="hero-actions-wrap">
-                            <a href="services-1.html" class="hero-btn hero-btn-pink">EXPLORE SERVICES <i class="fa fa-arrow-right m-l5"></i></a>
-                            <a href="tel:6028032827" class="hero-btn hero-btn-dark"><i class="fa fa-phone m-r5"></i> CALL 602-803-2827</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SLIDE 3 -->
-            <div class="hero-slide" data-index="2" style="background-image: url('images/main-slider/slider2/slide3.jpg');">
-                <div class="hero-overlay-gradient"></div>
-                <div class="container">
-                    <div class="hero-content-inner">
-                        <span class="hero-badge-pill"><i class="fa fa-shield-heart m-r5"></i> 17+ Years of Excellence</span>
-                        <h2 class="hero-title-main">HOSPITAL-GRADE <span class="text-pink">SAFETY</span></h2>
-                        <h2 class="hero-subtitle-sub"><span class="text-pink">TRUSTED & LICENSED</span> EXPERTS</h2>
-                        <p class="hero-desc-text">Autoclave sterilized tools, disposable liners, hospital-grade disinfectants, and compassionate beauty care tailored for brides, executives, families, and seniors.</p>
-                        <div class="hero-actions-wrap">
-                            <a href="about-1.html" class="hero-btn hero-btn-pink">OUR STORY <i class="fa fa-arrow-right m-l5"></i></a>
-                            <a href="contact-1.html" class="hero-btn hero-btn-dark">GET A QUOTE <i class="fa fa-file-invoice m-l5"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- NAVIGATION ARROWS -->
-        <button class="hero-nav-arrow hero-prev" id="heroPrevBtn" aria-label="Previous Slide"><i class="fa fa-chevron-left"></i></button>
-        <button class="hero-nav-arrow hero-next" id="heroNextBtn" aria-label="Next Slide"><i class="fa fa-chevron-right"></i></button>
-
-        <!-- DOTS -->
-        <div class="hero-dots-wrap" id="heroDotsWrap">
-            <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
-            <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
-            <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
-        </div>
-    </section>
-    <!-- INSTANT ZERO-DELAY LUXURY HERO SLIDER END -->
-
-    <!-- INSTANT HERO SLIDER SCRIPT -->
-    <script>
-    (function() {
-        var slider = document.getElementById('instantHeroSlider');
-        if (!slider) return;
-
-        var slides = slider.querySelectorAll('.hero-slide');
-        var dots = slider.querySelectorAll('.hero-dot');
-        var prevBtn = document.getElementById('heroPrevBtn');
-        var nextBtn = document.getElementById('heroNextBtn');
-        var current = 0;
-        var total = slides.length;
-        var timer = null;
-
-        function showSlide(index) {
-            if (index < 0) index = total - 1;
-            if (index >= total) index = 0;
-            current = index;
-
-            slides.forEach(function(s, i) {
-                if (i === current) {
-                    s.classList.add('active');
-                } else {
-                    s.classList.remove('active');
-                }
-            });
-
-            dots.forEach(function(d, i) {
-                if (i === current) {
-                    d.classList.add('active');
-                } else {
-                    d.classList.remove('active');
-                }
-            });
-        }
-
-        function nextSlide() {
-            showSlide(current + 1);
-        }
-
-        function prevSlide() {
-            showSlide(current - 1);
-        }
-
-        function startTimer() {
-            stopTimer();
-            timer = setInterval(nextSlide, 6000);
-        }
-
-        function stopTimer() {
-            if (timer) clearInterval(timer);
-        }
-
-        if (nextBtn) nextBtn.addEventListener('click', function() { nextSlide(); startTimer(); });
-        if (prevBtn) prevBtn.addEventListener('click', function() { prevSlide(); startTimer(); });
-
-        dots.forEach(function(dot) {
-            dot.addEventListener('click', function() {
-                var idx = parseInt(this.getAttribute('data-index'), 10);
-                showSlide(idx);
-                startTimer();
-            });
-        });
-
-        slider.addEventListener('mouseenter', stopTimer);
-        slider.addEventListener('mouseleave', startTimer);
-
-        // Touch Swipe
-        var touchStartX = 0;
-        slider.addEventListener('touchstart', function(e) {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-        slider.addEventListener('touchend', function(e) {
-            var diff = e.changedTouches[0].screenX - touchStartX;
-            if (diff > 45) { prevSlide(); startTimer(); }
-            else if (diff < -45) { nextSlide(); startTimer(); }
-        }, { passive: true });
-
-        startTimer();
-    })();
-    </script>
-
-<div class="page-content">
         
-                                                                        <!-- IDENTICAL LAPTOP & MOBILE LUXURY HERO STYLES -->
+                        <!-- LUXURY HERO STYLES (DESKTOP FULL IMAGE + MOBILE HALF-FACE CUT) -->
     <style>
         .instant-hero-slider-wrap {
             position: relative;
@@ -941,7 +530,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.80) 48%, rgba(255,255,255,0.12) 100%);
+            background: linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0.18) 75%, rgba(255,255,255,0) 100%);
             z-index: 1;
             pointer-events: none;
         }
@@ -950,6 +539,7 @@
             z-index: 2;
             max-width: 620px;
             padding: 20px 0;
+            text-align: left;
         }
         .hero-badge-pill {
             display: inline-flex;
@@ -1090,7 +680,7 @@
             border-color: #eb578b;
         }
 
-        /* 📱 MOBILE SAME LOOK AS LAPTOP (HALF FACE ON RIGHT, TEXT & BUTTONS ON LEFT) */
+        /* 📱 MOBILE VIEWPORT (HALF-FACE ON RIGHT EDGE, CRISP TEXT & BUTTONS ON LEFT) */
         @media (max-width: 991px) {
             .hero-title-main { font-size: 32px; }
             .hero-subtitle-sub { font-size: 22px; }
@@ -1098,41 +688,45 @@
         }
         @media (max-width: 767px) {
             .instant-hero-slider-wrap {
-                min-height: 440px;
-                height: 56vh;
-                max-height: 480px;
+                min-height: 460px;
+                height: 58vh;
+                max-height: 500px;
             }
             .hero-slide {
                 background-position: 28% center;
                 background-size: cover;
             }
             .hero-overlay-gradient {
-                background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.05) 100%);
+                background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 48%, rgba(255,255,255,0.18) 75%, rgba(255,255,255,0) 100%);
             }
             .hero-content-inner {
-                max-width: 220px;
+                max-width: 58%;
                 padding: 10px 0;
             }
             .hero-badge-pill {
-                font-size: 9px;
-                padding: 3px 8px;
+                font-size: 9.5px;
+                padding: 4px 10px;
                 margin-bottom: 6px;
                 letter-spacing: 0.5px;
             }
             .hero-title-main {
-                font-size: 18px;
-                line-height: 1.12;
+                font-size: 19px;
+                line-height: 1.15;
                 margin-bottom: 2px;
             }
             .hero-subtitle-sub {
-                font-size: 13.5px;
-                line-height: 1.12;
+                font-size: 14px;
+                line-height: 1.15;
                 margin-bottom: 6px;
             }
             .hero-desc-text {
                 font-size: 11px;
                 line-height: 1.35;
                 margin-bottom: 12px;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
             .hero-actions-wrap {
                 display: flex;
@@ -1141,12 +735,13 @@
                 max-width: 170px;
             }
             .hero-btn {
-                padding: 7px 12px;
-                font-size: 10px;
+                padding: 8px 14px;
+                font-size: 10.5px;
                 letter-spacing: 0.4px;
                 border-radius: 4px;
                 justify-content: center;
                 text-align: center;
+                width: auto;
             }
             .hero-dots-wrap {
                 bottom: 8px;
