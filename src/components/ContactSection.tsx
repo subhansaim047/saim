@@ -43,7 +43,7 @@ export const ContactSection = () => {
 💰 *Budget Range:* ${formData.budget}
 📝 *Project Details:* ${details}`;
 
-    const whatsappUrl = `https://wa.me/12498984111?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/34711244392?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
@@ -138,13 +138,13 @@ export const ContactSection = () => {
             <div className="bg-[#0c0c0e] border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-xs font-mono text-white/40 uppercase tracking-wider">Direct Hotline</span>
               <a
-                href="https://wa.me/12498984111"
+                href="https://wa.me/34711244392"
                 target="_blank"
                 rel="noreferrer"
                 className="text-base sm:text-lg font-bold text-white hover:text-primary transition-colors flex items-center gap-2"
               >
                 <MessageSquare className="w-4 h-4 text-primary" />
-                <span>+1 (249) 898-4111</span>
+                <span>+34 711 244 392</span>
               </a>
               <span className="text-[11px] text-white/40">Available Monday – Saturday on WhatsApp</span>
             </div>

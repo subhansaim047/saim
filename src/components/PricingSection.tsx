@@ -129,7 +129,7 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
           <div className="mt-6">
             {plan.featured ? (
               <PrimaryButton
-                href="https://wa.me/12498984111"
+                href="https://wa.me/34711244392"
                 target="_blank"
                 rel="noopener noreferrer"
                 size="sm"
@@ -139,7 +139,7 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
               </PrimaryButton>
             ) : (
               <SecondaryButton
-                href="https://wa.me/12498984111"
+                href="https://wa.me/34711244392"
                 target="_blank"
                 rel="noopener noreferrer"
                 size="sm"

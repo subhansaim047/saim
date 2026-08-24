@@ -74,7 +74,7 @@ export const PrivacyPolicy = () => {
           <section>
             <h2 className="text-white text-xl font-medium mb-3">5. Your Rights</h2>
             <p>
-              You have the right to access, update, or request the complete deletion of your personal data from our records. To exercise your rights, please contact us directly via WhatsApp at +1 (249) 898-4111.
+              You have the right to access, update, or request the complete deletion of your personal data from our records. To exercise your rights, please contact us directly via WhatsApp at +34 711 244 392.
             </p>
           </section>
 
@@ -84,7 +84,7 @@ export const PrivacyPolicy = () => {
               For any questions regarding this Privacy Policy, please contact Saim Dev:
             </p>
             <p className="mt-2 text-primary font-mono text-xs sm:text-sm">
-              WhatsApp: +1 (249) 898-4111 · Web: saimdev.site
+              WhatsApp: +34 711 244 392 · Web: saimdev.site
             </p>
           </section>
         </div>

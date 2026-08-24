@@ -307,7 +307,7 @@ export const Nexova404 = () => {
             Let's create a fast, high-converting digital platform tailored specifically for your business.
           </p>
           <a
-            href="https://wa.me/12498984111"
+            href="https://wa.me/34711244392"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all duration-300 shadow-xl group cursor-pointer text-sm"

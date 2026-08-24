@@ -322,7 +322,7 @@ export const CaseStudiesPage = () => {
                     Verified Project Results
                   </span>
                   <a
-                    href="https://wa.me/12498984111"
+                    href="https://wa.me/34711244392"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-white transition-colors"
@@ -366,7 +366,7 @@ export const CaseStudiesPage = () => {
             Message Saim Dev on WhatsApp to discuss your project requirements and receive a customized quote within 2 hours.
           </p>
           <a
-            href="https://wa.me/12498984111"
+            href="https://wa.me/34711244392"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-4 rounded-full hover:bg-white transition-all text-xs sm:text-sm cursor-pointer shadow-xl"

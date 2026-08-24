@@ -9,7 +9,7 @@ interface ContactButtonProps {
 export const ContactButton: React.FC<ContactButtonProps> = ({ label = "Contact Me", onClick, className = "" }) => {
   return (
     <a
-      href="https://wa.me/12498984111"
+      href="https://wa.me/34711244392"
       target="_blank"
       rel="noopener noreferrer"
       onClick={onClick}

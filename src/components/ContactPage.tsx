@@ -52,7 +52,7 @@ export const ContactPage = () => {
 • *Project Details*: ${formData.details}`;
 
       const encodedText = encodeURIComponent(text);
-      const url = `https://wa.me/12498984111?text=${encodedText}`;
+      const url = `https://wa.me/34711244392?text=${encodedText}`;
       setWaLink(url);
       setSubmitted(true);
 
@@ -107,7 +107,7 @@ export const ContactPage = () => {
             Send a Project Inquiry
           </h2>
           <p className="text-white/60 text-xs sm:text-sm mb-8 font-light">
-            Submitting this form launches WhatsApp with your pre-filled inquiry ready to send to Saim Dev (+1 249 898-4111).
+            Submitting this form launches WhatsApp with your pre-filled inquiry ready to send to Saim Dev (+34 711 244 392).
           </p>
 
           {submitted ? (
@@ -120,7 +120,7 @@ export const ContactPage = () => {
                 Click the button below to open WhatsApp with your pre-filled project details and press <strong>Send</strong>:
               </p>
               <a
-                href={waLink || "https://wa.me/12498984111"}
+                href={waLink || "https://wa.me/34711244392"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-emerald-500 text-black text-sm font-bold px-8 py-4 rounded-full hover:bg-emerald-400 transition-all cursor-pointer mb-4 shadow-xl scale-105"
@@ -320,7 +320,7 @@ export const ContactPage = () => {
             <div>
               <h4 className="text-white text-sm font-medium">Can we communicate via WhatsApp?</h4>
               <p className="text-white/60 text-xs mt-1 font-light">
-                Yes! Instant communication is available via WhatsApp (+1 249 898-4111) throughout the project.
+                Yes! Instant communication is available via WhatsApp (+34 711 244 392) throughout the project.
               </p>
             </div>
           </div>
@@ -335,12 +335,12 @@ export const ContactPage = () => {
             Skip the form and message Saim Dev directly on WhatsApp for an immediate response.
           </p>
           <a
-            href="https://wa.me/12498984111"
+            href="https://wa.me/34711244392"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-emerald-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-emerald-400 transition-all text-xs cursor-pointer shadow-lg"
           >
-            <span>Chat on WhatsApp (+1 249 898-4111)</span>
+            <span>Chat on WhatsApp (+34 711 244 392)</span>
           </a>
         </div>
       </div>
