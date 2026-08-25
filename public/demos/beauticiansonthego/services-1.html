@@ -270,7 +270,7 @@
                     </div>
 
                     <!-- CATEGORY 1: BRIDAL, WEDDINGS & PROM -->
-                    <div class="m-b40">
+                    <div class="m-b40 service-category-block" data-cat="bridal">
                         <div class="m-b25 pb-2" style="border-bottom: 2px solid #eb578b;">
                             <h3 class="text-uppercase m-a0 font-weight-700"><i class="fa fa-heart site-text-primary m-r10"></i> Bridal, Weddings & Prom Glam</h3>
                         </div>
@@ -957,11 +957,22 @@
                             if (targetCat === 'all' || block.getAttribute('data-cat') === targetCat) {
                                 block.style.display = 'block';
                                 block.style.opacity = '0';
-                                setTimeout(() => { block.style.transition = 'opacity 0.4s ease'; block.style.opacity = '1'; }, 10);
+                                setTimeout(function() {
+                                    block.style.transition = 'opacity 0.4s ease';
+                                    block.style.opacity = '1';
+                                }, 10);
                             } else {
                                 block.style.display = 'none';
                             }
                         });
+
+                        // Scroll to services content area smoothly
+                        var contentSection = document.querySelector('.section-full.p-t80');
+                        if (contentSection) {
+                            setTimeout(function() {
+                                contentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }, 50);
+                        }
                     });
                 });
             });
