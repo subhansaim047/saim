@@ -1700,6 +1700,64 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+
+<style id="detailx-swiper-fix">
+/* Fix for Swiper slides having 0 width/height due to missing trx_addons JS */
+.slider_swiper_outer .slider_swiper,
+.slider_swiper_outer .swiper-wrapper {
+    width: 100% !important;
+    min-height: 500px;
+}
+.slider_swiper_outer .swiper-slide {
+    width: 100% !important;
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.slider_swiper_outer .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0 !important;
+    pointer-events: none;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slider_swiper_outer .swiper-slide.swiper-slide-active {
+    z-index: 1;
+    position: relative;
+}
+
+/* Fix for Video auto-play and removing pause icon */
+.detailx-custom-hero video {
+    pointer-events: none !important;
+}
+.mejs-container, .mejs-overlay-play, .mejs-overlay-button {
+    pointer-events: none !important;
+    display: none !important;
+    opacity: 0 !important;
+}
+</style>
+<!-- VIDEO AUTOPLAY FIX -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('video').forEach(function(vid) {
+        vid.setAttribute('autoplay', '');
+        vid.setAttribute('muted', '');
+        vid.setAttribute('playsinline', '');
+        vid.setAttribute('loop', '');
+        vid.muted = true;
+        vid.style.pointerEvents = 'none';
+        
+        var playPromise = vid.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function(e) {
+                console.log('Autoplay prevented:', e);
+            });
+        }
+    });
+});
+</script>
+
 </body>
 </html>
 <!-- Cached by WP-Optimize (gzip) - https://teamupdraft.com/wp-optimize/ - Last modified: Aug 28, 2026 7:29 am (UTC:0) -->
