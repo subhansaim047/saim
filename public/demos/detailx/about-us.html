@@ -1677,6 +1677,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
 <style id="detailx-swiper-fix">
 /* Fix for Swiper slides having 0 width/height due to missing trx_addons JS */
 .slider_container:not(.inited) {
@@ -1755,17 +1758,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Custom Tabs/Swiper Fix with MutationObserver to wait for dynamic bullets
+    // Custom Tabs/Swiper Fix
     document.querySelectorAll('.slider_swiper_outer').forEach(function(slider) {
         const slides = slider.querySelectorAll('.swiper-slide');
         if (slides.length === 0) return;
         
         function initTabs() {
-            // Find the pagination bullets for this slider.
-            // Note: Sometimes they are sibling elements rather than inside slider_swiper_outer.
-            // So we search within the parent widget container.
-            const widget = slider.closest('.elementor-widget-container') || slider.parentElement.parentElement;
-            const bullets = widget.querySelectorAll('.slider_pagination_bullet, .swiper-pagination-bullet');
+            // Find bullets globally because they can be in a different column.
+            let widget = slider.closest('.elementor-widget');
+            let bullets = [];
+            
+            if (widget && widget.id) {
+                let controls = document.querySelector('[data-slider-id="' + widget.id + '"]');
+                if (controls) {
+                    bullets = controls.querySelectorAll('.slider_pagination_bullet, .swiper-pagination-bullet');
+                }
+            }
+            
+            // Fallback if no ID match (just find all bullets on page)
+            if (bullets.length === 0) {
+                bullets = document.querySelectorAll('.slider_pagination_wrap .swiper-pagination-bullet, .slider_pagination_bullet');
+            }
             
             if (bullets.length > 0) {
                 if (!slider.hasAttribute('data-custom-tabs-init')) {
@@ -1800,16 +1813,11 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         }
 
-        // Try immediately
         if (!initTabs()) {
-            // Observe DOM changes if bullets are not generated yet
             const observer = new MutationObserver((mutations, obs) => {
-                if (initTabs()) {
-                    obs.disconnect();
-                }
+                if (initTabs()) obs.disconnect();
             });
-            const widget = slider.closest('.elementor-widget-container') || document.body;
-            observer.observe(widget, { childList: true, subtree: true });
+            observer.observe(document.body, { childList: true, subtree: true });
         }
     });
 });
