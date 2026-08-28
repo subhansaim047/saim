@@ -382,6 +382,15 @@ color: #fff;}
         display: none !important;
     }
 
+
+    /* HIDE EXTRA THEME ARTIFACTS */
+    .trx_demo_panel,
+    .trx_demo_panel_button,
+    .trx_demo_panels_mask,
+    #style-11 {
+        display: none !important;
+    }
+
 </style>
 
 
@@ -1542,6 +1551,60 @@ color: #fff;}
         }
     });
 </script>
+
+
+<!-- CUSTOM MARQUEE FIX -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('.trx_addons_has_bg_text');
+    sections.forEach(function(section) {
+        var bgTextData = section.getAttribute('data-bg-text');
+        if (bgTextData) {
+            try {
+                var data = JSON.parse(bgTextData.replace(/&quot;/g, '"'));
+                if (data.bg_text) {
+                    var wrap = document.createElement('div');
+                    wrap.className = 'trx_addons_bg_text trx_addons_marquee_wrap';
+                    wrap.style.position = 'absolute';
+                    wrap.style.top = '10%';
+                    wrap.style.left = '0';
+                    wrap.style.width = '100%';
+                    wrap.style.overflow = 'hidden';
+                    wrap.style.whiteSpace = 'nowrap';
+                    wrap.style.zIndex = '0';
+                    wrap.style.pointerEvents = 'none';
+                    
+                    var inner = document.createElement('div');
+                    inner.className = 'trx_addons_marquee_element';
+                    inner.innerText = data.bg_text.toUpperCase();
+                    inner.style.display = 'inline-block';
+                    inner.style.fontSize = '12vw';
+                    inner.style.fontWeight = '900';
+                    inner.style.lineHeight = '1';
+                    inner.style.color = 'transparent';
+                    inner.style.WebkitTextStroke = '2px #ff0000'; /* RED LINE TEXT */
+                    inner.style.textTransform = 'uppercase';
+                    inner.style.animation = 'marquee 20s linear infinite';
+                    
+                    var inner2 = inner.cloneNode(true);
+                    
+                    wrap.appendChild(inner);
+                    wrap.appendChild(inner2);
+                    
+                    section.style.position = 'relative';
+                    section.insertBefore(wrap, section.firstChild);
+                }
+            } catch(e) { console.error('Error parsing bg text', e); }
+        }
+    });
+});
+</script>
+<style>
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+</style>
 
 </body>
 </html>
