@@ -1300,6 +1300,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
 <style id="detailx-swiper-fix">
 /* Fix for Swiper slides having 0 width/height due to missing trx_addons JS */
 .slider_container:not(.inited) {
@@ -1310,6 +1313,8 @@ document.addEventListener('DOMContentLoaded', function() {
     width: 100% !important;
     min-height: 500px;
 }
+
+/* Hide all slides by default */
 .slider_swiper_outer .swiper-slide {
     width: 100% !important;
     height: auto !important;
@@ -1322,21 +1327,23 @@ document.addEventListener('DOMContentLoaded', function() {
     left: 0;
     transition: opacity 0.3s ease;
 }
-/* By default, the first slide is visible */
-.slider_swiper_outer .swiper-slide:first-child,
-.slider_swiper_outer .swiper-slide.custom-active-slide {
+
+/* If JS hasn't initialized, show the first slide as fallback */
+.slider_swiper_outer:not([data-custom-tabs-init="1"]) .swiper-slide:first-child {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto;
     z-index: 1;
     position: relative;
 }
-.slider_swiper_outer .swiper-slide.custom-active-slide ~ .swiper-slide:first-child:not(.custom-active-slide) {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none;
-    z-index: 0;
-    position: absolute;
+
+/* Show the active slide (controlled by JS) */
+.slider_swiper_outer .swiper-slide.custom-active-slide {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto;
+    z-index: 1;
+    position: relative;
 }
 
 /* Pagination active state */
