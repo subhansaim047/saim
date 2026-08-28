@@ -1083,6 +1083,18 @@ header::before, header::after, .top_panel::before, .top_panel::after,
 
 </style>
 
+
+<style>
+/* Remove 3 red boxes (AncoraThemes demo panel) globally */
+.trx_demo_panels, #trx_demo_panels, .trx_demo_panels_mask, .trx_demo_button_close {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    z-index: -9999 !important;
+}
+</style>
+
 </head>
 
 <body class="wp-singular page-template-default page page-id-3738 wp-custom-logo wp-embed-responsive wp-theme-detailx theme-detailx hide_fixed_rows_enabled woocommerce-no-js tinvwl-theme-style skin_default woo_extensions_present scheme_default blog_mode_page body_style_fullscreen is_single sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-25857 header_position_default menu_side_none no_layout fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-3738">

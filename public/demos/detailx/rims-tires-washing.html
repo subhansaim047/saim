@@ -198,13 +198,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 #rs-demo-id {}
 /*# sourceURL=rs-plugin-settings-inline-css */
 </style>
-<style>.trx_demo_inline_1159820090{color:#ffffff !important;border-color:#383e28 !important;background-color:#383e28 !important;}.trx_demo_inline_1140298336:hover{color:#ffffff !important;border-color:#262c18 !important;background-color:#262c18 !important;}.trx_demo_panels.open .trx_demo_panel_active .trx_demo_panel_footer .trx_demo_panel_button {
-justify-content: center;}
-.trx_demo_tabs_style_icons .trx_demo_tabs a > i {
-color: #fff;}
-
-.trx_demo_tabs_style_icons [class*="hint_"]:after {
-    background-color: var(--theme-color-extra_bg_color);
+<style>.trx_demo_inline_1159820090{color:#ffffff !important;border-color:#383e28 !important;background-color:#383e28 !important;}.trx_demo_inline_1140298336:hover{color:#ffffff !important;border-color:#262c18 !important;background-color:#262c18 !important;}.trx_demo_panels.open .trx_demo_panel_active .trx_demo_panel_footer .trx_demo_panel_button {
+
+justify-content: center;}
+
+.trx_demo_tabs_style_icons .trx_demo_tabs a > i {
+
+color: #fff;}
+
+
+
+.trx_demo_tabs_style_icons [class*="hint_"]:after {
+
+    background-color: var(--theme-color-extra_bg_color);
+
 }</style>
 <link property="stylesheet" rel='stylesheet' id='trx_addons-icons-css' href='https://detailx.ancorathemes.com/wp-content/plugins/trx_addons/css/font-icons/css/trx_addons_icons.css' type='text/css' media='all' />
 <link property="stylesheet" rel='stylesheet' id='qw_extensions-icons-css' href='https://detailx.ancorathemes.com/wp-content/plugins/trx_addons/addons/qw-extension/css/font-icons/css/qw_extension_icons.css' type='text/css' media='all' />
@@ -280,6 +287,30 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
 }
 </style>
 
+
+<style>
+/* Remove 3 red boxes (AncoraThemes demo panel) */
+.trx_demo_panels, #trx_demo_panels, .trx_demo_panels_mask {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    z-index: -9999 !important;
+}
+</style>
+
+
+<style>
+/* Remove 3 red boxes (AncoraThemes demo panel) globally */
+.trx_demo_panels, #trx_demo_panels, .trx_demo_panels_mask, .trx_demo_button_close {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    z-index: -9999 !important;
+}
+</style>
+
 </head>
 
 <body class="wp-singular cpt_services-template-default single single-cpt_services postid-948 wp-custom-logo wp-embed-responsive wp-theme-detailx theme-detailx hide_fixed_rows_enabled woocommerce-no-js tinvwl-theme-style skin_default woo_extensions_present scheme_default blog_mode_services body_style_wide  is_stream blog_style_excerpt sidebar_show sidebar_right sidebar_small_screen_below trx_addons_present header_type_custom header_style_header-custom-25857 header_position_default menu_side_none no_layout fixed_blocks_sticky elementor-default elementor-kit-15">
@@ -291,7 +322,7 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
 		<div class="page_wrap" >
 
 			
-			<header class="top_panel top_panel_custom top_panel_custom_25857 top_panel_custom_header-default				 without_bg_image with_featured_image">
+			<header class="top_panel top_panel_custom top_panel_custom_25857 top_panel_custom_header-default				 without_bg_image">
 			<div data-elementor-type="cpt_layouts" data-elementor-id="25857" class="elementor elementor-25857">
 						<section class="elementor-section elementor-top-section elementor-element elementor-element-f5a31f9 elementor-section-content-middle sc_layouts_row sc_layouts_row_type_narrow scheme_dark elementor-section-full_width elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="f5a31f9" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 						<div class="elementor-container elementor-column-gap-extended">
@@ -328,10 +359,10 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="sc_layouts_item elementor-element elementor-element-f8eee8c sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="f8eee8c" data-element_type="widget" data-e-type="widget" data-widget_type="trx_sc_layouts_logo.default">
 				<div class="elementor-widget-container">
-					<a href="https://detailx.ancorathemes.com/"
-		class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1511231731" ><img class="logo_image"
-					src="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo.png"
-											srcset="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo-retina.png 2x"
+					<a href="index.html"
+		class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_941289556" ><img class="logo_image"
+					src="images/logo.png"
+											srcset="images/logo-retina.png 2x"
 											alt="DetailX" width="178" height="25"></a>				</div>
 				</div>
 					</div>
@@ -340,27 +371,7 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="sc_layouts_item elementor-element elementor-element-15c6075 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_menu" data-id="15c6075" data-element_type="widget" data-e-type="widget" data-widget_type="trx_sc_layouts_menu.default">
 				<div class="elementor-widget-container">
-					<nav class="sc_layouts_menu sc_layouts_menu_default sc_layouts_menu_dir_horizontal menu_hover_zoom_line" data-animation-in="fadeIn" data-animation-out="fadeOut" ><ul id="sc_layouts_menu_564070317" class="sc_layouts_menu_nav"><li id="menu-item-25895" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-25895"><a href="#"><span>Home</span></a>
-<ul class="sub-menu"><li id="menu-item-9173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9173"><a href="https://detailx.ancorathemes.com/"><span>Car Detailing</span></a></li><li id="menu-item-25888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25888"><a href="https://detailx.ancorathemes.com/auto-repair/"><span>Auto Repair</span></a></li><li id="menu-item-25887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25887"><a href="https://detailx.ancorathemes.com/wheels-and-tires/"><span>Wheels and Tires</span></a></li><li id="menu-item-25884" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25884"><a href="https://detailx.ancorathemes.com/accessories-store/"><span>Accessories Store</span></a></li><li id="menu-item-25886" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25886"><a href="https://detailx.ancorathemes.com/auto-body-shop/"><span>Auto Body Shop</span></a></li><li id="menu-item-25885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25885"><a href="https://detailx.ancorathemes.com/car-wash/"><span>Car Wash</span></a></li><li id="menu-item-30960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30960"><a href="https://detailx.ancorathemes.com/dealership/"><span>Dealership</span></a></li><li id="menu-item-31508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31508"><a href="https://detailx.ancorathemes.com/car-marketplace/"><span>Car Marketplace</span></a></li><li id="menu-item-32180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32180"><a href="https://detailx.ancorathemes.com/car-tuning/"><span>Car Tuning</span></a></li><li id="menu-item-32609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32609"><a href="https://detailx.ancorathemes.com/car-landing/"><span>Car Landing</span></a></li><li id="menu-item-32945" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32945"><a href="https://detailx.ancorathemes.com/car-rental/"><span>Car Rental</span></a></li></ul>
-</li><li id="menu-item-5272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5272"><a href="#"><span>Pages</span></a>
-<ul class="sub-menu"><li id="menu-item-26371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26371"><a href="https://detailx.ancorathemes.com/about-us/"><span>About Us</span></a></li><li id="menu-item-26372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26372"><a href="https://detailx.ancorathemes.com/our-services/"><span>Our Services</span></a></li><li id="menu-item-25900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25900"><a href="https://detailx.ancorathemes.com/our-team/"><span>Our Team</span></a></li><li id="menu-item-26373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26373"><a href="https://detailx.ancorathemes.com/faqs/"><span>FAQs</span></a></li><li id="menu-item-25902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25902"><a href="https://detailx.ancorathemes.com/pricing/"><span>Pricing</span></a></li><li id="menu-item-5573" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573"><a href="#"><span>Blog</span></a>
-	<ul class="sub-menu"><li id="menu-item-6602" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-6602"><a href="https://detailx.ancorathemes.com/blog-standard/"><span>Standard</span></a></li><li id="menu-item-6594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6594"><a href="https://detailx.ancorathemes.com/blog-list/"><span>List</span></a></li><li id="menu-item-6600" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6600"><a href="https://detailx.ancorathemes.com/blog-grid/"><span>Grid</span></a></li><li id="menu-item-6604" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6604"><a href="#"><span>Single Posts</span></a>
-		<ul class="sub-menu"><li id="menu-item-27626" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-27626"><a href="https://detailx.ancorathemes.com/the-best-soap-and-wax-to-cover-your-car-with/"><span>With Sidebar</span></a></li><li id="menu-item-27625" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-27625"><a href="https://detailx.ancorathemes.com/must-do-regular-checkups-for-a-better-car-operation/"><span>Without Sidebar</span></a></li></ul>
-</li></ul>
-</li><li id="menu-item-5296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5296"><a href="https://detailx.ancorathemes.com/contact/"><span>Contact</span></a></li><li id="menu-item-5294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5294"><a href="https://detailx.ancorathemes.com/get-a-quote/"><span>Get a Quote</span></a></li><li id="menu-item-30800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30800"><a href="https://detailx.ancorathemes.com/online-booking/"><span>Online Booking</span></a></li><li id="menu-item-26385" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-26385"><a href="#"><span>Tools</span></a>
-	<ul class="sub-menu"><li id="menu-item-12951" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12951"><a href="https://detailx.ancorathemes.com/typography/"><span>Typography</span></a></li><li id="menu-item-5546" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5546"><a href="https://detailx.ancorathemes.com/404/"><span>404 Page</span></a></li><li id="menu-item-26079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26079"><a href="https://detailx.ancorathemes.com/service-plus/"><span>Service Plus</span></a></li><li id="menu-item-12428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12428"><a href="https://detailx.ancorathemes.com/newsletter-popup/"><span>Newsletter Popup</span></a></li></ul>
-</li></ul>
-</li><li id="menu-item-31500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31500"><a href="#"><span>Cars</span></a>
-<ul class="sub-menu"><li id="menu-item-31501" class="menu-item menu-item-type-post_type_archive menu-item-object-cpt_cars menu-item-31501"><a href="https://detailx.ancorathemes.com/cars/"><span>All Cars</span></a></li><li id="menu-item-31502" class="menu-item menu-item-type-post_type menu-item-object-cpt_cars menu-item-31502"><a href="https://detailx.ancorathemes.com/cars/aston-martin/"><span>Single Car</span></a></li><li id="menu-item-31504" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31504"><a href="https://detailx.ancorathemes.com/cars/?compare=1"><span>Comparison List</span></a></li><li id="menu-item-31503" class="menu-item menu-item-type-post_type menu-item-object-cpt_cars_agents menu-item-31503"><a href="https://detailx.ancorathemes.com/car_agents/amy-walker/"><span>Car Agent</span></a></li></ul>
-</li><li id="menu-item-5547" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5547"><a href="#"><span>Portfolio</span></a>
-<ul class="sub-menu"><li id="menu-item-5562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5562"><a href="https://detailx.ancorathemes.com/portfolio-mouse-info/"><span>Mouse Info</span></a></li><li id="menu-item-5550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5550"><a href="https://detailx.ancorathemes.com/portfolio-overlay-bordered/"><span>Overlay Bordered</span></a></li><li id="menu-item-5561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5561"><a href="https://detailx.ancorathemes.com/portfolio-waves-centered/"><span>Waves Centered</span></a></li><li id="menu-item-5549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5549"><a href="https://detailx.ancorathemes.com/portfolio-hover-waves/"><span>Hover Waves</span></a></li><li id="menu-item-5564" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5564"><a href="#"><span>Single Portfolio</span></a>
-	<ul class="sub-menu"><li id="menu-item-28432" class="menu-item menu-item-type-post_type menu-item-object-cpt_portfolio menu-item-28432"><a href="https://detailx.ancorathemes.com/portfolio/three-whales/"><span>Left Sidebar</span></a></li><li id="menu-item-28433" class="menu-item menu-item-type-post_type menu-item-object-cpt_portfolio menu-item-28433"><a href="https://detailx.ancorathemes.com/portfolio/the-comfort/"><span>Right Sidebar</span></a></li><li id="menu-item-28437" class="menu-item menu-item-type-post_type menu-item-object-cpt_portfolio menu-item-28437"><a href="https://detailx.ancorathemes.com/portfolio/oils-fluids/"><span>Fullwidth</span></a></li><li id="menu-item-28435" class="menu-item menu-item-type-post_type menu-item-object-cpt_portfolio menu-item-28435"><a href="https://detailx.ancorathemes.com/portfolio/the-details/"><span>Background Video</span></a></li></ul>
-</li></ul>
-</li><li id="menu-item-5602" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5602"><a href="#"><span>Shop</span></a>
-<ul class="sub-menu"><li id="menu-item-13113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13113"><a href="https://detailx.ancorathemes.com/shop/"><span>Shop Default</span></a></li><li id="menu-item-19353" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19353"><a href="#"><span>Single Product</span></a>
-	<ul class="sub-menu"><li id="menu-item-30247" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-30247"><a href="https://detailx.ancorathemes.com/product/steel-flower-rim/"><span>Default</span></a></li><li id="menu-item-30444" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-30444"><a href="https://detailx.ancorathemes.com/product/double-star-rim/"><span>Fullwidth</span></a></li><li id="menu-item-19357" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-19357"><a href="https://detailx.ancorathemes.com/product/winter-tire/"><span>Grid</span></a></li></ul>
-</li><li id="menu-item-5604" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5604"><a href="https://detailx.ancorathemes.com/cart/"><span>Cart</span></a></li><li id="menu-item-5605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5605"><a href="https://detailx.ancorathemes.com/checkout/"><span>Checkout</span></a></li><li id="menu-item-6613" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6613"><a href="https://detailx.ancorathemes.com/wishlist-page/"><span>Wishlist Page</span></a></li></ul>
-</li></ul></nav>				</div>
+					<nav class="sc_layouts_menu sc_layouts_menu_default sc_layouts_menu_dir_horizontal menu_hover_zoom_line" data-animation-in="fadeIn" data-animation-out="fadeOut"><ul class="sc_layouts_menu_nav menu_main_nav"><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="index.html"><span>Home</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="about-us.html"><span>About Us</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item current_page_item"><a href="our-services.html"><span>Our Services</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="pricing.html"><span>Pricing</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="blog-single.html"><span>Blog</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="get-a-quote.html"><span>Get a Quote</span></a></li></ul></nav>				</div>
 				</div>
 				<div class="sc_layouts_item elementor-element elementor-element-e557d76 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_cart" data-id="e557d76" data-element_type="widget" data-e-type="widget" data-widget_type="trx_sc_layouts_cart.default">
 				<div class="elementor-widget-container">
@@ -389,11 +400,11 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
         <span class="search_submit"></span>
         <div class="search_wrap">
             <div class="search_header_wrap"><img class="logo_image"
-                           src="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo.png"
-                                            srcset="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo-retina.png 2x"                        alt="DetailX" width="178" height="25">                <a class="search_close"></a>
+                           src="images/logo.png"
+                                            srcset="images/logo-retina.png 2x"                        alt="DetailX" width="178" height="25">                <a class="search_close"></a>
             </div>
             <div class="search_form_wrap">
-                <form role="search" method="get" class="search_form" action="https://detailx.ancorathemes.com/">
+                <form role="search" method="get" class="search_form" action="index.html">
                     <input type="hidden" value="" name="post_types">
                     <input type="text" class="search_field" placeholder="Type words and hit enter" value="" name="s">
                     <button type="submit" class="search_submit"></button>
@@ -408,7 +419,7 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
 				</div>
 				<div class="sc_layouts_item elementor-element elementor-element-c570449 sc_layouts_hide_on_tablet sc_layouts_hide_on_mobile sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="c570449" data-element_type="widget" data-e-type="widget" data-widget_type="trx_sc_button.default">
 				<div class="elementor-widget-container">
-					<div	class="sc_item_button sc_button_wrap" ><a href="https://detailx.ancorathemes.com/get-a-quote/" class="sc_button hide_on_mobile hide_on_tablet sc_button_default sc_button_size_small sc_button_icon_left" ><span class="sc_button_text"><span class="sc_button_title">Get a Quote</span></span></a></div>				</div>
+					<div	class="sc_item_button sc_button_wrap" ><a href="get-a-quote.html" class="sc_button hide_on_mobile hide_on_tablet sc_button_default sc_button_size_small sc_button_icon_left" ><span class="sc_button_text"><span class="sc_button_title">Get a Quote</span></span></a></div>				</div>
 				</div>
 					</div>
 		</div>
@@ -420,10 +431,10 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="sc_layouts_item elementor-element elementor-element-00bf088 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="00bf088" data-element_type="widget" data-e-type="widget" data-widget_type="trx_sc_layouts_logo.default">
 				<div class="elementor-widget-container">
-					<a href="https://detailx.ancorathemes.com/"
-		class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_338172588" ><img class="logo_image"
-					src="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo.png"
-											srcset="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo-retina.png 2x"
+					<a href="index.html"
+		class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_1944194816" ><img class="logo_image"
+					src="images/logo.png"
+											srcset="images/logo-retina.png 2x"
 											alt="DetailX" width="178" height="25"></a>				</div>
 				</div>
 					</div>
@@ -457,11 +468,11 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
         <span class="search_submit"></span>
         <div class="search_wrap">
             <div class="search_header_wrap"><img class="logo_image"
-                           src="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo.png"
-                                            srcset="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo-retina.png 2x"                        alt="DetailX" width="178" height="25">                <a class="search_close"></a>
+                           src="images/logo.png"
+                                            srcset="images/logo-retina.png 2x"                        alt="DetailX" width="178" height="25">                <a class="search_close"></a>
             </div>
             <div class="search_form_wrap">
-                <form role="search" method="get" class="search_form" action="https://detailx.ancorathemes.com/">
+                <form role="search" method="get" class="search_form" action="index.html">
                     <input type="hidden" value="" name="post_types">
                     <input type="text" class="search_field" placeholder="Type words and hit enter" value="" name="s">
                     <button type="submit" class="search_submit"></button>
@@ -499,7 +510,7 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
 				</div>
 				<div class="sc_layouts_item elementor-element elementor-element-75dcc52 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_title" data-id="75dcc52" data-element_type="widget" data-e-type="widget" data-widget_type="trx_sc_layouts_title.default">
 				<div class="elementor-widget-container">
-					<div class="sc_layouts_title sc_align_center with_content without_image without_tint" ><div class="sc_layouts_title_content"><div class="sc_layouts_title_title"><h1 class="sc_layouts_title_caption">Rims &#038; tires washing</h1></div><div class="sc_layouts_title_breadcrumbs"><div class="breadcrumbs"><a class="breadcrumbs_item home" href="https://detailx.ancorathemes.com/">Home</a><span class="breadcrumbs_delimiter"></span><a class="breadcrumbs_item all_posts" href="https://detailx.ancorathemes.com/services/">All Services</a><span class="breadcrumbs_delimiter"></span><span class="breadcrumbs_item">...</span><span class="breadcrumbs_delimiter"></span><span class="breadcrumbs_item current">Rims &#038; tires washing</span></div></div></div></div>				</div>
+					<div class="sc_layouts_title sc_align_center with_content without_image without_tint" ><div class="sc_layouts_title_content"><div class="sc_layouts_title_title"><h1 class="sc_layouts_title_caption">Our Services</h1></div><div class="sc_layouts_title_breadcrumbs"><div class="breadcrumbs"><a class="breadcrumbs_item home" href="index.html">Home</a><span class="breadcrumbs_delimiter"></span><span class="breadcrumbs_item current">Our Services</span></div></div></div></div>				</div>
 				</div>
 				<div class="sc_layouts_item elementor-element elementor-element-62cfb03 sc_height_huge sc_fly_static elementor-widget elementor-widget-spacer" data-id="62cfb03" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
@@ -518,33 +529,13 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
 <div class="menu_mobile menu_mobile_fullscreen scheme_dark">
 	<div class="menu_mobile_inner">
         <div class="menu_mobile_header_wrap">
-            <a class="sc_layouts_logo" href="https://detailx.ancorathemes.com/">
-		<img src="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo.png" srcset="//detailx.ancorathemes.com/wp-content/uploads/2023/08/logo-retina.png 2x" alt="DetailX" width="178" height="25">	</a>
+            <a class="sc_layouts_logo" href="index.html">
+		<img src="images/logo.png" srcset="images/logo-retina.png 2x" alt="DetailX" width="178" height="25">	</a>
 	
             <span class="menu_mobile_close menu_button_close" tabindex="0"><span class="menu_button_close_text">Close</span><span class="menu_button_close_icon"></span></span>
         </div>
         <div class="menu_mobile_content_wrap content_wrap">
-            <div class="menu_mobile_content_wrap_inner"><nav class="menu_mobile_nav_area"><ul id="mobile-menu_mobile" class=" menu_mobile_nav"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-25895"><a href="#"><span>Home</span></a>
-<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9173"><a href="https://detailx.ancorathemes.com/"><span>Car Detailing</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25888"><a href="https://detailx.ancorathemes.com/auto-repair/"><span>Auto Repair</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25887"><a href="https://detailx.ancorathemes.com/wheels-and-tires/"><span>Wheels and Tires</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25884"><a href="https://detailx.ancorathemes.com/accessories-store/"><span>Accessories Store</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25886"><a href="https://detailx.ancorathemes.com/auto-body-shop/"><span>Auto Body Shop</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25885"><a href="https://detailx.ancorathemes.com/car-wash/"><span>Car Wash</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30960"><a href="https://detailx.ancorathemes.com/dealership/"><span>Dealership</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31508"><a href="https://detailx.ancorathemes.com/car-marketplace/"><span>Car Marketplace</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32180"><a href="https://detailx.ancorathemes.com/car-tuning/"><span>Car Tuning</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32609"><a href="https://detailx.ancorathemes.com/car-landing/"><span>Car Landing</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32945"><a href="https://detailx.ancorathemes.com/car-rental/"><span>Car Rental</span></a></li></ul>
-</li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5272"><a href="#"><span>Pages</span></a>
-<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26371"><a href="https://detailx.ancorathemes.com/about-us/"><span>About Us</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26372"><a href="https://detailx.ancorathemes.com/our-services/"><span>Our Services</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25900"><a href="https://detailx.ancorathemes.com/our-team/"><span>Our Team</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26373"><a href="https://detailx.ancorathemes.com/faqs/"><span>FAQs</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25902"><a href="https://detailx.ancorathemes.com/pricing/"><span>Pricing</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5573"><a href="#"><span>Blog</span></a>
-	<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-6602"><a href="https://detailx.ancorathemes.com/blog-standard/"><span>Standard</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6594"><a href="https://detailx.ancorathemes.com/blog-list/"><span>List</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6600"><a href="https://detailx.ancorathemes.com/blog-grid/"><span>Grid</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6604"><a href="#"><span>Single Posts</span></a>
-		<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-27626"><a href="https://detailx.ancorathemes.com/the-best-soap-and-wax-to-cover-your-car-with/"><span>With Sidebar</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-27625"><a href="https://detailx.ancorathemes.com/must-do-regular-checkups-for-a-better-car-operation/"><span>Without Sidebar</span></a></li></ul>
-</li></ul>
-</li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5296"><a href="https://detailx.ancorathemes.com/contact/"><span>Contact</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5294"><a href="https://detailx.ancorathemes.com/get-a-quote/"><span>Get a Quote</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30800"><a href="https://detailx.ancorathemes.com/online-booking/"><span>Online Booking</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-26385"><a href="#"><span>Tools</span></a>
-	<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12951"><a href="https://detailx.ancorathemes.com/typography/"><span>Typography</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5546"><a href="https://detailx.ancorathemes.com/404/"><span>404 Page</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26079"><a href="https://detailx.ancorathemes.com/service-plus/"><span>Service Plus</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12428"><a href="https://detailx.ancorathemes.com/newsletter-popup/"><span>Newsletter Popup</span></a></li></ul>
-</li></ul>
-</li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-31500"><a href="#"><span>Cars</span></a>
-<ul class="sub-menu"><li class="menu-item menu-item-type-post_type_archive menu-item-object-cpt_cars menu-item-31501"><a href="https://detailx.ancorathemes.com/cars/"><span>All Cars</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-cpt_cars menu-item-31502"><a href="https://detailx.ancorathemes.com/cars/aston-martin/"><span>Single Car</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31504"><a href="https://detailx.ancorathemes.com/cars/?compare=1"><span>Comparison List</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-cpt_cars_agents menu-item-31503"><a href="https://detailx.ancorathemes.com/car_agents/amy-walker/"><span>Car Agent</span></a></li></ul>
-</li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5547"><a href="#"><span>Portfolio</span></a>
-<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5562"><a href="https://detailx.ancorathemes.com/portfolio-mouse-info/"><span>Mouse Info</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5550"><a href="https://detailx.ancorathemes.com/portfolio-overlay-bordered/"><span>Overlay Bordered</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5561"><a href="https://detailx.ancorathemes.com/portfolio-waves-centered/"><span>Waves Centered</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5549"><a href="https://detailx.ancorathemes.com/portfolio-hover-waves/"><span>Hover Waves</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5564"><a href="#"><span>Single Portfolio</span></a>
-	<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-cpt_portfolio menu-item-28432"><a href="https://detailx.ancorathemes.com/portfolio/three-whales/"><span>Left Sidebar</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-cpt_portfolio menu-item-28433"><a href="https://detailx.ancorathemes.com/portfolio/the-comfort/"><span>Right Sidebar</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-cpt_portfolio menu-item-28437"><a href="https://detailx.ancorathemes.com/portfolio/oils-fluids/"><span>Fullwidth</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-cpt_portfolio menu-item-28435"><a href="https://detailx.ancorathemes.com/portfolio/the-details/"><span>Background Video</span></a></li></ul>
-</li></ul>
-</li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5602"><a href="#"><span>Shop</span></a>
-<ul class="sub-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13113"><a href="https://detailx.ancorathemes.com/shop/"><span>Shop Default</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19353"><a href="#"><span>Single Product</span></a>
-	<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-30247"><a href="https://detailx.ancorathemes.com/product/steel-flower-rim/"><span>Default</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-30444"><a href="https://detailx.ancorathemes.com/product/double-star-rim/"><span>Fullwidth</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-19357"><a href="https://detailx.ancorathemes.com/product/winter-tire/"><span>Grid</span></a></li></ul>
-</li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5604"><a href="https://detailx.ancorathemes.com/cart/"><span>Cart</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5605"><a href="https://detailx.ancorathemes.com/checkout/"><span>Checkout</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6613"><a href="https://detailx.ancorathemes.com/wishlist-page/"><span>Wishlist Page</span></a></li></ul>
-</li></ul></nav><div class="socials_mobile"><a target="_blank" rel="nofollow" href="https://www.facebook.com/AncoraThemes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_facebook-1" style=""><span class="screen-reader-text">facebook-1</span><span class="icon-facebook-1"></span></span></a><a target="_blank" rel="nofollow" href="https://twitter.com/themes_ancora" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_twitter-x" style=""><span class="screen-reader-text">twitter-x</span><span class="trx_addons_icon-twitter-x"></span></span></a><a target="_blank" rel="nofollow" href="https://www.instagram.com/ancora_themes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_instagram" style=""><span class="screen-reader-text">instagram</span><span class="icon-instagram"></span></span></a></div>            </div>
+            <div class="menu_mobile_content_wrap_inner"><nav class="menu_mobile_nav_area"><ul id="mobile-menu_mobile" class="menu_mobile_nav"><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="index.html"><span>Home</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="about-us.html"><span>About Us</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item current_page_item"><a href="our-services.html"><span>Our Services</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="pricing.html"><span>Pricing</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="blog-single.html"><span>Blog</span></a></li><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="get-a-quote.html"><span>Get a Quote</span></a></li></ul></nav><div class="socials_mobile"><a target="_blank" rel="nofollow" href="https://www.facebook.com/AncoraThemes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_facebook-1" style=""><span class="screen-reader-text">facebook-1</span><span class="icon-facebook-1"></span></span></a><a target="_blank" rel="nofollow" href="https://twitter.com/themes_ancora" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_twitter-x" style=""><span class="screen-reader-text">twitter-x</span><span class="trx_addons_icon-twitter-x"></span></span></a><a target="_blank" rel="nofollow" href="https://www.instagram.com/ancora_themes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_instagram" style=""><span class="screen-reader-text">instagram</span><span class="icon-instagram"></span></span></a></div>            </div>
 		</div>
     </div>
 </div>
@@ -860,10 +851,14 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/detailx/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 <div class="trx_addons_mouse_helper trx_addons_mouse_helper_base trx_addons_mouse_helper_style_default trx_addons_mouse_helper_smooth trx_addons_mouse_helper_centered"
-				></div><!-- Instagram Feed JS -->
-<script>
-var sbiajaxurl = "https://detailx.ancorathemes.com/wp-admin/admin-ajax.php";
-</script>
+				></div><!-- Instagram Feed JS -->
+
+<script>
+
+var sbiajaxurl = "https://detailx.ancorathemes.com/wp-admin/admin-ajax.php";
+
+</script>
+
 			<script>
 				const lazyloadRunObserver = () => {
 					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
