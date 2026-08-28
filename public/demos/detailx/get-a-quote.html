@@ -1380,19 +1380,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
 <style id="detailx-swiper-fix">
 /* Fix for Swiper slides having 0 width/height due to missing trx_addons JS */
 .slider_container:not(.inited) {
     display: block !important;
 }
-.slider_swiper_outer .slider_swiper,
-.slider_swiper_outer .swiper-wrapper {
+.slider_type_text,
+.slider_type_text .swiper-wrapper {
     width: 100% !important;
     min-height: 500px;
 }
 
 /* Hide all slides by default */
-.slider_swiper_outer .swiper-slide {
+.slider_type_text .swiper-slide {
     width: 100% !important;
     height: auto !important;
     opacity: 0 !important;
@@ -1406,7 +1409,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 /* If JS hasn't initialized, show the first slide as fallback */
-.slider_swiper_outer:not([data-custom-tabs-init="1"]) .swiper-slide:first-child {
+.slider_type_text:not([data-custom-tabs-init="1"]) .swiper-slide:first-child {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto;
@@ -1415,7 +1418,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 /* Show the active slide (controlled by JS) */
-.slider_swiper_outer .swiper-slide.custom-active-slide {
+.slider_type_text .swiper-slide.custom-active-slide {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto;
@@ -1462,13 +1465,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Custom Tabs/Swiper Fix
-    document.querySelectorAll('.slider_swiper_outer').forEach(function(slider) {
+    // Custom Tabs/Swiper Fix (Only apply to slider_type_text to avoid breaking multi-carousels)
+    document.querySelectorAll('.slider_type_text').forEach(function(slider) {
         const slides = slider.querySelectorAll('.swiper-slide');
         if (slides.length === 0) return;
         
         function initTabs() {
-            // Find bullets globally because they can be in a different column.
             let widget = slider.closest('.elementor-widget');
             let bullets = [];
             
@@ -1479,7 +1481,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            // Fallback if no ID match (just find all bullets on page)
             if (bullets.length === 0) {
                 bullets = document.querySelectorAll('.slider_pagination_wrap .swiper-pagination-bullet, .slider_pagination_bullet');
             }
