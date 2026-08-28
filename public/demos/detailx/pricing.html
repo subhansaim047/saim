@@ -1195,6 +1195,60 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 				TRX_DEMO_STORAGE['tabs_layout'] = "		
 			</script>
 			<script src="js/ctybgkiqd4jhsgdvzlgahqx3pjybdwlg.js" async></script>
+
+<!-- CUSTOM SCROLL ANIMATION OBSERVER FIX -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var el = entry.target;
+                el.classList.remove('elementor-invisible');
+                el.classList.add('animated');
+                
+                // Read animation type from data-settings
+                var settingsStr = el.getAttribute('data-settings');
+                var animName = '';
+                var delay = 0;
+                
+                if (settingsStr) {
+                    try {
+                        var settings = JSON.parse(settingsStr.replace(/&quot;/g, '"'));
+                        animName = settings._animation || settings.animation || '';
+                        delay = settings._animation_delay || settings.animation_delay || 0;
+                    } catch(e) {}
+                }
+                
+                if (animName) {
+                    el.classList.add(animName);
+                    el.style.animationName = animName;
+                    el.style.animationDuration = '1.2s';
+                    el.style.animationFillMode = 'both';
+                    if (delay) {
+                        el.style.animationDelay = delay + 'ms';
+                    }
+                } else {
+                    // fallback fade in
+                    el.style.animation = 'fadeIn 1s ease forwards';
+                }
+                
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.elementor-invisible').forEach(function(el) {
+        observer.observe(el);
+    });
+});
+</script>
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
 </body>
 </html>
 <!-- WP Optimize page cache - https://teamupdraft.com/wp-optimize/ - Page not served from cache  -->
