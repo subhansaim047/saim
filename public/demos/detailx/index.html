@@ -10,7 +10,9 @@
 		<meta name="format-detection" content="telephone=no">
 		<link rel="profile" href="//gmpg.org/xfn/11">
 		<title>DetailX &#8211; Car Detailing, Shop &amp; Repair WordPress Theme</title>
-<style>body{--booked_button_color: #c5a48e;}</style><meta name='robots' content='noindex, nofollow' />
+<style>body{--booked_button_color: #c5a48e;}
+
+</style><meta name='robots' content='noindex, nofollow' />
 
 <link rel='dns-prefetch' href='//use.fontawesome.com' />
 
@@ -364,6 +366,20 @@ color: #fff;}
             min-height: 480px !important;
             padding: 0 20px 40px 20px !important;
         }
+    }
+
+
+    /* HIDE SEARCH AND CART IN HEADER */
+    .trx_sc_layouts_search,
+    .trx_sc_layouts_cart,
+    .elementor-widget-trx_sc_layouts_search,
+    .elementor-widget-trx_sc_layouts_cart {
+        display: none !important;
+    }
+
+    /* HIDE SUBSCRIBE FOOTER SECTION (the specific column block) */
+    .elementor-element-48d3da0 {
+        display: none !important;
     }
 
 </style>
