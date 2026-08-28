@@ -1704,6 +1704,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+
+
 <style id="detailx-swiper-fix">
 /* Fix for Swiper slides having 0 width/height due to missing trx_addons JS */
 .slider_container:not(.inited) {
@@ -1717,22 +1723,39 @@ document.addEventListener('DOMContentLoaded', function() {
 .slider_swiper_outer .swiper-slide {
     width: 100% !important;
     height: auto !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-.slider_swiper_outer .swiper-slide:not(.swiper-slide-active) {
     opacity: 0 !important;
+    visibility: hidden !important;
     pointer-events: none;
     z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
+    transition: opacity 0.3s ease;
 }
-.slider_swiper_outer .swiper-slide:first-child {
+/* By default, the first slide is visible */
+.slider_swiper_outer .swiper-slide:first-child,
+.slider_swiper_outer .swiper-slide.custom-active-slide {
     opacity: 1 !important;
+    visibility: visible !important;
     pointer-events: auto;
     z-index: 1;
     position: relative;
+}
+.slider_swiper_outer .swiper-slide.custom-active-slide ~ .swiper-slide:first-child:not(.custom-active-slide) {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+    z-index: 0;
+    position: absolute;
+}
+
+/* Pagination active state */
+.slider_pagination_bullet {
+    cursor: pointer;
+}
+.slider_pagination_bullet.custom-active-bullet,
+.slider_pagination_bullet.swiper-pagination-bullet-active {
+    color: #EA0A0B !important; /* theme accent color */
 }
 
 /* Fix for Video auto-play and removing pause icon */
@@ -1745,9 +1768,10 @@ document.addEventListener('DOMContentLoaded', function() {
     opacity: 0 !important;
 }
 </style>
-<!-- VIDEO AUTOPLAY FIX -->
+<!-- VIDEO AUTOPLAY & TAB FIX -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Video Autoplay Fix
     document.querySelectorAll('video').forEach(function(vid) {
         vid.setAttribute('autoplay', '');
         vid.setAttribute('muted', '');
@@ -1761,6 +1785,64 @@ document.addEventListener('DOMContentLoaded', function() {
             playPromise.catch(function(e) {
                 console.log('Autoplay prevented:', e);
             });
+        }
+    });
+
+    // Custom Tabs/Swiper Fix with MutationObserver to wait for dynamic bullets
+    document.querySelectorAll('.slider_swiper_outer').forEach(function(slider) {
+        const slides = slider.querySelectorAll('.swiper-slide');
+        if (slides.length === 0) return;
+        
+        function initTabs() {
+            // Find the pagination bullets for this slider.
+            // Note: Sometimes they are sibling elements rather than inside slider_swiper_outer.
+            // So we search within the parent widget container.
+            const widget = slider.closest('.elementor-widget-container') || slider.parentElement.parentElement;
+            const bullets = widget.querySelectorAll('.slider_pagination_bullet, .swiper-pagination-bullet');
+            
+            if (bullets.length > 0) {
+                if (!slider.hasAttribute('data-custom-tabs-init')) {
+                    slider.setAttribute('data-custom-tabs-init', '1');
+                    
+                    bullets[0].classList.add('custom-active-bullet');
+                    slides[0].classList.add('custom-active-slide');
+
+                    bullets.forEach(function(bullet, index) {
+                        bullet.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            
+                            // Remove active class from all
+                            bullets.forEach(b => {
+                                b.classList.remove('custom-active-bullet', 'swiper-pagination-bullet-active');
+                            });
+                            slides.forEach(s => {
+                                s.classList.remove('custom-active-slide', 'swiper-slide-active');
+                            });
+                            
+                            // Add active class to clicked
+                            this.classList.add('custom-active-bullet');
+                            if (slides[index]) {
+                                slides[index].classList.add('custom-active-slide');
+                            }
+                        });
+                    });
+                }
+                return true;
+            }
+            return false;
+        }
+
+        // Try immediately
+        if (!initTabs()) {
+            // Observe DOM changes if bullets are not generated yet
+            const observer = new MutationObserver((mutations, obs) => {
+                if (initTabs()) {
+                    obs.disconnect();
+                }
+            });
+            const widget = slider.closest('.elementor-widget-container') || document.body;
+            observer.observe(widget, { childList: true, subtree: true });
         }
     });
 });
