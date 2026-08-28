@@ -1735,6 +1735,63 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Custom Tabs/Swiper Fix (Only apply to slider_type_text to avoid breaking multi-carousels)
+    
+    // Re-initialize remaining Swiper carousels globally!
+    document.querySelectorAll('.slider_swiper:not(.slider_type_text)').forEach(function(slider) {
+        if (typeof Swiper !== 'undefined') {
+            try {
+                // Try to parse options from data attributes if possible, or just provide defaults
+                let slidesPerView = parseInt(slider.getAttribute('data-slides-per-view')) || 1;
+                let spaceBetween = parseInt(slider.getAttribute('data-slides-space')) || 0;
+                let isAutoplay = parseInt(slider.getAttribute('data-autoplay')) === 1;
+                let isLoop = parseInt(slider.getAttribute('data-loop')) === 1;
+                let breakpointsAttr = slider.getAttribute('data-slides-per-view-breakpoints');
+                
+                let breakpoints = {};
+                if (breakpointsAttr) {
+                    let bpParsed = JSON.parse(breakpointsAttr.replace(/&quot;/g, '"'));
+                    // e.g. {"767": 1, "1279": 2, "999999": 3}
+                    for (let bp in bpParsed) {
+                        breakpoints[bp] = { slidesPerView: parseInt(bpParsed[bp]) };
+                    }
+                }
+                
+                let options = {
+                    slidesPerView: slidesPerView,
+                    spaceBetween: spaceBetween,
+                    loop: isLoop,
+                    breakpoints: breakpoints,
+                };
+                
+                if (isAutoplay) {
+                    options.autoplay = {
+                        delay: parseInt(slider.getAttribute('data-interval')) || 5000,
+                        disableOnInteraction: false
+                    };
+                }
+                
+                // If it has pagination inside
+                let pagination = slider.querySelector('.swiper-pagination');
+                if (!pagination) {
+                    // check if parent has it
+                    pagination = slider.parentElement.querySelector('.swiper-pagination');
+                }
+                
+                if (pagination) {
+                    options.pagination = {
+                        el: pagination,
+                        clickable: true
+                    };
+                }
+                
+                slider.classList.add('inited');
+                new Swiper(slider, options);
+            } catch (e) {
+                console.log('Error initializing swiper:', e);
+            }
+        }
+    });
+
     document.querySelectorAll('.slider_type_text').forEach(function(slider) {
         const slides = slider.querySelectorAll('.swiper-slide');
         if (slides.length === 0) return;
