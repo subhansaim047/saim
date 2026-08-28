@@ -18,6 +18,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "detailx",
+    title: "DetailX — Car Detailing, Auto Shop & Repair",
+    category: "Car Detailing & Automotive Repair",
+    description: "An ultra-modern, high-performance automotive detailing and car repair website featuring full-motion video hero, interactive service showcases, multi-step quote booking, pricing tiers, and client reviews.",
+    demoUrl: "/demos/detailx/index.html",
+    previewImage: "/demos/detailx/images/157_1-video_21.jpeg",
+    tags: ["Car Detailing", "Auto Repair", "Video Hero", "Quote Booking"],
+    features: [
+      "Full 6-Page Multi-Page Ecosystem (Home, Services, Pricing, Quote, Blog, About)",
+      "High-Impact Dark Aesthetic & 100% Native Video Background",
+      "Comprehensive Detailing Packages & Service Estimator",
+      "100% Offline Asset Bundling & Responsive Perfection"
+    ],
+    badge: "New Client Release"
+  },
+  {
     id: "beauticiansonthego",
     title: "Beauticians On The Go — Mobile Day Spa & Beauty Salon",
     category: "Mobile Day Spa & Beauty Salon",
