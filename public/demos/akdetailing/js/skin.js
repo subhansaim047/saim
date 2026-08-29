@@ -95,7 +95,7 @@
 									? slide.data('title')
 									: slide.find('[class*="_item_title"]').text()
 							);
-							html += '<span class="slider_pagination_bullet swiper-pagination-bullet" data-slide-number="' + (s ? jQuery(this).data('slide-number') : idx) + '">' + title + '</span>';
+							html += '<span class="slider_pagination_bullet swiper-pagination-bullet' + (idx === 0 ? ' custom-active-bullet' : '') + '\" data-slide-number="' + (s ? jQuery(this).data('slide-number') : idx) + '">' + title + '</span>';
 						});
 						controls.find('.slider_pagination_wrap').html(html);
 
