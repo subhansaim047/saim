@@ -1870,7 +1870,7 @@ header::before, header::after, .top_panel::before, .top_panel::after,
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="sc_layouts_item elementor-element elementor-element-99c549e sc_fly_static elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="99c549e" data-widget_type="heading.default">
 <div class="elementor-widget-container">
-<img src="images/ak-logo.png" alt="A&amp;K Mobile Detailing" class="ak-custom-logo" style="max-height: 100px; width: auto; margin-bottom: 20px;" /> </div>
+<a href="index.html"><img src="images/ak-logo.png" alt="A&amp;K Mobile Detailing" class="ak-custom-logo" style="max-height: 100px; width: auto; margin-bottom: 20px;" /></a> </div>
 </div>
 <div class="sc_layouts_item elementor-element elementor-element-611c6426 sc_fly_static elementor-widget elementor-widget-spacer" data-e-type="widget" data-element_type="widget" data-id="611c6426" data-widget_type="spacer.default">
 <div class="elementor-widget-container">
@@ -2252,8 +2252,8 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 /* ]]> */
 </script>
 <script>
-				TRX_DEMO_STORAGE['tabs_layout'] = "		
-			</script>
+				TRX_DEMO_STORAGE['tabs_layout'] = "";
+</script>
 <script async="" src="js/ctybgkiqd4jhsgdvzlgahqx3pjybdwlg.js"></script>
 <!-- CUSTOM COUNTER OBSERVER FIX -->
 <script>
@@ -2642,6 +2642,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    jQuery(document).on('click', '.sc_layouts_menu_mobile_button > a, .menu_mobile_button, .menu_mobile_button a', function(e) {
+        e.preventDefault();
+        jQuery('.menu_mobile').addClass('opened').prev('.menu_mobile_overlay').fadeIn();
+        jQuery('body').addClass('menu_mobile_opened');
+        return false;
+    });
+    jQuery(document).on('click', '.menu_mobile_close, .menu_mobile_overlay', function(e) {
+        e.preventDefault();
+        jQuery('.menu_mobile').removeClass('opened').prev('.menu_mobile_overlay').fadeOut();
+        jQuery('body').removeClass('menu_mobile_opened');
+        return false;
+    });
+});
+</script>
 </body>
+
 </html>
 <!-- WP Optimize page cache - https://teamupdraft.com/wp-optimize/ - Page not served from cache  -->

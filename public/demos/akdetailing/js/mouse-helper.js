@@ -4,7 +4,7 @@
 
 	"use strict";
 
-	var requestAnimationFrame = trx_addons_request_animation_frame();
+	var requestAnimationFrame = window.requestAnimationFrame;
 
 	var mouseX = null, mouseY = null,
 		realX  = null, realY  = null,

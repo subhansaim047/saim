@@ -19,7 +19,7 @@ jQuery( document ).on( 'action.init_hidden_elements', function() {
 
 		// Show hotspots after image loaded
 		if ( ! $image.hasClass( 'sc_hotspot_image_loaded' ) ) {
-			trx_addons_when_images_loaded( $image, function() {
+			detailx_when_images_loaded( $image, function() {
 				$image.addClass( 'sc_hotspot_image_loaded' );
 			} );
 		}
