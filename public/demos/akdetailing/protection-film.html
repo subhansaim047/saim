@@ -313,7 +313,31 @@ body.home .sc_layouts_row_fixed, body.home .top_panel_custom_header-home-car-det
     display: none !important;
 }
 </style>
-</head>
+
+    <style>
+    /* Force Swiper slides to be visible if JS fails to initialize Swiper */
+    .swiper-slide {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    /* But hide non-active slides in our custom tab script */
+    .slider_type_text .swiper-slide {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        position: absolute;
+    }
+    .slider_type_text .swiper-slide:first-child {
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative;
+    }
+    .slider_type_text .swiper-slide.custom-active-slide {
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative;
+    }
+    </style>
+    </head>
 <body class="wp-singular cpt_services-template-default single single-cpt_services postid-951 wp-custom-logo wp-embed-responsive wp-theme-detailx theme-detailx hide_fixed_rows_enabled woocommerce-no-js tinvwl-theme-style skin_default woo_extensions_present scheme_default blog_mode_services body_style_wide is_stream blog_style_excerpt sidebar_show sidebar_right sidebar_small_screen_below trx_addons_present header_type_custom header_style_header-custom-25857 header_position_default menu_side_none no_layout fixed_blocks_sticky elementor-default elementor-kit-15">
 <a class="skip-link detailx_skip_link skip_to_content_link" href="#content_skip_link_anchor" tabindex="0">Skip to content</a><a class="skip-link detailx_skip_link skip_to_sidebar_link" href="#sidebar_skip_link_anchor" tabindex="0">Skip to sidebar</a><a class="skip-link detailx_skip_link skip_to_footer_link" href="#footer_skip_link_anchor" tabindex="0">Skip to footer</a>
 <div class="body_wrap">
