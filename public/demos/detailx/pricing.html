@@ -1323,7 +1323,6 @@ header::before, header::after, .top_panel::before, .top_panel::after,
 </div>
 </div>
 </section>
-
 <section class="elementor-section elementor-top-section elementor-element elementor-element-9234de6 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-e-type="section" data-element_type="section" data-id="9234de6">
 <div class="elementor-container elementor-column-gap-extended">
 <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9069523 sc_content_align_inherit sc_layouts_column_icons_position_left sc_fly_static" data-e-type="column" data-element_type="column" data-id="9069523">
@@ -2168,6 +2167,48 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             observer.observe(document.body, { childList: true, subtree: true });
         }
+    });
+});
+</script>
+
+<script id="wa-form-redirect">
+document.addEventListener("DOMContentLoaded", function() {
+    var forms = document.querySelectorAll('form.wpcf7-form');
+    forms.forEach(function(form) {
+        // Remove the action and init class so CF7's JS doesn't intercept it first
+        form.classList.remove('init');
+        form.removeAttribute('data-status');
+        
+        // Disable CF7 original JS by cloning the form
+        var newForm = form.cloneNode(true);
+        form.parentNode.replaceChild(newForm, form);
+        
+        newForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var formData = new FormData(newForm);
+            var textParts = [];
+            textParts.push("*New Contact Form Submission*");
+            for (var pair of formData.entries()) {
+                var key = pair[0];
+                var val = pair[1];
+                if (key.startsWith('_wpcf7') || key === 'acceptance') continue; 
+                
+                var cleanKey = key.replace('your-', '').replace('-', ' ');
+                cleanKey = cleanKey.charAt(0).toUpperCase() + cleanKey.slice(1);
+                
+                if (val) {
+                    textParts.push("*" + cleanKey + "*: " + val);
+                }
+            }
+            var text = encodeURIComponent(textParts.join("\n"));
+            var waUrl = "https://wa.me/15208226392?text=" + text;
+            window.open(waUrl, '_blank');
+            
+            var btn = newForm.querySelector('input[type="submit"], button[type="submit"]');
+            if (btn && btn.value !== undefined) {
+                btn.value = "Sent to WhatsApp!";
+            }
+        });
     });
 });
 </script>
