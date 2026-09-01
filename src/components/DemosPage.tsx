@@ -128,21 +128,6 @@ const demos: DemoItem[] = [
       "Mobile-First Responsive Layout & Fast Loading"
     ],
     badge: "Featured Live Demo"
-  },
-  {
-    id: "woshico",
-    title: "Woshico â€” Auto Detailing & Car Wash Premium Template",
-    category: "Auto Services & E-Commerce",
-    description: "A 100% pixel-perfect, high-performance interactive website featuring smooth 60fps micro-animations, hero video transcode, and responsive pricing grids.",
-    demoUrl: "/demos/woshico/index.html",
-    previewImage: "/demos/woshico/images/6902f78e0d6aea37b1fc8910_graph.webp",
-    tags: ["Interactive UI", "HTML5/CSS3", "Responsive", "Auto Services"],
-    features: [
-      "Smooth 60fps Micro-animations",
-      "Interactive Hero Video & Slider Transcode",
-      "100% Offline Asset & Local Font Bundling",
-      "Fully Responsive Mobile & Tablet Layouts"
-    ]
   }
 ];
 
