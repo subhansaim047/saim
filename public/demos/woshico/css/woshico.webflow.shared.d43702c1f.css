@@ -14335,3 +14335,7 @@ figcaption {
     grid-column: span 1 / span 1;
   }
 }
+
+
+/* Hide webflow badge globally */
+.w-webflow-badge { display: none !important; }
