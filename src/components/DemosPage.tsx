@@ -17,6 +17,24 @@ interface DemoItem {
 }
 
 const demos: DemoItem[] = [
+
+  {
+    id: "woshico",
+    title: "Woshico Cleaning (Next.js Clone)",
+    description: "A pixel-perfect Webflow to Next.js 14 port. Built with React Server Components, pure CSS Modules (no Tailwind), and strict performance optimizations.",
+    category: "Business Landing",
+    features: [
+      "Next.js 14 App Router",
+      "CSS Modules & TypeScript",
+      "Zero-Tailwind Architecture",
+      "Hardware-Accelerated Smooth Scroll"
+    ],
+    tags: ["Next.js 14", "CSS Modules", "TypeScript", "Port"],
+    demoUrl: "/demos/woshico/index.html",
+    previewImage: "/demos/woshico/images/og-image.png",
+    badge: "Next.js Clone"
+  }
+,
   {
     id: "akdetailing",
     title: "DetailX — Car Detailing, Auto Shop & Repair",
