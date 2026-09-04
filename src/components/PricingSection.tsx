@@ -38,9 +38,9 @@ const plans: Plan[] = [
   },
   {
     name: "Starter Plan",
-    price: "$500 – $1,000",
+    price: "$1,999",
     
-    description: "Delivery: 5–7 Days. Essential business presence.",
+    description: "No monthly charges. Essential business presence.",
     bg: "#161616",
     features: [
       { text: "Up to 5 Pages", included: true },
@@ -59,9 +59,9 @@ const plans: Plan[] = [
   },
   {
     name: "Business Plan",
-    price: "$1,000 – $5,000",
+    price: "$2,999",
     
-    description: "Delivery: 7–10 Days. Full growth engine.",
+    description: "No monthly charges. Full growth engine.",
     bg: "#252525",
     features: [
       { text: "Up to 15 Pages", included: true },
