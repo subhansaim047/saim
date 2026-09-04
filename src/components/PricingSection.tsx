@@ -20,6 +20,23 @@ type Plan = {
 
 const plans: Plan[] = [
   {
+    name: "Micro Plan",
+    price: "Free Website",
+    description: "$99 / month — Simple 3-page online presence.",
+    bg: "#0f0f0f",
+    features: [
+      { text: "3 Pages (Home, Services, Contact)", included: true },
+      { text: "Mobile Responsive Design", included: true },
+      { text: "Contact Form", included: true },
+      { text: "WhatsApp Button", included: true },
+      { text: "Google Maps Embed", included: true },
+      { text: "Basic SEO Setup", included: true },
+      { text: "Social Media Links", included: true },
+      { text: "Fast Loading Design", included: true },
+      { text: "1 Round of Revisions", included: true },
+    ],
+  },
+  {
     name: "Starter Plan",
     price: "$500 – $1,000",
     
@@ -227,7 +244,7 @@ export const PricingSection = () => {
         </div>
 
         {/* CARDS */}
-        <div className="mx-auto grid max-w-3xl grid-cols-1 gap-6 md:grid-cols-2 items-start">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 items-start">
           {plans.map((p) => (
             <PricingCard key={p.name} plan={p} />
           ))}
