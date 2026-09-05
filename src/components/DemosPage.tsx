@@ -17,6 +17,17 @@ interface DemoItem {
 }
 
 const demos: DemoItem[] = [
+  {
+    id: "architecture",
+    title: "Architecture & Interior",
+    category: "Corporate / Agency",
+    description: "Premium architecture and interior design agency website with minimalist layouts and smooth scrolling.",
+    demoUrl: "/demos/architecture/index.html",
+    previewImage: "/demos/architecture/preview.png",
+    technologies: ["Webflow Clone", "HTML5", "CSS3", "GSAP"],
+    features: ["Project Showcase", "Minimalist UI", "Dark Mode Ready", "CMS Ready"],
+    accentColor: "bg-neutral-800"
+  },
 
   {
     id: "woshico",
