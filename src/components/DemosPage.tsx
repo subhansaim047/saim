@@ -24,9 +24,8 @@ const demos: DemoItem[] = [
     description: "Premium architecture and interior design agency website with minimalist layouts and smooth scrolling.",
     demoUrl: "/demos/architecture/index.html",
     previewImage: "/demos/architecture/preview.png",
-    technologies: ["Webflow Clone", "HTML5", "CSS3", "GSAP"],
+    tags: ["Webflow", "HTML5", "CSS3"],
     features: ["Project Showcase", "Minimalist UI", "Dark Mode Ready", "CMS Ready"],
-    accentColor: "bg-neutral-800"
   },
 
   {
