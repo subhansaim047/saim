@@ -212,26 +212,77 @@ export const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN: Image */}
+          {/* RIGHT COLUMN: Animated Marquee Grid */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:flex flex-col items-end justify-center w-full lg:w-[50%] xl:w-[52%] h-full max-h-[75vh] flex-shrink-0"
+            className="hidden lg:flex w-full lg:w-[50%] xl:w-[52%] h-[600px] xl:h-[75vh] relative overflow-hidden rounded-2xl flex-shrink-0"
           >
-            <div className="relative w-full h-full overflow-hidden flex items-center justify-end">
-              <picture className="w-full h-full flex items-center justify-end">
-                <source srcSet="/hero-dev.webp" type="image/webp" />
-                <img
-                  src="/hero-dev.webp"
-                  alt="Saim Dev — Full Stack Developer Portfolio Preview"
-                  className="w-full h-full object-contain object-right"
-                  style={{ imageRendering: "high-quality" }}
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              </picture>
+            {/* Fade Masks */}
+            <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#080808] to-transparent z-20 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#080808] to-transparent z-20 pointer-events-none" />
+
+            <div className="flex gap-4 w-full h-full relative z-10 pt-8">
+              {/* Column 1 - Scrolling UP */}
+              <div className="w-1/2 h-full flex flex-col relative">
+                <motion.div 
+                  animate={{ y: ["0%", "-50%"] }}
+                  transition={{ duration: 25, ease: "linear", repeat: Infinity }}
+                  className="flex flex-col gap-4 w-full absolute top-0"
+                >
+                  {[...Array(2)].map((_, i) => (
+                    <div key={i} className="flex flex-col gap-4 w-full">
+                      <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
+                        <img src="/section-performance.png" alt="Performance" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                        <div className="absolute bottom-6 left-6">
+                          <h3 className="text-xl font-light text-white">Performance</h3>
+                          <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Analytics</p>
+                        </div>
+                      </div>
+                      <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
+                        <img src="/hero-dev.webp" alt="UI Design" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                        <div className="absolute bottom-6 left-6">
+                          <h3 className="text-xl font-light text-white">Latest Shot</h3>
+                          <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">UI/UX Design</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
+
+              {/* Column 2 - Scrolling DOWN */}
+              <div className="w-1/2 h-full flex flex-col relative pt-16">
+                <motion.div 
+                  animate={{ y: ["-50%", "0%"] }}
+                  transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+                  className="flex flex-col gap-4 w-full absolute bottom-0"
+                >
+                  {[...Array(2)].map((_, i) => (
+                    <div key={i} className="flex flex-col gap-4 w-full">
+                      <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
+                        <img src="/section-backend-ui.png" alt="Backend" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                        <div className="absolute bottom-6 left-6">
+                          <h3 className="text-xl font-light text-white">Architecture</h3>
+                          <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Backend</p>
+                        </div>
+                      </div>
+                      <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
+                        <img src="/section-techstack.png" alt="Tech Stack" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                        <div className="absolute bottom-6 left-6">
+                          <h3 className="text-xl font-light text-white">Tech Stack</h3>
+                          <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Modern</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>
