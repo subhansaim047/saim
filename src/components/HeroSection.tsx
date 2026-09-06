@@ -1,183 +1,246 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { WordsPullUp } from "./WordsPullUp";
+
+const navItems = [
+  { label: "Our story", href: "#our-story" },
+  { label: "Services", href: "/services" },
+  { label: "Tech Stack", href: "/technologies" },
+  { label: "Demo Sites", href: "/demos" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "Benefits", href: "#benefits" },
+  { label: "Process", href: "#process" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
+];
 
 export const HeroSection = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const [hoveredNav, setHoveredNav] = useState<number | null>(null);
 
   return (
-    <section className="relative min-h-[100dvh] w-full bg-[#050505] flex items-center justify-center overflow-hidden font-sans">
-      
-      {/* Background ambient lighting */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {/* Very subtle glow top-left */}
-        <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-white/[0.02] blur-[120px]" />
-        
-        {/* Faint vertical grid lines */}
-        <div 
-          className="absolute inset-0 opacity-[0.03]"
+    <section className="h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-black relative box-border overflow-hidden">
+      <div className="relative h-full w-full rounded-xl sm:rounded-2xl md:rounded-[2rem] overflow-hidden bg-[#080808]">
+
+        {/* ==============================================
+            WEBILD EXACT BACKGROUND (Mesh Glow)
+        =============================================== */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
+          <div className="absolute top-0 left-[10%] h-[110vh] w-[9vw] -rotate-[52.5deg] -translate-x-[120%] -translate-y-[20%] rounded-[100%] bg-white/10" />
+          <div className="absolute top-[-20vh] right-[2.5vw] h-[100vh] w-[12.5vw] -rotate-60 rounded-[100%] bg-white/10" />
+          <div className="absolute top-[-20vh] left-[2vw] h-[150vh] w-[15vw] -rotate-45 rounded-[100%] bg-white/[0.08]" />
+          <div className="absolute top-[-30vh] left-0 h-[70vh] w-[10vw] -rotate-45 rounded-[100%] bg-white/[0.08]" />
+          <div className="absolute bottom-[-40vh] left-0 h-[50vh] w-[120vw] -rotate-20 rounded-[100%] bg-white/[0.05]" />
+          <div className="absolute inset-0 backdrop-blur-3xl" />
+        </div>
+
+        {/* Grain texture */}
+        <div className="absolute inset-0 noise-overlay opacity-[0.28] mix-blend-overlay pointer-events-none z-0" />
+
+        {/* Top border glow line */}
+        <div
+          className="absolute top-0 left-0 right-0 z-10 pointer-events-none"
           style={{
-            backgroundImage: "linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-            backgroundSize: "16.66% 100%",
+            height: "1px",
+            background: "linear-gradient(90deg, transparent, rgba(222,219,200,0.35) 50%, transparent)",
           }}
         />
-      </div>
 
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 pt-32 pb-20">
-        
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-10">
-          
-          {/* ==============================================
-              LEFT COLUMN - TYPOGRAPHY
-          =============================================== */}
-          <div className="w-full lg:w-[45%] flex flex-col justify-center items-start z-20">
-            
-            {/* Top Badge */}
+        {/* ==============================================
+            NAVBAR
+        =============================================== */}
+        <nav className="absolute top-0 left-0 right-0 z-20 flex justify-center px-1 sm:px-4">
+          {/* Mobile */}
+          <div className="flex sm:hidden flex-wrap items-center justify-center gap-1.5 p-2 bg-black/95 backdrop-blur-md rounded-b-xl border-x border-b border-white/15 max-w-full">
+            {navItems.map((item) =>
+              item.href.startsWith("/") ? (
+                <Link key={item.label} to={item.href} className="text-[10px] font-bold tracking-tight text-[#E1E0CC] bg-white/10 border border-white/15 px-2 py-0.5 rounded-md hover:bg-primary hover:text-black transition-colors">
+                  {item.label}
+                </Link>
+              ) : (
+                <a key={item.label} href={item.href} className="text-[10px] font-bold tracking-tight text-[#E1E0CC] bg-white/10 border border-white/15 px-2 py-0.5 rounded-md hover:bg-primary hover:text-black transition-colors">
+                  {item.label}
+                </a>
+              )
+            )}
+          </div>
+
+          {/* Desktop */}
+          <div className="hidden sm:flex bg-black/90 backdrop-blur-md rounded-b-3xl px-6 py-2.5 items-center justify-center gap-5 border-x border-b border-white/10">
+            {navItems.map((item, index) =>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  onMouseEnter={() => setHoveredNav(index)}
+                  onMouseLeave={() => setHoveredNav(null)}
+                  className="text-xs md:text-sm font-medium tracking-wide transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                  style={{ color: hoveredNav === index ? "#E1E0CC" : "rgba(225, 224, 204, 0.8)" }}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onMouseEnter={() => setHoveredNav(index)}
+                  onMouseLeave={() => setHoveredNav(null)}
+                  className="text-xs md:text-sm font-medium tracking-wide transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                  style={{ color: hoveredNav === index ? "#E1E0CC" : "rgba(225, 224, 204, 0.8)" }}
+                >
+                  {item.label}
+                </a>
+              )
+            )}
+          </div>
+        </nav>
+
+        {/* ==============================================
+            HERO BODY
+        =============================================== */}
+        <div className="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-8 md:px-10 lg:px-12 pt-20 pb-6 gap-6 lg:gap-10">
+
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col justify-center gap-4 sm:gap-6 w-full lg:w-[50%] xl:w-[48%] flex-shrink-0">
+
+            {/* Label group */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="mb-8"
+              transition={{ duration: 0.6, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col gap-1.5 self-start"
             >
-              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#111111] border border-white/5">
-                <span className="text-[13px] font-medium text-white/80">
-                  Full Stack Web Developer
+              {/* FULL STACK DEV */}
+              <div className="flex items-center gap-2.5">
+                <span className="block flex-shrink-0 rounded-full bg-primary" style={{ width: "3px", height: "clamp(14px, 1.6vw, 22px)", opacity: 0.85 }} />
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(13px, 1.35vw, 19px)", fontWeight: 800, letterSpacing: "0.22em", color: "#DEDBC8", textTransform: "uppercase", lineHeight: 1 }}>
+                  Full Stack Dev
+                </span>
+              </div>
+
+              {/* Tech chips */}
+              <div className="flex items-center gap-0 pl-[1.4rem]">
+                {["Next.js", "Node.js", "Vite", "React", "Tailwind"].map((tech, i, arr) => (
+                  <span key={tech} className="flex items-center">
+                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(9px, 0.85vw, 12px)", fontWeight: 500, letterSpacing: "0.13em", color: "rgba(222,219,200,0.45)", textTransform: "uppercase" }}>
+                      {tech}
+                    </span>
+                    {i < arr.length - 1 && (
+                      <span style={{ color: "rgba(222,219,200,0.25)", margin: "0 6px", fontSize: "9px" }}>&#x25AA;</span>
+                    )}
+                  </span>
+                ))}
+              </div>
+
+              {/* Divider */}
+              <div className="pl-[1.4rem] mt-0.5">
+                <div style={{ width: "clamp(80px, 8vw, 130px)", height: "1px", background: "linear-gradient(to right, rgba(222,219,200,0.3), transparent)" }} />
+              </div>
+
+              {/* ✨ Tagline — Fraunces italic + golden highlight */}
+              <div className="pl-[1.4rem]">
+                <span style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: "clamp(12px, 1.05vw, 16px)", fontWeight: 400, fontStyle: "italic", color: "#DEDBC8", letterSpacing: "0.01em", lineHeight: 1.4 }}>
+                  Business growth starts with a{" "}
+                  <span style={{ color: "#E8C97A", fontWeight: 600, fontStyle: "italic", borderBottom: "1.5px solid rgba(232,201,122,0.6)", paddingBottom: "1px", textShadow: "0 0 20px rgba(232,201,122,0.3)" }}>
+                    better website
+                  </span>
+                  .
                 </span>
               </div>
             </motion.div>
 
-            {/* Main Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-              className="text-[11vw] sm:text-[8vw] lg:text-[4.5rem] xl:text-[5.5rem] font-semibold leading-[1.05] tracking-[-0.03em] text-white mb-6"
-            >
-              High-Performance<br />
-              Web Architecture
-            </motion.h1>
+            {/* ✨ Giant Name — Fraunces display font */}
+            <WordsPullUp
+              text="Saim Dev"
+              showAsterisk={true}
+              className="text-[16vw] sm:text-[13vw] md:text-[11vw] lg:text-[9vw] xl:text-[8.5vw] font-bold leading-[0.85] tracking-[-0.07em] drop-shadow-2xl"
+              style={{ color: "#E1E0CC", fontFamily: "'Fraunces', Georgia, serif", fontWeight: 900 }}
+            />
 
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-base sm:text-lg text-white/60 leading-relaxed font-normal max-w-[480px] mb-10"
-            >
-              Saim Dev is a worldwide collective of web developers & strategists connected by a shared purpose — building custom websites that unlock <strong className="text-white font-medium">measurable growth</strong>. Business growth starts with a better website.
-            </motion.p>
-
-            {/* Buttons */}
+            {/* Sub-headline + description + CTA */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              className="flex flex-wrap items-center gap-4"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col gap-3 sm:gap-4"
             >
-              <a 
-                href="https://wa.me/34711244392" 
-                target="_blank" 
+              {/* ✨ Highlighted sub-headline */}
+              <div className="border-l-2 border-primary pl-3.5">
+                <h3 className="text-white text-xs sm:text-base font-semibold tracking-tight">
+                  High-Performance{" "}
+                  <span style={{ color: "#E8C97A", textShadow: "0 0 18px rgba(232,201,122,0.25)" }}>
+                    Web Architecture
+                  </span>
+                </h3>
+                <p className="text-white/50 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-0.5">
+                  Strategic Design &amp; Digital Growth
+                </p>
+              </div>
+
+              {/* ✨ Description — measurable growth highlighted */}
+              <motion.p
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                className="text-primary/90 text-[11px] sm:text-sm leading-relaxed font-light max-w-md"
+              >
+                Saim Dev is a worldwide collective of web developers &amp; strategists connected by a
+                shared purpose &mdash; building custom websites that unlock{" "}
+                <span style={{ color: "#E8C97A", fontWeight: 600, borderBottom: "1px solid rgba(232,201,122,0.55)", paddingBottom: "1px", textShadow: "0 0 16px rgba(232,201,122,0.25)" }}>
+                  measurable growth
+                </span>{" "}
+                for every business we work with.
+              </motion.p>
+
+              {/* CTA */}
+              <motion.a
+                href="https://wa.me/34711244392"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium text-black bg-white rounded-full hover:bg-gray-100 transition-colors"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className="bg-primary rounded-full pl-5 pr-1.5 py-1.5 sm:pl-6 sm:pr-2 sm:py-2 flex items-center gap-3 hover:gap-4 transition-all duration-300 group cursor-pointer self-start shadow-xl"
               >
-                Start Project
-              </a>
-              <a 
-                href="#our-story"
-                className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium text-white bg-[#1a1a1a] border border-white/5 rounded-full hover:bg-[#222222] transition-colors"
-              >
-                View Work
-              </a>
+                <span className="text-black font-semibold text-xs sm:text-sm tracking-wide">Start Your Project</span>
+                <div className="bg-black rounded-full w-7 h-7 sm:w-9 sm:h-9 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#E1E0CC]" />
+                </div>
+              </motion.a>
             </motion.div>
           </div>
 
-          {/* ==============================================
-              RIGHT COLUMN - PROPER ANIMATED MARQUEE GRID
-          =============================================== */}
-          <div className="w-full lg:w-[50%] h-[600px] lg:h-[800px] relative overflow-hidden rounded-3xl flex gap-6 z-10">
-            
-            {/* Top/Bottom Fade Masks for smooth scroll entry/exit */}
-            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#050505] to-transparent z-20 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050505] to-transparent z-20 pointer-events-none" />
-
-            {/* Column 1 - Scrolling UP */}
-            <div className="w-1/2 h-full flex flex-col relative pt-10">
-              <motion.div 
-                animate={{ y: ["0%", "-50%"] }}
-                transition={{ duration: 25, ease: "linear", repeat: Infinity }}
-                className="flex flex-col gap-6 w-full absolute top-0"
-              >
-                {/* We render the set twice for seamless looping */}
-                {[...Array(2)].map((_, i) => (
-                  <div key={i} className="flex flex-col gap-6 w-full">
-                    
-                    {/* Card 1 */}
-                    <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden bg-[#111111] border border-white/5">
-                      <img src="/section-performance.png" alt="Performance" className="absolute inset-0 w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <h3 className="text-2xl font-light text-white mb-1">Latest Shot</h3>
-                        <p className="text-[10px] text-white/50 uppercase tracking-widest font-mono">Performance Analytics</p>
-                      </div>
-                    </div>
-                    
-                    {/* Card 2 */}
-                    <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden bg-[#111111] border border-white/5">
-                      <img src="/hero-dev.webp" alt="UI Design" className="absolute inset-0 w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <h3 className="text-2xl font-light text-white mb-1">Latest Shot</h3>
-                        <p className="text-[10px] text-white/50 uppercase tracking-widest font-mono">UI/UX Design Series</p>
-                      </div>
-                    </div>
-                    
-                  </div>
-                ))}
-              </motion.div>
+          {/* RIGHT COLUMN: Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="hidden lg:flex flex-col items-end justify-center w-full lg:w-[50%] xl:w-[52%] h-full max-h-[75vh] flex-shrink-0"
+          >
+            <div className="relative w-full h-full overflow-hidden flex items-center justify-end">
+              <picture className="w-full h-full flex items-center justify-end">
+                <source srcSet="/hero-dev.webp" type="image/webp" />
+                <img
+                  src="/hero-dev.webp"
+                  alt="Saim Dev — Full Stack Developer Portfolio Preview"
+                  className="w-full h-full object-contain object-right"
+                  style={{ imageRendering: "high-quality" }}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
             </div>
-
-            {/* Column 2 - Scrolling DOWN */}
-            <div className="w-1/2 h-full flex flex-col relative">
-              <motion.div 
-                animate={{ y: ["-50%", "0%"] }}
-                transition={{ duration: 30, ease: "linear", repeat: Infinity }}
-                className="flex flex-col gap-6 w-full absolute bottom-0"
-              >
-                {/* We render the set twice for seamless looping */}
-                {[...Array(2)].map((_, i) => (
-                  <div key={i} className="flex flex-col gap-6 w-full">
-                    
-                    {/* Card 3 */}
-                    <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden bg-[#111111] border border-white/5">
-                      <img src="/section-backend-ui.png" alt="Backend" className="absolute inset-0 w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <h3 className="text-2xl font-light text-white mb-1">Latest Shot</h3>
-                        <p className="text-[10px] text-white/50 uppercase tracking-widest font-mono">Backend Architecture</p>
-                      </div>
-                    </div>
-
-                    {/* Card 4 */}
-                    <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden bg-[#111111] border border-white/5">
-                      <img src="/section-techstack.png" alt="Tech Stack" className="absolute inset-0 w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <h3 className="text-2xl font-light text-white mb-1">Latest Shot</h3>
-                        <p className="text-[10px] text-white/50 uppercase tracking-widest font-mono">Modern Tech Stack</p>
-                      </div>
-                    </div>
-
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-
-          </div>
+          </motion.div>
         </div>
+
+        {/* Bottom border glow */}
+        <div
+          className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none"
+          style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(222,219,200,0.25) 50%, transparent)" }}
+        />
       </div>
     </section>
   );
