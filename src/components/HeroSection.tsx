@@ -22,7 +22,7 @@ export const HeroSection = () => {
 
   return (
     <section className="h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-black relative box-border overflow-hidden">
-      <div className="relative h-full w-full rounded-xl sm:rounded-2xl md:rounded-[2rem] overflow-hidden bg-[#080808]">
+      <div className="relative h-full w-full rounded-xl sm:rounded-2xl md:rounded-[2rem] overflow-hidden bg-black">
 
         {/* ==============================================
             WEBILD EXACT BACKGROUND (Mesh Glow)
@@ -234,12 +234,12 @@ export const HeroSection = () => {
                   {[...Array(2)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-4 w-full">
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp" alt="Performance" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp" alt="Performance" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
                         
                         
                       </div>
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp" alt="UI Design" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp" alt="UI Design" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
                         
                         
                       </div>
@@ -258,12 +258,12 @@ export const HeroSection = () => {
                   {[...Array(2)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-4 w-full">
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp" alt="Backend" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp" alt="Backend" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
                         
                         
                       </div>
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp" alt="Tech Stack" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp" alt="Tech Stack" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
                         
                         
                       </div>
