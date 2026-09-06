@@ -24,17 +24,7 @@ export const HeroSection = () => {
     <section className="h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-black relative box-border overflow-hidden">
       <div className="relative h-full w-full rounded-xl sm:rounded-2xl md:rounded-[2rem] overflow-hidden bg-black">
 
-        {/* ==============================================
-            WEBILD EXACT BACKGROUND (Mesh Glow)
-        =============================================== */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
-          <div className="absolute top-0 left-[10%] h-[110vh] w-[9vw] -rotate-[52.5deg] -translate-x-[120%] -translate-y-[20%] rounded-[100%] bg-white/10" />
-          <div className="absolute top-[-20vh] right-[2.5vw] h-[100vh] w-[12.5vw] -rotate-60 rounded-[100%] bg-white/10" />
-          <div className="absolute top-[-20vh] left-[2vw] h-[150vh] w-[15vw] -rotate-45 rounded-[100%] bg-white/[0.08]" />
-          <div className="absolute top-[-30vh] left-0 h-[70vh] w-[10vw] -rotate-45 rounded-[100%] bg-white/[0.08]" />
-          <div className="absolute bottom-[-40vh] left-0 h-[50vh] w-[120vw] -rotate-20 rounded-[100%] bg-white/[0.05]" />
-          <div className="absolute inset-0 backdrop-blur-3xl" />
-        </div>
+
 
         {/* Grain texture */}
         <div className="absolute inset-0 noise-overlay opacity-[0.28] mix-blend-overlay pointer-events-none z-0" />
@@ -220,8 +210,8 @@ export const HeroSection = () => {
             className="hidden lg:flex w-full lg:w-[50%] xl:w-[52%] h-[600px] xl:h-[75vh] relative overflow-hidden rounded-2xl flex-shrink-0"
           >
             {/* Fade Masks */}
-            <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#080808] to-transparent z-20 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#080808] to-transparent z-20 pointer-events-none" />
+            <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none" />
 
             <div className="flex gap-4 w-full h-full relative z-10 pt-8">
               {/* Column 1 - Scrolling UP */}
