@@ -234,20 +234,14 @@ export const HeroSection = () => {
                   {[...Array(2)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-4 w-full">
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/section-performance.png" alt="Performance" className="absolute inset-0 w-full h-full object-cover opacity-80" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                        <div className="absolute bottom-6 left-6">
-                          <h3 className="text-xl font-light text-white">Performance</h3>
-                          <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Analytics</p>
-                        </div>
+                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp" alt="Performance" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        
+                        
                       </div>
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/hero-dev.webp" alt="UI Design" className="absolute inset-0 w-full h-full object-cover opacity-80" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                        <div className="absolute bottom-6 left-6">
-                          <h3 className="text-xl font-light text-white">Latest Shot</h3>
-                          <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">UI/UX Design</p>
-                        </div>
+                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp" alt="UI Design" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        
+                        
                       </div>
                     </div>
                   ))}
@@ -264,20 +258,14 @@ export const HeroSection = () => {
                   {[...Array(2)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-4 w-full">
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/section-backend-ui.png" alt="Backend" className="absolute inset-0 w-full h-full object-cover opacity-80" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                        <div className="absolute bottom-6 left-6">
-                          <h3 className="text-xl font-light text-white">Architecture</h3>
-                          <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Backend</p>
-                        </div>
+                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp" alt="Backend" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        
+                        
                       </div>
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/section-techstack.png" alt="Tech Stack" className="absolute inset-0 w-full h-full object-cover opacity-80" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                        <div className="absolute bottom-6 left-6">
-                          <h3 className="text-xl font-light text-white">Tech Stack</h3>
-                          <p className="text-[10px] text-white/50 uppercase tracking-widest mt-1">Modern</p>
-                        </div>
+                        <img src="https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp" alt="Tech Stack" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        
+                        
                       </div>
                     </div>
                   ))}
