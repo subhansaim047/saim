@@ -229,7 +229,7 @@ export const HeroSection = () => {
                 <motion.div 
                   animate={{ y: ["0%", "-50%"] }}
                   transition={{ duration: 25, ease: "linear", repeat: Infinity }}
-                  className="flex flex-col gap-4 w-full absolute top-0"
+                  className="flex flex-col gap-4 w-full"
                 >
                   {[...Array(2)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-4 w-full">
@@ -253,7 +253,7 @@ export const HeroSection = () => {
                 <motion.div 
                   animate={{ y: ["-50%", "0%"] }}
                   transition={{ duration: 30, ease: "linear", repeat: Infinity }}
-                  className="flex flex-col gap-4 w-full absolute bottom-0"
+                  className="flex flex-col gap-4 w-full"
                 >
                   {[...Array(2)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-4 w-full">
