@@ -1,259 +1,151 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { WordsPullUp } from "./WordsPullUp";
 
-const navItems = [
-  { label: "Our story", href: "#our-story" },
-  { label: "Services", href: "/services" },
-  { label: "Tech Stack", href: "/technologies" },
-  { label: "Demo Sites", href: "/demos" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Benefits", href: "#benefits" },
-  { label: "Process", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
-];
-
 export const HeroSection = () => {
-  const [hoveredNav, setHoveredNav] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    <section className="h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-black relative box-border overflow-hidden">
-      <div className="relative h-full w-full rounded-xl sm:rounded-2xl md:rounded-[2rem] overflow-hidden bg-[#080808]">
-
-        {/* ==============================================
-            DOT GRID BACKGROUND PATTERN
-        =============================================== */}
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
+    <section className="relative min-h-[100dvh] w-full bg-[#030303] flex flex-col items-center justify-center overflow-hidden">
+      
+      {/* Background Effects (Webild Inspired Blur & Gradients) */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* Animated ambient glowing orbs */}
+        <motion.div 
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-primary/20 blur-[120px]"
+        />
+        <motion.div 
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-[40%] -right-[10%] w-[40vw] h-[40vw] rounded-full bg-[#E8C97A]/10 blur-[100px]"
+        />
+        
+        {/* Subtle dot pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.15]"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(222,219,200,0.13) 1px, transparent 1px)",
-            backgroundSize: "28px 28px",
+            backgroundImage: "radial-gradient(circle, #DEDBC8 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
           }}
         />
+      </div>
 
-        {/* Warm amber radial glow behind text */}
-        <div
-          className="absolute z-0 pointer-events-none"
-          style={{
-            left: "0",
-            top: "50%",
-            transform: "translateY(-50%)",
-            width: "55%",
-            height: "70%",
-            background: "radial-gradient(ellipse at 30% 50%, rgba(180,145,90,0.08) 0%, transparent 70%)",
-            filter: "blur(50px)",
-          }}
-        />
-
-        {/* Grain texture */}
-        <div className="absolute inset-0 noise-overlay opacity-[0.28] mix-blend-overlay pointer-events-none z-0" />
-
-        {/* Top border glow line */}
-        <div
-          className="absolute top-0 left-0 right-0 z-10 pointer-events-none"
-          style={{
-            height: "1px",
-            background: "linear-gradient(90deg, transparent, rgba(222,219,200,0.35) 50%, transparent)",
-          }}
-        />
-
-        {/* ==============================================
-            NAVBAR
-        =============================================== */}
-        <nav className="absolute top-0 left-0 right-0 z-20 flex justify-center px-1 sm:px-4">
-          {/* Mobile */}
-          <div className="flex sm:hidden flex-wrap items-center justify-center gap-1.5 p-2 bg-black/95 backdrop-blur-md rounded-b-xl border-x border-b border-white/15 max-w-full">
-            {navItems.map((item) =>
-              item.href.startsWith("/") ? (
-                <Link key={item.label} to={item.href} className="text-[10px] font-bold tracking-tight text-[#E1E0CC] bg-white/10 border border-white/15 px-2 py-0.5 rounded-md hover:bg-primary hover:text-black transition-colors">
-                  {item.label}
-                </Link>
-              ) : (
-                <a key={item.label} href={item.href} className="text-[10px] font-bold tracking-tight text-[#E1E0CC] bg-white/10 border border-white/15 px-2 py-0.5 rounded-md hover:bg-primary hover:text-black transition-colors">
-                  {item.label}
-                </a>
-              )
-            )}
+      {/* Main Content Container */}
+      <div className="relative z-10 container mx-auto px-6 pt-32 pb-20 flex flex-col items-center justify-center text-center">
+        
+        {/* Top Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-8"
+        >
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-md">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-xs sm:text-sm font-medium tracking-[0.2em] text-[#DEDBC8] uppercase">
+              Full Stack Dev
+            </span>
           </div>
+        </motion.div>
 
-          {/* Desktop */}
-          <div className="hidden sm:flex bg-black/90 backdrop-blur-md rounded-b-3xl px-6 py-2.5 items-center justify-center gap-5 border-x border-b border-white/10">
-            {navItems.map((item, index) =>
-              item.href.startsWith("/") ? (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  onMouseEnter={() => setHoveredNav(index)}
-                  onMouseLeave={() => setHoveredNav(null)}
-                  className="text-xs md:text-sm font-medium tracking-wide transition-colors duration-200 whitespace-nowrap cursor-pointer"
-                  style={{ color: hoveredNav === index ? "#E1E0CC" : "rgba(225, 224, 204, 0.8)" }}
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onMouseEnter={() => setHoveredNav(index)}
-                  onMouseLeave={() => setHoveredNav(null)}
-                  className="text-xs md:text-sm font-medium tracking-wide transition-colors duration-200 whitespace-nowrap cursor-pointer"
-                  style={{ color: hoveredNav === index ? "#E1E0CC" : "rgba(225, 224, 204, 0.8)" }}
-                >
-                  {item.label}
-                </a>
-              )
-            )}
-          </div>
-        </nav>
-
-        {/* ==============================================
-            HERO BODY
-        =============================================== */}
-        <div className="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-8 md:px-10 lg:px-12 pt-20 pb-6 gap-6 lg:gap-10">
-
-          {/* LEFT COLUMN */}
-          <div className="flex flex-col justify-center gap-4 sm:gap-6 w-full lg:w-[50%] xl:w-[48%] flex-shrink-0">
-
-            {/* Label group */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col gap-1.5 self-start"
-            >
-              {/* FULL STACK DEV */}
-              <div className="flex items-center gap-2.5">
-                <span className="block flex-shrink-0 rounded-full bg-primary" style={{ width: "3px", height: "clamp(14px, 1.6vw, 22px)", opacity: 0.85 }} />
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(13px, 1.35vw, 19px)", fontWeight: 800, letterSpacing: "0.22em", color: "#DEDBC8", textTransform: "uppercase", lineHeight: 1 }}>
-                  Full Stack Dev
-                </span>
-              </div>
-
-              {/* Tech chips */}
-              <div className="flex items-center gap-0 pl-[1.4rem]">
-                {["Next.js", "Node.js", "Vite", "React", "Tailwind"].map((tech, i, arr) => (
-                  <span key={tech} className="flex items-center">
-                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(9px, 0.85vw, 12px)", fontWeight: 500, letterSpacing: "0.13em", color: "rgba(222,219,200,0.45)", textTransform: "uppercase" }}>
-                      {tech}
-                    </span>
-                    {i < arr.length - 1 && (
-                      <span style={{ color: "rgba(222,219,200,0.25)", margin: "0 6px", fontSize: "9px" }}>&#x25AA;</span>
-                    )}
-                  </span>
-                ))}
-              </div>
-
-              {/* Divider */}
-              <div className="pl-[1.4rem] mt-0.5">
-                <div style={{ width: "clamp(80px, 8vw, 130px)", height: "1px", background: "linear-gradient(to right, rgba(222,219,200,0.3), transparent)" }} />
-              </div>
-
-              {/* ✨ Tagline — Fraunces italic + golden highlight */}
-              <div className="pl-[1.4rem]">
-                <span style={{ fontFamily: "'Fraunces', Georgia, serif", fontSize: "clamp(12px, 1.05vw, 16px)", fontWeight: 400, fontStyle: "italic", color: "#DEDBC8", letterSpacing: "0.01em", lineHeight: 1.4 }}>
-                  Business growth starts with a{" "}
-                  <span style={{ color: "#E8C97A", fontWeight: 600, fontStyle: "italic", borderBottom: "1.5px solid rgba(232,201,122,0.6)", paddingBottom: "1px", textShadow: "0 0 20px rgba(232,201,122,0.3)" }}>
-                    better website
-                  </span>
-                  .
-                </span>
-              </div>
-            </motion.div>
-
-            {/* ✨ Giant Name — Fraunces display font */}
-            <WordsPullUp
-              text="Saim Dev"
-              showAsterisk={true}
-              className="text-[16vw] sm:text-[13vw] md:text-[11vw] lg:text-[9vw] xl:text-[8.5vw] font-bold leading-[0.85] tracking-[-0.07em] drop-shadow-2xl"
-              style={{ color: "#E1E0CC", fontFamily: "'Fraunces', Georgia, serif", fontWeight: 900 }}
-            />
-
-            {/* Sub-headline + description + CTA */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col gap-3 sm:gap-4"
-            >
-              {/* ✨ Highlighted sub-headline */}
-              <div className="border-l-2 border-primary pl-3.5">
-                <h3 className="text-white text-xs sm:text-base font-semibold tracking-tight">
-                  High-Performance{" "}
-                  <span style={{ color: "#E8C97A", textShadow: "0 0 18px rgba(232,201,122,0.25)" }}>
-                    Web Architecture
-                  </span>
-                </h3>
-                <p className="text-white/50 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-0.5">
-                  Strategic Design &amp; Digital Growth
-                </p>
-              </div>
-
-              {/* ✨ Description — measurable growth highlighted */}
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                className="text-primary/90 text-[11px] sm:text-sm leading-relaxed font-light max-w-md"
-              >
-                Saim Dev is a worldwide collective of web developers &amp; strategists connected by a
-                shared purpose &mdash; building custom websites that unlock{" "}
-                <span style={{ color: "#E8C97A", fontWeight: 600, borderBottom: "1px solid rgba(232,201,122,0.55)", paddingBottom: "1px", textShadow: "0 0 16px rgba(232,201,122,0.25)" }}>
-                  measurable growth
-                </span>{" "}
-                for every business we work with.
-              </motion.p>
-
-              {/* CTA */}
-              <motion.a
-                href="https://wa.me/34711244392"
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-primary rounded-full pl-5 pr-1.5 py-1.5 sm:pl-6 sm:pr-2 sm:py-2 flex items-center gap-3 hover:gap-4 transition-all duration-300 group cursor-pointer self-start shadow-xl"
-              >
-                <span className="text-black font-semibold text-xs sm:text-sm tracking-wide">Start Your Project</span>
-                <div className="bg-black rounded-full w-7 h-7 sm:w-9 sm:h-9 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#E1E0CC]" />
-                </div>
-              </motion.a>
-            </motion.div>
-          </div>
-
-          {/* RIGHT COLUMN: Image */}
+        {/* Massive Headline (Webild Vibe) */}
+        <div className="w-full max-w-5xl mx-auto mb-6">
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:flex flex-col items-end justify-center w-full lg:w-[50%] xl:w-[52%] h-full max-h-[75vh] flex-shrink-0"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative w-full h-full overflow-hidden flex items-center justify-end">
-              <picture className="w-full h-full flex items-center justify-end">
-                <source srcSet="/hero-dev.webp" type="image/webp" />
-                <img
-                  src="/hero-dev.webp"
-                  alt="Saim Dev — Full Stack Developer Portfolio Preview"
-                  className="w-full h-full object-contain object-right"
-                  style={{ imageRendering: "high-quality" }}
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              </picture>
-            </div>
+            <h1 className="text-[12vw] sm:text-[9vw] md:text-[7vw] lg:text-[6rem] font-bold leading-[0.9] tracking-tighter text-white drop-shadow-2xl font-sans">
+              High-Performance <br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#E8C97A] to-primary/70">
+                Web Architecture
+              </span>
+            </h1>
           </motion.div>
         </div>
 
-        {/* Bottom border glow */}
-        <div
-          className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none"
-          style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(222,219,200,0.25) 50%, transparent)" }}
-        />
+        {/* Tagline & Description */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          className="max-w-2xl mx-auto mb-12 flex flex-col gap-4"
+        >
+          <p className="text-lg sm:text-2xl font-light text-[#DEDBC8] italic font-serif">
+            Business growth starts with a better website.
+          </p>
+          <p className="text-sm sm:text-base text-white/60 leading-relaxed font-light">
+            Saim Dev is a worldwide collective of web developers & strategists connected by a shared purpose — building custom websites that unlock <strong className="text-primary font-medium">measurable growth</strong> for every business we work with.
+          </p>
+          
+          {/* Tech Stack Chips */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
+            {["Next.js", "Node.js", "Vite", "React", "Tailwind"].map((tech) => (
+              <span key={tech} className="px-3 py-1 text-[10px] sm:text-xs font-mono uppercase tracking-widest text-white/40 border border-white/10 rounded-md bg-white/5">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6"
+        >
+          <a 
+            href="https://wa.me/34711244392" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center justify-center px-8 py-4 font-semibold text-black bg-primary rounded-full overflow-hidden transition-transform hover:scale-105 active:scale-95"
+          >
+            <div className="absolute inset-0 w-full h-full bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+            <span className="relative flex items-center gap-2">
+              Start Your Project
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </a>
+          
+          <a 
+            href="#our-story" 
+            className="inline-flex items-center justify-center px-8 py-4 font-medium text-white border border-white/20 rounded-full hover:bg-white/10 transition-colors"
+          >
+            Learn More
+          </a>
+        </motion.div>
+
+        {/* Floating Image (Replaces the split layout with a center floating mockup) */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="w-full max-w-5xl mx-auto mt-20 relative perspective-[2000px]"
+        >
+          <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent z-10 h-full w-full" />
+          <img 
+            src="/hero-dev.webp" 
+            alt="Saim Dev Portfolio" 
+            className="w-full h-auto rounded-t-2xl sm:rounded-t-[2rem] border-t border-l border-r border-white/10 shadow-2xl relative z-0"
+            style={{ transform: "rotateX(5deg) scale(0.98)" }}
+          />
+        </motion.div>
+
       </div>
     </section>
   );
