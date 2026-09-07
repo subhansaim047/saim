@@ -209,10 +209,15 @@ padding: 14px 35px;
 }
 </style>
 <script src="js/wp-emoji-release.min.js" defer=""></script>    <style>
+        /* Force black background on theme color sections */
         .pbmit-bg-color-globalcolor, 
         .pbmit-elementor-bg-color-globalcolor,
-        section.pbmit-bg-color-globalcolor {
+        .pbmit-bg-color-globalcolor > .elementor-background-overlay,
+        .pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay,
+        .pbmit-bg-color-globalcolor::before,
+        .pbmit-elementor-bg-color-globalcolor::before {
             background-color: #000000 !important;
+            background-image: none !important;
         }
     </style>
 </head>
@@ -239,11 +244,11 @@ padding: 14px 35px;
 										<nav id="site-navigation" class="main-navigation pbmit-navbar  pbmit-main-active-color-white pbmit-dropdown-active-color-globalcolor" aria-label="Top Menu">
 											<div class="menu-main-menu-container"><ul id="pbmit-top-menu" class="menu">
 <li class="menu-item"><a href="index.html">Home</a></li>
-<li class="menu-item"><a href="#about">About Us</a></li>
-<li class="menu-item"><a href="#menu">Menu</a></li>
-<li class="menu-item"><a href="#reservation">Reservation</a></li>
-<li class="menu-item"><a href="#services">Our Services</a></li>
-<li class="menu-item"><a href="#contact">Contact Us</a></li>
+<li class="menu-item"><a href="about-us.html">About Us</a></li>
+<li class="menu-item"><a href="menu.html">Menu</a></li>
+<li class="menu-item"><a href="reservation.html">Reservation</a></li>
+<li class="menu-item"><a href="our-services.html">Our Services</a></li>
+<li class="menu-item"><a href="contact-us.html">Contact Us</a></li>
 </ul><span class="closepanel"><svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="20.163" height="20.163" viewBox="0 0 26.163 26.163"><rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect><rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect></svg></span></div>										</nav><!-- #site-navigation -->
 									</div><!-- .wrap -->
 							</div><!-- .navigation-top -->
