@@ -1,0 +1,216 @@
+@font-face {
+    font-family: "flaticon_dilicious";
+    src: url("../fonts/flaticon_dilicious.ttf") format("truetype"),
+url("../fonts/flaticon_dilicious.woff") format("woff"),
+url("../fonts/flaticon_dilicious.woff2") format("woff2"),
+url("../fonts/flaticon_dilicious.eot#iefix") format("embedded-opentype"),
+url("../fonts/flaticon_dilicious.svg#flaticon_dilicious") format("svg");
+}
+
+i[class^="flaticon_dilicious-"]:before, 
+i[class*=" pbmit-dilicious-icon-"]:before {
+    font-family: flaticon_dilicious !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pbmit-dilicious-icon-food-and-restaurant:before {
+    content: "\f101";
+}
+.pbmit-dilicious-icon-food-truck:before {
+    content: "\f102";
+}
+.pbmit-dilicious-icon-lunch-bag:before {
+    content: "\f103";
+}
+.pbmit-dilicious-icon-store:before {
+    content: "\f104";
+}
+.pbmit-dilicious-icon-menu:before {
+    content: "\f105";
+}
+.pbmit-dilicious-icon-order-food:before {
+    content: "\f106";
+}
+.pbmit-dilicious-icon-food:before {
+    content: "\f107";
+}
+.pbmit-dilicious-icon-soda:before {
+    content: "\f108";
+}
+.pbmit-dilicious-icon-hamburger:before {
+    content: "\f109";
+}
+.pbmit-dilicious-icon-hamburger-1:before {
+    content: "\f10a";
+}
+.pbmit-dilicious-icon-burger:before {
+    content: "\f10b";
+}
+.pbmit-dilicious-icon-burger-1:before {
+    content: "\f10c";
+}
+.pbmit-dilicious-icon-food-container:before {
+    content: "\f10d";
+}
+.pbmit-dilicious-icon-drone:before {
+    content: "\f10e";
+}
+.pbmit-dilicious-icon-map:before {
+    content: "\f10f";
+}
+.pbmit-dilicious-icon-hamburger-2:before {
+    content: "\f110";
+}
+.pbmit-dilicious-icon-ice-cream:before {
+    content: "\f111";
+}
+.pbmit-dilicious-icon-french-fries:before {
+    content: "\f112";
+}
+.pbmit-dilicious-icon-pizza:before {
+    content: "\f113";
+}
+.pbmit-dilicious-icon-taco:before {
+    content: "\f114";
+}
+.pbmit-dilicious-icon-french-fries-1:before {
+    content: "\f115";
+}
+.pbmit-dilicious-icon-food-delivery:before {
+    content: "\f116";
+}
+.pbmit-dilicious-icon-soda-1:before {
+    content: "\f117";
+}
+.pbmit-dilicious-icon-burrito:before {
+    content: "\f118";
+}
+.pbmit-dilicious-icon-sausage:before {
+    content: "\f119";
+}
+.pbmit-dilicious-icon-fast-food:before {
+    content: "\f11a";
+}
+.pbmit-dilicious-icon-food-delivery-1:before {
+    content: "\f11b";
+}
+.pbmit-dilicious-icon-ice-cream-1:before {
+    content: "\f11c";
+}
+.pbmit-dilicious-icon-pizza-slice:before {
+    content: "\f11d";
+}
+.pbmit-dilicious-icon-nachos:before {
+    content: "\f11e";
+}
+.pbmit-dilicious-icon-eating:before {
+    content: "\f11f";
+}
+.pbmit-dilicious-icon-customer-service:before {
+    content: "\f120";
+}
+.pbmit-dilicious-icon-delivery-man:before {
+    content: "\f121";
+}
+.pbmit-dilicious-icon-route:before {
+    content: "\f122";
+}
+.pbmit-dilicious-icon-discount:before {
+    content: "\f123";
+}
+.pbmit-dilicious-icon-pizza-1:before {
+    content: "\f124";
+}
+.pbmit-dilicious-icon-delivery-man-1:before {
+    content: "\f125";
+}
+.pbmit-dilicious-icon-pizza-2:before {
+    content: "\f126";
+}
+.pbmit-dilicious-icon-good-review:before {
+    content: "\f127";
+}
+.pbmit-dilicious-icon-food-delivery-2:before {
+    content: "\f128";
+}
+.pbmit-dilicious-icon-food-1:before {
+    content: "\f129";
+}
+.pbmit-dilicious-icon-quality:before {
+    content: "\f12a";
+}
+.pbmit-dilicious-icon-sushi:before {
+    content: "\f12b";
+}
+.pbmit-dilicious-icon-sushi-1:before {
+    content: "\f12c";
+}
+.pbmit-dilicious-icon-cupcake:before {
+    content: "\f12d";
+}
+.pbmit-dilicious-icon-ice-cream-2:before {
+    content: "\f12e";
+}
+.pbmit-dilicious-icon-fast-food-1:before {
+    content: "\f12f";
+}
+.pbmit-dilicious-icon-fried-potatoes:before {
+    content: "\f130";
+}
+.pbmit-dilicious-icon-shrimp:before {
+    content: "\f131";
+}
+.pbmit-dilicious-icon-lobster:before {
+    content: "\f132";
+}
+.pbmit-dilicious-icon-broccoli:before {
+    content: "\f133";
+}
+.pbmit-dilicious-icon-cheese:before {
+    content: "\f134";
+}
+.pbmit-dilicious-icon-cake:before {
+    content: "\f135";
+}
+.pbmit-dilicious-icon-birthday:before {
+    content: "\f136";
+}
+.pbmit-dilicious-icon-order-food-1:before {
+    content: "\f137";
+}
+.pbmit-dilicious-icon-food-app:before {
+    content: "\f138";
+}
+.pbmit-dilicious-icon-delivery-man-2:before {
+    content: "\f139";
+}
+.pbmit-dilicious-icon-smartphone:before {
+    content: "\f13a";
+}
+.pbmit-dilicious-icon-delivery-bike:before {
+    content: "\f13b";
+}
+.pbmit-dilicious-icon-tracking:before {
+    content: "\f13c";
+}
+.pbmit-dilicious-icon-support:before {
+    content: "\f13d";
+}
+.pbmit-dilicious-icon-food-delivery-3:before {
+    content: "\f13e";
+}
+.pbmit-dilicious-icon-phone-call:before {
+    content: "\f13f";
+}
+.pbmit-dilicious-icon-pin:before {
+    content: "\f140";
+}
+.pbmit-dilicious-icon-mail:before {
+    content: "\f141";
+}

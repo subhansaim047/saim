@@ -1,4 +1,4 @@
-﻿import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import { useNavigate, Link } from "react-router-dom";
 import React, { useState } from "react";
 import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft } from "lucide-react";
@@ -17,6 +17,22 @@ interface DemoItem {
 }
 
 const demos: DemoItem[] = [
+  {
+    id: "dilicious-pizza",
+    title: "Dilicious Pizza",
+    category: "Restaurant & Food",
+    description: "A delicious 1-to-1 cloned premium pizza and restaurant website showcasing menus, delivery options, and animated visuals.",
+    demoUrl: "/demos/dilicious-pizza/index.html",
+    previewImage: "/demos/dilicious-pizza/images/banner-bg-03-new.png",
+    tags: ["Restaurant", "Pizza", "Food Delivery", "HTML5"],
+    features: [
+      "100% Pixel-Perfect Clone",
+      "Interactive Food Menus",
+      "Parallax & Animations",
+      "Fully Responsive Design"
+    ],
+    badge: "New 100% Clone"
+  },
   {
     id: "architecture",
     title: "Architecture & Interior",
