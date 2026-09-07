@@ -331,15 +331,7 @@ padding: 14px 35px;
 			<span class="pbmit-header-button-text-1">Order in now</span>			<span class="pbmit-header-button-text-2">1-800-700-600</span>		</a>
 					</div>
 										</div>
-						<div class="pbmit-search-cart-box">
-									<div class="pbmit-header-search-btn"><a href="#" title="Search"><i class="pbmit-base-icon-search-1"></i></a></div>
-											<div class="pbmit-cart-wrapper pbmit-cart-style-1 pbmit-show-cart-amount-no">
-			<a href="https://dilicious-demo.pbminfotech.com/pizza/cart/" class="pbmit-cart-link">
-		<span class="pbmit-cart-details">
-			<span class="pbmit-cart-icon"></span>
-			<span class="pbmit-cart-count">0</span>
-		</span><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">£</span>0.00</span></a>		</div>
-								</div>
+						
 						<div class="pbmit-burger-menu-wrapper">
 							<div class="pbmit-mobile-menu-bg"></div>
 							<button id="menu-toggle" class="nav-menu-toggle">
@@ -366,16 +358,7 @@ padding: 14px 35px;
 			<div id="content" class="site-content container">
 									<div class="row multi-columns-row">
 				
-				<div class="pbmit-header-search-form-wrapper">
-					<div class="pbmit-search-close"><svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="28.163" height="28.163" viewBox="0 0 26.163 26.163"><rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect><rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect></svg></div>
-					<form role="search" method="get" class="search-form" action="https://dilicious-demo.pbminfotech.com/pizza/">
-	<label for="search-form-6a9f0a0f04e8b">
-		<span class="screen-reader-text">Search for:</span>
-	</label>
-	<input type="search" id="search-form-6a9f0a0f04e8b" class="search-field" placeholder="Search …" value="" name="s">
-	<button type="submit" class="search-submit" title="Search"><span class="screen-reader-text">Search</span></button>
-</form>
-				</div><div class="wrap">
+				<div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<section class="error-404 not-found clearfix">
@@ -567,7 +550,7 @@ var thickboxL10n = {"next":"Next \u003E","prev":"\u003C Prev","image":"Image","o
 var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
 //# sourceURL=https://dilicious-demo.pbminfotech.com/pizza/wp-includes/js/wp-emoji-loader.min.js
 </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;125856bf84ab44059737e93b01aa0fef&quot;,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+
 
 
 <div class="pbmit-cursor" style="transform: translate3d(-800px, -600px, 0px);"><div class="pbmit-cursor-text"></div></div><div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"><div style="border-width: medium; border-style: none; border-color: currentcolor; border-image: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div></div><div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div></body></html>
