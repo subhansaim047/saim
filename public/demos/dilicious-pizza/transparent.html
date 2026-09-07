@@ -185,7 +185,37 @@ padding: 14px 35px;
     font-weight: 600;
 }
 </style>
-<script src="js/wp-emoji-release.min.js" defer=""></script></head>
+<script src="js/wp-emoji-release.min.js" defer=""></script><style>
+        /* Force black background on theme color sections */
+        .pbmit-title-bar-wrapper.pbmit-bg-color-globalcolor,
+        section.pbmit-bg-color-globalcolor, 
+        section.pbmit-elementor-bg-color-globalcolor,
+        .elementor-section.pbmit-bg-color-globalcolor, 
+        .elementor-section.pbmit-elementor-bg-color-globalcolor,
+        section.pbmit-bg-color-globalcolor > .elementor-background-overlay,
+        section.pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay,
+        .elementor-section.pbmit-bg-color-globalcolor > .elementor-background-overlay,
+        .elementor-section.pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay,
+        section.pbmit-bg-color-globalcolor::before,
+        section.pbmit-elementor-bg-color-globalcolor::before,
+        .elementor-section.pbmit-bg-color-globalcolor::before,
+        .elementor-section.pbmit-elementor-bg-color-globalcolor::before {
+            background-color: #000000 !important;
+        }
+        
+        /* Remove gradients ONLY from overlays, keeping background textures on wrappers */
+        section.pbmit-bg-color-globalcolor > .elementor-background-overlay,
+        section.pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay,
+        .elementor-section.pbmit-bg-color-globalcolor > .elementor-background-overlay,
+        .elementor-section.pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay,
+        section.pbmit-bg-color-globalcolor::before,
+        section.pbmit-elementor-bg-color-globalcolor::before,
+        .elementor-section.pbmit-bg-color-globalcolor::before,
+        .elementor-section.pbmit-elementor-bg-color-globalcolor::before {
+            background-image: none !important;
+        }
+</style>
+</head>
 <body class="error404 wp-theme-dilicious theme-dilicious woocommerce-js  pbmit-top-menu-total-6 pbmit-sidebar-exists pbmit-sidebar-right pbmit-cursor-disable elementor-default elementor-kit-5" style="">
 <div id="page" class="site pbmit-parent-header-style-2">
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
