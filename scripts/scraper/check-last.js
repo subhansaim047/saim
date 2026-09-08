@@ -1,0 +1,10 @@
+const fs = require('fs');
+const cheerio = require('cheerio');
+const p = '../../public/demos/dilicious-pizza/index.html';
+let html = fs.readFileSync(p, 'utf8');
+const $ = cheerio.load(html);
+let sections = $('.elementor-top-section');
+let last = sections.last();
+console.log('ID:', last.attr('data-id'));
+console.log('Class:', last.attr('class'));
+console.log('Text:', last.text().replace(/\s+/g, ' ').substring(0, 200));
