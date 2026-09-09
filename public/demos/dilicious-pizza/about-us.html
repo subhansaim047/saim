@@ -135,32 +135,17 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https://dilicious-demo.pb
 <link rel="shortlink" href="https://dilicious-demo.pbminfotech.com/pizza/?p=4126">
 
 <style>
-        /* Force black background on theme color sections */
-        .pbmit-title-bar-wrapper.pbmit-bg-color-globalcolor,
-        section.pbmit-bg-color-globalcolor, 
-        section.pbmit-elementor-bg-color-globalcolor,
-        .elementor-section.pbmit-bg-color-globalcolor, 
-        .elementor-section.pbmit-elementor-bg-color-globalcolor,
-        section.pbmit-bg-color-globalcolor > .elementor-background-overlay,
-        section.pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay,
-        .elementor-section.pbmit-bg-color-globalcolor > .elementor-background-overlay,
-        .elementor-section.pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay,
-        section.pbmit-bg-color-globalcolor::before,
-        section.pbmit-elementor-bg-color-globalcolor::before,
-        .elementor-section.pbmit-bg-color-globalcolor::before,
-        .elementor-section.pbmit-elementor-bg-color-globalcolor::before {
+        /* Force black background ONLY on footer - not all globalcolor sections */
+        #colophon.pbmit-bg-color-globalcolor,
+        #colophon.pbmit-elementor-bg-color-globalcolor,
+        #colophon .pbmit-footer-section,
+        #colophon .pbmit-footer-big-area-wrapper,
+        footer.pbmit-bg-color-globalcolor,
+        footer.pbmit-elementor-bg-color-globalcolor {
             background-color: #000000 !important;
         }
-        
-        /* Remove gradients ONLY from overlays, keeping background textures on wrappers */
-        section.pbmit-bg-color-globalcolor > .elementor-background-overlay,
-        section.pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay,
-        .elementor-section.pbmit-bg-color-globalcolor > .elementor-background-overlay,
-        .elementor-section.pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay,
-        section.pbmit-bg-color-globalcolor::before,
-        section.pbmit-elementor-bg-color-globalcolor::before,
-        .elementor-section.pbmit-bg-color-globalcolor::before,
-        .elementor-section.pbmit-elementor-bg-color-globalcolor::before {
+        #colophon.pbmit-bg-color-globalcolor > .elementor-background-overlay,
+        #colophon.pbmit-elementor-bg-color-globalcolor > .elementor-background-overlay {
             background-image: none !important;
         }
 </style>
