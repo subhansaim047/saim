@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "cheerio": "^1.2.0",
+    "css": "^3.0.0",
     "website-scraper": "^6.0.0",
     "website-scraper-puppeteer": "^2.0.1"
   }
