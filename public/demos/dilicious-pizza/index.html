@@ -862,50 +862,36 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 </style>
 
-<style id="global-section-sizing-fix">
-    /* Global fix to make sections fit within the screen */
-    .elementor-section.elementor-top-section {
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-    }
-    
-    @media (min-width: 1024px) {
-        .elementor-section.elementor-top-section {
-            /* Force sections to take up exactly screen height and center content */
-            height: 100vh !important;
-            max-height: 100vh !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-        }
-        
-        /* Scale down the entire inner wrap slightly if it overflows */
-        .elementor-section.elementor-top-section > .elementor-container {
-            max-height: 95vh;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* Reduce huge image sizes inside some columns */
-        .elementor-widget-image img {
-            max-height: 60vh !important;
-            width: auto;
-            object-fit: contain;
-        }
 
-        /* Specifically adjust the burger section to prevent cutoff */
-        #burger-custom-css ~ .elementor-section, 
-        .elementor-element-f3401e1 {
-            height: auto !important;
-            min-height: 100vh !important;
-            padding-top: 50px !important;
-            padding-bottom: 50px !important;
-        }
+
+<style id="global-section-sizing-fix">
+    /* Global clean sizing so sections fit on screen naturally without any overlapping */
+    .elementor-section.elementor-top-section {
+      padding-top: 60px !important;
+      padding-bottom: 60px !important;
     }
-    
-    /* Reduce heading margins */
+    .elementor-element-e8a2a75 {
+      padding-top: 80px !important;
+      padding-bottom: 80px !important;
+    }
+    .elementor-element-20c303f {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+    }
+    /* Constrain Hamza Ilyas image in Section 2 so it fits comfortably on screen */
+    .elementor-element-20c303f img {
+      max-height: 480px !important;
+      width: auto !important;
+      object-fit: cover !important;
+      border-radius: 20px !important;
+    }
+    /* Section 4 margin fix */
+    .elementor-element-e71b354 {
+      margin-top: 60px !important;
+    }
+    /* Heading margins */
     .pbmit-heading-subheading {
-        margin-bottom: 15px !important;
+      margin-bottom: 20px !important;
     }
 </style>
 </head>
