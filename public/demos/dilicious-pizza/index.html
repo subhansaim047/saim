@@ -861,6 +861,53 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 .elementor-widget .elementor-icon-list-icon i{font-size:var(--e-icon-list-icon-size);width:1.25em;}
 
 </style>
+
+<style id="global-section-sizing-fix">
+    /* Global fix to make sections fit within the screen */
+    .elementor-section.elementor-top-section {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+    
+    @media (min-width: 1024px) {
+        .elementor-section.elementor-top-section {
+            /* Force sections to take up exactly screen height and center content */
+            height: 100vh !important;
+            max-height: 100vh !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+        }
+        
+        /* Scale down the entire inner wrap slightly if it overflows */
+        .elementor-section.elementor-top-section > .elementor-container {
+            max-height: 95vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Reduce huge image sizes inside some columns */
+        .elementor-widget-image img {
+            max-height: 60vh !important;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Specifically adjust the burger section to prevent cutoff */
+        #burger-custom-css ~ .elementor-section, 
+        .elementor-element-f3401e1 {
+            height: auto !important;
+            min-height: 100vh !important;
+            padding-top: 50px !important;
+            padding-bottom: 50px !important;
+        }
+    }
+    
+    /* Reduce heading margins */
+    .pbmit-heading-subheading {
+        margin-bottom: 15px !important;
+    }
+</style>
 </head>
 <body class="home wp-singular page-template-default page page-id-1124 wp-theme-dilicious theme-dilicious woocommerce-js pbmit-top-menu-total-6 pbmit-sidebar-no pbmit-cursor-disable elementor-default elementor-kit-5 elementor-page elementor-page-1124 e--ua-blink e--ua-chrome e--ua-webkit" data-elementor-device-mode="tablet" style="">
 <div id="page" class="site pbmit-parent-header-style-2">
