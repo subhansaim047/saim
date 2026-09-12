@@ -84,7 +84,7 @@ export const TermsOfService = () => {
               If you have any questions regarding these Terms of Service, please reach out directly:
             </p>
             <p className="mt-2 text-primary font-mono text-xs sm:text-sm">
-              WhatsApp: +34 711 244 392 · Web: saimdev.site
+              Instagram: Instagram DM · Web: saimdev.site
             </p>
           </section>
         </div>

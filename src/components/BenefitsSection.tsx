@@ -63,7 +63,7 @@ export const BenefitsSection = () => {
                   Technical Security
                 </h3>
                 <p className="mt-auto text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
-                  Complete Google indexing, local SEO, SSL security, WhatsApp and social integration, with clean, scalable code built for reliable business growth.
+                  Complete Google indexing, local SEO, SSL security, Instagram and social integration, with clean, scalable code built for reliable business growth.
                 </p>
               </div>
             </div>

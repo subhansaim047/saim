@@ -46,7 +46,7 @@ export const CtaSection = () => {
             <FadeUp delay={0.2} className="mt-10">
               <PrimaryButton
                 as="a"
-                href="https://wa.me/34711244392"
+                href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
               >

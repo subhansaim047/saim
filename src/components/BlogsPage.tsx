@@ -131,12 +131,12 @@ export const BlogsPage = () => {
           <p className="text-white/25 text-sm">
             More articles coming soon — follow on{" "}
             <a
-              href="https://wa.me/34711244392"
+              href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
               target="_blank"
               rel="noreferrer"
               className="text-primary/60 hover:text-primary underline underline-offset-4 transition-colors"
             >
-              WhatsApp
+              Instagram
             </a>{" "}
             to stay updated.
           </p>

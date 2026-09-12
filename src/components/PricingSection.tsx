@@ -28,7 +28,7 @@ const plans: Plan[] = [
       { text: "3 Pages (Home, Services, Contact)", included: true },
       { text: "Mobile Responsive Design", included: true },
       { text: "Contact Form", included: true },
-      { text: "WhatsApp Button", included: true },
+      { text: "Instagram Button", included: true },
       { text: "Google Maps Embed", included: true },
       { text: "Basic SEO Setup", included: true },
       { text: "Social Media Links", included: true },
@@ -47,7 +47,7 @@ const plans: Plan[] = [
       { text: "Custom Website Design", included: true },
       { text: "Mobile Responsive Design", included: true },
       { text: "Contact Form", included: true },
-      { text: "WhatsApp Integration", included: true },
+      { text: "Instagram Integration", included: true },
       { text: "Google Maps Integration", included: true },
       { text: "Basic SEO Setup", included: true },
       { text: "Fast Loading Website", included: true },
@@ -146,7 +146,7 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
           <div className="mt-6">
             {plan.featured ? (
               <PrimaryButton
-                href="https://wa.me/34711244392"
+                href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 size="sm"
@@ -156,7 +156,7 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
               </PrimaryButton>
             ) : (
               <SecondaryButton
-                href="https://wa.me/34711244392"
+                href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 size="sm"

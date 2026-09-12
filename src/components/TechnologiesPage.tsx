@@ -155,7 +155,7 @@ export const TechnologiesPage = () => {
             <div className="liquid-glass rounded-2xl p-6 border border-white/10">
               <h3 className="text-white font-medium text-lg mb-2">Lead Workflows</h3>
               <p className="text-white/60 text-xs font-light leading-relaxed">
-                Automated CRM syncing, instant email notifications, and WhatsApp lead routing.
+                Automated CRM syncing, instant email notifications, and Instagram lead routing.
               </p>
             </div>
             <div className="liquid-glass rounded-2xl p-6 border border-white/10">
@@ -198,7 +198,7 @@ export const TechnologiesPage = () => {
             Let's build a fast, secure, and AI-ready platform that sets you apart from competitors.
           </p>
           <a
-            href="https://wa.me/34711244392"
+            href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all text-xs cursor-pointer shadow-xl"

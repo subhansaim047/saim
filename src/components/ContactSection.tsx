@@ -43,8 +43,8 @@ export const ContactSection = () => {
 💰 *Budget Range:* ${formData.budget}
 📝 *Project Details:* ${details}`;
 
-    const whatsappUrl = `https://wa.me/34711244392?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    const igUrl = 'https://www.instagram.com/direct/t/18104872117958561/?hl=en';
+    window.open(igUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -66,7 +66,7 @@ export const ContactSection = () => {
             className="inline-flex items-center gap-2 text-primary text-xs font-mono tracking-widest uppercase mb-3"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Direct WhatsApp Inquiry</span>
+            <span>Direct Instagram Inquiry</span>
           </motion.div>
 
           <motion.h2
@@ -86,7 +86,7 @@ export const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-sm sm:text-base text-white/60 leading-relaxed"
           >
-            Share your project requirements below. Clicking submit will open a direct WhatsApp chat
+            Share your project requirements below. Clicking submit will open a direct Instagram chat
             with your briefing pre-filled for an instant quote and consultation.
           </motion.p>
         </div>
@@ -109,7 +109,7 @@ export const ContactSection = () => {
                 {[
                   { title: "Fast Turnaround", desc: "Complete delivery in 5–10 business days." },
                   { title: "Sub-Second Performance", desc: "Built with Next.js, React & modern headless architecture." },
-                  { title: "Direct WhatsApp Access", desc: "No middleman — chat directly with your senior developer." },
+                  { title: "Direct Instagram Access", desc: "No middleman — chat directly with your senior developer." },
                   { title: "Free 30-Day Support", desc: "Post-launch testing, SEO indexing & revisions included." },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
@@ -138,15 +138,15 @@ export const ContactSection = () => {
             <div className="bg-[#0c0c0e] border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-xs font-mono text-white/40 uppercase tracking-wider">Direct Hotline</span>
               <a
-                href="https://wa.me/34711244392"
+                href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
                 target="_blank"
                 rel="noreferrer"
                 className="text-base sm:text-lg font-bold text-white hover:text-primary transition-colors flex items-center gap-2"
               >
                 <MessageSquare className="w-4 h-4 text-primary" />
-                <span>+34 711 244 392</span>
+                <span>Instagram DM</span>
               </a>
-              <span className="text-[11px] text-white/40">Available Monday – Saturday on WhatsApp</span>
+              <span className="text-[11px] text-white/40">Available Monday – Saturday on Instagram</span>
             </div>
           </motion.div>
 
@@ -264,18 +264,18 @@ export const ContactSection = () => {
                 />
               </div>
 
-              {/* Submit to WhatsApp Button */}
+              {/* Submit to Instagram Button */}
               <button
                 type="submit"
                 className="mt-2 w-full bg-primary hover:bg-white text-black font-bold text-sm sm:text-base py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 shadow-xl group cursor-pointer"
               >
                 <MessageSquare className="w-5 h-5 text-black" />
-                <span>Start Project on WhatsApp</span>
+                <span>Start Project on Instagram</span>
                 <ArrowRight className="w-4 h-4 text-black transition-transform group-hover:translate-x-1" />
               </button>
 
               <p className="text-center text-[11px] text-white/40">
-                🔒 Your details are kept 100% confidential and directly transmitted via WhatsApp encryption.
+                🔒 Your details are kept 100% confidential and directly transmitted via Instagram encryption.
               </p>
             </form>
           </motion.div>

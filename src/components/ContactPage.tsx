@@ -26,7 +26,7 @@ export const ContactPage = () => {
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
-  const [waLink, setWaLink] = useState("");
+  const [igLink, setIgLink] = useState("");
 
   const validateForm = () => {
     const errs: Record<string, string> = {};
@@ -41,7 +41,7 @@ export const ContactPage = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      // Format pre-filled WhatsApp message
+      // Format pre-filled Instagram message
       const text = `Hi Saim Dev! I would like to inquire about a website project:
 
 • *Name*: ${formData.name}
@@ -52,11 +52,11 @@ export const ContactPage = () => {
 • *Project Details*: ${formData.details}`;
 
       const encodedText = encodeURIComponent(text);
-      const url = `https://wa.me/34711244392?text=${encodedText}`;
-      setWaLink(url);
+      const url = 'https://www.instagram.com/direct/t/18104872117958561/?hl=en';
+      setIgLink(url);
       setSubmitted(true);
 
-      // Direct redirection to WhatsApp App / Web
+      // Direct redirection to Instagram App / Web
       window.location.href = url;
     }
   };
@@ -97,7 +97,7 @@ export const ContactPage = () => {
             Let's Build Something Great
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Fill out the form below to initiate an instant project inquiry directly on WhatsApp.
+            Fill out the form below to initiate an instant project inquiry directly on Instagram.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export const ContactPage = () => {
             Send a Project Inquiry
           </h2>
           <p className="text-white/60 text-xs sm:text-sm mb-8 font-light">
-            Submitting this form launches WhatsApp with your pre-filled inquiry ready to send to Saim Dev (+34 711 244 392).
+            Submitting this form launches Instagram with your pre-filled inquiry ready to send to Saim Dev (Instagram DM).
           </p>
 
           {submitted ? (
@@ -117,16 +117,16 @@ export const ContactPage = () => {
                 Inquiry Form Formatted!
               </h3>
               <p className="text-white/70 text-sm max-w-md mx-auto mb-6">
-                Click the button below to open WhatsApp with your pre-filled project details and press <strong>Send</strong>:
+                Click the button below to open Instagram with your pre-filled project details and press <strong>Send</strong>:
               </p>
               <a
-                href={waLink || "https://wa.me/34711244392"}
+                href={igLink || "https://www.instagram.com/direct/t/18104872117958561/?hl=en"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-emerald-500 text-black text-sm font-bold px-8 py-4 rounded-full hover:bg-emerald-400 transition-all cursor-pointer mb-4 shadow-xl scale-105"
               >
                 <MessageSquare className="w-5 h-5" />
-                <span>Open & Send Message on WhatsApp</span>
+                <span>Open & Send Message on Instagram</span>
               </a>
               <div>
                 <button
@@ -260,7 +260,7 @@ export const ContactPage = () => {
                 type="submit"
                 className="w-full bg-primary text-black font-semibold py-3.5 px-6 rounded-full hover:bg-white transition-all cursor-pointer flex items-center justify-center gap-2 text-sm shadow-xl"
               >
-                <span>Send Project Inquiry on WhatsApp</span>
+                <span>Send Project Inquiry on Instagram</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
@@ -318,9 +318,9 @@ export const ContactPage = () => {
               </p>
             </div>
             <div>
-              <h4 className="text-white text-sm font-medium">Can we communicate via WhatsApp?</h4>
+              <h4 className="text-white text-sm font-medium">Can we communicate via Instagram?</h4>
               <p className="text-white/60 text-xs mt-1 font-light">
-                Yes! Instant communication is available via WhatsApp (+34 711 244 392) throughout the project.
+                Yes! Instant communication is available via Instagram (Instagram DM) throughout the project.
               </p>
             </div>
           </div>
@@ -332,15 +332,15 @@ export const ContactPage = () => {
             Prefer Instant Chat?
           </h3>
           <p className="text-white/60 text-xs sm:text-sm mb-6 font-light">
-            Skip the form and message Saim Dev directly on WhatsApp for an immediate response.
+            Skip the form and message Saim Dev directly on Instagram for an immediate response.
           </p>
           <a
-            href="https://wa.me/34711244392"
+            href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-emerald-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-emerald-400 transition-all text-xs cursor-pointer shadow-lg"
           >
-            <span>Chat on WhatsApp (+34 711 244 392)</span>
+            <span>Chat on Instagram (Instagram DM)</span>
           </a>
         </div>
       </div>
