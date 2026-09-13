@@ -2933,40 +2933,66 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a377f5cab85a8515',t:'MTc4ODgwNzY2Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe>
 
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"><div style="border-width: medium; border-style: none; border-color: currentcolor; border-image: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div></div><div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div><div class="pbmit-cursor" style="transform: translate3d(-800px, -600px, 0px);"><div class="pbmit-cursor-text"></div></div>
+
+
+
 <style>
 .floating-call-btn {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     background-color: #fcc332;
-    color: #111;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 12px 24px;
+    color: #111 !important;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+    padding: 8px 24px 8px 8px;
     border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(252, 195, 50, 0.4);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     z-index: 99999;
     display: flex;
     align-items: center;
-    gap: 10px;
-    text-decoration: none;
+    gap: 12px;
+    text-decoration: none !important;
     transition: all 0.3s ease;
-    border: 2px solid #fff;
+    border: 3px solid #111;
 }
 .floating-call-btn:hover {
-    transform: translateY(-5px);
-    color: #000;
-    box-shadow: 0 8px 20px rgba(252, 195, 50, 0.6);
+    transform: translateY(-5px) scale(1.05);
+    background-color: #111;
+    color: #fcc332 !important;
+    border-color: #fcc332;
+    box-shadow: 0 10px 25px rgba(252, 195, 50, 0.4);
+}
+.floating-call-btn .icon-circle {
+    background-color: #111;
+    color: #fcc332;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.floating-call-btn:hover .icon-circle {
+    background-color: #fcc332;
+    color: #111;
 }
 .floating-call-btn svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
 }
+.floating-call-btn span {
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
 </style>
 <a href="tel:03011337766" class="floating-call-btn">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path></svg>
-    Call Now
+    <div class="icon-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path></svg>
+    </div>
+    <span>CALL NOW</span>
 </a>
+
 </body></html>
