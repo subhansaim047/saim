@@ -864,34 +864,33 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 
+
+
 <style id="global-section-sizing-fix">
-    /* Global clean sizing so sections fit on screen naturally without any overlapping */
-    .elementor-section.elementor-top-section {
-      padding-top: 60px !important;
-      padding-bottom: 60px !important;
-    }
-    .elementor-element-e8a2a75 {
-      padding-top: 80px !important;
-      padding-bottom: 80px !important;
-    }
-    .elementor-element-20c303f {
-      padding-top: 50px !important;
-      padding-bottom: 50px !important;
-    }
-    /* Constrain Hamza Ilyas image in Section 2 so it fits comfortably on screen */
-    .elementor-element-20c303f img {
-      max-height: 480px !important;
-      width: auto !important;
-      object-fit: cover !important;
-      border-radius: 20px !important;
-    }
-    /* Section 4 margin fix */
-    .elementor-element-e71b354 {
-      margin-top: 60px !important;
-    }
-    /* Heading margins */
-    .pbmit-heading-subheading {
-      margin-bottom: 20px !important;
+    /* Global fix to make sections fit within the screen without cutting off content */
+    
+    @media (min-width: 1024px) {
+        /* Apply to all sections EXCEPT About (20c303f), Menu (e71b354), and Burger Anim (8c248e2) */
+        .elementor-section.elementor-top-section:not(.elementor-element-20c303f):not(.elementor-element-e71b354):not(.elementor-element-8c248e2) {
+            min-height: 100vh !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            padding-top: 50px !important;
+            padding-bottom: 50px !important;
+        }
+        
+        .elementor-section.elementor-top-section:not(.elementor-element-20c303f):not(.elementor-element-e71b354):not(.elementor-element-8c248e2) > .elementor-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Reduce huge image sizes inside these scaled columns */
+        .elementor-section.elementor-top-section:not(.elementor-element-20c303f):not(.elementor-element-e71b354):not(.elementor-element-8c248e2) .elementor-widget-image img {
+            max-height: 70vh !important;
+            width: auto;
+            object-fit: contain;
+        }
     }
 </style>
 </head>
