@@ -866,31 +866,29 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 
+
+
 <style id="global-section-sizing-fix">
-    /* Global fix to make sections fit within the screen without cutting off content */
+    /* Global clean sizing so sections fit on screen naturally */
+    .elementor-section.elementor-top-section:not(.elementor-element-20c303f) {
+      padding-top: 100px !important;
+      padding-bottom: 100px !important;
+    }
     
-    @media (min-width: 1024px) {
-        /* Apply to all sections EXCEPT About (20c303f), Menu (e71b354), and Burger Anim (8c248e2) */
-        .elementor-section.elementor-top-section:not(.elementor-element-20c303f):not(.elementor-element-e71b354):not(.elementor-element-8c248e2) {
-            min-height: 100vh !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-            padding-top: 50px !important;
-            padding-bottom: 50px !important;
-        }
-        
-        .elementor-section.elementor-top-section:not(.elementor-element-20c303f):not(.elementor-element-e71b354):not(.elementor-element-8c248e2) > .elementor-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        /* Reduce huge image sizes inside these scaled columns */
-        .elementor-section.elementor-top-section:not(.elementor-element-20c303f):not(.elementor-element-e71b354):not(.elementor-element-8c248e2) .elementor-widget-image img {
-            max-height: 70vh !important;
-            width: auto;
-            object-fit: contain;
-        }
+    /* Specific overrides if needed */
+    .elementor-element-e8a2a75 { /* Hero */
+      padding-top: 120px !important;
+      padding-bottom: 120px !important;
+    }
+    
+    .elementor-element-e71b354 { /* Menu Section */
+      padding-top: 80px !important;
+      padding-bottom: 80px !important;
+    }
+    
+    /* Heading margins */
+    .pbmit-heading-subheading {
+      margin-bottom: 20px !important;
     }
 </style>
 </head>
