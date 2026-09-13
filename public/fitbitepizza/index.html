@@ -923,7 +923,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
     }
 
     /* 3. Fix Promo Cards: Force correct colors based on exact IDs, not :has() */
-    .elementor-element-a228308 .pbmit-ihbox-style-3 { background-color: #830051 !important; } /* Cheesy Pizza: Purple/Magenta */
+    .elementor-element-859032c .pbmit-ihbox-style-3 { background-color: #830051 !important; } /* Cheesy Pizza: Purple/Magenta */
     .elementor-element-2b5f382 .pbmit-ihbox-style-3 { background-color: #659a16 !important; } /* Italian Food: Green */
     .elementor-element-6a03461 .pbmit-ihbox-style-3 { background-color: #d1122a !important; } /* Hottest Pizza: Red */
 
@@ -974,6 +974,121 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
     .elementor-element-1bced7d,
     .pbmit-tween-effect-style-1 {
         display: none !important;
+    }
+}
+</style>
+
+
+<style>
+@media (max-width: 767px) {
+    /* Fix Promo Boxes (The 3 Boxes): The pizzas were absolutely positioned and overflowing/cut off on the right! */
+    .pbmit-ihbox-style-3 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding-bottom: 30px !important;
+    }
+    
+    .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
+        position: relative !important; /* Force it into document flow */
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin: 20px auto !important;
+        transform: none !important;
+    }
+
+    .pbmit-ihbox-style-3 .pbmit-ihbox-contents {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    /* Fix Fastest Delivery Boxes (The 3 Dotted Boxes) spacing */
+    .pbmit-ihbox-style-8 {
+        margin-bottom: 20px !important;
+    }
+}
+</style>
+
+
+<style>
+@media (max-width: 767px) {
+    /* 1. 3 PROMO BOXES SWIPEABLE ROW (Desktop Parity) */
+    .elementor-element-85d9e25 .elementor-container {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px; /* Spacing between cards */
+        /* hide scrollbar for sleek look */
+        scrollbar-width: none;
+    }
+    .elementor-element-85d9e25 .elementor-container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .elementor-element-859032c, 
+    .elementor-element-2b5f382, 
+    .elementor-element-6a03461 {
+        flex: 0 0 85% !important; /* Take up 85% of screen width so the next one peeks in */
+        scroll-snap-align: center;
+        max-width: 85% !important;
+        width: 85% !important;
+    }
+
+    /* Restore absolute positioning for pizzas inside the promo boxes to match laptop view */
+    .pbmit-ihbox-style-3 {
+        padding: 30px !important;
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+    .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
+        position: absolute !important;
+        right: -30px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        margin: 0 !important;
+        z-index: 5 !important;
+    }
+    .pbmit-ihbox-style-3 .pbmit-ihbox-icon img {
+        max-width: 130px !important; /* Scale it down a bit so it doesn't overflow the 85% container entirely */
+        height: auto !important;
+    }
+    .pbmit-ihbox-style-3 .pbmit-ihbox-contents {
+        align-items: flex-start !important;
+    }
+
+    /* 2. FOOTER LOGO VISIBILITY */
+    .pbmit-footer-logo {
+        display: block !important;
+        visibility: visible !important;
+        margin: 0 auto 20px auto !important;
+        max-height: 120px !important;
+        text-align: center;
+    }
+    .pbmit-footer-right {
+        text-align: center;
+    }
+
+    /* 3. SCROLLING ANIMATIONS RESTORATION */
+    /* Remove elementor-hidden-mobile restrictions via CSS and scale down the tween effects to fit mobile screen */
+    .pbmit-tween-effect-style-1,
+    .pbmit_tween_effect_element,
+    .pbmit_tween_effect_element .elementor-hidden-mobile,
+    .elementor-hidden-mobile:has(img[src*="pizza-part"]) {
+        display: block !important;
+    }
+
+    /* Target the big flying pizza parts and scale them down so they don't break the narrow mobile screen */
+    .pbmit_tween_effect_element img {
+        transform: scale(0.5) !important;
+        transform-origin: center center !important;
     }
 }
 </style>
@@ -2763,8 +2878,7 @@ color:#000000;
 					<div class="pbmit-ihbox pbmit-ihbox-style-8"><div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-food"></i></div></div></div><div class="pbmit-ihbox-contents">
 		<h2 class="pbmit-element-title">
 					
-						Free Shipping <br>
-From 75$
+						Free Delivery <br> in Daska
 					
 					</h2>
 						</div></div>				</div>
