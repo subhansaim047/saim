@@ -231,6 +231,24 @@ padding: 14px 35px;
 <meta property="og:image" content="https://fitbitepizza.com/fitbitepizza/images/fitbite-logo.png">
 <meta property="og:type" content="website">
 
+
+<style>
+/* Fix promo cards losing background colors on mobile */
+.pbmit-ihbox-style-3 { position: relative; overflow: hidden; }
+.pbmit-ihbox-style-3 .pbmit-ihbox-overlay-image { display: block !important; }
+@media (max-width: 767px) {
+    .elementor-element-2b5f382, .elementor-element-6a03461 {
+        background-color: transparent !important;
+    }
+    .pbmit-ihbox-style-3 {
+        background-color: #222 !important; /* Fallback dark */
+    }
+    .pbmit-ihbox-style-3:has(img[src*="bg-01"]) { background-color: #791198 !important; } /* Purple */
+    .pbmit-ihbox-style-3:has(img[src*="bg-02"]) { background-color: #d1122a !important; } /* Red */
+    .pbmit-ihbox-style-3:has(img[src*="bg-03"]) { background-color: #659a16 !important; } /* Green */
+}
+</style>
+
 </head>
 
 <body class="wp-singular page-template-default page page-id-4204 wp-theme-dilicious theme-dilicious woocommerce-js pbmit-top-menu-total-6 pbmit-sidebar-no pbmit-cursor-disable elementor-default elementor-kit-5 elementor-page elementor-page-4204 e--ua-blink e--ua-chrome e--ua-webkit" data-elementor-device-mode="tablet" style="">

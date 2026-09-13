@@ -902,6 +902,24 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 <meta property="og:image" content="https://fitbitepizza.com/fitbitepizza/images/fitbite-logo.png">
 <meta property="og:type" content="website">
 
+
+<style>
+/* Fix promo cards losing background colors on mobile */
+.pbmit-ihbox-style-3 { position: relative; overflow: hidden; }
+.pbmit-ihbox-style-3 .pbmit-ihbox-overlay-image { display: block !important; }
+@media (max-width: 767px) {
+    .elementor-element-2b5f382, .elementor-element-6a03461 {
+        background-color: transparent !important;
+    }
+    .pbmit-ihbox-style-3 {
+        background-color: #222 !important; /* Fallback dark */
+    }
+    .pbmit-ihbox-style-3:has(img[src*="bg-01"]) { background-color: #791198 !important; } /* Purple */
+    .pbmit-ihbox-style-3:has(img[src*="bg-02"]) { background-color: #d1122a !important; } /* Red */
+    .pbmit-ihbox-style-3:has(img[src*="bg-03"]) { background-color: #659a16 !important; } /* Green */
+}
+</style>
+
 </head>
 <body class="home wp-singular page-template-default page page-id-1124 wp-theme-dilicious theme-dilicious woocommerce-js pbmit-top-menu-total-6 pbmit-sidebar-no pbmit-cursor-disable elementor-default elementor-kit-5 elementor-page elementor-page-1124 e--ua-blink e--ua-chrome e--ua-webkit" data-elementor-device-mode="tablet" style="">
 <div id="page" class="site pbmit-parent-header-style-2">
@@ -2662,7 +2680,7 @@ color:#000000;
 				</div>
 				<div class="elementor-element elementor-element-2efcf7d elementor-widget elementor-widget-text-editor" data-id="2efcf7d" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									From signature delights such as beef tartare and the best mashed potato in Paris, all the way to unique specialities.								</div>
+									Enjoy our signature fast food, hot pizzas, and delicious meals delivered fresh and fast right to your doorstep in Daska.								</div>
 				</div>
 				<section class="elementor-section elementor-inner-section elementor-element elementor-element-51de8b5 pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="51de8b5" data-element_type="section" data-e-type="section" data-cursor="blackish-color">
 						<div class="elementor-container elementor-column-gap-no">
