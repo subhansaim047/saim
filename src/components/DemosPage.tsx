@@ -22,8 +22,8 @@ const demos: DemoItem[] = [
     title: "Dilicious Pizza",
     category: "Restaurant & Food",
     description: "A delicious 1-to-1 cloned premium pizza and restaurant website showcasing menus, delivery options, and animated visuals.",
-    demoUrl: "/demos/dilicious-pizza/index.html",
-    previewImage: "/demos/dilicious-pizza/images/banner-bg-03-new.png",
+    demoUrl: "/fitbitepizza/index.html",
+    previewImage: "/fitbitepizza/images/banner-bg-03-new.png",
     tags: ["Restaurant", "Pizza", "Food Delivery", "HTML5"],
     features: [
       "100% Pixel-Perfect Clone",
