@@ -912,87 +912,13 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 
-<style>
-@media (max-width: 767px) {
-    /* 1. Fix Hero Gap: Remove huge empty space below buttons */
-    .elementor-element-e8a2a75 {
-        min-height: auto !important;
-        padding-bottom: 50px !important;
-    }
-    
-    /* 2. Fix Overlap: Prevent FITBITE PIZZA from colliding with Best Choice */
-    .elementor-element-73398ea, .elementor-element-14c8f3f {
-        margin-top: 25px !important;
-    }
-
-    /* 3. Fix Promo Cards: Force correct colors based on exact IDs, not :has() */
-     /* Cheesy Pizza: Purple/Magenta */
-     /* Italian Food: Green */
-     /* Hottest Pizza: Red */
-
-    /* 4. Fix Promo Pizzas: Show the missing pizza images inside the cards */
-    .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
-        display: flex !important;
-        justify-content: center !important;
-        margin-bottom: 20px !important;
-    }
-    .pbmit-ihbox-style-3 .pbmit-ihbox-icon img {
-        max-width: 150px !important;
-        height: auto !important;
-        display: block !important;
-    }
-    
-    
-    
-    
-    
-    /* 7. Fix Missing Scooter/Delivery Background */
-    .elementor-element-51de8b5 {
-        background-color: #b40a24 !important; /* Red */
-        padding: 40px 20px !important;
-        border-radius: 20px !important;
-        margin-top: 30px !important;
-    }
-    
-    /* Optional: Hide the broken parallax pieces completely just in case they peek out */
-    
-}
-</style>
 
 
-<style>
-@media (max-width: 767px) {
-    /* Fix Promo Boxes (The 3 Boxes): The pizzas were absolutely positioned and overflowing/cut off on the right! */
-    .pbmit-ihbox-style-3 {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        padding-bottom: 30px !important;
-    }
-    
-    .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
-        position: relative !important; /* Force it into document flow */
-        right: auto !important;
-        top: auto !important;
-        bottom: auto !important;
-        margin: 20px auto !important;
-        transform: none !important;
-    }
 
-    .pbmit-ihbox-style-3 .pbmit-ihbox-contents {
-        width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-    
-    /* Fix Fastest Delivery Boxes (The 3 Dotted Boxes) spacing */
-    .pbmit-ihbox-style-8 {
-        margin-bottom: 20px !important;
-    }
-}
-</style>
+
+
+
+
 
 
 
@@ -1017,128 +943,87 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 <style id="perfect-mobile-parallax">
-  @media (max-width: 767px) {
-  
-      /* 1. MIDDLE PIZZA (Why our pizza best) */
-      .elementor-element-dc878eb { margin-top: 40px !important; }
-
-      .elementor-element-6152e5e {
-            display: block !important;
-            position: relative !important;
-            width: 600px !important; 
-            height: 500px !important;
-            left: 50% !important;
-            margin-left: -260px !important; 
-            margin-top: 30px !important;
-            margin-bottom: -170px !important; /* Gave it 145px more space (was -245px) */
-            transform: scale(0.45) !important;
-            transform-origin: top center !important;
-        }
-        
-        /* FIX HERO SECTION PIZZA SCALING & POSITION */
-        .elementor-element-8a3f06d {
-            display: block !important;
-            position: relative !important;
-            width: 100% !important;
-            height: 400px !important;
-            transform: scale(0.65) !important;
-            transform-origin: top left !important;
-            margin-left: -20px !important;
-            margin-top: -30px !important;
-        }
-  
-      .elementor-element-15e8b6b,
-      .elementor-element-2c8cff4,
-      .elementor-element-e608a1c,
-      .elementor-element-593309a {
-          position: relative !important;
-          z-index: 20 !important;
-          margin-top: 20px !important;
-      }
-
-      /* FIX THE 3 PROMO BOXES ON MOBILE TO LOOK LIKE DESKTOP */
-
-      .pbmit-ihbox-style-3 .pbmit-element-title {
-          font-size: 26px !important;
-          line-height: 28px !important;
-      }
-      .pbmit-ihbox-style-3 .pbmit-element-heading {
-          font-size: 18px !important;
-          line-height: 20px !important;
-          margin-bottom: 5px !important;
-      }
-      .pbmit-ihbox-style-3 .pbmit-ihbox-btn a {
-          padding: 8px 20px !important;
-          font-size: 14px !important;
-          margin-top: 10px !important;
-      }
-      .pbmit-ihbox-style-3 {
-          padding: 30px 100px 30px 20px !important;
-      }
-
-      .elementor-element-859032c, .elementor-element-2b5f382, .elementor-element-6a03461 {
-          margin-bottom: 20px !important;
-      }
-      .pbmit-ihbox-style-3 {
-          padding: 40px 100px 40px 30px !important;
-          min-height: 180px !important;
-      }
-      .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
-          position: absolute !important;
-          right: -10px !important;
-          bottom: -20px !important;
-          margin: 0 !important;
-          display: block !important;
-      }
-      .pbmit-ihbox-style-3 .pbmit-ihbox-icon-wrapper.pbmit-ihbox-icon-type-image {
-          margin: 0 !important;
-          transform: scale(0.55) !important;
-          transform-origin: bottom right !important;
-      }
-      .pbmit-ihbox-style-3 .pbmit-ihbox-icon img {
-          max-width: none !important;
-          height: auto !important;
-          display: block !important;
-          margin: 0 !important;
-          padding: 0 !important;
-      }
+/* ====== FITBITE PIZZA MOBILE CLEAN LAYOUT ====== */
+@media (max-width: 767px) {
+    /* 1. Reset Global Section Spacing (Natural Stacking) */
+    .elementor-section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        height: auto !important;
+    }
     
-      /* UNHIDE THE FOOTER LOGO ON MOBILE */
-      .pbmit-footer-big-area-wrapper, .pbmit-footer-big-area, .pbmit-footer-left, .pbmit-footer-right {
-          display: block !important;
-          visibility: visible !important;
-          opacity: 1 !important;
-      }
-      .pbmit-footer-left h2 {
-          text-align: center !important;
-          font-size: 28px !important;
-      }
-      .pbmit-footer-logo {
-          text-align: center !important;
-          margin-top: 20px !important;
-          display: block !important;
-      }
-  
-      /* 2. BURGER SECTION */
-      .elementor-element-f2a4969 {
-          display: block !important;
-          position: relative !important;
-          width: 500px !important;
-          height: 600px !important;
-          left: 50% !important;
-          margin-left: -250px !important;
-          margin-top: 30px !important;
-          margin-bottom: -320px !important;
-          transform: scale(0.4) !important;
-          transform-origin: top center !important;
-      }
-      .elementor-element-a885bdc {
-          margin-top: 50px !important;
-      }
-      .elementor-element-b13c8c7 {
-          margin-bottom: 20px !important;
-      }
-  }
+    /* 2. Hero Section */
+    .elementor-element-e8a2a75 { padding-top: 100px !important; padding-bottom: 20px !important; }
+    .elementor-element-8a3f06d {
+        position: relative !important;
+        display: block !important;
+        width: 100% !important;
+        height: 380px !important;
+        transform: scale(0.65) !important;
+        transform-origin: top center !important;
+        margin: 20px auto 0 auto !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    /* 3. Middle Slices Section */
+    .elementor-element-dc878eb { margin-top: 30px !important; }
+    .elementor-element-6152e5e {
+        position: relative !important;
+        display: block !important;
+        width: 100% !important;
+        height: 480px !important;
+        transform: scale(0.45) !important;
+        transform-origin: top center !important;
+        margin: 20px auto !important;
+        left: 50% !important;
+        margin-left: -50% !important;
+    }
+    .elementor-element-15e8b6b,
+    .elementor-element-2c8cff4,
+    .elementor-element-e608a1c,
+    .elementor-element-593309a {
+        position: relative !important;
+        z-index: 20 !important;
+        margin-top: 15px !important;
+        text-align: center !important;
+    }
+
+    /* 4. Burger Section */
+    .elementor-element-f2a4969 {
+        position: relative !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        height: 400px !important;
+        margin: 30px auto !important;
+    }
+    .pbmit-circle-box-3 {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+    }
+    .elementor-element-f2a4969 .elementor-widget-pbmit_tween_effect_element {
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    /* 5. Clean Promo Boxes */
+    .elementor-element-591fc3e,
+    .elementor-element-c2e82f7,
+    .elementor-element-9d0a6ee {
+        margin-bottom: 20px !important;
+    }
+    .pbmit-ihbox-style-3 {
+        padding: 30px !important;
+    }
+}
 </style>
 
 </head>
@@ -2334,7 +2219,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 		<h2 class="pbmit-element-title" style="perspective: 400px;"><div class="split-line" style="display: block; text-align: start; position: relative;"><div style="position:relative;display:inline-block;"> <div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">N</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">e</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">a</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">p</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">o</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">l</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">i</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">t</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">a</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">n</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">P</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">i</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">z</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">z</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">a</div><div style="position: relative; display: inline-block; transform: translate(0px, 90%) rotateX(-40deg); opacity: 0;">.</div></div> </div></h2>
 		<div class="pbmit-heading-desc">Discover the perfect blend of fresh ingredients, bold flavors, and timeless recipes. Experience a meal that satisfies your cravings and delights your taste buds.</div></div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-172ea63 pbmit-countdown-style-1 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-text-editor" data-id="172ea63" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-element elementor-element-172ea63 pbmit-countdown-style-1 elementor-hidden-desktop elementor-hidden-tablet  elementor-widget elementor-widget-text-editor" data-id="172ea63" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
 									<div class="content_countdown animated" id="main_countedown_1" style="visibility: visible;"><div class="countdown">
 				<span class="element_conteiner"><span class="days time_left">714</span><span class="time_description">Days</span></span>
@@ -2872,7 +2757,7 @@ color:#000000;
 							<div class="elementor-container elementor-column-gap-no">
 					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6607e6b pbmit-bg-color-over-image pbmit-bgimage-no pbmit-bgcolor-yes" data-id="6607e6b" data-element_type="column" data-e-type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-1bced7d elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-pbmit_lottie_player_element" data-id="1bced7d" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_lottie_player_element.default">
+						<div class="elementor-element elementor-element-1bced7d elementor-hidden-desktop elementor-hidden-tablet  elementor-widget elementor-widget-pbmit_lottie_player_element" data-id="1bced7d" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_lottie_player_element.default">
 				<div class="elementor-widget-container">
 					<lottie-player src="https://lottie.host/979f5334-1bec-4298-8d85-cbf7a9b92be5/oiPJGPUM28.json" background="transparent.html" speed="1" style="width: 100%;height: 100%" loop="" autoplay=""></lottie-player>				</div>
 				</div>
