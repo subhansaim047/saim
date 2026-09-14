@@ -280,88 +280,20 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https://dilicious-demo.pb
 
 
 
-<style id="global-desktop-parity-animations">
+
+
+
+
+
+
+
+
+
+<style id="perfect-mobile-parallax">
 @media (max-width: 767px) {
-    /* Globally scale down any GSAP parallax container that might have been unhidden */
-    .elementor-widget-pbmit_tween_effect_element,
-    .pbmit_tween_effect_element {
-        transform: scale(0.65) !important;
-        transform-origin: center center !important;
-    }
-}
-</style>
 
-
-<style id="restore-laptop-animations">
-@media (max-width: 767px) {
-    /* 1. RESTORE EXACT LAPTOP DESIGN FOR 3 PROMO BOXES */
-    .elementor-element-859032c .pbmit-ihbox-style-3,
-    .elementor-element-2b5f382 .pbmit-ihbox-style-3,
-    .elementor-element-6a03461 .pbmit-ihbox-style-3 {
-        background-color: transparent !important;
-        background: transparent !important;
-        min-height: 250px;
-        position: relative;
-        overflow: visible !important;
-        padding: 40px 30px !important;
-    }
-    
-    .pbmit-ihbox-style-3 .pbmit-ihbox-overlay-image,
-    .pbmit-ihbox-style-3 .pbmit-ihbox-pattern-image {
-        display: block !important;
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        z-index: 1 !important;
-    }
-    .pbmit-ihbox-style-3 .pbmit-ihbox-contents {
-        position: relative !important;
-        z-index: 10 !important;
-    }
-    
-    .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
-        position: absolute !important;
-        right: -30px !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        z-index: 20 !important;
-    }
-    .pbmit-ihbox-style-3 .pbmit-ihbox-icon img {
-        max-width: 150px !important;
-    }
-    
-    .elementor-element-859032c, 
-    .elementor-element-2b5f382, 
-    .elementor-element-6a03461 {
-        flex: 0 0 85% !important; 
-        max-width: 85% !important;
-        width: 85% !important;
-        margin: 0 auto 30px auto !important;
-    }
-
-
-    /* 2. RESTORE SCROLLING PIZZA AND BURGER ANIMATIONS WITH FLAWLESS POSITIONING */
-    
-    /* The Burger Container */
-    .elementor-element-f2a4969 {
-        display: block !important; 
-        position: relative !important;
-        width: 600px !important; 
-        height: 500px !important;
-        /* Perfect centering for 600px element */
-        left: 50% !important;
-        margin-left: -300px !important;
-        margin-top: -250px !important; /* Pull up to sit exactly on the yellow circle */
-        margin-bottom: -150px !important;
-        transform: scale(0.65) !important;
-        transform-origin: top center !important;
-        z-index: 99 !important;
-    }
-    
-    /* The Why Choose Us (Yellow Circle & Pizza) */
+    /* 1. MIDDLE PIZZA (Why our pizza best) */
+    /* Prevent it from overlapping the text below it! */
     .elementor-element-6152e5e {
         display: block !important;
         position: relative !important;
@@ -369,14 +301,61 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https://dilicious-demo.pb
         height: 500px !important;
         left: 50% !important;
         margin-left: -300px !important;
-        margin-top: -50px !important;
-        margin-bottom: -200px !important;
-        transform: scale(0.65) !important;
+        
+        /* The container is 500px tall. Scale 0.45 makes visual height 225px.
+           Transform origin is top center. So the top stays in place, 
+           and the bottom 275px is empty ghost space.
+           We remove the ghost space with margin-bottom: -275px 
+           and add 30px padding for safety = -245px. */
+        margin-top: 30px !important;
+        margin-bottom: -245px !important; 
+        
+        transform: scale(0.45) !important;
         transform-origin: top center !important;
-        z-index: 99 !important;
+        z-index: 10 !important;
     }
 
-    /* The Hero Section (Giant Pizza Parts) */
+    /* Ensure the text blocks (01, 02, 03, 04) are relative and have proper spacing 
+       so they aren't hidden under the pizza */
+    .elementor-element-15e8b6b,
+    .elementor-element-2c8cff4,
+    .elementor-element-e608a1c,
+    .elementor-element-593309a {
+        position: relative !important;
+        z-index: 20 !important;
+        margin-top: 20px !important;
+    }
+
+
+    /* 2. BURGER SECTION */
+    /* The Burger parts container */
+    .elementor-element-f2a4969 {
+        display: block !important; 
+        position: relative !important;
+        width: 600px !important; 
+        height: 500px !important;
+        left: 50% !important;
+        margin-left: -300px !important;
+        
+        /* The yellow circle is part of the text column above it.
+           On mobile, the text column gets very tall, so the yellow circle sits far below the text.
+           We need to pull the burger UP to sit on the yellow circle. */
+        margin-top: -200px !important;
+        margin-bottom: -150px !important; 
+        
+        transform: scale(0.45) !important;
+        transform-origin: top center !important;
+        z-index: 20 !important;
+    }
+    
+    /* Make sure the Burger text doesn't overlap the burger */
+    .elementor-element-5707ad7 {
+        z-index: 30 !important;
+        padding-bottom: 200px !important; /* Give space for the yellow circle and burger to sit below the text */
+    }
+
+
+    /* 3. HERO PIZZA */
     .elementor-element-bff8b9f, .elementor-element-8a3f06d {
         display: block !important;
         position: relative !important;
@@ -384,30 +363,15 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https://dilicious-demo.pb
         height: 600px !important;
         left: 50% !important;
         margin-left: -300px !important;
+        
         margin-top: 0 !important;
-        margin-bottom: -250px !important;
-        transform: scale(0.65) !important;
+        margin-bottom: -250px !important; /* Remove 600px -> 300px ghost space */
+        
+        transform: scale(0.5) !important;
         transform-origin: top center !important;
-        z-index: 99 !important;
+        z-index: 10 !important;
     }
 
-    /* Remove previous CSS that was hiding overflowing pizza */
-    .elementor-section {
-        overflow: visible !important;
-    }
-    
-    /* Ensure text is always on top */
-    .pbmit-element-title, .pbmit-element-subtitle, .pbmit-heading-desc, .pbmit-ihbox-contents {
-        position: relative !important;
-        z-index: 100 !important;
-    }
-    
-    .pbmit_tween_effect_element img, 
-    .pbmit_tween_effect_element svg,
-    .pbmit_tween_effect_element .pbmit-ihbox-icon {
-        max-width: 100% !important;
-        opacity: 1 !important;
-    }
 }
 </style>
 
