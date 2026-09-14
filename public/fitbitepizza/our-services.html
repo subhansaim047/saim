@@ -346,10 +346,24 @@ padding: 14px 35px;
 
 
 
+
+
+
+<style id="global-desktop-parity-animations">
+@media (max-width: 767px) {
+    /* Globally scale down any GSAP parallax container that might have been unhidden */
+    .elementor-widget-pbmit_tween_effect_element,
+    .pbmit_tween_effect_element {
+        transform: scale(0.65) !important;
+        transform-origin: center center !important;
+    }
+}
+</style>
+
+
 <style id="restore-laptop-animations">
 @media (max-width: 767px) {
     /* 1. RESTORE EXACT LAPTOP DESIGN FOR 3 PROMO BOXES */
-    /* Remove the solid colors I forced earlier, let the laptop background images show! */
     .elementor-element-859032c .pbmit-ihbox-style-3,
     .elementor-element-2b5f382 .pbmit-ihbox-style-3,
     .elementor-element-6a03461 .pbmit-ihbox-style-3 {
@@ -361,7 +375,6 @@ padding: 14px 35px;
         padding: 40px 30px !important;
     }
     
-    /* Show the beautiful smoke/texture background images that were hidden on mobile */
     .pbmit-ihbox-style-3 .pbmit-ihbox-overlay-image,
     .pbmit-ihbox-style-3 .pbmit-ihbox-pattern-image {
         display: block !important;
@@ -378,7 +391,6 @@ padding: 14px 35px;
         z-index: 10 !important;
     }
     
-    /* Make the pizza bleed out the right side EXACTLY like laptop */
     .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
         position: absolute !important;
         right: -30px !important;
@@ -390,7 +402,6 @@ padding: 14px 35px;
         max-width: 150px !important;
     }
     
-    /* Keep width 85% so the bleeding pizza doesn't cause horizontal scroll bar */
     .elementor-element-859032c, 
     .elementor-element-2b5f382, 
     .elementor-element-6a03461 {
@@ -401,7 +412,7 @@ padding: 14px 35px;
     }
 
 
-    /* 2. RESTORE SCROLLING PIZZA AND BURGER ANIMATIONS */
+    /* 2. RESTORE SCROLLING PIZZA AND BURGER ANIMATIONS WITH FLAWLESS POSITIONING */
     
     /* The Burger Container */
     .elementor-element-f2a4969 {
@@ -409,12 +420,14 @@ padding: 14px 35px;
         position: relative !important;
         width: 600px !important; 
         height: 500px !important;
-        /* Center a 600px element in a 390px screen: (390-600)/2 = -105px. We use margin-left: -105px */
-        margin: 0 0 -200px -105px !important; 
+        /* Perfect centering for 600px element */
+        left: 50% !important;
+        margin-left: -300px !important;
+        margin-top: -250px !important; /* Pull up to sit exactly on the yellow circle */
+        margin-bottom: -150px !important;
         transform: scale(0.65) !important;
         transform-origin: top center !important;
-        z-index: 0 !important;
-        left: 0 !important;
+        z-index: 99 !important;
     }
     
     /* The Why Choose Us (Yellow Circle & Pizza) */
@@ -423,11 +436,13 @@ padding: 14px 35px;
         position: relative !important;
         width: 600px !important; 
         height: 500px !important;
-        margin: -50px 0 -200px -105px !important;
+        left: 50% !important;
+        margin-left: -300px !important;
+        margin-top: -50px !important;
+        margin-bottom: -200px !important;
         transform: scale(0.65) !important;
         transform-origin: top center !important;
-        z-index: 0 !important;
-        left: 0 !important;
+        z-index: 99 !important;
     }
 
     /* The Hero Section (Giant Pizza Parts) */
@@ -436,20 +451,26 @@ padding: 14px 35px;
         position: relative !important;
         width: 600px !important; 
         height: 600px !important;
-        margin: 0 0 -300px -105px !important;
+        left: 50% !important;
+        margin-left: -300px !important;
+        margin-top: 0 !important;
+        margin-bottom: -250px !important;
         transform: scale(0.65) !important;
         transform-origin: top center !important;
-        z-index: 1 !important;
-        left: 0 !important;
+        z-index: 99 !important;
     }
 
-    /* Ensure text is always on top of the scaled parallax containers */
-    .pbmit-element-title, .pbmit-element-subtitle, .pbmit-heading-desc, .pbmit-ihbox-contents {
-        position: relative !important;
-        z-index: 50 !important;
+    /* Remove previous CSS that was hiding overflowing pizza */
+    .elementor-section {
+        overflow: visible !important;
     }
     
-    /* Remove shrinking hack so the JS can animate them normally */
+    /* Ensure text is always on top */
+    .pbmit-element-title, .pbmit-element-subtitle, .pbmit-heading-desc, .pbmit-ihbox-contents {
+        position: relative !important;
+        z-index: 100 !important;
+    }
+    
     .pbmit_tween_effect_element img, 
     .pbmit_tween_effect_element svg,
     .pbmit_tween_effect_element .pbmit-ihbox-icon {
@@ -683,7 +704,7 @@ in Paris Town, </div>	</div></div>				</div>
 				<div class="elementor-widget-container">
 					<lottie-player src="https://lottie.host/979f5334-1bec-4298-8d85-cbf7a9b92be5/oiPJGPUM28.json" background="transparent.html" speed="1" style="width: 100%;height: 100%" loop="" autoplay=""></lottie-player>				</div>
 				</div>
-				<div class="elementor-element elementor-element-3ef19aa elementor-widget__width-initial elementor-absolute elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-html" data-id="3ef19aa" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-3ef19aa elementor-widget__width-initial elementor-absolute elementor-hidden-tablet elementor-widget elementor-widget-html" data-id="3ef19aa" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-circle-box-2"></div>				</div>
 				</div>

@@ -1022,10 +1022,24 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 
+
+
+
+<style id="global-desktop-parity-animations">
+@media (max-width: 767px) {
+    /* Globally scale down any GSAP parallax container that might have been unhidden */
+    .elementor-widget-pbmit_tween_effect_element,
+    .pbmit_tween_effect_element {
+        transform: scale(0.65) !important;
+        transform-origin: center center !important;
+    }
+}
+</style>
+
+
 <style id="restore-laptop-animations">
 @media (max-width: 767px) {
     /* 1. RESTORE EXACT LAPTOP DESIGN FOR 3 PROMO BOXES */
-    /* Remove the solid colors I forced earlier, let the laptop background images show! */
     .elementor-element-859032c .pbmit-ihbox-style-3,
     .elementor-element-2b5f382 .pbmit-ihbox-style-3,
     .elementor-element-6a03461 .pbmit-ihbox-style-3 {
@@ -1037,7 +1051,6 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         padding: 40px 30px !important;
     }
     
-    /* Show the beautiful smoke/texture background images that were hidden on mobile */
     .pbmit-ihbox-style-3 .pbmit-ihbox-overlay-image,
     .pbmit-ihbox-style-3 .pbmit-ihbox-pattern-image {
         display: block !important;
@@ -1054,7 +1067,6 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         z-index: 10 !important;
     }
     
-    /* Make the pizza bleed out the right side EXACTLY like laptop */
     .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
         position: absolute !important;
         right: -30px !important;
@@ -1066,7 +1078,6 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         max-width: 150px !important;
     }
     
-    /* Keep width 85% so the bleeding pizza doesn't cause horizontal scroll bar */
     .elementor-element-859032c, 
     .elementor-element-2b5f382, 
     .elementor-element-6a03461 {
@@ -1077,7 +1088,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
     }
 
 
-    /* 2. RESTORE SCROLLING PIZZA AND BURGER ANIMATIONS */
+    /* 2. RESTORE SCROLLING PIZZA AND BURGER ANIMATIONS WITH FLAWLESS POSITIONING */
     
     /* The Burger Container */
     .elementor-element-f2a4969 {
@@ -1085,12 +1096,14 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         position: relative !important;
         width: 600px !important; 
         height: 500px !important;
-        /* Center a 600px element in a 390px screen: (390-600)/2 = -105px. We use margin-left: -105px */
-        margin: 0 0 -200px -105px !important; 
+        /* Perfect centering for 600px element */
+        left: 50% !important;
+        margin-left: -300px !important;
+        margin-top: -250px !important; /* Pull up to sit exactly on the yellow circle */
+        margin-bottom: -150px !important;
         transform: scale(0.65) !important;
         transform-origin: top center !important;
-        z-index: 0 !important;
-        left: 0 !important;
+        z-index: 99 !important;
     }
     
     /* The Why Choose Us (Yellow Circle & Pizza) */
@@ -1099,11 +1112,13 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         position: relative !important;
         width: 600px !important; 
         height: 500px !important;
-        margin: -50px 0 -200px -105px !important;
+        left: 50% !important;
+        margin-left: -300px !important;
+        margin-top: -50px !important;
+        margin-bottom: -200px !important;
         transform: scale(0.65) !important;
         transform-origin: top center !important;
-        z-index: 0 !important;
-        left: 0 !important;
+        z-index: 99 !important;
     }
 
     /* The Hero Section (Giant Pizza Parts) */
@@ -1112,20 +1127,26 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         position: relative !important;
         width: 600px !important; 
         height: 600px !important;
-        margin: 0 0 -300px -105px !important;
+        left: 50% !important;
+        margin-left: -300px !important;
+        margin-top: 0 !important;
+        margin-bottom: -250px !important;
         transform: scale(0.65) !important;
         transform-origin: top center !important;
-        z-index: 1 !important;
-        left: 0 !important;
+        z-index: 99 !important;
     }
 
-    /* Ensure text is always on top of the scaled parallax containers */
-    .pbmit-element-title, .pbmit-element-subtitle, .pbmit-heading-desc, .pbmit-ihbox-contents {
-        position: relative !important;
-        z-index: 50 !important;
+    /* Remove previous CSS that was hiding overflowing pizza */
+    .elementor-section {
+        overflow: visible !important;
     }
     
-    /* Remove shrinking hack so the JS can animate them normally */
+    /* Ensure text is always on top */
+    .pbmit-element-title, .pbmit-element-subtitle, .pbmit-heading-desc, .pbmit-ihbox-contents {
+        position: relative !important;
+        z-index: 100 !important;
+    }
+    
     .pbmit_tween_effect_element img, 
     .pbmit_tween_effect_element svg,
     .pbmit_tween_effect_element .pbmit-ihbox-icon {
@@ -1266,14 +1287,14 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 		</div>
 					</div>
 		</div>
-				<div class="elementor-element elementor-element-ac23bca elementor-widget__width-initial elementor-absolute pbmit-custom-social elementor-hidden-mobile elementor-widget elementor-widget-shortcode" data-id="ac23bca" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="shortcode.default">
+				<div class="elementor-element elementor-element-ac23bca elementor-widget__width-initial elementor-absolute pbmit-custom-social elementor-widget elementor-widget-shortcode" data-id="ac23bca" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="shortcode.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-shortcode"><ul class="pbmit-social-links"><li class="pbmit-social-li pbmit-social-facebook "><a title="Facebook" href="https://www.facebook.com/p/FIT-BITE-PIZZA-100063928218830/" target="_blank"><span><i class="pbmit-base-icon-facebook-squared"></i></span></a></li></ul></div>
 						</div>
 				</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8a3f06d elementor-hidden-mobile pbmit-bg-color-over-image pbmit-bgimage-no pbmit-bgcolor-yes" data-id="8a3f06d" data-element_type="column" data-e-type="column">
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8a3f06d pbmit-bg-color-over-image pbmit-bgimage-no pbmit-bgcolor-yes" data-id="8a3f06d" data-element_type="column" data-e-type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-bada115 elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="bada115" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
@@ -1311,7 +1332,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
           <img loading="lazy" decoding="async" width="166" height="134" src="/fitbitepizza/images/garlic.png" class="attachment-full size-full wp-image-1359" alt=""></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-31624e7 elementor-widget__width-initial elementor-absolute pbmit-offer-text elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-pbmit_custom_heading" data-id="31624e7" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_custom_heading.default">
+				<div class="elementor-element elementor-element-31624e7 elementor-widget__width-initial elementor-absolute pbmit-offer-text elementor-hidden-tablet elementor-widget elementor-widget-pbmit_custom_heading" data-id="31624e7" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_custom_heading.default">
 				<div class="elementor-widget-container">
 						<div class="pbmit-custom-heading -align animation-style4"><div class="pbmit-element-title">
 			
@@ -1320,7 +1341,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 			</div>
 		</div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-f89b155 elementor-widget__width-auto elementor-absolute elementor-hidden-tablet elementor-hidden-mobile pbmit-animation-none elementor-widget elementor-widget-image" data-id="f89b155" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-element elementor-element-f89b155 elementor-widget__width-auto elementor-absolute elementor-hidden-tablet pbmit-animation-none elementor-widget elementor-widget-image" data-id="f89b155" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
 															<img loading="lazy" decoding="async" width="150" height="160" src="/fitbitepizza/images/pattern-bg-img.png" class="attachment-full size-full wp-image-1481" alt="">															</div>
 				</div>
@@ -1626,7 +1647,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
           <img loading="lazy" decoding="async" width="436" height="261" src="/fitbitepizza/images/pizza_06.webp" class="attachment-full size-full wp-image-303" alt="" srcset="/fitbitepizza/images/pizza_06.webp 436w, /fitbitepizza/images/pizza_06-300x180.webp 300w" sizes="(max-width: 436px) 100vw, 436px"></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-618f9c3 elementor-widget__width-initial elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-html" data-id="618f9c3" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-618f9c3 elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-html" data-id="618f9c3" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-circle-box-1"></div>				</div>
 				</div>
@@ -1666,7 +1687,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 		</div>
 					</div>
 		</section>
-				<div class="elementor-element elementor-element-167547f elementor-widget__width-initial elementor-absolute elementor-hidden-tablet elementor-hidden-mobile pbmit-animation-none elementor-widget elementor-widget-image" data-id="167547f" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-element elementor-element-167547f elementor-widget__width-initial elementor-absolute elementor-hidden-tablet pbmit-animation-none elementor-widget elementor-widget-image" data-id="167547f" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
 															<img loading="lazy" decoding="async" width="341" height="374" src="/fitbitepizza/images/pattern-shap-02.png" class="attachment-full size-full wp-image-2409" alt="" srcset="/fitbitepizza/images/pattern-shap-02.png 341w, /fitbitepizza/images/pattern-shap-02-274x300.png 274w" sizes="(max-width: 341px) 100vw, 341px">															</div>
 				</div>
@@ -1687,7 +1708,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 				<div class="elementor-widget-container">
 															<img loading="lazy" decoding="async" width="69" height="73" src="/fitbitepizza/images/vector-img-01.png" class="attachment-full size-full wp-image-1233" alt="">															</div>
 				</div>
-				<div class="elementor-element elementor-element-73eccb7 elementor-widget__width-initial elementor-absolute elementor-hidden-mobile pbmit-animation-none elementor-widget elementor-widget-image" data-id="73eccb7" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-element elementor-element-73eccb7 elementor-widget__width-initial elementor-absolute pbmit-animation-none elementor-widget elementor-widget-image" data-id="73eccb7" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
 															<img loading="lazy" decoding="async" width="274" height="194" src="/fitbitepizza/images/vector-img-04.png" class="attachment-full size-full wp-image-1232" alt="">															</div>
 				</div>
@@ -2383,55 +2404,55 @@ color:#000000;
           <img loading="lazy" decoding="async" width="587" height="366" src="/fitbitepizza/images/pizza-part-01.png" class="attachment-full size-full wp-image-3094" alt="" srcset="/fitbitepizza/images/pizza-part-01.png 587w, /fitbitepizza/images/pizza-part-01-300x187.png 300w, /fitbitepizza/images/pizza-part-01-400x250.png 400w" sizes="(max-width: 587px) 100vw, 587px"></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-1f8f765 elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="1f8f765" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
+				<div class="elementor-element elementor-element-1f8f765 elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="1f8f765" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-tween-efect pbmit-tween-effect-style-1"><div class="tween-text tween-image pbmit-tween-effect" data-start-position="80%" data-x-start="0" data-x-end="0" data-y-start="0" data-y-end="-150" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
           <img loading="lazy" decoding="async" width="44" height="55" src="/fitbitepizza/images/pizza-part-02.png" class="attachment-full size-full wp-image-3095" alt=""></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-c0ebd2a elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="c0ebd2a" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
+				<div class="elementor-element elementor-element-c0ebd2a elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="c0ebd2a" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-tween-efect pbmit-tween-effect-style-1"><div class="tween-text tween-image pbmit-tween-effect" data-start-position="80%" data-x-start="0" data-x-end="0" data-y-start="0" data-y-end="-105" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
           <img loading="lazy" decoding="async" width="104" height="94" src="/fitbitepizza/images/pizza-part-03.png" class="attachment-full size-full wp-image-3096" alt=""></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-6338557 elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="6338557" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
+				<div class="elementor-element elementor-element-6338557 elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="6338557" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-tween-efect pbmit-tween-effect-style-1"><div class="tween-text tween-image pbmit-tween-effect" data-start-position="80%" data-x-start="0" data-x-end="0" data-y-start="0" data-y-end="-235" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
           <img loading="lazy" decoding="async" width="85" height="94" src="/fitbitepizza/images/pizza-part-04.png" class="attachment-full size-full wp-image-3097" alt=""></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-6a248f9 elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="6a248f9" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
+				<div class="elementor-element elementor-element-6a248f9 elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="6a248f9" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-tween-efect pbmit-tween-effect-style-1"><div class="tween-text tween-image pbmit-tween-effect" data-start-position="80%" data-x-start="0" data-x-end="0" data-y-start="0" data-y-end="-145" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
           <img loading="lazy" decoding="async" width="84" height="199" src="/fitbitepizza/images/pizza-part-05.png" class="attachment-full size-full wp-image-3088" alt=""></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-e02f57d elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="e02f57d" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
+				<div class="elementor-element elementor-element-e02f57d elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="e02f57d" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-tween-efect pbmit-tween-effect-style-1"><div class="tween-text tween-image pbmit-tween-effect" data-start-position="90%" data-x-start="0" data-x-end="0" data-y-start="0" data-y-end="-625" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
           <img loading="lazy" decoding="async" width="39" height="54" src="/fitbitepizza/images/pizza-part-06.png" class="attachment-full size-full wp-image-3089" alt=""></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-cdfe788 elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="cdfe788" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
+				<div class="elementor-element elementor-element-cdfe788 elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="cdfe788" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-tween-efect pbmit-tween-effect-style-1"><div class="tween-text tween-image pbmit-tween-effect" data-start-position="80%" data-x-start="0" data-x-end="-3" data-y-start="0" data-y-end="-440" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
           <img loading="lazy" decoding="async" width="61" height="69" src="/fitbitepizza/images/pizza-part-07.png" class="attachment-full size-full wp-image-3090" alt=""></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-84d03b5 elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="84d03b5" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
+				<div class="elementor-element elementor-element-84d03b5 elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="84d03b5" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-tween-efect pbmit-tween-effect-style-1"><div class="tween-text tween-image pbmit-tween-effect" data-start-position="90%" data-x-start="0" data-x-end="1" data-y-start="0" data-y-end="-292" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
           <img loading="lazy" decoding="async" width="84" height="60" src="/fitbitepizza/images/pizza-part-08.png" class="attachment-full size-full wp-image-3091" alt=""></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-a7d29dd elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="a7d29dd" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
+				<div class="elementor-element elementor-element-a7d29dd elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="a7d29dd" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-tween-efect pbmit-tween-effect-style-1"><div class="tween-text tween-image pbmit-tween-effect" data-start-position="80%" data-x-start="0" data-x-end="-3" data-y-start="0" data-y-end="-75" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
           <img loading="lazy" decoding="async" width="131" height="110" src="/fitbitepizza/images/pizza-part-09.png" class="attachment-full size-full wp-image-3092" alt=""></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-d79dc56 elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="d79dc56" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
+				<div class="elementor-element elementor-element-d79dc56 elementor-absolute elementor-widget elementor-widget-pbmit_tween_effect_element" data-id="d79dc56" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="pbmit_tween_effect_element.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-tween-efect pbmit-tween-effect-style-1"><div class="tween-text tween-image pbmit-tween-effect" data-start-position="80%" data-x-start="0" data-x-end="0" data-y-start="0" data-y-end="-215" data-scale-x-start="1" data-scale-x-end=" 1" data-skew-x-start=" 0deg" data-skew-x-end="0deg" data-skew-y-start=" 0deg" data-skew-y-end=" 0deg" data-rotate-x-start="0" data-rotate-x-end="0">
           <img loading="lazy" decoding="async" width="94" height="93" src="/fitbitepizza/images/pizza-part-10.png" class="attachment-full size-full wp-image-3093" alt=""></div>
@@ -2656,7 +2677,7 @@ color:#000000;
 		<div class="swiper-pagination swiper-pagination-1 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></div></div><!-- .pbmit-element-inner -->   </div><!-- .pbminfotech-element -->  
 	    				</div>
 				</div>
-				<div class="elementor-element elementor-element-a131802 elementor-widget__width-initial elementor-absolute elementor-hidden-mobile pbmit-animation-none elementor-widget elementor-widget-image" data-id="a131802" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-element elementor-element-a131802 elementor-widget__width-initial elementor-absolute pbmit-animation-none elementor-widget elementor-widget-image" data-id="a131802" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
 															<img loading="lazy" decoding="async" width="254" height="285" src="/fitbitepizza/images/pattern-shap-03.png" class="attachment-full size-full wp-image-2410" alt="">															</div>
 				</div>
@@ -2727,11 +2748,11 @@ color:#000000;
           <img loading="lazy" decoding="async" width="352" height="141" src="/fitbitepizza/images/burger-part-08.png" class="attachment-full size-full wp-image-243" alt="" srcset="/fitbitepizza/images/burger-part-08.png 352w, /fitbitepizza/images/burger-part-08-300x120.png 300w, /fitbitepizza/images/burger-part-08-350x141.png 350w" sizes="(max-width: 352px) 100vw, 352px"></div>
 </div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-6d1817d elementor-widget__width-initial elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-html" data-id="6d1817d" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-6d1817d elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-html" data-id="6d1817d" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-circle-box-3"></div>				</div>
 				</div>
-				<div class="elementor-element elementor-element-2ff7232 elementor-widget__width-initial elementor-absolute elementor-hidden-mobile elementor-widget elementor-widget-html" data-id="2ff7232" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-2ff7232 elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-html" data-id="2ff7232" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-circle-box-new"></div>				</div>
 				</div>
@@ -2870,7 +2891,7 @@ color:#000000;
 				<div class="elementor-widget-container">
 					<lottie-player src="https://lottie.host/979f5334-1bec-4298-8d85-cbf7a9b92be5/oiPJGPUM28.json" background="transparent.html" speed="1" style="width: 100%;height: 100%" loop="" autoplay=""></lottie-player>				</div>
 				</div>
-				<div class="elementor-element elementor-element-9bab769 elementor-widget__width-initial elementor-absolute elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-html" data-id="9bab769" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-9bab769 elementor-widget__width-initial elementor-absolute elementor-hidden-tablet elementor-widget elementor-widget-html" data-id="9bab769" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-circle-box-2"></div>				</div>
 				</div>
