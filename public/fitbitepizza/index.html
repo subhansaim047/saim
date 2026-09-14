@@ -942,27 +942,9 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         display: block !important;
     }
     
-    /* 5. Fix Missing Burger: Inject static burger image below "Good Love Burger Tasty" badge */
-    .elementor-element-64c4d7f::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 250px;
-        background: url('/fitbitepizza/images/burger-01-1.png') no-repeat center center;
-        background-size: contain;
-        margin: 20px auto;
-    }
     
-    /* 6. Fix Missing Main Pizza Slice in "Why our pizza best" */
-    .elementor-element-dc878eb::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 250px;
-        background: url('/fitbitepizza/images/pizza-part-01.png') no-repeat center center;
-        background-size: contain;
-        margin: 0 auto 30px auto;
-    }
+    
+    
     
     /* 7. Fix Missing Scooter/Delivery Background */
     .elementor-element-51de8b5 {
@@ -1035,89 +1017,117 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 <style id="perfect-mobile-parallax">
-@media (max-width: 767px) {
+  @media (max-width: 767px) {
+  
+      /* 1. MIDDLE PIZZA (Why our pizza best) */
+      .elementor-element-dc878eb { margin-top: 40px !important; }
 
-    /* 1. MIDDLE PIZZA (Why our pizza best) */
-    /* Prevent it from overlapping the text below it! */
-    .elementor-element-6152e5e {
-        display: block !important;
-        position: relative !important;
-        width: 600px !important; 
-        height: 500px !important;
-        left: 50% !important;
-        margin-left: -300px !important;
-        
-        /* The container is 500px tall. Scale 0.45 makes visual height 225px.
-           Transform origin is top center. So the top stays in place, 
-           and the bottom 275px is empty ghost space.
-           We remove the ghost space with margin-bottom: -275px 
-           and add 30px padding for safety = -245px. */
-        margin-top: 30px !important;
-        margin-bottom: -245px !important; 
-        
-        transform: scale(0.45) !important;
-        transform-origin: top center !important;
-        z-index: 10 !important;
-    }
+      .elementor-element-6152e5e {
+          display: block !important;
+          position: relative !important;
+          width: 600px !important; 
+          height: 500px !important;
+          left: 50% !important;
+          margin-left: -300px !important;
+          margin-top: 30px !important;
+          margin-bottom: -245px !important; 
+          transform: scale(0.45) !important;
+          transform-origin: top center !important;
+          z-index: 10 !important;
+      }
+  
+      .elementor-element-15e8b6b,
+      .elementor-element-2c8cff4,
+      .elementor-element-e608a1c,
+      .elementor-element-593309a {
+          position: relative !important;
+          z-index: 20 !important;
+          margin-top: 20px !important;
+      }
 
-    /* Ensure the text blocks (01, 02, 03, 04) are relative and have proper spacing 
-       so they aren't hidden under the pizza */
-    .elementor-element-15e8b6b,
-    .elementor-element-2c8cff4,
-    .elementor-element-e608a1c,
-    .elementor-element-593309a {
-        position: relative !important;
-        z-index: 20 !important;
-        margin-top: 20px !important;
-    }
+      /* FIX THE 3 PROMO BOXES ON MOBILE TO LOOK LIKE DESKTOP */
 
+      .pbmit-ihbox-style-3 .pbmit-element-title {
+          font-size: 26px !important;
+          line-height: 28px !important;
+      }
+      .pbmit-ihbox-style-3 .pbmit-element-heading {
+          font-size: 18px !important;
+          line-height: 20px !important;
+          margin-bottom: 5px !important;
+      }
+      .pbmit-ihbox-style-3 .pbmit-ihbox-btn a {
+          padding: 8px 20px !important;
+          font-size: 14px !important;
+          margin-top: 10px !important;
+      }
+      .pbmit-ihbox-style-3 {
+          padding: 30px 100px 30px 20px !important;
+      }
 
-    /* 2. BURGER SECTION */
-    /* The Burger parts container */
-    .elementor-element-f2a4969 {
-        display: block !important; 
-        position: relative !important;
-        width: 600px !important; 
-        height: 500px !important;
-        left: 50% !important;
-        margin-left: -300px !important;
-        
-        /* The yellow circle is part of the text column above it.
-           On mobile, the text column gets very tall, so the yellow circle sits far below the text.
-           We need to pull the burger UP to sit on the yellow circle. */
-        margin-top: -200px !important;
-        margin-bottom: -150px !important; 
-        
-        transform: scale(0.45) !important;
-        transform-origin: top center !important;
-        z-index: 20 !important;
-    }
+      .elementor-element-859032c, .elementor-element-2b5f382, .elementor-element-6a03461 {
+          margin-bottom: 20px !important;
+      }
+      .pbmit-ihbox-style-3 {
+          padding: 40px 100px 40px 30px !important;
+          min-height: 180px !important;
+      }
+      .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
+          position: absolute !important;
+          right: -10px !important;
+          bottom: -20px !important;
+          margin: 0 !important;
+          display: block !important;
+      }
+      .pbmit-ihbox-style-3 .pbmit-ihbox-icon-wrapper.pbmit-ihbox-icon-type-image {
+          margin: 0 !important;
+          transform: scale(0.55) !important;
+          transform-origin: bottom right !important;
+      }
+      .pbmit-ihbox-style-3 .pbmit-ihbox-icon img {
+          max-width: none !important;
+          height: auto !important;
+          display: block !important;
+          margin: 0 !important;
+          padding: 0 !important;
+      }
     
-    /* Make sure the Burger text doesn't overlap the burger */
-    .elementor-element-5707ad7 {
-        z-index: 30 !important;
-        padding-bottom: 200px !important; /* Give space for the yellow circle and burger to sit below the text */
-    }
-
-
-    /* 3. HERO PIZZA */
-    .elementor-element-bff8b9f, .elementor-element-8a3f06d {
-        display: block !important;
-        position: relative !important;
-        width: 600px !important; 
-        height: 600px !important;
-        left: 50% !important;
-        margin-left: -300px !important;
-        
-        margin-top: 0 !important;
-        margin-bottom: -250px !important; /* Remove 600px -> 300px ghost space */
-        
-        transform: scale(0.5) !important;
-        transform-origin: top center !important;
-        z-index: 10 !important;
-    }
-
-}
+      /* UNHIDE THE FOOTER LOGO ON MOBILE */
+      .pbmit-footer-big-area-wrapper, .pbmit-footer-big-area, .pbmit-footer-left, .pbmit-footer-right {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+      }
+      .pbmit-footer-left h2 {
+          text-align: center !important;
+          font-size: 28px !important;
+      }
+      .pbmit-footer-logo {
+          text-align: center !important;
+          margin-top: 20px !important;
+          display: block !important;
+      }
+  
+      /* 2. BURGER SECTION */
+      .elementor-element-f2a4969 {
+          display: block !important;
+          position: relative !important;
+          width: 500px !important;
+          height: 600px !important;
+          left: 50% !important;
+          margin-left: -250px !important;
+          margin-top: 30px !important;
+          margin-bottom: -320px !important;
+          transform: scale(0.4) !important;
+          transform-origin: top center !important;
+      }
+      .elementor-element-a885bdc {
+          margin-top: 50px !important;
+      }
+      .elementor-element-b13c8c7 {
+          margin-bottom: 20px !important;
+      }
+  }
 </style>
 
 </head>
@@ -1377,7 +1387,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 						<div class="elementor-element elementor-element-1a5403b elementor-widget elementor-widget-pbmit_icon_heading" data-id="1a5403b" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-ihbox pbmit-ihbox-style-2"><div class="pbmit-ihbox-inner">
-	<div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-food-delivery"></i></div></div></div>	<div class="pbmit-ihbox-contents">
+	<div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-food-delivery"></i></div></div></div>	<div class="pbmit-ihbox-contents">
 				<h2 class="pbmit-element-title">
 					
 						Fresh Food
@@ -1394,7 +1404,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 						<div class="elementor-element elementor-element-3e3d543 elementor-widget elementor-widget-pbmit_icon_heading" data-id="3e3d543" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-ihbox pbmit-ihbox-style-2"><div class="pbmit-ihbox-inner">
-	<div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-food-delivery-2"></i></div></div></div>	<div class="pbmit-ihbox-contents">
+	<div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-food-delivery-2"></i></div></div></div>	<div class="pbmit-ihbox-contents">
 				<h2 class="pbmit-element-title">
 					
 						Fast Delivery
@@ -1415,7 +1425,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 						<div class="elementor-element elementor-element-039d46d elementor-widget elementor-widget-pbmit_icon_heading" data-id="039d46d" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-ihbox pbmit-ihbox-style-2"><div class="pbmit-ihbox-inner">
-	<div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-nachos"></i></div></div></div>	<div class="pbmit-ihbox-contents">
+	<div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-nachos"></i></div></div></div>	<div class="pbmit-ihbox-contents">
 				<h2 class="pbmit-element-title">
 					
 						Quality Maintain
@@ -1432,7 +1442,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 						<div class="elementor-element elementor-element-3c91250 elementor-widget elementor-widget-pbmit_icon_heading" data-id="3c91250" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-ihbox pbmit-ihbox-style-2"><div class="pbmit-ihbox-inner">
-	<div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-order-food-1"></i></div></div></div>	<div class="pbmit-ihbox-contents">
+	<div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-order-food-1"></i></div></div></div>	<div class="pbmit-ihbox-contents">
 				<h2 class="pbmit-element-title">
 					
 						24/7 Service
@@ -1469,7 +1479,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-be16757 elementor-widget elementor-widget-pbmit_icon_heading" data-id="be16757" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
-					<div class="pbmit-ihbox pbmit-ihbox-style-3"><div class="pbmit-ihbox-overlay-image"><img decoding="async" src="/fitbitepizza/images/ihbox-col-bg-01.jpg" alt="Cheesy  <br> Pizza" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-pattern-image"><img decoding="async" src="/fitbitepizza/images/banner-bg-02.png" alt="Cheesy  <br> Pizza" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image"><img decoding="async" src="/fitbitepizza/images/img-09.png" alt="Cheesy  <br> Pizza" width="221" height="212" loading="lazy"></div></div><div class="pbmit-ihbox-contents">
+					<div class="pbmit-ihbox pbmit-ihbox-style-3" style="padding: 40px 100px 40px 30px !important; min-height: 180px !important;"><div class="pbmit-ihbox-overlay-image"><img decoding="async" src="/fitbitepizza/images/ihbox-col-bg-01.jpg" alt="Cheesy  <br> Pizza" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-pattern-image"><img decoding="async" src="/fitbitepizza/images/banner-bg-02.png" alt="Cheesy  <br> Pizza" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image" style="margin: 0 !important; transform: scale(0.65) !important; transform-origin: bottom right !important;"><img decoding="async" src="/fitbitepizza/images/img-09.png" alt="Cheesy  <br> Pizza" width="221" height="212" loading="lazy"></div></div><div class="pbmit-ihbox-contents">
 	<h4 class="pbmit-element-heading">
 					
 						Today Special
@@ -1488,7 +1498,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-49061bb elementor-widget elementor-widget-pbmit_icon_heading" data-id="49061bb" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
-					<div class="pbmit-ihbox pbmit-ihbox-style-3"><div class="pbmit-ihbox-overlay-image"><img decoding="async" src="/fitbitepizza/images/ihbox-col-bg-02.jpg" alt="Italian <br> Food" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-pattern-image"><img decoding="async" src="/fitbitepizza/images/banner-bg-03-new.png" alt="Italian <br> Food" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image"><img decoding="async" src="/fitbitepizza/images/img-08-3.png" alt="Italian <br> Food" width="335" height="200" loading="lazy"></div></div><div class="pbmit-ihbox-contents">
+					<div class="pbmit-ihbox pbmit-ihbox-style-3" style="padding: 40px 100px 40px 30px !important; min-height: 180px !important;"><div class="pbmit-ihbox-overlay-image"><img decoding="async" src="/fitbitepizza/images/ihbox-col-bg-02.jpg" alt="Italian <br> Food" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-pattern-image"><img decoding="async" src="/fitbitepizza/images/banner-bg-03-new.png" alt="Italian <br> Food" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image" style="margin: 0 !important; transform: scale(0.65) !important; transform-origin: bottom right !important;"><img decoding="async" src="/fitbitepizza/images/img-08-3.png" alt="Italian <br> Food" width="335" height="200" loading="lazy"></div></div><div class="pbmit-ihbox-contents">
 	<h4 class="pbmit-element-heading">
 					
 						Best Quality
@@ -1507,7 +1517,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-25c8a00 elementor-widget elementor-widget-pbmit_icon_heading" data-id="25c8a00" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
-					<div class="pbmit-ihbox pbmit-ihbox-style-3"><div class="pbmit-ihbox-overlay-image"><img decoding="async" src="/fitbitepizza/images/ihbox-col-bg-03.jpg" alt="Hottest  <br> Pizza" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-pattern-image"><img decoding="async" src="/fitbitepizza/images/banner-bg-04.png" alt="Hottest  <br> Pizza" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image"><img decoding="async" src="/fitbitepizza/images/img-09-3.png" alt="Hottest  <br> Pizza" width="236" height="192" loading="lazy"></div></div><div class="pbmit-ihbox-contents">
+					<div class="pbmit-ihbox pbmit-ihbox-style-3" style="padding: 40px 100px 40px 30px !important; min-height: 180px !important;"><div class="pbmit-ihbox-overlay-image"><img decoding="async" src="/fitbitepizza/images/ihbox-col-bg-03.jpg" alt="Hottest  <br> Pizza" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-pattern-image"><img decoding="async" src="/fitbitepizza/images/banner-bg-04.png" alt="Hottest  <br> Pizza" width="403" height="300" loading="lazy"></div><div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image" style="margin: 0 !important; transform: scale(0.65) !important; transform-origin: bottom right !important;"><img decoding="async" src="/fitbitepizza/images/img-09-3.png" alt="Hottest  <br> Pizza" width="236" height="192" loading="lazy"></div></div><div class="pbmit-ihbox-contents">
 	<h4 class="pbmit-element-heading">
 					
 						Today Special
@@ -1546,7 +1556,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 						<div class="elementor-element elementor-element-3c11012 elementor-widget elementor-widget-pbmit_icon_heading" data-id="3c11012" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-ihbox pbmit-ihbox-style-4"><div class="pbmit-ihbox-inner">
-	<div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">01</div></div>	<div class="pbmit-ihbox-contents">
+	<div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">01</div></div>	<div class="pbmit-ihbox-contents">
 				<h2 class="pbmit-element-title">
 					
 						The highest quality
@@ -1560,7 +1570,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 				<div class="elementor-element elementor-element-92ded8a elementor-widget elementor-widget-pbmit_icon_heading" data-id="92ded8a" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-ihbox pbmit-ihbox-style-4"><div class="pbmit-ihbox-inner">
-	<div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">02</div></div>	<div class="pbmit-ihbox-contents">
+	<div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">02</div></div>	<div class="pbmit-ihbox-contents">
 				<h2 class="pbmit-element-title">
 					
 						Finest Taste
@@ -1622,7 +1632,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 						<div class="elementor-element elementor-element-b7cb01b elementor-widget elementor-widget-pbmit_icon_heading" data-id="b7cb01b" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-ihbox pbmit-ihbox-style-5"><div class="pbmit-ihbox-inner">
-	<div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">03</div></div>	<div class="pbmit-ihbox-contents">
+	<div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">03</div></div>	<div class="pbmit-ihbox-contents">
 				<h2 class="pbmit-element-title">
 					
 						The best ingredient
@@ -1636,7 +1646,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 				<div class="elementor-element elementor-element-4c37d1f elementor-widget elementor-widget-pbmit_icon_heading" data-id="4c37d1f" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-ihbox pbmit-ihbox-style-5"><div class="pbmit-ihbox-inner">
-	<div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">04</div></div>	<div class="pbmit-ihbox-contents">
+	<div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">04</div></div>	<div class="pbmit-ihbox-contents">
 				<h2 class="pbmit-element-title">
 					
 						Well Cooked
@@ -2784,7 +2794,7 @@ color:#000000;
 						<div class="elementor-element elementor-element-b503415 elementor-widget__width-initial elementor-widget elementor-widget-pbmit_icon_heading" data-id="b503415" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
 					<div class="pbmit-ihbox pbmit-ihbox-style-9"><div class="pbmit-ihbox-box">
-	<div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image"><img decoding="async" src="/fitbitepizza/images/burger.png" alt="Testy - fast food - Burger -" loading="lazy"></div></div>	<div class="pbmit-circle-box">
+	<div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image" style="margin: 0 !important; transform: scale(0.65) !important; transform-origin: bottom right !important;"><img decoding="async" src="/fitbitepizza/images/burger.png" alt="Testy - fast food - Burger -" loading="lazy"></div></div>	<div class="pbmit-circle-box">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 200 200">
 			<defs>
 				<path d="M0, 100a100, 100 0 1, 0 200, 0a100, 100 0 1, 0 -200, 0" id="txt-path"></path>
@@ -2826,7 +2836,7 @@ color:#000000;
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-0fe11c8 elementor-widget elementor-widget-pbmit_icon_heading" data-id="0fe11c8" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
-					<div class="pbmit-ihbox pbmit-ihbox-style-10"><div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-order-food"></i></div></div></div><div class="pbmit-ihbox-contents">
+					<div class="pbmit-ihbox pbmit-ihbox-style-10"><div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-order-food"></i></div></div></div><div class="pbmit-ihbox-contents">
 	<h4 class="pbmit-element-heading">
 					
 						Get online order now
@@ -2888,7 +2898,7 @@ color:#000000;
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-9f7af2e elementor-widget elementor-widget-pbmit_icon_heading" data-id="9f7af2e" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
-					<div class="pbmit-ihbox pbmit-ihbox-style-8"><div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-store"></i></div></div></div><div class="pbmit-ihbox-contents">
+					<div class="pbmit-ihbox pbmit-ihbox-style-8"><div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-store"></i></div></div></div><div class="pbmit-ihbox-contents">
 		<h2 class="pbmit-element-title">
 					
 						Delivery in <br> 30 minutes
@@ -2902,7 +2912,7 @@ color:#000000;
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-c53db80 elementor-widget elementor-widget-pbmit_icon_heading" data-id="c53db80" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
-					<div class="pbmit-ihbox pbmit-ihbox-style-8"><div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-food"></i></div></div></div><div class="pbmit-ihbox-contents">
+					<div class="pbmit-ihbox pbmit-ihbox-style-8"><div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-food"></i></div></div></div><div class="pbmit-ihbox-contents">
 		<h2 class="pbmit-element-title">
 					
 						Free Delivery <br> in Daska
@@ -2916,7 +2926,7 @@ color:#000000;
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-1629f75 elementor-widget elementor-widget-pbmit_icon_heading" data-id="1629f75" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_icon_heading.default">
 				<div class="elementor-widget-container">
-					<div class="pbmit-ihbox pbmit-ihbox-style-8"><div class="pbmit-ihbox-icon"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-burrito"></i></div></div></div><div class="pbmit-ihbox-contents">
+					<div class="pbmit-ihbox pbmit-ihbox-style-8"><div class="pbmit-ihbox-icon" style="position: absolute !important; right: -10px !important; bottom: -20px !important; margin: 0 !important; display: block !important;"><div class="pbmit-ihbox-icon-wrapper"><div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i class="pbmit-dilicious-icon pbmit-dilicious-icon-burrito"></i></div></div></div><div class="pbmit-ihbox-contents">
 		<h2 class="pbmit-element-title">
 					
 						Delivery on  <br> 
