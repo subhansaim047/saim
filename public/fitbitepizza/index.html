@@ -13,28 +13,7 @@
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
 
-    /* Scale down the tween elements significantly so they don't block mobile content */
-    .pbmit_tween_effect_element img, 
-    .pbmit_tween_effect_element svg,
-    .pbmit_tween_effect_element .pbmit-ihbox-icon {
-        max-width: 40% !important;
-        height: auto !important;
-        opacity: 0.8 !important;
-    }
-    .pbmit_tween_effect_element {
-        z-index: 0 !important; /* Keep animations behind text */
-        pointer-events: none !important;
-    }
-    /* Specifically reduce the huge yellow background circles that break the layout */
-    .elementor-widget-pbmit_tween_effect_element:has(img[src*="yellow"]),
-    .elementor-widget-pbmit_tween_effect_element:has(.pbmit-tween-efect) {
-        transform-origin: top center !important;
-    }
-    /* Ensure all text and important content stays above the wild parallax elements */
-    .pbmit-element-title, .pbmit-element-subtitle, .pbmit-heading-desc, p {
-        position: relative;
-        z-index: 10 !important;
-    }
+    
     
 </style>
 <link rel="stylesheet" id="swiper-css" href="/fitbitepizza/css/swiper.min.css" media="all">
@@ -947,9 +926,9 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
     }
 
     /* 3. Fix Promo Cards: Force correct colors based on exact IDs, not :has() */
-    .elementor-element-859032c .pbmit-ihbox-style-3 { background-color: #830051 !important; } /* Cheesy Pizza: Purple/Magenta */
-    .elementor-element-2b5f382 .pbmit-ihbox-style-3 { background-color: #659a16 !important; } /* Italian Food: Green */
-    .elementor-element-6a03461 .pbmit-ihbox-style-3 { background-color: #d1122a !important; } /* Hottest Pizza: Red */
+     /* Cheesy Pizza: Purple/Magenta */
+     /* Italian Food: Green */
+     /* Hottest Pizza: Red */
 
     /* 4. Fix Promo Pizzas: Show the missing pizza images inside the cards */
     .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
@@ -1037,46 +1016,57 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 
-<style>
+
+
+
+
+
+
+<style id="restore-laptop-animations">
 @media (max-width: 767px) {
-    /* 1. BRING BACK THE HERO PIZZA & BURGER ANIMATIONS */
-    /* Remove my old display:none patches */
-    .elementor-element-8a3f06d,
-    .elementor-element-1bced7d,
-    .pbmit-tween-effect-style-1 {
-        display: block !important;
+    /* 1. RESTORE EXACT LAPTOP DESIGN FOR 3 PROMO BOXES */
+    /* Remove the solid colors I forced earlier, let the laptop background images show! */
+    .elementor-element-859032c .pbmit-ihbox-style-3,
+    .elementor-element-2b5f382 .pbmit-ihbox-style-3,
+    .elementor-element-6a03461 .pbmit-ihbox-style-3 {
+        background-color: transparent !important;
+        background: transparent !important;
+        min-height: 250px;
+        position: relative;
+        overflow: visible !important;
+        padding: 40px 30px !important;
     }
     
-    /* Make the columns stack so the big pizza parts appear below the text */
-    .elementor-element-8a3f06d, .elementor-element-1bced7d {
-        position: relative !important;
+    /* Show the beautiful smoke/texture background images that were hidden on mobile */
+    .pbmit-ihbox-style-3 .pbmit-ihbox-overlay-image,
+    .pbmit-ihbox-style-3 .pbmit-ihbox-pattern-image {
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
-        min-height: 400px !important;
-        overflow: hidden !important; /* Prevent horizontal scroll from absolute pizza parts */
+        height: 100% !important;
+        object-fit: cover !important;
+        z-index: 1 !important;
     }
-
-    /* Override Elementor's native mobile hide */
-    .elementor-hidden-mobile {
-        display: block !important;
-    }
-
-    /* Scale the animations down so they fit in the 390px mobile screen without clipping text */
-    .pbmit_tween_effect_element {
-        transform: scale(0.6) !important;
-        transform-origin: top center !important;
-    }
-
-    /* 2. REVERT PROMO BOXES TO STACKED BUT EXACTLY LIKE DESKTOP */
-    /* Reset the swipeable row */
-    .elementor-element-85d9e25 .elementor-container {
-        display: flex !important;
-        flex-direction: column !important; /* Stack vertically */
-        flex-wrap: nowrap !important;
-        overflow-x: hidden !important;
-        padding-bottom: 0 !important;
-        gap: 0 !important;
+    .pbmit-ihbox-style-3 .pbmit-ihbox-contents {
+        position: relative !important;
+        z-index: 10 !important;
     }
     
+    /* Make the pizza bleed out the right side EXACTLY like laptop */
+    .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
+        position: absolute !important;
+        right: -30px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 20 !important;
+    }
+    .pbmit-ihbox-style-3 .pbmit-ihbox-icon img {
+        max-width: 150px !important;
+    }
+    
+    /* Keep width 85% so the bleeding pizza doesn't cause horizontal scroll bar */
     .elementor-element-859032c, 
     .elementor-element-2b5f382, 
     .elementor-element-6a03461 {
@@ -1084,35 +1074,63 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         max-width: 85% !important;
         width: 85% !important;
         margin: 0 auto 30px auto !important;
-        margin-bottom: 20px !important;
     }
 
-    /* Replicate the desktop layout for the inside of the box */
-    .pbmit-ihbox-style-3 {
-        padding: 40px 30px !important;
-        text-align: left !important;
-        align-items: flex-start !important;
+
+    /* 2. RESTORE SCROLLING PIZZA AND BURGER ANIMATIONS */
+    
+    /* The Burger Container */
+    .elementor-element-f2a4969 {
+        display: block !important; 
         position: relative !important;
-        overflow: visible !important;
+        width: 600px !important; 
+        height: 500px !important;
+        /* Center a 600px element in a 390px screen: (390-600)/2 = -105px. We use margin-left: -105px */
+        margin: 0 0 -200px -105px !important; 
+        transform: scale(0.65) !important;
+        transform-origin: top center !important;
+        z-index: 0 !important;
+        left: 0 !important;
     }
     
-    .pbmit-ihbox-style-3 .pbmit-ihbox-icon {
-        position: absolute !important;
-        right: -30px !important; /* Bleed off the right edge, just like laptop */
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        margin: 0 !important;
-        z-index: 5 !important;
+    /* The Why Choose Us (Yellow Circle & Pizza) */
+    .elementor-element-6152e5e {
+        display: block !important;
+        position: relative !important;
+        width: 600px !important; 
+        height: 500px !important;
+        margin: -50px 0 -200px -105px !important;
+        transform: scale(0.65) !important;
+        transform-origin: top center !important;
+        z-index: 0 !important;
+        left: 0 !important;
+    }
+
+    /* The Hero Section (Giant Pizza Parts) */
+    .elementor-element-bff8b9f, .elementor-element-8a3f06d {
+        display: block !important;
+        position: relative !important;
+        width: 600px !important; 
+        height: 600px !important;
+        margin: 0 0 -300px -105px !important;
+        transform: scale(0.65) !important;
+        transform-origin: top center !important;
+        z-index: 1 !important;
+        left: 0 !important;
+    }
+
+    /* Ensure text is always on top of the scaled parallax containers */
+    .pbmit-element-title, .pbmit-element-subtitle, .pbmit-heading-desc, .pbmit-ihbox-contents {
+        position: relative !important;
+        z-index: 50 !important;
     }
     
-    .pbmit-ihbox-style-3 .pbmit-ihbox-icon img {
-        max-width: 150px !important; 
-        height: auto !important;
-    }
-    
-    /* Ensure the body doesn't horizontal scroll because of the bleeding pizza images */
-    body {
-        overflow-x: hidden !important;
+    /* Remove shrinking hack so the JS can animate them normally */
+    .pbmit_tween_effect_element img, 
+    .pbmit_tween_effect_element svg,
+    .pbmit_tween_effect_element .pbmit-ihbox-icon {
+        max-width: 100% !important;
+        opacity: 1 !important;
     }
 }
 </style>
