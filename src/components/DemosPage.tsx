@@ -18,6 +18,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "fitbite-nextjs",
+    title: "FitBite Pizza — Next.js",
+    category: "Restaurant & Food",
+    description: "A full Next.js + Tailwind CSS rebuild of FitBite Pizza. 100% mobile responsive, GSAP animations, clean component architecture — zero WordPress bloat.",
+    demoUrl: "https://saim-86ac6d7-subhansaim047s-projects.vercel.app",
+    previewImage: "/fitbitepizza/images/banner-bg-03-new.png",
+    tags: ["Next.js", "Tailwind CSS", "GSAP", "TypeScript"],
+    features: [
+      "Built with Next.js 16 + Tailwind CSS v4",
+      "GSAP ScrollTrigger Animations",
+      "100% Mobile Responsive (no overlap)",
+      "Clean Component Architecture"
+    ],
+    badge: "New Next.js"
+  },
+  {
     id: "dilicious-pizza",
     title: "Dilicious Pizza",
     category: "Restaurant & Food",
