@@ -22,7 +22,7 @@ const demos: DemoItem[] = [
     title: "FitBite Pizza — Next.js",
     category: "Restaurant & Food",
     description: "A full Next.js + Tailwind CSS rebuild of FitBite Pizza. 100% mobile responsive, GSAP animations, clean component architecture — zero WordPress bloat.",
-    demoUrl: "https://saim-86ac6d7-subhansaim047s-projects.vercel.app",
+    demoUrl: "https://fitbite-pizza-nextjs.vercel.app",
     previewImage: "/fitbitepizza/images/banner-bg-03-new.png",
     tags: ["Next.js", "Tailwind CSS", "GSAP", "TypeScript"],
     features: [
