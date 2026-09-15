@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  .-font-pacifico {
+    font-family: var(--font-pacifico), cursive;
+  }
+  .-font-outfit {
+    font-family: var(--font-outfit), sans-serif;
+  }
+}
+
