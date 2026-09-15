@@ -971,13 +971,18 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
     }
 
     /* Fix "Made with Love" animated pizza overlapping text */
-    body .elementor-element.elementor-element-0cff698 {
+    body .elementor-element.elementor-element-0cff698,
+    body .elementor-element.elementor-element-0cff698.pbmit-bgcolor-yes {
         background-position: center center !important;
     }
-    body .elementor-element.elementor-element-0cff698::before {
+    body .elementor-element.elementor-element-0cff698::before,
+    body .elementor-element.elementor-element-0cff698::after,
+    body .elementor-element.elementor-element-0cff698.pbmit-bgcolor-yes::before,
+    body .elementor-element.elementor-element-0cff698.pbmit-bgcolor-yes::after {
         background-position: center center !important;
+        top: 50% !important;
         left: 50% !important;
-        transform: translateX(-50%) !important;
+        transform: translate(-50%, -50%) !important;
     }
     body .elementor-element.elementor-element-0cff698 .elementor-element-6152e5e {
         height: 400px !important;
