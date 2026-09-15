@@ -134,7 +134,7 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https://dilicious-demo.pb
 <script id="splitsext-js" src="/fitbitepizza/js/SplitText.min.js"></script>
 <script id="cursor-js" src="/fitbitepizza/js/cursor.min.js"></script>
 <script id="magnetic-js" src="/fitbitepizza/js/magnetic.min.js"></script>
-<script id="gsap-animation-effect-js" src="/fitbitepizza/js/gsap-animation.min.js?v=1789472260010"></script>
+<script id="gsap-animation-effect-js" src="/fitbitepizza/js/gsap-animation.min.js?v=1789473615071"></script>
 <link rel="https://api.w.org/" href="https://dilicious-demo.pbminfotech.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://dilicious-demo.pbminfotech.com/wp-json/wp/v2/pages/1124"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dilicious-demo.pbminfotech.com/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.1">
 <meta name="generator" content="WooCommerce 10.9.4">
@@ -951,10 +951,22 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 
+
+
+
+
+
+
 <style id="perfect-mobile-parallax">
 @media (max-width: 767px) {
-    /* Hide hero pizza column on mobile - keeps left text column intact */
+    /* Hide hero pizza column */
     .elementor-element-bff8b9f {
+        display: none !important;
+    }
+    /* Hide "Best Choice" heading, swirl arrow, and dot squiggle on mobile */
+    .elementor-element-6b7a075,
+    .elementor-element-8bb4d33,
+    .elementor-element-9071845 {
         display: none !important;
     }
     /* Hide duplicate desktop countdown */
