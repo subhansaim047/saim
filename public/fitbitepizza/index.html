@@ -960,14 +960,11 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 <style id="perfect-mobile-parallax">
 @media (max-width: 1024px) {
     /* Hide hero pizza column and its internal widgets aggressively */
-    body .elementor-element.elementor-element-bff8b9f,
-    body .elementor-element.elementor-element-89da6bf,
-    body .pbmit-tween-effect-style-1 {
+    body .elementor-element.elementor-element-bff8b9f {
         display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        height: 0 !important;
-        overflow: hidden !important;
+    }
+    body .elementor-element.elementor-element-89da6bf {
+        display: none !important;
     }
     /* Hide "Best Choice" heading, swirl arrow, and dot squiggle on mobile */
     body .elementor-element.elementor-element-6b7a075,
@@ -982,6 +979,13 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
     /* Hide large watermark numbers (01,02,03,04) */
     body .pbmit-ihbox-icon-type-text {
         display: none !important;
+    }
+    
+    /* Fix massive blank space below hero section */
+    body .elementor-element.elementor-element-e8a2a75 {
+        min-height: auto !important;
+        height: auto !important;
+        padding-bottom: 20px !important;
     }
 }
 </style>
