@@ -22,17 +22,17 @@ const demos: DemoItem[] = [
     id: "dilicious-pizza",
     title: "Dilicious Pizza",
     category: "Restaurant & Food",
-    description: "A delicious 1-to-1 cloned premium pizza and restaurant website showcasing menus, delivery options, and animated visuals.",
+    description: "A delicious 1-to-1 premium pizza and restaurant website showcasing menus, delivery options, and animated visuals.",
     demoUrl: "/fitbitepizza/index.html",
     previewImage: "/fitbitepizza/images/banner-bg-03-new.png",
     tags: ["Restaurant", "Pizza", "Food Delivery", "HTML5"],
     features: [
-      "100% Pixel-Perfect Clone",
+      "100% Pixel-Perfect",
       "Interactive Food Menus",
       "Parallax & Animations",
       "Fully Responsive Design"
     ],
-    badge: "New 100% Clone"
+    badge: "New Release"
   },
   {
     id: "architecture",
@@ -47,7 +47,7 @@ const demos: DemoItem[] = [
 
   {
     id: "woshico",
-    title: "Woshico Cleaning (Next.js Clone)",
+    title: "Woshico Cleaning (Next.js)",
     description: "A pixel-perfect Webflow to Next.js 14 port. Built with React Server Components, pure CSS Modules (no Tailwind), and strict performance optimizations.",
     category: "Business Landing",
     features: [
@@ -59,7 +59,7 @@ const demos: DemoItem[] = [
     tags: ["Next.js 14", "CSS Modules", "TypeScript", "Port"],
     demoUrl: "/demos/woshico/index.html",
     previewImage: "/demos/woshico/images/og-image.png",
-    badge: "Next.js Clone"
+    badge: "Next.js App"
   }
 ,
   {
@@ -146,17 +146,17 @@ const demos: DemoItem[] = [
     id: "studio-dbrickell",
     title: "Studio-D Brickell Ã¢â‚¬â€ Luxury Beauty Salon & Spa",
     category: "Beauty Salon & Miami Luxury Services",
-    description: "A 100% pixel-perfect 1:1 clone of the premier Studio-D Brickell salon in Miami, FL. Features top announcement discounts, luxury service showcases, KÃƒÂ©rastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
+    description: "A 100% pixel-perfect 1:1 build of the premier Studio-D Brickell salon in Miami, FL. Features top announcement discounts, luxury service showcases, KÃƒÂ©rastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
     demoUrl: "/demos/studio-dbrickell/index.html",
     previewImage: "/demos/studio-dbrickell/assets/images/branding/og-image.jpg",
-    tags: ["1:1 Pixel Clone", "Beauty Salon", "Luxury Spa", "Mobile First"],
+    tags: ["1:1 Pixel Perfect", "Beauty Salon", "Luxury Spa", "Mobile First"],
     features: [
       "100% 1:1 Pixel-Perfect Visual Fidelity",
       "KÃƒÂ©rastase & Shu Uemura Luxury Spotlight",
       "Interactive Online Booking & Mangomint Integration",
       "Mobile Sticky Bar & Responsive Fluid Grids"
     ],
-    badge: "New 1:1 Clone"
+    badge: "New Release"
   },
   {
     id: "liana",
@@ -406,5 +406,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+
+
 
 
