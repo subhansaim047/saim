@@ -1,11 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  .-font-pacifico {
-    font-family: var(--font-pacifico), cursive;
-  }
-  .-font-outfit {
-    font-family: var(--font-outfit), sans-serif;
-  }
+  --font-pacifico: var(--font-pacifico), cursive;
+  --font-outfit: var(--font-outfit), sans-serif;
 }
-
