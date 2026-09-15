@@ -3067,69 +3067,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 </a>
 
 
-<script id="mobile-menu-show-more">
-document.addEventListener("DOMContentLoaded", function() {
-    if (window.innerWidth <= 767) {
-        const wrappers = document.querySelectorAll('.pbmit-element-posts-wrapper');
-        wrappers.forEach(wrapper => {
-            const articles = wrapper.querySelectorAll('article');
-            if (articles.length > 3) {
-                // Hide items beyond the 3rd one
-                for (let i = 3; i < articles.length; i++) {
-                    articles[i].style.display = 'none';
-                }
-                
-                // Create a Show More button container
-                const btnContainer = document.createElement('div');
-                btnContainer.style.textAlign = 'center';
-                btnContainer.style.marginTop = '15px';
-                btnContainer.style.marginBottom = '25px';
-                
-                // Create the button
-                const btn = document.createElement('button');
-                btn.innerHTML = 'Show More ';
-                // Style the button to match the theme (yellow / dark)
-                btn.style.backgroundColor = '#ffc000';
-                btn.style.color = '#111';
-                btn.style.border = 'none';
-                btn.style.padding = '8px 20px';
-                btn.style.borderRadius = '30px';
-                btn.style.fontWeight = '600';
-                btn.style.cursor = 'pointer';
-                btn.style.fontFamily = 'Poppins, sans-serif';
-                btn.style.textTransform = 'uppercase';
-                btn.style.fontSize = '12px';
-                
-                let isExpanded = false;
-                
-                btn.addEventListener('click', function() {
-                    isExpanded = !isExpanded;
-                    if (isExpanded) {
-                        for (let i = 3; i < articles.length; i++) {
-                            articles[i].style.display = '';
-                        }
-                        btn.innerHTML = 'Show Less ';
-                    } else {
-                        for (let i = 3; i < articles.length; i++) {
-                            articles[i].style.display = 'none';
-                        }
-                        btn.innerHTML = 'Show More ';
-                        // Optionally scroll back to the heading
-                        const heading = wrapper.previousElementSibling;
-                        if (heading && heading.tagName === 'H3') {
-                            const y = heading.getBoundingClientRect().top + window.pageYOffset - 100;
-                            window.scrollTo({top: y, behavior: 'smooth'});
-                        }
-                    }
-                });
-                
-                btnContainer.appendChild(btn);
-                wrapper.parentNode.insertBefore(btnContainer, wrapper.nextSibling);
-            }
-        });
-    }
-});
-</script>
+
 
 <style id="clean-mobile-fix">
   @media (max-width: 1024px) {
@@ -3230,6 +3168,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 </style>
 </body></html>
+
 
 
 
