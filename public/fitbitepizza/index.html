@@ -969,6 +969,28 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
     body .elementor-element.elementor-element-8a3f06d {
         display: none !important;
     }
+
+    /* Fix "Made with Love" animated pizza overlapping text */
+    body .elementor-element.elementor-element-0cff698 {
+        background-position: center center !important;
+    }
+    body .elementor-element.elementor-element-0cff698::before {
+        background-position: center center !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+    body .elementor-element.elementor-element-0cff698 .elementor-element-6152e5e {
+        height: 400px !important;
+        margin-top: 40px !important;
+        margin-bottom: 30px !important;
+        z-index: 10 !important;
+    }
+    body .elementor-element.elementor-element-0cff698 .elementor-element-270f219,
+    body .elementor-element.elementor-element-0cff698 .elementor-element-52bdbde {
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
     /* Hide "Best Choice" heading, swirl arrow, and dot squiggle on mobile */
     body .elementor-element.elementor-element-6b7a075,
     body .elementor-element.elementor-element-8bb4d33,
