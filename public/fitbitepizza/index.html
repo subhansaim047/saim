@@ -945,33 +945,19 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 
+
+
+
 <style id="perfect-mobile-parallax">
 /* ====== FITBITE PIZZA MOBILE CLEAN LAYOUT ====== */
 @media (max-width: 767px) {
-    /* 1. Reset Global Section Spacing (Natural Stacking) & EVERYTHING CENTERED */
+    /* 1. Reset Global Section Spacing (Natural Stacking) */
     .elementor-section {
         padding-top: 40px !important;
         padding-bottom: 40px !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         height: auto !important;
-    }
-    
-    /* Center all headings, text, and columns */
-    .elementor-widget-heading,
-    .elementor-widget-text-editor,
-    .pbmit-heading-subheading,
-    .pbmit-element-title,
-    .pbmit-element-subtitle,
-    .pbmit-element-heading {
-        text-align: center !important;
-        justify-content: center !important;
-    }
-    
-    .elementor-column-wrap, .elementor-widget-wrap {
-        align-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
     }
 
     /* Fix Duplicate Countdown */
@@ -981,6 +967,12 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
     /* 2. Hero Section */
     .elementor-element-e8a2a75 { padding-top: 100px !important; padding-bottom: 20px !important; }
+    
+    /* FIX: Ensure phone icon is aligned nicely in the hero (prevent weird overlap) */
+    .pbmit-ihbox-icon-wrapper, .pbmit-ihbox-box-number {
+        position: relative !important;
+    }
+    
     .elementor-element-8a3f06d {
         position: relative !important;
         display: block !important;
@@ -997,12 +989,14 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
     .elementor-element-dc878eb { margin-top: 30px !important; }
     
     /* The Yellow Background Circle MUST be exactly centered */
-    .pbmit-bg-imgbox { position: absolute !important; left: 50% !important; transform: translateX(-50%) !important; width: 100% !important; text-align: center !important;
+    .pbmit-bg-imgbox {
+        position: absolute !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
+        width: 100% !important;
+        text-align: center !important;
         margin: 0 !important;
         right: auto !important;
-        text-align: center !important;
     }
     
     .elementor-element-6152e5e {
@@ -1017,7 +1011,7 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         margin-left: -50% !important;
     }
 
-    /* Ensure text descriptions near slices stack neatly and center */
+    /* Ensure text descriptions near slices stack neatly */
     .elementor-element-15e8b6b,
     .elementor-element-2c8cff4,
     .elementor-element-e608a1c,
@@ -1025,15 +1019,12 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         position: relative !important;
         z-index: 20 !important;
         margin-top: 20px !important;
-        text-align: center !important;
         width: 100% !important;
     }
 
-    .elementor-element-15e8b6b .elementor-widget-container,
-    .elementor-element-2c8cff4 .elementor-widget-container,
-    .elementor-element-e608a1c .elementor-widget-container,
-    .elementor-element-593309a .elementor-widget-container {
-        text-align: center !important;
+    /* Hide the huge watermark numbers (01, 02, 03, 04) which cause severe overlap */
+    .pbmit-ihbox-icon-type-text {
+        display: none !important;
     }
 
     /* 4. Burger Section */
@@ -1067,12 +1058,6 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
     }
     .pbmit-ihbox-style-3 {
         padding: 30px !important;
-        text-align: center !important;
-    }
-    
-    /* Hide the huge numbers (01, 02) since they look messy when stacked and centered */
-    .pbmit-ihbox-style-3 .pbmit-ihbox-box-number {
-        display: none !important;
     }
 }
 </style>
