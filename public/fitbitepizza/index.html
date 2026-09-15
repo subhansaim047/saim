@@ -3087,7 +3087,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 // Create the button
                 const btn = document.createElement('button');
-                btn.innerHTML = 'Show More <span style="font-size: 10px; margin-left: 5px;">â–¼</span>';
+                btn.innerHTML = 'Show More ';
                 // Style the button to match the theme (yellow / dark)
                 btn.style.backgroundColor = '#ffc000';
                 btn.style.color = '#111';
@@ -3108,12 +3108,12 @@ document.addEventListener("DOMContentLoaded", function() {
                         for (let i = 3; i < articles.length; i++) {
                             articles[i].style.display = '';
                         }
-                        btn.innerHTML = 'Show Less <span style="font-size: 10px; margin-left: 5px;">â–²</span>';
+                        btn.innerHTML = 'Show Less ';
                     } else {
                         for (let i = 3; i < articles.length; i++) {
                             articles[i].style.display = 'none';
                         }
-                        btn.innerHTML = 'Show More <span style="font-size: 10px; margin-left: 5px;">â–¼</span>';
+                        btn.innerHTML = 'Show More ';
                         // Optionally scroll back to the heading
                         const heading = wrapper.previousElementSibling;
                         if (heading && heading.tagName === 'H3') {
@@ -3210,25 +3210,7 @@ document.addEventListener("DOMContentLoaded", function() {
       /* 5. Hide large decorative watermark numbers to clean up mobile view */
       body .pbmit-ihbox-icon-type-text { display: none !important; }
 
-        /* 10. Aggressively strip margins that might be causing phantom space in Hero and Menu sections ONLY */
-    body .elementor-element.elementor-element-f3401e1,
-    body .elementor-element.elementor-element-8c248e2 {
-        padding-top: 20px !important;
-        padding-bottom: 20px !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-    /* 11. Remove all phantom paddings/margins on columns within Hero and Menu sections */
-    body .elementor-element.elementor-element-f3401e1 .elementor-column,
-    body .elementor-element.elementor-element-8c248e2 .elementor-column,
-    body .elementor-element.elementor-element-f3401e1 .elementor-element-populated,
-    body .elementor-element.elementor-element-8c248e2 .elementor-element-populated {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-    /* 11. Hide back to top button on mobile */
+        /* 11. Hide back to top button on mobile */
     .pbmit-progress-wrap {
         display: none !important;
     }
@@ -3248,5 +3230,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 </style>
 </body></html>
+
 
 
