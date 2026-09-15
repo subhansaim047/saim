@@ -134,7 +134,7 @@ var pbmit_js_variables = {"responsive":null,"ajaxurl":"https://dilicious-demo.pb
 <script id="splitsext-js" src="/fitbitepizza/js/SplitText.min.js"></script>
 <script id="cursor-js" src="/fitbitepizza/js/cursor.min.js"></script>
 <script id="magnetic-js" src="/fitbitepizza/js/magnetic.min.js"></script>
-<script id="gsap-animation-effect-js" src="/fitbitepizza/js/gsap-animation.min.js?v=1789471489162"></script>
+<script id="gsap-animation-effect-js" src="/fitbitepizza/js/gsap-animation.min.js?v=1789472260010"></script>
 <link rel="https://api.w.org/" href="https://dilicious-demo.pbminfotech.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://dilicious-demo.pbminfotech.com/wp-json/wp/v2/pages/1124"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dilicious-demo.pbminfotech.com/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 7.1">
 <meta name="generator" content="WooCommerce 10.9.4">
@@ -948,120 +948,25 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 
 
 
-<style id="perfect-mobile-parallax">
-/* ====== FITBITE PIZZA MOBILE CLEAN LAYOUT ====== */
-@media (max-width: 767px) {
-    /* 1. Reset Global Section Spacing (Natural Stacking) */
-    .elementor-section {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        height: auto !important;
-    }
 
-    /* Fix Duplicate Countdown */
+
+
+<style id="perfect-mobile-parallax">
+@media (max-width: 767px) {
+    /* Hide hero pizza column on mobile - keeps left text column intact */
+    .elementor-element-bff8b9f {
+        display: none !important;
+    }
+    /* Hide duplicate desktop countdown */
     .elementor-element-37b6a8b {
         display: none !important;
     }
-
-    /* 2. Hero Section */
-    .elementor-element-e8a2a75 { padding-top: 100px !important; padding-bottom: 20px !important; }
-    
-    /* FIX: Ensure phone icon is aligned nicely in the hero (prevent weird overlap) */
-    .pbmit-ihbox-icon-wrapper, .pbmit-ihbox-box-number {
-        position: relative !important;
-    }
-    
-    .elementor-element-8a3f06d {
-        position: relative !important;
-        display: block !important;
-        width: 100% !important;
-        height: 380px !important;
-        transform: scale(0.65) !important;
-        transform-origin: top center !important;
-        margin: 20px auto 0 auto !important;
-        left: 0 !important;
-        right: 0 !important;
-    }
-
-    /* 3. Middle Slices Section ("Why our pizza best") */
-    .elementor-element-dc878eb { margin-top: 30px !important; }
-    
-    /* The Yellow Background Circle MUST be exactly centered */
-    .pbmit-bg-imgbox {
-        position: absolute !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 100% !important;
-        text-align: center !important;
-        margin: 0 !important;
-        right: auto !important;
-    }
-    
-    .elementor-element-6152e5e {
-        position: relative !important;
-        display: block !important;
-        width: 100% !important;
-        height: 480px !important;
-        transform: scale(0.45) !important;
-        transform-origin: top center !important;
-        margin: 20px auto !important;
-        left: 50% !important;
-        margin-left: -50% !important;
-    }
-
-    /* Ensure text descriptions near slices stack neatly */
-    .elementor-element-15e8b6b,
-    .elementor-element-2c8cff4,
-    .elementor-element-e608a1c,
-    .elementor-element-593309a {
-        position: relative !important;
-        z-index: 20 !important;
-        margin-top: 20px !important;
-        width: 100% !important;
-    }
-
-    /* Hide the huge watermark numbers (01, 02, 03, 04) which cause severe overlap */
+    /* Hide large watermark numbers (01,02,03,04) */
     .pbmit-ihbox-icon-type-text {
         display: none !important;
     }
-
-    /* 4. Burger Section */
-    .elementor-element-f2a4969 {
-        position: relative !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        width: 100% !important;
-        height: 400px !important;
-        margin: 30px auto !important;
-    }
-    .pbmit-circle-box-3 {
-        position: absolute !important;
-        left: 50% !important;
-        top: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        margin: 0 !important;
-    }
-    .elementor-element-f2a4969 .elementor-widget-pbmit_tween_effect_element {
-        position: absolute !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-    }
-
-    /* 5. Clean Promo Boxes */
-    .elementor-element-591fc3e,
-    .elementor-element-c2e82f7,
-    .elementor-element-9d0a6ee {
-        margin-bottom: 20px !important;
-    }
-    .pbmit-ihbox-style-3 {
-        padding: 30px !important;
-    }
 }
 </style>
-
 </head>
 <body class="home wp-singular page-template-default page page-id-1124 wp-theme-dilicious theme-dilicious woocommerce-js pbmit-top-menu-total-6 pbmit-sidebar-no pbmit-cursor-disable elementor-default elementor-kit-5 elementor-page elementor-page-1124 e--ua-blink e--ua-chrome e--ua-webkit" data-elementor-device-mode="tablet" style="">
 <div id="page" class="site pbmit-parent-header-style-2">
