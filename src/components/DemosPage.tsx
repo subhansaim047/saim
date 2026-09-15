@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+﻿import { Helmet } from "react-helmet-async";
 import { useNavigate, Link } from "react-router-dom";
 import React, { useState } from "react";
 import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft } from "lucide-react";
@@ -17,22 +17,7 @@ interface DemoItem {
 }
 
 const demos: DemoItem[] = [
-  {
-    id: "fitbite-nextjs",
-    title: "FitBite Pizza — Next.js",
-    category: "Restaurant & Food",
-    description: "A full Next.js + Tailwind CSS rebuild of FitBite Pizza. 100% mobile responsive, GSAP animations, clean component architecture — zero WordPress bloat.",
-    demoUrl: "https://fitbite-pizza-nextjs.vercel.app",
-    previewImage: "/fitbitepizza/images/banner-bg-03-new.png",
-    tags: ["Next.js", "Tailwind CSS", "GSAP", "TypeScript"],
-    features: [
-      "Built with Next.js 16 + Tailwind CSS v4",
-      "GSAP ScrollTrigger Animations",
-      "100% Mobile Responsive (no overlap)",
-      "Clean Component Architecture"
-    ],
-    badge: "New Next.js"
-  },
+  
   {
     id: "dilicious-pizza",
     title: "Dilicious Pizza",
@@ -79,7 +64,7 @@ const demos: DemoItem[] = [
 ,
   {
     id: "akdetailing",
-    title: "DetailX — Car Detailing, Auto Shop & Repair",
+    title: "DetailX â€” Car Detailing, Auto Shop & Repair",
     category: "Car Detailing & Automotive Repair",
     description: "An ultra-modern, high-performance automotive detailing and car repair website featuring full-motion video hero, interactive service showcases, multi-step quote booking, pricing tiers, and client reviews.",
     demoUrl: "/demos/akdetailing/index.html",
@@ -95,7 +80,7 @@ const demos: DemoItem[] = [
   },
   {
     id: "beauticiansonthego",
-    title: "Beauticians On The Go — Mobile Day Spa & Beauty Salon",
+    title: "Beauticians On The Go â€” Mobile Day Spa & Beauty Salon",
     category: "Mobile Day Spa & Beauty Salon",
     description: "An upscale on-demand mobile day spa and beauty salon website with full service pricing catalogs, Revolution Slider hero, founder story, interactive FAQs, and quote request booking flow.",
     demoUrl: "/demos/beauticiansonthego/index.html",
@@ -111,7 +96,7 @@ const demos: DemoItem[] = [
   },
       {
     id: "atelier-noir",
-    title: "ATELIER NOIR â€” Luxury Interior Architecture & Design",
+    title: "ATELIER NOIR Ã¢â‚¬â€ Luxury Interior Architecture & Design",
     category: "Interior Architecture & Luxury Living",
     description: "A minimalist, editorial interior design and architecture studio showcase featuring high-end residential case studies, filterable project portfolios, and architectural project inquiry flows.",
     demoUrl: "/demos/atelier-noir/index.html",
@@ -127,7 +112,7 @@ const demos: DemoItem[] = [
   },
   {
     id: "serenia",
-    title: "SERENIA â€” Luxury Wellness & Beauty Spa",
+    title: "SERENIA Ã¢â‚¬â€ Luxury Wellness & Beauty Spa",
     category: "Wellness Sanctuary & Day Spa",
     description: "A tranquil, nature-inspired luxury wellness and day spa website featuring full appointment booking, 8 signature therapy showcases, organic cosmetics shop, treatment pricing, and sanctuary lookbook.",
     demoUrl: "/demos/serenia/index.html",
@@ -143,7 +128,7 @@ const demos: DemoItem[] = [
   },
   {
     id: "valeria",
-    title: "VALÃˆRIA â€” Luxury Beauty Salon & Cosmetics",
+    title: "VALÃƒË†RIA Ã¢â‚¬â€ Luxury Beauty Salon & Cosmetics",
     category: "Beauty Salon & High-End Aesthetics",
     description: "An ultra-luxurious, editorial aesthetic beauty salon template featuring animated hero marquees, comprehensive multi-page service menus, curated lookbook gallery, and interactive booking inquiry.",
     demoUrl: "/demos/valeria/index.html",
@@ -159,15 +144,15 @@ const demos: DemoItem[] = [
   },
   {
     id: "studio-dbrickell",
-    title: "Studio-D Brickell â€” Luxury Beauty Salon & Spa",
+    title: "Studio-D Brickell Ã¢â‚¬â€ Luxury Beauty Salon & Spa",
     category: "Beauty Salon & Miami Luxury Services",
-    description: "A 100% pixel-perfect 1:1 clone of the premier Studio-D Brickell salon in Miami, FL. Features top announcement discounts, luxury service showcases, KÃ©rastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
+    description: "A 100% pixel-perfect 1:1 clone of the premier Studio-D Brickell salon in Miami, FL. Features top announcement discounts, luxury service showcases, KÃƒÂ©rastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
     demoUrl: "/demos/studio-dbrickell/index.html",
     previewImage: "/demos/studio-dbrickell/assets/images/branding/og-image.jpg",
     tags: ["1:1 Pixel Clone", "Beauty Salon", "Luxury Spa", "Mobile First"],
     features: [
       "100% 1:1 Pixel-Perfect Visual Fidelity",
-      "KÃ©rastase & Shu Uemura Luxury Spotlight",
+      "KÃƒÂ©rastase & Shu Uemura Luxury Spotlight",
       "Interactive Online Booking & Mangomint Integration",
       "Mobile Sticky Bar & Responsive Fluid Grids"
     ],
@@ -175,7 +160,7 @@ const demos: DemoItem[] = [
   },
   {
     id: "liana",
-    title: "LIANA â€” Hair & Beauty Salon Native Template",
+    title: "LIANA Ã¢â‚¬â€ Hair & Beauty Salon Native Template",
     category: "Beauty Salon & Online Booking",
     description: "A pixel-perfect, ultra-fast native recreation of the luxury LIANA Hair & Beauty Salon template. Features online booking, signature treatments menu, master stylists showcase, and responsive mobile-first design.",
     demoUrl: "/demos/liana/index.html",
@@ -398,7 +383,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                 onClick={() => setSelectedDemo(null)}
                 className="bg-white/10 hover:bg-white/20 text-white p-2 rounded-xl transition-colors cursor-pointer"
               >
-                âœ•
+                Ã¢Å“â€¢
               </button>
             </div>
           </div>
@@ -421,4 +406,5 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+
 
