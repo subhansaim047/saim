@@ -3201,27 +3201,6 @@ document.addEventListener("DOMContentLoaded", function() {
           height: auto !important;
       }
       
-      /* 10. Aggressively strip margins that might be causing phantom space */
-      body .elementor-element.elementor-element-f3401e1,
-      body .elementor-element.elementor-element-8c248e2,
-      body .elementor-element.elementor-element-0cff698 {
-          padding-top: 20px !important;
-          padding-bottom: 20px !important;
-          margin-top: 0 !important;
-          margin-bottom: 0 !important;
-      }
-      /* 11. Remove all phantom paddings/margins on columns within these sections */
-      body .elementor-element.elementor-element-f3401e1 .elementor-column,
-      body .elementor-element.elementor-element-8c248e2 .elementor-column,
-      body .elementor-element.elementor-element-0cff698 .elementor-column,
-      body .elementor-element.elementor-element-f3401e1 .elementor-element-populated,
-      body .elementor-element.elementor-element-8c248e2 .elementor-element-populated,
-      body .elementor-element.elementor-element-0cff698 .elementor-element-populated {
-          padding-top: 0 !important;
-          padding-bottom: 0 !important;
-          margin-top: 0 !important;
-          margin-bottom: 0 !important;
-      }
       /* 12. Hide all absolute positioned pattern shapes on mobile because they stretch the containers and leave blank spaces */
       body .elementor-element.elementor-element-f3401e1 .elementor-absolute,
       body .elementor-element.elementor-element-8c248e2 .elementor-absolute,
@@ -3229,9 +3208,45 @@ document.addEventListener("DOMContentLoaded", function() {
           display: none !important;
       }
       /* 5. Hide large decorative watermark numbers to clean up mobile view */
-      body .pbmit-ihbox-icon-type-text {
-          display: none !important;
-      }
+      body .pbmit-ihbox-icon-type-text { display: none !important; }
+
+        /* 10. Aggressively strip margins that might be causing phantom space in Hero and Menu sections ONLY */
+    body .elementor-element.elementor-element-f3401e1,
+    body .elementor-element.elementor-element-8c248e2 {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    /* 11. Remove all phantom paddings/margins on columns within Hero and Menu sections */
+    body .elementor-element.elementor-element-f3401e1 .elementor-column,
+    body .elementor-element.elementor-element-8c248e2 .elementor-column,
+    body .elementor-element.elementor-element-f3401e1 .elementor-element-populated,
+    body .elementor-element.elementor-element-8c248e2 .elementor-element-populated {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    /* 11. Hide back to top button on mobile */
+    .pbmit-progress-wrap {
+        display: none !important;
+    }
+    /* 13. Fix Footer Logo Visibility on Mobile */
+    .pbmit-footer-big-area .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .pbmit-footer-right {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+    .pbmit-footer-logo {
+        display: inline-block !important;
+        max-height: 120px !important;
+    }
   }
 </style>
 </body></html>
+
+
