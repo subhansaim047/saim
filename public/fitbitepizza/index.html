@@ -970,6 +970,12 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         display: none !important;
     }
 
+        /* Fix overlapping text boxes in the Pizza section */
+    body .elementor-element.elementor-element-0cff698 .pbmit-ihbox-contents {
+        position: relative !important;
+        top: auto !important;
+        margin-top: 20px !important;
+    }
     /* Fix "Made with Love" animated pizza overlapping text */
     body .elementor-element.elementor-element-0cff698,
     body .elementor-element.elementor-element-0cff698.pbmit-bgcolor-yes {
@@ -3195,3 +3201,13 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 </body></html>
+<style>
+    @media (max-width: 1024px) {
+        body .elementor-element.elementor-element-0cff698 .pbmit-ihbox-contents {
+            position: relative !important;
+            top: auto !important;
+            margin-top: 20px !important;
+        }
+    }
+</style>
+
