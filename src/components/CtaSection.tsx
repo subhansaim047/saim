@@ -46,7 +46,7 @@ export const CtaSection = () => {
             <FadeUp delay={0.2} className="mt-10">
               <PrimaryButton
                 as="a"
-                href="https://wa.me/447473962953"
+                href="sms:+447473962953"
                 target="_blank"
                 rel="noopener noreferrer"
               >

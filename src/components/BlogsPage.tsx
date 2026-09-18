@@ -131,7 +131,7 @@ export const BlogsPage = () => {
           <p className="text-white/25 text-sm">
             More articles coming soon — follow on{" "}
             <a
-              href="https://wa.me/447473962953"
+              href="sms:+447473962953"
               target="_blank"
               rel="noreferrer"
               className="text-primary/60 hover:text-primary underline underline-offset-4 transition-colors"

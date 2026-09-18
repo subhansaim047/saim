@@ -43,7 +43,7 @@ export const ContactSection = () => {
 ?? *Budget Range:* ${formData.budget}
 ?? *Project Details:* ${details}`;
 
-    const igUrl = 'https://wa.me/447473962953';
+    const igUrl = 'sms:+447473962953';
     window.open(igUrl, "_blank", "noopener,noreferrer");
   };
 
@@ -66,7 +66,7 @@ export const ContactSection = () => {
             className="inline-flex items-center gap-2 text-primary text-xs font-mono tracking-widest uppercase mb-3"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Direct WhatsApp Inquiry</span>
+            <span>Direct SMS Inquiry</span>
           </motion.div>
 
           <motion.h2
@@ -109,7 +109,7 @@ export const ContactSection = () => {
                 {[
                   { title: "Fast Turnaround", desc: "Complete delivery in 5�10 business days." },
                   { title: "Sub-Second Performance", desc: "Built with Next.js, React & modern headless architecture." },
-                  { title: "Direct WhatsApp Access", desc: "No middleman � chat directly with your senior developer." },
+                  { title: "Direct SMS Access", desc: "No middleman � chat directly with your senior developer." },
                   { title: "Free 30-Day Support", desc: "Post-launch testing, SEO indexing & revisions included." },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
@@ -138,13 +138,13 @@ export const ContactSection = () => {
             <div className="bg-[#0c0c0e] border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-xs font-mono text-white/40 uppercase tracking-wider">Direct Hotline</span>
               <a
-                href="https://wa.me/447473962953"
+                href="sms:+447473962953"
                 target="_blank"
                 rel="noreferrer"
                 className="text-base sm:text-lg font-bold text-white hover:text-primary transition-colors flex items-center gap-2"
               >
                 <MessageSquare className="w-4 h-4 text-primary" />
-                <span>WhatsApp</span>
+                <span>SMS</span>
               </a>
               <span className="text-[11px] text-white/40">Available Monday � Saturday on Instagram</span>
             </div>
@@ -270,12 +270,12 @@ export const ContactSection = () => {
                 className="mt-2 w-full bg-primary hover:bg-white text-black font-bold text-sm sm:text-base py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 shadow-xl group cursor-pointer"
               >
                 <MessageSquare className="w-5 h-5 text-black" />
-                <span>Start Project on WhatsApp</span>
+                <span>Start Project on SMS</span>
                 <ArrowRight className="w-4 h-4 text-black transition-transform group-hover:translate-x-1" />
               </button>
 
               <p className="text-center text-[11px] text-white/40">
-                ?? Your details are kept 100% confidential and directly transmitted via WhatsApp encryption.
+                ?? Your details are kept 100% confidential and directly transmitted via SMS encryption.
               </p>
             </form>
           </motion.div>

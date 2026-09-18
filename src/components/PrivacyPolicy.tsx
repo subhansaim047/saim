@@ -74,7 +74,7 @@ export const PrivacyPolicy = () => {
           <section>
             <h2 className="text-white text-xl font-medium mb-3">5. Your Rights</h2>
             <p>
-              You have the right to access, update, or request the complete deletion of your personal data from our records. To exercise your rights, please contact us directly via Instagram at WhatsApp.
+              You have the right to access, update, or request the complete deletion of your personal data from our records. To exercise your rights, please contact us directly via Instagram at SMS.
             </p>
           </section>
 
@@ -84,7 +84,7 @@ export const PrivacyPolicy = () => {
               For any questions regarding this Privacy Policy, please contact Saim Dev:
             </p>
             <p className="mt-2 text-primary font-mono text-xs sm:text-sm">
-              Instagram: WhatsApp · Web: saimdev.site
+              Instagram: SMS · Web: saimdev.site
             </p>
           </section>
         </div>

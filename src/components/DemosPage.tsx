@@ -215,7 +215,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
           <div className="flex items-center gap-6">
             <Link to="/" className="text-sm text-[#E1E0CC]/70 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer font-medium"><ArrowLeft className="w-4 h-4" /> Back to Home</Link>
             <a
-              href="https://wa.me/447473962953"
+              href="sms:+447473962953"
               target="_blank"
               rel="noreferrer"
               className="bg-primary hover:bg-white text-black font-semibold text-sm px-5 py-2 rounded-full transition-all shadow-lg"

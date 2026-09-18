@@ -77,7 +77,7 @@ const servicesData: ServiceItem[] = [
     id: "whatsapp",
     icon: "💬",
     category: "integrations",
-    title: "WhatsApp & Live Chat Integration",
+    title: "SMS & Live Chat Integration",
     subtitle: "Instant Client Communication",
     description:
       "Connect your website directly to Instagram so potential clients can initiate inquiries and book services with a single click.",
@@ -144,7 +144,7 @@ const footerColumns = [
   {
     title: "INTEGRATIONS",
     links: [
-      "WhatsApp Chat",
+      "SMS Chat",
       "Google Maps Location",
       "AI Assistants & Bots",
       "CRM & Booking Sync",
@@ -307,7 +307,7 @@ export const Nexova404 = () => {
             Let's create a fast, high-converting digital platform tailored specifically for your business.
           </p>
           <a
-            href="https://wa.me/447473962953"
+            href="sms:+447473962953"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all duration-300 shadow-xl group cursor-pointer text-sm"
