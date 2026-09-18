@@ -18,23 +18,6 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
-    id: "webild-demo",
-    title: "AI Website Builder Preview",
-    category: "Corporate / Tech",
-    description: "A 1-to-1 exact scrape of a modern, React-based AI website builder preview showing advanced UI elements.",
-    demoUrl: "/webild-demo/index.html",
-    previewImage: "https://www.webild.io/favicon.ico?favicon.15icazd544q6s.ico",
-    tags: ["React", "AI Tool", "Dashboard", "Modern UI"],
-    features: [
-      "100% Pixel-Perfect Exact Replica",
-      "Modern AI Interface Design",
-      "Tailwind UI Style",
-      "Responsive Layout"
-    ],
-    badge: "1-to-1 Replica"
-  },
-  
-  {
     id: "dilicious-pizza",
     title: "Dilicious Pizza",
     category: "Restaurant & Food",
