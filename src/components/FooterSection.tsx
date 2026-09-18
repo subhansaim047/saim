@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const FooterSection = () => {
   return (
@@ -32,13 +32,13 @@ export const FooterSection = () => {
             <a href="#contact">Contact</a>
           </nav>
 
-          <nav className="site-footer__nav" aria-label="Contact navigation">
-            <a href="https://www.instagram.com/direct/t/18104872117958561/?hl=en" target="_blank" rel="nofollow noreferrer">
-              Instagram Direct
-            </a>
-            <a href="https://www.instagram.com/direct/t/18104872117958561/?hl=en" target="_blank" rel="noreferrer">
-              Instagram DM
-            </a>
+          <nav className="site-footer__nav" aria-label="Social navigation">
+            <a href="https://x.com/saimwebdev" target="_blank" rel="noreferrer">X (Twitter)</a>
+            <a href="https://saimswebagency.quora.com/" target="_blank" rel="noreferrer">Quora</a>
+            <a href="https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER" target="_blank" rel="noreferrer">Contra</a>
+            <a href="https://www.instagram.com/saim_agency/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/@saimdev.site" target="_blank" rel="noreferrer">TikTok</a>
+            <a href="https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog" target="_blank" rel="noreferrer">Threads</a>
           </nav>
         </div>
 
