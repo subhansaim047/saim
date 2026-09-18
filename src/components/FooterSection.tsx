@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { IconX, IconQuora, IconContra, IconInstagram, IconTikTok, IconThreads } from "./SocialIcons";
 export const FooterSection = () => {
   return (
     <footer className="site-footer">
@@ -33,12 +33,24 @@ export const FooterSection = () => {
           </nav>
 
           <nav className="site-footer__nav" aria-label="Social navigation">
-            <a href="https://x.com/saimwebdev" target="_blank" rel="noreferrer">X (Twitter)</a>
-            <a href="https://saimswebagency.quora.com/" target="_blank" rel="noreferrer">Quora</a>
-            <a href="https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER" target="_blank" rel="noreferrer">Contra</a>
-            <a href="https://www.instagram.com/saim_agency/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://www.tiktok.com/@saimdev.site" target="_blank" rel="noreferrer">TikTok</a>
-            <a href="https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog" target="_blank" rel="noreferrer">Threads</a>
+            <a href="https://x.com/saimwebdev" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+              <IconX className="w-4 h-4" /> X (Twitter)
+            </a>
+            <a href="https://saimswebagency.quora.com/" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+              <IconQuora className="w-4 h-4" /> Quora
+            </a>
+            <a href="https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+              <IconContra className="w-4 h-4" /> Contra
+            </a>
+            <a href="https://www.instagram.com/saim_agency/" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+              <IconInstagram className="w-4 h-4" /> Instagram
+            </a>
+            <a href="https://www.tiktok.com/@saimdev.site" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+              <IconTikTok className="w-4 h-4" /> TikTok
+            </a>
+            <a href="https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+              <IconThreads className="w-4 h-4" /> Threads
+            </a>
           </nav>
         </div>
 
