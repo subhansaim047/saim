@@ -31,7 +31,7 @@ export const BackendSection = () => {
         >
           <p style={{ color: "rgba(225,224,204,0.65)", fontSize: "clamp(0.9rem, 1.1vw, 1.05rem)", lineHeight: 1.75 }}>
             Whether it&apos;s multilingual support, fast page building, easy asset management
-            or interface integration — we take care of the heart of your website: The Backend.
+            or interface integration Â— we take care of the heart of your website: The Backend.
           </p>
 
           {/* 4K Vector CMS Component (Zero blur, infinite crispness) */}
