@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageSquare, ArrowRight, Sparkles, CheckCircle2, Clock, ShieldCheck } from "lucide-react";
 
@@ -8,7 +8,7 @@ export const ContactSection = () => {
     contactInfo: "",
     projectType: "Custom Business Website",
     currentWebsite: "",
-    budget: "$1,000 – $2,500",
+    budget: "$1,000 � $2,500",
     details: "",
   });
 
@@ -20,9 +20,9 @@ export const ContactSection = () => {
   ];
 
   const budgetOptions = [
-    "$500 – $1,000",
-    "$1,000 – $2,500",
-    "$2,500 – $5,000",
+    "$500 � $1,000",
+    "$1,000 � $2,500",
+    "$2,500 � $5,000",
     "$5,000+",
   ];
 
@@ -34,16 +34,16 @@ export const ContactSection = () => {
     const currentSite = formData.currentWebsite.trim() || "None (New Project)";
     const details = formData.details.trim() || "Looking forward to discussing project details!";
 
-    const message = `👋 Hello Saim Dev! I would like to start a website project:
+    const message = `?? Hello Saim Dev! I would like to start a website project:
 
-👤 *Name / Business:* ${name}
-📍 *Contact / Location:* ${contact}
-🚀 *Project Type:* ${formData.projectType}
-🌐 *Current Website:* ${currentSite}
-💰 *Budget Range:* ${formData.budget}
-📝 *Project Details:* ${details}`;
+?? *Name / Business:* ${name}
+?? *Contact / Location:* ${contact}
+?? *Project Type:* ${formData.projectType}
+?? *Current Website:* ${currentSite}
+?? *Budget Range:* ${formData.budget}
+?? *Project Details:* ${details}`;
 
-    const igUrl = 'https://www.instagram.com/direct/t/18104872117958561/?hl=en';
+    const igUrl = 'https://wa.me/447473962953';
     window.open(igUrl, "_blank", "noopener,noreferrer");
   };
 
@@ -66,7 +66,7 @@ export const ContactSection = () => {
             className="inline-flex items-center gap-2 text-primary text-xs font-mono tracking-widest uppercase mb-3"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Direct Instagram Inquiry</span>
+            <span>Direct WhatsApp Inquiry</span>
           </motion.div>
 
           <motion.h2
@@ -107,9 +107,9 @@ export const ContactSection = () => {
               
               <div className="space-y-4">
                 {[
-                  { title: "Fast Turnaround", desc: "Complete delivery in 5–10 business days." },
+                  { title: "Fast Turnaround", desc: "Complete delivery in 5�10 business days." },
                   { title: "Sub-Second Performance", desc: "Built with Next.js, React & modern headless architecture." },
-                  { title: "Direct Instagram Access", desc: "No middleman — chat directly with your senior developer." },
+                  { title: "Direct WhatsApp Access", desc: "No middleman � chat directly with your senior developer." },
                   { title: "Free 30-Day Support", desc: "Post-launch testing, SEO indexing & revisions included." },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
@@ -138,15 +138,15 @@ export const ContactSection = () => {
             <div className="bg-[#0c0c0e] border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
               <span className="text-xs font-mono text-white/40 uppercase tracking-wider">Direct Hotline</span>
               <a
-                href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
+                href="https://wa.me/447473962953"
                 target="_blank"
                 rel="noreferrer"
                 className="text-base sm:text-lg font-bold text-white hover:text-primary transition-colors flex items-center gap-2"
               >
                 <MessageSquare className="w-4 h-4 text-primary" />
-                <span>Instagram DM</span>
+                <span>WhatsApp</span>
               </a>
-              <span className="text-[11px] text-white/40">Available Monday – Saturday on Instagram</span>
+              <span className="text-[11px] text-white/40">Available Monday � Saturday on Instagram</span>
             </div>
           </motion.div>
 
@@ -270,12 +270,12 @@ export const ContactSection = () => {
                 className="mt-2 w-full bg-primary hover:bg-white text-black font-bold text-sm sm:text-base py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 shadow-xl group cursor-pointer"
               >
                 <MessageSquare className="w-5 h-5 text-black" />
-                <span>Start Project on Instagram</span>
+                <span>Start Project on WhatsApp</span>
                 <ArrowRight className="w-4 h-4 text-black transition-transform group-hover:translate-x-1" />
               </button>
 
               <p className="text-center text-[11px] text-white/40">
-                🔒 Your details are kept 100% confidential and directly transmitted via Instagram encryption.
+                ?? Your details are kept 100% confidential and directly transmitted via WhatsApp encryption.
               </p>
             </form>
           </motion.div>

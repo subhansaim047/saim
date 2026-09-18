@@ -52,11 +52,11 @@ export const ContactPage = () => {
 • *Project Details*: ${formData.details}`;
 
       const encodedText = encodeURIComponent(text);
-      const url = 'https://www.instagram.com/direct/t/18104872117958561/?hl=en';
+      const url = 'https://wa.me/447473962953';
       setIgLink(url);
       setSubmitted(true);
 
-      // Direct redirection to Instagram App / Web
+      // Direct redirection to WhatsApp
       window.location.href = url;
     }
   };
@@ -107,7 +107,7 @@ export const ContactPage = () => {
             Send a Project Inquiry
           </h2>
           <p className="text-white/60 text-xs sm:text-sm mb-8 font-light">
-            Submitting this form launches Instagram with your pre-filled inquiry ready to send to Saim Dev (Instagram DM).
+            Submitting this form launches Instagram with your pre-filled inquiry ready to send to Saim Dev (WhatsApp).
           </p>
 
           {submitted ? (
@@ -120,13 +120,13 @@ export const ContactPage = () => {
                 Click the button below to open Instagram with your pre-filled project details and press <strong>Send</strong>:
               </p>
               <a
-                href={igLink || "https://www.instagram.com/direct/t/18104872117958561/?hl=en"}
+                href={igLink || "https://wa.me/447473962953"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-emerald-500 text-black text-sm font-bold px-8 py-4 rounded-full hover:bg-emerald-400 transition-all cursor-pointer mb-4 shadow-xl scale-105"
               >
                 <MessageSquare className="w-5 h-5" />
-                <span>Open & Send Message on Instagram</span>
+                <span>Open & Send Message on WhatsApp</span>
               </a>
               <div>
                 <button
@@ -260,7 +260,7 @@ export const ContactPage = () => {
                 type="submit"
                 className="w-full bg-primary text-black font-semibold py-3.5 px-6 rounded-full hover:bg-white transition-all cursor-pointer flex items-center justify-center gap-2 text-sm shadow-xl"
               >
-                <span>Send Project Inquiry on Instagram</span>
+                <span>Send Project Inquiry on WhatsApp</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
@@ -320,7 +320,7 @@ export const ContactPage = () => {
             <div>
               <h4 className="text-white text-sm font-medium">Can we communicate via Instagram?</h4>
               <p className="text-white/60 text-xs mt-1 font-light">
-                Yes! Instant communication is available via Instagram (Instagram DM) throughout the project.
+                Yes! Instant communication is available via Instagram (WhatsApp) throughout the project.
               </p>
             </div>
           </div>
@@ -335,12 +335,12 @@ export const ContactPage = () => {
             Skip the form and message Saim Dev directly on Instagram for an immediate response.
           </p>
           <a
-            href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
+            href="https://wa.me/447473962953"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-emerald-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-emerald-400 transition-all text-xs cursor-pointer shadow-lg"
           >
-            <span>Chat on Instagram (Instagram DM)</span>
+            <span>Chat on WhatsApp</span>
           </a>
         </div>
       </div>

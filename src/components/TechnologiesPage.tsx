@@ -198,7 +198,7 @@ export const TechnologiesPage = () => {
             Let's build a fast, secure, and AI-ready platform that sets you apart from competitors.
           </p>
           <a
-            href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
+            href="https://wa.me/447473962953"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all text-xs cursor-pointer shadow-xl"

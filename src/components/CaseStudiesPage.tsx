@@ -67,7 +67,7 @@ const caseStudiesData: CaseStudy[] = [
     problemText:
       "Drivers stuck on the road needed immediate click-to-call service, but SpeedTech's previous website was unreadable on mobile phones and failed to rank locally.",
     solutionText:
-      "Crafted a high-contrast mobile-first platform featuring instant emergency call triggers, Instagram Direct location sharing, and Google Local Pack SEO.",
+      "Crafted a high-contrast mobile-first platform featuring instant emergency call triggers, WhatsApp location sharing, and Google Local Pack SEO.",
     designText:
       "Bold automotive visual design with high-visibility CTA buttons, dynamic service cards, and real-time repair status tracking.",
     beforeStats: { loadTime: "5.2s", score: 31, bounceRate: "74%" },
@@ -322,7 +322,7 @@ export const CaseStudiesPage = () => {
                     Verified Project Results
                   </span>
                   <a
-                    href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
+                    href="https://wa.me/447473962953"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-white transition-colors"
@@ -363,15 +363,15 @@ export const CaseStudiesPage = () => {
             Ready to Build Your Case Study Success Story?
           </h3>
           <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            Message Saim Dev on Instagram to discuss your project requirements and receive a customized quote within 2 hours.
+            Message Saim Dev on WhatsApp to discuss your project requirements and receive a customized quote within 2 hours.
           </p>
           <a
-            href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
+            href="https://wa.me/447473962953"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-4 rounded-full hover:bg-white transition-all text-xs sm:text-sm cursor-pointer shadow-xl"
           >
-            <span>Start Your Project on Instagram</span>
+            <span>Start Your Project on WhatsApp</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

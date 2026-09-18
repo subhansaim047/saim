@@ -290,10 +290,10 @@ export const ServicesPage = () => {
             Ready to Select Your Custom Web Service?
           </h3>
           <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            Message Saim Dev on Instagram to receive a detailed proposal and get started immediately.
+            Message Saim Dev on WhatsApp to receive a detailed proposal and get started immediately.
           </p>
           <a
-            href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
+            href="https://wa.me/447473962953"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all text-xs cursor-pointer shadow-xl"

@@ -186,7 +186,7 @@ export const HeroSection = () => {
 
               {/* CTA */}
               <motion.a
-                href="https://www.instagram.com/direct/t/18104872117958561/?hl=en"
+                href="https://wa.me/447473962953"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ y: 20, opacity: 0 }}
