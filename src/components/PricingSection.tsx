@@ -20,12 +20,12 @@ type Plan = {
 
 const plans: Plan[] = [
   {
-    name: "Micro Plan",
-    price: "Free Website",
-    description: "$99 / month — Simple 3-page online presence.",
+    name: "Landing Page",
+    price: "Landing Page",
+    description: "Simple 1-page online presence.",
     bg: "#0f0f0f",
     features: [
-      { text: "3 Pages (Home, Services, Contact)", included: true },
+      { text: "1 Page (Landing Page)", included: true },
       { text: "Mobile Responsive Design", included: true },
       { text: "Contact Form", included: true },
       { text: "Instagram Button", included: true },
@@ -38,7 +38,7 @@ const plans: Plan[] = [
   },
   {
     name: "Starter Plan",
-    price: "$1,999",
+    price: "$500",
     
     description: "No monthly charges. Essential business presence.",
     bg: "#161616",
@@ -59,7 +59,7 @@ const plans: Plan[] = [
   },
   {
     name: "Business Plan",
-    price: "$2,999",
+    price: "$999",
     
     description: "No monthly charges. Full growth engine.",
     bg: "#252525",
