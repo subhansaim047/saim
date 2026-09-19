@@ -31,7 +31,7 @@ const demos: DemoItem[] = [
       "Parallax & Animations",
       "Fully Responsive Design"
     ],
-    badge: "New Release"
+    badge: "🔧 In Working - Not Complete"
   },
   {
     id: "architecture",
@@ -253,7 +253,11 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 {demo.badge && (
-                  <span className="absolute top-3 left-3 bg-primary text-black font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+                  <span className={`absolute top-3 left-3 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-lg ${
+                    demo.badge.includes('In Working') 
+                      ? 'bg-orange-500 text-white' 
+                      : 'bg-primary text-black'
+                  }`}>
                     {demo.badge}
                   </span>
                 )}
