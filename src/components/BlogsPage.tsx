@@ -5,6 +5,16 @@ import { ArrowLeft, Calendar, Clock, Tag, ArrowRight } from "lucide-react";
 
 
 const blogs = [
+    {
+      id: 3,
+      title: "I Just Launched My Web Agency — And I'm Offering 50% Off to My First Clients",
+      excerpt: "Premium web development at half the price. Find out why I am offering this massive discount and how it can act as the ultimate growth engine for your business.",
+      date: "Sep 20, 2026",
+      readTime: "5 min read",
+      tag: "Launch Special",
+      tagColor: "#F59E0B",
+      slug: "#blog-post-3",
+    },
   {
     id: 2,
     title: "I'm Building 5 Free Websites for Local Businesses — Here's Why",
