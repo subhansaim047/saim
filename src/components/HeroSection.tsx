@@ -47,7 +47,7 @@ export const HeroSection = () => {
           <div className="flex sm:hidden flex-wrap items-center justify-center gap-1.5 p-2 bg-black/95 backdrop-blur-md rounded-b-xl border-x border-b border-white/15 max-w-full">
             {navItems.map((item) =>
               item.href.startsWith("/") ? (
-                <Link key={item.label} to={item.href} className="text-[10px] font-bold tracking-tight text-[#E1E0CC] bg-white/10 border border-white/15 px-2 py-0.5 rounded-md hover:bg-primary hover:text-black transition-colors">
+                <Link key={item.label} href={item.href} className="text-[10px] font-bold tracking-tight text-[#E1E0CC] bg-white/10 border border-white/15 px-2 py-0.5 rounded-md hover:bg-primary hover:text-black transition-colors">
                   {item.label}
                 </Link>
               ) : (
@@ -64,7 +64,7 @@ export const HeroSection = () => {
               item.href.startsWith("/") ? (
                 <Link
                   key={item.label}
-                  to={item.href}
+                  href={item.href}
                   onMouseEnter={() => setHoveredNav(index)}
                   onMouseLeave={() => setHoveredNav(null)}
                   className="text-xs md:text-sm font-medium tracking-wide transition-colors duration-200 whitespace-nowrap cursor-pointer"

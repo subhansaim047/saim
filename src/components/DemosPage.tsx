@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import React, { useState } from "react";
-import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft } from "lucide-react";
+import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft, X } from "lucide-react";
 import { FooterSection } from "./FooterSection";
 
 interface DemoItem {
@@ -197,7 +197,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
       {/* Header Navigation Bar */}
       <nav className="sticky top-0 z-40 backdrop-blur-md bg-black/80 border-b border-white/10 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 group cursor-pointer">
+          <Link href="/" className="flex items-center gap-3 group cursor-pointer">
             <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors">
               <img src="/saim-dev-logo.png" alt="Saim Dev Logo" className="w-full h-full object-cover" />
             </div>
@@ -205,7 +205,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
           </Link>
 
           <div className="flex items-center gap-6">
-            <Link to="/" className="text-sm text-[#E1E0CC]/70 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer font-medium"><ArrowLeft className="w-4 h-4" /> Back to Home</Link>
+            <Link href="/" className="text-sm text-[#E1E0CC]/70 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer font-medium"><ArrowLeft className="w-4 h-4" /> Back to Home</Link>
             <a
               href="sms:+447473962953"
               target="_blank"

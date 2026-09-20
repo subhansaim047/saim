@@ -19,9 +19,9 @@ export const FooterSection = () => {
 
           <nav className="site-footer__nav" aria-label="Page sections navigation">
             <a href="#our-story">Our Story</a>
-            <Link to="/services">Services</Link>
-            <Link to="/technologies">Tech Stack</Link>
-            <Link to="/demos">Demo Sites</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/technologies">Tech Stack</Link>
+            <Link href="/demos">Demo Sites</Link>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Explore navigation">
@@ -29,7 +29,7 @@ export const FooterSection = () => {
             <a href="#process">My Process</a>
             <a href="#pricing">Pricing Plans</a>
             <a href="#faq">FAQ</a>
-            <Link to="/blogs">Blogs</Link>
+            <Link href="/blogs">Blogs</Link>
             <a href="#contact">Contact</a>
           </nav>
 
@@ -57,7 +57,7 @@ export const FooterSection = () => {
 
         {/* BRAND ROW */}
         <div className="site-footer__brand-row">
-          <Link to="/" className="site-footer__brand" aria-label="Saim Dev home">
+          <Link href="/" className="site-footer__brand" aria-label="Saim Dev home">
             <span className="site-footer__mark" aria-hidden="true">
               <img
                 src="/saim-dev-logo.jpg"
@@ -72,8 +72,8 @@ export const FooterSection = () => {
         {/* LEGAL LINE */}
         <div className="site-footer__legal">
           <p>Â© 2026 Saim Dev. All rights reserved.</p>
-          <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
         </div>
       </div>
     </footer>
