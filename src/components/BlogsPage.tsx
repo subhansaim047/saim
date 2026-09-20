@@ -95,6 +95,7 @@ export const BlogsPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: i * 0.07 }}
               onClick={() => {
+                if (blog.slug === "#blog-post-3") router.push("/blog/50-percent-off-agency-launch");
                 if (blog.slug === "#blog-post-1") router.push("/blog/why-small-business-needs-website-2026");
                 if (blog.slug === "#blog-post-2") router.push("/blog/free-website-for-local-business");
               }}
