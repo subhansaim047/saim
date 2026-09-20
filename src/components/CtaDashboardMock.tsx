@@ -1,3 +1,4 @@
+"use client";
 import { ChatPanel } from "./ChatPanel";
 import { VelorahHeroPreview } from "./VelorahHeroPreview";
 

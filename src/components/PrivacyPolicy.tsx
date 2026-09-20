@@ -1,9 +1,10 @@
-import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
 export const PrivacyPolicy = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <div
       className="min-h-screen bg-black text-white px-4 sm:px-6 md:px-12 py-12 select-none"
@@ -11,20 +12,11 @@ export const PrivacyPolicy = () => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
-      <Helmet>
-        <title>Privacy Policy | Saim Dev</title>
-        <meta name="description" content="Read the Saim Dev privacy policy. Learn how your data is collected, used, and protected when you use our website or engage our web development services." />
-        <link rel="canonical" href="https://www.saimdev.site/privacy" />
-        <meta property="og:title" content="Privacy Policy | Saim Dev" />
-        <meta property="og:description" content="Read the Saim Dev privacy policy. Learn how your data is collected, used, and protected when you use our website or engage our web development services." />
-        <meta property="og:url" content="https://www.saimdev.site/privacy" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      
       <div className="max-w-4xl mx-auto">
         {/* Top Back Navigation */}
         <button
-          onClick={() => navigate('/')}
+          onClick={() => router.push('/')}
           className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />

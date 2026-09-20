@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { Plus, ChevronDown, Sparkles, Image as ImageIcon, FileText, MoreHorizontal } from "lucide-react";
 

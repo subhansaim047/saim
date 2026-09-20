@@ -1,3 +1,4 @@
+"use client";
 import { useRef } from "react";
 import { useScroll } from "framer-motion";
 import { WordsPullUpMultiStyle } from "./WordsPullUpMultiStyle";

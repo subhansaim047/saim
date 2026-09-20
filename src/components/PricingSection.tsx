@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { Check, X, ChevronUp, ChevronDown } from "lucide-react";
 import { FadeUp } from "./FadeUp";

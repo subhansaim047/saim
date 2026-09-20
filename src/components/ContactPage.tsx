@@ -1,5 +1,6 @@
-import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import {
   ArrowLeft,
@@ -14,7 +15,7 @@ import {
 } from "lucide-react";
 
 export const ContactPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     businessName: "",
@@ -68,20 +69,11 @@ export const ContactPage = () => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
-      <Helmet>
-        <title>Contact Saim Dev | Get a Free Website Quote</title>
-        <meta name="description" content="Get in touch for a free consultation or website quote. I build professional websites for small businesses starting from $500. Delivery in 5-10 days." />
-        <link rel="canonical" href="https://www.saimdev.site/contact" />
-        <meta property="og:title" content="Contact Saim Dev | Get a Free Website Quote" />
-        <meta property="og:description" content="Get in touch for a free consultation or website quote. I build professional websites for small businesses starting from $500. Delivery in 5-10 days." />
-        <meta property="og:url" content="https://www.saimdev.site/contact" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      
       <div className="max-w-4xl mx-auto">
         {/* Top Back Navigation */}
         <button
-          onClick={() => navigate('/')}
+          onClick={() => router.push('/')}
           className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />

@@ -1,5 +1,6 @@
-import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import {
   ArrowLeft,
@@ -109,7 +110,7 @@ const caseStudiesData: CaseStudy[] = [
 ];
 
 export const CaseStudiesPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const filteredStudies =
@@ -124,20 +125,11 @@ export const CaseStudiesPage = () => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
-      <Helmet>
-        <title>Case Studies | Real Business Website Results | Saim Dev</title>
-        <meta name="description" content="Real-world examples of how professional websites helped small businesses attract more customers online. See the design, technology, and results behind each project." />
-        <link rel="canonical" href="https://www.saimdev.site/case-studies" />
-        <meta property="og:title" content="Case Studies | Real Business Website Results | Saim Dev" />
-        <meta property="og:description" content="Real-world examples of how professional websites helped small businesses attract more customers online. See the design, technology, and results behind each project." />
-        <meta property="og:url" content="https://www.saimdev.site/case-studies" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      
       <div className="max-w-6xl mx-auto">
         {/* Top Back Navigation */}
         <button
-          onClick={() => navigate('/')}
+          onClick={() => router.push('/')}
           className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />

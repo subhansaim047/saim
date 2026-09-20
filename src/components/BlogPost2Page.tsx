@@ -1,7 +1,7 @@
+"use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { useRouter } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 
 const faqs = [
@@ -64,7 +64,7 @@ const sections = [
 ];
 
 export const BlogPost2Page = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const scrollTo = (id: string) => {
@@ -74,56 +74,18 @@ export const BlogPost2Page = () => {
 
   return (
     <div className="min-h-screen bg-black text-[#E1E0CC]">
-      <Helmet>
-        <title>I'm Building 5 Free Websites for Local Businesses — Here's Why | Saim Dev</title>
-        <meta name="description" content="Free professional websites for 5 local businesses. Custom design, mobile-first, fast loading, SEO ready. No cost — just honest feedback in return. 5 slots only." />
-        <link rel="canonical" href="https://www.saimdev.site/blog/free-website-for-local-business" />
-        <meta property="og:title" content="I'm Building 5 Free Websites for Local Businesses — Here's Why" />
-        <meta property="og:description" content="Free professional websites for 5 local businesses. No cost — just honest feedback in return. 5 slots only, first come first served." />
-        <meta property="og:url" content="https://www.saimdev.site/blog/free-website-for-local-business" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "I'm Building 5 Free Websites for Local Businesses — Here's Why",
-            "description": "Free professional websites for 5 local businesses. Custom design, mobile-first, fast loading, SEO ready. No cost — just honest feedback in return. 5 slots only.",
-            "url": "https://www.saimdev.site/blog/free-website-for-local-business",
-            "datePublished": "2026-09-20",
-            "dateModified": "2026-09-20",
-            "author": {
-              "@type": "Person",
-              "name": "Saim Dev",
-              "url": "https://www.saimdev.site"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Saim Dev",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.saimdev.site/saim-dev-logo.jpg"
-              }
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://www.saimdev.site/blog/free-website-for-local-business"
-            },
-            "keywords": ["free website", "local business website", "web development offer", "small business website free", "saim dev"]
-          })}
-        </script>
-      </Helmet>
+      
 
       {/* ── Sticky Header ── */}
       <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
         <button
-          onClick={() => navigate('/blogs')}
+          onClick={() => router.push('/blogs')}
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           All Blogs
         </button>
-        <button onClick={() => navigate('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
+        <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white hidden sm:block">Saim Dev</span>
         </button>
@@ -372,7 +334,7 @@ export const BlogPost2Page = () => {
 
         {/* ── Back ── */}
         <div className="text-center">
-          <button onClick={() => navigate('/blogs')} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
+          <button onClick={() => router.push('/blogs')} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
             <ArrowLeft className="w-4 h-4" />Back to all blogs
           </button>
         </div>

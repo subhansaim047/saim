@@ -1,3 +1,4 @@
+"use client";
 export const BenefitsSection = () => {
   return (
     <section id="benefits" className="w-full bg-black">

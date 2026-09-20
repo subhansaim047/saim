@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageSquare, ArrowRight, Sparkles, CheckCircle2, Clock, ShieldCheck } from "lucide-react";

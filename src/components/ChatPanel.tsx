@@ -1,3 +1,4 @@
+"use client";
 import { useState, useRef, useEffect, type KeyboardEvent } from "react";
 import { ArrowUp } from "lucide-react";
 import { FadeUp } from "./FadeUp";

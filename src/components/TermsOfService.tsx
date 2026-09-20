@@ -1,9 +1,10 @@
-import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
 export const TermsOfService = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <div
       className="min-h-screen bg-black text-white px-4 sm:px-6 md:px-12 py-12 select-none"
@@ -11,20 +12,11 @@ export const TermsOfService = () => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
-      <Helmet>
-        <title>Terms of Service | Saim Dev</title>
-        <meta name="description" content="Review the Saim Dev terms of service. These terms govern your use of our website and any web development services you engage with." />
-        <link rel="canonical" href="https://www.saimdev.site/terms" />
-        <meta property="og:title" content="Terms of Service | Saim Dev" />
-        <meta property="og:description" content="Review the Saim Dev terms of service. These terms govern your use of our website and any web development services you engage with." />
-        <meta property="og:url" content="https://www.saimdev.site/terms" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+      
       <div className="max-w-4xl mx-auto">
         {/* Top Back Navigation */}
         <button
-          onClick={() => navigate('/')}
+          onClick={() => router.push('/')}
           className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />

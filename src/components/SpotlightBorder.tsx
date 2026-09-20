@@ -1,3 +1,4 @@
+"use client";
 import { useRef, useState, type PointerEvent, type ReactNode } from "react";
 import { cn } from "../lib/utils";
 

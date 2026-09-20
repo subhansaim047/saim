@@ -1,7 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Tag, ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+
 
 const blogs = [
   {
@@ -29,27 +30,20 @@ const blogs = [
 ];
 
 export const BlogsPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-black text-[#E1E0CC]">
-      <Helmet>
-        <title>Web Development & Business Growth Blog | Saim Dev</title>
-        <meta name="description" content="Practical insights on web development, SEO, and growing your business online. Written by Saim Dev — full stack web developer." />
-        <link rel="canonical" href="https://www.saimdev.site/blogs" />
-        <meta property="og:title" content="Web Development & Business Growth Blog | Saim Dev" />
-        <meta property="og:url" content="https://www.saimdev.site/blogs" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      
       {/* ── Header Bar ── */}
       <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
         <button
-          onClick={() => navigate('/')}
+          onClick={() => router.push('/')}
           className="flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </button>
-        <button onClick={() => navigate('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
+        <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img
             src="/saim-dev-logo.jpg"
             alt="Saim Dev"
@@ -91,8 +85,8 @@ export const BlogsPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: i * 0.07 }}
               onClick={() => {
-                if (blog.slug === "#blog-post-1") navigate("/blog/why-small-business-needs-website-2026");
-                if (blog.slug === "#blog-post-2") navigate("/blog/free-website-for-local-business");
+                if (blog.slug === "#blog-post-1") router.push("/blog/why-small-business-needs-website-2026");
+                if (blog.slug === "#blog-post-2") router.push("/blog/free-website-for-local-business");
               }}
               className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 cursor-pointer overflow-hidden"
             >

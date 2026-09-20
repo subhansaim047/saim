@@ -1,3 +1,4 @@
+"use client";
 import { motion, useTransform, type MotionValue } from "framer-motion";
 
 interface AnimatedLetterProps {

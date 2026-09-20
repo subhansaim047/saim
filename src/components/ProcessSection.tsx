@@ -1,3 +1,4 @@
+"use client";
 import { FadeUp } from "./FadeUp";
 import { PhoneCall, Compass, Code2, Rocket } from "lucide-react";
 

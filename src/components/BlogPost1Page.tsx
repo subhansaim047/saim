@@ -1,7 +1,8 @@
+"use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { useRouter } from "next/navigation";
+
 import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, XCircle, ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
@@ -90,7 +91,7 @@ const websiteVsSocial = [
 ];
 
 export const BlogPost1Page = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const sections = [
@@ -115,27 +116,17 @@ export const BlogPost1Page = () => {
 
   return (
     <div className="min-h-screen bg-black text-[#E1E0CC]">
-      <Helmet>
-        <title>Why Every Small Business Needs a Professional Website in 2026 | Saim Dev</title>
-        <meta name="description" content="98% of consumers search online for local businesses. Discover why a professional website is essential for small business growth in 2026, backed by real statistics and case studies." />
-        <link rel="canonical" href="https://www.saimdev.site/blog/why-small-business-needs-website-2026" />
-        <meta property="og:title" content="Why Every Small Business Needs a Professional Website in 2026" />
-        <meta property="og:description" content="98% of consumers search online for local businesses. Real statistics, case studies, and practical steps for small business owners." />
-        <meta property="og:url" content="https://www.saimdev.site/blog/why-small-business-needs-website-2026" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":"Why Every Small Business Needs a Professional Website in 2026","description":"98% of consumers search online for local businesses. Learn why a professional website is essential for small business growth in 2026.","url":"https://www.saimdev.site/blog/why-small-business-needs-website-2026","datePublished":"2026-08-11","dateModified":"2026-08-11","author":{"@type":"Person","name":"Saim Dev","url":"https://www.saimdev.site"},"publisher":{"@type":"Organization","name":"Saim Dev","logo":{"@type":"ImageObject","url":"https://www.saimdev.site/saim-dev-logo.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.saimdev.site/blog/why-small-business-needs-website-2026"},"keywords":["small business website","professional website 2026","website for small business","local business website","website vs social media","website ROI","web development","local SEO"]})}</script>
-      </Helmet>
+      
       {/* ── Sticky Header ── */}
       <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
         <button
-          onClick={() => navigate('/blogs')}
+          onClick={() => router.push('/blogs')}
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           All Blogs
         </button>
-        <button onClick={() => navigate('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
+        <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white hidden sm:block">Saim Dev</span>
         </button>
@@ -489,10 +480,10 @@ export const BlogPost1Page = () => {
             I offer a free website audit for small businesses. You'll get a clear, honest review of your current online presence — covering your website performance, Google visibility, mobile experience, and the specific steps that would generate more leads. No sales pitch. Just a straight assessment.
           </p>
           <div className="flex flex-wrap gap-3">
-            <button onClick={() => navigate('/')} className="inline-flex items-center gap-2 bg-primary text-black font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors text-sm cursor-pointer">
+            <button onClick={() => router.push('/')} className="inline-flex items-center gap-2 bg-primary text-black font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors text-sm cursor-pointer">
               Request a Free Audit
             </button>
-            <button onClick={() => navigate('/')} className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-medium px-6 py-3 rounded-xl transition-colors text-sm cursor-pointer">
+            <button onClick={() => router.push('/')} className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-medium px-6 py-3 rounded-xl transition-colors text-sm cursor-pointer">
               View Pricing
             </button>
           </div>
@@ -513,7 +504,7 @@ export const BlogPost1Page = () => {
 
         {/* ── Back ── */}
         <div className="text-center">
-          <button onClick={() => navigate('/blogs')} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
+          <button onClick={() => router.push('/blogs')} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
             <ArrowLeft className="w-4 h-4" />Back to all blogs
           </button>
         </div>
