@@ -83,6 +83,35 @@ export const BlogPost2Page = () => {
         <meta property="og:url" content="https://www.saimdev.site/blog/free-website-for-local-business" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "I'm Building 5 Free Websites for Local Businesses — Here's Why",
+            "description": "Free professional websites for 5 local businesses. Custom design, mobile-first, fast loading, SEO ready. No cost — just honest feedback in return. 5 slots only.",
+            "url": "https://www.saimdev.site/blog/free-website-for-local-business",
+            "datePublished": "2026-09-20",
+            "dateModified": "2026-09-20",
+            "author": {
+              "@type": "Person",
+              "name": "Saim Dev",
+              "url": "https://www.saimdev.site"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Saim Dev",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.saimdev.site/saim-dev-logo.jpg"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.saimdev.site/blog/free-website-for-local-business"
+            },
+            "keywords": ["free website", "local business website", "web development offer", "small business website free", "saim dev"]
+          })}
+        </script>
       </Helmet>
 
       {/* ── Sticky Header ── */}
