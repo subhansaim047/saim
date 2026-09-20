@@ -1,4 +1,4 @@
-﻿import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import { BenefitsSection } from "./components/BenefitsSection";
@@ -20,6 +20,7 @@ import { DemosPage } from "./components/DemosPage";
 import { ServicesPage } from "./components/ServicesPage";
 import { BlogsPage } from "./components/BlogsPage";
 import { BlogPost1Page } from "./components/BlogPost1Page";
+import { BlogPost2Page } from "./components/BlogPost2Page";
 import { Helmet } from "react-helmet-async";
 
 const HomePage = () => (
@@ -59,6 +60,7 @@ export function App() {
       <Route path="/terms" element={<TermsOfService />} />
       <Route path="/blogs" element={<BlogsPage />} />
       <Route path="/blog/why-small-business-needs-website-2026" element={<BlogPost1Page />} />
+      <Route path="/blog/free-website-for-local-business" element={<BlogPost2Page />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

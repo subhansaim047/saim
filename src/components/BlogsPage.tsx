@@ -5,6 +5,17 @@ import { Helmet } from "react-helmet-async";
 
 const blogs = [
   {
+    id: 2,
+    title: "I'm Building 5 Free Websites for Local Businesses — Here's Why",
+    excerpt:
+      "I'm offering FREE websites to 5 local businesses that want to grow. No strings attached — just honest feedback in return. Find out if you qualify.",
+    date: "Sep 20, 2026",
+    readTime: "7 min read",
+    tag: "Special Offer",
+    tagColor: "#DEDBC8",
+    slug: "#blog-post-2",
+  },
+  {
     id: 1,
     title: "Why Every Small Business Needs a Professional Website in 2026",
     excerpt:
@@ -79,7 +90,10 @@ export const BlogsPage = () => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: i * 0.07 }}
-              onClick={() => { if (blog.slug === "#blog-post-1") navigate("/blog/why-small-business-needs-website-2026"); }}
+              onClick={() => {
+                if (blog.slug === "#blog-post-1") navigate("/blog/why-small-business-needs-website-2026");
+                if (blog.slug === "#blog-post-2") navigate("/blog/free-website-for-local-business");
+              }}
               className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 cursor-pointer overflow-hidden"
             >
               {/* Glow on hover */}
