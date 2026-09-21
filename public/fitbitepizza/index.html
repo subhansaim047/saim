@@ -1906,7 +1906,22 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-1bced7d elementor-hidden-desktop elementor-hidden-tablet  elementor-widget elementor-widget-pbmit_lottie_player_element" data-id="1bced7d" data-element_type="widget" data-e-type="widget" data-widget_type="pbmit_lottie_player_element.default">
 				<div class="elementor-widget-container">
-					<lottie-player src="https://lottie.host/979f5334-1bec-4298-8d85-cbf7a9b92be5/oiPJGPUM28.json" background="transparent.html" speed="1" style="width: 100%;height: 100%" loop="" autoplay=""></lottie-player>				</div>
+					<lottie-player id="bike-lottie" src="https://lottie.host/979f5334-1bec-4298-8d85-cbf7a9b92be5/oiPJGPUM28.json" background="transparent" speed="1" style="width: 100%;height: 100%" loop=""></lottie-player>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const player = document.getElementById("bike-lottie");
+        if(player) {
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    player.play();
+                } else {
+                    player.pause();
+                }
+            }, { threshold: 0.2 });
+            observer.observe(player);
+        }
+      });
+    </script>				</div>
 				</div>
 				<div class="elementor-element elementor-element-9bab769 elementor-widget__width-initial elementor-absolute elementor-hidden-tablet elementor-widget elementor-widget-html" data-id="9bab769" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="html.default">
 				<div class="elementor-widget-container">
