@@ -20,20 +20,20 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
-    id: "dilicious-pizza",
-    title: "Dilicious Pizza",
-    category: "Restaurant & Food",
-    description: "A delicious 1-to-1 premium pizza and restaurant website showcasing menus, delivery options, and animated visuals.",
+    id: "anzaar-rooftop",
+    title: "ANZAAR Rooftop",
+    category: "Restaurant & Luxury Dining",
+    description: "A premium 1-to-1 restaurant website showcasing dynamic scroll animations, luxury styling, and fully animated food visualizers.",
     demoUrl: "/fitbitepizza/index.html",
     previewImage: "/fitbitepizza/images/banner-bg-03-new.png",
-    tags: ["Restaurant", "Pizza", "Food Delivery", "HTML5"],
+    tags: ["Restaurant", "Luxury", "GSAP Scroll", "HTML5"],
     features: [
-      "100% Pixel-Perfect",
+      "Scroll-Triggered Burger Animation",
       "Interactive Food Menus",
       "Parallax & Animations",
       "Fully Responsive Design"
     ],
-    badge: "🔧 In Working - Not Complete"
+    badge: "New Release"
   },
   {
     id: "architecture",
