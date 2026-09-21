@@ -1913,11 +1913,12 @@ body.rtl .pbmit-ihbox-style-9 .pbmit-ihbox-box text{direction:ltr;}
         if(player) {
             const observer = new IntersectionObserver((entries) => {
                 if (entries[0].isIntersecting) {
+                    player.seek(0);
                     player.play();
                 } else {
-                    player.pause();
+                    player.stop();
                 }
-            }, { threshold: 0.2 });
+            }, { threshold: 0.5 });
             observer.observe(player);
         }
       });
