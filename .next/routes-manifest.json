@@ -1,0 +1,159 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/blog/50-percent-off-agency-launch",
+      "regex": "^/blog/50\\-percent\\-off\\-agency\\-launch(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/50\\-percent\\-off\\-agency\\-launch(?:/)?$"
+    },
+    {
+      "page": "/blog/free-website-for-local-business",
+      "regex": "^/blog/free\\-website\\-for\\-local\\-business(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/free\\-website\\-for\\-local\\-business(?:/)?$"
+    },
+    {
+      "page": "/blog/why-small-business-needs-website-2026",
+      "regex": "^/blog/why\\-small\\-business\\-needs\\-website\\-2026(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/why\\-small\\-business\\-needs\\-website\\-2026(?:/)?$"
+    },
+    {
+      "page": "/blogs",
+      "regex": "^/blogs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blogs(?:/)?$"
+    },
+    {
+      "page": "/case-studies",
+      "regex": "^/case\\-studies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/case\\-studies(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/demos",
+      "regex": "^/demos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demos(?:/)?$"
+    },
+    {
+      "page": "/demos/anzaar",
+      "regex": "^/demos/anzaar(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demos/anzaar(?:/)?$"
+    },
+    {
+      "page": "/demos/anzaar/contact",
+      "regex": "^/demos/anzaar/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demos/anzaar/contact(?:/)?$"
+    },
+    {
+      "page": "/demos/anzaar/gallery",
+      "regex": "^/demos/anzaar/gallery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demos/anzaar/gallery(?:/)?$"
+    },
+    {
+      "page": "/demos/anzaar/menu",
+      "regex": "^/demos/anzaar/menu(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demos/anzaar/menu(?:/)?$"
+    },
+    {
+      "page": "/demos/anzaar/our-story",
+      "regex": "^/demos/anzaar/our\\-story(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demos/anzaar/our\\-story(?:/)?$"
+    },
+    {
+      "page": "/privacy",
+      "regex": "^/privacy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/privacy(?:/)?$"
+    },
+    {
+      "page": "/services",
+      "regex": "^/services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services(?:/)?$"
+    },
+    {
+      "page": "/technologies",
+      "regex": "^/technologies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/technologies(?:/)?$"
+    },
+    {
+      "page": "/terms",
+      "regex": "^/terms(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/terms(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

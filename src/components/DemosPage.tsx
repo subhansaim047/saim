@@ -20,22 +20,6 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
-    id: "anzaar-luxury-restaurant",
-    title: "ANZAAR - Luxury Dining",
-    category: "Restaurant & Fine Dining",
-    description: "A premium, animated luxury hospitality & restaurant website. Features a 120-item digital menu, cinematic hero video, gallery, and reservation form.",
-    demoUrl: "/demos/anzaar",
-    previewImage: "/demos/anzaar/assets/anzaar-logo.jpg",
-    tags: ["Next.js", "Framer Motion", "Tailwind CSS", "Luxury"],
-    features: [
-      "Cinematic Video Background",
-      "Interactive 120-Item Digital Menu",
-      "Smooth Framer Motion Transitions",
-      "Fully Responsive 5-Page Architecture"
-    ],
-    badge: "New Release"
-  },
-  {
     id: "dilicious-pizza",
     title: "Dilicious Pizza",
     category: "Restaurant & Food",
