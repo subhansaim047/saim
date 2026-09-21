@@ -9,7 +9,7 @@ export default function AnzaarHome() {
     initial: { opacity: 0, y: 40 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: "-100px" },
-    transition: { duration: 0.8, ease: "easeOut" }
+    transition: { duration: 0.8 }
   };
 
   return (
@@ -43,7 +43,7 @@ export default function AnzaarHome() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              transition={{ duration: 1.2 }}
             >
               <span className="font-sans text-[#D8B27A] text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-6 block">
                 ANZAAR | Modern Pakistani Dining
@@ -142,7 +142,7 @@ export default function AnzaarHome() {
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
                   className="group cursor-pointer"
                 >
                   <div className="relative aspect-[4/5] overflow-hidden mb-6 bg-[#2B1C16]">
@@ -189,7 +189,7 @@ export default function AnzaarHome() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
+                transition={{ duration: 0.8, delay: i * 0.2 }}
                 className="text-center"
               >
                 <h3 className="font-serif text-2xl text-[#D8B27A] mb-6">{col.title}</h3>
