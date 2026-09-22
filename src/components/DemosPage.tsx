@@ -24,8 +24,8 @@ const demos: DemoItem[] = [
     title: "ANZAAR Rooftop",
     category: "Restaurant & Luxury Dining",
     description: "A premium 1-to-1 restaurant website showcasing dynamic scroll animations, luxury styling, and fully animated food visualizers.",
-    demoUrl: "/fitbitepizza/index.html",
-    previewImage: "/fitbitepizza/images/banner-bg-03-new.png",
+    demoUrl: "/anzaar/index.html",
+    previewImage: "/anzaar/images/banner-bg-03-new.png",
     tags: ["Restaurant", "Luxury", "GSAP Scroll", "HTML5"],
     features: [
       "Scroll-Triggered Burger Animation",
