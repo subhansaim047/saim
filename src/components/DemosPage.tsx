@@ -20,6 +20,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "frenchyse",
+    title: "Frenchyse Restaurant",
+    category: "Restaurant & Luxury Dining",
+    description: "A premium 1-to-1 restaurant website template clone ready for customization.",
+    demoUrl: "/frenchyse/index.html",
+    previewImage: "/frenchyse/images/banner-bg-03-new.png",
+    tags: ["Restaurant", "Luxury", "GSAP Scroll", "HTML5"],
+    features: [
+      "Scroll-Triggered Burger Animation",
+      "Interactive Food Menus",
+      "Parallax & Animations",
+      "Fully Responsive Design"
+    ],
+    badge: "Template"
+  },
+  {
     id: "anzaar-rooftop",
     title: "ANZAAR Rooftop",
     category: "Restaurant & Luxury Dining",
