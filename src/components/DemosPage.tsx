@@ -20,6 +20,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "pizzabox",
+    title: "Pizza Box",
+    category: "Restaurant & Fast Food",
+    description: "A premium restaurant and fast food website template ready for customization.",
+    demoUrl: "/pizzabox/index.html",
+    previewImage: "/pizzabox/images/banner-bg-03-new.png",
+    tags: ["Restaurant", "Pizza", "GSAP Scroll", "HTML5"],
+    features: [
+      "Scroll-Triggered Burger Animation",
+      "Interactive Food Menus",
+      "Parallax & Animations",
+      "Fully Responsive Design"
+    ],
+    badge: "New Release"
+  },
+  {
     id: "frenchyse",
     title: "Frenchyse Restaurant",
     category: "Restaurant & Luxury Dining",
@@ -413,6 +429,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+
 
 
 
