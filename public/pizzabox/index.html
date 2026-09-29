@@ -5407,8 +5407,25 @@ window.addEventListener('load', function() {
         <div class="elementor-element elementor-widget elementor-widget-html" style="width: 100%; display: block;">
             <div class="elementor-widget-container" style="width: 100%;">
                 <script src="https://elfsightcdn.com/platform.js" async=""></script>
-                <div class="elfsight-app-4d09a611-784d-450d-b59c-7627aaa679fd" data-elfsight-app-lazy="" style="width: 100%;"></div>
-            </div>
+                <div class="elfsight-app-4d09a611-784d-450d-b59c-7627aaa679fd" data-elfsight-app-lazy="" style="width: 100%; min-height: 400px;"></div>
+            
+        <script>
+            window.addEventListener('load', function() {
+                // Ensure ScrollTrigger exists
+                setTimeout(function() {
+                    if (typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined') {
+                        const target = document.querySelector('.elfsight-app-4d09a611-784d-450d-b59c-7627aaa679fd');
+                        if (target && typeof ResizeObserver !== 'undefined') {
+                            const observer = new ResizeObserver(() => {
+                                window.ScrollTrigger.refresh();
+                            });
+                            observer.observe(target);
+                        }
+                    }
+                }, 2000); // Small delay to allow initial scripts to load
+            });
+        </script>
+        </div>
         </div>
         
         
