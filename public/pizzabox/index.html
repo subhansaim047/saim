@@ -1455,217 +1455,224 @@ window.addEventListener('load', function() {
   .pbmit-tabs-heading::-webkit-scrollbar { width: 6px; }
   .pbmit-tabs-heading::-webkit-scrollbar-thumb { background: #e62222; border-radius: 10px; }
   .pbmit-tabs-heading::-webkit-scrollbar-track { background: #f5f5f5; border-radius: 10px; }
-  .pbmit-tab-link h3 { white-space: normal !important; word-wrap: break-word !important; }
+  
+  /* Fix the truncation of text */
+  .pbmit-tab-link span, .pbmit-tab-link h3 { 
+      white-space: normal !important; 
+      word-wrap: break-word !important; 
+      overflow: visible !important; 
+      text-overflow: clip !important;
+  }
 </style>
-<ul class="pbmit-tabs-heading" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 15px; margin: 0 0 40px 0; max-height: 420px; overflow-y: auto; overflow-x: hidden; border: 1px solid #f0f0f0; border-radius: 12px; box-shadow: inset 0 0 10px rgba(0,0,0,0.02);">
+<ul class="pbmit-tabs-heading" style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px; list-style: none; padding: 10px; margin: 0 0 40px 0; max-height: 440px; overflow-y: auto; overflow-x: hidden; border: 1px solid #f0f0f0; border-radius: 12px; box-shadow: inset 0 0 10px rgba(0,0,0,0.02);">
 
-    <li class="pbmit-tab-link pbmit-tab-li-active" data-pbmit-tab="1" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link pbmit-tab-li-active" data-pbmit-tab="1" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-food" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-food" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Starter &amp; Wings</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Starter &amp; Wings</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="2" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="2" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-nachos" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-nachos" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Side Orders &amp; Dips</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Side Orders &amp; Dips</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="3" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="3" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-french-fries" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-french-fries" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Fries, Pasta &amp; Cheese Stick</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Fries, Pasta &amp; Cheese Stick</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-pizza" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-pizza" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Classic &amp; Special Pizzas</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Classic &amp; Special Pizzas</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="5" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="5" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-hamburger" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-hamburger" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Burgers &amp; Sandwiches</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Burgers &amp; Sandwiches</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="6" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="6" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-food-and-restaurant" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-food-and-restaurant" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Chef Special &amp; Steaks</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Chef Special &amp; Steaks</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="7" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="7" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-fast-food-1" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-fast-food-1" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Chicken Broast</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Chicken Broast</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="8" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="8" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-sushi-1" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-sushi-1" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Chinese &amp; Rice</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Chinese &amp; Rice</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="9" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="9" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-food-1" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-food-1" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Handi &amp; Karahi</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Handi &amp; Karahi</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="10" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="10" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-sausage" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-sausage" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">BBQ &amp; Kabab</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">BBQ &amp; Kabab</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="11" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="11" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-sausage" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-sausage" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">BBQ Platters &amp; Lamb</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">BBQ Platters &amp; Lamb</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="12" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="12" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-broccoli" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-broccoli" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Tandoor, Salad &amp; Raita</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Tandoor, Salad &amp; Raita</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="13" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="13" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-discount" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-discount" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Exclusive Deals</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Exclusive Deals</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="14" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="14" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-ice-cream-1" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-ice-cream-1" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Desserts &amp; Ice Cream</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Desserts &amp; Ice Cream</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="15" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="15" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda-1" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda-1" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Shakes &amp; Smoothies</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Shakes &amp; Smoothies</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="16" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="16" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Coffee &amp; Frappe</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Coffee &amp; Frappe</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="17" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="17" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Tea &amp; Bubble Tea</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Tea &amp; Bubble Tea</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="18" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="18" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Mocktails &amp; Slush</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Mocktails &amp; Slush</h3></span>
     </li>
     
-    <li class="pbmit-tab-link " data-pbmit-tab="19" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(20% - 12px); min-width: 140px; min-height: 110px; margin: 0; padding: 10px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
+    <li class="pbmit-tab-link " data-pbmit-tab="19" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(16.666% - 10px); min-width: 100px; min-height: 110px; margin: 0; padding: 10px 5px; border: 1px solid #ffe3e3; border-radius: 10px; background: #fff; cursor: pointer; transition: all 0.3s ease; text-align: center;">
         <div class="pbmit-tabmenu-icon" style="margin-bottom: 8px;">
             <div class="pbmit-tabmenu-icon-wrapper">
                 <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda" style="font-size: 32px; color: #e62222;"></i>
+                    <i class="pbmit-dilicious-icon pbmit-dilicious-icon-soda" style="font-size: 28px; color: #e62222;"></i>
                 </div>
             </div>
         </div>
-        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.3; white-space: normal; word-break: break-word;">Cold Beverages &amp; Soda</h3></span>
+        <span style="width: 100%; white-space: normal;"><h3 class="pbminfotech-tabmenu-heading" style="font-size: 13px; margin: 0; color: #333; line-height: 1.2; white-space: normal !important;">Cold Beverages &amp; Soda</h3></span>
     </li>
     </ul>
 
