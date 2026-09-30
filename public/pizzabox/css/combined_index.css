@@ -5543,27 +5543,24 @@ i[class*=" pbmit-dilicious-icon-"]:before {
 
 
 
+
 /* ELEGANCIA CUSTOM HERO STYLES */
 #custom-elegancia-hero {
     position: relative;
     width: 100%;
-    height: 100vh;
-    min-height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
     background-color: #000;
     overflow: hidden;
-    margin-top: -115px;
+    margin-top: -115px; /* Pull under header */
     z-index: 1;
 }
-.ak-hero {
+.ak-hero.ak-style1 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-height: 700px;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 .ak-hero-bg {
     position: absolute;
@@ -5583,81 +5580,89 @@ i[class*=" pbmit-dilicious-icon-"]:before {
     background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
-.hero-text-section {
+#custom-elegancia-hero .container {
     position: relative;
     z-index: 2;
-    text-align: center;
-    color: #fff;
-    max-width: 900px;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
     padding: 0 15px;
-    margin-top: 80px;
+}
+.hero-text-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.slider-info {
+    text-align: left;
+    max-width: 700px;
 }
 .hero-title {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 .hero-main-title {
     font-family: 'Baskervville', serif !important;
-    font-size: 110px !important;
+    font-size: 90px !important;
     font-weight: 400 !important;
-    line-height: 1 !important;
+    line-height: 1.1 !important;
     margin: 0 !important;
     color: #ffffff !important;
-    text-transform: none !important;
+    text-transform: uppercase !important;
 }
 .hero-main-title-1 {
     font-family: 'Baskervville', serif !important;
     font-style: italic !important;
-    font-size: 100px !important;
+    font-size: 85px !important;
     font-weight: 400 !important;
     color: #FFD28D !important;
-    margin: -25px 0 0 0 !important;
-    text-transform: none !important;
+    margin: 0 !important;
+    text-transform: uppercase !important;
 }
 .hero-sub-text {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 17px !important;
+    font-family: 'Prompt', sans-serif !important;
+    font-size: 18px !important;
     line-height: 1.8 !important;
-    margin: 0 auto !important;
-    max-width: 650px !important;
-    color: #dfdfdf !important;
+    margin: 0 !important;
+    color: #c8c8c8 !important;
+    max-width: 550px;
+}
+.ak-height-30 {
+    height: 30px;
+}
+.ak-height-70 {
+    height: 70px;
 }
 .hero-btn {
     display: inline-block;
-    background: transparent;
-    border: 1px solid #FFD28D !important;
+    text-decoration: none;
+}
+.ak-btn {
+    display: inline-block;
+    background-color: #FFD28D;
     color: #000 !important;
-    background-color: #FFD28D !important;
-    font-family: 'Inter', sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    padding: 16px 42px !important;
+    font-family: 'Prompt', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    padding: 18px 36px !important;
     text-transform: uppercase !important;
-    letter-spacing: 1.5px !important;
-    text-decoration: none !important;
-    transition: all 0.4s ease !important;
-    border-radius: 0 !important;
+    transition: all 0.3s ease !important;
 }
-.hero-btn:hover {
-    background-color: transparent !important;
-    color: #FFD28D !important;
+.ak-btn:hover {
+    background-color: #fff;
+    color: #000 !important;
 }
-.hero-spacing-1 {
-    height: 30px;
-}
-.hero-spacing-2 {
-    height: 45px;
-}
+
 @media (max-width: 991px) {
-    .hero-main-title { font-size: 80px !important; }
-    .hero-main-title-1 { font-size: 70px !important; margin-top: -15px !important; }
+    .hero-main-title { font-size: 60px !important; }
+    .hero-main-title-1 { font-size: 55px !important; }
+    .ak-height-70 { height: 40px; }
 }
 @media (max-width: 767px) {
-    .hero-main-title { font-size: 55px !important; }
-    .hero-main-title-1 { font-size: 50px !important; margin-top: -10px !important; }
-    #custom-elegancia-hero { min-height: 600px; }
-    .hero-spacing-1 { height: 20px; }
-    .hero-spacing-2 { height: 30px; }
-    .hero-btn { padding: 12px 30px !important; font-size: 13px !important; }
+    .hero-main-title { font-size: 45px !important; }
+    .hero-main-title-1 { font-size: 40px !important; }
+    .hero-sub-text { font-size: 15px !important; }
+    .ak-btn { padding: 12px 24px !important; font-size: 15px !important; }
+    .ak-height-70 { height: 30px; }
 }
