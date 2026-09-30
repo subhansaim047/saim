@@ -1,50 +1,108 @@
 const fs = require('fs');
-const menuDataTs = fs.readFileSync('anzaar-menu-temp.ts', 'utf16le');
+const data = require('./menu_data.json');
 
-let str = menuDataTs.replace('export const menuData = ', '');
-let menuData;
-try {
-  menuData = eval(str);
-} catch(e) {
-  console.log('Error evaluating:', e);
-  process.exit(1);
+// Filter out categories that are actually just drinks without prices.
+let validCategories = data.filter(c => c.items && c.items.length > 0);
+
+// Fix cold beverages
+const coldBeverages = data.find(c => c.name === 'Cold Beverages');
+if (coldBeverages) {
+    const drinkNames = ['Soft Drink Tin', 'Soft Drink 1L', 'Soft Drink 1.5L', 'Powerful', 'Water Bottle S', 'Water Bottle L', 'Sting', 'Redbull'];
+    drinkNames.forEach(d => coldBeverages.items.push(d));
+}
+if (!validCategories.find(c => c.name === 'Cold Beverages')) {
+    validCategories.push({
+        name: 'Cold Beverages',
+        items: ['Soft Drink Tin', 'Soft Drink 1L', 'Soft Drink 1.5L', 'Powerful', 'Water Bottle S', 'Water Bottle L', 'Sting', 'Redbull']
+    });
 }
 
-let html = '';
-for (const cat of menuData) {
-  html += '<div style="margin-bottom: 50px;">' +
-    '<h3 style="margin-bottom: 25px; color: #f29f05; font-size: 32px; font-weight: 800; border-bottom: 2px solid #e8e2d8; padding-bottom: 12px; text-transform: uppercase;">' +
-      cat.category +
-    '</h3>' +
-    '<div class="pbmit-element-posts-wrapper row multi-columns-row">';
+const icons = [
+    'pbmit-dilicious-icon-pizza',
+    'pbmit-dilicious-icon-burger',
+    'pbmit-dilicious-icon-hot-dog',
+    'pbmit-dilicious-icon-french-fries',
+    'pbmit-dilicious-icon-taco',
+    'pbmit-dilicious-icon-sushi-1',
+    'pbmit-dilicious-icon-burrito',
+    'pbmit-dilicious-icon-sausage',
+    'pbmit-dilicious-icon-food',
+    'pbmit-dilicious-icon-ice-cream-1'
+];
 
-  for (const item of cat.items) {
-    let subtitle = 'Rs. ' + item.price;
-    if (item.sizes) subtitle = item.sizes + ' - ' + subtitle;
-    
-    html += '<article class="pbmit-ele pbmit-ele-miconheading pbmit-miconheading-style-6 col-md-12">' +
-        '<div class="pbmit-ihbox pbmit-ihbox-style-6">' +
-            '<div class="pbmit-ihbox-contents" style="padding-left: 0; margin-left: 0;">' +
-                '<div class="pbmit-content-inner">' +
-                    '<h2 class="pbmit-element-title">' + item.name + '</h2>' +
-                    '<h4 class="pbmit-element-subtitle" style="font-size: 15px; margin-top: 5px; color: #D8B27A;">' + subtitle + '</h4>' +
-                '</div>' +
-            '</div>' + 
-        '</div>' +
-    '</article>';
-  }
-  
-  html += '</div></div>';
+let tabsHtml = '<ul class="pbmit-tabs-heading" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; padding: 0;">\n';
+let contentHtml = '';
+
+validCategories.forEach((cat, index) => {
+    const tabId = index + 1;
+    const isActive = index === 0 ? 'pbmit-tab-li-active' : '';
+    const isActiveContent = index === 0 ? 'pbmit-tab-active' : '';
+    const icon = icons[index % icons.length];
+
+    tabsHtml += `
+    <li class="pbmit-tab-link ${isActive}" data-pbmit-tab="${tabId}" style="width: calc(20% - 15px); min-width: 140px; margin: 0; padding: 15px; border: 1px solid #eee; border-radius: 10px;">
+        <div class="pbmit-tabmenu-icon" style="margin-bottom: 10px;">
+            <div class="pbmit-tabmenu-icon-wrapper">
+                <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
+                    <i class="pbmit-dilicious-icon ${icon}" style="font-size: 32px;"></i>
+                </div>
+            </div>
+        </div>
+        <span><h3 class="pbminfotech-tabmenu-heading" style="font-size: 14px; margin: 0;">${cat.name}</h3></span>
+    </li>
+    `;
+
+    let itemsHtml = '';
+    cat.items.forEach(itemStr => {
+        const priceIndex = itemStr.lastIndexOf('Rs.');
+        let title = itemStr;
+        let price = '';
+        if (priceIndex !== -1) {
+            title = itemStr.substring(0, priceIndex).trim();
+            price = itemStr.substring(priceIndex).trim();
+        }
+
+        itemsHtml += `
+        <div class="col-md-6">
+            <div class="pbmit-ele-menuitem pbmit-menu-style-1">
+                <div class="pbminfotech-box-content">
+                    <div class="pbminfotech-menuitem-head" style="display: flex; align-items: baseline;">
+                        <h4 class="pbminfotech-menuitem-title" style="flex: 0 1 auto; white-space: normal;">${title}</h4>
+                        <div class="pbminfotech-menuitem-leader" style="flex: 1 1 auto; border-bottom: 2px dotted #ccc; margin: 0 10px;"></div>
+                        <div class="pbminfotech-menuitem-price" style="flex: 0 1 auto; font-weight: bold; color: #ff0000; white-space: nowrap;">${price}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+    });
+
+    contentHtml += `
+    <div class="pbmit-tab-content ${isActiveContent}" data-pbmit-tab="${tabId}" style="${index === 0 ? '' : 'display: none;'}">
+        <div class="row">
+            ${itemsHtml}
+        </div>
+    </div>
+    `;
+});
+
+tabsHtml += '</ul>';
+
+const cheerio = require('cheerio');
+const file = 'public/pizzabox/menu.html';
+const html = fs.readFileSync(file, 'utf8');
+const $ = cheerio.load(html);
+
+$('.pbmit-tabs').html(tabsHtml + '\n' + contentHtml);
+fs.writeFileSync(file, $.html());
+
+// Do the same for index.html if it has .pbmit-tabs
+const fileIndex = 'public/pizzabox/index.html';
+const htmlIndex = fs.readFileSync(fileIndex, 'utf8');
+const $index = cheerio.load(htmlIndex);
+if ($index('.pbmit-tabs').length > 0) {
+    $index('.pbmit-tabs').html(tabsHtml + '\n' + contentHtml);
+    fs.writeFileSync(fileIndex, $index.html());
 }
 
-let menuHtml = fs.readFileSync('public/fitbitepizza/menu.html', 'utf8');
-
-const s = menuHtml.indexOf('<div style="margin-bottom: 50px;">');
-const e = menuHtml.indexOf('<div class="elementor-element elementor-element-d12dfef');
-if (s !== -1 && e !== -1) {
-   const newHtml = menuHtml.substring(0, s) + html + '</div></div></div></div></div></div>' + menuHtml.substring(e);
-   fs.writeFileSync('public/fitbitepizza/menu.html', newHtml, 'utf8');
-   console.log('Menu successfully updated!');
-} else {
-   console.log('Failed');
-}
+console.log('Replaced tabs in menu.html and index.html');

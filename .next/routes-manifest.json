@@ -84,36 +84,6 @@
       "namedRegex": "^/demos(?:/)?$"
     },
     {
-      "page": "/demos/anzaar",
-      "regex": "^/demos/anzaar(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/demos/anzaar(?:/)?$"
-    },
-    {
-      "page": "/demos/anzaar/contact",
-      "regex": "^/demos/anzaar/contact(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/demos/anzaar/contact(?:/)?$"
-    },
-    {
-      "page": "/demos/anzaar/gallery",
-      "regex": "^/demos/anzaar/gallery(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/demos/anzaar/gallery(?:/)?$"
-    },
-    {
-      "page": "/demos/anzaar/menu",
-      "regex": "^/demos/anzaar/menu(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/demos/anzaar/menu(?:/)?$"
-    },
-    {
-      "page": "/demos/anzaar/our-story",
-      "regex": "^/demos/anzaar/our\\-story(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/demos/anzaar/our\\-story(?:/)?$"
-    },
-    {
       "page": "/privacy",
       "regex": "^/privacy(?:/)?$",
       "routeKeys": {},

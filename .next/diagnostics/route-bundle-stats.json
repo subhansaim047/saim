@@ -15,86 +15,12 @@
     ]
   },
   {
-    "route": "/demos/anzaar/menu",
-    "firstLoadUncompressedJsBytes": 609548,
-    "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0h2qsuyze9ds1.js",
-      ".next\\static\\chunks\\03sx9g38oacjc.js",
-      ".next\\static\\chunks\\1tduj1eb0wvr5.js",
-      ".next\\static\\chunks\\3ie578o_ohp2a.js",
-      ".next\\static\\chunks\\310vm2bl3xxpt.js",
-      ".next\\static\\chunks\\2mmpezlrfmbu5.js",
-      ".next\\static\\chunks\\27t_qfc-3_lzs.js",
-      ".next\\static\\chunks\\2e_lrwr-bf1eq.js",
-      ".next\\static\\chunks\\turbopack-17_pvygprndfa.js"
-    ]
-  },
-  {
     "route": "/blog/why-small-business-needs-website-2026",
     "firstLoadUncompressedJsBytes": 609424,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\0h2qsuyze9ds1.js",
       ".next\\static\\chunks\\0krgcd1j5l3l6.js",
       ".next\\static\\chunks\\1tduj1eb0wvr5.js",
-      ".next\\static\\chunks\\310vm2bl3xxpt.js",
-      ".next\\static\\chunks\\2mmpezlrfmbu5.js",
-      ".next\\static\\chunks\\27t_qfc-3_lzs.js",
-      ".next\\static\\chunks\\2e_lrwr-bf1eq.js",
-      ".next\\static\\chunks\\turbopack-17_pvygprndfa.js"
-    ]
-  },
-  {
-    "route": "/demos/anzaar",
-    "firstLoadUncompressedJsBytes": 607716,
-    "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0h2qsuyze9ds1.js",
-      ".next\\static\\chunks\\0ms51bl5tlqgr.js",
-      ".next\\static\\chunks\\1tduj1eb0wvr5.js",
-      ".next\\static\\chunks\\3ie578o_ohp2a.js",
-      ".next\\static\\chunks\\310vm2bl3xxpt.js",
-      ".next\\static\\chunks\\2mmpezlrfmbu5.js",
-      ".next\\static\\chunks\\27t_qfc-3_lzs.js",
-      ".next\\static\\chunks\\2e_lrwr-bf1eq.js",
-      ".next\\static\\chunks\\turbopack-17_pvygprndfa.js"
-    ]
-  },
-  {
-    "route": "/demos/anzaar/contact",
-    "firstLoadUncompressedJsBytes": 603621,
-    "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0h2qsuyze9ds1.js",
-      ".next\\static\\chunks\\0ydn_m8aar6h_.js",
-      ".next\\static\\chunks\\1tduj1eb0wvr5.js",
-      ".next\\static\\chunks\\310vm2bl3xxpt.js",
-      ".next\\static\\chunks\\2mmpezlrfmbu5.js",
-      ".next\\static\\chunks\\27t_qfc-3_lzs.js",
-      ".next\\static\\chunks\\2e_lrwr-bf1eq.js",
-      ".next\\static\\chunks\\turbopack-17_pvygprndfa.js"
-    ]
-  },
-  {
-    "route": "/demos/anzaar/gallery",
-    "firstLoadUncompressedJsBytes": 602985,
-    "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0h2qsuyze9ds1.js",
-      ".next\\static\\chunks\\1po1_7w_x7m-e.js",
-      ".next\\static\\chunks\\1tduj1eb0wvr5.js",
-      ".next\\static\\chunks\\3ie578o_ohp2a.js",
-      ".next\\static\\chunks\\310vm2bl3xxpt.js",
-      ".next\\static\\chunks\\2mmpezlrfmbu5.js",
-      ".next\\static\\chunks\\27t_qfc-3_lzs.js",
-      ".next\\static\\chunks\\2e_lrwr-bf1eq.js",
-      ".next\\static\\chunks\\turbopack-17_pvygprndfa.js"
-    ]
-  },
-  {
-    "route": "/demos/anzaar/our-story",
-    "firstLoadUncompressedJsBytes": 602766,
-    "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0h2qsuyze9ds1.js",
-      ".next\\static\\chunks\\2kyj7nj20-jmm.js",
-      ".next\\static\\chunks\\1tduj1eb0wvr5.js",
-      ".next\\static\\chunks\\3ie578o_ohp2a.js",
       ".next\\static\\chunks\\310vm2bl3xxpt.js",
       ".next\\static\\chunks\\2mmpezlrfmbu5.js",
       ".next\\static\\chunks\\27t_qfc-3_lzs.js",
@@ -174,10 +100,10 @@
   },
   {
     "route": "/demos",
-    "firstLoadUncompressedJsBytes": 487076,
+    "firstLoadUncompressedJsBytes": 486965,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\0h2qsuyze9ds1.js",
-      ".next\\static\\chunks\\2xnzm5749bh7i.js",
+      ".next\\static\\chunks\\1_wzgtc9k-a-b.js",
       ".next\\static\\chunks\\310vm2bl3xxpt.js",
       ".next\\static\\chunks\\2mmpezlrfmbu5.js",
       ".next\\static\\chunks\\27t_qfc-3_lzs.js",

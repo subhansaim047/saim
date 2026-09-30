@@ -90,51 +90,6 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
-// Validate ../../app/demos/anzaar/contact/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/demos/anzaar/contact">> = Specific
-  const handler = {} as typeof import("../../app/demos/anzaar/contact/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../app/demos/anzaar/gallery/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/demos/anzaar/gallery">> = Specific
-  const handler = {} as typeof import("../../app/demos/anzaar/gallery/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../app/demos/anzaar/menu/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/demos/anzaar/menu">> = Specific
-  const handler = {} as typeof import("../../app/demos/anzaar/menu/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../app/demos/anzaar/our-story/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/demos/anzaar/our-story">> = Specific
-  const handler = {} as typeof import("../../app/demos/anzaar/our-story/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../app/demos/anzaar/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/demos/anzaar">> = Specific
-  const handler = {} as typeof import("../../app/demos/anzaar/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
 // Validate ../../app/demos/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/demos">> = Specific
@@ -194,15 +149,6 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 
 
 
-
-// Validate ../../app/demos/anzaar/layout.tsx
-{
-  type __IsExpected<Specific extends LayoutConfig<"/demos/anzaar">> = Specific
-  const handler = {} as typeof import("../../app/demos/anzaar/layout.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
 
 // Validate ../../app/layout.tsx
 {
