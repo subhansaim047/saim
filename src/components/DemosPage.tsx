@@ -20,6 +20,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "cottage",
+    title: "Cottage",
+    category: "Restaurant & Fast Food",
+    description: "A custom variant of the Pizza Box template named Cottage.",
+    demoUrl: "/cottage/index.html",
+    previewImage: "/cottage/images/banner-bg-03-new.png",
+    tags: ["Restaurant", "Pizza", "GSAP Scroll", "HTML5"],
+    features: [
+      "Scroll-Triggered Burger Animation",
+      "Interactive Food Menus",
+      "Parallax & Animations",
+      "Fully Responsive Design"
+    ],
+    badge: "New Clone"
+  },
+  {
     id: "pizzabox",
     title: "Pizza Box",
     category: "Restaurant & Fast Food",
@@ -429,6 +445,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+
 
 
 
