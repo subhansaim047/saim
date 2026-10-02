@@ -32,8 +32,7 @@ const demos: DemoItem[] = [
       "Interactive Food Menus",
       "Parallax & Animations",
       "Reservation System Integration"
-    ],
-    status: "Live"
+    ]
   },
   {
     id: "cottage",
@@ -461,6 +460,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+
 
 
 
