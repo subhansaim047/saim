@@ -20,6 +20,20 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "pomodoro",
+    title: "Pomodoro",
+    category: "Restaurant & Fast Food",
+    description: "A custom variant of the Eats n Bites template named Pomodoro.",
+    demoUrl: "/pomodoro/index.html",
+    previewImage: "/pomodoro/images/banner-bg-03-new.png",
+    tags: ["Restaurant", "Pizza", "Fast Food"],
+    features: [
+      "Responsive Design",
+      "Tabbed Menu",
+      "Google Maps Integration"
+    ]
+  },
+  {
     id: "eats-n-bites",
     title: "Eats n Bites",
     category: "Restaurant & Fast Food",
@@ -460,6 +474,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+
 
 
 
