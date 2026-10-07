@@ -1101,7 +1101,11 @@
                     
                     // We want the animation to start shortly after it enters the screen (e.g., progress 0.2)
                     // And fully explode when it's in the middle/upper part of the screen (e.g., progress 0.8)
-                    let animProgress = (progress - 0.1) / 0.6;
+                    
+                    // Start when element is 30% into view (progress = 0.3)
+                    // Finish when element is 80% up the screen (progress = 0.8)
+                    let animProgress = (progress - 0.3) / 0.5;
+
                     
                     // Clamp between 0 and 1
                     if (animProgress < 0) animProgress = 0;
