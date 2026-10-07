@@ -25,7 +25,7 @@ const demos: DemoItem[] = [
     category: "Restaurant & Fast Food",
     description: "A premium, fully scraped variant of the Royal Fare template.",
     demoUrl: "/burger-garage/index.html",
-    previewImage: "/burger-garage/images/logo.png",
+    previewImage: "/burger-garage/assets/media/logo.png",
     tags: ["Restaurant", "Burger", "HTML5"],
     features: [
       "Exact perfect clone",
@@ -432,6 +432,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+
 
 
 
