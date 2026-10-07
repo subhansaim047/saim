@@ -2506,26 +2506,26 @@ textarea::placeholder,
 }
 #ui-header .ui-logo img {
   position: absolute;
-  top: 24px;
+  top: 10px;
   margin-right: auto;
   line-height: 1;
   pointer-events: initial;
   z-index: 9;
-  max-height: 64px; /* You may need to change the img height to match your logo type! */
+  max-height: 110px; /* You may need to change the img height to match your logo type! */
 }
 @media (max-width: 1399px) {
   #ui-header .ui-logo img {
-    max-height: 56px;
+    max-height: 90px;
   }
 }
 @media (max-width: 1024px) {
   #ui-header .ui-logo img {
-    max-height: 48px;
+    max-height: 80px;
   }
 }
 @media (max-width: 575px) {
   #ui-header .ui-logo img {
-    max-height: 40px;
+    max-height: 70px;
   }
 }
 #ui-header .ui-logo .ui-logo-light {
@@ -5984,4 +5984,10 @@ body.ui-search-open .scrollbar-track {
 }
 
 /*# sourceMappingURL=app.css.map */
+
+
+footer img[src*='logo'] {
+  max-height: 110px;
+  width: auto;
+}
 
