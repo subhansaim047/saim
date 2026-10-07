@@ -5995,23 +5995,36 @@ footer img[src*='logo'] {
 /* Urdu Tagline Styles */
 .urdu-tagline {
     font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Nafees Nastaleeq', 'Arial', sans-serif !important;
-    font-size: 52px !important;
+    font-size: 56px !important;
     font-weight: 900 !important;
     color: #FFDE00 !important;
-    -webkit-text-stroke: 2px #000 !important;
-    text-shadow: 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000, 6px 6px 10px rgba(0,0,0,0.5) !important;
-    line-height: 1.6 !important;
-    margin-top: 15px !important;
+    -webkit-text-stroke: 1.5px #000 !important;
+    text-shadow: 
+        1px 1px 0 #000, 
+        2px 2px 0 #000, 
+        3px 3px 0 #000, 
+        4px 4px 0 #000, 
+        5px 5px 0 #000, 
+        6px 6px 0 #000, 
+        7px 7px 0 #000, 
+        8px 8px 15px rgba(0,0,0,0.4) !important;
+    line-height: 1.4 !important;
+    margin-top: 5px !important;
     margin-bottom: 30px !important;
+    transform: translateX(-40px) rotate(-3deg) !important; /* Shifting left and giving a stylish tilt */
+    display: inline-block !important; /* Required for transform */
+    direction: rtl !important;
 }
 
 @media (max-width: 991px) {
     .urdu-tagline {
-        font-size: 42px !important;
+        font-size: 46px !important;
+        transform: translateX(-20px) rotate(-3deg) !important;
     }
 }
 @media (max-width: 767px) {
     .urdu-tagline {
-        font-size: 36px !important;
+        font-size: 38px !important;
+        transform: translateX(-10px) rotate(-2deg) !important;
     }
 }
