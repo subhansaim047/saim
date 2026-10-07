@@ -6033,14 +6033,21 @@ footer img[src*='logo'] {
 .custom-hero-title {
     font-family: 'Arial Rounded MT Bold', 'Fredoka One', 'Nunito', 'Varela Round', sans-serif !important;
     text-transform: uppercase !important;
-    color: #FF3B3B !important;
-    -webkit-text-stroke: 1px #B22222 !important;
+    color: #111 !important;
+    -webkit-text-stroke: 1px #fff !important;
     text-shadow: 
-        0px 2px 0px #CC2222,
-        0px 4px 0px #A01010,
-        0px 6px 0px #800000,
-        0px 8px 8px rgba(0,0,0,0.3) !important;
+        0px 2px 0px #888,
+        0px 4px 0px #555,
+        0px 6px 0px #222,
+        0px 8px 8px rgba(0,0,0,0.4) !important;
     font-weight: 900 !important;
     letter-spacing: 2px !important;
     line-height: 1.1 !important;
+    animation: titleFloat 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
 }
