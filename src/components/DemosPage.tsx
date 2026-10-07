@@ -19,67 +19,10 @@ interface DemoItem {
 }
 
 const demos: DemoItem[] = [
-  {
-    id: "pomodoro",
-    title: "Pomodoro",
-    category: "Restaurant & Fast Food",
-    description: "A custom variant of the Eats n Bites template named Pomodoro.",
-    demoUrl: "/pomodoro/index.html",
-    previewImage: "/pomodoro/images/banner-bg-03-new.png",
-    tags: ["Restaurant", "Pizza", "Fast Food"],
-    features: [
-      "Responsive Design",
-      "Tabbed Menu",
-      "Google Maps Integration"
-    ]
-  },
-  {
-    id: "eats-n-bites",
-    title: "Eats n Bites",
-    category: "Restaurant & Fast Food",
-    description: "A custom variant of the Pizza Box template named Eats n Bites.",
-    demoUrl: "/eats-n-bites/index.html",
-    previewImage: "/eats-n-bites/images/banner-bg-03-new.png",
-    tags: ["Restaurant", "Pizza", "GSAP Scroll", "HTML5"],
-    features: [
-      "Scroll-Triggered Burger Animation",
-      "Interactive Food Menus",
-      "Parallax & Animations",
-      "Reservation System Integration"
-    ]
-  },
-  {
-    id: "cottage",
-    title: "Cottage",
-    category: "Restaurant & Fast Food",
-    description: "A custom variant of the Pizza Box template named Cottage.",
-    demoUrl: "/cottage/index.html",
-    previewImage: "/cottage/images/banner-bg-03-new.png",
-    tags: ["Restaurant", "Pizza", "GSAP Scroll", "HTML5"],
-    features: [
-      "Scroll-Triggered Burger Animation",
-      "Interactive Food Menus",
-      "Parallax & Animations",
-      "Fully Responsive Design"
-    ],
-    badge: "New Clone"
-  },
-  {
-    id: "pizzabox",
-    title: "Pizza Box",
-    category: "Restaurant & Fast Food",
-    description: "A premium restaurant and fast food website template ready for customization.",
-    demoUrl: "/pizzabox/index.html",
-    previewImage: "/pizzabox/images/banner-bg-03-new.png",
-    tags: ["Restaurant", "Pizza", "GSAP Scroll", "HTML5"],
-    features: [
-      "Scroll-Triggered Burger Animation",
-      "Interactive Food Menus",
-      "Parallax & Animations",
-      "Fully Responsive Design"
-    ],
-    badge: "New Release"
-  },
+  
+  
+  
+  
   {
     id: "frenchyse",
     title: "Frenchyse Restaurant",
@@ -474,6 +417,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+
 
 
 

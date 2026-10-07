@@ -1,0 +1,398 @@
+[
+  {
+    "name": "Starter & Wings",
+    "items": [
+      "Fish�n�Chips 3 Pcs Rs. 1350",
+      "Finger Fish 6 Pcs Rs. 1450",
+      "Potato Stick B.B.Q B.B.Q Creamy Garlic Supreme Per Piece Rs. 250",
+      "Nuggets 5 Pcs Rs. 380 10 Pcs Rs. 690",
+      "Hotshot 15 Pcs Rs. 520",
+      "Chicorn Fries 5 Pcs Rs. 390 10 Pcs Rs. 740",
+      "Chicken Donut 5 Pcs Rs. 380 10 Pcs Rs. 700",
+      "Fries Regular Rs. 210 Large Rs. 290",
+      "Aussie Fries Rs. 650",
+      "Peri Peri Fries Rs. 650",
+      "Russian Salad Regular Rs. 300 Large Rs. 530",
+      "Cheesy Stick Rs. 330",
+      "Buffalo Wings 6 Pcs Rs. 580",
+      "Honey BBQ Wings 6 Pcs Rs. 580",
+      "Hot Wings 5 Pcs Rs. 390 10 Pcs Rs. 740",
+      "Dynamite Wings 6 Pcs Rs. 580",
+      "Sweet Chilli Wings 6 Pcs Rs. 580",
+      "Spicy Mayo Wings 6 Pcs Rs. 580",
+      "Smoked Wings 5 Pcs Rs. 390 10 Pcs Rs. 740"
+    ]
+  },
+  {
+    "name": "Side Orders & Dips",
+    "items": [
+      "Chicken Shawarma Rs. 330",
+      "Zinger Shawarma Rs. 410",
+      "Zinger Paratha Rs. 410",
+      "Kabab Pratha Rs. 480",
+      "Chicken Paratha Rs. 380",
+      "Chicken Cheese Paratha Rs. 480",
+      "Arabic Shawarma Rs. 550",
+      "1 Chicken Piece Rs. 310",
+      "2 Chicken Pieces Rs. 600",
+      "5 Chicken Pieces Rs. 1500",
+      "10 Chicken Pieces Rs. 2900",
+      "Chicken Pakora Rs. 750",
+      "Crispy Chicken Wrap Rs. 600",
+      "Grilled Chicken Wrap Rs. 600",
+      "Mexican Chicken Wrap Rs. 600",
+      "BBQ Dip Rs. 100",
+      "Mayo Dip Rs. 100",
+      "Peri Peri Dip Rs. 100",
+      "Sriracha Mayo Dip Rs. 120"
+    ]
+  },
+  {
+    "name": "Fries, Pasta & Cheese Stick",
+    "items": [
+      "BBQ Loaded Fries Rs. 770",
+      "Peri Peri Loaded Fries Rs. 780",
+      "Hot�n�Spicy Pasta Rs. 830",
+      "Italian Pasta Rs. 930",
+      "Lasagna Rs. 1050",
+      "Alfredo Pasta Rs. 830",
+      "Mac & Cheese Pasta Rs. 800",
+      "Cheese Stick Regular 8\" Rs. 880 Medium 10\" Rs. 1480 Large 12\" Rs. 1950 Family 14\" Rs. 2500 XXL 16\" Rs. 2950"
+    ]
+  },
+  {
+    "name": "Classic & Special Pizzas",
+    "items": [
+      "Chicken Tikka Pizza Small 8\" Rs. 780 Medium 10\" Rs. 1330 Large 12\" Rs. 1750 Family 14\" Rs. 2200 XXL 16\" Rs. 2650",
+      "Chicken Fajita Pizza Small 8\" Rs. 780 Medium 10\" Rs. 1330 Large 12\" Rs. 1750 Family 14\" Rs. 2200 XXL 16\" Rs. 2650",
+      "Chicken Tandoori Pizza Small 8\" Rs. 780 Medium 10\" Rs. 1330 Large 12\" Rs. 1750 Family 14\" Rs. 2200 XXL 16\" Rs. 2650",
+      "Chicken Hot�n�Spicy Pizza Small 8\" Rs. 780 Medium 10\" Rs. 1330 Large 12\" Rs. 1750 Family 14\" Rs. 2200 XXL 16\" Rs. 2650",
+      "Chicken Supreme Pizza Small 8\" Rs. 780 Medium 10\" Rs. 1330 Large 12\" Rs. 1750 Family 14\" Rs. 2200 XXL 16\" Rs. 2650",
+      "Vegetable Pizza Small 8\" Rs. 780 Medium 10\" Rs. 1330 Large 12\" Rs. 1750 Family 14\" Rs. 2200 XXL 16\" Rs. 2650",
+      "Chicken Mexican Pizza Small 8\" Rs. 780 Medium 10\" Rs. 1330 Large 12\" Rs. 1750 Family 14\" Rs. 2200 XXL 16\" Rs. 2650",
+      "Smoked Pizza Small 8\" Rs. 780 Medium 10\" Rs. 1330 Large 12\" Rs. 1750 Family 14\" Rs. 2200 XXL 16\" Rs. 2650",
+      "Chicken Malai Pizza Small 8\" Rs. 880 Medium 10\" Rs. 1480 Large 12\" Rs. 1950 Family 14\" Rs. 2500 XXL 16\" Rs. 2950",
+      "Doner Malai Pizza Small 8\" Rs. 880 Medium 10\" Rs. 1480 Large 12\" Rs. 1950 Family 14\" Rs. 2500 XXL 16\" Rs. 2950",
+      "Chicken Crust Pizza Small 8\" Rs. 880 Medium 10\" Rs. 1480 Large 12\" Rs. 1950 Family 14\" Rs. 2500 XXL 16\" Rs. 2950",
+      "Doner Pizza Small 8\" Rs. 880 Medium 10\" Rs. 1480 Large 12\" Rs. 1950 Family 14\" Rs. 2500 XXL 16\" Rs. 2950",
+      "Kababish Pizza Small 8\" Rs. 880 Medium 10\" Rs. 1480 Large 12\" Rs. 1950 Family 14\" Rs. 2500 XXL 16\" Rs. 2950",
+      "Crown Crust Pizza Small 8\" Rs. 880 Medium 10\" Rs. 1480 Large 12\" Rs. 1950 Family 14\" Rs. 2500 XXL 16\" Rs. 2950",
+      "Peri Peri Pizza Small 8\" Rs. 880 Medium 10\" Rs. 1480 Large 12\" Rs. 1950 Family 14\" Rs. 2500 XXL 16\" Rs. 2950"
+    ]
+  },
+  {
+    "name": "Burgers & Sandwiches",
+    "items": [
+      "Kids Burger Rs. 440",
+      "Chicken Chapli Burger Rs. 450",
+      "Chicken Spicy Burger Rs. 470",
+      "Zinger Burger Rs. 520",
+      "Thunder Burger Rs. 530",
+      "Sizzler Burger Rs. 580",
+      "Thunder Extreme Single Rs. 870 Meal Rs. 1170",
+      "Zinger Stacker Single Rs. 920 Meal Rs. 1210",
+      "Box Mighty Single Rs. 740 Meal Rs. 1040",
+      "Beef Smash Burger Rs. 850",
+      "Fillet Steak Burger Rs. 650",
+      "Box Star Burger Rs. 850",
+      "Lava Burger Rs. 1190",
+      "Grilled Chicken Burger Rs. 650",
+      "Pizza Box Special Sandwich Rs. 550",
+      "BBQ Sandwich Rs. 500",
+      "Peri Peri Sandwich Rs. 500",
+      "Smoked Sandwich Rs. 500",
+      "Club Sandwich Rs. 650",
+      "Fillet Steak Sandwich Rs. 550",
+      "Fajita Chicken Sandwich Rs. 550"
+    ]
+  },
+  {
+    "name": "Chef Special & Steaks",
+    "items": [
+      "Tarragon Chicken Rs. 1450",
+      "Chicken Cordon Bleu Rs. 1350",
+      "Swiss Polo Rs. 1350",
+      "Moroccan Chicken Rs. 1450",
+      "Stuffed Chicken Rs. 1450",
+      "Chicken Parmesan Rs. 1150",
+      "Black Pepper Steak Chicken Rs. 1750 Beef Rs. 2150",
+      "Mexican Steak Chicken Rs. 1750 Beef Rs. 2150",
+      "White Mushroom Steak Chicken Rs. 1750 Beef Rs. 2150",
+      "Jalapeno Steak Chicken Rs. 1800 Beef Rs. 2200",
+      "Whisky River Steak Chicken Rs. 1800 Beef Rs. 2200",
+      "Wild Mushroom Steak Chicken Rs. 1750 Beef Rs. 2150"
+    ]
+  },
+  {
+    "name": "Chicken Broast",
+    "items": [
+      "Quarter Spicy Broast 1 Chicken Leg 1 Chicken Thigh 1 Bun 1 Garlic Dip Served with crispy fries Rs. 780",
+      "Half Spicy Broast 2 Chicken Legs 2 Chicken Thighs 1 Bun 1 Garlic Dip 1 Large Fiery Served with crispy fries Rs. 1380",
+      "Full Spicy Broast 4 Chicken Legs 4 Chicken Thighs 2 Buns 2 Garlic Dip 2 Fiery Dip Served with crispy fries Rs. 2690",
+      "Supreme Family 8 Chicken Legs 8 Chicken Thighs 4 Buns 4 Garlic Dip 4 Fiery Dip Served with crispy fries Rs. 5140",
+      "Grand Fiesta 16 Chicken Legs 16 Chicken Thighs 8 Buns 8 Garlic Dip 8 Fiery Dip Served with crispy fries Rs. 9780"
+    ]
+  },
+  {
+    "name": "Chinese & Rice",
+    "items": [
+      "Singapuri Chicken Rs. 1050",
+      "Three Leaves Chicken Rs. 950",
+      "Oyster Chicken Rs. 1050",
+      "Kung Pao Chicken Rs. 950",
+      "Crispy Korean Chicken Rs. 1150",
+      "Chicken Almond Rs. 1150",
+      "Beef Chilli Dry Rs. 1699",
+      "Chicken Shashlik Rs. 1095",
+      "Chicken Chilli Dry Rs. 1150",
+      "Chicken Manchurian Rs. 1095",
+      "Chicken Cashewnut Rs. 1150",
+      "Chicken Chow-mein Rs. 1099",
+      "Vegetable Chow-mein Rs. 899",
+      "Special Rice Rs. 950",
+      "Egg Fried Rice Rs. 700",
+      "Masala Rice Rs. 750",
+      "Vegetable Rice Rs. 650",
+      "Chicken Fried Rice Rs. 750",
+      "Garlic Fried Rice Rs. 650"
+    ]
+  },
+  {
+    "name": "Handi & Karahi",
+    "items": [
+      "Mutton Karahi FULL Rs. 4500 HALF Rs. 2500",
+      "Mutton Shinwari Karahi FULL Rs. 4500 HALF Rs. 2500",
+      "Chicken Karahi FULL Rs. 2100 HALF Rs. 1100",
+      "Chicken White Karahi FULL Rs. 2450 HALF Rs. 1300",
+      "Chicken Achari Karahi FULL Rs. 2250 HALF Rs. 1200",
+      "Chicken Angara Karahi FULL Rs. 2250 HALF Rs. 1200",
+      "Chicken Handi FULL Rs. 1490",
+      "Mughlai Handi FULL Rs. 1570",
+      "Achari Handi FULL Rs. 1530",
+      "Jalfrezi Handi FULL Rs. 1580",
+      "Bombay Chicken FULL Rs. 1670",
+      "Green Chilli Lemon Handi FULL Rs. 1490",
+      "Ranjha Gosht (Mutton) FULL Rs. 5000 HALF Rs. 3000",
+      "Desi Murgh Karahi FULL Rs. 4500 HALF Rs. 2500"
+    ]
+  },
+  {
+    "name": "BBQ & Kabab",
+    "items": [
+      "Shish Tawook 5 Pcs Rs. 950 10 Pcs Rs. 1800",
+      "Malai Boti 5 Pcs Rs. 950 10 Pcs Rs. 1800",
+      "Sikandri Tikka 3 Pcs Rs. 990 6 Pcs Rs. 1900",
+      "Rajastani Tikka 3 Pcs Rs. 950 6 Pcs Rs. 1800",
+      "Bihari Boti 10 Pcs Rs. 1650",
+      "Kastoori Boti 10 Pcs Rs. 1650",
+      "Tikka Boti 10 Pcs Rs. 1300",
+      "Tikka Piece 1 Pc Rs. 600",
+      "Tandoori Piece 1 Pc Rs. 600",
+      "Chullu Kabab 3 Pcs Rs. 1000",
+      "Reshmi Kabab 2 Pcs Rs. 650 4 Pcs Rs. 1150",
+      "Turkish Kabab 2 Pcs Rs. 650 4 Pcs Rs. 1200",
+      "Cheese Kabab 2 Pcs Rs. 650 4 Pcs Rs. 1250",
+      "Gola Kabab 4 Pcs Rs. 650 8 Pcs Rs. 1250",
+      "Seekh Kabab 2 Pcs Rs. 550 4 Pcs Rs. 1050",
+      "Mutton Kabab 2 Pcs Rs. 750 4 Pcs Rs. 1350",
+      "Mutton Gola Kabab 4 Pcs Rs. 750 8 Pcs Rs. 1350"
+    ]
+  },
+  {
+    "name": "BBQ Platters & Lamb",
+    "items": [
+      "Platter for 2 Persons Chicken Tikka Piece 1 Pc Malai Boti 4 Pcs Kastoori Boti 4 Pcs Chicken Gola Kabab 4 Pcs Chicken Seekh Kabab 2 Pcs Rs. 3300",
+      "Platter for 4 Persons Chicken Tikka Piece 2 Pcs Malai Boti 4 Pcs Shish Tawook 4 Pcs Chicken Gola Kabab 4 Pcs Turkish Kabab 4 Pcs Reshmi Kabab 4 Pcs Sikandari Tikka 4 Pcs Rs. 6700",
+      "Platter for 4 Persons Chicken Handi 1 No Malai Boti 8 Pcs Tikka Boti 8 Pcs Chicken Kabab 2 Pcs Reshmi Kabab 2 Pcs Fresh Salad Rs. 6900",
+      "Special Platter for 4 Persons Mutton Kabab 4 Pcs Chicken Tikka Piece 2 Pcs Chicken Cheese Kabab 2 Pcs Turkish Kabab 2 Pcs Bihari Boti 4 Pcs Malai Boti 4 Pcs Sikandari Tikka 4 Pcs Rs. 7400",
+      "Platter for 4 Persons Mutton Raan 1 Kg Mutton Kabab 2 Pcs Reshmi Kabab 2 Pcs Turkish Kabab 2 Pcs Tikka Boti 8 Pcs Malai Boti 4 Pcs Shish Tawook 4 Pcs Kabli Pulao Rs. 9690",
+      "Platter for 6 Persons Al-Faham Chargha 1 Pc Mutton Kabab 4 Pcs Gola Kabab 6 Pcs Turkish Kabab 3 Pcs Bihari Boti 6 Pcs Kastoori Boti 6 Pcs Malai Boti 6 Pcs Sikandari Tikka 6 Pcs Rs. 10300",
+      "Whole Lamb with Rice (Per KG) Rs. 4500"
+    ]
+  },
+  {
+    "name": "Tandoor, Salad & Raita",
+    "items": [
+      "Roghni Naan Rs. 100",
+      "Garlic Naan Rs. 120",
+      "Kalwanji Naan Rs. 100",
+      "Simple Naan Rs. 70",
+      "Roti Per Head Rs. 90",
+      "Fresh Veg. Salad Rs. 250",
+      "Mint/Zeera Raita Rs. 120"
+    ]
+  },
+  {
+    "name": "Exclusive Deals",
+    "items": [
+      "P1 1 Small Pizza 1 Reg. Salad 1 Reg. Drink Rs.1170",
+      "P2 1 Medium Pizza 1 Reg. Salad 2 Reg. Drinks Rs.1840",
+      "P3 1 Medium Pizza 5 Hot Wings 2 Reg. Drinks Rs.1950",
+      "P4 1 Large Pizza 5 Nuggets 1.5L Drink Rs.2290",
+      "P5 2 Medium Pizza 10 Hot Wings 1.5L Drink Rs.3590",
+      "P6 1 Large Pizza 1 Medium Pizza 1.5L Drink Rs.3270",
+      "P7 1 Family Pizza 3 Chicken Burger 1 Reg. Fries 1.5L Drinks Rs.3840",
+      "P8 2 Large Pizza 1 Large Salad 10 Pcs. Nuggets 1.5L Drinks Rs.4720",
+      "P9 2 Family Pizza 3 Zinger Burger 1.5L Drink Rs.5990",
+      "P10 2 Family Pizza 10 Hot Wings 4 Zinger Burgers 30 Hotshots 2 1.5L Drinks Rs.8390",
+      "P11 3 XXL Pizza 20 Hot Wings 2 Large Fries 2 1.5L Drink Rs.9920",
+      "W2 2 XXL Pizza 10 Hot Wings 2 Reg. Fries 2 1.5 L Drink Rs.6810",
+      "B1 1 Chapli Burger 1 Reg. Fries 1 Reg. Drink Rs.770",
+      "B2 1 Thunder Burger 1 Reg. Fries 1 Reg. Drink Rs.840",
+      "B3 1 Sizzler Burger 1 Reg. Fries 1 Reg. Drink Rs.910",
+      "B4 1 Zinger Burger 1 Reg. Fries 1 Reg. Drink Rs.830",
+      "B5 1 Zinger Burger 1 Chicken Piece 1 Reg. Drink Rs.930",
+      "B6 1 Spicy Burger 1 Reg. Fries 1 Reg. Drink Rs.790",
+      "B7 2 Zinger Burgers 1 Reg. Fries 2 Reg. Drinks Rs.1510",
+      "B8 2 Zinger Burgers 1 Reg. Fries 5 Pcs. Nuggets 2 Reg. Drinks Rs.1820",
+      "B11 4 Zinger Burgers 1 Reg. Fries 5 Pcs. Nuggets 1.5L Drink Rs.2810",
+      "C1 15 Pcs. Hot Shots 1 Reg. Fries 1 Reg. Drink Rs.850",
+      "C2 10 Pcs. Nuggets 1 Reg. Salad 1 Reg. Drink Rs.1030",
+      "C3 3 Pcs. Chicken 1 Reg. Fries 1 Reg. Drink Rs.1190",
+      "C4 10 Pcs. Hot Wings 1 Reg. Fries 1 Reg. Drink Rs.1070",
+      "C5 1 Zinger Pratha 10 Pcs. Hot Wings 1 Reg. Drink Rs.1270",
+      "C6 2 Zinger Prathas 10 Pcs. Nuggets 1 Reg. Fries 2 Reg. Drinks Rs.2020",
+      "W1 6 Zinger Burgers 10 Pcs. Nuggets 1 Reg. Fries 1.5L Drink Rs.3870",
+      "B9 Chicken Burger | Reg Fries | Drink Rs. 720",
+      "B10 5 Nuggets | Reg Fries | Drink Rs. 620"
+    ]
+  },
+  {
+    "name": "Desserts & Ice Cream",
+    "items": [
+      "Turkish Kunafa Rs. 900",
+      "Molten Lava with Ice-cream Rs. 450",
+      "Chocolate brownie with vanila ice-cream Rs. 380",
+      "Single Scoops Rs. 190",
+      "2 Scoops Rs. 320",
+      "3 Scoops Rs. 450",
+      "3 Scoops Special Rs. 550"
+    ]
+  },
+  {
+    "name": "Shakes & Smoothies",
+    "items": [
+      "PB Special Pehalwani Shake Rs. 900",
+      "PB Special Shake Rs. 800",
+      "Dates Kulfa Shake Rs. 800",
+      "Anjeer Dates Shake Rs. 800",
+      "Kitkat Shake Rs. 700",
+      "Bounty Shake Rs. 700",
+      "Snickers Shake Rs. 700",
+      "Peanut Caramel Shake Rs. 700",
+      "Oreo Shake Rs. 700",
+      "Nutella Shake Rs. 700",
+      "Lotus Shake Rs. 700",
+      "Candy Shake Rs. 700",
+      "Chocolate Shake Rs. 700",
+      "Pineapple Shake Rs. 600",
+      "Mango Shake Rs. 600",
+      "Strawberry Shake Rs. 600",
+      "Coconut Shake Rs. 600",
+      "Vanila Shake Rs. 600",
+      "Tutti Fruiti Shake Rs. 600",
+      "Kulfa Shake Rs. 600",
+      "Caramel Crunch Shake Rs. 600",
+      "Pistachio Shake Rs. 600",
+      "Blue Berry Smoothie Rs. 650",
+      "Mango Smoothie Rs. 650",
+      "Strawberry Smoothie Rs. 650",
+      "Kiwi Smoothie Rs. 650"
+    ]
+  },
+  {
+    "name": "Coffee & Frappe",
+    "items": [
+      "Cappuccino Rs. 550",
+      "Cafe Latte Rs. 500",
+      "Hot Chocolate Rs. 500",
+      "Caramel Latte Rs. 550",
+      "Hazelnut Latte Rs. 550",
+      "Irish Cappuccino Rs. 550",
+      "Cafe Mocha Rs. 550",
+      "Americano Rs. 300",
+      "Flavour Cappuccino Rs. 550",
+      "Espresso Single Shot Rs. 199",
+      "Espresso Double Shot Rs. 350",
+      "Mocha Cold Coffee Rs. 650",
+      "Caramel Cold Coffee Rs. 650",
+      "Vanilla Cold Coffee Rs. 650",
+      "Hazelnut Cold Coffee Rs. 650",
+      "Cookies & Cream Rs. 650",
+      "Hazelnut Latte Rs. 550",
+      "Plain Cappuccino Rs. 550",
+      "Caramel Rs. 550",
+      "Vanilla Rs. 550",
+      "Ice Latte Rs. 550",
+      "Mocha Rs. 600",
+      "Moca Rs. 600"
+    ]
+  },
+  {
+    "name": "Tea & Bubble Tea",
+    "items": [
+      "Simple Tea Rs. 200",
+      "Karak Chaye Rs. 220",
+      "Cardamom Tea Rs. 350",
+      "Kashmiri Tea Rs. 350",
+      "Green Tea Rs. 150",
+      "Peach Rs. 500",
+      "Mango Rs. 500",
+      "Blueberry Rs. 650",
+      "Green Apple Rs. 650",
+      "Strawberry Rs. 650"
+    ]
+  },
+  {
+    "name": "Mocktails & Slush",
+    "items": [
+      "Pina Colada Rs. 550",
+      "Blue Colada Rs. 550",
+      "Mexican Sunrise Rs. 550",
+      "Peach Rs. 580",
+      "Mango Rs. 580",
+      "Red Grapes Rs. 580",
+      "Blue Berry Rs. 580",
+      "Lemon & Ginger Rs. 580",
+      "Passion Fruit Rs. 580",
+      "Strawberry Rs. 580",
+      "Electric Mint Rs. 400",
+      "Mint Margarita Rs. 400",
+      "Strawberry Margrita Rs. 400",
+      "Blue Slush Rs. 400",
+      "Strawberry Slush Rs. 400",
+      "Blue Berry Slush Rs. 400",
+      "Lemon Ginger Slush Rs. 400",
+      "Fresh Lime Rs. 400",
+      "Blue Lagoon Rs. 450",
+      "Strawberry Lagoon Rs. 450",
+      "Passion Lagoon Rs. 450",
+      "Strawberry Rs. 550",
+      "Mango Rs. 550",
+      "Peach Rs. 550",
+      "Blueberry Rs. 550",
+      "Kiwi Rs. 550"
+    ]
+  },
+  {
+    "name": "Cold Beverages & Soda",
+    "items": [
+      "Soft Drink Tin",
+      "Soft Drink 1L",
+      "Soft Drink 1.5L",
+      "Powerful",
+      "Water Bottle S",
+      "Water Bottle L",
+      "Sting",
+      "Redbull",
+      "Peach Soda Rs. 450",
+      "Mango Soda Rs. 450",
+      "Blood Orange Soda Rs. 450",
+      "Passion Fruit Soda Rs. 450",
+      "Starwberry Soda Rs. 450",
+      "Blueberry Soda Rs. 450",
+      "Kiwi Soda Rs. 450",
+      "Mint Soda Rs. 450"
+    ]
+  }
+]
