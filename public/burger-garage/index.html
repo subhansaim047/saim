@@ -1079,6 +1079,7 @@
 
     
 
+    
     <!-- Burger Scroll Animation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -1098,9 +1099,10 @@
                     if (progress > 1) progress = 1;
                     
                     parts.forEach((part, index) => {
-                        // index 0 = top bun, needs negative Y to go UP.
-                        // index 7 = bottom bun, needs positive Y to go DOWN.
-                        const factor = (3.5 - index) * 50; 
+                        // index 0 = part-1 (Top Bun), needs negative Y to go UP.
+                        // index 7 = part-8 (Bottom Bun), needs positive Y to go DOWN.
+                        // When index = 0 -> (0 - 3.5) = -3.5. So factor is negative.
+                        const factor = (index - 3.5) * 50; 
                         
                         // Math.abs(progress - 0.5) is 0.5 at edges, 0 at center.
                         // Multiply by 2 so it goes from 1 (edges) to 0 (center).
