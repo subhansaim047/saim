@@ -57,7 +57,7 @@
     },
     gsap: function () {
       gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-      if (window.innerWidth > 1024) {
+      if (window.innerWidth > 767) {
         MyScroll = ScrollSmoother.create({
           smooth: 1,
           effects: true,
@@ -70,7 +70,7 @@
       // Hero Banner 1 
       if ($('.hero-banner-1').length) {
 
-        if (window.innerWidth > 1199) {
+        if (window.innerWidth > 991) {
 
           gsap.set(".img-1", { scale: 1, x: '0%' })
           gsap.set(".img-2", { scale: 0.4, x: '50%' })

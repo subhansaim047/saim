@@ -3208,17 +3208,17 @@ body.ui-search-open .scrollbar-track {
     margin-left: 10%;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .hero-banner-1 .image-block .images .img.img-2 {
     display: none;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .hero-banner-1 .image-block .images .img.img-3 {
     display: none;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .hero-banner-1 .image-block .images .img.img-4 {
     display: none;
   }
@@ -5984,3 +5984,4 @@ body.ui-search-open .scrollbar-track {
 }
 
 /*# sourceMappingURL=app.css.map */
+
