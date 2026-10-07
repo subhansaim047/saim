@@ -19,6 +19,21 @@ interface DemoItem {
 }
 
 const demos: DemoItem[] = [
+  {
+    id: "burger-garage",
+    title: "Burger Garage",
+    category: "Restaurant & Fast Food",
+    description: "A premium, fully scraped variant of the Royal Fare template.",
+    demoUrl: "/burger-garage/index.html",
+    previewImage: "/burger-garage/images/logo.png",
+    tags: ["Restaurant", "Burger", "HTML5"],
+    features: [
+      "Exact perfect clone",
+      "Interactive Food Menus",
+      "Fully Responsive Design"
+    ],
+    badge: "New Release"
+  },
   
   
   
@@ -417,6 +432,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
     </main>
   );
 };
+
 
 
 
