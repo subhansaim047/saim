@@ -33,6 +33,12 @@ export const FooterSection = () => {
             <a href="#contact">Contact</a>
           </nav>
 
+          <nav className="site-footer__nav" aria-label="Client Demos">
+            <span style={{color:'rgba(255,255,255,0.4)', fontSize:'10px', textTransform:'uppercase', fontWeight:600, marginBottom:'4px', display:'block'}}>Live Demos</span>
+            <a href="/burger-garage/index.html">Burger Garage</a>
+            <a href="/frenchyse/index.html">Frenchyse Luxury</a>
+          </nav>
+
           <nav className="site-footer__nav" aria-label="Social navigation">
             <a href="https://x.com/saimwebdev" target="_blank" rel="noreferrer" className="flex items-center gap-2">
               <IconX className="w-4 h-4" /> X (Twitter)
