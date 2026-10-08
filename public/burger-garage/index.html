@@ -302,7 +302,7 @@
                                 <div class="col-lg-6 mb-5 mb-lg-0">
                                     <div class="burger-exploding-wrapper">
                                         <div class="burger-yellow-circle"></div>
-                                        <div class="burger-red-accents"></div>
+                                        
                                         <img src="assets/media/products/parts/burger-part-01.png" alt="Burger Bottom Bun" class="burger-part burger-part-1">
                                         <img src="assets/media/products/parts/burger-part-02.png" alt="Burger Patty" class="burger-part burger-part-2">
                                         <img src="assets/media/products/parts/burger-part-03.png" alt="Burger Cheese" class="burger-part burger-part-3">
@@ -1086,47 +1086,61 @@
         document.addEventListener('DOMContentLoaded', function() {
             var wrapper = document.querySelector('.burger-exploding-wrapper');
             var parts = document.querySelectorAll('.burger-part');
-            
-            // EXACT data-y-end percentages from Frenchyse website
-            // These are PERCENTAGE values (relative to each element's own height)
-            // matching translate(0%, Y%) used by Frenchyse's GSAP plugin
             var endPercents = [-100, -120, -30, 0, 70, 110, 160, 165];
             
             if (wrapper && parts.length > 0) {
-                window.addEventListener('scroll', function() {
+                var targetProgress = 0;
+                var currentProgress = 0;
+                var heights = [];
+                
+                // Cache heights to avoid layout thrashing
+                setTimeout(function() {
+                    for(var i=0; i<parts.length; i++) {
+                        heights[i] = parts[i].offsetHeight;
+                    }
+                    // Initial calculation
+                    calculateTarget();
+                    currentProgress = targetProgress;
+                    render();
+                }, 100);
+
+                function calculateTarget() {
                     var rect = wrapper.getBoundingClientRect();
                     var windowHeight = window.innerHeight;
-                    
-                    // Frenchyse uses data-start-position="70%" meaning: 
-                    // animation starts when element is 70% from top of viewport
-                    // = when element enters from bottom at 30% progress
                     var progress = 1 - (rect.top / windowHeight);
                     
-                    // Start animation when element is nicely in view (progress = 0.55)
-                    // Fully exploded when element is high in viewport (progress = 0.95)
-                    var animProgress = (progress - 0.55) / 0.4;
+                    // Timing: Start when middle of screen, end when near top
+                    var animProgress = (progress - 0.45) / 0.45;
                     
-                    // Clamp between 0 and 1
                     if (animProgress < 0) animProgress = 0;
                     if (animProgress > 1) animProgress = 1;
                     
-                    // Ease-out cubic (matching GSAP default)
-                    var easeProgress = 1 - Math.pow(1 - animProgress, 3);
+                    targetProgress = animProgress;
+                }
+
+                window.addEventListener('scroll', function() {
+                    calculateTarget();
+                }, { passive: true });
+
+                function render() {
+                    // Smooth lerping (interpolation) for buttery feel
+                    currentProgress += (targetProgress - currentProgress) * 0.1;
+                    
+                    // Ease-out cubic
+                    var easeProgress = 1 - Math.pow(1 - currentProgress, 3);
                     
                     for(var index = 0; index < parts.length; index++) {
-                        if (index < endPercents.length) {
+                        if (index < endPercents.length && heights[index]) {
                             var part = parts[index];
-                            // Get element's own height to replicate percentage behavior
-                            var height = part.offsetHeight;
-                            // Convert percentage to pixels: exactly how GSAP translate(0%, Y%) works
-                            var yOffset = (endPercents[index] / 100) * height * easeProgress;
-                            part.style.transform = 'translateY(' + yOffset + 'px)';
+                            var yOffset = (endPercents[index] / 100) * heights[index] * easeProgress;
+                            part.style.transform = 'translate3d(0, ' + yOffset + 'px, 0)';
                         }
                     }
-                });
+                    
+                    requestAnimationFrame(render);
+                }
                 
-                // Trigger once on load to set initial state
-                window.dispatchEvent(new Event('scroll'));
+                requestAnimationFrame(render);
             }
         });
     </script>
