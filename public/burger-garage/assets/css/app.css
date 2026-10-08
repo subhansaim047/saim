@@ -6122,5 +6122,10 @@ footer img[src*='logo'] {
     will-change: transform;
 }
 
-/ *   B u r g e r   p e r f e c t l y   s y n c e d   * /  
+/ *   B u r g e r   p e r f e c t l y   s y n c e d   * / 
  
+ 
+/* Custom Logo Fix */
+#ui-header .ui-logo img, .footer-main a img[src*='barger-logo'] { max-height: 140px !important; width: auto !important; filter: brightness(0) invert(1) !important; }
+@media (max-width: 991px) { #ui-header .ui-logo img { max-height: 90px !important; } }
+@media (max-width: 575px) { #ui-header .ui-logo img { max-height: 70px !important; } }
