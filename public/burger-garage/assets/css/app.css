@@ -52,7 +52,7 @@ ol.list-style {
 
 ul.list-style li::marker,
 ol.list-style li::marker {
-  color: #FF5C00;
+  color: #000000;
 }
 
 .unstyled {
@@ -400,7 +400,7 @@ a {
   transition: all 0.5s ease-in;
 }
 a:hover {
-  color: #FF5C00;
+  color: #000000;
   transition: all 0.5s ease-in;
 }
 
@@ -417,11 +417,11 @@ strong {
 Helpers
 -------------------------*/
 .color-primary {
-  color: #FF5C00 !important;
+  color: #000000 !important;
 }
 
 .bg-primary {
-  background-color: #FF5C00 !important;
+  background-color: #000000 !important;
 }
 
 .color-white {
@@ -649,8 +649,8 @@ Helpers
   align-content: center;
   justify-content: center;
   border-radius: 5px;
-  border: 1px solid #FF5C00;
-  background: rgba(255, 92, 0, 0.2);
+  border: 1px solid #000000;
+  background: rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in;
 }
 @media (max-width: 1199px) {
@@ -1739,29 +1739,29 @@ Elements
   transform: translate(0);
 }
 .cus-btn.primary {
-  box-shadow: 0px 5px 20px 0px rgba(255, 92, 0, 0.5);
-  background: linear-gradient(99deg, #FF8946 -4.71%, #FF5C00 93.14%);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(99deg, #222222 -4.71%, #000000 93.14%);
   color: #FCFDFD;
   transition: all 0.5s ease-in;
 }
 .cus-btn.primary .icon-wrapper {
-  color: #FF5C00;
+  color: #000000;
   background: #FCFDFD;
 }
 .cus-btn.primary .icon-wrapper svg {
-  fill: #FF5C00;
+  fill: #000000;
 }
 .cus-btn.primary .icon-wrapper svg path {
-  stroke: #FF5C00;
+  stroke: #000000;
 }
 .cus-btn.primary .icon-wrapper svg.icon-svg-copy path {
-  stroke: #FF5C00;
+  stroke: #000000;
 }
 .cus-btn.primary-banner {
   padding: 0.833vw 1.667vw;
   color: #FCFDFD;
-  background: linear-gradient(99deg, #FF8946 -4.71%, #FF5C00 93.14%);
-  box-shadow: 0px 15px 30px 0px rgba(255, 92, 0, 0.5);
+  background: linear-gradient(99deg, #222222 -4.71%, #000000 93.14%);
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 1199px) {
   .cus-btn.primary-banner {
@@ -1789,11 +1789,11 @@ Elements
   stroke: #282525;
 }
 .cus-btn.dark .icon-wrapper svg.icon-svg-copy path {
-  stroke: #FF5C00;
+  stroke: #000000;
 }
 .cus-btn.dark:hover {
-  background: #FF5C00;
-  box-shadow: 0px 15px 30px 0px rgba(255, 92, 0, 0.5);
+  background: #000000;
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease-in;
 }
 .cus-btn.light {
@@ -1815,22 +1815,22 @@ Elements
 }
 .cus-btn.light:hover {
   background: #FCFDFD;
-  box-shadow: 0px 15px 30px 0px rgba(255, 92, 0, 0.5);
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease-in;
 }
 .cus-btn.outline {
   background: transparent;
-  color: #FF5C00;
-  border: 1px solid #FF5C00;
+  color: #000000;
+  border: 1px solid #000000;
   box-shadow: none;
   transition: all 0.5s ease-in;
 }
 .cus-btn.outline .icon-wrapper {
-  background: #FF5C00;
+  background: #000000;
   color: #FCFDFD;
 }
 .cus-btn.outline:hover {
-  background: #FF5C00;
+  background: #000000;
   transition: all 0.5s ease-in;
   color: #FCFDFD;
 }
@@ -1839,13 +1839,13 @@ Elements
   color: #FCFDFD;
 }
 .cus-btn.outline:hover .icon-wrapper svg {
-  fill: #FF5C00;
+  fill: #000000;
 }
 .cus-btn.outline:hover .icon-wrapper svg path {
-  stroke: #FF5C00;
+  stroke: #000000;
 }
 .cus-btn.outline:hover .icon-wrapper svg.icon-svg-copy path {
-  stroke: #FF5C00;
+  stroke: #000000;
 }
 
 .slider-arrow {
@@ -1883,9 +1883,9 @@ Elements
   opacity: 0.3;
 }
 .slider-arrow .arrow:hover:not(.slick-disabled) {
-  background: #FF5C00;
-  border-color: #FF5C00;
-  box-shadow: 0px 0px 20px 1px #FF5C00;
+  background: #000000;
+  border-color: #000000;
+  box-shadow: 0px 0px 20px 1px #000000;
 }
 .slider-arrow .arrow:hover:not(.slick-disabled) svg path {
   stroke: #FCFDFD;
@@ -1987,7 +1987,7 @@ textarea::placeholder,
   align-content: center;
   justify-content: center;
   border: 0;
-  background: #FF5C00;
+  background: #000000;
   color: #FCFDFD;
   border-radius: 5px;
 }
@@ -2054,7 +2054,7 @@ textarea::placeholder,
   font-size: 24px;
 }
 .filter-row-2 .right-filters .layout-filter li.active {
-  background: #FF5C00;
+  background: #000000;
 }
 .filter-row-2 .right-filters .layout-filter li.active a i {
   color: #FCFDFD;
@@ -2075,7 +2075,7 @@ textarea::placeholder,
 }
 .heading .title span {
   position: relative;
-  color: #FF5C00;
+  color: #000000;
 }
 .heading .title span::before {
   content: "";
@@ -2090,7 +2090,7 @@ textarea::placeholder,
 }
 
 .eyebrow {
-  color: #FF5C00;
+  color: #000000;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -2339,14 +2339,14 @@ textarea::placeholder,
 }
 #preloader .loading span {
   position: relative;
-  color: rgba(255, 92, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 #preloader .loading span::after {
   position: absolute;
   top: 0;
   left: 0;
   content: attr(data-text);
-  color: #FF5C00;
+  color: #000000;
   opacity: 0;
   transform: rotateY(-90deg);
   animation: loading06 4s infinite;
@@ -2447,7 +2447,7 @@ textarea::placeholder,
   background: #F5F7F9;
 }
 .pagination li.active, .pagination li:hover {
-  background: #FF5C00;
+  background: #000000;
   transition: all 0.5s ease-in;
 }
 .pagination li.active a, .pagination li:hover a {
@@ -3048,7 +3048,7 @@ body.ui-search-open .scrollbar-track {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(103.95% 102.72% at 53.02% 10.62%, rgba(255, 255, 255, 0.66) 0%, #F57A35 29.07%, #913908 83.9%, #FDAF84 100%), #FF5C00;
+  background: radial-gradient(103.95% 102.72% at 53.02% 10.62%, rgba(255, 255, 255, 0.66) 0%, #111111 29.07%, #000000 83.9%, #333333 100%), #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3296,7 +3296,7 @@ body.ui-search-open .scrollbar-track {
 
 .hero-banner-2 {
   width: 100vw;
-  background: radial-gradient(103.95% 102.72% at 53.02% 10.62%, rgba(255, 255, 255, 0.66) 0%, #F57A35 29.07%, #913908 83.9%, #FDAF84 100%), #FF5C00;
+  background: radial-gradient(103.95% 102.72% at 53.02% 10.62%, rgba(255, 255, 255, 0.66) 0%, #111111 29.07%, #000000 83.9%, #333333 100%), #000000;
   padding: 8.33vw 1.25vw 0 !important;
   text-align: center;
   height: 50vw;
@@ -3718,7 +3718,7 @@ body.ui-search-open .scrollbar-track {
   padding: 3.1770833333vw;
   border-radius: 50%;
   border: 1px solid rgba(252, 253, 253, 0.5);
-  background: rgba(255, 92, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 .hero-banner-2 .dishes-component .stroke-light .dish {
   position: relative;
@@ -3984,7 +3984,7 @@ body.ui-search-open .scrollbar-track {
   display: grid;
   justify-content: center;
   align-content: center;
-  color: #FF5C00;
+  color: #000000;
   font-size: 18px;
 }
 .product-list-card .action-block {
@@ -4038,7 +4038,7 @@ body.ui-search-open .scrollbar-track {
   }
 }
 .customized_burger label > input:checked + img {
-  border: 2px solid #FF5C00;
+  border: 2px solid #000000;
 }
 .customized_burger .range_slider {
   max-width: 34.375vw;
@@ -4436,7 +4436,7 @@ body.ui-search-open .scrollbar-track {
   margin-left: 16px;
 }
 .blog-card .blog-info-block .blog-analytic li::marker {
-  color: #FF5C00;
+  color: #000000;
 }
 .blog-card .blog-info-block .blog-analytic li:first-child {
   list-style: none;
@@ -4521,7 +4521,7 @@ body.ui-search-open .scrollbar-track {
   margin-left: 16px;
 }
 .blog-detail .content .blog-analytic li::marker {
-  color: #FF5C00;
+  color: #000000;
 }
 .blog-detail .content .blog-analytic li:first-child {
   list-style: none;
@@ -4833,7 +4833,7 @@ body.ui-search-open .scrollbar-track {
   color: currentColor;
   width: 20px;
   height: 20px;
-  border: 2px solid #FF5C00;
+  border: 2px solid #000000;
   margin-top: 5px;
   border-radius: 50%;
   transform: translateY(-0.075em);
@@ -4848,14 +4848,14 @@ body.ui-search-open .scrollbar-track {
   border-radius: 50%;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  background-color: #FF5C00;
+  background-color: #000000;
 }
 .payment-method label:has(input[type=radio]) > input[type=radio]::after {
   content: "";
   width: 2em;
   height: 2em;
   border-radius: 50%;
-  background-color: #FF5C00;
+  background-color: #000000;
   opacity: 0;
   position: absolute;
   z-index: -1;
@@ -4864,10 +4864,10 @@ body.ui-search-open .scrollbar-track {
   transform: translate(-50%, -50%);
 }
 .payment-method label:has(input[type=radio]) > input[type=radio]:is(:active):not(:checked)::after {
-  background-color: #FF5C00;
+  background-color: #000000;
 }
 .payment-method label:has(input[type=radio]) > input[type=radio]:checked {
-  border-color: #FF5C00;
+  border-color: #000000;
 }
 .payment-method label:has(input[type=radio]) > input[type=radio]:checked::after {
   opacity: 0;
@@ -4876,10 +4876,10 @@ body.ui-search-open .scrollbar-track {
   transform: scale(1);
 }
 .payment-method label:has(input[type=radio]) > input[type=radio]:checked:is(:hover, :focus)::after {
-  background-color: #FF5C00;
+  background-color: #000000;
 }
 .payment-method label:has(input[type=radio]) > input[type=radio]:checked:is(:active)::after {
-  background-color: #FF5C00;
+  background-color: #000000;
 }
 .payment-method label:has(input[type=radio]) > input[type=radio]:focus {
   outline: unset;
@@ -4969,7 +4969,7 @@ body.ui-search-open .scrollbar-track {
   min-width: 9.844vw;
 }
 .about-us .text-block .feature-points li i {
-  color: #FF5C00;
+  color: #000000;
   font-size: clamp(16px, 1.042vw, 20px);
 }
 .about-us .text-block .owner-block {
@@ -5105,7 +5105,7 @@ body.ui-search-open .scrollbar-track {
   color: #979797;
 }
 .sidebar .sidebar-widget .blogs-list li .blog-list-item:hover h6 {
-  color: #FF5C00;
+  color: #000000;
   transition: all 0.5s ease-in;
 }
 .sidebar .sidebar-widget .blogs-list li .blog-list-item img {
@@ -5130,7 +5130,7 @@ body.ui-search-open .scrollbar-track {
   border-radius: 5px;
 }
 .sidebar .sidebar-widget .tags-list li.active, .sidebar .sidebar-widget .tags-list li:hover {
-  background-color: #FF5C00;
+  background-color: #000000;
   transition: all 0.5s ease-in;
 }
 .sidebar .sidebar-widget .tags-list li.active a, .sidebar .sidebar-widget .tags-list li:hover a {
@@ -5167,8 +5167,8 @@ body.ui-search-open .scrollbar-track {
   top: 4px;
 }
 .sidebar .sidebar-widget .filter-checkbox input:checked + label:before {
-  background: #FF5C00;
-  border-color: #FF5C00;
+  background: #000000;
+  border-color: #000000;
 }
 .sidebar .sidebar-widget .filter-checkbox label {
   position: relative;
@@ -5208,7 +5208,7 @@ body.ui-search-open .scrollbar-track {
   display: grid;
   justify-content: center;
   align-content: center;
-  color: #FF5C00;
+  color: #000000;
   font-size: 18px;
 }
 .sidebar .sidebar-widget .filter-checkbox label:before {
@@ -5313,7 +5313,7 @@ body.ui-search-open .scrollbar-track {
   display: grid;
   justify-content: center;
   align-content: center;
-  color: #FF5C00;
+  color: #000000;
 }
 @media (max-width: 575px) {
   .product-detail .content .abo-pro .rating-review .rating i {
@@ -5381,7 +5381,7 @@ body.ui-search-open .scrollbar-track {
   display: grid;
   justify-content: center;
   align-content: center;
-  color: #FF5C00;
+  color: #000000;
 }
 @media (max-width: 575px) {
   .reviews .review-block .rating i {
@@ -5564,14 +5564,14 @@ body.ui-search-open .scrollbar-track {
   position: absolute;
   font-size: 23px;
   line-height: 18px;
-  color: #FF5C00;
+  color: #000000;
   bottom: 24px;
   display: grid;
   align-content: center;
   justify-content: center;
   border-radius: 16px;
-  border: 1px solid #FF5C00;
-  background: rgba(255, 92, 0, 0.2);
+  border: 1px solid #000000;
+  background: rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 @media (max-width: 1599px) {
@@ -5669,7 +5669,7 @@ body.ui-search-open .scrollbar-track {
   justify-content: center;
   align-content: center;
   font-size: 16px;
-  color: #FF5C00;
+  color: #000000;
 }
 
 .category-card-1 {
