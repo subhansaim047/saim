@@ -963,16 +963,14 @@
                     targetProgress = animProgress;
                 }
 
-                window.addEventListener('scroll', function() {
-                    calculateTarget();
-                }, { passive: true });
-
                 function render() {
-                    // Smooth lerping (interpolation) for buttery feel
-                    currentProgress += (targetProgress - currentProgress) * 0.1;
+                    calculateTarget(); // Constantly check position to bypass ScrollSmoother scroll event bugs
                     
-                    // Ease-out cubic
-                    var easeProgress = 1 - Math.pow(1 - currentProgress, 3);
+                    // Smooth lerping (interpolation) for buttery feel
+                    currentProgress += (targetProgress - currentProgress) * 0.15;
+                    
+                    // Direct mapping for reversible smooth scrolling
+                    var easeProgress = currentProgress; 
                     
                     for(var index = 0; index < parts.length; index++) {
                         if (index < endPercents.length && heights[index]) {
