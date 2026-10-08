@@ -1102,9 +1102,9 @@
                     // = when element enters from bottom at 30% progress
                     var progress = 1 - (rect.top / windowHeight);
                     
-                    // Start at 70% from top (progress = 0.3 since it's from bottom)
-                    // Fully exploded when element center passes viewport center
-                    var animProgress = (progress - 0.3) / 0.5;
+                    // Start animation when element is nicely in view (progress = 0.55)
+                    // Fully exploded when element is high in viewport (progress = 0.95)
+                    var animProgress = (progress - 0.55) / 0.4;
                     
                     // Clamp between 0 and 1
                     if (animProgress < 0) animProgress = 0;
