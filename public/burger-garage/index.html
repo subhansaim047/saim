@@ -938,17 +938,6 @@
                 var currentProgress = 0;
                 var heights = [];
                 
-                // Cache heights to avoid layout thrashing
-                setTimeout(function() {
-                    for(var i=0; i<parts.length; i++) {
-                        heights[i] = parts[i].offsetHeight;
-                    }
-                    // Initial calculation
-                    calculateTarget();
-                    currentProgress = targetProgress;
-                    render();
-                }, 100);
-
                 function calculateTarget() {
                     var rect = wrapper.getBoundingClientRect();
                     var windowHeight = window.innerHeight;
@@ -964,16 +953,18 @@
                 }
 
                 function render() {
-                    calculateTarget(); // Constantly check position to bypass ScrollSmoother scroll event bugs
+                    calculateTarget(); 
                     
-                    // Smooth lerping (interpolation) for buttery feel
                     currentProgress += (targetProgress - currentProgress) * 0.15;
-                    
-                    // Direct mapping for reversible smooth scrolling
                     var easeProgress = currentProgress; 
                     
                     for(var index = 0; index < parts.length; index++) {
-                        if (index < endPercents.length && heights[index]) {
+                        // Dynamically grab height once the image loads to avoid race conditions
+                        if (!heights[index] || heights[index] === 0) {
+                            heights[index] = parts[index].offsetHeight;
+                        }
+                        
+                        if (index < endPercents.length && heights[index] > 0) {
                             var part = parts[index];
                             var yOffset = (endPercents[index] / 100) * heights[index] * easeProgress;
                             part.style.transform = 'translate3d(0, ' + yOffset + 'px, 0)';
@@ -983,6 +974,9 @@
                     requestAnimationFrame(render);
                 }
                 
+                // Initialize target immediately
+                calculateTarget();
+                currentProgress = targetProgress;
                 requestAnimationFrame(render);
             }
         });
