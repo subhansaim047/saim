@@ -20,6 +20,22 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "hotbite",
+    title: "Hotbite – Street Food That Hits",
+    category: "Fast Food & Street Food",
+    description: "An energetic, high-converting modern street food brand website featuring interactive food sliders, dynamic menus, bold typography, and smooth micro-interactions.",
+    demoUrl: "/hotbite/index.html",
+    previewImage: "/hotbite/preview.jpg",
+    tags: ["Fast Food", "Street Food", "Framer", "Interactive Slider"],
+    features: [
+      "Interactive Pizza & Food Slider",
+      "Categorized Street Food Menu & Combos",
+      "Social Proof & Testimonials Showcase",
+      "Responsive Layout & Smooth Scroll"
+    ],
+    badge: "New 1:1 Demo"
+  },
+  {
     id: "burger-garage",
     title: "Burger Garage",
     category: "Restaurant & Fast Food",
