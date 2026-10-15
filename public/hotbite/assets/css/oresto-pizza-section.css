@@ -1,0 +1,449 @@
+/* ==========================================================================
+   O'Resto Pizza - "Why our Pizza best?" Section Styles
+   100% Scoped & Isolated from Framer Global Styles
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+#oresto-pizza-why-best {
+  position: relative;
+  width: 100%;
+  background-color: #faf5ec;
+  padding: 120px 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #2b1408;
+  z-index: 10;
+}
+
+#oresto-pizza-why-best * {
+  box-sizing: border-box;
+}
+
+/* Background floating decorative patterns (leaf & garlic/peppers) */
+#oresto-pizza-why-best .oresto-bg-pattern-left {
+  position: absolute;
+  top: 40px;
+  left: -60px;
+  width: 320px;
+  max-width: 25vw;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#oresto-pizza-why-best .oresto-bg-pattern-right {
+  position: absolute;
+  bottom: 20px;
+  right: -40px;
+  width: 160px;
+  max-width: 18vw;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header Container */
+#oresto-pizza-why-best .oresto-pizza-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  position: relative;
+  z-index: 5;
+}
+
+#oresto-pizza-why-best .oresto-pizza-subtitle {
+  font-family: 'Norican', cursive;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #ffa800;
+  margin: 0 0 8px 0;
+  font-weight: normal;
+  display: block;
+}
+
+#oresto-pizza-why-best .oresto-pizza-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: clamp(34px, 4.5vw, 56px);
+  line-height: 1.15;
+  color: #2b1408;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* Main 3-Column Layout */
+#oresto-pizza-why-best .oresto-pizza-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+}
+
+#oresto-pizza-why-best .oresto-features-col {
+  flex: 1;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  z-index: 5;
+}
+
+/* Feature Box Styling */
+#oresto-pizza-why-best .oresto-feature-box {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+#oresto-pizza-why-best .oresto-feature-box:hover {
+  transform: translateY(-4px);
+}
+
+#oresto-pizza-why-best .oresto-features-left .oresto-feature-box {
+  text-align: left;
+  padding-right: 10px;
+}
+
+#oresto-pizza-why-best .oresto-features-right .oresto-feature-box {
+  text-align: left;
+  padding-left: 10px;
+}
+
+#oresto-pizza-why-best .oresto-feature-title-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* Giant Embossed Watermark Number */
+#oresto-pizza-why-best .oresto-feature-number {
+  position: absolute;
+  top: -45px;
+  right: -25px;
+  font-size: 110px;
+  line-height: 1;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+}
+
+#oresto-pizza-why-best .oresto-features-right .oresto-feature-number {
+  right: -30px;
+}
+
+#oresto-pizza-why-best .oresto-feature-title {
+  position: relative;
+  z-index: 2;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #2b1408;
+  margin: 0;
+}
+
+#oresto-pizza-why-best .oresto-feature-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #635043;
+  margin: 0;
+  max-width: 320px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Centerpiece Container */
+#oresto-pizza-why-best .oresto-pizza-center {
+  flex: 0 0 540px;
+  width: 540px;
+  height: 540px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+/* Solid Golden Circle + Rotating Dashed Circle */
+#oresto-pizza-why-best .oresto-circle-box {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Inner Solid Orange/Yellow Circle */
+#oresto-pizza-why-best .oresto-circle-box::before {
+  content: '';
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #ffa800;
+  box-shadow: 0 15px 45px rgba(255, 168, 0, 0.28);
+  z-index: 1;
+}
+
+/* Outer Rotating Dashed Ring */
+#oresto-pizza-why-best .oresto-circle-box::after {
+  content: '';
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background-image: url('/hotbite/assets/images/circle-ellipse.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  z-index: 2;
+  animation: oresto-rotate-ellipse 45s linear infinite;
+}
+
+@keyframes oresto-rotate-ellipse {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Exploding Pizza Slice Stack Container */
+#oresto-pizza-why-best .oresto-pizza-slices-stack {
+  position: relative;
+  width: 440px;
+  height: 340px;
+  z-index: 4;
+}
+
+/* Common Layer Rules */
+#oresto-pizza-why-best .oresto-pizza-layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  pointer-events: none;
+  will-change: transform;
+}
+
+#oresto-pizza-why-best .oresto-pizza-layer img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Layer 1: Fresh Basil Leaves (Topmost, flies highest) */
+#oresto-pizza-why-best .oresto-layer-1 {
+  top: 15px;
+  width: 250px;
+  z-index: 10;
+}
+
+/* Layer 2: Herbs & Seasoning */
+#oresto-pizza-why-best .oresto-layer-2 {
+  top: 10px;
+  width: 300px;
+  z-index: 9;
+}
+
+/* Layer 3: Black Olives */
+#oresto-pizza-why-best .oresto-layer-3 {
+  top: 50px;
+  width: 280px;
+  z-index: 8;
+}
+
+/* Layer 4: Melting Mozzarella Cheese (Focal Pivot) */
+#oresto-pizza-why-best .oresto-layer-4 {
+  top: 60px;
+  width: 360px;
+  z-index: 7;
+}
+
+/* Layer 5: Rich Red Tomato Sauce */
+#oresto-pizza-why-best .oresto-layer-5 {
+  top: 90px;
+  width: 360px;
+  z-index: 6;
+}
+
+/* Layer 6: Golden Crispy Pizza Crust */
+#oresto-pizza-why-best .oresto-layer-6 {
+  top: 95px;
+  width: 430px;
+  z-index: 5;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1100px) {
+  #oresto-pizza-why-best {
+    padding: 90px 20px;
+  }
+  
+  #oresto-pizza-why-best .oresto-pizza-center {
+    flex: 0 0 440px;
+    width: 440px;
+    height: 440px;
+    margin: 0 10px;
+  }
+  
+  #oresto-pizza-why-best .oresto-circle-box {
+    width: 420px;
+    height: 420px;
+  }
+  
+  #oresto-pizza-why-best .oresto-circle-box::before {
+    width: 380px;
+    height: 380px;
+  }
+  
+  #oresto-pizza-why-best .oresto-circle-box::after {
+    width: 430px;
+    height: 430px;
+  }
+  
+  #oresto-pizza-why-best .oresto-pizza-slices-stack {
+    width: 360px;
+    height: 280px;
+    transform: scale(0.85);
+  }
+  
+  #oresto-pizza-why-best .oresto-features-col {
+    gap: 45px;
+  }
+  
+  #oresto-pizza-why-best .oresto-feature-title {
+    font-size: 22px;
+  }
+  
+  #oresto-pizza-why-best .oresto-feature-number {
+    font-size: 90px;
+    top: -35px;
+  }
+}
+
+/* Small Tablets & Mobile Viewports (900px and below) */
+@media (max-width: 900px) {
+  #oresto-pizza-why-best .oresto-pizza-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  #oresto-pizza-why-best .oresto-pizza-center {
+    order: 1;
+    margin: 0 auto;
+  }
+  
+  #oresto-pizza-why-best .oresto-features-left {
+    order: 2;
+    max-width: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  #oresto-pizza-why-best .oresto-features-right {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  #oresto-pizza-why-best .oresto-feature-desc {
+    max-width: 100%;
+  }
+}
+
+/* Mobile Devices (640px and below) */
+@media (max-width: 640px) {
+  #oresto-pizza-why-best {
+    padding: 60px 16px;
+  }
+  
+  #oresto-pizza-why-best .oresto-pizza-header {
+    margin-bottom: 35px;
+  }
+  
+  #oresto-pizza-why-best .oresto-pizza-subtitle {
+    font-size: 26px;
+  }
+  
+  #oresto-pizza-why-best .oresto-pizza-title {
+    font-size: 28px;
+  }
+  
+  #oresto-pizza-why-best .oresto-pizza-center {
+    width: 320px;
+    height: 320px;
+    flex: 0 0 320px;
+  }
+  
+  #oresto-pizza-why-best .oresto-circle-box {
+    width: 300px;
+    height: 300px;
+  }
+  
+  #oresto-pizza-why-best .oresto-circle-box::before {
+    width: 270px;
+    height: 270px;
+  }
+  
+  #oresto-pizza-why-best .oresto-circle-box::after {
+    width: 310px;
+    height: 310px;
+  }
+  
+  #oresto-pizza-why-best .oresto-pizza-slices-stack {
+    width: 280px;
+    height: 220px;
+    transform: scale(0.65);
+  }
+  
+  #oresto-pizza-why-best .oresto-features-left,
+  #oresto-pizza-why-best .oresto-features-right {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  
+  #oresto-pizza-why-best .oresto-feature-title {
+    font-size: 20px;
+  }
+  
+  #oresto-pizza-why-best .oresto-feature-number {
+    font-size: 80px;
+    top: -30px;
+    right: 0;
+  }
+  
+  #oresto-pizza-why-best .oresto-bg-pattern-left,
+  #oresto-pizza-why-best .oresto-bg-pattern-right {
+    display: none;
+  }
+}
