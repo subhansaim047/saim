@@ -572,6 +572,7 @@
 </style>
 
   <link rel="stylesheet" href="/hotbite/assets/css/oresto-pizza-section.css">
+  <link rel="stylesheet" href="/hotbite/assets/css/oresto-burger-section.css">
 </head>
 <body>
 	<script async src="https://events.framer.com/script?v=2" data-fid="0b1b6a2c60887f1ddf98fc1f4594caac0c6bb48a20a2e5afe5d050e9802c5d7e" data-no-nt></script>
@@ -1483,8 +1484,174 @@
   </section>
 </template>
 
+<template id="oresto-burger-template">
+  <section id="oresto-burger-talking">
+    <!-- Ambient Background Leaves / Graphics -->
+    <img src="/hotbite/assets/images/pattern-shap-01.png" alt="" class="oresto-bg-pattern-left" loading="lazy" decoding="async">
+    <img src="/hotbite/assets/images/pattern-shap-04.png" alt="" class="oresto-bg-pattern-right" loading="lazy" decoding="async">
+
+    <div class="oresto-burger-container">
+      <!-- Left Column: Exploding Burger Centerpiece -->
+      <div class="oresto-burger-col-visual">
+        <!-- Ambient Orbit Dots -->
+        <img src="/hotbite/assets/images/dot-img-04.png" alt="" class="oresto-stage-dot-1" loading="lazy" decoding="async">
+        <img src="/hotbite/assets/images/dot-img-03.png" alt="" class="oresto-stage-dot-2" loading="lazy" decoding="async">
+
+        <!-- Golden Orbit Concentric Rings -->
+        <div class="oresto-burger-circle-box-3"></div>
+        <div class="oresto-burger-circle-box-new"></div>
+
+        <!-- 8-Layer Exploding Burger Stack -->
+        <div class="oresto-burger-stack">
+          <!-- Layer 1: Brioche Bun Top -->
+          <div class="oresto-burger-layer oresto-burger-layer-1 pbmit-tween-effect"
+               data-start-position="70%"
+               data-x-start="0" data-x-end="0"
+               data-y-start="0" data-y-end="-100"
+               data-rotate-x-start="0" data-rotate-x-end="0">
+            <img src="/hotbite/assets/images/burger-part-01.png" alt="Brioche Top Bun" width="313" height="163" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Layer 2: Onions & Rich Creamy Sauce -->
+          <div class="oresto-burger-layer oresto-burger-layer-2 pbmit-tween-effect"
+               data-start-position="70%"
+               data-x-start="0" data-x-end="0"
+               data-y-start="0" data-y-end="-120"
+               data-rotate-x-start="0" data-rotate-x-end="0">
+            <img src="/hotbite/assets/images/burger-part-02.png" alt="Onions and Sauce" width="304" height="95" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Layer 3: Crisp Garden Lettuce -->
+          <div class="oresto-burger-layer oresto-burger-layer-3 pbmit-tween-effect"
+               data-start-position="70%"
+               data-x-start="0" data-x-end="0"
+               data-y-start="0" data-y-end="-30"
+               data-rotate-x-start="0" data-rotate-x-end="0">
+            <img src="/hotbite/assets/images/burger-part-03.png" alt="Garden Fresh Lettuce" width="372" height="156" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Layer 4: Ripe Tomato Slices (Pivot Layer) -->
+          <div class="oresto-burger-layer oresto-burger-layer-4 pbmit-tween-effect"
+               data-start-position="70%"
+               data-x-start="0" data-x-end="0"
+               data-y-start="0" data-y-end="0"
+               data-rotate-x-start="0" data-rotate-x-end="0">
+            <img src="/hotbite/assets/images/burger-part-04.png" alt="Fresh Tomato Slices" width="311" height="78" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Layer 5: Molten Melted Cheddar Cheese -->
+          <div class="oresto-burger-layer oresto-burger-layer-5 pbmit-tween-effect"
+               data-start-position="70%"
+               data-x-start="0" data-x-end="0"
+               data-y-start="0" data-y-end="70"
+               data-rotate-x-start="0" data-rotate-x-end="0">
+            <img src="/hotbite/assets/images/burger-part-05.png" alt="Melted Cheddar Cheese" width="361" height="95" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Layer 6: Flame-Grilled Savory Patty -->
+          <div class="oresto-burger-layer oresto-burger-layer-6 pbmit-tween-effect"
+               data-start-position="70%"
+               data-x-start="0" data-x-end="0"
+               data-y-start="0" data-y-end="110"
+               data-rotate-x-start="0" data-rotate-x-end="0">
+            <img src="/hotbite/assets/images/burger-part-06.png" alt="Flame-Grilled Patty" width="347" height="98" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Layer 7: Fresh Herb & Pesto Spread -->
+          <div class="oresto-burger-layer oresto-burger-layer-7 pbmit-tween-effect"
+               data-start-position="70%"
+               data-x-start="0" data-x-end="0"
+               data-y-start="0" data-y-end="160"
+               data-rotate-x-start="0" data-rotate-x-end="0">
+            <img src="/hotbite/assets/images/burger-part-07.png" alt="Herb Pesto Spread" width="356" height="105" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Layer 8: Golden Toasted Bottom Bun -->
+          <div class="oresto-burger-layer oresto-burger-layer-8 pbmit-tween-effect"
+               data-start-position="70%"
+               data-x-start="0" data-x-end="0"
+               data-y-start="0" data-y-end="165"
+               data-rotate-x-start="0" data-rotate-x-end="0">
+            <img src="/hotbite/assets/images/burger-part-08.png" alt="Toasted Bottom Bun" width="352" height="141" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Content, Feature Checklist, Rotating Badge & Actions -->
+      <div class="oresto-burger-col-content">
+        <span class="oresto-burger-subtitle">Made with Love</span>
+        <h2 class="oresto-burger-title">Our Burger Do The Talking</h2>
+        <p class="oresto-burger-desc">We provide you with complete meal prep which includes the prepackaged necessary ingredients.</p>
+
+        <!-- Feature List & 360° Rotating Badge -->
+        <div class="oresto-burger-features-wrap">
+          <ul class="oresto-burger-checklist">
+            <li class="oresto-burger-checklist-item">
+              <svg class="oresto-checklist-icon" viewBox="0 0 512 512">
+                <path d="M256 0c14.1 0 27.2 7.8 33.9 20.3l37.2 69.5c4.7 8.8 13.9 14.4 23.9 14.7l77.7 2.3c14.1 .4 26.6 8.9 31.8 22s1.7 27.9-8.4 37.8l-56.1 54.4c-7.2 7-10.4 17.2-8.3 27l16.1 76.5c2.9 13.9-3.2 27.8-15.5 35.1s-27.4 5.7-38.3-3.8l-65.7-57.5c-7.7-6.7-18.6-8.7-28.2-5.1l-71.5 26.6c-13.1 4.9-27.7 1.2-37.1-9.3s-10.6-25.9-3-37.9l42.4-66.6c5.5-8.6 5.6-19.6 .3-28.3l-41.5-67.2c-7.5-12.1-5.6-27.5 4.8-37.7s26-11.6 38.8-3.7l69.7 42.7c8.9 5.5 20.1 5.4 28.9-.3l69.4-43.2C236.4 7.6 246.1 0 256 0z"/>
+              </svg>
+              <span class="oresto-checklist-text">Delicious &amp; Healthy Foods</span>
+            </li>
+            <li class="oresto-burger-checklist-item">
+              <svg class="oresto-checklist-icon" viewBox="0 0 512 512">
+                <path d="M256 0c14.1 0 27.2 7.8 33.9 20.3l37.2 69.5c4.7 8.8 13.9 14.4 23.9 14.7l77.7 2.3c14.1 .4 26.6 8.9 31.8 22s1.7 27.9-8.4 37.8l-56.1 54.4c-7.2 7-10.4 17.2-8.3 27l16.1 76.5c2.9 13.9-3.2 27.8-15.5 35.1s-27.4 5.7-38.3-3.8l-65.7-57.5c-7.7-6.7-18.6-8.7-28.2-5.1l-71.5 26.6c-13.1 4.9-27.7 1.2-37.1-9.3s-10.6-25.9-3-37.9l42.4-66.6c5.5-8.6 5.6-19.6 .3-28.3l-41.5-67.2c-7.5-12.1-5.6-27.5 4.8-37.7s26-11.6 38.8-3.7l69.7 42.7c8.9 5.5 20.1 5.4 28.9-.3l69.4-43.2C236.4 7.6 246.1 0 256 0z"/>
+              </svg>
+              <span class="oresto-checklist-text">Specific Family &amp; Kids Zone</span>
+            </li>
+            <li class="oresto-burger-checklist-item">
+              <svg class="oresto-checklist-icon" viewBox="0 0 512 512">
+                <path d="M256 0c14.1 0 27.2 7.8 33.9 20.3l37.2 69.5c4.7 8.8 13.9 14.4 23.9 14.7l77.7 2.3c14.1 .4 26.6 8.9 31.8 22s1.7 27.9-8.4 37.8l-56.1 54.4c-7.2 7-10.4 17.2-8.3 27l16.1 76.5c2.9 13.9-3.2 27.8-15.5 35.1s-27.4 5.7-38.3-3.8l-65.7-57.5c-7.7-6.7-18.6-8.7-28.2-5.1l-71.5 26.6c-13.1 4.9-27.7 1.2-37.1-9.3s-10.6-25.9-3-37.9l42.4-66.6c5.5-8.6 5.6-19.6 .3-28.3l-41.5-67.2c-7.5-12.1-5.6-27.5 4.8-37.7s26-11.6 38.8-3.7l69.7 42.7c8.9 5.5 20.1 5.4 28.9-.3l69.4-43.2C236.4 7.6 246.1 0 256 0z"/>
+              </svg>
+              <span class="oresto-checklist-text">Best Price &amp; Offers</span>
+            </li>
+            <li class="oresto-burger-checklist-item">
+              <svg class="oresto-checklist-icon" viewBox="0 0 512 512">
+                <path d="M256 0c14.1 0 27.2 7.8 33.9 20.3l37.2 69.5c4.7 8.8 13.9 14.4 23.9 14.7l77.7 2.3c14.1 .4 26.6 8.9 31.8 22s1.7 27.9-8.4 37.8l-56.1 54.4c-7.2 7-10.4 17.2-8.3 27l16.1 76.5c2.9 13.9-3.2 27.8-15.5 35.1s-27.4 5.7-38.3-3.8l-65.7-57.5c-7.7-6.7-18.6-8.7-28.2-5.1l-71.5 26.6c-13.1 4.9-27.7 1.2-37.1-9.3s-10.6-25.9-3-37.9l42.4-66.6c5.5-8.6 5.6-19.6 .3-28.3l-41.5-67.2c-7.5-12.1-5.6-27.5 4.8-37.7s26-11.6 38.8-3.7l69.7 42.7c8.9 5.5 20.1 5.4 28.9-.3l69.4-43.2C236.4 7.6 246.1 0 256 0z"/>
+              </svg>
+              <span class="oresto-checklist-text">Made By Fresh Ingredients</span>
+            </li>
+          </ul>
+
+          <!-- Rotating Circular Badge -->
+          <div class="oresto-rotating-badge">
+            <svg viewBox="0 0 200 200">
+              <defs>
+                <path d="M 100, 100 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" id="oresto-burger-badge-path"></path>
+              </defs>
+              <text>
+                <textPath xlink:href="#oresto-burger-badge-path" startOffset="0%">TESTY - FAST FOOD - BURGER -</textPath>
+              </text>
+            </svg>
+            <div class="oresto-badge-center-icon">
+              <img src="/hotbite/assets/images/burger.png" alt="Burger Icon" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Row: Button & Phone -->
+        <div class="oresto-burger-actions-row">
+          <a href="#Menu" class="oresto-burger-btn">Discover More</a>
+          
+          <div class="oresto-burger-call-box">
+            <div class="oresto-call-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
+              </svg>
+            </div>
+            <div class="oresto-call-meta">
+              <span class="oresto-call-label">Get online order now</span>
+              <a href="tel:03314333355" class="oresto-call-number">03314333355</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
   <script src="/hotbite/assets/js/gsap.min.js"></script>
   <script src="/hotbite/assets/js/ScrollTrigger.js"></script>
   <script src="/hotbite/assets/js/oresto-pizza-animation.js"></script>
+  <script src="/hotbite/assets/js/oresto-burger-animation.js"></script>
 </body>
 </html>
