@@ -1,10 +1,21 @@
 /* ==========================================================================
    O'Resto Pizza - Exploding Pizza Slice ScrollTrigger Physics Engine
-   100% React-Hydration Immune & Self-Healing Mounter
+   100% Exact Anzaar Parity (Timing, Physics, Scroll-Up & Scroll-Down)
+   100% React-Hydration Immune & Dynamic Layout Observer
    ========================================================================== */
 
 (function() {
   let isAnimationBound = false;
+  let refreshDebounce = null;
+
+  function scheduleRefresh() {
+    clearTimeout(refreshDebounce);
+    refreshDebounce = setTimeout(() => {
+      if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.refresh();
+      }
+    }, 120);
+  }
 
   function initPizzaAnimation() {
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
@@ -12,17 +23,28 @@
     }
 
     const section = document.getElementById('oresto-pizza-why-best');
-    if (!section) return;
+    if (!section || !document.body.contains(section)) return;
 
     const layers = gsap.utils.toArray('#oresto-pizza-why-best .pbmit-tween-effect');
     if (!layers || layers.length === 0) return;
 
     gsap.registerPlugin(ScrollTrigger);
 
+    // Clean up any pre-existing triggers on this section to prevent duplicates
+    ScrollTrigger.getAll().forEach((st) => {
+      if (st.trigger && (st.trigger.id === 'oresto-pizza-why-best' || st.trigger.closest('#oresto-pizza-why-best'))) {
+        st.kill(true);
+      }
+    });
+
     ScrollTrigger.matchMedia({
-      // Desktop (> 768px): Full exploding scrub physics
+      // Desktop (> 768px): Exact Anzaar scrub explosion physics
       "(min-width: 769px)": function() {
         layers.forEach((box) => {
+          const toppos = box.getAttribute('data-start-position') || "70%";
+          const startPos = "top " + toppos;
+          const endPos = "bottom 70%";
+
           const yStart = parseFloat(box.getAttribute('data-y-start')) || 0;
           const yEnd = parseFloat(box.getAttribute('data-y-end')) || 0;
           const xStart = parseFloat(box.getAttribute('data-x-start')) || 0;
@@ -31,27 +53,31 @@
           const rotEnd = parseFloat(box.getAttribute('data-rotate-x-end')) || 0;
 
           gsap.set(box, {
-            yPercent: yStart,
             xPercent: xStart,
+            yPercent: yStart,
             rotation: rotStart
           });
 
-          gsap.to(box, {
-            yPercent: yEnd,
-            xPercent: xEnd,
-            rotation: rotEnd,
-            ease: "none",
+          const tl = gsap.timeline({
             scrollTrigger: {
-              trigger: section,
-              start: "top 75%",
-              end: "bottom 35%",
-              scrub: 1.2
-            }
+              trigger: box,
+              start: startPos,
+              end: endPos,
+              scrub: 1,
+              invalidateOnRefresh: true
+            },
+            defaults: { ease: "none" }
+          });
+
+          tl.to(box, {
+            xPercent: xEnd,
+            yPercent: yEnd,
+            rotation: rotEnd
           });
         });
       },
 
-      // Mobile (<= 768px): Keep pizza perfectly assembled and stable
+      // Mobile (<= 768px): Keep pizza slice perfectly assembled and centered
       "(max-width: 768px)": function() {
         layers.forEach((box) => {
           gsap.set(box, { clearProps: "all" });
@@ -60,7 +86,7 @@
     });
 
     isAnimationBound = true;
-    ScrollTrigger.refresh();
+    scheduleRefresh();
   }
 
   function mountPizzaSection() {
@@ -77,9 +103,7 @@
       }
     } else if (section.nextElementSibling !== menu) {
       menu.parentNode.insertBefore(section, menu);
-      if (typeof ScrollTrigger !== 'undefined') {
-        ScrollTrigger.refresh();
-      }
+      scheduleRefresh();
     } else if (!isAnimationBound) {
       initPizzaAnimation();
     }
@@ -106,9 +130,15 @@
     observer.observe(document.body, { childList: true, subtree: true });
   } catch (e) {}
 
-  window.addEventListener('load', () => {
-    if (typeof ScrollTrigger !== 'undefined') {
-      ScrollTrigger.refresh();
-    }
-  });
+  // Layout observer: Automatically refreshes ScrollTrigger as images/fonts load
+  if (typeof ResizeObserver !== 'undefined') {
+    const ro = new ResizeObserver(() => scheduleRefresh());
+    ro.observe(document.body);
+  }
+
+  window.addEventListener('load', scheduleRefresh);
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(scheduleRefresh);
+  }
 })();
