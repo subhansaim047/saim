@@ -64,10 +64,9 @@
   }
 
   function mountBurgerSection() {
-    // Target position: After #Testimonials (before #Gallery)
-    const testimonials = document.getElementById('Testimonials');
     const gallery = document.getElementById('Gallery');
-    const anchor = testimonials || gallery;
+    const testimonials = document.getElementById('Testimonials');
+    const anchor = gallery || testimonials;
     if (!anchor) return;
 
     let section = document.getElementById('oresto-burger-talking');
@@ -75,27 +74,22 @@
       const template = document.getElementById('oresto-burger-template');
       if (template) {
         section = template.content.firstElementChild.cloneNode(true);
-        if (testimonials && testimonials.nextElementSibling) {
-          testimonials.parentNode.insertBefore(section, testimonials.nextElementSibling);
-        } else if (gallery) {
+        if (gallery) {
           gallery.parentNode.insertBefore(section, gallery);
+        } else if (testimonials && testimonials.nextElementSibling) {
+          testimonials.parentNode.insertBefore(section, testimonials.nextElementSibling);
         } else {
           anchor.parentNode.appendChild(section);
         }
         initBurgerAnimation();
       }
-    } else {
-      // Ensure it stays in the correct relative position if DOM gets rewritten
-      const desiredParent = anchor.parentNode;
-      const desiredNextSibling = (testimonials && testimonials.nextElementSibling !== section) ? testimonials.nextElementSibling : (gallery || null);
-      
-      if (section.parentNode !== desiredParent) {
-        desiredParent.insertBefore(section, desiredNextSibling);
-        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+    } else if (gallery && section.nextElementSibling !== gallery) {
+      gallery.parentNode.insertBefore(section, gallery);
+      if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.refresh();
       }
-      if (!isAnimationBound) {
-        initBurgerAnimation();
-      }
+    } else if (!isAnimationBound) {
+      initBurgerAnimation();
     }
   }
 
