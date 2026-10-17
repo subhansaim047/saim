@@ -569,6 +569,149 @@
     background: #270e02;
     transform: scale(1.04);
   }
+
+  /* ==========================================================================
+     MOBILE RESPONSIVENESS OVERRIDES & ENHANCEMENTS (Scoped to Mobile Breakpoints)
+     ========================================================================== */
+  /* Contact Section Address Wrapping (All Screen Sizes) */
+  #Contact p,
+  #Contact .framer-mreop1 p,
+  #Contact .framer-r83hou p,
+  #Contact [data-framer-name="Text Wrapper"] p {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow: visible !important;
+    line-height: 1.4 !important;
+  }
+  #Contact .framer-mreop1,
+  #Contact .framer-r83hou,
+  #Contact .framer-260Xx,
+  #Contact .framer-4t766z-container,
+  #Contact .framer-ir9viy-container {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Floating WhatsApp Button: Strictly hidden on desktop by default */
+  .oresto-floating-whatsapp {
+    display: none !important;
+  }
+
+  @media (max-width: 768px) {
+    /* Contact Section: Address multi-line wrap & container fluidity */
+    #Contact .framer-4t766z-container,
+    #Contact .framer-ir9viy-container,
+    #Contact .framer-260Xx,
+    #Contact .framer-r83hou,
+    #Contact .framer-mreop1,
+    #Contact .framer-1ed1mh4 {
+      width: 100% !important;
+      max-width: calc(100% - 28px) !important;
+      box-sizing: border-box !important;
+    }
+    #Contact p,
+    #Contact .framer-mreop1 p,
+    #Contact .framer-r83hou p,
+    #Contact [data-framer-name="Text Wrapper"] p {
+      font-size: 15px !important;
+    }
+    #Contact .framer-260Xx,
+    #Contact .framer-4t766z-container,
+    #Contact .framer-ir9viy-container,
+    #Contact .framer-1ed1mh4,
+    #Contact .framer-xgeroo-container,
+    #Contact .framer-3Zfeq {
+      height: auto !important;
+      min-height: auto !important;
+    }
+    #Contact .framer-1cfkuix {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Menu Category Horizontal Swipe Enhancement */
+    .hb-category-nav {
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      justify-content: flex-start !important;
+      padding: 0 12px 14px 12px !important;
+      margin-left: -12px !important;
+      margin-right: -12px !important;
+      -webkit-overflow-scrolling: touch !important;
+      scrollbar-width: none !important;
+      scroll-padding: 12px !important;
+    }
+    .hb-category-nav::-webkit-scrollbar {
+      display: none !important;
+    }
+    .hb-tab-btn {
+      flex-shrink: 0 !important;
+    }
+
+    /* Mobile Floating WhatsApp Quick Order Button */
+    .oresto-floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 18px;
+      background-color: #25D366;
+      color: #ffffff !important;
+      text-decoration: none;
+      display: inline-flex !important;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px 10px 14px;
+      border-radius: 50px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .oresto-floating-whatsapp:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+      color: #ffffff !important;
+    }
+    .oresto-floating-whatsapp .oresto-wa-icon {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .oresto-floating-whatsapp {
+      padding: 9px 15px 9px 12px;
+      font-size: 13px;
+      bottom: 16px;
+      right: 14px;
+    }
+    .oresto-floating-whatsapp .oresto-wa-icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* Menu item row spacing on small screens */
+    .hb-item-row {
+      gap: 8px !important;
+    }
+    .hb-item-info {
+      max-width: 62% !important;
+    }
+    .hb-item-name {
+      font-size: 19px !important;
+      word-break: break-word !important;
+    }
+    .hb-promo-card {
+      padding: 18px 16px !important;
+    }
+  }
 </style>
 
   <link rel="stylesheet" href="/hotbite/assets/css/oresto-pizza-section.css">
@@ -1712,5 +1855,16 @@
   <script src="/hotbite/assets/js/ScrollTrigger.js"></script>
   <script src="/hotbite/assets/js/oresto-pizza-animation.js"></script>
   <script src="/hotbite/assets/js/oresto-burger-animation.js"></script>
+  <!-- Mobile Floating WhatsApp Quick Order Button -->
+  <a href="https://wa.me/923256737861?text=Hello%20O'Resto%20Pizza,%20I%20would%20like%20to%20place%20an%20order."
+     class="oresto-floating-whatsapp"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Order via WhatsApp">
+    <svg class="oresto-wa-icon" viewBox="0 0 32 32" width="24" height="24" fill="#ffffff">
+      <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.047l-2.137 7.953 8.169-2.144c2.378 1.306 5.075 1.994 7.831 1.994 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.475 0-4.894-0.669-7.019-1.931l-0.503-0.3-5.206 1.366 1.391-5.181-0.331-0.528c-1.381-2.206-2.113-4.756-2.113-7.409 0-7.356 5.988-13.333 13.333-13.333s13.333 5.978 13.333 13.333-5.978 13.333-13.333 13.333zM22.563 19.344c-0.359-0.181-2.128-1.050-2.456-1.169s-0.569-0.181-0.806 0.181c-0.241 0.359-0.925 1.169-1.134 1.409s-0.419 0.269-0.781 0.088c-0.359-0.181-1.522-0.563-2.9-1.788-1.072-0.956-1.794-2.138-2.006-2.5-0.209-0.359-0.022-0.553 0.156-0.731 0.163-0.163 0.359-0.419 0.538-0.628s0.241-0.359 0.359-0.6c0.119-0.241 0.063-0.45-0.031-0.628s-0.806-1.944-1.106-2.663c-0.291-0.7-0.584-0.606-0.806-0.619s-0.453-0.013-0.694-0.013c-0.241 0-0.631 0.091-0.963 0.45s-1.266 1.238-1.266 3.019c0 1.781 1.297 3.503 1.478 3.744s2.553 3.9 6.188 5.469c0.866 0.372 1.541 0.594 2.066 0.763 0.869 0.275 1.659 0.238 2.284 0.144 0.697-0.103 2.128-0.869 2.428-1.709s0.3-1.563 0.209-1.709c-0.088-0.15-0.328-0.241-0.688-0.419z"/>
+    </svg>
+    <span class="oresto-wa-label">Order Now</span>
+  </a>
 </body>
 </html>

@@ -413,14 +413,16 @@
   }
 
   #oresto-pizza-why-best .oresto-pizza-center {
-    width: 320px;
-    height: 320px;
-    flex: 0 0 320px;
+    width: min(320px, calc(100vw - 32px));
+    height: min(320px, calc(100vw - 32px));
+    flex: 0 0 auto;
+    max-width: 100%;
   }
 
   #oresto-pizza-why-best .oresto-circle-box {
     width: 300px;
     height: 304px;
+    max-width: 100%;
   }
 
   #oresto-pizza-why-best .oresto-circle-box::before {
@@ -433,6 +435,7 @@
   #oresto-pizza-why-best .oresto-circle-box::after {
     width: 300px;
     height: 304px;
+    max-width: 100%;
   }
 
   #oresto-pizza-why-best .oresto-pizza-slices-stack {
@@ -463,5 +466,30 @@
   #oresto-pizza-why-best .oresto-bg-pattern-left,
   #oresto-pizza-why-best .oresto-bg-pattern-right {
     display: none;
+  }
+}
+
+/* Small Mobile Devices (360px and below) */
+@media (max-width: 360px) {
+  #oresto-pizza-why-best {
+    padding: 45px 10px;
+  }
+
+  #oresto-pizza-why-best .oresto-pizza-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  #oresto-pizza-why-best .oresto-pizza-slices-stack {
+    transform: translateY(-50%) scale(0.58);
+  }
+
+  #oresto-pizza-why-best .oresto-feature-number {
+    font-size: 54px;
+    top: -35px;
+  }
+
+  #oresto-pizza-why-best .oresto-feature-title {
+    font-size: 19px;
   }
 }

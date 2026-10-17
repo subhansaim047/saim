@@ -609,14 +609,14 @@
 
   #oresto-burger-talking .pbmit-circle-box-3::after,
   #oresto-burger-talking .oresto-burger-circle-box-3::after {
-    width: 340px;
-    height: 344px;
+    width: min(340px, 90vw);
+    height: min(344px, 90vw);
   }
 
   #oresto-burger-talking .pbmit-circle-box-new::before,
   #oresto-burger-talking .oresto-burger-circle-box-new::before {
-    width: 380px;
-    height: 380px;
+    width: min(340px, 92vw);
+    height: min(340px, 92vw);
   }
 
   #oresto-burger-talking .oresto-burger-stack {
@@ -638,5 +638,36 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+  }
+}
+
+/* Small Mobile Devices (360px and below) */
+@media (max-width: 360px) {
+  #oresto-burger-talking {
+    padding: 45px 10px 55px 10px;
+    overflow-x: clip !important;
+  }
+
+  #oresto-burger-talking .pbmit-element-title-main {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  #oresto-burger-talking .oresto-burger-col-visual {
+    height: 340px;
+  }
+
+  #oresto-burger-talking .oresto-burger-stack {
+    transform: scale(0.60);
+  }
+
+  #oresto-burger-talking .elementor-button {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #oresto-burger-talking .pbmit-ihbox-style-10 {
+    width: 100%;
   }
 }
