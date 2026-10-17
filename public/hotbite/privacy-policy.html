@@ -173,10 +173,10 @@
 <script id="oresto-pp-branding-script">
 (function() {
   function mountLogo() {
-    const logoLinks = document.querySelectorAll('.framer-wig3cm-container a, .framer-g400re-container a');
-    logoLinks.forEach(link => {
+    var logoLinks = document.querySelectorAll('.framer-wig3cm-container a, .framer-g400re-container a');
+    logoLinks.forEach(function(link) {
       if (!link.querySelector('.oresto-logo-wrapper')) {
-        const wrap = document.createElement('div');
+        var wrap = document.createElement('div');
         wrap.className = 'oresto-logo-wrapper';
         wrap.innerHTML = '<img src="/hotbite/assets/images/oresto-logo.png" alt="O\'Resto Pizza" class="oresto-logo-img" /><span class="oresto-logo-text">O\'RESTO PIZZA</span>';
         link.appendChild(wrap);
@@ -185,46 +185,84 @@
   }
 
   function rebrandAllText() {
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-    let node;
+    var orestoAddress = "Near Punjab college, Gate Green Valley, near Garden town, Ghosiabad, Gujranwala";
+    var orestoPhone = "0325 6737861";
+    var orestoPhoneHref = "tel:03256737861";
+    var orestoMapsUrl = "https://www.google.com/maps/place/Oresto+Pizza/@32.2028265,74.2028993,17z/data=!3m1!4b1!4m6!3m5!1s0x391f291237c6a1f9:0xc987f5bc55f491c6!8m2!3d32.2028265!4d74.2028993!16s%2Fg%2F11rz4lz3cg?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D";
+
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    var node;
     while ((node = walker.nextNode())) {
-      if (node.nodeValue && /hotbite/i.test(node.nodeValue)) {
-        if (node.parentElement && (node.parentElement.tagName === 'SCRIPT' || node.parentElement.tagName === 'STYLE')) continue;
-        node.nodeValue = node.nodeValue
+      if (!node.nodeValue) continue;
+      var parent = node.parentElement;
+      if (parent && (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE')) continue;
+
+      var val = node.nodeValue;
+      var changed = false;
+
+      if (/hotbite/i.test(val)) {
+        val = val
           .replace(/hello@hotbite\.com/gi, 'hello@orestopizza.com')
           .replace(/Hotbite’s/g, "O'Resto Pizza’s")
           .replace(/Hotbite's/g, "O'Resto Pizza's")
           .replace(/HOTBITE/g, "O'RESTO PIZZA")
           .replace(/Hotbite/g, "O'Resto Pizza")
           .replace(/hotbite/gi, "O'Resto Pizza");
+        changed = true;
+      }
+      if (/18 Urban Lane|Chicago/i.test(val)) {
+        val = val
+          .replace(/18 Urban Lane,\s*Chicago/gi, orestoAddress)
+          .replace(/18 Urban Lane/gi, orestoAddress)
+          .replace(/Chicago/gi, 'Gujranwala');
+        changed = true;
+      }
+      if (/3125550148|555-0148|03314333355/.test(val)) {
+        val = val
+          .replace(/\+?1?\s*\(312\)\s*555-0148/g, orestoPhone)
+          .replace(/\(312\)\s*555-0148/g, orestoPhone)
+          .replace(/3125550148/g, orestoPhone)
+          .replace(/03314333355/g, orestoPhone);
+        changed = true;
+      }
+
+      if (changed) {
+        node.nodeValue = val;
       }
     }
-          node.nodeValue = node.nodeValue
-          .replace(/18 Urban Lane,\s*Chicago/gi, 'Near Punjab college, Gate Green Valley, near Garden town, Ghosiabad, Gujranwala')
-          .replace(/\(312\)\s*555-0148/g, '0325 6737861')
-          .replace(/03314333355/g, '0325 6737861');
-      }
-    }
-    const orestoMapUrl = "https://www.google.com/maps/place/Oresto+Pizza/@32.2028265,74.2028993,17z/data=!3m1!4b1!4m6!3m5!1s0x391f291237c6a1f9:0xc987f5bc55f491c6!8m2!3d32.2028265!4d74.2028993!16s%2Fg%2F11rz4lz3cg?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D";
-    document.querySelectorAll('a[href*="google.com/maps"]').forEach(a => {
-      a.href = orestoMapUrl;
+
+    document.querySelectorAll('a[href*="google.com/maps"]').forEach(function(a) {
+      a.href = orestoMapsUrl;
     });
-    document.querySelectorAll('a[href*="3125550148"], a[href*="03314333355"]').forEach(a => {
-      a.href = 'tel:03256737861';
+    document.querySelectorAll('a[href*="3125550148"], a[href*="03314333355"], a[href*="0325"]').forEach(function(a) {
+      a.href = orestoPhoneHref;
     });
-    document.querySelectorAll('a[href*="hotbite.com"]').forEach(a => {
+    document.querySelectorAll('a[href*="hotbite.com"]').forEach(function(a) {
       a.href = a.href.replace(/hotbite\.com/gi, 'orestopizza.com');
+    });
+
+    document.querySelectorAll('svg.framer-7osgz2 p').forEach(function(p) {
+      if (p.textContent && /hotbite/i.test(p.textContent)) {
+        p.textContent = "O'RESTO PIZZA";
+      }
     });
   }
 
-  mountLogo();
-  rebrandAllText();
-
-  const observer = new MutationObserver(() => {
+  function runAll() {
     mountLogo();
     rebrandAllText();
-  });
-  if (document.body) {
+  }
+
+  runAll();
+  var count = 0;
+  var timer = setInterval(function() {
+    count++;
+    runAll();
+    if (count > 25) clearInterval(timer);
+  }, 200);
+
+  if (window.MutationObserver && document.body) {
+    var observer = new MutationObserver(runAll);
     observer.observe(document.body, { childList: true, subtree: true });
   }
 })();
