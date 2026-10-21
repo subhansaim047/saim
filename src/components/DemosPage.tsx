@@ -33,18 +33,18 @@ const demos: DemoItem[] = [
       "Social Proof & Testimonials Showcase",
       "Responsive Layout & Smooth Scroll"
     ],
-    badge: "New 1:1 Demo"
+    badge: "Production Architecture"
   },
   {
     id: "burger-garage",
     title: "Burger Garage",
     category: "Restaurant & Fast Food",
-    description: "A premium, fully scraped variant of the Royal Fare template.",
+    description: "Bespoke high-performance digital menu & fast-casual restaurant architecture.",
     demoUrl: "/burger-garage/index.html",
     previewImage: "/burger-garage/assets/media/logo.png",
     tags: ["Restaurant", "Burger", "HTML5"],
     features: [
-      "Exact perfect clone",
+      "Pixel-Perfect Responsive Engineering",
       "Interactive Food Menus",
       "Fully Responsive Design"
     ],
@@ -58,7 +58,7 @@ const demos: DemoItem[] = [
     id: "frenchyse",
     title: "Frenchyse Restaurant",
     category: "Restaurant & Luxury Dining",
-    description: "A premium 1-to-1 restaurant website template clone ready for customization.",
+    description: "Bespoke fine-dining & luxury hospitality web experience tailored for reservations.",
     demoUrl: "/frenchyse/index.html",
     previewImage: "/frenchyse/images/banner-bg-03-new.png",
     tags: ["Restaurant", "Luxury", "GSAP Scroll", "HTML5"],
@@ -68,13 +68,13 @@ const demos: DemoItem[] = [
       "Parallax & Animations",
       "Fully Responsive Design"
     ],
-    badge: "Template"
+    badge: "Bespoke Architecture"
   },
   {
     id: "anzaar-rooftop",
     title: "ANZAAR Rooftop",
     category: "Restaurant & Luxury Dining",
-    description: "A premium 1-to-1 restaurant website showcasing dynamic scroll animations, luxury styling, and fully animated food visualizers.",
+    description: "A bespoke culinary web platform showcasing dynamic scroll animations, luxury styling, and fully animated food visualizers.",
     demoUrl: "/anzaar/index.html",
     previewImage: "/anzaar/images/banner-bg-03-new.png",
     tags: ["Restaurant", "Luxury", "GSAP Scroll", "HTML5"],
@@ -160,7 +160,7 @@ const demos: DemoItem[] = [
       "Curated Residential & Penthouse Visual Portfolio",
       "Interactive Architecture Project Consultation System"
     ],
-    badge: "Featured Template"
+    badge: "Featured Production"
   },
   {
     id: "serenia",
@@ -169,20 +169,20 @@ const demos: DemoItem[] = [
     description: "A tranquil, nature-inspired luxury wellness and day spa website featuring full appointment booking, 8 signature therapy showcases, organic cosmetics shop, treatment pricing, and sanctuary lookbook.",
     demoUrl: "/demos/serenia/index.html",
     previewImage: "/demos/serenia/preview.png",
-    tags: ["Wellness & Spa", "Appointment Booking", "Cosmetics Shop", "Full Template"],
+    tags: ["Wellness & Spa", "Appointment Booking", "Cosmetics Shop", "Complete Platform"],
     features: [
       "Tranquil Earth-Toned Aesthetic & Belleza Typography",
       "Comprehensive 8-Therapy Service Catalog & Day Passes",
       "Organic Beauty & Skincare E-Commerce Showcase",
       "Interactive Appointment Reservation & 100% Offline Assets"
     ],
-    badge: "Featured Template"
+    badge: "Featured Production"
   },
   {
     id: "valeria",
     title: "VALERIA - Luxury Beauty Salon & Cosmetics",
     category: "Beauty Salon & High-End Aesthetics",
-    description: "An ultra-luxurious, editorial aesthetic beauty salon template featuring animated hero marquees, comprehensive multi-page service menus, curated lookbook gallery, and interactive booking inquiry.",
+    description: "An ultra-luxurious, editorial aesthetic beauty salon platform featuring animated hero marquees, comprehensive multi-page service menus, curated lookbook gallery, and interactive booking inquiry.",
     demoUrl: "/demos/valeria/index.html",
     previewImage: "/demos/valeria/preview.png",
     tags: ["Luxury Design", "Beauty & Cosmetics", "Editorial Aesthetic", "Full Template"],
@@ -198,12 +198,12 @@ const demos: DemoItem[] = [
     id: "studio-dbrickell",
     title: "Studio-D Brickell - Luxury Beauty Salon & Spa",
     category: "Beauty Salon & Miami Luxury Services",
-    description: "A 100% pixel-perfect 1:1 build of the premier Studio-D Brickell salon in Miami, FL. Features top announcement discounts, luxury service showcases, K-rastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
+    description: "A high-performance custom digital flagship engineered for premier salons and luxury studios. Features top announcement discounts, luxury service showcases, K-rastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
     demoUrl: "/demos/studio-dbrickell/index.html",
     previewImage: "/demos/studio-dbrickell/assets/images/branding/og-image.jpg",
-    tags: ["1:1 Pixel Perfect", "Beauty Salon", "Luxury Spa", "Mobile First"],
+    tags: ["Pixel-Perfect UI", "Beauty Salon", "Luxury Spa", "Mobile First"],
     features: [
-      "100% 1:1 Pixel-Perfect Visual Fidelity",
+      "100% Pixel-Perfect Visual Fidelity",
       "K-rastase & Shu Uemura Luxury Spotlight",
       "Interactive Online Booking & Mangomint Integration",
       "Mobile Sticky Bar & Responsive Fluid Grids"
@@ -212,9 +212,9 @@ const demos: DemoItem[] = [
   },
   {
     id: "liana",
-    title: "LIANA - Hair & Beauty Salon Native Template",
+    title: "LIANA - Luxury Hair & Beauty Salon Experience",
     category: "Beauty Salon & Online Booking",
-    description: "A pixel-perfect, ultra-fast native recreation of the luxury LIANA Hair & Beauty Salon template. Features online booking, signature treatments menu, master stylists showcase, and responsive mobile-first design.",
+    description: "A pixel-perfect, ultra-fast custom web architecture engineered for luxury hair & beauty brands. Features online booking, signature treatments menu, master stylists showcase, and responsive mobile-first design.",
     demoUrl: "/demos/liana/index.html",
     previewImage: "/demos/liana/preview.png",
     tags: ["Clean Code", "Beauty Salon", "Booking System", "Fast Loading"],

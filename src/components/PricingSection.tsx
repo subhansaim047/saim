@@ -324,6 +324,41 @@ export const PricingSection = () => {
             <PricingCard key={p.name} plan={p} currency={currency} />
           ))}
         </div>
+
+        {/* PAYMENT TERMS & PEACE OF MIND */}
+        <div className="mt-12 max-w-5xl mx-auto rounded-2xl bg-white/[0.03] border border-white/10 p-6 sm:p-8 shadow-xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2 text-white font-medium text-sm">
+                <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
+                <span>50/50 Milestone Protection</span>
+              </div>
+              <p className="text-white/60 text-xs leading-relaxed">
+                50% deposit to initiate architecture & design. The remaining 50% is only payable after full private staging preview and your final approval prior to live deployment.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2 text-white font-medium text-sm">
+                <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                <span>UK & EU Invoicing & Rails</span>
+              </div>
+              <p className="text-white/60 text-xs leading-relaxed">
+                HMRC & EU VAT-compliant invoices. Payments processed seamlessly via Stripe Secure Card, Wise Multi-Currency, UK Faster Payments, and SEPA Bank Wire.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2 text-white font-medium text-sm">
+                <Sparkles className="w-4 h-4 text-primary flex-shrink-0" />
+                <span>100% Satisfaction Guarantee</span>
+              </div>
+              <p className="text-white/60 text-xs leading-relaxed">
+                We iterate on staging until you are 100% satisfied with performance, UX, and conversion flow. Zero monthly retainers or hidden lock-ins.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ export const PerformanceSection = () => {
     <section className="bg-black text-[#E1E0CC] px-6 sm:px-12 md:px-20 lg:px-28 py-24 md:py-32 overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-        {/* LEFT: Heading (Same font as My Process) */}
+        {/* LEFT: Heading (Same font as Our Process) */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,11 +47,11 @@ export const PerformanceSection = () => {
               >
                 {/* Horizontal Grid Lines & Labels */}
                 {[
-                  { val: "5.000", y: 40 },
-                  { val: "4.000", y: 110 },
-                  { val: "3.000", y: 180 },
-                  { val: "2.000", y: 250 },
-                  { val: "1.000", y: 320 },
+                  { val: "50,000", y: 40 },
+                  { val: "40,000", y: 110 },
+                  { val: "30,000", y: 180 },
+                  { val: "20,000", y: 250 },
+                  { val: "10,000", y: 320 },
                 ].map((grid) => (
                   <g key={grid.val}>
                     <text
@@ -121,14 +121,14 @@ export const PerformanceSection = () => {
                   top: "20%",
                   left: "48%",
                   transform: "translate(-10%, 0)",
-                  minWidth: "150px",
+                  minWidth: "180px",
                 }}
               >
                 {/* Views Row */}
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[11px] text-white/50 font-medium">Views</span>
+                  <span className="text-[11px] text-white/50 font-medium">Organic Impressions</span>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-bold text-white">3.024</span>
+                    <span className="text-xs font-bold text-white">34,200</span>
                     <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#3b185f] text-[#c084fc]">
                       +47%
                     </span>
@@ -137,15 +137,21 @@ export const PerformanceSection = () => {
 
                 {/* Clicks Row */}
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[11px] text-white/50 font-medium">Clicks</span>
+                  <span className="text-[11px] text-white/50 font-medium">Qualified Inquiries</span>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-bold text-white">1.274</span>
+                    <span className="text-xs font-bold text-white">1,274</span>
                     <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#064e3b] text-[#34d399]">
                       +53%
                     </span>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Context Benchmark Caption */}
+            <div className="mt-2 pt-3 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-white/50">
+              <span className="font-mono">Benchmark: 90 days post-launch Next.js 16 deployment</span>
+              <span className="text-primary/80 font-medium">Verified Core Web Vitals (98+ Score)</span>
             </div>
           </div>
         </motion.div>

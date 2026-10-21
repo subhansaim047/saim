@@ -28,7 +28,7 @@ export const FooterSection = () => {
 
           <nav className="site-footer__nav" aria-label="Explore navigation">
             <a href="/#benefits">Key Benefits</a>
-            <a href="/#process">My Process</a>
+            <a href="/#process">Our Process</a>
             <a href="/#pricing">Pricing Plans</a>
             <a href="/#faq">FAQ</a>
             <Link href="/blogs">Blogs</Link>

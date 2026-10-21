@@ -468,7 +468,7 @@ export const BlogPost1Page = () => {
             <p className="text-white font-semibold text-sm mb-0.5">Saim Dev</p>
             <p className="text-white/40 text-xs mb-3">Full Stack Web Developer · Building business websites since 2020</p>
             <p className="text-white/55 text-sm leading-relaxed">
-              I build high-performance, conversion-focused websites for small businesses. Every site I deliver is fast, mobile-optimised, and built to generate real leads — not just look good.
+              We build high-performance, conversion-focused websites for growing businesses. Every site our studio delivers is fast, mobile-optimised, and built to generate real leads — not just look good.
             </p>
           </div>
         </motion.div>

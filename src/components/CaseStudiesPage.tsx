@@ -43,7 +43,7 @@ const caseStudiesData: CaseStudy[] = [
     problemText:
       "Apex Dental was losing over 60% of mobile visitors due to a slow WordPress template that loaded in 4.8 seconds and lacked instant online booking options.",
     solutionText:
-      "Engineered a bespoke React + Tailwind web platform featuring click-to-book Instagram integration, MedicalBusiness JSON-LD schema, and local SEO maps optimization.",
+      "Engineered a bespoke React + Tailwind web platform featuring click-to-book WhatsApp integration, MedicalBusiness JSON-LD schema, and local SEO maps optimization.",
     designText:
       "Clean, medical-grade dark luxury aesthetic with high-contrast typography, trust badges, and frictionless appointment CTA buttons.",
     beforeStats: { loadTime: "4.8s", score: 38, bounceRate: "68%" },
@@ -75,7 +75,7 @@ const caseStudiesData: CaseStudy[] = [
     afterStats: { loadTime: "0.5s", score: 100, bounceRate: "14%" },
     testimonial: {
       quote:
-        "Our phone hasn't stopped ringing since the new site went live. The instant Instagram location sharing alone saved us hours of back-and-forth.",
+        "Our phone hasn't stopped ringing since the new site went live. The instant WhatsApp location sharing alone saved us hours of back-and-forth.",
       author: "James Miller",
       role: "Operations Manager, SpeedTech Auto",
     },

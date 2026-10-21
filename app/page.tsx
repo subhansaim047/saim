@@ -28,7 +28,7 @@ const faqSchema = {
       "name": "Do you provide hosting?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! I guide you through selecting and setting up ultra-fast cloud hosting, custom domain configuration, and free SSL security setup for sub-second page loads."
+        "text": "Yes! We guide you through selecting and setting up ultra-fast cloud hosting, custom domain configuration, and free SSL security setup for sub-second page loads."
       }
     },
     {

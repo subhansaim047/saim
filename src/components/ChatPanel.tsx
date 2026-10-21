@@ -19,7 +19,7 @@ const initialMessages: Message[] = [
     id: "1",
     role: "assistant",
     content:
-      "Welcome to Saim Dev! I build high-converting websites engineered to turn visitors into paying clients. How can I help your business grow today?",
+      "Welcome to Saim Dev! We engineer high-converting websites designed to turn visitors into paying clients. How can we help your business grow today?",
   },
   {
     id: "2",

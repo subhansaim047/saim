@@ -18,7 +18,7 @@ const faqs: FaqItem[] = [
   {
     question: "Do you provide hosting?",
     answer:
-      "Yes! I guide you through selecting and setting up ultra-fast cloud hosting, custom domain configuration, and free SSL security setup for sub-second page loads.",
+      "Yes! We guide you through selecting and setting up ultra-fast cloud hosting, custom domain configuration, and free SSL security setup for sub-second page loads.",
   },
   {
     question: "Can I edit content myself?",

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MessageSquare, ArrowRight, Sparkles, CheckCircle2, Clock, ShieldCheck } from "lucide-react";
+import { MessageSquare, ArrowRight, CheckCircle2, Clock, ShieldCheck, Calendar } from "lucide-react";
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ export const ContactSection = () => {
     contactInfo: "",
     projectType: "Custom Business Website",
     currentWebsite: "",
-    budget: "$1,000 � $2,500",
+    budget: "£350 – £750 / $450 – $999 (Starter)",
     details: "",
   });
 
@@ -21,10 +21,10 @@ export const ContactSection = () => {
   ];
 
   const budgetOptions = [
-    "$500 � $1,000",
-    "$1,000 � $2,500",
-    "$2,500 � $5,000",
-    "$5,000+",
+    "£350 – £750 / $450 – $999 (Starter)",
+    "£750 – £1,500 / $999 – $2,000 (Business)",
+    "£1,500 – £3,500+ / $2,000+ (Custom / Web App)",
+    "Flexible / Let's Discuss",
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -35,14 +35,14 @@ export const ContactSection = () => {
     const currentSite = formData.currentWebsite.trim() || "None (New Project)";
     const details = formData.details.trim() || "Looking forward to discussing project details!";
 
-    const message = `?? Hello Saim Dev! I would like to start a website project:
+    const message = `👋 Hello Saim Dev! I would like to start a website project:
 
-?? *Name / Business:* ${name}
-?? *Contact / Location:* ${contact}
-?? *Project Type:* ${formData.projectType}
-?? *Current Website:* ${currentSite}
-?? *Budget Range:* ${formData.budget}
-?? *Project Details:* ${details}`;
+• Name / Business: ${name}
+• Contact / Location: ${contact}
+• Project Type: ${formData.projectType}
+• Current Website: ${currentSite}
+• Budget Range: ${formData.budget}
+• Project Details: ${details}`;
 
     const encodedMessage = encodeURIComponent(message);
     const waUrl = `https://wa.me/447473962953?text=${encodedMessage}`;
@@ -52,23 +52,25 @@ export const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative w-full bg-black text-[#E1E0CC] px-4 sm:px-8 md:px-12 lg:px-20 py-24 sm:py-32 overflow-hidden"
+      className="relative w-full bg-black text-[#E1E0CC] px-4 sm:px-8 md:px-12 lg:px-20 py-24 sm:py-32 overflow-hidden border-t border-white/10"
     >
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[140px] pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="flex flex-col items-center text-center mb-16 sm:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-primary text-xs font-mono tracking-widest uppercase mb-3"
+            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 mb-4"
           >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Direct SMS Inquiry</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-xs font-mono uppercase tracking-wider text-white/80">
+              Accepting New UK & European Projects
+            </span>
           </motion.div>
 
           <motion.h2
@@ -76,9 +78,9 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-normal tracking-tight text-white mb-4"
+            className="text-3xl sm:text-5xl md:text-6xl font-normal tracking-tight text-white max-w-3xl leading-[1.08]"
           >
-            Let&apos;s Build Your Website
+            Let&apos;s build something <span className="font-serif italic text-primary">remarkable</span> together.
           </motion.h2>
 
           <motion.p
@@ -86,17 +88,14 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm sm:text-base text-white/60 leading-relaxed"
+            className="mt-4 text-sm sm:text-base text-white/60 max-w-xl"
           >
-            Share your project requirements below. Clicking submit will open a direct Instagram chat
-            with your briefing pre-filled for an instant quote and consultation.
+            Fill out the project brief below to start directly on WhatsApp, or book a 15-minute discovery call to discuss your goals.
           </motion.p>
         </div>
 
-        {/* Contact Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          
-          {/* Left Info Panel (4 cols) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left Info Column (4 cols) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -109,10 +108,10 @@ export const ContactSection = () => {
               
               <div className="space-y-4">
                 {[
-                  { title: "Fast Turnaround", desc: "Complete delivery in 5�10 business days." },
-                  { title: "Sub-Second Performance", desc: "Built with Next.js, React & modern headless architecture." },
-                  { title: "Direct SMS Access", desc: "No middleman � chat directly with your senior developer." },
-                  { title: "Free 30-Day Support", desc: "Post-launch testing, SEO indexing & revisions included." },
+                  { title: "Rapid Turnaround", desc: "Complete delivery in 5–10 business days." },
+                  { title: "Sub-Second Performance", desc: "Next.js 16 + React 19 architecture with 95+ Core Web Vitals." },
+                  { title: "Direct WhatsApp Access", desc: "No middlemen — communicate directly with your lead engineer." },
+                  { title: "Free Dedicated Support", desc: "14 to 30 days of post-launch testing, SEO indexing & revisions." },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
@@ -127,7 +126,7 @@ export const ContactSection = () => {
               <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/60">
                 <div className="flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5 text-primary" />
-                  <span>Reply in ~15 mins</span>
+                  <span>Reply in &lt;15 mins</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-primary" />
@@ -137,15 +136,15 @@ export const ContactSection = () => {
             </div>
 
             {/* Quick Contact Card */}
-            <div className="bg-[#0c0c0e] border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
-              <span className="text-xs font-mono text-white/40 uppercase tracking-wider">Direct Channels</span>
+            <div className="bg-[#0c0c0e] border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+              <span className="text-xs font-mono text-white/40 uppercase tracking-wider">Fast Response Channels</span>
               <a
                 href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20interested%20in%20a%20website%20project"
                 target="_blank"
                 rel="noreferrer"
                 className="text-base sm:text-lg font-bold text-white hover:text-primary transition-colors flex items-center gap-2"
               >
-                <MessageSquare className="w-4 h-4 text-primary" />
+                <MessageSquare className="w-4 h-4 text-emerald-400" />
                 <span>WhatsApp: +44 7473 962953</span>
               </a>
               <a
@@ -154,9 +153,10 @@ export const ContactSection = () => {
                 rel="noreferrer"
                 className="text-xs sm:text-sm font-semibold text-primary hover:underline flex items-center gap-1.5"
               >
-                <span>📅 Book a 15-Min Discovery Call &rarr;</span>
+                <Calendar className="w-4 h-4 text-primary" />
+                <span>Book a 15-Min Discovery Call &rarr;</span>
               </a>
-              <span className="text-[11px] text-white/40">Serving UK, European & International Businesses</span>
+              <span className="text-[11px] text-white/40">UK & European Timezones • Available Monday – Saturday</span>
             </div>
           </motion.div>
 
@@ -169,123 +169,124 @@ export const ContactSection = () => {
             className="lg:col-span-8 bg-[#0a0a0c] border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl"
           >
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              
-              {/* Row 1: Name & Contact/Address */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              {/* Row 1: Name & Contact */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="contact-name" className="text-xs font-medium text-white/80">
-                    Your Name / Business <span className="text-primary">*</span>
+                  <label htmlFor="name" className="text-xs font-mono text-white/70 uppercase tracking-wider">
+                    Your Name / Company *
                   </label>
                   <input
-                    id="contact-name"
                     type="text"
+                    id="name"
                     required
-                    placeholder="e.g. John Doe / Apex Studio"
+                    placeholder="e.g. David Smith"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                    className="w-full bg-[#121215] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="contact-info" className="text-xs font-medium text-white/80">
-                    Phone / Email / Location <span className="text-primary">*</span>
+                  <label htmlFor="contactInfo" className="text-xs font-mono text-white/70 uppercase tracking-wider">
+                    Email / Phone Number *
                   </label>
                   <input
-                    id="contact-info"
                     type="text"
+                    id="contactInfo"
                     required
-                    placeholder="e.g. +1 (555) 0192 or john@company.com"
+                    placeholder="e.g. david@example.co.uk or +44..."
                     value={formData.contactInfo}
                     onChange={(e) => setFormData({ ...formData, contactInfo: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                    className="w-full bg-[#121215] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
               </div>
 
-              {/* Project Type Selector */}
+              {/* Row 2: Project Type & Current Website */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="projectType" className="text-xs font-mono text-white/70 uppercase tracking-wider">
+                    Project Type
+                  </label>
+                  <select
+                    id="projectType"
+                    value={formData.projectType}
+                    onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
+                    className="w-full bg-[#121215] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors cursor-pointer"
+                  >
+                    {projectTypes.map((t) => (
+                      <option key={t} value={t} className="bg-[#121215] text-white">
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="currentWebsite" className="text-xs font-mono text-white/70 uppercase tracking-wider">
+                    Current Website (Optional)
+                  </label>
+                  <input
+                    type="text"
+                    id="currentWebsite"
+                    placeholder="e.g. yourbusiness.co.uk"
+                    value={formData.currentWebsite}
+                    onChange={(e) => setFormData({ ...formData, currentWebsite: e.target.value })}
+                    className="w-full bg-[#121215] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-primary transition-colors"
+                  />
+                </div>
+              </div>
+
+              {/* Budget Options */}
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-medium text-white/80">Project Type</label>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  {projectTypes.map((type) => (
+                <label className="text-xs font-mono text-white/70 uppercase tracking-wider">
+                  Estimated Budget Range
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {budgetOptions.map((b) => (
                     <button
-                      key={type}
                       type="button"
-                      onClick={() => setFormData({ ...formData, projectType: type })}
-                      className={`text-xs px-3 py-2.5 rounded-xl border transition-all text-center cursor-pointer ${
-                        formData.projectType === type
-                          ? "bg-primary text-black font-semibold border-primary shadow-md"
-                          : "bg-white/5 text-white/70 border-white/10 hover:border-white/20 hover:text-white"
+                      key={b}
+                      onClick={() => setFormData({ ...formData, budget: b })}
+                      className={`text-left px-4 py-3 rounded-xl border text-xs sm:text-sm font-medium transition-all ${
+                        formData.budget === b
+                          ? "border-primary bg-primary/10 text-primary"
+                          : "border-white/10 bg-[#121215] text-white/70 hover:border-white/20 hover:text-white"
                       }`}
                     >
-                      {type}
+                      {b}
                     </button>
                   ))}
                 </div>
               </div>
 
-              {/* Current Website & Budget */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="current-website" className="text-xs font-medium text-white/80">
-                    Existing Website <span className="text-white/40 font-normal">(Optional)</span>
-                  </label>
-                  <input
-                    id="current-website"
-                    type="text"
-                    placeholder="e.g. www.yoursite.com"
-                    value={formData.currentWebsite}
-                    onChange={(e) => setFormData({ ...formData, currentWebsite: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="budget-select" className="text-xs font-medium text-white/80">
-                    Estimated Budget Range
-                  </label>
-                  <select
-                    id="budget-select"
-                    value={formData.budget}
-                    onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full bg-[#141416] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors cursor-pointer"
-                  >
-                    {budgetOptions.map((opt) => (
-                      <option key={opt} value={opt} className="bg-black text-white">
-                        {opt}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              {/* Project Requirements */}
+              {/* Project Details */}
               <div className="flex flex-col gap-2">
-                <label htmlFor="project-details" className="text-xs font-medium text-white/80">
-                  Project Details &amp; Goals
+                <label htmlFor="details" className="text-xs font-mono text-white/70 uppercase tracking-wider">
+                  Project Details / Requirements
                 </label>
                 <textarea
-                  id="project-details"
-                  rows={3}
-                  placeholder="Tell us about your business, the features you need, or reference websites you like..."
+                  id="details"
+                  rows={4}
+                  placeholder="Tell us about your business goals, desired timeline, or any specific features..."
                   value={formData.details}
                   onChange={(e) => setFormData({ ...formData, details: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
+                  className="w-full bg-[#121215] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-primary transition-colors resize-none"
                 />
               </div>
 
-              {/* Submit to Instagram Button */}
+              {/* Submit CTA Button */}
               <button
                 type="submit"
-                className="mt-2 w-full bg-primary hover:bg-white text-black font-bold text-sm sm:text-base py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 shadow-xl group cursor-pointer"
+                className="mt-2 w-full bg-primary hover:brightness-110 active:scale-95 text-black font-bold text-sm sm:text-base py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 shadow-xl group cursor-pointer"
               >
                 <MessageSquare className="w-5 h-5 text-black" />
-                <span>Start Project on SMS</span>
+                <span>Submit Brief via WhatsApp</span>
                 <ArrowRight className="w-4 h-4 text-black transition-transform group-hover:translate-x-1" />
               </button>
 
-              <p className="text-center text-[11px] text-white/40">
-                ?? Your details are kept 100% confidential and directly transmitted via SMS encryption.
+              <p className="text-center text-[11px] text-white/50">
+                🔒 Your details are kept 100% confidential. Direct end-to-end encrypted connection with lead engineer.
               </p>
             </form>
           </motion.div>
@@ -294,4 +295,3 @@ export const ContactSection = () => {
     </section>
   );
 };
-

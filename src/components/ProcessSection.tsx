@@ -43,7 +43,7 @@ export const ProcessSection = () => {
 
           <FadeUp delay={0.1}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-white mb-4">
-              My Process
+              Our Process
             </h2>
           </FadeUp>
 

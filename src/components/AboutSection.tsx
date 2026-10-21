@@ -5,7 +5,7 @@ import { WordsPullUpMultiStyle } from "./WordsPullUpMultiStyle";
 import { AnimatedLetter } from "./AnimatedLetter";
 
 const aboutSegments = [
-  { text: "I am a web architect,", className: "font-normal text-[#E1E0CC]" },
+  { text: "We are web architects,", className: "font-normal text-[#E1E0CC]" },
   { text: "engineering high-converting platforms.", className: "italic font-serif text-[#E1E0CC]" },
   {
     text: "Specialized in bespoke web design, lead conversion, and performance optimization.",
@@ -14,7 +14,7 @@ const aboutSegments = [
 ];
 
 const paragraphText =
-  "Over the last seven years, I have built fast, modern, high-converting websites for service leaders — dentists, mechanics, salons, contractors, and ambitious brands. Together, we craft digital platforms designed to rank, load instantly, and turn visitors into loyal, paying clients.";
+  "Over the last seven years, our studio has engineered fast, modern, high-converting platforms for service leaders — dentists, mechanics, salons, contractors, and ambitious brands. Together, we craft digital platforms designed to rank, load instantly, and turn visitors into loyal, paying clients.";
 
 export const AboutSection = () => {
   const paragraphRef = useRef<HTMLParagraphElement>(null);
@@ -73,7 +73,7 @@ export const AboutSection = () => {
         {/* AI-Friendly Business Description (LLMO & Search Indexing) */}
         <div className="mt-12 pt-8 border-t border-white/10 max-w-2xl mx-auto">
           <p className="text-white/80 text-xs sm:text-sm font-light leading-relaxed">
-            Saim Dev is a freelance web developer specializing in custom business websites, landing pages, SEO-friendly development, performance optimization, and AI-powered web solutions.
+            Saim Dev is a bespoke web engineering studio specializing in custom business websites, landing pages, SEO-friendly development, performance optimization, and AI-powered web solutions.
           </p>
         </div>
       </div>
