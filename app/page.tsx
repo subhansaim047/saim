@@ -11,20 +11,73 @@ import { CtaSection } from "@/components/CtaSection";
 import { ContactSection } from "@/components/ContactSection";
 import { FooterSection } from "@/components/FooterSection";
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a website take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Starter websites are typically completed within 5–7 business days. Full Business Plan websites take 7–10 days from initial discovery to final deployment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide hosting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! I guide you through selecting and setting up ultra-fast cloud hosting, custom domain configuration, and free SSL security setup for sub-second page loads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I edit content myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Your website is engineered with clean content architecture and clear instructions so you can easily update text, images, blog posts, and services whenever needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer support after launch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Every project includes 14 to 30 days of free dedicated technical support post-launch to handle minor tweaks, bug fixes, backups, and security checks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On-page SEO includes optimized title tags, meta descriptions, structured schema markup, sub-second page speed optimization, mobile responsiveness, and Google Search Console indexing setup."
+      }
+    }
+  ]
+};
+
 export default function HomePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden">
-      <HeroSection />
-      <AboutSection />
-      <BenefitsSection />
-      <PerformanceSection />
-      <TechStackSection />
-      <ProcessSection />
-      <PricingSection />
-      <FaqSection />
-      <CtaSection />
-      <ContactSection />
-      <FooterSection />
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main className="min-h-screen overflow-x-hidden">
+        <HeroSection />
+        <AboutSection />
+        <BenefitsSection />
+        <PerformanceSection />
+        <TechStackSection />
+        <ProcessSection />
+        <PricingSection />
+        <FaqSection />
+        <CtaSection />
+        <ContactSection />
+        <FooterSection />
+      </main>
+    </>
   );
 }

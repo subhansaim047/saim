@@ -44,8 +44,9 @@ export const ContactSection = () => {
 ?? *Budget Range:* ${formData.budget}
 ?? *Project Details:* ${details}`;
 
-    const igUrl = 'sms:+447473962953';
-    window.open(igUrl, "_blank", "noopener,noreferrer");
+    const encodedMessage = encodeURIComponent(message);
+    const waUrl = `https://wa.me/447473962953?text=${encodedMessage}`;
+    window.open(waUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -137,17 +138,25 @@ export const ContactSection = () => {
 
             {/* Quick Contact Card */}
             <div className="bg-[#0c0c0e] border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
-              <span className="text-xs font-mono text-white/40 uppercase tracking-wider">Direct Hotline</span>
+              <span className="text-xs font-mono text-white/40 uppercase tracking-wider">Direct Channels</span>
               <a
-                href="sms:+447473962953"
+                href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20interested%20in%20a%20website%20project"
                 target="_blank"
                 rel="noreferrer"
                 className="text-base sm:text-lg font-bold text-white hover:text-primary transition-colors flex items-center gap-2"
               >
                 <MessageSquare className="w-4 h-4 text-primary" />
-                <span>SMS</span>
+                <span>WhatsApp: +44 7473 962953</span>
               </a>
-              <span className="text-[11px] text-white/40">Available Monday � Saturday on Instagram</span>
+              <a
+                href="https://calendly.com/saimdev/15min"
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs sm:text-sm font-semibold text-primary hover:underline flex items-center gap-1.5"
+              >
+                <span>📅 Book a 15-Min Discovery Call &rarr;</span>
+              </a>
+              <span className="text-[11px] text-white/40">Serving UK, European & International Businesses</span>
             </div>
           </motion.div>
 

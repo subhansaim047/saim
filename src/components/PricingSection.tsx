@@ -1,17 +1,18 @@
 "use client";
 import { useState } from "react";
-import { Check, X, ChevronUp, ChevronDown } from "lucide-react";
+import { Check, X, ChevronUp, ChevronDown, ShieldCheck, Sparkles } from "lucide-react";
 import { FadeUp } from "./FadeUp";
 import { PrimaryButton } from "./PrimaryButton";
 import { SecondaryButton } from "./SecondaryButton";
 import { SpotlightBorder } from "./SpotlightBorder";
 import { cn } from "../lib/utils";
 
+type Currency = "GBP" | "EUR" | "USD";
+
 type Feature = { text: string; included: boolean };
-type Plan = {
+type BasePlan = {
   name: string;
-  price: string;
-  originalPrice?: string;
+  prices: Record<Currency, string>;
   description: string;
   features: Feature[];
   featured?: boolean;
@@ -19,86 +20,96 @@ type Plan = {
   bg: string;
 };
 
-const plans: Plan[] = [
+const rawPlans: BasePlan[] = [
   {
     name: "Landing Page",
-    price: "Landing Page",
-    description: "Simple 1-page online presence.",
+    prices: {
+      GBP: "£250",
+      EUR: "€290",
+      USD: "$300",
+    },
+    description: "High-converting 1-page online presence for single offers & local service campaigns.",
     bg: "#0f0f0f",
     features: [
-      { text: "1 Page (Landing Page)", included: true },
-      { text: "Mobile Responsive Design", included: true },
-      { text: "Contact Form", included: true },
-      { text: "Instagram Button", included: true },
+      { text: "1 High-Converting Page", included: true },
+      { text: "Mobile-First Ultra Fast Design", included: true },
+      { text: "Lead Capture & Contact Form", included: true },
+      { text: "Direct WhatsApp & Call Integration", included: true },
       { text: "Google Maps Embed", included: true },
-      { text: "Basic SEO Setup", included: true },
-      { text: "Social Media Links", included: true },
-      { text: "Fast Loading Design", included: true },
-      { text: "1 Round of Revisions", included: true },
+      { text: "Core SEO & Social Graph Setup", included: true },
+      { text: "Sub-Second Loading Architecture", included: true },
+      { text: "1 Round of Refinements", included: true },
+      { text: "7 Days Post-Launch Support", included: true },
     ],
   },
   {
     name: "Starter Plan",
-    price: "$500",
-    
-    description: "No monthly charges. Essential business presence.",
+    prices: {
+      GBP: "£390",
+      EUR: "€460",
+      USD: "$500",
+    },
+    description: "No monthly lock-in. Essential high-performance digital presence for local businesses.",
     bg: "#161616",
     features: [
-      { text: "Up to 5 Pages", included: true },
-      { text: "Custom Website Design", included: true },
-      { text: "Mobile Responsive Design", included: true },
-      { text: "Contact Form", included: true },
-      { text: "Instagram Integration", included: true },
-      { text: "Google Maps Integration", included: true },
-      { text: "Basic SEO Setup", included: true },
-      { text: "Fast Loading Website", included: true },
-      { text: "Social Media Links", included: true },
-      { text: "SSL Setup Assistance", included: true },
-      { text: "2 Revisions", included: true },
-      { text: "14 Days Support", included: true },
+      { text: "Up to 5 Custom Pages", included: true },
+      { text: "Next.js 16 Static Performance", included: true },
+      { text: "Mobile Responsive & Accessible", included: true },
+      { text: "Lead Generation & Contact Forms", included: true },
+      { text: "Direct WhatsApp & Call Buttons", included: true },
+      { text: "Google Maps & Local Schema", included: true },
+      { text: "Complete On-Page SEO Setup", included: true },
+      { text: "95+ Google PageSpeed Score", included: true },
+      { text: "SSL & Cloud Hosting Setup", included: true },
+      { text: "GDPR Compliant Architecture", included: true },
+      { text: "2 Rounds of Revisions", included: true },
+      { text: "14 Days Dedicated Support", included: true },
     ],
   },
   {
     name: "Business Plan",
-    price: "$999",
-    
-    description: "No monthly charges. Full growth engine.",
+    prices: {
+      GBP: "£790",
+      EUR: "€920",
+      USD: "$999",
+    },
+    description: "No monthly retainers. Complete growth engine engineered to dominate local search.",
     bg: "#252525",
     features: [
-      { text: "Up to 15 Pages", included: true },
-      { text: "Premium Custom UI/UX Design", included: true },
-      { text: "Advanced Animations & Interactions", included: true },
-      { text: "Conversion-Focused Layout", included: true },
-      { text: "Complete On-Page SEO", included: true },
-      { text: "Blog System Setup", included: true },
-      { text: "Google Analytics Integration", included: true },
-      { text: "Google Search Console Setup", included: true },
-      { text: "Lead Generation Forms", included: true },
-      { text: "Custom Contact Forms", included: true },
-      { text: "Advanced Speed Optimization", included: true },
-      { text: "AI Chatbot Integration", included: true },
-      { text: "Portfolio / Gallery System", included: true },
-      { text: "FAQ Section", included: true },
-      { text: "Testimonials Section", included: true },
-      { text: "Newsletter Signup Integration", included: true },
-      { text: "Social Media Integration", included: true },
-      { text: "Priority Support", included: true },
-      { text: "5 Revisions", included: true },
-      { text: "30 Days Support", included: true },
+      { text: "Up to 15 Pages & Landing Sections", included: true },
+      { text: "Bespoke Custom UI/UX & Brand Identity", included: true },
+      { text: "Sub-Second Next.js Turbopack Builds", included: true },
+      { text: "Conversion-Focused Architecture", included: true },
+      { text: "Comprehensive Structured Schema (JSON-LD)", included: true },
+      { text: "Dynamic Blog / Editorial CMS System", included: true },
+      { text: "Google Analytics 4 & Search Console Setup", included: true },
+      { text: "Advanced Speed & Core Web Vitals Optimization", included: true },
+      { text: "AI Chatbot / WhatsApp Lead Funnel", included: true },
+      { text: "Interactive Case Studies / Gallery System", included: true },
+      { text: "FAQ Rich Snippet Section", included: true },
+      { text: "GDPR Cookie Banner & Privacy Ready", included: true },
+      { text: "Priority Fast-Track Turnaround", included: true },
+      { text: "5 Revisions Included", included: true },
+      { text: "30 Days Dedicated Support", included: true },
     ],
     featured: true,
-    badge: "Best Value",
+    badge: "Most Popular in UK/EU",
   },
 ];
 
-const PricingCard = ({ plan }: { plan: Plan }) => {
+const PricingCard = ({ plan, currency }: { plan: BasePlan; currency: Currency }) => {
   const [expanded, setExpanded] = useState(false);
 
+  const price = plan.prices[currency];
   const INITIAL_COUNT = 5;
   const visibleFeatures = expanded
     ? plan.features
     : plan.features.slice(0, INITIAL_COUNT);
   const remainingCount = plan.features.length - INITIAL_COUNT;
+
+  const orderUrl = `https://wa.me/447473962953?text=${encodeURIComponent(
+    `Hi Saim, I'd like to get started with the ${plan.name} (${price}).`
+  )}`;
 
   return (
     <SpotlightBorder
@@ -112,8 +123,9 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
         style={{ backgroundColor: plan.bg }}
       >
         {plan.badge && (
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-white/15 bg-white px-3 py-1 text-xs font-medium text-black shadow-lg">
-            {plan.badge}
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-primary/30 bg-primary px-3.5 py-1 text-xs font-bold text-black shadow-lg flex items-center gap-1">
+            <Sparkles className="w-3 h-3 text-black" />
+            <span>{plan.badge}</span>
           </div>
         )}
 
@@ -126,19 +138,17 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
 
         <FadeUp delay={0.1}>
           <div className="mt-8 flex items-baseline gap-2">
-            <span className="text-3xl sm:text-[2.25rem] leading-none font-normal tracking-tight text-foreground">
-              {plan.price}
+            <span className="text-3xl sm:text-[2.5rem] leading-none font-bold tracking-tight text-foreground text-white">
+              {price}
             </span>
-            {plan.originalPrice && (
-              <span className="text-lg text-foreground/40 line-through">
-                ${plan.originalPrice}
-              </span>
-            )}
+            <span className="text-xs text-foreground/50 uppercase font-mono">
+              / one-time
+            </span>
           </div>
         </FadeUp>
 
         <FadeUp delay={0.2}>
-          <p className="mt-3 text-sm leading-relaxed text-foreground/60">
+          <p className="mt-3 text-sm leading-relaxed text-foreground/60 min-h-[42px]">
             {plan.description}
           </p>
         </FadeUp>
@@ -147,21 +157,21 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
           <div className="mt-6">
             {plan.featured ? (
               <PrimaryButton
-                href="sms:+447473962953"
+                href={orderUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 size="sm"
-                className="w-full"
+                className="w-full justify-center"
               >
-                Get Started
+                Order on WhatsApp
               </PrimaryButton>
             ) : (
               <SecondaryButton
-                href="sms:+447473962953"
+                href={orderUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 size="sm"
-                className="w-full"
+                className="w-full justify-center hover:bg-white hover:text-black"
               >
                 Get Started
               </SecondaryButton>
@@ -175,26 +185,26 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
               <li
                 key={f.text}
                 className={cn(
-                  "flex items-center gap-3 py-3 text-sm transition-all duration-300",
+                  "flex items-center gap-3 py-2.5 text-xs sm:text-sm transition-all duration-300",
                   i !== 0 && "border-t border-white/10",
                   f.included ? "text-foreground/85" : "text-foreground/40"
                 )}
               >
                 <span
                   className={cn(
-                    "flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border",
+                    "flex h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 items-center justify-center rounded-full border",
                     f.included
-                      ? "border-white/20 bg-white/[0.06]"
-                      : "border-white/10 bg-transparent"
+                      ? "border-primary/40 bg-primary/10 text-primary"
+                      : "border-white/10 bg-transparent text-foreground/40"
                   )}
                 >
                   {f.included ? (
-                    <Check className="w-3 h-3 text-foreground" />
+                    <Check className="w-3 h-3 text-primary" />
                   ) : (
                     <X className="w-3 h-3 text-foreground/50" />
                   )}
                 </span>
-                {f.text}
+                <span>{f.text}</span>
               </li>
             ))}
           </ul>
@@ -217,37 +227,101 @@ const PricingCard = ({ plan }: { plan: Plan }) => {
 };
 
 export const PricingSection = () => {
+  const [currency, setCurrency] = useState<Currency>("GBP");
+
   return (
-    <section id="pricing" className="relative w-full bg-background py-12 sm:py-16">
+    <section id="pricing" className="relative w-full bg-background py-16 sm:py-24 border-t border-white/10">
       <div className="mx-auto max-w-[1080px] px-4 sm:px-6">
         {/* HEADER */}
-        <div className="mb-14 flex flex-col items-start gap-10 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mb-10 flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <FadeUp>
-              <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-landing-surface border border-white/10 px-3 py-1 text-xs text-foreground/80 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-white/90" />
-                Pricing
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-landing-surface border border-white/10 px-3.5 py-1 text-xs text-foreground/80 backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                <span>TRANSPARENT VALUE PRICING</span>
               </span>
             </FadeUp>
             <FadeUp delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl font-normal tracking-[-0.02em] leading-[1.05] text-foreground">
-                Clear pricing plans
-                <br className="hidden sm:block" /> that scale with you.
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal tracking-[-0.02em] leading-[1.05] text-white">
+                Clear pricing plans.
+                <br />
+                <span className="text-white/60">No retainers. No surprises.</span>
               </h2>
             </FadeUp>
           </div>
+
+          {/* CURRENCY TOGGLE */}
           <FadeUp delay={0.2}>
-            <p className="max-w-sm text-sm sm:text-base text-foreground/60">
-              Transparent, high-value web architecture. Pick the plan that fits how far
-              you want to take your business online.
-            </p>
+            <div className="flex flex-col sm:items-end gap-2 w-full sm:w-auto">
+              <span className="text-[11px] font-mono text-white/50 uppercase tracking-wider">
+                Select Currency (UK / EU / Global):
+              </span>
+              <div className="inline-flex p-1 bg-white/5 border border-white/15 rounded-full backdrop-blur">
+                <button
+                  type="button"
+                  onClick={() => setCurrency("GBP")}
+                  className={cn(
+                    "px-3.5 py-1.5 text-xs font-semibold rounded-full transition-all cursor-pointer",
+                    currency === "GBP"
+                      ? "bg-primary text-black shadow-md"
+                      : "text-white/70 hover:text-white"
+                  )}
+                >
+                  🇬🇧 £ GBP (UK)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setCurrency("EUR")}
+                  className={cn(
+                    "px-3.5 py-1.5 text-xs font-semibold rounded-full transition-all cursor-pointer",
+                    currency === "EUR"
+                      ? "bg-primary text-black shadow-md"
+                      : "text-white/70 hover:text-white"
+                  )}
+                >
+                  🇪🇺 € EUR (Europe)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setCurrency("USD")}
+                  className={cn(
+                    "px-3.5 py-1.5 text-xs font-semibold rounded-full transition-all cursor-pointer",
+                    currency === "USD"
+                      ? "bg-primary text-black shadow-md"
+                      : "text-white/70 hover:text-white"
+                  )}
+                >
+                  🌐 $ USD (Global)
+                </button>
+              </div>
+            </div>
           </FadeUp>
+        </div>
+
+        {/* TRUST BANNER */}
+        <div className="mb-10 grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-white/75">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
+            <span>UK & EU Invoicing Ready</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
+            <span>Zero Monthly Retainers</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
+            <span>95+ Core Web Vitals</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
+            <span>Fast 5–10 Day Delivery</span>
+          </div>
         </div>
 
         {/* CARDS */}
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 items-start">
-          {plans.map((p) => (
-            <PricingCard key={p.name} plan={p} />
+          {rawPlans.map((p) => (
+            <PricingCard key={p.name} plan={p} currency={currency} />
           ))}
         </div>
       </div>

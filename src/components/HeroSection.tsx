@@ -186,20 +186,34 @@ export const HeroSection = () => {
               </motion.p>
 
               {/* CTA */}
-              <motion.a
-                href="sms:+447473962953"
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-primary rounded-full pl-5 pr-1.5 py-1.5 sm:pl-6 sm:pr-2 sm:py-2 flex items-center gap-3 hover:gap-4 transition-all duration-300 group cursor-pointer self-start shadow-xl"
-              >
-                <span className="text-black font-semibold text-xs sm:text-sm tracking-wide">Start Your Project</span>
-                <div className="bg-black rounded-full w-7 h-7 sm:w-9 sm:h-9 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#E1E0CC]" />
-                </div>
-              </motion.a>
+              <div className="flex flex-wrap items-center gap-3 pt-1">
+                <motion.a
+                  href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20interested%20in%20starting%20a%20website%20project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                  className="bg-primary rounded-full pl-5 pr-1.5 py-1.5 sm:pl-6 sm:pr-2 sm:py-2 flex items-center gap-3 hover:gap-4 transition-all duration-300 group cursor-pointer self-start shadow-xl"
+                >
+                  <span className="text-black font-semibold text-xs sm:text-sm tracking-wide">Start on WhatsApp</span>
+                  <div className="bg-black rounded-full w-7 h-7 sm:w-9 sm:h-9 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#E1E0CC]" />
+                  </div>
+                </motion.a>
+
+                <motion.a
+                  href="https://calendly.com/saimdev/15min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                  className="rounded-full px-4 sm:px-5 py-2 sm:py-2.5 flex items-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 text-[#E1E0CC] hover:text-white transition-all text-xs sm:text-sm font-medium backdrop-blur"
+                >
+                  <span>Book 15-Min Call</span>
+                </motion.a>
+              </div>
             </motion.div>
           </div>
 

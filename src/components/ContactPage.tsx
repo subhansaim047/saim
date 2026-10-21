@@ -53,7 +53,7 @@ export const ContactPage = () => {
 • *Project Details*: ${formData.details}`;
 
       const encodedText = encodeURIComponent(text);
-      const url = 'sms:+447473962953';
+      const url = `https://wa.me/447473962953?text=${encodedText}`;
       setIgLink(url);
       setSubmitted(true);
 
@@ -109,16 +109,16 @@ export const ContactPage = () => {
                 Inquiry Form Formatted!
               </h3>
               <p className="text-white/70 text-sm max-w-md mx-auto mb-6">
-                Click the button below to open Instagram with your pre-filled project details and press <strong>Send</strong>:
+                Click the button below to open WhatsApp with your pre-filled project details and press <strong>Send</strong>:
               </p>
               <a
-                href={igLink || "sms:+447473962953"}
+                href={igLink || "https://wa.me/447473962953"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-emerald-500 text-black text-sm font-bold px-8 py-4 rounded-full hover:bg-emerald-400 transition-all cursor-pointer mb-4 shadow-xl scale-105"
               >
                 <MessageSquare className="w-5 h-5" />
-                <span>Open & Send Message on SMS</span>
+                <span>Open & Send Message on WhatsApp</span>
               </a>
               <div>
                 <button
@@ -324,15 +324,15 @@ export const ContactPage = () => {
             Prefer Instant Chat?
           </h3>
           <p className="text-white/60 text-xs sm:text-sm mb-6 font-light">
-            Skip the form and message Saim Dev directly on Instagram for an immediate response.
+            Skip the form and message Saim Dev directly on WhatsApp for an immediate response.
           </p>
           <a
-            href="sms:+447473962953"
+            href="https://wa.me/447473962953?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-emerald-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-emerald-400 transition-all text-xs cursor-pointer shadow-lg"
           >
-            <span>Chat on SMS</span>
+            <span>Chat on WhatsApp</span>
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { IconX, IconQuora, IconContra, IconInstagram, IconTikTok, IconThreads } from "./SocialIcons";
+
 export const FooterSection = () => {
   return (
     <footer className="site-footer">
@@ -18,26 +19,29 @@ export const FooterSection = () => {
           </h2>
 
           <nav className="site-footer__nav" aria-label="Page sections navigation">
-            <a href="#our-story">Our Story</a>
+            <a href="/#our-story">Our Story</a>
             <Link href="/services">Services</Link>
             <Link href="/technologies">Tech Stack</Link>
+            <Link href="/nextjs-developer-uk" className="text-primary hover:underline">Next.js UK & EU</Link>
             <Link href="/demos">Demo Sites</Link>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Explore navigation">
-            <a href="#benefits">Key Benefits</a>
-            <a href="#process">My Process</a>
-            <a href="#pricing">Pricing Plans</a>
-            <a href="#faq">FAQ</a>
+            <a href="/#benefits">Key Benefits</a>
+            <a href="/#process">My Process</a>
+            <a href="/#pricing">Pricing Plans</a>
+            <a href="/#faq">FAQ</a>
             <Link href="/blogs">Blogs</Link>
-            <a href="#contact">Contact</a>
+            <a href="/#contact">Contact</a>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Client Demos">
-            <span style={{color:'rgba(255,255,255,0.4)', fontSize:'10px', textTransform:'uppercase', fontWeight:600, marginBottom:'4px', display:'block'}}>Live Demos</span>
-            <a href="/hotbite/index.html">Hotbite Street Food</a>
-            <a href="/burger-garage/index.html">Burger Garage</a>
-            <a href="/frenchyse/index.html">Frenchyse Luxury</a>
+            <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '10px', textTransform: 'uppercase', fontWeight: 600, marginBottom: '4px', display: 'block' }}>
+              Client Demos (Preview)
+            </span>
+            <a href="/hotbite/index.html" rel="nofollow">O&apos;Resto Street Food</a>
+            <a href="/burger-garage/index.html" rel="nofollow">Burger Garage</a>
+            <a href="/frenchyse/index.html" rel="nofollow">Frenchyse Luxury</a>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Social navigation">
@@ -76,14 +80,18 @@ export const FooterSection = () => {
           </Link>
         </div>
 
-        {/* LEGAL LINE */}
-        <div className="site-footer__legal">
-          <p>Â© 2026 Saim Dev. All rights reserved.</p>
-          <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+        {/* LEGAL & TRUST LINE */}
+        <div className="site-footer__legal border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
+          <p>© 2026 Saim Dev. All rights reserved. Custom Next.js Architecture for UK, Europe & Worldwide.</p>
+          <div className="flex items-center gap-3">
+            <span className="text-white/40">GDPR & PECR Compliant</span>
+            <span>•</span>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <span>•</span>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
-

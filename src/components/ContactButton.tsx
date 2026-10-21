@@ -3,14 +3,20 @@ import React from 'react';
 
 interface ContactButtonProps {
   label?: string;
+  href?: string;
   onClick?: () => void;
   className?: string;
 }
 
-export const ContactButton: React.FC<ContactButtonProps> = ({ label = "Contact Me", onClick, className = "" }) => {
+export const ContactButton: React.FC<ContactButtonProps> = ({
+  label = "Chat on WhatsApp",
+  href = "https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20interested%20in%20discussing%20a%20website%20project",
+  onClick,
+  className = "",
+}) => {
   return (
     <a
-      href="sms:+447473962953"
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       onClick={onClick}

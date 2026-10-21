@@ -285,7 +285,7 @@ export const ServicesPage = () => {
             Message Saim Dev on SMS to receive a detailed proposal and get started immediately.
           </p>
           <a
-            href="sms:+447473962953"
+            href="https://wa.me/447473962953?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all text-xs cursor-pointer shadow-xl"
