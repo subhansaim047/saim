@@ -1,29 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
   Download,
   Printer,
-  Sparkles,
   ShieldCheck,
   CheckCircle2,
-  Building,
-  User,
-  Calendar,
   ArrowRight,
   ExternalLink,
-  Plus,
-  Trash2,
-  Search,
-  Check,
-  RotateCcw,
+  Thermometer,
   Clock,
-  HelpCircle
+  Award,
+  Sparkles
 } from "lucide-react";
 import { FoodSafetyTemplate, FOOD_SAFETY_TEMPLATES } from "@/data/saim_templates";
-import { ALLERGENS, MenuItem, AllergenStatus } from "./ToolsPage";
+import { RecipeCalculatorTool } from "./tools/RecipeCalculatorTool";
+import { FoodCostCalculatorTool } from "./tools/FoodCostCalculatorTool";
+import { HaccpPlanBuilderTool } from "./tools/HaccpPlanBuilderTool";
+import { FoodSafetyQuizTool } from "./tools/FoodSafetyQuizTool";
+import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
+import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
 
 interface Props {
   template: FoodSafetyTemplate;
@@ -35,27 +33,49 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     (t) => t.id !== template.id && (t.type === template.type || t.catSlug === template.catSlug)
   ).slice(0, 4);
 
-  // Types of interactive tools
-  const isAllergenTool =
-    template.slug.includes("allergen") ||
-    template.slug.includes("allergy") ||
-    template.title.toLowerCase().includes("allergen");
-
-  const isCostTool =
-    template.slug.includes("cost") ||
-    template.slug.includes("margin") ||
+  // Determine specific tool type
+  const isRecipeTool =
     template.slug.includes("recipe-calc") ||
     template.slug.includes("recipe-card") ||
-    template.title.toLowerCase().includes("cost");
+    template.slug.includes("recipe-creator") ||
+    template.slug.includes("recipe-generator") ||
+    template.slug.includes("recipe-resize");
+
+  const isCostTool =
+    !isRecipeTool &&
+    (template.slug.includes("cost") ||
+      template.slug.includes("margin") ||
+      template.title.toLowerCase().includes("cost") ||
+      template.title.toLowerCase().includes("margin"));
+
+  const isHaccpTool =
+    template.slug.includes("haccp") ||
+    template.slug.includes("flow-chart") ||
+    template.slug.includes("hazard-analysis") ||
+    template.slug.includes("food-safety-plan") ||
+    template.slug.includes("critical-control-point");
 
   const isQuizTool =
     template.slug.includes("quiz") ||
     template.title.toLowerCase().includes("quiz");
 
-  const isChecklistOrLog =
-    !isAllergenTool &&
+  const isAllergenTool =
+    !isRecipeTool &&
     !isCostTool &&
+    !isHaccpTool &&
     !isQuizTool &&
+    (template.slug.includes("allergen") ||
+      template.slug.includes("allergy") ||
+      template.title.toLowerCase().includes("allergen") ||
+      template.title.toLowerCase().includes("allergy") ||
+      template.slug.includes("natasha"));
+
+  const isChecklistOrLog =
+    !isRecipeTool &&
+    !isCostTool &&
+    !isHaccpTool &&
+    !isQuizTool &&
+    !isAllergenTool &&
     (template.type === "checklist" ||
       template.type === "log" ||
       template.slug.includes("checklist") ||
@@ -63,143 +83,11 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("schedule") ||
       template.slug.includes("sheet") ||
       template.slug.includes("opening") ||
+      template.slug.includes("closing") ||
       template.slug.includes("sop") ||
-      template.slug.includes("audit"));
-
-  // Common Header State
-  const [restaurantName, setRestaurantName] = useState("My Takeaway & Kitchen");
-  const [completedBy, setCompletedBy] = useState("Head Chef / Manager");
-  const [reviewDate, setReviewDate] = useState(() => new Date().toISOString().split("T")[0]);
-
-  // Allergen Matrix Interactive State
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([
-    {
-      id: "1",
-      name: "Classic Cheeseburger",
-      category: "Burgers",
-      ingredients: "Beef patty, brioche bun, cheddar cheese, burger sauce, lettuce, tomato",
-      allergens: { gluten: "contains", milk: "contains", eggs: "contains", sesame: "contains", mustard: "contains", soya: "may" }
-    },
-    {
-      id: "2",
-      name: "Margherita Pizza 12\"",
-      category: "Pizzas",
-      ingredients: "Hand-stretched dough, San Marzano tomato sauce, 100% mozzarella, basil",
-      allergens: { gluten: "contains", milk: "contains" }
-    },
-    {
-      id: "3",
-      name: "Crispy Hot Wings",
-      category: "Chicken",
-      ingredients: "Seasoned crispy chicken wings, spicy cayenne glaze, celery dip",
-      allergens: { gluten: "contains", celery: "contains", mustard: "contains", soya: "may" }
-    },
-    {
-      id: "4",
-      name: "Loaded Cheese Fries",
-      category: "Sides",
-      ingredients: "Crisp potato fries, garlic butter drizzle, melted cheddar & mozzarella",
-      allergens: { milk: "contains", gluten: "may" }
-    }
-  ]);
-  const [newDishName, setNewDishName] = useState("");
-  const [newDishCategory, setNewDishCategory] = useState("Mains");
-
-  const toggleAllergen = (itemId: string, allergenId: string) => {
-    setMenuItems(prev =>
-      prev.map(item => {
-        if (item.id !== itemId) return item;
-        const current = item.allergens[allergenId] || "none";
-        const next: AllergenStatus = current === "none" ? "contains" : current === "contains" ? "may" : "none";
-        return { ...item, allergens: { ...item.allergens, [allergenId]: next } };
-      })
-    );
-  };
-
-  const handleAddDish = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newDishName.trim()) return;
-    setMenuItems(prev => [
-      ...prev,
-      { id: Date.now().toString(), name: newDishName.trim(), category: newDishCategory.trim(), ingredients: "", allergens: {} }
-    ]);
-    setNewDishName("");
-  };
-
-  // Food Cost State
-  const [sellingPrice, setSellingPrice] = useState(8.50);
-  const [costIngredients, setCostIngredients] = useState([
-    { id: "1", name: "Minced Chuck Beef", packQty: 1000, packCost: 7.20, recipeQty: 200, unit: "g" },
-    { id: "2", name: "Brioche Bun", packQty: 4, packCost: 1.60, recipeQty: 1, unit: "pcs" },
-    { id: "3", name: "American Cheddar", packQty: 10, packCost: 2.20, recipeQty: 2, unit: "pcs" },
-    { id: "4", name: "Burger Sauce", packQty: 500, packCost: 3.50, recipeQty: 30, unit: "ml" }
-  ]);
-  const totalCost = costIngredients.reduce((sum, ing) => sum + (ing.packQty > 0 ? (ing.packCost / ing.packQty) * ing.recipeQty : 0), 0);
-  const foodCostPct = sellingPrice > 0 ? (totalCost / sellingPrice) * 100 : 0;
-  const grossMargin = sellingPrice > 0 ? ((sellingPrice - totalCost) / sellingPrice) * 100 : 0;
-
-  // Digital Checklist / Log State
-  const [checklistTasks, setChecklistTasks] = useState([
-    { id: "1", task: "Probe calibrate & check main refrigeration (< 5°C)", checked: true, note: "Probe read: 3.4°C" },
-    { id: "2", task: "Inspect walk-in commercial freezer temperature (< -18°C)", checked: true, note: "-19.2°C logged" },
-    { id: "3", task: "Verify raw meat and ready-to-eat separation and color-coded chopping boards", checked: true, note: "Clean and separated" },
-    { id: "4", task: "Check handwashing stations: warm water, antibacterial soap & blue roll", checked: true, note: "Fully equipped" },
-    { id: "5", task: "Inspect sanitiser solution concentration (BS EN 1276 compliance)", checked: false, note: "Needs top-up" },
-    { id: "6", task: "Date labels and PPDS Natasha's Law compliance check", checked: true, note: "Labels printed and attached" },
-    { id: "7", task: "Check kitchen extraction hood, ventilation and grease filters", checked: false, note: "Scheduled for night clean" }
-  ]);
-  const [newTaskInput, setNewTaskInput] = useState("");
-
-  const toggleTask = (id: string) => {
-    setChecklistTasks(prev => prev.map(t => t.id === id ? { ...t, checked: !t.checked } : t));
-  };
-
-  const handleAddTask = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newTaskInput.trim()) return;
-    setChecklistTasks(prev => [
-      ...prev,
-      { id: Date.now().toString(), task: newTaskInput.trim(), checked: false, note: "Added manually" }
-    ]);
-    setNewTaskInput("");
-  };
-
-  // Food Safety Quiz State
-  const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
-  const [quizSubmitted, setQuizSubmitted] = useState(false);
-
-  const quizQuestions = [
-    {
-      q: "What is the food temperature Danger Zone defined by the UK Food Standards Agency (FSA)?",
-      options: ["0°C to 100°C", "8°C to 63°C", "20°C to 45°C", "-18°C to 0°C"],
-      correct: 1
-    },
-    {
-      q: "Under Natasha's Law (UK), what must Prepacked for Direct Sale (PPDS) foods display?",
-      options: ["Only the calorie count", "Full ingredients list with the 14 allergens emphasized", "Only the chef's name", "Price excluding VAT"],
-      correct: 1
-    },
-    {
-      q: "Within what timeframe must cooked food be cooled to below 8°C?",
-      options: ["Within 90 minutes (max 2 hours)", "Within 6 hours", "Within 12 hours", "Overnight at room temp"],
-      correct: 0
-    },
-    {
-      q: "Which chopping board color is designated for raw poultry in UK commercial kitchens?",
-      options: ["Red", "Yellow", "Blue", "Green"],
-      correct: 1
-    },
-    {
-      q: "What is the legal minimum temperature for reheating hot holding food in England & Wales?",
-      options: ["60°C", "75°C (reheated core) and held above 63°C", "50°C", "100°C"],
-      correct: 1
-    }
-  ];
-
-  const quizScore = Object.keys(quizAnswers).reduce((score, idx) => {
-    const qIndex = Number(idx);
-    return quizAnswers[qIndex] === quizQuestions[qIndex].correct ? score + 1 : score;
-  }, 0);
+      template.slug.includes("audit") ||
+      template.slug.includes("delivery") ||
+      template.slug.includes("inspection"));
 
   return (
     <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
@@ -303,337 +191,70 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════
-            IF INTERACTIVE ALLERGEN MATRIX: LIVE TOOL EMBED
+            DEDICATED INTERACTIVE TOOLS MATCHING FOODDOCS FUNCTIONALITY
         ════════════════════════════════════════════════════════════════ */}
-        {isAllergenTool && (
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6 printable-doc">
-            <div>
-              <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider font-mono">
-                Interactive Food Allergy Matrix
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                Customize Dishes &amp; Check UK 14 Major Allergens
-              </h2>
-            </div>
 
-            {/* Config */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200 text-xs no-print">
-              <div>
-                <label className="block text-[11px] font-bold text-gray-600 mb-1">Restaurant Name</label>
-                <input
-                  type="text"
-                  value={restaurantName}
-                  onChange={e => setRestaurantName(e.target.value)}
-                  className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-semibold text-gray-900"
-                />
-              </div>
-              <div>
-                <label className="block text-[11px] font-bold text-gray-600 mb-1">Audited By</label>
-                <input
-                  type="text"
-                  value={completedBy}
-                  onChange={e => setCompletedBy(e.target.value)}
-                  className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-semibold text-gray-900"
-                />
-              </div>
-              <div>
-                <label className="block text-[11px] font-bold text-gray-600 mb-1">Review Date</label>
-                <input
-                  type="date"
-                  value={reviewDate}
-                  onChange={e => setReviewDate(e.target.value)}
-                  className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-semibold text-gray-900"
-                />
-              </div>
-            </div>
-
-            {/* Table */}
-            <div className="overflow-x-auto border border-gray-200 rounded-2xl">
-              <table className="w-full text-left text-xs">
-                <thead className="bg-gray-100 text-gray-700 uppercase font-mono text-[10px] tracking-wider">
-                  <tr>
-                    <th className="p-3 border-b">Dish Name</th>
-                    {ALLERGENS.map(a => (
-                      <th key={a.id} className="p-2 border-b text-center whitespace-nowrap" title={a.name}>
-                        {a.icon} {a.name.slice(0, 4)}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {menuItems.map(item => (
-                    <tr key={item.id} className="hover:bg-gray-50/80 transition-colors">
-                      <td className="p-3 font-semibold text-gray-900">
-                        {item.name}
-                        <div className="text-[10px] text-gray-400 font-normal">{item.ingredients}</div>
-                      </td>
-                      {ALLERGENS.map(a => {
-                        const status = item.allergens[a.id] || "none";
-                        return (
-                          <td key={a.id} className="p-1 text-center">
-                            <button
-                              onClick={() => toggleAllergen(item.id, a.id)}
-                              className={`w-7 h-7 rounded-lg text-[10px] font-bold font-mono transition-transform active:scale-95 cursor-pointer ${
-                                status === "contains"
-                                  ? "bg-red-500 text-white shadow-sm"
-                                  : status === "may"
-                                  ? "bg-amber-400 text-gray-900 font-extrabold"
-                                  : "bg-gray-100 text-gray-300 hover:text-gray-400"
-                              }`}
-                              title={`${a.name}: Click to cycle (Contains / May Contain / None)`}
-                            >
-                              {status === "contains" ? "YES" : status === "may" ? "MAY" : "—"}
-                            </button>
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            {/* Add Dish Form */}
-            <form onSubmit={handleAddDish} className="flex gap-2 items-center no-print">
-              <input
-                type="text"
-                placeholder="New dish name..."
-                value={newDishName}
-                onChange={e => setNewDishName(e.target.value)}
-                className="flex-1 bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs text-gray-900"
-              />
-              <input
-                type="text"
-                placeholder="Category"
-                value={newDishCategory}
-                onChange={e => setNewDishCategory(e.target.value)}
-                className="w-32 bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs text-gray-900"
-              />
-              <button
-                type="submit"
-                className="bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-1 cursor-pointer"
-              >
-                <Plus className="w-3.5 h-3.5" />
-                <span>Add Dish</span>
-              </button>
-            </form>
-          </div>
+        {/* 1. Recipe Yield & Resizing Calculator */}
+        {isRecipeTool && (
+          <RecipeCalculatorTool templateId={template.id} pdfUrl={template.pdfUrl} />
         )}
 
-        {/* ═══════════════════════════════════════════════════════════════
-            IF FOOD COST CALCULATOR: LIVE TOOL EMBED
-        ════════════════════════════════════════════════════════════════ */}
+        {/* 2. Commercial Kitchen Food Cost & Margin Calculator */}
         {isCostTool && (
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6 printable-doc">
-            <div>
-              <span className="text-xs font-bold text-amber-700 uppercase tracking-wider font-mono">
-                Interactive Food Cost &amp; Profit Engine
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                Calculate Real-time Recipe Costs &amp; Target Margins
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                <span className="text-[10px] font-mono uppercase text-gray-500">Portion Cost</span>
-                <div className="text-2xl font-bold text-gray-900">£{totalCost.toFixed(2)}</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                <span className="text-[10px] font-mono uppercase text-gray-500">Food Cost %</span>
-                <div className={`text-2xl font-bold ${foodCostPct <= 28 ? "text-emerald-600" : "text-amber-600"}`}>
-                  {foodCostPct.toFixed(1)}%
-                </div>
-              </div>
-              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                <span className="text-[10px] font-mono uppercase text-gray-500">Gross Margin %</span>
-                <div className="text-2xl font-bold text-emerald-600">{grossMargin.toFixed(1)}%</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                <span className="text-[10px] font-mono uppercase text-gray-500">Selling Price</span>
-                <input
-                  type="number"
-                  step="0.10"
-                  value={sellingPrice}
-                  onChange={e => setSellingPrice(Number(e.target.value))}
-                  className="text-2xl font-bold text-gray-900 bg-transparent border-b border-gray-300 w-24 focus:outline-none"
-                />
-              </div>
-            </div>
-          </div>
+          <FoodCostCalculatorTool templateId={template.id} />
         )}
 
-        {/* ═══════════════════════════════════════════════════════════════
-            IF FOOD SAFETY QUIZ: INTERACTIVE QUIZ EMBED
-        ════════════════════════════════════════════════════════════════ */}
+        {/* 3. 7-Principle HACCP Plan Builder & CCP Matrix */}
+        {isHaccpTool && (
+          <HaccpPlanBuilderTool templateId={template.id} />
+        )}
+
+        {/* 4. Food Safety Level 2 Hygiene Exam */}
         {isQuizTool && (
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6 printable-doc">
-            <div className="flex items-center justify-between">
-              <div>
-                <span className="text-xs font-bold text-indigo-700 uppercase tracking-wider font-mono flex items-center gap-1.5">
-                  <HelpCircle className="w-3.5 h-3.5" />
-                  Interactive Food Safety Knowledge Test
-                </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                  Test Your UK Food Hygiene &amp; Safety Compliance
-                </h2>
-              </div>
-              {quizSubmitted && (
-                <div className="text-right">
-                  <span className="text-xs font-bold uppercase font-mono text-gray-500">Score</span>
-                  <div className="text-2xl font-black text-indigo-600">{quizScore} / {quizQuestions.length}</div>
-                </div>
-              )}
-            </div>
-
-            <div className="space-y-4">
-              {quizQuestions.map((q, qIdx) => {
-                const selected = quizAnswers[qIdx];
-                return (
-                  <div key={qIdx} className="p-4 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
-                    <p className="font-bold text-sm text-gray-900">
-                      {qIdx + 1}. {q.q}
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
-                      {q.options.map((opt, optIdx) => {
-                        let btnStyle = "bg-white border-gray-200 text-gray-800 hover:border-gray-400";
-                        if (selected === optIdx) {
-                          btnStyle = "bg-indigo-600 border-indigo-600 text-white font-bold";
-                        }
-                        if (quizSubmitted) {
-                          if (optIdx === q.correct) {
-                            btnStyle = "bg-emerald-600 border-emerald-600 text-white font-bold";
-                          } else if (selected === optIdx && optIdx !== q.correct) {
-                            btnStyle = "bg-red-500 border-red-500 text-white font-bold";
-                          }
-                        }
-
-                        return (
-                          <button
-                            key={optIdx}
-                            type="button"
-                            onClick={() => {
-                              if (!quizSubmitted) {
-                                setQuizAnswers(prev => ({ ...prev, [qIdx]: optIdx }));
-                              }
-                            }}
-                            className={`text-left px-3.5 py-2.5 rounded-xl text-xs border transition-all cursor-pointer ${btnStyle}`}
-                          >
-                            {opt}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="flex items-center gap-3 pt-2 no-print">
-              {!quizSubmitted ? (
-                <button
-                  type="button"
-                  onClick={() => setQuizSubmitted(true)}
-                  disabled={Object.keys(quizAnswers).length < quizQuestions.length}
-                  className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-xs font-bold px-6 py-2.5 rounded-xl transition-all cursor-pointer shadow"
-                >
-                  Submit &amp; Check Answers
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setQuizAnswers({});
-                    setQuizSubmitted(false);
-                  }}
-                  className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-6 py-2.5 rounded-xl flex items-center gap-1.5 cursor-pointer shadow"
-                >
-                  <RotateCcw className="w-3.5 h-3.5" />
-                  <span>Retake Quiz</span>
-                </button>
-              )}
-            </div>
-          </div>
+          <FoodSafetyQuizTool templateId={template.id} />
         )}
 
-        {/* ═══════════════════════════════════════════════════════════════
-            IF CHECKLIST / LOG: INTERACTIVE DIGITAL CHECKLIST EMBED
-        ════════════════════════════════════════════════════════════════ */}
+        {/* 5. Official 14 Food Allergen Matrix & Natasha's Law Chart */}
+        {isAllergenTool && (
+          <AllergenMatrixTool templateId={template.id} />
+        )}
+
+        {/* 6. Digital Verification Checklist & Temperature Log */}
         {isChecklistOrLog && (
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6 printable-doc">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-              <div>
-                <span className="text-xs font-bold text-amber-700 uppercase tracking-wider font-mono flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5" />
-                  Interactive Digital Inspection Checklist
-                </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                  Daily Commercial Kitchen Verification Log
-                </h2>
+          <DigitalChecklistTool templateTitle={template.title} templateId={template.id} />
+        )}
+
+        {/* 7. If standard poster/chart: Show Regulatory Temperature Reference Table */}
+        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && (
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 space-y-4 printable-doc">
+            <div className="flex items-center gap-2">
+              <Thermometer className="w-5 h-5 text-red-500" />
+              <h3 className="text-lg font-bold text-gray-900">
+                UK &amp; EU Food Temperature Regulatory Standards Reference
+              </h3>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+              <div className="p-3.5 rounded-xl bg-blue-50 border border-blue-200">
+                <span className="font-mono text-[10px] uppercase font-bold text-blue-700">Commercial Freezing</span>
+                <div className="text-xl font-black text-blue-950 mt-1">&le; -18&deg;C</div>
+                <p className="text-[10px] text-blue-800 mt-1">Stops all bacterial multiplication</p>
               </div>
-              <button
-                type="button"
-                onClick={() => window.print()}
-                className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 self-start cursor-pointer no-print shadow"
-              >
-                <Printer className="w-3.5 h-3.5" />
-                <span>Print Completed Sheet</span>
-              </button>
+              <div className="p-3.5 rounded-xl bg-cyan-50 border border-cyan-200">
+                <span className="font-mono text-[10px] uppercase font-bold text-cyan-700">Chilled Cold Holding</span>
+                <div className="text-xl font-black text-cyan-950 mt-1">1&deg;C to 4&deg;C</div>
+                <p className="text-[10px] text-cyan-800 mt-1">Legal maximum is 8&deg;C</p>
+              </div>
+              <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200">
+                <span className="font-mono text-[10px] uppercase font-bold text-amber-700">Hot Holding Display</span>
+                <div className="text-xl font-black text-amber-950 mt-1">&ge; 63&deg;C</div>
+                <p className="text-[10px] text-amber-800 mt-1">Max 2 hrs if dropped below 63&deg;C</p>
+              </div>
+              <div className="p-3.5 rounded-xl bg-red-50 border border-red-200">
+                <span className="font-mono text-[10px] uppercase font-bold text-red-700">Safe Cooking Core</span>
+                <div className="text-xl font-black text-red-950 mt-1">&ge; 75&deg;C (30s)</div>
+                <p className="text-[10px] text-red-800 mt-1">Destroys pathogens (E. coli, Salmonella)</p>
+              </div>
             </div>
-
-            {/* Checklist items */}
-            <div className="space-y-2 border border-gray-200 rounded-2xl p-3 bg-gray-50/50">
-              {checklistTasks.map((item, idx) => (
-                <div
-                  key={item.id}
-                  onClick={() => toggleTask(item.id)}
-                  className={`p-3 rounded-xl border flex items-center justify-between gap-3 cursor-pointer transition-colors ${
-                    item.checked
-                      ? "bg-emerald-50/80 border-emerald-200 text-gray-900"
-                      : "bg-white border-gray-200 text-gray-700 hover:border-gray-300"
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className={`w-5 h-5 rounded-md flex items-center justify-center border transition-colors ${
-                      item.checked ? "bg-emerald-600 border-emerald-600 text-white" : "border-gray-300 bg-white"
-                    }`}>
-                      {item.checked && <Check className="w-3.5 h-3.5 stroke-[3]" />}
-                    </div>
-                    <div>
-                      <p className={`text-xs font-semibold ${item.checked ? "line-through text-gray-500" : ""}`}>
-                        {item.task}
-                      </p>
-                      {item.note && (
-                        <p className="text-[10px] text-gray-400 font-mono mt-0.5">{item.note}</p>
-                      )}
-                    </div>
-                  </div>
-                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full font-bold ${
-                    item.checked ? "bg-emerald-100 text-emerald-800" : "bg-gray-100 text-gray-500"
-                  }`}>
-                    {item.checked ? "COMPLETED" : "PENDING"}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Add custom check task */}
-            <form onSubmit={handleAddTask} className="flex gap-2 items-center no-print">
-              <input
-                type="text"
-                placeholder="Add custom task or critical control point check..."
-                value={newTaskInput}
-                onChange={e => setNewTaskInput(e.target.value)}
-                className="flex-1 bg-white border border-gray-300 rounded-lg px-3 py-2 text-xs text-gray-900"
-              />
-              <button
-                type="submit"
-                className="bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-1 cursor-pointer shrink-0"
-              >
-                <Plus className="w-3.5 h-3.5" />
-                <span>Add Check</span>
-              </button>
-            </form>
           </div>
         )}
 
