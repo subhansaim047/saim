@@ -16,6 +16,8 @@ import {
   Edit3
 } from "lucide-react";
 import { FoodSafetyTemplate, FOOD_SAFETY_TEMPLATES } from "@/data/saim_templates";
+import { CORE_PAGES_METADATA } from "@/data/core_metadata";
+import pagePlanData from "@/data/page_plan.json";
 import { RecipeCalculatorTool } from "./tools/RecipeCalculatorTool";
 import { FoodCostCalculatorTool } from "./tools/FoodCostCalculatorTool";
 import { HaccpPlanBuilderTool } from "./tools/HaccpPlanBuilderTool";
@@ -86,19 +88,24 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("delivery") ||
       template.slug.includes("inspection"));
 
-  // Related templates (for allergen pages, only link allergen resources)
+  // Related templates: only link to indexed KEEP and IMPROVE pages (no NOINDEX or duplicates)
+  const isIndexableSlug = (slug: string) => {
+    const bucket = (pagePlanData as any)[slug]?.bucket;
+    return bucket === "KEEP" || bucket === "IMPROVE";
+  };
+
   const related = isAllergenTool
     ? FOOD_SAFETY_TEMPLATES.filter(
         (t) =>
           t.id !== template.id &&
+          isIndexableSlug(t.slug) &&
           (t.slug.includes("allergen") ||
             t.slug.includes("allergy") ||
-            t.slug.includes("natasha") ||
             t.title.toLowerCase().includes("allergen") ||
             t.title.toLowerCase().includes("allergy"))
       ).slice(0, 4)
     : FOOD_SAFETY_TEMPLATES.filter(
-        (t) => t.id !== template.id && (t.type === template.type || t.catSlug === template.catSlug)
+        (t) => t.id !== template.id && isIndexableSlug(t.slug)
       ).slice(0, 4);
 
   return (
@@ -348,9 +355,13 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
               Using consistent documentation like the <strong>{template.title}</strong> helps your kitchen team maintain clear records, train food handling staff, and follow food safety procedures.
             </p>
             <ul className="text-xs sm:text-sm text-gray-600 space-y-2 list-disc list-inside">
-              <li>Display prominently at food preparation, cooking, or storage stations.</li>
-              <li>Train kitchen and front-of-house staff on these guidelines during onboarding.</li>
-              <li>Review records periodically to ensure documentation is kept up to date.</li>
+              {(CORE_PAGES_METADATA[template.slug]?.howTo || [
+                "Display prominently at food preparation, cooking, or storage stations.",
+                "Train kitchen and front-of-house staff on these guidelines during onboarding.",
+                "Review records periodically to ensure documentation is kept up to date."
+              ]).map((step, idx) => (
+                <li key={idx}>{step}</li>
+              ))}
             </ul>
           </div>
         )}

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FOOD_SAFETY_TEMPLATES, getTemplateBySlug } from "@/data/saim_templates";
 import { TemplateDetailPage } from "@/components/TemplateDetailPage";
+import { CORE_PAGES_METADATA } from "@/data/core_metadata";
 import pagePlanData from "@/data/page_plan.json";
 
 interface PageProps {
@@ -44,40 +45,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonicalSlug = plan.bucket === "MERGE" ? plan.target_canonical_slug : slug;
   const canonicalUrl = `https://www.saimdev.site/food-safety-templates/${canonicalSlug}`;
 
-  // Custom metadata for allergen page
-  if (slug === "food-allergen-chart") {
-    const pageTitle = "Free UK Takeaway Allergen Chart Generator (14 Allergens)";
-    const pageDesc =
-      "Build and print a UK allergen chart for your takeaway in minutes. Covers all 14 allergens, a customer filter and PDF print. Free, no sign-up.";
+  // Check if hand-crafted core metadata exists
+  const coreMeta = CORE_PAGES_METADATA[slug];
 
-    return {
-      title: pageTitle,
-      description: pageDesc,
-      robots: {
-        index: true,
-        follow: true,
-      },
-      alternates: {
-        canonical: canonicalUrl,
-      },
-      openGraph: {
-        title: pageTitle,
-        description: pageDesc,
-        url: canonicalUrl,
-        siteName: "Saim Dev",
-        locale: "en_GB",
-        type: "website",
-      },
-      twitter: {
-        card: "summary_large_image",
-        title: pageTitle,
-        description: pageDesc,
-      },
-    };
-  }
-
-  const pageTitle = `${template.title} | Free Food Safety Download | Saim Dev`;
-  const pageDesc = template.desc;
+  const pageTitle = coreMeta ? coreMeta.title : `${template.title} | Free Food Safety Download | Saim Dev`;
+  const pageDesc = coreMeta ? coreMeta.desc : template.desc;
 
   return {
     title: pageTitle,
@@ -90,7 +62,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${template.title} | Saim Dev Free Food Safety Suite`,
+      title: pageTitle,
       description: pageDesc,
       url: canonicalUrl,
       siteName: "Saim Dev",
@@ -99,7 +71,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: `${template.title} | Free Food Safety Download`,
+      title: pageTitle,
       description: pageDesc,
     },
   };
