@@ -1,59 +1,128 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Tag, ArrowRight } from "lucide-react";
 
+interface BlogItem {
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  tag: string;
+  tagColor: string;
+  url: string;
+}
 
-const blogs = [
-    {
-      id: 3,
-      title: "I Just Launched My Web Agency — And I'm Offering 50% Off to My First Clients",
-      excerpt: "Premium web development at half the price. Find out why I am offering this massive discount and how it can act as the ultimate growth engine for your business.",
-      date: "Sep 20, 2026",
-      readTime: "5 min read",
-      tag: "Launch Special",
-      tagColor: "#F59E0B",
-      slug: "#blog-post-3",
-    },
+const blogs: BlogItem[] = [
+  {
+    id: 9,
+    title: "How to Create a Fully Compliant 14-Allergen Matrix for UK Restaurants & Takeaways",
+    excerpt: "Step-by-step masterclass on auditing recipes, preventing cross-contamination, and building an EHO-approved 14-allergen matrix under Natasha's Law. Free digital generator included.",
+    date: "Oct 23, 2026",
+    readTime: "8 min read",
+    tag: "Allergen Compliance",
+    tagColor: "#EF4444",
+    url: "/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
+  },
+  {
+    id: 8,
+    title: "How to Calculate Food Cost Percentage & Protect 70%+ Gross Margins in Your Commercial Kitchen",
+    excerpt: "Learn the exact formula top restaurants use to calculate food cost percentage and lock in 70%+ margins. Use our free interactive commercial food cost calculator.",
+    date: "Oct 23, 2026",
+    readTime: "9 min read",
+    tag: "Kitchen Economics",
+    tagColor: "#10B981",
+    url: "/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
+  },
+  {
+    id: 7,
+    title: "The Commercial Kitchen Guide to Recipe Scaling: How to Scale from 10 to 500 Portions Without Taste Breakdown",
+    excerpt: "Why linear math destroys bulk catering recipes, how to handle non-linear spices and liquids, and how to generate standardized chef prep cards with our free batch scaler.",
+    date: "Oct 23, 2026",
+    readTime: "8 min read",
+    tag: "Batch Catering",
+    tagColor: "#F59E0B",
+    url: "/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
+  },
+  {
+    id: 6,
+    title: "SFBB Opening & Closing Checklists: The Daily Kitchen Routine That Guarantees a 5-Star Food Hygiene Rating",
+    excerpt: "Discover the essential SFBB opening and closing hygiene checks every UK kitchen must log daily. Prevent cross-contamination and pass EHO audits with our free digital checklist.",
+    date: "Oct 23, 2026",
+    readTime: "8 min read",
+    tag: "Food Hygiene",
+    tagColor: "#3B82F6",
+    url: "/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
+  },
+  {
+    id: 5,
+    title: "How to Write an EHO-Approved HACCP Plan for Your UK Food Business (7 Principles + Free Plan Builder)",
+    excerpt: "A practical, plain-English guide to creating an EHO-compliant HACCP plan for catering and takeaway businesses. Build your hazard analysis and CCP tables with our free tool.",
+    date: "Oct 23, 2026",
+    readTime: "10 min read",
+    tag: "HACCP Law",
+    tagColor: "#6366F1",
+    url: "/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
+  },
+  {
+    id: 4,
+    title: "Level 2 Food Hygiene Practice Test: 10 Critical Questions Every Kitchen Worker & Chef Must Pass",
+    excerpt: "Test your kitchen team with our Level 2 Food Hygiene practice test. Review temperature danger zones, cross-contamination rules, and UK food safety laws with our free interactive quiz.",
+    date: "Oct 23, 2026",
+    readTime: "7 min read",
+    tag: "Staff Training",
+    tagColor: "#A855F7",
+    url: "/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide",
+  },
+  {
+    id: 3,
+    title: "I Just Launched My Web Agency — And I'm Offering 50% Off to My First Clients",
+    excerpt: "Premium web development at half the price. Find out why I am offering this massive discount and how it can act as the ultimate growth engine for your business.",
+    date: "Sep 20, 2026",
+    readTime: "5 min read",
+    tag: "Launch Special",
+    tagColor: "#F59E0B",
+    url: "/blog/50-percent-off-agency-launch",
+  },
   {
     id: 2,
     title: "I'm Building 5 Free Websites for Local Businesses — Here's Why",
-    excerpt:
-      "I'm offering FREE websites to 5 local businesses that want to grow. No strings attached — just honest feedback in return. Find out if you qualify.",
+    excerpt: "I'm offering FREE websites to 5 local businesses that want to grow. No strings attached — just honest feedback in return. Find out if you qualify.",
     date: "Sep 20, 2026",
     readTime: "7 min read",
     tag: "Special Offer",
     tagColor: "#DEDBC8",
-    slug: "#blog-post-2",
+    url: "/blog/free-website-for-local-business",
   },
   {
     id: 1,
     title: "Why Every Small Business Needs a Professional Website in 2026",
-    excerpt:
-      "97% of consumers search online before making a purchase. If your business isn't showing up professionally, you're handing customers straight to your competitors — every single day.",
+    excerpt: "97% of consumers search online before making a purchase. If your business isn't showing up professionally, you're handing customers straight to your competitors — every single day.",
     date: "Aug 11, 2026",
     readTime: "8 min read",
     tag: "Business Growth",
     tagColor: "#DEDBC8",
-    slug: "#blog-post-1",
+    url: "/blog/why-small-business-needs-website-2026",
   },
 ];
 
 export const BlogsPage = () => {
   const router = useRouter();
+
   return (
     <div className="min-h-screen bg-black text-[#E1E0CC]">
-      
       {/* ── Header Bar ── */}
       <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
         <button
-          onClick={() => router.push('/')}
+          onClick={() => router.push("/")}
           className="flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </button>
-        <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
+        <button onClick={() => router.push("/")} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img
             src="/saim-dev-logo.jpg"
             alt="Saim Dev"
@@ -72,15 +141,15 @@ export const BlogsPage = () => {
         >
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-white/60 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            Web Development & Business Growth Blog
+            Commercial Kitchen Systems &amp; Web Growth Blog
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-4 leading-tight">
-            Insights &<br />
-            <span className="text-primary">Growth Tips</span>
+            Hospitality Insights &amp;<br />
+            <span className="text-primary">Kitchen Growth Systems</span>
           </h1>
           <p className="text-white/50 text-base sm:text-lg max-w-xl leading-relaxed">
-            Real strategies on web development, SEO, and turning your website
-            into a business growth engine.
+            Real, proven operational playbooks on food safety law, EHO compliance audits, 
+            recipe portion economics, and web ordering systems.
           </p>
         </motion.div>
       </section>
@@ -93,13 +162,9 @@ export const BlogsPage = () => {
               key={blog.id}
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: i * 0.07 }}
-              onClick={() => {
-                if (blog.slug === "#blog-post-3") router.push("/blog/50-percent-off-agency-launch");
-                if (blog.slug === "#blog-post-1") router.push("/blog/why-small-business-needs-website-2026");
-                if (blog.slug === "#blog-post-2") router.push("/blog/free-website-for-local-business");
-              }}
-              className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 cursor-pointer overflow-hidden"
+              transition={{ duration: 0.45, delay: i * 0.05 }}
+              onClick={() => router.push(blog.url)}
+              className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 cursor-pointer overflow-hidden shadow-lg"
             >
               {/* Glow on hover */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-500 pointer-events-none" />
@@ -140,7 +205,7 @@ export const BlogsPage = () => {
           ))}
         </div>
 
-        {/* Coming Soon notice */}
+        {/* Support note */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -148,16 +213,15 @@ export const BlogsPage = () => {
           className="mt-14 text-center"
         >
           <p className="text-white/25 text-sm">
-            More articles coming soon — follow on{" "}
+            Have questions about Natasha&apos;s Law or custom online ordering? Chat directly on{" "}
             <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20discussing%20a%20website%20project"
               target="_blank"
               rel="noreferrer"
               className="text-primary/60 hover:text-primary underline underline-offset-4 transition-colors"
             >
-              Instagram
-            </a>{" "}
-            to stay updated.
+              WhatsApp (+92 319 6526604)
+            </a>.
           </p>
         </motion.div>
       </section>
