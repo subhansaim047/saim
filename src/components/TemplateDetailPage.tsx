@@ -122,7 +122,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
         <div className="flex items-center gap-3">
           <a
-            href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions"
+            href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5 transition-all shadow"
@@ -361,7 +361,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           </p>
           <div className="pt-2">
             <a
-              href="https://wa.me/447473962953?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20takeaway%20website"
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20takeaway%20website"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-5 py-2.5 rounded-full inline-flex items-center gap-1.5 transition-all shadow"

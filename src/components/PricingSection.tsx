@@ -107,7 +107,7 @@ const PricingCard = ({ plan, currency }: { plan: BasePlan; currency: Currency })
     : plan.features.slice(0, INITIAL_COUNT);
   const remainingCount = plan.features.length - INITIAL_COUNT;
 
-  const orderUrl = `https://wa.me/447473962953?text=${encodeURIComponent(
+  const orderUrl = `https://wa.me/923196526604?text=${encodeURIComponent(
     `Hi Saim, I'd like to get started with the ${plan.name} (${price}).`
   )}`;
 

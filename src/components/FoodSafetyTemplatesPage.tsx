@@ -168,7 +168,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
           </button>
 
           <a
-            href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20using%20the%20Food%20Safety%20Templates%20Hub"
+            href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20using%20the%20Food%20Safety%20Templates%20Hub"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5 transition-all shadow"
@@ -340,7 +340,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 Need automated Natasha&apos;s Law allergen filtering on your menu?
               </p>
               <a
-                href="https://wa.me/447473962953?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering"
+                href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-bold text-[#1D1D1F] hover:underline flex items-center gap-1 pt-1"
@@ -671,21 +671,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             </p>
             <div className="pt-2 flex flex-wrap gap-3">
               <a
-                href="https://wa.me/447473962953?text=Hi%20Saim,%20I%20want%20to%20build%20a%20custom%20takeaway%20website"
+                href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20want%20to%20build%20a%20custom%20takeaway%20website"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs sm:text-sm px-6 py-3 rounded-full flex items-center gap-2 transition-all shadow"
               >
                 <span>Discuss with Lead Architect on WhatsApp</span>
                 <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="https://calendly.com/saimdev/15min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 text-white font-medium text-xs sm:text-sm px-5 py-3 rounded-full border border-white/20 transition-all"
-              >
-                <span>Book 15-Min Strategy Call</span>
               </a>
             </div>
           </div>

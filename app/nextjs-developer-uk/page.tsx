@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Clock, ShieldCheck, Zap, HelpCircle, PhoneCall, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, ShieldCheck, Zap, HelpCircle, Sparkles } from "lucide-react";
 import { FooterSection } from "@/components/FooterSection";
 
 export const metadata: Metadata = {
@@ -84,12 +84,12 @@ export default function NextJsDeveloperUkPage() {
                 Pricing
               </Link>
               <a
-                href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20a%20UK%20business%20looking%20for%20a%20Next.js%20developer"
+                href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20a%20UK%20business%20looking%20for%20a%20Next.js%20developer"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-primary text-black text-xs sm:text-sm font-semibold px-4 py-2 rounded-full hover:brightness-110 transition-all flex items-center gap-1.5 shadow-md"
               >
-                <span>WhatsApp UK</span>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -113,23 +113,13 @@ export default function NextJsDeveloperUkPage() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
             <a
-              href="https://wa.me/447473962953?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Next.js%20website%20for%20my%20UK%20business"
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Next.js%20website%20for%20my%20UK%20business"
               target="_blank"
               rel="noreferrer"
               className="bg-primary text-black font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full hover:brightness-110 active:scale-95 transition-all flex items-center gap-2 shadow-xl cursor-pointer"
             >
-              <span>Start on WhatsApp (+44 7473 962953)</span>
+              <span>Start on WhatsApp (+92 319 6526604)</span>
               <ArrowRight className="w-4 h-4" />
-            </a>
-
-            <a
-              href="https://calendly.com/saimdev/15min"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-sm sm:text-base px-6 py-3.5 rounded-full transition-all flex items-center gap-2 backdrop-blur cursor-pointer"
-            >
-              <PhoneCall className="w-4 h-4 text-primary" />
-              <span>Book 15-Min Discovery Call</span>
             </a>
           </div>
 
@@ -252,7 +242,7 @@ export default function NextJsDeveloperUkPage() {
                   </ul>
                 </div>
                 <a
-                  href="https://wa.me/447473962953?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Landing%20Page%20package%20(£250)"
+                  href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Landing%20Page%20package%20(£250)"
                   target="_blank"
                   rel="noreferrer"
                   className="w-full text-center py-2.5 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold"
@@ -276,7 +266,7 @@ export default function NextJsDeveloperUkPage() {
                   </ul>
                 </div>
                 <a
-                  href="https://wa.me/447473962953?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Starter%20Plan%20(£390)"
+                  href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Starter%20Plan%20(£390)"
                   target="_blank"
                   rel="noreferrer"
                   className="w-full text-center py-2.5 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold"
@@ -303,7 +293,7 @@ export default function NextJsDeveloperUkPage() {
                   </ul>
                 </div>
                 <a
-                  href="https://wa.me/447473962953?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Business%20Plan%20(£790)"
+                  href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Business%20Plan%20(£790)"
                   target="_blank"
                   rel="noreferrer"
                   className="w-full text-center py-2.5 rounded-full bg-primary text-black hover:brightness-110 transition-all text-xs font-bold shadow-md"
@@ -366,24 +356,16 @@ export default function NextJsDeveloperUkPage() {
               Ready to Upgrade Your UK Digital Presence?
             </h2>
             <p className="text-white/60 text-sm mb-8">
-              Discuss your project directly on WhatsApp or book a 15-minute video call today. No sales pitch, just honest technical advice.
+              Discuss your project directly on WhatsApp. No sales pitch, just honest technical advice.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
-                href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20interested%20in%20a%20Next.js%20website%20for%20my%20UK%20business"
+                href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20Next.js%20website%20for%20my%20UK%20business"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-primary text-black font-semibold text-sm px-6 py-3 rounded-full hover:brightness-110 transition-all shadow-xl"
               >
-                Chat on WhatsApp (+44 7473 962953)
-              </a>
-              <a
-                href="https://calendly.com/saimdev/15min"
-                target="_blank"
-                rel="noreferrer"
-                className="border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-sm px-6 py-3 rounded-full transition-all"
-              >
-                Book Discovery Call
+                Chat on WhatsApp (+92 319 6526604)
               </a>
             </div>
           </div>

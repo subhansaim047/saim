@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MessageSquare, ArrowRight, CheckCircle2, Clock, ShieldCheck, Calendar } from "lucide-react";
+import { MessageSquare, ArrowRight, CheckCircle2, Clock, ShieldCheck } from "lucide-react";
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +45,7 @@ export const ContactSection = () => {
 • Project Details: ${details}`;
 
     const encodedMessage = encodeURIComponent(message);
-    const waUrl = `https://wa.me/447473962953?text=${encodedMessage}`;
+    const waUrl = `https://wa.me/923196526604?text=${encodedMessage}`;
     window.open(waUrl, "_blank", "noopener,noreferrer");
   };
 
@@ -90,7 +90,7 @@ export const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-4 text-sm sm:text-base text-white/60 max-w-xl"
           >
-            Fill out the project brief below to start directly on WhatsApp, or book a 15-minute discovery call to discuss your goals.
+            Fill out the project brief below to start directly on WhatsApp to discuss your project goals.
           </motion.p>
         </div>
 
@@ -139,22 +139,13 @@ export const ContactSection = () => {
             <div className="bg-[#0c0c0e] border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
               <span className="text-xs font-mono text-white/40 uppercase tracking-wider">Fast Response Channels</span>
               <a
-                href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20interested%20in%20a%20website%20project"
+                href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20website%20project"
                 target="_blank"
                 rel="noreferrer"
                 className="text-base sm:text-lg font-bold text-white hover:text-primary transition-colors flex items-center gap-2"
               >
                 <MessageSquare className="w-4 h-4 text-emerald-400" />
-                <span>WhatsApp: +44 7473 962953</span>
-              </a>
-              <a
-                href="https://calendly.com/saimdev/15min"
-                target="_blank"
-                rel="noreferrer"
-                className="text-xs sm:text-sm font-semibold text-primary hover:underline flex items-center gap-1.5"
-              >
-                <Calendar className="w-4 h-4 text-primary" />
-                <span>Book a 15-Min Discovery Call &rarr;</span>
+                <span>WhatsApp: +92 319 6526604</span>
               </a>
               <span className="text-[11px] text-white/40">UK & European Timezones • Available Monday – Saturday</span>
             </div>

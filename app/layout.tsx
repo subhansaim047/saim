@@ -56,8 +56,8 @@ const organizationSchema = {
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-    "telephone": "+447473962953",
-    "url": "https://wa.me/447473962953",
+    "telephone": "+923196526604",
+    "url": "https://wa.me/923196526604",
     "availableLanguage": ["English"]
   },
   "sameAs": [

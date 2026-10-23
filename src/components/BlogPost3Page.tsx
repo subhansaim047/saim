@@ -226,7 +226,7 @@ export const BlogPost3Page = () => {
               Because I am offering premium engineering at half the rate, I can only take on a very limited number of projects before my schedule fills up and prices return to normal. If you need a website, do not wait.
             </p>
             <a
-              href="https://wa.me/447473962953?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
               className="inline-flex items-center gap-2 bg-primary text-black font-bold px-8 py-4 rounded-xl hover:bg-white transition-all shadow-lg hover:shadow-primary/25 cursor-pointer relative z-10"
             >
               Claim 50% Off — SMS Me Now

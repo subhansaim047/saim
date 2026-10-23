@@ -10,7 +10,7 @@ interface ContactButtonProps {
 
 export const ContactButton: React.FC<ContactButtonProps> = ({
   label = "Chat on WhatsApp",
-  href = "https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20interested%20in%20discussing%20a%20website%20project",
+  href = "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20discussing%20a%20website%20project",
   onClick,
   className = "",
 }) => {

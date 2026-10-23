@@ -454,7 +454,7 @@ export const ToolsPage: React.FC = () => {
             Custom Takeaway Websites
           </Link>
           <a
-            href="https://wa.me/447473962953?text=Hi%20Saim,%20I%20am%20using%20your%20free%20takeaway%20tools%20and%20would%20like%20to%20discuss%20a%20website"
+            href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20using%20your%20free%20takeaway%20tools%20and%20would%20like%20to%20discuss%20a%20website"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary hover:brightness-110 text-black text-xs font-bold px-3.5 py-1.5 rounded-full flex items-center gap-1.5 transition-all shadow-md"
@@ -1611,22 +1611,13 @@ export const ToolsPage: React.FC = () => {
 
             <div className="flex flex-wrap items-center gap-3 mt-6">
               <a
-                href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20using%20your%20food%20safety%20tools%20and%20interested%20in%20a%20takeaway%20website"
+                href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20using%20your%20food%20safety%20tools%20and%20interested%20in%20a%20takeaway%20website"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary hover:brightness-110 text-black text-xs sm:text-sm font-bold px-6 py-3 rounded-full flex items-center gap-2 transition-all shadow-xl"
               >
                 <span>Discuss Your Project on WhatsApp</span>
                 <ArrowRight className="w-4 h-4" />
-              </a>
-
-              <a
-                href="https://calendly.com/saimdev/15min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/15 text-white text-xs sm:text-sm font-medium px-5 py-3 rounded-full border border-white/20 transition-all backdrop-blur"
-              >
-                <span>Book 15-Min Strategy Call</span>
               </a>
             </div>
           </div>
