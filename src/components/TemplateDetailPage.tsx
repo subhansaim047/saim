@@ -223,7 +223,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <FoodSafetyQuizTool templateId={template.id} />
         )}
 
-        {/* 5. Official 14 Food Allergen Matrix & Natasha's Law Chart */}
+        {/* 5. 14 Food Allergen Matrix & Kitchen Chart Tool */}
         {isAllergenTool && (
           <AllergenMatrixTool templateId={template.id} />
         )}
