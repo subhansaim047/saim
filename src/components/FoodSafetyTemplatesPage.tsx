@@ -53,7 +53,6 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
         if (selectedType === "checklist" && item.type !== "checklist") return false;
         if (selectedType === "chart" && item.type !== "chart") return false;
         if (selectedType === "log" && item.type !== "log") return false;
-        if (selectedType === "ebook" && item.type !== "ebook") return false;
       }
 
       // Business Activity filter
@@ -87,8 +86,6 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
         return "bg-[#edf0ff] border-[#cdd6ff]";
       case "smart_tool":
         return "bg-[#fef9e7] border-[#fbeab2]";
-      case "ebook":
-        return "bg-[#fdeeed] border-[#facfcc]";
       default:
         return "bg-[#f8f9fa] border-gray-200";
     }
@@ -106,8 +103,6 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
         return "text-[#4338ca] bg-[#e0e7ff]";
       case "smart_tool":
         return "text-[#92400e] bg-[#fef3c7]";
-      case "ebook":
-        return "text-[#be123c] bg-[#ffe4e6]";
       default:
         return "text-gray-700 bg-gray-100";
     }
@@ -262,7 +257,6 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 <option value="checklist">Checklist (31)</option>
                 <option value="chart">Chart (45)</option>
                 <option value="log">Monitoring log (15)</option>
-                <option value="ebook">Ebook / Guide (9)</option>
               </select>
             </div>
 
@@ -362,7 +356,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   100% Free Interactive Templates &amp; Compliance Hub
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold leading-tight">
-                  All 170+ Posters, Logs, &amp; Smart Tools Free
+                  All 160+ Posters, Logs, Charts &amp; Smart Tools Free
                 </h3>
                 <p className="text-xs text-white/80 mt-1 max-w-xl">
                   Customize compliance sheets online and print or save as PDF with zero sign-up.
@@ -694,7 +688,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
       {/* ── FOOTER ── */}
       <footer className="border-t border-[#E5E5EA] bg-white py-8 px-4 sm:px-8 text-center text-xs text-gray-500 no-print">
-        <p>© 2026 Saim Dev. All 170+ Food Safety Templates, Checklists &amp; Posters are 100% Free.</p>
+        <p>© 2026 Saim Dev. All 160+ Food Safety Templates, Checklists &amp; Posters are 100% Free.</p>
         <div className="flex items-center justify-center gap-4 mt-2">
           <Link href="/" className="hover:text-black">Home</Link>
           <span>•</span>

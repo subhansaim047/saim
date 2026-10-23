@@ -252,12 +252,12 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
               </div>
             </div>
 
-            {/* Poster Graphic Container - optimized for high-res print without clipping */}
-            <div className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gray-50 border border-gray-200">
+            {/* Poster / Chart Graphic Container - optimized for high-res print without clipping */}
+            <div className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gray-50 border border-gray-200 print:bg-white print:border-none print:p-0">
               <img
                 src={template.imgUrl}
                 alt={template.title}
-                className="max-h-[600px] w-auto object-contain drop-shadow-sm rounded-lg"
+                className="max-h-[600px] print:max-h-none print:w-full w-auto object-contain drop-shadow-sm rounded-lg"
               />
             </div>
 

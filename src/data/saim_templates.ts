@@ -73,7 +73,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Allergen",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "",
-    "imgUrl": "/templates/svg/Food_allergen_chart.svg",
+    "imgUrl": "/templates/charts/template-5.png",
     "targetUrl": "/food-safety-templates/food-allergen-chart",
     "desc": "Critical food temperature and safety chart for food allergen. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -157,7 +157,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Turkey Pasteurization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-12",
-    "imgUrl": "/templates/svg/Turkey-pasteurization-chart.svg",
+    "imgUrl": "/templates/charts/template-12.png",
     "targetUrl": "/food-safety-templates/turkey-pasteurization-chart",
     "desc": "Critical food temperature and safety chart for turkey pasteurization chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -181,7 +181,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Waste Management Plan",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-14",
-    "imgUrl": "/templates/svg/Waste_control_plan.svg",
+    "imgUrl": "/templates/charts/template-14.png",
     "targetUrl": "/food-safety-templates/waste-management-plan",
     "desc": "Critical food temperature and safety chart for waste management plan. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -205,7 +205,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Flow Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-16",
-    "imgUrl": "/templates/svg/Flow_chart_sample.svg",
+    "imgUrl": "/templates/charts/template-16.png",
     "targetUrl": "/food-safety-templates/haccp-flow-chart-template",
     "desc": "Critical food temperature and safety chart for flow chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -229,7 +229,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "HACCP Plan Template",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-18",
-    "imgUrl": "/templates/svg/HACCP_Plan_Example.svg",
+    "imgUrl": "/templates/charts/template-18.png",
     "targetUrl": "/food-safety-templates/haccp-plan-builder",
     "desc": "Critical food temperature and safety chart for haccp plan template. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -253,7 +253,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Product Specification Sheet",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-20",
-    "imgUrl": "/templates/svg/Product_specification.svg",
+    "imgUrl": "/templates/charts/template-20.png",
     "targetUrl": "/food-safety-templates/product-specification-sheet",
     "desc": "Critical food temperature and safety chart for product specification sheet. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -277,7 +277,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Walk-In-Cooler Food Storage Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-22",
-    "imgUrl": "/templates/svg/Walk-in-cooler.svg",
+    "imgUrl": "/templates/charts/template-22.png",
     "targetUrl": "/food-safety-templates/walk-in-cooler-food-storage-chart",
     "desc": "Critical food temperature and safety chart for walk-in-cooler food storage chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -385,7 +385,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Pest Management",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-31",
-    "imgUrl": "/templates/svg/Pest_control_plan.svg",
+    "imgUrl": "/templates/charts/template-31.png",
     "targetUrl": "/food-safety-templates/pest-management-plan",
     "desc": "Critical food temperature and safety chart for pest management. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -409,7 +409,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Allergy Matrix",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-33",
-    "imgUrl": "/templates/svg/Allergy_matrix.svg",
+    "imgUrl": "/templates/charts/template-33.png",
     "targetUrl": "/food-safety-templates/allergy-matrix",
     "desc": "Critical food temperature and safety chart for allergy matrix. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -577,7 +577,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Meat Cooking Chart",
     "activity": "producer,retail,wholesale,restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-47",
-    "imgUrl": "/templates/svg/Meat_cooking_chart.svg",
+    "imgUrl": "/templates/charts/template-47.png",
     "targetUrl": "/food-safety-templates/meat-cooking-chart",
     "desc": "Critical food temperature and safety chart for meat cooking chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -601,7 +601,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Steak Doneness Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-49",
-    "imgUrl": "/templates/svg/Steak_doneness_chart.svg",
+    "imgUrl": "/templates/charts/template-49.png",
     "targetUrl": "/food-safety-templates/steak-cooking-chart",
     "desc": "Critical food temperature and safety chart for steak doneness chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -613,7 +613,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Ham Cooking Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-50",
-    "imgUrl": "/templates/svg/Ham_cooking_temp_chart.svg",
+    "imgUrl": "/templates/charts/template-50.png",
     "targetUrl": "/food-safety-templates/ham-cooking-temperature-chart",
     "desc": "Critical food temperature and safety chart for ham cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -649,7 +649,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Venison Cooking Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-53",
-    "imgUrl": "/templates/svg/Venison_cooking_temp_chart.svg",
+    "imgUrl": "/templates/charts/template-53.png",
     "targetUrl": "/food-safety-templates/venison-cooking-temperature-chart",
     "desc": "Critical food temperature and safety chart for venison cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -673,7 +673,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Chicken Cooking Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-55",
-    "imgUrl": "/templates/svg/Hot_holding_fried_chicken.svg",
+    "imgUrl": "/templates/charts/template-55.png",
     "targetUrl": "/food-safety-templates/chicken-temperature-chart",
     "desc": "Critical food temperature and safety chart for chicken cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -709,7 +709,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Duck Cooking Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-58",
-    "imgUrl": "/templates/svg/Duck_cooking_temp_chart.svg",
+    "imgUrl": "/templates/charts/template-58.png",
     "targetUrl": "/food-safety-templates/duck-cooking-temperature-chart",
     "desc": "Critical food temperature and safety chart for duck cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -721,7 +721,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Beef Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-59",
-    "imgUrl": "/templates/svg/Beef_cooking_chart.svg",
+    "imgUrl": "/templates/charts/template-59.png",
     "targetUrl": "/food-safety-templates/beef-temperature-chart",
     "desc": "Critical food temperature and safety chart for beef temperature chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -733,7 +733,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Turkey Cooking Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-60",
-    "imgUrl": "/templates/svg/Turkey_cook_chart.svg",
+    "imgUrl": "/templates/charts/template-60.png",
     "targetUrl": "/food-safety-templates/turkey-cooking-chart",
     "desc": "Critical food temperature and safety chart for turkey cooking chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -745,7 +745,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Lamb Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-61",
-    "imgUrl": "/templates/svg/Lamb_Temp_chart.svg",
+    "imgUrl": "/templates/charts/template-61.png",
     "targetUrl": "/food-safety-templates/lamb-temperature-chart",
     "desc": "Critical food temperature and safety chart for lamb temperature chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -757,7 +757,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Fish Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-62",
-    "imgUrl": "/templates/svg/Fish_temp_chart.svg",
+    "imgUrl": "/templates/charts/template-62.png",
     "targetUrl": "/food-safety-templates/fish-temperature-chart",
     "desc": "Critical food temperature and safety chart for fish temperature chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -870,42 +870,6 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "desc": "Official kitchen wall poster for fridge temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
   {
-    "id": "template-72",
-    "slug": "haccp-plan-example-pdf",
-    "type": "ebook",
-    "preheader": "GUIDE",
-    "title": "How To Write A HACCP Plan",
-    "activity": "restaurant,retail,producer,wholesale,healthcare",
-    "pdfUrl": "/api/download?id=template-72",
-    "imgUrl": "/templates/svg/ebook-write-haccp.png",
-    "targetUrl": "/food-safety-templates/haccp-plan-example-pdf",
-    "desc": "Essential guidance and standard operating procedures for how to write a haccp plan."
-  },
-  {
-    "id": "template-73",
-    "slug": "safe-food-handling-practices-and-procedures-pdf",
-    "type": "ebook",
-    "preheader": "GUIDE",
-    "title": "Food Safety Guidelines",
-    "activity": "restaurant,retail,producer,wholesale,healthcare",
-    "pdfUrl": "/api/download?id=template-73",
-    "imgUrl": "/templates/svg/ebook-guidelines.png",
-    "targetUrl": "/food-safety-templates/safe-food-handling-practices-and-procedures-pdf",
-    "desc": "Essential guidance and standard operating procedures for food safety guidelines."
-  },
-  {
-    "id": "template-74",
-    "slug": "food-handlers-test-questions-answers-pdf",
-    "type": "ebook",
-    "preheader": "GUIDE",
-    "title": "Food Handlers Test Answers",
-    "activity": "restaurant,retail,producer,wholesale,healthcare",
-    "pdfUrl": "/api/download?id=template-74",
-    "imgUrl": "/templates/svg/ebook-handlers-test.png",
-    "targetUrl": "/food-safety-templates/food-handlers-test-questions-answers-pdf",
-    "desc": "Essential guidance and standard operating procedures for food handlers test answers."
-  },
-  {
     "id": "template-75",
     "slug": "food-temperature-chart",
     "type": "chart",
@@ -913,7 +877,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Temperature",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-75",
-    "imgUrl": "/templates/svg/Food_temp_chart.svg",
+    "imgUrl": "/templates/charts/template-75.png",
     "targetUrl": "/food-safety-templates/food-temperature-chart",
     "desc": "Critical food temperature and safety chart for food temperature. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -937,7 +901,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Proper Food Storage Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-77",
-    "imgUrl": "/templates/svg/Proper_food_storage_chart.svg",
+    "imgUrl": "/templates/charts/template-77.png",
     "targetUrl": "/food-safety-templates/proper-food-storage-chart",
     "desc": "Critical food temperature and safety chart for proper food storage chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -949,7 +913,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "SSOP Template",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-78",
-    "imgUrl": "/templates/svg/SSOP_folder.svg",
+    "imgUrl": "/templates/charts/template-78.png",
     "targetUrl": "/food-safety-templates/sanitation-standard-operating-procedures",
     "desc": "Critical food temperature and safety chart for ssop template. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -973,7 +937,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Define Critical Control Point With Decision Tree",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-80",
-    "imgUrl": "/templates/svg/Decision_tree.svg",
+    "imgUrl": "/templates/charts/template-80.png",
     "targetUrl": "/food-safety-templates/what-are-the-critical-control-points-for-food-safety",
     "desc": "Critical food temperature and safety chart for define critical control point with decision tree. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1201,7 +1165,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Safe Food Preparation",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-99",
-    "imgUrl": "/templates/svg/Safe_food_prep1.webp",
+    "imgUrl": "/templates/charts/template-99.png",
     "targetUrl": "/food-safety-templates/vacuum-sealed-food-shelf-life-chart",
     "desc": "Critical food temperature and safety chart for safe food preparation. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1213,7 +1177,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Calculating Food Cost",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-100",
-    "imgUrl": "/templates/svg/Food_cost_calc.svg",
+    "imgUrl": "/templates/charts/template-100.png",
     "targetUrl": "/food-safety-templates/calculating-food-cost",
     "desc": "Critical food temperature and safety chart for calculating food cost. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1285,7 +1249,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "The FDA'S FSMA Food Traceability List",
     "activity": "producer",
     "pdfUrl": "/api/download?id=template-106",
-    "imgUrl": "/templates/svg/Features.%20Production%20Traceability.png",
+    "imgUrl": "/templates/charts/template-106.png",
     "targetUrl": "/food-safety-templates/fsma-food-traceability-list",
     "desc": "Critical food temperature and safety chart for the fda's fsma food traceability list. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1350,18 +1314,6 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "desc": "Comprehensive food hygiene and compliance checklist for how to get fssc 22000 certified?. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
   },
   {
-    "id": "template-112",
-    "slug": "food-safety-management-software-buyers-guide",
-    "type": "ebook",
-    "preheader": "GUIDE",
-    "title": "How To Buy Food Safety Management Software EBook",
-    "activity": "restaurant,retail,producer,wholesale,healthcare",
-    "pdfUrl": "/api/download?id=template-112",
-    "imgUrl": "/templates/svg/ebook-buy-fsms-software.png",
-    "targetUrl": "/food-safety-templates/food-safety-management-software-buyers-guide",
-    "desc": "Essential guidance and standard operating procedures for how to buy food safety management software ebook."
-  },
-  {
     "id": "template-113",
     "slug": "ingredient-traceability",
     "type": "log",
@@ -1417,7 +1369,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Expiration Dates Guidelines",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-117",
-    "imgUrl": "/templates/svg/Food_exp_guidlines.svg",
+    "imgUrl": "/templates/charts/template-117.png",
     "targetUrl": "/food-safety-templates/food-expiration-dates-guidelines-chart",
     "desc": "Critical food temperature and safety chart for food expiration dates guidelines. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1429,7 +1381,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Canned Food Expiration Dates",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-118",
-    "imgUrl": "/templates/svg/Canned_food_guidelines.svg",
+    "imgUrl": "/templates/charts/template-118.png",
     "targetUrl": "/food-safety-templates/canned-food-expiration-dates-chart",
     "desc": "Critical food temperature and safety chart for canned food expiration dates. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1525,7 +1477,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How Long To Keep The Leftovers",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-126",
-    "imgUrl": "/templates/svg/Leftovers.svg",
+    "imgUrl": "/templates/charts/template-126.png",
     "targetUrl": "/food-safety-templates/how-long-to-keep-leftovers-chart",
     "desc": "Critical food temperature and safety chart for how long to keep the leftovers. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1549,7 +1501,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How Long Does Butter Last?",
     "activity": "retail,restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-128",
-    "imgUrl": "/templates/svg/Butter.svg",
+    "imgUrl": "/templates/charts/template-128.png",
     "targetUrl": "/food-safety-templates/how-long-does-butter-last-poster",
     "desc": "Critical food temperature and safety chart for how long does butter last?. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1657,7 +1609,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Milk Pasteurization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-137",
-    "imgUrl": "/templates/svg/Milk-pasteurization-chart.svg",
+    "imgUrl": "/templates/charts/template-137.png",
     "targetUrl": "/food-safety-templates/milk-pasteurization-temperature-time-chart",
     "desc": "Critical food temperature and safety chart for milk pasteurization chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1669,7 +1621,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Pork Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-138",
-    "imgUrl": "/templates/svg/Pork_temp_chart.svg",
+    "imgUrl": "/templates/charts/template-138.png",
     "targetUrl": "/food-safety-templates/pork-temperature-chart",
     "desc": "Critical food temperature and safety chart for pork temperature chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1681,7 +1633,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Freeze Drying Time Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-139",
-    "imgUrl": "/templates/svg/Freeze-dried-food.png",
+    "imgUrl": "/templates/charts/template-139.png",
     "targetUrl": "/food-safety-templates/freeze-drying-time-chart",
     "desc": "Critical food temperature and safety chart for freeze drying time chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1693,7 +1645,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Juice-Pasteurization-Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-140",
-    "imgUrl": "/templates/svg/Juice-pasteurization-chart.svg",
+    "imgUrl": "/templates/charts/template-140.png",
     "targetUrl": "/food-safety-templates/juice-pasteurization-temperature-time-chart",
     "desc": "Critical food temperature and safety chart for juice-pasteurization-chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1705,7 +1657,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Meat-Pasteurization-Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-141",
-    "imgUrl": "/templates/svg/Meat-pasteurization-chart.svg",
+    "imgUrl": "/templates/charts/template-141.png",
     "targetUrl": "/food-safety-templates/meat-pasteurization-chart",
     "desc": "Critical food temperature and safety chart for meat-pasteurization-chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1717,7 +1669,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Poultry Pasteurization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-142",
-    "imgUrl": "/templates/svg/Poulty-pasteurization-chart.svg",
+    "imgUrl": "/templates/charts/template-142.png",
     "targetUrl": "/food-safety-templates/poultry-pasteurization-chart",
     "desc": "Critical food temperature and safety chart for poultry pasteurization chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1729,7 +1681,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Chicken Pasteurization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-143",
-    "imgUrl": "/templates/svg/Chicken-pasteurization-chart.svg",
+    "imgUrl": "/templates/charts/template-143.png",
     "targetUrl": "/food-safety-templates/chicken-pasteurization-chart",
     "desc": "Critical food temperature and safety chart for chicken pasteurization chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1753,7 +1705,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Freezer Organization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-145",
-    "imgUrl": "/templates/svg/Freezer-organization-chart.svg",
+    "imgUrl": "/templates/charts/template-145.png",
     "targetUrl": "/food-safety-templates/freezer-organization-chart",
     "desc": "Critical food temperature and safety chart for freezer organization chart. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1768,30 +1720,6 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/posters/template-146.png",
     "targetUrl": "/food-safety-templates/prevent-freezer-burn",
     "desc": "Official kitchen wall poster for prevent freezer burn poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
-  },
-  {
-    "id": "template-147",
-    "slug": "how-to-get-gmp-certified",
-    "type": "ebook",
-    "preheader": "GUIDE",
-    "title": "How To Get GMP Certified",
-    "activity": "restaurant,retail,producer,wholesale,healthcare",
-    "pdfUrl": "/api/download?id=template-147",
-    "imgUrl": "/templates/svg/ebook-GMP-certified.png",
-    "targetUrl": "/food-safety-templates/how-to-get-gmp-certified",
-    "desc": "Essential guidance and standard operating procedures for how to get gmp certified."
-  },
-  {
-    "id": "template-148",
-    "slug": "fsma-204-compliance",
-    "type": "ebook",
-    "preheader": "GUIDE",
-    "title": "How To Get Compliant With FSMA 204 In 8 Steps",
-    "activity": "restaurant,retail,producer,wholesale,healthcare",
-    "pdfUrl": "/api/download?id=template-148",
-    "imgUrl": "/templates/svg/ebook-FSMA-compliant.png",
-    "targetUrl": "/food-safety-templates/fsma-204-compliance",
-    "desc": "Essential guidance and standard operating procedures for how to get compliant with fsma 204 in 8 steps."
   },
   {
     "id": "template-149",
@@ -1813,7 +1741,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "5 Whys Root Cause Analysis",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-150",
-    "imgUrl": "/templates/svg/5_whys.svg",
+    "imgUrl": "/templates/charts/template-150.png",
     "targetUrl": "/food-safety-templates/5-whys-root-cause-analysis-template",
     "desc": "Critical food temperature and safety chart for 5 whys root cause analysis. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -1962,42 +1890,6 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "desc": "Official kitchen wall poster for restaurant manager responsibilities. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
   {
-    "id": "template-163",
-    "slug": "restaurant-food-safety-leader-playbook",
-    "type": "ebook",
-    "preheader": "GUIDE",
-    "title": "The Restaurant Food Safety Leader’S Playbook",
-    "activity": "restaurant,healthcare",
-    "pdfUrl": "/api/download?id=template-163",
-    "imgUrl": "/templates/svg/ebook-restaurant-food-safety.png",
-    "targetUrl": "/food-safety-templates/restaurant-food-safety-leader-playbook",
-    "desc": "Essential guidance and standard operating procedures for the restaurant food safety leader’s playbook."
-  },
-  {
-    "id": "template-164",
-    "slug": "retail-food-safety-leaders-playbook",
-    "type": "ebook",
-    "preheader": "GUIDE",
-    "title": "The Retail Food Safety Leader’S Playbook",
-    "activity": "healthcare,retail",
-    "pdfUrl": "/api/download?id=template-164",
-    "imgUrl": "/templates/svg/ebook-retail-food-safety.png",
-    "targetUrl": "/food-safety-templates/retail-food-safety-leaders-playbook",
-    "desc": "Essential guidance and standard operating procedures for the retail food safety leader’s playbook."
-  },
-  {
-    "id": "template-165",
-    "slug": "healthcare-food-safety-leaders-playbook",
-    "type": "ebook",
-    "preheader": "GUIDE",
-    "title": "The Healthcare Food Safety Leader’S Playbook",
-    "activity": "healthcare,retail",
-    "pdfUrl": "/api/download?id=template-165",
-    "imgUrl": "/templates/svg/ebook-healthcare-food-safety.svg",
-    "targetUrl": "/food-safety-templates/healthcare-food-safety-leaders-playbook",
-    "desc": "Essential guidance and standard operating procedures for the healthcare food safety leader’s playbook."
-  },
-  {
     "id": "template-166",
     "slug": "restaurant-sop",
     "type": "chart",
@@ -2005,7 +1897,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant SOP Template",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-166",
-    "imgUrl": "/templates/svg/Restaurant_SOP.svg",
+    "imgUrl": "/templates/charts/template-166.png",
     "targetUrl": "/food-safety-templates/restaurant-sop",
     "desc": "Critical food temperature and safety chart for restaurant sop template. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -2017,7 +1909,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "SOPs In The Food Industry",
     "activity": "restaurant,healthcare,producer",
     "pdfUrl": "/api/download?id=template-167",
-    "imgUrl": "/templates/svg/SOPs_in_food_industry.svg",
+    "imgUrl": "/templates/charts/template-167.png",
     "targetUrl": "/food-safety-templates/standard-operating-procedure-in-food-industry",
     "desc": "Critical food temperature and safety chart for sops in the food industry. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -2029,7 +1921,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Pest Control SOP",
     "activity": "restaurant,healthcare,producer",
     "pdfUrl": "/api/download?id=template-168",
-    "imgUrl": "/templates/svg/Pest_control_SOP.svg",
+    "imgUrl": "/templates/charts/template-168.png",
     "targetUrl": "/food-safety-templates/pest-control-sop",
     "desc": "Critical food temperature and safety chart for pest control sop. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -2041,7 +1933,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Allergen Control SOP",
     "activity": "restaurant,healthcare,producer",
     "pdfUrl": "/api/download?id=template-169",
-    "imgUrl": "/templates/svg/Allergen_control_SOP.svg",
+    "imgUrl": "/templates/charts/template-169.png",
     "targetUrl": "/food-safety-templates/allergen-control-sop",
     "desc": "Critical food temperature and safety chart for allergen control sop. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -2053,7 +1945,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Waste Management Plan SOP",
     "activity": "restaurant,healthcare,producer",
     "pdfUrl": "/api/download?id=template-170",
-    "imgUrl": "/templates/svg/Waste_management_SOP.svg",
+    "imgUrl": "/templates/charts/template-170.png",
     "targetUrl": "/food-safety-templates/waste-management-plan-sop",
     "desc": "Critical food temperature and safety chart for waste management plan sop. Clear visual reference guide for chefs and food preparation handlers."
   },
@@ -2065,7 +1957,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Kitchen SOP",
     "activity": "restaurant,wholesale,healthcare,producer",
     "pdfUrl": "/api/download?id=template-171",
-    "imgUrl": "/templates/svg/Kitchen_SOP.svg",
+    "imgUrl": "/templates/charts/template-171.png",
     "targetUrl": "/food-safety-templates/kitchen-sop",
     "desc": "Critical food temperature and safety chart for kitchen sop. Clear visual reference guide for chefs and food preparation handlers."
   }
