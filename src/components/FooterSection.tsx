@@ -23,6 +23,7 @@ export const FooterSection = () => {
             <Link href="/services">Services</Link>
             <Link href="/technologies">Tech Stack</Link>
             <Link href="/nextjs-developer-uk" className="text-primary hover:underline">Next.js UK & EU</Link>
+            <Link href="/tools" className="text-primary hover:underline">Free Food Safety Tools</Link>
             <Link href="/demos">Demo Sites</Link>
           </nav>
 

@@ -9,6 +9,7 @@ const navItems = [
   { label: "Our story", href: "#our-story" },
   { label: "Services", href: "/services" },
   { label: "Tech Stack", href: "/technologies" },
+  { label: "Free Tools", href: "/tools" },
   { label: "Demo Sites", href: "/demos" },
   { label: "Blogs", href: "/blogs" },
   { label: "Benefits", href: "#benefits" },
