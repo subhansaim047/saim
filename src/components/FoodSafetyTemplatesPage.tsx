@@ -196,9 +196,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             </h1>
 
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mt-1">
-              Explore our comprehensive collection of food safety templates, checklists, logs, posters, 
-              and smart calculators. Designed for restaurants, takeaways, caterers, and food manufacturers 
-              to streamline Natasha&apos;s Law compliance and achieve 5-Star Food Hygiene ratings.
+              Templates and tools to help you organise kitchen records, train staff and prepare for inspections.
             </p>
 
             <div className="flex flex-wrap items-center gap-2 pt-2">
@@ -259,11 +257,11 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
               >
                 <option value="all">All options ({FOOD_SAFETY_TEMPLATES.length})</option>
-                <option value="smart_tool">Smart tool (27)</option>
-                <option value="poster">Poster (44)</option>
-                <option value="checklist">Checklist (31)</option>
-                <option value="chart">Chart (45)</option>
-                <option value="log">Monitoring log (15)</option>
+                <option value="smart_tool">Smart tool ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "smart_tool").length})</option>
+                <option value="poster">Poster ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "poster").length})</option>
+                <option value="checklist">Checklist ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "checklist").length})</option>
+                <option value="chart">Chart ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "chart").length})</option>
+                <option value="log">Monitoring log ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "log").length})</option>
               </select>
             </div>
 
@@ -363,7 +361,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   Kitchen Safety Templates &amp; Record Tools
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold leading-tight">
-                  Free Printable &amp; Digital Food Safety Records
+                  All {FOOD_SAFETY_TEMPLATES.length} Posters, Logs, Charts &amp; Tools Free
                 </h3>
                 <p className="text-xs text-white/80 mt-1 max-w-xl">
                   Customise kitchen sheets online and print or save as PDF with zero sign-up.
