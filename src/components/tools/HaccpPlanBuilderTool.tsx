@@ -336,13 +336,13 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = () => {
                   {/* 3. Hazard Details */}
                   <td className="p-2.5 align-top">
                     <textarea
-                      rows={3}
+                      rows={4}
                       value={s.hazardDesc}
                       onChange={e => handleUpdateStep(s.id, "hazardDesc", e.target.value)}
                       placeholder="Identify specific hazard details..."
-                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-indigo-600 rounded-lg p-2 text-xs text-gray-800 leading-relaxed print:hidden shadow-2xs focus:outline-none resize-y min-h-[72px]"
+                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-indigo-600 rounded-lg p-2.5 text-xs text-gray-800 leading-relaxed print:hidden shadow-2xs focus:outline-none resize-y min-h-[96px]"
                     />
-                    <div className="hidden print:block text-[8.5pt] leading-tight text-gray-900 whitespace-pre-wrap">
+                    <div className="hidden print:block text-[9pt] leading-relaxed text-gray-950 whitespace-pre-wrap">
                       {s.hazardDesc}
                     </div>
                   </td>
@@ -377,13 +377,13 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = () => {
                   {/* 5. Critical Limit */}
                   <td className="p-2.5 align-top">
                     <textarea
-                      rows={3}
+                      rows={4}
                       value={s.criticalLimit}
                       onChange={e => handleUpdateStep(s.id, "criticalLimit", e.target.value)}
                       placeholder="Specify measurable limits..."
-                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-indigo-600 rounded-lg p-2 text-xs text-gray-800 font-mono leading-relaxed print:hidden shadow-2xs focus:outline-none resize-y min-h-[72px]"
+                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-indigo-600 rounded-lg p-2.5 text-xs text-gray-800 font-mono leading-relaxed print:hidden shadow-2xs focus:outline-none resize-y min-h-[96px]"
                     />
-                    <div className="hidden print:block text-[8.5pt] font-mono leading-tight text-gray-900 whitespace-pre-wrap">
+                    <div className="hidden print:block text-[9pt] font-mono leading-relaxed text-gray-950 whitespace-pre-wrap">
                       {s.criticalLimit}
                     </div>
                   </td>
@@ -391,13 +391,13 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = () => {
                   {/* 6. Monitoring Procedure */}
                   <td className="p-2.5 align-top">
                     <textarea
-                      rows={3}
+                      rows={4}
                       value={s.monitoring}
                       onChange={e => handleUpdateStep(s.id, "monitoring", e.target.value)}
                       placeholder="Monitoring procedure..."
-                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-indigo-600 rounded-lg p-2 text-xs text-gray-800 leading-relaxed print:hidden shadow-2xs focus:outline-none resize-y min-h-[72px]"
+                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-indigo-600 rounded-lg p-2.5 text-xs text-gray-800 leading-relaxed print:hidden shadow-2xs focus:outline-none resize-y min-h-[96px]"
                     />
-                    <div className="hidden print:block text-[8.5pt] leading-tight text-gray-900 whitespace-pre-wrap">
+                    <div className="hidden print:block text-[9pt] leading-relaxed text-gray-950 whitespace-pre-wrap">
                       {s.monitoring}
                     </div>
                   </td>
@@ -405,13 +405,13 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = () => {
                   {/* 7. Corrective Action */}
                   <td className="p-2.5 align-top">
                     <textarea
-                      rows={3}
+                      rows={4}
                       value={s.correctiveAction}
                       onChange={e => handleUpdateStep(s.id, "correctiveAction", e.target.value)}
                       placeholder="Corrective actions taken..."
-                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-indigo-600 rounded-lg p-2 text-xs text-red-950 font-medium leading-relaxed print:hidden shadow-2xs focus:outline-none resize-y min-h-[72px]"
+                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-indigo-600 rounded-lg p-2.5 text-xs text-red-950 font-medium leading-relaxed print:hidden shadow-2xs focus:outline-none resize-y min-h-[96px]"
                     />
-                    <div className="hidden print:block text-[8.5pt] leading-tight text-red-950 font-semibold whitespace-pre-wrap">
+                    <div className="hidden print:block text-[9pt] leading-relaxed text-red-950 font-semibold whitespace-pre-wrap">
                       {s.correctiveAction}
                     </div>
                   </td>

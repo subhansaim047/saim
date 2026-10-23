@@ -794,7 +794,7 @@ export const ToolsPage: React.FC = () => {
                             </span>
                           </div>
                           {item.ingredients && (
-                            <p className="text-[10px] text-white/40 line-clamp-1 mt-0.5">
+                            <p className="text-[11px] text-white/70 mt-1 leading-relaxed whitespace-pre-wrap max-w-sm">
                               {item.ingredients}
                             </p>
                           )}

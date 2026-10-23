@@ -407,15 +407,15 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                     {task.category}
                   </span>
                   <textarea
-                    rows={2}
+                    rows={3}
                     value={task.task}
                     onChange={e => {
                       const val = e.target.value;
                       setTasks(prev => prev.map(t => t.id === task.id ? { ...t, task: val } : t));
                     }}
-                    className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-2.5 py-1 text-xs font-bold text-gray-900 leading-snug focus:outline-none print:hidden shadow-2xs resize-y"
+                    className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg p-2.5 text-xs font-bold text-gray-900 leading-relaxed focus:outline-none print:hidden shadow-2xs resize-y min-h-[68px]"
                   />
-                  <div className="hidden print:block text-[8.5pt] font-bold text-gray-950 leading-snug">
+                  <div className="hidden print:block text-[9pt] font-bold text-gray-950 leading-relaxed whitespace-pre-wrap">
                     {task.task}
                   </div>
                 </div>
@@ -430,9 +430,9 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                     const val = e.target.value;
                     setTasks(prev => prev.map(t => t.id === task.id ? { ...t, actionNotes: val } : t));
                   }}
-                  className="bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-2.5 py-1.5 text-xs text-gray-800 w-48 focus:outline-none print:hidden shadow-2xs"
+                  className="bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-2 text-xs text-gray-800 w-full sm:w-64 focus:outline-none print:hidden shadow-2xs"
                 />
-                <div className="hidden print:block text-[8pt] text-gray-800 italic max-w-[200px] leading-tight">
+                <div className="hidden print:block text-[8.5pt] text-gray-800 italic max-w-xs leading-relaxed whitespace-pre-wrap">
                   {task.actionNotes || "—"}
                 </div>
 

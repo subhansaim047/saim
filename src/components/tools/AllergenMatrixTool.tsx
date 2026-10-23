@@ -317,7 +317,7 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
         <table className="w-full text-left text-xs">
           <thead className="bg-[#1D1D1F] text-white uppercase font-mono text-[9px] tracking-wider">
             <tr>
-              <th className="p-3 border-b" style={{ width: "28%" }}>Dish / Recipe Name &amp; Ingredients</th>
+              <th className="p-3 border-b" style={{ width: "32%", minWidth: "270px" }}>Dish / Recipe Name &amp; Ingredients</th>
               {ALLERGENS.map(a => (
                 <th key={a.id} className="p-2 border-b text-center whitespace-nowrap" style={{ width: "5%" }} title={a.name}>
                   <div>{a.icon}</div>
@@ -330,7 +330,7 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
           <tbody className="divide-y divide-gray-100">
             {filteredItems.map(item => (
               <tr key={item.id} className="hover:bg-gray-50/80 transition-colors">
-                <td className="p-2.5 align-top">
+                <td className="p-2.5 align-top" style={{ minWidth: "270px" }}>
                   <input
                     type="text"
                     value={item.name}
@@ -339,27 +339,27 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
                       setMenuItems(prev => prev.map(m => m.id === item.id ? { ...m, name: val } : m));
                     }}
                     placeholder="Dish name..."
-                    className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-red-500 rounded-lg px-2.5 py-1.5 font-bold text-xs text-gray-900 focus:outline-none print:hidden shadow-2xs"
+                    className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-red-500 rounded-lg px-3 py-2 font-bold text-xs text-gray-900 focus:outline-none print:hidden shadow-2xs"
                   />
-                  <div className="hidden print:block font-bold text-[8.5pt] text-gray-950 leading-tight">
+                  <div className="hidden print:block font-bold text-[9pt] text-gray-950 leading-tight">
                     {item.name}
                   </div>
 
                   <textarea
-                    rows={2}
+                    rows={4}
                     value={item.ingredients}
                     placeholder="Full ingredient breakdown..."
                     onChange={e => {
                       const val = e.target.value;
                       setMenuItems(prev => prev.map(m => m.id === item.id ? { ...m, ingredients: val } : m));
                     }}
-                    className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-red-500 rounded-lg px-2.5 py-1 text-[11px] text-gray-700 focus:outline-none print:hidden shadow-2xs mt-1 resize-y leading-snug"
+                    className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-red-500 rounded-lg p-2.5 text-xs text-gray-800 focus:outline-none print:hidden shadow-2xs mt-1.5 resize-y leading-relaxed min-h-[92px]"
                   />
-                  <div className="hidden print:block text-[7.5pt] text-gray-700 leading-snug whitespace-pre-wrap mt-0.5">
+                  <div className="hidden print:block text-[8.5pt] text-gray-950 font-medium leading-relaxed whitespace-pre-wrap mt-1">
                     {item.ingredients}
                   </div>
 
-                  <span className="inline-block mt-1 px-1.5 py-0.5 bg-gray-100 border border-gray-200 rounded text-[9px] font-mono text-gray-600 print:text-[7pt]">
+                  <span className="inline-block mt-1 px-1.5 py-0.5 bg-gray-100 border border-gray-200 rounded text-[9px] font-mono text-gray-600 print:text-[7.5pt] print:border-gray-300">
                     {item.category}
                   </span>
                 </td>

@@ -485,13 +485,13 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
             Preparation Method &amp; Kitchen Instructions
           </label>
           <textarea
-            rows={5}
+            rows={7}
             value={prepSteps}
             onChange={e => setPrepSteps(e.target.value)}
             placeholder="Step-by-step instructions for chefs, bakers and kitchen crew..."
-            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-2xl p-4 text-xs text-gray-800 leading-relaxed font-sans focus:outline-none print:hidden shadow-2xs resize-y"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-2xl p-4 text-xs text-gray-800 leading-relaxed font-sans focus:outline-none print:hidden shadow-2xs resize-y min-h-[160px]"
           />
-          <div className="hidden print:block p-3 border border-gray-200 rounded-xl text-[8.5pt] text-gray-900 leading-relaxed whitespace-pre-wrap">
+          <div className="hidden print:block p-3 border border-gray-200 rounded-xl text-[9pt] text-gray-950 leading-relaxed whitespace-pre-wrap">
             {prepSteps}
           </div>
         </div>
