@@ -25,7 +25,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Freezer Temperature Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-1",
-    "imgUrl": "/templates/svg/Freezer.svg",
+    "imgUrl": "/templates/posters/template-1.png",
     "targetUrl": "/food-safety-templates/freezer-temperature-chart",
     "desc": "Official kitchen wall poster for freezer temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -37,7 +37,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Two-Stage Cooling Method",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-2",
-    "imgUrl": "/templates/svg/Cooling_2_stages.svg",
+    "imgUrl": "/templates/posters/template-2.png",
     "targetUrl": "/food-safety-templates/food-cooling-poster",
     "desc": "Official kitchen wall poster for two-stage cooling method. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -49,7 +49,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Cooling Food Methods Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-3",
-    "imgUrl": "/templates/svg/Cooling_methods.svg",
+    "imgUrl": "/templates/posters/template-3.png",
     "targetUrl": "/food-safety-templates/food-cooling-poster",
     "desc": "Official kitchen wall poster for cooling food methods poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -61,7 +61,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Safe Food Prep",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-4",
-    "imgUrl": "/templates/svg/Safe_food_prep1.webp",
+    "imgUrl": "/templates/posters/template-4.png",
     "targetUrl": "/food-safety-templates/basic-food-preparation-rules",
     "desc": "Official kitchen wall poster for safe food prep. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -565,7 +565,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Fridge Layout Food Safety Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-46",
-    "imgUrl": "/templates/svg/Fridge_layout_poster.svg",
+    "imgUrl": "/templates/posters/template-46.png",
     "targetUrl": "/food-safety-templates/fridge-layout-poster",
     "desc": "Official kitchen wall poster for fridge layout food safety poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -625,7 +625,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Hand Washing Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-51",
-    "imgUrl": "/templates/svg/Handwashing.svg",
+    "imgUrl": "/templates/posters/template-51.png",
     "targetUrl": "/food-safety-templates/hand-washing-poster",
     "desc": "Official kitchen wall poster for hand washing poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -637,7 +637,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "When Should You Wash Hands Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-52",
-    "imgUrl": "/templates/svg/When_wash_hands.svg",
+    "imgUrl": "/templates/posters/template-52.png",
     "targetUrl": "/food-safety-templates/when-should-you-wash-your-hands",
     "desc": "Official kitchen wall poster for when should you wash hands poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -661,7 +661,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Safety Temperatures Poster",
     "activity": "producer,retail,wholesale",
     "pdfUrl": "/api/download?id=template-54",
-    "imgUrl": "/templates/svg/Food_safety_temp.svg",
+    "imgUrl": "/templates/posters/template-54.png",
     "targetUrl": "/food-safety-templates/food-temperatures-poster",
     "desc": "Official kitchen wall poster for food safety temperatures poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -781,7 +781,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How Do You Calibrate A Thermometer Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-64",
-    "imgUrl": "/templates/svg/Thermo_calib_freezing.svg",
+    "imgUrl": "/templates/posters/template-64.png",
     "targetUrl": "/food-safety-templates/how-do-you-calibrate-a-thermometer",
     "desc": "Official kitchen wall poster for how do you calibrate a thermometer poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -817,7 +817,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Temperature Danger Zone Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-67",
-    "imgUrl": "/templates/svg/Temp_danger_zone.svg",
+    "imgUrl": "/templates/posters/template-67.png",
     "targetUrl": "/food-safety-templates/danger-zone-for-food",
     "desc": "Official kitchen wall poster for temperature danger zone chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -829,7 +829,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Kitchen Safety Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-68",
-    "imgUrl": "/templates/svg/Kitchen_safety.svg",
+    "imgUrl": "/templates/posters/template-68.png",
     "targetUrl": "/food-safety-templates/kitchen-safety-poster",
     "desc": "Official kitchen wall poster for kitchen safety poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -841,7 +841,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Safety And Sanitation Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-69",
-    "imgUrl": "/templates/svg/Food_safety_sanitation.svg",
+    "imgUrl": "/templates/posters/template-69.png",
     "targetUrl": "/food-safety-templates/food-safety-and-sanitation",
     "desc": "Official kitchen wall poster for food safety and sanitation poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -853,7 +853,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Big 6 Foodborne Illnesses",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-70",
-    "imgUrl": "/templates/svg/Big_6_foodborne_illnesses.svg",
+    "imgUrl": "/templates/posters/template-70.png",
     "targetUrl": "/food-safety-templates/big-6-foodborne-illnesses",
     "desc": "Official kitchen wall poster for big 6 foodborne illnesses. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -865,7 +865,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Fridge Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-71",
-    "imgUrl": "/templates/svg/Fridge_temp.svg",
+    "imgUrl": "/templates/posters/template-71.png",
     "targetUrl": "/food-safety-templates/fridge-temperature-chart",
     "desc": "Official kitchen wall poster for fridge temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -985,7 +985,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Burger Temperature Chart",
     "activity": "producer,restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-81",
-    "imgUrl": "/templates/svg/Burger_grilling.svg",
+    "imgUrl": "/templates/posters/template-81.png",
     "targetUrl": "/food-safety-templates/burger-temp-chart",
     "desc": "Official kitchen wall poster for burger temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -997,7 +997,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Hot Holding Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-82",
-    "imgUrl": "/templates/svg/Hot_holding.svg",
+    "imgUrl": "/templates/posters/template-82.png",
     "targetUrl": "/food-safety-templates/hot-holding-temperature",
     "desc": "Official kitchen wall poster for hot holding temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1009,7 +1009,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Hot Holding Temperature For Fried Chicken",
     "activity": "producer,restaurant,retail,healthcare",
     "pdfUrl": "/api/download?id=template-83",
-    "imgUrl": "/templates/svg/Hot_holding_fried_chicken.svg",
+    "imgUrl": "/templates/posters/template-83.png",
     "targetUrl": "/food-safety-templates/what-is-the-minimum-hot-holding-temperature-for-fried-chicken",
     "desc": "Official kitchen wall poster for hot holding temperature for fried chicken. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1045,7 +1045,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Hot Dog",
     "activity": "producer,restaurant,retail,healthcare",
     "pdfUrl": "/api/download?id=template-86",
-    "imgUrl": "/templates/svg/Hot_dog.svg",
+    "imgUrl": "/templates/posters/template-86.png",
     "targetUrl": "/food-safety-templates/what-is-the-minimum-hot-holding-temperature-for-hot-dog",
     "desc": "Official kitchen wall poster for hot dog. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1057,7 +1057,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Fridge Organization",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-87",
-    "imgUrl": "/templates/svg/Fridge_organization_chart.svg",
+    "imgUrl": "/templates/posters/template-87.png",
     "targetUrl": "/food-safety-templates/fridge-organization-chart",
     "desc": "Official kitchen wall poster for fridge organization. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1069,7 +1069,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Cleaning A Meat Slicer",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-88",
-    "imgUrl": "/templates/svg/Meat_slicer.svg",
+    "imgUrl": "/templates/posters/template-88.png",
     "targetUrl": "/food-safety-templates/cleaning-a-meat-slicer-poster",
     "desc": "Official kitchen wall poster for cleaning a meat slicer. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1081,7 +1081,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Allergen Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-89",
-    "imgUrl": "/templates/svg/Food_allergen.svg",
+    "imgUrl": "/templates/posters/template-89.png",
     "targetUrl": "/food-safety-templates/allergen-poster",
     "desc": "Official kitchen wall poster for food allergen poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1093,7 +1093,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How To Use A Meat Thermometer",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-90",
-    "imgUrl": "/templates/svg/Meat_thermometer_usage.svg",
+    "imgUrl": "/templates/posters/template-90.png",
     "targetUrl": "/food-safety-templates/how-to-use-a-meat-thermometer",
     "desc": "Official kitchen wall poster for how to use a meat thermometer. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1105,7 +1105,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How To Use A Food Thermometer",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-91",
-    "imgUrl": "/templates/svg/Food_thermometer_usage.svg",
+    "imgUrl": "/templates/posters/template-91.png",
     "targetUrl": "/food-safety-templates/how-to-use-a-food-thermometer",
     "desc": "Official kitchen wall poster for how to use a food thermometer. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1117,7 +1117,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Sanitation Rules Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-92",
-    "imgUrl": "/templates/svg/Sanitation_rules.svg",
+    "imgUrl": "/templates/posters/template-92.png",
     "targetUrl": "/food-safety-templates/food-sanitation-rules",
     "desc": "Official kitchen wall poster for food sanitation rules poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1129,7 +1129,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Cooling Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-93",
-    "imgUrl": "/templates/svg/Cooling_stages.svg",
+    "imgUrl": "/templates/posters/template-93.png",
     "targetUrl": "/food-safety-templates/food-cooling-poster",
     "desc": "Official kitchen wall poster for food cooling poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1141,7 +1141,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Cold Food Storage Rules",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-94",
-    "imgUrl": "/templates/svg/Cooling_2_stages%20copy.svg",
+    "imgUrl": "/templates/posters/template-94.png",
     "targetUrl": "/food-safety-templates/cold-food-storage-rules",
     "desc": "Official kitchen wall poster for cold food storage rules. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1165,7 +1165,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Receiving Procedure",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-96",
-    "imgUrl": "/templates/svg/Food_shipment.svg",
+    "imgUrl": "/templates/posters/template-96.png",
     "targetUrl": "/food-safety-templates/food-receiving-procedure",
     "desc": "Official kitchen wall poster for food receiving procedure. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1453,7 +1453,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Reheating Poster",
     "activity": "producer,restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-120",
-    "imgUrl": "/templates/svg/Reheat_food.svg",
+    "imgUrl": "/templates/posters/template-120.png",
     "targetUrl": "/food-safety-templates/reheating-food-temperature-guide",
     "desc": "Official kitchen wall poster for food reheating poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1465,7 +1465,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Three Sink Method Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-121",
-    "imgUrl": "/templates/svg/Three_sink_method.svg",
+    "imgUrl": "/templates/posters/template-121.png",
     "targetUrl": "/food-safety-templates/three-sink-method",
     "desc": "Official kitchen wall poster for three sink method poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1477,7 +1477,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Cleaning And Sanitizing Dirty Utensils",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-122",
-    "imgUrl": "/templates/svg/Utensils.svg",
+    "imgUrl": "/templates/posters/template-122.png",
     "targetUrl": "/food-safety-templates/proper-method-for-cleaning-dirty-utensils",
     "desc": "Official kitchen wall poster for cleaning and sanitizing dirty utensils. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1489,7 +1489,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "5 Food Safety Rules",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-123",
-    "imgUrl": "/templates/svg/5_safety_rules.svg",
+    "imgUrl": "/templates/posters/template-123.png",
     "targetUrl": "/food-safety-templates/five-food-safety-rules",
     "desc": "Official kitchen wall poster for 5 food safety rules. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1501,7 +1501,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Max. Temp. And Rules For Cold Holding Food",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-124",
-    "imgUrl": "/templates/svg/Cold_holding_food.svg",
+    "imgUrl": "/templates/posters/template-124.png",
     "targetUrl": "/food-safety-templates/cold-holding-food",
     "desc": "Official kitchen wall poster for max. temp. and rules for cold holding food. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1513,7 +1513,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Sell-By, Use-By, Expiration Dates",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-125",
-    "imgUrl": "/templates/svg/Sell_by.svg",
+    "imgUrl": "/templates/posters/template-125.png",
     "targetUrl": "/food-safety-templates/sell-by-date",
     "desc": "Official kitchen wall poster for sell-by, use-by, expiration dates. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1537,7 +1537,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "FATTOM",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-127",
-    "imgUrl": "/templates/svg/FATTOM.svg",
+    "imgUrl": "/templates/posters/template-127.png",
     "targetUrl": "/food-safety-templates/fat-tom-poster",
     "desc": "Official kitchen wall poster for fattom. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1561,7 +1561,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "US Cutting Board Color Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-129",
-    "imgUrl": "/templates/svg/US_Cutting_Boards.svg",
+    "imgUrl": "/templates/posters/template-129.png",
     "targetUrl": "/food-safety-templates/cutting-board-color-chart",
     "desc": "Official kitchen wall poster for us cutting board color chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1573,7 +1573,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "UK Chopping Board Colour Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-130",
-    "imgUrl": "/templates/svg/Chopping_Boards_UK.svg",
+    "imgUrl": "/templates/posters/template-130.png",
     "targetUrl": "/food-safety-templates/chopping-board-colour-chart",
     "desc": "Official kitchen wall poster for uk chopping board colour chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1609,7 +1609,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Defrosting",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-133",
-    "imgUrl": "/templates/svg/Food_thawing.svg",
+    "imgUrl": "/templates/posters/template-133.png",
     "targetUrl": "/food-safety-templates/defrosting-foods",
     "desc": "Official kitchen wall poster for food defrosting. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1621,7 +1621,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Thermometer Calibration Boiling Point Method",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-134",
-    "imgUrl": "/templates/svg/Thermo_calib_boiling.svg",
+    "imgUrl": "/templates/posters/template-134.png",
     "targetUrl": "/food-safety-templates/boiling-water-thermometer-calibration",
     "desc": "Official kitchen wall poster for thermometer calibration boiling point method. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1765,7 +1765,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Prevent Freezer Burn Poster",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-146",
-    "imgUrl": "/templates/svg/Freezer-burn.svg",
+    "imgUrl": "/templates/posters/template-146.png",
     "targetUrl": "/food-safety-templates/prevent-freezer-burn",
     "desc": "Official kitchen wall poster for prevent freezer burn poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1861,7 +1861,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant Hood Cleaning",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-154",
-    "imgUrl": "/templates/svg/Restaurant_hood_cleaning_checklist.svg",
+    "imgUrl": "/templates/posters/template-154.png",
     "targetUrl": "/food-safety-templates/restaurant-hood-cleaning",
     "desc": "Official kitchen wall poster for restaurant hood cleaning. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1873,7 +1873,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Grease Trap Cleaning Guide",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-155",
-    "imgUrl": "/templates/svg/Grease_trap_cleaning_guide.svg",
+    "imgUrl": "/templates/posters/template-155.png",
     "targetUrl": "/food-safety-templates/grease-trap-cleaning",
     "desc": "Official kitchen wall poster for grease trap cleaning guide. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1933,7 +1933,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant Steps Of Service",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-160",
-    "imgUrl": "/templates/svg/Kitchen_prep_list_template-1.svg",
+    "imgUrl": "/templates/posters/template-160.png",
     "targetUrl": "/food-safety-templates/restaurant-steps-of-service",
     "desc": "Official kitchen wall poster for restaurant steps of service. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1945,7 +1945,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant Food Safety Procedures",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-161",
-    "imgUrl": "/templates/svg/Restaurant_food_safety_procedures.svg",
+    "imgUrl": "/templates/posters/template-161.png",
     "targetUrl": "/food-safety-templates/restaurant-food-safety-procedures",
     "desc": "Official kitchen wall poster for restaurant food safety procedures. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
@@ -1957,7 +1957,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant Manager Responsibilities",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-162",
-    "imgUrl": "/templates/svg/Restaurant_manager_responsibilities.svg",
+    "imgUrl": "/templates/posters/template-162.png",
     "targetUrl": "/food-safety-templates/restaurant-manager-responsibilities",
     "desc": "Official kitchen wall poster for restaurant manager responsibilities. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
   },
