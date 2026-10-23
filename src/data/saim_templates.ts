@@ -7,6 +7,7 @@ export interface FoodSafetyTemplate {
   catSlug?: string;
   badge?: string;
   imgUrl: string;
+  thumbUrl?: string;
   pdfUrl: string;
   type: string;
   preheader?: string;
@@ -25,9 +26,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Freezer Temperature Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-1",
-    "imgUrl": "/templates/posters/template-1.png",
+    "imgUrl": "/templates/posters/template-1.webp",
     "targetUrl": "/food-safety-templates/freezer-temperature-chart",
-    "desc": "Official kitchen wall poster for freezer temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for freezer temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-1.webp"
   },
   {
     "id": "template-2",
@@ -37,9 +39,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Two-Stage Cooling Method",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-2",
-    "imgUrl": "/templates/posters/template-2.png",
+    "imgUrl": "/templates/posters/template-2.webp",
     "targetUrl": "/food-safety-templates/food-cooling-poster",
-    "desc": "Official kitchen wall poster for two-stage cooling method. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for two-stage cooling method. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-2.webp"
   },
   {
     "id": "template-3",
@@ -49,9 +52,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Cooling Food Methods Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-3",
-    "imgUrl": "/templates/posters/template-3.png",
+    "imgUrl": "/templates/posters/template-3.webp",
     "targetUrl": "/food-safety-templates/food-cooling-poster",
-    "desc": "Official kitchen wall poster for cooling food methods poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for cooling food methods poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-3.webp"
   },
   {
     "id": "template-4",
@@ -61,9 +65,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Safe Food Prep",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-4",
-    "imgUrl": "/templates/posters/template-4.png",
+    "imgUrl": "/templates/posters/template-4.webp",
     "targetUrl": "/food-safety-templates/basic-food-preparation-rules",
-    "desc": "Official kitchen wall poster for safe food prep. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for safe food prep. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-4.webp"
   },
   {
     "id": "template-5",
@@ -73,9 +78,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Allergen",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "",
-    "imgUrl": "/templates/charts/template-5.png",
+    "imgUrl": "/templates/charts/template-5.webp",
     "targetUrl": "/food-safety-templates/food-allergen-chart",
-    "desc": "Critical food temperature and safety chart for food allergen. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for food allergen. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-5.webp"
   },
   {
     "id": "template-6",
@@ -87,7 +93,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Recipe_resize_tool.svg",
     "targetUrl": "/food-safety-templates/recipe-calculator",
-    "desc": "Interactive smart calculator and digital generator for recipe calculator. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for recipe calculator. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Recipe_resize_tool.svg"
   },
   {
     "id": "template-7",
@@ -99,7 +106,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Consumer_advisory.svg",
     "targetUrl": "/food-safety-templates/consumer-advisory",
-    "desc": "Interactive smart calculator and digital generator for consumer advisory. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for consumer advisory. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Consumer_advisory.svg"
   },
   {
     "id": "template-8",
@@ -111,7 +119,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Allergy_warning.svg",
     "targetUrl": "/food-safety-templates/food-allergy-warning",
-    "desc": "Interactive smart calculator and digital generator for food allergy warning. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for food allergy warning. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Allergy_warning.svg"
   },
   {
     "id": "template-9",
@@ -123,7 +132,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Quiz.svg",
     "targetUrl": "/food-safety-templates/food-safety-quiz",
-    "desc": "Interactive smart calculator and digital generator for food safety quiz. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for food safety quiz. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Quiz.svg"
   },
   {
     "id": "template-10",
@@ -135,7 +145,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-10",
     "imgUrl": "/templates/svg/brc_audit.svg",
     "targetUrl": "/food-safety-templates/brc-audit",
-    "desc": "Comprehensive food hygiene and compliance checklist for brc audit checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for brc audit checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/brc_audit.svg"
   },
   {
     "id": "template-11",
@@ -147,7 +158,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-11",
     "imgUrl": "/templates/svg/kosher.svg",
     "targetUrl": "/food-safety-templates/kosher-certification",
-    "desc": "Comprehensive food hygiene and compliance checklist for kosher. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for kosher. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/kosher.svg"
   },
   {
     "id": "template-12",
@@ -157,9 +169,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Turkey Pasteurization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-12",
-    "imgUrl": "/templates/charts/template-12.png",
+    "imgUrl": "/templates/charts/template-12.webp",
     "targetUrl": "/food-safety-templates/turkey-pasteurization-chart",
-    "desc": "Critical food temperature and safety chart for turkey pasteurization chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for turkey pasteurization chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-12.webp"
   },
   {
     "id": "template-13",
@@ -171,7 +184,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-13",
     "imgUrl": "/templates/svg/Temp_log.svg",
     "targetUrl": "/food-safety-templates/fridge-temperature-record-sheet-pdf",
-    "desc": "Mandatory record keeping log for temperature sheet. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for temperature sheet. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Temp_log.svg"
   },
   {
     "id": "template-14",
@@ -181,9 +195,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Waste Management Plan",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-14",
-    "imgUrl": "/templates/charts/template-14.png",
+    "imgUrl": "/templates/charts/template-14.webp",
     "targetUrl": "/food-safety-templates/waste-management-plan",
-    "desc": "Critical food temperature and safety chart for waste management plan. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for waste management plan. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-14.webp"
   },
   {
     "id": "template-15",
@@ -195,7 +210,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Waste_control_plan.svg",
     "targetUrl": "/food-safety-templates/waste-management-schedule",
-    "desc": "Interactive smart calculator and digital generator for waste management schedule. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for waste management schedule. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Waste_control_plan.svg"
   },
   {
     "id": "template-16",
@@ -205,9 +221,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Flow Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-16",
-    "imgUrl": "/templates/charts/template-16.png",
+    "imgUrl": "/templates/charts/template-16.webp",
     "targetUrl": "/food-safety-templates/haccp-flow-chart-template",
-    "desc": "Critical food temperature and safety chart for flow chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for flow chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-16.webp"
   },
   {
     "id": "template-17",
@@ -219,7 +236,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Flow_chart_sample.svg",
     "targetUrl": "/food-safety-templates/food-flow-chart",
-    "desc": "Interactive smart calculator and digital generator for food flow chart. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for food flow chart. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Flow_chart_sample.svg"
   },
   {
     "id": "template-18",
@@ -229,9 +247,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "HACCP Plan Template",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-18",
-    "imgUrl": "/templates/charts/template-18.png",
+    "imgUrl": "/templates/charts/template-18.webp",
     "targetUrl": "/food-safety-templates/haccp-plan-builder",
-    "desc": "Critical food temperature and safety chart for haccp plan template. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for haccp plan template. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-18.webp"
   },
   {
     "id": "template-19",
@@ -243,7 +262,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/HACCP_Plan_Example.svg",
     "targetUrl": "/food-safety-templates/food-safety-plan",
-    "desc": "Interactive smart calculator and digital generator for food safety plan. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for food safety plan. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/HACCP_Plan_Example.svg"
   },
   {
     "id": "template-20",
@@ -253,9 +273,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Product Specification Sheet",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-20",
-    "imgUrl": "/templates/charts/template-20.png",
+    "imgUrl": "/templates/charts/template-20.webp",
     "targetUrl": "/food-safety-templates/product-specification-sheet",
-    "desc": "Critical food temperature and safety chart for product specification sheet. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for product specification sheet. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-20.webp"
   },
   {
     "id": "template-21",
@@ -267,7 +288,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Product_specification.svg",
     "targetUrl": "/food-safety-templates/product-specification-template",
-    "desc": "Interactive smart calculator and digital generator for product specification template. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for product specification template. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Product_specification.svg"
   },
   {
     "id": "template-22",
@@ -277,9 +299,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Walk-In-Cooler Food Storage Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-22",
-    "imgUrl": "/templates/charts/template-22.png",
+    "imgUrl": "/templates/charts/template-22.webp",
     "targetUrl": "/food-safety-templates/walk-in-cooler-food-storage-chart",
-    "desc": "Critical food temperature and safety chart for walk-in-cooler food storage chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for walk-in-cooler food storage chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-22.webp"
   },
   {
     "id": "template-23",
@@ -291,7 +314,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-23",
     "imgUrl": "/templates/svg/Cleaning_schedule.svg",
     "targetUrl": "/food-safety-templates/cleaning-schedule",
-    "desc": "Mandatory record keeping log for cleaning schedule. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for cleaning schedule. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Cleaning_schedule.svg"
   },
   {
     "id": "template-24",
@@ -303,7 +327,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Cleaning_schedule.svg",
     "targetUrl": "/food-safety-templates/cleaning-checklist-template",
-    "desc": "Interactive smart calculator and digital generator for cleaning checklist template. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for cleaning checklist template. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Cleaning_schedule.svg"
   },
   {
     "id": "template-25",
@@ -315,7 +340,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-25",
     "imgUrl": "/templates/svg/Restaurant-cleaning.svg",
     "targetUrl": "/food-safety-templates/restaurant-cleaning-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for restaurant cleaning checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for restaurant cleaning checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Restaurant-cleaning.svg"
   },
   {
     "id": "template-26",
@@ -327,7 +353,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Restaurant-cleaning.svg",
     "targetUrl": "/food-safety-templates/cleaning-restaurant",
-    "desc": "Interactive smart calculator and digital generator for cleaning restaurant template. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for cleaning restaurant template. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Restaurant-cleaning.svg"
   },
   {
     "id": "template-27",
@@ -339,7 +366,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-27",
     "imgUrl": "/templates/svg/Food_traceability.svg",
     "targetUrl": "/food-safety-templates/food-traceability",
-    "desc": "Mandatory record keeping log for food traceability. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for food traceability. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Food_traceability.svg"
   },
   {
     "id": "template-28",
@@ -351,7 +379,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-28",
     "imgUrl": "/templates/svg/Food_recall.svg",
     "targetUrl": "/food-safety-templates/food-recall",
-    "desc": "Mandatory record keeping log for food recall. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for food recall. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Food_recall.svg"
   },
   {
     "id": "template-29",
@@ -363,7 +392,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-29",
     "imgUrl": "/templates/svg/Pest_control_plan.svg",
     "targetUrl": "/food-safety-templates/pest-control-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for pest control. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for pest control. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Pest_control_plan.svg"
   },
   {
     "id": "template-30",
@@ -375,7 +405,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Pest_control_plan.svg",
     "targetUrl": "/food-safety-templates/pest-control-inspection-checklist",
-    "desc": "Interactive smart calculator and digital generator for pest control inspection checklist. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for pest control inspection checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Pest_control_plan.svg"
   },
   {
     "id": "template-31",
@@ -385,9 +416,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Pest Management",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-31",
-    "imgUrl": "/templates/charts/template-31.png",
+    "imgUrl": "/templates/charts/template-31.webp",
     "targetUrl": "/food-safety-templates/pest-management-plan",
-    "desc": "Critical food temperature and safety chart for pest management. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for pest management. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-31.webp"
   },
   {
     "id": "template-32",
@@ -399,7 +431,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Pest_control_plan.svg",
     "targetUrl": "/food-safety-templates/pest-control-template",
-    "desc": "Interactive smart calculator and digital generator for pest control. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for pest control. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Pest_control_plan.svg"
   },
   {
     "id": "template-33",
@@ -409,9 +442,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Allergy Matrix",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-33",
-    "imgUrl": "/templates/charts/template-33.png",
+    "imgUrl": "/templates/charts/template-33.webp",
     "targetUrl": "/food-safety-templates/allergy-matrix",
-    "desc": "Critical food temperature and safety chart for allergy matrix. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for allergy matrix. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-33.webp"
   },
   {
     "id": "template-34",
@@ -423,7 +457,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-34",
     "imgUrl": "/templates/svg/Bars_pubs_opening.svg",
     "targetUrl": "/food-safety-templates/bar-opening-closing-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for bar opening and closing. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for bar opening and closing. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Bars_pubs_opening.svg"
   },
   {
     "id": "template-35",
@@ -435,7 +470,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Bars_pubs_opening.svg",
     "targetUrl": "/food-safety-templates/bar-opening-checklist",
-    "desc": "Interactive smart calculator and digital generator for bar opening checklist. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for bar opening checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Bars_pubs_opening.svg"
   },
   {
     "id": "template-36",
@@ -447,7 +483,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-36",
     "imgUrl": "/templates/svg/Restaurant_opening.svg",
     "targetUrl": "/food-safety-templates/restaurant-opening-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for restaurant opening. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for restaurant opening. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Restaurant_opening.svg"
   },
   {
     "id": "template-37",
@@ -459,7 +496,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Restaurant_opening.svg",
     "targetUrl": "/food-safety-templates/restaurant-checklist",
-    "desc": "Interactive smart calculator and digital generator for restaurant checklist. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for restaurant checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Restaurant_opening.svg"
   },
   {
     "id": "template-38",
@@ -471,7 +509,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-38",
     "imgUrl": "/templates/svg/Retail-store-daily-checklist.svg",
     "targetUrl": "/food-safety-templates/printable-retail-store-daily-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for printable retail store daily checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for printable retail store daily checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Retail-store-daily-checklist.svg"
   },
   {
     "id": "template-39",
@@ -483,7 +522,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Retail-store-daily-checklist.svg",
     "targetUrl": "/food-safety-templates/retail-store-daily-checklist",
-    "desc": "Interactive smart calculator and digital generator for retail store daily checklist. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for retail store daily checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Retail-store-daily-checklist.svg"
   },
   {
     "id": "template-40",
@@ -495,7 +535,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-40",
     "imgUrl": "/templates/svg/Opening_closing_checklist.svg",
     "targetUrl": "/food-safety-templates/opening-and-closing-checklist-template",
-    "desc": "Comprehensive food hygiene and compliance checklist for opening and closing. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for opening and closing. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Opening_closing_checklist.svg"
   },
   {
     "id": "template-41",
@@ -507,7 +548,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Opening_closing_checklist.svg",
     "targetUrl": "/food-safety-templates/kitchen-opening-and-closing-checklist",
-    "desc": "Interactive smart calculator and digital generator for kitchen opening and closing checklist. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for kitchen opening and closing checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Opening_closing_checklist.svg"
   },
   {
     "id": "template-42",
@@ -519,7 +561,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-42",
     "imgUrl": "/templates/svg/Health_inspection_checklist.svg",
     "targetUrl": "/food-safety-templates/health-inspection-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for health inspection checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for health inspection checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Health_inspection_checklist.svg"
   },
   {
     "id": "template-43",
@@ -531,7 +574,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Health_inspection_checklist.svg",
     "targetUrl": "/food-safety-templates/restaurant-health-inspection-checklist",
-    "desc": "Interactive smart calculator and digital generator for restaurant health inspection checklist. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for restaurant health inspection checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Health_inspection_checklist.svg"
   },
   {
     "id": "template-44",
@@ -543,7 +587,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-44",
     "imgUrl": "/templates/svg/Restaurant_equipment_list.svg",
     "targetUrl": "/food-safety-templates/restaurant-equipment-list",
-    "desc": "Comprehensive food hygiene and compliance checklist for restaurant equipment list. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for restaurant equipment list. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Restaurant_equipment_list.svg"
   },
   {
     "id": "template-45",
@@ -555,7 +600,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Restaurant_equipment_list.svg",
     "targetUrl": "/food-safety-templates/kitchen-utensils-list",
-    "desc": "Interactive smart calculator and digital generator for kitchen utensils list. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for kitchen utensils list. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Restaurant_equipment_list.svg"
   },
   {
     "id": "template-46",
@@ -565,9 +611,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Fridge Layout Food Safety Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-46",
-    "imgUrl": "/templates/posters/template-46.png",
+    "imgUrl": "/templates/posters/template-46.webp",
     "targetUrl": "/food-safety-templates/fridge-layout-poster",
-    "desc": "Official kitchen wall poster for fridge layout food safety poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for fridge layout food safety poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-46.webp"
   },
   {
     "id": "template-47",
@@ -577,9 +624,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Meat Cooking Chart",
     "activity": "producer,retail,wholesale,restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-47",
-    "imgUrl": "/templates/charts/template-47.png",
+    "imgUrl": "/templates/charts/template-47.webp",
     "targetUrl": "/food-safety-templates/meat-cooking-chart",
-    "desc": "Critical food temperature and safety chart for meat cooking chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for meat cooking chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-47.webp"
   },
   {
     "id": "template-48",
@@ -591,7 +639,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-48",
     "imgUrl": "/templates/svg/Cooking_temp_log.svg",
     "targetUrl": "/food-safety-templates/cooking-log-template",
-    "desc": "Mandatory record keeping log for cooking log. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for cooking log. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Cooking_temp_log.svg"
   },
   {
     "id": "template-49",
@@ -601,9 +650,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Steak Doneness Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-49",
-    "imgUrl": "/templates/charts/template-49.png",
+    "imgUrl": "/templates/charts/template-49.webp",
     "targetUrl": "/food-safety-templates/steak-cooking-chart",
-    "desc": "Critical food temperature and safety chart for steak doneness chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for steak doneness chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-49.webp"
   },
   {
     "id": "template-50",
@@ -613,9 +663,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Ham Cooking Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-50",
-    "imgUrl": "/templates/charts/template-50.png",
+    "imgUrl": "/templates/charts/template-50.webp",
     "targetUrl": "/food-safety-templates/ham-cooking-temperature-chart",
-    "desc": "Critical food temperature and safety chart for ham cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for ham cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-50.webp"
   },
   {
     "id": "template-51",
@@ -625,9 +676,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Hand Washing Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-51",
-    "imgUrl": "/templates/posters/template-51.png",
+    "imgUrl": "/templates/posters/template-51.webp",
     "targetUrl": "/food-safety-templates/hand-washing-poster",
-    "desc": "Official kitchen wall poster for hand washing poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for hand washing poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-51.webp"
   },
   {
     "id": "template-52",
@@ -637,9 +689,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "When Should You Wash Hands Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-52",
-    "imgUrl": "/templates/posters/template-52.png",
+    "imgUrl": "/templates/posters/template-52.webp",
     "targetUrl": "/food-safety-templates/when-should-you-wash-your-hands",
-    "desc": "Official kitchen wall poster for when should you wash hands poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for when should you wash hands poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-52.webp"
   },
   {
     "id": "template-53",
@@ -649,9 +702,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Venison Cooking Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-53",
-    "imgUrl": "/templates/charts/template-53.png",
+    "imgUrl": "/templates/charts/template-53.webp",
     "targetUrl": "/food-safety-templates/venison-cooking-temperature-chart",
-    "desc": "Critical food temperature and safety chart for venison cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for venison cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-53.webp"
   },
   {
     "id": "template-54",
@@ -661,9 +715,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Safety Temperatures Poster",
     "activity": "producer,retail,wholesale",
     "pdfUrl": "/api/download?id=template-54",
-    "imgUrl": "/templates/posters/template-54.png",
+    "imgUrl": "/templates/posters/template-54.webp",
     "targetUrl": "/food-safety-templates/food-temperatures-poster",
-    "desc": "Official kitchen wall poster for food safety temperatures poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for food safety temperatures poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-54.webp"
   },
   {
     "id": "template-55",
@@ -673,9 +728,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Chicken Cooking Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-55",
-    "imgUrl": "/templates/charts/template-55.png",
+    "imgUrl": "/templates/charts/template-55.webp",
     "targetUrl": "/food-safety-templates/chicken-temperature-chart",
-    "desc": "Critical food temperature and safety chart for chicken cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for chicken cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-55.webp"
   },
   {
     "id": "template-56",
@@ -687,7 +743,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-56",
     "imgUrl": "/templates/svg/Opening_restaurant_checklist.svg",
     "targetUrl": "/food-safety-templates/opening-a-restaurant-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for opening a restaurant. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for opening a restaurant. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Opening_restaurant_checklist.svg"
   },
   {
     "id": "template-57",
@@ -699,7 +756,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Opening_restaurant_checklist.svg",
     "targetUrl": "/food-safety-templates/starting-a-food-business-checklist",
-    "desc": "Interactive smart calculator and digital generator for starting a food business checklist. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for starting a food business checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Opening_restaurant_checklist.svg"
   },
   {
     "id": "template-58",
@@ -709,9 +767,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Duck Cooking Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-58",
-    "imgUrl": "/templates/charts/template-58.png",
+    "imgUrl": "/templates/charts/template-58.webp",
     "targetUrl": "/food-safety-templates/duck-cooking-temperature-chart",
-    "desc": "Critical food temperature and safety chart for duck cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for duck cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-58.webp"
   },
   {
     "id": "template-59",
@@ -721,9 +780,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Beef Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-59",
-    "imgUrl": "/templates/charts/template-59.png",
+    "imgUrl": "/templates/charts/template-59.webp",
     "targetUrl": "/food-safety-templates/beef-temperature-chart",
-    "desc": "Critical food temperature and safety chart for beef temperature chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for beef temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-59.webp"
   },
   {
     "id": "template-60",
@@ -733,9 +793,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Turkey Cooking Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-60",
-    "imgUrl": "/templates/charts/template-60.png",
+    "imgUrl": "/templates/charts/template-60.webp",
     "targetUrl": "/food-safety-templates/turkey-cooking-chart",
-    "desc": "Critical food temperature and safety chart for turkey cooking chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for turkey cooking chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-60.webp"
   },
   {
     "id": "template-61",
@@ -745,9 +806,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Lamb Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-61",
-    "imgUrl": "/templates/charts/template-61.png",
+    "imgUrl": "/templates/charts/template-61.webp",
     "targetUrl": "/food-safety-templates/lamb-temperature-chart",
-    "desc": "Critical food temperature and safety chart for lamb temperature chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for lamb temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-61.webp"
   },
   {
     "id": "template-62",
@@ -757,9 +819,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Fish Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-62",
-    "imgUrl": "/templates/charts/template-62.png",
+    "imgUrl": "/templates/charts/template-62.webp",
     "targetUrl": "/food-safety-templates/fish-temperature-chart",
-    "desc": "Critical food temperature and safety chart for fish temperature chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for fish temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-62.webp"
   },
   {
     "id": "template-63",
@@ -771,7 +834,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-63",
     "imgUrl": "/templates/svg/Thermometer_calib_log.svg",
     "targetUrl": "/food-safety-templates/thermometer-calibration-log",
-    "desc": "Mandatory record keeping log for thermometer calibration. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for thermometer calibration. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Thermometer_calib_log.svg"
   },
   {
     "id": "template-64",
@@ -781,9 +845,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How Do You Calibrate A Thermometer Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-64",
-    "imgUrl": "/templates/posters/template-64.png",
+    "imgUrl": "/templates/posters/template-64.webp",
     "targetUrl": "/food-safety-templates/how-do-you-calibrate-a-thermometer",
-    "desc": "Official kitchen wall poster for how do you calibrate a thermometer poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for how do you calibrate a thermometer poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-64.webp"
   },
   {
     "id": "template-65",
@@ -795,7 +860,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-65",
     "imgUrl": "/templates/svg/HACCP-audit-checklist.svg",
     "targetUrl": "/food-safety-templates/haccp-audit-checklist-template",
-    "desc": "Comprehensive food hygiene and compliance checklist for haccp audit checklist template. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for haccp audit checklist template. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/HACCP-audit-checklist.svg"
   },
   {
     "id": "template-66",
@@ -807,7 +873,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/HACCP-audit-checklist.svg",
     "targetUrl": "/food-safety-templates/haccp-audit",
-    "desc": "Interactive smart calculator and digital generator for haccp audit checklist. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for haccp audit checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/HACCP-audit-checklist.svg"
   },
   {
     "id": "template-67",
@@ -817,9 +884,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Temperature Danger Zone Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-67",
-    "imgUrl": "/templates/posters/template-67.png",
+    "imgUrl": "/templates/posters/template-67.webp",
     "targetUrl": "/food-safety-templates/danger-zone-for-food",
-    "desc": "Official kitchen wall poster for temperature danger zone chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for temperature danger zone chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-67.webp"
   },
   {
     "id": "template-68",
@@ -829,9 +897,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Kitchen Safety Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-68",
-    "imgUrl": "/templates/posters/template-68.png",
+    "imgUrl": "/templates/posters/template-68.webp",
     "targetUrl": "/food-safety-templates/kitchen-safety-poster",
-    "desc": "Official kitchen wall poster for kitchen safety poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for kitchen safety poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-68.webp"
   },
   {
     "id": "template-69",
@@ -841,9 +910,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Safety And Sanitation Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-69",
-    "imgUrl": "/templates/posters/template-69.png",
+    "imgUrl": "/templates/posters/template-69.webp",
     "targetUrl": "/food-safety-templates/food-safety-and-sanitation",
-    "desc": "Official kitchen wall poster for food safety and sanitation poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for food safety and sanitation poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-69.webp"
   },
   {
     "id": "template-70",
@@ -853,9 +923,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Big 6 Foodborne Illnesses",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-70",
-    "imgUrl": "/templates/posters/template-70.png",
+    "imgUrl": "/templates/posters/template-70.webp",
     "targetUrl": "/food-safety-templates/big-6-foodborne-illnesses",
-    "desc": "Official kitchen wall poster for big 6 foodborne illnesses. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for big 6 foodborne illnesses. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-70.webp"
   },
   {
     "id": "template-71",
@@ -865,9 +936,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Fridge Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-71",
-    "imgUrl": "/templates/posters/template-71.png",
+    "imgUrl": "/templates/posters/template-71.webp",
     "targetUrl": "/food-safety-templates/fridge-temperature-chart",
-    "desc": "Official kitchen wall poster for fridge temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for fridge temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-71.webp"
   },
   {
     "id": "template-75",
@@ -877,9 +949,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Temperature",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-75",
-    "imgUrl": "/templates/charts/template-75.png",
+    "imgUrl": "/templates/charts/template-75.webp",
     "targetUrl": "/food-safety-templates/food-temperature-chart",
-    "desc": "Critical food temperature and safety chart for food temperature. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for food temperature. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-75.webp"
   },
   {
     "id": "template-76",
@@ -891,7 +964,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Define_critical_control_point.svg",
     "targetUrl": "/food-safety-templates/haccp-risk-assessment",
-    "desc": "Interactive smart calculator and digital generator for define critical control point with haccp matrix. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for define critical control point with haccp matrix. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Define_critical_control_point.svg"
   },
   {
     "id": "template-77",
@@ -901,9 +975,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Proper Food Storage Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-77",
-    "imgUrl": "/templates/charts/template-77.png",
+    "imgUrl": "/templates/charts/template-77.webp",
     "targetUrl": "/food-safety-templates/proper-food-storage-chart",
-    "desc": "Critical food temperature and safety chart for proper food storage chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for proper food storage chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-77.webp"
   },
   {
     "id": "template-78",
@@ -913,9 +988,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "SSOP Template",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-78",
-    "imgUrl": "/templates/charts/template-78.png",
+    "imgUrl": "/templates/charts/template-78.webp",
     "targetUrl": "/food-safety-templates/sanitation-standard-operating-procedures",
-    "desc": "Critical food temperature and safety chart for ssop template. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for ssop template. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-78.webp"
   },
   {
     "id": "template-79",
@@ -927,7 +1003,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/SSOP_folder.svg",
     "targetUrl": "/food-safety-templates/ssop",
-    "desc": "Interactive smart calculator and digital generator for ssop. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for ssop. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/SSOP_folder.svg"
   },
   {
     "id": "template-80",
@@ -937,9 +1014,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Define Critical Control Point With Decision Tree",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-80",
-    "imgUrl": "/templates/charts/template-80.png",
+    "imgUrl": "/templates/charts/template-80.webp",
     "targetUrl": "/food-safety-templates/what-are-the-critical-control-points-for-food-safety",
-    "desc": "Critical food temperature and safety chart for define critical control point with decision tree. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for define critical control point with decision tree. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-80.webp"
   },
   {
     "id": "template-81",
@@ -949,9 +1027,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Burger Temperature Chart",
     "activity": "producer,restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-81",
-    "imgUrl": "/templates/posters/template-81.png",
+    "imgUrl": "/templates/posters/template-81.webp",
     "targetUrl": "/food-safety-templates/burger-temp-chart",
-    "desc": "Official kitchen wall poster for burger temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for burger temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-81.webp"
   },
   {
     "id": "template-82",
@@ -961,9 +1040,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Hot Holding Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-82",
-    "imgUrl": "/templates/posters/template-82.png",
+    "imgUrl": "/templates/posters/template-82.webp",
     "targetUrl": "/food-safety-templates/hot-holding-temperature",
-    "desc": "Official kitchen wall poster for hot holding temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for hot holding temperature chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-82.webp"
   },
   {
     "id": "template-83",
@@ -973,9 +1053,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Hot Holding Temperature For Fried Chicken",
     "activity": "producer,restaurant,retail,healthcare",
     "pdfUrl": "/api/download?id=template-83",
-    "imgUrl": "/templates/posters/template-83.png",
+    "imgUrl": "/templates/posters/template-83.webp",
     "targetUrl": "/food-safety-templates/what-is-the-minimum-hot-holding-temperature-for-fried-chicken",
-    "desc": "Official kitchen wall poster for hot holding temperature for fried chicken. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for hot holding temperature for fried chicken. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-83.webp"
   },
   {
     "id": "template-84",
@@ -987,7 +1068,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-84",
     "imgUrl": "/templates/svg/Hot_holding_pizza.svg",
     "targetUrl": "/food-safety-templates/what-is-the-minimum-hot-holding-temperature-requirement-for-pizza",
-    "desc": "Mandatory record keeping log for pizza hot holding. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for pizza hot holding. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Hot_holding_pizza.svg"
   },
   {
     "id": "template-85",
@@ -999,7 +1081,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-85",
     "imgUrl": "/templates/svg/EHO_checklist.svg",
     "targetUrl": "/food-safety-templates/eho-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for eho food hygiene inspection checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for eho food hygiene inspection checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/EHO_checklist.svg"
   },
   {
     "id": "template-86",
@@ -1009,9 +1092,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Hot Dog",
     "activity": "producer,restaurant,retail,healthcare",
     "pdfUrl": "/api/download?id=template-86",
-    "imgUrl": "/templates/posters/template-86.png",
+    "imgUrl": "/templates/posters/template-86.webp",
     "targetUrl": "/food-safety-templates/what-is-the-minimum-hot-holding-temperature-for-hot-dog",
-    "desc": "Official kitchen wall poster for hot dog. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for hot dog. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-86.webp"
   },
   {
     "id": "template-87",
@@ -1021,9 +1105,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Fridge Organization",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-87",
-    "imgUrl": "/templates/posters/template-87.png",
+    "imgUrl": "/templates/posters/template-87.webp",
     "targetUrl": "/food-safety-templates/fridge-organization-chart",
-    "desc": "Official kitchen wall poster for fridge organization. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for fridge organization. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-87.webp"
   },
   {
     "id": "template-88",
@@ -1033,9 +1118,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Cleaning A Meat Slicer",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-88",
-    "imgUrl": "/templates/posters/template-88.png",
+    "imgUrl": "/templates/posters/template-88.webp",
     "targetUrl": "/food-safety-templates/cleaning-a-meat-slicer-poster",
-    "desc": "Official kitchen wall poster for cleaning a meat slicer. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for cleaning a meat slicer. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-88.webp"
   },
   {
     "id": "template-89",
@@ -1045,9 +1131,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Allergen Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-89",
-    "imgUrl": "/templates/posters/template-89.png",
+    "imgUrl": "/templates/posters/template-89.webp",
     "targetUrl": "/food-safety-templates/allergen-poster",
-    "desc": "Official kitchen wall poster for food allergen poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for food allergen poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-89.webp"
   },
   {
     "id": "template-90",
@@ -1057,9 +1144,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How To Use A Meat Thermometer",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-90",
-    "imgUrl": "/templates/posters/template-90.png",
+    "imgUrl": "/templates/posters/template-90.webp",
     "targetUrl": "/food-safety-templates/how-to-use-a-meat-thermometer",
-    "desc": "Official kitchen wall poster for how to use a meat thermometer. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for how to use a meat thermometer. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-90.webp"
   },
   {
     "id": "template-91",
@@ -1069,9 +1157,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How To Use A Food Thermometer",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-91",
-    "imgUrl": "/templates/posters/template-91.png",
+    "imgUrl": "/templates/posters/template-91.webp",
     "targetUrl": "/food-safety-templates/how-to-use-a-food-thermometer",
-    "desc": "Official kitchen wall poster for how to use a food thermometer. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for how to use a food thermometer. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-91.webp"
   },
   {
     "id": "template-92",
@@ -1081,9 +1170,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Sanitation Rules Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-92",
-    "imgUrl": "/templates/posters/template-92.png",
+    "imgUrl": "/templates/posters/template-92.webp",
     "targetUrl": "/food-safety-templates/food-sanitation-rules",
-    "desc": "Official kitchen wall poster for food sanitation rules poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for food sanitation rules poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-92.webp"
   },
   {
     "id": "template-93",
@@ -1093,9 +1183,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Cooling Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-93",
-    "imgUrl": "/templates/posters/template-93.png",
+    "imgUrl": "/templates/posters/template-93.webp",
     "targetUrl": "/food-safety-templates/food-cooling-poster",
-    "desc": "Official kitchen wall poster for food cooling poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for food cooling poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-93.webp"
   },
   {
     "id": "template-94",
@@ -1105,9 +1196,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Cold Food Storage Rules",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-94",
-    "imgUrl": "/templates/posters/template-94.png",
+    "imgUrl": "/templates/posters/template-94.webp",
     "targetUrl": "/food-safety-templates/cold-food-storage-rules",
-    "desc": "Official kitchen wall poster for cold food storage rules. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for cold food storage rules. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-94.webp"
   },
   {
     "id": "template-95",
@@ -1119,7 +1211,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-95",
     "imgUrl": "/templates/svg/Receiving_temp_log.svg",
     "targetUrl": "/food-safety-templates/receiving-log",
-    "desc": "Mandatory record keeping log for receiving temperature. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for receiving temperature. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Receiving_temp_log.svg"
   },
   {
     "id": "template-96",
@@ -1129,9 +1222,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Receiving Procedure",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-96",
-    "imgUrl": "/templates/posters/template-96.png",
+    "imgUrl": "/templates/posters/template-96.webp",
     "targetUrl": "/food-safety-templates/food-receiving-procedure",
-    "desc": "Official kitchen wall poster for food receiving procedure. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for food receiving procedure. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-96.webp"
   },
   {
     "id": "template-97",
@@ -1143,7 +1237,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-97",
     "imgUrl": "/templates/svg/Cleaning_schedule.svg",
     "targetUrl": "/food-safety-templates/deep-cleaning-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for deep cleaning checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for deep cleaning checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Cleaning_schedule.svg"
   },
   {
     "id": "template-98",
@@ -1155,7 +1250,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Cleaning_schedule.svg",
     "targetUrl": "/food-safety-templates/restaurant-deep-cleaning-checklist",
-    "desc": "Interactive smart calculator and digital generator for restaurant deep cleaning. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for restaurant deep cleaning. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Cleaning_schedule.svg"
   },
   {
     "id": "template-99",
@@ -1165,9 +1261,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Safe Food Preparation",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-99",
-    "imgUrl": "/templates/charts/template-99.png",
+    "imgUrl": "/templates/charts/template-99.webp",
     "targetUrl": "/food-safety-templates/vacuum-sealed-food-shelf-life-chart",
-    "desc": "Critical food temperature and safety chart for safe food preparation. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for safe food preparation. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-99.webp"
   },
   {
     "id": "template-100",
@@ -1177,9 +1274,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Calculating Food Cost",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-100",
-    "imgUrl": "/templates/charts/template-100.png",
+    "imgUrl": "/templates/charts/template-100.webp",
     "targetUrl": "/food-safety-templates/calculating-food-cost",
-    "desc": "Critical food temperature and safety chart for calculating food cost. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for calculating food cost. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-100.webp"
   },
   {
     "id": "template-101",
@@ -1191,7 +1289,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Food_cost_calc.svg",
     "targetUrl": "/food-safety-templates/food-cost-calculator",
-    "desc": "Interactive smart calculator and digital generator for food cost calculator. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for food cost calculator. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Food_cost_calc.svg"
   },
   {
     "id": "template-102",
@@ -1203,7 +1302,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-102",
     "imgUrl": "/templates/svg/GMP_audit.svg",
     "targetUrl": "/food-safety-templates/gmp-audit-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for gmp audit checklist - template. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for gmp audit checklist - template. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/GMP_audit.svg"
   },
   {
     "id": "template-103",
@@ -1215,7 +1315,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/GMP_audit.svg",
     "targetUrl": "/food-safety-templates/food-production-gmp-audit-checklist",
-    "desc": "Interactive smart calculator and digital generator for gmp audit checklist - smart tool. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for gmp audit checklist - smart tool. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/GMP_audit.svg"
   },
   {
     "id": "template-104",
@@ -1227,7 +1328,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-104",
     "imgUrl": "/templates/svg/gfsi_cert.svg",
     "targetUrl": "/food-safety-templates/gfsi-audit-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for how to get gfsi certified?. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for how to get gfsi certified?. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/gfsi_cert.svg"
   },
   {
     "id": "template-105",
@@ -1239,7 +1341,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-105",
     "imgUrl": "/templates/svg/ISO_22000_cert.svg",
     "targetUrl": "/food-safety-templates/get-iso-22000-certified",
-    "desc": "Comprehensive food hygiene and compliance checklist for how to get iso 22000 certified?. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for how to get iso 22000 certified?. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/ISO_22000_cert.svg"
   },
   {
     "id": "template-106",
@@ -1249,9 +1352,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "The FDA'S FSMA Food Traceability List",
     "activity": "producer",
     "pdfUrl": "/api/download?id=template-106",
-    "imgUrl": "/templates/charts/template-106.png",
+    "imgUrl": "/templates/charts/template-106.webp",
     "targetUrl": "/food-safety-templates/fsma-food-traceability-list",
-    "desc": "Critical food temperature and safety chart for the fda's fsma food traceability list. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for the fda's fsma food traceability list. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-106.webp"
   },
   {
     "id": "template-107",
@@ -1263,7 +1367,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-107",
     "imgUrl": "/templates/svg/Approved_suppliers_list.svg",
     "targetUrl": "/food-safety-templates/approved-supplier-list",
-    "desc": "Mandatory record keeping log for approved supplier list. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for approved supplier list. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Approved_suppliers_list.svg"
   },
   {
     "id": "template-108",
@@ -1275,7 +1380,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-108",
     "imgUrl": "/templates/svg/SQF_audit_checklist.svg",
     "targetUrl": "/food-safety-templates/sqf-audit-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for sqf internal audit checklist | download free template. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for sqf internal audit checklist | download free template. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/SQF_audit_checklist.svg"
   },
   {
     "id": "template-109",
@@ -1287,7 +1393,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-109",
     "imgUrl": "/templates/svg/ISO_22000_Internal_Audit_Checklist.svg",
     "targetUrl": "/food-safety-templates/iso-22000-internal-audit-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for iso 22000 internal audit checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for iso 22000 internal audit checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/ISO_22000_Internal_Audit_Checklist.svg"
   },
   {
     "id": "template-110",
@@ -1299,7 +1406,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-110",
     "imgUrl": "/templates/svg/FSMA_Compliance_Audit_Checklist.svg",
     "targetUrl": "/food-safety-templates/fsma-compliance-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for fsma compliance checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for fsma compliance checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/FSMA_Compliance_Audit_Checklist.svg"
   },
   {
     "id": "template-111",
@@ -1311,7 +1419,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-111",
     "imgUrl": "/templates/svg/fssc.svg",
     "targetUrl": "/food-safety-templates/fssc-certification-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for how to get fssc 22000 certified?. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for how to get fssc 22000 certified?. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/fssc.svg"
   },
   {
     "id": "template-113",
@@ -1323,7 +1432,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-113",
     "imgUrl": "/templates/svg/Ingredient_traceability.svg",
     "targetUrl": "/food-safety-templates/ingredient-traceability",
-    "desc": "Mandatory record keeping log for ingredient traceability. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for ingredient traceability. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Ingredient_traceability.svg"
   },
   {
     "id": "template-114",
@@ -1335,7 +1445,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-114",
     "imgUrl": "/templates/svg/Delivery_log.svg",
     "targetUrl": "/food-safety-templates/delivery-log",
-    "desc": "Mandatory record keeping log for delivery log. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for delivery log. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Delivery_log.svg"
   },
   {
     "id": "template-115",
@@ -1347,7 +1458,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-115",
     "imgUrl": "/templates/svg/Production_sheet.svg",
     "targetUrl": "/food-safety-templates/food-production-sheet",
-    "desc": "Mandatory record keeping log for production sheet. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for production sheet. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Production_sheet.svg"
   },
   {
     "id": "template-116",
@@ -1359,7 +1471,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-116",
     "imgUrl": "/templates/svg/Dispatch_sheet.svg",
     "targetUrl": "/food-safety-templates/dispatch-log",
-    "desc": "Mandatory record keeping log for dispatch log. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for dispatch log. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Dispatch_sheet.svg"
   },
   {
     "id": "template-117",
@@ -1369,9 +1482,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Expiration Dates Guidelines",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-117",
-    "imgUrl": "/templates/charts/template-117.png",
+    "imgUrl": "/templates/charts/template-117.webp",
     "targetUrl": "/food-safety-templates/food-expiration-dates-guidelines-chart",
-    "desc": "Critical food temperature and safety chart for food expiration dates guidelines. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for food expiration dates guidelines. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-117.webp"
   },
   {
     "id": "template-118",
@@ -1381,9 +1495,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Canned Food Expiration Dates",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-118",
-    "imgUrl": "/templates/charts/template-118.png",
+    "imgUrl": "/templates/charts/template-118.webp",
     "targetUrl": "/food-safety-templates/canned-food-expiration-dates-chart",
-    "desc": "Critical food temperature and safety chart for canned food expiration dates. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for canned food expiration dates. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-118.webp"
   },
   {
     "id": "template-119",
@@ -1395,7 +1510,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Hazard_Analysis.svg",
     "targetUrl": "/food-safety-templates/hazard-analysis-template",
-    "desc": "Interactive smart calculator and digital generator for hazard analysis example. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for hazard analysis example. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Hazard_Analysis.svg"
   },
   {
     "id": "template-120",
@@ -1405,9 +1521,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Reheating Poster",
     "activity": "producer,restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-120",
-    "imgUrl": "/templates/posters/template-120.png",
+    "imgUrl": "/templates/posters/template-120.webp",
     "targetUrl": "/food-safety-templates/reheating-food-temperature-guide",
-    "desc": "Official kitchen wall poster for food reheating poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for food reheating poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-120.webp"
   },
   {
     "id": "template-121",
@@ -1417,9 +1534,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Three Sink Method Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-121",
-    "imgUrl": "/templates/posters/template-121.png",
+    "imgUrl": "/templates/posters/template-121.webp",
     "targetUrl": "/food-safety-templates/three-sink-method",
-    "desc": "Official kitchen wall poster for three sink method poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for three sink method poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-121.webp"
   },
   {
     "id": "template-122",
@@ -1429,9 +1547,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Cleaning And Sanitizing Dirty Utensils",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-122",
-    "imgUrl": "/templates/posters/template-122.png",
+    "imgUrl": "/templates/posters/template-122.webp",
     "targetUrl": "/food-safety-templates/proper-method-for-cleaning-dirty-utensils",
-    "desc": "Official kitchen wall poster for cleaning and sanitizing dirty utensils. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for cleaning and sanitizing dirty utensils. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-122.webp"
   },
   {
     "id": "template-123",
@@ -1441,9 +1560,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "5 Food Safety Rules",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-123",
-    "imgUrl": "/templates/posters/template-123.png",
+    "imgUrl": "/templates/posters/template-123.webp",
     "targetUrl": "/food-safety-templates/five-food-safety-rules",
-    "desc": "Official kitchen wall poster for 5 food safety rules. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for 5 food safety rules. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-123.webp"
   },
   {
     "id": "template-124",
@@ -1453,9 +1573,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Max. Temp. And Rules For Cold Holding Food",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-124",
-    "imgUrl": "/templates/posters/template-124.png",
+    "imgUrl": "/templates/posters/template-124.webp",
     "targetUrl": "/food-safety-templates/cold-holding-food",
-    "desc": "Official kitchen wall poster for max. temp. and rules for cold holding food. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for max. temp. and rules for cold holding food. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-124.webp"
   },
   {
     "id": "template-125",
@@ -1465,9 +1586,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Sell-By, Use-By, Expiration Dates",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-125",
-    "imgUrl": "/templates/posters/template-125.png",
+    "imgUrl": "/templates/posters/template-125.webp",
     "targetUrl": "/food-safety-templates/sell-by-date",
-    "desc": "Official kitchen wall poster for sell-by, use-by, expiration dates. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for sell-by, use-by, expiration dates. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-125.webp"
   },
   {
     "id": "template-126",
@@ -1477,9 +1599,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How Long To Keep The Leftovers",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-126",
-    "imgUrl": "/templates/charts/template-126.png",
+    "imgUrl": "/templates/charts/template-126.webp",
     "targetUrl": "/food-safety-templates/how-long-to-keep-leftovers-chart",
-    "desc": "Critical food temperature and safety chart for how long to keep the leftovers. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for how long to keep the leftovers. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-126.webp"
   },
   {
     "id": "template-127",
@@ -1489,9 +1612,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "FATTOM",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-127",
-    "imgUrl": "/templates/posters/template-127.png",
+    "imgUrl": "/templates/posters/template-127.webp",
     "targetUrl": "/food-safety-templates/fat-tom-poster",
-    "desc": "Official kitchen wall poster for fattom. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for fattom. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-127.webp"
   },
   {
     "id": "template-128",
@@ -1501,9 +1625,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "How Long Does Butter Last?",
     "activity": "retail,restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-128",
-    "imgUrl": "/templates/charts/template-128.png",
+    "imgUrl": "/templates/charts/template-128.webp",
     "targetUrl": "/food-safety-templates/how-long-does-butter-last-poster",
-    "desc": "Critical food temperature and safety chart for how long does butter last?. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for how long does butter last?. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-128.webp"
   },
   {
     "id": "template-129",
@@ -1513,9 +1638,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "US Cutting Board Color Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-129",
-    "imgUrl": "/templates/posters/template-129.png",
+    "imgUrl": "/templates/posters/template-129.webp",
     "targetUrl": "/food-safety-templates/cutting-board-color-chart",
-    "desc": "Official kitchen wall poster for us cutting board color chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for us cutting board color chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-129.webp"
   },
   {
     "id": "template-130",
@@ -1525,9 +1651,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "UK Chopping Board Colour Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-130",
-    "imgUrl": "/templates/posters/template-130.png",
+    "imgUrl": "/templates/posters/template-130.webp",
     "targetUrl": "/food-safety-templates/chopping-board-colour-chart",
-    "desc": "Official kitchen wall poster for uk chopping board colour chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for uk chopping board colour chart. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-130.webp"
   },
   {
     "id": "template-131",
@@ -1539,7 +1666,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-131",
     "imgUrl": "/templates/svg/Natashas_law.svg",
     "targetUrl": "/food-safety-templates/natashas-law",
-    "desc": "Comprehensive food hygiene and compliance checklist for natasha's law. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for natasha's law. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Natashas_law.svg"
   },
   {
     "id": "template-132",
@@ -1551,7 +1679,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Recipe_creator_tool.svg",
     "targetUrl": "/food-safety-templates/recipe-card-generator",
-    "desc": "Interactive smart calculator and digital generator for recipe generator. Streamlines food safety operations with zero manual calculation errors."
+    "desc": "Interactive smart calculator and digital generator for recipe generator. Streamlines food safety operations with zero manual calculation errors.",
+    "thumbUrl": "/templates/svg/Recipe_creator_tool.svg"
   },
   {
     "id": "template-133",
@@ -1561,9 +1690,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Food Defrosting",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-133",
-    "imgUrl": "/templates/posters/template-133.png",
+    "imgUrl": "/templates/posters/template-133.webp",
     "targetUrl": "/food-safety-templates/defrosting-foods",
-    "desc": "Official kitchen wall poster for food defrosting. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for food defrosting. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-133.webp"
   },
   {
     "id": "template-134",
@@ -1573,9 +1703,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Thermometer Calibration Boiling Point Method",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-134",
-    "imgUrl": "/templates/posters/template-134.png",
+    "imgUrl": "/templates/posters/template-134.webp",
     "targetUrl": "/food-safety-templates/boiling-water-thermometer-calibration",
-    "desc": "Official kitchen wall poster for thermometer calibration boiling point method. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for thermometer calibration boiling point method. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-134.webp"
   },
   {
     "id": "template-135",
@@ -1587,7 +1718,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-135",
     "imgUrl": "/templates/svg/non-gmo.svg",
     "targetUrl": "/food-safety-templates/non-gmo",
-    "desc": "Comprehensive food hygiene and compliance checklist for how to get the non-gmo certification?. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for how to get the non-gmo certification?. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/non-gmo.svg"
   },
   {
     "id": "template-136",
@@ -1599,7 +1731,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-136",
     "imgUrl": "/templates/svg/Amazon_reqs.png",
     "targetUrl": "/food-safety-templates/amazon-seller-and-product-requirements",
-    "desc": "Comprehensive food hygiene and compliance checklist for amazon seller and product requirements. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for amazon seller and product requirements. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Amazon_reqs.png"
   },
   {
     "id": "template-137",
@@ -1609,9 +1742,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Milk Pasteurization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-137",
-    "imgUrl": "/templates/charts/template-137.png",
+    "imgUrl": "/templates/charts/template-137.webp",
     "targetUrl": "/food-safety-templates/milk-pasteurization-temperature-time-chart",
-    "desc": "Critical food temperature and safety chart for milk pasteurization chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for milk pasteurization chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-137.webp"
   },
   {
     "id": "template-138",
@@ -1621,9 +1755,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Pork Temperature Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-138",
-    "imgUrl": "/templates/charts/template-138.png",
+    "imgUrl": "/templates/charts/template-138.webp",
     "targetUrl": "/food-safety-templates/pork-temperature-chart",
-    "desc": "Critical food temperature and safety chart for pork temperature chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for pork temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-138.webp"
   },
   {
     "id": "template-139",
@@ -1633,9 +1768,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Freeze Drying Time Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-139",
-    "imgUrl": "/templates/charts/template-139.png",
+    "imgUrl": "/templates/charts/template-139.webp",
     "targetUrl": "/food-safety-templates/freeze-drying-time-chart",
-    "desc": "Critical food temperature and safety chart for freeze drying time chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for freeze drying time chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-139.webp"
   },
   {
     "id": "template-140",
@@ -1645,9 +1781,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Juice-Pasteurization-Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-140",
-    "imgUrl": "/templates/charts/template-140.png",
+    "imgUrl": "/templates/charts/template-140.webp",
     "targetUrl": "/food-safety-templates/juice-pasteurization-temperature-time-chart",
-    "desc": "Critical food temperature and safety chart for juice-pasteurization-chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for juice-pasteurization-chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-140.webp"
   },
   {
     "id": "template-141",
@@ -1657,9 +1794,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Meat-Pasteurization-Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-141",
-    "imgUrl": "/templates/charts/template-141.png",
+    "imgUrl": "/templates/charts/template-141.webp",
     "targetUrl": "/food-safety-templates/meat-pasteurization-chart",
-    "desc": "Critical food temperature and safety chart for meat-pasteurization-chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for meat-pasteurization-chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-141.webp"
   },
   {
     "id": "template-142",
@@ -1669,9 +1807,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Poultry Pasteurization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-142",
-    "imgUrl": "/templates/charts/template-142.png",
+    "imgUrl": "/templates/charts/template-142.webp",
     "targetUrl": "/food-safety-templates/poultry-pasteurization-chart",
-    "desc": "Critical food temperature and safety chart for poultry pasteurization chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for poultry pasteurization chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-142.webp"
   },
   {
     "id": "template-143",
@@ -1681,9 +1820,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Chicken Pasteurization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-143",
-    "imgUrl": "/templates/charts/template-143.png",
+    "imgUrl": "/templates/charts/template-143.webp",
     "targetUrl": "/food-safety-templates/chicken-pasteurization-chart",
-    "desc": "Critical food temperature and safety chart for chicken pasteurization chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for chicken pasteurization chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-143.webp"
   },
   {
     "id": "template-144",
@@ -1695,7 +1835,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-144",
     "imgUrl": "/templates/svg/Hot-holding-food.svg",
     "targetUrl": "/food-safety-templates/hot-holding-food-temperature-log",
-    "desc": "Mandatory record keeping log for hot holding food log. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for hot holding food log. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Hot-holding-food.svg"
   },
   {
     "id": "template-145",
@@ -1705,9 +1846,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Freezer Organization Chart",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-145",
-    "imgUrl": "/templates/charts/template-145.png",
+    "imgUrl": "/templates/charts/template-145.webp",
     "targetUrl": "/food-safety-templates/freezer-organization-chart",
-    "desc": "Critical food temperature and safety chart for freezer organization chart. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for freezer organization chart. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-145.webp"
   },
   {
     "id": "template-146",
@@ -1717,9 +1859,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Prevent Freezer Burn Poster",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-146",
-    "imgUrl": "/templates/posters/template-146.png",
+    "imgUrl": "/templates/posters/template-146.webp",
     "targetUrl": "/food-safety-templates/prevent-freezer-burn",
-    "desc": "Official kitchen wall poster for prevent freezer burn poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for prevent freezer burn poster. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-146.webp"
   },
   {
     "id": "template-149",
@@ -1731,7 +1874,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-149",
     "imgUrl": "/templates/svg/EcoSure_inspection_checklist.svg",
     "targetUrl": "/food-safety-templates/ecosure-inspection-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for ecosure inspection checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for ecosure inspection checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/EcoSure_inspection_checklist.svg"
   },
   {
     "id": "template-150",
@@ -1741,9 +1885,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "5 Whys Root Cause Analysis",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-150",
-    "imgUrl": "/templates/charts/template-150.png",
+    "imgUrl": "/templates/charts/template-150.webp",
     "targetUrl": "/food-safety-templates/5-whys-root-cause-analysis-template",
-    "desc": "Critical food temperature and safety chart for 5 whys root cause analysis. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for 5 whys root cause analysis. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-150.webp"
   },
   {
     "id": "template-151",
@@ -1755,7 +1900,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-151",
     "imgUrl": "/templates/svg/Corrective_action_plan.svg",
     "targetUrl": "/food-safety-templates/corrective-action-plan-template",
-    "desc": "Mandatory record keeping log for corrective action plan. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings."
+    "desc": "Mandatory record keeping log for corrective action plan. Essential for HACCP documentation, due diligence, and 5-Star Food Hygiene ratings.",
+    "thumbUrl": "/templates/svg/Corrective_action_plan.svg"
   },
   {
     "id": "template-152",
@@ -1767,7 +1913,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-152",
     "imgUrl": "/templates/svg/Fire_inspection_checklist.svg",
     "targetUrl": "/food-safety-templates/restaurant-fire-inspection-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for restaurant fire inspection checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for restaurant fire inspection checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Fire_inspection_checklist.svg"
   },
   {
     "id": "template-153",
@@ -1779,7 +1926,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-153",
     "imgUrl": "/templates/svg/Restausatnt_maintenance_checklist.svg",
     "targetUrl": "/food-safety-templates/restaurant-maintenance-checklist",
-    "desc": "Comprehensive food hygiene and compliance checklist for restaurant maintenance checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for restaurant maintenance checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Restausatnt_maintenance_checklist.svg"
   },
   {
     "id": "template-154",
@@ -1789,9 +1937,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant Hood Cleaning",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-154",
-    "imgUrl": "/templates/posters/template-154.png",
+    "imgUrl": "/templates/posters/template-154.webp",
     "targetUrl": "/food-safety-templates/restaurant-hood-cleaning",
-    "desc": "Official kitchen wall poster for restaurant hood cleaning. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for restaurant hood cleaning. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-154.webp"
   },
   {
     "id": "template-155",
@@ -1801,9 +1950,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Grease Trap Cleaning Guide",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-155",
-    "imgUrl": "/templates/posters/template-155.png",
+    "imgUrl": "/templates/posters/template-155.webp",
     "targetUrl": "/food-safety-templates/grease-trap-cleaning",
-    "desc": "Official kitchen wall poster for grease trap cleaning guide. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for grease trap cleaning guide. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-155.webp"
   },
   {
     "id": "template-156",
@@ -1815,7 +1965,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-156",
     "imgUrl": "/templates/svg/Restaurant_bathroom_cleaning_checklist.svg",
     "targetUrl": "/food-safety-templates/restroom-cleaning-checklist-log",
-    "desc": "Comprehensive food hygiene and compliance checklist for restroom cleaning checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for restroom cleaning checklist. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Restaurant_bathroom_cleaning_checklist.svg"
   },
   {
     "id": "template-157",
@@ -1827,7 +1978,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-157",
     "imgUrl": "/templates/svg/Restaurant_inventory_template.svg",
     "targetUrl": "/food-safety-templates/restaurant-inventory-template",
-    "desc": "Comprehensive food hygiene and compliance checklist for restaurant inventory template. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for restaurant inventory template. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Restaurant_inventory_template.svg"
   },
   {
     "id": "template-158",
@@ -1839,7 +1991,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-158",
     "imgUrl": "/templates/svg/Restaurant_schedule_template.svg",
     "targetUrl": "/food-safety-templates/restaurant-schedule-template",
-    "desc": "Comprehensive food hygiene and compliance checklist for restaurant schedule template. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for restaurant schedule template. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Restaurant_schedule_template.svg"
   },
   {
     "id": "template-159",
@@ -1851,7 +2004,8 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-159",
     "imgUrl": "/templates/svg/Kitchen_prep_list_template.svg",
     "targetUrl": "/food-safety-templates/kitchen-prep-list-template",
-    "desc": "Comprehensive food hygiene and compliance checklist for kitchen prep list template. Designed for daily kitchen supervisor verification and local authority (EHO) audits."
+    "desc": "Comprehensive food hygiene and compliance checklist for kitchen prep list template. Designed for daily kitchen supervisor verification and local authority (EHO) audits.",
+    "thumbUrl": "/templates/svg/Kitchen_prep_list_template.svg"
   },
   {
     "id": "template-160",
@@ -1861,9 +2015,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant Steps Of Service",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-160",
-    "imgUrl": "/templates/posters/template-160.png",
+    "imgUrl": "/templates/posters/template-160.webp",
     "targetUrl": "/food-safety-templates/restaurant-steps-of-service",
-    "desc": "Official kitchen wall poster for restaurant steps of service. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for restaurant steps of service. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-160.webp"
   },
   {
     "id": "template-161",
@@ -1873,9 +2028,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant Food Safety Procedures",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-161",
-    "imgUrl": "/templates/posters/template-161.png",
+    "imgUrl": "/templates/posters/template-161.webp",
     "targetUrl": "/food-safety-templates/restaurant-food-safety-procedures",
-    "desc": "Official kitchen wall poster for restaurant food safety procedures. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for restaurant food safety procedures. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-161.webp"
   },
   {
     "id": "template-162",
@@ -1885,9 +2041,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant Manager Responsibilities",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-162",
-    "imgUrl": "/templates/posters/template-162.png",
+    "imgUrl": "/templates/posters/template-162.webp",
     "targetUrl": "/food-safety-templates/restaurant-manager-responsibilities",
-    "desc": "Official kitchen wall poster for restaurant manager responsibilities. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format."
+    "desc": "Official kitchen wall poster for restaurant manager responsibilities. Promotes compliance with UK Food Standards Agency (FSA) and Natasha's Law guidelines. Free printable A4/A3 format.",
+    "thumbUrl": "/templates/thumbs/template-162.webp"
   },
   {
     "id": "template-166",
@@ -1897,9 +2054,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Restaurant SOP Template",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-166",
-    "imgUrl": "/templates/charts/template-166.png",
+    "imgUrl": "/templates/charts/template-166.webp",
     "targetUrl": "/food-safety-templates/restaurant-sop",
-    "desc": "Critical food temperature and safety chart for restaurant sop template. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for restaurant sop template. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-166.webp"
   },
   {
     "id": "template-167",
@@ -1909,9 +2067,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "SOPs In The Food Industry",
     "activity": "restaurant,healthcare,producer",
     "pdfUrl": "/api/download?id=template-167",
-    "imgUrl": "/templates/charts/template-167.png",
+    "imgUrl": "/templates/charts/template-167.webp",
     "targetUrl": "/food-safety-templates/standard-operating-procedure-in-food-industry",
-    "desc": "Critical food temperature and safety chart for sops in the food industry. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for sops in the food industry. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-167.webp"
   },
   {
     "id": "template-168",
@@ -1921,9 +2080,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Pest Control SOP",
     "activity": "restaurant,healthcare,producer",
     "pdfUrl": "/api/download?id=template-168",
-    "imgUrl": "/templates/charts/template-168.png",
+    "imgUrl": "/templates/charts/template-168.webp",
     "targetUrl": "/food-safety-templates/pest-control-sop",
-    "desc": "Critical food temperature and safety chart for pest control sop. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for pest control sop. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-168.webp"
   },
   {
     "id": "template-169",
@@ -1933,9 +2093,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Allergen Control SOP",
     "activity": "restaurant,healthcare,producer",
     "pdfUrl": "/api/download?id=template-169",
-    "imgUrl": "/templates/charts/template-169.png",
+    "imgUrl": "/templates/charts/template-169.webp",
     "targetUrl": "/food-safety-templates/allergen-control-sop",
-    "desc": "Critical food temperature and safety chart for allergen control sop. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for allergen control sop. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-169.webp"
   },
   {
     "id": "template-170",
@@ -1945,9 +2106,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Waste Management Plan SOP",
     "activity": "restaurant,healthcare,producer",
     "pdfUrl": "/api/download?id=template-170",
-    "imgUrl": "/templates/charts/template-170.png",
+    "imgUrl": "/templates/charts/template-170.webp",
     "targetUrl": "/food-safety-templates/waste-management-plan-sop",
-    "desc": "Critical food temperature and safety chart for waste management plan sop. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for waste management plan sop. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-170.webp"
   },
   {
     "id": "template-171",
@@ -1957,9 +2119,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "title": "Kitchen SOP",
     "activity": "restaurant,wholesale,healthcare,producer",
     "pdfUrl": "/api/download?id=template-171",
-    "imgUrl": "/templates/charts/template-171.png",
+    "imgUrl": "/templates/charts/template-171.webp",
     "targetUrl": "/food-safety-templates/kitchen-sop",
-    "desc": "Critical food temperature and safety chart for kitchen sop. Clear visual reference guide for chefs and food preparation handlers."
+    "desc": "Critical food temperature and safety chart for kitchen sop. Clear visual reference guide for chefs and food preparation handlers.",
+    "thumbUrl": "/templates/thumbs/template-171.webp"
   }
 ];
 

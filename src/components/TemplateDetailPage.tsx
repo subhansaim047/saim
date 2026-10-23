@@ -141,9 +141,11 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           {/* Preview Image */}
           <div className="w-full md:w-1/2 aspect-[4/3] rounded-2xl bg-amber-50/60 border border-amber-200/60 p-6 flex items-center justify-center relative overflow-hidden shrink-0">
             <img
-              src={template.imgUrl}
+              src={template.thumbUrl || template.imgUrl}
               alt={template.title}
               className="max-h-full max-w-full object-contain drop-shadow"
+              loading="eager"
+              decoding="async"
             />
             <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider bg-white/90 text-amber-900 border border-amber-200 shadow-sm">
               {template.preheader || template.type.toUpperCase()}
@@ -152,9 +154,9 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
           {/* Details & Actions */}
           <div className="w-full md:w-1/2 flex flex-col gap-4">
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full w-fit">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>100% Free Compliance Resource</span>
+            <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full w-fit">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Compliance Resource • Printable &amp; Digital</span>
             </div>
 
             <h1 className="text-2xl sm:text-4xl font-extrabold text-[#1D1D1F] leading-tight">
@@ -257,6 +259,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
               <img
                 src={template.imgUrl}
                 alt={template.title}
+                loading="eager"
+                decoding="async"
                 className="max-h-[600px] print:max-h-none print:w-full w-auto object-contain drop-shadow-sm rounded-lg"
               />
             </div>
