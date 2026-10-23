@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  verification: {
+    google: 'google0191625097e7b0a7',
+  },
   openGraph: {
     title: 'Saim Dev - High-Performance Web Development | Next.js Architecture',
     description: 'Custom high-performance websites for UK & European businesses. Fast delivery, 95+ Core Web Vitals, transparent fixed pricing.',
