@@ -1,0 +1,802 @@
+{
+  "freezer-temperature-chart": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "freezer-temperature-chart",
+    "reason": "Core commercial kitchen temperature reference poster for sub-zero food storage"
+  },
+  "basic-food-preparation-rules": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "basic-food-preparation-rules",
+    "reason": "Essential kitchen prep rules poster; cross-contamination prevention and personal hygiene guidance"
+  },
+  "food-allergen-chart": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "food-allergen-chart",
+    "reason": "Flagship UK allergen chart generator; covers 14 allergens, client-side PDF export, zero data capture"
+  },
+  "recipe-calculator": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "recipe-calculator",
+    "reason": "Interactive recipe scaling and batch costing tool for catering businesses"
+  },
+  "consumer-advisory": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "consumer-advisory",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-allergy-warning": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "food-allergen-chart",
+    "reason": "Duplicate food allergy notice"
+  },
+  "food-safety-quiz": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "food-safety-quiz",
+    "reason": "Interactive UK Food Hygiene Level 2 practice test and staff training assessment"
+  },
+  "brc-audit": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "brc-audit",
+    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+  },
+  "kosher-certification": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "kosher-certification",
+    "reason": "Specialised non-hospitality certification / platform requirement"
+  },
+  "turkey-pasteurization-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "turkey-pasteurization-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "fridge-temperature-record-sheet-pdf": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "fridge-temperature-record-sheet-pdf",
+    "reason": "Daily commercial fridge, freezer, and cold servery manual temperature record log sheet"
+  },
+  "waste-management-plan": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "waste-management-plan",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "waste-management-schedule": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "waste-management-schedule",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "haccp-flow-chart-template": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "haccp-flow-chart-template",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-flow-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-flow-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "haccp-plan-builder": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "haccp-plan-builder",
+    "reason": "Interactive HACCP CCP table builder based on Codex Alimentarius principles for UK kitchens"
+  },
+  "food-safety-plan": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-safety-plan",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "product-specification-sheet": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "product-specification-sheet",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "product-specification-template": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "product-specification-template",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "walk-in-cooler-food-storage-chart": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "walk-in-cooler-food-storage-chart",
+    "reason": "Commercial chiller vertical food shelving hierarchy chart preventing raw-to-cooked drips"
+  },
+  "cleaning-schedule": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "cleaning-schedule",
+    "reason": "Commercial kitchen deep cleaning schedule, frequency rota, and chemical dilution standard"
+  },
+  "cleaning-checklist-template": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "cleaning-schedule",
+    "reason": "Duplicate cleaning checklist template"
+  },
+  "restaurant-cleaning-checklist": {
+    "bucket": "IMPROVE",
+    "target_canonical_slug": "restaurant-cleaning-checklist",
+    "reason": "Front-of-house and back-of-house daily cleaning checklist; candidate for expanded UK hospitality content"
+  },
+  "cleaning-restaurant": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "restaurant-cleaning-checklist",
+    "reason": "Duplicate restaurant cleaning checklist"
+  },
+  "food-traceability": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "food-traceability",
+    "reason": "Raw ingredient batch traceability and supplier delivery verification log sheet"
+  },
+  "food-recall": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "food-recall",
+    "reason": "Food business product recall and withdrawal procedure log for defective or contaminated batches"
+  },
+  "pest-control-checklist": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "pest-control-checklist",
+    "reason": "Food premises pest prevention, contractor inspection log, and physical proofing checklist"
+  },
+  "pest-control-inspection-checklist": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "pest-control-checklist",
+    "reason": "Near-duplicate pest inspection checklist"
+  },
+  "pest-management-plan": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "pest-control-checklist",
+    "reason": "Near-duplicate pest management plan"
+  },
+  "pest-control-template": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "pest-control-checklist",
+    "reason": "Duplicate pest control checklist template"
+  },
+  "allergy-matrix": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "allergy-matrix",
+    "reason": "Interactive 14-allergen matrix tool; primary search intent for commercial kitchen menu audits"
+  },
+  "bar-opening-closing-checklist": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "opening-and-closing-checklist-template",
+    "reason": "Duplicate bar opening and closing checklist"
+  },
+  "bar-opening-checklist": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "opening-and-closing-checklist-template",
+    "reason": "Duplicate bar opening checklist variant"
+  },
+  "restaurant-opening-checklist": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "opening-and-closing-checklist-template",
+    "reason": "Duplicate restaurant opening checklist"
+  },
+  "restaurant-checklist": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "opening-and-closing-checklist-template",
+    "reason": "Generic duplicate restaurant checklist"
+  },
+  "printable-retail-store-daily-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "printable-retail-store-daily-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "retail-store-daily-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "retail-store-daily-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "opening-and-closing-checklist-template": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "opening-and-closing-checklist-template",
+    "reason": "Standard daily opening and closing verification checklist for food premises"
+  },
+  "kitchen-opening-and-closing-checklist": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "opening-and-closing-checklist-template",
+    "reason": "Duplicate kitchen opening and closing checklist"
+  },
+  "health-inspection-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "health-inspection-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-health-inspection-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-health-inspection-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-equipment-list": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-equipment-list",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "kitchen-utensils-list": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "kitchen-utensils-list",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "fridge-layout-poster": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "fridge-layout-poster",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "meat-cooking-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "meat-cooking-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "cooking-log-template": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "cooking-log-template",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "steak-cooking-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "steak-cooking-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "ham-cooking-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "ham-cooking-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "hand-washing-poster": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "hand-washing-poster",
+    "reason": "Kitchen handwashing technique, timing, and hygienic soap lathering poster"
+  },
+  "when-should-you-wash-your-hands": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "when-should-you-wash-your-hands",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "venison-cooking-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "venison-cooking-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-temperatures-poster": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-temperatures-poster",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "chicken-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "chicken-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "opening-a-restaurant-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "opening-a-restaurant-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "starting-a-food-business-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "starting-a-food-business-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "duck-cooking-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "duck-cooking-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "beef-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "beef-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "turkey-cooking-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "turkey-cooking-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "lamb-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "lamb-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "fish-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "fish-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "thermometer-calibration-log": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "thermometer-calibration-log",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "how-do-you-calibrate-a-thermometer": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "how-do-you-calibrate-a-thermometer",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "haccp-audit-checklist-template": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "haccp-audit-checklist-template",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "haccp-audit": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "haccp-audit",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "danger-zone-for-food": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "danger-zone-for-food",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "kitchen-safety-poster": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "kitchen-safety-poster",
+    "reason": "General commercial kitchen hygiene, personal safety, and hazard awareness poster"
+  },
+  "food-safety-and-sanitation": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-safety-and-sanitation",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "big-6-foodborne-illnesses": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "big-6-foodborne-illnesses",
+    "reason": "US-specific food regulation / agency standard, off-audience for UK food businesses"
+  },
+  "fridge-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "fridge-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "haccp-risk-assessment": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "haccp-risk-assessment",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "proper-food-storage-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "proper-food-storage-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "sanitation-standard-operating-procedures": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "sanitation-standard-operating-procedures",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "ssop": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "ssop",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "what-are-the-critical-control-points-for-food-safety": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "what-are-the-critical-control-points-for-food-safety",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "burger-temp-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "burger-temp-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "hot-holding-temperature": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "hot-holding-temperature",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "what-is-the-minimum-hot-holding-temperature-for-fried-chicken": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "what-is-the-minimum-hot-holding-temperature-for-fried-chicken",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "what-is-the-minimum-hot-holding-temperature-requirement-for-pizza": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "what-is-the-minimum-hot-holding-temperature-requirement-for-pizza",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "eho-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "eho-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "what-is-the-minimum-hot-holding-temperature-for-hot-dog": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "what-is-the-minimum-hot-holding-temperature-for-hot-dog",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "fridge-organization-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "fridge-organization-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "cleaning-a-meat-slicer-poster": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "cleaning-a-meat-slicer-poster",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "allergen-poster": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "food-allergen-chart",
+    "reason": "Duplicate allergen display poster"
+  },
+  "how-to-use-a-meat-thermometer": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "how-to-use-a-meat-thermometer",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "how-to-use-a-food-thermometer": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "how-to-use-a-food-thermometer",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-sanitation-rules": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-sanitation-rules",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-cooling-poster": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "food-cooling-poster",
+    "reason": "Core cooling guidance poster for commercial kitchens; covers chilling methods and temperature thresholds"
+  },
+  "cold-food-storage-rules": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "cold-food-storage-rules",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "receiving-log": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "receiving-log",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-receiving-procedure": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-receiving-procedure",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "deep-cleaning-checklist": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "restaurant-cleaning-checklist",
+    "reason": "Duplicate deep cleaning checklist"
+  },
+  "restaurant-deep-cleaning-checklist": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "restaurant-cleaning-checklist",
+    "reason": "Duplicate restaurant deep cleaning checklist variant"
+  },
+  "vacuum-sealed-food-shelf-life-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "vacuum-sealed-food-shelf-life-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "calculating-food-cost": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "food-cost-calculator",
+    "reason": "Near-duplicate of interactive food cost calculator"
+  },
+  "food-cost-calculator": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "food-cost-calculator",
+    "reason": "Interactive gross profit and recipe food cost calculator for UK hospitality operators"
+  },
+  "gmp-audit-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "gmp-audit-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-production-gmp-audit-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-production-gmp-audit-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "gfsi-audit-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "gfsi-audit-checklist",
+    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+  },
+  "get-iso-22000-certified": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "get-iso-22000-certified",
+    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+  },
+  "fsma-food-traceability-list": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "fsma-food-traceability-list",
+    "reason": "US-specific food regulation / agency standard, off-audience for UK food businesses"
+  },
+  "approved-supplier-list": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "approved-supplier-list",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "sqf-audit-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "sqf-audit-checklist",
+    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+  },
+  "iso-22000-internal-audit-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "iso-22000-internal-audit-checklist",
+    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+  },
+  "fsma-compliance-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "fsma-compliance-checklist",
+    "reason": "US-specific food regulation / agency standard, off-audience for UK food businesses"
+  },
+  "fssc-certification-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "fssc-certification-checklist",
+    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+  },
+  "ingredient-traceability": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "ingredient-traceability",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "delivery-log": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "delivery-log",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-production-sheet": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-production-sheet",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "dispatch-log": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "dispatch-log",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "food-expiration-dates-guidelines-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "food-expiration-dates-guidelines-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "canned-food-expiration-dates-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "canned-food-expiration-dates-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "hazard-analysis-template": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "hazard-analysis-template",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "reheating-food-temperature-guide": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "reheating-food-temperature-guide",
+    "reason": "Food reheating guidelines poster showing legal core temperature standards (75°C / 82°C)"
+  },
+  "three-sink-method": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "three-sink-method",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "proper-method-for-cleaning-dirty-utensils": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "proper-method-for-cleaning-dirty-utensils",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "five-food-safety-rules": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "five-food-safety-rules",
+    "reason": "5 essential food safety principles poster for staff onboarding and training"
+  },
+  "cold-holding-food": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "cold-holding-food",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "sell-by-date": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "sell-by-date",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "how-long-to-keep-leftovers-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "how-long-to-keep-leftovers-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "fat-tom-poster": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "fat-tom-poster",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "how-long-does-butter-last-poster": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "how-long-does-butter-last-poster",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "cutting-board-color-chart": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "chopping-board-colour-chart",
+    "reason": "US cutting board color chart merged into UK colour-coded chopping board chart"
+  },
+  "chopping-board-colour-chart": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "chopping-board-colour-chart",
+    "reason": "UK colour-coded chopping board chart preventing cross-contamination between raw meats and ready-to-eat foods"
+  },
+  "natashas-law": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "food-allergen-chart",
+    "reason": "Duplicate Natasha's Law compliance sheet"
+  },
+  "recipe-card-generator": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "recipe-card-generator",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "defrosting-foods": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "defrosting-foods",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "boiling-water-thermometer-calibration": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "boiling-water-thermometer-calibration",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "non-gmo": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "non-gmo",
+    "reason": "Specialised non-hospitality certification / platform requirement"
+  },
+  "amazon-seller-and-product-requirements": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "amazon-seller-and-product-requirements",
+    "reason": "Specialised non-hospitality certification / platform requirement"
+  },
+  "milk-pasteurization-temperature-time-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "milk-pasteurization-temperature-time-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "pork-temperature-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "pork-temperature-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "freeze-drying-time-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "freeze-drying-time-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "juice-pasteurization-temperature-time-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "juice-pasteurization-temperature-time-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "meat-pasteurization-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "meat-pasteurization-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "poultry-pasteurization-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "poultry-pasteurization-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "chicken-pasteurization-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "chicken-pasteurization-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "hot-holding-food-temperature-log": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "hot-holding-food-temperature-log",
+    "reason": "Cooked food hot holding buffet and servery temperature monitoring log (63°C legal standard)"
+  },
+  "freezer-organization-chart": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "freezer-organization-chart",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "prevent-freezer-burn": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "prevent-freezer-burn",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "ecosure-inspection-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "ecosure-inspection-checklist",
+    "reason": "US-specific food regulation / agency standard, off-audience for UK food businesses"
+  },
+  "5-whys-root-cause-analysis-template": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "5-whys-root-cause-analysis-template",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "corrective-action-plan-template": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "corrective-action-plan-template",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-fire-inspection-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-fire-inspection-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-maintenance-checklist": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-maintenance-checklist",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-hood-cleaning": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-hood-cleaning",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "grease-trap-cleaning": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "grease-trap-cleaning",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restroom-cleaning-checklist-log": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restroom-cleaning-checklist-log",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-inventory-template": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-inventory-template",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-schedule-template": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-schedule-template",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "kitchen-prep-list-template": {
+    "bucket": "KEEP",
+    "target_canonical_slug": "kitchen-prep-list-template",
+    "reason": "Daily kitchen station mise en place, portion control, and prep list sheet"
+  },
+  "restaurant-steps-of-service": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-steps-of-service",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-food-safety-procedures": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-food-safety-procedures",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-manager-responsibilities": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-manager-responsibilities",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "restaurant-sop": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "restaurant-sop",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "standard-operating-procedure-in-food-industry": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "standard-operating-procedure-in-food-industry",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "pest-control-sop": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "pest-control-checklist",
+    "reason": "Duplicate pest control standard operating procedure"
+  },
+  "allergen-control-sop": {
+    "bucket": "MERGE",
+    "target_canonical_slug": "food-allergen-chart",
+    "reason": "Duplicate allergen control procedure"
+  },
+  "waste-management-plan-sop": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "waste-management-plan-sop",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  },
+  "kitchen-sop": {
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "kitchen-sop",
+    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+  }
+}
