@@ -1,0 +1,954 @@
+"use client";
+
+import React, { useState, useMemo } from "react";
+import Link from "next/link";
+import {
+  Search,
+  Download,
+  Filter,
+  Printer,
+  Sparkles,
+  ArrowRight,
+  ExternalLink,
+  ShieldCheck,
+  CheckCircle2,
+  FileText,
+  SlidersHorizontal,
+  ChevronDown,
+  X,
+  Plus,
+  RefreshCw,
+  Copy,
+  Building,
+  User,
+  Calendar,
+  Thermometer,
+  DollarSign,
+  ChefHat,
+  ClipboardCheck,
+  AlertCircle,
+  Sliders,
+  Check
+} from "lucide-react";
+import { FOOD_SAFETY_TEMPLATES, FoodSafetyTemplate } from "@/data/fooddocs_templates";
+import { ALLERGENS, MenuItem, AllergenStatus } from "./ToolsPage";
+
+export const FoodSafetyTemplatesPage: React.FC = () => {
+  // ── FILTER STATES (MATCHING FOODDOCS) ──
+  const [selectedType, setSelectedType] = useState<string>("all");
+  const [selectedActivity, setSelectedActivity] = useState<string>("all");
+  const [selectedPurpose, setSelectedPurpose] = useState<string>("all");
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [activeInteractiveTool, setActiveInteractiveTool] = useState<string | null>(null);
+
+  // ── DYNAMIC FILTERING ──
+  const filteredTemplates = useMemo(() => {
+    return FOOD_SAFETY_TEMPLATES.filter(item => {
+      // Type filter
+      if (selectedType !== "all") {
+        if (selectedType === "smart_tool" && item.type !== "smart_tool") return false;
+        if (selectedType === "poster" && item.type !== "poster") return false;
+        if (selectedType === "checklist" && item.type !== "checklist") return false;
+        if (selectedType === "chart" && item.type !== "chart") return false;
+        if (selectedType === "log" && item.type !== "log") return false;
+        if (selectedType === "ebook" && item.type !== "ebook") return false;
+      }
+
+      // Business Activity filter
+      if (selectedActivity !== "all") {
+        if (!item.activity.includes(selectedActivity)) return false;
+      }
+
+      // Search term
+      if (searchTerm.trim()) {
+        const query = searchTerm.toLowerCase();
+        const matchesTitle = item.title.toLowerCase().includes(query);
+        const matchesType = item.type.toLowerCase().includes(query);
+        const matchesPre = item.preheader.toLowerCase().includes(query);
+        if (!matchesTitle && !matchesType && !matchesPre) return false;
+      }
+
+      return true;
+    });
+  }, [selectedType, selectedActivity, selectedPurpose, searchTerm]);
+
+  // Card background styling based on data-type
+  const getCardBg = (type: string) => {
+    switch (type) {
+      case "poster":
+        return "bg-[#fff1e3] border-[#fedcb7]";
+      case "checklist":
+        return "bg-[#e6f9f0] border-[#b8f0d5]";
+      case "chart":
+        return "bg-[#e6f7fd] border-[#bfeafd]";
+      case "log":
+        return "bg-[#edf0ff] border-[#cdd6ff]";
+      case "smart_tool":
+        return "bg-[#fef9e7] border-[#fbeab2]";
+      case "ebook":
+        return "bg-[#fdeeed] border-[#facfcc]";
+      default:
+        return "bg-[#f8f9fa] border-gray-200";
+    }
+  };
+
+  const getPillColor = (type: string) => {
+    switch (type) {
+      case "poster":
+        return "text-[#b45309] bg-[#ffedd5]";
+      case "checklist":
+        return "text-[#047857] bg-[#d1fae5]";
+      case "chart":
+        return "text-[#0369a1] bg-[#e0f2fe]";
+      case "log":
+        return "text-[#4338ca] bg-[#e0e7ff]";
+      case "smart_tool":
+        return "text-[#92400e] bg-[#fef3c7]";
+      case "ebook":
+        return "text-[#be123c] bg-[#ffe4e6]";
+      default:
+        return "text-gray-700 bg-gray-100";
+    }
+  };
+
+  // ──────────────────────────────────────────────
+  // INTERACTIVE TOOLS EMBEDDED MODAL STATES
+  // ──────────────────────────────────────────────
+  // Allergen Matrix State
+  const [restaurantName, setRestaurantName] = useState("My Takeaway & Kitchen");
+  const [completedBy, setCompletedBy] = useState("Head Chef / Manager");
+  const [reviewDate, setReviewDate] = useState(() => new Date().toISOString().split("T")[0]);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([
+    {
+      id: "1",
+      name: "Classic Cheeseburger",
+      category: "Burgers",
+      ingredients: "Beef patty, brioche bun, cheddar cheese, burger sauce, lettuce, tomato",
+      allergens: { gluten: "contains", milk: "contains", eggs: "contains", sesame: "contains", mustard: "contains", soya: "may" }
+    },
+    {
+      id: "2",
+      name: "Margherita Pizza 12\"",
+      category: "Pizzas",
+      ingredients: "Hand-stretched dough, San Marzano tomato sauce, 100% mozzarella, fresh basil",
+      allergens: { gluten: "contains", milk: "contains" }
+    },
+    {
+      id: "3",
+      name: "Crispy Hot Wings",
+      category: "Chicken",
+      ingredients: "Seasoned crispy chicken wings, spicy cayenne glaze, celery dip",
+      allergens: { gluten: "contains", celery: "contains", mustard: "contains", soya: "may" }
+    },
+    {
+      id: "4",
+      name: "Loaded Cheese Fries",
+      category: "Sides",
+      ingredients: "Crisp potato fries, garlic butter drizzle, melted cheddar & mozzarella",
+      allergens: { milk: "contains", gluten: "may" }
+    }
+  ]);
+  const [matrixSearch, setMatrixSearch] = useState("");
+  const [newDishName, setNewDishName] = useState("");
+  const [newDishCategory, setNewDishCategory] = useState("Mains");
+
+  const toggleAllergen = (itemId: string, allergenId: string) => {
+    setMenuItems(prev =>
+      prev.map(item => {
+        if (item.id !== itemId) return item;
+        const current = item.allergens[allergenId] || "none";
+        const next: AllergenStatus = current === "none" ? "contains" : current === "contains" ? "may" : "none";
+        return { ...item, allergens: { ...item.allergens, [allergenId]: next } };
+      })
+    );
+  };
+
+  const handleAddDish = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newDishName.trim()) return;
+    setMenuItems(prev => [
+      ...prev,
+      { id: Date.now().toString(), name: newDishName.trim(), category: newDishCategory.trim(), ingredients: "", allergens: {} }
+    ]);
+    setNewDishName("");
+  };
+
+  // Food Cost Calculator State
+  const [recipeTitle, setRecipeTitle] = useState("Signature Double Smash Burger");
+  const [servingsYield, setServingsYield] = useState(1);
+  const [menuSellingPrice, setMenuSellingPrice] = useState(8.50);
+  const [costIngredients, setCostIngredients] = useState([
+    { id: "1", name: "Minced Chuck Beef", packQty: 1000, packCost: 7.20, recipeQty: 200, unit: "g" },
+    { id: "2", name: "Brioche Bun", packQty: 4, packCost: 1.60, recipeQty: 1, unit: "pcs" },
+    { id: "3", name: "American Cheddar", packQty: 10, packCost: 2.20, recipeQty: 2, unit: "pcs" },
+    { id: "4", name: "Burger Sauce", packQty: 500, packCost: 3.50, recipeQty: 30, unit: "ml" }
+  ]);
+  const totalCost = costIngredients.reduce((sum, ing) => sum + (ing.packQty > 0 ? (ing.packCost / ing.packQty) * ing.recipeQty : 0), 0);
+  const portionCost = servingsYield > 0 ? totalCost / servingsYield : 0;
+  const foodCostPct = menuSellingPrice > 0 ? (portionCost / menuSellingPrice) * 100 : 0;
+  const grossMargin = menuSellingPrice > 0 ? ((menuSellingPrice - portionCost) / menuSellingPrice) * 100 : 0;
+
+  return (
+    <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
+      {/* ── PRINT STYLES ── */}
+      <style jsx global>{`
+        @media print {
+          header, nav, .filter-sidebar, .top-banner, .editorial-section, .no-print, .close-modal-btn {
+            display: none !important;
+          }
+          body {
+            background: #ffffff !important;
+            color: #000000 !important;
+          }
+          .printable-doc {
+            background: #ffffff !important;
+            color: #000000 !important;
+            padding: 0 !important;
+            border: none !important;
+            box-shadow: none !important;
+            width: 100% !important;
+          }
+          .printable-doc table {
+            border-collapse: collapse !important;
+            width: 100% !important;
+          }
+          .printable-doc th, .printable-doc td {
+            border: 1px solid #333333 !important;
+            padding: 4px 6px !important;
+            color: #000000 !important;
+            font-size: 10pt !important;
+          }
+        }
+      `}</style>
+
+      {/* ── TOP HEADER / NAVBAR ── */}
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between no-print shadow-sm">
+        <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
+              <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-full h-full object-cover" />
+            </div>
+            <span className="font-bold text-[#1D1D1F] text-base tracking-tight">Saim Dev</span>
+          </Link>
+          <span className="text-gray-300">/</span>
+          <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full">
+            Food Safety Templates Hub
+          </span>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setActiveInteractiveTool("allergen")}
+            className="hidden sm:flex items-center gap-1.5 text-xs font-bold bg-[#E8F5E9] text-[#2E7D32] hover:bg-[#C8E6C9] px-3.5 py-1.5 rounded-full transition-colors"
+          >
+            <ShieldCheck className="w-4 h-4" />
+            <span>Interactive Allergen Matrix</span>
+          </button>
+
+          <a
+            href="https://wa.me/447473962953?text=Hi%20Saim,%20I'm%20using%20the%20Food%20Safety%20Templates%20Hub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5 transition-all shadow"
+          >
+            <span>WhatsApp Saim</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </a>
+        </div>
+      </header>
+
+      {/* ── HERO BANNER ── */}
+      <section className="bg-white border-b border-[#E5E5EA] px-4 sm:px-8 py-10 sm:py-14 no-print">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col gap-3 max-w-4xl">
+            <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full w-fit">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>100% Free Compliance &amp; Kitchen Resources</span>
+              <span className="text-gray-400">•</span>
+              <span className="text-emerald-700">Zero Paywalls</span>
+            </div>
+
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1D1D1F] leading-[1.1]">
+              Food Safety Templates Hub: Posters, Checklists, Logs, Smart Tools, and More
+            </h1>
+
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mt-1">
+              Explore our comprehensive collection of food safety templates, checklists, logs, posters, 
+              and smart calculators. Designed for restaurants, takeaways, caterers, and food manufacturers 
+              to streamline Natasha&apos;s Law compliance and achieve 5-Star Food Hygiene ratings.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
+              <span className="text-xs font-bold text-gray-500 uppercase font-mono">Quick Launch:</span>
+              <button
+                onClick={() => setActiveInteractiveTool("allergen")}
+                className="text-xs font-semibold bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1.5 rounded-lg border border-gray-200 flex items-center gap-1.5 transition-colors cursor-pointer"
+              >
+                🛡️ Allergen Matrix
+              </button>
+              <button
+                onClick={() => setActiveInteractiveTool("cost")}
+                className="text-xs font-semibold bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1.5 rounded-lg border border-gray-200 flex items-center gap-1.5 transition-colors cursor-pointer"
+              >
+                💰 Food Cost Calculator
+              </button>
+              <button
+                onClick={() => setActiveInteractiveTool("temps")}
+                className="text-xs font-semibold bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1.5 rounded-lg border border-gray-200 flex items-center gap-1.5 transition-colors cursor-pointer"
+              >
+                🌡️ Safe Cooking Temps Chart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── MAIN 2-COLUMN HUB LAYOUT (SIDEBAR + GRID) ── */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 items-start">
+
+          {/* ═══════════════════════════════════════════════════════════════
+              LEFT SIDEBAR: FILTER RESOURCES (FOODDOCS STYLE)
+          ════════════════════════════════════════════════════════════════ */}
+          <aside className="filter-sidebar sticky top-24 rounded-3xl p-6 bg-[#feeedb] border border-[#fddbc0] shadow-sm space-y-5 no-print">
+            <div className="flex items-center justify-between">
+              <span className="font-bold text-lg text-[#1D1D1F]">Filter resources</span>
+              <SlidersHorizontal className="w-4 h-4 text-gray-700" />
+            </div>
+
+            {/* Type Dropdown */}
+            <div className="space-y-1.5">
+              <label htmlFor="filter-type" className="block text-xs font-bold text-gray-700">Type</label>
+              <select
+                id="filter-type"
+                value={selectedType}
+                onChange={e => setSelectedType(e.target.value)}
+                className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
+              >
+                <option value="all">All options ({FOOD_SAFETY_TEMPLATES.length})</option>
+                <option value="smart_tool">Smart tool (27)</option>
+                <option value="poster">Poster (44)</option>
+                <option value="checklist">Checklist (31)</option>
+                <option value="chart">Chart (45)</option>
+                <option value="log">Monitoring log (15)</option>
+                <option value="ebook">Ebook / Guide (9)</option>
+              </select>
+            </div>
+
+            {/* Business Activity Dropdown */}
+            <div className="space-y-1.5">
+              <label htmlFor="filter-activity" className="block text-xs font-bold text-gray-700">Business activity</label>
+              <select
+                id="filter-activity"
+                value={selectedActivity}
+                onChange={e => setSelectedActivity(e.target.value)}
+                className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
+              >
+                <option value="all">All options</option>
+                <option value="restaurant">Hospitality (Restaurants, Takeaways, Cafes)</option>
+                <option value="healthcare">Healthcare &amp; Schools</option>
+                <option value="producer">Manufacturing &amp; Production</option>
+                <option value="retail">Retail &amp; Grocery</option>
+                <option value="wholesale">Wholesale</option>
+              </select>
+            </div>
+
+            {/* Purpose Dropdown */}
+            <div className="space-y-1.5">
+              <label htmlFor="filter-purpose" className="block text-xs font-bold text-gray-700">Purpose</label>
+              <select
+                id="filter-purpose"
+                value={selectedPurpose}
+                onChange={e => setSelectedPurpose(e.target.value)}
+                className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
+              >
+                <option value="all">All options</option>
+                <option value="new">Open my brand new business</option>
+                <option value="operating">Operate my running business effectively</option>
+              </select>
+            </div>
+
+            {/* Search Templates Input */}
+            <div className="space-y-1.5">
+              <label htmlFor="filter-search" className="block text-xs font-bold text-gray-700">Search templates</label>
+              <div className="relative">
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                <input
+                  id="filter-search"
+                  type="text"
+                  placeholder="e.g. Allergen, Freezer, Cleaning..."
+                  value={searchTerm}
+                  onChange={e => setSearchTerm(e.target.value)}
+                  className="w-full bg-white border border-[#e5d4be] rounded-xl pl-9 pr-3 py-2.5 text-xs text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 shadow-sm"
+                />
+              </div>
+            </div>
+
+            {/* Reset Filters */}
+            {(selectedType !== "all" || selectedActivity !== "all" || selectedPurpose !== "all" || searchTerm) && (
+              <button
+                onClick={() => {
+                  setSelectedType("all");
+                  setSelectedActivity("all");
+                  setSelectedPurpose("all");
+                  setSearchTerm("");
+                }}
+                className="w-full py-2 text-xs font-bold text-amber-900 hover:text-black transition-colors flex items-center justify-center gap-1 cursor-pointer"
+              >
+                <RefreshCw className="w-3.5 h-3.5" />
+                <span>Reset all filters</span>
+              </button>
+            )}
+
+            {/* Sidebar Promo Box */}
+            <div className="p-4 rounded-2xl bg-white/80 border border-[#e5d4be] space-y-2">
+              <span className="text-[10px] font-extrabold uppercase font-mono tracking-wider text-amber-800">
+                Custom Takeaway Websites
+              </span>
+              <p className="text-xs text-gray-600 leading-snug">
+                Need automated Natasha&apos;s Law allergen filtering on your menu?
+              </p>
+              <a
+                href="https://wa.me/447473962953?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-bold text-[#1D1D1F] hover:underline flex items-center gap-1 pt-1"
+              >
+                <span>Ask Saim on WhatsApp</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </aside>
+
+          {/* ═══════════════════════════════════════════════════════════════
+              RIGHT MAIN COLUMN: 4-COLUMN TEMPLATE GRID (171 ITEMS)
+          ════════════════════════════════════════════════════════════════ */}
+          <main className="space-y-6">
+            {/* Results Counter & Free Pack Banner */}
+            <div className="p-6 rounded-3xl bg-gradient-to-r from-[#2e2d75] via-[#39388c] to-[#2e2d75] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-lg top-banner no-print">
+              <div>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-bold block mb-1">
+                  100% Free Template Pack Download
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold leading-tight">
+                  All 170+ Posters, Logs, &amp; Smart Tools Free
+                </h3>
+                <p className="text-xs text-white/80 mt-1 max-w-xl">
+                  Download official compliance PDFs or launch interactive smart calculators with one click.
+                </p>
+              </div>
+
+              <div className="px-4 py-2 rounded-xl bg-white/10 border border-white/20 text-xs font-bold shrink-0 font-mono">
+                {filteredTemplates.length} Resources Available
+              </div>
+            </div>
+
+            {/* Active Filter Chips */}
+            <div className="flex items-center justify-between text-xs text-gray-500 px-1 no-print">
+              <span>Showing <strong>{filteredTemplates.length}</strong> food safety templates</span>
+              <span className="font-mono text-[11px]">Instant Direct PDF Downloads</span>
+            </div>
+
+            {/* 4-COLUMN RESPONSIVE GRID */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+              {filteredTemplates.map(template => (
+                <div
+                  key={template.id}
+                  className="group rounded-2xl bg-white border border-[#E5E5EA] hover:border-gray-400 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-200"
+                >
+                  {/* Card Image Container with Color-Coded Background */}
+                  <div className={`p-4 aspect-[4/3] flex items-center justify-center relative overflow-hidden transition-transform group-hover:scale-[1.02] ${getCardBg(template.type)}`}>
+                    <img
+                      src={template.imgUrl}
+                      alt={template.title}
+                      className="max-h-full max-w-full object-contain drop-shadow-sm"
+                      loading="lazy"
+                      onError={(e) => {
+                        // Fallback if SVG fails
+                        (e.target as HTMLElement).style.display = "none";
+                      }}
+                    />
+
+                    {/* Preheader Badge */}
+                    <span className={`absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-wider font-mono shadow-sm ${getPillColor(template.type)}`}>
+                      {template.preheader}
+                    </span>
+                  </div>
+
+                  {/* Card Content & Title */}
+                  <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between gap-3">
+                    <h4 className="font-bold text-xs sm:text-sm text-[#1D1D1F] line-clamp-2 leading-snug group-hover:text-amber-800 transition-colors">
+                      {template.title}
+                    </h4>
+
+                    {/* Action Button */}
+                    <div className="pt-2 border-t border-gray-100 flex items-center justify-between gap-2">
+                      {template.pdfUrl ? (
+                        <a
+                          href={template.pdfUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full py-2 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                        >
+                          <Download className="w-3.5 h-3.5" />
+                          <span>Download PDF</span>
+                        </a>
+                      ) : template.type === "smart_tool" || template.title.toLowerCase().includes("allergy") || template.title.toLowerCase().includes("cost") ? (
+                        <button
+                          onClick={() => {
+                            if (template.title.toLowerCase().includes("allergy") || template.title.toLowerCase().includes("allergen")) {
+                              setActiveInteractiveTool("allergen");
+                            } else if (template.title.toLowerCase().includes("cost") || template.title.toLowerCase().includes("margin")) {
+                              setActiveInteractiveTool("cost");
+                            } else {
+                              setActiveInteractiveTool("temps");
+                            }
+                          }}
+                          className="w-full py-2 px-3 rounded-xl bg-[#2e2d75] hover:bg-[#1f1e52] text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                        >
+                          <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                          <span>Open Tool Free</span>
+                        </button>
+                      ) : (
+                        <a
+                          href={template.targetUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full py-2 px-3 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-800 text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                        >
+                          <span>View Details</span>
+                          <ExternalLink className="w-3 h-3 text-gray-500" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {filteredTemplates.length === 0 && (
+              <div className="p-12 text-center rounded-3xl bg-white border border-gray-200">
+                <Search className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                <h4 className="font-bold text-gray-800 text-base">No templates match your filters</h4>
+                <p className="text-xs text-gray-500 mt-1">Try selecting different filter options or clearing the search box.</p>
+                <button
+                  onClick={() => {
+                    setSelectedType("all");
+                    setSelectedActivity("all");
+                    setSearchTerm("");
+                  }}
+                  className="mt-4 px-4 py-2 bg-gray-900 text-white text-xs font-bold rounded-xl"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            )}
+          </main>
+        </div>
+      </div>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          INTERACTIVE SMART TOOL MODAL (FULL EXPERIENCE)
+      ════════════════════════════════════════════════════════════════ */}
+      {activeInteractiveTool && (
+        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto no-print">
+          <div className="bg-white rounded-3xl max-w-5xl w-full max-h-[92vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative border border-gray-200">
+            {/* Modal Close Button */}
+            <button
+              onClick={() => setActiveInteractiveTool(null)}
+              className="absolute top-5 right-5 p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors close-modal-btn"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* MODAL: ALLERGEN MATRIX */}
+            {activeInteractiveTool === "allergen" && (
+              <div className="space-y-6">
+                <div>
+                  <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider font-mono">
+                    UK Natasha&apos;s Law Compliant Tool
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1D1D1F]">
+                    Interactive Allergen Matrix Builder
+                  </h2>
+                  <p className="text-xs sm:text-sm text-gray-600 mt-1">
+                    Click any cell to toggle allergen presence (Contains, May Contain, or Free).
+                  </p>
+                </div>
+
+                {/* Restaurant Configuration Bar */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200 text-xs">
+                  <div>
+                    <label htmlFor="modal-rest-name" className="block text-[11px] font-bold text-gray-600 mb-1">Restaurant Name</label>
+                    <input
+                      id="modal-rest-name"
+                      type="text"
+                      value={restaurantName}
+                      onChange={e => setRestaurantName(e.target.value)}
+                      className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-semibold text-gray-900"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="modal-comp-by" className="block text-[11px] font-bold text-gray-600 mb-1">Audited By</label>
+                    <input
+                      id="modal-comp-by"
+                      type="text"
+                      value={completedBy}
+                      onChange={e => setCompletedBy(e.target.value)}
+                      className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-semibold text-gray-900"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="modal-rev-date" className="block text-[11px] font-bold text-gray-600 mb-1">Date</label>
+                    <input
+                      id="modal-rev-date"
+                      type="date"
+                      value={reviewDate}
+                      onChange={e => setReviewDate(e.target.value)}
+                      className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-semibold text-gray-900"
+                    />
+                  </div>
+                </div>
+
+                {/* Printable Matrix Table */}
+                <div className="printable-doc border border-gray-200 rounded-2xl overflow-x-auto">
+                  <table className="w-full text-left text-xs border-collapse">
+                    <thead>
+                      <tr className="bg-gray-100 border-b border-gray-200">
+                        <th className="p-3 font-bold text-gray-800 min-w-[170px] sticky left-0 bg-gray-100 z-10">
+                          Dish Name
+                        </th>
+                        {ALLERGENS.map(a => (
+                          <th key={a.id} className="p-2 text-center font-bold text-gray-700 min-w-[55px]">
+                            <div className="flex flex-col items-center">
+                              <span>{a.icon}</span>
+                              <span className="text-[10px] font-mono">{a.short}</span>
+                            </div>
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      {menuItems.map(item => (
+                        <tr key={item.id} className="hover:bg-gray-50">
+                          <td className="p-3 font-semibold text-gray-900 sticky left-0 bg-white z-10 border-r border-gray-100">
+                            {item.name}
+                            <span className="text-[10px] text-gray-400 block font-normal">{item.category}</span>
+                          </td>
+                          {ALLERGENS.map(a => {
+                            const st = item.allergens[a.id] || "none";
+                            return (
+                              <td
+                                key={a.id}
+                                onClick={() => toggleAllergen(item.id, a.id)}
+                                className="p-1 text-center cursor-pointer select-none hover:bg-gray-100"
+                              >
+                                {st === "contains" && (
+                                  <span className="inline-block px-1.5 py-0.5 rounded bg-red-600 text-white font-extrabold text-[10px]">
+                                    C
+                                  </span>
+                                )}
+                                {st === "may" && (
+                                  <span className="inline-block px-1.5 py-0.5 rounded bg-amber-500 text-white font-extrabold text-[10px]">
+                                    MC
+                                  </span>
+                                )}
+                                {st === "none" && <span className="text-gray-300">&mdash;</span>}
+                              </td>
+                            );
+                          })}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Inline Add Dish Form */}
+                <form onSubmit={handleAddDish} className="flex flex-col sm:flex-row items-center gap-2 p-3 bg-gray-50 rounded-xl border border-gray-200">
+                  <input
+                    type="text"
+                    placeholder="New dish name..."
+                    value={newDishName}
+                    onChange={e => setNewDishName(e.target.value)}
+                    className="flex-1 bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs text-gray-900"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Category (e.g. Mains)"
+                    value={newDishCategory}
+                    onChange={e => setNewDishCategory(e.target.value)}
+                    className="w-32 bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs text-gray-900"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-1 cursor-pointer"
+                  >
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Add Dish</span>
+                  </button>
+                </form>
+
+                {/* Print Action */}
+                <div className="flex justify-between items-center pt-2">
+                  <div className="text-xs text-gray-500">
+                    Legend: <strong className="text-red-600">C</strong> = Contains | <strong className="text-amber-600">MC</strong> = May Contain Cross-Contact
+                  </div>
+                  <button
+                    onClick={() => window.print()}
+                    className="bg-black text-white font-bold text-xs px-5 py-2.5 rounded-xl flex items-center gap-2 shadow"
+                  >
+                    <Printer className="w-4 h-4" />
+                    <span>Print Compliance Poster</span>
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* MODAL: FOOD COST CALCULATOR */}
+            {activeInteractiveTool === "cost" && (
+              <div className="space-y-6">
+                <div>
+                  <span className="text-xs font-bold text-amber-700 uppercase tracking-wider font-mono">
+                    Profitability Engine
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1D1D1F]">
+                    Food Cost &amp; Gross Margin Calculator
+                  </h2>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                    <span className="text-[10px] font-mono uppercase text-gray-500">Portion Cost</span>
+                    <div className="text-2xl font-bold text-gray-900">£{portionCost.toFixed(2)}</div>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                    <span className="text-[10px] font-mono uppercase text-gray-500">Food Cost %</span>
+                    <div className={`text-2xl font-bold ${foodCostPct <= 28 ? "text-emerald-600" : "text-amber-600"}`}>
+                      {foodCostPct.toFixed(1)}%
+                    </div>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                    <span className="text-[10px] font-mono uppercase text-gray-500">Gross Margin %</span>
+                    <div className="text-2xl font-bold text-emerald-600">{grossMargin.toFixed(1)}%</div>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                    <span className="text-[10px] font-mono uppercase text-gray-500">Selling Price</span>
+                    <input
+                      type="number"
+                      step="0.10"
+                      value={menuSellingPrice}
+                      onChange={e => setMenuSellingPrice(Number(e.target.value))}
+                      className="text-2xl font-bold text-gray-900 bg-transparent border-b border-gray-300 w-24 focus:outline-none"
+                    />
+                  </div>
+                </div>
+
+                <div className="border border-gray-200 rounded-2xl p-4 bg-gray-50 space-y-3">
+                  <h4 className="text-xs font-bold text-gray-800 uppercase font-mono">Ingredient Breakdown</h4>
+                  <div className="space-y-2">
+                    {costIngredients.map(ing => {
+                      const cost = (ing.packCost / ing.packQty) * ing.recipeQty;
+                      return (
+                        <div key={ing.id} className="flex items-center justify-between p-2.5 bg-white rounded-xl border border-gray-200 text-xs">
+                          <span className="font-semibold text-gray-800">{ing.name}</span>
+                          <span className="font-mono text-gray-500">{ing.recipeQty} {ing.unit}</span>
+                          <span className="font-mono font-bold text-gray-900">£{cost.toFixed(2)}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="flex justify-end">
+                  <button
+                    onClick={() => window.print()}
+                    className="bg-black text-white font-bold text-xs px-5 py-2.5 rounded-xl flex items-center gap-2 shadow"
+                  >
+                    <Printer className="w-4 h-4" />
+                    <span>Print Costing Sheet</span>
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* MODAL: SAFE TEMPS */}
+            {activeInteractiveTool === "temps" && (
+              <div className="space-y-6">
+                <div>
+                  <span className="text-xs font-bold text-sky-700 uppercase tracking-wider font-mono">
+                    UK FSA Critical Control Limits
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1D1D1F]">
+                    Safe Cooking &amp; Chilling Temperatures Guide
+                  </h2>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                  <div className="p-4 rounded-2xl bg-sky-50 border border-sky-200 text-sky-900">
+                    <span className="font-bold text-base block mb-1">Chilled &amp; Frozen</span>
+                    <strong className="text-xl text-sky-700 block mb-2">&lt; 5°C</strong>
+                    <p>Fridges: 0°C to 5°C (legal max 8°C). Freezers: -18°C or colder.</p>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-red-50 border border-red-200 text-red-900">
+                    <span className="font-bold text-base block mb-1">⚠️ Danger Zone</span>
+                    <strong className="text-xl text-red-700 block mb-2">8°C &ndash; 63°C</strong>
+                    <p>Bacteria multiply rapidly. Never leave cooked food at room temperature.</p>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                    <span className="font-bold text-base block mb-1">Cooking Core Temp</span>
+                    <strong className="text-xl text-emerald-700 block mb-2">75°C+</strong>
+                    <p>Instant 75°C core (or 70°C for 2 min). Hot holding above 63°C.</p>
+                  </div>
+                </div>
+
+                <div className="flex justify-end">
+                  <button
+                    onClick={() => window.print()}
+                    className="bg-black text-white font-bold text-xs px-5 py-2.5 rounded-xl flex items-center gap-2 shadow"
+                  >
+                    <Printer className="w-4 h-4" />
+                    <span>Print Kitchen Temperature Poster</span>
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* ═══════════════════════════════════════════════════════════════
+          COMPLETE EDITORIAL SECTIONS (EXACT 1-TO-1 CONTENT FROM FOODDOCS)
+      ════════════════════════════════════════════════════════════════ */}
+      <section className="editorial-section border-t border-[#E5E5EA] bg-white py-16 px-4 sm:px-8 no-print">
+        <div className="max-w-4xl mx-auto space-y-12 text-[#1D1D1F]">
+
+          {/* Section: Key Takeaways */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#F6F6F9] border border-[#E5E5EA] space-y-3">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-[#1D1D1F]">
+              Key Takeaways
+            </h2>
+            <ul className="space-y-2 text-xs sm:text-sm text-gray-700 leading-relaxed list-disc list-inside">
+              <li>Food safety templates streamline compliance, enhance operational consistency, and reduce risks of foodborne illnesses.</li>
+              <li>Visual reminders like posters promote best practices in hygiene, temperature control, and cross-contamination prevention.</li>
+              <li>Checklists and logs foster staff accountability and simplify daily, weekly, and monthly tasks for health inspection readiness.</li>
+              <li>Temperature logs and calibration records support HACCP monitoring, Natasha&apos;s Law, and EHO audit readiness.</li>
+            </ul>
+          </div>
+
+          {/* Section: Food safety posters */}
+          <div className="space-y-3">
+            <h2 className="text-2xl font-bold text-[#1D1D1F]">
+              Food safety posters: visual reminders for best practices
+            </h2>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              Visual aids like our Kitchen Safety Poster and Hand Washing Poster are crucial in reinforcing proper food handling practices. 
+              Placed strategically in food preparation and dining areas, these posters serve as constant reminders of personal hygiene, 
+              proper handwashing techniques, and essential safety rules.
+            </p>
+          </div>
+
+          {/* Section: Customizable templates */}
+          <div className="space-y-3">
+            <h2 className="text-2xl font-bold text-[#1D1D1F]">
+              Customizable food safety templates: streamline your safety processes
+            </h2>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              Our customizable templates are essential tools for comprehensive food safety management, allowing you to manage food safety hazards 
+              and maintain compliance effortlessly. Whether you are running a restaurant, food manufacturing facility, or catering company, 
+              these templates adapt to your unique operational workflow.
+            </p>
+          </div>
+
+          {/* Section: Comprehensive checklists */}
+          <div className="space-y-3">
+            <h2 className="text-2xl font-bold text-[#1D1D1F]">
+              Comprehensive food safety checklists: your daily compliance partners
+            </h2>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              Checklists are essential tools for maintaining consistency and compliance in daily operations. Use the Restaurant Cleaning Checklist 
+              and Kitchen Opening and Closing Checklist to maintain a spotless environment every shift. The Health Inspection Checklist ensures 
+              your team is always audit-ready.
+            </p>
+          </div>
+
+          {/* Section: 5 Benefits */}
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-[#1D1D1F]">
+              5 Benefits of using these food safety resources in your food business
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                <h4 className="font-bold text-sm text-gray-900 mb-1">1. Enhanced compliance and reduced risk</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">Meet local authority and FSA food safety standards consistently.</p>
+              </div>
+              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                <h4 className="font-bold text-sm text-gray-900 mb-1">2. Improved efficiency and consistency</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">Standardize food preparation and hygiene routines across all staff shifts.</p>
+              </div>
+              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                <h4 className="font-bold text-sm text-gray-900 mb-1">3. Increased staff accountability</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">Sign-off sheets ensure tasks are completed and verified daily.</p>
+              </div>
+              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                <h4 className="font-bold text-sm text-gray-900 mb-1">4. Enhanced customer trust &amp; 5★ ratings</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">Protect your reputation and prevent catastrophic allergy incidents.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* ═══════════════════════════════════════════════════════════════
+              HIGH-TICKET AGENCY CONVERSION OFFER (FOOTER)
+          ════════════════════════════════════════════════════════════════ */}
+          <div className="rounded-3xl bg-[#1D1D1F] text-white p-8 sm:p-12 space-y-4 shadow-xl">
+            <span className="text-amber-400 font-mono text-xs uppercase tracking-widest font-bold">
+              Bespoke Takeaway &amp; Restaurant Web Development
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
+              Ready to automate food safety on your own online ordering website?
+            </h3>
+            <p className="text-sm text-gray-300 leading-relaxed max-w-2xl">
+              We engineer custom, ultra-fast websites for UK takeaways and restaurants with automated allergen badges, 
+              direct WhatsApp orders, and 0% commission fees on every order.
+            </p>
+            <div className="pt-2 flex flex-wrap gap-3">
+              <a
+                href="https://wa.me/447473962953?text=Hi%20Saim,%20I%20want%20to%20build%20a%20custom%20takeaway%20website"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs sm:text-sm px-6 py-3 rounded-full flex items-center gap-2 transition-all shadow"
+              >
+                <span>Discuss with Lead Architect on WhatsApp</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="https://calendly.com/saimdev/15min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 text-white font-medium text-xs sm:text-sm px-5 py-3 rounded-full border border-white/20 transition-all"
+              >
+                <span>Book 15-Min Strategy Call</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── FOOTER ── */}
+      <footer className="border-t border-[#E5E5EA] bg-white py-8 px-4 sm:px-8 text-center text-xs text-gray-500 no-print">
+        <p>© 2026 Saim Dev. All 170+ Food Safety Templates, Checklists &amp; Posters are 100% Free.</p>
+        <div className="flex items-center justify-center gap-4 mt-2">
+          <Link href="/" className="hover:text-black">Home</Link>
+          <span>•</span>
+          <Link href="/services" className="hover:text-black">Services</Link>
+          <span>•</span>
+          <Link href="/demos" className="hover:text-black">Demos</Link>
+          <span>•</span>
+          <Link href="/privacy" className="hover:text-black">Privacy Policy</Link>
+        </div>
+      </footer>
+    </div>
+  );
+};
