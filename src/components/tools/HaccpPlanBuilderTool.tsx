@@ -90,10 +90,11 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = ({ templa
   ]);
 
   const handleAddStep = () => {
+    const newId = `haccp-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     setSteps(prev => [
       ...prev,
       {
-        id: Date.now().toString(),
+        id: newId,
         stepName: "Custom Process Step",
         hazardType: "Biological",
         hazardDesc: "Identify potential hazard...",
@@ -106,7 +107,10 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = ({ templa
   };
 
   const handleRemoveStep = (id: string) => {
-    setSteps(prev => prev.filter(s => s.id !== id));
+    setSteps(prev => {
+      if (prev.length <= 1) return prev;
+      return prev.filter(s => s.id !== id);
+    });
   };
 
   const handleUpdateStep = (id: string, field: keyof HaccpStep, val: any) => {
@@ -303,6 +307,20 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = ({ templa
               ))}
             </tbody>
           </table>
+        </div>
+
+        <div className="flex items-center justify-between no-print pt-1">
+          <button
+            type="button"
+            onClick={handleAddStep}
+            className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-all shadow cursor-pointer hover:scale-[1.01]"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            <span>+ Add Process Step</span>
+          </button>
+          <span className="text-xs font-mono text-gray-500">
+            {steps.length} step{steps.length !== 1 ? "s" : ""} documented
+          </span>
         </div>
       </div>
 

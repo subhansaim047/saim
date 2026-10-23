@@ -97,10 +97,11 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
   const handleAddTask = (e: React.FormEvent) => {
     e.preventDefault();
     if (!newTaskText.trim()) return;
+    const newId = `task-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     setTasks(prev => [
       ...prev,
       {
-        id: Date.now().toString(),
+        id: newId,
         category: newTaskCategory,
         task: newTaskText.trim(),
         status: "pending",
@@ -111,10 +112,11 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
   };
 
   const handleAddTempRow = () => {
+    const newId = `temp-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     setTempRecords(prev => [
       ...prev,
       {
-        id: Date.now().toString(),
+        id: newId,
         unit: "Custom Chiller / Hot Hold",
         target: "<= 5°C",
         time: "12:00",
@@ -303,6 +305,20 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
               ))}
             </tbody>
           </table>
+        </div>
+
+        <div className="flex items-center justify-between no-print pt-1">
+          <button
+            type="button"
+            onClick={handleAddTempRow}
+            className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-all shadow cursor-pointer hover:scale-[1.01]"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            <span>+ Add Equipment / Temp Row</span>
+          </button>
+          <span className="text-xs font-mono text-gray-500">
+            {tempRecords.length} probe point{tempRecords.length !== 1 ? "s" : ""} logged
+          </span>
         </div>
       </div>
 

@@ -32,6 +32,9 @@ import {
 } from "lucide-react";
 import { FOOD_SAFETY_TEMPLATES, FoodSafetyTemplate } from "@/data/saim_templates";
 import { ALLERGENS, MenuItem, AllergenStatus } from "./ToolsPage";
+import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
+import { FoodCostCalculatorTool } from "./tools/FoodCostCalculatorTool";
+import { RecipeCalculatorTool } from "./tools/RecipeCalculatorTool";
 
 export const FoodSafetyTemplatesPage: React.FC = () => {
   // ── FILTER STATES (INTERNAL SAIM DEV FILTERS) ──
@@ -110,83 +113,6 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
         return "text-gray-700 bg-gray-100";
     }
   };
-
-  // ──────────────────────────────────────────────
-  // INTERACTIVE TOOLS EMBEDDED MODAL STATES
-  // ──────────────────────────────────────────────
-  // Allergen Matrix State
-  const [restaurantName, setRestaurantName] = useState("My Takeaway & Kitchen");
-  const [completedBy, setCompletedBy] = useState("Head Chef / Manager");
-  const [reviewDate, setReviewDate] = useState(() => new Date().toISOString().split("T")[0]);
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([
-    {
-      id: "1",
-      name: "Classic Cheeseburger",
-      category: "Burgers",
-      ingredients: "Beef patty, brioche bun, cheddar cheese, burger sauce, lettuce, tomato",
-      allergens: { gluten: "contains", milk: "contains", eggs: "contains", sesame: "contains", mustard: "contains", soya: "may" }
-    },
-    {
-      id: "2",
-      name: "Margherita Pizza 12\"",
-      category: "Pizzas",
-      ingredients: "Hand-stretched dough, San Marzano tomato sauce, 100% mozzarella, fresh basil",
-      allergens: { gluten: "contains", milk: "contains" }
-    },
-    {
-      id: "3",
-      name: "Crispy Hot Wings",
-      category: "Chicken",
-      ingredients: "Seasoned crispy chicken wings, spicy cayenne glaze, celery dip",
-      allergens: { gluten: "contains", celery: "contains", mustard: "contains", soya: "may" }
-    },
-    {
-      id: "4",
-      name: "Loaded Cheese Fries",
-      category: "Sides",
-      ingredients: "Crisp potato fries, garlic butter drizzle, melted cheddar & mozzarella",
-      allergens: { milk: "contains", gluten: "may" }
-    }
-  ]);
-  const [matrixSearch, setMatrixSearch] = useState("");
-  const [newDishName, setNewDishName] = useState("");
-  const [newDishCategory, setNewDishCategory] = useState("Mains");
-
-  const toggleAllergen = (itemId: string, allergenId: string) => {
-    setMenuItems(prev =>
-      prev.map(item => {
-        if (item.id !== itemId) return item;
-        const current = item.allergens[allergenId] || "none";
-        const next: AllergenStatus = current === "none" ? "contains" : current === "contains" ? "may" : "none";
-        return { ...item, allergens: { ...item.allergens, [allergenId]: next } };
-      })
-    );
-  };
-
-  const handleAddDish = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newDishName.trim()) return;
-    setMenuItems(prev => [
-      ...prev,
-      { id: Date.now().toString(), name: newDishName.trim(), category: newDishCategory.trim(), ingredients: "", allergens: {} }
-    ]);
-    setNewDishName("");
-  };
-
-  // Food Cost Calculator State
-  const [recipeTitle, setRecipeTitle] = useState("Signature Double Smash Burger");
-  const [servingsYield, setServingsYield] = useState(1);
-  const [menuSellingPrice, setMenuSellingPrice] = useState(8.50);
-  const [costIngredients, setCostIngredients] = useState([
-    { id: "1", name: "Minced Chuck Beef", packQty: 1000, packCost: 7.20, recipeQty: 200, unit: "g" },
-    { id: "2", name: "Brioche Bun", packQty: 4, packCost: 1.60, recipeQty: 1, unit: "pcs" },
-    { id: "3", name: "American Cheddar", packQty: 10, packCost: 2.20, recipeQty: 2, unit: "pcs" },
-    { id: "4", name: "Burger Sauce", packQty: 500, packCost: 3.50, recipeQty: 30, unit: "ml" }
-  ]);
-  const totalCost = costIngredients.reduce((sum, ing) => sum + (ing.packQty > 0 ? (ing.packCost / ing.packQty) * ing.recipeQty : 0), 0);
-  const portionCost = servingsYield > 0 ? totalCost / servingsYield : 0;
-  const foodCostPct = menuSellingPrice > 0 ? (portionCost / menuSellingPrice) * 100 : 0;
-  const grossMargin = menuSellingPrice > 0 ? ((menuSellingPrice - portionCost) / menuSellingPrice) * 100 : 0;
 
   return (
     <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
@@ -291,6 +217,12 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 className="text-xs font-semibold bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1.5 rounded-lg border border-gray-200 flex items-center gap-1.5 transition-colors cursor-pointer"
               >
                 💰 Food Cost Calculator
+              </button>
+              <button
+                onClick={() => setActiveInteractiveTool("recipe")}
+                className="text-xs font-semibold bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1.5 rounded-lg border border-gray-200 flex items-center gap-1.5 transition-colors cursor-pointer"
+              >
+                👨‍🍳 Recipe Calculator
               </button>
               <button
                 onClick={() => setActiveInteractiveTool("temps")}
@@ -549,222 +481,63 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
       {activeInteractiveTool && (
         <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto no-print">
           <div className="bg-white rounded-3xl max-w-5xl w-full max-h-[92vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative border border-gray-200">
-            {/* Modal Close Button */}
-            <button
-              onClick={() => setActiveInteractiveTool(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors close-modal-btn"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            {/* Modal Header Bar with Full Tab Link & Close */}
+            <div className="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono font-bold uppercase text-gray-500">Interactive Workspace</span>
+                {activeInteractiveTool === "allergen" && (
+                  <Link
+                    href="/food-safety-templates/allergy-matrix"
+                    target="_blank"
+                    className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold"
+                  >
+                    <span>Open in new tab</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </Link>
+                )}
+                {activeInteractiveTool === "cost" && (
+                  <Link
+                    href="/food-safety-templates/food-cost-calculator"
+                    target="_blank"
+                    className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold"
+                  >
+                    <span>Open in new tab</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </Link>
+                )}
+                {activeInteractiveTool === "recipe" && (
+                  <Link
+                    href="/food-safety-templates/recipe-calculator"
+                    target="_blank"
+                    className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold"
+                  >
+                    <span>Open in new tab</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </Link>
+                )}
+              </div>
+              <button
+                onClick={() => setActiveInteractiveTool(null)}
+                className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors close-modal-btn cursor-pointer"
+                title="Close"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
             {/* MODAL: ALLERGEN MATRIX */}
             {activeInteractiveTool === "allergen" && (
-              <div className="space-y-6">
-                <div>
-                  <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider font-mono">
-                    UK Natasha&apos;s Law Compliant Tool
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1D1D1F]">
-                    Interactive Allergen Matrix Builder
-                  </h2>
-                  <p className="text-xs sm:text-sm text-gray-600 mt-1">
-                    Click any cell to toggle allergen presence (Contains, May Contain, or Free).
-                  </p>
-                </div>
-
-                {/* Restaurant Configuration Bar */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200 text-xs">
-                  <div>
-                    <label htmlFor="modal-rest-name" className="block text-[11px] font-bold text-gray-600 mb-1">Restaurant Name</label>
-                    <input
-                      id="modal-rest-name"
-                      type="text"
-                      value={restaurantName}
-                      onChange={e => setRestaurantName(e.target.value)}
-                      className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-semibold text-gray-900"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="modal-comp-by" className="block text-[11px] font-bold text-gray-600 mb-1">Audited By</label>
-                    <input
-                      id="modal-comp-by"
-                      type="text"
-                      value={completedBy}
-                      onChange={e => setCompletedBy(e.target.value)}
-                      className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-semibold text-gray-900"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="modal-rev-date" className="block text-[11px] font-bold text-gray-600 mb-1">Date</label>
-                    <input
-                      id="modal-rev-date"
-                      type="date"
-                      value={reviewDate}
-                      onChange={e => setReviewDate(e.target.value)}
-                      className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-semibold text-gray-900"
-                    />
-                  </div>
-                </div>
-
-                {/* Printable Matrix Table */}
-                <div className="printable-doc border border-gray-200 rounded-2xl overflow-x-auto">
-                  <table className="w-full text-left text-xs border-collapse">
-                    <thead>
-                      <tr className="bg-gray-100 border-b border-gray-200">
-                        <th className="p-3 font-bold text-gray-800 min-w-[170px] sticky left-0 bg-gray-100 z-10">
-                          Dish Name
-                        </th>
-                        {ALLERGENS.map(a => (
-                          <th key={a.id} className="p-2 text-center font-bold text-gray-700 min-w-[55px]">
-                            <div className="flex flex-col items-center">
-                              <span>{a.icon}</span>
-                              <span className="text-[10px] font-mono">{a.short}</span>
-                            </div>
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-100">
-                      {menuItems.map(item => (
-                        <tr key={item.id} className="hover:bg-gray-50">
-                          <td className="p-3 font-semibold text-gray-900 sticky left-0 bg-white z-10 border-r border-gray-100">
-                            {item.name}
-                            <span className="text-[10px] text-gray-400 block font-normal">{item.category}</span>
-                          </td>
-                          {ALLERGENS.map(a => {
-                            const st = item.allergens[a.id] || "none";
-                            return (
-                              <td
-                                key={a.id}
-                                onClick={() => toggleAllergen(item.id, a.id)}
-                                className="p-1 text-center cursor-pointer select-none hover:bg-gray-100"
-                              >
-                                {st === "contains" && (
-                                  <span className="inline-block px-1.5 py-0.5 rounded bg-red-600 text-white font-extrabold text-[10px]">
-                                    C
-                                  </span>
-                                )}
-                                {st === "may" && (
-                                  <span className="inline-block px-1.5 py-0.5 rounded bg-amber-500 text-white font-extrabold text-[10px]">
-                                    MC
-                                  </span>
-                                )}
-                                {st === "none" && <span className="text-gray-300">&mdash;</span>}
-                              </td>
-                            );
-                          })}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Inline Add Dish Form */}
-                <form onSubmit={handleAddDish} className="flex flex-col sm:flex-row items-center gap-2 p-3 bg-gray-50 rounded-xl border border-gray-200">
-                  <input
-                    type="text"
-                    placeholder="New dish name..."
-                    value={newDishName}
-                    onChange={e => setNewDishName(e.target.value)}
-                    className="flex-1 bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs text-gray-900"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Category (e.g. Mains)"
-                    value={newDishCategory}
-                    onChange={e => setNewDishCategory(e.target.value)}
-                    className="w-32 bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs text-gray-900"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-1 cursor-pointer"
-                  >
-                    <Plus className="w-3.5 h-3.5" />
-                    <span>Add Dish</span>
-                  </button>
-                </form>
-
-                {/* Print Action */}
-                <div className="flex justify-between items-center pt-2">
-                  <div className="text-xs text-gray-500">
-                    Legend: <strong className="text-red-600">C</strong> = Contains | <strong className="text-amber-600">MC</strong> = May Contain Cross-Contact
-                  </div>
-                  <button
-                    onClick={() => window.print()}
-                    className="bg-black text-white font-bold text-xs px-5 py-2.5 rounded-xl flex items-center gap-2 shadow"
-                  >
-                    <Printer className="w-4 h-4" />
-                    <span>Print Compliance Poster</span>
-                  </button>
-                </div>
-              </div>
+              <AllergenMatrixTool />
             )}
 
             {/* MODAL: FOOD COST CALCULATOR */}
             {activeInteractiveTool === "cost" && (
-              <div className="space-y-6">
-                <div>
-                  <span className="text-xs font-bold text-amber-700 uppercase tracking-wider font-mono">
-                    Profitability Engine
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1D1D1F]">
-                    Food Cost &amp; Gross Margin Calculator
-                  </h2>
-                </div>
+              <FoodCostCalculatorTool />
+            )}
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                    <span className="text-[10px] font-mono uppercase text-gray-500">Portion Cost</span>
-                    <div className="text-2xl font-bold text-gray-900">£{portionCost.toFixed(2)}</div>
-                  </div>
-                  <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                    <span className="text-[10px] font-mono uppercase text-gray-500">Food Cost %</span>
-                    <div className={`text-2xl font-bold ${foodCostPct <= 28 ? "text-emerald-600" : "text-amber-600"}`}>
-                      {foodCostPct.toFixed(1)}%
-                    </div>
-                  </div>
-                  <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                    <span className="text-[10px] font-mono uppercase text-gray-500">Gross Margin %</span>
-                    <div className="text-2xl font-bold text-emerald-600">{grossMargin.toFixed(1)}%</div>
-                  </div>
-                  <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                    <span className="text-[10px] font-mono uppercase text-gray-500">Selling Price</span>
-                    <input
-                      type="number"
-                      step="0.10"
-                      value={menuSellingPrice}
-                      onChange={e => setMenuSellingPrice(Number(e.target.value))}
-                      className="text-2xl font-bold text-gray-900 bg-transparent border-b border-gray-300 w-24 focus:outline-none"
-                    />
-                  </div>
-                </div>
-
-                <div className="border border-gray-200 rounded-2xl p-4 bg-gray-50 space-y-3">
-                  <h4 className="text-xs font-bold text-gray-800 uppercase font-mono">Ingredient Breakdown</h4>
-                  <div className="space-y-2">
-                    {costIngredients.map(ing => {
-                      const cost = (ing.packCost / ing.packQty) * ing.recipeQty;
-                      return (
-                        <div key={ing.id} className="flex items-center justify-between p-2.5 bg-white rounded-xl border border-gray-200 text-xs">
-                          <span className="font-semibold text-gray-800">{ing.name}</span>
-                          <span className="font-mono text-gray-500">{ing.recipeQty} {ing.unit}</span>
-                          <span className="font-mono font-bold text-gray-900">£{cost.toFixed(2)}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                <div className="flex justify-end">
-                  <button
-                    onClick={() => window.print()}
-                    className="bg-black text-white font-bold text-xs px-5 py-2.5 rounded-xl flex items-center gap-2 shadow"
-                  >
-                    <Printer className="w-4 h-4" />
-                    <span>Print Costing Sheet</span>
-                  </button>
-                </div>
-              </div>
+            {/* MODAL: RECIPE CALCULATOR */}
+            {activeInteractiveTool === "recipe" && (
+              <RecipeCalculatorTool />
             )}
 
             {/* MODAL: SAFE TEMPS */}

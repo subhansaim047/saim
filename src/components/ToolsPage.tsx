@@ -286,9 +286,10 @@ export const ToolsPage: React.FC = () => {
   ]);
 
   const addIngredient = () => {
+    const newId = `ing-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     setIngredients(prev => [
       ...prev,
-      { id: Date.now().toString(), name: "New Ingredient", packQty: 1000, packCost: 5.0, recipeQty: 100, unit: "g" }
+      { id: newId, name: "New Ingredient", packQty: 1000, packCost: 5.0, recipeQty: 100, unit: "g" }
     ]);
   };
 
@@ -336,6 +337,14 @@ export const ToolsPage: React.FC = () => {
     { id: "5", name: "Fresh Basil Leaves (Torn)", baseQty: 10, unit: "g" },
     { id: "6", name: "Sea Salt & Cracked Black Pepper", baseQty: 8, unit: "g" }
   ]);
+
+  const addScalableIngredient = () => {
+    const newId = `sc-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    setScalableIngredients(prev => [
+      ...prev,
+      { id: newId, name: "New Ingredient", baseQty: 100, unit: "g" }
+    ]);
+  };
 
   // ──────────────────────────────────────────────
   // TAB 4: DAILY SFBB HYGIENE CHECKLIST STATE
@@ -1251,6 +1260,16 @@ export const ToolsPage: React.FC = () => {
                       </div>
                     );
                   })}
+                </div>
+                <div className="pt-3">
+                  <button
+                    type="button"
+                    onClick={addScalableIngredient}
+                    className="bg-white/10 hover:bg-white/15 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 border border-white/15 transition-all no-print cursor-pointer"
+                  >
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Add Scalable Ingredient</span>
+                  </button>
                 </div>
               </div>
 

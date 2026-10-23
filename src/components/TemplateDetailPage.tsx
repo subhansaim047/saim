@@ -35,11 +35,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
   // Determine specific tool type
   const isRecipeTool =
-    template.slug.includes("recipe-calc") ||
-    template.slug.includes("recipe-card") ||
-    template.slug.includes("recipe-creator") ||
-    template.slug.includes("recipe-generator") ||
-    template.slug.includes("recipe-resize");
+    template.slug.includes("recipe") ||
+    template.title.toLowerCase().includes("recipe");
 
   const isCostTool =
     !isRecipeTool &&
