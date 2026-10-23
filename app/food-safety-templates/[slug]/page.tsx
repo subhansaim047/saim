@@ -23,6 +23,34 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  if (slug === "food-allergen-chart") {
+    const pageTitle = "Free UK Takeaway Allergen Chart Generator (14 Allergens)";
+    const pageDesc =
+      "Build and print a UK allergen chart for your takeaway in minutes. Covers all 14 allergens, a customer filter and PDF print. Free, no sign-up.";
+    const pageUrl = "https://www.saimdev.site/food-safety-templates/food-allergen-chart";
+
+    return {
+      title: pageTitle,
+      description: pageDesc,
+      alternates: {
+        canonical: pageUrl,
+      },
+      openGraph: {
+        title: pageTitle,
+        description: pageDesc,
+        url: pageUrl,
+        siteName: "Saim Dev",
+        locale: "en_GB",
+        type: "website",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: pageTitle,
+        description: pageDesc,
+      },
+    };
+  }
+
   return {
     title: `${template.title} | Free Food Safety Download | Saim Dev`,
     description: template.desc,

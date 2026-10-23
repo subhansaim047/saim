@@ -32,11 +32,6 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const [managerSignoff, setManagerSignoff] = useState("Head Chef / Safety Lead");
   const [complianceDate, setComplianceDate] = useState(() => new Date().toISOString().split("T")[0]);
 
-  // Related templates (same type or category)
-  const related = FOOD_SAFETY_TEMPLATES.filter(
-    (t) => t.id !== template.id && (t.type === template.type || t.catSlug === template.catSlug)
-  ).slice(0, 4);
-
   // Determine specific tool type
   const isRecipeTool =
     template.slug.includes("recipe") ||
@@ -89,6 +84,21 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("audit") ||
       template.slug.includes("delivery") ||
       template.slug.includes("inspection"));
+
+  // Related templates (for allergen pages, only link allergen resources)
+  const related = isAllergenTool
+    ? FOOD_SAFETY_TEMPLATES.filter(
+        (t) =>
+          t.id !== template.id &&
+          (t.slug.includes("allergen") ||
+            t.slug.includes("allergy") ||
+            t.slug.includes("natasha") ||
+            t.title.toLowerCase().includes("allergen") ||
+            t.title.toLowerCase().includes("allergy"))
+      ).slice(0, 4)
+    : FOOD_SAFETY_TEMPLATES.filter(
+        (t) => t.id !== template.id && (t.type === template.type || t.catSlug === template.catSlug)
+      ).slice(0, 4);
 
   return (
     <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
@@ -156,15 +166,17 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <div className="w-full md:w-1/2 flex flex-col gap-4">
             <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full w-fit">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Compliance Resource • Printable &amp; Digital</span>
+              <span>{isAllergenTool ? "Covers the 14 UK/EU allergens" : "Resource • Printable & Digital"}</span>
             </div>
 
             <h1 className="text-2xl sm:text-4xl font-extrabold text-[#1D1D1F] leading-tight">
-              {template.title}
+              {isAllergenTool ? "Free UK Takeaway Allergen Chart Generator (14 Allergens)" : template.title}
             </h1>
 
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              {template.desc}
+              {isAllergenTool
+                ? "Build and print a UK allergen chart for your takeaway in minutes. Covers all 14 allergens, a customer filter and PDF print. Free, no sign-up."
+                : template.desc}
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -175,10 +187,6 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                 <Printer className="w-4 h-4 text-amber-400" />
                 <span>Print / Save as PDF</span>
               </button>
-            </div>
-
-            <div className="text-[11px] text-gray-400 font-mono pt-1">
-              • Compliant with UK Food Standards Agency (FSA) and Natasha&apos;s Law
             </div>
           </div>
         </div>
@@ -305,28 +313,53 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         )}
 
         {/* Guidance / Compliance Section */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-4 no-print">
-          <h3 className="text-xl font-bold text-[#1D1D1F]">
-            How to use this {template.type} for UK &amp; EU Food Safety Compliance
-          </h3>
-          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-            Local authority Environmental Health Officers (EHOs) inspect commercial food operations for evidence of 
-            effective Hazard Analysis Critical Control Point (HACCP) principles. Using verified documents like the{" "}
-            <strong>{template.title}</strong> ensures your kitchen maintains thorough records, trains food handling staff, 
-            and eliminates hazards before they reach customers.
-          </p>
-          <ul className="text-xs sm:text-sm text-gray-600 space-y-2 list-disc list-inside">
-            <li>Display prominently at food preparation, cooking, or storage stations.</li>
-            <li>Train kitchen and front-of-house staff on these guidelines during onboarding.</li>
-            <li>Audit records periodically to ensure signatures and temperatures are maintained.</li>
-          </ul>
-        </div>
+        {isAllergenTool ? (
+          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-4 no-print">
+            <h3 className="text-xl font-bold text-[#1D1D1F]">
+              How to manage allergen records in your kitchen
+            </h3>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Keep accurate, up-to-date records of every ingredient used in your dishes. Review recipe cards and supplier specifications regularly, especially when switching brands or ingredients. Ensure front-of-house and kitchen staff know how to check allergen records and answer customer questions safely.
+            </p>
+            <ul className="text-xs sm:text-sm text-gray-600 space-y-2 list-disc list-inside">
+              <li><strong>Record every ingredient:</strong> Check every pre-packaged sauce, seasoning, paste, and oil for hidden allergens.</li>
+              <li><strong>Update on recipe changes:</strong> Re-check records immediately whenever a recipe or supplier specification changes.</li>
+              <li><strong>Train your team:</strong> Ensure all staff know how to read this chart and never guess when a customer asks about allergens.</li>
+            </ul>
+            <div className="pt-3 text-xs text-gray-500 border-t border-gray-100">
+              Sources: Official Food Standards Agency (FSA) guidance at{" "}
+              <a
+                href="https://www.food.gov.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-gray-700 hover:text-black font-medium"
+              >
+                food.gov.uk
+              </a>.
+            </div>
+          </div>
+        ) : (
+          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-4 no-print">
+            <h3 className="text-xl font-bold text-[#1D1D1F]">
+              How to use this {template.type} for UK &amp; EU Food Safety Compliance
+            </h3>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Using verified documents like the <strong>{template.title}</strong> ensures your kitchen maintains thorough records, trains food handling staff, 
+              and eliminates hazards before they reach customers.
+            </p>
+            <ul className="text-xs sm:text-sm text-gray-600 space-y-2 list-disc list-inside">
+              <li>Display prominently at food preparation, cooking, or storage stations.</li>
+              <li>Train kitchen and front-of-house staff on these guidelines during onboarding.</li>
+              <li>Audit records periodically to ensure signatures and temperatures are maintained.</li>
+            </ul>
+          </div>
+        )}
 
         {/* Related Templates */}
         {related.length > 0 && (
           <div className="space-y-4 related-section no-print">
             <h3 className="text-lg font-bold text-[#1D1D1F]">
-              Related {template.preheader || "Food Safety"} Resources
+              Related {isAllergenTool ? "Allergen" : (template.preheader || "Food Safety")} Resources
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {related.map(item => (
@@ -353,11 +386,10 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             Bespoke Takeaway Web Development
           </span>
           <h3 className="text-xl sm:text-2xl font-bold">
-            Need an online ordering site with automated Natasha&apos;s Law allergen filtering?
+            Need an online menu with an allergen filter?
           </h3>
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">
-            Saim Dev builds custom websites for UK takeaways &amp; restaurants with 0% commission, 
-            instant Google Maps SEO, and built-in allergen filters.
+            Saim Dev builds fast, mobile-friendly websites for UK takeaways and restaurants, including allergen filters on menus.
           </p>
           <div className="pt-2">
             <a

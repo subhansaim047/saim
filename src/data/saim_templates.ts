@@ -75,12 +75,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "food-allergen-chart",
     "type": "chart",
     "preheader": "CHART",
-    "title": "Food Allergen",
+    "title": "Free UK Takeaway Allergen Chart Generator (14 Allergens)",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/charts/template-5.webp",
     "targetUrl": "/food-safety-templates/food-allergen-chart",
-    "desc": "Critical food temperature and safety chart for food allergen. Clear visual reference guide for chefs and food preparation handlers.",
+    "desc": "Build and print a UK allergen chart for your takeaway in minutes. Covers all 14 allergens, a customer filter and PDF print. Free, no sign-up.",
     "thumbUrl": "/templates/thumbs/template-5.webp"
   },
   {
