@@ -182,13 +182,13 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = () => {
         <div>
           <span className="text-xs font-bold text-indigo-800 uppercase tracking-wider font-mono flex items-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-indigo-600" />
-            Codex Alimentarius &amp; UK FSA Compliant
+            Based on Codex Alimentarius HACCP Principles
           </span>
           <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900 mt-1">
             HACCP Plan Builder &amp; CCP Hazard Analysis Matrix
           </h2>
           <p className="text-xs text-gray-500 mt-0.5">
-            Document critical control points, preventive limits, and corrective procedures for EHO compliance.
+            Document critical control points, preventive limits, and corrective procedures for kitchen records.
           </p>
         </div>
 

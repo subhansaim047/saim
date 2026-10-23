@@ -176,7 +176,7 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
             Commercial Recipe Calculator &amp; Batch Scaler
           </h2>
           <p className="text-xs text-gray-500 mt-0.5">
-            Scale portions, ingredient quantities, and batch sizes with 100% mathematical accuracy.
+            Scale portions, ingredient quantities, and batch sizes accurately.
           </p>
         </div>
 

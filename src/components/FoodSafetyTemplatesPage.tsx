@@ -36,6 +36,7 @@ import { ALLERGENS, MenuItem, AllergenStatus } from "./ToolsPage";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { FoodCostCalculatorTool } from "./tools/FoodCostCalculatorTool";
 import { RecipeCalculatorTool } from "./tools/RecipeCalculatorTool";
+import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
 
 export const FoodSafetyTemplatesPage: React.FC = () => {
   // ── FILTER STATES (INTERNAL SAIM DEV FILTERS) ──
@@ -185,7 +186,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
           <div className="flex flex-col gap-3 max-w-4xl">
             <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-wider uppercase text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full w-fit">
               <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
-              <span>Official HACCP &amp; Food Hygiene Resources</span>
+              <span>Kitchen Hygiene &amp; Food Safety Resources</span>
               <span className="text-slate-300">•</span>
               <span className="text-slate-600">Free Printable &amp; Digital</span>
             </div>
@@ -359,13 +360,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             <div className="p-6 rounded-3xl bg-gradient-to-r from-[#2e2d75] via-[#39388c] to-[#2e2d75] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-lg top-banner no-print">
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-bold block mb-1">
-                  100% Free Interactive Templates &amp; Compliance Hub
+                  Kitchen Safety Templates &amp; Record Tools
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold leading-tight">
-                  All 160+ Posters, Logs, Charts &amp; Smart Tools Free
+                  Free Printable &amp; Digital Food Safety Records
                 </h3>
                 <p className="text-xs text-white/80 mt-1 max-w-xl">
-                  Customize compliance sheets online and print or save as PDF with zero sign-up.
+                  Customise kitchen sheets online and print or save as PDF with zero sign-up.
                 </p>
               </div>
 
@@ -578,6 +579,10 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
       {/* ═══════════════════════════════════════════════════════════════
           COMPLETE EDITORIAL SECTIONS (UK FSA & NATASHA'S LAW STANDARDS)
       ════════════════════════════════════════════════════════════════ */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 pb-8 no-print">
+        <FoodSafetyDisclaimer />
+      </div>
+
       <section className="editorial-section border-t border-[#E5E5EA] bg-white py-16 px-4 sm:px-8 no-print">
         <div className="max-w-4xl mx-auto space-y-12 text-[#1D1D1F]">
 
@@ -587,7 +592,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
               Key Takeaways
             </h2>
             <ul className="space-y-2 text-xs sm:text-sm text-gray-700 leading-relaxed list-disc list-inside">
-              <li>Food safety templates streamline compliance, enhance operational consistency, and reduce risks of foodborne illnesses.</li>
+              <li>Food safety templates help standardise routines, organise kitchen records, and support daily food hygiene.</li>
               <li>Visual reminders like posters promote best practices in hygiene, temperature control, and cross-contamination prevention.</li>
               <li>Checklists and logs foster staff accountability and simplify daily, weekly, and monthly tasks for health inspection readiness.</li>
               <li>Temperature logs and calibration records support HACCP monitoring, Natasha&apos;s Law, and EHO audit readiness.</li>
@@ -621,7 +626,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
           {/* Section: Comprehensive checklists */}
           <div className="space-y-3">
             <h2 className="text-2xl font-bold text-[#1D1D1F]">
-              Comprehensive food safety checklists: your daily compliance partners
+              Food safety checklists for daily kitchen routines
             </h2>
             <p className="text-sm text-gray-700 leading-relaxed">
               Checklists are essential tools for maintaining consistency and compliance in daily operations. Use the Restaurant Cleaning Checklist 
@@ -637,8 +642,8 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                <h4 className="font-bold text-sm text-gray-900 mb-1">1. Enhanced compliance and reduced risk</h4>
-                <p className="text-xs text-gray-600 leading-relaxed">Meet local authority and FSA food safety standards consistently.</p>
+                <h4 className="font-bold text-sm text-gray-900 mb-1">1. Organised documentation</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">Keep kitchen records structured and accessible for staff and supervisors.</p>
               </div>
               <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
                 <h4 className="font-bold text-sm text-gray-900 mb-1">2. Improved efficiency and consistency</h4>
@@ -649,8 +654,8 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 <p className="text-xs text-gray-600 leading-relaxed">Sign-off sheets ensure tasks are completed and verified daily.</p>
               </div>
               <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
-                <h4 className="font-bold text-sm text-gray-900 mb-1">4. Enhanced customer trust &amp; 5★ ratings</h4>
-                <p className="text-xs text-gray-600 leading-relaxed">Protect your reputation and prevent catastrophic allergy incidents.</p>
+                <h4 className="font-bold text-sm text-gray-900 mb-1">4. Consistent team routines</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">Provide clear visual guidance and daily logs for kitchen staff.</p>
               </div>
             </div>
           </div>
@@ -687,7 +692,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
       {/* ── FOOTER ── */}
       <footer className="border-t border-[#E5E5EA] bg-white py-8 px-4 sm:px-8 text-center text-xs text-gray-500 no-print">
-        <p>© 2026 Saim Dev. All 160+ Food Safety Templates, Checklists &amp; Posters are 100% Free.</p>
+        <p>© 2026 Saim Dev. Free kitchen templates, checklists, and tools.</p>
         <div className="flex items-center justify-center gap-4 mt-2">
           <Link href="/" className="hover:text-black">Home</Link>
           <span>•</span>

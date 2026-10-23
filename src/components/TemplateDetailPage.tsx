@@ -22,6 +22,7 @@ import { HaccpPlanBuilderTool } from "./tools/HaccpPlanBuilderTool";
 import { FoodSafetyQuizTool } from "./tools/FoodSafetyQuizTool";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
+import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
 
 interface Props {
   template: FoodSafetyTemplate;
@@ -241,7 +242,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                 <div className="hidden print:block font-bold text-sm text-gray-950">{premisesName}</div>
               </div>
               <div>
-                <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Manager Sign-Off / Responsible Person</label>
+                <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Checked By / Responsible Person</label>
                 <input
                   type="text"
                   value={managerSignoff}
@@ -251,7 +252,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                 <div className="hidden print:block font-semibold text-xs text-gray-900">{managerSignoff}</div>
               </div>
               <div>
-                <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Active Compliance Date</label>
+                <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Date of Record</label>
                 <input
                   type="date"
                   value={complianceDate}
@@ -306,8 +307,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             </div>
 
             <div className="pt-2 text-[10px] text-gray-400 font-mono flex items-center justify-between border-t border-gray-100">
-              <span>• Approved Kitchen Wall Display • FSA &amp; Natasha&apos;s Law Compliant</span>
-              <span>Signed: {managerSignoff}</span>
+              <span>Kitchen record display</span>
+              <span>Checked by: {managerSignoff}</span>
             </div>
           </div>
         )}
@@ -341,19 +342,23 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         ) : (
           <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-4 no-print">
             <h3 className="text-xl font-bold text-[#1D1D1F]">
-              How to use this {template.type} for UK &amp; EU Food Safety Compliance
+              How to use this {template.type} in your kitchen
             </h3>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Using verified documents like the <strong>{template.title}</strong> ensures your kitchen maintains thorough records, trains food handling staff, 
-              and eliminates hazards before they reach customers.
+              Using consistent documentation like the <strong>{template.title}</strong> helps your kitchen team maintain clear records, train food handling staff, and follow food safety procedures.
             </p>
             <ul className="text-xs sm:text-sm text-gray-600 space-y-2 list-disc list-inside">
               <li>Display prominently at food preparation, cooking, or storage stations.</li>
               <li>Train kitchen and front-of-house staff on these guidelines during onboarding.</li>
-              <li>Audit records periodically to ensure signatures and temperatures are maintained.</li>
+              <li>Review records periodically to ensure documentation is kept up to date.</li>
             </ul>
           </div>
         )}
+
+        {/* Shared Regulatory Disclaimer on all resource pages */}
+        <div className="no-print">
+          <FoodSafetyDisclaimer />
+        </div>
 
         {/* Related Templates */}
         {related.length > 0 && (

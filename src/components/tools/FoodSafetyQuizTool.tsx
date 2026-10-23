@@ -83,7 +83,7 @@ const QUESTIONS: Question[] = [
     q: "What British Standard must commercial kitchen chemical sanitisers and disinfectants meet?",
     options: ["BS EN 1276 or BS EN 13697", "ISO 9001 only", "No standard is required", "CE mark only"],
     correct: 0,
-    explanation: "BS EN 1276 and BS EN 13697 guarantee the disinfectant kills 99.999% of bacteria (including E. coli and Salmonella) within the specified contact time."
+    explanation: "BS EN 1276 and BS EN 13697 specify that the disinfectant kills 99.999% of bacteria (including E. coli and Salmonella) within the specified contact time."
   },
   {
     id: 10,
@@ -121,7 +121,7 @@ export const FoodSafetyQuizTool: React.FC<{ templateId?: string }> = ({ template
         <div>
           <span className="text-xs font-bold text-indigo-800 uppercase tracking-wider font-mono flex items-center gap-1.5">
             <Award className="w-4 h-4 text-indigo-600" />
-            Official UK Food Hygiene Level 2 Training Standard
+            UK Food Hygiene Level 2 Practice Quiz
           </span>
           <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900 mt-1">
             Food Safety &amp; Hygiene Knowledge Exam
