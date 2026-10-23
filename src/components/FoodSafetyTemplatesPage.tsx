@@ -30,11 +30,11 @@ import {
   Sliders,
   Check
 } from "lucide-react";
-import { FOOD_SAFETY_TEMPLATES, FoodSafetyTemplate } from "@/data/fooddocs_templates";
+import { FOOD_SAFETY_TEMPLATES, FoodSafetyTemplate } from "@/data/saim_templates";
 import { ALLERGENS, MenuItem, AllergenStatus } from "./ToolsPage";
 
 export const FoodSafetyTemplatesPage: React.FC = () => {
-  // ── FILTER STATES (MATCHING FOODDOCS) ──
+  // ── FILTER STATES (INTERNAL SAIM DEV FILTERS) ──
   const [selectedType, setSelectedType] = useState<string>("all");
   const [selectedActivity, setSelectedActivity] = useState<string>("all");
   const [selectedPurpose, setSelectedPurpose] = useState<string>("all");
@@ -56,7 +56,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
       // Business Activity filter
       if (selectedActivity !== "all") {
-        if (!item.activity.includes(selectedActivity)) return false;
+        if (!item.activity?.includes(selectedActivity)) return false;
       }
 
       // Search term
@@ -64,7 +64,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
         const query = searchTerm.toLowerCase();
         const matchesTitle = item.title.toLowerCase().includes(query);
         const matchesType = item.type.toLowerCase().includes(query);
-        const matchesPre = item.preheader.toLowerCase().includes(query);
+        const matchesPre = item.preheader ? item.preheader.toLowerCase().includes(query) : false;
         if (!matchesTitle && !matchesType && !matchesPre) return false;
       }
 
@@ -308,7 +308,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 items-start">
 
           {/* ═══════════════════════════════════════════════════════════════
-              LEFT SIDEBAR: FILTER RESOURCES (FOODDOCS STYLE)
+              LEFT SIDEBAR: FILTER RESOURCES (SAIM DEV STYLE)
           ════════════════════════════════════════════════════════════════ */}
           <aside className="filter-sidebar sticky top-24 rounded-3xl p-6 bg-[#feeedb] border border-[#fddbc0] shadow-sm space-y-5 no-print">
             <div className="flex items-center justify-between">
@@ -457,7 +457,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   className="group rounded-2xl bg-white border border-[#E5E5EA] hover:border-gray-400 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-200"
                 >
                   {/* Card Image Container with Color-Coded Background */}
-                  <div className={`p-4 aspect-[4/3] flex items-center justify-center relative overflow-hidden transition-transform group-hover:scale-[1.02] ${getCardBg(template.type)}`}>
+                  <Link href={`/food-safety-templates/${template.slug}`} className={`p-4 aspect-[4/3] flex items-center justify-center relative overflow-hidden transition-transform group-hover:scale-[1.02] ${getCardBg(template.type)}`}>
                     <img
                       src={template.imgUrl}
                       alt={template.title}
@@ -471,21 +471,23 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
                     {/* Preheader Badge */}
                     <span className={`absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-wider font-mono shadow-sm ${getPillColor(template.type)}`}>
-                      {template.preheader}
+                      {template.preheader || template.type.toUpperCase()}
                     </span>
-                  </div>
+                  </Link>
 
                   {/* Card Content & Title */}
                   <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between gap-3">
-                    <h4 className="font-bold text-xs sm:text-sm text-[#1D1D1F] line-clamp-2 leading-snug group-hover:text-amber-800 transition-colors">
-                      {template.title}
-                    </h4>
+                    <Link href={`/food-safety-templates/${template.slug}`} className="hover:underline">
+                      <h4 className="font-bold text-xs sm:text-sm text-[#1D1D1F] line-clamp-2 leading-snug group-hover:text-amber-800 transition-colors">
+                        {template.title}
+                      </h4>
+                    </Link>
 
                     {/* Action Button */}
                     <div className="pt-2 border-t border-gray-100 flex items-center justify-between gap-2">
                       {template.pdfUrl ? (
                         <a
-                          href={template.pdfUrl}
+                          href={`/api/download?id=${template.id}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-full py-2 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
@@ -510,15 +512,12 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                           <span>Open Tool Free</span>
                         </button>
                       ) : (
-                        <a
-                          href={template.targetUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Link href={`/food-safety-templates/${template.slug}`}
                           className="w-full py-2 px-3 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-800 text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                         >
                           <span>View Details</span>
                           <ExternalLink className="w-3 h-3 text-gray-500" />
-                        </a>
+                        </Link>
                       )}
                     </div>
                   </div>
@@ -819,7 +818,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
       )}
 
       {/* ═══════════════════════════════════════════════════════════════
-          COMPLETE EDITORIAL SECTIONS (EXACT 1-TO-1 CONTENT FROM FOODDOCS)
+          COMPLETE EDITORIAL SECTIONS (UK FSA & NATASHA'S LAW STANDARDS)
       ════════════════════════════════════════════════════════════════ */}
       <section className="editorial-section border-t border-[#E5E5EA] bg-white py-16 px-4 sm:px-8 no-print">
         <div className="max-w-4xl mx-auto space-y-12 text-[#1D1D1F]">
