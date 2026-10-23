@@ -457,7 +457,12 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   className="group rounded-2xl bg-white border border-[#E5E5EA] hover:border-gray-400 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-200"
                 >
                   {/* Card Image Container with Color-Coded Background */}
-                  <Link href={`/food-safety-templates/${template.slug}`} className={`p-4 aspect-[4/3] flex items-center justify-center relative overflow-hidden transition-transform group-hover:scale-[1.02] ${getCardBg(template.type)}`}>
+                  <Link
+                    href={`/food-safety-templates/${template.slug}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-4 aspect-[4/3] flex items-center justify-center relative overflow-hidden transition-transform group-hover:scale-[1.02] ${getCardBg(template.type)}`}
+                  >
                     <img
                       src={template.imgUrl}
                       alt={template.title}
@@ -477,7 +482,12 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
                   {/* Card Content & Title */}
                   <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between gap-3">
-                    <Link href={`/food-safety-templates/${template.slug}`} className="hover:underline">
+                    <Link
+                      href={`/food-safety-templates/${template.slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
                       <h4 className="font-bold text-xs sm:text-sm text-[#1D1D1F] line-clamp-2 leading-snug group-hover:text-amber-800 transition-colors">
                         {template.title}
                       </h4>
@@ -485,40 +495,27 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
                     {/* Action Button */}
                     <div className="pt-2 border-t border-gray-100 flex items-center justify-between gap-2">
+                      <Link
+                        href={`/food-safety-templates/${template.slug}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 py-2 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer group-hover:bg-[#2e2d75]"
+                      >
+                        <span>{template.type === "smart_tool" || template.slug.includes("calc") || template.slug.includes("allergen") || template.slug.includes("quiz") ? "Open Tool" : "Open Template"}</span>
+                        <ExternalLink className="w-3 h-3 text-gray-400 group-hover:text-white" />
+                      </Link>
+
                       {template.pdfUrl ? (
                         <a
                           href={`/api/download?id=${template.id}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-full py-2 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                          title="Instant PDF Download"
+                          className="p-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-black border border-gray-200 transition-colors cursor-pointer shrink-0"
                         >
                           <Download className="w-3.5 h-3.5" />
-                          <span>Download PDF</span>
                         </a>
-                      ) : template.type === "smart_tool" || template.title.toLowerCase().includes("allergy") || template.title.toLowerCase().includes("cost") ? (
-                        <button
-                          onClick={() => {
-                            if (template.title.toLowerCase().includes("allergy") || template.title.toLowerCase().includes("allergen")) {
-                              setActiveInteractiveTool("allergen");
-                            } else if (template.title.toLowerCase().includes("cost") || template.title.toLowerCase().includes("margin")) {
-                              setActiveInteractiveTool("cost");
-                            } else {
-                              setActiveInteractiveTool("temps");
-                            }
-                          }}
-                          className="w-full py-2 px-3 rounded-xl bg-[#2e2d75] hover:bg-[#1f1e52] text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                        >
-                          <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                          <span>Open Tool Free</span>
-                        </button>
-                      ) : (
-                        <Link href={`/food-safety-templates/${template.slug}`}
-                          className="w-full py-2 px-3 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-800 text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                        >
-                          <span>View Details</span>
-                          <ExternalLink className="w-3 h-3 text-gray-500" />
-                        </Link>
-                      )}
+                      ) : null}
                     </div>
                   </div>
                 </div>
