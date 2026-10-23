@@ -405,13 +405,23 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             Need an online menu with an allergen filter?
           </h3>
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">
-            Saim Dev builds fast, mobile-friendly websites for UK takeaways and restaurants, including allergen filters on menus.
+            We build custom Next.js websites for UK takeaways and restaurants with automated allergen tags, WhatsApp ordering, and zero commission fees.
           </p>
           <div className="pt-2">
             <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20takeaway%20website"
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(
+                    new CustomEvent("cta_click", {
+                      detail: { location: "template_footer", target: "whatsapp" }
+                    })
+                  );
+                  console.log("CTA Click Event:", { location: "template_footer", target: "whatsapp" });
+                }
+              }}
               className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-5 py-2.5 rounded-full inline-flex items-center gap-1.5 transition-all shadow"
             >
               <span>Chat on WhatsApp</span>
@@ -421,6 +431,28 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         </div>
 
       </main>
+
+      {/* ── FOOTER ── */}
+      <footer className="border-t border-[#E5E5EA] bg-white py-8 px-4 sm:px-8 text-center text-xs text-gray-500 no-print mt-12">
+        <p>© 2026 Saim Dev. Free kitchen templates, checklists, and tools.</p>
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-2 text-gray-600">
+          <Link href="/" className="hover:text-black">Home</Link>
+          <span>•</span>
+          <Link href="/services" className="hover:text-black">Services</Link>
+          <span>•</span>
+          <Link href="/demos" className="hover:text-black">Demos</Link>
+          <span>•</span>
+          <Link href="/about" className="hover:text-black">About</Link>
+          <span>•</span>
+          <Link href="/contact" className="hover:text-black">Contact</Link>
+          <span>•</span>
+          <Link href="/privacy" className="hover:text-black">Privacy Policy</Link>
+          <span>•</span>
+          <Link href="/cookie-policy" className="hover:text-black">Cookie Policy</Link>
+          <span>•</span>
+          <Link href="/disclaimer" className="hover:text-black">Disclaimer</Link>
+        </div>
+      </footer>
     </div>
   );
 };

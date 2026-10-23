@@ -12,6 +12,7 @@ const staticPages = [
   { url: "https://www.saimdev.site/technologies", priority: "0.8", changefreq: "monthly" },
   { url: "https://www.saimdev.site/case-studies", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/demos", priority: "0.8", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/about", priority: "0.8", changefreq: "monthly" },
   { url: "https://www.saimdev.site/contact", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blogs", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/blog/why-small-business-needs-website-2026", priority: "0.85", changefreq: "monthly" },
@@ -24,6 +25,8 @@ const staticPages = [
   { url: "https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step", priority: "0.85", changefreq: "weekly" },
   { url: "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide", priority: "0.85", changefreq: "weekly" },
   { url: "https://www.saimdev.site/privacy", priority: "0.5", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/cookie-policy", priority: "0.5", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/disclaimer", priority: "0.5", changefreq: "monthly" },
   { url: "https://www.saimdev.site/terms", priority: "0.5", changefreq: "monthly" }
 ];
 

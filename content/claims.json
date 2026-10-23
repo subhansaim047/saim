@@ -1,0 +1,32 @@
+[
+  {
+    "id": "claim-01",
+    "claim": "Bespoke Next.js and React web development for hospitality and service businesses",
+    "verificationSource": "Verified in codebase architecture: Next.js 16 App Router, React 19, TypeScript, and Tailwind CSS.",
+    "status": "verified"
+  },
+  {
+    "id": "claim-02",
+    "claim": "Direct WhatsApp ordering with 0% platform commission fees",
+    "verificationSource": "Verified in ordering workflow: Customer orders route directly to the takeaway owner's WhatsApp number without aggregator commission cuts.",
+    "status": "verified"
+  },
+  {
+    "id": "claim-03",
+    "claim": "Digital allergen matrix covering all 14 mandatory UK/EU allergens",
+    "verificationSource": "Verified against Food Information Regulations 2014 & retained EU Regulation 1169/2011 (Celery, Cereals with gluten, Crustaceans, Eggs, Fish, Lupin, Milk, Molluscs, Mustard, Tree Nuts, Peanuts, Sesame, Soybeans, Sulphites).",
+    "status": "verified"
+  },
+  {
+    "id": "claim-04",
+    "claim": "Celsius commercial kitchen temperature guidance limits",
+    "verificationSource": "Verified against Food Standards Agency (FSA) guidance: 0°C-5°C commercial fridge recommendation, 8°C statutory ceiling, 63°C hot holding, 75°C core cooking.",
+    "status": "verified"
+  },
+  {
+    "id": "claim-05",
+    "claim": "Client-side private PDF generation without mandatory sign-up",
+    "verificationSource": "Verified in client components: Form data is processed locally in the user's browser with print CSS; zero private records captured on agency servers.",
+    "status": "verified"
+  }
+]

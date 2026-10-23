@@ -83,13 +83,25 @@ export const FooterSection = () => {
 
         {/* LEGAL & TRUST LINE */}
         <div className="site-footer__legal border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
-          <p>© 2026 Saim Dev. All rights reserved. Custom Next.js Architecture for UK, Europe & Worldwide.</p>
-          <div className="flex items-center gap-3">
-            <span className="text-white/40">GDPR & PECR Compliant</span>
+          <p>© 2026 Saim Dev. All rights reserved. Custom Next.js Architecture for UK, Europe &amp; Worldwide.</p>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-white/70">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>•</span>
+            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            <span>•</span>
+            <Link href="/demos" className="hover:text-white transition-colors">Demos</Link>
+            <span>•</span>
+            <Link href="/about" className="hover:text-white transition-colors">About</Link>
+            <span>•</span>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
             <span>•</span>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span>•</span>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
+            <span>•</span>
+            <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
+            <span>•</span>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
           </div>
         </div>
       </div>

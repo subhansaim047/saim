@@ -46,6 +46,17 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [activeInteractiveTool, setActiveInteractiveTool] = useState<string | null>(null);
 
+  const handleWhatsAppClick = (location: string) => {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent("cta_click", {
+          detail: { location, target: "whatsapp" }
+        })
+      );
+      console.log("CTA Click Event:", { location, target: "whatsapp" });
+    }
+  };
+
   // ── DYNAMIC FILTERING ──
   const filteredTemplates = useMemo(() => {
     return FOOD_SAFETY_TEMPLATES.filter(item => {
@@ -663,20 +674,20 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
           ════════════════════════════════════════════════════════════════ */}
           <div className="rounded-3xl bg-[#1D1D1F] text-white p-8 sm:p-12 space-y-4 shadow-xl">
             <span className="text-amber-400 font-mono text-xs uppercase tracking-widest font-bold">
-              Bespoke Takeaway &amp; Restaurant Web Development
+              Bespoke Takeaway Web Development
             </span>
             <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
-              Ready to automate food safety on your own online ordering website?
+              Need an online menu with an allergen filter?
             </h3>
             <p className="text-sm text-gray-300 leading-relaxed max-w-2xl">
-              We engineer custom, ultra-fast websites for UK takeaways and restaurants with automated allergen badges, 
-              direct WhatsApp orders, and 0% commission fees on every order.
+              We build custom Next.js websites for UK takeaways and restaurants with automated allergen tags, WhatsApp ordering, and zero commission fees.
             </p>
             <div className="pt-2 flex flex-wrap gap-3">
               <a
-                href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20want%20to%20build%20a%20custom%20takeaway%20website"
+                href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleWhatsAppClick("hub_footer")}
                 className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs sm:text-sm px-6 py-3 rounded-full flex items-center gap-2 transition-all shadow"
               >
                 <span>Discuss with Lead Architect on WhatsApp</span>
@@ -691,14 +702,22 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
       {/* ── FOOTER ── */}
       <footer className="border-t border-[#E5E5EA] bg-white py-8 px-4 sm:px-8 text-center text-xs text-gray-500 no-print">
         <p>© 2026 Saim Dev. Free kitchen templates, checklists, and tools.</p>
-        <div className="flex items-center justify-center gap-4 mt-2">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-2 text-gray-600">
           <Link href="/" className="hover:text-black">Home</Link>
           <span>•</span>
           <Link href="/services" className="hover:text-black">Services</Link>
           <span>•</span>
           <Link href="/demos" className="hover:text-black">Demos</Link>
           <span>•</span>
+          <Link href="/about" className="hover:text-black">About</Link>
+          <span>•</span>
+          <Link href="/contact" className="hover:text-black">Contact</Link>
+          <span>•</span>
           <Link href="/privacy" className="hover:text-black">Privacy Policy</Link>
+          <span>•</span>
+          <Link href="/cookie-policy" className="hover:text-black">Cookie Policy</Link>
+          <span>•</span>
+          <Link href="/disclaimer" className="hover:text-black">Disclaimer</Link>
         </div>
       </footer>
     </div>
