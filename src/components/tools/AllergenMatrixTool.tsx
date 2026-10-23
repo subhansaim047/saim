@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import { Plus, Trash2, Printer, Download, ShieldAlert, Check, Search, Filter, RotateCcw } from "lucide-react";
+import { Plus, Trash2, Printer, ShieldAlert, Check, Search, Filter, RotateCcw, Edit3 } from "lucide-react";
 import { ALLERGENS, MenuItem, AllergenStatus } from "../ToolsPage";
 
 const DEFAULT_MENU_ITEMS: MenuItem[] = [
@@ -147,6 +147,45 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
 
   return (
     <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm space-y-8 printable-doc">
+      {/* Print Page Setup (Landscape for 14 Allergen Columns) */}
+      <style jsx global>{`
+        @media print {
+          @page {
+            size: landscape;
+            margin: 6mm;
+          }
+          body {
+            background: #ffffff !important;
+            color: #000000 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          .printable-doc {
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          .printable-doc table {
+            width: 100% !important;
+            table-layout: fixed !important;
+            border-collapse: collapse !important;
+          }
+          .printable-doc th,
+          .printable-doc td {
+            border: 1px solid #d1d5db !important;
+            padding: 4px 6px !important;
+            word-break: break-word !important;
+          }
+          .printable-doc th {
+            background-color: #1f2937 !important;
+            color: #ffffff !important;
+            font-size: 8pt !important;
+          }
+        }
+      `}</style>
+
       {/* ── HEADER ── */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-gray-100">
         <div>
@@ -163,6 +202,11 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
         </div>
 
         <div className="flex flex-wrap items-center gap-2 no-print">
+          <div className="hidden sm:flex items-center gap-1.5 text-xs font-bold text-red-800 bg-red-50 border border-red-200 px-3 py-2 rounded-xl">
+            <Edit3 className="w-3.5 h-3.5 text-red-600" />
+            <span>All Dishes &amp; Allergens Editable</span>
+          </div>
+
           <button
             type="button"
             onClick={handleReset}
@@ -176,21 +220,11 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
           <button
             type="button"
             onClick={() => window.print()}
-            className="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer border border-gray-200"
+            className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-5 py-2.5 rounded-xl flex items-center gap-2 transition-all shadow cursor-pointer hover:scale-[1.02]"
           >
-            <Printer className="w-3.5 h-3.5" />
-            <span>Print Kitchen Poster</span>
+            <Printer className="w-4 h-4 text-amber-400" />
+            <span>Print Allergen Chart</span>
           </button>
-
-          {templateId ? (
-            <a
-              href={`/api/download?id=${templateId}`}
-              className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shadow"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>Download PDF</span>
-            </a>
-          ) : null}
         </div>
       </div>
 
@@ -202,8 +236,9 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
             type="text"
             value={restaurantName}
             onChange={e => setRestaurantName(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none focus:border-red-500"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-red-500 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-bold text-xs text-gray-950">{restaurantName}</div>
         </div>
         <div>
           <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Assessed &amp; Signed By</label>
@@ -211,8 +246,9 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
             type="text"
             value={completedBy}
             onChange={e => setCompletedBy(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none focus:border-red-500"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-red-500 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-bold text-xs text-gray-950">{completedBy}</div>
         </div>
         <div>
           <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Review Date</label>
@@ -220,8 +256,9 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
             type="date"
             value={reviewDate}
             onChange={e => setReviewDate(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none focus:border-red-500"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-red-500 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-bold text-xs text-gray-950">{reviewDate}</div>
         </div>
       </div>
 
@@ -276,24 +313,24 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
       </div>
 
       {/* ── 14-ALLERGEN INTERACTIVE TABLE ── */}
-      <div className="overflow-x-auto border border-gray-200 rounded-2xl bg-white">
+      <div className="overflow-x-auto border border-gray-200 rounded-2xl bg-white print:border-none print:overflow-visible">
         <table className="w-full text-left text-xs">
           <thead className="bg-[#1D1D1F] text-white uppercase font-mono text-[9px] tracking-wider">
             <tr>
-              <th className="p-3 border-b min-w-[200px]">Dish / Recipe Name &amp; Ingredients</th>
+              <th className="p-3 border-b" style={{ width: "28%" }}>Dish / Recipe Name &amp; Ingredients</th>
               {ALLERGENS.map(a => (
-                <th key={a.id} className="p-2 border-b text-center whitespace-nowrap min-w-[50px]" title={a.name}>
+                <th key={a.id} className="p-2 border-b text-center whitespace-nowrap" style={{ width: "5%" }} title={a.name}>
                   <div>{a.icon}</div>
                   <div className="mt-0.5 text-[8px] opacity-80">{a.name.slice(0, 3)}</div>
                 </th>
               ))}
-              <th className="p-2 border-b text-right no-print w-16">Action</th>
+              <th className="p-2 border-b text-right no-print" style={{ width: "2%" }}>Action</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
             {filteredItems.map(item => (
               <tr key={item.id} className="hover:bg-gray-50/80 transition-colors">
-                <td className="p-3">
+                <td className="p-2.5 align-top">
                   <input
                     type="text"
                     value={item.name}
@@ -301,19 +338,28 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
                       const val = e.target.value;
                       setMenuItems(prev => prev.map(m => m.id === item.id ? { ...m, name: val } : m));
                     }}
-                    className="font-bold text-gray-900 w-full bg-transparent border-b border-transparent hover:border-gray-300 focus:border-red-500 focus:outline-none"
+                    placeholder="Dish name..."
+                    className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-red-500 rounded-lg px-2.5 py-1.5 font-bold text-xs text-gray-900 focus:outline-none print:hidden shadow-2xs"
                   />
-                  <input
-                    type="text"
+                  <div className="hidden print:block font-bold text-[8.5pt] text-gray-950 leading-tight">
+                    {item.name}
+                  </div>
+
+                  <textarea
+                    rows={2}
                     value={item.ingredients}
                     placeholder="Full ingredient breakdown..."
                     onChange={e => {
                       const val = e.target.value;
                       setMenuItems(prev => prev.map(m => m.id === item.id ? { ...m, ingredients: val } : m));
                     }}
-                    className="text-[10px] text-gray-500 w-full bg-transparent border-b border-transparent hover:border-gray-200 focus:border-gray-400 focus:outline-none mt-0.5"
+                    className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-red-500 rounded-lg px-2.5 py-1 text-[11px] text-gray-700 focus:outline-none print:hidden shadow-2xs mt-1 resize-y leading-snug"
                   />
-                  <span className="inline-block mt-1 px-1.5 py-0.5 bg-gray-100 rounded text-[9px] font-mono text-gray-600">
+                  <div className="hidden print:block text-[7.5pt] text-gray-700 leading-snug whitespace-pre-wrap mt-0.5">
+                    {item.ingredients}
+                  </div>
+
+                  <span className="inline-block mt-1 px-1.5 py-0.5 bg-gray-100 border border-gray-200 rounded text-[9px] font-mono text-gray-600 print:text-[7pt]">
                     {item.category}
                   </span>
                 </td>
@@ -321,11 +367,11 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
                 {ALLERGENS.map(a => {
                   const status = item.allergens[a.id] || "none";
                   return (
-                    <td key={a.id} className="p-1 text-center">
+                    <td key={a.id} className="p-1 text-center align-middle">
                       <button
                         type="button"
                         onClick={() => toggleAllergen(item.id, a.id)}
-                        className={`w-7 h-7 rounded-lg text-[9px] font-extrabold font-mono transition-transform active:scale-90 cursor-pointer ${
+                        className={`w-7 h-7 rounded-lg text-[9px] font-extrabold font-mono transition-transform active:scale-90 cursor-pointer print:hidden ${
                           status === "contains"
                             ? "bg-red-500 text-white shadow-xs"
                             : status === "may"
@@ -336,11 +382,24 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = ({ template
                       >
                         {status === "contains" ? "YES" : status === "may" ? "MAY" : "—"}
                       </button>
+                      <div className="hidden print:block text-center font-mono font-black text-[7.5pt]">
+                        {status === "contains" ? (
+                          <span className="inline-block px-1 py-0.5 rounded border border-red-600 bg-red-50 text-red-700 font-black">
+                            YES
+                          </span>
+                        ) : status === "may" ? (
+                          <span className="inline-block px-1 py-0.5 rounded border border-amber-500 bg-amber-50 text-amber-800 font-bold">
+                            MAY
+                          </span>
+                        ) : (
+                          <span className="text-gray-300">—</span>
+                        )}
+                      </div>
                     </td>
                   );
                 })}
 
-                <td className="p-2 text-right no-print">
+                <td className="p-2 text-right no-print align-top">
                   <button
                     type="button"
                     onClick={() => handleRemoveDish(item.id)}

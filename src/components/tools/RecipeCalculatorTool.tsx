@@ -5,7 +5,6 @@ import {
   Plus,
   Trash2,
   Printer,
-  Download,
   Sparkles,
   Scale,
   Clock,
@@ -14,7 +13,7 @@ import {
   Image as ImageIcon,
   RotateCcw,
   Sliders,
-  FileText
+  Edit3
 } from "lucide-react";
 
 export interface RecipeIngredient {
@@ -59,10 +58,7 @@ const DEFAULT_INGREDIENTS: RecipeIngredient[] = [
   { id: "ing-7", qty: 180, unit: "Grams (g)", name: "Softened Unsalted Butter" }
 ];
 
-export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: string }> = ({
-  templateId,
-  pdfUrl
-}) => {
+export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: string }> = () => {
   const [recipeName, setRecipeName] = useState("Artisan Brioche Burger Buns");
   const [unitSystem, setUnitSystem] = useState<"metric" | "imperial">("metric");
   const [prepTime, setPrepTime] = useState("25 mins");
@@ -102,7 +98,7 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
 
   const handleRemoveIngredient = (id: string) => {
     setIngredients(prev => {
-      if (prev.length <= 1) return prev; // Keep at least one row
+      if (prev.length <= 1) return prev;
       return prev.filter(ing => ing.id !== id);
     });
   };
@@ -135,6 +131,40 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
 
   return (
     <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm space-y-8 printable-doc">
+      {/* Print Page Setup (Portrait for Recipe Cards) */}
+      <style jsx global>{`
+        @media print {
+          @page {
+            size: portrait;
+            margin: 10mm;
+          }
+          body {
+            background: #ffffff !important;
+            color: #000000 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          .printable-doc {
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          .printable-doc table {
+            width: 100% !important;
+            table-layout: fixed !important;
+            border-collapse: collapse !important;
+          }
+          .printable-doc th,
+          .printable-doc td {
+            border: 1px solid #e5e7eb !important;
+            padding: 6px 8px !important;
+            word-break: break-word !important;
+          }
+        }
+      `}</style>
+
       {/* ── TOOL HEADER ── */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-gray-100">
         <div>
@@ -151,6 +181,11 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
         </div>
 
         <div className="flex flex-wrap items-center gap-2 no-print">
+          <div className="hidden sm:flex items-center gap-1.5 text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200 px-3 py-2 rounded-xl">
+            <Edit3 className="w-3.5 h-3.5 text-amber-600" />
+            <span>All Fields Editable</span>
+          </div>
+
           <button
             type="button"
             onClick={handleReset}
@@ -164,21 +199,11 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
           <button
             type="button"
             onClick={() => window.print()}
-            className="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer border border-gray-200"
+            className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-5 py-2.5 rounded-xl flex items-center gap-2 transition-all shadow cursor-pointer hover:scale-[1.02]"
           >
-            <Printer className="w-3.5 h-3.5" />
+            <Printer className="w-4 h-4 text-amber-400" />
             <span>Print Recipe Card</span>
           </button>
-
-          {templateId ? (
-            <a
-              href={`/api/download?id=${templateId}`}
-              className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shadow"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>Download PDF</span>
-            </a>
-          ) : null}
         </div>
       </div>
 
@@ -193,8 +218,9 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
             value={recipeName}
             onChange={e => setRecipeName(e.target.value)}
             placeholder="e.g. Signature Artisan Burger Buns"
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 font-bold text-sm text-gray-900 focus:outline-none focus:border-amber-500"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-2 font-bold text-sm text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-extrabold text-base text-gray-950">{recipeName}</div>
         </div>
         <div>
           <label className="block text-[11px] font-bold text-gray-700 uppercase tracking-wider mb-1">
@@ -209,8 +235,9 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
               setCookTime(parts[1]?.trim() || "");
             }}
             placeholder="25 mins / 18 mins"
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900 font-semibold focus:outline-none focus:border-amber-500"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-2 text-gray-900 font-semibold focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-semibold text-xs text-gray-800">{prepTime} / {cookTime}</div>
         </div>
         <div>
           <label className="block text-[11px] font-bold text-gray-700 uppercase tracking-wider mb-1">
@@ -221,8 +248,9 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
             value={cookingTemp}
             onChange={e => setCookingTemp(e.target.value)}
             placeholder="190°C / 375°F"
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900 font-semibold focus:outline-none focus:border-amber-500"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-2 text-gray-900 font-semibold focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-semibold text-xs text-gray-800">{cookingTemp}</div>
         </div>
       </div>
 
@@ -264,7 +292,7 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
                 const val = e.target.value === "" ? "" : Math.max(1, parseInt(e.target.value) || 1);
                 setOrigServings(val);
               }}
-              className="w-24 text-2xl font-black bg-white border border-gray-300 rounded-xl px-3 py-1 text-gray-900 focus:outline-none focus:border-amber-500"
+              className="w-24 text-2xl font-black bg-white border border-gray-300 rounded-xl px-3 py-1 text-gray-900 focus:outline-none focus:border-amber-500 shadow-2xs"
             />
             <span className="text-xs text-gray-500 font-semibold">Portions</span>
           </div>
@@ -283,7 +311,7 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
                 const val = e.target.value === "" ? "" : Math.max(1, parseInt(e.target.value) || 1);
                 setDesiredServings(val);
               }}
-              className="w-24 text-2xl font-black bg-white border border-amber-400 rounded-xl px-3 py-1 text-amber-900 focus:outline-none focus:border-amber-600"
+              className="w-24 text-2xl font-black bg-white border border-amber-400 rounded-xl px-3 py-1 text-amber-900 focus:outline-none focus:border-amber-600 shadow-2xs"
             />
             <span className="text-xs text-amber-700 font-semibold">Portions</span>
           </div>
@@ -306,7 +334,7 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
 
       {/* ── INGREDIENTS TABLE & SCALING ── */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between no-print">
           <div>
             <h3 className="text-base font-bold text-gray-900">
               Ingredients &amp; Automatic Resized Yields
@@ -320,28 +348,28 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
           <button
             type="button"
             onClick={handleAddIngredient}
-            className="no-print bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-all shadow-sm cursor-pointer hover:shadow"
+            className="bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-all shadow-sm cursor-pointer hover:shadow"
           >
             <Plus className="w-4 h-4" />
             <span>Add Ingredient</span>
           </button>
         </div>
 
-        <div className="overflow-x-auto border border-gray-200 rounded-2xl bg-white">
+        <div className="overflow-x-auto border border-gray-200 rounded-2xl bg-white print:border-none print:overflow-visible">
           <table className="w-full text-left text-xs">
             <thead className="bg-gray-100 text-gray-700 uppercase font-mono text-[10px] tracking-wider">
               <tr>
-                <th className="p-3 border-b min-w-[220px]">Ingredient Name</th>
-                <th className="p-3 border-b text-center min-w-[110px]">Base Quantity</th>
-                <th className="p-3 border-b min-w-[140px]">Measurement Unit</th>
-                <th className="p-3 border-b bg-amber-50 text-amber-950 font-bold text-center min-w-[160px]">
+                <th className="p-3 border-b min-w-[200px]" style={{ width: "35%" }}>Ingredient Name</th>
+                <th className="p-3 border-b text-center min-w-[100px]" style={{ width: "15%" }}>Base Quantity</th>
+                <th className="p-3 border-b min-w-[130px]" style={{ width: "20%" }}>Measurement Unit</th>
+                <th className="p-3 border-b bg-amber-50 text-amber-950 font-bold text-center min-w-[150px]" style={{ width: "25%" }}>
                   Resized Batch Qty (x{factor.toFixed(2)})
                 </th>
-                <th className="p-3 border-b text-right no-print w-16">Action</th>
+                <th className="p-3 border-b text-right no-print w-16" style={{ width: "5%" }}>Action</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
-              {ingredients.map((ing, idx) => {
+              {ingredients.map(ing => {
                 const numericQty = typeof ing.qty === "number" ? ing.qty : 0;
                 const scaledQty = numericQty * factor;
                 const displayScaled = Number.isInteger(scaledQty)
@@ -351,18 +379,21 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
                 return (
                   <tr key={ing.id} className="hover:bg-amber-50/20 transition-colors">
                     {/* Ingredient Name */}
-                    <td className="p-3">
+                    <td className="p-2.5">
                       <input
                         type="text"
                         placeholder="e.g. Flour, Sugar, Whole Milk..."
                         value={ing.name}
                         onChange={e => handleUpdateIngredient(ing.id, "name", e.target.value)}
-                        className="w-full bg-transparent border-b border-gray-200 hover:border-gray-400 focus:border-amber-600 py-1 font-semibold text-gray-900 focus:outline-none"
+                        className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-2.5 py-1.5 font-semibold text-gray-900 focus:outline-none print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block font-semibold text-[8.5pt] text-gray-950">
+                        {ing.name || "—"}
+                      </div>
                     </td>
 
                     {/* Original Qty */}
-                    <td className="p-3 text-center">
+                    <td className="p-2.5 text-center">
                       <input
                         type="number"
                         step="any"
@@ -372,25 +403,31 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
                           const val = e.target.value === "" ? "" : parseFloat(e.target.value);
                           handleUpdateIngredient(ing.id, "qty", isNaN(val as number) ? "" : val);
                         }}
-                        className="w-24 text-center bg-gray-50 border border-gray-300 rounded-lg py-1 font-mono font-bold text-gray-900 focus:outline-none focus:border-amber-600"
+                        className="w-20 text-center bg-white border border-gray-300 rounded-lg py-1.5 font-mono font-bold text-gray-900 focus:outline-none focus:border-amber-600 print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block font-mono font-bold text-[8.5pt]">
+                        {ing.qty}
+                      </div>
                     </td>
 
                     {/* Unit Selector */}
-                    <td className="p-3">
+                    <td className="p-2.5">
                       <select
                         value={ing.unit}
                         onChange={e => handleUpdateIngredient(ing.id, "unit", e.target.value)}
-                        className="bg-gray-50 border border-gray-300 rounded-lg px-2 py-1 text-xs text-gray-800 font-medium focus:outline-none focus:border-amber-600"
+                        className="w-full bg-white border border-gray-300 rounded-lg px-2 py-1.5 text-xs text-gray-800 font-medium focus:outline-none focus:border-amber-600 print:hidden shadow-2xs"
                       >
                         {availableUnits.map(u => (
                           <option key={u} value={u}>{u}</option>
                         ))}
                       </select>
+                      <div className="hidden print:block text-[8.5pt] text-gray-700">
+                        {ing.unit}
+                      </div>
                     </td>
 
                     {/* Rescaled Output */}
-                    <td className="p-3 bg-amber-50/40 text-center font-mono font-black text-amber-950 text-sm">
+                    <td className="p-2.5 bg-amber-50/40 text-center font-mono font-black text-amber-950 text-sm">
                       {numericQty > 0 ? (
                         <span>
                           {displayScaled} <span className="text-xs font-semibold text-amber-800">{ing.unit.split(" ")[0]}</span>
@@ -401,7 +438,7 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
                     </td>
 
                     {/* Delete Row Button */}
-                    <td className="p-3 text-right no-print">
+                    <td className="p-2.5 text-right no-print">
                       <button
                         type="button"
                         onClick={() => handleRemoveIngredient(ing.id)}
@@ -423,7 +460,7 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
           </table>
         </div>
 
-        {/* ── BOTTOM PROMINENT "+ ADD INGREDIENT" BUTTON (MATCHING FOODDOCS "+ Add row") ── */}
+        {/* ── BOTTOM PROMINENT "+ ADD INGREDIENT" BUTTON ── */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 no-print">
           <button
             type="button"
@@ -435,12 +472,12 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
           </button>
 
           <span className="text-[11px] text-gray-400 font-mono">
-            {ingredients.length} total ingredient{ingredients.length !== 1 ? "s" : ""} in recipe
+            {ingredients.length} total ingredient{ingredients.length !== 1 ? "s" : ""} in recipe • Fully printable
           </span>
         </div>
       </div>
 
-      {/* ── PHOTO UPLOAD & PREPARATION STEPS (MATCHING FOODDOCS) ── */}
+      {/* ── PHOTO UPLOAD & PREPARATION STEPS ── */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-2">
         {/* Method / Prep Notes */}
         <div className="lg:col-span-2 space-y-2">
@@ -452,11 +489,14 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
             value={prepSteps}
             onChange={e => setPrepSteps(e.target.value)}
             placeholder="Step-by-step instructions for chefs, bakers and kitchen crew..."
-            className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 text-xs text-gray-800 leading-relaxed font-sans focus:outline-none focus:border-amber-500"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-2xl p-4 text-xs text-gray-800 leading-relaxed font-sans focus:outline-none print:hidden shadow-2xs resize-y"
           />
+          <div className="hidden print:block p-3 border border-gray-200 rounded-xl text-[8.5pt] text-gray-900 leading-relaxed whitespace-pre-wrap">
+            {prepSteps}
+          </div>
         </div>
 
-        {/* Recipe Dish Photo Upload */}
+        {/* Recipe Dish Photo */}
         <div className="space-y-2">
           <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider font-mono">
             Dish Reference Photo
@@ -474,7 +514,7 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
                 </button>
               </div>
             ) : (
-              <div className="space-y-2">
+              <div className="space-y-2 no-print">
                 <div className="w-10 h-10 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto">
                   <ImageIcon className="w-5 h-5" />
                 </div>

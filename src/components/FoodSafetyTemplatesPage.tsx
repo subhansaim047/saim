@@ -4,7 +4,6 @@ import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import {
   Search,
-  Download,
   Filter,
   Printer,
   Sparkles,
@@ -360,13 +359,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             <div className="p-6 rounded-3xl bg-gradient-to-r from-[#2e2d75] via-[#39388c] to-[#2e2d75] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-lg top-banner no-print">
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-bold block mb-1">
-                  100% Free Template Pack Download
+                  100% Free Interactive Templates &amp; Compliance Hub
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold leading-tight">
                   All 170+ Posters, Logs, &amp; Smart Tools Free
                 </h3>
                 <p className="text-xs text-white/80 mt-1 max-w-xl">
-                  Download official compliance PDFs or launch interactive smart calculators with one click.
+                  Customize compliance sheets online and print or save as PDF with zero sign-up.
                 </p>
               </div>
 
@@ -378,7 +377,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             {/* Active Filter Chips */}
             <div className="flex items-center justify-between text-xs text-gray-500 px-1 no-print">
               <span>Showing <strong>{filteredTemplates.length}</strong> food safety templates</span>
-              <span className="font-mono text-[11px]">Instant Direct PDF Downloads</span>
+              <span className="font-mono text-[11px]">Print &amp; Save as PDF Ready</span>
             </div>
 
             {/* 4-COLUMN RESPONSIVE GRID */}
@@ -426,28 +425,16 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     </Link>
 
                     {/* Action Button */}
-                    <div className="pt-2 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <div className="pt-2 border-t border-gray-100 flex items-center">
                       <Link
                         href={`/food-safety-templates/${template.slug}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 py-2 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer group-hover:bg-[#2e2d75]"
+                        className="w-full py-2.5 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer group-hover:bg-[#2e2d75]"
                       >
-                        <span>{template.type === "smart_tool" || template.slug.includes("calc") || template.slug.includes("allergen") || template.slug.includes("quiz") ? "Open Tool" : "Open Template"}</span>
+                        <span>{template.type === "smart_tool" || template.slug.includes("calc") || template.slug.includes("allergen") || template.slug.includes("quiz") ? "Open Interactive Tool" : "Open Template"}</span>
                         <ExternalLink className="w-3 h-3 text-gray-400 group-hover:text-white" />
                       </Link>
-
-                      {template.pdfUrl ? (
-                        <a
-                          href={`/api/download?id=${template.id}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Instant PDF Download"
-                          className="p-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-black border border-gray-200 transition-colors cursor-pointer shrink-0"
-                        >
-                          <Download className="w-3.5 h-3.5" />
-                        </a>
-                      ) : null}
                     </div>
                   </div>
                 </div>

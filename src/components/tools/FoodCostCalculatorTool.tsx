@@ -5,7 +5,6 @@ import {
   Plus,
   Trash2,
   Printer,
-  Download,
   DollarSign,
   Percent,
   TrendingUp,
@@ -13,7 +12,8 @@ import {
   CheckCircle2,
   RotateCcw,
   Scale,
-  ChefHat
+  ChefHat,
+  Edit3
 } from "lucide-react";
 
 export interface CostItem {
@@ -37,7 +37,7 @@ const DEFAULT_SECONDARY: CostItem[] = [
   { id: "s-3", name: "Takeaway Branded Kraft Box", qty: 1, unit: "pc", unitCost: 0.22 }
 ];
 
-export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ templateId }) => {
+export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
   const [recipeName, setRecipeName] = useState("Gourmet Truffle Burger & Fries");
   const [currency, setCurrency] = useState("£");
   const [servings, setServings] = useState<number | "">(1);
@@ -121,6 +121,40 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
 
   return (
     <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm space-y-8 printable-doc">
+      {/* Print Page Setup (Portrait for Costing Sheets) */}
+      <style jsx global>{`
+        @media print {
+          @page {
+            size: portrait;
+            margin: 10mm;
+          }
+          body {
+            background: #ffffff !important;
+            color: #000000 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          .printable-doc {
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          .printable-doc table {
+            width: 100% !important;
+            table-layout: fixed !important;
+            border-collapse: collapse !important;
+          }
+          .printable-doc th,
+          .printable-doc td {
+            border: 1px solid #e5e7eb !important;
+            padding: 6px 8px !important;
+            word-break: break-word !important;
+          }
+        }
+      `}</style>
+
       {/* ── TOOL HEADER ── */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-gray-100">
         <div>
@@ -153,6 +187,11 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
             ))}
           </div>
 
+          <div className="hidden sm:flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-2 rounded-xl">
+            <Edit3 className="w-3.5 h-3.5 text-emerald-600" />
+            <span>All Fields Editable</span>
+          </div>
+
           <button
             type="button"
             onClick={handleReset}
@@ -166,21 +205,11 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
           <button
             type="button"
             onClick={() => window.print()}
-            className="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer border border-gray-200"
+            className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-5 py-2.5 rounded-xl flex items-center gap-2 transition-all shadow cursor-pointer hover:scale-[1.02]"
           >
-            <Printer className="w-3.5 h-3.5" />
+            <Printer className="w-4 h-4 text-amber-400" />
             <span>Print Sheet</span>
           </button>
-
-          {templateId ? (
-            <a
-              href={`/api/download?id=${templateId}`}
-              className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shadow"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>Download PDF</span>
-            </a>
-          ) : null}
         </div>
       </div>
 
@@ -252,8 +281,9 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
             type="text"
             value={recipeName}
             onChange={e => setRecipeName(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none focus:border-emerald-600"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-emerald-600 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-bold text-sm text-gray-950">{recipeName}</div>
         </div>
         <div>
           <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Menu Selling Price ({currency})</label>
@@ -266,8 +296,9 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
               const val = e.target.value === "" ? "" : Math.max(0, parseFloat(e.target.value) || 0);
               setSalesPrice(val);
             }}
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none focus:border-emerald-600"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-emerald-600 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-bold text-xs text-gray-900">{currency}{numSalesPrice.toFixed(2)}</div>
         </div>
         <div>
           <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Target Food Cost %</label>
@@ -280,14 +311,15 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
               const val = e.target.value === "" ? "" : Math.max(1, parseInt(e.target.value) || 28);
               setTargetCostPct(val);
             }}
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none focus:border-emerald-600"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-emerald-600 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-bold text-xs text-gray-900">{numTargetCostPct}%</div>
         </div>
       </div>
 
       {/* ── 1. PRIMARY INGREDIENTS TABLE ── */}
       <div className="space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between no-print">
           <div>
             <h3 className="text-sm font-bold text-gray-900 uppercase font-mono tracking-wider">
               1. Primary Ingredients &amp; Raw Proteins
@@ -295,27 +327,26 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
             <p className="text-[11px] text-gray-500">Major proteins, doughs, buns, and main components</p>
           </div>
 
-          {/* Top Add Ingredient Button */}
           <button
             type="button"
             onClick={handleAddPrimary}
-            className="no-print bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm cursor-pointer"
+            className="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>Add Ingredient</span>
           </button>
         </div>
 
-        <div className="overflow-x-auto border border-gray-200 rounded-2xl bg-white">
+        <div className="overflow-x-auto border border-gray-200 rounded-2xl bg-white print:border-none print:overflow-visible">
           <table className="w-full text-left text-xs">
             <thead className="bg-gray-100 text-gray-700 uppercase font-mono text-[10px] tracking-wider">
               <tr>
-                <th className="p-3 border-b min-w-[200px]">Product / Ingredient Name</th>
-                <th className="p-3 border-b text-center min-w-[100px]">Qty / Portion</th>
-                <th className="p-3 border-b min-w-[80px]">Unit</th>
-                <th className="p-3 border-b min-w-[120px]">Unit Cost ({currency})</th>
-                <th className="p-3 border-b font-bold text-right min-w-[100px]">Row Total</th>
-                <th className="p-3 border-b text-right no-print w-16">Action</th>
+                <th className="p-3 border-b min-w-[200px]" style={{ width: "40%" }}>Product / Ingredient Name</th>
+                <th className="p-3 border-b text-center min-w-[100px]" style={{ width: "15%" }}>Qty / Portion</th>
+                <th className="p-3 border-b min-w-[80px]" style={{ width: "15%" }}>Unit</th>
+                <th className="p-3 border-b min-w-[120px]" style={{ width: "15%" }}>Unit Cost ({currency})</th>
+                <th className="p-3 border-b font-bold text-right min-w-[100px]" style={{ width: "10%" }}>Row Total</th>
+                <th className="p-3 border-b text-right no-print w-16" style={{ width: "5%" }}>Action</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -325,16 +356,19 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
                 const total = numericQty * numericCost;
                 return (
                   <tr key={item.id} className="hover:bg-gray-50/80 transition-colors">
-                    <td className="p-3">
+                    <td className="p-2.5">
                       <input
                         type="text"
                         placeholder="Ingredient name..."
                         value={item.name}
                         onChange={e => updateItem(setPrimaryIngredients, item.id, "name", e.target.value)}
-                        className="w-full bg-transparent border-b border-gray-200 hover:border-gray-400 focus:border-emerald-600 py-1 font-semibold text-gray-900 focus:outline-none"
+                        className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-emerald-600 rounded-lg px-2.5 py-1.5 font-semibold text-gray-900 focus:outline-none print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block font-semibold text-[8.5pt] text-gray-950">
+                        {item.name || "—"}
+                      </div>
                     </td>
-                    <td className="p-3 text-center">
+                    <td className="p-2.5 text-center">
                       <input
                         type="number"
                         step="any"
@@ -344,19 +378,25 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
                           const val = e.target.value === "" ? "" : parseFloat(e.target.value);
                           updateItem(setPrimaryIngredients, item.id, "qty", isNaN(val as number) ? "" : val);
                         }}
-                        className="w-20 text-center bg-gray-50 border border-gray-300 rounded-lg py-1 font-mono font-bold text-gray-800 focus:outline-none focus:border-emerald-600"
+                        className="w-20 text-center bg-white border border-gray-300 rounded-lg py-1.5 font-mono font-bold text-gray-800 focus:outline-none focus:border-emerald-600 print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block font-mono text-[8.5pt]">
+                        {item.qty}
+                      </div>
                     </td>
-                    <td className="p-3">
+                    <td className="p-2.5">
                       <input
                         type="text"
                         value={item.unit}
                         onChange={e => updateItem(setPrimaryIngredients, item.id, "unit", e.target.value)}
                         placeholder="pc, g, kg"
-                        className="w-20 bg-gray-50 border border-gray-300 rounded-lg px-2 py-1 text-xs text-gray-700 focus:outline-none focus:border-emerald-600"
+                        className="w-20 bg-white border border-gray-300 rounded-lg px-2 py-1.5 text-xs text-gray-700 focus:outline-none focus:border-emerald-600 print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block text-[8.5pt] text-gray-700">
+                        {item.unit}
+                      </div>
                     </td>
-                    <td className="p-3">
+                    <td className="p-2.5">
                       <input
                         type="number"
                         step="0.001"
@@ -366,13 +406,16 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
                           const val = e.target.value === "" ? "" : parseFloat(e.target.value);
                           updateItem(setPrimaryIngredients, item.id, "unitCost", isNaN(val as number) ? "" : val);
                         }}
-                        className="w-24 bg-gray-50 border border-gray-300 rounded-lg px-2 py-1 font-mono font-bold text-gray-800 focus:outline-none focus:border-emerald-600"
+                        className="w-24 bg-white border border-gray-300 rounded-lg px-2 py-1.5 font-mono font-bold text-gray-800 focus:outline-none focus:border-emerald-600 print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block font-mono text-[8.5pt]">
+                        {currency}{typeof item.unitCost === "number" ? item.unitCost.toFixed(2) : "0.00"}
+                      </div>
                     </td>
-                    <td className="p-3 text-right font-mono font-bold text-gray-900">
+                    <td className="p-2.5 text-right font-mono font-bold text-gray-900">
                       {currency}{total.toFixed(2)}
                     </td>
-                    <td className="p-3 text-right no-print">
+                    <td className="p-2.5 text-right no-print">
                       <button
                         type="button"
                         onClick={() => removeItem(setPrimaryIngredients, item.id)}
@@ -412,7 +455,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
 
       {/* ── 2. SECONDARY INGREDIENTS TABLE ── */}
       <div className="space-y-3 pt-4 border-t border-gray-100">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between no-print">
           <div>
             <h3 className="text-sm font-bold text-gray-900 uppercase font-mono tracking-wider">
               2. Secondary Ingredients, Sauces &amp; Packaging
@@ -420,27 +463,26 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
             <p className="text-[11px] text-gray-500">Dressings, seasonings, garnishes, and takeaway packaging</p>
           </div>
 
-          {/* Top Add Secondary Button */}
           <button
             type="button"
             onClick={handleAddSecondary}
-            className="no-print bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm cursor-pointer"
+            className="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>Add Secondary</span>
           </button>
         </div>
 
-        <div className="overflow-x-auto border border-gray-200 rounded-2xl bg-white">
+        <div className="overflow-x-auto border border-gray-200 rounded-2xl bg-white print:border-none print:overflow-visible">
           <table className="w-full text-left text-xs">
             <thead className="bg-gray-100 text-gray-700 uppercase font-mono text-[10px] tracking-wider">
               <tr>
-                <th className="p-3 border-b min-w-[200px]">Product / Packaging Name</th>
-                <th className="p-3 border-b text-center min-w-[100px]">Qty</th>
-                <th className="p-3 border-b min-w-[80px]">Unit</th>
-                <th className="p-3 border-b min-w-[120px]">Unit Cost ({currency})</th>
-                <th className="p-3 border-b font-bold text-right min-w-[100px]">Row Total</th>
-                <th className="p-3 border-b text-right no-print w-16">Action</th>
+                <th className="p-3 border-b min-w-[200px]" style={{ width: "40%" }}>Product / Packaging Name</th>
+                <th className="p-3 border-b text-center min-w-[100px]" style={{ width: "15%" }}>Qty</th>
+                <th className="p-3 border-b min-w-[80px]" style={{ width: "15%" }}>Unit</th>
+                <th className="p-3 border-b min-w-[120px]" style={{ width: "15%" }}>Unit Cost ({currency})</th>
+                <th className="p-3 border-b font-bold text-right min-w-[100px]" style={{ width: "10%" }}>Row Total</th>
+                <th className="p-3 border-b text-right no-print w-16" style={{ width: "5%" }}>Action</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -450,16 +492,19 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
                 const total = numericQty * numericCost;
                 return (
                   <tr key={item.id} className="hover:bg-gray-50/80 transition-colors">
-                    <td className="p-3">
+                    <td className="p-2.5">
                       <input
                         type="text"
                         placeholder="Packaging, sauce, condiment..."
                         value={item.name}
                         onChange={e => updateItem(setSecondaryIngredients, item.id, "name", e.target.value)}
-                        className="w-full bg-transparent border-b border-gray-200 hover:border-gray-400 focus:border-emerald-600 py-1 font-semibold text-gray-900 focus:outline-none"
+                        className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-emerald-600 rounded-lg px-2.5 py-1.5 font-semibold text-gray-900 focus:outline-none print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block font-semibold text-[8.5pt] text-gray-950">
+                        {item.name || "—"}
+                      </div>
                     </td>
-                    <td className="p-3 text-center">
+                    <td className="p-2.5 text-center">
                       <input
                         type="number"
                         step="any"
@@ -469,19 +514,25 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
                           const val = e.target.value === "" ? "" : parseFloat(e.target.value);
                           updateItem(setSecondaryIngredients, item.id, "qty", isNaN(val as number) ? "" : val);
                         }}
-                        className="w-20 text-center bg-gray-50 border border-gray-300 rounded-lg py-1 font-mono font-bold text-gray-800 focus:outline-none focus:border-emerald-600"
+                        className="w-20 text-center bg-white border border-gray-300 rounded-lg py-1.5 font-mono font-bold text-gray-800 focus:outline-none focus:border-emerald-600 print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block font-mono text-[8.5pt]">
+                        {item.qty}
+                      </div>
                     </td>
-                    <td className="p-3">
+                    <td className="p-2.5">
                       <input
                         type="text"
                         value={item.unit}
                         onChange={e => updateItem(setSecondaryIngredients, item.id, "unit", e.target.value)}
                         placeholder="ml, g, pc"
-                        className="w-20 bg-gray-50 border border-gray-300 rounded-lg px-2 py-1 text-xs text-gray-700 focus:outline-none focus:border-emerald-600"
+                        className="w-20 bg-white border border-gray-300 rounded-lg px-2 py-1.5 text-xs text-gray-700 focus:outline-none focus:border-emerald-600 print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block text-[8.5pt] text-gray-700">
+                        {item.unit}
+                      </div>
                     </td>
-                    <td className="p-3">
+                    <td className="p-2.5">
                       <input
                         type="number"
                         step="0.001"
@@ -491,13 +542,16 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
                           const val = e.target.value === "" ? "" : parseFloat(e.target.value);
                           updateItem(setSecondaryIngredients, item.id, "unitCost", isNaN(val as number) ? "" : val);
                         }}
-                        className="w-24 bg-gray-50 border border-gray-300 rounded-lg px-2 py-1 font-mono font-bold text-gray-800 focus:outline-none focus:border-emerald-600"
+                        className="w-24 bg-white border border-gray-300 rounded-lg px-2 py-1.5 font-mono font-bold text-gray-800 focus:outline-none focus:border-emerald-600 print:hidden shadow-2xs"
                       />
+                      <div className="hidden print:block font-mono text-[8.5pt]">
+                        {currency}{typeof item.unitCost === "number" ? item.unitCost.toFixed(2) : "0.00"}
+                      </div>
                     </td>
-                    <td className="p-3 text-right font-mono font-bold text-gray-900">
+                    <td className="p-2.5 text-right font-mono font-bold text-gray-900">
                       {currency}{total.toFixed(2)}
                     </td>
-                    <td className="p-3 text-right no-print">
+                    <td className="p-2.5 text-right no-print">
                       <button
                         type="button"
                         onClick={() => removeItem(setSecondaryIngredients, item.id)}
@@ -545,8 +599,11 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = ({ temp
           value={prepNotes}
           onChange={e => setPrepNotes(e.target.value)}
           placeholder="Document standard operating procedures, cooking temperatures, and presentation steps..."
-          className="w-full bg-gray-50 border border-gray-200 rounded-2xl p-4 text-xs text-gray-800 leading-relaxed font-sans focus:outline-none focus:border-emerald-600"
+          className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-emerald-600 rounded-2xl p-4 text-xs text-gray-800 leading-relaxed font-sans focus:outline-none print:hidden shadow-2xs resize-y"
         />
+        <div className="hidden print:block p-3 border border-gray-200 rounded-xl text-[8.5pt] text-gray-900 leading-relaxed whitespace-pre-wrap">
+          {prepNotes}
+        </div>
       </div>
 
       {/* ── FOOTER AUDIT STAMP ── */}

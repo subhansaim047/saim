@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Plus, Trash2, Printer, Download, Check, AlertCircle, Clock, Thermometer, ShieldCheck } from "lucide-react";
+import { Plus, Trash2, Printer, Check, AlertCircle, Clock, Thermometer, ShieldCheck, Edit3 } from "lucide-react";
 
 interface CheckItem {
   id: string;
@@ -129,6 +129,40 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
 
   return (
     <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm space-y-8 printable-doc">
+      {/* Print Page Setup (Portrait for Kitchen Checklists) */}
+      <style jsx global>{`
+        @media print {
+          @page {
+            size: portrait;
+            margin: 8mm;
+          }
+          body {
+            background: #ffffff !important;
+            color: #000000 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          .printable-doc {
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          .printable-doc table {
+            width: 100% !important;
+            table-layout: fixed !important;
+            border-collapse: collapse !important;
+          }
+          .printable-doc th,
+          .printable-doc td {
+            border: 1px solid #d1d5db !important;
+            padding: 5px 6px !important;
+            word-break: break-word !important;
+          }
+        }
+      `}</style>
+
       {/* Title */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-gray-100">
         <div>
@@ -144,7 +178,12 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
           </p>
         </div>
 
-        <div className="flex items-center gap-2 no-print">
+        <div className="flex flex-wrap items-center gap-2 no-print">
+          <div className="hidden sm:flex items-center gap-1.5 text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200 px-3 py-2 rounded-xl">
+            <Edit3 className="w-3.5 h-3.5 text-amber-600" />
+            <span>All Checks &amp; Temps Editable</span>
+          </div>
+
           <div className="flex bg-gray-100 rounded-xl p-1 border border-gray-200 text-xs font-bold">
             {(["Opening", "Midday", "Closing"] as const).map(s => (
               <button
@@ -163,21 +202,11 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
           <button
             type="button"
             onClick={() => window.print()}
-            className="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer border border-gray-200"
+            className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-5 py-2.5 rounded-xl flex items-center gap-2 transition-all shadow cursor-pointer hover:scale-[1.02]"
           >
-            <Printer className="w-3.5 h-3.5" />
+            <Printer className="w-4 h-4 text-amber-400" />
             <span>Print Official Log</span>
           </button>
-
-          {templateId ? (
-            <a
-              href={`/api/download?id=${templateId}`}
-              className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shadow"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>Download PDF</span>
-            </a>
-          ) : null}
         </div>
       </div>
 
@@ -189,8 +218,9 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
             type="text"
             value={inspectorName}
             onChange={e => setInspectorName(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-bold text-gray-900"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-bold text-xs text-gray-950">{inspectorName}</div>
         </div>
         <div>
           <label className="block text-[11px] font-bold text-gray-700 mb-1">Shift Type</label>
@@ -202,8 +232,9 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
             type="date"
             value={logDate}
             onChange={e => setLogDate(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-lg px-3 py-1.5 font-bold text-gray-900"
+            className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
+          <div className="hidden print:block font-bold text-xs text-gray-950">{logDate}</div>
         </div>
       </div>
 
@@ -226,22 +257,22 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
           </button>
         </div>
 
-        <div className="overflow-x-auto border border-gray-200 rounded-2xl">
+        <div className="overflow-x-auto border border-gray-200 rounded-2xl print:border-none print:overflow-visible">
           <table className="w-full text-left text-xs">
             <thead className="bg-gray-100 text-gray-700 uppercase font-mono text-[10px] tracking-wider">
               <tr>
-                <th className="p-3 border-b">Equipment / Product</th>
-                <th className="p-3 border-b">Target Limit</th>
-                <th className="p-3 border-b">Log Time</th>
-                <th className="p-3 border-b font-bold">Probe Reading</th>
-                <th className="p-3 border-b">Status</th>
-                <th className="p-3 border-b">Initial</th>
+                <th className="p-3 border-b" style={{ width: "32%" }}>Equipment / Product</th>
+                <th className="p-3 border-b" style={{ width: "18%" }}>Target Limit</th>
+                <th className="p-3 border-b text-center" style={{ width: "12%" }}>Log Time</th>
+                <th className="p-3 border-b font-bold text-center" style={{ width: "18%" }}>Probe Reading</th>
+                <th className="p-3 border-b text-center" style={{ width: "10%" }}>Status</th>
+                <th className="p-3 border-b text-center" style={{ width: "10%" }}>Initial</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
               {tempRecords.map(t => (
                 <tr key={t.id} className="hover:bg-gray-50/80 transition-colors">
-                  <td className="p-3 font-semibold text-gray-900">
+                  <td className="p-2.5 font-semibold text-gray-900">
                     <input
                       type="text"
                       value={t.unit}
@@ -249,11 +280,12 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                         const val = e.target.value;
                         setTempRecords(prev => prev.map(r => r.id === t.id ? { ...r, unit: val } : r));
                       }}
-                      className="w-full bg-transparent border-b border-transparent hover:border-gray-300 focus:border-gray-500 py-0.5"
+                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-2.5 py-1 text-xs font-semibold text-gray-900 focus:outline-none print:hidden shadow-2xs"
                     />
+                    <div className="hidden print:block font-bold text-[8.5pt] text-gray-950">{t.unit}</div>
                   </td>
-                  <td className="p-3 font-mono text-gray-500">{t.target}</td>
-                  <td className="p-3 font-mono">
+                  <td className="p-2.5 font-mono text-gray-500 text-[11px]">{t.target}</td>
+                  <td className="p-2.5 font-mono text-center">
                     <input
                       type="text"
                       value={t.time}
@@ -261,10 +293,11 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                         const val = e.target.value;
                         setTempRecords(prev => prev.map(r => r.id === t.id ? { ...r, time: val } : r));
                       }}
-                      className="w-16 bg-gray-50 border border-gray-200 rounded px-1.5 py-0.5 font-mono"
+                      className="w-16 bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded px-1.5 py-1 font-mono text-xs text-center focus:outline-none print:hidden shadow-2xs"
                     />
+                    <div className="hidden print:block font-mono text-[8.5pt] text-gray-900 text-center">{t.time}</div>
                   </td>
-                  <td className="p-3 font-mono font-bold text-gray-900">
+                  <td className="p-2.5 font-mono font-bold text-gray-900 text-center">
                     <input
                       type="text"
                       value={t.temp}
@@ -273,23 +306,31 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                         const val = e.target.value;
                         setTempRecords(prev => prev.map(r => r.id === t.id ? { ...r, temp: val } : r));
                       }}
-                      className="w-24 bg-gray-50 border border-gray-200 rounded px-2 py-0.5 font-bold"
+                      className="w-24 bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded px-2 py-1 font-bold text-xs text-center focus:outline-none print:hidden shadow-2xs"
                     />
+                    <div className="hidden print:block font-mono font-bold text-[8.5pt] text-gray-950 text-center">{t.temp || "—"}</div>
                   </td>
-                  <td className="p-3">
+                  <td className="p-2.5 text-center">
                     <button
                       type="button"
                       onClick={() => {
                         setTempRecords(prev => prev.map(r => r.id === t.id ? { ...r, status: r.status === "pass" ? "fail" : "pass" } : r));
                       }}
-                      className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold cursor-pointer ${
+                      className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold cursor-pointer print:hidden ${
                         t.status === "pass" ? "bg-emerald-100 text-emerald-800" : "bg-red-100 text-red-800"
                       }`}
                     >
                       {t.status.toUpperCase()}
                     </button>
+                    <div className="hidden print:block text-center font-mono font-black text-[7.5pt]">
+                      {t.status === "pass" ? (
+                        <span className="text-emerald-700 font-black">[PASS]</span>
+                      ) : (
+                        <span className="text-red-700 font-black">[FAIL]</span>
+                      )}
+                    </div>
                   </td>
-                  <td className="p-3 font-mono text-gray-400">
+                  <td className="p-2.5 font-mono text-gray-700 text-center">
                     <input
                       type="text"
                       value={t.signedBy}
@@ -298,8 +339,9 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                         const val = e.target.value;
                         setTempRecords(prev => prev.map(r => r.id === t.id ? { ...r, signedBy: val } : r));
                       }}
-                      className="w-12 bg-transparent border-b border-gray-200 text-center uppercase"
+                      className="w-14 bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded px-1.5 py-1 text-center uppercase text-xs focus:outline-none print:hidden shadow-2xs"
                     />
+                    <div className="hidden print:block font-mono uppercase text-[8.5pt] text-gray-900 text-center">{t.signedBy || "—"}</div>
                   </td>
                 </tr>
               ))}
@@ -328,7 +370,7 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
           2. Mandatory HACCP &amp; Food Hygiene Checks
         </h3>
 
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           {tasks.map(task => (
             <div
               key={task.id}
@@ -344,7 +386,7 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                 <button
                   type="button"
                   onClick={() => toggleTaskStatus(task.id)}
-                  className={`w-6 h-6 rounded-lg flex items-center justify-center border transition-all cursor-pointer mt-0.5 shrink-0 ${
+                  className={`w-6 h-6 rounded-lg flex items-center justify-center border transition-all cursor-pointer mt-0.5 shrink-0 print:hidden ${
                     task.status === "pass"
                       ? "bg-emerald-600 border-emerald-600 text-white"
                       : task.status === "fail"
@@ -360,11 +402,22 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                   ) : null}
                 </button>
 
-                <div className="space-y-0.5">
+                <div className="space-y-1 flex-1">
                   <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-gray-400">
                     {task.category}
                   </span>
-                  <p className="text-xs font-bold text-gray-900 leading-snug">{task.task}</p>
+                  <textarea
+                    rows={2}
+                    value={task.task}
+                    onChange={e => {
+                      const val = e.target.value;
+                      setTasks(prev => prev.map(t => t.id === task.id ? { ...t, task: val } : t));
+                    }}
+                    className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-2.5 py-1 text-xs font-bold text-gray-900 leading-snug focus:outline-none print:hidden shadow-2xs resize-y"
+                  />
+                  <div className="hidden print:block text-[8.5pt] font-bold text-gray-950 leading-snug">
+                    {task.task}
+                  </div>
                 </div>
               </div>
 
@@ -377,12 +430,15 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                     const val = e.target.value;
                     setTasks(prev => prev.map(t => t.id === task.id ? { ...t, actionNotes: val } : t));
                   }}
-                  className="bg-white border border-gray-200 rounded-lg px-2.5 py-1 text-xs text-gray-700 w-44 focus:outline-none"
+                  className="bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-2.5 py-1.5 text-xs text-gray-800 w-48 focus:outline-none print:hidden shadow-2xs"
                 />
+                <div className="hidden print:block text-[8pt] text-gray-800 italic max-w-[200px] leading-tight">
+                  {task.actionNotes || "—"}
+                </div>
 
                 <span
                   onClick={() => toggleTaskStatus(task.id)}
-                  className={`px-2.5 py-1 rounded-lg text-[10px] font-mono font-black uppercase cursor-pointer ${
+                  className={`px-2.5 py-1 rounded-lg text-[10px] font-mono font-black uppercase cursor-pointer print:hidden ${
                     task.status === "pass"
                       ? "bg-emerald-600 text-white shadow-xs"
                       : task.status === "fail"
@@ -391,6 +447,15 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
                   }`}
                 >
                   {task.status}
+                </span>
+                <span className="hidden print:inline-block font-mono font-black text-[7.5pt] uppercase">
+                  {task.status === "pass" ? (
+                    <span className="text-emerald-700">[PASS]</span>
+                  ) : task.status === "fail" ? (
+                    <span className="text-red-700">[FAIL]</span>
+                  ) : (
+                    <span className="text-gray-500">[PENDING]</span>
+                  )}
                 </span>
               </div>
             </div>

@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
-  Download,
   Printer,
   ShieldCheck,
   CheckCircle2,
@@ -13,7 +12,8 @@ import {
   Thermometer,
   Clock,
   Award,
-  Sparkles
+  Sparkles,
+  Edit3
 } from "lucide-react";
 import { FoodSafetyTemplate, FOOD_SAFETY_TEMPLATES } from "@/data/saim_templates";
 import { RecipeCalculatorTool } from "./tools/RecipeCalculatorTool";
@@ -28,6 +28,10 @@ interface Props {
 }
 
 export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
+  const [premisesName, setPremisesName] = useState("Artisan Kitchen & Takeaway Ltd");
+  const [managerSignoff, setManagerSignoff] = useState("Head Chef / Safety Lead");
+  const [complianceDate, setComplianceDate] = useState(() => new Date().toISOString().split("T")[0]);
+
   // Related templates (same type or category)
   const related = FOOD_SAFETY_TEMPLATES.filter(
     (t) => t.id !== template.id && (t.type === template.type || t.catSlug === template.catSlug)
@@ -162,22 +166,12 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
-              {template.pdfUrl ? (
-                <a
-                  href={`/api/download?id=${template.id}`}
-                  className="bg-gray-900 hover:bg-black text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-xl flex items-center gap-2 transition-all shadow cursor-pointer"
-                >
-                  <Download className="w-4 h-4" />
-                  <span>Download Free PDF</span>
-                </a>
-              ) : null}
-
               <button
                 onClick={() => window.print()}
-                className="bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs sm:text-sm font-bold px-4 py-3 rounded-xl flex items-center gap-2 border border-gray-200 transition-colors cursor-pointer"
+                className="bg-gray-900 hover:bg-black text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl flex items-center gap-2 transition-all shadow cursor-pointer hover:scale-[1.01]"
               >
-                <Printer className="w-4 h-4" />
-                <span>Print Poster / Sheet</span>
+                <Printer className="w-4 h-4 text-amber-400" />
+                <span>Print / Save as PDF</span>
               </button>
             </div>
 
@@ -221,36 +215,87 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <DigitalChecklistTool templateTitle={template.title} templateId={template.id} />
         )}
 
-        {/* 7. If standard poster/chart: Show Regulatory Temperature Reference Table */}
+        {/* 7. Standard Poster / Reference Chart View (Fully Printable & Editable) */}
         {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && (
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 space-y-4 printable-doc">
-            <div className="flex items-center gap-2">
-              <Thermometer className="w-5 h-5 text-red-500" />
-              <h3 className="text-lg font-bold text-gray-900">
-                UK &amp; EU Food Temperature Regulatory Standards Reference
-              </h3>
+          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-6 printable-doc shadow-sm">
+            {/* Printable & Editable Sign-Off Header */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-2xl bg-amber-50/50 border border-amber-200/60 text-xs">
+              <div>
+                <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Establishment / Premises Name</label>
+                <input
+                  type="text"
+                  value={premisesName}
+                  onChange={e => setPremisesName(e.target.value)}
+                  className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
+                />
+                <div className="hidden print:block font-bold text-sm text-gray-950">{premisesName}</div>
+              </div>
+              <div>
+                <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Manager Sign-Off / Responsible Person</label>
+                <input
+                  type="text"
+                  value={managerSignoff}
+                  onChange={e => setManagerSignoff(e.target.value)}
+                  className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-1.5 font-semibold text-gray-900 focus:outline-none print:hidden shadow-2xs"
+                />
+                <div className="hidden print:block font-semibold text-xs text-gray-900">{managerSignoff}</div>
+              </div>
+              <div>
+                <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Active Compliance Date</label>
+                <input
+                  type="date"
+                  value={complianceDate}
+                  onChange={e => setComplianceDate(e.target.value)}
+                  className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-1.5 font-semibold text-gray-900 focus:outline-none print:hidden shadow-2xs"
+                />
+                <div className="hidden print:block font-semibold text-xs text-gray-900">{complianceDate}</div>
+              </div>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-              <div className="p-3.5 rounded-xl bg-blue-50 border border-blue-200">
-                <span className="font-mono text-[10px] uppercase font-bold text-blue-700">Commercial Freezing</span>
-                <div className="text-xl font-black text-blue-950 mt-1">&le; -18&deg;C</div>
-                <p className="text-[10px] text-blue-800 mt-1">Stops all bacterial multiplication</p>
+
+            {/* Poster Graphic Container - optimized for high-res print without clipping */}
+            <div className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gray-50 border border-gray-200">
+              <img
+                src={template.imgUrl}
+                alt={template.title}
+                className="max-h-[600px] w-auto object-contain drop-shadow-sm rounded-lg"
+              />
+            </div>
+
+            {/* Temperature Table Reference */}
+            <div className="pt-4 border-t border-gray-100 space-y-3">
+              <div className="flex items-center gap-2">
+                <Thermometer className="w-5 h-5 text-red-500" />
+                <h3 className="text-sm font-bold text-gray-900 uppercase font-mono tracking-wider">
+                  UK &amp; EU Food Safety Temperature Reference Limits
+                </h3>
               </div>
-              <div className="p-3.5 rounded-xl bg-cyan-50 border border-cyan-200">
-                <span className="font-mono text-[10px] uppercase font-bold text-cyan-700">Chilled Cold Holding</span>
-                <div className="text-xl font-black text-cyan-950 mt-1">1&deg;C to 4&deg;C</div>
-                <p className="text-[10px] text-cyan-800 mt-1">Legal maximum is 8&deg;C</p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                <div className="p-3.5 rounded-xl bg-blue-50 border border-blue-200">
+                  <span className="font-mono text-[10px] uppercase font-bold text-blue-700">Commercial Freezing</span>
+                  <div className="text-xl font-black text-blue-950 mt-1">&le; -18&deg;C</div>
+                  <p className="text-[10px] text-blue-800 mt-1">Stops bacterial growth</p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-cyan-50 border border-cyan-200">
+                  <span className="font-mono text-[10px] uppercase font-bold text-cyan-700">Chilled Cold Holding</span>
+                  <div className="text-xl font-black text-cyan-950 mt-1">1&deg;C to 4&deg;C</div>
+                  <p className="text-[10px] text-cyan-800 mt-1">Legal maximum 8&deg;C</p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200">
+                  <span className="font-mono text-[10px] uppercase font-bold text-amber-700">Hot Holding Display</span>
+                  <div className="text-xl font-black text-amber-950 mt-1">&ge; 63&deg;C</div>
+                  <p className="text-[10px] text-amber-800 mt-1">Max 2 hrs if below 63&deg;C</p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-red-50 border border-red-200">
+                  <span className="font-mono text-[10px] uppercase font-bold text-red-700">Safe Cooking Core</span>
+                  <div className="text-xl font-black text-red-950 mt-1">&ge; 75&deg;C (30s)</div>
+                  <p className="text-[10px] text-red-800 mt-1">Destroys pathogens</p>
+                </div>
               </div>
-              <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200">
-                <span className="font-mono text-[10px] uppercase font-bold text-amber-700">Hot Holding Display</span>
-                <div className="text-xl font-black text-amber-950 mt-1">&ge; 63&deg;C</div>
-                <p className="text-[10px] text-amber-800 mt-1">Max 2 hrs if dropped below 63&deg;C</p>
-              </div>
-              <div className="p-3.5 rounded-xl bg-red-50 border border-red-200">
-                <span className="font-mono text-[10px] uppercase font-bold text-red-700">Safe Cooking Core</span>
-                <div className="text-xl font-black text-red-950 mt-1">&ge; 75&deg;C (30s)</div>
-                <p className="text-[10px] text-red-800 mt-1">Destroys pathogens (E. coli, Salmonella)</p>
-              </div>
+            </div>
+
+            <div className="pt-2 text-[10px] text-gray-400 font-mono flex items-center justify-between border-t border-gray-100">
+              <span>• Approved Kitchen Wall Display • FSA &amp; Natasha&apos;s Law Compliant</span>
+              <span>Signed: {managerSignoff}</span>
             </div>
           </div>
         )}
