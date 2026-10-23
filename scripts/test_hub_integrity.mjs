@@ -7,7 +7,8 @@ const tsPath = "src/data/saim_templates.ts";
 const tsContent = fs.readFileSync(tsPath, "utf8");
 const equalsIdx = tsContent.indexOf("=", tsContent.indexOf("FOOD_SAFETY_TEMPLATES"));
 const arrayStart = tsContent.indexOf("[", equalsIdx);
-const arrayEnd = tsContent.indexOf("];\n\nexport const ALL_CATEGORIES");
+const catIdx = tsContent.indexOf("export const ALL_CATEGORIES");
+const arrayEnd = tsContent.lastIndexOf("];", catIdx);
 const templates = JSON.parse(tsContent.slice(arrayStart, arrayEnd + 1));
 
 let errors = 0;
