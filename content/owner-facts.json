@@ -1,18 +1,14 @@
 {
-  "name": "Saim",
-  "businessName": "Saim Dev",
-  "tradingName": "Saim Dev",
-  "location": "UK & Europe",
-  "contactEmail": "",
-  "contactWhatsApp": "+923196526604",
-  "bookingUrl": "",
+  "displayName": "Saim Dev",
   "voice": "we",
-  "services": [
-    "Next.js web development",
-    "Bespoke takeaway websites",
-    "Interactive kitchen tools & calculators"
-  ],
-  "registeredAddress": "",
-  "companiesHouseNumber": "",
-  "vatNumber": ""
+  "location": "UK & Europe",
+  "workingHours": "",
+  "contactEmail": "",
+  "bookingUrl": "",
+  "ukPhone": "",
+  "businessAddress": "",
+  "companyNumber": "",
+  "vatNumber": "",
+  "yearsExperience": "",
+  "demosAreRealClients": false
 }

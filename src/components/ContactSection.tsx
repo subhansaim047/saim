@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageSquare, ArrowRight, CheckCircle2, Clock, ShieldCheck } from "lucide-react";
 import { BUDGET_OPTIONS } from "../../content/plans";
+import { getClaim } from "../lib/claims";
+import ownerFacts from "../../content/owner-facts.json";
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -126,7 +128,7 @@ export const ContactSection = () => {
                 </div>
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-primary" />
-                  <span>100% Satisfaction</span>
+                  <span>{getClaim("satisfaction-guarantee")}</span>
                 </div>
               </div>
             </div>
@@ -143,7 +145,7 @@ export const ContactSection = () => {
                 <MessageSquare className="w-4 h-4 text-emerald-400" />
                 <span>WhatsApp: +92 319 6526604</span>
               </a>
-              <span className="text-[11px] text-white/40">UK & European Timezones • Available Monday – Saturday</span>
+              {ownerFacts.workingHours ? <span className="text-[11px] text-white/40">Working hours: {ownerFacts.workingHours}</span> : null}
             </div>
           </motion.div>
 
@@ -273,7 +275,7 @@ export const ContactSection = () => {
               </button>
 
               <p className="text-center text-[11px] text-white/50">
-                🔒 Your details are kept confidential. Direct messaging connection with lead engineer.
+                🔒 {getClaim("end-to-end-encrypted")}
               </p>
             </form>
           </motion.div>

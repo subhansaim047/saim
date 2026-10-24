@@ -66,18 +66,17 @@ To prevent deceptive advertising or unverified commercial representations under 
 
 | Claim ID | Promotional Claim | Required Evidence from Owner | Current Status | Neutral Live Text in Use |
 |---|---|---|---|---|
-| `gdpr-compliant` | "GDPR compliant" | Third-party legal audit, DPO sign-off, or data mapping documentation | Needs Evidence | "Privacy-conscious architecture" |
-| `core-web-vitals-95` | "95+ Core Web Vitals" | Real-user monitoring (CrUX field data) across 75th percentile of mobile visits | Needs Evidence | "Optimised Core Web Vitals" |
-| `core-web-vitals-98` | "Verified Core Web Vitals (98+ Score)" | Public Lighthouse/PageSpeed URL or report link for deployed client build | Needs Evidence | "Optimised Core Web Vitals score" |
-| `performance-stats` | "Organic Impressions 34,200+ / Qualified Inquiries 1,274+" | Search Console / Analytics export verifying client post-launch metrics | Needs Evidence | Labeled: "Illustrative example, not a client result" |
-| `satisfaction-guarantee` | "100% Satisfaction Guarantee" | Formal refund/revision contract terms or escrow terms | Needs Evidence | "Dedicated Revision Support" |
-| `reply-speed` | "Reply in <15 mins" | Verified SLA or automated round-the-clock dispatch confirmation | Needs Evidence | "Direct WhatsApp communication" |
-| `end-to-end-encrypted` | "Direct end-to-end encrypted connection" | Valid only if WhatsApp/Signal is specified (general web contact is TLS/HTTPS) | Needs Evidence | "Direct messaging connection" |
-| `hmrc-vat` | "HMRC & EU VAT-compliant invoices" | Official UK VAT registration number and VAT invoice templates | Needs Evidence | "Itemised commercial invoices" |
-| `sub-second` | "sub-second" | Server response (TTFB) or client render benchmarking < 1000ms on 4G | Needs Evidence | "Fast-loading" |
+| `satisfaction-guarantee` | "100% Satisfaction Guarantee" | Formal refund/revision contract terms or escrow terms | Needs Evidence | "Revisions included on staging until the agreed scope is delivered." (Drafted in Terms Section 3) |
+| `reply-speed` | "Reply in <15 mins" | Verified SLA or automated round-the-clock dispatch confirmation | Needs Evidence | "Replies on WhatsApp during working hours." (Omitted until workingHours is set) |
+| `end-to-end-encrypted` | "Direct end-to-end encrypted connection with lead engineer" | Valid only if WhatsApp/Signal is specified | Needs Evidence | "Your message opens in WhatsApp. WhatsApp's own privacy terms apply. See our privacy policy." |
+| `hmrc-vat` | "HMRC & EU VAT-compliant invoices" | Official UK VAT registration number and VAT invoice templates | Needs Evidence | "Invoices provided." |
+| `gdpr-compliant` | "GDPR compliant" | Third-party legal audit or DPO sign-off | Needs Evidence | Omitted from metadata and copy |
+| `core-web-vitals-95` | "95+ Core Web Vitals" | CrUX field data across 75th percentile of mobile visits | Needs Evidence | Omitted from metadata and copy |
+| `core-web-vitals-98` | "Verified Core Web Vitals (98+ Score)" | Public Lighthouse/PageSpeed URL for client build | Needs Evidence | Omitted from metadata and copy |
+| `sub-second` | "sub-second" | Server response TTFB or client render benchmarking < 1000ms | Needs Evidence | Omitted from metadata and copy |
+| `performance-stats` | "Organic Impressions 34,200+ / Qualified Inquiries 1,274+" | Search Console / Analytics export verifying client post-launch metrics | Needs Evidence | "Illustrative example, not a client result" |
 | `seven-years` | "Over the last seven years, our studio..." | Business incorporation date or portfolio archive from 2019 or earlier | Needs Evidence | "Our studio engineers" |
-| `zero-commission` | "0% commission" | Explanation of WhatsApp ordering without aggregator transaction cuts | Verified for Direct WhatsApp | "Direct ordering without aggregator commission fees" |
-| `instant-maps-seo` | "instant Google Maps SEO" | Clarification that Google Local Pack ranking depends on Google algorithms | Needs Evidence | "Google Maps profile integration" |
+| `demos-preview` | "Client Demos (Preview)" | Confirmation that demos are real paying clients | Needs Evidence | "Concept demo sites (not client work)" |
 
 ---
 

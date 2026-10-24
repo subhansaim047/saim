@@ -267,7 +267,7 @@ export const ContactPage = () => {
         {/* WHY WORK WITH ME */}
         <div className="mb-20">
           <h2 className="text-2xl sm:text-3xl font-light text-white text-center mb-10">
-            Why Work With Me?
+            Why Work With {ownerFacts.voice === "I" ? "Me" : "Us"}?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <div className="liquid-glass rounded-2xl p-6 border border-white/10">

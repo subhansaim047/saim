@@ -39,7 +39,7 @@ export const TermsOfService = () => {
           <section>
             <h2 className="text-white text-xl font-medium mb-3">1. Scope of Services</h2>
             <p>
-              Saim Dev provides custom web architecture, e-commerce solutions, mobile responsive development, speed optimization, and SEO setup. Services are provided under two main plans: Starter Plan ($500 – $1,000, 5–7 days delivery) and Business Plan ($1,000 – $5,000, 7–10 days delivery).
+              Saim Dev provides custom web architecture, e-commerce solutions, mobile responsive development, speed optimization, and SEO setup. Services are provided under three primary tiers: Landing Page (from £250, 3–5 days delivery), Starter Plan (from £390, 5–7 days delivery), and Business Plan (from £790, 7–10 days delivery), as well as bespoke web architecture solutions.
             </p>
           </section>
 
@@ -53,7 +53,7 @@ export const TermsOfService = () => {
           <section>
             <h2 className="text-white text-xl font-medium mb-3">3. Revisions & Technical Support</h2>
             <p>
-              Starter Plan includes 2 rounds of design revisions and 14 days of dedicated post-launch support. Business Plan includes 5 rounds of revisions and 30 days of post-launch technical support. Additional feature requests outside the original scope will be quoted separately.
+              Revisions included on staging until the agreed scope is delivered. Starter Plan includes 2 rounds of design revisions and 14 days of dedicated post-launch support. Business Plan includes 5 rounds of revisions and 30 days of post-launch technical support. Additional feature requests outside the agreed project brief will be quoted separately. (DRAFT for owner review)
             </p>
           </section>
 
