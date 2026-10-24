@@ -1,0 +1,156 @@
+{
+  "timestamp": "2026-10-24T21:17:41.259Z",
+  "environment": {
+    "site": "https://www.saimdev.site",
+    "framework": "Next.js 16.3.5 (Turbopack, App Router)",
+    "hosting": "Vercel Edge Platform",
+    "targetAudience": "UK & Europe (en-GB, GBP)"
+  },
+  "buildOutput": {
+    "compiledRoutes": 188,
+    "status": "Clean compile (code 0)"
+  },
+  "lighthouseScores": {
+    "homepage": {
+      "mobile": {
+        "performance": 95,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 98,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      }
+    },
+    "toolsHub": {
+      "mobile": {
+        "performance": 92,
+        "accessibility": 98,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 96,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      }
+    },
+    "foodAllergenChart": {
+      "mobile": {
+        "performance": 93,
+        "accessibility": 98,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 97,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      }
+    },
+    "recipeCalculator": {
+      "mobile": {
+        "performance": 94,
+        "accessibility": 98,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 97,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      }
+    },
+    "foodCostCalculator": {
+      "mobile": {
+        "performance": 94,
+        "accessibility": 98,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "desktop": {
+        "performance": 97,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      }
+    }
+  },
+  "robotsTxt": {
+    "status": 200,
+    "contentSnippet": "# Saim Dev — robots.txt\n# https://www.saimdev.site\n\nUser-agent: *\nAllow: /\nDisallow: /api/\n\n# Googlebot explicit\nUser-agent: Googlebot\nAllow: /\nCrawl-delay: 0\n\n# Bingbot\nUser-agent: Bingbot\nAllow: /\nCrawl-delay: 1\n\n# AI crawlers — allowed\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\n"
+  },
+  "sitemap": {
+    "status": 200,
+    "urlCount": 48
+  },
+  "pagesAudited": {
+    "https://www.saimdev.site/": {
+      "status": 200,
+      "title": "Saim Dev - Next.js &amp; Full Stack Web Developer | UK &amp; Europe",
+      "metaDescription": "Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.",
+      "canonical": "https://www.saimdev.site",
+      "h1": "Saim DevSaim Dev",
+      "structuredDataCount": 3,
+      "structuredDataTypes": [
+        "ProfessionalService",
+        "Person",
+        "FAQPage"
+      ]
+    },
+    "https://www.saimdev.site/tools": {
+      "status": 200,
+      "title": "Free Food Safety Templates &amp; Kitchen Tools | Saim Dev",
+      "metaDescription": "Free printable food safety templates, checklists, logs and posters for UK restaurants and takeaways. Edit online, then print or save as PDF.",
+      "canonical": "https://www.saimdev.site/tools",
+      "h1": "Food Safety Templates Hub: Posters, Checklists, Logs, Smart Tools, and More",
+      "structuredDataCount": 2,
+      "structuredDataTypes": [
+        "ProfessionalService",
+        "Person"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/food-allergen-chart": {
+      "status": 200,
+      "title": "Free UK Takeaway Allergen Chart Generator (14 Allergens)",
+      "metaDescription": "Build and print a UK allergen chart for your takeaway in minutes. Covers all 14 allergens, a customer filter and PDF print. Free, no sign-up.",
+      "canonical": "https://www.saimdev.site/food-safety-templates/food-allergen-chart",
+      "h1": "Free UK Takeaway Allergen Chart Generator (14 Allergens)",
+      "structuredDataCount": 2,
+      "structuredDataTypes": [
+        "ProfessionalService",
+        "Person"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/recipe-calculator": {
+      "status": 200,
+      "title": "Free Recipe Scale Calculator Tool | Saim Dev",
+      "metaDescription": "Scale ingredient quantities and batch portions accurately. Calculate exact commercial batch costs and export kitchen prep sheets directly to PDF.",
+      "canonical": "https://www.saimdev.site/food-safety-templates/recipe-calculator",
+      "h1": "Recipe Calculator",
+      "structuredDataCount": 2,
+      "structuredDataTypes": [
+        "ProfessionalService",
+        "Person"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/food-cost-calculator": {
+      "status": 200,
+      "title": "Free Food Cost Calculator Tool | Saim Dev",
+      "metaDescription": "Calculate food cost percentage, menu pricing, and gross profit margins. Model ingredient expenses with live interactive sliders and zero sign-up.",
+      "canonical": "https://www.saimdev.site/food-safety-templates/food-cost-calculator",
+      "h1": "Food Cost Calculator",
+      "structuredDataCount": 2,
+      "structuredDataTypes": [
+        "ProfessionalService",
+        "Person"
+      ]
+    }
+  }
+}

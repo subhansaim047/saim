@@ -17,6 +17,36 @@ interface BlogItem {
 
 const blogs: BlogItem[] = [
   {
+    id: 12,
+    title: "How to Get a 5-Star Food Hygiene Rating in the UK: Complete EHO Inspection Checklist",
+    excerpt: "Comprehensive guide for independent UK restaurants, takeaways, and caterers on passing council Environmental Health inspections across food handling, facilities, and HACCP records.",
+    date: "Oct 25, 2026",
+    readTime: "8 min read",
+    tag: "5-Star Rating",
+    tagColor: "#10B981",
+    url: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+  },
+  {
+    id: 11,
+    title: "Natasha's Law PPDS Food Labelling Guide for UK Takeaways, Cafes & Delis",
+    excerpt: "Learn what qualifies as Pre-Packed for Direct Sale (PPDS) food and master mandatory rules for ingredient lists and allergen highlighting under UK law.",
+    date: "Oct 25, 2026",
+    readTime: "7 min read",
+    tag: "Natasha's Law",
+    tagColor: "#EF4444",
+    url: "/blog/natashas-law-ppds-food-labelling-guide",
+  },
+  {
+    id: 10,
+    title: "Commercial Kitchen Food Cooling Guide: The UK 90-Minute Rule & Temperature Limits",
+    excerpt: "Everything UK restaurant and takeaway managers need to know about rapidly cooling cooked food below 8°C in 90 minutes and avoiding the Danger Zone.",
+    date: "Oct 25, 2026",
+    readTime: "7 min read",
+    tag: "Temperature Control",
+    tagColor: "#3B82F6",
+    url: "/blog/commercial-kitchen-food-cooling-temperature-guide",
+  },
+  {
     id: 9,
     title: "How to Create a Fully Compliant 14-Allergen Matrix for UK Restaurants & Takeaways",
     excerpt: "Step-by-step masterclass on auditing recipes, preventing cross-contamination, and building an EHO-approved 14-allergen matrix under Natasha's Law. Free digital generator included.",
