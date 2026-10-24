@@ -1,4 +1,5 @@
 "use client";
+import { SiteFooter } from "./SiteFooter";
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -295,6 +296,7 @@ export const ServicesPage = () => {
           </a>
         </div>
       </div>
+      <SiteFooter theme="dark" />
     </div>
   );
 };

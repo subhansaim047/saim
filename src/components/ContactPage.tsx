@@ -1,4 +1,5 @@
 "use client";
+import { SiteFooter } from "./SiteFooter";
 
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
@@ -336,6 +337,7 @@ export const ContactPage = () => {
           </a>
         </div>
       </div>
+      <SiteFooter theme="dark" />
     </div>
   );
 };

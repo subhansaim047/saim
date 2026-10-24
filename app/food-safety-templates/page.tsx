@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import { FoodSafetyTemplatesPage } from "@/components/FoodSafetyTemplatesPage";
-import { FOOD_SAFETY_TEMPLATES } from "@/data/saim_templates";
 
 export const metadata: Metadata = {
-  title: "Food Safety Templates Hub: Posters, Checklists, Logs & Tools | Free Download",
-  description: `${FOOD_SAFETY_TEMPLATES.length} free, printable food-safety templates, checklists, posters and kitchen tools for UK food businesses. Direct PDF download, no sign-up.`,
+  title: "Free Food Safety Templates & Kitchen Tools | Saim Dev",
+  description: "Free printable food safety templates, checklists, logs and posters for UK restaurants and takeaways. Edit online, then print or save as PDF.",
   alternates: {
     canonical: "https://www.saimdev.site/food-safety-templates"
   },
   openGraph: {
-    title: "Food Safety Templates Hub: Posters, Checklists, Logs & Tools",
-    description: `${FOOD_SAFETY_TEMPLATES.length} free, printable food-safety templates, checklists, posters and kitchen tools for UK food businesses. Direct PDF download, no sign-up.`,
+    title: "Free Food Safety Templates & Kitchen Tools | Saim Dev",
+    description: "Free printable food safety templates, checklists, logs and posters for UK restaurants and takeaways. Edit online, then print or save as PDF.",
     url: "https://www.saimdev.site/food-safety-templates",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -18,11 +17,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Food Safety Templates Hub: Posters, Checklists, Logs & Tools",
-    description: `${FOOD_SAFETY_TEMPLATES.length} free, printable food-safety templates, checklists, posters and kitchen tools for UK food businesses. Direct PDF download, no sign-up.`
+    title: "Free Food Safety Templates & Kitchen Tools | Saim Dev",
+    description: "Free printable food safety templates, checklists, logs and posters for UK restaurants and takeaways. Edit online, then print or save as PDF."
   }
 };
 
-export default function FoodSafetyTemplatesRoute() {
+export default function Route() {
   return <FoodSafetyTemplatesPage />;
 }

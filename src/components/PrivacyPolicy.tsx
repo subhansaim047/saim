@@ -1,4 +1,5 @@
 "use client";
+import { SiteFooter } from "./SiteFooter";
 
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -81,6 +82,7 @@ export const PrivacyPolicy = () => {
           </section>
         </div>
       </div>
+      <SiteFooter theme="dark" />
     </div>
   );
 };

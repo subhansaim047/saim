@@ -1,4 +1,5 @@
 "use client";
+import { SiteFooter } from "./SiteFooter";
 
 import React, { useState } from "react";
 import Link from "next/link";

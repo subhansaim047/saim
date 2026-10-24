@@ -1,13 +1,27 @@
+import { SiteFooter } from "@/components/SiteFooter";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Food Safety & Regulatory Disclaimer | Saim Dev",
-  description: "Read the Saim Dev Food Safety and Regulatory Disclaimer. Templates are management tools, not legal advice, and do not guarantee compliance.",
+  title: "Food Safety Disclaimer | Saim Dev",
+  description: "Regulatory and guidance notice for kitchen templates, checklists, and calculators. General reference only and not official advice from the FSA.",
   alternates: {
     canonical: "https://www.saimdev.site/disclaimer",
   },
+  openGraph: {
+    title: "Food Safety Disclaimer | Saim Dev",
+    description: "Regulatory and guidance notice for kitchen templates, checklists, and calculators. General reference only and not official advice from the FSA.",
+    url: "https://www.saimdev.site/disclaimer",
+    siteName: "Saim Dev",
+    locale: "en_GB",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Food Safety Disclaimer | Saim Dev",
+    description: "Regulatory and guidance notice for kitchen templates, checklists, and calculators. General reference only and not official advice from the FSA."
+  }
 };
 
 export default function DisclaimerPage() {
@@ -89,26 +103,7 @@ export default function DisclaimerPage() {
         </div>
       </main>
 
-      <footer className="border-t border-[#E5E5EA] bg-white py-8 px-4 sm:px-8 text-center text-xs text-gray-500">
-        <p>© 2026 Saim Dev. All rights reserved.</p>
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-2 text-gray-600">
-          <Link href="/" className="hover:text-black">Home</Link>
-          <span>•</span>
-          <Link href="/services" className="hover:text-black">Services</Link>
-          <span>•</span>
-          <Link href="/demos" className="hover:text-black">Demos</Link>
-          <span>•</span>
-          <Link href="/about" className="hover:text-black">About</Link>
-          <span>•</span>
-          <Link href="/contact" className="hover:text-black">Contact</Link>
-          <span>•</span>
-          <Link href="/privacy" className="hover:text-black">Privacy Policy</Link>
-          <span>•</span>
-          <Link href="/cookie-policy" className="hover:text-black">Cookie Policy</Link>
-          <span>•</span>
-          <Link href="/disclaimer" className="hover:text-black font-semibold text-black">Disclaimer</Link>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

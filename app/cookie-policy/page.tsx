@@ -1,3 +1,4 @@
+import { SiteFooter } from "@/components/SiteFooter";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -91,26 +92,7 @@ export default function CookiePolicyPage() {
         </div>
       </main>
 
-      <footer className="border-t border-[#E5E5EA] bg-white py-8 px-4 sm:px-8 text-center text-xs text-gray-500">
-        <p>© 2026 Saim Dev. All rights reserved.</p>
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-2 text-gray-600">
-          <Link href="/" className="hover:text-black">Home</Link>
-          <span>•</span>
-          <Link href="/services" className="hover:text-black">Services</Link>
-          <span>•</span>
-          <Link href="/demos" className="hover:text-black">Demos</Link>
-          <span>•</span>
-          <Link href="/about" className="hover:text-black">About</Link>
-          <span>•</span>
-          <Link href="/contact" className="hover:text-black">Contact</Link>
-          <span>•</span>
-          <Link href="/privacy" className="hover:text-black">Privacy Policy</Link>
-          <span>•</span>
-          <Link href="/cookie-policy" className="hover:text-black font-semibold text-black">Cookie Policy</Link>
-          <span>•</span>
-          <Link href="/disclaimer" className="hover:text-black">Disclaimer</Link>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
