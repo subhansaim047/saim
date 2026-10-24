@@ -1,5 +1,7 @@
 "use client";
 import { SiteFooter } from "./SiteFooter";
+import { BUDGET_OPTIONS } from "../../content/plans";
+import ownerFacts from "../../content/owner-facts.json";
 
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
@@ -22,7 +24,7 @@ export const ContactPage = () => {
     businessName: "",
     email: "",
     website: "",
-    budget: "Under £500",
+    budget: BUDGET_OPTIONS[0] as string,
     details: "",
   });
 
@@ -222,9 +224,11 @@ export const ContactPage = () => {
                   }
                   className="w-full bg-[#161616] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors"
                 >
-                  <option value="$500 - $1,000">$500 - $1,000 (Starter Website)</option>
-                  <option value="$1,000 - $5,000">$1,000 - $5,000 (Full Business Plan)</option>
-                  <option value="$1200+">$1,200+ (Custom Web Architecture / AI App)</option>
+                  {BUDGET_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
                 </select>
               </div>
 
@@ -311,9 +315,9 @@ export const ContactPage = () => {
               </p>
             </div>
             <div>
-              <h4 className="text-white text-sm font-medium">Can we communicate via Instagram?</h4>
-              <p className="text-white/60 text-xs mt-1 font-light">
-                Yes! Instant communication is available via WhatsApp (+92 319 6526604) throughout the project.
+              <h4 className="text-white text-sm font-medium">How can I contact you?</h4>
+              <p className="text-white/60 text-xs mt-1 font-light leading-relaxed">
+                You can contact Saim Dev directly via WhatsApp at +92 319 6526604, through Instagram @saim_agency${ownerFacts.contactEmail ? `, or by email at ${ownerFacts.contactEmail}` : ""}. WhatsApp is our fastest channel during project development.
               </p>
             </div>
           </div>
@@ -327,14 +331,24 @@ export const ContactPage = () => {
           <p className="text-white/60 text-xs sm:text-sm mb-6 font-light">
             Skip the form and message Saim Dev directly on WhatsApp for an immediate response.
           </p>
-          <a
-            href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-emerald-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-emerald-400 transition-all text-xs cursor-pointer shadow-lg"
-          >
-            <span>Chat on WhatsApp</span>
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-emerald-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-emerald-400 transition-all text-xs cursor-pointer shadow-lg"
+            >
+              <span>Chat on WhatsApp</span>
+            </a>
+            {ownerFacts.contactEmail && (
+              <a
+                href={`mailto:${ownerFacts.contactEmail}`}
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-full transition-all text-xs cursor-pointer border border-white/15"
+              >
+                <span>Email Us</span>
+              </a>
+            )}
+          </div>
         </div>
       </div>
       <SiteFooter theme="dark" />

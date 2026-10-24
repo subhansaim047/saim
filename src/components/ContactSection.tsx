@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageSquare, ArrowRight, CheckCircle2, Clock, ShieldCheck } from "lucide-react";
+import { BUDGET_OPTIONS } from "../../content/plans";
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,7 @@ export const ContactSection = () => {
     contactInfo: "",
     projectType: "Custom Business Website",
     currentWebsite: "",
-    budget: "£350 – £750 / $450 – $999 (Starter)",
+    budget: BUDGET_OPTIONS[0] as string,
     details: "",
   });
 
@@ -20,12 +21,7 @@ export const ContactSection = () => {
     "Web App / SaaS",
   ];
 
-  const budgetOptions = [
-    "£350 – £750 / $450 – $999 (Starter)",
-    "£750 – £1,500 / $999 – $2,000 (Business)",
-    "£1,500 – £3,500+ / $2,000+ (Custom / Web App)",
-    "Flexible / Let's Discuss",
-  ];
+  const budgetOptions = BUDGET_OPTIONS;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
