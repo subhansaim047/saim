@@ -61,7 +61,7 @@ const rawPlans: BasePlan[] = [
       { text: "Complete On-Page SEO Setup", included: true },
       { text: "95+ Google PageSpeed Score", included: true },
       { text: "SSL & Cloud Hosting Setup", included: true },
-      { text: "GDPR Compliant Architecture", included: true },
+      { text: "Privacy-Conscious Web Architecture", included: true },
       { text: "2 Rounds of Revisions", included: true },
       { text: "14 Days Dedicated Support", included: true },
     ],
@@ -87,7 +87,7 @@ const rawPlans: BasePlan[] = [
       { text: "AI Chatbot / WhatsApp Lead Funnel", included: true },
       { text: "Interactive Case Studies / Gallery System", included: true },
       { text: "FAQ Rich Snippet Section", included: true },
-      { text: "GDPR Cookie Banner & Privacy Ready", included: true },
+      { text: "PECR Cookie Banner & Privacy Ready", included: true },
       { text: "Priority Fast-Track Turnaround", included: true },
       { text: "5 Revisions Included", included: true },
       { text: "30 Days Dedicated Support", included: true },
@@ -310,7 +310,7 @@ export const PricingSection = () => {
           </div>
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
-            <span>95+ Core Web Vitals</span>
+            <span>Optimised Core Web Vitals</span>
           </div>
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
@@ -344,17 +344,17 @@ export const PricingSection = () => {
                 <span>UK & EU Invoicing & Rails</span>
               </div>
               <p className="text-white/60 text-xs leading-relaxed">
-                HMRC & EU VAT-compliant invoices. Payments processed seamlessly via Stripe Secure Card, Wise Multi-Currency, UK Faster Payments, and SEPA Bank Wire.
+                Itemised commercial invoices. Payments processed seamlessly via Stripe Secure Card, Wise Multi-Currency, UK Faster Payments, and SEPA Bank Wire.
               </p>
             </div>
 
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2 text-white font-medium text-sm">
                 <Sparkles className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>100% Satisfaction Guarantee</span>
+                <span>Dedicated Revision Support</span>
               </div>
               <p className="text-white/60 text-xs leading-relaxed">
-                We iterate on staging until you are 100% satisfied with performance, UX, and conversion flow. Zero monthly retainers or hidden lock-ins.
+                We iterate on staging with you until you approve performance, UX, and conversion flow. Zero monthly retainers or hidden lock-ins.
               </p>
             </div>
           </div>

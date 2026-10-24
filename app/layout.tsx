@@ -8,7 +8,7 @@ const instrument = Instrument_Serif({ weight: "400", style: ["normal", "italic"]
 
 export const metadata: Metadata = {
   title: 'Saim Dev - Next.js & Full Stack Web Developer | UK & Europe',
-  description: 'Custom high-performance websites for UK, European, and global businesses. Built with Next.js 16, React, and Node.js. 95+ Core Web Vitals, GDPR compliant, sub-second delivery. Starting from £390 / $500.',
+  description: 'Custom high-performance websites for UK, European, and global businesses. Built with Next.js 16, React, and Node.js. Optimised Core Web Vitals, privacy-conscious architecture, fast turnaround. Starting from £390.',
   metadataBase: new URL('https://www.saimdev.site'),
   alternates: {
     canonical: '/',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Saim Dev - Next.js Developer for UK & Europe',
-    description: 'Bespoke high-performance websites for businesses. Sub-second speed & GDPR compliant.',
+    description: 'Bespoke high-performance websites for businesses. Fast loading & privacy-conscious architecture.',
     creator: '@saimwebdev',
   },
 };

@@ -109,7 +109,7 @@ export const ContactSection = () => {
               <div className="space-y-4">
                 {[
                   { title: "Rapid Turnaround", desc: "Complete delivery in 5–10 business days." },
-                  { title: "Sub-Second Performance", desc: "Next.js 16 + React 19 architecture with 95+ Core Web Vitals." },
+                  { title: "High-Speed Performance", desc: "Next.js 16 + React 19 architecture optimised for Core Web Vitals." },
                   { title: "Direct WhatsApp Access", desc: "No middlemen — communicate directly with your lead engineer." },
                   { title: "Free Dedicated Support", desc: "14 to 30 days of post-launch testing, SEO indexing & revisions." },
                 ].map((item, idx) => (
@@ -126,7 +126,7 @@ export const ContactSection = () => {
               <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/60">
                 <div className="flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5 text-primary" />
-                  <span>Reply in &lt;15 mins</span>
+                  <span>Direct WhatsApp communication</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-primary" />
@@ -277,7 +277,7 @@ export const ContactSection = () => {
               </button>
 
               <p className="text-center text-[11px] text-white/50">
-                🔒 Your details are kept 100% confidential. Direct end-to-end encrypted connection with lead engineer.
+                🔒 Your details are kept confidential. Direct messaging connection with lead engineer.
               </p>
             </form>
           </motion.div>

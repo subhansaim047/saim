@@ -1,32 +1,74 @@
 [
   {
-    "id": "claim-01",
-    "claim": "Bespoke Next.js and React web development for hospitality and service businesses",
-    "verificationSource": "Verified in codebase architecture: Next.js 16 App Router, React 19, TypeScript, and Tailwind CSS.",
-    "status": "verified"
+    "id": "gdpr-compliant",
+    "text": "GDPR compliant",
+    "evidence": "",
+    "neutralText": "Privacy-conscious architecture"
   },
   {
-    "id": "claim-02",
-    "claim": "Direct WhatsApp ordering with 0% platform commission fees",
-    "verificationSource": "Verified in ordering workflow: Customer orders route directly to the takeaway owner's WhatsApp number without aggregator commission cuts.",
-    "status": "verified"
+    "id": "core-web-vitals-95",
+    "text": "95+ Core Web Vitals",
+    "evidence": "",
+    "neutralText": "Optimised Core Web Vitals"
   },
   {
-    "id": "claim-03",
-    "claim": "Digital allergen matrix covering all 14 mandatory UK/EU allergens",
-    "verificationSource": "Verified against Food Information Regulations 2014 & retained EU Regulation 1169/2011 (Celery, Cereals with gluten, Crustaceans, Eggs, Fish, Lupin, Milk, Molluscs, Mustard, Tree Nuts, Peanuts, Sesame, Soybeans, Sulphites).",
-    "status": "verified"
+    "id": "core-web-vitals-98",
+    "text": "Verified Core Web Vitals (98+ Score)",
+    "evidence": "",
+    "neutralText": "Optimised Core Web Vitals score"
   },
   {
-    "id": "claim-04",
-    "claim": "Celsius commercial kitchen temperature guidance limits",
-    "verificationSource": "Verified against Food Standards Agency (FSA) guidance: 0°C-5°C commercial fridge recommendation, 8°C statutory ceiling, 63°C hot holding, 75°C core cooking.",
-    "status": "verified"
+    "id": "performance-stats",
+    "text": "Organic Impressions 34,200+ / Qualified Inquiries 1,274+ / Benchmark: 90 days post-launch",
+    "evidence": "",
+    "neutralText": "Illustrative example, not a client result"
   },
   {
-    "id": "claim-05",
-    "claim": "Client-side private PDF generation without mandatory sign-up",
-    "verificationSource": "Verified in client components: Form data is processed locally in the user's browser with print CSS; zero private records captured on agency servers.",
-    "status": "verified"
+    "id": "satisfaction-guarantee",
+    "text": "100% Satisfaction Guarantee",
+    "evidence": "",
+    "neutralText": "Dedicated Revision Support"
+  },
+  {
+    "id": "reply-speed",
+    "text": "Reply in <15 mins",
+    "evidence": "",
+    "neutralText": "Direct communication"
+  },
+  {
+    "id": "end-to-end-encrypted",
+    "text": "Direct end-to-end encrypted connection",
+    "evidence": "",
+    "neutralText": "Direct messaging connection"
+  },
+  {
+    "id": "hmrc-vat",
+    "text": "HMRC & EU VAT-compliant invoices",
+    "evidence": "",
+    "neutralText": "Itemised commercial invoices"
+  },
+  {
+    "id": "sub-second",
+    "text": "sub-second",
+    "evidence": "",
+    "neutralText": "fast-loading"
+  },
+  {
+    "id": "seven-years",
+    "text": "Over the last seven years, our studio has engineered",
+    "evidence": "",
+    "neutralText": "Our studio engineers"
+  },
+  {
+    "id": "zero-commission",
+    "text": "0% commission",
+    "evidence": "",
+    "neutralText": "Direct ordering without aggregator commission fees"
+  },
+  {
+    "id": "instant-maps-seo",
+    "text": "instant Google Maps SEO",
+    "evidence": "",
+    "neutralText": "Google Maps profile integration"
   }
 ]

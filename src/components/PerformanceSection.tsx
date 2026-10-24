@@ -150,8 +150,8 @@ export const PerformanceSection = () => {
 
             {/* Context Benchmark Caption */}
             <div className="mt-2 pt-3 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-white/50">
-              <span className="font-mono">Benchmark: 90 days post-launch Next.js 16 deployment</span>
-              <span className="text-primary/80 font-medium">Verified Core Web Vitals (98+ Score)</span>
+              <span className="font-mono">Benchmark: 90 days post-launch Next.js 16 deployment (Illustrative example, not a client result)</span>
+              <span className="text-primary/80 font-medium">Optimised Core Web Vitals Score</span>
             </div>
           </div>
         </motion.div>

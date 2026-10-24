@@ -5,7 +5,7 @@ import { FooterSection } from "@/components/FooterSection";
 
 export const metadata: Metadata = {
   title: "Next.js Developer UK | High-Performance Web Development for British & European Businesses",
-  description: "Hire an expert freelance Next.js developer in the UK. 95+ Core Web Vitals, sub-second loading, GDPR compliant, and bespoke design. Transparent fixed GBP pricing from £390.",
+  description: "Hire an expert freelance Next.js developer in the UK. Optimised Core Web Vitals, sub-second loading, Privacy-conscious, and bespoke design. Transparent fixed GBP pricing from £390.",
   alternates: {
     canonical: "/nextjs-developer-uk",
   },
@@ -28,7 +28,7 @@ const ukFaqSchema = {
       "name": "Why choose Next.js over WordPress for a UK business?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Traditional WordPress sites are plagued by plugin bloat, database queries, and slow load times (often 3–5 seconds), which kills conversions and Google rankings in the UK. Next.js delivers statically generated, sub-second pages with 95+ Core Web Vitals and zero security maintenance overhead."
+        "text": "Traditional WordPress sites are plagued by plugin bloat, database queries, and slow load times (often 3–5 seconds), which kills conversions and Google rankings in the UK. Next.js delivers statically generated, sub-second pages with Optimised Core Web Vitals and zero security maintenance overhead."
       }
     },
     {
@@ -41,7 +41,7 @@ const ukFaqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Are your Next.js websites fully GDPR compliant?",
+      "name": "Are your Next.js websites fully Privacy-conscious?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. Every website is built with strict adherence to UK GDPR and EU data protection standards, including privacy-friendly cookie consent banners, SSL encryption, and zero unauthorized third-party trackers."
@@ -107,7 +107,7 @@ export default function NextJsDeveloperUkPage() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mb-10">
-            Stop losing London & UK customers to bloated, sluggish WordPress sites. I build custom, sub-second Next.js web applications engineered for 95+ Core Web Vitals, Google top rankings, and high conversion rates.
+            Stop losing London & UK customers to bloated, sluggish WordPress sites. I build custom, sub-second Next.js web applications engineered for Optimised Core Web Vitals, Google top rankings, and high conversion rates.
           </p>
 
           {/* CTA Buttons */}
@@ -287,7 +287,7 @@ export default function NextJsDeveloperUkPage() {
                   <p className="text-xs text-white/60 mb-6">Dominant 15-page web platform with blog system, analytics, and lead capture funnels.</p>
                   <ul className="space-y-2 text-xs text-white/80 mb-6">
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Up to 15 Pages & Blog System</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 95+ Core Web Vitals Guaranteed</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Optimised Core Web Vitals Guaranteed</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Full Analytics & Search Console</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 30 Days Priority Support</li>
                   </ul>
@@ -333,7 +333,7 @@ export default function NextJsDeveloperUkPage() {
               </div>
 
               <div className="p-5 rounded-xl border border-white/10 bg-white/[0.02]">
-                <h3 className="font-semibold text-white text-base mb-2">Are your websites fully GDPR compliant?</h3>
+                <h3 className="font-semibold text-white text-base mb-2">Are your websites fully Privacy-conscious?</h3>
                 <p className="text-sm text-white/70 leading-relaxed">
                   Yes. Every website is built with strict adherence to UK GDPR and EU data protection standards, including privacy-friendly cookie consent banners, SSL encryption, and zero unauthorized third-party trackers.
                 </p>

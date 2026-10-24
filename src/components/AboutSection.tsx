@@ -14,7 +14,7 @@ const aboutSegments = [
 ];
 
 const paragraphText =
-  "Over the last seven years, our studio has engineered fast, modern, high-converting platforms for service leaders — dentists, mechanics, salons, contractors, and ambitious brands. Together, we craft digital platforms designed to rank, load instantly, and turn visitors into loyal, paying clients.";
+  "Our studio engineers fast, modern, high-converting platforms for service leaders — dentists, mechanics, salons, contractors, and ambitious brands. Together, we craft digital platforms designed to rank, load instantly, and turn visitors into loyal, paying clients.";
 
 export const AboutSection = () => {
   const paragraphRef = useRef<HTMLParagraphElement>(null);
