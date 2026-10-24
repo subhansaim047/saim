@@ -143,9 +143,9 @@ export const ToolsPage: React.FC = () => {
   // ──────────────────────────────────────────────
   // TAB 1: ALLERGEN MATRIX STATE
   // ──────────────────────────────────────────────
-  const [restaurantName, setRestaurantName] = useState("My Takeaway & Kitchen");
-  const [completedBy, setCompletedBy] = useState("Head Chef / Manager");
-  const [reviewDate, setReviewDate] = useState(() => new Date().toISOString().split("T")[0]);
+  const [restaurantName, setRestaurantName] = useState("");
+  const [completedBy, setCompletedBy] = useState("");
+  const [reviewDate, setReviewDate] = useState("");
   const [menuItems, setMenuItems] = useState<MenuItem[]>(DEFAULT_MENU_ITEMS);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -244,15 +244,15 @@ export const ToolsPage: React.FC = () => {
 
   // Copy WhatsApp/Text Summary
   const copySummary = () => {
-    let text = `📋 ${restaurantName} - Allergen Declaration (FSA & Natasha's Law Compliant)\n`;
-    text += `Last Updated: ${reviewDate} | Inspected By: ${completedBy}\n\n`;
+    let text = `📋 ${restaurantName || 'Kitchen'} - Allergen Declaration\n`;
+    text += `Last Updated: ${reviewDate || 'Not set'} | Checked by: ${completedBy || 'Kitchen staff'}\n\n`;
     menuItems.forEach(item => {
       const contains = ALLERGENS.filter(a => item.allergens[a.id] === "contains").map(a => a.name);
       const may = ALLERGENS.filter(a => item.allergens[a.id] === "may").map(a => a.name);
       text += `• ${item.name} (${item.category}):\n`;
       if (contains.length > 0) text += `   ⚠️ Contains: ${contains.join(", ")}\n`;
       if (may.length > 0) text += `   ⚡ May contain: ${may.join(", ")}\n`;
-      if (contains.length === 0 && may.length === 0) text += `   ✅ 14 Major Allergens Free\n`;
+      if (contains.length === 0 && may.length === 0) text += `   ✅ Not declared\n`;
     });
     navigator.clipboard.writeText(text);
     setCopyFeedback(true);
@@ -481,7 +481,7 @@ export const ToolsPage: React.FC = () => {
           </h1>
 
           <p className="text-sm sm:text-base text-white/70 max-w-2xl leading-relaxed">
-            Everything your kitchen needs for <strong className="text-white">Natasha&apos;s Law</strong>, 
+            Everything your kitchen needs for <strong className="text-white">food safety records</strong>, 
             Food Standards Agency (FSA) inspections, and accurate food margins. 
             <span className="text-primary"> 100% Free forever</span> — zero credit cards, zero paywalls.
           </p>
@@ -491,7 +491,7 @@ export const ToolsPage: React.FC = () => {
             <div className="p-3 rounded-xl bg-white/[0.02] border border-white/10 flex items-center gap-2.5 text-left">
               <ShieldAlert className="w-4 h-4 text-primary shrink-0" />
               <div>
-                <div className="text-xs font-bold text-white">Natasha&apos;s Law</div>
+                <div className="text-xs font-bold text-white">Allergen Matrix</div>
                 <div className="text-[10px] text-white/50">14 Major Allergens</div>
               </div>
             </div>
@@ -741,15 +741,15 @@ export const ToolsPage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div>
                     <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                      {restaurantName} &mdash; Official Allergen Matrix
+                      {restaurantName ? `${restaurantName} — ` : ""}14 Allergen Matrix
                     </h2>
                     <p className="text-xs text-white/60 mt-0.5">
-                      Compliant with UK Regulation 1169/2011 (FIC) &amp; Natasha&apos;s Law (Food Standards Agency UK)
+                      Covers the 14 UK/EU allergens. Review recipe cards and supplier specifications.
                     </p>
                   </div>
                   <div className="text-left sm:text-right text-xs font-mono text-white/60">
-                    <div>Date: <strong className="text-white">{reviewDate}</strong></div>
-                    <div>Audited By: <strong className="text-white">{completedBy}</strong></div>
+                    {reviewDate ? <div>Date: <strong className="text-white">{reviewDate}</strong></div> : null}
+                    {completedBy ? <div>Checked by: <strong className="text-white">{completedBy}</strong></div> : null}
                   </div>
                 </div>
               </div>
@@ -1601,12 +1601,10 @@ export const ToolsPage: React.FC = () => {
               Automate Your Takeaway &amp; Save Thousands
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
-              Tired of JustEat &amp; Deliveroo taking <span className="text-primary">30% commission</span> on every order?
+              Want an online menu with an allergen filter?
             </h2>
             <p className="text-sm sm:text-base text-white/70 mt-3 leading-relaxed">
-              We engineer bespoke, high-speed online ordering websites for UK takeaways and restaurants. 
-              Features include <strong className="text-white">built-in Natasha&apos;s Law allergen filtering</strong>, 
-              direct WhatsApp orders, Google Maps SEO, and zero commission fees.
+              Saim Dev builds fast, mobile-friendly websites for UK takeaways and restaurants, including allergen filters on menus.
             </p>
 
             <div className="flex flex-wrap items-center gap-3 mt-6">

@@ -347,7 +347,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 Custom Takeaway Websites
               </span>
               <p className="text-xs text-gray-600 leading-snug">
-                Need automated Natasha&apos;s Law allergen filtering on your menu?
+                Need an allergen filter on your online menu?
               </p>
               <a
                 href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering"
@@ -372,7 +372,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   Kitchen Safety Templates &amp; Record Tools
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold leading-tight">
-                  All {FOOD_SAFETY_TEMPLATES.length} Posters, Logs, Charts &amp; Tools Free
+                  All {FOOD_SAFETY_TEMPLATES.length} Posters, Logs, Charts and Smart Tools, Free
                 </h3>
                 <p className="text-xs text-white/80 mt-1 max-w-xl">
                   Customise kitchen sheets online and print or save as PDF with zero sign-up.
@@ -604,7 +604,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
               <li>Food safety templates help standardise routines, organise kitchen records, and support daily food hygiene.</li>
               <li>Visual reminders like posters promote best practices in hygiene, temperature control, and cross-contamination prevention.</li>
               <li>Checklists and logs foster staff accountability and simplify daily, weekly, and monthly tasks for health inspection readiness.</li>
-              <li>Temperature logs and calibration records support HACCP monitoring, Natasha&apos;s Law, and EHO audit readiness.</li>
+              <li>Temperature logs and calibration records support your own HACCP monitoring.</li>
             </ul>
           </div>
 
@@ -640,7 +640,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             <p className="text-sm text-gray-700 leading-relaxed">
               Checklists are essential tools for maintaining consistency and compliance in daily operations. Use the Restaurant Cleaning Checklist 
               and Kitchen Opening and Closing Checklist to maintain a spotless environment every shift. The Health Inspection Checklist ensures 
-              your team is always audit-ready.
+              your team is prepared for inspections.
             </p>
           </div>
 
@@ -680,7 +680,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
               Need an online menu with an allergen filter?
             </h3>
             <p className="text-sm text-gray-300 leading-relaxed max-w-2xl">
-              We build custom Next.js websites for UK takeaways and restaurants with automated allergen tags, WhatsApp ordering, and zero commission fees.
+              Saim Dev builds fast, mobile-friendly websites for UK takeaways and restaurants, including allergen filters on menus.
             </p>
             <div className="pt-2 flex flex-wrap gap-3">
               <a
