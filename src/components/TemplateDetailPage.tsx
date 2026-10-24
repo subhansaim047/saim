@@ -31,9 +31,9 @@ interface Props {
 }
 
 export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
-  const [premisesName, setPremisesName] = useState("Artisan Kitchen & Takeaway Ltd");
-  const [managerSignoff, setManagerSignoff] = useState("Head Chef / Safety Lead");
-  const [complianceDate, setComplianceDate] = useState(() => new Date().toISOString().split("T")[0]);
+  const [premisesName, setPremisesName] = useState("");
+  const [managerSignoff, setManagerSignoff] = useState("");
+  const [complianceDate, setComplianceDate] = useState("");
 
   // Determine specific tool type
   const isRecipeTool =
@@ -246,7 +246,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                   onChange={e => setPremisesName(e.target.value)}
                   className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
                 />
-                <div className="hidden print:block font-bold text-sm text-gray-950">{premisesName}</div>
+                {premisesName ? <div className="hidden print:block font-bold text-sm text-gray-950">{premisesName}</div> : null}
               </div>
               <div>
                 <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Checked By / Responsible Person</label>
@@ -256,7 +256,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                   onChange={e => setManagerSignoff(e.target.value)}
                   className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-1.5 font-semibold text-gray-900 focus:outline-none print:hidden shadow-2xs"
                 />
-                <div className="hidden print:block font-semibold text-xs text-gray-900">{managerSignoff}</div>
+                {managerSignoff ? <div className="hidden print:block font-semibold text-xs text-gray-900">{managerSignoff}</div> : null}
               </div>
               <div>
                 <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Date of Record</label>
@@ -266,7 +266,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                   onChange={e => setComplianceDate(e.target.value)}
                   className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-amber-600 rounded-lg px-3 py-1.5 font-semibold text-gray-900 focus:outline-none print:hidden shadow-2xs"
                 />
-                <div className="hidden print:block font-semibold text-xs text-gray-900">{complianceDate}</div>
+                {complianceDate ? <div className="hidden print:block font-semibold text-xs text-gray-900">{complianceDate}</div> : null}
               </div>
             </div>
 
@@ -315,7 +315,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
             <div className="pt-2 text-[10px] text-gray-400 font-mono flex items-center justify-between border-t border-gray-100">
               <span>Kitchen record display</span>
-              <span>Checked by: {managerSignoff}</span>
+              {managerSignoff ? <span>Checked by: {managerSignoff}</span> : null}
             </div>
           </div>
         )}
@@ -405,7 +405,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             Need an online menu with an allergen filter?
           </h3>
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">
-            We build custom Next.js websites for UK takeaways and restaurants with automated allergen tags, WhatsApp ordering, and zero commission fees.
+            Saim Dev builds fast, mobile-friendly websites for UK takeaways and restaurants, including allergen filters on menus.
           </p>
           <div className="pt-2">
             <a

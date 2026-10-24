@@ -1,11 +1,12 @@
 {
   "food-allergen-chart": {
-    "title": "Free UK Takeaway Allergen Chart | Saim Dev",
-    "desc": "Record the 14 mandatory UK allergens across your menu. Filter dishes interactively and export a print-ready kitchen matrix as a PDF with zero sign-up.",
+    "title": "Free UK Takeaway Allergen Chart Generator (14 Allergens)",
+    "desc": "Build and print a UK allergen chart for your takeaway in minutes. Covers all 14 allergens, a customer filter and PDF print. Free, no sign-up.",
     "howTo": [
-      "Record every ingredient, sauce, and garnish across all menu items accurately.",
-      "Highlight which of the 14 UK allergens are present or carry cross-contact risk.",
-      "Review and reprint your chart whenever suppliers or dish recipes change."
+      "Replace the example dishes with your own menu and ingredients.",
+      "Mark Contains (YES) for every declared ingredient. Use May contain (MAY) only after a cross-contact risk assessment.",
+      "Check every dish against your recipes and supplier specifications, and update the chart whenever a recipe, product or supplier changes.",
+      "Keep the chart where staff can find it and make sure staff can explain it to customers."
     ]
   },
   "allergy-matrix": {

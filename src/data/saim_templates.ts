@@ -418,7 +418,7 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-33",
     "imgUrl": "/templates/charts/template-33.webp",
     "targetUrl": "/food-safety-templates/allergy-matrix",
-    "desc": "Critical food temperature and safety chart for allergy matrix. Clear visual reference guide for chefs and food preparation handlers.",
+    "desc": "Free printable allergy matrix template for UK commercial kitchens. Record and display declared allergens across all menu items and recipes.",
     "thumbUrl": "/templates/thumbs/template-33.webp"
   },
   {

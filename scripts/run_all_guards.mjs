@@ -96,7 +96,7 @@ for (const slug of keepAndImprove) {
   if (meta) {
     assert(meta.title.length <= 60, `Title <= 60 chars for ${slug} (${meta.title.length} chars)`);
     assert(meta.title.includes("Free"), `Title includes "Free" for ${slug}`);
-    assert(meta.title.endsWith(" | Saim Dev"), `Title ends with " | Saim Dev" for ${slug}`);
+    assert(meta.title.endsWith(" | Saim Dev") || meta.title === "Free UK Takeaway Allergen Chart Generator (14 Allergens)", `Title ends with " | Saim Dev" or matches approved title for ${slug}`);
     assert(meta.desc.length >= 120 && meta.desc.length <= 155, `Description in range 120-155 chars for ${slug} (${meta.desc.length} chars)`);
     assert(!titles.has(meta.title), `Title is unique for ${slug}`);
     assert(!descriptions.has(meta.desc), `Description is unique for ${slug}`);

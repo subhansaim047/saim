@@ -93,9 +93,9 @@ const DEFAULT_STEPS: HaccpStep[] = [
 ];
 
 export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = () => {
-  const [businessName, setBusinessName] = useState("Artisan Kitchen & Takeaway Ltd");
+  const [businessName, setBusinessName] = useState("");
   const [foodCategory, setFoodCategory] = useState("Cook-Serve & Hot-Holding (Burgers, Pizzas & Fried Chicken)");
-  const [managerName, setManagerName] = useState("Head Chef / Safety Lead");
+  const [managerName, setManagerName] = useState("");
   const [auditDate, setAuditDate] = useState(() => new Date().toISOString().split("T")[0]);
 
   const [steps, setSteps] = useState<HaccpStep[]>(DEFAULT_STEPS);
@@ -130,7 +130,7 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = () => {
 
   const handleReset = () => {
     setSteps(DEFAULT_STEPS);
-    setBusinessName("Artisan Kitchen & Takeaway Ltd");
+    setBusinessName("");
     setFoodCategory("Cook-Serve & Hot-Holding (Burgers, Pizzas & Fried Chicken)");
   };
 

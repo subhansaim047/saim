@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useMemo, useEffect } from "react";
+import Link from "next/link";
 import { Plus, Trash2, Printer, ShieldCheck, Search, RotateCcw, Edit3 } from "lucide-react";
 import { ALLERGENS, MenuItem, AllergenStatus } from "../ToolsPage";
 
@@ -35,7 +36,7 @@ const DEFAULT_MENU_ITEMS: MenuItem[] = [
     id: "dish-3",
     name: "Crispy Hot Wings",
     category: "Chicken",
-    ingredients: "Buttermilk marinated fried chicken wings, seasoned wheat flour coating, hot cayenne butter glaze, celery dip",
+    ingredients: "Buttermilk marinated, seasoned wheat flour coated fried chicken wings, hot cayenne butter glaze, celery dip",
     allergens: {
       gluten: "contains",
       milk: "contains",
