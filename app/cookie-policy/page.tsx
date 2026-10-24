@@ -4,7 +4,20 @@ import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Cookie Policy | Saim Dev",
-  description: "Read the Saim Dev Cookie Policy. Learn how we handle cookies and browser local storage on our website and tools.",
+  description: "How Saim Dev uses cookies and browser storage on this website and its free tools.",
+  openGraph: {
+    title: "Cookie Policy | Saim Dev",
+    description: "How Saim Dev uses cookies and browser storage on this website and its free tools.",
+    url: "https://www.saimdev.site/cookie-policy",
+    siteName: "Saim Dev",
+    locale: "en_GB",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cookie Policy | Saim Dev",
+    description: "How Saim Dev uses cookies and browser storage on this website and its free tools."
+  },
   alternates: {
     canonical: "https://www.saimdev.site/cookie-policy",
   },

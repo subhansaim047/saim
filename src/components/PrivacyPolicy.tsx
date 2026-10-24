@@ -45,7 +45,7 @@ export const PrivacyPolicy = () => {
           <section>
             <h2 className="text-white text-xl font-medium mb-3">2. How We Use Your Information</h2>
             <p>
-              Your information is strictly used to deliver custom website development services, communicate project milestones, provide technical support, and configure hosting and domain services. We never sell or share your information with third parties.
+              Your information is strictly used to deliver custom website development services, communicate project milestones, provide technical support, and configure hosting and domain services. We never sell your personal information. We only share data with essential infrastructure providers (such as hosting and communication platforms) necessary to deliver our services.
             </p>
           </section>
 
@@ -59,7 +59,7 @@ export const PrivacyPolicy = () => {
           <section>
             <h2 className="text-white text-xl font-medium mb-3">4. Cookies & Analytics</h2>
             <p>
-              Our website uses basic performance cookies and privacy-focused analytics (such as Google Analytics) to analyze site traffic and improve user experience. You can disable cookies in your browser settings at any time.
+              Our website uses essential technical storage and privacy-focused performance tools to deliver sub-second page loads. You can manage or disable storage in your browser settings at any time.
             </p>
           </section>
 
