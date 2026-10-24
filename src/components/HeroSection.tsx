@@ -161,12 +161,12 @@ export const HeroSection = () => {
             >
               {/* ✨ Highlighted sub-headline */}
               <div className="border-l-2 border-primary pl-3.5">
-                <h3 className="text-white text-xs sm:text-base font-semibold tracking-tight">
+                <h2 className="text-white text-xs sm:text-base font-semibold tracking-tight">
                   High-Performance{" "}
                   <span style={{ color: "#E8C97A", textShadow: "0 0 18px rgba(232,201,122,0.25)" }}>
                     Web Architecture
                   </span>
-                </h3>
+                </h2>
                 <p className="text-white/50 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-0.5">
                   Strategic Design &amp; Digital Growth
                 </p>
