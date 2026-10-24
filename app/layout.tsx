@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     description: 'Bespoke high-performance websites for businesses. Fast loading & privacy-conscious architecture.',
     creator: '@saimwebdev',
   },
+  other: {
+    'build-sha': process.env.VERCEL_GIT_COMMIT_SHA ? process.env.VERCEL_GIT_COMMIT_SHA.slice(0, 7) : 'local',
+  },
 };
 
 const organizationSchema = {
