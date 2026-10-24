@@ -70,11 +70,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "Saim Dev",
       locale: "en_GB",
       type: "website",
+      images: [
+        {
+          url: "https://www.saimdev.site/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${template.title} - Saim Dev`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: pageTitle,
       description: pageDesc,
+      images: ["https://www.saimdev.site/og-image.png"],
     },
   };
 }
@@ -87,5 +96,93 @@ export default async function TemplateDetailRoute({ params }: PageProps) {
     notFound();
   }
 
-  return <TemplateDetailPage template={template} />;
+  const coreMeta = CORE_PAGES_METADATA[slug];
+  const pageTitle = coreMeta ? coreMeta.title : `${template.title} | Saim Dev`;
+  const pageDesc = coreMeta ? coreMeta.desc : template.desc;
+  const canonicalUrl = `https://www.saimdev.site/food-safety-templates/${slug}`;
+
+  // 1. BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.saimdev.site/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Free Tools",
+        "item": "https://www.saimdev.site/tools"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": template.title,
+        "item": canonicalUrl
+      }
+    ]
+  };
+
+  // 2. WebApplication Schema (for interactive calculators / tools) or DigitalDocument Schema
+  const isInteractive =
+    slug.includes("allergen") ||
+    slug.includes("calculator") ||
+    slug.includes("cost") ||
+    slug.includes("recipe") ||
+    slug.includes("haccp") ||
+    slug.includes("quiz");
+
+  const structuredSchema = isInteractive
+    ? {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": pageTitle,
+        "description": pageDesc,
+        "url": canonicalUrl,
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All / Web Browser",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Saim Dev",
+          "url": "https://www.saimdev.site"
+        }
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "DigitalDocument",
+        "name": pageTitle,
+        "description": pageDesc,
+        "url": canonicalUrl,
+        "fileFormat": "application/pdf",
+        "isAccessibleForFree": true,
+        "publisher": {
+          "@type": "Organization",
+          "name": "Saim Dev",
+          "url": "https://www.saimdev.site"
+        }
+      };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredSchema) }}
+      />
+      <TemplateDetailPage template={template} />
+    </>
+  );
 }

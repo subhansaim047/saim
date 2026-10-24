@@ -155,6 +155,23 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-8 py-10 space-y-10">
 
+        {/* Visible Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="no-print">
+          <ol className="flex items-center gap-1.5 text-xs text-gray-500 font-medium flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-black transition-colors">Home</Link>
+            </li>
+            <li aria-hidden="true" className="text-gray-300">/</li>
+            <li>
+              <Link href="/tools" className="hover:text-black transition-colors">Free Tools</Link>
+            </li>
+            <li aria-hidden="true" className="text-gray-300">/</li>
+            <li className="text-gray-900 font-semibold truncate max-w-[240px] sm:max-w-md" aria-current="page">
+              {template.title}
+            </li>
+          </ol>
+        </nav>
+
         {/* Template Hero / Intro */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm flex flex-col md:flex-row items-center gap-8 no-print">
           {/* Preview Image */}
@@ -396,6 +413,22 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             </div>
           </div>
         )}
+
+        {/* Layout-Stable Reserved Ad Slot (AdSense Ready - Zero CLS) */}
+        <div className="no-print w-full flex flex-col items-center justify-center my-6" aria-label="Sponsored Content">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400 mb-1.5 block">
+            Advertisement
+          </span>
+          <div
+            id="adsense-slot-template-bottom"
+            className="w-full max-w-[728px] min-h-[90px] sm:min-h-[250px] bg-gray-100/70 border border-dashed border-gray-300 rounded-2xl flex items-center justify-center text-center p-4 transition-all"
+            data-ad-status="pending-approval"
+          >
+            <span className="text-xs text-gray-400 font-medium">
+              Reserved Ad Placement · Displays after AdSense approval
+            </span>
+          </div>
+        </div>
 
         {/* Conversion Banner */}
         <div className="rounded-3xl bg-[#1D1D1F] text-white p-8 sm:p-10 space-y-3 shadow-xl conversion-banner no-print">

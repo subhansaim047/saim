@@ -46,32 +46,21 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "Organization",
   "@id": "https://www.saimdev.site/#organization",
   "name": "Saim Dev",
-  "alternateName": "Saim Web Architecture Agency",
   "url": "https://www.saimdev.site",
-  "logo": "https://www.saimdev.site/saim-dev-logo.png",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.saimdev.site/saim-dev-logo.png",
+    "width": 512,
+    "height": 512
+  },
   "image": "https://www.saimdev.site/og-image.png",
   "description": "Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.",
-  "priceRange": "£250 - £790",
-  "currenciesAccepted": "GBP, EUR, USD",
-  "paymentAccepted": "Bank Transfer, Stripe, Wise, Credit Card",
-  "areaServed": [
-    { "@type": "Country", "name": "United Kingdom" },
-    { "@type": "Country", "name": "Ireland" },
-    { "@type": "Country", "name": "Germany" },
-    { "@type": "Country", "name": "Netherlands" },
-    { "@type": "AdministrativeArea", "name": "European Union" }
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "GB"
-  },
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-    "telephone": "+923196526604",
     "email": "contact@saimdev.site",
     "url": "https://wa.me/923196526604",
     "availableLanguage": ["English"]
@@ -103,14 +92,32 @@ const personSchema = {
   ]
 };
 
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.saimdev.site/#website",
+  "name": "Saim Dev",
+  "url": "https://www.saimdev.site",
+  "publisher": {
+    "@id": "https://www.saimdev.site/#organization"
+  },
+  "inLanguage": "en-GB"
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <head>
+        {/* Google Consent Mode v2 Default Signals (Default Denied) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -118,6 +125,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body className={`${inter.variable} ${instrument.variable} bg-black text-[#E1E0CC] antialiased selection:bg-primary selection:text-black`}>
