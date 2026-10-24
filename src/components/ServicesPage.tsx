@@ -282,7 +282,7 @@ export const ServicesPage = () => {
             Ready to Select Your Custom Web Service?
           </h3>
           <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            Message Saim Dev on SMS to receive a detailed proposal and get started immediately.
+            Message Saim Dev on WhatsApp to receive a detailed proposal and get started immediately.
           </p>
           <a
             href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"

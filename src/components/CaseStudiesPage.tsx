@@ -355,7 +355,7 @@ export const CaseStudiesPage = () => {
             Ready to Build Your Case Study Success Story?
           </h3>
           <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            Message Saim Dev on SMS to discuss your project requirements and receive a customized quote within 2 hours.
+            Message Saim Dev on WhatsApp to discuss your project requirements and receive a custom quote within 2 hours.
           </p>
           <a
             href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
@@ -363,7 +363,7 @@ export const CaseStudiesPage = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-4 rounded-full hover:bg-white transition-all text-xs sm:text-sm cursor-pointer shadow-xl"
           >
-            <span>Start Your Project on SMS</span>
+            <span>Start Your Project on WhatsApp</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

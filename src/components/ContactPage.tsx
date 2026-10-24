@@ -21,7 +21,7 @@ export const ContactPage = () => {
     businessName: "",
     email: "",
     website: "",
-    budget: "$500 - $1,000",
+    budget: "Under £500",
     details: "",
   });
 
@@ -57,7 +57,7 @@ export const ContactPage = () => {
       setIgLink(url);
       setSubmitted(true);
 
-      // Direct redirection to SMS
+      // Direct redirection to WhatsApp
       window.location.href = url;
     }
   };
@@ -89,7 +89,7 @@ export const ContactPage = () => {
             Let's Build Something Great
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Fill out the form below to initiate an instant project inquiry directly on Instagram.
+            Fill out the form below to send a project inquiry directly via WhatsApp or start a discussion.
           </p>
         </div>
 
@@ -99,7 +99,7 @@ export const ContactPage = () => {
             Send a Project Inquiry
           </h2>
           <p className="text-white/60 text-xs sm:text-sm mb-8 font-light">
-            Submitting this form launches Instagram with your pre-filled inquiry ready to send to Saim Dev (SMS).
+            Submitting this form launches WhatsApp with your pre-filled inquiry ready to send to Saim Dev.
           </p>
 
           {submitted ? (
@@ -252,7 +252,7 @@ export const ContactPage = () => {
                 type="submit"
                 className="w-full bg-primary text-black font-semibold py-3.5 px-6 rounded-full hover:bg-white transition-all cursor-pointer flex items-center justify-center gap-2 text-sm shadow-xl"
               >
-                <span>Send Project Inquiry on SMS</span>
+                <span>Send Project Inquiry on WhatsApp</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
@@ -312,7 +312,7 @@ export const ContactPage = () => {
             <div>
               <h4 className="text-white text-sm font-medium">Can we communicate via Instagram?</h4>
               <p className="text-white/60 text-xs mt-1 font-light">
-                Yes! Instant communication is available via Instagram (SMS) throughout the project.
+                Yes! Instant communication is available via WhatsApp (+92 319 6526604) throughout the project.
               </p>
             </div>
           </div>
