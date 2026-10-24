@@ -4,6 +4,7 @@ import { FOOD_SAFETY_TEMPLATES, getTemplateBySlug } from "@/data/saim_templates"
 import { TemplateDetailPage } from "@/components/TemplateDetailPage";
 import { CORE_PAGES_METADATA } from "@/data/core_metadata";
 import pagePlanData from "@/data/page_plan.json";
+import { isRouteNeedsReplacement } from "@/lib/originality-guard";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -41,7 +42,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     reason: "Default plan",
   };
 
-  const isIndexable = plan.bucket === "KEEP" || plan.bucket === "IMPROVE";
+  const needsReplacement = isRouteNeedsReplacement(`/food-safety-templates/${slug}`);
+  const isIndexable = !needsReplacement && (plan.bucket === "KEEP" || plan.bucket === "IMPROVE");
   const canonicalSlug = plan.bucket === "MERGE" ? plan.target_canonical_slug : slug;
   const canonicalUrl = `https://www.saimdev.site/food-safety-templates/${canonicalSlug}`;
 

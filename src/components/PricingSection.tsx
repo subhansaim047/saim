@@ -6,98 +6,9 @@ import { PrimaryButton } from "./PrimaryButton";
 import { SecondaryButton } from "./SecondaryButton";
 import { SpotlightBorder } from "./SpotlightBorder";
 import { cn } from "../lib/utils";
+import { PLANS, type Currency, type Plan } from "../../content/plans";
 
-type Currency = "GBP" | "EUR" | "USD";
-
-type Feature = { text: string; included: boolean };
-type BasePlan = {
-  name: string;
-  prices: Record<Currency, string>;
-  description: string;
-  features: Feature[];
-  featured?: boolean;
-  badge?: string;
-  bg: string;
-};
-
-const rawPlans: BasePlan[] = [
-  {
-    name: "Landing Page",
-    prices: {
-      GBP: "£250",
-      EUR: "€290",
-      USD: "$300",
-    },
-    description: "High-converting 1-page online presence for single offers & local service campaigns.",
-    bg: "#0f0f0f",
-    features: [
-      { text: "1 High-Converting Page", included: true },
-      { text: "Mobile-First Ultra Fast Design", included: true },
-      { text: "Lead Capture & Contact Form", included: true },
-      { text: "Direct WhatsApp & Call Integration", included: true },
-      { text: "Google Maps Embed", included: true },
-      { text: "Core SEO & Social Graph Setup", included: true },
-      { text: "Sub-Second Loading Architecture", included: true },
-      { text: "1 Round of Refinements", included: true },
-      { text: "7 Days Post-Launch Support", included: true },
-    ],
-  },
-  {
-    name: "Starter Plan",
-    prices: {
-      GBP: "£390",
-      EUR: "€460",
-      USD: "$500",
-    },
-    description: "No monthly lock-in. Essential high-performance digital presence for local businesses.",
-    bg: "#161616",
-    features: [
-      { text: "Up to 5 Custom Pages", included: true },
-      { text: "Next.js 16 Static Performance", included: true },
-      { text: "Mobile Responsive & Accessible", included: true },
-      { text: "Lead Generation & Contact Forms", included: true },
-      { text: "Direct WhatsApp & Call Buttons", included: true },
-      { text: "Google Maps & Local Schema", included: true },
-      { text: "Complete On-Page SEO Setup", included: true },
-      { text: "95+ Google PageSpeed Score", included: true },
-      { text: "SSL & Cloud Hosting Setup", included: true },
-      { text: "Privacy-Conscious Web Architecture", included: true },
-      { text: "2 Rounds of Revisions", included: true },
-      { text: "14 Days Dedicated Support", included: true },
-    ],
-  },
-  {
-    name: "Business Plan",
-    prices: {
-      GBP: "£790",
-      EUR: "€920",
-      USD: "$999",
-    },
-    description: "No monthly retainers. Complete growth engine engineered to dominate local search.",
-    bg: "#252525",
-    features: [
-      { text: "Up to 15 Pages & Landing Sections", included: true },
-      { text: "Bespoke Custom UI/UX & Brand Identity", included: true },
-      { text: "Sub-Second Next.js Turbopack Builds", included: true },
-      { text: "Conversion-Focused Architecture", included: true },
-      { text: "Comprehensive Structured Schema (JSON-LD)", included: true },
-      { text: "Dynamic Blog / Editorial CMS System", included: true },
-      { text: "Google Analytics 4 & Search Console Setup", included: true },
-      { text: "Advanced Speed & Core Web Vitals Optimization", included: true },
-      { text: "AI Chatbot / WhatsApp Lead Funnel", included: true },
-      { text: "Interactive Case Studies / Gallery System", included: true },
-      { text: "FAQ Rich Snippet Section", included: true },
-      { text: "PECR Cookie Banner & Privacy Ready", included: true },
-      { text: "Priority Fast-Track Turnaround", included: true },
-      { text: "5 Revisions Included", included: true },
-      { text: "30 Days Dedicated Support", included: true },
-    ],
-    featured: true,
-    badge: "Most Popular in UK/EU",
-  },
-];
-
-const PricingCard = ({ plan, currency }: { plan: BasePlan; currency: Currency }) => {
+const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => {
   const [expanded, setExpanded] = useState(false);
 
   const price = plan.prices[currency];
@@ -320,7 +231,7 @@ export const PricingSection = () => {
 
         {/* CARDS */}
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 items-start">
-          {rawPlans.map((p) => (
+          {PLANS.map((p) => (
             <PricingCard key={p.name} plan={p} currency={currency} />
           ))}
         </div>

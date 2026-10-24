@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { IconX, IconQuora, IconContra, IconInstagram, IconTikTok, IconThreads } from "./SocialIcons";
+import { getClaim } from "../lib/claims";
 
 export const FooterSection = () => {
   return (
@@ -36,9 +37,9 @@ export const FooterSection = () => {
             <a href="/#contact">Contact</a>
           </nav>
 
-          <nav className="site-footer__nav" aria-label="Client Demos">
+          <nav className="site-footer__nav" aria-label={getClaim("demos-preview")}>
             <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '10px', textTransform: 'uppercase', fontWeight: 600, marginBottom: '4px', display: 'block' }}>
-              Client Demos (Preview)
+              {getClaim("demos-preview")}
             </span>
             <a href="/hotbite/index.html" rel="nofollow">O&apos;Resto Street Food</a>
             <a href="/burger-garage/index.html" rel="nofollow">Burger Garage</a>

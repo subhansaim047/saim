@@ -1,21 +1,51 @@
 [
   {
+    "id": "satisfaction-guarantee",
+    "text": "100% Satisfaction Guarantee",
+    "evidence": "",
+    "neutralText": "Revisions included on staging until the agreed scope is delivered."
+  },
+  {
+    "id": "reply-speed",
+    "text": "Reply in <15 mins",
+    "evidence": "",
+    "neutralText": "Replies on WhatsApp during working hours."
+  },
+  {
+    "id": "end-to-end-encrypted",
+    "text": "Direct end-to-end encrypted connection with lead engineer",
+    "evidence": "",
+    "neutralText": "Your message opens in WhatsApp. WhatsApp's own privacy terms apply. See our privacy policy."
+  },
+  {
+    "id": "hmrc-vat",
+    "text": "HMRC & EU VAT-compliant invoices",
+    "evidence": "",
+    "neutralText": "Invoices provided."
+  },
+  {
     "id": "gdpr-compliant",
     "text": "GDPR compliant",
     "evidence": "",
-    "neutralText": "Privacy-conscious architecture"
+    "neutralText": ""
   },
   {
     "id": "core-web-vitals-95",
     "text": "95+ Core Web Vitals",
     "evidence": "",
-    "neutralText": "Optimised Core Web Vitals"
+    "neutralText": ""
   },
   {
     "id": "core-web-vitals-98",
     "text": "Verified Core Web Vitals (98+ Score)",
     "evidence": "",
-    "neutralText": "Optimised Core Web Vitals score"
+    "neutralText": ""
+  },
+  {
+    "id": "sub-second",
+    "text": "sub-second",
+    "evidence": "",
+    "neutralText": ""
   },
   {
     "id": "performance-stats",
@@ -24,51 +54,15 @@
     "neutralText": "Illustrative example, not a client result"
   },
   {
-    "id": "satisfaction-guarantee",
-    "text": "100% Satisfaction Guarantee",
-    "evidence": "",
-    "neutralText": "Dedicated Revision Support"
-  },
-  {
-    "id": "reply-speed",
-    "text": "Reply in <15 mins",
-    "evidence": "",
-    "neutralText": "Direct communication"
-  },
-  {
-    "id": "end-to-end-encrypted",
-    "text": "Direct end-to-end encrypted connection",
-    "evidence": "",
-    "neutralText": "Direct messaging connection"
-  },
-  {
-    "id": "hmrc-vat",
-    "text": "HMRC & EU VAT-compliant invoices",
-    "evidence": "",
-    "neutralText": "Itemised commercial invoices"
-  },
-  {
-    "id": "sub-second",
-    "text": "sub-second",
-    "evidence": "",
-    "neutralText": "fast-loading"
-  },
-  {
     "id": "seven-years",
-    "text": "Over the last seven years, our studio has engineered",
+    "text": "Over the last seven years, our studio has engineered web platforms",
     "evidence": "",
     "neutralText": "Our studio engineers"
   },
   {
-    "id": "zero-commission",
-    "text": "0% commission",
+    "id": "demos-preview",
+    "text": "Client Demos (Preview)",
     "evidence": "",
-    "neutralText": "Direct ordering without aggregator commission fees"
-  },
-  {
-    "id": "instant-maps-seo",
-    "text": "instant Google Maps SEO",
-    "evidence": "",
-    "neutralText": "Google Maps profile integration"
+    "neutralText": "Concept demo sites (not client work)"
   }
 ]

@@ -4,14 +4,18 @@
  * Live Deployment Verification Script: saimdev.site
  * 
  * Usage:
- *   node scripts/verify-live.mjs https://www.saimdev.site
+ *   node scripts/verify-live.mjs https://www.saimdev.site [expectedSha]
  *   node scripts/verify-live.mjs http://localhost:3000
  */
 
 const baseUrl = process.argv[2] ? process.argv[2].replace(/\/$/, '') : 'https://www.saimdev.site';
+const expectedSha = process.argv[3] || process.env.EXPECTED_SHA || null;
 
 console.log(`=================================================`);
 console.log(`   LIVE SITE VERIFICATION: ${baseUrl}`);
+if (expectedSha) {
+  console.log(`   EXPECTED COMMIT SHA: ${expectedSha}`);
+}
 console.log(`=================================================\n`);
 
 const routes = [
@@ -37,7 +41,7 @@ const routes = [
   },
   {
     path: '/contact',
-    expectedTitle: 'Contact | Saim Dev',
+    expectedTitle: 'Contact Saim Dev | Website Projects for UK Businesses',
     canonical: 'https://www.saimdev.site/contact'
   },
   {
@@ -81,7 +85,17 @@ const forbiddenSection1 = [
   "Instagram: SMS",
   "via Instagram at SMS",
   "Send Project Inquiry on SMS",
-  "Saim Dev (SMS)"
+  "Saim Dev (SMS)",
+  "Fill out the form below to initiate an instant project inquiry directly on Instagram",
+  "Submitting this form launches Instagram",
+  "Can we communicate via Instagram? Yes! Instant communication is available via Instagram (SMS)",
+  "$500 - $1,000 (Starter Website)",
+  "$1,000 - $5,000 (Full Business Plan)",
+  "$1,200+ (Custom Web Architecture / AI App)",
+  "phone/Instagram number",
+  "We never sell or share your information with third parties.",
+  "privacy-focused analytics (such as Google Analytics)",
+  "contact us directly via Instagram at SMS"
 ];
 
 const requiredFooterLinks = [
@@ -114,7 +128,7 @@ async function verifyRoute(route) {
   try {
     const res = await fetch(url, {
       headers: {
-        'User-Agent': 'SaimDev-QualityGuard/2.0'
+        'User-Agent': 'SaimDev-QualityGuard/3.0'
       }
     });
 
@@ -123,7 +137,18 @@ async function verifyRoute(route) {
 
     const html = await res.text();
 
-    // (a) Forbidden Section 1 strings check
+    // (a) Build SHA check on homepage or all pages
+    if (expectedSha) {
+      const shaMatch = html.match(/<meta[^>]+name=["']build-sha["'][^>]+content=["']([^"']+)["']/i);
+      if (shaMatch) {
+        const liveSha = shaMatch[1];
+        assert(liveSha === expectedSha, `build-sha matches expected ${expectedSha} (live: ${liveSha})`);
+      } else {
+        assert(false, `No <meta name="build-sha"> tag found on ${route.path}`);
+      }
+    }
+
+    // (b) Forbidden Section 1 strings check
     let foundForbidden = false;
     for (const forbidden of forbiddenSection1) {
       if (html.includes(forbidden)) {
@@ -135,14 +160,14 @@ async function verifyRoute(route) {
       assert(true, `No Section 1 forbidden claims found in ${route.path}`);
     }
 
-    // (b) Title verification
+    // (c) Title verification
     if (route.expectedTitle) {
       const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
       const actualTitle = titleMatch ? titleMatch[1].trim().replace(/&amp;/g, '&') : '';
       assert(actualTitle.includes(route.expectedTitle), `Title matches "${route.expectedTitle}" on ${route.path} (actual: "${actualTitle}")`);
     }
 
-    // (c) og:url equals canonical
+    // (d) og:url equals canonical
     const canonicalMatch = html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i);
     const ogUrlMatch = html.match(/<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["']/i);
     
@@ -152,7 +177,7 @@ async function verifyRoute(route) {
       assert(canonical.replace(/\/$/, '') === ogUrl.replace(/\/$/, ''), `og:url ("${ogUrl}") matches canonical ("${canonical}") on ${route.path}`);
     }
 
-    // (d) Footer links present
+    // (e) Footer links present
     let missingLinks = 0;
     for (const link of requiredFooterLinks) {
       if (!html.includes(link)) {
@@ -162,9 +187,20 @@ async function verifyRoute(route) {
     }
     assert(missingLinks === 0, `All 9 footer links present in ${route.path}`);
 
-    // (e) No SMS as placeholder
-    const smsPlaceholderMatch = html.match(/Instagram\s*\(SMS\)|Instagram:\s*SMS|via\s+Instagram\s+at\s+SMS|Inquiry\s+on\s+SMS/i);
-    assert(!smsPlaceholderMatch, `No SMS placeholder tokens found in ${route.path}`);
+    // (f) Specific checks per route
+    if (route.path === '/contact') {
+      assert(html.includes('Send Project Inquiry on WhatsApp'), 'Contact form CTA submits to WhatsApp');
+      assert(html.includes('Landing page (from £250)'), 'Contact form uses unified budget plans from plans.ts');
+    }
+
+    if (route.path === '/privacy') {
+      assert(html.includes('We do not sell personal data. We share it only with the service providers listed above.'), 'Privacy policy contains required no-sale declaration');
+      assert(html.includes('Information Commissioner') || html.includes('ICO'), 'Privacy policy contains ICO disclosure');
+    }
+
+    if (route.path === '/cookie-policy') {
+      assert(html.includes('saim_cookie_consent'), 'Cookie policy contains storage inventory table');
+    }
 
   } catch (err) {
     assert(false, `Failed to fetch ${url}: ${err.message}`);

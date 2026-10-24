@@ -8,7 +8,7 @@ const instrument = Instrument_Serif({ weight: "400", style: ["normal", "italic"]
 
 export const metadata: Metadata = {
   title: 'Saim Dev - Next.js & Full Stack Web Developer | UK & Europe',
-  description: 'Custom high-performance websites for UK, European, and global businesses. Built with Next.js 16, React, and Node.js. Optimised Core Web Vitals, privacy-conscious architecture, fast turnaround. Starting from £390.',
+  description: 'Custom, fast Next.js websites for UK and European businesses. Fixed one-time pricing from £250.',
   metadataBase: new URL('https://www.saimdev.site'),
   alternates: {
     canonical: '/',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Saim Dev - High-Performance Web Development | Next.js Architecture',
-    description: 'Custom high-performance websites for UK & European businesses. Fast delivery, 95+ Core Web Vitals, transparent fixed pricing.',
+    description: 'Custom, fast Next.js websites for UK and European businesses. Fixed one-time pricing from £250.',
     url: '/',
     siteName: 'Saim Dev',
     type: 'website',
@@ -27,8 +27,11 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Saim Dev - Next.js Developer for UK & Europe',
-    description: 'Bespoke high-performance websites for businesses. Fast loading & privacy-conscious architecture.',
+    description: 'Custom, fast Next.js websites for UK and European businesses. Fixed one-time pricing from £250.',
     creator: '@saimwebdev',
+  },
+  other: {
+    'build-sha': process.env.VERCEL_GIT_COMMIT_SHA ? process.env.VERCEL_GIT_COMMIT_SHA.slice(0, 7) : 'local',
   },
 };
 
@@ -41,8 +44,8 @@ const organizationSchema = {
   "url": "https://www.saimdev.site",
   "logo": "https://www.saimdev.site/saim-dev-logo.png",
   "image": "https://www.saimdev.site/og-image.png",
-  "description": "Bespoke high-performance web development and Next.js architecture for UK, European, and global businesses. Fast turnaround, sub-second loading, and SEO-engineered design.",
-  "priceRange": "£390 - £1500",
+  "description": "Custom, fast Next.js websites for UK and European businesses. Fixed one-time pricing from £250.",
+  "priceRange": "£250 - £790",
   "currenciesAccepted": "GBP, EUR, USD",
   "paymentAccepted": "Bank Transfer, Stripe, Wise, Credit Card",
   "areaServed": [

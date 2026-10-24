@@ -43,19 +43,23 @@ export const CookieBanner: React.FC = () => {
         <div className="flex-1">
           <div className="flex items-center justify-between mb-1">
             <h4 className="text-sm font-semibold text-white flex items-center gap-1.5">
-              <span>EU & UK Privacy Notice</span>
+              <span>Privacy & Storage Notice</span>
               <ShieldCheck className="w-3.5 h-3.5 text-primary" />
             </h4>
             <button
               onClick={() => handleConsent("essential")}
               aria-label="Close cookie banner"
-              className="text-white/40 hover:text-white transition-colors"
+              className="text-white/40 hover:text-white transition-colors cursor-pointer"
             >
               <X className="w-4 h-4" />
             </button>
           </div>
           <p className="text-xs text-white/70 leading-relaxed mb-4">
-            We use privacy-respecting cookies to deliver optimal performance, security, and sub-second page loads. In compliance with GDPR and UK PECR guidelines. Learn more in our{" "}
+            We use essential local storage to remember your privacy preference and persist interactive kitchen tool edits on your device. We do not use third-party tracking or advertising cookies. Learn more in our{" "}
+            <Link href="/cookie-policy" className="underline text-primary hover:text-white transition-colors">
+              Cookie Policy
+            </Link>{" "}
+            and{" "}
             <Link href="/privacy" className="underline text-primary hover:text-white transition-colors">
               Privacy Policy
             </Link>
