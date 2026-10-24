@@ -1,0 +1,7 @@
+id,title,slug,targetUrl,action,reason
+"template-dup-cooling-1","Two-Stage Cooling Method","food-cooling-poster","/food-safety-templates/food-cooling-poster","MERGED_CARD","Duplicate URL pointing to same food cooling poster; kept canonical food-cooling-poster card"
+"template-dup-cooling-2","Cooling Food Methods Poster","food-cooling-poster","/food-safety-templates/food-cooling-poster","MERGED_CARD","Duplicate URL pointing to same food cooling poster; kept canonical food-cooling-poster card"
+"template-dup-safe-prep","Safe Food Preparation","vacuum-sealed-food-shelf-life-chart","/food-safety-templates/vacuum-sealed-food-shelf-life-chart","RETITLED","Card pointing to vacuum sealed chart retitled to Vacuum-Sealed Food Shelf-Life Chart"
+"template-5","Food Allergen Chart","food-allergen-chart","/food-safety-templates/food-allergen-chart","TYPE_UPDATED","Updated type to smart_tool and preheader to SMART TOOL"
+"template-100","Calculating Food Cost","calculating-food-cost","/food-safety-templates/calculating-food-cost","TYPE_UPDATED","Updated type to smart_tool and preheader to SMART TOOL"
+"template-101","Food Cost Calculator","food-cost-calculator","/food-safety-templates/food-cost-calculator","TYPE_UPDATED","Updated type to smart_tool and preheader to SMART TOOL"
