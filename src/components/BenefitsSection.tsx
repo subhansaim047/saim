@@ -52,7 +52,7 @@ export const BenefitsSection = () => {
                   SEO Optimization
                 </h3>
                 <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
-                  Sub-second Next.js architecture, verified Core Web Vitals, and structured schema markup engineered to rank on Google.
+                  Sub-second Next.js architecture, optimised Core Web Vitals, and structured schema markup engineered to rank on Google.
                 </p>
               </div>
             </div>

@@ -126,7 +126,7 @@ export default function NextJsDeveloperUkPage() {
           {/* TRUST STATS */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-left">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-0.5">99/100</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-0.5">90+</div>
               <div className="text-xs text-white/60">Google Core Web Vitals</div>
             </div>
             <div>

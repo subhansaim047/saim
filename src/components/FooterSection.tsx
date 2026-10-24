@@ -85,8 +85,14 @@ export const FooterSection = () => {
           </Link>
         </div>
 
+        {/* VISIBLE BUSINESS DETAILS */}
+        <div className="border-t border-white/10 pt-4 mt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50 text-center sm:text-left">
+          <span>Saim Dev — Independent Next.js Engineering Studio for UK &amp; European businesses.</span>
+          <span>Contact: <a href="mailto:contact@saimdev.site" className="text-primary hover:underline">contact@saimdev.site</a> · WhatsApp: <a href="https://wa.me/923196526604" className="text-primary hover:underline">+92 319 6526604</a></span>
+        </div>
+
         {/* LEGAL & TRUST LINE */}
-        <div className="site-footer__legal border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
+        <div className="site-footer__legal border-t border-white/10 pt-6 mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
           <p>© 2026 Saim Dev. All rights reserved. Email: <a href="mailto:contact@saimdev.site" className="text-white/80 hover:text-white underline">contact@saimdev.site</a></p>
           <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-white/70">
             <Link href="/" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Home</Link>

@@ -23,12 +23,21 @@ export const metadata: Metadata = {
     siteName: 'Saim Dev',
     locale: 'en_GB',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.saimdev.site/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Saim Dev - Next.js Web Development for UK & Europe',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Saim Dev - Next.js Developer for UK & Europe',
     description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
     creator: '@saimwebdev',
+    images: ['https://www.saimdev.site/og-image.png'],
   },
   other: {
     'build-sha': process.env.VERCEL_GIT_COMMIT_SHA ? process.env.VERCEL_GIT_COMMIT_SHA.slice(0, 7) : 'local',

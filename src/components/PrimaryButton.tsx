@@ -9,8 +9,8 @@ const AnimatedText = ({ children }: { children: ReactNode }) => {
         {children}
       </span>
       <span
-        aria-hidden
-        className="absolute left-0 top-0 inline-block translate-y-full py-0.5 transition-transform duration-300 ease-out group-hover:translate-y-0"
+        aria-hidden="true"
+        className="absolute left-0 top-0 inline-block translate-y-full py-0.5 transition-transform duration-300 ease-out group-hover:translate-y-0 select-none pointer-events-none"
       >
         {children}
       </span>

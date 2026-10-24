@@ -334,7 +334,7 @@ export const CaseStudiesPage = () => {
             Guaranteed Performance Contract
           </h2>
           <p className="text-white/70 text-xs sm:text-sm max-w-2xl mx-auto font-light leading-relaxed mb-8">
-            Every website built by Saim Dev includes a guaranteed 95+ Lighthouse speed benchmark, mobile responsiveness, and 100% full code ownership upon completion.
+            Every website built by Saim Dev includes a guaranteed 90+ Lighthouse speed benchmark, mobile responsiveness, and 100% full code ownership upon completion.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-emerald-400">
             <span className="flex items-center gap-1.5">

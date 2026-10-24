@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import { FadeUp } from "./FadeUp";
 import { HelpCircle, ChevronDown } from "lucide-react";
 
@@ -37,12 +36,6 @@ const faqs: FaqItem[] = [
 ];
 
 export const FaqSection = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section id="faq" className="relative w-full bg-black py-16 sm:py-24 border-t border-white/10">
       <div className="mx-auto max-w-[1080px] px-4 sm:px-6">
@@ -68,55 +61,29 @@ export const FaqSection = () => {
           </FadeUp>
         </div>
 
-        {/* ACCORDION FAQ LIST */}
+        {/* ACCORDION FAQ LIST - Native details / summary with CSS-only collapse */}
         <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index;
-
-            return (
-              <FadeUp key={faq.question} delay={0.08 * index}>
-                <div
-                  className={`liquid-glass rounded-2xl border transition-all duration-300 overflow-hidden ${
-                    isOpen
-                      ? "border-primary/40 bg-white/[0.04]"
-                      : "border-white/10 hover:border-white/20"
-                  }`}
-                >
-                  <button
-                    type="button"
-                    onClick={() => toggleFaq(index)}
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-answer-${index}`}
-                    className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
-                  >
-                    <h3 className="text-white text-base sm:text-lg font-medium leading-snug">
-                      {faq.question}
-                    </h3>
-                    <div
-                      className={`w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                        isOpen ? "rotate-180 text-primary border-primary/30" : "text-white/60"
-                      }`}
-                    >
-                      <ChevronDown className="w-4 h-4" />
-                    </div>
-                  </button>
-
-                  <div
-                    id={`faq-answer-${index}`}
-                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
-                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <div className="px-6 sm:px-7 pb-6 sm:pb-7 text-foreground/70 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
-                        {faq.answer}
-                      </div>
-                    </div>
+          {faqs.map((faq, index) => (
+            <FadeUp key={faq.question} delay={0.08 * index}>
+              <details
+                className="group liquid-glass rounded-2xl border border-white/10 open:border-primary/40 open:bg-white/[0.04] transition-all duration-300 overflow-hidden"
+                open={index === 0}
+              >
+                <summary className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 list-none select-none">
+                  <h3 className="text-white text-base sm:text-lg font-medium leading-snug">
+                    {faq.question}
+                  </h3>
+                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 transition-transform duration-300 group-open:rotate-180 group-open:text-primary group-open:border-primary/30 text-white/60">
+                    <ChevronDown className="w-4 h-4" />
                   </div>
+                </summary>
+
+                <div className="px-6 sm:px-7 pb-6 sm:pb-7 text-foreground/70 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
+                  {faq.answer}
                 </div>
-              </FadeUp>
-            );
-          })}
+              </details>
+            </FadeUp>
+          ))}
         </div>
       </div>
     </section>

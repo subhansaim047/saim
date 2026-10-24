@@ -39,29 +39,36 @@ export const WordsPullUpMultiStyle = ({
     });
   });
 
+  const fullText = segments.map((s) => s.text).join(" ");
+
   return (
-    <div
-      ref={ref}
-      className={`inline-flex flex-wrap justify-center gap-x-[0.25em] gap-y-[0.1em] ${containerClassName}`}
-      style={style}
-    >
-      {wordList.map(({ word, className, globalIndex }) => (
-        <span key={globalIndex} className="inline-block overflow-hidden py-1">
-          <motion.span
-            className={`inline-block ${className}`}
-            initial={{ y: 20, opacity: 0 }}
-            animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: delay + globalIndex * 0.08,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-          >
-            {word}
-          </motion.span>
-          {" "}
-        </span>
-      ))}
+    <div ref={ref} className={`relative ${containerClassName}`} style={style}>
+      {/* Screen reader accessible text: single clean string */}
+      <span className="sr-only">{fullText}</span>
+
+      {/* Visual animation aria-hidden */}
+      <span
+        aria-hidden="true"
+        className="inline-flex flex-wrap justify-center gap-x-[0.25em] gap-y-[0.1em]"
+      >
+        {wordList.map(({ word, className, globalIndex }) => (
+          <span key={globalIndex} className="inline-block overflow-hidden py-1">
+            <motion.span
+              className={`inline-block ${className}`}
+              initial={{ y: 20, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: delay + globalIndex * 0.08,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+            >
+              {word}
+            </motion.span>
+            {" "}
+          </span>
+        ))}
+      </span>
     </div>
   );
 };

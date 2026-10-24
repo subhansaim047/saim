@@ -18,9 +18,14 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ theme = "light", classNa
       } ${className}`}
     >
       <p>© 2026 Saim Dev. High-performance Next.js web architecture. Email: <a href="mailto:contact@saimdev.site" className="underline hover:text-primary">contact@saimdev.site</a></p>
+      
+      <div className={`mt-2 text-[11px] ${isDark ? "text-white/40" : "text-gray-400"}`}>
+        Saim Dev — Independent Web Architecture Studio for UK &amp; Europe · WhatsApp: <a href="https://wa.me/923196526604" className="hover:underline text-primary">+92 319 6526604</a>
+      </div>
+
       <nav
         aria-label="Footer Navigation"
-        className={`flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-2.5 ${
+        className={`flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-3 ${
           isDark ? "text-white/70" : "text-gray-600"
         }`}
       >

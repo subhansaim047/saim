@@ -15,7 +15,6 @@ export const WordsPullUp = ({
   text,
   className = "",
   delay = 0,
-  showAsterisk = false,
   style,
   as: Component = "div",
 }: WordsPullUpProps) => {
@@ -24,15 +23,16 @@ export const WordsPullUp = ({
   const words = text.split(" ");
 
   return (
-    <Component ref={ref as any} className={`inline-flex flex-wrap ${className}`} style={style}>
-      {words.map((word, i) => {
-        const isLastWord = i === words.length - 1;
-        return (
+    <Component ref={ref as any} className={`relative ${className}`} style={style}>
+      {/* Screen reader text: clean single string with proper pronunciation and no double-reading */}
+      <span className="sr-only">{text}</span>
+
+      {/* Visual animation aria-hidden="true" with explicit whitespace between spans */}
+      <span aria-hidden="true" className="inline-flex flex-wrap">
+        {words.map((word, i) => (
           <span
             key={i}
-            className={`inline-block overflow-hidden mr-[0.2em] last:mr-0 relative py-1 ${
-              showAsterisk && isLastWord ? "pr-[0.35em]" : ""
-            }`}
+            className="inline-block overflow-hidden mr-[0.25em] last:mr-0 relative py-1"
           >
             <motion.span
               className="inline-block relative"
@@ -45,15 +45,11 @@ export const WordsPullUp = ({
               }}
             >
               {word}
-              {showAsterisk && isLastWord && (
-                <span className="absolute top-[0.65em] -right-[0.3em] text-[0.31em] leading-none select-none font-sans">
-                  *
-                </span>
-              )}
             </motion.span>
+            {" "}
           </span>
-        );
-      })}
+        ))}
+      </span>
     </Component>
   );
 };
