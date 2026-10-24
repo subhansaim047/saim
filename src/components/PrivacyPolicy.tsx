@@ -133,6 +133,7 @@ export const PrivacyPolicy: React.FC = () => {
             <ul className="list-disc list-inside space-y-1 mt-2 text-white/70 text-sm">
               <li><strong>Hosting &amp; Edge Delivery:</strong> Vercel Inc. (cloud infrastructure and edge deployment).</li>
               <li><strong>Direct Communications:</strong> Meta Platforms Ireland Ltd / WhatsApp LLC (when you message our WhatsApp channel).</li>
+              <li><strong>Advertising &amp; Analytics:</strong> Google LLC / Google Ireland Ltd (Google AdSense and Google Analytics, operating under Google Consent Mode v2 and IAB TCF frameworks where enabled). Third-party vendors, including Google, use cookies to serve ads based on prior visits to this website. Users may manage preferences via the Cookie Settings footer button or opt out of personalised advertising at <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="underline text-primary">Google Ads Settings</a>.</li>
             </ul>
           </section>
 

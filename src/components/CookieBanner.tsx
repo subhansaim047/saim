@@ -10,14 +10,31 @@ export const CookieBanner: React.FC = () => {
     try {
       const consent = localStorage.getItem("saim_cookie_consent");
       if (!consent) {
-        // Small delay so it doesn't pop in abruptly
         const timer = setTimeout(() => setIsVisible(true), 1200);
         return () => clearTimeout(timer);
+      } else if (consent === "accepted") {
+        updateGoogleConsent("granted");
       }
     } catch {
       // localStorage may fail in private mode
     }
+
+    // Listen to re-open trigger from footer "Cookie Settings"
+    const handleReopen = () => setIsVisible(true);
+    window.addEventListener("open_cookie_settings", handleReopen);
+    return () => window.removeEventListener("open_cookie_settings", handleReopen);
   }, []);
+
+  const updateGoogleConsent = (state: "granted" | "denied") => {
+    if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+      (window as any).gtag("consent", "update", {
+        ad_storage: state,
+        ad_user_data: state,
+        ad_personalization: state,
+        analytics_storage: state,
+      });
+    }
+  };
 
   const handleConsent = (type: "accepted" | "essential") => {
     try {
@@ -25,6 +42,13 @@ export const CookieBanner: React.FC = () => {
     } catch {
       // Ignore
     }
+
+    if (type === "accepted") {
+      updateGoogleConsent("granted");
+    } else {
+      updateGoogleConsent("denied");
+    }
+
     setIsVisible(false);
   };
 
@@ -43,7 +67,7 @@ export const CookieBanner: React.FC = () => {
         <div className="flex-1">
           <div className="flex items-center justify-between mb-1">
             <p className="text-sm font-semibold text-white flex items-center gap-1.5">
-              <span>Privacy & Storage Notice</span>
+              <span>Privacy &amp; Cookie Consent</span>
               <ShieldCheck className="w-3.5 h-3.5 text-primary" />
             </p>
             <button
@@ -55,7 +79,7 @@ export const CookieBanner: React.FC = () => {
             </button>
           </div>
           <p className="text-xs text-white/70 leading-relaxed mb-4">
-            We use essential local storage to remember your privacy preference and persist interactive kitchen tool edits on your device. We do not use third-party tracking or advertising cookies. Learn more in our{" "}
+            We use essential local storage to remember your privacy preference and persist interactive kitchen tool edits on your device. Non-essential cookies and analytics comply with Google Consent Mode v2 and UK GDPR. Learn more in our{" "}
             <Link href="/cookie-policy" className="underline text-primary hover:text-white transition-colors">
               Cookie Policy
             </Link>{" "}

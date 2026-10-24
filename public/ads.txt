@@ -1,0 +1,8 @@
+# ads.txt — Google AdSense authorisation file
+# Insert your publisher ID on the line below when approved.
+# Format: google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# ACTION REQUIRED: Replace the line below with your real publisher ID from
+# https://adsense.google.com/adsense/app#home (Settings > Account > Account info)
+#
+# google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

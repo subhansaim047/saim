@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 
@@ -48,6 +50,18 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ theme = "light", classNa
         <Link href="/disclaimer" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Disclaimer</Link>
         <span aria-hidden="true">·</span>
         <Link href="/terms" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Terms</Link>
+        <span aria-hidden="true">·</span>
+        <button
+          type="button"
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              window.dispatchEvent(new CustomEvent("open_cookie_settings"));
+            }
+          }}
+          className={isDark ? "hover:text-white transition-colors py-1 px-1 cursor-pointer" : "hover:text-black transition-colors py-1 px-1 cursor-pointer"}
+        >
+          Cookie Settings
+        </button>
       </nav>
     </footer>
   );

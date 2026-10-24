@@ -112,6 +112,18 @@ export const FooterSection = () => {
             <Link href="/disclaimer" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Disclaimer</Link>
             <span>•</span>
             <Link href="/terms" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Terms</Link>
+            <span>•</span>
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("open_cookie_settings"));
+                }
+              }}
+              className="hover:text-white transition-colors py-2 px-1.5 inline-block text-left cursor-pointer"
+            >
+              Cookie Settings
+            </button>
           </div>
         </div>
       </div>
