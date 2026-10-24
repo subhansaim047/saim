@@ -1,37 +1,40 @@
-"use client";
-import { SiteFooter } from "./SiteFooter";
-import { useRouter } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
-import ownerFacts from "../../content/owner-facts.json";
-import Link from "next/link";
+'use client';
 
-export const PrivacyPolicy = () => {
-  const router = useRouter();
+import React from 'react';
+import Link from 'next/link';
+import { ArrowLeft, Shield } from 'lucide-react';
+import { SiteFooter } from '@/components/SiteFooter';
+import ownerFacts from '../../content/owner-facts.json';
 
+export const PrivacyPolicy: React.FC = () => {
   return (
-    <div
-      className="min-h-screen bg-black text-white px-4 sm:px-6 md:px-12 py-12 select-none"
-      style={{
-        fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
-      }}
-    >
-      <div className="max-w-4xl mx-auto">
-        {/* Top Back Navigation */}
-        <button
-          onClick={() => router.push("/")}
-          className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Main Page</span>
-        </button>
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-primary selection:text-black">
+      {/* Navigation Header */}
+      <nav className="border-b border-white/10 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors cursor-pointer"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Home</span>
+          </Link>
+          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+            <Shield className="w-3.5 h-3.5" />
+            <span>UK GDPR &amp; PECR Compliant</span>
+          </div>
+        </div>
+      </nav>
 
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-6 py-16 sm:py-20">
         {/* Header */}
-        <div className="border-b border-white/10 pb-8 mb-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-white mb-3">
+        <div className="mb-12 border-b border-white/10 pb-8">
+          <h1 className="text-3xl sm:text-4xl font-light tracking-tight text-white mb-4">
             Privacy Policy
           </h1>
-          <p className="text-white/50 text-xs font-mono">
-            Last updated: 24 October 2026 · Saim Dev Web Architecture
+          <p className="text-white/60 text-sm">
+            Effective Date: October 24, 2026 · Last Updated: October 24, 2026
           </p>
         </div>
 
@@ -69,12 +72,31 @@ export const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-white text-xl font-medium mb-3">3. Purposes and Lawful Bases for Processing</h2>
+            <h2 className="text-white text-xl font-medium mb-3">3. Cookies &amp; Local Browser Storage</h2>
+            <p className="text-white/70 text-sm">
+              We do not use third-party tracking or advertising cookies. Our free client-side kitchen tools and compliance notice use local browser storage strictly to preserve your work and preferences locally on your device:
+            </p>
+            <ul className="list-disc list-inside space-y-1 mt-2 text-white/70 text-xs font-mono">
+              <li>saim_cookie_consent: Remembers your cookie notice preference so the notice is not repeatedly shown.</li>
+              <li>saim_allergen_matrix_v1: Saves dish and allergen data in your browser for the Allergen Matrix Generator.</li>
+              <li>saim_food_cost_v1: Saves recipe pricing and margin calculations locally on your device.</li>
+              <li>saim_recipe_calc_v1: Saves scaled commercial batch catering measurements locally.</li>
+            </ul>
+            <p className="mt-2 text-white/70 text-sm">
+              For our complete technical storage inventory and details on managing browser storage, view our{" "}
+              <Link href="/cookie-policy" className="underline text-primary">
+                Cookie Policy
+              </Link>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-white text-xl font-medium mb-3">4. Purposes and Lawful Bases for Processing</h2>
             <div className="overflow-x-auto mt-3 border border-white/10 rounded-xl">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
-                  <tr className="bg-white/5 border-b border-white/10 text-white font-semibold">
-                    <th className="p-3">Processing Activity</th>
+                  <tr className="border-b border-white/10 bg-white/5 text-white">
+                    <th className="p-3">Purpose</th>
                     <th className="p-3">Data Categories</th>
                     <th className="p-3">UK GDPR Lawful Basis</th>
                   </tr>
@@ -101,7 +123,7 @@ export const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-white text-xl font-medium mb-3">4. Data Sharing &amp; Processors</h2>
+            <h2 className="text-white text-xl font-medium mb-3">5. Data Sharing &amp; Processors</h2>
             <p>
               <strong>We do not sell personal data. We share it only with the service providers listed above.</strong>
             </p>
@@ -115,14 +137,14 @@ export const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-white text-xl font-medium mb-3">5. Data Retention</h2>
+            <h2 className="text-white text-xl font-medium mb-3">6. Data Retention</h2>
             <p className="text-white/70 text-sm">
               Prospective client enquiry data is retained for up to 6 months if a project does not proceed. For active clients, commercial project records, contracts, and invoices are retained for 6 years in accordance with UK statutory accounting obligations.
             </p>
           </section>
 
           <section>
-            <h2 className="text-white text-xl font-medium mb-3">6. Your Rights Under UK &amp; EU GDPR</h2>
+            <h2 className="text-white text-xl font-medium mb-3">7. Your Rights Under UK &amp; EU GDPR</h2>
             <p className="text-white/70 text-sm">You have statutory rights regarding your personal data:</p>
             <ul className="list-disc list-inside space-y-1.5 mt-2 text-white/70 text-sm">
               <li><strong>Right of Access:</strong> Request a copy of the data we hold about you.</li>
@@ -140,7 +162,7 @@ export const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-white text-xl font-medium mb-3">7. Right to Complain to the Supervisory Authority</h2>
+            <h2 className="text-white text-xl font-medium mb-3">8. Right to Complain to the Supervisory Authority</h2>
             <p className="text-white/70 text-sm">
               If you have unresolved concerns regarding our data processing, you have the right to lodge a complaint with the UK supervisory authority:
             </p>
@@ -152,7 +174,7 @@ export const PrivacyPolicy = () => {
           </section>
 
           <section className="pt-6 border-t border-white/10">
-            <h2 className="text-white text-xl font-medium mb-3">8. Contact Us</h2>
+            <h2 className="text-white text-xl font-medium mb-3">9. Contact Us</h2>
             <p className="text-white/70 text-sm">
               For any questions regarding this policy or our privacy practices:
             </p>

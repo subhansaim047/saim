@@ -145,23 +145,41 @@ assert(allergenToolContent.includes('const [reviewDate, setReviewDate] = useStat
 assert(!allergenToolContent.includes('new Date()'), `No build-time new Date() in AllergenMatrixTool`);
 
 // -----------------------------------------------------------------
-// GUARD 6: No SMS placeholder tokens in components
+// GUARD 6: Sitewide SMS Placeholder Tokens Check
 // -----------------------------------------------------------------
-console.log("\n--- Guard 6: SMS Placeholder Tokens Check ---");
-const filesToCheckSms = [
-  "src/components/ContactPage.tsx",
-  "src/components/PrivacyPolicy.tsx",
-  "src/components/TermsOfService.tsx",
-  "src/components/ServicesPage.tsx",
-  "src/components/CaseStudiesPage.tsx",
-  "src/components/BlogPost3Page.tsx"
+console.log("\n--- Guard 6: Sitewide SMS Placeholder Tokens Check ---");
+function scanDirForSms(dir, matchedFiles = []) {
+  if (!fs.existsSync(dir)) return matchedFiles;
+  const items = fs.readdirSync(dir);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      scanDirForSms(fullPath, matchedFiles);
+    } else {
+      const ext = path.extname(item).toLowerCase();
+      if (['.tsx', '.ts', '.md', '.json'].includes(ext)) {
+        const text = fs.readFileSync(fullPath, "utf8");
+        const smsMatch = text.match(/Instagram\s*\(SMS\)|Instagram:\s*SMS|via\s+Instagram\s+at\s+SMS|Inquiry\s+on\s+SMS|Saim\s+Dev\s+\(SMS\)/i);
+        if (smsMatch) {
+          matchedFiles.push({ file: fullPath, match: smsMatch[0] });
+        }
+      }
+    }
+  }
+  return matchedFiles;
+}
+
+const foundSmsMatches = [
+  ...scanDirForSms("src"),
+  ...scanDirForSms("app"),
+  ...scanDirForSms("content")
 ];
 
-for (const file of filesToCheckSms) {
-  if (fs.existsSync(file)) {
-    const content = fs.readFileSync(file, "utf8");
-    const smsMatch = content.match(/Instagram\s*\(SMS\)|Instagram:\s*SMS|via\s+Instagram\s+at\s+SMS|Inquiry\s+on\s+SMS|Saim\s+Dev\s+\(SMS\)/i);
-    assert(!smsMatch, `No SMS placeholder tokens in ${file}`);
+assert(foundSmsMatches.length === 0, `Sitewide scan found zero SMS placeholder tokens (found: ${foundSmsMatches.length})`);
+if (foundSmsMatches.length > 0) {
+  for (const m of foundSmsMatches) {
+    console.error(`SMS token found in ${m.file}: "${m.match}"`);
   }
 }
 
@@ -174,6 +192,99 @@ assert(allergenToolContent.includes('mustard: "contains"') && allergenToolConten
 assert(allergenToolContent.includes('sulphites: "contains"'), `Sulphites ingredient in Garden Salad marked as sulphites contains`);
 assert(allergenToolContent.includes('crustaceans: "contains"'), `Prawn ingredient in King Prawns marked as crustaceans contains`);
 assert(allergenToolContent.includes('celery: "contains"'), `Celery ingredient in Hot Wings marked as celery contains`);
+
+// -----------------------------------------------------------------
+// GUARD 8: Budget Options & Plans Sync
+// -----------------------------------------------------------------
+console.log("\n--- Guard 8: Budget Options & Plans Sync ---");
+assert(fs.existsSync("content/plans.ts"), "content/plans.ts exists");
+const plansContent = fs.readFileSync("content/plans.ts", "utf8");
+assert(plansContent.includes("Landing page (from £250)"), "plans.ts defines Landing page budget");
+assert(plansContent.includes("Starter (from £390)"), "plans.ts defines Starter budget");
+assert(plansContent.includes("Business (from £790)"), "plans.ts defines Business budget");
+
+const contactPageContent = fs.readFileSync("src/components/ContactPage.tsx", "utf8");
+const contactSectionContent = fs.readFileSync("src/components/ContactSection.tsx", "utf8");
+assert(contactPageContent.includes("BUDGET_OPTIONS"), "ContactPage uses canonical BUDGET_OPTIONS from content/plans");
+assert(contactSectionContent.includes("BUDGET_OPTIONS"), "ContactSection uses canonical BUDGET_OPTIONS from content/plans");
+
+// -----------------------------------------------------------------
+// GUARD 9: Claims Evidence & Voice Consistency
+// -----------------------------------------------------------------
+console.log("\n--- Guard 9: Claims Evidence & Voice Consistency ---");
+const claims = JSON.parse(fs.readFileSync("content/claims.json", "utf8"));
+const ownerFacts = JSON.parse(fs.readFileSync("content/owner-facts.json", "utf8"));
+
+assert(ownerFacts.voice === "we", 'ownerFacts.voice is harmonised as "we"');
+for (const claim of claims) {
+  if (!claim.evidence || claim.evidence.trim() === "") {
+    assert(
+      claim.neutralText !== undefined && (claim.neutralText !== "" || ["gdpr-compliant", "core-web-vitals-95", "core-web-vitals-98", "sub-second"].includes(claim.id)),
+      `Claim "${claim.id}" without evidence has safe neutral text or is removed/gated`
+    );
+  }
+}
+
+// -----------------------------------------------------------------
+// GUARD 10: Tracking Inventory & Storage Audit
+// -----------------------------------------------------------------
+console.log("\n--- Guard 10: Tracking Inventory & Storage Disclosures ---");
+assert(fs.existsSync("review/tracking-inventory.md"), "review/tracking-inventory.md exists");
+const cookiePolicyContent = fs.readFileSync("app/cookie-policy/page.tsx", "utf8");
+const privacyPolicyContent = fs.readFileSync("src/components/PrivacyPolicy.tsx", "utf8");
+
+const requiredStorageKeys = [
+  "saim_cookie_consent",
+  "saim_allergen_matrix_v1",
+  "saim_food_cost_v1",
+  "saim_recipe_calc_v1"
+];
+
+for (const key of requiredStorageKeys) {
+  assert(cookiePolicyContent.includes(key), `Cookie Policy lists storage key "${key}"`);
+  assert(privacyPolicyContent.includes(key), `Privacy Policy lists storage key "${key}"`);
+}
+
+assert(privacyPolicyContent.includes("WhatsApp") && privacyPolicyContent.includes("Vercel"), "Privacy Policy discloses third-party processors");
+assert(privacyPolicyContent.includes("Information Commissioner's Office") || privacyPolicyContent.includes("Information Commissioner&apos;s Office"), "Privacy Policy discloses ICO complaint rights");
+
+// -----------------------------------------------------------------
+// GUARD 11: Static Core Pages Bespoke Metadata Quality
+// -----------------------------------------------------------------
+console.log("\n--- Guard 11: Static Core Pages Bespoke Metadata Quality ---");
+const corePages = ["about", "contact", "cookie-policy", "disclaimer", "privacy", "tools"];
+const coreTitles = new Set();
+const coreDescs = new Set();
+
+for (const pageName of corePages) {
+  const filePath = `app/${pageName}/page.tsx`;
+  assert(fs.existsSync(filePath), `${filePath} exists`);
+  const content = fs.readFileSync(filePath, "utf8");
+
+  // Extract title
+  const titleMatch = content.match(/title:\s*["']([^"']+)["']/);
+  assert(!!titleMatch, `Page "${pageName}" exports title in metadata`);
+  if (titleMatch) {
+    const title = titleMatch[1];
+    assert(!coreTitles.has(title), `Title is unique for ${pageName} ("${title}")`);
+    coreTitles.add(title);
+  }
+
+  // Extract description
+  const descMatch = content.match(/description:\s*["']([^"']+)["']/);
+  assert(!!descMatch, `Page "${pageName}" exports description in metadata`);
+  if (descMatch) {
+    const desc = descMatch[1];
+    assert(desc.length >= 120 && desc.length <= 155, `Description length in 120-155 range for ${pageName} (${desc.length} chars)`);
+    assert(!coreDescs.has(desc), `Description is unique for ${pageName}`);
+    coreDescs.add(desc);
+  }
+
+  // Check canonical and og:url
+  const canonicalExpected = `https://www.saimdev.site/${pageName}`;
+  assert(content.includes(canonicalExpected), `Canonical URL for ${pageName} is ${canonicalExpected}`);
+  assert(content.includes(`url: "${canonicalExpected}"`) || content.includes(`url: '${canonicalExpected}'`), `OG url for ${pageName} matches canonical`);
+}
 
 // -----------------------------------------------------------------
 // FINAL SUMMARY

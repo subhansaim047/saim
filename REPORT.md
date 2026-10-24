@@ -1,198 +1,195 @@
-# Technical Audit & Site Quality Overhaul Report (v2): saimdev.site
+# Site Quality & Trust Overhaul Report (v3): saimdev.site
 
-**Branch:** `fix/site-quality-2`  
-**Generated:** 24 October 2026  
-**Status:** ALL PHASES COMPLETE & CI QUALITY GUARDS PASSED (187/187 static routes verified)
+**Branch:** `fix/trust-privacy-originality`  
+**Target Production Branch:** `main` (verified default deployment branch on GitHub/Vercel)  
+**Date:** 24 October 2026  
+**Status:** ALL PHASES COMPLETE & PASSING (11/11 CI Quality Guards, 187/187 Static Routes Compiled)
 
 ---
 
 ## 1. Executive Summary
 
-This overhaul is the comprehensive second-pass resolution of all content accuracy, food safety semantics, technical SEO, legal trust, and advertising compliance requirements across `saimdev.site`. 
+This report documents the completion of **Fix Prompt 3** on `saimdev.site` (Next.js 16.3.5 App Router). 
 
-Every unverified regulatory claim (e.g., *"100% Free downloads compliant with UK Natasha's Law & FSA standards"*, *"achieve 5-Star Food Hygiene ratings"*, *"protect your reputation and prevent catastrophic allergy incidents"*), broken find-and-replace placeholder artifacts (`SMS` tokens on contact and privacy pages), inconsistent hub counts, and unevidenced commercial representations have been eliminated at source. 
+The scope of this overhaul was strictly focused on **Trust & Conversion**, **Unified Pricing/Plans**, **Privacy, Cookies & Analytics Compliance**, and **Originality Evidence Tooling**. As required by the project rules, zero modifications were made to the allergen page or food safety template hub components.
 
-In their place, the codebase now implements robust, British English, defensible documentation, a unified 9-link `<SiteFooter />`, bespoke metadata with 100% canonical-to-OG alignment across all core routes, dynamic hub counters, zero pre-consent third-party tracking, and an automated 7-guard CI test suite.
+Every broken placeholder token (`SMS` on contact and privacy pages), discordant budget option, unevidenced commercial representation, and tracking ambiguity has been eliminated. The site now runs zero pre-consent tracking, provides an explicit browser storage inventory, includes comprehensive UK GDPR and PECR disclosures with ICO complaint rights, and includes an evidence-based originality tooling pipeline.
 
 ---
 
-## 2. Phase-by-Phase Commit History
+## 2. Commit History
 
 | Phase | Commit | Message & Scope |
 |---|---|---|
-| **Phase 0** | Diagnosis | Full source diagnosis of static build tree, date generation, metadata, and live claims. Report: `phase0_report.md`. |
-| **Phase 1** | `bab6cdb` | `fix(allergen): Phase 1 allergen tool safety, demo data, and neutral copy` — Handcrafted metadata, empty form defaults, statutory disclaimer, safe legend semantics, and demo data allergen alignment. |
-| **Phase 2** | `f4717cb` | `fix(claims): Phase 2 sitewide claims cleanup, hub replacements, and claims logging` — Removed EHO/FSA guarantees sitewide, neutralised WhatsApp export message, and appended audit entries to `review/claims-review.csv`. |
-| **Phase 3** | `fe35fec` | `fix(hub): Phase 3 hub integrity, dynamic counts, and hub changes log` — Dynamic `FOOD_SAFETY_TEMPLATES.length` counters, zero hardcoded 160+/162/170+ strings, fixed vacuum-sealed chart title, and verified zero shared asset URLs. |
-| **Phase 4** | `575ee91` | `fix(contact): Phase 4 placeholder bug fixes, GBP budgets, and owner facts` — Removed all `SMS` placeholder strings across 6 components, aligned contact form with direct WhatsApp submission, updated budget options to non-overlapping GBP ranges, and initialized `content/owner-facts.json`. |
-| **Phase 5** | `c8e23ef` | `fix(privacy): Phase 5 privacy draft, cookie metadata, and consent alignment` — Removed inaccurate "never sell or share" statement, aligned privacy disclosures with essential processors, added unique metadata for `/privacy` and `/cookie-policy`, and created UK GDPR/PECR draft in `content/privacy-draft.md`. |
-| **Phase 6** | `25ce969` | `feat(metadata): Phase 6 shared SiteFooter and per-route metadata` — Built unified `<SiteFooter />` rendering all 9 required pages, added unique titles (<= 60 chars) and descriptions (120-155 chars) to all core routes, and verified `og:url == canonical`. |
-| **Phase 7** | `c9ecb76` | `feat(claims): Phase 7 home-page claims wiring, claims.json, and OWNER-TODO table` — Built `content/claims.json` and `src/lib/claims.ts`, neutralised unevidenced home-page claims with fallback text, and populated Section 5 in `OWNER-TODO.md`. |
-| **Phase 8** | `9488a06` | `chore: Phase 8 quality guards, demo linting, and verify-live script` — Expanded CI guards (Guard 6 SMS check, Guard 7 demo allergen linting, Guard 8 reviewDate empty check), created `scripts/verify-live.mjs`, and fixed demo dish ingredients. |
+| **Phase 0** | `5c12412` | `chore: Phase 0 baseline deploy check and build-sha meta tag` — Injected `<meta name="build-sha">` into `app/layout.tsx` metadata `other` field and documented production deployment branch (`main`). |
+| **Phase 1** | `6ecf2ea` | `fix(contact): Phase 1 placeholder bug, unified plans.ts, and form consistency` — Created single source of truth `content/plans.ts` (Landing £250, Starter £390, Business £790), wired contact and home forms, removed Instagram launching claims, and set bespoke British English metadata for `/contact`. |
+| **Phase 2** | `e4fc5cf` | `feat(trust): Phase 2 UK trust signals, evidence-gated claims, and terms revision clause` — Standardised `content/owner-facts.json` schema, gated unevidenced claims with safe fallbacks, harmonised voice as `"we"`, relabelled demos as `"Concept demo sites (not client work)"`, and added staging revision clause to Terms of Service Section 3. |
+| **Phase 3** | `fe89959` | `fix(privacy): Phase 3 tracking inventory, cookie audit, and UK GDPR/PECR compliance` — Audited zero third-party cookies on load, documented storage keys in `review/tracking-inventory.md`, added storage table to `app/cookie-policy/page.tsx`, and updated `src/components/PrivacyPolicy.tsx` with UK GDPR lawful bases, processors, and ICO complaint details. |
+| **Phase 4** | `4d8ff78` | `docs(originality): Phase 4 text, image, and licence originality evidence scripts and reports` — Built `scripts/originality/text.mjs`, `scripts/originality/images.mjs`, and `scripts/originality/seed-decisions.mjs`; generated `review/originality-text.csv`, `review/near-duplicates.csv`, `review/originality-images.csv` (2,531 records), `review/licences.csv`, `public/LICENSES.txt`, and wired originality route guard. |
+| **Phase 5** | Current | `chore: Phase 5 guards, live verification script, and final report` — Expanded test suite to 11 automated quality guards, updated `scripts/verify-live.mjs` with build-sha and forbidden string assertions, and published comprehensive documentation. |
 
 ---
 
-## 3. Detailed Summary of Phase Accomplishments
+## 3. Real Verification Outputs
 
-### Phase 0: Diagnosis & Source Audit
-- Diagnosed that `/food-safety-templates/food-allergen-chart` is statically generated by `app/food-safety-templates/[slug]/page.tsx` via `generateStaticParams()`.
-- Confirmed review dates and establishment names were hardcoded as component initial states in `AllergenMatrixTool.tsx` and `HaccpPlanBuilderTool.tsx`.
-- Located hardcoded claims in `src/components/ToolsPage.tsx`, `FoodSafetyTemplatesPage.tsx`, and `TemplateDetailPage.tsx`.
+### 3.1 `npm test` Output (11 CI Guards)
+```text
+> prisma-landing@0.0.0 test
+> node scripts/run_all_guards.mjs
 
-### Phase 1: Allergen Page Safety Overhaul (`/food-safety-templates/food-allergen-chart`)
-- **Metadata:** Handcrafted title `"Free UK Takeaway Allergen Chart Generator (14 Allergens)"` (55 chars) and description (137 chars) in `src/data/core_metadata.json`.
-- **Form Defaults:** Cleared build-time defaults (`premisesName: ""`, `managerSignoff: ""`, `complianceDate: ""`, `reviewDate: ""`).
-- **Legend & Semantics:** Enforced `YES = Contains`, `MAY = May contain (cross-contact)`, and `— = Not declared` with tooltip: *"Not declared does not mean the dish has none. Always check with staff."*
-- **Filters:** Replaced dangerous "Free From:" filters with `"Hide dishes containing: <allergen>"` and `"No allergen filter"`.
-- **Demo Data Integrity:** Aligned all ingredients to actual allergens (e.g. King Prawns have `crustaceans: "contains"`, `gluten: "contains"`, `eggs: "contains"`; Garden Salad contains `mustard` and `sulphites`).
-- **Legal Compliance:** Mounted `<FoodSafetyDisclaimer />` with link to `/disclaimer` and linked official FSA guidance at `https://www.food.gov.uk/business-guidance/allergen-guidance-for-food-businesses` (HTTP 200 verified).
-
-### Phase 2: Sitewide Claims Cleanup
-- Eliminated unverified statutory and regulatory claims across `ToolsPage.tsx`, `FoodSafetyTemplatesPage.tsx`, and `TemplateDetailPage.tsx`.
-- Removed claims of "UK Food Standards Agency & Natasha's Law Compliant", "achieve 5-Star Food Hygiene ratings", "Audited By... Approved for Kitchen Wall Display", and "protect your reputation and prevent catastrophic allergy incidents".
-- Neutralised the WhatsApp export text to standard kitchen review copy without claiming statutory compliance.
-- Recorded all 11 audit records in `review/claims-review.csv`.
-
-### Phase 3: Hub Integrity & Dynamic Counters (`/tools`)
-- Replaced hardcoded "160+", "162", and "170+" counters with dynamic `FOOD_SAFETY_TEMPLATES.length` expressions.
-- Confirmed zero duplicate cards; each of the 160 templates maps to an existing image asset and unique route.
-- Updated `template-99` title to *"Vacuum-Sealed Food Shelf-Life Chart"* to match its image and target URL.
-- Corrected `template-100` (*"Calculating Food Cost"*) type to `SMART TOOL` (`smart_tool`).
-- Logged changes in `review/hub-changes.csv`.
-
-### Phase 4: Placeholder Removal & Contact Page Aligned with Home
-- Fixed the broken find-and-replace artifact that converted contact tokens into `SMS`. Scanned and removed all `Instagram (SMS)`, `Instagram: SMS`, `via Instagram at SMS`, and `Saim Dev (SMS)` strings from all components.
-- Contact form now submits directly to WhatsApp (`wa.me/923196526604`) matching the home page CTA.
-- Updated project budget dropdown to non-overlapping GBP ranges: `"Under £500"`, `"£500 - £1,000"`, `"£1,000 - £2,500"`, `"£2,500+"`, and `"Flexible / let's discuss"`.
-- Populated `content/owner-facts.json` with transparent business facts while leaving unknown legal numbers empty to prevent placeholder rendering.
-
-### Phase 5: Privacy, Cookies, and Consent Transparency
-- Code audit confirmed: **zero trackers or analytics scripts load before consent**.
-- Removed blanket claim *"We never sell or share your information with third parties"* from `PrivacyPolicy.tsx` and replaced it with an accurate disclosure of essential infrastructure processors (Vercel for hosting, WhatsApp/Meta for communications).
-- Authored a comprehensive UK GDPR / PECR policy draft in `content/privacy-draft.md` ready for owner sign-off.
-- Set bespoke, compliant metadata for `/privacy` and `/cookie-policy`.
-
-### Phase 6: Standardised Site-Wide Footer & Core Metadata
-- Developed `src/components/SiteFooter.tsx` supporting both dark and light modes.
-- Every page now renders all 9 required legal and navigation links: Home, Services, Demos, About, Contact, Privacy Policy, Cookie Policy, Disclaimer, Terms.
-- Handcrafted unique, character-bounded metadata for all core routes (`/`, `/about`, `/contact`, `/privacy`, `/cookie-policy`, `/disclaimer`, `/terms`, `/services`, `/demos`, `/tools`, `/food-safety-templates`), guaranteeing `og:url === canonical` and `og:locale === "en_GB"`.
-
-### Phase 7: Home-Page Claims Registry & Fallbacks
-- Created `content/claims.json` holding 12 promotional claims with evidence criteria and neutral fallback copy.
-- Created `src/lib/claims.ts` with helper `getClaim(id)`.
-- Replaced unevidenced marketing claims across `AboutSection.tsx`, `ContactSection.tsx`, `PerformanceSection.tsx`, `PricingSection.tsx`, `app/layout.tsx`, and `app/nextjs-developer-uk/page.tsx` with neutral fallback text until the owner supplies verification.
-- Documented all 12 claims in Section 5 of `OWNER-TODO.md`.
-
-### Phase 8: Quality Guards, Demo Linting, and Live Verification
-- Expanded `scripts/run_all_guards.mjs` with:
-  - Guard 6: Sitewide SMS placeholder scan.
-  - Guard 7: Demo data ingredient-to-allergen linting for all 14 allergens.
-  - Guard 8: Tool initialization review date empty check.
-- Authored `scripts/verify-live.mjs` to execute automated HTTP validation against live or staging deployments.
-
----
-
-## 4. Verification Commands Run & Real Results
-
-### 1. Quality Guards Test Suite
-```powershell
-npm test
-```
-**Result:** `Exit code 0`.
-```
 =================================================
        SAIMDEV.SITE - CI QUALITY GUARDS           
 =================================================
+
 --- Guard 1: Forbidden Sitewide Claims Check ---
-✅ [PASS] No forbidden claims in templates, components, or pages (42 checks).
---- Guard 2: Hub Integrity & Asset Links ---
-✅ [PASS] All 160 templates have valid slugs, unique routes, and existing image files.
---- Guard 3: Handcrafted Core Metadata Compliance ---
-✅ [PASS] 24/24 core indexed pages comply with character limits (title <= 60, desc 120-155), unique titles and descriptions.
---- Guard 4: Sitemap & Noindex Alignment ---
-✅ [PASS] 24/24 core indexed pages in sitemap.xml.
-✅ [PASS] Zero NOINDEX or MERGE pages appear in sitemap.xml.
---- Guard 5: Allergen Tool Data & Semantics Safety ---
-✅ [PASS] No "Free From:" filter labels.
-✅ [PASS] No "Audited By" claims.
-✅ [PASS] Premise and manager start empty.
-✅ [PASS] Contains approved neutral badge and safe legend semantics.
-✅ [PASS] Demo dishes containing gluten marked as contains.
-✅ [PASS] reviewDate starts empty, no build-time new Date().
---- Guard 6: SMS Placeholder Tokens Check ---
-✅ [PASS] Zero SMS placeholder tokens across all components.
---- Guard 7: Demo Data Ingredient-to-Allergen Lint ---
-✅ [PASS] Egg ingredient in King Prawns marked as eggs contains.
-✅ [PASS] Mustard and sulphites in Garden Salad marked as contains.
-✅ [PASS] Crustaceans in King Prawns marked as contains.
-✅ [PASS] Celery in Hot Wings marked as contains.
+✅ [PASS] No forbidden claim matching /100%\s+free\s+downloads\s+compliant/i in src/data/saim_templates.ts
+✅ [PASS] No forbidden claim matching /official\s+14\s+food\s+allergen/i in src/data/saim_templates.ts
+✅ [PASS] No forbidden claim matching /achieve\s+5-star\s+food\s+hygiene/i in src/data/saim_templates.ts
+✅ [PASS] No forbidden claim matching /prevent\s+catastrophic\s+allergy/i in src/data/saim_templates.ts
+✅ [PASS] No forbidden claim matching /fsa\s+compliant/i in src/data/saim_templates.ts
+✅ [PASS] No forbidden claim matching /eho\s+approved/i in src/data/saim_templates.ts
+✅ [PASS] No forbidden claim matching /audited\s+by/i in src/data/saim_templates.ts
+...
+--- Guard 6: Sitewide SMS Placeholder Tokens Check ---
+✅ [PASS] Sitewide scan found zero SMS placeholder tokens (found: 0)
+
+--- Guard 7: Demo Data Ingredient to Allergen Lint ---
+✅ [PASS] Egg ingredient in King Prawns marked as eggs contains
+✅ [PASS] Mustard ingredient in Garden Salad marked as mustard contains
+✅ [PASS] Sulphites ingredient in Garden Salad marked as sulphites contains
+✅ [PASS] Prawn ingredient in King Prawns marked as crustaceans contains
+✅ [PASS] Celery ingredient in Hot Wings marked as celery contains
+
+--- Guard 8: Budget Options & Plans Sync ---
+✅ [PASS] content/plans.ts exists
+✅ [PASS] plans.ts defines Landing page budget
+✅ [PASS] plans.ts defines Starter budget
+✅ [PASS] plans.ts defines Business budget
+✅ [PASS] ContactPage uses canonical BUDGET_OPTIONS from content/plans
+✅ [PASS] ContactSection uses canonical BUDGET_OPTIONS from content/plans
+
+--- Guard 9: Claims Evidence & Voice Consistency ---
+✅ [PASS] ownerFacts.voice is harmonised as "we"
+✅ [PASS] Claim "satisfaction-guarantee" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "reply-speed" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "end-to-end-encrypted" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "hmrc-vat" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "gdpr-compliant" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "core-web-vitals-95" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "core-web-vitals-98" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "sub-second" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "performance-stats" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "seven-years" without evidence has safe neutral text or is removed/gated
+✅ [PASS] Claim "demos-preview" without evidence has safe neutral text or is removed/gated
+
+--- Guard 10: Tracking Inventory & Storage Disclosures ---
+✅ [PASS] review/tracking-inventory.md exists
+✅ [PASS] Cookie Policy lists storage key "saim_cookie_consent"
+✅ [PASS] Privacy Policy lists storage key "saim_cookie_consent"
+✅ [PASS] Cookie Policy lists storage key "saim_allergen_matrix_v1"
+✅ [PASS] Privacy Policy lists storage key "saim_allergen_matrix_v1"
+✅ [PASS] Cookie Policy lists storage key "saim_food_cost_v1"
+✅ [PASS] Privacy Policy lists storage key "saim_food_cost_v1"
+✅ [PASS] Cookie Policy lists storage key "saim_recipe_calc_v1"
+✅ [PASS] Privacy Policy lists storage key "saim_recipe_calc_v1"
+✅ [PASS] Privacy Policy discloses third-party processors
+✅ [PASS] Privacy Policy discloses ICO complaint rights
+
+--- Guard 11: Static Core Pages Bespoke Metadata Quality ---
+✅ [PASS] app/about/page.tsx exists
+✅ [PASS] Page "about" exports title in metadata
+✅ [PASS] Title is unique for about ("About Saim Dev | Next.js Web Architecture")
+✅ [PASS] Page "about" exports description in metadata
+✅ [PASS] Description length in 120-155 range for about (141 chars)
+✅ [PASS] Canonical URL for about is https://www.saimdev.site/about
+✅ [PASS] OG url for about matches canonical
+✅ [PASS] app/contact/page.tsx exists
+✅ [PASS] Page "contact" exports title in metadata
+✅ [PASS] Title is unique for contact ("Contact Saim Dev | Website Projects for UK Businesses")
+✅ [PASS] Description length in 120-155 range for contact (133 chars)
+✅ [PASS] Canonical URL for contact is https://www.saimdev.site/contact
+✅ [PASS] OG url for contact matches canonical
+✅ [PASS] app/cookie-policy/page.tsx exists
+✅ [PASS] Page "cookie-policy" exports title in metadata
+✅ [PASS] Title is unique for cookie-policy ("Cookie Policy | Saim Dev")
+✅ [PASS] Description length in 120-155 range for cookie-policy (137 chars)
+✅ [PASS] Canonical URL for cookie-policy is https://www.saimdev.site/cookie-policy
+✅ [PASS] OG url for cookie-policy matches canonical
+✅ [PASS] app/disclaimer/page.tsx exists
+✅ [PASS] Page "disclaimer" exports title in metadata
+✅ [PASS] Title is unique for disclaimer ("Food Safety Disclaimer | Saim Dev")
+✅ [PASS] Description length in 120-155 range for disclaimer (143 chars)
+✅ [PASS] Canonical URL for disclaimer is https://www.saimdev.site/disclaimer
+✅ [PASS] OG url for disclaimer matches canonical
+✅ [PASS] app/privacy/page.tsx exists
+✅ [PASS] Page "privacy" exports title in metadata
+✅ [PASS] Title is unique for privacy ("Privacy Policy | Saim Dev")
+✅ [PASS] Description length in 120-155 range for privacy (133 chars)
+✅ [PASS] Canonical URL for privacy is https://www.saimdev.site/privacy
+✅ [PASS] OG url for privacy matches canonical
+✅ [PASS] app/tools/page.tsx exists
+✅ [PASS] Page "tools" exports title in metadata
+✅ [PASS] Title is unique for tools ("Free Food Safety Templates & Kitchen Tools | Saim Dev")
+✅ [PASS] Description length in 120-155 range for tools (140 chars)
+✅ [PASS] Canonical URL for tools is https://www.saimdev.site/tools
+✅ [PASS] OG url for tools matches canonical
 
 =================================================
 🎉 ALL QUALITY GUARDS PASSED WITH ZERO ERRORS!
 =================================================
 ```
 
-### 2. Next.js Production Build
-```powershell
-npm run build
-```
-**Result:** `Exit code 0`.
-```
+### 3.2 `npm run build` Output
+```text
+> prisma-landing@0.0.0 build
+> next build
+
 ▲ Next.js 16.3.5 (Turbopack)
-✓ Running next.config.mjs took 143ms
+✓ Running next.config.mjs took 134ms
   Creating an optimized production build ...
-✓ Compiled successfully in 10.8s
+✓ Compiled successfully in 10.1s
   Running TypeScript ...
-  Finished TypeScript in 13.9s ...
+  Finished TypeScript in 8.6s ...
   Collecting page data using 3 workers ...
-  Generating static pages using 3 workers (187/187) in 17.1s
+✓ Generating static pages using 3 workers (187/187) in 17.8s
   Finalizing page optimization ...
 
 Route (app)
-○ / (Static)
-○ /about (Static)
-○ /contact (Static)
-○ /cookie-policy (Static)
-○ /demos (Static)
-○ /disclaimer (Static)
-○ /food-safety-templates (Static)
-● /food-safety-templates/[slug] (160 static pages generated)
-○ /privacy (Static)
-○ /services (Static)
-○ /terms (Static)
-○ /tools (Static)
-+ 8 static blog pages
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ƒ /api/download
+├ ○ /blog/... [9 posts]
+├ ○ /blogs
+├ ○ /case-studies
+├ ○ /contact
+├ ○ /cookie-policy
+├ ○ /demos
+├ ○ /disclaimer
+├ ○ /food-safety-templates
+├   /food-safety-templates/[slug] (160 templates)
+├ ○ /nextjs-developer-uk
+├ ○ /privacy
+├ ○ /services
+├ ○ /technologies
+├ ○ /terms
+└ ○ /tools
 ```
 
 ---
 
-## 5. NOT VERIFIED List (Action Required by Owner)
+## 4. NOT VERIFIED List
 
-The following items cannot be completed autonomously and require the site owner's intervention or external credentials:
-
-1. **Google AdSense Console Re-submission:**
-   - Navigating to the Google AdSense dashboard for `saimdev.site` and clicking **"Request Review"** must be performed by the account owner.
-2. **Permanent 301 Redirects (`review/redirect-plan.csv`):**
-   - As mandated by the operating rules, the 19 near-duplicate pages currently remain live and browseable with `<meta name="robots" content="noindex, follow">`. Permanent redirects in `next.config.mjs` will only be added when the owner replies `"APPROVE redirect-plan"`.
-3. **Formal Business Details (`content/owner-facts.json`):**
-   - Official Companies House registration number, VAT number, and company registered office address must be populated by the owner.
-4. **Live DNS / Host Deployment Verification:**
-   - Testing the live public domain `https://www.saimdev.site` depends on pushing the commits to GitHub and waiting for Vercel/production deployment.
+The following items cannot be fully verified locally and require live edge production deployment:
+1. **Live Domain Build SHA Matching:** `<meta name="build-sha">` assertion against `https://www.saimdev.site` will match the deployed commit only after the feature branch is merged into `main` and Vercel completes deployment.
+2. **Third-Party CDN Caching / Edge Invalidation:** Vercel edge CDN cache TTL for static assets (HTML/CSS) requires 60–120 seconds to propagate globally post-deployment.
+3. **Owner Legal Details:** Verification of company registration number, registered address, VAT number, and contact email remain pending until provided by the site owner in `content/owner-facts.json`.
 
 ---
 
-## 6. How to Verify the Live Site Post-Deployment
+## 5. State of `OWNER-TODO.md`
 
-Once the branch is merged and deployed to production, run the automated live verification script:
-
-```bash
-node scripts/verify-live.mjs https://www.saimdev.site
-```
-
-The script will fetch and inspect the 9 key routes (`/`, `/tools`, `/food-safety-templates/food-allergen-chart`, `/about`, `/contact`, `/privacy`, `/cookie-policy`, `/disclaimer`, `/terms`), checking:
-- HTTP 200 response codes
-- Absence of forbidden claims (`FSA Compliant`, `Audited By`, `100% Free downloads compliant`, etc.)
-- Absence of placeholder tokens (`SMS`)
-- Exactly 9 footer links on every page
-- Strict equality between `canonical` and `og:url`
-- Safe allergen tool legend semantics (`YES = Contains`, `MAY = May contain`, `— = Not declared`)
+The following items are documented in [`OWNER-TODO.md`](file:///C:/Users/subhan/.gemini/antigravity/scratch/saim/OWNER-TODO.md) for the site owner:
+1. **Business Identity Information:** Provide legal company name, UK registered address, contact email, company registration number, and VAT number in `content/owner-facts.json`. (Currently omitted to avoid displaying placeholder text).
+2. **Review Evidence for Commercial Claims:** Provide evidence in `content/claims.json` if any specific promotional claim (e.g. response SLA or VAT-compliant invoicing) is to be restored.
+3. **Review Originality Decisions:** Check `review/originality-decisions.csv` for any assets or routes requiring future replacement. Any route marked `needs_replacement` is automatically assigned `<meta name="robots" content="noindex, follow">`.
