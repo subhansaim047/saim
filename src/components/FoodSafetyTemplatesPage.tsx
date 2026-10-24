@@ -701,26 +701,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="border-t border-[#E5E5EA] bg-white py-8 px-4 sm:px-8 text-center text-xs text-gray-500 no-print">
-        <p>© 2026 Saim Dev. Free kitchen templates, checklists, and tools.</p>
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-2 text-gray-600">
-          <Link href="/" className="hover:text-black">Home</Link>
-          <span>•</span>
-          <Link href="/services" className="hover:text-black">Services</Link>
-          <span>•</span>
-          <Link href="/demos" className="hover:text-black">Demos</Link>
-          <span>•</span>
-          <Link href="/about" className="hover:text-black">About</Link>
-          <span>•</span>
-          <Link href="/contact" className="hover:text-black">Contact</Link>
-          <span>•</span>
-          <Link href="/privacy" className="hover:text-black">Privacy Policy</Link>
-          <span>•</span>
-          <Link href="/cookie-policy" className="hover:text-black">Cookie Policy</Link>
-          <span>•</span>
-          <Link href="/disclaimer" className="hover:text-black">Disclaimer</Link>
-        </div>
-      </footer>
+      <SiteFooter theme="light" />
     </div>
   );
 };
