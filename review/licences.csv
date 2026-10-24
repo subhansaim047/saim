@@ -1,0 +1,14 @@
+asset_or_package,version,licence,source,attribution_required,attribution_present,commercial_use_allowed
+"cheerio","1.2.0","MIT","https://github.com/cheeriojs/cheerio",true,true,true
+"clsx","2.1.1","MIT","https://github.com/lukeed/clsx",true,true,true
+"framer-motion","12.42.2","MIT","https://github.com/framer/motion",true,true,true
+"glob","13.0.6","ISC","https://github.com/isaacs/node-glob",true,true,true
+"lucide-react","1.26.0","ISC","https://github.com/lucide-icons/lucide",true,true,true
+"next","16.3.5","MIT","https://github.com/vercel/next.js",true,true,true
+"react","19.2.7","MIT","https://github.com/facebook/react",true,true,true
+"react-dom","19.2.7","MIT","https://github.com/facebook/react",true,true,true
+"sharp","0.35.4","Apache-2.0","https://github.com/lovell/sharp",true,true,true
+"tailwind-merge","3.6.0","MIT","https://github.com/dcastilho/tailwind-merge",true,true,true
+"website-scraper","6.0.0","MIT","https://github.com/website-scraper/node-website-scraper",true,true,true
+"Inter (Font)","Google Fonts","SIL OFL 1.1","https://fonts.google.com/specimen/Inter",true,true,true
+"Instrument Serif (Font)","Google Fonts","SIL OFL 1.1","https://fonts.google.com/specimen/Instrument+Serif",true,true,true
