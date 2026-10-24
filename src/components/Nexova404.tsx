@@ -62,7 +62,7 @@ const servicesData: ServiceItem[] = [
     subtitle: "Sub-Second Page Loads",
     description:
       "Eliminate slow loading times with deep code optimization, asset compression, and caching to improve bounce rates and Core Web Vitals.",
-    highlights: ["Core Web Vitals 90+", "Asset Caching", "Zero Lag"],
+    highlights: ["Optimised Core Web Vitals", "Asset Caching", "Zero Lag"],
   },
   {
     id: "seo",

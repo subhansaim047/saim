@@ -1,75 +1,91 @@
 "use client";
-const VIDEO_SRC =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4";
+import React from "react";
+import { Zap, CheckCircle2, Globe, Cpu, ArrowUpRight } from "lucide-react";
 
 export const VelorahHeroPreview = () => {
   return (
     <div
-      className="relative w-full h-full overflow-hidden rounded-2xl flex flex-col justify-between"
-      style={{ backgroundColor: "hsl(201 100% 13%)" }}
+      className="relative w-full h-full overflow-hidden rounded-2xl flex flex-col justify-between p-4 sm:p-6 border border-white/10"
+      style={{
+        background: "linear-gradient(135deg, #090d16 0%, #0d121f 50%, #05070c 100%)",
+      }}
     >
-      {/* Background Looping Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src={VIDEO_SRC} type="video/mp4" />
-      </video>
+      {/* Background Ambient Glow */}
+      <div className="absolute top-0 right-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Nav Row */}
-      <div className="relative z-10 flex items-center justify-between px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4">
-        {/* Left Brand */}
-        <span
-          className="text-white text-sm sm:text-base md:text-lg tracking-tight font-serif"
-          style={{ fontFamily: "'Instrument Serif', serif" }}
-        >
-          Saim Dev<sup className="text-[0.5em]">®</sup>
-        </span>
-
-        {/* Center Nav Links (Hidden < md) */}
-        <div className="hidden md:flex items-center gap-3 lg:gap-4 text-[9px] lg:text-[10px] text-white/60">
-          <span className="text-white font-medium cursor-pointer">Home</span>
-          <span className="hover:text-white transition-colors cursor-pointer">
-            Services
-          </span>
-          <span className="hover:text-white transition-colors cursor-pointer">
-            About
-          </span>
-          <span className="hover:text-white transition-colors cursor-pointer">
-            Growth
-          </span>
-          <span className="hover:text-white transition-colors cursor-pointer">
-            Contact
+      {/* Top Window Bar */}
+      <div className="relative z-10 flex items-center justify-between pb-4 border-b border-white/10">
+        <div className="flex items-center gap-2">
+          <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
+          <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+          <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+          <span className="ml-2 font-mono text-[10px] text-white/40 tracking-wider">
+            production.edge.network
           </span>
         </div>
 
-        {/* Right Action Button */}
-        <button className="liquid-glass rounded-full px-2.5 sm:px-3 py-1 text-[9px] sm:text-[10px] text-white cursor-pointer">
-          Explore Growth
-        </button>
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-[10px]">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Edge Live (24ms)</span>
+        </div>
       </div>
 
-      {/* Hero Block */}
-      <div className="relative z-10 flex flex-col items-center text-center px-3 sm:px-4 pt-3 sm:pt-5 md:pt-7 pb-6 my-auto">
-        <h1
-          className="animate-fade-rise text-white font-normal leading-[0.95] tracking-[-0.03em] text-lg sm:text-2xl md:text-3xl lg:text-4xl max-w-[90%] font-serif"
-          style={{ fontFamily: "'Instrument Serif', serif" }}
-        >
-          Where <em className="not-italic text-white/55">vision</em> meets{" "}
-          <em className="not-italic text-white/55">measurable growth.</em>
-        </h1>
+      {/* Center Architecture Metrics Grid */}
+      <div className="relative z-10 my-auto py-4 grid grid-cols-2 gap-3 sm:gap-4">
+        <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] font-mono text-white/50">PERFORMANCE</span>
+            <Zap className="w-3.5 h-3.5 text-primary" />
+          </div>
+          <div className="mt-3">
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">99<span className="text-xs text-white/40 font-normal">/100</span></div>
+            <p className="text-[10px] text-white/60 mt-0.5">Optimised Core Web Vitals</p>
+          </div>
+        </div>
 
-        <p className="animate-fade-rise-delay text-white/60 text-[9px] sm:text-[11px] md:text-xs leading-relaxed max-w-[80%] sm:max-w-sm md:max-w-md mt-2 sm:mt-3 md:mt-4">
-          Engineered for forward-thinking business leaders, service providers, and growing brands. We build digital spaces designed for maximum lead conversion, speed, and market authority.
-        </p>
+        <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] font-mono text-white/50">FRAMEWORK</span>
+            <Cpu className="w-3.5 h-3.5 text-emerald-400" />
+          </div>
+          <div className="mt-3">
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">Next.js 16</div>
+            <p className="text-[10px] text-white/60 mt-0.5">Turbopack App Router</p>
+          </div>
+        </div>
 
-        <button className="animate-fade-rise-delay-2 liquid-glass rounded-full px-4 sm:px-5 md:px-6 py-1.5 sm:py-2 md:py-2.5 text-[9px] sm:text-[10px] text-white mt-3 sm:mt-4 md:mt-5 cursor-pointer">
-          Start Project
-        </button>
+        <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] font-mono text-white/50">SERVERLESS</span>
+            <Globe className="w-3.5 h-3.5 text-cyan-400" />
+          </div>
+          <div className="mt-3">
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">&lt; 0.8s</div>
+            <p className="text-[10px] text-white/60 mt-0.5">Sub-second First Load</p>
+          </div>
+        </div>
+
+        <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] font-mono text-white/50">SEO &amp; SCHEMA</span>
+            <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
+          </div>
+          <div className="mt-3">
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">100%</div>
+            <p className="text-[10px] text-white/60 mt-0.5">Structured Schema (JSON-LD)</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Status Row */}
+      <div className="relative z-10 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-white/60">
+        <span className="font-mono text-[10px] text-white/40">
+          UK &amp; European Web Architecture
+        </span>
+        <span className="flex items-center gap-1 text-primary text-[10px] font-medium">
+          Verified Architecture <ArrowUpRight className="w-3 h-3" />
+        </span>
       </div>
     </div>
   );

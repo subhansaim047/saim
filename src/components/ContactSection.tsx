@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MessageSquare, ArrowRight, CheckCircle2, Clock, ShieldCheck } from "lucide-react";
+import { MessageSquare, ArrowRight, CheckCircle2, Clock, ShieldCheck, Mail } from "lucide-react";
 import { BUDGET_OPTIONS } from "../../content/plans";
 import { getClaim } from "../lib/claims";
 import ownerFacts from "../../content/owner-facts.json";
@@ -144,6 +144,13 @@ export const ContactSection = () => {
               >
                 <MessageSquare className="w-4 h-4 text-emerald-400" />
                 <span>WhatsApp: +92 319 6526604</span>
+              </a>
+              <a
+                href="mailto:contact@saimdev.site"
+                className="text-sm sm:text-base font-semibold text-white/90 hover:text-primary transition-colors flex items-center gap-2 pt-2 border-t border-white/10"
+              >
+                <Mail className="w-4 h-4 text-primary" />
+                <span>contact@saimdev.site</span>
               </a>
               {ownerFacts.workingHours ? <span className="text-[11px] text-white/40">Working hours: {ownerFacts.workingHours}</span> : null}
             </div>

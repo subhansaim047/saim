@@ -59,6 +59,7 @@ export const WordsPullUpMultiStyle = ({
           >
             {word}
           </motion.span>
+          {" "}
         </span>
       ))}
     </div>

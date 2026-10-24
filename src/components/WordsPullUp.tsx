@@ -8,6 +8,7 @@ interface WordsPullUpProps {
   delay?: number;
   showAsterisk?: boolean;
   style?: CSSProperties;
+  as?: "div" | "h1" | "h2";
 }
 
 export const WordsPullUp = ({
@@ -16,13 +17,14 @@ export const WordsPullUp = ({
   delay = 0,
   showAsterisk = false,
   style,
+  as: Component = "div",
 }: WordsPullUpProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const words = text.split(" ");
 
   return (
-    <div ref={ref} className={`inline-flex flex-wrap ${className}`} style={style}>
+    <Component ref={ref as any} className={`inline-flex flex-wrap ${className}`} style={style}>
       {words.map((word, i) => {
         const isLastWord = i === words.length - 1;
         return (
@@ -52,6 +54,6 @@ export const WordsPullUp = ({
           </span>
         );
       })}
-    </div>
+    </Component>
   );
 };

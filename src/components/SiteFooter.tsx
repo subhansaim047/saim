@@ -17,30 +17,32 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ theme = "light", classNa
           : "border-[#E5E5EA] bg-white text-gray-500"
       } ${className}`}
     >
-      <p>© 2026 Saim Dev. High-performance Next.js web architecture &amp; digital kitchen resources.</p>
+      <p>© 2026 Saim Dev. High-performance Next.js web architecture. Email: <a href="mailto:contact@saimdev.site" className="underline hover:text-primary">contact@saimdev.site</a></p>
       <nav
         aria-label="Footer Navigation"
         className={`flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-2.5 ${
           isDark ? "text-white/70" : "text-gray-600"
         }`}
       >
-        <Link href="/" className={isDark ? "hover:text-white transition-colors" : "hover:text-black transition-colors"}>Home</Link>
+        <Link href="/" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Home</Link>
         <span aria-hidden="true">·</span>
-        <Link href="/services" className={isDark ? "hover:text-white transition-colors" : "hover:text-black transition-colors"}>Services</Link>
+        <Link href="/services" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Services</Link>
         <span aria-hidden="true">·</span>
-        <Link href="/demos" className={isDark ? "hover:text-white transition-colors" : "hover:text-black transition-colors"}>Demos</Link>
+        <Link href="/tools" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Free Tools</Link>
         <span aria-hidden="true">·</span>
-        <Link href="/about" className={isDark ? "hover:text-white transition-colors" : "hover:text-black transition-colors"}>About</Link>
+        <Link href="/demos" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Demos</Link>
         <span aria-hidden="true">·</span>
-        <Link href="/contact" className={isDark ? "hover:text-white transition-colors" : "hover:text-black transition-colors"}>Contact</Link>
+        <Link href="/about" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>About</Link>
         <span aria-hidden="true">·</span>
-        <Link href="/privacy" className={isDark ? "hover:text-white transition-colors" : "hover:text-black transition-colors"}>Privacy Policy</Link>
+        <Link href="/contact" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Contact</Link>
         <span aria-hidden="true">·</span>
-        <Link href="/cookie-policy" className={isDark ? "hover:text-white transition-colors" : "hover:text-black transition-colors"}>Cookie Policy</Link>
+        <Link href="/privacy" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Privacy Policy</Link>
         <span aria-hidden="true">·</span>
-        <Link href="/disclaimer" className={isDark ? "hover:text-white transition-colors" : "hover:text-black transition-colors"}>Disclaimer</Link>
+        <Link href="/cookie-policy" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Cookie Policy</Link>
         <span aria-hidden="true">·</span>
-        <Link href="/terms" className={isDark ? "hover:text-white transition-colors" : "hover:text-black transition-colors"}>Terms</Link>
+        <Link href="/disclaimer" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Disclaimer</Link>
+        <span aria-hidden="true">·</span>
+        <Link href="/terms" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Terms</Link>
       </nav>
     </footer>
   );

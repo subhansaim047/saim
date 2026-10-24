@@ -24,7 +24,7 @@ export const FooterSection = () => {
             <Link href="/services">Services</Link>
             <Link href="/technologies">Tech Stack</Link>
             <Link href="/nextjs-developer-uk" className="text-primary hover:underline">Next.js UK & EU</Link>
-            <Link href="/tools" className="text-primary hover:underline">Free Food Safety Tools</Link>
+            <Link href="/tools" className="text-primary hover:underline">Free Tools</Link>
             <Link href="/demos">Demo Sites</Link>
           </nav>
 
@@ -35,10 +35,13 @@ export const FooterSection = () => {
             <a href="/#faq">FAQ</a>
             <Link href="/blogs">Blogs</Link>
             <a href="/#contact">Contact</a>
+            <a href="mailto:contact@saimdev.site" className="text-primary hover:underline">
+              contact@saimdev.site
+            </a>
           </nav>
 
           <nav className="site-footer__nav" aria-label={getClaim("demos-preview")}>
-            <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '10px', textTransform: 'uppercase', fontWeight: 600, marginBottom: '4px', display: 'block' }}>
+            <span style={{ color: '#a3a3a3', fontSize: '10px', textTransform: 'uppercase', fontWeight: 600, marginBottom: '4px', display: 'block' }}>
               {getClaim("demos-preview")}
             </span>
             <a href="/hotbite/index.html" rel="nofollow">O&apos;Resto Street Food</a>
@@ -84,25 +87,25 @@ export const FooterSection = () => {
 
         {/* LEGAL & TRUST LINE */}
         <div className="site-footer__legal border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
-          <p>© 2026 Saim Dev. All rights reserved. Custom Next.js Architecture for UK, Europe &amp; Worldwide.</p>
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-white/70">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <p>© 2026 Saim Dev. All rights reserved. Email: <a href="mailto:contact@saimdev.site" className="text-white/80 hover:text-white underline">contact@saimdev.site</a></p>
+          <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-white/70">
+            <Link href="/" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Home</Link>
             <span>•</span>
-            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            <Link href="/services" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Services</Link>
             <span>•</span>
-            <Link href="/demos" className="hover:text-white transition-colors">Demos</Link>
+            <Link href="/demos" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Demos</Link>
             <span>•</span>
-            <Link href="/about" className="hover:text-white transition-colors">About</Link>
+            <Link href="/about" className="hover:text-white transition-colors py-2 px-1.5 inline-block">About</Link>
             <span>•</span>
-            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+            <Link href="/contact" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Contact</Link>
             <span>•</span>
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Privacy Policy</Link>
             <span>•</span>
-            <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
+            <Link href="/cookie-policy" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Cookie Policy</Link>
             <span>•</span>
-            <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
+            <Link href="/disclaimer" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Disclaimer</Link>
             <span>•</span>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+            <Link href="/terms" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Terms</Link>
           </div>
         </div>
       </div>

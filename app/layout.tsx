@@ -8,7 +8,7 @@ const instrument = Instrument_Serif({ weight: "400", style: ["normal", "italic"]
 
 export const metadata: Metadata = {
   title: 'Saim Dev - Next.js & Full Stack Web Developer | UK & Europe',
-  description: 'Custom, fast Next.js websites for UK and European businesses. Fixed one-time pricing from £250.',
+  description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
   metadataBase: new URL('https://www.saimdev.site'),
   alternates: {
     canonical: '/',
@@ -18,16 +18,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Saim Dev - High-Performance Web Development | Next.js Architecture',
-    description: 'Custom, fast Next.js websites for UK and European businesses. Fixed one-time pricing from £250.',
+    description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
     url: '/',
     siteName: 'Saim Dev',
-    type: 'website',
     locale: 'en_GB',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Saim Dev - Next.js Developer for UK & Europe',
-    description: 'Custom, fast Next.js websites for UK and European businesses. Fixed one-time pricing from £250.',
+    description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
     creator: '@saimwebdev',
   },
   other: {
@@ -44,7 +44,7 @@ const organizationSchema = {
   "url": "https://www.saimdev.site",
   "logo": "https://www.saimdev.site/saim-dev-logo.png",
   "image": "https://www.saimdev.site/og-image.png",
-  "description": "Custom, fast Next.js websites for UK and European businesses. Fixed one-time pricing from £250.",
+  "description": "Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.",
   "priceRange": "£250 - £790",
   "currenciesAccepted": "GBP, EUR, USD",
   "paymentAccepted": "Bank Transfer, Stripe, Wise, Credit Card",
@@ -63,6 +63,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     "contactType": "customer service",
     "telephone": "+923196526604",
+    "email": "contact@saimdev.site",
     "url": "https://wa.me/923196526604",
     "availableLanguage": ["English"]
   },

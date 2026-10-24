@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { FadeUp } from "./FadeUp";
 import { HelpCircle, ChevronDown } from "lucide-react";
 
@@ -77,14 +76,19 @@ export const FaqSection = () => {
             return (
               <FadeUp key={faq.question} delay={0.08 * index}>
                 <div
-                  onClick={() => toggleFaq(index)}
-                  className={`liquid-glass rounded-2xl border transition-all duration-300 overflow-hidden cursor-pointer ${
+                  className={`liquid-glass rounded-2xl border transition-all duration-300 overflow-hidden ${
                     isOpen
                       ? "border-primary/40 bg-white/[0.04]"
                       : "border-white/10 hover:border-white/20"
                   }`}
                 >
-                  <div className="p-6 sm:p-7 flex items-center justify-between gap-4">
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(index)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${index}`}
+                    className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                  >
                     <h3 className="text-white text-base sm:text-lg font-medium leading-snug">
                       {faq.question}
                     </h3>
@@ -95,22 +99,20 @@ export const FaqSection = () => {
                     >
                       <ChevronDown className="w-4 h-4" />
                     </div>
-                  </div>
+                  </button>
 
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                      >
-                        <div className="px-6 sm:px-7 pb-6 sm:pb-7 text-foreground/70 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
-                          {faq.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <div
+                    id={`faq-answer-${index}`}
+                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="px-6 sm:px-7 pb-6 sm:pb-7 text-foreground/70 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
+                        {faq.answer}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </FadeUp>
             );

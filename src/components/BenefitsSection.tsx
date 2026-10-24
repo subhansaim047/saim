@@ -31,7 +31,7 @@ export const BenefitsSection = () => {
 
             {/* Card 2: Video Card (Center) */}
             <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-neutral-950 overflow-hidden flex flex-col">
-              <div className="relative w-full overflow-hidden" style={{ height: "75%" }}>
+              <div className="relative w-full overflow-hidden h-[50%]">
                 <video preload="metadata" autoPlay
                   loop
                   muted
@@ -43,14 +43,17 @@ export const BenefitsSection = () => {
                     type="video/mp4"
                   />
                 </video>
-                <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-neutral-950" />
+                <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-neutral-950" />
               </div>
-              <div className="flex-1 flex items-center justify-start p-6 sm:p-8">
+              <div className="flex-1 flex flex-col justify-center p-6 sm:p-8">
                 <h3 className="text-white text-xl sm:text-2xl font-light leading-tight text-left">
                   Performance, Speed &
                   <br />
                   SEO Optimization
                 </h3>
+                <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
+                  Sub-second Next.js architecture, verified Core Web Vitals, and structured schema markup engineered to rank on Google.
+                </p>
               </div>
             </div>
 

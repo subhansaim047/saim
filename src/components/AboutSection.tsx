@@ -1,8 +1,5 @@
 "use client";
-import { useRef } from "react";
-import { useScroll } from "framer-motion";
 import { WordsPullUpMultiStyle } from "./WordsPullUpMultiStyle";
-import { AnimatedLetter } from "./AnimatedLetter";
 
 const aboutSegments = [
   { text: "We are web architects,", className: "font-normal text-[#E1E0CC]" },
@@ -17,17 +14,6 @@ const paragraphText =
   "Our studio engineers fast, modern, high-converting platforms for service leaders — dentists, mechanics, salons, contractors, and ambitious brands. Together, we craft digital platforms designed to rank, load instantly, and turn visitors into loyal, paying clients.";
 
 export const AboutSection = () => {
-  const paragraphRef = useRef<HTMLParagraphElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: paragraphRef,
-    offset: ["start 0.8", "end 0.2"],
-  });
-
-  const words = paragraphText.split(" ");
-  const totalChars = paragraphText.length;
-
-  let globalCharIndex = 0;
-
   return (
     <section id="our-story" className="bg-black py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8">
       <div className="bg-[#101010] rounded-3xl md:rounded-[2rem] max-w-6xl mx-auto p-8 sm:p-12 md:p-16 lg:p-20 text-center border border-white/5 shadow-2xl">
@@ -44,30 +30,9 @@ export const AboutSection = () => {
           />
         </div>
 
-        {/* Body paragraph with scroll-linked character opacity reveal */}
-        <p
-          ref={paragraphRef}
-          className="text-[#DEDBC8] text-xs sm:text-sm md:text-base max-w-2xl mx-auto mt-10 md:mt-14 leading-relaxed font-light"
-        >
-          {words.map((word, wordIndex) => {
-            const wordChars = word.split("");
-            const wordStartIndex = globalCharIndex;
-            globalCharIndex += word.length + 1;
-
-            return (
-              <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.3em]">
-                {wordChars.map((char, charIndex) => (
-                  <AnimatedLetter
-                    key={charIndex}
-                    char={char}
-                    index={wordStartIndex + charIndex}
-                    totalChars={totalChars}
-                    progress={scrollYProgress}
-                  />
-                ))}
-              </span>
-            );
-          })}
+        {/* Body paragraph with normal, accessible word spacing */}
+        <p className="text-[#DEDBC8] text-xs sm:text-sm md:text-base max-w-2xl mx-auto mt-10 md:mt-14 leading-relaxed font-light">
+          {paragraphText}
         </p>
 
         {/* AI-Friendly Business Description (LLMO & Search Indexing) */}
