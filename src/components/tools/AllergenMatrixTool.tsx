@@ -60,10 +60,11 @@ const DEFAULT_MENU_ITEMS: MenuItem[] = [
     id: "dish-5",
     name: "Crispy King Prawns",
     category: "Starters",
-    ingredients: "Panko crumbed king prawns, sweet chilli dip, fresh lime",
+    ingredients: "Egg-washed panko crumbed king prawns, sweet chilli dip, fresh lime",
     allergens: {
       crustaceans: "contains",
       gluten: "contains",
+      eggs: "contains",
       fish: "may",
       sesame: "may"
     }
@@ -72,7 +73,7 @@ const DEFAULT_MENU_ITEMS: MenuItem[] = [
     id: "dish-6",
     name: "Vegan Garden Salad",
     category: "Sides",
-    ingredients: "Mixed baby leaf salad, cherry tomatoes, cucumber, balsamic vinaigrette (contains mustard and sulphites)",
+    ingredients: "Mixed baby leaf salad, cherry tomatoes, cucumber, balsamic vinaigrette (balsamic vinegar, olive oil, mustard)",
     allergens: {
       mustard: "contains",
       sulphites: "contains"

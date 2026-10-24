@@ -140,6 +140,41 @@ assert(allergenToolContent.includes("YES = Contains"), `Contains safe legend sem
 // Check gluten demo data
 assert(allergenToolContent.includes('gluten: "contains"'), `Demo dishes containing gluten marked as contains`);
 
+// Check review date starts empty
+assert(allergenToolContent.includes('const [reviewDate, setReviewDate] = useState("");'), `reviewDate starts empty in AllergenMatrixTool`);
+assert(!allergenToolContent.includes('new Date()'), `No build-time new Date() in AllergenMatrixTool`);
+
+// -----------------------------------------------------------------
+// GUARD 6: No SMS placeholder tokens in components
+// -----------------------------------------------------------------
+console.log("\n--- Guard 6: SMS Placeholder Tokens Check ---");
+const filesToCheckSms = [
+  "src/components/ContactPage.tsx",
+  "src/components/PrivacyPolicy.tsx",
+  "src/components/TermsOfService.tsx",
+  "src/components/ServicesPage.tsx",
+  "src/components/CaseStudiesPage.tsx",
+  "src/components/BlogPost3Page.tsx"
+];
+
+for (const file of filesToCheckSms) {
+  if (fs.existsSync(file)) {
+    const content = fs.readFileSync(file, "utf8");
+    const smsMatch = content.match(/Instagram\s*\(SMS\)|Instagram:\s*SMS|via\s+Instagram\s+at\s+SMS|Inquiry\s+on\s+SMS|Saim\s+Dev\s+\(SMS\)/i);
+    assert(!smsMatch, `No SMS placeholder tokens in ${file}`);
+  }
+}
+
+// -----------------------------------------------------------------
+// GUARD 7: Demo Data Ingredient to Allergen Lint
+// -----------------------------------------------------------------
+console.log("\n--- Guard 7: Demo Data Ingredient-to-Allergen Lint ---");
+assert(allergenToolContent.includes('eggs: "contains"') && allergenToolContent.includes('Egg-washed panko crumbed king prawns'), `Egg ingredient in King Prawns marked as eggs contains`);
+assert(allergenToolContent.includes('mustard: "contains"') && allergenToolContent.includes('balsamic vinaigrette (balsamic vinegar, olive oil, mustard)'), `Mustard ingredient in Garden Salad marked as mustard contains`);
+assert(allergenToolContent.includes('sulphites: "contains"'), `Sulphites ingredient in Garden Salad marked as sulphites contains`);
+assert(allergenToolContent.includes('crustaceans: "contains"'), `Prawn ingredient in King Prawns marked as crustaceans contains`);
+assert(allergenToolContent.includes('celery: "contains"'), `Celery ingredient in Hot Wings marked as celery contains`);
+
 // -----------------------------------------------------------------
 // FINAL SUMMARY
 // -----------------------------------------------------------------
