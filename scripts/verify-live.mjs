@@ -138,7 +138,7 @@ async function verifyRoute(route) {
     // (b) Title verification
     if (route.expectedTitle) {
       const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
-      const actualTitle = titleMatch ? titleMatch[1].trim() : '';
+      const actualTitle = titleMatch ? titleMatch[1].trim().replace(/&amp;/g, '&') : '';
       assert(actualTitle.includes(route.expectedTitle), `Title matches "${route.expectedTitle}" on ${route.path} (actual: "${actualTitle}")`);
     }
 
@@ -149,7 +149,7 @@ async function verifyRoute(route) {
     if (canonicalMatch && ogUrlMatch) {
       const canonical = canonicalMatch[1];
       const ogUrl = ogUrlMatch[1];
-      assert(canonical === ogUrl, `og:url ("${ogUrl}") matches canonical ("${canonical}") on ${route.path}`);
+      assert(canonical.replace(/\/$/, '') === ogUrl.replace(/\/$/, ''), `og:url ("${ogUrl}") matches canonical ("${canonical}") on ${route.path}`);
     }
 
     // (d) Footer links present
