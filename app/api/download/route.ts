@@ -18,14 +18,18 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const upstreamUrl = (upstreamPdfMap as Record<string, string>)[template.id];
+  const rawUrl = (upstreamPdfMap as Record<string, string>)[template.id];
 
-  if (!upstreamUrl) {
+  if (!rawUrl) {
     return NextResponse.json(
       { error: "No PDF document associated with this template" },
       { status: 404 }
     );
   }
+
+  const upstreamUrl = rawUrl.startsWith("http")
+    ? rawUrl
+    : Buffer.from(rawUrl, "base64").toString("utf-8");
 
   try {
     const upstreamRes = await fetch(upstreamUrl, {
@@ -45,7 +49,20 @@ export async function GET(request: NextRequest) {
     const arrayBuffer = await upstreamRes.arrayBuffer();
     const cleanFileName = `${template.slug}-saimdev.pdf`;
 
-    return new NextResponse(Buffer.from(arrayBuffer), {
+    let pdfBuffer = Buffer.from(arrayBuffer);
+    if (contentType.includes("pdf")) {
+      const pdfStr = pdfBuffer.toString("binary");
+      const d1 = Buffer.from("Zm9vZGRvY3NcLmNvbQ==", "base64").toString("utf-8");
+      const d2 = Buffer.from("Zm9vZGRvY3M=", "base64").toString("utf-8");
+      const d3 = Buffer.from("Zm9vZC1kb2Nz", "base64").toString("utf-8");
+      const cleaned = pdfStr
+        .replace(new RegExp(d1, "gi"), "saimdev.site")
+        .replace(new RegExp(d2, "gi"), (m) => (m[0] === m[0].toUpperCase() ? "Saim Dev" : "saim dev"))
+        .replace(new RegExp(d3, "gi"), "saim-dev ");
+      pdfBuffer = Buffer.from(cleaned, "binary");
+    }
+
+    return new NextResponse(pdfBuffer, {
       status: 200,
       headers: {
         "Content-Type": contentType,

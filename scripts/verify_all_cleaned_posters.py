@@ -13,8 +13,8 @@ poster_dir = os.path.join("public", "templates", "posters")
 
 print(f"Verifying all {len(mappings)} cleaned poster files in {poster_dir}...")
 
-green_logo_color = (0, 192, 100) # FoodDocs green
-navy_qr_color = (27, 20, 100)    # FoodDocs QR navy
+green_logo_color = (0, 192, 100) # Upstream green
+navy_qr_color = (27, 20, 100)    # Upstream QR navy
 
 verified = 0
 
@@ -30,7 +30,7 @@ for item in mappings:
     im = Image.open(filepath).convert("RGB")
     w, h = im.size
     
-    # Check bottom region for FoodDocs branding remnants
+    # Check bottom region for Upstream branding remnants
     check_h = 100 if h < 2000 else 200
     bottom_crop = im.crop((0, h - check_h, w, h))
     

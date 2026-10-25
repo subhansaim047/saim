@@ -589,7 +589,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
         </div>
       </div>
 
-      {/* ── 3. PREPARATION STEPS (TABLE 3 IN FOODDOCS) ── */}
+      {/* ── 3. PREPARATION STEPS (TABLE 3 IN RECIPE STANDARDS) ── */}
       <div className="space-y-2 pt-4 border-t border-gray-100">
         <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider font-mono">
           3. Preparation Steps &amp; Kitchen SOP

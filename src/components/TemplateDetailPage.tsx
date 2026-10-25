@@ -218,7 +218,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════
-            DEDICATED INTERACTIVE TOOLS MATCHING FOODDOCS FUNCTIONALITY
+            DEDICATED INTERACTIVE COMPLIANCE AND KITCHEN TOOLS
         ════════════════════════════════════════════════════════════════ */}
 
         {/* 1. Recipe Yield & Resizing Calculator */}

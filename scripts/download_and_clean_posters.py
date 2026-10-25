@@ -55,7 +55,7 @@ for idx, item in enumerate(mappings, 1):
         else:
             fill_color = bg_color
             
-        # The branding on all FoodDocs posters is within the bottom 230 pixels
+        # The branding on all Upstream posters is within the bottom 230 pixels
         draw = ImageDraw.Draw(im)
         draw.rectangle([(0, h - 230), (w, h)], fill=fill_color)
         

@@ -26,3 +26,9 @@ out
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary scraping & mapping data
+scripts/*_mappings.json
+scripts/*.pdf
+scripts/*.png
+
