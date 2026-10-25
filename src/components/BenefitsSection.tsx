@@ -32,7 +32,7 @@ export const BenefitsSection = () => {
 
             {/* Card 2: Video Card (Center) */}
             <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-neutral-950 overflow-hidden flex flex-col">
-              <div className="relative w-full overflow-hidden h-[50%]">
+              <div className="relative w-full overflow-hidden h-[54%] sm:h-[56%] flex items-center justify-center bg-black pt-3 sm:pt-4">
                 <video
                   ref={(el) => {
                     if (el) {
@@ -47,7 +47,7 @@ export const BenefitsSection = () => {
                   playsInline
                   preload="auto"
                   poster="/videos/benefits-poster.webp"
-                  className="w-full h-full object-cover block"
+                  className="w-full h-full object-contain block"
                 >
                   <source src="/videos/benefits-speed-animation.mp4" type="video/mp4" />
                   <source
@@ -55,9 +55,9 @@ export const BenefitsSection = () => {
                     type="video/mp4"
                   />
                 </video>
-                <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-neutral-950" />
+                <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-neutral-950" />
               </div>
-              <div className="flex-1 flex flex-col justify-center p-6 sm:p-8">
+              <div className="flex-1 flex flex-col justify-center p-6 sm:p-8 pt-2">
                 <h3 className="text-white text-xl sm:text-2xl font-light leading-tight text-left">
                   Performance, Speed &
                   <br />
