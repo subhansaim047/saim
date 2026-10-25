@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const instrument = Instrument_Serif({ weight: "400", style: ["normal", "italic"], subsets: ['latin'], variable: '--font-instrument' });
 
 export const metadata: Metadata = {
-  title: 'Saim Dev - Next.js & Full Stack Web Developer | UK & Europe',
-  description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
+  title: 'Next.js Websites for UK & EU Small Businesses | Saim Dev',
+  description: 'Custom, high-performance Next.js websites for UK and European small businesses. Transparent fixed pricing from £250 with sub-second speeds and SEO built-in.',
   metadataBase: new URL('https://www.saimdev.site'),
   alternates: {
     canonical: 'https://www.saimdev.site',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     google: 'google0191625097e7b0a7',
   },
   openGraph: {
-    title: 'Saim Dev - Next.js & Full Stack Web Developer | UK & Europe',
-    description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
+    title: 'Next.js Websites for UK & EU Small Businesses | Saim Dev',
+    description: 'Custom, high-performance Next.js websites for UK and European small businesses. Transparent fixed pricing from £250 with sub-second speeds and SEO built-in.',
     url: 'https://www.saimdev.site',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
         url: 'https://www.saimdev.site/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Saim Dev - Next.js Web Development for UK & Europe',
+        alt: 'Saim Dev - Next.js Websites for UK & EU Small Businesses',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Saim Dev - Next.js & Full Stack Web Developer | UK & Europe',
-    description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
+    title: 'Next.js Websites for UK & EU Small Businesses | Saim Dev',
+    description: 'Custom, high-performance Next.js websites for UK and European small businesses. Transparent fixed pricing from £250 with sub-second speeds and SEO built-in.',
     creator: '@saimwebdev',
     images: ['https://www.saimdev.site/og-image.png'],
   },
@@ -57,7 +57,7 @@ const organizationSchema = {
     "height": 512
   },
   "image": "https://www.saimdev.site/og-image.png",
-  "description": "Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.",
+  "description": "Custom, high-performance Next.js websites for UK and European small businesses. Transparent fixed pricing from £250.",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -70,7 +70,9 @@ const organizationSchema = {
     "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
     "https://github.com/subhansaim047",
     "https://www.instagram.com/saim_agency/",
-    "https://saimswebagency.quora.com/"
+    "https://saimswebagency.quora.com/",
+    "https://www.tiktok.com/@saimdev.site",
+    "https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog"
   ]
 };
 
@@ -78,17 +80,47 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://www.saimdev.site/#person",
-  "name": "Saim",
-  "jobTitle": "Lead Full Stack Developer & Next.js Architect",
+  "name": "Saim Dev",
+  "jobTitle": "Founder & Lead Next.js Architect",
   "worksFor": {
     "@id": "https://www.saimdev.site/#organization"
   },
-  "url": "https://www.saimdev.site",
+  "url": "https://www.saimdev.site/about",
   "image": "https://www.saimdev.site/saim-dev-logo.jpg",
   "sameAs": [
     "https://x.com/saimwebdev",
     "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
-    "https://github.com/subhansaim047"
+    "https://github.com/subhansaim047",
+    "https://www.instagram.com/saim_agency/",
+    "https://saimswebagency.quora.com/",
+    "https://www.tiktok.com/@saimdev.site",
+    "https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog"
+  ]
+};
+
+const professionalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.saimdev.site/#professionalservice",
+  "name": "Saim Dev - Next.js Web Architecture & Takeaway Systems",
+  "url": "https://www.saimdev.site",
+  "image": "https://www.saimdev.site/og-image.png",
+  "priceRange": "£250 - £790",
+  "areaServed": ["GB", "EU"],
+  "parentOrganization": {
+    "@id": "https://www.saimdev.site/#organization"
+  },
+  "founder": {
+    "@id": "https://www.saimdev.site/#person"
+  },
+  "sameAs": [
+    "https://x.com/saimwebdev",
+    "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
+    "https://github.com/subhansaim047",
+    "https://www.instagram.com/saim_agency/",
+    "https://saimswebagency.quora.com/",
+    "https://www.tiktok.com/@saimdev.site",
+    "https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog"
   ]
 };
 

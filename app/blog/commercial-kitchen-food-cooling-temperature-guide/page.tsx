@@ -3,24 +3,27 @@ import { BlogPostCoolingGuide } from '@/components/blog/BlogPostCoolingGuide';
 
 export const metadata: Metadata = {
   title: "Commercial Kitchen Food Cooling Guide: UK 90-Minute Rule | Saim Dev",
-  description: "Learn UK food safety cooling rules: cooling from 75°C to 8°C in 90 minutes, approved methods (blast chilling, shallow pans), and the Danger Zone explained.",
+  description: "Learn UK food safety cooling rules: cooling from 75\u00b0C to 8\u00b0C in 90 minutes, approved methods (blast chilling, shallow pans), and the Danger Zone explained.",
   alternates: {
     canonical: 'https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide'
   },
   openGraph: {
-    title: "Commercial Kitchen Food Cooling Guide: The UK 90-Minute Rule & Limits",
-    description: "Everything UK restaurant and takeaway managers need to know about rapidly reducing food temperatures and passing EHO chilling audits.",
-    url: "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide",
-    type: "article",
-    publishedTime: "2026-10-25T00:00:00.000Z",
-    authors: ["https://www.saimdev.site"],
-    images: [{ url: "https://www.saimdev.site/og-image.png", width: 1200, height: 630 }]
+    title: "Commercial Kitchen Food Cooling Guide: UK 90-Minute Rule | Saim Dev",
+    description: "Learn UK food safety cooling rules: cooling from 75\u00b0C to 8\u00b0C in 90 minutes, approved methods (blast chilling, shallow pans), and the Danger Zone explained.",
+    url: 'https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide',
+    siteName: 'Saim Dev',
+    locale: 'en_GB',
+    type: 'article',
+    publishedTime: '2026-10-25T00:00:00.000Z',
+    modifiedTime: '2026-10-25T00:00:00.000Z',
+    authors: ['https://www.saimdev.site/about'],
+    images: [{ url: 'https://www.saimdev.site/og-image.png', width: 1200, height: 630, alt: "Commercial Kitchen Food Cooling Guide: UK 90-Minute Rule" }]
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Commercial Kitchen Food Cooling Guide (UK 90-Minute Rule)",
-    description: "Learn how to safely cool hot food below 8°C in under 90 minutes to comply with UK Food Standards Agency guidelines.",
-    images: ["https://www.saimdev.site/og-image.png"]
+    card: 'summary_large_image',
+    title: "Commercial Kitchen Food Cooling Guide: UK 90-Minute Rule | Saim Dev",
+    description: "Learn UK food safety cooling rules: cooling from 75\u00b0C to 8\u00b0C in 90 minutes, approved methods (blast chilling, shallow pans), and the Danger Zone explained.",
+    images: ['https://www.saimdev.site/og-image.png']
   }
 };
 
@@ -28,19 +31,21 @@ export default function Page() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Commercial Kitchen Food Cooling Guide: The UK 90-Minute Rule & Temperature Limits",
-    "description": "Everything UK restaurant and takeaway managers need to know about rapidly reducing food temperatures and passing EHO chilling audits.",
+    "headline": "Commercial Kitchen Food Cooling Guide: UK 90-Minute Rule | Saim Dev",
+    "description": "Learn UK food safety cooling rules: cooling from 75\u00b0C to 8\u00b0C in 90 minutes, approved methods (blast chilling, shallow pans), and the Danger Zone explained.",
     "url": "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide",
     "datePublished": "2026-10-25",
     "dateModified": "2026-10-25",
     "author": {
-      "@type": "Organization",
+      "@type": "Person",
       "name": "Saim Dev",
-      "url": "https://www.saimdev.site"
+      "jobTitle": "Founder & Lead Next.js Architect",
+      "url": "https://www.saimdev.site/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Saim Dev",
+      "url": "https://www.saimdev.site",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.saimdev.site/saim-dev-logo.png"
@@ -49,7 +54,8 @@ export default function Page() {
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide"
-    }
+    },
+    "image": "https://www.saimdev.site/og-image.png"
   };
 
   const breadcrumbSchema = {
@@ -71,7 +77,7 @@ export default function Page() {
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Food Cooling Temperature Guide",
+        "name": "Commercial Kitchen Food Cooling Guide: UK 90-Minute Rule",
         "item": "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide"
       }
     ]

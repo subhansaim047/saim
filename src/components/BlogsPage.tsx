@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Tag, ArrowRight } from "lucide-react";
@@ -11,6 +12,7 @@ interface BlogItem {
   date: string;
   readTime: string;
   tag: string;
+  category: "hygiene" | "allergens" | "economics" | "web";
   tagColor: string;
   url: string;
 }
@@ -23,6 +25,7 @@ const blogs: BlogItem[] = [
     date: "Oct 25, 2026",
     readTime: "8 min read",
     tag: "5-Star Rating",
+    category: "hygiene",
     tagColor: "#10B981",
     url: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
   },
@@ -33,6 +36,7 @@ const blogs: BlogItem[] = [
     date: "Oct 25, 2026",
     readTime: "7 min read",
     tag: "Natasha's Law",
+    category: "allergens",
     tagColor: "#EF4444",
     url: "/blog/natashas-law-ppds-food-labelling-guide",
   },
@@ -43,16 +47,18 @@ const blogs: BlogItem[] = [
     date: "Oct 25, 2026",
     readTime: "7 min read",
     tag: "Temperature Control",
+    category: "hygiene",
     tagColor: "#3B82F6",
     url: "/blog/commercial-kitchen-food-cooling-temperature-guide",
   },
   {
     id: 9,
     title: "How to Create a Fully Compliant 14-Allergen Matrix for UK Restaurants & Takeaways",
-    excerpt: "Step-by-step masterclass on auditing recipes, preventing cross-contamination, and building an EHO-approved 14-allergen matrix under Natasha's Law. Free digital generator included.",
+    excerpt: "Step-by-step masterclass on auditing recipes, preventing cross-contamination, and building a compliant 14-allergen matrix aligned with FSA guidance under Natasha's Law. Free digital generator included.",
     date: "Oct 23, 2026",
     readTime: "8 min read",
     tag: "Allergen Compliance",
+    category: "allergens",
     tagColor: "#EF4444",
     url: "/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
   },
@@ -63,6 +69,7 @@ const blogs: BlogItem[] = [
     date: "Oct 23, 2026",
     readTime: "9 min read",
     tag: "Kitchen Economics",
+    category: "economics",
     tagColor: "#10B981",
     url: "/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
   },
@@ -73,26 +80,29 @@ const blogs: BlogItem[] = [
     date: "Oct 23, 2026",
     readTime: "8 min read",
     tag: "Batch Catering",
+    category: "economics",
     tagColor: "#F59E0B",
     url: "/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
   },
   {
     id: 6,
-    title: "SFBB Opening & Closing Checklists: The Daily Kitchen Routine That Guarantees a 5-Star Food Hygiene Rating",
+    title: "SFBB Opening & Closing Checklists: The Daily Kitchen Routine That Helps You Prepare for a 5-Star Food Hygiene Rating",
     excerpt: "Discover the essential SFBB opening and closing hygiene checks every UK kitchen must log daily. Prevent cross-contamination and pass EHO audits with our free digital checklist.",
     date: "Oct 23, 2026",
     readTime: "8 min read",
     tag: "Food Hygiene",
+    category: "hygiene",
     tagColor: "#3B82F6",
     url: "/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
   },
   {
     id: 5,
-    title: "How to Write an EHO-Approved HACCP Plan for Your UK Food Business (7 Principles + Free Plan Builder)",
-    excerpt: "A practical, plain-English guide to creating an EHO-compliant HACCP plan for catering and takeaway businesses. Build your hazard analysis and CCP tables with our free tool.",
+    title: "How to Write a HACCP Plan for Your UK Food Business (7 Principles + Free Plan Builder)",
+    excerpt: "A practical, plain-English guide to creating a HACCP plan aligned with FSA standards for catering and takeaway businesses. Build your hazard analysis and CCP tables with our free tool.",
     date: "Oct 23, 2026",
     readTime: "10 min read",
     tag: "HACCP Law",
+    category: "hygiene",
     tagColor: "#6366F1",
     url: "/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
   },
@@ -103,6 +113,7 @@ const blogs: BlogItem[] = [
     date: "Oct 23, 2026",
     readTime: "7 min read",
     tag: "Staff Training",
+    category: "hygiene",
     tagColor: "#A855F7",
     url: "/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide",
   },
@@ -113,6 +124,7 @@ const blogs: BlogItem[] = [
     date: "Sep 20, 2026",
     readTime: "5 min read",
     tag: "Launch Special",
+    category: "web",
     tagColor: "#F59E0B",
     url: "/blog/50-percent-off-agency-launch",
   },
@@ -123,6 +135,7 @@ const blogs: BlogItem[] = [
     date: "Sep 20, 2026",
     readTime: "7 min read",
     tag: "Special Offer",
+    category: "web",
     tagColor: "#DEDBC8",
     url: "/blog/free-website-for-local-business",
   },
@@ -133,13 +146,27 @@ const blogs: BlogItem[] = [
     date: "Aug 11, 2026",
     readTime: "8 min read",
     tag: "Business Growth",
+    category: "web",
     tagColor: "#DEDBC8",
     url: "/blog/why-small-business-needs-website-2026",
   },
 ];
 
+const CATEGORIES = [
+  { id: "all", label: "All Guides", count: blogs.length },
+  { id: "hygiene", label: "Food Hygiene & SFBB", count: blogs.filter(b => b.category === "hygiene").length },
+  { id: "allergens", label: "Allergens & Natasha's Law", count: blogs.filter(b => b.category === "allergens").length },
+  { id: "economics", label: "Kitchen Economics & Batching", count: blogs.filter(b => b.category === "economics").length },
+  { id: "web", label: "Web Strategy & Growth", count: blogs.filter(b => b.category === "web").length },
+];
+
 export const BlogsPage = () => {
   const router = useRouter();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
+  const filteredBlogs = selectedCategory === "all"
+    ? blogs
+    : blogs.filter(b => b.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-black text-[#E1E0CC]">
@@ -163,7 +190,7 @@ export const BlogsPage = () => {
       </header>
 
       {/* ── Hero ── */}
-      <section className="px-4 sm:px-8 pt-16 pb-12 max-w-5xl mx-auto">
+      <section className="px-4 sm:px-8 pt-16 pb-8 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -184,10 +211,29 @@ export const BlogsPage = () => {
         </motion.div>
       </section>
 
+      {/* ── Category Filter Links ── */}
+      <section className="px-4 sm:px-8 pb-10 max-w-5xl mx-auto">
+        <div className="flex flex-wrap items-center gap-2">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setSelectedCategory(cat.id)}
+              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                selectedCategory === cat.id
+                  ? "bg-primary text-black font-semibold shadow-md shadow-primary/20"
+                  : "bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 hover:border-white/20"
+              }`}
+            >
+              {cat.label} ({cat.count})
+            </button>
+          ))}
+        </div>
+      </section>
+
       {/* ── Blog Grid ── */}
       <section className="px-4 sm:px-8 pb-24 max-w-5xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {blogs.map((blog, i) => (
+          {filteredBlogs.map((blog, i) => (
             <motion.article
               key={blog.id}
               initial={{ opacity: 0, y: 24 }}
@@ -227,34 +273,20 @@ export const BlogsPage = () => {
                     {blog.readTime}
                   </span>
                 </div>
-                <span className="flex items-center gap-1 text-[10px] font-semibold text-primary/70 group-hover:text-primary transition-colors">
-                  Read <ArrowRight className="w-3 h-3" />
+                <span className="text-[10px] font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Read Guide
+                  <ArrowRight className="w-3 h-3" />
                 </span>
               </div>
             </motion.article>
           ))}
         </div>
-
-        {/* Support note */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-14 text-center"
-        >
-          <p className="text-white/25 text-sm">
-            Have questions about Natasha&apos;s Law or custom online ordering? Chat directly on{" "}
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20discussing%20a%20website%20project"
-              target="_blank"
-              rel="noreferrer"
-              className="text-primary/60 hover:text-primary underline underline-offset-4 transition-colors"
-            >
-              WhatsApp (+92 319 6526604)
-            </a>.
-          </p>
-        </motion.div>
       </section>
+
+      {/* ── Footer ── */}
+      <footer className="border-t border-white/10 py-8 px-4 sm:px-8 text-center text-xs text-white/40">
+        <p>© 2026 Saim Dev · High-Performance Web Development for Hospitality &amp; Beyond</p>
+      </footer>
     </div>
   );
 };

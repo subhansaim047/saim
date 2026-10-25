@@ -4,6 +4,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { PerformanceSection } from "@/components/PerformanceSection";
 import { TechStackSection } from "@/components/TechStackSection";
+import { FeaturedToolsSection } from "@/components/FeaturedToolsSection";
 import { PricingSection } from "@/components/PricingSection";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -69,6 +70,7 @@ export default function HomePage() {
         <BenefitsSection />
         <PerformanceSection />
         <TechStackSection />
+        <FeaturedToolsSection />
         <ProcessSection />
         <PricingSection />
         <FaqSection />

@@ -82,7 +82,7 @@ export const BlogPostChecklist: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-[1.12]">
-            SFBB Opening &amp; Closing Checklists: The Daily Kitchen Routine That Guarantees a 5-Star Food Hygiene Rating
+            SFBB Opening &amp; Closing Checklists: The Daily Kitchen Routine That Helps You Prepare for a 5-Star Food Hygiene Rating
           </h1>
 
           <p className="text-base sm:text-xl text-white/70 leading-relaxed max-w-3xl">

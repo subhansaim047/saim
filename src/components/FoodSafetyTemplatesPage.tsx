@@ -198,17 +198,17 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
           <div className="flex flex-col gap-3 max-w-4xl">
             <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-wider uppercase text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full w-fit">
               <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
-              <span>Kitchen Hygiene &amp; Food Safety Resources</span>
+              <span>UK Food Safety &amp; Kitchen Management</span>
               <span className="text-slate-300">•</span>
-              <span className="text-slate-600">Free Printable &amp; Digital</span>
+              <span>Free Printable Logs &amp; Interactive Tools</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1D1D1F] leading-[1.1]">
-              Food Safety Templates Hub: Posters, Checklists, Logs, Smart Tools, and More
+              UK Restaurant &amp; Takeaway Kitchen Tools: Daily Checklists, Logs &amp; Allergen Matrices
             </h1>
 
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mt-1">
-              Templates and tools to help you organise kitchen records, train staff and prepare for inspections.
+              Practical due diligence systems built specifically for independent UK takeaways, restaurants, pubs, and catering operations. Aligned with Food Standards Agency (FSA) and Safer Food, Better Business (SFBB) standards.
             </p>
 
             <div className="flex flex-wrap items-center gap-2 pt-2">
@@ -255,7 +255,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
           ════════════════════════════════════════════════════════════════ */}
           <aside className="filter-sidebar sticky top-24 rounded-3xl p-6 bg-[#feeedb] border border-[#fddbc0] shadow-sm space-y-5 no-print">
             <div className="flex items-center justify-between">
-              <span className="font-bold text-lg text-[#1D1D1F]">Filter resources</span>
+              <span className="font-bold text-lg text-[#1D1D1F]">Filter Kitchen Resources</span>
               <SlidersHorizontal className="w-4 h-4 text-gray-700" />
             </div>
 

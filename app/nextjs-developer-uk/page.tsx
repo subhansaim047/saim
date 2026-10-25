@@ -5,18 +5,25 @@ import { FooterSection } from "@/components/FooterSection";
 
 export const metadata: Metadata = {
   title: "Next.js Developer UK | High-Performance Web Development for British & European Businesses",
-  description: "Hire an expert freelance Next.js developer in the UK. Optimised Core Web Vitals, sub-second loading, Privacy-conscious, and bespoke design. Transparent fixed GBP pricing from £390.",
+  description: "Hire an expert freelance Next.js developer for UK businesses. Sub-second loading, clean React code, built-in SEO, and transparent fixed pricing from £390.",
   alternates: {
-    canonical: "/nextjs-developer-uk",
+    canonical: "https://www.saimdev.site/nextjs-developer-uk",
   },
   openGraph: {
-    title: "Next.js Developer UK | High-Performance Web Development",
-    description: "Bespoke high-performance Next.js websites for UK businesses. 95+ PageSpeed, sub-second speed, transparent pricing.",
-    url: "/nextjs-developer-uk",
+    title: "Next.js Developer UK | High-Performance Web Development | Saim Dev",
+    description: "Hire an expert freelance Next.js developer for UK businesses. Sub-second loading, clean React code, built-in SEO, and transparent fixed pricing from £390.",
+    url: "https://www.saimdev.site/nextjs-developer-uk",
     siteName: "Saim Dev",
     locale: "en_GB",
     type: "website",
+    images: [{ url: "https://www.saimdev.site/og-image.png", width: 1200, height: 630, alt: "Next.js Developer UK" }]
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next.js Developer UK | High-Performance Web Development | Saim Dev",
+    description: "Hire an expert freelance Next.js developer for UK businesses. Sub-second loading, clean React code, built-in SEO, and transparent fixed pricing from £390.",
+    images: ["https://www.saimdev.site/og-image.png"]
+  }
 };
 
 const ukFaqSchema = {

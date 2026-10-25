@@ -72,7 +72,7 @@ export const PLANS: Plan[] = [
       EUR: "€920",
       USD: "$999",
     },
-    description: "No monthly retainers. Complete growth engine engineered to dominate local search.",
+    description: "No monthly retainers. Complete growth engine engineered to rank effectively in local search.",
     bg: "#252525",
     features: [
       { text: "Up to 15 Pages & Landing Sections", included: true },

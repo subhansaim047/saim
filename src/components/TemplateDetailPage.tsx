@@ -32,12 +32,14 @@ import { FoodSafetyQuizTool } from "./tools/FoodSafetyQuizTool";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
+import { TOOL_DEEP_CONTENT } from "@/data/tool_deep_content";
 
 interface Props {
   template: FoodSafetyTemplate;
 }
 
 export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
+  const deepContent = TOOL_DEEP_CONTENT[template.slug];
   const [premisesName, setPremisesName] = useState("");
   const [managerSignoff, setManagerSignoff] = useState("");
   const [complianceDate, setComplianceDate] = useState("");
@@ -120,7 +122,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         (t) => t.id !== template.id && isIndexableSlug(t.slug)
       ).slice(0, 4);
 
-  const faqs = [
+  const activeFaqs = deepContent?.faqs || [
     {
       q: `Is the ${template.title} suitable for UK Environmental Health Officer (EHO) inspections?`,
       a: `Yes. This template and digital logging workflow are developed in line with UK Food Standards Agency (FSA) Safer Food, Better Business (SFBB) standards and HACCP Article 5 of Regulation (EC) No 852/2004. When maintained with genuine operating data and supervisor sign-offs, it fulfills statutory record-keeping and due diligence requirements under the Food Safety Act 1990.`
@@ -142,6 +144,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       a: "Yes. You can enter your establishment name, manager sign-off, and inspection date directly into the input fields above. Then click 'Print / Save as PDF' to generate an optimized, clean A4 layout. All web buttons, navigation links, and screen-only elements are automatically excluded from the printed output."
     }
   ];
+  const faqs = activeFaqs;
 
   return (
     <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
@@ -168,9 +171,9 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
       {/* Header */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between no-print">
-        <Link href="/food-safety-templates" className="flex items-center gap-2 text-xs font-bold text-gray-700 hover:text-black">
+        <Link href="/tools" className="flex items-center gap-2 text-xs font-bold text-gray-700 hover:text-black">
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Templates Hub</span>
+          <span>Back to Kitchen Tools Hub</span>
         </Link>
 
         <div className="flex items-center gap-3">
@@ -210,13 +213,18 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         <div className="bg-white rounded-2xl border border-gray-200 p-4 shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs no-print">
           <div className="flex flex-wrap items-center gap-3 text-gray-600">
             <div className="inline-flex items-center gap-1.5 font-medium">
+              <FileText className="w-3.5 h-3.5 text-gray-700" />
+              <span>Byline: <strong className="text-gray-900 font-semibold">Saim Dev Kitchen Compliance Team</strong></span>
+            </div>
+            <span className="text-gray-300 hidden sm:inline" aria-hidden="true">•</span>
+            <div className="inline-flex items-center gap-1.5 font-medium">
               <Clock className="w-3.5 h-3.5 text-amber-700" />
               <span>Last Updated: <strong className="text-gray-900 font-semibold">October 2026</strong></span>
             </div>
             <span className="text-gray-300 hidden sm:inline" aria-hidden="true">•</span>
             <div className="inline-flex items-center gap-1.5 font-medium">
               <Calendar className="w-3.5 h-3.5 text-blue-700" />
-              <span>Review Cycle: <strong className="text-gray-900 font-semibold">Monthly Due Diligence Review</strong></span>
+              <span>Review: <strong className="text-gray-900 font-semibold">Monthly Due Diligence Audit</strong></span>
             </div>
           </div>
           <div className="inline-flex items-center gap-1.5 text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full text-[11px] font-semibold">
@@ -269,6 +277,19 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             </div>
           </div>
         </div>
+
+        {/* 40-60 Word Direct Answer Box (GEO / LLMO Grounding) */}
+        {deepContent?.directAnswer && (
+          <div className="bg-amber-50/70 border border-amber-200/90 rounded-2xl p-5 sm:p-6 shadow-2xs space-y-2 no-print">
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-amber-900 uppercase tracking-wider">
+              <Sparkles className="w-4 h-4 text-amber-700" />
+              <span>Direct Operational Answer &amp; UK Legal Context</span>
+            </div>
+            <p className="text-xs sm:text-sm text-gray-800 leading-relaxed font-medium">
+              {deepContent.directAnswer}
+            </p>
+          </div>
+        )}
 
         {/* ═══════════════════════════════════════════════════════════════
             DEDICATED INTERACTIVE COMPLIANCE AND KITCHEN TOOLS
@@ -557,6 +578,30 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         <div className="no-print">
           <FoodSafetyDisclaimer />
         </div>
+
+        {/* Related Compliance Blog Guide */}
+        {deepContent?.relatedBlog && (
+          <div className="bg-gradient-to-r from-blue-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md no-print">
+            <div className="space-y-1 max-w-xl">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-bold block">
+                Recommended UK Hospitality Inspection Guide
+              </span>
+              <h4 className="text-base sm:text-lg font-bold">
+                {deepContent.relatedBlog.title}
+              </h4>
+              <p className="text-xs text-blue-200 leading-relaxed">
+                Read our in-depth guidance on UK Food Standards Agency inspection procedures, staff training, and compliance routines.
+              </p>
+            </div>
+            <Link
+              href={`/blog/${deepContent.relatedBlog.slug}`}
+              className="bg-white text-gray-950 hover:bg-gray-100 font-bold text-xs px-5 py-2.5 rounded-full inline-flex items-center gap-1.5 transition-all shadow shrink-0"
+            >
+              <span>Read Guide</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        )}
 
         {/* Related Templates */}
         {related.length > 0 && (

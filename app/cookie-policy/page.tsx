@@ -5,13 +5,13 @@ import { ArrowLeft, Cookie, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Cookie Policy | Saim Dev",
-  description: "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive tools operate.",
+  description: "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive kitchen tools save data locally.",
   alternates: {
     canonical: "https://www.saimdev.site/cookie-policy",
   },
   openGraph: {
     title: "Cookie Policy | Saim Dev",
-    description: "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive tools operate.",
+    description: "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive kitchen tools save data locally.",
     url: "https://www.saimdev.site/cookie-policy",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Cookie Policy | Saim Dev",
-    description: "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive tools operate."
+    description: "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive kitchen tools store data locally."
   }
 };
 

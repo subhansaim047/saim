@@ -101,7 +101,7 @@ export const BlogPostHaccpPlan: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-[1.12]">
-            How to Write an EHO-Approved HACCP Plan for Your UK Food Business (7 Principles + Free Digital Plan Builder)
+            How to Write a HACCP Plan for Your UK Food Business (7 Principles + Free Digital Plan Builder)
           </h1>
 
           <p className="text-base sm:text-xl text-white/70 leading-relaxed max-w-3xl">

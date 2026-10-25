@@ -4,33 +4,40 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /api/*
 
-# Block Next.js internals that have no SEO value
-Disallow: /_next/data/
-
-# Googlebot — no crawl delay for this small site
+# Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
 
-# Bingbot
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 2
+Disallow: /api/
 
-# AI training crawlers — allowed (helps LLM brand visibility)
+# AI Search & LLM Engine Crawlers (Explicitly Allowed)
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
 User-agent: GPTBot
 Allow: /
-
-User-agent: ClaudeBot
-Allow: /
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
 
 User-agent: CCBot
 Allow: /
+Disallow: /api/
 
 # Sitemaps
 Sitemap: https://www.saimdev.site/sitemap.xml

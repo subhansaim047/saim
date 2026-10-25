@@ -6,7 +6,6 @@ const pagePlan = JSON.parse(fs.readFileSync("src/data/page_plan.json", "utf8"));
 const staticPages = [
   { url: "https://www.saimdev.site/", priority: "1.0", changefreq: "weekly" },
   { url: "https://www.saimdev.site/tools", priority: "0.9", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/food-safety-templates", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/nextjs-developer-uk", priority: "0.95", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/technologies", priority: "0.8", changefreq: "monthly" },

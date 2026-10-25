@@ -1,33 +1,43 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ShieldCheck, Code2, Rocket, Globe } from "lucide-react";
+import { ArrowLeft, ArrowRight, ShieldCheck, Code2, Rocket, Globe, UserCheck, Sparkles, MapPin, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Saim Dev | Next.js Web Architecture",
-  description: "Learn about Saim Dev. We build high-speed Next.js websites, bespoke takeaway ordering systems, and practical digital tools for UK businesses.",
+  title: "About Saim Dev | Next.js Web Architecture & Takeaway Systems",
+  description: "Learn about Saim Dev, a Pakistan-based Next.js studio serving UK and European small businesses with fast websites, takeaway menus, and web applications.",
   alternates: {
     canonical: "https://www.saimdev.site/about",
   },
   openGraph: {
-    title: "About Saim Dev | Next.js Web Architecture",
-    description: "Learn about Saim Dev. We build high-speed Next.js websites, bespoke takeaway ordering systems, and practical digital tools for UK businesses.",
+    title: "About Saim Dev | Next.js Web Architecture & Takeaway Systems",
+    description: "Learn about Saim Dev, a Pakistan-based Next.js studio serving UK and European small businesses with fast websites, takeaway menus, and web applications.",
     url: "https://www.saimdev.site/about",
     siteName: "Saim Dev",
     locale: "en_GB",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "https://www.saimdev.site/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "About Saim Dev - Next.js Development Studio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Saim Dev | Next.js Web Architecture",
-    description: "Learn about Saim Dev. We build high-speed Next.js websites, bespoke takeaway ordering systems, and practical digital tools for UK businesses."
-  }
+    title: "About Saim Dev | Next.js Web Architecture & Takeaway Systems",
+    description: "Learn about Saim Dev, a Pakistan-based Next.js studio serving UK and European small businesses with fast websites, takeaway menus, and web applications.",
+    creator: "@saimwebdev",
+    images: ["https://www.saimdev.site/og-image.png"],
+  },
 };
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-sm">
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-xs">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
             <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-full h-full object-cover" />
@@ -47,15 +57,46 @@ export default function AboutPage() {
           <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-black">
             <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
           </Link>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[11px] font-semibold text-amber-900">
+            <MapPin className="w-3.5 h-3.5 text-amber-700" />
+            <span>Pakistan-Based Studio • Serving UK &amp; EU Remotely</span>
+          </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1D1D1F]">
             About Saim Dev
           </h1>
-          <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-            We are a web development studio specialising in modern Next.js web applications, fast online ordering systems, and practical digital tools for independent businesses.
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
+            Saim Dev is a Pakistan-based Next.js studio serving UK and European clients remotely. We specialize in building fast, lightweight websites, online takeaway ordering systems, and practical digital operational tools for independent small businesses.
           </p>
         </div>
 
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-6">
+        {/* Studio Identity Card */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xs space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-2xl bg-black text-white flex items-center justify-center font-bold">
+              SD
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-gray-900">Transparent Remote Partnership</h2>
+              <p className="text-xs text-gray-500 font-mono">Founder-Led Engineering • Clear Fixed Milestone Pricing</p>
+            </div>
+          </div>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            By operating remotely from Pakistan with direct communication via WhatsApp and Google Meet, we offer independent UK and European business owners senior-level Next.js craftsmanship at clear, fixed prices (from £250). There are no middle managers, no hidden agency overheads, and no monthly lock-in contracts.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-gray-50 border border-gray-100 text-xs text-gray-700">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <span>Direct WhatsApp &amp; Loom updates aligned with UK business hours.</span>
+            </div>
+            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-gray-50 border border-gray-100 text-xs text-gray-700">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <span>Full source code ownership on GitHub with zero platform dependency.</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Engineering Philosophy */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xs space-y-6">
           <h2 className="text-2xl font-bold text-[#1D1D1F]">Our Approach to Web Engineering</h2>
           <p className="text-sm text-gray-700 leading-relaxed">
             We believe commercial websites should be fast, accessible, and straightforward. Rather than using slow, bloated page builders, we write clean Next.js and React code that achieves top-tier Core Web Vitals, rapid sub-second page loads, and intuitive mobile interfaces.
@@ -63,43 +104,52 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
             <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
               <Code2 className="w-5 h-5 text-indigo-600" />
-              <h3 className="font-bold text-sm text-gray-900">Modern Codebase</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">Next.js 16 App Router, React 19, TypeScript, and clean CSS styling.</p>
+              <h3 className="font-bold text-sm text-gray-900">Modern Architecture</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">Next.js 16 App Router, React 19, TypeScript, and Tailwind CSS.</p>
             </div>
             <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
               <Rocket className="w-5 h-5 text-amber-600" />
-              <h3 className="font-bold text-sm text-gray-900">High Performance</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">Engineered for quick loading on 4G/5G mobile devices with zero clutter.</p>
+              <h3 className="font-bold text-sm text-gray-900">Sub-Second Speed</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">Engineered for instant loading on 4G/5G mobile devices with zero clutter.</p>
             </div>
             <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
               <Globe className="w-5 h-5 text-emerald-600" />
-              <h3 className="font-bold text-sm text-gray-900">UK Focus</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">Tailored solutions for UK hospitality operators and local service businesses.</p>
+              <h3 className="font-bold text-sm text-gray-900">UK Hospitality Focus</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">Tailored solutions for UK takeaways, restaurants, and local services.</p>
             </div>
           </div>
         </section>
 
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-4">
+        {/* Food Safety Tools & Free Resources */}
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xs space-y-4">
           <h2 className="text-2xl font-bold text-[#1D1D1F]">Food Safety Tools &amp; Resources</h2>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Alongside bespoke client development, we provide free kitchen management tools and printable templates—including our interactive allergen matrix and kitchen checklists. These tools are completely free to use, run client-side in your browser, and help UK food businesses organise daily records.
+            Alongside bespoke client development, we provide free kitchen management tools and printable templates—including our interactive allergen matrix and kitchen checklists. These tools are completely free to use, run client-side in your browser, and help UK food businesses organize daily records in alignment with UK Food Standards Agency (FSA) guidance.
           </p>
           <div className="pt-2">
             <Link
               href="/tools"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 hover:text-indigo-900 underline"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-black bg-amber-100 hover:bg-amber-200 px-4 py-2 rounded-xl transition-colors"
             >
-              <span>Explore Food Safety Templates Hub</span>
+              <span>Explore Kitchen Tools Hub</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
         </section>
 
-        <section className="p-6 sm:p-8 rounded-3xl bg-amber-50/70 border border-amber-200 text-xs text-amber-950 leading-relaxed">
-          <p className="font-semibold text-amber-900 mb-1">Company Information</p>
-          <p>
-            For client inquiries, technical support, or partnership discussions, you can reach us through our <Link href="/contact" className="underline font-semibold">Contact Page</Link> or connect directly via WhatsApp.
-          </p>
+        {/* Contact CTA */}
+        <section className="p-6 sm:p-8 rounded-3xl bg-amber-50/70 border border-amber-200 text-xs text-amber-950 leading-relaxed flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <p className="font-bold text-sm text-amber-950 mb-1">Have a project in mind?</p>
+            <p className="text-amber-800">Discuss your requirements directly with Saim. Fixed quotes delivered within 24 hours.</p>
+          </div>
+          <Link
+            href="/contact"
+            className="bg-black hover:bg-gray-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl inline-flex items-center gap-1.5 transition-all shadow shrink-0"
+          >
+            <span>Start a Project</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </section>
       </main>
 

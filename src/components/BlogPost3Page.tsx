@@ -116,7 +116,7 @@ export const BlogPost3Page = () => {
               It is official. After months of intense preparation, late-night coding sessions, and refining my process, I have launched my own web development agency.
             </p>
             <p className="text-white/70 text-base leading-relaxed">
-              My core mission? To help businesses dominate their local markets with high-performance, custom-built websites that don't just look pretty, but actually convert visitors into paying customers. And to celebrate this milestone, I am doing something crazy: I am offering a flat <strong>50% discount</strong> on new website projects.
+              My core mission? To help businesses succeed in their local markets with high-performance, custom-built websites that don't just look pretty, but actually convert visitors into paying customers. And to celebrate this milestone, I am doing something crazy: I am offering a flat <strong>50% discount</strong> on new website projects.
             </p>
           </section>
 
@@ -177,7 +177,7 @@ export const BlogPost3Page = () => {
             </p>
             <ul className="space-y-3 mb-6">
               {[
-                "Local service providers (plumbers, electricians, salons) looking to dominate their area.",
+                "Local service providers (plumbers, electricians, salons) looking to grow in their area.",
                 "Startups & Entrepreneurs who need a professional look to secure funding or clients.",
                 "E-commerce brands wanting a smooth, high-converting checkout experience.",
                 "Established businesses looking to replace an outdated, slow website."

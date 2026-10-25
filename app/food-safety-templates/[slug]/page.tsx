@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { FOOD_SAFETY_TEMPLATES, getTemplateBySlug } from "@/data/saim_templates";
 import { TemplateDetailPage } from "@/components/TemplateDetailPage";
 import { CORE_PAGES_METADATA } from "@/data/core_metadata";
+import { TOOL_DEEP_CONTENT, FALLBACK_DEEP_CONTENT } from "@/data/tool_deep_content";
 import pagePlanData from "@/data/page_plan.json";
 import { isRouteNeedsReplacement } from "@/lib/originality-guard";
 
