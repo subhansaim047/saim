@@ -1,0 +1,398 @@
+[
+  {
+    "id": "template-1",
+    "slug": "freezer-temperature-chart",
+    "title": "Freezer Temperature Chart",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 144977,
+    "imagePath": "/templates/posters/template-1.png"
+  },
+  {
+    "id": "template-2",
+    "slug": "food-cooling-poster",
+    "title": "Two-Stage Cooling Method",
+    "status": "success",
+    "size": "1731x2581",
+    "fileSize": 291445,
+    "imagePath": "/templates/posters/template-2.png"
+  },
+  {
+    "id": "template-3",
+    "slug": "food-cooling-poster",
+    "title": "Cooling Food Methods Poster",
+    "status": "success",
+    "size": "1731x2581",
+    "fileSize": 291445,
+    "imagePath": "/templates/posters/template-3.png"
+  },
+  {
+    "id": "template-4",
+    "slug": "basic-food-preparation-rules",
+    "title": "Safe Food Prep",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 234910,
+    "imagePath": "/templates/posters/template-4.png"
+  },
+  {
+    "id": "template-46",
+    "slug": "fridge-layout-poster",
+    "title": "Fridge Layout Food Safety Poster",
+    "status": "success",
+    "size": "1731x2580",
+    "fileSize": 333850,
+    "imagePath": "/templates/posters/template-46.png"
+  },
+  {
+    "id": "template-51",
+    "slug": "hand-washing-poster",
+    "title": "Hand Washing Poster",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 280550,
+    "imagePath": "/templates/posters/template-51.png"
+  },
+  {
+    "id": "template-52",
+    "slug": "when-should-you-wash-your-hands",
+    "title": "When Should You Wash Hands Poster",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 212044,
+    "imagePath": "/templates/posters/template-52.png"
+  },
+  {
+    "id": "template-54",
+    "slug": "food-temperatures-poster",
+    "title": "Food Safety Temperatures Poster",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 204150,
+    "imagePath": "/templates/posters/template-54.png"
+  },
+  {
+    "id": "template-64",
+    "slug": "how-do-you-calibrate-a-thermometer",
+    "title": "How Do You Calibrate A Thermometer Poster",
+    "status": "success",
+    "size": "1731x1249",
+    "fileSize": 360991,
+    "imagePath": "/templates/posters/template-64.png"
+  },
+  {
+    "id": "template-67",
+    "slug": "danger-zone-for-food",
+    "title": "Temperature Danger Zone Chart",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 144367,
+    "imagePath": "/templates/posters/template-67.png"
+  },
+  {
+    "id": "template-68",
+    "slug": "kitchen-safety-poster",
+    "title": "Kitchen Safety Poster",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 208523,
+    "imagePath": "/templates/posters/template-68.png"
+  },
+  {
+    "id": "template-69",
+    "slug": "food-safety-and-sanitation",
+    "title": "Food Safety And Sanitation Poster",
+    "status": "success",
+    "size": "1731x2580",
+    "fileSize": 210495,
+    "imagePath": "/templates/posters/template-69.png"
+  },
+  {
+    "id": "template-70",
+    "slug": "big-6-foodborne-illnesses",
+    "title": "Big 6 Foodborne Illnesses",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 261359,
+    "imagePath": "/templates/posters/template-70.png"
+  },
+  {
+    "id": "template-71",
+    "slug": "fridge-temperature-chart",
+    "title": "Fridge Temperature Chart",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 143409,
+    "imagePath": "/templates/posters/template-71.png"
+  },
+  {
+    "id": "template-81",
+    "slug": "burger-temp-chart",
+    "title": "Burger Temperature Chart",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 208515,
+    "imagePath": "/templates/posters/template-81.png"
+  },
+  {
+    "id": "template-82",
+    "slug": "hot-holding-temperature",
+    "title": "Hot Holding Temperature Chart",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 265555,
+    "imagePath": "/templates/posters/template-82.png"
+  },
+  {
+    "id": "template-83",
+    "slug": "what-is-the-minimum-hot-holding-temperature-for-fried-chicken",
+    "title": "Hot Holding Temperature For Fried Chicken",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 218792,
+    "imagePath": "/templates/posters/template-83.png"
+  },
+  {
+    "id": "template-86",
+    "slug": "what-is-the-minimum-hot-holding-temperature-for-hot-dog",
+    "title": "Hot Dog",
+    "status": "success",
+    "size": "865x1290",
+    "fileSize": 93237,
+    "imagePath": "/templates/posters/template-86.png"
+  },
+  {
+    "id": "template-87",
+    "slug": "fridge-organization-chart",
+    "title": "Fridge Organization",
+    "status": "success",
+    "size": "866x1290",
+    "fileSize": 153200,
+    "imagePath": "/templates/posters/template-87.png"
+  },
+  {
+    "id": "template-88",
+    "slug": "cleaning-a-meat-slicer-poster",
+    "title": "Cleaning A Meat Slicer",
+    "status": "success",
+    "size": "866x1290",
+    "fileSize": 133933,
+    "imagePath": "/templates/posters/template-88.png"
+  },
+  {
+    "id": "template-89",
+    "slug": "allergen-poster",
+    "title": "Food Allergen Poster",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 151087,
+    "imagePath": "/templates/posters/template-89.png"
+  },
+  {
+    "id": "template-90",
+    "slug": "how-to-use-a-meat-thermometer",
+    "title": "How To Use A Meat Thermometer",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 237518,
+    "imagePath": "/templates/posters/template-90.png"
+  },
+  {
+    "id": "template-91",
+    "slug": "how-to-use-a-food-thermometer",
+    "title": "How To Use A Food Thermometer",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 254943,
+    "imagePath": "/templates/posters/template-91.png"
+  },
+  {
+    "id": "template-92",
+    "slug": "food-sanitation-rules",
+    "title": "Food Sanitation Rules Poster",
+    "status": "success",
+    "size": "1731x2580",
+    "fileSize": 274736,
+    "imagePath": "/templates/posters/template-92.png"
+  },
+  {
+    "id": "template-93",
+    "slug": "food-cooling-poster",
+    "title": "Food Cooling Poster",
+    "status": "success",
+    "size": "1731x2581",
+    "fileSize": 291445,
+    "imagePath": "/templates/posters/template-93.png"
+  },
+  {
+    "id": "template-94",
+    "slug": "cold-food-storage-rules",
+    "title": "Cold Food Storage Rules",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 262327,
+    "imagePath": "/templates/posters/template-94.png"
+  },
+  {
+    "id": "template-96",
+    "slug": "food-receiving-procedure",
+    "title": "Food Receiving Procedure",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 273086,
+    "imagePath": "/templates/posters/template-96.png"
+  },
+  {
+    "id": "template-120",
+    "slug": "reheating-food-temperature-guide",
+    "title": "Food Reheating Poster",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 192850,
+    "imagePath": "/templates/posters/template-120.png"
+  },
+  {
+    "id": "template-121",
+    "slug": "three-sink-method",
+    "title": "Three Sink Method Poster",
+    "status": "success",
+    "size": "1731x2581",
+    "fileSize": 272424,
+    "imagePath": "/templates/posters/template-121.png"
+  },
+  {
+    "id": "template-122",
+    "slug": "proper-method-for-cleaning-dirty-utensils",
+    "title": "Cleaning And Sanitizing Dirty Utensils",
+    "status": "success",
+    "size": "1731x2581",
+    "fileSize": 229989,
+    "imagePath": "/templates/posters/template-122.png"
+  },
+  {
+    "id": "template-123",
+    "slug": "five-food-safety-rules",
+    "title": "5 Food Safety Rules",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 174211,
+    "imagePath": "/templates/posters/template-123.png"
+  },
+  {
+    "id": "template-124",
+    "slug": "cold-holding-food",
+    "title": "Max. Temp. And Rules For Cold Holding Food",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 245653,
+    "imagePath": "/templates/posters/template-124.png"
+  },
+  {
+    "id": "template-125",
+    "slug": "sell-by-date",
+    "title": "Sell-By, Use-By, Expiration Dates",
+    "status": "success",
+    "size": "1731x2580",
+    "fileSize": 291129,
+    "imagePath": "/templates/posters/template-125.png"
+  },
+  {
+    "id": "template-127",
+    "slug": "fat-tom-poster",
+    "title": "FATTOM",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 353050,
+    "imagePath": "/templates/posters/template-127.png"
+  },
+  {
+    "id": "template-129",
+    "slug": "cutting-board-color-chart",
+    "title": "US Cutting Board Color Chart",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 222639,
+    "imagePath": "/templates/posters/template-129.png"
+  },
+  {
+    "id": "template-130",
+    "slug": "chopping-board-colour-chart",
+    "title": "UK Chopping Board Colour Chart",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 232659,
+    "imagePath": "/templates/posters/template-130.png"
+  },
+  {
+    "id": "template-133",
+    "slug": "defrosting-foods",
+    "title": "Food Defrosting",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 273688,
+    "imagePath": "/templates/posters/template-133.png"
+  },
+  {
+    "id": "template-134",
+    "slug": "boiling-water-thermometer-calibration",
+    "title": "Thermometer Calibration Boiling Point Method",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 253879,
+    "imagePath": "/templates/posters/template-134.png"
+  },
+  {
+    "id": "template-146",
+    "slug": "prevent-freezer-burn",
+    "title": "Prevent Freezer Burn Poster",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 285987,
+    "imagePath": "/templates/posters/template-146.png"
+  },
+  {
+    "id": "template-154",
+    "slug": "restaurant-hood-cleaning",
+    "title": "Restaurant Hood Cleaning",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 264714,
+    "imagePath": "/templates/posters/template-154.png"
+  },
+  {
+    "id": "template-155",
+    "slug": "grease-trap-cleaning",
+    "title": "Grease Trap Cleaning Guide",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 215054,
+    "imagePath": "/templates/posters/template-155.png"
+  },
+  {
+    "id": "template-160",
+    "slug": "restaurant-steps-of-service",
+    "title": "Restaurant Steps Of Service",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 162746,
+    "imagePath": "/templates/posters/template-160.png"
+  },
+  {
+    "id": "template-161",
+    "slug": "restaurant-food-safety-procedures",
+    "title": "Restaurant Food Safety Procedures",
+    "status": "success",
+    "size": "1730x2581",
+    "fileSize": 237032,
+    "imagePath": "/templates/posters/template-161.png"
+  },
+  {
+    "id": "template-162",
+    "slug": "restaurant-manager-responsibilities",
+    "title": "Restaurant Manager Responsibilities",
+    "status": "success",
+    "size": "1730x2580",
+    "fileSize": 234111,
+    "imagePath": "/templates/posters/template-162.png"
+  }
+]

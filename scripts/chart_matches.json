@@ -1,0 +1,542 @@
+[
+  {
+    "id": "template-5",
+    "title": "Food Allergen",
+    "slug": "food-allergen-chart",
+    "localImg": "/templates/svg/Food_allergen_chart.svg",
+    "matchedUpstream": {
+      "title": "Food allergen",
+      "link": "https://www.fooddocs.com/food-safety-templates/food-allergen-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_allergen_chart.svg",
+      "pdf": ""
+    }
+  },
+  {
+    "id": "template-12",
+    "title": "Turkey Pasteurization Chart",
+    "slug": "turkey-pasteurization-chart",
+    "localImg": "/templates/svg/Turkey-pasteurization-chart.svg",
+    "matchedUpstream": {
+      "title": "Turkey pasteurization chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/turkey-pasteurization-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Turkey-pasteurization-chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Turkey_pasteurization_temperature_chart.pdf"
+    }
+  },
+  {
+    "id": "template-14",
+    "title": "Waste Management Plan",
+    "slug": "waste-management-plan",
+    "localImg": "/templates/svg/Waste_control_plan.svg",
+    "matchedUpstream": {
+      "title": "Waste management plan",
+      "link": "https://www.fooddocs.com/food-safety-templates/waste-management-plan",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Waste_control_plan.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Waste-management-plan.pdf"
+    }
+  },
+  {
+    "id": "template-16",
+    "title": "Flow Chart",
+    "slug": "haccp-flow-chart-template",
+    "localImg": "/templates/svg/Flow_chart_sample.svg",
+    "matchedUpstream": {
+      "title": "Flow chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/haccp-flow-chart-template",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Flow_chart_sample.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Flow-chart.pdf"
+    }
+  },
+  {
+    "id": "template-18",
+    "title": "HACCP Plan Template",
+    "slug": "haccp-plan-builder",
+    "localImg": "/templates/svg/HACCP_Plan_Example.svg",
+    "matchedUpstream": {
+      "title": "HACCP plan template",
+      "link": "https://www.fooddocs.com/food-safety-templates/haccp-plan-builder",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/HACCP_Plan_Example.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/HACCP-plan-template.pdf"
+    }
+  },
+  {
+    "id": "template-20",
+    "title": "Product Specification Sheet",
+    "slug": "product-specification-sheet",
+    "localImg": "/templates/svg/Product_specification.svg",
+    "matchedUpstream": {
+      "title": "Product specification sheet",
+      "link": "https://www.fooddocs.com/food-safety-templates/product-specification-sheet",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Product_specification.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Product-specification-sheet.pdf"
+    }
+  },
+  {
+    "id": "template-22",
+    "title": "Walk-In-Cooler Food Storage Chart",
+    "slug": "walk-in-cooler-food-storage-chart",
+    "localImg": "/templates/svg/Walk-in-cooler.svg",
+    "matchedUpstream": {
+      "title": "Walk-in-cooler food storage chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/walk-in-cooler-food-storage-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Walk-in-cooler.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/Walk-in_cooler_food_storage_chart.pdf"
+    }
+  },
+  {
+    "id": "template-31",
+    "title": "Pest Management",
+    "slug": "pest-management-plan",
+    "localImg": "/templates/svg/Pest_control_plan.svg",
+    "matchedUpstream": {
+      "title": "Pest management",
+      "link": "https://www.fooddocs.com/food-safety-templates/pest-management-plan",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Pest_control_plan.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Pest-management-plan.pdf"
+    }
+  },
+  {
+    "id": "template-33",
+    "title": "Allergy Matrix",
+    "slug": "allergy-matrix",
+    "localImg": "/templates/svg/Allergy_matrix.svg",
+    "matchedUpstream": {
+      "title": "Allergy matrix",
+      "link": "https://www.fooddocs.com/food-safety-templates/allergy-matrix",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Allergy_matrix.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Allergen_matrix.pdf"
+    }
+  },
+  {
+    "id": "template-47",
+    "title": "Meat Cooking Chart",
+    "slug": "meat-cooking-chart",
+    "localImg": "/templates/svg/Meat_cooking_chart.svg",
+    "matchedUpstream": {
+      "title": "Meat cooking chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/meat-cooking-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Meat_cooking_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Meat_cooking_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-49",
+    "title": "Steak Doneness Chart",
+    "slug": "steak-cooking-chart",
+    "localImg": "/templates/svg/Steak_doneness_chart.svg",
+    "matchedUpstream": {
+      "title": "Steak doneness chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/steak-cooking-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Steak_doneness_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Steak_cooking_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-50",
+    "title": "Ham Cooking Temperature Chart",
+    "slug": "ham-cooking-temperature-chart",
+    "localImg": "/templates/svg/Ham_cooking_temp_chart.svg",
+    "matchedUpstream": {
+      "title": "Ham cooking temperature chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/ham-cooking-temperature-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Ham_cooking_temp_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Ham_cooking_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-53",
+    "title": "Venison Cooking Temperature Chart",
+    "slug": "venison-cooking-temperature-chart",
+    "localImg": "/templates/svg/Venison_cooking_temp_chart.svg",
+    "matchedUpstream": {
+      "title": "Venison cooking temperature chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/venison-cooking-temperature-chart",
+      "img": "https://www.fooddocs.com/hubfs/Venison_cooking_temp_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Venison_cooking_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-55",
+    "title": "Chicken Cooking Temperature Chart",
+    "slug": "chicken-temperature-chart",
+    "localImg": "/templates/svg/Hot_holding_fried_chicken.svg",
+    "matchedUpstream": {
+      "title": "Chicken cooking temperature chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/chicken-temperature-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Hot_holding_fried_chicken.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Chicken_cooking_temp_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-58",
+    "title": "Duck Cooking Temperature Chart",
+    "slug": "duck-cooking-temperature-chart",
+    "localImg": "/templates/svg/Duck_cooking_temp_chart.svg",
+    "matchedUpstream": {
+      "title": "Duck cooking temperature chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/duck-cooking-temperature-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Duck_cooking_temp_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Duck_cooking_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-59",
+    "title": "Beef Temperature Chart",
+    "slug": "beef-temperature-chart",
+    "localImg": "/templates/svg/Beef_cooking_chart.svg",
+    "matchedUpstream": {
+      "title": "Beef temperature chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/beef-temperature-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Beef_cooking_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Beef_temperature_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-60",
+    "title": "Turkey Cooking Chart",
+    "slug": "turkey-cooking-chart",
+    "localImg": "/templates/svg/Turkey_cook_chart.svg",
+    "matchedUpstream": {
+      "title": "Turkey cooking chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/turkey-cooking-chart",
+      "img": "https://www.fooddocs.com/hubfs/Turkey_cook_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Turkey_cooking_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-61",
+    "title": "Lamb Temperature Chart",
+    "slug": "lamb-temperature-chart",
+    "localImg": "/templates/svg/Lamb_Temp_chart.svg",
+    "matchedUpstream": {
+      "title": "Lamb temperature chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/lamb-temperature-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Lamb_Temp_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Lamb_temp_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-62",
+    "title": "Fish Temperature Chart",
+    "slug": "fish-temperature-chart",
+    "localImg": "/templates/svg/Fish_temp_chart.svg",
+    "matchedUpstream": {
+      "title": "Fish temperature chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/fish-temperature-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Fish_temp_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Fish_temperature_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-75",
+    "title": "Food Temperature",
+    "slug": "food-temperature-chart",
+    "localImg": "/templates/svg/Food_temp_chart.svg",
+    "matchedUpstream": {
+      "title": "Food temperature",
+      "link": "https://www.fooddocs.com/food-safety-templates/food-temperature-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_temp_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_temp_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-77",
+    "title": "Proper Food Storage Chart",
+    "slug": "proper-food-storage-chart",
+    "localImg": "/templates/svg/Proper_food_storage_chart.svg",
+    "matchedUpstream": {
+      "title": " Proper food storage chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/proper-food-storage-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Proper_food_storage_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Proper_food_storage_chart.pdf"
+    }
+  },
+  {
+    "id": "template-78",
+    "title": "SSOP Template",
+    "slug": "sanitation-standard-operating-procedures",
+    "localImg": "/templates/svg/SSOP_folder.svg",
+    "matchedUpstream": {
+      "title": "SSOP template",
+      "link": "https://www.fooddocs.com/food-safety-templates/sanitation-standard-operating-procedures",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/SSOP_folder.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/SSOP.pdf"
+    }
+  },
+  {
+    "id": "template-80",
+    "title": "Define Critical Control Point With Decision Tree",
+    "slug": "what-are-the-critical-control-points-for-food-safety",
+    "localImg": "/templates/svg/Decision_tree.svg",
+    "matchedUpstream": {
+      "title": "Define critical control point with Decision Tree",
+      "link": "https://www.fooddocs.com/food-safety-templates/what-are-the-critical-control-points-for-food-safety",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Decision_tree.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/critical-control-points.pdf"
+    }
+  },
+  {
+    "id": "template-99",
+    "title": "Safe Food Preparation",
+    "slug": "vacuum-sealed-food-shelf-life-chart",
+    "localImg": "/templates/svg/Safe_food_prep1.webp",
+    "matchedUpstream": {
+      "title": "Safe food preparation",
+      "link": "https://www.fooddocs.com/food-safety-templates/vacuum-sealed-food-shelf-life-chart",
+      "img": "https://www.fooddocs.com/hubfs/Safe_food_prep1.webp",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Vacuum_sealed_food_shelf_life_chart.pdf"
+    }
+  },
+  {
+    "id": "template-100",
+    "title": "Calculating Food Cost",
+    "slug": "calculating-food-cost",
+    "localImg": "/templates/svg/Food_cost_calc.svg",
+    "matchedUpstream": {
+      "title": "Calculating food cost",
+      "link": "https://www.fooddocs.com/food-safety-templates/calculating-food-cost",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_cost_calc.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Calculating_food_cost.pdf"
+    }
+  },
+  {
+    "id": "template-106",
+    "title": "The FDA'S FSMA Food Traceability List",
+    "slug": "fsma-food-traceability-list",
+    "localImg": "/templates/svg/Features.%20Production%20Traceability.png",
+    "matchedUpstream": {
+      "title": "The FDA's FSMA food traceability list",
+      "link": "https://www.fooddocs.com/food-safety-templates/fsma-food-traceability-list",
+      "img": "https://www.fooddocs.com/hubfs/Features.%20Production%20Traceability.png",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/FDAs_FSMA_food_traceability_list.pdf"
+    }
+  },
+  {
+    "id": "template-117",
+    "title": "Food Expiration Dates Guidelines",
+    "slug": "food-expiration-dates-guidelines-chart",
+    "localImg": "/templates/svg/Food_exp_guidlines.svg",
+    "matchedUpstream": {
+      "title": " Food expiration dates guidelines",
+      "link": "https://www.fooddocs.com/food-safety-templates/food-expiration-dates-guidelines-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_exp_guidlines.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_expiration_dates_guidelines_chart.pdf"
+    }
+  },
+  {
+    "id": "template-118",
+    "title": "Canned Food Expiration Dates",
+    "slug": "canned-food-expiration-dates-chart",
+    "localImg": "/templates/svg/Canned_food_guidelines.svg",
+    "matchedUpstream": {
+      "title": " Canned food expiration dates",
+      "link": "https://www.fooddocs.com/food-safety-templates/canned-food-expiration-dates-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Canned_food_guidelines.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/canned_food_expiration_dates_chart.pdf"
+    }
+  },
+  {
+    "id": "template-126",
+    "title": "How Long To Keep The Leftovers",
+    "slug": "how-long-to-keep-leftovers-chart",
+    "localImg": "/templates/svg/Leftovers.svg",
+    "matchedUpstream": {
+      "title": "How long to keep the leftovers",
+      "link": "https://www.fooddocs.com/food-safety-templates/how-long-to-keep-leftovers-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Leftovers.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/How_long_to_keep_leftovers_C.pdf"
+    }
+  },
+  {
+    "id": "template-128",
+    "title": "How Long Does Butter Last?",
+    "slug": "how-long-does-butter-last-poster",
+    "localImg": "/templates/svg/Butter.svg",
+    "matchedUpstream": {
+      "title": " How long does butter last?",
+      "link": "https://www.fooddocs.com/food-safety-templates/how-long-does-butter-last-poster",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Butter.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Butter_C.pdf"
+    }
+  },
+  {
+    "id": "template-137",
+    "title": "Milk Pasteurization Chart",
+    "slug": "milk-pasteurization-temperature-time-chart",
+    "localImg": "/templates/svg/Milk-pasteurization-chart.svg",
+    "matchedUpstream": {
+      "title": "Milk pasteurization chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/milk-pasteurization-temperature-time-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Milk-pasteurization-chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Milk_pasteurization_temperature_chart.pdf"
+    }
+  },
+  {
+    "id": "template-138",
+    "title": "Pork Temperature Chart",
+    "slug": "pork-temperature-chart",
+    "localImg": "/templates/svg/Pork_temp_chart.svg",
+    "matchedUpstream": {
+      "title": "Pork temperature chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/pork-temperature-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Pork_temp_chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Pork_temperature_chart_C.pdf"
+    }
+  },
+  {
+    "id": "template-139",
+    "title": "Freeze Drying Time Chart",
+    "slug": "freeze-drying-time-chart",
+    "localImg": "/templates/svg/Freeze-dried-food.png",
+    "matchedUpstream": {
+      "title": "Freeze drying time chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/freeze-drying-time-chart",
+      "img": "https://www.fooddocs.com/hubfs/Freeze-dried-food.png",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Freeze_drying_time_chart.pdf"
+    }
+  },
+  {
+    "id": "template-140",
+    "title": "Juice-Pasteurization-Chart",
+    "slug": "juice-pasteurization-temperature-time-chart",
+    "localImg": "/templates/svg/Juice-pasteurization-chart.svg",
+    "matchedUpstream": {
+      "title": "Juice-pasteurization-chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/juice-pasteurization-temperature-time-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Juice-pasteurization-chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Juice_pasteurization_temperature_chart.pdf"
+    }
+  },
+  {
+    "id": "template-141",
+    "title": "Meat-Pasteurization-Chart",
+    "slug": "meat-pasteurization-chart",
+    "localImg": "/templates/svg/Meat-pasteurization-chart.svg",
+    "matchedUpstream": {
+      "title": "Meat-pasteurization-chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/meat-pasteurization-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Meat-pasteurization-chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Meat_pasteurization_temperature_chart.pdf"
+    }
+  },
+  {
+    "id": "template-142",
+    "title": "Poultry Pasteurization Chart",
+    "slug": "poultry-pasteurization-chart",
+    "localImg": "/templates/svg/Poulty-pasteurization-chart.svg",
+    "matchedUpstream": {
+      "title": "Poultry pasteurization chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/poultry-pasteurization-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Poulty-pasteurization-chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Poultry_pasteurization_temperature_chart.pdf"
+    }
+  },
+  {
+    "id": "template-143",
+    "title": "Chicken Pasteurization Chart",
+    "slug": "chicken-pasteurization-chart",
+    "localImg": "/templates/svg/Chicken-pasteurization-chart.svg",
+    "matchedUpstream": {
+      "title": "Chicken pasteurization chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/chicken-pasteurization-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Chicken-pasteurization-chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Chicken_pasteurization_temperature_chart.pdf"
+    }
+  },
+  {
+    "id": "template-145",
+    "title": "Freezer Organization Chart",
+    "slug": "freezer-organization-chart",
+    "localImg": "/templates/svg/Freezer-organization-chart.svg",
+    "matchedUpstream": {
+      "title": "Freezer organization chart",
+      "link": "https://www.fooddocs.com/food-safety-templates/freezer-organization-chart",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Freezer-organization-chart.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Freezer_organization_chart.pdf"
+    }
+  },
+  {
+    "id": "template-150",
+    "title": "5 Whys Root Cause Analysis",
+    "slug": "5-whys-root-cause-analysis-template",
+    "localImg": "/templates/svg/5_whys.svg",
+    "matchedUpstream": {
+      "title": "5 whys root cause analysis",
+      "link": "https://www.fooddocs.com/food-safety-templates/5-whys-root-cause-analysis-template",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/5_whys.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/5-why-analysis.pdf"
+    }
+  },
+  {
+    "id": "template-166",
+    "title": "Restaurant SOP Template",
+    "slug": "restaurant-sop",
+    "localImg": "/templates/svg/Restaurant_SOP.svg",
+    "matchedUpstream": {
+      "title": "Restaurant SOP Template",
+      "link": "https://www.fooddocs.com/food-safety-templates/restaurant-sop",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_SOP.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Restaurant_SOP_template.pdf"
+    }
+  },
+  {
+    "id": "template-167",
+    "title": "SOPs In The Food Industry",
+    "slug": "standard-operating-procedure-in-food-industry",
+    "localImg": "/templates/svg/SOPs_in_food_industry.svg",
+    "matchedUpstream": {
+      "title": "SOPs in the food industry",
+      "link": "https://www.fooddocs.com/food-safety-templates/standard-operating-procedure-in-food-industry",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/SOPs_in_food_industry.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_handling_SOP.pdf"
+    }
+  },
+  {
+    "id": "template-168",
+    "title": "Pest Control SOP",
+    "slug": "pest-control-sop",
+    "localImg": "/templates/svg/Pest_control_SOP.svg",
+    "matchedUpstream": {
+      "title": "Pest control SOP",
+      "link": "https://www.fooddocs.com/food-safety-templates/pest-control-sop",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Pest_control_SOP.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Pest_control_SOP.pdf"
+    }
+  },
+  {
+    "id": "template-169",
+    "title": "Allergen Control SOP",
+    "slug": "allergen-control-sop",
+    "localImg": "/templates/svg/Allergen_control_SOP.svg",
+    "matchedUpstream": {
+      "title": "Allergen control SOP",
+      "link": "https://www.fooddocs.com/food-safety-templates/allergen-control-sop",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Allergen_control_SOP.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Allergen_control_SOP.pdf"
+    }
+  },
+  {
+    "id": "template-170",
+    "title": "Waste Management Plan SOP",
+    "slug": "waste-management-plan-sop",
+    "localImg": "/templates/svg/Waste_management_SOP.svg",
+    "matchedUpstream": {
+      "title": "Waste management plan SOP",
+      "link": "https://www.fooddocs.com/food-safety-templates/waste-management-plan-sop",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Waste_management_SOP.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Waste_management_SOP.pdf"
+    }
+  },
+  {
+    "id": "template-171",
+    "title": "Kitchen SOP",
+    "slug": "kitchen-sop",
+    "localImg": "/templates/svg/Kitchen_SOP.svg",
+    "matchedUpstream": {
+      "title": "Kitchen SOP",
+      "link": "https://www.fooddocs.com/food-safety-templates/kitchen-sop",
+      "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Kitchen_SOP.svg",
+      "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Kitchen_SOP_2026_template.pdf"
+    }
+  }
+]

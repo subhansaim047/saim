@@ -1,0 +1,1712 @@
+[
+  {
+    "type": "poster",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Freezer_temp_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Freezer.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/freezer-temperature-chart",
+    "title": "Freezer temperature chart",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Cooling_methods_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cooling_2_stages.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-cooling-poster",
+    "title": "Two-stage cooling method",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Cooling_methods_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cooling_methods.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-cooling-poster",
+    "title": "Cooling food methods poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Four_safety_rules_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/Safe_food_prep1.webp",
+    "link": "https://www.fooddocs.com/food-safety-templates/basic-food-preparation-rules",
+    "title": "Safe food prep",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_allergen_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-allergen-chart",
+    "title": "Food allergen",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Recipe_resize_tool.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/recipe-calculator",
+    "title": "Recipe calculator",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Consumer_advisory.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/consumer-advisory",
+    "title": "Consumer advisory",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Allergy_warning.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-allergy-warning",
+    "title": "Food allergy warning",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Quiz.svg",
+    "link": "https://www.fooddocs.com/food-safety-quiz",
+    "title": "Food safety quiz",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/BRC_audit.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/brc_audit.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/brc-audit",
+    "title": "BRC audit checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Kosher_cert.pdf",
+    "img": "https://www.fooddocs.com/hubfs/kosher.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/kosher-certification",
+    "title": "Kosher",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Turkey_pasteurization_temperature_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Turkey-pasteurization-chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/turkey-pasteurization-chart",
+    "title": "Turkey pasteurization chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Temperature-log.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Temp_log.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/fridge-temperature-record-sheet-pdf",
+    "title": "Temperature sheet",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Waste-management-plan.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Waste_control_plan.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/waste-management-plan",
+    "title": "Waste management plan",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Waste_control_plan.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/waste-management-schedule",
+    "title": "Waste management schedule",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Flow-chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Flow_chart_sample.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/haccp-flow-chart-template",
+    "title": "Flow chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Flow_chart_sample.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-flow-chart",
+    "title": "Food flow chart",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/HACCP-plan-template.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/HACCP_Plan_Example.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/haccp-plan-builder",
+    "title": "HACCP plan template",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/HACCP_Plan_Example.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-safety-plan",
+    "title": "Food safety plan",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Product-specification-sheet.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Product_specification.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/product-specification-sheet",
+    "title": "Product specification sheet",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Product_specification.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/product-specification-template",
+    "title": "Product specification template",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/Walk-in_cooler_food_storage_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Walk-in-cooler.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/walk-in-cooler-food-storage-chart",
+    "title": "Walk-in-cooler food storage chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Cleaning-schedule.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cleaning_schedule.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/cleaning-schedule",
+    "title": "Cleaning schedule",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cleaning_schedule.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/cleaning-checklist-template",
+    "title": "Cleaning checklist template",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Restaurant-cleaning-checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant-cleaning.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-cleaning-checklist",
+    "title": "Restaurant cleaning checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant-cleaning.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/cleaning-restaurant",
+    "title": "Cleaning restaurant template",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food-traceability.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_traceability.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-traceability",
+    "title": "Food traceability",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food-recalls.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_recall.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-recall",
+    "title": "Food recall",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Pest-control-checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Pest_control_plan.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/pest-control-checklist",
+    "title": " Pest control",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Pest_control_plan.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/pest-control-inspection-checklist",
+    "title": " Pest control inspection checklist",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Pest-management-plan.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Pest_control_plan.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/pest-management-plan",
+    "title": "Pest management",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Pest_control_plan.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/pest-control-template",
+    "title": "Pest control",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Allergen_matrix.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Allergy_matrix.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/allergy-matrix",
+    "title": "Allergy matrix",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Bar_opening_and_closing_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Bars_pubs_opening.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/bar-opening-closing-checklist",
+    "title": "Bar opening and closing",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Bars_pubs_opening.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/bar-opening-checklist",
+    "title": "Bar opening checklist",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Restaurant_opening_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_opening.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-opening-checklist",
+    "title": " Restaurant opening",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_opening.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-checklist",
+    "title": " Restaurant checklist",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "retail",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Retail_store_daily_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Retail-store-daily-checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/printable-retail-store-daily-checklist",
+    "title": "Printable retail store daily checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "retail",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Retail-store-daily-checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/retail-store-daily-checklist",
+    "title": "Retail store daily checklist",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Opening_and_closing_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Opening_closing_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/opening-and-closing-checklist-template",
+    "title": " Opening and closing",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Opening_closing_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/kitchen-opening-and-closing-checklist",
+    "title": " Kitchen opening and closing checklist",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Health-inspection-checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Health_inspection_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/health-inspection-checklist",
+    "title": " Health inspection checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Health_inspection_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-health-inspection-checklist",
+    "title": "Restaurant health inspection checklist",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Restaurant-equipment-checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_equipment_list.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-equipment-list",
+    "title": "Restaurant equipment list",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_equipment_list.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/kitchen-utensils-list",
+    "title": "Kitchen utensils list",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Fridge_layout_safety_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Fridge_layout_poster.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/fridge-layout-poster",
+    "title": "Fridge layout food safety poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer,retail,wholesale,restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Meat_cooking_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Meat_cooking_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/meat-cooking-chart",
+    "title": "Meat cooking chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Cooking-log.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cooking_temp_log.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/cooking-log-template",
+    "title": "Cooking log",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Steak_cooking_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Steak_doneness_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/steak-cooking-chart",
+    "title": "Steak doneness chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Ham_cooking_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Ham_cooking_temp_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/ham-cooking-temperature-chart",
+    "title": "Ham cooking temperature chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Handwashing_poster.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Handwashing.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/hand-washing-poster",
+    "title": "Hand washing poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Did_you_wash_hands.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/When_wash_hands.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/when-should-you-wash-your-hands",
+    "title": "When should you wash hands poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Venison_cooking_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/Venison_cooking_temp_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/venison-cooking-temperature-chart",
+    "title": "Venison cooking temperature chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "producer,retail,wholesale",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_temp_poster_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_safety_temp.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-temperatures-poster",
+    "title": "Food safety temperatures poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Chicken_cooking_temp_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Hot_holding_fried_chicken.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/chicken-temperature-chart",
+    "title": "Chicken cooking temperature chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Opening_a_restaurant.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Opening_restaurant_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/opening-a-restaurant-checklist",
+    "title": "Opening a restaurant",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Opening_restaurant_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/starting-a-food-business-checklist",
+    "title": "Starting a food business checklist",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Duck_cooking_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Duck_cooking_temp_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/duck-cooking-temperature-chart",
+    "title": "Duck cooking temperature chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Beef_temperature_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Beef_cooking_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/beef-temperature-chart",
+    "title": "Beef temperature chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Turkey_cooking_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/Turkey_cook_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/turkey-cooking-chart",
+    "title": "Turkey cooking chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Lamb_temp_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Lamb_Temp_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/lamb-temperature-chart",
+    "title": "Lamb temperature chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Fish_temperature_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Fish_temp_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/fish-temperature-chart",
+    "title": "Fish temperature chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Thermometer_calibration_log.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Thermometer_calib_log.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/thermometer-calibration-log",
+    "title": "Thermometer calibration",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Thermometer_calib.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Thermo_calib_freezing.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/how-do-you-calibrate-a-thermometer",
+    "title": "How do you calibrate a thermometer poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/HACCP_audit_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/HACCP-audit-checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/haccp-audit-checklist-template",
+    "title": "HACCP Audit Checklist Template",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/HACCP-audit-checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/haccp-audit",
+    "title": "HACCP Audit Checklist",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Temp_danger_zone_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Temp_danger_zone.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/danger-zone-for-food",
+    "title": "Temperature danger zone chart",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Kitchen_safety.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Kitchen_safety.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/kitchen-safety-poster",
+    "title": "Kitchen safety poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_safety_and_sanitation.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_safety_sanitation.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-safety-and-sanitation",
+    "title": "Food safety and sanitation poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Big_6_illnesses.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Big_6_foodborne_illnesses.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/big-6-foodborne-illnesses",
+    "title": "Big 6 foodborne illnesses",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Fridge_temp_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Fridge_temp.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/fridge-temperature-chart",
+    "title": "Fridge temperature chart",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "ebook",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/E-BOOKs/How%20to%20Write%20a%20HACCP%20Plan.pdf",
+    "img": "https://www.fooddocs.com/hubfs/E-BOOKs/hub-icons/ebook-write-haccp.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/haccp-plan-example-pdf",
+    "title": "How to write a HACCP Plan",
+    "preheader": "EBOOK",
+    "desc": ""
+  },
+  {
+    "type": "ebook",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/E-BOOKs/Food-safety-guideline.pdf",
+    "img": "https://www.fooddocs.com/hubfs/E-BOOKs/hub-icons/ebook-guidelines.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/safe-food-handling-practices-and-procedures-pdf",
+    "title": "Food Safety Guidelines",
+    "preheader": "EBOOK",
+    "desc": ""
+  },
+  {
+    "type": "ebook",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/E-BOOKs/Food-safety-handlers-test.pdf",
+    "img": "https://www.fooddocs.com/hubfs/E-BOOKs/hub-icons/ebook-handlers-test.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-handlers-test-questions-answers-pdf",
+    "title": "Food Handlers Test Answers",
+    "preheader": "EBOOK",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_temp_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_temp_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-temperature-chart",
+    "title": "Food temperature",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Define_critical_control_point.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/haccp-risk-assessment",
+    "title": "Define critical control point with HACCP matrix",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Proper_food_storage_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Proper_food_storage_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/proper-food-storage-chart",
+    "title": " Proper food storage chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/SSOP.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/SSOP_folder.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/sanitation-standard-operating-procedures",
+    "title": "SSOP template",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/SSOP_folder.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/ssop",
+    "title": "SSOP",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/critical-control-points.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Decision_tree.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/what-are-the-critical-control-points-for-food-safety",
+    "title": "Define critical control point with Decision Tree",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "producer,restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Grill_perfect_burger_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Burger_grilling.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/burger-temp-chart",
+    "title": "Burger temperature chart",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Hot_holding_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Hot_holding.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/hot-holding-temperature",
+    "title": "Hot holding temperature chart",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "producer,restaurant,retail,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Fried_chicken_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Hot_holding_fried_chicken.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/what-is-the-minimum-hot-holding-temperature-for-fried-chicken",
+    "title": "Hot holding temperature for fried chicken",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "producer,restaurant,retail,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Hot_holding_pizza_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Hot_holding_pizza.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/what-is-the-minimum-hot-holding-temperature-requirement-for-pizza",
+    "title": "Pizza hot holding",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/EHO_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/EHO_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/eho-checklist",
+    "title": "EHO food hygiene inspection checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "producer,restaurant,retail,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Hot_holding_hot_dog_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Hot_dog.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/what-is-the-minimum-hot-holding-temperature-for-hot-dog",
+    "title": "Hot dog",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Fridge_organization_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Fridge_organization_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/fridge-organization-chart",
+    "title": " Fridge organization",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Meat_slicer_cleaning.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Meat_slicer.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/cleaning-a-meat-slicer-poster",
+    "title": " Cleaning a meat slicer",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Top_14_allergens.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_allergen.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/allergen-poster",
+    "title": "Food allergen poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Thermometer_meat.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Meat_thermometer_usage.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/how-to-use-a-meat-thermometer",
+    "title": "How to use a meat thermometer",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Thermometer_food.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_thermometer_usage.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/how-to-use-a-food-thermometer",
+    "title": "How to use a food thermometer",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_sanitation_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Sanitation_rules.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-sanitation-rules",
+    "title": "Food sanitation rules poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Cooling_methods_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cooling_stages.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-cooling-poster",
+    "title": " Food cooling poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Cold_food_storage_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cooling_2_stages%20copy.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/cold-food-storage-rules",
+    "title": " Cold food storage rules",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Receiving_temperature_log.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Receiving_temp_log.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/receiving-log",
+    "title": "Receiving temperature",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_receiving_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_shipment.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-receiving-procedure",
+    "title": "Food receiving procedure",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Deep_cleaning_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cleaning_schedule.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/deep-cleaning-checklist",
+    "title": "Deep cleaning checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cleaning_schedule.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-deep-cleaning-checklist",
+    "title": "Restaurant deep cleaning",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Vacuum_sealed_food_shelf_life_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/Safe_food_prep1.webp",
+    "link": "https://www.fooddocs.com/food-safety-templates/vacuum-sealed-food-shelf-life-chart",
+    "title": "Safe food preparation",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Calculating_food_cost.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_cost_calc.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/calculating-food-cost",
+    "title": "Calculating food cost",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_cost_calc.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-cost-calculator",
+    "title": "Food cost calculator",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/GMP_Audit_checklist_for_food_production.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/GMP_audit.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/gmp-audit-checklist",
+    "title": " GMP audit checklist - template",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/GMP_audit.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-production-gmp-audit-checklist",
+    "title": " GMP audit checklist - smart tool",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/GFSI_audit_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/gfsi_cert.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/gfsi-audit-checklist",
+    "title": "How to get GFSI certified?",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/ISO_22000_cert.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/ISO_22000_cert.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/get-iso-22000-certified",
+    "title": "How to get ISO 22000 certified?",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/FDAs_FSMA_food_traceability_list.pdf",
+    "img": "https://www.fooddocs.com/hubfs/Features.%20Production%20Traceability.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/fsma-food-traceability-list",
+    "title": "The FDA's FSMA food traceability list",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Approved_suppliers_list.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Approved_suppliers_list.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/approved-supplier-list",
+    "title": "Approved Supplier List",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/SQF_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/SQF_audit_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/sqf-audit-checklist",
+    "title": "SQF internal audit checklist | Download Free Template",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "producer",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/ISO_22000_internal_audit_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/ISO_22000_Internal_Audit_Checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/iso-22000-internal-audit-checklist",
+    "title": "ISO 22000 internal audit checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "producer",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/FSMA_compliance_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/FSMA_Compliance_Audit_Checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/fsma-compliance-checklist",
+    "title": "FSMA compliance checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/FSSC_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/fssc.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/fssc-certification-checklist",
+    "title": "How to get FSSC 22000 certified?",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "ebook",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/E-BOOKs/How%20to%20Buy%20Food%20Safety%20Management%20Software.pdf",
+    "img": "https://www.fooddocs.com/hubfs/E-BOOKs/hub-icons/ebook-buy-fsms-software.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-safety-management-software-buyers-guide",
+    "title": "How to Buy Food Safety Management Software eBook",
+    "preheader": "EBOOK",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Ingredient_traceability.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Ingredient_traceability.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/ingredient-traceability",
+    "title": "Ingredient traceability",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_traceability_step_1_delivery_log.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Delivery_log.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/delivery-log",
+    "title": "Delivery log",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_traceability_step_2_production_sheet.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Production_sheet.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-production-sheet",
+    "title": "Production sheet",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_traceability_step_3_dispatch_log.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Dispatch_sheet.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/dispatch-log",
+    "title": "Dispatch log",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_expiration_dates_guidelines_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Food_exp_guidlines.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/food-expiration-dates-guidelines-chart",
+    "title": " Food expiration dates guidelines",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/canned_food_expiration_dates_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Canned_food_guidelines.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/canned-food-expiration-dates-chart",
+    "title": " Canned food expiration dates",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Hazard_Analysis.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/hazard-analysis-template",
+    "title": "Hazard Analysis Example",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "producer,restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Reheat_food_poster_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Reheat_food.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/reheating-food-temperature-guide",
+    "title": "Food reheating poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Three_sink_method.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Three_sink_method.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/three-sink-method",
+    "title": " Three sink method poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Kitchen_utensils.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Utensils.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/proper-method-for-cleaning-dirty-utensils",
+    "title": "Cleaning and sanitizing dirty utensils",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/5_food_safety_rules.pdf",
+    "img": "https://www.fooddocs.com/hubfs/5_safety_rules.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/five-food-safety-rules",
+    "title": " 5 food safety rules",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Cold_holding_foods_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Cold_holding_food.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/cold-holding-food",
+    "title": " Max. temp. and rules for cold holding food",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Sell_by.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Sell_by.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/sell-by-date",
+    "title": "Sell-by, use-by, expiration dates",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/How_long_to_keep_leftovers_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Leftovers.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/how-long-to-keep-leftovers-chart",
+    "title": "How long to keep the leftovers",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/FATTOM_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/FATTOM.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/fat-tom-poster",
+    "title": "FATTOM",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "retail,restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Butter_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Butter.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/how-long-does-butter-last-poster",
+    "title": " How long does butter last?",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Cutting_board_US.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/US_Cutting_Boards.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/cutting-board-color-chart",
+    "title": "US cutting board color chart",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Chopping_board.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Chopping_Boards_UK.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/chopping-board-colour-chart",
+    "title": "UK chopping board colour chart",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Natashas_law_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Natashas_law.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/natashas-law",
+    "title": " Natasha's law",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "smart_tool",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Recipe_creator_tool.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/recipe-card-generator",
+    "title": "Recipe generator",
+    "preheader": "SMART_TOOL",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/defrosting_food.pdf",
+    "img": "https://www.fooddocs.com/hubfs/Food_thawing.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/defrosting-foods",
+    "title": " Food defrosting",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Thermometer_calib_boil.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Thermo_calib_boiling.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/boiling-water-thermometer-calibration",
+    "title": "Thermometer calibration boiling point method",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Non-GMO_project.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/non-gmo.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/non-gmo",
+    "title": "How to get the non-GMO certification?",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Amazon_reqs.pdf",
+    "img": "https://www.fooddocs.com/hubfs/Amazon_reqs.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/amazon-seller-and-product-requirements",
+    "title": "Amazon seller and product requirements",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Milk_pasteurization_temperature_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Milk-pasteurization-chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/milk-pasteurization-temperature-time-chart",
+    "title": "Milk pasteurization chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Pork_temperature_chart_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Pork_temp_chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/pork-temperature-chart",
+    "title": "Pork temperature chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Freeze_drying_time_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/Freeze-dried-food.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/freeze-drying-time-chart",
+    "title": "Freeze drying time chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Juice_pasteurization_temperature_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Juice-pasteurization-chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/juice-pasteurization-temperature-time-chart",
+    "title": "Juice-pasteurization-chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Meat_pasteurization_temperature_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Meat-pasteurization-chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/meat-pasteurization-chart",
+    "title": "Meat-pasteurization-chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Poultry_pasteurization_temperature_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Poulty-pasteurization-chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/poultry-pasteurization-chart",
+    "title": "Poultry pasteurization chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Chicken_pasteurization_temperature_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Chicken-pasteurization-chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/chicken-pasteurization-chart",
+    "title": "Chicken pasteurization chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Hot_holding_food_temperature_log.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Hot-holding-food.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/hot-holding-food-temperature-log",
+    "title": "Hot holding food log",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Freezer_organization_chart.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Freezer-organization-chart.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/freezer-organization-chart",
+    "title": "Freezer organization chart",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Freezer_burn.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Freezer-burn.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/prevent-freezer-burn",
+    "title": "Prevent freezer burn poster",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "ebook",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/E-BOOKs/How%20to%20get%20GMP%20Certified.pdf",
+    "img": "https://www.fooddocs.com/hubfs/E-BOOKs/hub-icons/ebook-GMP-certified.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/how-to-get-gmp-certified",
+    "title": "How to Get GMP Certified",
+    "preheader": "EBOOK",
+    "desc": ""
+  },
+  {
+    "type": "ebook",
+    "activity": "restaurant,retail,producer,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/E-BOOKs/How%20to%20Get%20Compliant%20with%20FSMA%20204%20in%208%20Steps.pdf",
+    "img": "https://www.fooddocs.com/hubfs/E-BOOKs/hub-icons/ebook-FSMA-compliant.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/fsma-204-compliance",
+    "title": "How to Get Compliant with FSMA 204 in 8 Steps",
+    "preheader": "EBOOK",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/EcoSure_inspection_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/EcoSure_inspection_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/ecosure-inspection-checklist",
+    "title": "EcoSure inspection checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/5-why-analysis.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/5_whys.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/5-whys-root-cause-analysis-template",
+    "title": "5 whys root cause analysis",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "log",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Corrective_action_template.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Corrective_action_plan.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/corrective-action-plan-template",
+    "title": "Corrective action plan",
+    "preheader": "LOG",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "producer,restaurant,retail,wholesale,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/Restaurant_fire_inspection_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Fire_inspection_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-fire-inspection-checklist",
+    "title": "Restaurant fire inspection checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Restaurant_maintenance_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restausatnt_maintenance_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-maintenance-checklist",
+    "title": "Restaurant maintenance checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Restaurant_hood_cleaning_steps.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_hood_cleaning_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-hood-cleaning",
+    "title": "Restaurant hood cleaning",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/5_core_steps_of_cleaning_grease_trap.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Grease_trap_cleaning_guide.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/grease-trap-cleaning",
+    "title": "Grease trap cleaning guide",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/Restaurant_bathroom_cleaning_checklist.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_bathroom_cleaning_checklist.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restroom-cleaning-checklist-log",
+    "title": "Restroom cleaning checklist",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/Restaurant_inventory_template.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_inventory_template.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-inventory-template",
+    "title": "Restaurant inventory template",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/Excel_templates/Restaurant%20Schedule%20Template.xlsx",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_schedule_template.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-schedule-template",
+    "title": "Restaurant schedule template",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "checklist",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/Excel_templates/Kitchen_Prep_List_Template_(3_and_7_Days).xlsx",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Kitchen_prep_list_template.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/kitchen-prep-list-template",
+    "title": "Kitchen prep list template",
+    "preheader": "CHECKLIST",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/7_steps_of_service.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Kitchen_prep_list_template-1.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-steps-of-service",
+    "title": "Restaurant steps of service",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Restaurant_food_safety_procedures_C.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_food_safety_procedures.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-food-safety-procedures",
+    "title": "Restaurant food safety procedures",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "poster",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/5_core_responsibilities_of_restaurant_manager.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_manager_responsibilities.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-manager-responsibilities",
+    "title": "Restaurant manager responsibilities",
+    "preheader": "POSTER",
+    "desc": ""
+  },
+  {
+    "type": "ebook",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/E-BOOKs/The%20Restaurant%20Food%20Safety%20Leaders%20Playbook.pdf",
+    "img": "https://www.fooddocs.com/hubfs/E-BOOKs/hub-icons/ebook-restaurant-food-safety.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-food-safety-leader-playbook",
+    "title": "The Restaurant Food Safety Leader’s Playbook",
+    "preheader": "EBOOK",
+    "desc": ""
+  },
+  {
+    "type": "ebook",
+    "activity": "healthcare,retail",
+    "pdf": "https://www.fooddocs.com/hubfs/E-BOOKs/The%20Retail%20Food%20Safety%20Leaders%20Playbook.pdf",
+    "img": "https://www.fooddocs.com/hubfs/E-BOOKs/hub-icons/ebook-retail-food-safety.png",
+    "link": "https://www.fooddocs.com/food-safety-templates/retail-food-safety-leaders-playbook",
+    "title": "The Retail Food Safety Leader’s Playbook",
+    "preheader": "EBOOK",
+    "desc": ""
+  },
+  {
+    "type": "ebook",
+    "activity": "healthcare,retail",
+    "pdf": "https://www.fooddocs.com/hubfs/E-BOOKs/The%20Healthcare%20Food%20Safety%20Leaders%20Playbook.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/ebook-healthcare-food-safety.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/healthcare-food-safety-leaders-playbook",
+    "title": "The Healthcare Food Safety Leader’s Playbook",
+    "preheader": "EBOOK",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,healthcare",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Restaurant_SOP_template.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Restaurant_SOP.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/restaurant-sop",
+    "title": "Restaurant SOP Template",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,healthcare,producer",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Food_handling_SOP.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/SOPs_in_food_industry.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/standard-operating-procedure-in-food-industry",
+    "title": "SOPs in the food industry",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,healthcare,producer",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Pest_control_SOP.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Pest_control_SOP.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/pest-control-sop",
+    "title": "Pest control SOP",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,healthcare,producer",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Allergen_control_SOP.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Allergen_control_SOP.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/allergen-control-sop",
+    "title": "Allergen control SOP",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,healthcare,producer",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Waste_management_SOP.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Waste_management_SOP.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/waste-management-plan-sop",
+    "title": "Waste management plan SOP",
+    "preheader": "CHART",
+    "desc": ""
+  },
+  {
+    "type": "chart",
+    "activity": "restaurant,wholesale,healthcare,producer",
+    "pdf": "https://www.fooddocs.com/hubfs/HACCP_templates/PDF/QR/Kitchen_SOP_2026_template.pdf",
+    "img": "https://www.fooddocs.com/hubfs/HACCP_templates/Kitchen_SOP.svg",
+    "link": "https://www.fooddocs.com/food-safety-templates/kitchen-sop",
+    "title": "Kitchen SOP",
+    "preheader": "CHART",
+    "desc": ""
+  }
+]

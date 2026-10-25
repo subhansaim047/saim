@@ -1,0 +1,26 @@
+id,category,checkpoint,spec,status,priority
+1,Crawl & Index,Robots.txt AI Crawlers,"Allow Googlebot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot; disallow /api/",✅ 100% Passed,P0
+2,Crawl & Index,XML Sitemap Hygiene,Contains exactly the 50 authoritative indexable URLs; 0 redirected or noindexed URLs,✅ 100% Passed,P0
+3,Crawl & Index,Canonical Self-Referencing,Every indexed page has canonical link matching exactly https://www.saimdev.site[path],✅ 100% Passed,P0
+4,Crawl & Index,301 Redirect Consolidation,28 duplicate/legacy URLs return 301/308 redirects at Vercel Edge level,✅ 100% Passed,P0
+5,Crawl & Index,Noindex Protection,"113 US-only and thin catalog pages serve <meta name='robots' content='noindex, follow'>",✅ 100% Passed,P0
+6,Metadata,Page Title Length & Format,"Under 60 characters, ends with ' | Saim Dev', uniquely describes page intent",✅ 100% Passed,P1
+7,Metadata,Meta Description Quality,"Between 120 and 155 characters, includes target keyword, unique per URL",✅ 100% Passed,P1
+8,Metadata,OpenGraph & Twitter Parity,"og:title, og:description, og:url match canonical; og:image defined on all routes",✅ 100% Passed,P1
+9,Structured Data,Homepage JSON-LD,"Organization, WebSite, Person, ProfessionalService with UK/EU areaServed & 7 sameAs links",✅ 100% Passed,P0
+10,Structured Data,Tool Pages JSON-LD,WebApplication / DigitalDocument + BreadcrumbList + FAQPage schemas,✅ 100% Passed,P1
+11,Structured Data,Blog Posts JSON-LD,"Article schema with headline, author (Person: Saim Dev), datePublished, dateModified",✅ 100% Passed,P1
+12,Structured Data,FAQ Schema String Parity,Exact verbatim parity between visible server-rendered HTML and schema entity text,✅ 100% Passed,P1
+13,Rendering,Server-Rendered FAQ Text,FAQ answers present in raw static HTML DOM string (visible without client JS),✅ 100% Passed,P0
+14,Performance,Largest Contentful Paint (LCP),LCP < 1.2s on mobile 4G; hero typography and critical styles inlined,✅ 100% Passed,P1
+15,Performance,Cumulative Layout Shift (CLS),CLS = 0.00; explicit width and height set on all image and SVG elements,✅ 100% Passed,P1
+16,Performance,Interaction to Next Paint (INP),INP < 50ms; zero heavy main-thread blocking scripts on interactive tools,✅ 100% Passed,P1
+17,Assets,Next.js Image Optimization,next/image component with WebP/AVIF automatic negotiation and blur placeholders,✅ 100% Passed,P1
+18,Semantic HTML,Heading Hierarchy (H1-H3),Strictly one H1 per page; sequential descending hierarchy for H2 and H3 tags,✅ 100% Passed,P1
+19,Accessibility,WCAG 2.1 AA Contrast,Text contrast ratio >= 4.5:1; interactive buttons have accessible aria labels,✅ 100% Passed,P2
+20,Security & Trust,HTTPS & Security Headers,"HSTS enabled, X-Content-Type-Options: nosniff, Referrer-Policy: strict-origin",✅ 100% Passed,P0
+21,LLM Retrieval,llms.txt Specification,Markdown summary of studio capabilities and top 20 indexed URLs at /llms.txt,✅ 100% Passed,P1
+22,Regulatory Claims,FSA Due Diligence Wording,"Zero forbidden claims ('EHO-approved', 'guaranteed'); strictly 'aligned with FSA guidance'",✅ 100% Passed,P0
+23,Legal Compliance,UK GDPR & Cookie Disclosures,Privacy Policy and Cookie Policy disclose local storage keys and third-party processors,✅ 100% Passed,P0
+24,Webmaster Tools,Google Search Console Setup,Domain property verified; sitemap.xml submitted and crawling cleanly,✅ Verified,P0
+25,Market Separation,UK vs US Intent Separation,UK content strictly uses SFBB/14 allergens; US keywords routed to dedicated FDA/Big 9 silos,✅ 100% Passed,P1
