@@ -564,7 +564,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
     ],
     relatedTools: ["food-allergen-chart", "recipe-calculator", "basic-food-preparation-rules"],
     relatedBlog: {
-      title: "How to Create a Fully Compliant 14-Allergen Matrix for UK Restaurants",
+      title: "How to Create a Compliant 14-Allergen Matrix for UK Restaurants",
       slug: "how-to-create-compliant-14-allergen-matrix-uk-restaurants"
     }
   },

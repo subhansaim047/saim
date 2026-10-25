@@ -53,7 +53,7 @@ const blogs: BlogItem[] = [
   },
   {
     id: 9,
-    title: "How to Create a Fully Compliant 14-Allergen Matrix for UK Restaurants & Takeaways",
+    title: "How to Create a Compliant 14-Allergen Matrix for UK Restaurants & Takeaways",
     excerpt: "Step-by-step masterclass on auditing recipes, preventing cross-contamination, and building a compliant 14-allergen matrix aligned with FSA guidance under Natasha's Law. Free digital generator included.",
     date: "Oct 23, 2026",
     readTime: "8 min read",
@@ -205,7 +205,7 @@ export const BlogsPage = () => {
             <span className="text-primary">Kitchen Growth Systems</span>
           </h1>
           <p className="text-white/50 text-base sm:text-lg max-w-xl leading-relaxed">
-            Real, proven operational playbooks on food safety law, EHO compliance audits, 
+            Practical operational playbooks on food safety law, EHO compliance audits, 
             recipe portion economics, and web ordering systems.
           </p>
         </motion.div>

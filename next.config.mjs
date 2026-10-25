@@ -126,6 +126,26 @@ const nextConfig = {
         destination: '/food-safety-templates/chopping-board-colour-chart',
         permanent: true,
       },
+      {
+        source: '/food-safety-templates/fsma-food-traceability-list',
+        destination: '/food-safety-templates/food-traceability',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/fsma-compliance-checklist',
+        destination: '/food-safety-templates/opening-and-closing-checklist-template',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/ecosure-inspection-checklist',
+        destination: '/food-safety-templates/restaurant-cleaning-checklist',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/amazon-seller-and-product-requirements',
+        destination: '/food-safety-templates/food-traceability',
+        permanent: true,
+      },
     ];
   },
 };

@@ -149,13 +149,13 @@ export const BlogPostHaccpPlan: React.FC = () => {
             1. What is HACCP &amp; Why is It Legally Enforced?
           </h2>
           <p>
-            Developed originally by NASA in the 1960s to guarantee 100% sterile food for astronauts, HACCP was adopted globally 
+            Developed originally by NASA in the 1960s to maximize food safety for astronauts, HACCP was adopted globally 
             by the Codex Alimentarius Commission and codified into UK and European law under <strong>Regulation (EC) 852/2004</strong>.
           </p>
           <p>
             Traditional kitchen management relied on <em>&quot;end-product testing&quot;</em> — tasting a soup or inspecting a finished steak. 
             HACCP recognizes that bacterial toxins (like <em>Bacillus cereus</em> in cooked rice or <em>Salmonella</em> in poultry) 
-            cannot be smelled, tasted, or seen with the naked eye. Safety can only be guaranteed by strictly controlling process parameters 
+            cannot be smelled, tasted, or seen with the naked eye. Safety is achieved by strictly controlling process parameters 
             (time, temperature, separation).
           </p>
         </section>

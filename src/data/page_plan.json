@@ -500,9 +500,9 @@
     "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
   },
   "fsma-food-traceability-list": {
-    "bucket": "NOINDEX",
-    "target_canonical_slug": "fsma-food-traceability-list",
-    "reason": "US-specific food regulation / agency standard, off-audience for UK food businesses"
+    "bucket": "MERGE",
+    "target_canonical_slug": "food-traceability",
+    "reason": "US FSMA traceability list 301 redirected to UK food-traceability log"
   },
   "approved-supplier-list": {
     "bucket": "NOINDEX",
@@ -520,9 +520,9 @@
     "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
   },
   "fsma-compliance-checklist": {
-    "bucket": "NOINDEX",
-    "target_canonical_slug": "fsma-compliance-checklist",
-    "reason": "US-specific food regulation / agency standard, off-audience for UK food businesses"
+    "bucket": "MERGE",
+    "target_canonical_slug": "opening-and-closing-checklist-template",
+    "reason": "US FSMA checklist 301 redirected to UK opening-and-closing checklist"
   },
   "fssc-certification-checklist": {
     "bucket": "NOINDEX",
@@ -567,7 +567,7 @@
   "reheating-food-temperature-guide": {
     "bucket": "KEEP",
     "target_canonical_slug": "reheating-food-temperature-guide",
-    "reason": "Food reheating guidelines poster showing legal core temperature standards (75°C / 82°C)"
+    "reason": "Food reheating guidelines poster showing legal core temperature standards (75\u00b0C / 82\u00b0C)"
   },
   "three-sink-method": {
     "bucket": "NOINDEX",
@@ -645,9 +645,9 @@
     "reason": "Specialised non-hospitality certification / platform requirement"
   },
   "amazon-seller-and-product-requirements": {
-    "bucket": "NOINDEX",
-    "target_canonical_slug": "amazon-seller-and-product-requirements",
-    "reason": "Specialised non-hospitality certification / platform requirement"
+    "bucket": "MERGE",
+    "target_canonical_slug": "food-traceability",
+    "reason": "Platform seller requirements 301 redirected to UK food-traceability log"
   },
   "milk-pasteurization-temperature-time-chart": {
     "bucket": "NOINDEX",
@@ -687,7 +687,7 @@
   "hot-holding-food-temperature-log": {
     "bucket": "KEEP",
     "target_canonical_slug": "hot-holding-food-temperature-log",
-    "reason": "Cooked food hot holding buffet and servery temperature monitoring log (63°C legal standard)"
+    "reason": "Cooked food hot holding buffet and servery temperature monitoring log (63\u00b0C legal standard)"
   },
   "freezer-organization-chart": {
     "bucket": "NOINDEX",
@@ -700,9 +700,9 @@
     "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
   },
   "ecosure-inspection-checklist": {
-    "bucket": "NOINDEX",
-    "target_canonical_slug": "ecosure-inspection-checklist",
-    "reason": "US-specific food regulation / agency standard, off-audience for UK food businesses"
+    "bucket": "MERGE",
+    "target_canonical_slug": "restaurant-cleaning-checklist",
+    "reason": "US EcoSure checklist 301 redirected to UK restaurant-cleaning-checklist"
   },
   "5-whys-root-cause-analysis-template": {
     "bucket": "NOINDEX",

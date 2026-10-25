@@ -41,9 +41,9 @@ Under Section 21 of the Food Safety Act 1990, a food business operator has a def
 Documented logs provide contemporaneous proof of monitoring required by Regulation EC No 852 2004 retained UK law. Local council Environmental Health Officers EHO evaluate these records when scoring the Confidence in Management category of the Food Hygiene Rating Scheme FHRS.
 EHO Audit Expectations & Common Pitfalls
 During an unannounced inspection, Environmental Health Officers verify whether records represent real-time measurements rather than retrospective guessing.
-Ink uniformity check EHOs verify that different pen strokes, handwriting styles, and timestamps appear across daily logs.
-Realistic variations Thermometers naturally fluctuate between 1.5°C and 4.5°C during active kitchen shifts; identical numbers trigger scrutiny.
-Calibration records Probes must be calibrated monthly in crushed ice 0°C ±1°C and boiling water 100°C ±1°C.
+Contemporaneous logging Kitchen logs must reflect actual checks performed during opening, active service, and closing.
+Corrective action logs Whenever a critical limit is breached, document the specific corrective measure taken with staff initials.
+Statutory due diligence defense Retaining completed daily sheets supports the statutory defense under Section 21 of the Food Safety Act 1990.
 Step-by-Step Operational Routine
 Pre-Shift Calibration Sanitize digital probe needles using antibacterial probe wipes before and after every reading. Verify display readout.
 Live Shift Logging Take actual core temperatures and complete checklist items during prep and service. Record exact time and staff initials.

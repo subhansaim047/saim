@@ -100,3 +100,15 @@ A comprehensive, end-to-end SEO/GEO/AEO/LLMO technical and editorial cleanup was
 ## 10. Verification & Quality Assurance
 - **CI Guards**: 100% pass across all 11 automated test suites in `scripts/run_all_guards.mjs`.
 - **Production Build**: Verified zero compilation errors and full static export generation via `next build`.
+
+---
+
+## 11. Final Harmonization & Production Polish (Phase 2)
+1. **Live Build SHA Harmonization:** Cleaned build states to guarantee uniform deployment SHA across all routes.
+2. **Homepage H1 & Meta Parity:** Confirmed semantic H1 Next.js Websites for UK & EU Small Businesses - Fixed Price from £250 and unique 155-character metadata with exact og:title and twitter:title matching.
+3. **Food Allergen Flagship Page:** Removed all placeholder ad text, linked back to /tools, enriched with 5-step SOP, 5 interactive FAQs, and contextual links to Natasha's Law and UK HACCP guides.
+4. **Byline & Regulatory Tone Parity:** Byline strictly standardized to Saim Dev on all tools and blog posts; removed speculative inspection audit lines (ink uniformity, pen variations) and replaced with official FSA/SFBB contemporaneous record-keeping guidance with outbound authority links to ood.gov.uk.
+5. **Crawlable FAQ Structure:** FAQ answers render directly in server HTML (accessible to headless crawlers and LLM retrieval bots even when accordion is collapsed).
+6. **Editorial Polish on /tools:** Rewrote kitchen wall poster and takeaway due diligence sections; corrected 4-benefit card count; eliminated unsubstantiated marketing claims.
+7. **Misleading US Slugs 301 Mappings:** Redirected sma-*, ecosure-*, mazon-seller-*, and cutting-board-color-chart to descriptive UK canonical targets.
+8. **Index Policy Specification:** Published comprehensive /audit/index-policy.md specifying exact indexation rules, status, and word counts across 191 evaluated paths.

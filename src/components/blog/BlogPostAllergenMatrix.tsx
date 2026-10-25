@@ -80,7 +80,7 @@ export const BlogPostAllergenMatrix: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-[1.12]">
-            How to Create a Fully Compliant 14-Allergen Matrix for UK Restaurants &amp; Takeaways
+            How to Create a Compliant 14-Allergen Matrix for UK Restaurants &amp; Takeaways
           </h1>
 
           <p className="text-base sm:text-xl text-white/70 leading-relaxed max-w-3xl">

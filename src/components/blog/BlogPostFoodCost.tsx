@@ -104,7 +104,7 @@ export const BlogPostFoodCost: React.FC = () => {
           <TrendingUp className="w-6 h-6 text-emerald-400 shrink-0 mt-1" />
           <div className="text-sm leading-relaxed">
             <strong className="block text-white font-semibold mb-1 text-base">The Hospitality Paradox:</strong>
-            Being packed on a Friday night does not guarantee you are profitable. In fact, many busy restaurants run themselves out of business 
+            Being packed on a Friday night does not ensure you are profitable. In fact, many busy restaurants run themselves out of business 
             because their highest-selling dishes are underpriced by £1.50 to £2.50 per plate, actively subsidizing every customer who walks through the door.
           </div>
         </div>
