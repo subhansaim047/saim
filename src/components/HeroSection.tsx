@@ -237,10 +237,10 @@ export const HeroSection = () => {
                   {[...Array(2)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-4 w-full">
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/hero-shots/shot-1.webp" alt="Performance" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
+                        <img src="/hero-shots/shot-1.webp" alt="Fresh and Reddy Dark Web Architecture" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
                       </div>
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/hero-shots/shot-2.webp" alt="UI Design" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
+                        <img src="/hero-shots/shot-2.webp" alt="Evora Luxury Real Estate Web Platform" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
                       </div>
                     </div>
                   ))}
@@ -257,10 +257,10 @@ export const HeroSection = () => {
                   {[...Array(2)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-4 w-full">
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/hero-shots/shot-3.webp" alt="Backend" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
+                        <img src="/hero-shots/shot-3.webp" alt="GAZU High-Conversion Fashion E-Commerce" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
                       </div>
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/hero-shots/shot-4.webp" alt="Tech Stack" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
+                        <img src="/hero-shots/shot-4.webp" alt="Interactive Digital SaaS Showcase" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" />
                       </div>
                     </div>
                   ))}
