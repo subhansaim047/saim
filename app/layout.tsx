@@ -11,15 +11,15 @@ export const metadata: Metadata = {
   description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
   metadataBase: new URL('https://www.saimdev.site'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.saimdev.site',
   },
   verification: {
     google: 'google0191625097e7b0a7',
   },
   openGraph: {
-    title: 'Saim Dev - High-Performance Web Development | Next.js Architecture',
+    title: 'Saim Dev - Next.js & Full Stack Web Developer | UK & Europe',
     description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
-    url: '/',
+    url: 'https://www.saimdev.site',
     siteName: 'Saim Dev',
     locale: 'en_GB',
     type: 'website',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Saim Dev - Next.js Developer for UK & Europe',
+    title: 'Saim Dev - Next.js & Full Stack Web Developer | UK & Europe',
     description: 'Custom, fast Next.js websites for UK and European businesses. Fixed pricing: £250 Landing Page, £390 Starter, £790 Business.',
     creator: '@saimwebdev',
     images: ['https://www.saimdev.site/og-image.png'],

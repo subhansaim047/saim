@@ -14,7 +14,13 @@ import {
   Clock,
   Award,
   Sparkles,
-  Edit3
+  Edit3,
+  HelpCircle,
+  ChevronDown,
+  FileText,
+  BookOpen,
+  Calendar,
+  AlertTriangle
 } from "lucide-react";
 import { FoodSafetyTemplate, FOOD_SAFETY_TEMPLATES } from "@/data/saim_templates";
 import { CORE_PAGES_METADATA } from "@/data/core_metadata";
@@ -35,6 +41,11 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const [premisesName, setPremisesName] = useState("");
   const [managerSignoff, setManagerSignoff] = useState("");
   const [complianceDate, setComplianceDate] = useState("");
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (idx: number) => {
+    setOpenFaq(prev => prev === idx ? null : idx);
+  };
 
   // Determine specific tool type
   const isRecipeTool =
@@ -109,6 +120,29 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         (t) => t.id !== template.id && isIndexableSlug(t.slug)
       ).slice(0, 4);
 
+  const faqs = [
+    {
+      q: `Is the ${template.title} suitable for UK Environmental Health Officer (EHO) inspections?`,
+      a: `Yes. This template and digital logging workflow are developed in line with UK Food Standards Agency (FSA) Safer Food, Better Business (SFBB) standards and HACCP Article 5 of Regulation (EC) No 852/2004. When maintained with genuine operating data and supervisor sign-offs, it fulfills statutory record-keeping and due diligence requirements under the Food Safety Act 1990.`
+    },
+    {
+      q: "How frequently should kitchen staff complete and sign off this record?",
+      a: "Critical checks (such as fridge, chiller, and hot-holding temperatures) must be completed at least twice daily—once during morning prep before opening, and once during evening service. Daily opening, closing, and hygiene checklists must be completed throughout each shift, with a designated supervisor or Head Chef signing off the log before premises shutdown."
+    },
+    {
+      q: "What is the recommended corrective action if a critical limit is breached?",
+      a: "Immediate containment is mandatory. For cold storage exceeding 8°C, probe the internal core temperature: if food has remained between 8°C and 63°C for under 4 hours, rapidly chill or cook it immediately; otherwise, safely discard it. For hot holding dropping below 63°C, reheat above 75°C (allowed once only) or serve within 2 hours, or condemn. Always record the issue, affected batch, and corrective action taken directly on the log."
+    },
+    {
+      q: "How long must commercial kitchens retain completed safety records?",
+      a: "Under UK due diligence legal defense (Section 21 of the Food Safety Act 1990), completed temperature sheets, cleaning logs, and monitoring records should be archived for a minimum of 6 to 12 months, or at least 3 months after the shelf-life of products served. Having organized monthly binders or digital PDF exports ready is vital for unannounced council audits."
+    },
+    {
+      q: "Can I customize, edit, and print this sheet without watermarks?",
+      a: "Yes. You can enter your establishment name, manager sign-off, and inspection date directly into the input fields above. Then click 'Print / Save as PDF' to generate an optimized, clean A4 layout. All web buttons, navigation links, and screen-only elements are automatically excluded from the printed output."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
       {/* ── PRINT STYLES ── */}
@@ -171,6 +205,25 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             </li>
           </ol>
         </nav>
+
+        {/* Editorial Trust & Verification Meta Bar */}
+        <div className="bg-white rounded-2xl border border-gray-200 p-4 shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs no-print">
+          <div className="flex flex-wrap items-center gap-3 text-gray-600">
+            <div className="inline-flex items-center gap-1.5 font-medium">
+              <Clock className="w-3.5 h-3.5 text-amber-700" />
+              <span>Last Updated: <strong className="text-gray-900 font-semibold">October 2026</strong></span>
+            </div>
+            <span className="text-gray-300 hidden sm:inline" aria-hidden="true">•</span>
+            <div className="inline-flex items-center gap-1.5 font-medium">
+              <Calendar className="w-3.5 h-3.5 text-blue-700" />
+              <span>Review Cycle: <strong className="text-gray-900 font-semibold">Monthly Due Diligence Review</strong></span>
+            </div>
+          </div>
+          <div className="inline-flex items-center gap-1.5 text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full text-[11px] font-semibold">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+            <span>Aligned with UK Food Standards Agency (FSA) Guidance</span>
+          </div>
+        </div>
 
         {/* Template Hero / Intro */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm flex flex-col md:flex-row items-center gap-8 no-print">
@@ -288,7 +341,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
               </div>
             </div>
 
-            {/* Poster / Chart Graphic Container - optimized for high-res print without clipping */}
+            {/* Poster / Chart Graphic Container */}
             <div className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gray-50 border border-gray-200 print:bg-white print:border-none print:p-0">
               <img
                 src={template.imgUrl}
@@ -338,51 +391,167 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           </div>
         )}
 
-        {/* Guidance / Compliance Section */}
-        {isAllergenTool ? (
-          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-4 no-print">
-            <h3 className="text-xl font-bold text-[#1D1D1F]">
-              How to manage allergen records in your kitchen
-            </h3>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Keep accurate, up-to-date records of every ingredient used in your dishes. Review recipe cards and supplier specifications regularly, especially when switching brands or ingredients. Ensure front-of-house and kitchen staff know how to check allergen records and answer customer questions safely.
+        {/* ═══════════════════════════════════════════════════════════════
+            IN-DEPTH KITCHEN OPERATIONAL GUIDANCE & DUE DILIGENCE
+        ════════════════════════════════════════════════════════════════ */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-8 no-print shadow-sm">
+          {/* Section Header */}
+          <div className="border-b border-gray-100 pb-5">
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-amber-900 bg-amber-50 border border-amber-200/80 px-3 py-1 rounded-full mb-3">
+              <BookOpen className="w-3.5 h-3.5 text-amber-700" />
+              <span>Standard Operating Guidance (SOP)</span>
+            </div>
+            <h2 className="text-2xl font-bold text-[#1D1D1F]">
+              How to Implement the {template.title} in Your Commercial Kitchen
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-600 mt-1.5 leading-relaxed">
+              Practical due diligence procedures, regulatory compliance steps, and EHO audit verification guidelines for UK hospitality businesses.
             </p>
-            <ul className="text-xs sm:text-sm text-gray-600 space-y-2 list-disc list-inside">
-              <li><strong>Record every ingredient:</strong> Check every pre-packaged sauce, seasoning, paste, and oil for hidden allergens.</li>
-              <li><strong>Update on recipe changes:</strong> Re-check records immediately whenever a recipe or supplier specification changes.</li>
-              <li><strong>Train your team:</strong> Ensure all staff know how to read this chart and never guess when a customer asks about allergens.</li>
-            </ul>
-            <div className="pt-3 text-xs text-gray-500 border-t border-gray-100">
-              Sources: Official Food Standards Agency (FSA) guidance at{" "}
-              <a
-                href="https://www.food.gov.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline text-gray-700 hover:text-black font-medium"
-              >
-                food.gov.uk
-              </a>.
+          </div>
+
+          {/* Core Explanation Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-50/80 rounded-2xl p-5 border border-gray-200/80 space-y-3">
+              <div className="flex items-center gap-2 text-sm font-bold text-gray-900">
+                <FileText className="w-4 h-4 text-blue-600" />
+                <h3>UK Statutory Due Diligence Framework</h3>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Under Section 21 of the <strong>Food Safety Act 1990</strong>, a food business operator has a defense of due diligence if they prove that all reasonable precautions were taken and all due diligence was exercised to prevent food safety offenses.
+              </p>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Documented logs like the <strong>{template.title}</strong> provide contemporaneous proof of monitoring required by <strong>Regulation (EC) No 852/2004</strong> (retained UK law). Local council Environmental Health Officers (EHO) evaluate these records when scoring the <em>"Confidence in Management"</em> category of the Food Hygiene Rating Scheme (FHRS).
+              </p>
+            </div>
+
+            <div className="bg-gray-50/80 rounded-2xl p-5 border border-gray-200/80 space-y-3">
+              <div className="flex items-center gap-2 text-sm font-bold text-gray-900">
+                <AlertTriangle className="w-4 h-4 text-amber-600" />
+                <h3>EHO Audit Expectations &amp; Common Pitfalls</h3>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                During an unannounced inspection, Environmental Health Officers verify whether records represent real-time measurements rather than retrospective guessing.
+              </p>
+              <ul className="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
+                <li><strong>Ink uniformity check:</strong> EHOs verify that different pen strokes, handwriting styles, and timestamps appear across daily logs.</li>
+                <li><strong>Realistic variations:</strong> Thermometers naturally fluctuate between 1.5°C and 4.5°C during active kitchen shifts; identical numbers trigger scrutiny.</li>
+                <li><strong>Calibration records:</strong> Probes must be calibrated monthly in crushed ice (0°C ±1°C) and boiling water (100°C ±1°C).</li>
+              </ul>
             </div>
           </div>
-        ) : (
-          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-4 no-print">
-            <h3 className="text-xl font-bold text-[#1D1D1F]">
-              How to use this {template.type} in your kitchen
+
+          {/* Step-by-Step SOP */}
+          <div className="space-y-4">
+            <h3 className="text-base font-bold text-gray-900 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+              <span>Step-by-Step Operational Routine</span>
             </h3>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Using consistent documentation like the <strong>{template.title}</strong> helps your kitchen team maintain clear records, train food handling staff, and follow food safety procedures.
-            </p>
-            <ul className="text-xs sm:text-sm text-gray-600 space-y-2 list-disc list-inside">
-              {(CORE_PAGES_METADATA[template.slug]?.howTo || [
-                "Display prominently at food preparation, cooking, or storage stations.",
-                "Train kitchen and front-of-house staff on these guidelines during onboarding.",
-                "Review records periodically to ensure documentation is kept up to date."
-              ]).map((step, idx) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ul>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-2xs space-y-2">
+                <div className="w-7 h-7 rounded-lg bg-amber-100 text-amber-900 font-bold text-xs flex items-center justify-center font-mono">
+                  01
+                </div>
+                <h4 className="text-xs font-bold text-gray-900">Pre-Shift Calibration</h4>
+                <p className="text-[11px] text-gray-600 leading-relaxed">
+                  Sanitize digital probe needles using antibacterial probe wipes before and after every reading. Verify display readout.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-2xs space-y-2">
+                <div className="w-7 h-7 rounded-lg bg-amber-100 text-amber-900 font-bold text-xs flex items-center justify-center font-mono">
+                  02
+                </div>
+                <h4 className="text-xs font-bold text-gray-900">Live Shift Logging</h4>
+                <p className="text-[11px] text-gray-600 leading-relaxed">
+                  Take actual core temperatures and complete checklist items during prep and service. Record exact time and staff initials.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-2xs space-y-2">
+                <div className="w-7 h-7 rounded-lg bg-amber-100 text-amber-900 font-bold text-xs flex items-center justify-center font-mono">
+                  03
+                </div>
+                <h4 className="text-xs font-bold text-gray-900">Corrective Actions</h4>
+                <p className="text-[11px] text-gray-600 leading-relaxed">
+                  If limits deviate (e.g. fridge &gt;8°C), immediately quarantine, re-chill, reheat &ge;75°C, or discard, and write down the action.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-2xs space-y-2">
+                <div className="w-7 h-7 rounded-lg bg-amber-100 text-amber-900 font-bold text-xs flex items-center justify-center font-mono">
+                  04
+                </div>
+                <h4 className="text-xs font-bold text-gray-900">Manager Sign-Off</h4>
+                <p className="text-[11px] text-gray-600 leading-relaxed">
+                  Head Chef or supervisor reviews the day's record, signs the sign-off box, and files it in the HACCP due diligence binder.
+                </p>
+              </div>
+            </div>
           </div>
-        )}
+
+          {/* Quick Reference Box */}
+          <div className="bg-amber-50/60 rounded-2xl p-4 border border-amber-200/70 text-xs text-amber-900 space-y-1">
+            <span className="font-bold">Official Guidance Reference:</span>
+            <p className="text-[11px] text-amber-800 leading-relaxed">
+              Procedures align with UK Food Standards Agency (FSA) <em>Safer Food, Better Business (SFBB)</em> catering guidance and the Food Information Regulations 2014. Review official advice at{" "}
+              <a href="https://www.food.gov.uk" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-black">
+                food.gov.uk
+              </a>.
+            </p>
+          </div>
+        </div>
+
+        {/* ═══════════════════════════════════════════════════════════════
+            INTERACTIVE FAQS SECTION
+        ════════════════════════════════════════════════════════════════ */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-6 no-print shadow-sm">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700">
+              <HelpCircle className="w-4 h-4" />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-[#1D1D1F]">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xs text-gray-500">
+                Common questions about UK kitchen compliance, record keeping, and EHO audits.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-3 pt-2">
+            {faqs.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div
+                  key={idx}
+                  className="rounded-2xl border border-gray-200/90 bg-white overflow-hidden transition-all duration-200 hover:border-gray-300"
+                >
+                  <button
+                    onClick={() => toggleFaq(idx)}
+                    className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 cursor-pointer focus:outline-hidden"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="text-xs sm:text-sm font-bold text-gray-900 leading-snug">
+                      {faq.q}
+                    </span>
+                    <ChevronDown
+                      className={`w-4 h-4 text-gray-400 shrink-0 transition-transform duration-200 ${
+                        isOpen ? "rotate-180 text-amber-600" : ""
+                      }`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <div className="px-5 pb-4 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3 bg-gray-50/50">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
 
         {/* Shared Regulatory Disclaimer on all resource pages */}
         <div className="no-print">
@@ -413,22 +582,6 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             </div>
           </div>
         )}
-
-        {/* Layout-Stable Reserved Ad Slot (AdSense Ready - Zero CLS) */}
-        <div className="no-print w-full flex flex-col items-center justify-center my-6" aria-label="Sponsored Content">
-          <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400 mb-1.5 block">
-            Advertisement
-          </span>
-          <div
-            id="adsense-slot-template-bottom"
-            className="w-full max-w-[728px] min-h-[90px] sm:min-h-[250px] bg-gray-100/70 border border-dashed border-gray-300 rounded-2xl flex items-center justify-center text-center p-4 transition-all"
-            data-ad-status="pending-approval"
-          >
-            <span className="text-xs text-gray-400 font-medium">
-              Reserved Ad Placement · Displays after AdSense approval
-            </span>
-          </div>
-        </div>
 
         {/* Conversion Banner */}
         <div className="rounded-3xl bg-[#1D1D1F] text-white p-8 sm:p-10 space-y-3 shadow-xl conversion-banner no-print">
