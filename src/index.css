@@ -151,6 +151,63 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
+/* Sybiosme Magnetic Action Button */
+.sybiosme-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-radius: 9999px;
+  padding: 0.625rem 0.625rem 0.625rem 1.35rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.sybiosme-action-btn .btn-arrow {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  flex-shrink: 0;
+}
+.sybiosme-action-btn:hover .btn-arrow {
+  transform: translateX(3px) scale(1.06);
+}
+
+/* Sybiosme Disclosure Icon */
+.sybiosme-disclosure-icon {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: rgba(255, 255, 255, 0.6);
+}
+.sybiosme-disclosure-icon svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+details[open] .sybiosme-disclosure-icon {
+  background: rgba(255, 74, 28, 0.15);
+  border-color: rgba(255, 74, 28, 0.35);
+  color: #FF4A1C;
+}
+details[open] .sybiosme-disclosure-icon svg {
+  transform: rotate(180deg);
+}
+
 @keyframes footerDotsMove {
   0% { transform: translate3d(0, -50%, 0); }
   100% { transform: translate3d(-50%, -50%, 0); }

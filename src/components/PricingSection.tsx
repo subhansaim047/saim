@@ -1,9 +1,29 @@
 "use client";
 import { useState } from "react";
-import { Check, X, ChevronUp, ChevronDown, ShieldCheck, Sparkles } from "lucide-react";
+import { ChevronUp, ChevronDown, ShieldCheck, Sparkles, Check } from "lucide-react";
 import { FadeUp } from "./FadeUp";
 import { cn } from "../lib/utils";
 import { PLANS, type Currency, type Plan } from "../../content/plans";
+
+const SybiosmeCheckIcon = () => (
+  <svg
+    width="17"
+    height="16"
+    viewBox="0 0 17 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-4 h-4 text-[#FF4A1C] flex-shrink-0"
+    aria-hidden="true"
+  >
+    <path
+      d="M14 4.5L6.5 12L2.5 8"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => {
   const [expanded, setExpanded] = useState(false);
@@ -20,124 +40,137 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
   )}`;
 
   return (
-    <div
+    <article
       className={cn(
-        "bento-card-sybiosme relative flex h-full flex-col p-7 sm:p-8 transition-all duration-300 shadow-2xl group",
+        "relative flex h-full flex-col justify-between rounded-[2.25rem] bg-[#121212] border p-2.5 sm:p-3 transition-all duration-300 shadow-2xl group",
         plan.featured
-          ? "border-[#FF4A1C]/50 hover:border-[#FF4A1C] shadow-[0_12px_48px_rgba(255,74,28,0.12)] bg-[#141414]"
-          : "border-white/10 hover:border-white/20 bg-[#121212]"
+          ? "border-[#FF4A1C]/50 hover:border-[#FF4A1C] shadow-[0_12px_48px_rgba(255,74,28,0.12)]"
+          : "border-white/10 hover:border-white/20"
       )}
     >
-      {/* Featured Badge */}
+      {/* Featured Pill Badge */}
       {plan.badge && (
-        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-[#FF4A1C] px-4 py-1 text-xs font-semibold text-white shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-[#FF4A1C] px-4 py-1 text-xs font-semibold text-white shadow-lg flex items-center gap-1.5 whitespace-nowrap z-20">
           <Sparkles className="w-3.5 h-3.5 text-white" />
           <span>{plan.badge}</span>
         </div>
       )}
 
-      {/* Plan Header */}
-      <FadeUp delay={0}>
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-[11px] uppercase tracking-[0.2em] font-mono text-white/50">
-            {plan.name}
-          </span>
-          {plan.featured && (
-            <span className="section-dot" />
-          )}
-        </div>
-      </FadeUp>
-      
-      <div className="border-t border-white/5 my-2" />
+      {/* Top Tile — Sybiosme Mesh Tile */}
+      <div
+        className={cn(
+          "relative overflow-hidden rounded-[1.75rem] p-7 sm:p-8 flex flex-col justify-between min-h-[220px] sm:min-h-[240px] border",
+          plan.id === "starter"
+            ? "bg-gradient-to-br from-[#241712] via-[#1a1210] to-[#12100f] border-[#FF4A1C]/35"
+            : plan.id === "business"
+            ? "bg-gradient-to-br from-[#1b1c20] via-[#131417] to-[#0e0f12] border-white/10"
+            : "bg-gradient-to-br from-[#1d1d1d] via-[#151515] to-[#101010] border-white/5"
+        )}
+      >
+        {/* Subtle Ambient Radial Glow */}
+        {plan.featured && (
+          <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#FF4A1C]/20 rounded-full blur-3xl pointer-events-none" />
+        )}
 
-      {/* Price */}
-      <FadeUp delay={0.1}>
-        <div className="mt-4 flex items-baseline gap-2">
-          <span className="text-3xl sm:text-[2.75rem] leading-none font-bold tracking-tight text-white">
+        <div className="relative z-10">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white">
+              {plan.name}
+            </h3>
+            {plan.featured && <span className="section-dot" />}
+          </div>
+          <p className="text-xs sm:text-sm text-white/60 font-light leading-relaxed min-h-[40px]">
+            {plan.description}
+          </p>
+        </div>
+
+        {/* Price Row */}
+        <div className="relative z-10 mt-6 flex items-baseline gap-2">
+          <span className="text-4xl sm:text-5xl font-medium tracking-tight text-white leading-none">
             {price}
           </span>
           <span className="text-xs text-white/50 uppercase font-mono tracking-wider">
-            / one-time
+            / one-off
           </span>
         </div>
-      </FadeUp>
+      </div>
 
-      {/* Description */}
-      <FadeUp delay={0.2}>
-        <p className="mt-3.5 text-sm leading-relaxed text-white/65 min-h-[44px] font-light">
-          {plan.description}
-        </p>
-      </FadeUp>
+      {/* Plan Details & Included Features */}
+      <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+        <div>
+          <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-white/50 block mb-4">
+            Included:
+          </span>
 
-      {/* CTA Button */}
-      <FadeUp delay={0.3}>
-        <div className="mt-6">
-          {plan.featured ? (
-            <a
-              href={orderUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-white hover:bg-neutral-100 text-black font-semibold rounded-full py-3 px-6 flex items-center justify-center gap-2 transition-all duration-300 shadow-xl active:scale-[0.98] text-sm tracking-tight cursor-pointer"
-            >
-              <span>Order on WhatsApp</span>
-            </a>
-          ) : (
-            <a
-              href={orderUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-white/[0.06] hover:bg-white/15 text-white border border-white/10 hover:border-white/25 rounded-full py-3 px-6 flex items-center justify-center gap-2 transition-all duration-300 text-sm tracking-tight cursor-pointer"
-            >
-              <span>Get Started</span>
-            </a>
-          )}
-        </div>
-      </FadeUp>
-
-      {/* Feature List */}
-      <FadeUp delay={0.4}>
-        <ul className="mt-8 flex flex-1 flex-col gap-1">
-          {visibleFeatures.map((f, i) => (
-            <li
-              key={f.text}
-              className={cn(
-                "flex items-center gap-3 py-2.5 text-xs sm:text-sm transition-all duration-300",
-                i !== 0 && "border-t border-white/5",
-                f.included ? "text-white/85" : "text-white/35"
-              )}
-            >
-              <span
+          <ul className="flex flex-col gap-3">
+            {visibleFeatures.map((f, i) => (
+              <li
+                key={f.text}
                 className={cn(
-                  "flex h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 items-center justify-center rounded-full border",
-                  f.included
-                    ? "border-[#FF4A1C]/40 bg-[#FF4A1C]/15 text-[#FF4A1C]"
-                    : "border-white/10 bg-transparent text-white/30"
+                  "flex items-start gap-3 text-xs sm:text-sm font-light leading-relaxed transition-all duration-300",
+                  f.included ? "text-white/85" : "text-white/35"
                 )}
               >
-                {f.included ? (
-                  <Check className="w-3 h-3 text-[#FF4A1C]" />
-                ) : (
-                  <X className="w-3 h-3 text-white/30" />
-                )}
-              </span>
-              <span>{f.text}</span>
-            </li>
-          ))}
-        </ul>
+                <span className="mt-0.5">
+                  <SybiosmeCheckIcon />
+                </span>
+                <span>{f.text}</span>
+              </li>
+            ))}
+          </ul>
 
-        {remainingCount > 0 && (
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="mt-4 flex items-center justify-center gap-1.5 text-xs text-white/70 hover:text-white font-medium transition-colors cursor-pointer py-2.5 w-full border-t border-white/10"
+          {remainingCount > 0 && (
+            <button
+              type="button"
+              onClick={() => setExpanded(!expanded)}
+              className="mt-4 flex items-center justify-center gap-1.5 text-xs text-white/70 hover:text-white font-medium transition-colors cursor-pointer py-2.5 w-full border-t border-white/10"
+            >
+              <span>
+                {expanded ? "Show Less" : `View More (+${remainingCount} features)`}
+              </span>
+              {expanded ? (
+                <ChevronUp className="w-4 h-4" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-[#FF4A1C]" />
+              )}
+            </button>
+          )}
+        </div>
+
+        {/* CTA Button — Sybiosme Magnetic Action Button */}
+        <div className="mt-8 pt-4 border-t border-white/5">
+          <a
+            href={orderUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              "sybiosme-action-btn w-full",
+              plan.featured
+                ? "bg-white hover:bg-neutral-100 text-black shadow-xl"
+                : "bg-white/[0.06] hover:bg-white/15 text-white border border-white/10 hover:border-white/20"
+            )}
           >
-            <span>
-              {expanded ? "Show Less" : `View More (+${remainingCount} features)`}
+            <span className="text-sm font-medium tracking-tight">
+              {plan.featured ? "Order on WhatsApp" : "Get Started"}
             </span>
-            {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4 text-[#FF4A1C]" />}
-          </button>
-        )}
-      </FadeUp>
-    </div>
+            <div
+              className={cn(
+                "btn-arrow",
+                plan.featured ? "bg-black text-white" : "bg-[#FF4A1C] text-white"
+              )}
+            >
+              <svg
+                viewBox="0 0 17 15"
+                className="w-3.5 h-3.5 fill-current"
+                aria-hidden="true"
+              >
+                <path d="M16.56 8.555L10.56 14.555C10.26 14.855 9.88 14.995 9.5 14.995C9.12 14.995 8.74 14.855 8.44 14.555C7.86 13.975 7.86 13.015 8.44 12.435L11.88 8.995H1.5C0.68 8.995 0 8.315 0 7.495C0 6.675 0.68 5.995 1.5 5.995H11.88L8.44 2.555C7.86 1.975 7.86 1.015 8.44 0.435C9.02 -0.145 9.98 -0.145 10.56 0.435L16.56 6.435C17.14 7.015 17.14 7.975 16.56 8.555Z" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
   );
 };
 
@@ -145,34 +178,39 @@ export const PricingSection = () => {
   const [currency, setCurrency] = useState<Currency>("GBP");
 
   return (
-    <section id="pricing" className="relative w-full bg-[#0A0A0A] py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden">
+    <section
+      id="pricing"
+      className="relative w-full bg-[#0A0A0A] py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden"
+    >
       {/* Background Ambient Glow */}
       <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#FF4A1C]/[0.03] rounded-full blur-[160px] pointer-events-none z-0" />
 
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 md:px-8 relative z-10">
-        
-        {/* HEADER */}
-        <div className="mb-12 flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
+      <div className="mx-auto max-w-[1300px] px-4 sm:px-6 md:px-8 relative z-10">
+        {/* HEADER — Sybiosme Step Indicator & Title */}
+        <div className="mb-14 flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <FadeUp>
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
                 <span className="section-dot" />
                 <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
-                  Subscriptions • Fixed Pricing
+                  Packages <span className="text-white/40">01/03</span>
                 </span>
               </div>
             </FadeUp>
             <FadeUp delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.08] text-white" style={{ letterSpacing: "-0.04em" }}>
+              <h2
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.08] text-white"
+                style={{ letterSpacing: "-0.04em" }}
+              >
                 Choose. <span className="text-white/40">Your plan.</span>
               </h2>
-              <p className="mt-3 text-sm sm:text-base text-white/65 font-light">
-                No monthly retainers. No hidden fees. 100% custom engineering.
+              <p className="mt-3.5 text-sm sm:text-base text-white/65 font-light leading-relaxed">
+                No monthly retainers. No hidden fees. 100% custom Next.js engineering.
               </p>
             </FadeUp>
           </div>
 
-          {/* CURRENCY TOGGLE */}
+          {/* CURRENCY TOGGLE — Sybiosme Pill Island */}
           <FadeUp delay={0.2}>
             <div className="flex flex-col sm:items-end gap-2 w-full sm:w-auto">
               <span className="text-[11px] font-mono text-white/50 uppercase tracking-wider">
@@ -221,7 +259,7 @@ export const PricingSection = () => {
         </div>
 
         {/* TRUST BANNER — Sybiosme Squircle Strip */}
-        <div className="mb-12 grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 sm:p-5 rounded-[1.5rem] bg-[#121212] border border-white/10 text-xs text-white/80 shadow-xl">
+        <div className="mb-14 grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 sm:p-5 rounded-[1.75rem] bg-[#121212] border border-white/10 text-xs text-white/80 shadow-xl">
           <div className="flex items-center gap-2.5">
             <ShieldCheck className="w-4 h-4 text-[#FF4A1C] flex-shrink-0" />
             <span>UK &amp; EU Invoicing Ready</span>
@@ -240,14 +278,14 @@ export const PricingSection = () => {
           </div>
         </div>
 
-        {/* CARDS */}
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
+        {/* 3 PLAN CARDS GRID */}
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {PLANS.map((p) => (
             <PricingCard key={p.name} plan={p} currency={currency} />
           ))}
         </div>
 
-        {/* PAYMENT TERMS & PEACE OF MIND — Double-Bezel Frame */}
+        {/* PAYMENT TERMS & PEACE OF MIND — Sybiosme Double-Bezel Frame */}
         <div className="mt-14 max-w-6xl mx-auto rounded-[2rem] bg-[#121212] border border-white/10 p-7 sm:p-10 shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col gap-2.5">
