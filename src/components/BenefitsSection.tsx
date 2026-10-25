@@ -48,26 +48,35 @@ export const BenefitsSection = () => {
             </p>
           </div>
 
-          {/* Card 2: Video Card (Center) */}
+          {/* Card 2: Animation & Video Card (Center) */}
           <div className="bento-card-sybiosme relative h-[380px] sm:h-[460px] overflow-hidden flex flex-col shadow-2xl group">
-            <div className="relative w-full overflow-hidden h-[52%]">
+            <div className="relative w-full overflow-hidden h-[58%] sm:h-[62%] shrink-0 bg-[#0d0d0d]">
               <video
-                preload="metadata"
+                ref={(el) => {
+                  if (el) {
+                    el.muted = true;
+                    el.defaultMuted = true;
+                    el.play().catch(() => {});
+                  }
+                }}
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover block opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                preload="auto"
+                poster="/videos/benefits-poster.webp"
+                className="w-full h-full object-cover block opacity-95 group-hover:opacity-100 transition-opacity duration-500"
               >
+                <source src="/videos/benefits-speed-animation.mp4" type="video/mp4" />
                 <source
                   src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260421_072701_f6a01abb-eb30-4559-9d6e-774362defbc3.mp4"
                   type="video/mp4"
                 />
               </video>
-              <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#121212]" />
+              <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-[#121212]" />
             </div>
-            <div className="flex-1 flex flex-col justify-center p-7 sm:p-9 pt-2">
-              <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/50 block mb-2">
+            <div className="flex-1 flex flex-col justify-center p-6 sm:p-8 pt-2">
+              <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/50 block mb-1.5">
                 02 / ARCHITECTURE
               </span>
               <h3 className="text-white text-xl sm:text-2xl font-medium tracking-tight leading-snug">
@@ -75,7 +84,7 @@ export const BenefitsSection = () => {
                 <br />
                 <span className="text-white/60">SEO Optimization</span>
               </h3>
-              <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
+              <p className="mt-2 text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
                 Sub-second Next.js architecture, optimised Core Web Vitals, and structured schema markup engineered to rank on Google.
               </p>
             </div>
