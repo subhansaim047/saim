@@ -9,6 +9,17 @@ export default {
     extend: {
       colors: {
         primary: '#DEDBC8',
+        vermilion: {
+          DEFAULT: '#FF4A1C',
+          hover: '#FF5F36',
+          glow: 'rgba(255, 74, 28, 0.25)',
+        },
+        surface: {
+          deep: '#0A0A0A',
+          card: '#121212',
+          elevated: '#181818',
+          border: 'rgba(255, 255, 255, 0.08)',
+        },
         landing: {
           surface: "rgba(255, 255, 255, 0.10)",
           "surface-hover": "rgba(255, 255, 255, 0.16)",
@@ -17,6 +28,10 @@ export default {
           text: "rgba(255, 255, 255, 0.80)",
           "text-muted": "rgba(255, 255, 255, 0.60)",
         },
+      },
+      borderRadius: {
+        'squircle-lg': '2rem',
+        'squircle-xl': '2.5rem',
       },
       fontFamily: {
         serif: ['"Instrument Serif"', 'serif'],
