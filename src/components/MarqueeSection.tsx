@@ -30,7 +30,7 @@ const marqueeImagesRow2 = [
 
 export const MarqueeSection: React.FC = () => {
   return (
-    <section className="bg-[#0C0C0C] py-16 sm:py-24 overflow-hidden flex flex-col gap-4">
+    <section className="bg-black py-16 sm:py-24 overflow-hidden flex flex-col gap-4">
       {/* Row 1 */}
       <div className="flex gap-3 w-max animate-[marquee_30s_linear_infinite]">
         {[...marqueeImagesRow1, ...marqueeImagesRow1, ...marqueeImagesRow1].map((src, idx) => (

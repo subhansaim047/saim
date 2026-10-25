@@ -32,7 +32,7 @@ const projectsList = [
 
 export const ProjectsSection: React.FC = () => {
   return (
-    <section id="projects" className="bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-14 relative z-30 px-4 sm:px-8 md:px-12 py-20 sm:py-28 font-['Kanit']">
+    <section id="projects" className="bg-black rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-14 relative z-30 px-4 sm:px-8 md:px-12 py-20 sm:py-28 font-['Kanit']">
       <div className="max-w-6xl mx-auto flex flex-col gap-16">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

@@ -87,9 +87,9 @@
 }
 
 /* Smooth scrolling & background */
-html {
+html, body {
   scroll-behavior: smooth;
-  background-color: #000000;
+  background-color: #000000 !important;
   color: #E1E0CC;
 }
 
@@ -110,7 +110,7 @@ html {
 /* EngineTech Site Footer Styles (Continuous 60FPS Hardware Accelerated Loop) */
 :root {
   --hero-max-width: 1820px;
-  --surface-deep: #0A0A0A;
+  --surface-deep: #000000;
   --surface-card: #121212;
   --surface-elevated: #181818;
   --accent-vermilion: #FF4A1C;

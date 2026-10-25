@@ -145,7 +145,7 @@ export default function NextJsDeveloperUkPage() {
         </section>
 
         {/* WHY UK BUSINESSES CHOOSE SAIM DEV VS UK AGENCIES */}
-        <section className="py-16 sm:py-24 border-t border-white/10 bg-[#08080a]">
+        <section className="py-16 sm:py-24 border-t border-white/10 bg-black">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="text-center max-w-2xl mx-auto mb-14">
               <span className="text-xs font-mono uppercase text-primary tracking-wider mb-2 block">
@@ -306,7 +306,7 @@ export default function NextJsDeveloperUkPage() {
         </section>
 
         {/* UK FAQ */}
-        <section className="py-16 sm:py-24 border-t border-white/10 bg-[#08080a]">
+        <section className="py-16 sm:py-24 border-t border-white/10 bg-black">
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-12">
               <span className="text-xs font-mono uppercase text-primary tracking-wider mb-2 block">

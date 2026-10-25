@@ -65,7 +65,7 @@ export const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Background Ambient Glow */}
       <div className="fixed top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#FF4A1C]/[0.025] rounded-full blur-[180px] pointer-events-none z-0" />
 

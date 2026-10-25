@@ -180,7 +180,7 @@ export const PricingSection = () => {
   return (
     <section
       id="pricing"
-      className="relative w-full bg-[#0A0A0A] py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full bg-black py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden"
     >
       {/* Background Ambient Glow */}
       <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#FF4A1C]/[0.03] rounded-full blur-[160px] pointer-events-none z-0" />
