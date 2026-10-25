@@ -363,7 +363,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
           </aside>
 
           {/* ═══════════════════════════════════════════════════════════════
-              RIGHT MAIN COLUMN: 4-COLUMN TEMPLATE GRID (171 ITEMS)
+              RIGHT MAIN COLUMN: 4-COLUMN TEMPLATE GRID (160 ITEMS)
           ════════════════════════════════════════════════════════════════ */}
           <main className="space-y-6">
             {/* Results Counter & Free Pack Banner */}

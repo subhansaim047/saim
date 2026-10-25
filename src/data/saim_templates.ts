@@ -296,12 +296,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "cleaning-checklist-template",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Cleaning Checklist Template",
+    "title": "Daily Kitchen Cleaning Schedule & Checklist",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Cleaning_schedule.svg",
     "targetUrl": "/food-safety-templates/cleaning-checklist-template",
-    "desc": "Interactive smart calculator and digital generator for cleaning checklist template. Streamlines food safety operations with zero manual calculation errors.",
+    "desc": "Comprehensive daily kitchen cleaning schedule covering food prep surfaces, floors, and equipment.",
     "thumbUrl": "/templates/svg/Cleaning_schedule.svg"
   },
   {
@@ -322,12 +322,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "cleaning-restaurant",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Cleaning Restaurant Template",
+    "title": "Full Restaurant Deep Cleaning Plan",
     "activity": "restaurant,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Restaurant-cleaning.svg",
     "targetUrl": "/food-safety-templates/cleaning-restaurant",
-    "desc": "Interactive smart calculator and digital generator for cleaning restaurant template. Streamlines food safety operations with zero manual calculation errors.",
+    "desc": "Scheduled deep-cleaning checklist for back-of-house kitchen equipment, extraction hoods, and refrigeration.",
     "thumbUrl": "/templates/svg/Restaurant-cleaning.svg"
   },
   {
@@ -361,12 +361,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "pest-control-checklist",
     "type": "checklist",
     "preheader": "CHECKLIST",
-    "title": "Pest Control",
+    "title": "Commercial Kitchen Pest Control Checklist",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-29",
     "imgUrl": "/templates/svg/Pest_control_plan.svg",
     "targetUrl": "/food-safety-templates/pest-control-checklist",
-    "desc": "Kitchen checklist for pest control. Helps supervisors and team members organise daily checks and documentation.",
+    "desc": "Comprehensive daily and weekly commercial kitchen pest control checklist. Record bait station checks, proofing inspection, and pest contractor visits.",
     "thumbUrl": "/templates/svg/Pest_control_plan.svg"
   },
   {
@@ -374,12 +374,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "pest-control-inspection-checklist",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Pest Control Inspection Checklist",
+    "title": "Daily Pest Inspection & Monitoring Log",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Pest_control_plan.svg",
     "targetUrl": "/food-safety-templates/pest-control-inspection-checklist",
-    "desc": "Interactive smart calculator and digital generator for pest control inspection checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "desc": "Daily kitchen inspection log for recording pest monitoring checks, fly screen integrity, and waste area hygiene in food premises.",
     "thumbUrl": "/templates/svg/Pest_control_plan.svg"
   },
   {
@@ -387,12 +387,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "pest-management-plan",
     "type": "chart",
     "preheader": "CHART",
-    "title": "Pest Management",
+    "title": "Integrated Pest Management Plan (IPM)",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-31",
     "imgUrl": "/templates/charts/template-31.webp",
     "targetUrl": "/food-safety-templates/pest-management-plan",
-    "desc": "Critical food temperature and safety chart for pest management. Clear visual reference guide for chefs and food preparation handlers.",
+    "desc": "Kitchen wall chart and integrated pest management plan outlining prevention procedures, contractor frequency, and emergency response.",
     "thumbUrl": "/templates/thumbs/template-31.webp"
   },
   {
@@ -400,12 +400,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "pest-control-template",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Pest Control",
+    "title": "Kitchen Pest Prevention Action Plan",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Pest_control_plan.svg",
     "targetUrl": "/food-safety-templates/pest-control-template",
-    "desc": "Interactive smart calculator and digital generator for pest control. Streamlines food safety operations with zero manual calculation errors.",
+    "desc": "Actionable kitchen pest prevention plan and checklist for food business supervisors and Environmental Health inspection readiness.",
     "thumbUrl": "/templates/svg/Pest_control_plan.svg"
   },
   {
@@ -426,12 +426,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "bar-opening-closing-checklist",
     "type": "checklist",
     "preheader": "CHECKLIST",
-    "title": "Bar Opening And Closing",
+    "title": "Bar Daily Opening & Closing Checklist",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-34",
     "imgUrl": "/templates/svg/Bars_pubs_opening.svg",
     "targetUrl": "/food-safety-templates/bar-opening-closing-checklist",
-    "desc": "Kitchen checklist for bar opening and closing. Helps supervisors and team members organise daily checks and documentation.",
+    "desc": "Daily hygiene, ice machine, glassware sanitisation, and draught line checklist for bars and pubs.",
     "thumbUrl": "/templates/svg/Bars_pubs_opening.svg"
   },
   {
@@ -439,12 +439,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "bar-opening-checklist",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Bar Opening Checklist",
+    "title": "Interactive Bar Operations Checklist",
     "activity": "restaurant,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Bars_pubs_opening.svg",
     "targetUrl": "/food-safety-templates/bar-opening-checklist",
-    "desc": "Interactive smart calculator and digital generator for bar opening checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "desc": "Interactive digital bar opening and closing verification tool for hospitality managers.",
     "thumbUrl": "/templates/svg/Bars_pubs_opening.svg"
   },
   {
@@ -452,12 +452,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "restaurant-opening-checklist",
     "type": "checklist",
     "preheader": "CHECKLIST",
-    "title": "Restaurant Opening",
+    "title": "Morning Restaurant Opening Checklist",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-36",
     "imgUrl": "/templates/svg/Restaurant_opening.svg",
     "targetUrl": "/food-safety-templates/restaurant-opening-checklist",
-    "desc": "Kitchen checklist for restaurant opening. Helps supervisors and team members organise daily checks and documentation.",
+    "desc": "Step-by-step morning checklist covering prep refrigeration, sanitising stations, and ventilation checks.",
     "thumbUrl": "/templates/svg/Restaurant_opening.svg"
   },
   {
@@ -465,12 +465,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "restaurant-checklist",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Restaurant Checklist",
+    "title": "Interactive Front-of-House Restaurant Tool",
     "activity": "restaurant,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Restaurant_opening.svg",
     "targetUrl": "/food-safety-templates/restaurant-checklist",
-    "desc": "Interactive smart calculator and digital generator for restaurant checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "desc": "Interactive digital tool for monitoring restaurant front-of-house setup, table readiness, and staff briefing.",
     "thumbUrl": "/templates/svg/Restaurant_opening.svg"
   },
   {
@@ -478,12 +478,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "printable-retail-store-daily-checklist",
     "type": "checklist",
     "preheader": "CHECKLIST",
-    "title": "Printable Retail Store Daily Checklist",
+    "title": "Food Retail Store Daily Checklist",
     "activity": "retail",
     "pdfUrl": "/api/download?id=template-38",
     "imgUrl": "/templates/svg/Retail-store-daily-checklist.svg",
     "targetUrl": "/food-safety-templates/printable-retail-store-daily-checklist",
-    "desc": "Kitchen checklist for printable retail store daily checklist. Helps supervisors and team members organise daily checks and documentation.",
+    "desc": "Daily display chiller temperature checks, date code rotation, and stock hygiene checklist for retail food stores.",
     "thumbUrl": "/templates/svg/Retail-store-daily-checklist.svg"
   },
   {
@@ -491,12 +491,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "retail-store-daily-checklist",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Retail Store Daily Checklist",
+    "title": "Interactive Retail Store Daily Checklist",
     "activity": "retail",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Retail-store-daily-checklist.svg",
     "targetUrl": "/food-safety-templates/retail-store-daily-checklist",
-    "desc": "Interactive smart calculator and digital generator for retail store daily checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "desc": "Interactive digital inspection checklist for retail food premises and deli counters.",
     "thumbUrl": "/templates/svg/Retail-store-daily-checklist.svg"
   },
   {
@@ -504,12 +504,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "opening-and-closing-checklist-template",
     "type": "checklist",
     "preheader": "CHECKLIST",
-    "title": "Opening And Closing",
+    "title": "Daily Kitchen Opening & Closing Checklist",
     "activity": "restaurant,healthcare",
     "pdfUrl": "/api/download?id=template-40",
     "imgUrl": "/templates/svg/Opening_closing_checklist.svg",
     "targetUrl": "/food-safety-templates/opening-and-closing-checklist-template",
-    "desc": "Kitchen checklist for opening and closing. Helps supervisors and team members organise daily checks and documentation.",
+    "desc": "Daily opening and closing sign-off checklist for kitchen supervisors and hygiene managers.",
     "thumbUrl": "/templates/svg/Opening_closing_checklist.svg"
   },
   {
@@ -517,12 +517,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "kitchen-opening-and-closing-checklist",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Kitchen Opening And Closing Checklist",
+    "title": "Interactive Kitchen Opening & Closing Tool",
     "activity": "restaurant,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Opening_closing_checklist.svg",
     "targetUrl": "/food-safety-templates/kitchen-opening-and-closing-checklist",
-    "desc": "Interactive smart calculator and digital generator for kitchen opening and closing checklist. Streamlines food safety operations with zero manual calculation errors.",
+    "desc": "Interactive digital checklist for opening and closing procedures with real-time status tracking.",
     "thumbUrl": "/templates/svg/Opening_closing_checklist.svg"
   },
   {
@@ -1154,12 +1154,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "food-cooling-poster",
     "type": "poster",
     "preheader": "POSTER",
-    "title": "Food Cooling Poster",
+    "title": "Food Cooling Methods & Two-Stage Chilling Poster",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-93",
     "imgUrl": "/templates/posters/template-93.webp",
     "targetUrl": "/food-safety-templates/food-cooling-poster",
-    "desc": "Kitchen wall poster for food cooling poster. Designed as a visual reference for food handlers. Printable format.",
+    "desc": "UK FSA-recommended food cooling procedures and two-stage chilling guidelines. Clear visual reference for rapid chilling within 90 minutes and ice-bath methods.",
     "thumbUrl": "/templates/thumbs/template-93.webp"
   },
   {
@@ -1245,12 +1245,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "calculating-food-cost",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Calculating Food Cost",
+    "title": "Food Cost & Margin Target Formulas Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-100",
     "imgUrl": "/templates/charts/template-100.webp",
     "targetUrl": "/food-safety-templates/calculating-food-cost",
-    "desc": "Critical food temperature and safety chart for calculating food cost. Clear visual reference guide for chefs and food preparation handlers.",
+    "desc": "Essential food costing formulas, gross margin targets, and portion control benchmarks for commercial kitchens.",
     "thumbUrl": "/templates/thumbs/template-100.webp"
   },
   {
@@ -1323,12 +1323,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "fsma-food-traceability-list",
     "type": "chart",
     "preheader": "CHART",
-    "title": "The FDA'S FSMA Food Traceability List",
+    "title": "UK & EU Food Traceability & Batch Tracking Guide",
     "activity": "producer",
     "pdfUrl": "/api/download?id=template-106",
     "imgUrl": "/templates/charts/template-106.webp",
     "targetUrl": "/food-safety-templates/fsma-food-traceability-list",
-    "desc": "Critical food temperature and safety chart for the fda's fsma food traceability list. Clear visual reference guide for chefs and food preparation handlers.",
+    "desc": "Statutory one-step-forward, one-step-back food traceability documentation requirements under General Food Law (Regulation EC 178/2002) for UK food premises.",
     "thumbUrl": "/templates/thumbs/template-106.webp"
   },
   {
@@ -1375,12 +1375,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "fsma-compliance-checklist",
     "type": "checklist",
     "preheader": "CHECKLIST",
-    "title": "FSMA Compliance Checklist",
+    "title": "UK Food Hygiene Due Diligence & Compliance Checklist",
     "activity": "producer",
     "pdfUrl": "/api/download?id=template-110",
     "imgUrl": "/templates/svg/FSMA_Compliance_Audit_Checklist.svg",
     "targetUrl": "/food-safety-templates/fsma-compliance-checklist",
-    "desc": "Kitchen checklist for fsma compliance checklist. Helps supervisors and team members organise daily checks and documentation.",
+    "desc": "Statutory due diligence record-keeping checklist under the Food Safety Act 1990 and Food Information Regulations for UK commercial caterers.",
     "thumbUrl": "/templates/svg/FSMA_Compliance_Audit_Checklist.svg"
   },
   {
@@ -1609,12 +1609,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "cutting-board-color-chart",
     "type": "poster",
     "preheader": "POSTER",
-    "title": "US Cutting Board Color Chart",
+    "title": "UK Colour-Coded Chopping Board Chart",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-129",
     "imgUrl": "/templates/posters/template-129.webp",
     "targetUrl": "/food-safety-templates/cutting-board-color-chart",
-    "desc": "Kitchen wall poster for us cutting board color chart. Designed as a visual reference for food handlers. Printable format.",
+    "desc": "FSA-recommended colour coding for commercial kitchen chopping boards: Red (Raw Meat), Blue (Raw Fish), Yellow (Cooked Meat), Green (Salad & Fruit), Brown (Vegetables), White (Dairy & Bakery).",
     "thumbUrl": "/templates/thumbs/template-129.webp"
   },
   {
@@ -1700,12 +1700,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "amazon-seller-and-product-requirements",
     "type": "checklist",
     "preheader": "CHECKLIST",
-    "title": "Amazon Seller And Product Requirements",
+    "title": "UK E-Commerce Food Selling & Packaging Requirements",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-136",
     "imgUrl": "/templates/svg/Amazon_reqs.png",
     "targetUrl": "/food-safety-templates/amazon-seller-and-product-requirements",
-    "desc": "Kitchen checklist for amazon seller and product requirements. Helps supervisors and team members organise daily checks and documentation.",
+    "desc": "Mandatory labelling, allergen declaration, and courier temperature maintenance guidelines for UK online food businesses and distance selling.",
     "thumbUrl": "/templates/svg/Amazon_reqs.png"
   },
   {
@@ -1843,12 +1843,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "ecosure-inspection-checklist",
     "type": "checklist",
     "preheader": "CHECKLIST",
-    "title": "EcoSure Inspection Checklist",
+    "title": "Third-Party Kitchen Hygiene Audit Checklist",
     "activity": "producer,restaurant,retail,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-149",
     "imgUrl": "/templates/svg/EcoSure_inspection_checklist.svg",
     "targetUrl": "/food-safety-templates/ecosure-inspection-checklist",
-    "desc": "Kitchen checklist for ecosure inspection checklist. Helps supervisors and team members organise daily checks and documentation.",
+    "desc": "Comprehensive external inspection audit preparation checklist for commercial hospitality kitchens, restaurants, and food manufacturing units.",
     "thumbUrl": "/templates/svg/EcoSure_inspection_checklist.svg"
   },
   {
@@ -2051,12 +2051,12 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "slug": "pest-control-sop",
     "type": "chart",
     "preheader": "CHART",
-    "title": "Pest Control SOP",
+    "title": "Pest Control Standard Operating Procedure (SOP)",
     "activity": "restaurant,healthcare,producer",
     "pdfUrl": "/api/download?id=template-168",
     "imgUrl": "/templates/charts/template-168.webp",
     "targetUrl": "/food-safety-templates/pest-control-sop",
-    "desc": "Critical food temperature and safety chart for pest control sop. Clear visual reference guide for chefs and food preparation handlers.",
+    "desc": "Standard operating procedure (SOP) documentation for food business pest prevention, exclusion barriers, and contracted technician reporting.",
     "thumbUrl": "/templates/thumbs/template-168.webp"
   },
   {

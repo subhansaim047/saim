@@ -56,19 +56,19 @@
   },
   "freezer-temperature-chart": {
     "title": "Free Freezer Temperature Chart | Saim Dev",
-    "desc": "Download a commercial freezer temperature chart. Keep sub-zero food storage records below -18°C and print clean A4 monitoring logs directly to PDF.",
+    "desc": "Download a commercial freezer temperature chart. Keep sub-zero food storage records below -18\u00b0C and print clean A4 monitoring logs directly to PDF.",
     "howTo": [
       "Mount this chart directly onto or adjacent to commercial walk-in freezers.",
       "Record morning and evening internal temperature readings twice per shift.",
-      "Take corrective action immediately if freezer temperatures rise above -18°C."
+      "Take corrective action immediately if freezer temperatures rise above -18\u00b0C."
     ]
   },
   "food-cooling-poster": {
-    "title": "Free Food Cooling Methods Poster | Saim Dev",
-    "desc": "Download a commercial food cooling guide poster. Follow safe rapid chilling methods, avoid bacterial growth, and print kitchen posters directly to PDF.",
+    "title": "Free Food Cooling Methods & Chilling Poster | Saim Dev",
+    "desc": "UK FSA-recommended food cooling procedures and two-stage chilling guidelines. Download printable kitchen posters with 90-minute rapid chilling protocols.",
     "howTo": [
       "Divide hot cooked batches into shallow stainless steel pans before chilling.",
-      "Cool food to 8°C or colder within 90 minutes to prevent spore germination.",
+      "Cool food to 8\u00b0C or colder within 90 minutes to prevent spore germination.",
       "Cover, date-code, and transfer chilled containers into cold storage promptly."
     ]
   },
@@ -92,11 +92,11 @@
   },
   "fridge-temperature-record-sheet-pdf": {
     "title": "Free Fridge Temperature Sheet | Saim Dev",
-    "desc": "Download a daily commercial fridge temperature record sheet. Log morning and evening chiller readings below 5°C with direct printable PDF download.",
+    "desc": "Download a daily commercial fridge temperature record sheet. Log morning and evening chiller readings below 5\u00b0C with direct printable PDF download.",
     "howTo": [
       "Check calibrated fridge thermometers at opening and during the afternoon shift.",
       "Record temperature readings alongside staff initials on the log sheet daily.",
-      "Report chiller units exceeding 8°C to the duty manager for urgent service."
+      "Report chiller units exceeding 8\u00b0C to the duty manager for urgent service."
     ]
   },
   "cleaning-schedule": {
@@ -136,8 +136,8 @@
     ]
   },
   "pest-control-checklist": {
-    "title": "Free Pest Control Checklist | Saim Dev",
-    "desc": "Download a food business pest prevention checklist. Inspect ingress points, bait stations, and proofing barriers with direct printable PDF download.",
+    "title": "Free Commercial Pest Control Checklist | Saim Dev",
+    "desc": "Comprehensive commercial kitchen pest control checklist. Inspect ingress points, bait stations, and proofing barriers with direct printable PDF download.",
     "howTo": [
       "Inspect external doors, pipe penetrations, and ventilation screens weekly.",
       "Check storage areas and dry pantries for any signs of pest activity or droppings.",
@@ -182,9 +182,9 @@
   },
   "reheating-food-temperature-guide": {
     "title": "Free Food Reheating Guide Poster | Saim Dev",
-    "desc": "Download a food reheating temperature guide poster. Follow legal core limits of 75°C (82°C in Scotland) with this direct printable A4 PDF download.",
+    "desc": "Download a food reheating temperature guide poster. Follow legal core limits of 75\u00b0C (82\u00b0C in Scotland) with this direct printable A4 PDF download.",
     "howTo": [
-      "Reheat pre-cooked foods rapidly until core temperature reaches at least 75°C.",
+      "Reheat pre-cooked foods rapidly until core temperature reaches at least 75\u00b0C.",
       "Stir soups, gravies, and stews during reheating to distribute heat evenly.",
       "Never reheat food more than once; discard leftovers that are not consumed."
     ]
@@ -209,11 +209,11 @@
   },
   "hot-holding-food-temperature-log": {
     "title": "Free Hot Holding Temperature Log | Saim Dev",
-    "desc": "Download a commercial hot holding temperature log. Record buffet and bain-marie temperatures above 63°C with this direct printable PDF download sheet.",
+    "desc": "Download a commercial hot holding temperature log. Record buffet and bain-marie temperatures above 63\u00b0C with this direct printable PDF download sheet.",
     "howTo": [
       "Preheat bain-maries and hot holding wells before loading hot cooked dishes.",
-      "Probe and log food temperatures every 2 hours to ensure they remain above 63°C.",
-      "Discard hot food displayed below 63°C after a maximum of 2 hours."
+      "Probe and log food temperatures every 2 hours to ensure they remain above 63\u00b0C.",
+      "Discard hot food displayed below 63\u00b0C after a maximum of 2 hours."
     ]
   }
 }
