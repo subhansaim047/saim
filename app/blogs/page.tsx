@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogsPage } from '@/components/BlogsPage';
 
 export const metadata: Metadata = {
-  title: "Web Development & Kitchen Tech Blog | Saim Dev",
-  description: "Explore expert web development articles, UK commercial kitchen hygiene guides, SFBB compliance tips, and digital operational strategies by Saim Dev.",
+  title: 'Web Development & Food Safety Blog | Saim Dev',
+  description: 'Practical guides on Next.js web development for small businesses and food hygiene compliance, SFBB logs, and Natasha\'s Law for UK restaurants.',
   alternates: {
     canonical: 'https://www.saimdev.site/blogs',
   },
   openGraph: {
-    title: "Web Development & Kitchen Tech Blog | Saim Dev",
-    description: "Explore expert web development articles, UK commercial kitchen hygiene guides, SFBB compliance tips, and digital operational strategies by Saim Dev.",
+    title: 'Web Development & Food Safety Blog | Saim Dev',
+    description: 'Practical guides on Next.js web development for small businesses and food hygiene compliance, SFBB logs, and Natasha\'s Law for UK restaurants.',
     url: 'https://www.saimdev.site/blogs',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Development & Kitchen Tech Blog | Saim Dev",
-    description: "Explore expert web development articles, UK commercial kitchen hygiene guides, SFBB compliance tips, and digital operational strategies by Saim Dev.",
+    title: 'Web Development & Food Safety Blog | Saim Dev',
+    description: 'Practical guides on Next.js web development for small businesses and food hygiene compliance, SFBB logs, and Natasha\'s Law for UK restaurants.',
     creator: '@saimwebdev',
     images: ['https://www.saimdev.site/og-image.png'],
   },

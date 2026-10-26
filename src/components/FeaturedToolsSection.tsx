@@ -3,7 +3,26 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Calculator, ChefHat, FileText, Thermometer, Sparkles } from "lucide-react";
 
-const FEATURED_TOOLS = [
+interface FeaturedTool {
+  slug: string;
+  customHref?: string;
+  title: string;
+  tag: string;
+  desc: string;
+  icon: any;
+  tagColor: string;
+}
+
+const FEATURED_TOOLS: FeaturedTool[] = [
+  {
+    slug: "ppds-label-generator",
+    customHref: "/tools/ppds-label-generator",
+    title: "Natasha's Law PPDS Label Maker",
+    tag: "PPDS Food Labelling",
+    desc: "Interactive food label generator with automated 14-allergen bolding, expiry dating, and A4 sticker sheet printing.",
+    icon: Sparkles,
+    tagColor: "text-amber-300 border-amber-400/30 bg-amber-400/15",
+  },
   {
     slug: "allergy-matrix",
     title: "14 Food Allergen Matrix & Chart",
@@ -81,7 +100,7 @@ export const FeaturedToolsSection = () => {
             return (
               <Link
                 key={tool.slug}
-                href={`/food-safety-templates/${tool.slug}`}
+                href={tool.customHref || `/food-safety-templates/${tool.slug}`}
                 className="group relative flex flex-col justify-between rounded-2xl bg-neutral-950/80 border border-white/10 p-6 transition-all duration-300 hover:border-primary/40 hover:bg-neutral-900/80 hover:-translate-y-1"
               >
                 <div>

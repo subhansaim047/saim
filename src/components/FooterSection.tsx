@@ -22,9 +22,12 @@ export const FooterSection = () => {
           <nav className="site-footer__nav" aria-label="Page sections navigation">
             <a href="/#our-story">Our Story</a>
             <Link href="/services">Services</Link>
+            <Link href="/services/takeaway-web-design" className="text-primary hover:underline">Takeaway Web Design</Link>
+            <Link href="/case-studies">Case Studies</Link>
             <Link href="/technologies">Tech Stack</Link>
             <Link href="/nextjs-developer-uk" className="text-primary hover:underline">Next.js UK & EU</Link>
             <Link href="/tools" className="text-primary hover:underline">Free Tools</Link>
+            <Link href="/tools/ppds-label-generator">PPDS Label Maker</Link>
             <Link href="/demos">Demo Sites</Link>
           </nav>
 

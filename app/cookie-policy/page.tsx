@@ -4,6 +4,10 @@ import Link from "next/link";
 import { ArrowLeft, Cookie, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Cookie Policy | Saim Dev",
   description: "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive kitchen tools save data locally.",
   alternates: {

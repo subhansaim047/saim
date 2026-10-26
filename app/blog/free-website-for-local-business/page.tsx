@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPost2Page } from '@/components/BlogPost2Page';
 
 export const metadata: Metadata = {
-  title: "I'm Building 5 Free Websites for Local Businesses \u2014 Here's Why | Saim Dev",
-  description: "Saim Dev is building 5 free Next.js websites for independent UK local businesses to expand our portfolio. Learn how to claim your slot today.",
+  title: 'Why Saim Dev Builds Free Starter Sites for Local Shops',
+  description: 'Case study on our local business starter initiative. How bespoke Next.js websites outperform heavy CMS templates in real-world local Google search.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/free-website-for-local-business'
   },
   openGraph: {
-    title: "I'm Building 5 Free Websites for Local Businesses \u2014 Here's Why | Saim Dev",
-    description: "Saim Dev is building 5 free Next.js websites for independent UK local businesses to expand our portfolio. Learn how to claim your slot today.",
+    title: 'Why Saim Dev Builds Free Starter Sites for Local Shops',
+    description: 'Case study on our local business starter initiative. How bespoke Next.js websites outperform heavy CMS templates in real-world local Google search.',
     url: 'https://www.saimdev.site/blog/free-website-for-local-business',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "I'm Building 5 Free Websites for Local Businesses \u2014 Here's Why | Saim Dev",
-    description: "Saim Dev is building 5 free Next.js websites for independent UK local businesses to expand our portfolio. Learn how to claim your slot today.",
+    title: 'Why Saim Dev Builds Free Starter Sites for Local Shops',
+    description: 'Case study on our local business starter initiative. How bespoke Next.js websites outperform heavy CMS templates in real-world local Google search.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

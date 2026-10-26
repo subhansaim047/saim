@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPostCoolingGuide } from '@/components/blog/BlogPostCoolingGuide';
 
 export const metadata: Metadata = {
-  title: "Commercial Kitchen Food Cooling Guide: UK 90-Minute Rule | Saim Dev",
-  description: "Learn UK food safety cooling rules: cooling from 75\u00b0C to 8\u00b0C in 90 minutes, approved methods (blast chilling, shallow pans), and the Danger Zone explained.",
+  title: 'UK Food Cooling Temperature Guide: 90-Minute Rule',
+  description: 'Master safe food cooling in commercial kitchens. Step-by-step advice on blast chilling, ice baths, and FSA requirements to prevent bacterial growth.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide'
   },
   openGraph: {
-    title: "Commercial Kitchen Food Cooling Guide: UK 90-Minute Rule | Saim Dev",
-    description: "Learn UK food safety cooling rules: cooling from 75\u00b0C to 8\u00b0C in 90 minutes, approved methods (blast chilling, shallow pans), and the Danger Zone explained.",
+    title: 'UK Food Cooling Temperature Guide: 90-Minute Rule',
+    description: 'Master safe food cooling in commercial kitchens. Step-by-step advice on blast chilling, ice baths, and FSA requirements to prevent bacterial growth.',
     url: 'https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Commercial Kitchen Food Cooling Guide: UK 90-Minute Rule | Saim Dev",
-    description: "Learn UK food safety cooling rules: cooling from 75\u00b0C to 8\u00b0C in 90 minutes, approved methods (blast chilling, shallow pans), and the Danger Zone explained.",
+    title: 'UK Food Cooling Temperature Guide: 90-Minute Rule',
+    description: 'Master safe food cooling in commercial kitchens. Step-by-step advice on blast chilling, ice baths, and FSA requirements to prevent bacterial growth.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

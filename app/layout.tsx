@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const instrument = Instrument_Serif({ weight: "400", style: ["normal", "italic"], subsets: ['latin'], variable: '--font-instrument' });
 
 export const metadata: Metadata = {
-  title: 'Next.js Websites for UK & EU Small Businesses | Saim Dev',
-  description: 'Custom, high-performance Next.js websites for UK and European small businesses. Transparent fixed pricing from £250 with sub-second speeds and SEO built-in.',
+  title: 'Next.js Websites for UK Small Businesses | Saim Dev',
+  description: 'Custom Next.js websites for UK small businesses from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
   metadataBase: new URL('https://www.saimdev.site'),
   alternates: {
     canonical: 'https://www.saimdev.site',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     google: 'google0191625097e7b0a7',
   },
   openGraph: {
-    title: 'Next.js Websites for UK & EU Small Businesses | Saim Dev',
-    description: 'Custom, high-performance Next.js websites for UK and European small businesses. Transparent fixed pricing from £250 with sub-second speeds and SEO built-in.',
+    title: 'Next.js Websites for UK Small Businesses | Saim Dev',
+    description: 'Custom Next.js websites for UK small businesses from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
     url: 'https://www.saimdev.site',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Next.js Websites for UK & EU Small Businesses | Saim Dev',
-    description: 'Custom, high-performance Next.js websites for UK and European small businesses. Transparent fixed pricing from £250 with sub-second speeds and SEO built-in.',
+    title: 'Next.js Websites for UK Small Businesses | Saim Dev',
+    description: 'Custom Next.js websites for UK small businesses from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
     creator: '@saimwebdev',
     images: ['https://www.saimdev.site/og-image.png'],
   },

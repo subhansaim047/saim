@@ -35,6 +35,18 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ theme = "light", classNa
         <span aria-hidden="true">·</span>
         <Link href="/services" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Services</Link>
         <span aria-hidden="true">·</span>
+        <Link href="/services/takeaway-web-design" className={isDark ? "hover:text-white transition-colors py-1 px-1 text-amber-400" : "hover:text-black transition-colors py-1 px-1 text-amber-700 font-semibold"}>Takeaway Websites</Link>
+        <span aria-hidden="true">·</span>
+        <Link href="/nextjs-developer-uk" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Next.js UK</Link>
+        <span aria-hidden="true">·</span>
+        <Link href="/case-studies" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Case Studies</Link>
+        <span aria-hidden="true">·</span>
+        <Link href="/technologies" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Tech Stack</Link>
+        <span aria-hidden="true">·</span>
+        <Link href="/blogs" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Blog Guides</Link>
+        <span aria-hidden="true">·</span>
+        <Link href="/tools/ppds-label-generator" className={isDark ? "hover:text-white transition-colors py-1 px-1 text-amber-300" : "hover:text-black transition-colors py-1 px-1 text-amber-800"}>PPDS Label Maker</Link>
+        <span aria-hidden="true">·</span>
         <Link href="/tools" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Free Tools</Link>
         <span aria-hidden="true">·</span>
         <Link href="/demos" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Demos</Link>

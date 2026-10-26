@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPost3Page } from '@/components/BlogPost3Page';
 
 export const metadata: Metadata = {
-  title: "I Just Launched My Web Agency \u2014 And I'm Offering 50% Off | Saim Dev",
-  description: "Claim 50% off Next.js web development during our agency launch. Fast turnarounds, bespoke code, and high performance for UK small businesses.",
+  title: 'Saim Dev Studio Launch: Fixed Price Web Development',
+  description: 'Special introductory fixed-price packages for UK and European small businesses seeking sub-second Next.js web applications and takeaway systems.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/50-percent-off-agency-launch'
   },
   openGraph: {
-    title: "I Just Launched My Web Agency \u2014 And I'm Offering 50% Off | Saim Dev",
-    description: "Claim 50% off Next.js web development during our agency launch. Fast turnarounds, bespoke code, and high performance for UK small businesses.",
+    title: 'Saim Dev Studio Launch: Fixed Price Web Development',
+    description: 'Special introductory fixed-price packages for UK and European small businesses seeking sub-second Next.js web applications and takeaway systems.',
     url: 'https://www.saimdev.site/blog/50-percent-off-agency-launch',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "I Just Launched My Web Agency \u2014 And I'm Offering 50% Off | Saim Dev",
-    description: "Claim 50% off Next.js web development during our agency launch. Fast turnarounds, bespoke code, and high performance for UK small businesses.",
+    title: 'Saim Dev Studio Launch: Fixed Price Web Development',
+    description: 'Special introductory fixed-price packages for UK and European small businesses seeking sub-second Next.js web applications and takeaway systems.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

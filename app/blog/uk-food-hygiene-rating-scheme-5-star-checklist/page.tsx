@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPostFhrsChecklist } from '@/components/blog/BlogPostFhrsChecklist';
 
 export const metadata: Metadata = {
-  title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist | Saim Dev",
-  description: "Complete inspection guide for UK restaurants and takeaways to achieve a 5-star Food Hygiene Rating. Covers food safety, cleanliness, and HACCP records.",
+  title: 'How to Get a 5-Star Food Hygiene Rating: UK Checklist',
+  description: 'Complete UK inspection checklist to secure a 5-star Food Hygiene Rating. Practical tips for structure, hygiene practices, and confidence in management.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist'
   },
   openGraph: {
-    title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist | Saim Dev",
-    description: "Complete inspection guide for UK restaurants and takeaways to achieve a 5-star Food Hygiene Rating. Covers food safety, cleanliness, and HACCP records.",
+    title: 'How to Get a 5-Star Food Hygiene Rating: UK Checklist',
+    description: 'Complete UK inspection checklist to secure a 5-star Food Hygiene Rating. Practical tips for structure, hygiene practices, and confidence in management.',
     url: 'https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist | Saim Dev",
-    description: "Complete inspection guide for UK restaurants and takeaways to achieve a 5-star Food Hygiene Rating. Covers food safety, cleanliness, and HACCP records.",
+    title: 'How to Get a 5-Star Food Hygiene Rating: UK Checklist',
+    description: 'Complete UK inspection checklist to secure a 5-star Food Hygiene Rating. Practical tips for structure, hygiene practices, and confidence in management.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

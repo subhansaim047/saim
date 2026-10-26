@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPostAllergenMatrix } from '@/components/blog/BlogPostAllergenMatrix';
 
 export const metadata: Metadata = {
-  title: "How to Create a Compliant 14-Allergen Matrix for UK Restaurants | Saim Dev",
-  description: "Auditing recipes and building an allergen matrix aligned with FSA guidance under Natasha's Law. Free interactive digital generator included.",
+  title: 'How to Build a 14-Allergen Matrix for UK Kitchens',
+  description: 'Step-by-step guide to auditing recipes and creating a 14-allergen chart for UK restaurants, takeaways, and pubs under Food Information Regulations.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants'
   },
   openGraph: {
-    title: "How to Create a Compliant 14-Allergen Matrix for UK Restaurants | Saim Dev",
-    description: "Auditing recipes and building an allergen matrix aligned with FSA guidance under Natasha's Law. Free interactive digital generator included.",
+    title: 'How to Build a 14-Allergen Matrix for UK Kitchens',
+    description: 'Step-by-step guide to auditing recipes and creating a 14-allergen chart for UK restaurants, takeaways, and pubs under Food Information Regulations.',
     url: 'https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "How to Create a Compliant 14-Allergen Matrix for UK Restaurants | Saim Dev",
-    description: "Auditing recipes and building an allergen matrix aligned with FSA guidance under Natasha's Law. Free interactive digital generator included.",
+    title: 'How to Build a 14-Allergen Matrix for UK Kitchens',
+    description: 'Step-by-step guide to auditing recipes and creating a 14-allergen chart for UK restaurants, takeaways, and pubs under Food Information Regulations.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

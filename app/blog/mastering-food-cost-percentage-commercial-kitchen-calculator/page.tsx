@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPostFoodCost } from '@/components/blog/BlogPostFoodCost';
 
 export const metadata: Metadata = {
-  title: "How to Calculate Food Cost Percentage & Protect 70%+ Margins | Saim Dev",
-  description: "Calculate food cost percentage and protect 70%+ margins. Use our free interactive commercial kitchen calculator built for UK takeaways and cafes.",
+  title: 'How to Calculate Food Cost Percentage in UK Kitchens',
+  description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator'
   },
   openGraph: {
-    title: "How to Calculate Food Cost Percentage & Protect 70%+ Margins | Saim Dev",
-    description: "Calculate food cost percentage and protect 70%+ margins. Use our free interactive commercial kitchen calculator built for UK takeaways and cafes.",
+    title: 'How to Calculate Food Cost Percentage in UK Kitchens',
+    description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
     url: 'https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "How to Calculate Food Cost Percentage & Protect 70%+ Margins | Saim Dev",
-    description: "Calculate food cost percentage and protect 70%+ margins. Use our free interactive commercial kitchen calculator built for UK takeaways and cafes.",
+    title: 'How to Calculate Food Cost Percentage in UK Kitchens',
+    description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

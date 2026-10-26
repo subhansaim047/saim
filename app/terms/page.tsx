@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import { TermsOfService } from '@/components/TermsOfService';
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Terms of Service | Saim Dev",
   description: "Terms of Service for Saim Dev web architecture and digital resources. Review service delivery, client terms, intellectual property, and usage.",
   alternates: {

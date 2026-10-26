@@ -4,14 +4,14 @@ import { ArrowRight, CheckCircle2, Clock, ShieldCheck, Zap, HelpCircle, Sparkles
 import { FooterSection } from "@/components/FooterSection";
 
 export const metadata: Metadata = {
-  title: "Next.js Developer UK | High-Performance Web Development for British & European Businesses",
-  description: "Hire an expert freelance Next.js developer for UK businesses. Sub-second loading, clean React code, built-in SEO, and transparent fixed pricing from £390.",
+  title: 'Freelance Next.js Developer UK | Fast Custom Sites',
+  description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
   alternates: {
     canonical: "https://www.saimdev.site/nextjs-developer-uk",
   },
   openGraph: {
-    title: "Next.js Developer UK | High-Performance Web Development | Saim Dev",
-    description: "Hire an expert freelance Next.js developer for UK businesses. Sub-second loading, clean React code, built-in SEO, and transparent fixed pricing from £390.",
+    title: 'Freelance Next.js Developer UK | Fast Custom Sites',
+    description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
     url: "https://www.saimdev.site/nextjs-developer-uk",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js Developer UK | High-Performance Web Development | Saim Dev",
-    description: "Hire an expert freelance Next.js developer for UK businesses. Sub-second loading, clean React code, built-in SEO, and transparent fixed pricing from £390.",
+    title: 'Freelance Next.js Developer UK | Fast Custom Sites',
+    description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
     images: ["https://www.saimdev.site/og-image.png"]
   }
 };

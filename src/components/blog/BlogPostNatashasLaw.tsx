@@ -216,6 +216,28 @@ export const BlogPostNatashasLaw: React.FC = () => {
             </div>
           </section>
 
+          {/* Interactive Tool Bridge */}
+          <section className="mb-8 p-6 sm:p-8 rounded-3xl bg-amber-500/10 border border-amber-400/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold block">
+                Free Interactive Compliance Tool
+              </span>
+              <h3 className="text-base sm:text-lg font-bold text-white">
+                Generate Natasha's Law PPDS Labels Online
+              </h3>
+              <p className="text-xs text-white/70 max-w-xl leading-relaxed">
+                Use our free web tool to generate Prepacked for Direct Sale food labels with automated 14-allergen bolding and standard A4 adhesive sticker layouts.
+              </p>
+            </div>
+            <Link
+              href="/tools/ppds-label-generator"
+              className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-5 py-3 rounded-full inline-flex items-center gap-1.5 transition-all shrink-0 shadow-lg"
+            >
+              <span>Open Free PPDS Tool</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </section>
+
           {/* Agency Conversion Bridge */}
           <section className="mt-12 p-8 rounded-3xl bg-[#111113] border border-primary/30 relative overflow-hidden">
             <span className="text-primary text-xs font-mono uppercase tracking-widest block mb-2">

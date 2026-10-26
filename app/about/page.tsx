@@ -4,14 +4,14 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, ShieldCheck, Code2, Rocket, Globe, UserCheck, Sparkles, MapPin, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Saim Dev | Next.js Web Architecture & Takeaway Systems",
-  description: "Learn about Saim Dev, a Pakistan-based Next.js studio serving UK and European small businesses with fast websites, takeaway menus, and web applications.",
+  title: 'About Saim Dev | Remote Next.js Studio for UK & EU',
+  description: 'Learn about Saim Dev, an independent Next.js developer providing fast, fixed-price websites and digital kitchen systems for UK small businesses.',
   alternates: {
     canonical: "https://www.saimdev.site/about",
   },
   openGraph: {
-    title: "About Saim Dev | Next.js Web Architecture & Takeaway Systems",
-    description: "Learn about Saim Dev, a Pakistan-based Next.js studio serving UK and European small businesses with fast websites, takeaway menus, and web applications.",
+    title: 'About Saim Dev | Remote Next.js Studio for UK & EU',
+    description: 'Learn about Saim Dev, an independent Next.js developer providing fast, fixed-price websites and digital kitchen systems for UK small businesses.',
     url: "https://www.saimdev.site/about",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Saim Dev | Next.js Web Architecture & Takeaway Systems",
-    description: "Learn about Saim Dev, a Pakistan-based Next.js studio serving UK and European small businesses with fast websites, takeaway menus, and web applications.",
+    title: 'About Saim Dev | Remote Next.js Studio for UK & EU',
+    description: 'Learn about Saim Dev, an independent Next.js developer providing fast, fixed-price websites and digital kitchen systems for UK small businesses.',
     creator: "@saimwebdev",
     images: ["https://www.saimdev.site/og-image.png"],
   },

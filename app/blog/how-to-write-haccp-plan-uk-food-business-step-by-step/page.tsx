@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPostHaccpPlan } from '@/components/blog/BlogPostHaccpPlan';
 
 export const metadata: Metadata = {
-  title: "How to Write a HACCP Plan for UK Food Businesses | Saim Dev",
-  description: "Plain-English guide to creating a HACCP plan for UK takeaways aligned with FSA rules. Build hazard tables with our free digital tool online.",
+  title: 'How to Write a UK Takeaway HACCP Plan Step-by-Step',
+  description: 'Learn how to write a commercial kitchen HACCP plan under Regulation (EC) 852/2004. Plain-English guide to hazard analysis, CCPs, and record keeping.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step'
   },
   openGraph: {
-    title: "How to Write a HACCP Plan for UK Food Businesses | Saim Dev",
-    description: "Plain-English guide to creating a HACCP plan for UK takeaways aligned with FSA rules. Build hazard tables with our free digital tool online.",
+    title: 'How to Write a UK Takeaway HACCP Plan Step-by-Step',
+    description: 'Learn how to write a commercial kitchen HACCP plan under Regulation (EC) 852/2004. Plain-English guide to hazard analysis, CCPs, and record keeping.',
     url: 'https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "How to Write a HACCP Plan for UK Food Businesses | Saim Dev",
-    description: "Plain-English guide to creating a HACCP plan for UK takeaways aligned with FSA rules. Build hazard tables with our free digital tool online.",
+    title: 'How to Write a UK Takeaway HACCP Plan Step-by-Step',
+    description: 'Learn how to write a commercial kitchen HACCP plan under Regulation (EC) 852/2004. Plain-English guide to hazard analysis, CCPs, and record keeping.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

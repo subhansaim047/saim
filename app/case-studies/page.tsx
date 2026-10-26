@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { CaseStudiesPage } from '@/components/CaseStudiesPage';
 
 export const metadata: Metadata = {
-  title: "Next.js Case Studies & Web Performance Results | Saim Dev",
-  description: "Explore verified Next.js website case studies for UK and European businesses. Discover real sub-second speed metrics, SEO growth, and client revenue gains.",
+  title: 'Client Web Development Case Studies | Saim Dev',
+  description: 'Review real Next.js website case studies for UK and European clients. Proven sub-second loading speeds, mobile conversion gains, and clean delivery.',
   alternates: {
     canonical: 'https://www.saimdev.site/case-studies'
   },
   openGraph: {
-    title: "Next.js Case Studies & Web Performance Results | Saim Dev",
-    description: "Explore verified Next.js website case studies for UK and European businesses. Discover real sub-second speed metrics, SEO growth, and client revenue gains.",
+    title: 'Client Web Development Case Studies | Saim Dev',
+    description: 'Review real Next.js website case studies for UK and European clients. Proven sub-second loading speeds, mobile conversion gains, and clean delivery.',
     url: 'https://www.saimdev.site/case-studies',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Next.js Case Studies & Web Performance Results | Saim Dev",
-    description: "Explore verified Next.js website case studies for UK and European businesses. Discover real sub-second speed metrics, SEO growth, and client revenue gains.",
+    title: 'Client Web Development Case Studies | Saim Dev',
+    description: 'Review real Next.js website case studies for UK and European clients. Proven sub-second loading speeds, mobile conversion gains, and clean delivery.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

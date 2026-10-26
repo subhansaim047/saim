@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import { PrivacyPolicy } from '@/components/PrivacyPolicy';
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Privacy Policy | Saim Dev",
   description: "Read how Saim Dev collects, uses, and protects personal data from enquiries and free tools in compliance with UK GDPR and the Data Protection Act 2018.",
   alternates: {

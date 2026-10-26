@@ -28,10 +28,6 @@ const staticPages = [
   { url: "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist", priority: "0.85", changefreq: "weekly" },
   { url: "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide", priority: "0.85", changefreq: "weekly" },
   { url: "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide", priority: "0.85", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/privacy", priority: "0.5", changefreq: "monthly" },
-  { url: "https://www.saimdev.site/cookie-policy", priority: "0.5", changefreq: "monthly" },
-  { url: "https://www.saimdev.site/disclaimer", priority: "0.5", changefreq: "monthly" },
-  { url: "https://www.saimdev.site/terms", priority: "0.5", changefreq: "monthly" }
 ];
 
 // Add only KEEP and IMPROVE pages

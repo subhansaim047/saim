@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPostRecipeScaler } from '@/components/blog/BlogPostRecipeScaler';
 
 export const metadata: Metadata = {
-  title: "Commercial Recipe Scaling Guide: Scale 10 to 500 Portions | Saim Dev",
-  description: "Master recipe scaling for catering kitchens. Avoid seasoning errors and calculate precise portion costs with our free interactive tool online.",
+  title: 'How to Scale Catering Recipes Without Quality Loss',
+  description: 'Guide to scaling commercial catering recipes from 10 to 500 portions. Avoid common conversion errors, calculate yields, and manage ingredient costs.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator'
   },
   openGraph: {
-    title: "Commercial Recipe Scaling Guide: Scale 10 to 500 Portions | Saim Dev",
-    description: "Master recipe scaling for catering kitchens. Avoid seasoning errors and calculate precise portion costs with our free interactive tool online.",
+    title: 'How to Scale Catering Recipes Without Quality Loss',
+    description: 'Guide to scaling commercial catering recipes from 10 to 500 portions. Avoid common conversion errors, calculate yields, and manage ingredient costs.',
     url: 'https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Commercial Recipe Scaling Guide: Scale 10 to 500 Portions | Saim Dev",
-    description: "Master recipe scaling for catering kitchens. Avoid seasoning errors and calculate precise portion costs with our free interactive tool online.",
+    title: 'How to Scale Catering Recipes Without Quality Loss',
+    description: 'Guide to scaling commercial catering recipes from 10 to 500 portions. Avoid common conversion errors, calculate yields, and manage ingredient costs.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

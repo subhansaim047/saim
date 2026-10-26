@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPostChecklist } from '@/components/blog/BlogPostChecklist';
 
 export const metadata: Metadata = {
-  title: "SFBB Opening & Closing Checklists: 5-Star Food Hygiene Guide | Saim Dev",
-  description: "Essential SFBB opening and closing hygiene checks every UK kitchen must log daily. Prevent contamination and pass EHO audits with our free tool.",
+  title: 'SFBB Opening & Closing Checklist Guide for UK Cafes',
+  description: 'Master your daily opening and closing checks with Safer Food, Better Business guidance. Protect kitchen hygiene and secure a 5-star council rating.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide'
   },
   openGraph: {
-    title: "SFBB Opening & Closing Checklists: 5-Star Food Hygiene Guide | Saim Dev",
-    description: "Essential SFBB opening and closing hygiene checks every UK kitchen must log daily. Prevent contamination and pass EHO audits with our free tool.",
+    title: 'SFBB Opening & Closing Checklist Guide for UK Cafes',
+    description: 'Master your daily opening and closing checks with Safer Food, Better Business guidance. Protect kitchen hygiene and secure a 5-star council rating.',
     url: 'https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "SFBB Opening & Closing Checklists: 5-Star Food Hygiene Guide | Saim Dev",
-    description: "Essential SFBB opening and closing hygiene checks every UK kitchen must log daily. Prevent contamination and pass EHO audits with our free tool.",
+    title: 'SFBB Opening & Closing Checklist Guide for UK Cafes',
+    description: 'Master your daily opening and closing checks with Safer Food, Better Business guidance. Protect kitchen hygiene and secure a 5-star council rating.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

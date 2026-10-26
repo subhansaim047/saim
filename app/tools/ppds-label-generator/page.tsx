@@ -6,16 +6,14 @@ import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Free PPDS Food Label Template UK | Natasha's Law Compliant | Saim Dev",
-  description:
-    "Generate compliant Natasha's Law PPDS food labels online for free. Automatically emphasise 14 UK allergens in bold. Print A4 label sheets or single stickers.",
+  title: 'Free PPDS Food Label Template UK | Natasha\'s Law',
+  description: 'Generate compliant Natasha\'s Law PPDS food labels online for free. Automatically bold all 14 statutory allergens, set expiry dates, and print A4 sheets.',
   alternates: {
     canonical: "https://www.saimdev.site/tools/ppds-label-generator",
   },
   openGraph: {
-    title: "Free PPDS Food Label Template UK | Natasha's Law Compliant | Saim Dev",
-    description:
-      "Generate compliant Natasha's Law PPDS food labels online for free. Automatically emphasise 14 UK allergens in bold. Print A4 label sheets or single stickers.",
+    title: 'Free PPDS Food Label Template UK | Natasha\'s Law',
+    description: 'Generate compliant Natasha\'s Law PPDS food labels online for free. Automatically bold all 14 statutory allergens, set expiry dates, and print A4 sheets.',
     url: "https://www.saimdev.site/tools/ppds-label-generator",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -31,9 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free PPDS Food Label Template UK | Natasha's Law Compliant | Saim Dev",
-    description:
-      "Generate compliant Natasha's Law PPDS food labels online for free. Automatically emphasise 14 UK allergens in bold. Print A4 label sheets or single stickers.",
+    title: 'Free PPDS Food Label Template UK | Natasha\'s Law',
+    description: 'Generate compliant Natasha\'s Law PPDS food labels online for free. Automatically bold all 14 statutory allergens, set expiry dates, and print A4 sheets.',
     images: ["https://www.saimdev.site/og-image.png"],
   },
 };
@@ -95,8 +92,7 @@ export default function PpdsLabelGeneratorPage() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Free Natasha's Law PPDS Food Label Generator UK",
-    description:
-      "Online generator creating compliant Prepacked for Direct Sale (PPDS) food labels with automated 14-allergen bolding for UK food businesses.",
+    description: 'Generate compliant Natasha\'s Law PPDS food labels online for free. Automatically bold all 14 statutory allergens, set expiry dates, and print A4 sheets.',
     url: canonicalUrl,
     applicationCategory: "BusinessApplication",
     operatingSystem: "All / Web Browser",

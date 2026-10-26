@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import { SiteFooter } from "./SiteFooter";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -239,9 +242,11 @@ export const BlogsPage = () => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: i * 0.05 }}
-              onClick={() => router.push(blog.url)}
-              className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 cursor-pointer overflow-hidden shadow-lg"
+              className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 overflow-hidden shadow-lg"
             >
+              <Link href={blog.url} className="absolute inset-0 z-10" aria-label={blog.title}>
+                <span className="sr-only">{blog.title}</span>
+              </Link>
               {/* Glow on hover */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-500 pointer-events-none" />
 
@@ -283,10 +288,7 @@ export const BlogsPage = () => {
         </div>
       </section>
 
-      {/* ── Footer ── */}
-      <footer className="border-t border-white/10 py-8 px-4 sm:px-8 text-center text-xs text-white/40">
-        <p>© 2026 Saim Dev · High-Performance Web Development for Hospitality &amp; Beyond</p>
-      </footer>
+      <SiteFooter theme="dark" />
     </div>
   );
 };

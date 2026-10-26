@@ -4,6 +4,10 @@ import Link from "next/link";
 import { ArrowLeft, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Food Safety Disclaimer | Saim Dev",
   description: "Regulatory and guidance notice for kitchen templates, checklists, and calculators. General reference only and not official advice from the FSA.",
   alternates: {

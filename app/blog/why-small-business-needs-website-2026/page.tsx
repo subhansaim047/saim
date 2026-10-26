@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPost1Page } from '@/components/BlogPost1Page';
 
 export const metadata: Metadata = {
-  title: "Why Every Small Business Needs a Professional Website in 2026 | Saim Dev",
-  description: "Why UK small businesses need a fast Next.js website in 2026. Turn local searches into paying customers with modern mobile performance and local SEO.",
+  title: 'Why UK Small Businesses Need a Custom Website in 2026',
+  description: 'Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/why-small-business-needs-website-2026'
   },
   openGraph: {
-    title: "Why Every Small Business Needs a Professional Website in 2026 | Saim Dev",
-    description: "Why UK small businesses need a fast Next.js website in 2026. Turn local searches into paying customers with modern mobile performance and local SEO.",
+    title: 'Why UK Small Businesses Need a Custom Website in 2026',
+    description: 'Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.',
     url: 'https://www.saimdev.site/blog/why-small-business-needs-website-2026',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Why Every Small Business Needs a Professional Website in 2026 | Saim Dev",
-    description: "Why UK small businesses need a fast Next.js website in 2026. Turn local searches into paying customers with modern mobile performance and local SEO.",
+    title: 'Why UK Small Businesses Need a Custom Website in 2026',
+    description: 'Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

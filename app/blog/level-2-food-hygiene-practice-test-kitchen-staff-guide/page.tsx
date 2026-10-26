@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { BlogPostHygieneQuiz } from '@/components/blog/BlogPostHygieneQuiz';
 
 export const metadata: Metadata = {
-  title: "Level 2 Food Hygiene Practice Test: 10 Critical Questions | Saim Dev",
-  description: "Test your kitchen team with our Level 2 Food Hygiene practice test. Review temperature danger zones, cross-contamination, and hygiene laws today.",
+  title: 'Level 2 Food Hygiene Practice Test: 10 Key Questions',
+  description: 'Prepare kitchen staff for UK Food Safety Level 2 certification with this practice test covering critical temperatures, hygiene, and cross-contamination.',
   alternates: {
     canonical: 'https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide'
   },
   openGraph: {
-    title: "Level 2 Food Hygiene Practice Test: 10 Critical Questions | Saim Dev",
-    description: "Test your kitchen team with our Level 2 Food Hygiene practice test. Review temperature danger zones, cross-contamination, and hygiene laws today.",
+    title: 'Level 2 Food Hygiene Practice Test: 10 Key Questions',
+    description: 'Prepare kitchen staff for UK Food Safety Level 2 certification with this practice test covering critical temperatures, hygiene, and cross-contamination.',
     url: 'https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Level 2 Food Hygiene Practice Test: 10 Critical Questions | Saim Dev",
-    description: "Test your kitchen team with our Level 2 Food Hygiene practice test. Review temperature danger zones, cross-contamination, and hygiene laws today.",
+    title: 'Level 2 Food Hygiene Practice Test: 10 Key Questions',
+    description: 'Prepare kitchen staff for UK Food Safety Level 2 certification with this practice test covering critical temperatures, hygiene, and cross-contamination.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };
