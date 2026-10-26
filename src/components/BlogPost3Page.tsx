@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { ArrowLeft, ArrowRight, Share2, ChevronDown, ChevronUp, CheckCircle, Smartphone, Zap, Search, Layout } from "lucide-react";
 
 const faqs = [
@@ -45,13 +46,13 @@ export const BlogPost3Page = () => {
     <div className="min-h-screen bg-black text-[#E1E0CC]">
       {/* ── Sticky Header ── */}
       <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <button
-          onClick={() => router.push("/blogs")}
+        <Link
+          href="/blogs"
           className="flex items-center gap-2 text-sm font-semibold text-white/70 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back
-        </button>
+          <span>return to the Saim Dev blog</span>
+        </Link>
         <div className="flex items-center gap-3">
           <button className="flex items-center gap-1.5 text-xs font-semibold text-white/50 hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-full cursor-pointer">
             <Share2 className="w-3.5 h-3.5" /> Share
@@ -236,6 +237,37 @@ export const BlogPost3Page = () => {
 
         </motion.article>
 
+        {/* ── Related resources ── */}
+        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 mb-8">
+          <p className="text-xs font-bold tracking-widest uppercase text-primary/80 mb-2">Related resources</p>
+          <p className="text-white/60 text-xs sm:text-sm mb-5 font-light">
+            Learn more about our web development services, bespoke architecture, and direct quotes:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+            <Link
+              href="/services"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>fixed-price website development</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+            <Link
+              href="/nextjs-developer-uk"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>Next.js websites for UK businesses</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+            <Link
+              href="/contact"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>discuss your website project</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+
         {/* ── Author Card ── */}
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-10">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
@@ -247,6 +279,14 @@ export const BlogPost3Page = () => {
             </p>
           </div>
         </motion.div>
+
+        {/* ── Back ── */}
+        <div className="text-center mt-6">
+          <Link href="/blogs" className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
+            <ArrowLeft className="w-4 h-4" />
+            <span>return to the Saim Dev blog</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

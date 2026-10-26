@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 
 const faqs = [
@@ -78,13 +79,13 @@ export const BlogPost2Page = () => {
 
       {/* ── Sticky Header ── */}
       <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <button
-          onClick={() => router.push('/blogs')}
+        <Link
+          href="/blogs"
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          All Blogs
-        </button>
+          <span>return to the Saim Dev blog</span>
+        </Link>
         <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white hidden sm:block">Saim Dev</span>
@@ -320,6 +321,37 @@ export const BlogPost2Page = () => {
           </a>
         </motion.div>
 
+        {/* ── Related resources ── */}
+        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 mb-8">
+          <p className="text-xs font-bold tracking-widest uppercase text-primary/80 mb-2">Related resources</p>
+          <p className="text-white/60 text-xs sm:text-sm mb-5 font-light">
+            Looking to grow your business online? Explore our development services, verified results, and quotes:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+            <Link
+              href="/services"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>fixed-price website development</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+            <Link
+              href="/case-studies"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>website case studies</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+            <Link
+              href="/contact"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>discuss your website project</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+
         {/* ── Author Card ── */}
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-10">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
@@ -334,9 +366,10 @@ export const BlogPost2Page = () => {
 
         {/* ── Back ── */}
         <div className="text-center">
-          <button onClick={() => router.push('/blogs')} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
-            <ArrowLeft className="w-4 h-4" />Back to all blogs
-          </button>
+          <Link href="/blogs" className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
+            <ArrowLeft className="w-4 h-4" />
+            <span>return to the Saim Dev blog</span>
+          </Link>
         </div>
       </div>
     </div>

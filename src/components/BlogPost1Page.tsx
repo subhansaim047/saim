@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, XCircle, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -119,13 +120,13 @@ export const BlogPost1Page = () => {
       
       {/* ── Sticky Header ── */}
       <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <button
-          onClick={() => router.push('/blogs')}
+        <Link
+          href="/blogs"
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          All Blogs
-        </button>
+          <span>return to the Saim Dev blog</span>
+        </Link>
         <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white hidden sm:block">Saim Dev</span>
@@ -489,24 +490,50 @@ export const BlogPost1Page = () => {
           </div>
         </motion.div>
 
-        {/* ── Internal Links ── */}
-        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 mb-10">
-          <p className="text-xs font-bold tracking-widest uppercase text-white/30 mb-4">Related articles coming soon</p>
-          <div className="space-y-2 text-sm text-white/40">
-            {["Local SEO Guide for Small Businesses", "Why Page Speed Directly Affects Your Revenue", "Google Business Profile: Complete Setup Guide", "How Much Should a Small Business Website Cost?", "Why Mobile Optimisation Is Non-Negotiable in 2026"].map((t, i) => (
-              <p key={i} className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary/40 flex-shrink-0" />
-                {t}
-              </p>
-            ))}
+        {/* ── Related resources ── */}
+        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 mb-10">
+          <p className="text-xs font-bold tracking-widest uppercase text-primary/80 mb-2">Related resources</p>
+          <p className="text-white/60 text-xs sm:text-sm mb-5 font-light">
+            Explore our engineering services, performance results, and direct project consultation:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <Link
+              href="/services"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>fixed-price website development</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+            <Link
+              href="/nextjs-developer-uk"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>Next.js websites for UK businesses</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+            <Link
+              href="/case-studies"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>website case studies</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+            <Link
+              href="/contact"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>discuss your website project</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
           </div>
         </div>
 
         {/* ── Back ── */}
         <div className="text-center">
-          <button onClick={() => router.push('/blogs')} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
-            <ArrowLeft className="w-4 h-4" />Back to all blogs
-          </button>
+          <Link href="/blogs" className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
+            <ArrowLeft className="w-4 h-4" />
+            <span>return to the Saim Dev blog</span>
+          </Link>
         </div>
       </div>
     </div>
