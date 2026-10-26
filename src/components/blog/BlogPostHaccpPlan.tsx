@@ -129,6 +129,16 @@ export const BlogPostHaccpPlan: React.FC = () => {
           </div>
         </div>
 
+        {/* ── Key Regulatory Definition ── */}
+        <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 text-white/90 mb-12">
+          <dl className="space-y-2 text-sm leading-relaxed">
+            <dt className="text-primary font-mono text-xs uppercase tracking-wider font-bold">What is HACCP (Hazard Analysis and Critical Control Point)?</dt>
+            <dd className="text-white/80">
+              Hazard Analysis and Critical Control Point (HACCP) is an internationally recognised, systematic food safety management system codified into UK law under Regulation (EC) No 852/2004. It identifies, evaluates, and controls biological, chemical, physical, and allergenic hazards at specific operational stages called Critical Control Points (CCPs).
+            </dd>
+          </dl>
+        </div>
+
         {/* ── Table of Contents ── */}
         <nav className="p-6 rounded-2xl bg-[#0d0d10] border border-white/10 mb-12">
           <h2 className="text-xs font-mono uppercase tracking-widest text-primary mb-4 font-bold">Table of Contents</h2>

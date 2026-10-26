@@ -225,6 +225,27 @@ export const ServicesPage = () => {
           </p>
         </div>
 
+        {/* Key Architectural Standards */}
+        <div className="liquid-glass rounded-3xl p-6 sm:p-8 border border-white/10 mb-12">
+          <h2 className="text-xs font-mono uppercase tracking-widest text-primary mb-3 font-bold">
+            Key Architectural Standards
+          </h2>
+          <dl className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm text-white/80">
+            <div className="space-y-1">
+              <dt className="text-white font-semibold text-sm">What is Next.js?</dt>
+              <dd className="text-white/60 leading-relaxed font-light">
+                An open-source React framework built by Vercel that delivers hybrid static generation and server-side rendering for ultra-fast page speeds, automatic code splitting, and native search engine discoverability.
+              </dd>
+            </div>
+            <div className="space-y-1">
+              <dt className="text-white font-semibold text-sm">What are Core Web Vitals?</dt>
+              <dd className="text-white/60 leading-relaxed font-light">
+                Google’s standardized web vitals assessing real-world user page experience: Largest Contentful Paint (loading speed &lt; 2.5s), Interaction to Next Paint (interactivity &lt; 200ms), and Cumulative Layout Shift (visual stability &lt; 0.1).
+              </dd>
+            </div>
+          </dl>
+        </div>
+
         {/* 2. SERVICES LIST */}
         <div className="space-y-10 mb-20">
           {detailedServices.map((service) => (

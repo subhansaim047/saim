@@ -210,6 +210,27 @@ export default function PpdsLabelGeneratorPage() {
         {/* ── INTERACTIVE TOOL ── */}
         <PpdsLabelGeneratorTool />
 
+        {/* ── Regulatory Definitions List ── */}
+        <div className="no-print bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200 shadow-sm space-y-3">
+          <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-amber-900">
+            Key Regulatory Definitions
+          </h2>
+          <dl className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-neutral-800">
+            <div className="p-4 rounded-2xl bg-white border border-neutral-200">
+              <dt className="font-bold text-neutral-950 mb-1">What is PPDS (Prepacked for Direct Sale)?</dt>
+              <dd className="text-neutral-600 leading-relaxed">
+                Food that is packaged at the same premises from which it is offered to consumers before it is ordered or selected. Examples include pre-boxed sandwiches in display chillers, bottled fresh juices, and packaged bakery goods.
+              </dd>
+            </div>
+            <div className="p-4 rounded-2xl bg-white border border-neutral-200">
+              <dt className="font-bold text-neutral-950 mb-1">What is Natasha’s Law?</dt>
+              <dd className="text-neutral-600 leading-relaxed">
+                The Food Information (Amendment) Regulations 2019, in force across the UK since 1 October 2021. It requires all PPDS food to feature an explicit label showing the product name, full ingredients list, and clear emphasis for any of the 14 major allergens.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
         {/* ── HOW TO USE STEP-BY-STEP GUIDE ── */}
         <div className="no-print bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200 shadow-sm space-y-4">
           <h2 className="text-lg sm:text-xl font-bold text-neutral-900">

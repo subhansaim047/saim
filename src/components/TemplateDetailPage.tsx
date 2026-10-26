@@ -256,6 +256,38 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           </ol>
         </nav>
 
+        {/* Contextual Regulatory Definition */}
+        {isHaccpTool && (
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-xs sm:text-sm text-slate-700 no-print">
+            <dl className="space-y-1">
+              <dt className="font-bold text-slate-900 text-xs sm:text-sm">What is HACCP?</dt>
+              <dd className="leading-relaxed text-slate-600">
+                Hazard Analysis and Critical Control Point (HACCP) is a systematic, preventative food safety management system that identifies, evaluates, and controls biological, chemical, physical, and allergenic hazards at specific operational stages called Critical Control Points (CCPs).
+              </dd>
+            </dl>
+          </div>
+        )}
+        {isAllergenTool && (
+          <div className="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-5 text-xs sm:text-sm text-slate-700 no-print">
+            <dl className="space-y-1">
+              <dt className="font-bold text-amber-950 text-xs sm:text-sm">What are the 14 statutory allergens?</dt>
+              <dd className="leading-relaxed text-slate-600">
+                Under UK food law (Regulation (EU) No 1169/2011 retained in UK law and the Food Information Regulations 2014), food businesses must declare by law the presence of 14 major allergens: celery, cereals containing gluten, crustaceans, eggs, fish, lupin, milk, molluscs, mustard, tree nuts, peanuts, sesame seeds, soya, and sulphur dioxide (sulphites).
+              </dd>
+            </dl>
+          </div>
+        )}
+        {isChecklistOrLog && (
+          <div className="bg-blue-50/60 border border-blue-200/70 rounded-2xl p-5 text-xs sm:text-sm text-slate-700 no-print">
+            <dl className="space-y-1">
+              <dt className="font-bold text-blue-950 text-xs sm:text-sm">What is SFBB (Safer Food, Better Business)?</dt>
+              <dd className="leading-relaxed text-slate-600">
+                Safer Food, Better Business (SFBB) is a practical food safety management pack developed by the UK Food Standards Agency (FSA). It helps small catering and retail businesses comply with food hygiene regulations through documented procedures across cooking, cleaning, chilling, cross-contamination, and daily opening/closing checks.
+              </dd>
+            </dl>
+          </div>
+        )}
+
         {/* Editorial Trust & Verification Meta Bar */}
         <div className="bg-white rounded-2xl border border-gray-200 p-4 shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs no-print">
           <div className="flex flex-wrap items-center gap-3 text-gray-600">

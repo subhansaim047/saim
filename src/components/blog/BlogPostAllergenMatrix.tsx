@@ -108,6 +108,16 @@ export const BlogPostAllergenMatrix: React.FC = () => {
           </div>
         </div>
 
+        {/* ── Key Regulatory Definition ── */}
+        <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 text-white/90 mb-12">
+          <dl className="space-y-2 text-sm leading-relaxed">
+            <dt className="text-primary font-mono text-xs uppercase tracking-wider font-bold">What are the 14 statutory allergens?</dt>
+            <dd className="text-white/80">
+              Under UK food law (Regulation (EU) No 1169/2011 retained in UK law and the Food Information Regulations 2014), food businesses are legally required to declare 14 specific allergens whenever used as ingredients: celery, cereals containing gluten, crustaceans, eggs, fish, lupin, milk, molluscs, mustard, tree nuts, peanuts, sesame seeds, soya, and sulphur dioxide (or sulphites above 10mg/kg).
+            </dd>
+          </dl>
+        </div>
+
         {/* ── Table of Contents ── */}
         <nav className="p-6 rounded-2xl bg-[#0d0d10] border border-white/10 mb-12">
           <h2 className="text-xs font-mono uppercase tracking-widest text-primary mb-4 font-bold">Table of Contents</h2>

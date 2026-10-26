@@ -53,9 +53,15 @@ export const TechnologiesPage = () => {
               <div>
                 <span className="text-2xl mb-3 block">▲</span>
                 <h3 className="text-white font-medium text-lg mb-1">Next.js</h3>
-                <p className="text-white/60 text-xs font-light leading-relaxed">
+                <p className="text-white/60 text-xs font-light leading-relaxed mb-2">
                   Server-side rendering, static site generation, and optimal edge routing.
                 </p>
+                <dl className="pt-2 border-t border-white/10 text-xs">
+                  <dt className="text-primary font-mono text-[11px] uppercase tracking-wider font-bold mb-0.5">What is Next.js?</dt>
+                  <dd className="text-white/60 leading-relaxed font-light">
+                    Next.js is an open-source React framework developed by Vercel that combines server-side rendering, static site generation, and edge routing to build ultra-fast, search-optimised web applications.
+                  </dd>
+                </dl>
               </div>
               <Link
                 href="/nextjs-developer-uk"
@@ -91,9 +97,15 @@ export const TechnologiesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="liquid-glass rounded-2xl p-7 border border-white/10">
               <h3 className="text-white font-medium text-lg mb-2">Core Web Vitals Optimization</h3>
-              <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed mb-4">
+              <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed mb-3">
                 Sub-second LCP (Largest Contentful Paint &lt; 2.5s), minimal CLS (&lt; 0.1), and rapid INP (&lt; 200ms) for high Google search rankings.
               </p>
+              <dl className="mb-4 p-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs">
+                <dt className="text-primary font-mono text-[11px] uppercase tracking-wider font-bold mb-1">What are Core Web Vitals?</dt>
+                <dd className="text-white/60 leading-relaxed font-light">
+                  Core Web Vitals are a standardized set of real-world user experience metrics defined by Google that evaluate loading speed (LCP), interactivity responsiveness (INP), and visual stability (CLS).
+                </dd>
+              </dl>
               <div className="flex items-center gap-3 text-xs font-mono text-emerald-400 mb-3">
                 <span className="bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">LCP &lt; 2.5s</span>
                 <span className="bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">CLS &lt; 0.1</span>

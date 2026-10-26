@@ -96,6 +96,24 @@ export const BlogPostNatashasLaw: React.FC = () => {
 
         {/* Article Body */}
         <article className="space-y-10 text-sm sm:text-base text-white/80 leading-relaxed">
+          {/* ── Key Regulatory Definitions ── */}
+          <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 text-white/90 mb-4">
+            <dl className="space-y-4 text-sm leading-relaxed">
+              <div>
+                <dt className="text-primary font-mono text-xs uppercase tracking-wider font-bold mb-1">What is Natasha’s Law?</dt>
+                <dd className="text-white/80">
+                  Natasha’s Law is the UK Food Information (Amendment) Regulations 2019, which took effect across England, Wales, Scotland, and Northern Ireland on 1 October 2021. It mandates that any food business selling Prepacked for Direct Sale (PPDS) food must display a label with a full ingredients list and clear emphasis of any of the 14 statutory allergens present.
+                </dd>
+              </div>
+              <div className="pt-3 border-t border-white/10">
+                <dt className="text-primary font-mono text-xs uppercase tracking-wider font-bold mb-1">What is PPDS (Prepacked for Direct Sale)?</dt>
+                <dd className="text-white/80">
+                  Prepacked for Direct Sale (PPDS) refers to food that is packaged on the same premises from which it is offered to consumers before it is ordered or selected. Common examples include boxed sandwiches, packaged salads, and bakery goods wrapped on-site before display.
+                </dd>
+              </div>
+            </dl>
+          </div>
+
           {/* Section 1 */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">

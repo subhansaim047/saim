@@ -110,6 +110,16 @@ export const BlogPostChecklist: React.FC = () => {
           </div>
         </div>
 
+        {/* ── Key Regulatory Definition ── */}
+        <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 text-white/90 mb-12">
+          <dl className="space-y-2 text-sm leading-relaxed">
+            <dt className="text-primary font-mono text-xs uppercase tracking-wider font-bold">What is SFBB (Safer Food, Better Business)?</dt>
+            <dd className="text-white/80">
+              Safer Food, Better Business (SFBB) is an established food safety management pack developed by the UK Food Standards Agency (FSA). It helps small catering and retail businesses comply with food hygiene regulations through documented procedures across cooking, cleaning, chilling, cross-contamination, and daily opening and closing checks.
+            </dd>
+          </dl>
+        </div>
+
         {/* ── Table of Contents ── */}
         <nav className="p-6 rounded-2xl bg-[#0d0d10] border border-white/10 mb-12">
           <h2 className="text-xs font-mono uppercase tracking-widest text-primary mb-4 font-bold">Table of Contents</h2>

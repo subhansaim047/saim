@@ -245,6 +245,18 @@ export default function TakeawayWebDesignPage() {
           </div>
         </div>
 
+        {/* Semantic Concept Definition */}
+        <div className="p-6 sm:p-8 rounded-3xl bg-neutral-900/60 border border-white/10">
+          <dl className="space-y-2 text-xs sm:text-sm text-white/80">
+            <dt className="text-amber-400 font-mono text-xs uppercase tracking-wider font-bold">
+              What is a Direct Ordering Website?
+            </dt>
+            <dd className="text-white/70 leading-relaxed font-light">
+              A direct ordering website is an independent digital ordering platform owned exclusively by a takeaway or restaurant. It enables local customers to browse menus, filter allergens, and submit collection or delivery orders directly via WhatsApp, SMS, or online payment gateways—eliminating third-party portal cuts and commission percentages.
+            </dd>
+          </dl>
+        </div>
+
         {/* ── THE MATH: JUST EAT VS DIRECT SYSTEM ── */}
         <div className="rounded-3xl bg-neutral-900/80 border border-white/10 p-8 sm:p-10 space-y-6">
           <div className="max-w-2xl">

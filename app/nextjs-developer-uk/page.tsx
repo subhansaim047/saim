@@ -158,6 +158,29 @@ export default function NextJsDeveloperUkPage() {
           </div>
         </section>
 
+        {/* KEY TECHNICAL DEFINITIONS */}
+        <section className="px-4 sm:px-6 max-w-5xl mx-auto mb-16">
+          <div className="p-6 sm:p-8 rounded-3xl bg-white/[0.03] border border-white/10">
+            <h2 className="text-xs font-mono uppercase tracking-widest text-primary mb-4 font-bold">
+              Core Technical Concepts
+            </h2>
+            <dl className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm text-white/80">
+              <div className="space-y-1.5">
+                <dt className="text-white font-semibold text-sm">What is Next.js?</dt>
+                <dd className="text-white/60 leading-relaxed font-light">
+                  Next.js is a full-stack React web framework designed by Vercel. It combines server-side rendering (SSR), static site generation (SSG), and edge middleware to deliver fast, secure, and search-optimised websites for modern businesses.
+                </dd>
+              </div>
+              <div className="space-y-1.5">
+                <dt className="text-white font-semibold text-sm">What are Core Web Vitals?</dt>
+                <dd className="text-white/60 leading-relaxed font-light">
+                  Core Web Vitals are Google’s standardized metrics measuring real-world web page performance, primarily Largest Contentful Paint (loading speed &lt; 2.5s), Interaction to Next Paint (responsiveness &lt; 200ms), and Cumulative Layout Shift (visual stability &lt; 0.1).
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
         {/* WHY UK BUSINESSES CHOOSE SAIM DEV VS UK AGENCIES */}
         <section className="py-16 sm:py-24 border-t border-white/10 bg-black">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
