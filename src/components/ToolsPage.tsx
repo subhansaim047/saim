@@ -487,7 +487,14 @@ export const ToolsPage: React.FC = () => {
           </p>
 
           {/* Quick value cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 w-full mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-3 w-full mt-4">
+            <Link href="/tools/ppds-label-generator" className="p-3 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center gap-2.5 text-left hover:bg-amber-400/20 transition-all group">
+              <Sparkles className="w-4 h-4 text-amber-400 shrink-0 group-hover:scale-110 transition-transform" />
+              <div>
+                <div className="text-xs font-bold text-white group-hover:text-amber-300">PPDS Label Maker</div>
+                <div className="text-[10px] text-amber-300/80 font-mono">Natasha's Law Free</div>
+              </div>
+            </Link>
             <div className="p-3 rounded-xl bg-white/[0.02] border border-white/10 flex items-center gap-2.5 text-left">
               <ShieldAlert className="w-4 h-4 text-primary shrink-0" />
               <div>
@@ -1595,28 +1602,41 @@ export const ToolsPage: React.FC = () => {
         {/* ═══════════════════════════════════════════════════════════════
             AGENCY CONVERSION & LEAD MAGNET BANNER (NO-PRINT)
         ════════════════════════════════════════════════════════════════ */}
-        <section className="mt-16 rounded-3xl bg-gradient-to-r from-[#141418] via-[#1c1b12] to-[#141418] border border-primary/25 p-8 sm:p-12 relative overflow-hidden shadow-2xl no-print lead-cta-banner">
-          <div className="max-w-3xl">
-            <span className="text-primary text-xs font-mono uppercase tracking-widest mb-2 block">
-              Automate Your Takeaway &amp; Save Thousands
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
-              Want an online menu with an allergen filter?
-            </h2>
-            <p className="text-sm sm:text-base text-white/70 mt-3 leading-relaxed">
-              Saim Dev builds fast, mobile-friendly websites for UK takeaways and restaurants, including allergen filters on menus.
-            </p>
+        <section className="mt-16 rounded-3xl bg-gradient-to-r from-[#141418] via-[#1c1b12] to-[#141418] border border-primary/30 p-8 sm:p-12 relative overflow-hidden shadow-2xl no-print lead-cta-banner">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="max-w-3xl space-y-3">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-primary text-xs font-mono uppercase tracking-widest font-bold">
+                  Bespoke Takeaway Web Architecture · Fixed £250
+                </span>
+                <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-mono uppercase px-2 py-0.5 rounded-full border border-emerald-500/30 font-bold">
+                  Zero Commission
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                Stop Losing 30%+ Order Revenue to Just Eat &amp; Deliveroo
+              </h2>
+              <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
+                We build sub-second Next.js direct-ordering websites for UK takeaways and restaurants. Includes live interactive Natasha&apos;s Law 14-allergen menu filtering, instant WhatsApp order dispatch, and Google Maps local SEO—starting from a one-time fixed fee of £250 with zero ongoing commission cuts.
+              </p>
+            </div>
 
-            <div className="flex flex-wrap items-center gap-3 mt-6">
+            <div className="flex flex-col sm:flex-row lg:flex-col items-stretch sm:items-center lg:items-stretch gap-3 shrink-0">
               <a
-                href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20using%20your%20food%20safety%20tools%20and%20interested%20in%20a%20takeaway%20website"
+                href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20using%20your%20food%20safety%20tools%20and%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary hover:brightness-110 text-black text-xs sm:text-sm font-bold px-6 py-3 rounded-full flex items-center gap-2 transition-all shadow-xl"
+                className="bg-primary hover:brightness-110 text-black text-xs sm:text-sm font-bold px-6 py-3.5 rounded-full flex items-center justify-center gap-2 transition-all shadow-xl hover:scale-105 cursor-pointer"
               >
-                <span>Discuss Your Project on WhatsApp</span>
+                <span>Chat on WhatsApp</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
+              <Link
+                href="/services/takeaway-web-design"
+                className="bg-white/10 hover:bg-white/15 text-white text-xs sm:text-sm font-medium px-6 py-3.5 rounded-full flex items-center justify-center gap-2 transition-all border border-white/15 text-center"
+              >
+                <span>View Takeaway System (£250)</span>
+              </Link>
             </div>
           </div>
         </section>

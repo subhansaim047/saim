@@ -597,37 +597,52 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           </div>
         )}
 
-        {/* Conversion Banner */}
-        <div className="rounded-3xl bg-[#1D1D1F] text-white p-8 sm:p-10 space-y-3 shadow-xl conversion-banner no-print">
-          <span className="text-amber-400 font-mono text-xs uppercase tracking-widest font-bold">
-            Bespoke Takeaway Web Development
-          </span>
-          <h3 className="text-xl sm:text-2xl font-bold">
-            Need an online menu with an allergen filter?
-          </h3>
-          <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-2xl">
-            Saim Dev builds fast, mobile-friendly websites for UK takeaways and restaurants, including allergen filters on menus.
-          </p>
-          <div className="pt-2">
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                if (typeof window !== "undefined") {
-                  window.dispatchEvent(
-                    new CustomEvent("cta_click", {
-                      detail: { location: "template_footer", target: "whatsapp" }
-                    })
-                  );
-                  console.log("CTA Click Event:", { location: "template_footer", target: "whatsapp" });
-                }
-              }}
-              className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-5 py-2.5 rounded-full inline-flex items-center gap-1.5 transition-all shadow"
-            >
-              <span>Chat on WhatsApp</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+        {/* Conversion Banner: High-Impact Takeaway Commercial Bridge */}
+        <div className="rounded-3xl bg-neutral-950 text-white p-8 sm:p-10 space-y-4 shadow-2xl conversion-banner no-print border border-neutral-800">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="space-y-2 max-w-2xl">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-amber-400 font-mono text-xs uppercase tracking-widest font-bold">
+                  Bespoke Takeaway Web Development · Fixed £250
+                </span>
+                <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] px-2 py-0.5 rounded-full font-mono uppercase">
+                  Zero Commission
+                </span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold tracking-tight">
+                Stop losing 30%+ order revenue to Just Eat & Deliveroo
+              </h3>
+              <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light">
+                We build sub-second Next.js direct ordering websites for UK takeaways and restaurants. Features interactive Natasha's Law 14-allergen menu filtering, WhatsApp & kitchen SMS order dispatch, and Google Maps local SEO—starting from a one-time fixed fee of £250 with zero monthly cuts.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+              <a
+                href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    window.dispatchEvent(
+                      new CustomEvent("cta_click", {
+                        detail: { location: "template_footer", target: "whatsapp" }
+                      })
+                    );
+                    console.log("CTA Click Event:", { location: "template_footer", target: "whatsapp" });
+                  }
+                }}
+                className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all shadow-lg hover:scale-105"
+              >
+                <span>Chat on WhatsApp</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+              <Link
+                href="/services/takeaway-web-design"
+                className="bg-white/10 hover:bg-white/20 text-white font-medium text-xs px-5 py-3.5 rounded-full inline-flex items-center justify-center gap-1.5 transition-all border border-white/15"
+              >
+                <span>Takeaway Demo & Details</span>
+              </Link>
+            </div>
           </div>
         </div>
 

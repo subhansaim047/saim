@@ -9,6 +9,9 @@ import { motion, AnimatePresence } from "framer-motion";
 interface ServiceDetail {
   id: string;
   title: string;
+  price?: string;
+  featured?: boolean;
+  dedicatedLink?: string;
   description: string;
   benefits: string[];
   deliverables: string[];
@@ -17,21 +20,47 @@ interface ServiceDetail {
 
 const detailedServices: ServiceDetail[] = [
   {
-    id: "custom-web",
-    title: "Custom Website Development",
+    id: "takeaway-web",
+    title: "Takeaway & Restaurant Web System (Commission-Free)",
+    price: "Fixed £250",
+    featured: true,
+    dedicatedLink: "/services/takeaway-web-design",
     description:
-      "Bespoke full-stack web architecture designed to establish brand authority, engage visitors, and turn traffic into predictable sales.",
+      "Bespoke, lightning-fast Next.js direct-ordering website designed for UK takeaways, chip shops, and restaurants. Escape 30%+ Just Eat, Deliveroo, and Uber Eats commissions with an interactive Natasha's Law allergen-filtered menu and instant WhatsApp order routing.",
     benefits: [
-      "Custom codebase built from scratch",
-      "High conversion UI layout",
-      "Sub-second loading times",
-      "Full ownership of code and assets",
+      "Zero monthly commission fees (keep 100% of order revenue)",
+      "Interactive 14-allergen filter compliant with Natasha's Law",
+      "Direct WhatsApp and SMS checkout routing with zero friction",
+      "Sub-second load times on 4G/5G mobile devices (100/100 Core Web Vitals)",
+      "Google Maps & Local UK SEO setup for 'takeaway near me' searches",
     ],
     deliverables: [
-      "Responsive React/Tailwind codebase",
-      "Content Architecture & Copy Structure",
-      "Contact & Lead Forms",
-      "14–30 Days Support",
+      "Custom Next.js 16 Responsive Ordering Website",
+      "Full Digital Menu with Live Allergen Filtering",
+      "Direct WhatsApp / Call / Table Order Dispatch",
+      "Printable Table QR Codes & Allergen Matrix Export",
+      "Domain, SSL, Hosting & Google Business Profile Setup",
+      "Full Code Ownership with Zero Monthly Agency Lock-In",
+    ],
+    timeline: "3 – 5 Days",
+  },
+  {
+    id: "custom-web",
+    title: "Custom Small Business Website",
+    price: "From £350",
+    description:
+      "Bespoke full-stack web architecture designed for UK & European service businesses to establish brand authority, engage local visitors, and convert organic traffic into predictable enquiries.",
+    benefits: [
+      "Custom Next.js codebase built from scratch",
+      "High-conversion layout structured for local UK search",
+      "Sub-second loading times (100/100 Core Web Vitals)",
+      "Full ownership of code, assets, and hosting",
+    ],
+    deliverables: [
+      "Responsive React/Tailwind codebase (up to 5 pages)",
+      "Content Architecture & Local SEO Copywriting",
+      "Contact & Lead Capture Forms with Instant Alerts",
+      "14–30 Days Dedicated Launch Support",
     ],
     timeline: "5 – 10 Days",
   },
@@ -143,12 +172,22 @@ const serviceFaqs = [
   {
     question: "Which plan or service is right for my business?",
     answer:
-      "If you need a fast, essential business presence with up to 5 pages, the Starter Plan ($500 – $1,000) is ideal. For comprehensive multi-page websites with advanced animations, AI chatbot, and full SEO, choose the Business Plan ($1,000 – $5,000).",
+      "If you operate a UK takeaway, cafe, or restaurant, our £250 Fixed Price Takeaway Package is specifically tailored to eliminate 30%+ Just Eat, Deliveroo, and Uber Eats commissions with an interactive Natasha's Law allergen-filtered menu. For general UK and European small businesses, our Starter Plan begins at £250, and comprehensive multi-page custom builds range from £350 to £850.",
+  },
+  {
+    question: "Does the takeaway website include Natasha's Law allergen filtering?",
+    answer:
+      "Yes. Every restaurant and takeaway site we deliver includes an interactive 14-allergen filter matrix on the digital menu. Diners can filter out nuts, gluten, dairy, celery, mustard, etc. in real time, helping you maintain compliance with the Food Information Regulations 2014 and Natasha's Law.",
+  },
+  {
+    question: "Are there any recurring commission fees or monthly subscriptions?",
+    answer:
+      "None. Unlike aggregator platforms (Just Eat, Deliveroo) that take 20% to 35% of every single order, you pay a one-time fixed price from £250. Orders go directly to your WhatsApp or kitchen tablet, and you keep 100% of your customer revenue.",
   },
   {
     question: "Do I get full ownership of the website?",
     answer:
-      "Yes! Upon project completion and 100% full payment, you receive full ownership of the code, assets, and design with zero recurring agency locks.",
+      "Yes! Upon project completion and full payment, you receive full ownership of the Next.js code, assets, and design with zero recurring agency locks or platform dependency.",
   },
 ];
 
@@ -196,12 +235,35 @@ export const ServicesPage = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-light text-white mb-2">
-                    {service.title}
-                  </h2>
+                  <div className="flex items-center gap-3 flex-wrap mb-2">
+                    <h2 className="text-2xl sm:text-3xl font-light text-white">
+                      {service.title}
+                    </h2>
+                    {service.price && (
+                      <span className="px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 font-mono text-xs font-bold">
+                        {service.price}
+                      </span>
+                    )}
+                    {service.featured && (
+                      <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-mono uppercase font-bold tracking-wider">
+                        Most Popular for UK Food Businesses
+                      </span>
+                    )}
+                  </div>
                   <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed max-w-2xl">
                     {service.description}
                   </p>
+                  {service.dedicatedLink && (
+                    <div className="mt-3">
+                      <a
+                        href={service.dedicatedLink}
+                        className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-4 transition-colors"
+                      >
+                        <span>View Takeaway System Features & Live Demo Breakdown</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  )}
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono text-primary bg-white/5 border border-white/10 px-3.5 py-2 rounded-full shrink-0 self-start md:self-auto">
                   <Clock className="w-4 h-4" />

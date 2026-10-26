@@ -31,7 +31,8 @@
 1. [Saim Dev Homepage](https://www.saimdev.site/): Bespoke Next.js websites for UK and European businesses with fixed pricing from £250.
 2. [Free UK Kitchen Tools & Templates Hub](https://www.saimdev.site/tools): Free printable food safety templates, checklists, logs, and calculators for UK restaurants and takeaways.
 3. [Next.js Developer UK](https://www.saimdev.site/nextjs-developer-uk): Specialist freelance Next.js web development for UK businesses seeking 95+ PageSpeed and sub-second load times.
-4. [Web Development Services](https://www.saimdev.site/services): Full-stack web development, online ordering systems, speed optimization, and technical SEO architecture.
+4. [Takeaway Website Design UK](https://www.saimdev.site/services/takeaway-web-design): Commission-free direct ordering websites for UK takeaways & restaurants with built-in Natasha's Law allergen filters. Fixed £250.
+5. [Web Development Services](https://www.saimdev.site/services): Full-stack web development, online ordering systems, speed optimization, and technical SEO architecture.
 5. [Case Studies & Results](https://www.saimdev.site/case-studies): Real business website case studies showing sub-second speed metrics and organic conversion improvements.
 6. [Modern Tech Stack](https://www.saimdev.site/technologies): Architectural breakdown of Next.js App Router, Tailwind CSS, TypeScript, and edge infrastructure.
 7. [About Saim Dev](https://www.saimdev.site/about): Honest overview of our Pakistan-based Next.js studio serving UK and EU clients remotely.
