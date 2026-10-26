@@ -23,10 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/contact`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE_URL}/blogs`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/privacy`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/cookie-policy`,    lastModified: NOW, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/disclaimer`,       lastModified: NOW, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/terms`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
   // ─── Blog posts (including new high-intent guides) ─────────────────────────
