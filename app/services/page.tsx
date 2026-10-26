@@ -33,5 +33,32 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ServicesPage />;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.saimdev.site/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Web Development Services",
+        "item": "https://www.saimdev.site/services"
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <ServicesPage />
+    </>
+  );
 }

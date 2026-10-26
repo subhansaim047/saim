@@ -203,14 +203,18 @@ export const ServicesPage = () => {
     >
       
       <div className="max-w-5xl mx-auto">
-        {/* Top Back Navigation */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Main Page</span>
-        </Link>
+        {/* Visible Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-8">
+          <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            </li>
+            <li aria-hidden="true" className="text-white/30">/</li>
+            <li className="text-primary font-semibold" aria-current="page">
+              Services
+            </li>
+          </ol>
+        </nav>
 
         {/* 1. HERO */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -328,7 +332,17 @@ export const ServicesPage = () => {
           <p className="text-white/60 text-xs sm:text-sm mb-6 font-light">
             Discover our dedicated developer offerings, live interactive demos, and real performance metrics.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link
+              href="/services/takeaway-web-design"
+              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-amber-400/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-amber-400 uppercase block mb-1">Takeaway Specialty</span>
+              <span className="text-sm font-medium text-white group-hover:text-amber-400 transition-colors flex items-center justify-between">
+                <span>Takeaway web design from £250</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
             <Link
               href="/nextjs-developer-uk"
               className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
@@ -340,12 +354,32 @@ export const ServicesPage = () => {
               </span>
             </Link>
             <Link
+              href="/technologies"
+              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-primary uppercase block mb-1">Tech Stack</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                <span>Explore our Next.js engineering stack</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link
               href="/case-studies"
               className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
             >
               <span className="text-xs font-mono text-primary uppercase block mb-1">Performance Results</span>
               <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
                 <span>View our website case studies</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link
+              href="/demos"
+              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-primary uppercase block mb-1">Live Systems</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                <span>Test interactive web ordering demos</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>

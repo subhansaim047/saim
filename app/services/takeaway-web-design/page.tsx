@@ -187,6 +187,23 @@ export default function TakeawayWebDesignPage() {
       </header>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-16">
+        {/* Visible Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
+          <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            </li>
+            <li aria-hidden="true" className="text-white/30">/</li>
+            <li>
+              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            </li>
+            <li aria-hidden="true" className="text-white/30">/</li>
+            <li className="text-amber-400 font-semibold" aria-current="page">
+              Takeaway Web Design UK
+            </li>
+          </ol>
+        </nav>
+
         {/* HERO SECTION */}
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-amber-300 text-xs font-mono font-bold uppercase">

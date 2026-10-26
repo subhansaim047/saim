@@ -90,7 +90,18 @@ export const BlogPostHaccpPlan: React.FC = () => {
       {/* ── Hero / Article Header ── */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 pt-16 pb-24">
         <header className="mb-12 border-b border-white/10 pb-10">
-          <div className="flex flex-wrap items-center gap-3 mb-6">
+                  {/* Visible Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-6">
+          <ol className="flex items-center gap-1.5 text-xs text-white/50 flex-wrap">
+            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><Link href="/blogs" className="hover:text-white transition-colors">Blog</Link></li>
+            <li aria-hidden="true">/</li>
+            <li className="text-white font-medium truncate" aria-current="page">How to Write a UK HACCP Plan Step-by-Step</li>
+          </ol>
+        </nav>
+
+<div className="flex flex-wrap items-center gap-3 mb-6">
             <span className="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
               HACCP Principles &amp; Legal Food Law
             </span>

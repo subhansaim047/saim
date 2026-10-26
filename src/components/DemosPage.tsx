@@ -273,6 +273,23 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
       <div className="relative z-10 py-16 px-4 sm:px-8 max-w-7xl mx-auto flex-1 w-full">
         <div className="text-center mb-14">
           
+          {/* Visible Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
+            <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              </li>
+              <li aria-hidden="true" className="text-white/30">/</li>
+              <li>
+                <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+              </li>
+              <li aria-hidden="true" className="text-white/30">/</li>
+              <li className="text-primary font-semibold" aria-current="page">
+                Live Demos
+              </li>
+            </ol>
+          </nav>
+
           <h1 className="text-3xl sm:text-6xl font-bold tracking-tight text-white max-w-4xl mx-auto">
             Experience Live Client Websites & Demos
           </h1>

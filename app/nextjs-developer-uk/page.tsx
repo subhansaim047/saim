@@ -65,12 +65,41 @@ const ukFaqSchema = {
   ]
 };
 
+const ukBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.saimdev.site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.saimdev.site/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Next.js Developer UK",
+      "item": "https://www.saimdev.site/nextjs-developer-uk"
+    }
+  ]
+};
+
 export default function NextJsDeveloperUkPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ukFaqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ukBreadcrumbSchema) }}
       />
       <div className="min-h-screen bg-black text-[#E1E0CC] selection:bg-primary selection:text-black">
         {/* TOP BAR / NAVIGATION */}
@@ -104,6 +133,23 @@ export default function NextJsDeveloperUkPage() {
 
         {/* HERO */}
         <section className="relative px-4 sm:px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 max-w-5xl mx-auto text-center">
+          {/* Visible Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
+            <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              </li>
+              <li aria-hidden="true" className="text-white/30">/</li>
+              <li>
+                <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+              </li>
+              <li aria-hidden="true" className="text-white/30">/</li>
+              <li className="text-primary font-semibold" aria-current="page">
+                Next.js Developer UK
+              </li>
+            </ol>
+          </nav>
+
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-mono font-medium mb-6">
             <Sparkles className="w-3.5 h-3.5" />
             <span>UK & EUROPEAN WEB ARCHITECTURE SPECIALIST</span>

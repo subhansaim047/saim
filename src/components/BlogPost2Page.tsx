@@ -95,7 +95,18 @@ export const BlogPost2Page = () => {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
 
         {/* ── Article Header ── */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-10">
+                {/* Visible Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-6">
+          <ol className="flex items-center gap-1.5 text-xs text-white/50 flex-wrap">
+            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><Link href="/blogs" className="hover:text-white transition-colors">Blog</Link></li>
+            <li aria-hidden="true">/</li>
+            <li className="text-white font-medium truncate" aria-current="page">Free Websites for Local Businesses</li>
+          </ol>
+        </nav>
+
+<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-10">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-bold tracking-widest uppercase text-primary mb-5">
             Special Offer
           </span>

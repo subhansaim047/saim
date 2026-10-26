@@ -62,7 +62,18 @@ export const BlogPost3Page = () => {
 
       {/* ── Hero Article Header ── */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-16 pb-10">
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+                {/* Visible Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-6">
+          <ol className="flex items-center gap-1.5 text-xs text-white/50 flex-wrap">
+            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><Link href="/blogs" className="hover:text-white transition-colors">Blog</Link></li>
+            <li aria-hidden="true">/</li>
+            <li className="text-white font-medium truncate" aria-current="page">Agency Launch 50% Off Special</li>
+          </ol>
+        </nav>
+
+<motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <div className="flex items-center gap-3 mb-6">
             <span className="bg-primary/20 text-primary border border-primary/20 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
               Launch Special

@@ -160,15 +160,23 @@ export default function PpdsLabelGeneratorPage() {
 
       {/* Main Content Area */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-10">
-        {/* Top Breadcrumb & Metadata Badge */}
+        {/* Visible Breadcrumb Navigation */}
         <div className="no-print space-y-3">
-          <div className="flex items-center gap-2 text-xs text-neutral-500 font-mono flex-wrap">
-            <Link href="/" className="hover:underline">Home</Link>
-            <span>/</span>
-            <Link href="/tools" className="hover:underline">Tools</Link>
-            <span>/</span>
-            <span className="text-neutral-900 font-bold">PPDS Label Generator</span>
-          </div>
+          <nav aria-label="Breadcrumb">
+            <ol className="flex items-center gap-1.5 text-xs text-neutral-500 font-mono flex-wrap">
+              <li>
+                <Link href="/" className="hover:underline">Home</Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li>
+                <Link href="/tools" className="hover:underline">Tools</Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li className="text-neutral-900 font-bold" aria-current="page">
+                PPDS Label Generator
+              </li>
+            </ol>
+          </nav>
 
           <div className="flex items-center gap-2 flex-wrap">
             <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-mono font-bold uppercase">

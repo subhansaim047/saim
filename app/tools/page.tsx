@@ -33,5 +33,32 @@ export const metadata: Metadata = {
 };
 
 export default function Route() {
-  return <FoodSafetyTemplatesPage />;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.saimdev.site/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Free UK Kitchen Tools & Food Safety Templates",
+        "item": "https://www.saimdev.site/tools"
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <FoodSafetyTemplatesPage />
+    </>
+  );
 }

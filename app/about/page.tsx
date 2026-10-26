@@ -106,9 +106,18 @@ export default function AboutPage() {
 
       <main className="max-w-4xl mx-auto px-4 sm:px-8 py-12 sm:py-16 space-y-12">
         <div className="space-y-4">
-          <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-black">
-            <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
-          </Link>
+          {/* Visible Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="no-print mb-2">
+            <ol className="flex items-center gap-1.5 text-xs text-gray-500 font-medium flex-wrap">
+              <li>
+                <Link href="/" className="hover:text-black transition-colors">Home</Link>
+              </li>
+              <li aria-hidden="true" className="text-gray-300">/</li>
+              <li className="text-gray-900 font-semibold" aria-current="page">
+                About Saim Dev
+              </li>
+            </ol>
+          </nav>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[11px] font-semibold text-amber-900">
             <MapPin className="w-3.5 h-3.5 text-amber-700" />
             <span>Pakistan-Based Studio • Serving UK &amp; EU Remotely</span>

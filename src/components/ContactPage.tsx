@@ -69,14 +69,18 @@ export const ContactPage = () => {
       <div className="fixed top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#FF4A1C]/[0.025] rounded-full blur-[180px] pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-12 py-12">
-        {/* Top Back Navigation — Sybiosme Pill Style */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-white/70 hover:text-white text-xs font-mono uppercase tracking-wider transition-all mb-10 cursor-pointer hover:border-white/20"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span>Back to Home</span>
-        </Link>
+        {/* Visible Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-8">
+          <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            </li>
+            <li aria-hidden="true" className="text-white/30">/</li>
+            <li className="text-primary font-semibold" aria-current="page">
+              Contact
+            </li>
+          </ol>
+        </nav>
 
         {/* HERO */}
         <div className="text-center max-w-2xl mx-auto mb-14">

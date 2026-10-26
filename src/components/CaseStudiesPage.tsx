@@ -126,14 +126,22 @@ export const CaseStudiesPage = () => {
     >
       
       <div className="max-w-6xl mx-auto">
-        {/* Top Back Navigation */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Main Page</span>
-        </Link>
+        {/* Visible Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-8">
+          <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            </li>
+            <li aria-hidden="true" className="text-white/30">/</li>
+            <li>
+              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            </li>
+            <li aria-hidden="true" className="text-white/30">/</li>
+            <li className="text-primary font-semibold" aria-current="page">
+              Case Studies
+            </li>
+          </ol>
+        </nav>
 
         {/* HERO SECTION */}
         <div className="text-center max-w-3xl mx-auto mb-14">

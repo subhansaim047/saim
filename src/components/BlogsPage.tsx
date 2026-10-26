@@ -199,6 +199,19 @@ export const BlogsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
+          {/* Visible Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center gap-1.5 text-xs text-white/50 flex-wrap">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              </li>
+              <li aria-hidden="true" className="text-white/30">/</li>
+              <li className="text-white font-medium" aria-current="page">
+                Blog
+              </li>
+            </ol>
+          </nav>
+
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-white/60 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             Commercial Kitchen Systems &amp; Web Growth Blog
@@ -212,6 +225,53 @@ export const BlogsPage = () => {
             recipe portion economics, and web ordering systems.
           </p>
         </motion.div>
+      </section>
+
+      {/* ── Topical Silo Banners ── */}
+      <section className="px-4 sm:px-8 pb-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1">
+                Topical Silo A &bull; Web Engineering
+              </span>
+              <h2 className="text-base font-semibold text-white mb-1.5">
+                Web Development &amp; Small Business Growth
+              </h2>
+              <p className="text-xs text-white/60 leading-relaxed mb-3">
+                Insights on Next.js performance, local SEO, mobile conversions, and commission-free ordering systems.
+              </p>
+            </div>
+            <Link
+              href="/services"
+              className="text-xs font-medium text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5 transition-colors"
+            >
+              <span>Explore Fixed-Price Web Services from £250</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1">
+                Topical Silo B &bull; Hospitality Compliance
+              </span>
+              <h2 className="text-base font-semibold text-white mb-1.5">
+                Food Safety, SFBB &amp; Kitchen Operations
+              </h2>
+              <p className="text-xs text-white/60 leading-relaxed mb-3">
+                Practical playbooks on FSA standards, 14 statutory allergens, Natasha&apos;s Law, and 5-star EHO audits.
+              </p>
+            </div>
+            <Link
+              href="/tools"
+              className="text-xs font-medium text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1.5 transition-colors"
+            >
+              <span>Access 160+ Free Food Safety Tools &amp; Logs</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* ── Category Filter Links ── */}
