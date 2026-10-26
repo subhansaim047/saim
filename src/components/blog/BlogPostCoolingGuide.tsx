@@ -9,45 +9,34 @@ import {
 } from "lucide-react";
 import { SiteFooter } from "../SiteFooter";
 
-const COOLING_METHODS = [
-  { 
-    method: "Blast Chilling", 
-    desc: "Commercial blast chillers use high-velocity cold airflow to pull core temperatures from 70°C to below 3°C within 90 minutes. This is standard industry best practice in cook-chill catering." 
-  },
-  { 
-    method: "Shallow Gastronorm Pans", 
-    desc: "Spreading hot batches into clean stainless steel trays at a maximum depth of 50mm (2 inches) increases surface area, allowing heat to escape quickly before refrigeration." 
-  },
-  { 
-    method: "Ice Baths & Cold Water Slurries", 
-    desc: "Placing saucepots or soup containers into cold or iced water baths with periodic stirring drops core temperatures safely without heating surrounding kitchen equipment." 
-  },
-  { 
-    method: "Portioning & Slicing Meat Joints", 
-    desc: "Dividing large joints of beef, pork, or whole poultry into smaller cuts or individual portions releases trapped core heat far faster than attempting to cool whole roasts." 
-  }
-];
-
 const FAQS = [
   {
-    q: "Is the 90-minute cooling rule a statutory UK law?",
-    a: "No. Retained UK legislation (Regulation (EC) No 852/2004, Annex II, Chapter IX) states that food to be held or served chilled must be cooled as quickly as possible to avoid health risks. The 90-minute figure is Food Standards Agency (FSA) guidance in the Safer Food, Better Business (SFBB) system and an industry standard benchmark for cook-chill operations."
+    q: "Why must cooked food be cooled quickly?",
+    a: "Rapid cooling minimises time in the danger zone between 8°C and 63°C, preventing bacterial multiplication and spore germination."
   },
   {
-    q: "Why can't I put hot steaming food straight into a commercial fridge?",
-    a: "Placing hot food directly into a refrigerator elevates the interior air temperature of the unit. This warms neighbouring chilled foods into the Danger Zone (8°C to 63°C), promoting bacterial multiplication and placing heavy mechanical strain on commercial compressor coils."
+    q: "What is the safest way to cool a large batch of food?",
+    a: "Dividing batches into shallow stainless steel trays (under 50mm depth) and using a blast chiller or ice-water bath with frequent stirring."
   },
   {
-    q: "Why does cooked rice require a stricter 1-hour cooling protocol?",
-    a: "Uncooked rice naturally contains spores of Bacillus cereus, a bacterium whose spores survive boiling temperatures. If rice cools slowly, spores germinate into bacteria and produce emetic toxins (cereulide) that are heat-stable and cannot be destroyed by subsequent reheating. Rice should be cooled within 1 hour and chilled below 5°C."
+    q: "Can a blast chiller be used for cooked food?",
+    a: "Yes. Commercial blast chillers are designed specifically to pull hot cooked food down below 3°C within 90 minutes using high-velocity chilled airflow."
   },
   {
-    q: "What is the legal maximum temperature for cold holding in England?",
-    a: "Under Schedule 4 of the Food Safety and Hygiene (England) Regulations 2013, cold food that supports bacterial growth must be kept at or below 8°C. Best practice in professional kitchens is to maintain storage fridges between 0°C and 5°C to provide a safety buffer."
+    q: "How should cooked rice be cooled?",
+    a: "Spread rice into thin layers, cool as quickly as possible—ideally within one hour as advised by the FSA—and chill below 5°C to inhibit Bacillus cereus."
   },
   {
-    q: "What should I do if a batch of stew has taken 3 hours to cool to 15°C?",
-    a: "If food has lingered in the Danger Zone beyond safe limits without monitored cooling controls, it should be safely discarded. If internal temperature monitoring demonstrates it remained safe and within your HACCP corrective limits, it may be immediately reheated to a core temperature of at least 75°C (82°C in Scotland) or disposed of to eliminate foodborne illness hazards."
+    q: "What should a kitchen record during cooling?",
+    a: "Record the date, food item, batch size, cooling start and finish times, final core temperature, and staff initials in your food safety log."
+  },
+  {
+    q: "What should staff do if food does not cool as expected?",
+    a: "Execute HACCP corrective actions: subdivide into smaller trays, add ice baths, or safely discard the food if danger zone time limits are breached."
+  },
+  {
+    q: "Is there one cooling time that applies to every UK food business?",
+    a: "No single cooling time applies to every UK kitchen. While the FSA recommends cooling food within 90 minutes as standard SFBB best practice, exact cooling procedures depend on food type, portion mass, equipment, and your site-specific HACCP plan."
   }
 ];
 
@@ -56,8 +45,8 @@ export const BlogPostCoolingGuide: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black text-[#E1E0CC]">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
+      {/* Top Bar Navigation */}
+      <div className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
         <Link
           href="/blogs"
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors"
@@ -71,11 +60,11 @@ export const BlogPostCoolingGuide: React.FC = () => {
         >
           Print Food Cooling Poster
         </Link>
-      </header>
+      </div>
 
-      {/* Main Content */}
+      {/* Main Container */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        {/* Breadcrumb */}
+        {/* Breadcrumbs */}
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-1.5 text-xs text-white/50 flex-wrap">
             <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
@@ -86,251 +75,170 @@ export const BlogPostCoolingGuide: React.FC = () => {
           </ol>
         </nav>
 
-        {/* Hero Article Header */}
-        <header className="mb-10">
-          <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-primary uppercase bg-primary/10 border border-primary/20 px-3 py-1 rounded-full mb-4">
-            <ThermometerSnowflake className="w-3.5 h-3.5" />
-            <span>Temperature Control &amp; Chilling Standards</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            Commercial Kitchen Food Cooling Guide: The UK 90-Minute Rule &amp; Temperature Limits
-          </h1>
-
-          <p className="text-base sm:text-lg text-white/70 leading-relaxed mb-6">
-            A practical guide for UK head chefs, catering managers, and takeaway operators on safe cooling workflows, bacterial growth limits, probe monitoring, and due diligence compliance.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-4 text-xs text-white/50 border-t border-b border-white/10 py-3">
-            <span>By Saim Dev Food Safety Technical Team</span>
-            <span>•</span>
-            <span>Updated: October 2026</span>
-            <span>•</span>
-            <span>Reading time: 8 mins</span>
-          </div>
-        </header>
-
-        {/* Article Body */}
-        <article className="space-y-10 text-sm sm:text-base text-white/80 leading-relaxed">
-
-          {/* ── AEO DIRECT ANSWER HIGHLIGHT BOX ── */}
-          <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.04] border border-primary/30 relative space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase text-primary tracking-wider">
-              <Info className="w-4 h-4 text-primary shrink-0" />
-              <span>Direct Answer: Commercial Food Cooling in the UK</span>
+        <article className="space-y-10">
+          {/* Article Header */}
+          <div className="mb-8">
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-primary uppercase bg-primary/10 border border-primary/20 px-3 py-1 rounded-full mb-4">
+              <ThermometerSnowflake className="w-3.5 h-3.5" />
+              <span>Commercial Food Safety &amp; Chilling Standards</span>
             </div>
-            <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
-              In UK commercial kitchens, food cooling is the controlled temperature reduction of hot cooked food to <strong>8°C or below</strong> prior to chilled storage. Retained Regulation (EC) No 852/2004 requires food businesses to cool food <em>as quickly as possible</em> to prevent health hazards. The Food Standards Agency (FSA) recommends placing food into chilled storage within <strong>90 minutes</strong>, while commercial cook-chill operations aim to blast-chill from 70°C to below 3°C within 90 minutes.
+
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+              Commercial Kitchen Food Cooling Temperature Guide UK
+            </h1>
+
+            <p className="text-sm sm:text-base text-white/70 leading-relaxed">
+              Safe commercial food cooling, temperature control limits, bacterial risk prevention, and UK food hygiene standards.
             </p>
           </div>
 
-          {/* ── SECTION 1: What Commercial Food Cooling Means ── */}
+          {/* ── OPENING DIRECT-ANSWER SECTION (FIRST 100 WORDS) ── */}
+          <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-primary/20 text-white/90 leading-relaxed text-sm sm:text-base">
+            <span className="text-primary font-mono text-xs uppercase tracking-wider font-semibold block mb-2">
+              Direct Answer: Safe Food Cooling in UK Catering
+            </span>
+            <p>
+              In commercial catering, cooked food must be cooled safely to prevent foodborne illness. Rapid cooling reduces the time high-risk foods spend in the temperature danger zone where pathogenic bacteria multiply quickly. Food businesses across the UK must follow their site-specific food-safety management system alongside official FSA or FSS guidance. Because cooling rates depend on food density and equipment, procedures vary by kitchen.
+            </p>
+          </div>
+
+          {/* ── SECTION 1: Why Is Rapid Food Cooling Important? ── */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">
-              What Commercial Food Cooling Means in UK Catering
+              Why Is Rapid Food Cooling Important?
             </h2>
-            <p>
-              Commercial food cooling is the active management of hot food transitioning from cooking heat (75°C+) down to safe refrigeration temperatures. This process is a Critical Control Point (CCP) in any food safety management system based on HACCP principles.
-            </p>
-            <p>
-              In catering and takeaways, bulk batches of curry, stew, and jointed meats retain significant thermal mass. Leaving these items on ambient prep tables allows them to linger inside the bacterial Danger Zone between <strong>8°C and 63°C</strong>. In this thermal band, bacteria such as <em>Clostridium perfringens</em> and <em>Salmonella</em> double in population every 20 minutes under ambient kitchen warmth.
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              When cooking ends, food temperatures drop into warm ranges that support rapid bacterial growth. Leaving large volumes of hot food to cool slowly at room temperature creates an avoidable hazard. Deep containers insulate the thermal core, allowing warm conditions to persist. High-risk foods like cooked rice, pasta, meat joints, gravies, and stocks require diligent control. Documented temperature records verify safe cooling methods.
             </p>
           </section>
 
-          {/* ── SECTION 2: Legal Requirements vs FSA Guidance ── */}
+          {/* ── SECTION 2: The Food Temperature Danger Zone ── */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">
-              Legal Requirements vs. FSA Guidance and Best Practice
+              The Food Temperature Danger Zone
             </h2>
-            <p>
-              Food business operators must distinguish between statutory legislation, regulatory guidance, and commercial best practice during Environmental Health Officer (EHO) audits:
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              In UK food safety, 8°C to 63°C is the temperature danger zone, where bacteria like <em>Salmonella</em> multiply rapidly.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 space-y-1.5">
-                <span className="text-xs font-mono font-bold text-amber-400 uppercase">1. Statutory Legislation</span>
-                <h3 className="text-sm font-semibold text-white">Retained Regulation (EC) 852/2004</h3>
-                <p className="text-xs text-white/70 leading-relaxed">
-                  Annex II, Chapter IX mandates that food to be held chilled must be cooled as quickly as possible following cooking to avoid health risks. Schedule 4 of the Food Safety and Hygiene (England) Regulations 2013 sets the legal cold-holding ceiling at 8°C.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 space-y-1.5">
-                <span className="text-xs font-mono font-bold text-blue-400 uppercase">2. FSA Guidance (SFBB)</span>
-                <h3 className="text-sm font-semibold text-white">The 90-Minute Benchmark</h3>
-                <p className="text-xs text-white/70 leading-relaxed">
-                  The Food Standards Agency Safer Food, Better Business (SFBB) pack advises caterers to cool food as quickly as possible and place it into chilled storage within 90 minutes. This is guidance rather than an inflexible statutory limit.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 space-y-1.5">
-                <span className="text-xs font-mono font-bold text-emerald-400 uppercase">3. Industry Best Practice</span>
-                <h3 className="text-sm font-semibold text-white">Commercial Blast Chilling</h3>
-                <p className="text-xs text-white/70 leading-relaxed">
-                  The UK Cook-Chill Guidelines specify blast-chilling cooked food from 70°C down to 3°C or lower within 90 minutes. This provides an optimal safety margin for central production units.
-                </p>
-              </div>
-            </div>
-
-            <p className="text-xs text-white/60">
-              *Regional Variations: In Scotland, temperature rules are enforced under the Food Hygiene (Scotland) Regulations 2006 alongside Food Standards Scotland (FSS) CookSafe guidance.
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              Under Schedule 4 of the Food Safety and Hygiene (England) Regulations 2013 and devolved equivalents, cold holding requires 8°C or below, while hot holding requires 63°C or above (logged in a <Link href="/food-safety-templates/hot-holding-food-temperature-log" className="text-primary hover:underline font-medium">hot holding food temperature log</Link>). This danger zone is an operational benchmark rather than a blanket statutory rule for every stage. Caterers must follow validated HACCP controls referencing official FSA guidance and the <Link href="/food-safety-templates/reheating-food-temperature-guide" className="text-primary hover:underline font-medium">reheating food temperature guide</Link>.
             </p>
           </section>
 
-          {/* ── SECTION 3: Safe Cooling Workflow ── */}
+          {/* ── SECTION 3: A Safe Commercial Food-Cooling Process (10 Steps) ── */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">
-              The 5-Step Commercial Safe Cooling Workflow
+              A Safe Commercial Food-Cooling Process
             </h2>
-            <p>
-              Relying on kitchen ambient air to cool deep pots of food invites compliance failure. Follow this systematic 5-step procedure:
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              Commercial kitchens should follow a structured 10-step safe cooling procedure:
             </p>
-
-            <ol className="space-y-3 pt-1">
-              <li className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="w-6 h-6 rounded-full bg-primary/20 text-primary font-mono text-xs flex items-center justify-center shrink-0 font-bold">1</span>
-                <div>
-                  <h3 className="text-sm font-semibold text-white">Divide into Shallow Containers</h3>
-                  <p className="text-xs text-white/70 mt-0.5">
-                    Decant hot stews and sauces from stockpots into shallow stainless steel gastronorms (maximum depth 50mm). This maximizes surface area for rapid heat loss.
-                  </p>
-                </div>
-              </li>
-
-              <li className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="w-6 h-6 rounded-full bg-primary/20 text-primary font-mono text-xs flex items-center justify-center shrink-0 font-bold">2</span>
-                <div>
-                  <h3 className="text-sm font-semibold text-white">Portion Large Meat Joints</h3>
-                  <p className="text-xs text-white/70 mt-0.5">
-                    Dense cuts of roast beef, pork, or whole birds retain heat deep in their muscle core. Carve roasts into smaller cuts before chilling.
-                  </p>
-                </div>
-              </li>
-
-              <li className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="w-6 h-6 rounded-full bg-primary/20 text-primary font-mono text-xs flex items-center justify-center shrink-0 font-bold">3</span>
-                <div>
-                  <h3 className="text-sm font-semibold text-white">Utilise Ice Baths or Cold Water Immersion</h3>
-                  <p className="text-xs text-white/70 mt-0.5">
-                    Place containers into sinks filled with iced water. Stir periodically with clean, sanitised utensils to conduct heat away from the core.
-                  </p>
-                </div>
-              </li>
-
-              <li className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="w-6 h-6 rounded-full bg-primary/20 text-primary font-mono text-xs flex items-center justify-center shrink-0 font-bold">4</span>
-                <div>
-                  <h3 className="text-sm font-semibold text-white">Protect from Cross-Contamination</h3>
-                  <p className="text-xs text-white/70 mt-0.5">
-                    Cover containers loosely with clean parchment or perforated lids to allow steam to escape while shielding food from airborne contaminants.
-                  </p>
-                </div>
-              </li>
-
-              <li className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                <span className="w-6 h-6 rounded-full bg-primary/20 text-primary font-mono text-xs flex items-center justify-center shrink-0 font-bold">5</span>
-                <div>
-                  <h3 className="text-sm font-semibold text-white">Transfer to Monitored Cold Storage</h3>
-                  <p className="text-xs text-white/70 mt-0.5">
-                    Once pre-cooled, transfer containers immediately to refrigerators operating below 5°C, recording time and temperature in your log.
-                  </p>
-                </div>
-              </li>
+            <ol className="space-y-2 text-sm sm:text-base text-white/80 list-decimal list-inside bg-white/[0.02] p-5 rounded-2xl border border-white/10 leading-relaxed">
+              <li><strong className="text-white">Stop heat:</strong> Remove cooked items from heat sources promptly.</li>
+              <li><strong className="text-white">Divide batches:</strong> Split large quantities into smaller portions to speed cooling.</li>
+              <li><strong className="text-white">Use shallow pans:</strong> Spread food into stainless trays (max depth 50mm).</li>
+              <li><strong className="text-white">Allow airflow:</strong> Space containers on open wire racks for unhindered ventilation.</li>
+              <li><strong className="text-white">Rapid cooling:</strong> Deploy a commercial blast chiller or ice-water bath.</li>
+              <li><strong className="text-white">Shield food:</strong> Cover loosely with clean parchment or vented lids.</li>
+              <li><strong className="text-white">Probe core:</strong> Check internal temperatures with a sanitised digital probe.</li>
+              <li><strong className="text-white">Cold storage:</strong> Move batches into cold storage once below 8°C.</li>
+              <li><strong className="text-white">Corrective action:</strong> If cooling lags, subdivide, refresh ice, or discard.</li>
+              <li><strong className="text-white">Review procedures:</strong> Re-evaluate cooling in your <Link href="/food-safety-templates/haccp-plan-builder" className="text-primary hover:underline font-medium">HACCP plan builder</Link> whenever recipes or equipment change.</li>
             </ol>
           </section>
 
-          {/* ── SECTION 4: High-Risk Foods (Cooked Rice & Bacillus cereus) ── */}
+          {/* ── SECTION 4: Why Container Depth and Portion Size Matter ── */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">
-              Specific Risks: Cooked Rice and Bacillus Cereus
+              Why Container Depth and Portion Size Matter
             </h2>
-            <div className="p-5 rounded-2xl bg-amber-950/20 border border-amber-500/30 space-y-3">
-              <div className="flex items-center gap-2 text-amber-300 font-semibold text-sm">
-                <AlertOctagon className="w-4 h-4 shrink-0 text-amber-400" />
-                <span>Why Rice Requires a Strict 1-Hour Protocol</span>
-              </div>
-              <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
-                Raw uncooked rice carries spores of <em>Bacillus cereus</em> that survive boiling temperatures. When cooked rice cools slowly at room temperature, spores germinate into vegetative bacteria that produce an emetic toxin called <strong>cereulide</strong>.
-              </p>
-              <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
-                Cereulide is heat-stable and resists subsequent frying or microwave reheating. It causes acute vomiting and nausea within hours of consumption.
-              </p>
-              <p className="text-xs sm:text-sm text-white/90 font-medium">
-                Mandatory Rice Protocol: Cool cooked rice within 1 hour, refrigerate immediately at or below 5°C, store for no more than 24 hours, and reheat thoroughly only once.
-              </p>
-            </div>
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              Heat dissipates slowly through dense foods. In deep stockpots, the centre remains insulated, keeping core temperatures dangerously warm while exterior surfaces cool. Transferring hot food into shallow stainless steel pans (maximum depth 50mm) increases surface area for rapid heat loss. Slicing large meat joints or portioning poultry similarly releases trapped core heat, ensuring even chilling.
+            </p>
           </section>
 
-          {/* ── SECTION 5: Temperature Monitoring & Due Diligence ── */}
+          {/* ── SECTION 5: Blast Chilling and Other Cooling Methods ── */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">
-              Temperature Monitoring and Record Keeping
+              Blast Chilling and Other Cooling Methods
             </h2>
-            <p>
-              Under Section 21 of the Food Safety Act 1990, documented records provide statutory due diligence evidence. Kitchen supervisors must verify cooling with a calibrated probe thermometer cleaned with food-safe probe wipes.
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              Commercial blast chillers circulate high-velocity cold air to reduce core temperatures from 70°C to below 3°C within 90 minutes, setting the cook-chill benchmark. Alternatively, kitchens use ice-water baths and sanitised cooling paddles for liquid dishes. Never place hot food directly into storage fridges: this elevates cabinet heat, endangers adjacent foods, and strains compressors.
             </p>
-            <p>
-              Insert the probe into the thermal centre (thickest part) of the cooling batch, recording:
+          </section>
+
+          {/* ── SECTION 6: Cooling Cooked Rice, Pasta and High-Risk Foods ── */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold text-white tracking-tight">
+              Cooling Cooked Rice, Pasta and High-Risk Foods
+            </h2>
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              Uncooked rice harbours spores of <em>Bacillus cereus</em>, which survive boiling. If cooled slowly, spores germinate and produce heat-stable emetic toxins resisting reheating. Rice must be cooled as quickly as possible—ideally within one hour as advised in FSA Safer Food, Better Business guidance—and chilled at 5°C or lower. Thick gravies, sauces, and large meat joints also retain core heat and should be stirred or sliced before chilling.
             </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-white/70">
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                <span>Date, food item, and batch number</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                <span>Initial core cooking temperature (≥75°C)</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                <span>Time cooling commenced</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                <span>Final temperature before refrigeration (&lt;8°C)</span>
-              </li>
+          </section>
+
+          {/* ── SECTION 7: Temperature Monitoring and Records ── */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold text-white tracking-tight">
+              Temperature Monitoring and Records
+            </h2>
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              Disinfect probe thermometers with food-safe antibacterial wipes before inserting them into the core where cooling is slowest. Log batch names, cooling times, core temperatures, and staff initials on a <Link href="/food-safety-templates/fridge-temperature-record-sheet-pdf" className="text-primary hover:underline font-medium">fridge temperature record sheet</Link> or <Link href="/food-safety-templates/freezer-temperature-chart" className="text-primary hover:underline font-medium">freezer temperature chart</Link>. Maintaining accurate cooling logs provides essential due-diligence evidence for local authority inspections.
+            </p>
+          </section>
+
+          {/* ── SECTION 8: What to Do If Food Cools Too Slowly ── */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold text-white tracking-tight">
+              What to Do If Food Cools Too Slowly
+            </h2>
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              When cooling lags, act promptly. Subdivide batches into shallower trays or submerge containers into ice-water baths. If food lingers in the danger zone beyond safe HACCP limits, safely discard it—never guess. Under specific validated HACCP safe methods, slow food may be reheated once to 75°C (82°C in Scotland) before rapid re-chilling; reheating does not destroy heat-stable toxins like <em>Bacillus cereus</em> cereulide. Review processes to prevent recurrence.
+            </p>
+          </section>
+
+          {/* ── SECTION 9: Cooling Checklist for Commercial Kitchens ── */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold text-white tracking-tight">
+              Cooling Checklist for Commercial Kitchens
+            </h2>
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              Maintain cooling standards across kitchen shifts using this concise checklist, paired with your daily <Link href="/food-safety-templates/opening-and-closing-checklist-template" className="text-primary hover:underline font-medium">opening and closing checklist template</Link>:
+            </p>
+            <ul className="space-y-2 text-sm sm:text-base text-white/80 list-disc list-inside bg-white/[0.02] p-5 rounded-2xl border border-white/10 leading-relaxed">
+              <li>Batches split into shallow pans under 50mm depth.</li>
+              <li>Blast chiller or ice-water bath utilised.</li>
+              <li>Vented covers shield food from contamination.</li>
+              <li>Digital probe sanitised before and after use.</li>
+              <li>Core temperatures checked at the thickest part.</li>
+              <li>Cooling start and finish times recorded.</li>
+              <li>Batches moved to cold storage once below 8°C.</li>
+              <li>Cold storage kept at 5°C or below.</li>
+              <li>Slow batches corrected or discarded promptly.</li>
+              <li>Team trained on site-specific HACCP procedures.</li>
             </ul>
           </section>
 
-          {/* ── SECTION 6: Corrective Actions ── */}
+          {/* ── SECTION 10: England, Wales, Scotland and Northern Ireland ── */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">
-              Corrective Action When Cooling is Too Slow
+              England, Wales, Scotland and Northern Ireland
             </h2>
-            <p>
-              When food fails to reach target temperatures within planned timeframes, enact documented corrective actions:
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              Food hygiene rules across the UK share core standards, but administration varies:
             </p>
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 space-y-2 text-xs sm:text-sm text-white/80">
-              <p>
-                <strong>Under 2 Hours in Danger Zone:</strong> Reheat the batch to a core temperature of 75°C (82°C in Scotland) for 2 minutes to destroy vegetative bacteria, then rapidly cool using shallow pans or blast chilling.
-              </p>
-              <p>
-                <strong>Exceeding 2 Hours Unmonitored:</strong> Discard the food immediately. Do not attempt re-chilling if food has spent uncontrolled hours between 8°C and 63°C, as heat-stable toxins may have developed.
-              </p>
-            </div>
+            <ul className="space-y-2 text-sm sm:text-base text-white/80 list-disc list-inside bg-white/[0.02] p-5 rounded-2xl border border-white/10 leading-relaxed">
+              <li><strong className="text-white">England:</strong> FSA policy, enforced by local councils under 2013 regulations; voluntary rating display.</li>
+              <li><strong className="text-white">Wales:</strong> FSA policy; mandatory hygiene rating display by law.</li>
+              <li><strong className="text-white">Scotland:</strong> Food Standards Scotland under 2006 regulations; operates FHIS and CookSafe (82°C reheating standard).</li>
+              <li><strong className="text-white">Northern Ireland:</strong> FSA policy; mandatory hygiene rating display applies by law.</li>
+            </ul>
+            <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+              Local Environmental Health Officers inspect businesses against these regional frameworks and site-specific HACCP.
+            </p>
           </section>
 
-          {/* ── SECTION 7: Site-Specific Food Safety Procedures ── */}
-          <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-white tracking-tight">
-              Site-Specific FSMS vs. General Guidance
-            </h2>
-            <p>
-              This guide provides technical information based on UK FSA principles. It does not replace a documented Food Safety Management System (FSMS) tailored to your specific kitchen premises, equipment capacity, and staff volumes.
-            </p>
-            <p>
-              Always consult your local council Environmental Health Officer (EHO) and primary authority advice when validating operational timings in your kitchen.
-            </p>
-            <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-xs text-white/60 space-y-1">
-              <span className="font-bold text-white block">Official Legislative Sources:</span>
-              <p>&bull; Retained Regulation (EC) No 852/2004 on hygiene of foodstuffs.</p>
-              <p>&bull; Food Safety and Hygiene (England) Regulations 2013 (Schedule 4: Temperature Control).</p>
-              <p>&bull; Food Standards Agency (FSA): Safer Food, Better Business (SFBB) for Caterers.</p>
-              <p>&bull; Food Standards Scotland (FSS): CookSafe Food Safety Assurance System.</p>
-            </div>
-          </section>
-
-          {/* ── SECTION 8: Relevant Internal Links ── */}
+          {/* ── RELATED TEMPLATES & TOOLS ── */}
           <section className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-white/[0.05] to-white/[0.02] border border-white/10 space-y-3">
             <h3 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
               <FileText className="w-5 h-5 text-primary" />
@@ -339,7 +247,7 @@ export const BlogPostCoolingGuide: React.FC = () => {
             <p className="text-xs sm:text-sm text-white/70">
               Access free printable sheets and interactive tools to maintain compliant kitchen records:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-2">
               <Link
                 href="/food-safety-templates/food-cooling-poster"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
@@ -351,7 +259,7 @@ export const BlogPostCoolingGuide: React.FC = () => {
                 href="/food-safety-templates/fridge-temperature-record-sheet-pdf"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
-                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">fridge temperature sheet</span>
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">fridge temperature record sheet</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
               <Link
@@ -361,22 +269,48 @@ export const BlogPostCoolingGuide: React.FC = () => {
                 <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">freezer temperature chart</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
-            </div>
-
-            <div className="pt-2">
+              <Link
+                href="/food-safety-templates/hot-holding-food-temperature-log"
+                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
+              >
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">hot holding food temperature log</span>
+                <ArrowRight className="w-4 h-4 text-primary shrink-0" />
+              </Link>
+              <Link
+                href="/food-safety-templates/reheating-food-temperature-guide"
+                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
+              >
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">reheating food temperature guide</span>
+                <ArrowRight className="w-4 h-4 text-primary shrink-0" />
+              </Link>
+              <Link
+                href="/food-safety-templates/haccp-plan-builder"
+                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
+              >
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">HACCP plan builder</span>
+                <ArrowRight className="w-4 h-4 text-primary shrink-0" />
+              </Link>
+              <Link
+                href="/food-safety-templates/opening-and-closing-checklist-template"
+                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
+              >
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">opening and closing checklist</span>
+                <ArrowRight className="w-4 h-4 text-primary shrink-0" />
+              </Link>
               <Link
                 href="/tools"
-                className="inline-flex items-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs px-4 py-2.5 rounded-full transition-all"
+                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
-                <span>return to all kitchen tools</span>
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">all kitchen tools</span>
+                <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
             </div>
           </section>
 
-          {/* ── SECTION 9: FAQs ── */}
+          {/* ── SECTION 11: Frequently Asked Questions ── */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">
-              Frequently Asked Questions on Commercial Food Cooling
+              Frequently Asked Questions
             </h2>
             <div className="space-y-3">
               {FAQS.map((faq, i) => {
@@ -405,23 +339,23 @@ export const BlogPostCoolingGuide: React.FC = () => {
             </div>
           </section>
 
-          {/* ── REGULATORY DISCLAIMER ── */}
+          {/* ── VISIBLE DISCLAIMER ── */}
           <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/10 text-[11px] text-white/50 leading-relaxed">
             <p>
-              <strong>Food Safety Information Disclaimer:</strong> This guide and associated printable records are provided for general educational purposes and due diligence operational assistance only. They do not constitute official legal advice or formal environmental health compliance verification. Food business operators remain solely responsible under the Food Safety Act 1990 for developing, establishing, and maintaining their own site-specific Food Safety Management System (FSMS) aligned with HACCP principles.
+              <strong>Food Safety Information Disclaimer:</strong> This guide provides general food safety information for commercial kitchens across the UK. It does not replace site-specific food-safety management systems (HACCP or SFBB) or official guidance from the Food Standards Agency, Food Standards Scotland, or your local authority environmental health department. Businesses must validate their own cooling controls to ensure customer safety.
             </p>
           </div>
 
           {/* ── AGENCY CONVERSION BRIDGE ── */}
           <section className="mt-12 p-8 rounded-3xl bg-[#111113] border border-primary/30 relative overflow-hidden">
             <span className="text-primary text-xs font-mono uppercase tracking-widest block mb-2">
-              Fast, Modern Web Architecture
+              Modern Web Engineering
             </span>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
-              Elevate your food brand with custom web engineering.
+              Bespoke websites for UK food businesses.
             </h3>
             <p className="text-xs sm:text-sm text-white/70 leading-relaxed max-w-2xl mb-6">
-              Saim Dev builds bespoke Next.js websites for UK catering and restaurant operators, optimized for sub-second speeds, mobile ordering, and maximum local search visibility.
+              Saim Dev builds high-speed Next.js websites for UK caterers and restaurants, optimized for online ordering and local search.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <a
@@ -441,7 +375,6 @@ export const BlogPostCoolingGuide: React.FC = () => {
               </Link>
             </div>
           </section>
-
         </article>
       </main>
 
