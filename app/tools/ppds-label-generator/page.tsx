@@ -146,7 +146,7 @@ export default function PpdsLabelGeneratorPage() {
           className="flex items-center gap-2 text-xs font-bold text-gray-700 hover:text-black transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Kitchen Tools Hub</span>
+          <span>return to all kitchen tools</span>
         </Link>
         <div className="flex items-center gap-3">
           <Link

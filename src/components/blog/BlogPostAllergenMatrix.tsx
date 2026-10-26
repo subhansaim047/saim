@@ -53,13 +53,13 @@ export const BlogPostAllergenMatrix: React.FC = () => {
     <div className="min-h-screen bg-black text-[#E1E0CC]">
       {/* ── Top Header ── */}
       <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <button
-          onClick={() => router.push("/blogs")}
+        <Link
+          href="/blogs"
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          All Articles
-        </button>
+          <span>return to the Saim Dev blog</span>
+        </Link>
         <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white">Saim Dev Hospitality Systems</span>
@@ -250,20 +250,28 @@ export const BlogPostAllergenMatrix: React.FC = () => {
             and print an unclipped, high-contrast chart formatted specifically for your kitchen wall display.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center gap-3 pt-2">
+            <Link
+              href="/food-safety-templates/allergy-matrix"
+              className="bg-primary hover:brightness-110 text-black font-bold text-xs sm:text-sm px-5 py-3.5 rounded-full flex items-center gap-2 transition-all shadow-xl"
+            >
+              <span>free 14-allergen matrix</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+
             <Link
               href="/food-safety-templates/food-allergen-chart"
-              className="bg-primary hover:brightness-110 text-black font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full flex items-center gap-2 transition-all shadow-xl"
+              className="bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm px-5 py-3.5 rounded-full flex items-center gap-2 transition-all border border-white/20"
             >
-              <span>Launch 14-Allergen Matrix Tool</span>
+              <span>food allergen chart</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
             <Link
               href="/tools"
-              className="border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm px-5 py-3.5 rounded-full transition-all"
+              className="border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm px-4 py-3.5 rounded-full transition-all"
             >
-              <span>Explore All Commercial Kitchen Tools</span>
+              <span>return to all kitchen tools</span>
             </Link>
           </div>
         </section>
@@ -297,6 +305,14 @@ export const BlogPostAllergenMatrix: React.FC = () => {
             })}
           </div>
         </section>
+
+        {/* ── Bottom Navigation ── */}
+        <div className="text-center mb-8">
+          <Link href="/blogs" className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors cursor-pointer">
+            <ArrowLeft className="w-4 h-4" />
+            <span>return to the Saim Dev blog</span>
+          </Link>
+        </div>
 
         {/* ── BOTTOM CTA ── */}
         <div className="p-8 rounded-3xl bg-[#0a0a0d] border border-white/10 text-center space-y-4">

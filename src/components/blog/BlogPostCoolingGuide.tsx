@@ -161,20 +161,36 @@ export const BlogPostCoolingGuide: React.FC = () => {
             <p className="text-xs sm:text-sm text-white/70">
               Download and print our verified temperature monitoring sheets to keep on-site records for your daily SFBB pack:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
               <Link
                 href="/food-safety-templates/food-cooling-poster"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
-                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">Food Cooling Procedures Poster</span>
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">food cooling poster</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
               <Link
                 href="/food-safety-templates/fridge-temperature-record-sheet-pdf"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
-                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">Fridge &amp; Chiller Record Sheet</span>
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">fridge temperature sheet</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
+              </Link>
+              <Link
+                href="/food-safety-templates/freezer-temperature-chart"
+                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
+              >
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">freezer temperature chart</span>
+                <ArrowRight className="w-4 h-4 text-primary shrink-0" />
+              </Link>
+            </div>
+
+            <div className="pt-2">
+              <Link
+                href="/tools"
+                className="inline-flex items-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs px-4 py-2.5 rounded-full transition-all"
+              >
+                <span>return to all kitchen tools</span>
               </Link>
             </div>
           </section>

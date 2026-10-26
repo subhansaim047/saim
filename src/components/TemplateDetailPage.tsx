@@ -38,8 +38,55 @@ interface Props {
   template: FoodSafetyTemplate;
 }
 
+
+function getFallbackRelatedBlog(slug: string, title: string) {
+  const s = slug.toLowerCase();
+  const t = title.toLowerCase();
+  if (s.includes("allergen") || s.includes("allergy") || t.includes("allergen") || t.includes("allergy") || s.includes("natasha")) {
+    return {
+      title: "How to Create a Compliant 14-Allergen Matrix for UK Restaurants",
+      slug: "how-to-create-compliant-14-allergen-matrix-uk-restaurants"
+    };
+  }
+  if (s.includes("haccp") || s.includes("hazard") || s.includes("critical-control") || s.includes("ccp")) {
+    return {
+      title: "How to Write a HACCP Plan for UK Food Businesses Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    };
+  }
+  if (s.includes("cost") || s.includes("margin") || t.includes("cost") || t.includes("margin")) {
+    return {
+      title: "Mastering Food Cost Percentage: Commercial Kitchen Recipe Pricing Guide",
+      slug: "mastering-food-cost-percentage-commercial-kitchen-calculator"
+    };
+  }
+  if (s.includes("recipe") || t.includes("recipe") || s.includes("batch")) {
+    return {
+      title: "How to Scale Recipes for Commercial Catering: Batch Calculator Guide",
+      slug: "how-to-scale-recipes-commercial-catering-batch-calculator"
+    };
+  }
+  if (s.includes("cooling") || s.includes("temp") || s.includes("fridge") || s.includes("freezer") || s.includes("chill")) {
+    return {
+      title: "Commercial Kitchen Food Cooling & Temperature Limits Guide",
+      slug: "commercial-kitchen-food-cooling-temperature-guide"
+    };
+  }
+  if (s.includes("quiz") || t.includes("quiz") || s.includes("hygiene")) {
+    return {
+      title: "Level 2 Food Hygiene Practice Test & Kitchen Staff Training Guide",
+      slug: "level-2-food-hygiene-practice-test-kitchen-staff-guide"
+    };
+  }
+  return {
+    title: "SFBB Daily Kitchen Opening & Closing Checklist Guide",
+    slug: "sfbb-daily-kitchen-opening-closing-checklist-guide"
+  };
+}
+
 export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const deepContent = TOOL_DEEP_CONTENT[template.slug];
+  const activeRelatedBlog = deepContent?.relatedBlog || getFallbackRelatedBlog(template.slug, template.title);
   const [premisesName, setPremisesName] = useState("");
   const [managerSignoff, setManagerSignoff] = useState("");
   const [complianceDate, setComplianceDate] = useState("");
@@ -173,7 +220,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between no-print">
         <Link href="/tools" className="flex items-center gap-2 text-xs font-bold text-gray-700 hover:text-black">
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Kitchen Tools Hub</span>
+          <span>return to all kitchen tools</span>
         </Link>
 
         <div className="flex items-center gap-3">
@@ -549,21 +596,21 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         </div>
 
         {/* Related Compliance Blog Guide */}
-        {deepContent?.relatedBlog && (
+        {activeRelatedBlog && (
           <div className="bg-gradient-to-r from-blue-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md no-print">
             <div className="space-y-1 max-w-xl">
               <span className="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-bold block">
                 Recommended UK Hospitality Inspection Guide
               </span>
               <h4 className="text-base sm:text-lg font-bold">
-                {deepContent.relatedBlog.title}
+                {activeRelatedBlog.title}
               </h4>
               <p className="text-xs text-blue-200 leading-relaxed">
                 Read our in-depth guidance on UK Food Standards Agency inspection procedures, staff training, and compliance routines.
               </p>
             </div>
             <Link
-              href={`/blog/${deepContent.relatedBlog.slug}`}
+              href={`/blog/${activeRelatedBlog.slug}`}
               className="bg-white text-gray-950 hover:bg-gray-100 font-bold text-xs px-5 py-2.5 rounded-full inline-flex items-center gap-1.5 transition-all shadow shrink-0"
             >
               <span>Read Guide</span>
@@ -596,6 +643,17 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             </div>
           </div>
         )}
+
+        {/* Bottom return link to Kitchen Tools Hub */}
+        <div className="text-center pt-2 pb-2 no-print">
+          <Link
+            href="/tools"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-gray-600 hover:text-black transition-colors"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>return to all kitchen tools</span>
+          </Link>
+        </div>
 
         {/* Conversion Banner: High-Impact Takeaway Commercial Bridge */}
         <div className="rounded-3xl bg-neutral-950 text-white p-8 sm:p-10 space-y-4 shadow-2xl conversion-banner no-print border border-neutral-800">

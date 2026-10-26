@@ -47,7 +47,7 @@ export const BlogPostNatashasLaw: React.FC = () => {
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Articles</span>
+          <span>return to the Saim Dev blog</span>
         </Link>
         <Link
           href="/food-safety-templates/food-allergen-chart"
@@ -229,13 +229,21 @@ export const BlogPostNatashasLaw: React.FC = () => {
                 Use our free web tool to generate Prepacked for Direct Sale food labels with automated 14-allergen bolding and standard A4 adhesive sticker layouts.
               </p>
             </div>
-            <Link
-              href="/tools/ppds-label-generator"
-              className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-5 py-3 rounded-full inline-flex items-center gap-1.5 transition-all shrink-0 shadow-lg"
-            >
-              <span>Open Free PPDS Tool</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <Link
+                href="/tools/ppds-label-generator"
+                className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-5 py-3 rounded-full inline-flex items-center gap-1.5 transition-all shadow-lg"
+              >
+                <span>PPDS label generator</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link
+                href="/tools"
+                className="bg-white/10 hover:bg-white/15 text-white text-xs font-medium px-4 py-3 rounded-full transition-all border border-white/15"
+              >
+                <span>return to all kitchen tools</span>
+              </Link>
+            </div>
           </section>
 
           {/* Agency Conversion Bridge */}

@@ -55,13 +55,13 @@ export const BlogPostFoodCost: React.FC = () => {
     <div className="min-h-screen bg-black text-[#E1E0CC]">
       {/* ── Top Header ── */}
       <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <button
-          onClick={() => router.push("/blogs")}
+        <Link
+          href="/blogs"
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          All Articles
-        </button>
+          <span>return to the Saim Dev blog</span>
+        </Link>
         <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white">Saim Dev Hospitality Systems</span>
@@ -295,7 +295,7 @@ export const BlogPostFoodCost: React.FC = () => {
               href="/food-safety-templates/food-cost-calculator"
               className="bg-primary hover:brightness-110 text-black font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full flex items-center gap-2 transition-all shadow-xl"
             >
-              <span>Launch Food Cost Calculator</span>
+              <span>commercial food cost calculator</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
@@ -303,7 +303,7 @@ export const BlogPostFoodCost: React.FC = () => {
               href="/tools"
               className="border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm px-5 py-3.5 rounded-full transition-all"
             >
-              <span>Explore All Commercial Kitchen Tools</span>
+              <span>return to all kitchen tools</span>
             </Link>
           </div>
         </section>
@@ -337,6 +337,14 @@ export const BlogPostFoodCost: React.FC = () => {
             })}
           </div>
         </section>
+
+        {/* ── Bottom Navigation ── */}
+        <div className="text-center mb-8">
+          <Link href="/blogs" className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors cursor-pointer">
+            <ArrowLeft className="w-4 h-4" />
+            <span>return to the Saim Dev blog</span>
+          </Link>
+        </div>
 
         {/* ── BOTTOM CTA ── */}
         <div className="p-8 rounded-3xl bg-[#0a0a0d] border border-white/10 text-center space-y-4">

@@ -55,13 +55,13 @@ export const BlogPostChecklist: React.FC = () => {
     <div className="min-h-screen bg-black text-[#E1E0CC]">
       {/* ── Top Header ── */}
       <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <button
-          onClick={() => router.push("/blogs")}
+        <Link
+          href="/blogs"
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          All Articles
-        </button>
+          <span>return to the Saim Dev blog</span>
+        </Link>
         <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white">Saim Dev Hospitality Systems</span>
@@ -235,20 +235,38 @@ export const BlogPostChecklist: React.FC = () => {
             Toggle tasks with pass/fail badges, record corrective action notes, and print a clean, professional inspection log with zero paywall.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
             <Link
-              href="/food-safety-templates/cleaning-schedule"
-              className="bg-primary hover:brightness-110 text-black font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full flex items-center gap-2 transition-all shadow-xl"
+              href="/food-safety-templates/opening-and-closing-checklist-template"
+              className="p-3.5 rounded-xl bg-primary text-black font-bold text-xs sm:text-sm flex items-center justify-between shadow-xl hover:brightness-110 transition-all"
             >
-              <span>Launch Daily SFBB Checklist Tool</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>opening and closing checklist</span>
+              <ArrowRight className="w-4 h-4 shrink-0" />
             </Link>
 
             <Link
-              href="/tools"
-              className="border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm px-5 py-3.5 rounded-full transition-all"
+              href="/food-safety-templates/cleaning-schedule"
+              className="p-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm flex items-center justify-between border border-white/15 transition-all"
             >
-              <span>Explore All Commercial Kitchen Tools</span>
+              <span>cleaning schedule</span>
+              <ArrowRight className="w-4 h-4 shrink-0 text-primary" />
+            </Link>
+
+            <Link
+              href="/food-safety-templates/fridge-temperature-record-sheet-pdf"
+              className="p-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm flex items-center justify-between border border-white/15 transition-all"
+            >
+              <span>kitchen temperature log</span>
+              <ArrowRight className="w-4 h-4 shrink-0 text-primary" />
+            </Link>
+          </div>
+
+          <div className="pt-2">
+            <Link
+              href="/tools"
+              className="inline-flex items-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm px-5 py-3 rounded-full transition-all"
+            >
+              <span>return to all kitchen tools</span>
             </Link>
           </div>
         </section>
@@ -282,6 +300,14 @@ export const BlogPostChecklist: React.FC = () => {
             })}
           </div>
         </section>
+
+        {/* ── Bottom Navigation ── */}
+        <div className="text-center mb-8">
+          <Link href="/blogs" className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors cursor-pointer">
+            <ArrowLeft className="w-4 h-4" />
+            <span>return to the Saim Dev blog</span>
+          </Link>
+        </div>
 
         {/* ── BOTTOM CTA ── */}
         <div className="p-8 rounded-3xl bg-[#0a0a0d] border border-white/10 text-center space-y-4">
