@@ -128,6 +128,13 @@ export default function NextJsDeveloperUkPage() {
               <span>Start on WhatsApp (+92 319 6526604)</span>
               <ArrowRight className="w-4 h-4" />
             </a>
+            <Link
+              href="/case-studies"
+              className="border border-white/20 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full transition-all flex items-center gap-2 cursor-pointer"
+            >
+              <span>View our website case studies</span>
+              <ArrowRight className="w-4 h-4 text-primary" />
+            </Link>
           </div>
 
           {/* TRUST STATS */}
@@ -312,6 +319,30 @@ export default function NextJsDeveloperUkPage() {
           </div>
         </section>
 
+        {/* CONTEXTUAL NAVIGATION */}
+        <section className="py-12 px-4 sm:px-6 max-w-5xl mx-auto border-t border-white/10">
+          <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-lg font-medium text-white mb-1">Looking for packaged solutions or custom scopes?</h3>
+              <p className="text-xs sm:text-sm text-white/60">Compare transparent deliverables, case study metrics, or get a direct project estimate.</p>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <Link
+                href="/services"
+                className="text-xs font-semibold px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+              >
+                Explore our web development services
+              </Link>
+              <Link
+                href="/contact"
+                className="text-xs font-semibold px-4 py-2.5 rounded-full bg-primary text-black hover:brightness-110 transition-colors"
+              >
+                Discuss your website project
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* UK FAQ */}
         <section className="py-16 sm:py-24 border-t border-white/10 bg-black">
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
@@ -374,6 +405,12 @@ export default function NextJsDeveloperUkPage() {
               >
                 Chat on WhatsApp (+92 319 6526604)
               </a>
+              <Link
+                href="/contact"
+                className="bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3 rounded-full transition-all border border-white/15"
+              >
+                Discuss your website project via enquiry form
+              </Link>
             </div>
           </div>
         </section>

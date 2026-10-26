@@ -1,7 +1,7 @@
 "use client";
 import { SiteFooter } from "./SiteFooter";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, HelpCircle, ChevronDown, CheckCircle2, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -192,7 +192,6 @@ const serviceFaqs = [
 ];
 
 export const ServicesPage = () => {
-  const router = useRouter();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   return (
@@ -205,13 +204,13 @@ export const ServicesPage = () => {
       
       <div className="max-w-5xl mx-auto">
         {/* Top Back Navigation */}
-        <button
-          onClick={() => router.push('/')}
+        <Link
+          href="/"
           className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Main Page</span>
-        </button>
+        </Link>
 
         {/* 1. HERO */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -255,13 +254,13 @@ export const ServicesPage = () => {
                   </p>
                   {service.dedicatedLink && (
                     <div className="mt-3">
-                      <a
+                      <Link
                         href={service.dedicatedLink}
                         className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-4 transition-colors"
                       >
                         <span>View Takeaway System Features & Live Demo Breakdown</span>
                         <ArrowRight className="w-3.5 h-3.5" />
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -300,6 +299,46 @@ export const ServicesPage = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CROSS-NAVIGATION CLUSTER */}
+        <div className="mb-16 liquid-glass rounded-3xl p-8 border border-white/15">
+          <h3 className="text-xl font-light text-white mb-2">Explore Related Engineering &amp; Client Work</h3>
+          <p className="text-white/60 text-xs sm:text-sm mb-6 font-light">
+            Discover our dedicated developer offerings, live interactive demos, and real performance metrics.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link
+              href="/nextjs-developer-uk"
+              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-primary uppercase block mb-1">Freelance Engineer</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                <span>Hire a Next.js developer for your UK business</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link
+              href="/case-studies"
+              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-primary uppercase block mb-1">Performance Results</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                <span>View our website case studies</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link
+              href="/contact"
+              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-primary uppercase block mb-1">Fixed Quote</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                <span>Discuss your website project with Saim</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+          </div>
         </div>
 
         {/* 3. FAQ SNIPPET */}
@@ -347,15 +386,24 @@ export const ServicesPage = () => {
           <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
             Message Saim Dev on WhatsApp to receive a detailed proposal and get started immediately.
           </p>
-          <a
-            href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all text-xs cursor-pointer shadow-xl"
-          >
-            <span>Start Your Project</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all text-xs cursor-pointer shadow-xl"
+            >
+              <span>Start Your Project on WhatsApp</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-full transition-all text-xs cursor-pointer border border-white/15"
+            >
+              <span>Discuss your website project</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </div>
       <SiteFooter theme="dark" />

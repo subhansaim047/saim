@@ -2,7 +2,7 @@
 import { SiteFooter } from "./SiteFooter";
 import { BUDGET_OPTIONS } from "../../content/plans";
 import ownerFacts from "../../content/owner-facts.json";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import {
   ArrowLeft,
@@ -19,7 +19,6 @@ import {
 import { cn } from "../lib/utils";
 
 export const ContactPage = () => {
-  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     businessName: "",
@@ -71,13 +70,13 @@ export const ContactPage = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-12 py-12">
         {/* Top Back Navigation — Sybiosme Pill Style */}
-        <button
-          onClick={() => router.push("/")}
+        <Link
+          href="/"
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-white/70 hover:text-white text-xs font-mono uppercase tracking-wider transition-all mb-10 cursor-pointer hover:border-white/20"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to Home</span>
-        </button>
+        </Link>
 
         {/* HERO */}
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -329,6 +328,18 @@ export const ContactPage = () => {
                 </button>
               </form>
             )}
+          </div>
+        </div>
+
+        {/* CONTEXTUAL NAVIGATION */}
+        <div className="mb-14 p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
+          <p className="text-xs text-white/60 mb-3 font-light">Want to explore our solutions and results before submitting an enquiry?</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-primary">
+            <Link href="/services" className="hover:underline">Explore our web development services</Link>
+            <span className="text-white/20">·</span>
+            <Link href="/case-studies" className="hover:underline">View our website case studies</Link>
+            <span className="text-white/20">·</span>
+            <Link href="/demos" className="hover:underline">Explore live website demos</Link>
           </div>
         </div>
 

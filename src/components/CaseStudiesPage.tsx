@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowLeft,
@@ -110,7 +110,6 @@ const caseStudiesData: CaseStudy[] = [
 ];
 
 export const CaseStudiesPage = () => {
-  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const filteredStudies =
@@ -128,13 +127,13 @@ export const CaseStudiesPage = () => {
       
       <div className="max-w-6xl mx-auto">
         {/* Top Back Navigation */}
-        <button
-          onClick={() => router.push('/')}
+        <Link
+          href="/"
           className="inline-flex items-center gap-2 text-primary hover:text-white text-sm font-medium transition-colors mb-10 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Main Page</span>
-        </button>
+        </Link>
 
         {/* HERO SECTION */}
         <div className="text-center max-w-3xl mx-auto mb-14">
@@ -329,7 +328,7 @@ export const CaseStudiesPage = () => {
         </div>
 
         {/* AGENCY GUARANTEE BANNER */}
-        <div className="bg-white/5 rounded-3xl p-8 sm:p-12 border border-white/10 text-center mb-20">
+        <div className="bg-white/5 rounded-3xl p-8 sm:p-12 border border-white/10 text-center mb-16">
           <h2 className="text-2xl sm:text-3xl font-light text-white mb-4">
             Guaranteed Performance Contract
           </h2>
@@ -349,6 +348,40 @@ export const CaseStudiesPage = () => {
           </div>
         </div>
 
+        {/* CONTEXTUAL INTERNAL LINKS */}
+        <div className="mb-16 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Link
+            href="/services"
+            className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+          >
+            <span className="text-xs font-mono text-primary uppercase block mb-1">Packaged Solutions</span>
+            <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+              <span>Explore our web development services</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </Link>
+          <Link
+            href="/nextjs-developer-uk"
+            className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+          >
+            <span className="text-xs font-mono text-primary uppercase block mb-1">UK Specialist</span>
+            <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+              <span>Hire a Next.js developer for your UK business</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </Link>
+          <Link
+            href="/contact"
+            className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+          >
+            <span className="text-xs font-mono text-primary uppercase block mb-1">Project Enquiry</span>
+            <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+              <span>Discuss your website project with our lead engineer</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </Link>
+        </div>
+
         {/* CTA */}
         <div className="text-center bg-[#0F0F0F] rounded-3xl p-10 sm:p-14 border border-white/15">
           <h3 className="text-2xl sm:text-4xl font-light text-white mb-4">
@@ -357,15 +390,24 @@ export const CaseStudiesPage = () => {
           <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
             Message Saim Dev on WhatsApp to discuss your project requirements and receive a custom quote within 2 hours.
           </p>
-          <a
-            href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-4 rounded-full hover:bg-white transition-all text-xs sm:text-sm cursor-pointer shadow-xl"
-          >
-            <span>Start Your Project on WhatsApp</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-4 rounded-full hover:bg-white transition-all text-xs sm:text-sm cursor-pointer shadow-xl"
+            >
+              <span>Start Your Project on WhatsApp</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full transition-all text-xs sm:text-sm cursor-pointer border border-white/15"
+            >
+              <span>Discuss your website project via enquiry form</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

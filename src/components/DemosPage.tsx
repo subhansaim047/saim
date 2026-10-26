@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import React, { useState } from "react";
-import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft, X } from "lucide-react";
+import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft, ArrowRight, X } from "lucide-react";
 import { FooterSection } from "./FooterSection";
 
 interface DemoItem {
@@ -443,6 +443,60 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
           </div>
         </div>
       )}
+
+      {/* CONTEXTUAL CLUSTER NAVIGATION */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="p-8 sm:p-10 rounded-3xl bg-white/[0.02] border border-white/10 text-center">
+          <h2 className="text-2xl sm:text-3xl font-light text-white mb-3">
+            Ready for a Custom Website or Ordering System?
+          </h2>
+          <p className="text-white/60 text-xs sm:text-sm max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+            These interactive demos showcase real Next.js performance. We build bespoke digital ordering platforms and high-converting websites from £250.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+            <Link
+              href="/services"
+              className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-primary uppercase block mb-1">Fixed-Price Plans</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                <span>Explore our web development services</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link
+              href="/services/takeaway-web-design"
+              className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-primary uppercase block mb-1">0% Commission System</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                <span>Takeaway website design &amp; ordering</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link
+              href="/case-studies"
+              className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-primary uppercase block mb-1">Speed Benchmarks</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                <span>View our website case studies</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link
+              href="/contact"
+              className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <span className="text-xs font-mono text-primary uppercase block mb-1">Direct Consultation</span>
+              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                <span>Discuss your website project with Saim</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </div>
 
       <FooterSection />
     </main>
