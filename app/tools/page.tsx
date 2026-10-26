@@ -8,17 +8,27 @@ export const metadata: Metadata = {
     canonical: "https://www.saimdev.site/tools"
   },
   openGraph: {
+    type: "website",
     title: 'Free UK Kitchen Tools & Food Safety Templates Hub',
     description: 'Free compliance tools for UK commercial kitchens. Access 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.',
     url: "https://www.saimdev.site/tools",
     siteName: "Saim Dev",
     locale: "en_GB",
-    type: "website"
+    images: [
+      {
+        url: "https://www.saimdev.site/og-tools.png",
+        width: 1200,
+        height: 630,
+        alt: "UK Kitchen Tools and Food Safety Templates Hub - Saim Dev",
+        type: "image/png"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: 'Free UK Kitchen Tools & Food Safety Templates Hub',
-    description: "Free printable food safety templates, checklists, logs and posters for UK restaurants and takeaways. Edit online, then print or save as PDF."
+    description: 'Free compliance tools for UK commercial kitchens. Access 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.',
+    images: ["https://www.saimdev.site/og-tools.png"]
   }
 };
 
