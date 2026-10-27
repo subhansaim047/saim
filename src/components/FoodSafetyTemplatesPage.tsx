@@ -39,6 +39,7 @@ import { FoodCostCalculatorTool } from "./tools/FoodCostCalculatorTool";
 import { RecipeCalculatorTool } from "./tools/RecipeCalculatorTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
 import { isOffAudience } from "@/lib/off-audience";
+import { getCanonicalTemplateSlug } from "@/lib/canonical-slugs";
 
 export const FoodSafetyTemplatesPage: React.FC = () => {
   // ── FILTER STATES (INTERNAL SAIM DEV FILTERS) ──
@@ -590,7 +591,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 >
                   {/* Card Image Container with Color-Coded Background */}
                   <Link
-                    href={`/food-safety-templates/${template.slug}`}
+                    href={`/food-safety-templates/${getCanonicalTemplateSlug(template.slug)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`p-4 aspect-[4/3] flex items-center justify-center relative overflow-hidden transition-transform group-hover:scale-[1.02] ${getCardBg(template.type)}`}
@@ -616,7 +617,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   {/* Card Content & Title */}
                   <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between gap-3">
                     <Link
-                      href={`/food-safety-templates/${template.slug}`}
+                      href={`/food-safety-templates/${getCanonicalTemplateSlug(template.slug)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline"
@@ -629,7 +630,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     {/* Action Button */}
                     <div className="pt-2 border-t border-gray-100 flex items-center">
                       <Link
-                        href={`/food-safety-templates/${template.slug}`}
+                        href={`/food-safety-templates/${getCanonicalTemplateSlug(template.slug)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-2.5 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer group-hover:bg-[#2e2d75]"
@@ -678,7 +679,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   {offAudienceTemplates.map((template) => (
                     <Link
                       key={template.id}
-                      href={`/food-safety-templates/${template.slug}`}
+                      href={`/food-safety-templates/${getCanonicalTemplateSlug(template.slug)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 rounded-xl bg-white border border-gray-200 hover:border-gray-400 flex flex-col justify-between shadow-2xs group/card"

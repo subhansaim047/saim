@@ -1,0 +1,40 @@
+export const REDIRECTED_SLUGS: Record<string, string> = {
+  "two-stage-cooling-method": "food-cooling-poster",
+  "cooling-food-methods-poster": "food-cooling-poster",
+  "cooling-food-methods": "food-cooling-poster",
+  "two-stage-cooling": "food-cooling-poster",
+  "food-allergy-warning": "food-allergen-chart",
+  "cleaning-checklist-template": "cleaning-schedule",
+  "cleaning-restaurant": "restaurant-cleaning-checklist",
+  "pest-control-inspection-checklist": "pest-control-checklist",
+  "pest-management-plan": "pest-control-checklist",
+  "pest-control-template": "pest-control-checklist",
+  "pest-control-sop": "pest-control-checklist",
+  "bar-opening-closing-checklist": "opening-and-closing-checklist-template",
+  "bar-opening-checklist": "opening-and-closing-checklist-template",
+  "restaurant-opening-checklist": "opening-and-closing-checklist-template",
+  "restaurant-checklist": "opening-and-closing-checklist-template",
+  "kitchen-opening-and-closing-checklist": "opening-and-closing-checklist-template",
+  "allergen-poster": "food-allergen-chart",
+  "allergen-control-sop": "food-allergen-chart",
+  "natashas-law": "food-allergen-chart",
+  "deep-cleaning-checklist": "restaurant-cleaning-checklist",
+  "restaurant-deep-cleaning-checklist": "restaurant-cleaning-checklist",
+  "calculating-food-cost": "food-cost-calculator",
+  "cutting-board-color-chart": "chopping-board-colour-chart",
+  "fsma-food-traceability-list": "food-traceability",
+  "fsma-compliance-checklist": "opening-and-closing-checklist-template",
+  "ecosure-inspection-checklist": "restaurant-cleaning-checklist",
+  "amazon-seller-and-product-requirements": "food-traceability",
+  "fridge-temperature-log": "fridge-temperature-record-sheet-pdf",
+  "fridge-temperature-chart": "fridge-temperature-record-sheet-pdf",
+  "freezer-temperature-log": "freezer-temperature-chart",
+  "opening-closing-checklist": "opening-and-closing-checklist-template",
+  "chopping-board-guide": "chopping-board-colour-chart",
+  "handwashing-poster": "hand-washing-poster",
+  "delivery-intake-log": "delivery-log"
+};
+
+export function getCanonicalTemplateSlug(slug: string): string {
+  return REDIRECTED_SLUGS[slug] || slug;
+}
