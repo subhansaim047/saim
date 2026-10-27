@@ -110,7 +110,7 @@ const demos: DemoItem[] = [
     ],
     tags: ["Next.js 14", "CSS Modules", "TypeScript", "Port"],
     demoUrl: "/demos/woshico/index.html",
-    previewImage: "/demos/woshico/images/og-image.png",
+    previewImage: "/demos/woshico/images/69006b7b13043eba7258c780_home-one-ad-bg.jpg",
     badge: "Next.js App"
   }
 ,
@@ -216,7 +216,7 @@ const demos: DemoItem[] = [
     category: "Beauty Salon & Online Booking",
     description: "A pixel-perfect, ultra-fast custom web architecture engineered for luxury hair & beauty brands. Features online booking, signature treatments menu, master stylists showcase, and responsive mobile-first design.",
     demoUrl: "/demos/liana/index.html",
-    previewImage: "/demos/liana/preview.png",
+    previewImage: "/demos/liana/images/og-image.png",
     tags: ["Clean Code", "Beauty Salon", "Booking System", "Fast Loading"],
     features: [
       "Pixel-Perfect Luxury Design & Typography",
