@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive kitchen tools save data locally.",
   alternates: {
     canonical: "https://www.saimdev.site/cookie-policy",
+    languages: {
+      "en-GB": "https://www.saimdev.site/cookie-policy",
+    },
   },
   openGraph: {
     title: "Cookie Policy | Saim Dev",
@@ -20,11 +23,24 @@ export const metadata: Metadata = {
     siteName: "Saim Dev",
     locale: "en_GB",
     type: "website"
+  ,
+    images: [
+      {
+        url: "https://www.saimdev.site/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Cookie Policy - Saim Dev",
+        type: "image/png",
+      },
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Cookie Policy | Saim Dev",
     description: "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive kitchen tools store data locally."
+  ,
+    creator: "@saimwebdev",
+    images: ["https://www.saimdev.site/og-image.png"]
   }
 };
 

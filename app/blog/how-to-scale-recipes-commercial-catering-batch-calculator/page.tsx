@@ -4,8 +4,19 @@ import { BlogPostRecipeScaler } from '@/components/blog/BlogPostRecipeScaler';
 export const metadata: Metadata = {
   title: 'How to Scale Catering Recipes Without Quality Loss',
   description: 'Guide to scaling commercial catering recipes from 10 to 500 portions. Avoid common conversion errors, calculate yields, and manage ingredient costs.',
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator'
+    canonical: 'https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator',
+    },
   },
   openGraph: {
     title: 'How to Scale Catering Recipes Without Quality Loss',
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'How to Scale Catering Recipes Without Quality Loss',
     description: 'Guide to scaling commercial catering recipes from 10 to 500 portions. Avoid common conversion errors, calculate yields, and manage ingredient costs.',
     images: ['https://www.saimdev.site/og-image.png']

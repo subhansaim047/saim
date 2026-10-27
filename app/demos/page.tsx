@@ -4,8 +4,15 @@ import { DemosPage } from '@/components/DemosPage';
 export const metadata: Metadata = {
   title: 'Interactive Takeaway & Business Web Demos | Saim Dev',
   description: 'Test live interactive Next.js website demos, online ordering menus, allergen filters, and digital food-safety tools built for UK businesses.',
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
-    canonical: 'https://www.saimdev.site/demos'
+    canonical: 'https://www.saimdev.site/demos',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/demos',
+    },
   },
   openGraph: {
     type: 'website',
@@ -26,6 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'Interactive Takeaway & Business Web Demos | Saim Dev',
     description: 'Test live interactive Next.js website demos, online ordering menus, allergen filters, and digital food-safety tools built for UK businesses.',
     images: ['https://www.saimdev.site/og-demos.png']

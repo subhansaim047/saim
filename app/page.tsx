@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
@@ -9,6 +10,61 @@ import { PricingSection } from "@/components/PricingSection";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { FooterSection } from "@/components/FooterSection";
+
+export const metadata: Metadata = {
+  title: "Next.js Websites for UK Small Businesses | Saim Dev",
+  description: "Bespoke Next.js websites for UK small businesses and takeaways from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
+  alternates: {
+    canonical: "https://www.saimdev.site",
+    languages: {
+      "en-GB": "https://www.saimdev.site",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Next.js Websites for UK Small Businesses | Saim Dev",
+    description: "Bespoke Next.js websites for UK small businesses and takeaways from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
+    url: "https://www.saimdev.site",
+    siteName: "Saim Dev",
+    locale: "en_GB",
+    type: "website",
+    images: [
+      {
+        url: "https://www.saimdev.site/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Saim Dev - Next.js Websites for UK Small Businesses",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next.js Websites for UK Small Businesses | Saim Dev",
+    description: "Bespoke Next.js websites for UK small businesses and takeaways from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
+    creator: "@saimwebdev",
+    images: ["https://www.saimdev.site/og-image.png"],
+  },
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.saimdev.site/#webpage",
+  "url": "https://www.saimdev.site",
+  "name": "Next.js Websites for UK Small Businesses | Saim Dev",
+  "description": "Bespoke Next.js websites for UK small businesses and takeaways from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
+  "inLanguage": "en-GB",
+  "isPartOf": {
+    "@id": "https://www.saimdev.site/#website"
+  },
+  "about": {
+    "@id": "https://www.saimdev.site/#organization"
+  }
+};
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -60,6 +116,10 @@ const faqSchema = {
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

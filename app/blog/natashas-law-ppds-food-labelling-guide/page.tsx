@@ -2,14 +2,25 @@ import type { Metadata } from 'next';
 import { BlogPostNatashasLaw } from '@/components/blog/BlogPostNatashasLaw';
 
 export const metadata: Metadata = {
-  title: 'Natasha\'s Law PPDS Food Labelling Guide for UK Food',
-  description: 'Complete UK guide to Natasha\'s Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.',
+  title: "Natasha's Law PPDS Food Labelling Guide for UK Food",
+  description: "Complete UK guide to Natasha's Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.",
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide'
+    canonical: 'https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide',
+    },
   },
   openGraph: {
-    title: 'Natasha\'s Law PPDS Food Labelling Guide for UK Food',
-    description: 'Complete UK guide to Natasha\'s Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.',
+    title: "Natasha's Law PPDS Food Labelling Guide for UK Food",
+    description: "Complete UK guide to Natasha's Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.",
     url: 'https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -21,8 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Natasha\'s Law PPDS Food Labelling Guide for UK Food',
-    description: 'Complete UK guide to Natasha\'s Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.',
+    creator: '@saimwebdev',
+    title: "Natasha's Law PPDS Food Labelling Guide for UK Food",
+    description: "Complete UK guide to Natasha's Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.",
     images: ['https://www.saimdev.site/og-image.png']
   }
 };

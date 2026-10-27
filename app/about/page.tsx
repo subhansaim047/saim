@@ -6,8 +6,15 @@ import { ArrowLeft, ArrowRight, ShieldCheck, Code2, Rocket, Globe, UserCheck, Ma
 export const metadata: Metadata = {
   title: 'About Saim Dev | Remote Next.js Studio for UK & EU',
   description: 'Learn about Saim Dev, an independent Next.js developer providing fast, fixed-price websites and digital kitchen systems for UK small businesses.',
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "https://www.saimdev.site/about",
+    languages: {
+      "en-GB": "https://www.saimdev.site/about",
+    },
   },
   openGraph: {
     title: 'About Saim Dev | Remote Next.js Studio for UK & EU',

@@ -4,6 +4,10 @@ import { FoodSafetyTemplatesPage } from "@/components/FoodSafetyTemplatesPage";
 export const metadata: Metadata = {
   title: "Free Food Safety Templates UK | Kitchen Compliance Hub",
   description: "Free food safety templates for UK commercial kitchens. Download 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.",
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "https://www.saimdev.site/tools",
     languages: {
@@ -29,6 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    creator: "@saimwebdev",
     title: "Free Food Safety Templates UK | Kitchen Compliance Hub",
     description: "Free food safety templates for UK commercial kitchens. Download 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.",
     images: ["https://www.saimdev.site/og-tools.png"]

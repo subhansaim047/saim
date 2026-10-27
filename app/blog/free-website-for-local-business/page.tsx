@@ -4,8 +4,19 @@ import { BlogPost2Page } from '@/components/BlogPost2Page';
 export const metadata: Metadata = {
   title: 'Why Saim Dev Builds Free Starter Sites for Local Shops',
   description: 'Case study on our local business starter initiative. How bespoke Next.js websites outperform heavy CMS templates in real-world local Google search.',
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/free-website-for-local-business'
+    canonical: 'https://www.saimdev.site/blog/free-website-for-local-business',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/free-website-for-local-business',
+    },
   },
   openGraph: {
     title: 'Why Saim Dev Builds Free Starter Sites for Local Shops',
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'Why Saim Dev Builds Free Starter Sites for Local Shops',
     description: 'Case study on our local business starter initiative. How bespoke Next.js websites outperform heavy CMS templates in real-world local Google search.',
     images: ['https://www.saimdev.site/og-image.png']

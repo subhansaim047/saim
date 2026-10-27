@@ -6,8 +6,15 @@ import { FooterSection } from "@/components/FooterSection";
 export const metadata: Metadata = {
   title: 'Freelance Next.js Developer UK | Fast Custom Sites',
   description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "https://www.saimdev.site/nextjs-developer-uk",
+    languages: {
+      "en-GB": "https://www.saimdev.site/nextjs-developer-uk",
+    },
   },
   openGraph: {
     title: 'Freelance Next.js Developer UK | Fast Custom Sites',
@@ -20,6 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    creator: "@saimwebdev",
     title: 'Freelance Next.js Developer UK | Fast Custom Sites',
     description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
     images: ["https://www.saimdev.site/og-image.png"]

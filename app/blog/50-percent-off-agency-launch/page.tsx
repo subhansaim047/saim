@@ -4,8 +4,19 @@ import { BlogPost3Page } from '@/components/BlogPost3Page';
 export const metadata: Metadata = {
   title: 'Saim Dev Studio Launch: Fixed Price Web Development',
   description: 'Special introductory fixed-price packages for UK and European small businesses seeking sub-second Next.js web applications and takeaway systems.',
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/50-percent-off-agency-launch'
+    canonical: 'https://www.saimdev.site/blog/50-percent-off-agency-launch',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/50-percent-off-agency-launch',
+    },
   },
   openGraph: {
     title: 'Saim Dev Studio Launch: Fixed Price Web Development',
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'Saim Dev Studio Launch: Fixed Price Web Development',
     description: 'Special introductory fixed-price packages for UK and European small businesses seeking sub-second Next.js web applications and takeaway systems.',
     images: ['https://www.saimdev.site/og-image.png']

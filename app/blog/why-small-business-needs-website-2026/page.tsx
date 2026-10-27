@@ -4,8 +4,19 @@ import { BlogPost1Page } from '@/components/BlogPost1Page';
 export const metadata: Metadata = {
   title: 'Why UK Small Businesses Need a Custom Website in 2026',
   description: 'Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.',
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/why-small-business-needs-website-2026'
+    canonical: 'https://www.saimdev.site/blog/why-small-business-needs-website-2026',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/why-small-business-needs-website-2026',
+    },
   },
   openGraph: {
     title: 'Why UK Small Businesses Need a Custom Website in 2026',
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'Why UK Small Businesses Need a Custom Website in 2026',
     description: 'Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.',
     images: ['https://www.saimdev.site/og-image.png']

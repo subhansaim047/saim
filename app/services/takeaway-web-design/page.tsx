@@ -19,31 +19,40 @@ import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: 'Takeaway Website Design UK | Commission-Free Orders',
-  description: 'Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha\'s Law allergen filters and WhatsApp kitchen dispatch.',
+  description: "Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "https://www.saimdev.site/services/takeaway-web-design",
+    languages: {
+      "en-GB": "https://www.saimdev.site/services/takeaway-web-design",
+    },
   },
   openGraph: {
     title: 'Takeaway Website Design UK | Commission-Free Orders',
-    description: 'Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha\'s Law allergen filters and WhatsApp kitchen dispatch.',
+    description: "Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
     url: "https://www.saimdev.site/services/takeaway-web-design",
     siteName: "Saim Dev",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.saimdev.site/og-image.png",
+        url: "https://www.saimdev.site/og-services.png",
         width: 1200,
         height: 630,
         alt: "Takeaway Website Design UK - Saim Dev",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    creator: "@saimwebdev",
     title: 'Takeaway Website Design UK | Commission-Free Orders',
-    description: 'Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha\'s Law allergen filters and WhatsApp kitchen dispatch.',
-    images: ["https://www.saimdev.site/og-image.png"],
+    description: "Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
+    images: ["https://www.saimdev.site/og-services.png"],
   },
 };
 
@@ -104,7 +113,7 @@ export default function TakeawayWebDesignPage() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Takeaway Website Design UK - Saim Dev",
-    description: 'Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha\'s Law allergen filters and WhatsApp kitchen dispatch.',
+    description: "Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
     url: canonicalUrl,
     priceRange: "£250",
     areaServed: ["United Kingdom", "European Union"],
@@ -122,7 +131,7 @@ export default function TakeawayWebDesignPage() {
           name: "Commission-Free Takeaway Starter System",
           price: "250",
           priceCurrency: "GBP",
-          description: 'Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha\'s Law allergen filters and WhatsApp kitchen dispatch.',
+          description: "Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
         },
       ],
     },

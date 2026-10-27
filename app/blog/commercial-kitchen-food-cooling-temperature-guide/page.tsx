@@ -4,8 +4,19 @@ import { BlogPostCoolingGuide } from '@/components/blog/BlogPostCoolingGuide';
 export const metadata: Metadata = {
   title: 'UK Food Cooling Temperature Guide: 90-Minute Rule',
   description: 'Master safe food cooling in commercial kitchens. Step-by-step advice on blast chilling, ice baths, and FSA requirements to prevent bacterial growth.',
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide'
+    canonical: 'https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide',
+    },
   },
   openGraph: {
     title: 'UK Food Cooling Temperature Guide: 90-Minute Rule',
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'UK Food Cooling Temperature Guide: 90-Minute Rule',
     description: 'Master safe food cooling in commercial kitchens. Step-by-step advice on blast chilling, ice baths, and FSA requirements to prevent bacterial growth.',
     images: ['https://www.saimdev.site/og-image.png']

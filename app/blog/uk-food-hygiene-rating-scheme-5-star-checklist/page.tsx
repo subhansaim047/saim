@@ -4,8 +4,19 @@ import { BlogPostFhrsChecklist } from '@/components/blog/BlogPostFhrsChecklist';
 export const metadata: Metadata = {
   title: 'How to Get a 5-Star Food Hygiene Rating: UK Checklist',
   description: 'Complete UK inspection checklist to secure a 5-star Food Hygiene Rating. Practical tips for structure, hygiene practices, and confidence in management.',
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist'
+    canonical: 'https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+    },
   },
   openGraph: {
     title: 'How to Get a 5-Star Food Hygiene Rating: UK Checklist',
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'How to Get a 5-Star Food Hygiene Rating: UK Checklist',
     description: 'Complete UK inspection checklist to secure a 5-star Food Hygiene Rating. Practical tips for structure, hygiene practices, and confidence in management.',
     images: ['https://www.saimdev.site/og-image.png']

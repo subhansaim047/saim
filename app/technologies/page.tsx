@@ -4,8 +4,15 @@ import { TechnologiesPage } from '@/components/TechnologiesPage';
 export const metadata: Metadata = {
   title: 'Modern Next.js & React Tech Stack | Saim Dev',
   description: 'Explore our high-performance web development stack: Next.js 16 App Router, React, Tailwind CSS, TypeScript, and edge cloud hosting for speed.',
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
-    canonical: 'https://www.saimdev.site/technologies'
+    canonical: 'https://www.saimdev.site/technologies',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/technologies',
+    },
   },
   openGraph: {
     title: 'Modern Next.js & React Tech Stack | Saim Dev',
@@ -18,6 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'Modern Next.js & React Tech Stack | Saim Dev',
     description: 'Explore our high-performance web development stack: Next.js 16 App Router, React, Tailwind CSS, TypeScript, and edge cloud hosting for speed.',
     images: ['https://www.saimdev.site/og-image.png']

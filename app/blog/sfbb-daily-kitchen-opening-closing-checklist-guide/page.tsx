@@ -4,8 +4,19 @@ import { BlogPostChecklist } from '@/components/blog/BlogPostChecklist';
 export const metadata: Metadata = {
   title: 'SFBB Opening & Closing Checklist Guide for UK Cafes',
   description: 'Master your daily opening and closing checks with Safer Food, Better Business guidance. Protect kitchen hygiene and secure a 5-star council rating.',
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide'
+    canonical: 'https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide',
+    },
   },
   openGraph: {
     title: 'SFBB Opening & Closing Checklist Guide for UK Cafes',
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'SFBB Opening & Closing Checklist Guide for UK Cafes',
     description: 'Master your daily opening and closing checks with Safer Food, Better Business guidance. Protect kitchen hygiene and secure a 5-star council rating.',
     images: ['https://www.saimdev.site/og-image.png']

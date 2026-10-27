@@ -4,8 +4,19 @@ import { BlogPostFoodCost } from '@/components/blog/BlogPostFoodCost';
 export const metadata: Metadata = {
   title: 'How to Calculate Food Cost Percentage in UK Kitchens',
   description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator'
+    canonical: 'https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator',
+    },
   },
   openGraph: {
     title: 'How to Calculate Food Cost Percentage in UK Kitchens',
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'How to Calculate Food Cost Percentage in UK Kitchens',
     description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
     images: ['https://www.saimdev.site/og-image.png']

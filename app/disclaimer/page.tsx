@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "Regulatory and guidance notice for kitchen templates, checklists, and calculators. General reference only and not official advice from the FSA.",
   alternates: {
     canonical: "https://www.saimdev.site/disclaimer",
+    languages: {
+      "en-GB": "https://www.saimdev.site/disclaimer",
+    },
   },
   openGraph: {
     title: "Food Safety Disclaimer | Saim Dev",
@@ -20,11 +23,24 @@ export const metadata: Metadata = {
     siteName: "Saim Dev",
     locale: "en_GB",
     type: "website"
+  ,
+    images: [
+      {
+        url: "https://www.saimdev.site/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Food Safety Disclaimer - Saim Dev",
+        type: "image/png",
+      },
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Food Safety Disclaimer | Saim Dev",
     description: "Regulatory and guidance notice for kitchen templates, checklists, and calculators. General reference only and not official advice from the FSA."
+  ,
+    creator: "@saimwebdev",
+    images: ["https://www.saimdev.site/og-image.png"]
   }
 };
 

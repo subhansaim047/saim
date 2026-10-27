@@ -4,8 +4,15 @@ import { ContactPage } from '@/components/ContactPage';
 export const metadata: Metadata = {
   title: 'Contact Saim Dev | Fast Fixed-Price Website Quotes',
   description: 'Get a fixed-price quote for your UK small-business website. Contact Saim Dev via WhatsApp or enquiry form for quick responses within 24 hours.',
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: 'https://www.saimdev.site/contact',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/contact',
+    },
   },
   openGraph: {
     type: 'website',
@@ -26,6 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'Contact Saim Dev | Fast Fixed-Price Website Quotes',
     description: 'Get a fixed-price quote for your UK small-business website. Contact Saim Dev via WhatsApp or enquiry form for quick responses within 24 hours.',
     images: ['https://www.saimdev.site/og-contact.png'],

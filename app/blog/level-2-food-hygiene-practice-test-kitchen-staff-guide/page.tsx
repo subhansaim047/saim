@@ -4,8 +4,19 @@ import { BlogPostHygieneQuiz } from '@/components/blog/BlogPostHygieneQuiz';
 export const metadata: Metadata = {
   title: 'Level 2 Food Hygiene Practice Test: 10 Key Questions',
   description: 'Prepare kitchen staff for UK Food Safety Level 2 certification with this practice test covering critical temperatures, hygiene, and cross-contamination.',
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
   alternates: {
-    canonical: 'https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide'
+    canonical: 'https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide',
+    languages: {
+      'en-GB': 'https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide',
+    },
   },
   openGraph: {
     title: 'Level 2 Food Hygiene Practice Test: 10 Key Questions',
@@ -21,6 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    creator: '@saimwebdev',
     title: 'Level 2 Food Hygiene Practice Test: 10 Key Questions',
     description: 'Prepare kitchen staff for UK Food Safety Level 2 certification with this practice test covering critical temperatures, hygiene, and cross-contamination.',
     images: ['https://www.saimdev.site/og-image.png']

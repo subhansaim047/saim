@@ -86,6 +86,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
+      creator: "@saimwebdev",
       title: pageTitle,
       description: pageDesc,
       images: ["https://www.saimdev.site/og-image.png"],
