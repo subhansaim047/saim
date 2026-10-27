@@ -110,14 +110,14 @@ export const HeroSection = () => {
         <div className="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-8 md:px-12 lg:px-14 pt-20 pb-6 gap-6 lg:gap-12">
 
           {/* LEFT COLUMN */}
-          <div className="flex flex-col justify-center gap-4 sm:gap-6 w-full lg:w-[50%] xl:w-[48%] flex-shrink-0">
+          <div className="flex flex-col justify-center gap-5 sm:gap-7 lg:gap-8 w-full lg:w-[50%] xl:w-[48%] flex-shrink-0">
 
             {/* Label group — Sybiosme Pill Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col gap-2 self-start"
+              className="flex flex-col gap-2.5 sm:gap-3 self-start"
             >
               {/* STATUS PILL */}
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
@@ -142,7 +142,7 @@ export const HeroSection = () => {
               </div>
 
               {/* Tagline */}
-              <div className="pl-1 mt-1">
+              <div className="pl-1 mt-1.5 sm:mt-2">
                 <span className="text-xs sm:text-sm font-normal text-white/70 tracking-tight leading-relaxed">
                   Better websites for{" "}
                   <span className="text-white font-medium underline decoration-[#FF4A1C] decoration-2 underline-offset-4">
@@ -170,34 +170,20 @@ export const HeroSection = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col gap-3.5 sm:gap-4.5"
+              className="flex flex-col gap-6 sm:gap-7 pt-1 sm:pt-2"
             >
               {/* Highlighted sub-headline */}
-              <div className="border-l-2 border-[#FF4A1C] pl-3.5">
-                <h2 className="text-white text-sm sm:text-base md:text-lg font-medium tracking-tight">
+              <div className="border-l-2 border-[#FF4A1C] pl-4 sm:pl-5 py-1">
+                <h2 className="text-white text-base sm:text-lg md:text-xl font-medium tracking-tight">
                   Fast,{" "}
                   <span className="text-white/50">
                     SEO-Friendly Websites
                   </span>
                 </h2>
-                <p className="text-white/45 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-0.5">
+                <p className="text-white/45 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-1.5">
                   CUSTOM DESIGN • MOBILE-FIRST PERFORMANCE • FULL OWNERSHIP
                 </p>
               </div>
-
-              {/* Description */}
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                className="text-white/70 text-xs sm:text-sm md:text-[15px] leading-relaxed font-light max-w-md"
-              >
-                Saim Dev is a bespoke web engineering studio. We build custom, ultra-fast websites that unlock{" "}
-                <span className="text-white font-medium border-b border-[#FF4A1C]/60 pb-0.5">
-                  measurable growth
-                </span>{" "}
-                for every business we partner with.
-              </motion.p>
 
               {/* CTA — Sybiosme Nested Island Button */}
               <div className="flex flex-wrap items-center gap-3 pt-2">
