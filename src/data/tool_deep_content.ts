@@ -993,7 +993,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
     relatedTools: ["opening-and-closing-checklist-template", "cleaning-schedule", "fridge-temperature-record-sheet-pdf"],
     relatedBlog: {
       title: "EHO Inspection Checklist & 5-Star Food Hygiene Guide UK",
-      slug: "fhrs-food-hygiene-rating-guide-uk"
+      slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
     }
   },
   "delivery-log": {

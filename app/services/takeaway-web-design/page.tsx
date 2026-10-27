@@ -239,7 +239,7 @@ export default function TakeawayWebDesignPage() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link
-              href="/tools/food-allergen-chart"
+              href="/food-safety-templates/food-allergen-chart"
               className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all border border-white/15"
             >
               <span>Try Live Allergen Matrix Demo</span>

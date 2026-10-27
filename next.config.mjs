@@ -208,6 +208,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/fhrs-food-hygiene-rating-guide-uk',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+        permanent: true,
+      },
+      {
+        source: '/tools/food-allergen-chart',
+        destination: '/food-safety-templates/food-allergen-chart',
+        permanent: true,
+      },
+      {
         source: '/food-safety-templates/delivery-intake-log',
         destination: '/food-safety-templates/delivery-log',
         permanent: true,
