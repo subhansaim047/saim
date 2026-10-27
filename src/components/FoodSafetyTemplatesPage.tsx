@@ -598,7 +598,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   >
                     <img
                       src={template.thumbUrl || template.imgUrl}
-                      alt={template.title}
+                      alt={`${template.title} - Free UK Food Hygiene Template (PDF Download)`}
                       className="max-h-full max-w-full object-contain drop-shadow-sm"
                       loading={idx < 12 ? "eager" : "lazy"}
                       decoding="async"

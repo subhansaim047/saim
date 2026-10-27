@@ -25,7 +25,7 @@ const demos: DemoItem[] = [
     category: "Fast Food & Street Food",
     description: "An energetic, high-converting modern street food brand website featuring interactive food sliders, dynamic menus, bold typography, and smooth micro-interactions.",
     demoUrl: "/hotbite/index.html",
-    previewImage: "/hotbite/preview.jpg",
+    previewImage: "/demos/previews/hotbite-street-food-takeaway.webp",
     tags: ["Fast Food", "Street Food", "Framer", "Interactive Slider"],
     features: [
       "Interactive Pizza & Food Slider",
@@ -41,7 +41,7 @@ const demos: DemoItem[] = [
     category: "Restaurant & Fast Food",
     description: "Bespoke high-performance digital menu & fast-casual restaurant architecture.",
     demoUrl: "/burger-garage/index.html",
-    previewImage: "/burger-garage/assets/media/logo.png",
+    previewImage: "/demos/previews/burger-garage-restaurant-branding.webp",
     tags: ["Restaurant", "Burger", "HTML5"],
     features: [
       "Pixel-Perfect Responsive Engineering",
@@ -60,7 +60,7 @@ const demos: DemoItem[] = [
     category: "Restaurant & Luxury Dining",
     description: "Bespoke fine-dining & luxury hospitality web experience tailored for reservations.",
     demoUrl: "/frenchyse/index.html",
-    previewImage: "/frenchyse/images/banner-bg-03-new.png",
+    previewImage: "/demos/previews/frenchyse-takeaway-restaurant-banner.webp",
     tags: ["Restaurant", "Luxury", "GSAP Scroll", "HTML5"],
     features: [
       "Scroll-Triggered Burger Animation",
@@ -76,7 +76,7 @@ const demos: DemoItem[] = [
     category: "Restaurant & Luxury Dining",
     description: "A bespoke culinary web platform showcasing dynamic scroll animations, luxury styling, and fully animated food visualizers.",
     demoUrl: "/anzaar/index.html",
-    previewImage: "/anzaar/images/banner-bg-03-new.png",
+    previewImage: "/demos/previews/anzaar-rooftop-restaurant-banner.webp",
     tags: ["Restaurant", "Luxury", "GSAP Scroll", "HTML5"],
     features: [
       "Scroll-Triggered Burger Animation",
@@ -92,7 +92,7 @@ const demos: DemoItem[] = [
     category: "Corporate / Agency",
     description: "Premium architecture and interior design agency website with minimalist layouts and smooth scrolling.",
     demoUrl: "/demos/architecture/index.html",
-    previewImage: "/demos/architecture/preview.png",
+    previewImage: "/demos/previews/architecture-interior-studio-design.webp",
     tags: ["Webflow", "HTML5", "CSS3"],
     features: ["Project Showcase", "Minimalist UI", "Dark Mode Ready", "CMS Ready"],
   },
@@ -110,7 +110,7 @@ const demos: DemoItem[] = [
     ],
     tags: ["Next.js 14", "CSS Modules", "TypeScript", "Port"],
     demoUrl: "/demos/woshico/index.html",
-    previewImage: "/demos/woshico/images/69006b7b13043eba7258c780_home-one-ad-bg.jpg",
+    previewImage: "/demos/previews/woshico-cleaning-services-preview.webp",
     badge: "Next.js App"
   }
 ,
@@ -120,7 +120,7 @@ const demos: DemoItem[] = [
     category: "Car Detailing & Automotive Repair",
     description: "An ultra-modern, high-performance automotive detailing and car repair website featuring full-motion video hero, interactive service showcases, multi-step quote booking, pricing tiers, and client reviews.",
     demoUrl: "/demos/akdetailing/index.html",
-    previewImage: "/demos/akdetailing/images/157_1-video_21.jpeg",
+    previewImage: "/demos/previews/detailx-car-detailing-auto-repair.webp",
     tags: ["Car Detailing", "Auto Repair", "Video Hero", "Quote Booking"],
     features: [
       "Full 6-Page Multi-Page Ecosystem (Home, Services, Pricing, Quote, Blog, About)",
@@ -136,7 +136,7 @@ const demos: DemoItem[] = [
     category: "Mobile Day Spa & Beauty Salon",
     description: "An upscale on-demand mobile day spa and beauty salon website with full service pricing catalogs, Revolution Slider hero, founder story, interactive FAQs, and quote request booking flow.",
     demoUrl: "/demos/beauticiansonthego/index.html",
-    previewImage: "/demos/beauticiansonthego/preview.png",
+    previewImage: "/demos/previews/beauticians-on-the-go-mobile-day-spa.webp",
     tags: ["Mobile Spa", "Beauty Salon", "Full Catalog", "Quote Booking"],
     features: [
       "Full 5-Page Multi-Page Ecosystem (Home, About, Services, FAQ, Contact)",
@@ -152,7 +152,7 @@ const demos: DemoItem[] = [
     category: "Interior Architecture & Luxury Living",
     description: "A minimalist, editorial interior design and architecture studio showcase featuring high-end residential case studies, filterable project portfolios, and architectural project inquiry flows.",
     demoUrl: "/demos/atelier-noir/index.html",
-    previewImage: "/demos/atelier-noir/preview.png",
+    previewImage: "/demos/previews/atelier-noir-luxury-interior-design.webp",
     tags: ["Interior Design", "Architecture", "Minimalist Luxury", "Editorial Layout"],
     features: [
       "Editorial Minimalist Aesthetic & Geist Typography",
@@ -168,7 +168,7 @@ const demos: DemoItem[] = [
     category: "Wellness Sanctuary & Day Spa",
     description: "A tranquil, nature-inspired luxury wellness and day spa website featuring full appointment booking, 8 signature therapy showcases, organic cosmetics shop, treatment pricing, and sanctuary lookbook.",
     demoUrl: "/demos/serenia/index.html",
-    previewImage: "/demos/serenia/preview.png",
+    previewImage: "/demos/previews/serenia-luxury-wellness-spa.webp",
     tags: ["Wellness & Spa", "Appointment Booking", "Cosmetics Shop", "Complete Platform"],
     features: [
       "Tranquil Earth-Toned Aesthetic & Belleza Typography",
@@ -184,7 +184,7 @@ const demos: DemoItem[] = [
     category: "Beauty Salon & High-End Aesthetics",
     description: "An ultra-luxurious, editorial aesthetic beauty salon platform featuring animated hero marquees, comprehensive multi-page service menus, curated lookbook gallery, and interactive booking inquiry.",
     demoUrl: "/demos/valeria/index.html",
-    previewImage: "/demos/valeria/preview.png",
+    previewImage: "/demos/previews/valeria-luxury-beauty-salon.webp",
     tags: ["Luxury Design", "Beauty & Cosmetics", "Editorial Aesthetic", "Full Template"],
     features: [
       "High-Fashion Editorial Aesthetic & Italiana Typography",
@@ -200,7 +200,7 @@ const demos: DemoItem[] = [
     category: "Beauty Salon & Miami Luxury Services",
     description: "A high-performance custom digital flagship engineered for premier salons and luxury studios. Features top announcement discounts, luxury service showcases, K-rastase & Shu Uemura highlights, online booking, and a mobile quick-action bar.",
     demoUrl: "/demos/studio-dbrickell/index.html",
-    previewImage: "/demos/studio-dbrickell/assets/images/branding/og-image.jpg",
+    previewImage: "/demos/previews/studio-dbrickell-luxury-beauty-spa.webp",
     tags: ["Pixel-Perfect UI", "Beauty Salon", "Luxury Spa", "Mobile First"],
     features: [
       "100% Pixel-Perfect Visual Fidelity",
@@ -216,7 +216,7 @@ const demos: DemoItem[] = [
     category: "Beauty Salon & Online Booking",
     description: "A pixel-perfect, ultra-fast custom web architecture engineered for luxury hair & beauty brands. Features online booking, signature treatments menu, master stylists showcase, and responsive mobile-first design.",
     demoUrl: "/demos/liana/index.html",
-    previewImage: "/demos/liana/images/og-image.png",
+    previewImage: "/demos/previews/liana-luxury-hair-beauty-salon.webp",
     tags: ["Clean Code", "Beauty Salon", "Booking System", "Fast Loading"],
     features: [
       "Pixel-Perfect Luxury Design & Typography",
@@ -309,7 +309,11 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
               <div className="relative aspect-video overflow-hidden bg-black/60 border-b border-white/10">
                 <img
                   src={demo.previewImage}
-                  alt={demo.title}
+                  alt={`${demo.title} - Modern bespoke web design & engineering showcase`}
+                  width={1200}
+                  height={675}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

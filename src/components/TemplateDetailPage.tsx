@@ -313,7 +313,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <div className="w-full md:w-1/2 aspect-[4/3] rounded-2xl bg-amber-50/60 border border-amber-200/60 p-6 flex items-center justify-center relative overflow-hidden shrink-0">
             <img
               src={template.thumbUrl || template.imgUrl}
-              alt={template.title}
+              alt={`${template.title} - Free UK Kitchen Compliance Template (PDF Download)`}
               className="max-h-full max-w-full object-contain drop-shadow"
               loading="eager"
               decoding="async"
@@ -440,7 +440,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             <div className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gray-50 border border-gray-200 print:bg-white print:border-none print:p-0">
               <img
                 src={template.imgUrl}
-                alt={template.title}
+                alt={`${template.title} - Printable UK Food Hygiene Standard Document (FSA Aligned)`}
                 loading="eager"
                 decoding="async"
                 className="max-h-[600px] print:max-h-none print:w-full w-auto object-contain drop-shadow-sm rounded-lg"
