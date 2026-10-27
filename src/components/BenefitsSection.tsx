@@ -60,7 +60,7 @@ export const BenefitsSection = () => {
                   loop
                   muted
                   playsInline
-                  preload="auto"
+                  preload="none"
                   poster="/videos/benefits-poster.webp"
                   className="w-full h-full object-contain block"
                 >

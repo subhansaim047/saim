@@ -158,7 +158,7 @@ export const HeroSection = () => {
               as="div"
               text="Saim Dev"
               className="text-[16vw] sm:text-[13vw] md:text-[11vw] lg:text-[8.5vw] xl:text-[8vw] font-bold leading-[0.85] tracking-[-0.07em] drop-shadow-2xl"
-              style={{ color: "#ffffff", fontFamily: "'Fraunces', Georgia, serif", fontWeight: 900 }}
+              style={{ color: "#ffffff", fontFamily: "var(--font-fraunces), 'Fraunces', Georgia, serif", fontWeight: 900 }}
             />
 
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold tracking-tight text-white leading-tight mt-1 mb-2">

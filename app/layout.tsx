@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter, Instrument_Serif } from 'next/font/google';
+import { Inter, Instrument_Serif, Fraunces } from 'next/font/google';
 import '../src/index.css'; // Global CSS
 import { CookieBanner } from '@/components/CookieBanner';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const instrument = Instrument_Serif({ weight: "400", style: ["normal", "italic"], subsets: ['latin'], variable: '--font-instrument' });
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces' });
 
 export const metadata: Metadata = {
   title: 'Next.js Websites for UK Small Businesses | Saim Dev',
@@ -163,7 +164,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
-      <body className={`${inter.variable} ${instrument.variable} bg-black text-[#E1E0CC] antialiased selection:bg-primary selection:text-black`}>
+      <body className={`${inter.variable} ${instrument.variable} ${fraunces.variable} bg-black text-[#E1E0CC] antialiased selection:bg-primary selection:text-black`}>
         {children}
         <CookieBanner />
       </body>
