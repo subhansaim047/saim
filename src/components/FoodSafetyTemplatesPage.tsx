@@ -38,6 +38,7 @@ import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { FoodCostCalculatorTool } from "./tools/FoodCostCalculatorTool";
 import { RecipeCalculatorTool } from "./tools/RecipeCalculatorTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
+import { isOffAudience } from "@/lib/off-audience";
 
 export const FoodSafetyTemplatesPage: React.FC = () => {
   // ── FILTER STATES (INTERNAL SAIM DEV FILTERS) ──
@@ -87,6 +88,19 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
       return true;
     });
   }, [selectedType, selectedActivity, selectedPurpose, searchTerm]);
+
+  const { coreTemplates, offAudienceTemplates } = useMemo(() => {
+    const core: FoodSafetyTemplate[] = [];
+    const off: FoodSafetyTemplate[] = [];
+    filteredTemplates.forEach(item => {
+      if (isOffAudience(item.slug)) {
+        off.push(item);
+      } else {
+        core.push(item);
+      }
+    });
+    return { coreTemplates: core, offAudienceTemplates: off };
+  }, [filteredTemplates]);
 
   // Card background styling based on data-type
   const getCardBg = (type: string) => {
@@ -217,11 +231,11 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1D1D1F] leading-[1.1]">
-              UK Restaurant &amp; Takeaway Kitchen Tools: Daily Checklists, Logs &amp; Allergen Matrices
+              Free Food Safety Templates UK: Kitchen Checklists, Logs &amp; Allergen Matrices
             </h1>
 
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mt-1">
-              Practical due diligence systems built specifically for independent UK takeaways, restaurants, pubs, and catering operations. Aligned with Food Standards Agency (FSA) and Safer Food, Better Business (SFBB) standards.
+              Practical food hygiene management and due diligence systems built specifically for independent UK takeaways, restaurants, pubs, and commercial caterers. Under the Food Safety Act 1990 and Regulation (EC) No 852/2004, UK food businesses must maintain documented food safety procedures based on HACCP principles. These free templates and interactive tools align with Food Standards Agency (FSA) <em>Safer Food, Better Business (SFBB)</em> and Food Standards Scotland <em>CookSafe</em> guidance to support your 5-star Food Hygiene Rating.
             </p>
 
             <div className="flex flex-wrap items-center gap-2 pt-2">
@@ -314,7 +328,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 <Link href="/food-safety-templates/haccp-plan-builder" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; HACCP Plan Builder
                 </Link>
-                <Link href="/food-safety-templates/delivery-intake-log" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/delivery-log" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; Delivery Intake Log
                 </Link>
                 <Link href="/blog/how-to-write-haccp-plan-uk-food-business-step-by-step" className="text-slate-600 hover:text-black font-medium block truncate">
@@ -335,10 +349,10 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/food-safety-templates/fridge-temperature-log" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/fridge-temperature-record-sheet-pdf" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; Fridge Temperature Sheet
                 </Link>
-                <Link href="/food-safety-templates/freezer-temperature-log" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/freezer-temperature-chart" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; Freezer Temperature Chart
                 </Link>
                 <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-slate-600 hover:text-black font-medium block truncate">
@@ -362,7 +376,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 <Link href="/food-safety-templates/cleaning-schedule" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; Daily Cleaning Schedule
                 </Link>
-                <Link href="/food-safety-templates/opening-closing-checklist" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/opening-and-closing-checklist-template" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; Opening &amp; Closing Checklist
                 </Link>
                 <Link href="/blog/sfbb-daily-kitchen-opening-closing-checklist-guide" className="text-slate-600 hover:text-black font-medium block truncate">
@@ -407,10 +421,10 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/food-safety-templates/chopping-board-guide" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/chopping-board-colour-chart" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; Chopping Board Colour Guide
                 </Link>
-                <Link href="/food-safety-templates/handwashing-poster" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/hand-washing-poster" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; Hand Washing SOP Poster
                 </Link>
                 <Link href="/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide" className="text-slate-600 hover:text-black font-medium block truncate">
@@ -563,13 +577,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
             {/* Active Filter Chips */}
             <div className="flex items-center justify-between text-xs text-gray-500 px-1 no-print">
-              <span>Showing <strong>{filteredTemplates.length}</strong> food safety templates</span>
+              <span>Showing <strong>{coreTemplates.length}</strong> food safety templates</span>
               <span className="font-mono text-[11px]">Print &amp; Save as PDF Ready</span>
             </div>
 
             {/* 4-COLUMN RESPONSIVE GRID */}
             <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
-              {filteredTemplates.map((template, idx) => (
+              {coreTemplates.map((template, idx) => (
                 <div
                   key={template.id}
                   className="group rounded-2xl bg-white border border-[#E5E5EA] hover:border-gray-400 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-200"
@@ -629,7 +643,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
               ))}
             </div>
 
-            {filteredTemplates.length === 0 && (
+            {coreTemplates.length === 0 && (
               <div className="p-12 text-center rounded-3xl bg-white border border-gray-200">
                 <Search className="w-8 h-8 text-gray-400 mx-auto mb-2" />
                 <h4 className="font-bold text-gray-800 text-base">No templates match your filters</h4>
@@ -640,11 +654,45 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     setSelectedActivity("all");
                     setSearchTerm("");
                   }}
-                  className="mt-4 px-4 py-2 bg-gray-900 text-white text-xs font-bold rounded-xl"
+                  className="mt-4 px-4 py-2 bg-gray-900 text-white text-xs font-bold rounded-xl cursor-pointer"
                 >
                   Clear Filters
                 </button>
               </div>
+            )}
+
+            {/* Collapsible Drawer for Specialist & International Standards */}
+            {offAudienceTemplates.length > 0 && (
+              <details className="mt-10 rounded-2xl border border-gray-200 bg-gray-50/80 p-5 group no-print">
+                <summary className="flex items-center justify-between cursor-pointer text-xs sm:text-sm font-bold text-gray-700 select-none">
+                  <div className="flex items-center gap-2">
+                    <FileText className="w-4 h-4 text-gray-500" />
+                    <span>More resources ({offAudienceTemplates.length} Specialist &amp; International Standards)</span>
+                  </div>
+                  <ChevronDown className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform" />
+                </summary>
+                <p className="text-xs text-gray-500 mt-2 mb-4 leading-relaxed">
+                  Specialist industrial manufacturing checklists, US FDA reference charts, and export compliance templates for non-catering operations.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 pt-1">
+                  {offAudienceTemplates.map((template) => (
+                    <Link
+                      key={template.id}
+                      href={`/food-safety-templates/${template.slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-xl bg-white border border-gray-200 hover:border-gray-400 flex flex-col justify-between shadow-2xs group/card"
+                    >
+                      <span className="text-xs font-semibold text-gray-900 group-hover/card:text-amber-800 line-clamp-2">
+                        {template.title}
+                      </span>
+                      <span className="text-[10px] text-gray-400 font-mono mt-1.5 uppercase">
+                        {template.type}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </details>
             )}
           </main>
         </div>
@@ -864,6 +912,12 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 <span>Discuss with Lead Architect on WhatsApp</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
+              <Link
+                href="/services/takeaway-web-design"
+                className="bg-white/10 hover:bg-white/20 text-white font-medium text-xs sm:text-sm px-6 py-3 rounded-full flex items-center gap-1.5 transition-all border border-white/15"
+              >
+                <span>takeaway website with allergen filter</span>
+              </Link>
             </div>
           </div>
 

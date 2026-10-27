@@ -6,14 +6,17 @@ import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: 'Free PPDS Food Label Template UK | Natasha\'s Law',
-  description: 'Generate compliant Natasha\'s Law PPDS food labels online for free. Automatically bold all 14 statutory allergens, set expiry dates, and print A4 sheets.',
+  title: "PPDS Label Generator UK | Free Natasha's Law Labels",
+  description: "Generate compliant Natasha's Law PPDS food labels online. Automatically bold all 14 UK allergens, set use-by dates, and print free A4 sticker sheets.",
   alternates: {
     canonical: "https://www.saimdev.site/tools/ppds-label-generator",
+    languages: {
+      "en-GB": "https://www.saimdev.site/tools/ppds-label-generator",
+    },
   },
   openGraph: {
-    title: 'Free PPDS Food Label Template UK | Natasha\'s Law',
-    description: 'Generate compliant Natasha\'s Law PPDS food labels online for free. Automatically bold all 14 statutory allergens, set expiry dates, and print A4 sheets.',
+    title: "PPDS Label Generator UK | Free Natasha's Law Labels",
+    description: "Generate compliant Natasha's Law PPDS food labels online. Automatically bold all 14 UK allergens, set use-by dates, and print free A4 sticker sheets.",
     url: "https://www.saimdev.site/tools/ppds-label-generator",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -29,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: 'Free PPDS Food Label Template UK | Natasha\'s Law',
-    description: 'Generate compliant Natasha\'s Law PPDS food labels online for free. Automatically bold all 14 statutory allergens, set expiry dates, and print A4 sheets.',
+    title: "PPDS Label Generator UK | Free Natasha's Law Labels",
+    description: "Generate compliant Natasha's Law PPDS food labels online. Automatically bold all 14 UK allergens, set use-by dates, and print free A4 sticker sheets.",
     images: ["https://www.saimdev.site/og-image.png"],
   },
 };
@@ -102,6 +105,7 @@ export default function PpdsLabelGeneratorPage() {
       price: "0",
       priceCurrency: "GBP",
     },
+    dateModified: "2026-10-27",
     publisher: {
       "@type": "Organization",
       name: "Saim Dev",
@@ -153,7 +157,7 @@ export default function PpdsLabelGeneratorPage() {
             href="/services"
             className="text-xs font-bold text-amber-700 hover:text-amber-900 hidden sm:inline-block"
           >
-            £250 Takeaway Websites
+            ££250 Takeaway Websites
           </Link>
         </div>
       </header>
@@ -188,14 +192,14 @@ export default function PpdsLabelGeneratorPage() {
           </div>
 
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-neutral-950">
-            Free Natasha's Law PPDS Food Label Template UK
+            PPDS Label Generator: Free Natasha's Law Food Labels
           </h1>
 
           {/* Byline & Verification Date */}
           <div className="flex items-center gap-2 text-xs text-neutral-500 pt-1">
             <span>By <strong>Saim Dev</strong></span>
             <span>·</span>
-            <span>Last updated: October 2026</span>
+            <span>Last Reviewed: <strong>27 October 2026</strong></span>
             <span>·</span>
             <span className="inline-flex items-center gap-1 text-emerald-700 font-semibold">
               <CheckCircle2 className="w-3.5 h-3.5" />
@@ -427,7 +431,7 @@ export default function PpdsLabelGeneratorPage() {
                 href="/services/takeaway-web-design"
                 className="bg-white/10 hover:bg-white/20 text-white font-medium text-xs px-5 py-3.5 rounded-full inline-flex items-center justify-center gap-1.5 transition-all border border-white/15"
               >
-                <span>View Takeaway System (£250)</span>
+                <span>takeaway website with allergen filter</span>
               </Link>
             </div>
           </div>

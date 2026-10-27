@@ -1,52 +1,56 @@
 {
   "food-allergen-chart": {
-    "title": "Free UK Takeaway 14 Food Allergen Chart Matrix",
-    "desc": "Create and print a compliant 14-allergen chart for your UK food business. Free interactive menu matrix, customer filter, and instant A4 PDF export.",
+    "title": "Free Allergen Chart for Takeaways | Saim Dev",
+    "desc": "Download a free 14 allergen chart for takeaway and restaurant kitchens. Display statutory allergens clearly for customers and pass EHO hygiene inspections.",
     "howTo": [
-      "Replace the example dishes with your own menu and ingredients.",
-      "Mark Contains (YES) for every declared ingredient. Use May contain (MAY) only after a cross-contact risk assessment.",
-      "Check every dish against your recipes and supplier specifications, and update the chart whenever a recipe, product or supplier changes.",
-      "Keep the chart where staff can find it and make sure staff can explain it to customers."
+      "Display this statutory 14-allergen chart in prominent customer-facing ordering and kitchen collection areas.",
+      "Train front-of-house and takeaway telephone staff to ask customers about allergy requirements before taking orders.",
+      "Ensure kitchen prep staff consult current supplier packaging sheets when receiving substitute food products.",
+      "Review and reprint your takeaway allergen chart whenever ingredients, brands, or recipes change."
     ]
   },
   "allergy-matrix": {
-    "title": "Free 14 Allergen Matrix Tool for UK Restaurants",
-    "desc": "Map all 14 statutory allergens across your commercial menu. Filter ingredients interactively and export an ink-friendly A4 kitchen poster in seconds.",
+    "title": "Free Allergen Matrix Template UK | Saim Dev",
+    "desc": "Create a compliant allergen matrix template for your UK takeaway or restaurant. Filter ingredients interactively and export a printable A4 kitchen poster.",
     "howTo": [
-      "Enter dish titles alongside full recipe specifications and ingredient packages.",
-      "Flag declared allergens and identify cross-contact risks across prep lines.",
-      "Print or export your matrix to keep staff and customers safely informed."
+      "Input all dishes and recipes currently prepared and served in your kitchen.",
+      "Cross-reference supplier ingredient declarations for each of the 14 UK statutory allergens.",
+      "Mark Contains (YES) for confirmed ingredients and May Contain (MAY) only after thorough risk assessment.",
+      "Print the A4 allergen matrix and place it where kitchen and front-of-house staff can instantly reference it."
     ]
   },
   "food-cost-calculator": {
-    "title": "Free Food Cost Percentage Calculator for UK Kitchens",
-    "desc": "Calculate recipe food cost percentages, gross margins, and profitable takeaway menu prices with our free interactive commercial kitchen calculator.",
+    "title": "Free Food Cost Calculator UK | Saim Dev",
+    "desc": "Calculate recipe food cost percentages, gross profit margins, and profitable takeaway prices with our free UK food cost calculator for commercial kitchens.",
     "howTo": [
-      "Input ingredient purchase prices and exact recipe portion weights.",
-      "Review target gross profit percentage against total dish production cost.",
-      "Set profitable takeaway menu prices while tracking ingredient inflation."
+      "Enter raw ingredient invoice costs in GBP (£) including packaging and portion weights.",
+      "Input target kitchen Gross Profit margin percentage (standard UK takeaway target is 65% to 75%).",
+      "Review suggested takeaway menu selling price and gross profit contribution per portion.",
+      "Adjust portion sizes or supplier cost inputs to optimize takeaway menu profitability."
     ]
   },
   "recipe-calculator": {
-    "title": "Commercial Recipe Scaling Calculator | Batch Yields",
-    "desc": "Scale commercial catering recipes from 10 to 500 portions accurately. Calculate exact batch ingredient weights and kitchen production costs for free.",
+    "title": "Free Recipe Scaler Calculator UK | Saim Dev",
+    "desc": "Scale commercial recipes up or down accurately with our free recipe scaler calculator. Convert portion sizes, batch ingredient weights, and kitchen yields.",
     "howTo": [
-      "Enter standard batch recipe ingredients, baseline quantities, and units.",
-      "Select your target scaling factor or required guest portion headcount.",
-      "Print updated kitchen production sheets with scaled ingredient measurements."
+      "Enter your base recipe ingredient weights in metric grams (g) or kilograms (kg).",
+      "Set base portion yield and your target production batch quantity (e.g., 20 to 120 covers).",
+      "Review scaled batch ingredient measurements instantly with automatic rounding for kitchen prep.",
+      "Export or print scaled recipe cards for prep cooks to ensure consistent seasoning and portion control."
     ]
   },
   "haccp-plan-builder": {
-    "title": "Free UK Takeaway HACCP Plan Builder & CCP Matrix",
-    "desc": "Build a compliant commercial kitchen HACCP plan online. Identify critical control points, set control limits, and print structured kitchen logs to PDF.",
+    "title": "Free Takeaway HACCP Plan Template | Saim Dev",
+    "desc": "Build a compliant HACCP plan for your UK takeaway or restaurant. Identify critical control points, set safety limits, and download audit-ready PDF logs.",
     "howTo": [
-      "Map out each stage of food preparation from delivery to final hot service.",
-      "Establish critical limits for cooking, cooling, and refrigeration steps.",
-      "Document corrective actions for staff when critical limits are breached."
+      "Map out your kitchen process steps from goods intake and storage through cooking and hot holding.",
+      "Identify biological, chemical, physical, and allergen hazards at every preparation stage.",
+      "Define Critical Control Points (CCPs) such as core cooking temperature (75°C) and chilled storage (<8°C).",
+      "Establish corrective actions and supervisor verification sign-off schedules for your EHO due diligence file."
     ]
   },
   "food-safety-quiz": {
-    "title": "UK Food Hygiene Level 2 Practice Exam & Quiz Tool",
+    "title": "Free Food Safety Level 2 Practice Quiz | Saim Dev",
     "desc": "Test your kitchen team with this interactive UK Food Hygiene Level 2 quiz. Review temperature rules, cross-contamination, and Natasha's Law online.",
     "howTo": [
       "Complete the multiple-choice assessment covering core UK hygiene standards.",
@@ -55,34 +59,36 @@
     ]
   },
   "freezer-temperature-chart": {
-    "title": "Free Freezer & Fridge Temperature Log Sheet (PDF)",
-    "desc": "Download free dual-shift commercial fridge and freezer temperature logs. Keep your kitchen aligned with UK Food Standards Agency due diligence rules.",
+    "title": "Free Freezer Temperature Chart UK | Saim Dev",
+    "desc": "Free printable freezer temperature chart for UK commercial kitchens. Record daily checks at or below -18°C to maintain statutory EHO hygiene compliance.",
     "howTo": [
-      "Mount this chart directly onto or adjacent to commercial walk-in freezers.",
-      "Record morning and evening internal temperature readings twice per shift.",
-      "Take corrective action immediately if freezer temperatures rise above -18\u00b0C."
+      "Mount the freezer temperature log sheet on or next to commercial walk-in and chest freezers.",
+      "Inspect calibrated digital displays or probe ambient freezer air twice every working day.",
+      "Log the exact temperature reading and staff initials on the sheet immediately.",
+      "Take corrective action if temperatures rise above -18°C (check defrost cycle, ice buildup, or door seals)."
     ]
   },
   "food-cooling-poster": {
-    "title": "Commercial Food Cooling 90-Minute Guide Poster",
+    "title": "Free Kitchen Food Cooling Poster UK | Saim Dev",
     "desc": "Download a free kitchen wall poster explaining the UK 90-minute cooling rule, blast chilling, and danger zone temperature limits for safe catering.",
     "howTo": [
       "Divide hot cooked batches into shallow stainless steel pans before chilling.",
-      "Cool food to 8\u00b0C or colder within 90 minutes to prevent spore germination.",
+      "Cool food to 8°C or colder within 90 minutes to prevent spore germination.",
       "Cover, date-code, and transfer chilled containers into cold storage promptly."
     ]
   },
   "basic-food-preparation-rules": {
-    "title": "Basic Food Hygiene & Safe Prep Rules Poster (UK)",
-    "desc": "Printable food preparation hygiene poster for commercial kitchens. Essential due diligence guidelines covering hand hygiene, cross-contamination, and cooking.",
+    "title": "Free Basic Food Prep Rules Poster | Saim Dev",
+    "desc": "Printable UK commercial kitchen food preparation rules poster. Visual guidance on handwashing, temperature control, and cross-contamination prevention.",
     "howTo": [
-      "Display clearly above food preparation tables and vegetable washing sinks.",
-      "Train kitchen staff to wash hands thoroughly between handling different foods.",
-      "Use clean, sanitized equipment for every new food preparation task."
+      "Display this food preparation rules poster in active kitchen prep and wash-up areas.",
+      "Review standard operating procedures with new kitchen assistants during induction training.",
+      "Enforce strict separation between raw meats and ready-to-eat salads, cooked meats, and garnishes.",
+      "Ensure all prep staff wash hands thoroughly before touching ready-to-eat foods or utensils."
     ]
   },
   "walk-in-cooler-food-storage-chart": {
-    "title": "Commercial Walk-In Chiller Food Storage Layout Chart",
+    "title": "Free Walk-In Cooler Storage Chart | Saim Dev",
     "desc": "Visual food storage shelf chart for commercial walk-in chillers. Prevent drip cross-contamination by organizing raw poultry, meats, and ready-to-eat foods.",
     "howTo": [
       "Store ready-to-eat foods, dairy, and cooked dishes on the highest shelving.",
@@ -91,43 +97,47 @@
     ]
   },
   "fridge-temperature-record-sheet-pdf": {
-    "title": "Commercial Fridge Temperature Record Sheet UK (PDF)",
-    "desc": "Print daily commercial fridge temperature monitoring sheets for UK restaurants. Record morning prep and evening service checks for EHO inspections.",
+    "title": "Free Fridge Temperature Log Sheet | Saim Dev",
+    "desc": "Download a free fridge temperature log sheet for UK restaurants and takeaways. Record 8°C chilled limits twice daily for EHO due diligence evidence.",
     "howTo": [
-      "Check calibrated fridge thermometers at opening and during the afternoon shift.",
-      "Record temperature readings alongside staff initials on the log sheet daily.",
-      "Report chiller units exceeding 8\u00b0C to the duty manager for urgent service."
+      "Mount printed fridge temperature sheets adjacent to commercial walk-in and under-counter chillers.",
+      "Record probe air or core food temperatures twice daily (morning opening and afternoon/evening service).",
+      "Verify that internal temperatures remain strictly at or below 8°C (recommended 1°C to 5°C).",
+      "Log corrective actions immediately if any chiller unit rises above 8°C (seal check, stock transfer, technician call)."
     ]
   },
   "cleaning-schedule": {
-    "title": "Commercial Kitchen Cleaning Schedule Template UK",
-    "desc": "Download a free commercial kitchen cleaning rota covering daily, weekly, and deep-clean tasks. Ready to print and display for council inspections.",
+    "title": "Free Takeaway Cleaning Schedule | Saim Dev",
+    "desc": "Download a free takeaway cleaning schedule template for UK food businesses. Daily, weekly, and deep cleaning rotas aligned with FSA hygiene standards.",
     "howTo": [
-      "Assign specific kitchen cleaning zones to team members on each shift rota.",
-      "Specify approved sanitiser contact times and dilution ratios (BS EN 1276).",
-      "Sign and date completion logs after each deep clean or shift handover."
+      "List every piece of equipment, work surface, wall, and floor space requiring routine cleaning.",
+      "Specify cleaning frequency (after each use, daily at close, weekly deep clean, monthly maintenance).",
+      "Document approved cleaning chemicals (BS EN 1276 / BS EN 13697 certified sanitisers) and contact times.",
+      "Require cleaning staff and the supervising shift manager to initial each task upon successful completion."
     ]
   },
   "restaurant-cleaning-checklist": {
-    "title": "Commercial Restaurant Deep Cleaning Checklist (UK)",
-    "desc": "Comprehensive daily, weekly, and monthly cleaning checklist for UK commercial restaurant kitchens. Audit extraction canopies, grease traps, and line equipment.",
+    "title": "Free Restaurant Cleaning Checklist | Saim Dev",
+    "desc": "Restaurant cleaning checklist covering dining area, bar, kitchen prep, and washrooms. Daily and weekly tasks aligned with UK food hygiene regulations.",
     "howTo": [
-      "Complete opening sanitising passes on all food contact surfaces and counters.",
-      "Perform mid-shift sanitiser sweeps on high-touch touchpoints and door handles.",
-      "Sign off kitchen closing cleaning routines including grease traps and floors."
+      "Assign specific cleaning zones to front-of-house, kitchen, and bar teams at start and end of shifts.",
+      "Verify that food contact surfaces and table touchpoints are sanitised using EN 1276 certified sanitisers.",
+      "Check that customer washrooms are restocked with antibacterial soap, hot water, and hand towels.",
+      "Sign off completed daily cleaning logs to maintain management due diligence records for council inspections."
     ]
   },
   "opening-and-closing-checklist-template": {
-    "title": "Kitchen Opening & Closing Checklist Template UK",
-    "desc": "Free printable opening and closing hygiene checklist for UK food businesses. Maintain SFBB standards across food storage, safety, and kitchen locks.",
+    "title": "Free SFBB Opening & Closing Checks | Saim Dev",
+    "desc": "Free SFBB opening and closing checks template for UK food businesses. Daily hygiene checks, fridge temperatures, and routines for 5-star EHO ratings.",
     "howTo": [
-      "Inspect chillers, pilot lights, and ventilation hoods upon arrival on shift.",
-      "Verify sanitizer spray concentrations and handwashing soap basin stocks.",
-      "Complete evening shutdown checks, lock store cupboards, and verify waste bins."
+      "Complete morning opening checks before food prep commences (fridge temps, sanitiser levels, handwash basins).",
+      "Verify all refrigeration units operate below 8°C and probe thermometers are sanitised and calibrated.",
+      "Carry out evening closing checks (surfaces disinfected, food covered and dated, waste bins cleared, premises locked).",
+      "Sign and date the daily record sheet as evidence of management oversight for your local council EHO audit."
     ]
   },
   "kitchen-prep-list-template": {
-    "title": "Commercial Kitchen Daily Food Prep List Template",
+    "title": "Free Kitchen Daily Prep List Template | Saim Dev",
     "desc": "Organise daily kitchen production with this commercial prep sheet. Track batch pars, prep quantities, FIFO rotation, and morning line readiness.",
     "howTo": [
       "Review forecast covers and record required batch quantities by station.",
@@ -136,7 +146,7 @@
     ]
   },
   "pest-control-checklist": {
-    "title": "Commercial Kitchen Pest Control Inspection Checklist",
+    "title": "Free Kitchen Pest Control Checklist | Saim Dev",
     "desc": "Routine pest prevention and monitoring checklist for UK commercial caterers. Inspect bait stations, building proofing, and waste storage areas daily.",
     "howTo": [
       "Inspect external doors, pipe penetrations, and ventilation screens weekly.",
@@ -145,7 +155,7 @@
     ]
   },
   "food-traceability": {
-    "title": "UK Commercial Food Traceability Log Sheet Template",
+    "title": "Free Food Traceability Log Template | Saim Dev",
     "desc": "Document one-step-back and one-step-forward ingredient traceability for UK food businesses. Record delivery batch codes, invoices, and use-by dates.",
     "howTo": [
       "Record delivery dates, supplier names, and batch codes for incoming meats.",
@@ -154,7 +164,7 @@
     ]
   },
   "food-recall": {
-    "title": "Food Recall & Product Withdrawal Procedure Log (UK)",
+    "title": "Free Food Recall Procedure Checklist | Saim Dev",
     "desc": "Standard operating procedure and customer notification log for food product recalls and withdrawals under UK Food Standards Agency regulations.",
     "howTo": [
       "Identify affected batch numbers and isolate suspect stock in quarantine.",
@@ -163,7 +173,7 @@
     ]
   },
   "hand-washing-poster": {
-    "title": "Commercial Kitchen Hand Washing Steps Poster (UK)",
+    "title": "Free Commercial Handwashing Poster | Saim Dev",
     "desc": "Printable 6-step hand washing technique poster for food handlers. Aligned with UK Food Standards Agency hygiene rules for commercial kitchen washbasins.",
     "howTo": [
       "Position directly above all dedicated staff handwash basins in the kitchen.",
@@ -172,7 +182,7 @@
     ]
   },
   "kitchen-safety-poster": {
-    "title": "Commercial Kitchen Health & Safety Rules Poster UK",
+    "title": "Free Commercial Kitchen Safety Poster | Saim Dev",
     "desc": "Essential health and safety guidelines for commercial kitchen staff. Covers hot oil handling, slip hazards, knife safety, and emergency protocols.",
     "howTo": [
       "Mount in main kitchen thoroughfares near cooking lines and wash-up zones.",
@@ -181,16 +191,16 @@
     ]
   },
   "reheating-food-temperature-guide": {
-    "title": "Food Reheating Temperature Guide UK Kitchens (PDF)",
-    "desc": "Learn safe reheating rules for UK catering kitchens. Ensure hot core temperatures reach 75\u00b0C to destroy pathogens and pass local authority audits.",
+    "title": "Free Reheating Food Temperature Guide | Saim Dev",
+    "desc": "Learn safe reheating rules for UK catering kitchens. Ensure hot core temperatures reach 75°C to destroy pathogens and pass local authority audits.",
     "howTo": [
-      "Reheat pre-cooked foods rapidly until core temperature reaches at least 75\u00b0C.",
+      "Reheat pre-cooked foods rapidly until core temperature reaches at least 75°C.",
       "Stir soups, gravies, and stews during reheating to distribute heat evenly.",
       "Never reheat food more than once; discard leftovers that are not consumed."
     ]
   },
   "five-food-safety-rules": {
-    "title": "WHO 5 Keys to Safer Food Kitchen Poster & Guide",
+    "title": "Free 5 Key Food Safety Rules Poster | Saim Dev",
     "desc": "World Health Organisation 5 keys to safer food reference poster for staff training. Covers cleanliness, separation, cooking, temperature, and safe water.",
     "howTo": [
       "Display prominently in staff breakrooms and near food preparation stations.",
@@ -199,7 +209,7 @@
     ]
   },
   "chopping-board-colour-chart": {
-    "title": "Colour Coded Chopping Board Chart UK Kitchens (PDF)",
+    "title": "Free Chopping Board Colour Chart | Saim Dev",
     "desc": "Printable colour-coded cutting board wall poster for UK food businesses. Prevent cross-contamination between raw meat, poultry, fish, and salads.",
     "howTo": [
       "Mount above chopping board storage racks in the main preparation kitchen.",
@@ -208,12 +218,43 @@
     ]
   },
   "hot-holding-food-temperature-log": {
-    "title": "Commercial Hot Holding Temperature Log Sheet UK",
-    "desc": "Record hot-held food temperatures above 63\u00b0C throughout service. Free printable log sheet meeting UK Food Standards Agency hot holding requirements.",
+    "title": "Free Hot Holding Temperature Log | Saim Dev",
+    "desc": "Download a free hot holding temperature log for UK kitchens. Monitor food above 63°C and record time limits to comply with Food Hygiene Regulations.",
     "howTo": [
-      "Preheat bain-maries and hot holding wells before loading hot cooked dishes.",
-      "Probe and log food temperatures every 2 hours to ensure they remain above 63\u00b0C.",
-      "Discard hot food displayed below 63\u00b0C after a maximum of 2 hours."
+      "Preheat hot-holding equipment (bain-marie, hot cabinet, pass heat lamps) before adding hot food.",
+      "Ensure food is cooked thoroughly to 75°C (82°C in Scotland) before transferring to hot holding units.",
+      "Probe core temperatures at least every two hours to ensure food stays consistently above 63°C.",
+      "Apply the UK 2-hour exemption rule strictly if food drops below 63°C: serve or discard immediately."
+    ]
+  },
+  "eho-checklist": {
+    "title": "Free EHO Inspection Checklist UK | Saim Dev",
+    "desc": "Complete EHO inspection checklist for UK restaurants and takeaways. Audit food hygiene, cross-contamination, structural cleaning, and HACCP paperwork.",
+    "howTo": [
+      "Audit kitchen practices across the 3 EHO scoring pillars: Food Hygiene, Structural Compliance, and Management Confidence.",
+      "Verify that hot holding (>63°C), chilling (<8°C), and cooking (75°C) logs are up to date and signed daily.",
+      "Inspect physical premises for pest proofing, hot running water, soap, paper towels, and surface sanitation.",
+      "Organise your SFBB diary or HACCP binder so it can be handed to the visiting officer immediately."
+    ]
+  },
+  "delivery-log": {
+    "title": "Free Goods In Temperature Log UK | Saim Dev",
+    "desc": "Download a free goods in temperature log sheet for UK commercial kitchens. Check chilled (<8°C) and frozen (<-18°C) deliveries, date codes, and packaging.",
+    "howTo": [
+      "Check delivery vehicle hygiene and inspect arriving food packaging for tears, leaks, or pest damage.",
+      "Probe chilled goods to confirm temperature is at or below 8°C (reject stock exceeding 8°C).",
+      "Verify frozen items are solidly frozen at or below -18°C with no signs of thawing or refreezing.",
+      "Check use-by dates, record vehicle and supplier details, and file the signed delivery intake sheet."
+    ]
+  },
+  "cooking-log-template": {
+    "title": "Free Cooking Temperature Log Sheet | Saim Dev",
+    "desc": "Free cooking temperature record sheet for UK commercial kitchens. Verify core cooking temperatures reach 75°C (82°C in Scotland) for safe batch cooking.",
+    "howTo": [
+      "Sanitise the digital probe thermometer using a food-grade antibacterial wipe before and after each test.",
+      "Insert the probe into the thickest part of the meat, poultry, or batch dish away from bones.",
+      "Verify the reading reaches 75°C for 30 seconds (or equivalent time/temperature, 82°C in Scotland).",
+      "Record batch item name, time, core temperature, and cook initials on the daily kitchen record sheet."
     ]
   }
 }

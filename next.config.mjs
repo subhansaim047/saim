@@ -146,6 +146,42 @@ const nextConfig = {
         destination: '/food-safety-templates/food-traceability',
         permanent: true,
       },
+      // 4. Hub Cluster link alias fallbacks & missing variants
+      {
+        source: '/food-safety-templates/fridge-temperature-log',
+        destination: '/food-safety-templates/fridge-temperature-record-sheet-pdf',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/fridge-temperature-chart',
+        destination: '/food-safety-templates/fridge-temperature-record-sheet-pdf',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/freezer-temperature-log',
+        destination: '/food-safety-templates/freezer-temperature-chart',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/opening-closing-checklist',
+        destination: '/food-safety-templates/opening-and-closing-checklist-template',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/chopping-board-guide',
+        destination: '/food-safety-templates/chopping-board-colour-chart',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/handwashing-poster',
+        destination: '/food-safety-templates/hand-washing-poster',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/delivery-intake-log',
+        destination: '/food-safety-templates/delivery-log',
+        permanent: true,
+      },
     ];
   },
 };

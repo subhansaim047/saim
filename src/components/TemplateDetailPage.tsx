@@ -298,7 +298,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             <span className="text-gray-300 hidden sm:inline" aria-hidden="true">•</span>
             <div className="inline-flex items-center gap-1.5 font-medium">
               <Clock className="w-3.5 h-3.5 text-amber-700" />
-              <span>Last Updated: <strong className="text-gray-900 font-semibold">October 2026</strong></span>
+              <span>Last Reviewed: <strong className="text-gray-900 font-semibold">27 October 2026</strong></span>
             </div>
           </div>
           <div className="inline-flex items-center gap-1.5 text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full text-[11px] font-semibold">
@@ -331,13 +331,13 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             </div>
 
             <h1 className="text-2xl sm:text-4xl font-extrabold text-[#1D1D1F] leading-tight">
-              {isAllergenTool ? "Free UK Takeaway Allergen Chart Generator (14 Allergens)" : template.title}
+              {CORE_PAGES_METADATA[template.slug]?.title || (isAllergenTool ? "Free UK Takeaway Allergen Chart Generator (14 Allergens)" : template.title)}
             </h1>
 
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              {isAllergenTool
+              {CORE_PAGES_METADATA[template.slug]?.desc || (isAllergenTool
                 ? "Build and print a UK allergen chart for your takeaway in minutes. Covers all 14 allergens, a customer filter and PDF print. Free, no sign-up."
-                : template.desc}
+                : template.desc)}
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -730,7 +730,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                 href="/services/takeaway-web-design"
                 className="bg-white/10 hover:bg-white/20 text-white font-medium text-xs px-5 py-3.5 rounded-full inline-flex items-center justify-center gap-1.5 transition-all border border-white/15"
               >
-                <span>Takeaway Demo & Details</span>
+                <span>takeaway website with allergen filter</span>
               </Link>
             </div>
           </div>

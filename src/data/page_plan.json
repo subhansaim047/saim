@@ -37,17 +37,17 @@
   "brc-audit": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "brc-audit",
-    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "kosher-certification": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "kosher-certification",
-    "reason": "Specialised non-hospitality certification / platform requirement"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "turkey-pasteurization-chart": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "turkey-pasteurization-chart",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "fridge-temperature-record-sheet-pdf": {
     "bucket": "KEEP",
@@ -225,9 +225,9 @@
     "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
   },
   "cooking-log-template": {
-    "bucket": "NOINDEX",
+    "bucket": "KEEP",
     "target_canonical_slug": "cooking-log-template",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Mandatory 75\u00b0C core probe cooking temperature monitoring record for UK commercial kitchens"
   },
   "steak-cooking-chart": {
     "bucket": "NOINDEX",
@@ -337,7 +337,7 @@
   "big-6-foodborne-illnesses": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "big-6-foodborne-illnesses",
-    "reason": "US-specific food regulation / agency standard, off-audience for UK food businesses"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "fridge-temperature-chart": {
     "bucket": "NOINDEX",
@@ -387,22 +387,22 @@
   "what-is-the-minimum-hot-holding-temperature-for-fried-chicken": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "what-is-the-minimum-hot-holding-temperature-for-fried-chicken",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "what-is-the-minimum-hot-holding-temperature-requirement-for-pizza": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "what-is-the-minimum-hot-holding-temperature-requirement-for-pizza",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "eho-checklist": {
-    "bucket": "NOINDEX",
+    "bucket": "KEEP",
     "target_canonical_slug": "eho-checklist",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Essential UK commercial kitchen Environmental Health Officer 5-star hygiene audit checklist"
   },
   "what-is-the-minimum-hot-holding-temperature-for-hot-dog": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "what-is-the-minimum-hot-holding-temperature-for-hot-dog",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "fridge-organization-chart": {
     "bucket": "NOINDEX",
@@ -492,12 +492,12 @@
   "gfsi-audit-checklist": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "gfsi-audit-checklist",
-    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "get-iso-22000-certified": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "get-iso-22000-certified",
-    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "fsma-food-traceability-list": {
     "bucket": "MERGE",
@@ -512,12 +512,12 @@
   "sqf-audit-checklist": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "sqf-audit-checklist",
-    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "iso-22000-internal-audit-checklist": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "iso-22000-internal-audit-checklist",
-    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "fsma-compliance-checklist": {
     "bucket": "MERGE",
@@ -527,7 +527,7 @@
   "fssc-certification-checklist": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "fssc-certification-checklist",
-    "reason": "Industrial manufacturing certification standard; off-audience for independent UK restaurants"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "ingredient-traceability": {
     "bucket": "NOINDEX",
@@ -535,9 +535,9 @@
     "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
   },
   "delivery-log": {
-    "bucket": "NOINDEX",
+    "bucket": "KEEP",
     "target_canonical_slug": "delivery-log",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Statutory goods-in temperature and supplier delivery verification log for UK catering"
   },
   "food-production-sheet": {
     "bucket": "NOINDEX",
@@ -572,7 +572,7 @@
   "three-sink-method": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "three-sink-method",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "proper-method-for-cleaning-dirty-utensils": {
     "bucket": "NOINDEX",
@@ -602,7 +602,7 @@
   "fat-tom-poster": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "fat-tom-poster",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "how-long-does-butter-last-poster": {
     "bucket": "NOINDEX",
@@ -642,17 +642,17 @@
   "non-gmo": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "non-gmo",
-    "reason": "Specialised non-hospitality certification / platform requirement"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "amazon-seller-and-product-requirements": {
-    "bucket": "MERGE",
-    "target_canonical_slug": "food-traceability",
-    "reason": "Platform seller requirements 301 redirected to UK food-traceability log"
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "amazon-seller-and-product-requirements",
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "milk-pasteurization-temperature-time-chart": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "milk-pasteurization-temperature-time-chart",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "pork-temperature-chart": {
     "bucket": "NOINDEX",
@@ -662,27 +662,27 @@
   "freeze-drying-time-chart": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "freeze-drying-time-chart",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "juice-pasteurization-temperature-time-chart": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "juice-pasteurization-temperature-time-chart",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "meat-pasteurization-chart": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "meat-pasteurization-chart",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "poultry-pasteurization-chart": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "poultry-pasteurization-chart",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "chicken-pasteurization-chart": {
     "bucket": "NOINDEX",
     "target_canonical_slug": "chicken-pasteurization-chart",
-    "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "hot-holding-food-temperature-log": {
     "bucket": "KEEP",
@@ -700,9 +700,9 @@
     "reason": "Thin content / niche template; retained live with noindex to preserve direct downloads without index bloat"
   },
   "ecosure-inspection-checklist": {
-    "bucket": "MERGE",
-    "target_canonical_slug": "restaurant-cleaning-checklist",
-    "reason": "US EcoSure checklist 301 redirected to UK restaurant-cleaning-checklist"
+    "bucket": "NOINDEX",
+    "target_canonical_slug": "ecosure-inspection-checklist",
+    "reason": "Off-audience / out-of-jurisdiction industrial or US regulation"
   },
   "5-whys-root-cause-analysis-template": {
     "bucket": "NOINDEX",

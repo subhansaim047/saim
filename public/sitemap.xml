@@ -242,6 +242,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.saimdev.site/food-safety-templates/cooking-log-template</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.saimdev.site/food-safety-templates/hand-washing-poster</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -254,6 +260,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.saimdev.site/food-safety-templates/eho-checklist</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.saimdev.site/food-safety-templates/food-cooling-poster</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -261,6 +273,12 @@
   </url>
   <url>
     <loc>https://www.saimdev.site/food-safety-templates/food-cost-calculator</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.saimdev.site/food-safety-templates/delivery-log</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
