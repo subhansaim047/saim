@@ -9,6 +9,10 @@ const processSteps = [
     title: "Discovery Call",
     description:
       "We discuss your business goals, target clients, project scope, and design preferences.",
+    glow: "from-[#FF4A1C]/35 to-transparent",
+    iconHover: "group-hover:rotate-12 group-hover:scale-115",
+    color: "text-[#FF4A1C]",
+    borderHover: "group-hover:border-[#FF4A1C]/50 group-hover:shadow-[0_0_24px_rgba(255,74,28,0.25)]",
   },
   {
     step: "02",
@@ -16,6 +20,10 @@ const processSteps = [
     title: "Strategy & Planning",
     description:
       "Structuring website architecture, page layout wireframes, and high-converting copy paths.",
+    glow: "from-sky-500/35 to-transparent",
+    iconHover: "group-hover:rotate-90 group-hover:scale-115",
+    color: "text-sky-400",
+    borderHover: "group-hover:border-sky-400/50 group-hover:shadow-[0_0_24px_rgba(56,189,248,0.25)]",
   },
   {
     step: "03",
@@ -23,6 +31,10 @@ const processSteps = [
     title: "Design & Development",
     description:
       "Crafting pixel-perfect custom designs and building fast, sub-second clean code.",
+    glow: "from-emerald-500/35 to-transparent",
+    iconHover: "group-hover:scale-125",
+    color: "text-emerald-400",
+    borderHover: "group-hover:border-emerald-400/50 group-hover:shadow-[0_0_24px_rgba(52,211,153,0.25)]",
   },
   {
     step: "04",
@@ -30,6 +42,10 @@ const processSteps = [
     title: "Launch & Support",
     description:
       "Final testing, Google SEO indexing, live deployment, and 14–30 days dedicated support.",
+    glow: "from-purple-500/35 to-transparent",
+    iconHover: "group-hover:-translate-y-1.5 group-hover:translate-x-1.5 group-hover:scale-115",
+    color: "text-purple-400",
+    borderHover: "group-hover:border-purple-400/50 group-hover:shadow-[0_0_24px_rgba(192,132,252,0.25)]",
   },
 ];
 
@@ -77,10 +93,21 @@ export const ProcessSection = () => {
 
                   <div>
                     <div className="flex items-center justify-between mb-8">
-                      <div className="w-12 h-12 rounded-2xl bg-white/[0.05] backdrop-blur-md flex items-center justify-center text-white border border-white/10 group-hover:border-[#FF4A1C]/40 group-hover:text-[#FF4A1C] group-hover:scale-105 transition-all duration-300">
-                        <Icon className="w-5 h-5" />
+                      {/* Animated Icon Container */}
+                      <div className="relative shrink-0">
+                        <div
+                          className={`absolute -inset-1.5 rounded-2xl bg-gradient-to-br ${item.glow} opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 pointer-events-none`}
+                        />
+                        <div
+                          className={`relative w-12 h-12 rounded-2xl bg-[#111113] border border-white/10 ${item.borderHover} flex items-center justify-center transition-all duration-300 shadow-md`}
+                        >
+                          <Icon
+                            className={`w-5 h-5 ${item.color} transition-all duration-500 ease-out ${item.iconHover}`}
+                          />
+                        </div>
                       </div>
-                      <span className="text-[11px] font-mono font-bold tracking-wider text-white/90 bg-white/[0.06] border border-white/10 px-3 py-1 rounded-full">
+
+                      <span className="text-[11px] font-mono font-bold tracking-wider text-white/90 bg-white/[0.06] border border-white/10 px-3 py-1 rounded-full group-hover:border-white/25 transition-colors">
                         {item.step}
                       </span>
                     </div>

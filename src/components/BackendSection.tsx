@@ -1,6 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
-import { Plus, ChevronDown, Sparkles, Image as ImageIcon, FileText, MoreHorizontal } from "lucide-react";
+import { 
+  Plus, 
+  ChevronDown, 
+  SlidersHorizontal, 
+  ShoppingBag, 
+  FileText, 
+  MousePointerClick, 
+  AlignLeft, 
+  Image as ImageIcon, 
+  MoreHorizontal 
+} from "lucide-react";
 
 export const BackendSection = () => {
   return (
@@ -32,7 +42,7 @@ export const BackendSection = () => {
         >
           <p style={{ color: "rgba(225,224,204,0.65)", fontSize: "clamp(0.9rem, 1.1vw, 1.05rem)", lineHeight: 1.75 }}>
             Whether it&apos;s multilingual support, fast page building, easy asset management
-            or interface integration  we take care of the heart of your website: The Backend.
+            or interface integration — we take care of the heart of your website: The Backend.
           </p>
 
           {/* 4K Vector CMS Component (Zero blur, infinite crispness) */}
@@ -40,13 +50,13 @@ export const BackendSection = () => {
             
             {/* Top Dashed Area with Add Content Button */}
             <div className="relative w-full border border-dashed border-white/15 rounded-xl p-3 flex justify-center bg-[#0a0a0a]">
-              <button className="flex items-center gap-1.5 bg-[#141414] hover:bg-[#1f1f1f] border border-white/10 text-white/80 text-xs px-3 py-1.5 rounded-lg transition-colors">
+              <button className="flex items-center gap-1.5 bg-[#141414] hover:bg-[#1f1f1f] border border-white/10 text-white/80 text-xs px-3 py-1.5 rounded-lg transition-colors cursor-pointer">
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add content</span>
                 <ChevronDown className="w-3 h-3 text-white/40" />
               </button>
 
-              {/* Floating Dropdown Menu (Exact recreation) */}
+              {/* Floating Dropdown Menu */}
               <div
                 className="absolute z-20 bg-[#121214] border border-white/15 rounded-xl p-3 shadow-2xl flex flex-col gap-1.5"
                 style={{
@@ -61,18 +71,18 @@ export const BackendSection = () => {
                 
                 <div className="flex flex-col gap-1 mt-0.5">
                   {[
-                    { label: "Slideshow", icon: Sparkles },
-                    { label: "Products", icon: Sparkles },
-                    { label: "Teaser", icon: Sparkles },
-                    { label: "Call to action", icon: Sparkles },
+                    { label: "Slideshow", icon: SlidersHorizontal },
+                    { label: "Products", icon: ShoppingBag },
+                    { label: "Teaser", icon: FileText },
+                    { label: "Call to action", icon: MousePointerClick },
                   ].map((item) => {
                     const Icon = item.icon;
                     return (
                       <div
                         key={item.label}
-                        className="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-white/5 text-white/80 hover:text-white text-xs transition-colors cursor-pointer"
+                        className="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-white/5 text-white/80 hover:text-white text-xs transition-colors cursor-pointer group"
                       >
-                        <Icon className="w-3 h-3 text-white/40" />
+                        <Icon className="w-3 h-3 text-white/40 group-hover:text-primary transition-colors" />
                         <span>{item.label}</span>
                       </div>
                     );
@@ -90,7 +100,7 @@ export const BackendSection = () => {
                     <span className="w-1 h-1 bg-white rounded-full"></span>
                     <span className="w-1 h-1 bg-white rounded-full"></span>
                   </div>
-                  <Sparkles className="w-3.5 h-3.5 text-white/50" />
+                  <AlignLeft className="w-3.5 h-3.5 text-white/50" />
                   <span className="text-xs text-white/70 font-medium">Text</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -142,7 +152,7 @@ export const BackendSection = () => {
                     <span className="w-1 h-1 bg-white rounded-full"></span>
                     <span className="w-1 h-1 bg-white rounded-full"></span>
                   </div>
-                  <Sparkles className="w-3.5 h-3.5 text-white/50" />
+                  <FileText className="w-3.5 h-3.5 text-white/50" />
                   <span className="text-xs text-white/70 font-medium">Teaser</span>
                 </div>
                 <div className="flex items-center gap-2">

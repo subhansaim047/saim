@@ -13,7 +13,7 @@ import {
   Clock,
   Check,
   Star,
-  Sparkles,
+  UtensilsCrossed,
 } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -207,7 +207,7 @@ export default function TakeawayWebDesignPage() {
         {/* HERO SECTION */}
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-amber-300 text-xs font-mono font-bold uppercase">
-            <Sparkles className="w-3.5 h-3.5" />
+            <UtensilsCrossed className="w-3.5 h-3.5" />
             <span>UK Takeaway &amp; Restaurant Web Specialist</span>
           </div>
 

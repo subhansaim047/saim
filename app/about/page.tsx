@@ -1,7 +1,7 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ShieldCheck, Code2, Rocket, Globe, UserCheck, Sparkles, MapPin, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, ShieldCheck, Code2, Rocket, Globe, UserCheck, MapPin, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: 'About Saim Dev | Remote Next.js Studio for UK & EU',

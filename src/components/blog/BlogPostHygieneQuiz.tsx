@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { 
   ArrowLeft, ArrowRight, Award, CheckCircle2, AlertTriangle, 
-  HelpCircle, Sparkles, ChevronDown, ChevronUp, Clock, MessageSquare 
+  HelpCircle, ChevronDown, ChevronUp, Clock, MessageSquare 
 } from "lucide-react";
 
 const SAMPLE_QUESTIONS = [

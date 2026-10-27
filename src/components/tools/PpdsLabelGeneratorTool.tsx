@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useId } from "react";
-import { Printer, ShieldCheck, Plus, RotateCcw, AlertTriangle, CheckCircle, Info, Sparkles } from "lucide-react";
+import { Printer, ShieldCheck, Plus, RotateCcw, AlertTriangle, CheckCircle, Info, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 export interface PpdsPreset {
@@ -208,7 +208,7 @@ export const PpdsLabelGeneratorTool: React.FC = () => {
               >
                 <div className="flex items-center justify-between text-[10px] text-neutral-500 font-mono mb-1">
                   <span>{p.category}</span>
-                  <Sparkles className="w-3 h-3 text-amber-500 opacity-60 group-hover:opacity-100" />
+                  <ArrowUpRight className="w-3 h-3 text-amber-500 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
                 <div className="font-bold text-neutral-900 group-hover:text-amber-800 line-clamp-1">
                   {p.name}

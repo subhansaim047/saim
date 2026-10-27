@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ChevronUp, ChevronDown, ShieldCheck, Sparkles, Check } from "lucide-react";
+import { ChevronUp, ChevronDown, ShieldCheck, Flame, Check, BadgeCheck } from "lucide-react";
 import { FadeUp } from "./FadeUp";
 import { cn } from "../lib/utils";
 import { PLANS, type Currency, type Plan } from "../../content/plans";
@@ -51,7 +51,7 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
       {/* Featured Pill Badge */}
       {plan.badge && (
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-[#FF4A1C] px-4 py-1 text-xs font-semibold text-white shadow-lg flex items-center gap-1.5 whitespace-nowrap z-20">
-          <Sparkles className="w-3.5 h-3.5 text-white" />
+          <Flame className="w-3.5 h-3.5 text-white animate-pulse" />
           <span>{plan.badge}</span>
         </div>
       )}
@@ -310,7 +310,7 @@ export const PricingSection = () => {
 
             <div className="flex flex-col gap-2.5">
               <div className="flex items-center gap-2 text-white font-medium text-sm">
-                <Sparkles className="w-4 h-4 text-[#FF4A1C] flex-shrink-0" />
+                <BadgeCheck className="w-4 h-4 text-[#FF4A1C] flex-shrink-0" />
                 <span>Dedicated Revision Support</span>
               </div>
               <p className="text-white/60 text-xs sm:text-[13px] leading-relaxed font-light">

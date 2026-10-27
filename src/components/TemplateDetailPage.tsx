@@ -13,7 +13,7 @@ import {
   Thermometer,
   Clock,
   Award,
-  Sparkles,
+  Info,
   Edit3,
   HelpCircle,
   ChevronDown,
@@ -356,7 +356,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         {deepContent?.directAnswer && (
           <div className="bg-amber-50/70 border border-amber-200/90 rounded-2xl p-5 sm:p-6 shadow-2xs space-y-2 no-print">
             <div className="flex items-center gap-2 text-xs font-mono font-bold text-amber-900 uppercase tracking-wider">
-              <Sparkles className="w-4 h-4 text-amber-700" />
+              <Info className="w-4 h-4 text-amber-700" />
               <span>Direct Operational Answer &amp; UK Legal Context</span>
             </div>
             <p className="text-xs sm:text-sm text-gray-800 leading-relaxed font-medium">

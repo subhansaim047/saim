@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Clock, ShieldCheck, Zap, HelpCircle, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, ShieldCheck, Zap, HelpCircle, Code2 } from "lucide-react";
 import { FooterSection } from "@/components/FooterSection";
 
 export const metadata: Metadata = {
@@ -151,7 +151,7 @@ export default function NextJsDeveloperUkPage() {
           </nav>
 
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-mono font-medium mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Zap className="w-3.5 h-3.5 animate-pulse" />
             <span>UK & EUROPEAN WEB ARCHITECTURE SPECIALIST</span>
           </div>
 

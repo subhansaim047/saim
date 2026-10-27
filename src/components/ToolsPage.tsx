@@ -15,7 +15,8 @@ import {
   Search,
   Filter,
   Check,
-  Sparkles,
+  Tag,
+  ShieldCheck,
   ArrowRight,
   RefreshCw,
   Copy,
@@ -469,7 +470,7 @@ export const ToolsPage: React.FC = () => {
       <section className="relative px-4 sm:px-8 pt-10 pb-6 max-w-7xl mx-auto no-print">
         <div className="flex flex-col items-center text-center gap-3 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/10 px-3.5 py-1 text-xs text-white/80">
-            <Sparkles className="w-3.5 h-3.5 text-primary" />
+            <ShieldCheck className="w-3.5 h-3.5 text-primary animate-pulse" />
             <span className="font-mono uppercase tracking-wider text-[11px]">100% Free Food Safety &amp; Kitchen Suite</span>
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             <span className="text-emerald-400 font-semibold text-[11px]">UK &amp; EU Compliant</span>
@@ -489,7 +490,7 @@ export const ToolsPage: React.FC = () => {
           {/* Quick value cards */}
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-3 w-full mt-4">
             <Link href="/tools/ppds-label-generator" className="p-3 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center gap-2.5 text-left hover:bg-amber-400/20 transition-all group">
-              <Sparkles className="w-4 h-4 text-amber-400 shrink-0 group-hover:scale-110 transition-transform" />
+              <Tag className="w-4 h-4 text-amber-400 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform" />
               <div>
                 <div className="text-xs font-bold text-white group-hover:text-amber-300">PPDS Label Maker</div>
                 <div className="text-[10px] text-amber-300/80 font-mono">Natasha's Law Free</div>

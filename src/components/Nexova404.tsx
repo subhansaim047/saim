@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Compass, CheckCircle2 } from "lucide-react";
 
 interface ServiceItem {
   id: string;
@@ -204,7 +204,7 @@ export const Nexova404 = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
           >
-            <Sparkles className="w-3.5 h-3.5 text-primary" />
+            <Compass className="w-3.5 h-3.5 text-primary" />
             <span>STUDIO SERVICES & CAPABILITIES</span>
           </motion.div>
 

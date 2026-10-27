@@ -1,7 +1,7 @@
 "use client";
 import { useRef, type ReactNode } from "react";
 import { motion, useInView } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, LayoutTemplate, MessageSquareCode, Headphones } from "lucide-react";
 import { WordsPullUpMultiStyle } from "./WordsPullUpMultiStyle";
 
 const headerSegments = [
@@ -83,12 +83,13 @@ export const FeaturesSection = () => {
           <AnimatedFeatureCard index={1}>
             <div className="bg-[#212121] rounded-2xl p-6 sm:p-8 flex flex-col justify-between min-h-[360px] lg:h-full relative overflow-hidden group shadow-xl border border-white/5">
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <img
-                    src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171918_4a5edc79-d78f-4637-ac8b-53c43c220606.png&w=1280&q=85"
-                    alt="Project Storyboard Icon"
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover"
-                  />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="relative">
+                    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-blue-500/30 to-cyan-500/0 opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 pointer-events-none" />
+                    <div className="relative w-12 h-12 rounded-2xl bg-[#111113] border border-white/10 group-hover:border-blue-400/40 flex items-center justify-center transition-all duration-300 shadow-md">
+                      <LayoutTemplate className="w-5 h-5 text-blue-400 group-hover:scale-115 transition-transform duration-300" />
+                    </div>
+                  </div>
                   <span className="text-xs text-gray-500 font-mono">01</span>
                 </div>
                 <h3 className="text-lg sm:text-xl font-medium text-[#E1E0CC] mb-4">
@@ -97,7 +98,7 @@ export const FeaturesSection = () => {
                 <ul className="space-y-2.5">
                   <li className="flex items-start gap-2 text-xs sm:text-sm text-gray-400">
                     <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <span>Sequence visualizer & timeline</span>
+                    <span>Sequence visualizer &amp; timeline</span>
                   </li>
                   <li className="flex items-start gap-2 text-xs sm:text-sm text-gray-400">
                     <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -129,12 +130,13 @@ export const FeaturesSection = () => {
           <AnimatedFeatureCard index={2}>
             <div className="bg-[#212121] rounded-2xl p-6 sm:p-8 flex flex-col justify-between min-h-[360px] lg:h-full relative overflow-hidden group shadow-xl border border-white/5">
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <img
-                    src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171741_ed9845ab-f5b2-4018-8ce7-07cc01823522.png&w=1280&q=85"
-                    alt="Smart Critiques Icon"
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover"
-                  />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="relative">
+                    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-emerald-500/30 to-teal-500/0 opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 pointer-events-none" />
+                    <div className="relative w-12 h-12 rounded-2xl bg-[#111113] border border-white/10 group-hover:border-emerald-400/40 flex items-center justify-center transition-all duration-300 shadow-md">
+                      <MessageSquareCode className="w-5 h-5 text-emerald-400 group-hover:scale-115 transition-transform duration-300" />
+                    </div>
+                  </div>
                   <span className="text-xs text-gray-500 font-mono">02</span>
                 </div>
                 <h3 className="text-lg sm:text-xl font-medium text-[#E1E0CC] mb-4">
@@ -171,12 +173,13 @@ export const FeaturesSection = () => {
           <AnimatedFeatureCard index={3}>
             <div className="bg-[#212121] rounded-2xl p-6 sm:p-8 flex flex-col justify-between min-h-[360px] lg:h-full relative overflow-hidden group shadow-xl border border-white/5">
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <img
-                    src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171809_f56666dc-c099-4778-ad82-9ad4f209567b.png&w=1280&q=85"
-                    alt="Immersion Capsule Icon"
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover"
-                  />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="relative">
+                    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-purple-500/30 to-pink-500/0 opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 pointer-events-none" />
+                    <div className="relative w-12 h-12 rounded-2xl bg-[#111113] border border-white/10 group-hover:border-purple-400/40 flex items-center justify-center transition-all duration-300 shadow-md">
+                      <Headphones className="w-5 h-5 text-purple-400 group-hover:scale-115 transition-transform duration-300" />
+                    </div>
+                  </div>
                   <span className="text-xs text-gray-500 font-mono">03</span>
                 </div>
                 <h3 className="text-lg sm:text-xl font-medium text-[#E1E0CC] mb-4">
@@ -193,7 +196,7 @@ export const FeaturesSection = () => {
                   </li>
                   <li className="flex items-start gap-2 text-xs sm:text-sm text-gray-400">
                     <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <span>Studio schedule & deadline syncing</span>
+                    <span>Studio schedule &amp; deadline syncing</span>
                   </li>
                 </ul>
               </div>

@@ -5,7 +5,6 @@ import {
   Plus,
   Trash2,
   Printer,
-  Sparkles,
   Scale,
   Clock,
   ChefHat,
