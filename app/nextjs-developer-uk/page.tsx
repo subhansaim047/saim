@@ -168,7 +168,7 @@ export default function NextJsDeveloperUkPage() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mb-10">
-            Stop losing London & UK customers to bloated, sluggish WordPress sites. I build custom, sub-second Next.js web applications engineered for Optimised Core Web Vitals, Google top rankings, and high conversion rates.
+            Stop losing UK customers to bloated, sluggish WordPress sites. I provide high-performance Next.js web development for UK businesses, delivering custom, sub-second web applications engineered for Optimised Core Web Vitals, Google top rankings, and high conversion rates.
           </p>
 
           {/* CTA Buttons */}

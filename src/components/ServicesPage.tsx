@@ -225,7 +225,7 @@ export const ServicesPage = () => {
             Conversion-Focused Web Solutions
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Modern, minimal, and high-performing web architecture tailored to turn visitors into loyal, paying clients.
+            Explore our conversion-focused web solutions engineered with modern, minimal, and high-performing web architecture tailored to turn visitors into loyal, paying clients.
           </p>
         </div>
 

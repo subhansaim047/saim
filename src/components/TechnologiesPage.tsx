@@ -39,8 +39,8 @@ export const TechnologiesPage = () => {
             Technologies & Expertise
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Modern, sub-second web architecture powered by cutting-edge frontend frameworks, performance engineering, structured SEO, and AI workflows.
-          </p>
+          Explore our core web development technologies and technical expertise: Modern, sub-second web architecture powered by cutting-edge frontend frameworks, performance engineering, and robust cloud infrastructure.
+        </p>
         </div>
 
         {/* 2. FRONTEND */}

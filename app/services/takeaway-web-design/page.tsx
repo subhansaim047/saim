@@ -225,7 +225,7 @@ export default function TakeawayWebDesignPage() {
           </h1>
 
           <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-light">
-            We build lightning-fast Next.js direct ordering websites for UK takeaways, chip shops, and pizzerias. Features interactive Natasha&apos;s Law allergen filtering, zero commission on orders, and direct WhatsApp routing—all for a single fixed fee of £250.
+            Stop paying excessive portal commissions today. We build lightning-fast Next.js direct ordering websites for UK takeaways, chip shops, and pizzerias with full code ownership, zero commissions, and instant mobile ordering.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">

@@ -83,7 +83,7 @@ export const BlogPostFhrsChecklist: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-white/70 leading-relaxed mb-6">
-            A practical preparation guide for independent restaurants, takeaways, and commercial kitchens to evaluate food handling, physical premises, and documented due diligence management.
+            A practical preparation checklist for independent restaurants, takeaways, and commercial kitchens aiming for a top UK Food Hygiene Rating. Evaluate your food handling, cleanliness, and food safety management system before your next council inspection.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 text-xs text-white/50 border-t border-b border-white/10 py-3">

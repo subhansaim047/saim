@@ -302,8 +302,8 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
             Experience Live Client Websites & Demos
           </h1>
           <p className="mt-4 text-sm sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Browse through live interactive website demos built with high-performance web architecture, ultra-smooth 60fps animations, and responsive UI engineering.
-          </p>
+          Experience live client websites and interactive demos built with high-performance web architecture, ultra-smooth interactions, and instant load speeds.
+        </p>
         </div>
 
         {/* Demos Grid */}

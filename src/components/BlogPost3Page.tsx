@@ -84,8 +84,8 @@ export const BlogPost3Page = () => {
             I Just Launched My Web Agency — And I'm Offering <span className="text-primary">50% Off</span> to My First Clients
           </h1>
           <p className="text-lg sm:text-xl text-white/60 leading-relaxed mb-8">
-            Premium web development at half the price. Find out why I am offering this massive discount and how it can act as the ultimate growth engine for your business.
-          </p>
+          To celebrate the launch of my web agency, I am offering an exclusive 50% off discount to my first clients. Find out why I am offering this limited rate and how a high-performance Next.js website can act as the ultimate growth engine for your business.
+        </p>
 
           <div className="flex items-center justify-between py-5 border-y border-white/10">
             <div className="flex items-center gap-3">

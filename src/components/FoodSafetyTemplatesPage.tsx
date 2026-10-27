@@ -236,8 +236,8 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             </h1>
 
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mt-1">
-              Practical food hygiene management and due diligence systems built specifically for independent UK takeaways, restaurants, pubs, and commercial caterers. Under the Food Safety Act 1990 and Regulation (EC) No 852/2004, UK food businesses must maintain documented food safety procedures based on HACCP principles. These free templates and interactive tools align with Food Standards Agency (FSA) <em>Safer Food, Better Business (SFBB)</em> and Food Standards Scotland <em>CookSafe</em> guidance to support your 5-star Food Hygiene Rating.
-            </p>
+          Download free food safety templates for UK commercial kitchens. Access instant kitchen checklists, temperature logs, allergen matrices, and interactive compliance tools built specifically for independent UK takeaways, restaurants, and caterers.
+        </p>
 
             <div className="flex flex-wrap items-center gap-2 pt-2">
               <span className="text-xs font-semibold text-gray-500 uppercase font-mono tracking-wider">Quick Launch:</span>

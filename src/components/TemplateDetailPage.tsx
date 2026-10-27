@@ -333,7 +333,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             </div>
 
             <h1 className="text-2xl sm:text-4xl font-extrabold text-[#1D1D1F] leading-tight">
-              {CORE_PAGES_METADATA[template.slug]?.title || (isAllergenTool ? "Free UK Takeaway Allergen Chart Generator (14 Allergens)" : template.title)}
+              {(CORE_PAGES_METADATA[template.slug]?.title || (isAllergenTool ? "Free UK Takeaway Allergen Chart Generator (14 Allergens)" : template.title)).replace(/\s*\|\s*Saim Dev$/i, "")}
             </h1>
 
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">

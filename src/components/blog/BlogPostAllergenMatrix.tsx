@@ -95,9 +95,8 @@ export const BlogPostAllergenMatrix: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-            A comprehensive, step-by-step masterclass on auditing recipes, preventing fatal cross-contamination, 
-            and building an Environmental Health Officer (EHO) approved 14-allergen matrix for your commercial kitchen.
-          </p>
+          Learn how to create a fully compliant 14-allergen matrix for your commercial kitchen. A comprehensive, step-by-step masterclass on auditing recipes, preventing cross-contamination, and presenting accurate allergen declarations for UK restaurants and takeaways.
+        </p>
 
           <div className="mt-8 flex items-center gap-4 pt-6 border-t border-white/10">
             <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 rounded-full border border-primary/30 object-cover" />

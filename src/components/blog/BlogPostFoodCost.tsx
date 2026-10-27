@@ -97,9 +97,8 @@ export const BlogPostFoodCost: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-            A practical, no-fluff guide to mastering recipe unit economics, factoring in trim shrinkage, 
-            and pricing your restaurant or takeaway menu for sustainable profitability.
-          </p>
+          Learn how to calculate your true food cost percentage and protect healthy 70%+ gross profit margins. A practical guide to mastering recipe unit economics, factoring in trim shrinkage, and pricing your takeaway menu for long-term profitability.
+        </p>
 
           <div className="mt-8 flex items-center gap-4 pt-6 border-t border-white/10">
             <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 rounded-full border border-primary/30 object-cover" />

@@ -153,7 +153,7 @@ export const CaseStudiesPage = () => {
             Real Results. Real Websites.
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Explore how Saim Dev replaces slow, outdated websites with high-converting digital platforms engineered for sub-second speed, top search rankings, and predictable lead growth.
+            Explore real client results and real websites engineered by Saim Dev. See how we transform slow, outdated digital presence into high-converting web platforms built for sub-second speed, top Google rankings, and predictable revenue growth.
           </p>
         </div>
 

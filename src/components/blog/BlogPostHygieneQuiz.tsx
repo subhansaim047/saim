@@ -101,9 +101,8 @@ export const BlogPostHygieneQuiz: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-            How to evaluate your kitchen team&apos;s food safety knowledge before an EHO inspection. 
-            Review temperature danger zones, cross-contamination rules, and UK food hygiene standards with our free interactive quiz.
-          </p>
+          Test your kitchen team with 10 critical food safety questions that every chef and kitchen worker must pass before an inspection. Review temperature danger zones, cross-contamination prevention, and statutory hygiene standards with our interactive practice quiz.
+        </p>
 
           <div className="mt-8 flex items-center gap-4 pt-6 border-t border-white/10">
             <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 rounded-full border border-primary/30 object-cover" />

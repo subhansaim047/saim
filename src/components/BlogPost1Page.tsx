@@ -155,7 +155,7 @@ export const BlogPost1Page = () => {
             Why Every Small Business Needs a Professional Website in 2026
           </h1>
           <p className="text-white/55 text-base sm:text-lg leading-relaxed mb-7">
-            Most small business owners know they should have a website. Very few understand how much they're losing without one. This article covers the research, the real examples, and the practical steps — so you can make an informed decision rather than a guess.
+            Most small business owners know they need a professional website in 2026, but very few understand how much customer revenue they lose without one. This article covers the latest industry data, real examples, and practical steps so you can make an informed investment decision.
           </p>
           <div className="flex flex-wrap items-center gap-5 text-sm text-white/40 pb-7 border-b border-white/10">
             <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" />Aug 11, 2026</span>

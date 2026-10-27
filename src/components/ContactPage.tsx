@@ -99,7 +99,7 @@ export const ContactPage = () => {
           </h1>
 
           <p className="text-white/65 text-sm sm:text-base leading-relaxed font-light">
-            Direct communication with your lead engineer. No middlemen, no agency bloat.
+            Ready to build something remarkable for your business? Enjoy direct communication with your lead web engineer to build custom websites without middlemen or agency bloat.
           </p>
         </div>
 

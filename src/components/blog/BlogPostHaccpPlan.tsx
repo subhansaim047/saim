@@ -116,8 +116,7 @@ export const BlogPostHaccpPlan: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-            A comprehensive, plain-English blueprint for commercial food business operators, head chefs, and catering managers. 
-            Demystifying hazard analysis, critical limits, and corrective actions under Regulation (EC) 852/2004.
+            Learn how to write a compliant HACCP plan for your UK food business using the 7 foundational principles. A comprehensive, plain-English blueprint and digital plan builder for food business operators, head chefs, and catering managers to identify hazards, set critical limits, and establish corrective actions.
           </p>
 
           <div className="mt-8 flex items-center gap-4 pt-6 border-t border-white/10">

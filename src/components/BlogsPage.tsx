@@ -225,9 +225,8 @@ export const BlogsPage = () => {
             <span className="text-primary">Kitchen Growth Systems</span>
           </h1>
           <p className="text-white/50 text-base sm:text-lg max-w-xl leading-relaxed">
-            Practical operational playbooks on food safety law, EHO compliance audits, 
-            recipe portion economics, and web ordering systems.
-          </p>
+          Explore actionable hospitality insights and kitchen growth systems. Practical operational playbooks on UK food safety law, EHO inspection readiness, recipe portion economics, and commission-free web ordering systems.
+        </p>
         </motion.div>
       </section>
 
