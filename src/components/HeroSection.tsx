@@ -107,10 +107,10 @@ export const HeroSection = () => {
         {/* ==============================================
             HERO BODY
         =============================================== */}
-        <div className="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-8 md:px-12 lg:px-14 pt-20 pb-6 gap-6 lg:gap-12">
+        <div className="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-8 md:px-12 lg:px-14 pt-24 sm:pt-28 lg:pt-32 pb-14 sm:pb-16 lg:pb-20 gap-6 lg:gap-10">
 
           {/* LEFT COLUMN */}
-          <div className="flex flex-col justify-center gap-5 sm:gap-7 lg:gap-8 w-full lg:w-[50%] xl:w-[48%] flex-shrink-0">
+          <div className="flex flex-col justify-center gap-3.5 sm:gap-4.5 lg:gap-5 w-full lg:w-[50%] xl:w-[48%] flex-shrink-0">
 
             {/* Label group — Sybiosme Pill Badge */}
             <motion.div
@@ -170,7 +170,7 @@ export const HeroSection = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col gap-6 sm:gap-7 pt-1 sm:pt-2"
+              className="flex flex-col gap-3.5 sm:gap-4.5 pt-0.5"
             >
               {/* Highlighted sub-headline */}
               <div className="border-l-2 border-[#FF4A1C] pl-4 sm:pl-5 py-1">
@@ -186,7 +186,7 @@ export const HeroSection = () => {
               </div>
 
               {/* CTA — Sybiosme Nested Island Button */}
-              <div className="flex flex-wrap items-center gap-3 pt-2">
+              <div className="flex flex-wrap items-center gap-3 pt-0.5">
                 <motion.a
                   href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20starting%20a%20website%20project"
                   target="_blank"
