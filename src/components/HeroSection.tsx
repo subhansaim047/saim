@@ -123,19 +123,19 @@ export const HeroSection = () => {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
                 <span className="section-dot animate-pulse" />
                 <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/90">
-                  Full Stack Dev Studio
+                  FULL-STACK WEB STUDIO
                 </span>
               </div>
 
               {/* Tech chips */}
               <div className="flex items-center gap-0 pl-1">
-                {["Next.js", "Node.js", "Vite", "React", "Tailwind"].map((tech, i, arr) => (
+                {["Next.js", "React", "Node.js"].map((tech, i, arr) => (
                   <span key={tech} className="flex items-center">
                     <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-white/45">
                       {tech}
                     </span>
                     {i < arr.length - 1 && (
-                      <span className="text-white/25 mx-2 text-[8px]">&#x25AA;</span>
+                      <span className="text-white/25 mx-2 text-[8px]">&#x2022;</span>
                     )}
                   </span>
                 ))}
@@ -144,9 +144,9 @@ export const HeroSection = () => {
               {/* Tagline */}
               <div className="pl-1 mt-1">
                 <span className="text-xs sm:text-sm font-normal text-white/70 tracking-tight leading-relaxed">
-                  Business growth starts with a{" "}
+                  Better websites for{" "}
                   <span className="text-white font-medium underline decoration-[#FF4A1C] decoration-2 underline-offset-4">
-                    better website
+                    ambitious local businesses
                   </span>
                   .
                 </span>
@@ -162,7 +162,7 @@ export const HeroSection = () => {
             />
 
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold tracking-tight text-white leading-tight mt-1 mb-2">
-              Next.js Websites for UK &amp; EU Small Businesses - Fixed Price from £250
+              Next.js Websites for UK Small Businesses — From £250
             </h1>
 
             {/* Sub-headline + description + CTA */}
@@ -175,13 +175,13 @@ export const HeroSection = () => {
               {/* Highlighted sub-headline */}
               <div className="border-l-2 border-[#FF4A1C] pl-3.5">
                 <h2 className="text-white text-sm sm:text-base md:text-lg font-medium tracking-tight">
-                  High-Performance{" "}
+                  Fast,{" "}
                   <span className="text-white/50">
-                    Web Architecture
+                    SEO-Friendly Websites
                   </span>
                 </h2>
                 <p className="text-white/45 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-0.5">
-                  Strategic Design &amp; Digital Growth
+                  CUSTOM DESIGN • MOBILE-FIRST PERFORMANCE • FULL OWNERSHIP
                 </p>
               </div>
 
