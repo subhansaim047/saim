@@ -100,7 +100,11 @@ export const ChatPanel = ({
       <div className="flex items-center gap-3 px-4 py-3.5 border-b border-white/10 shrink-0">
         <img
           src="/saim-dev-logo.jpg"
-          alt="Saim Dev"
+          alt="Saim Dev - AI Assistant & Live Tech Support"
+          width={28}
+          height={28}
+          loading="lazy"
+          decoding="async"
           className="w-7 h-7 rounded-full object-cover border border-white/10 flex-shrink-0"
         />
         <div className="flex flex-col">

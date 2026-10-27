@@ -89,7 +89,7 @@ export const BlogPost3Page = () => {
 
           <div className="flex items-center justify-between py-5 border-y border-white/10">
             <div className="flex items-center gap-3">
-              <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-10 h-10 rounded-full border border-white/20" />
+              <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={40} height={40} loading="lazy" decoding="async" className="w-10 h-10 rounded-full border border-white/20" />
               <div>
                 <p className="text-white font-semibold text-sm">Saim Dev</p>
                 <p className="text-white/40 text-xs">Founder, Web Developer</p>
@@ -281,7 +281,7 @@ export const BlogPost3Page = () => {
 
         {/* ── Author Card ── */}
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-10">
-          <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
+          <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={56} height={56} loading="lazy" decoding="async" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
           <div>
             <p className="text-white font-semibold text-sm mb-0.5">Saim Dev</p>
             <p className="text-white/40 text-xs mb-3">Full Stack Web Developer • Building business websites since 2020</p>

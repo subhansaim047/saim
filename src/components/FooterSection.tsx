@@ -80,7 +80,11 @@ export const FooterSection = () => {
             <span className="site-footer__mark" aria-hidden="true">
               <img
                 src="/saim-dev-logo.jpg"
-                alt="Saim Dev Logo"
+                alt="Saim Dev - Next.js Development Studio"
+                width={36}
+                height={36}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-full"
               />
             </span>

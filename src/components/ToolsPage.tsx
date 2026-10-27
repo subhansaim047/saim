@@ -439,7 +439,7 @@ export const ToolsPage: React.FC = () => {
       <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-3.5 flex items-center justify-between no-print">
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors">
-            <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-full h-full object-cover" />
+            <img src="/saim-dev-logo.jpg" alt="Saim Dev - Kitchen Automation & Compliance Specialist" width={40} height={40} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           </div>
           <span className="font-bold text-white text-sm sm:text-base tracking-tight">Saim Dev</span>
           <span className="hidden sm:inline-block text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-primary/20 text-primary border border-primary/30">

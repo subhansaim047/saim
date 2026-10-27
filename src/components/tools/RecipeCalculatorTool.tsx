@@ -503,7 +503,7 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
           <div className="p-4 rounded-2xl bg-gray-50 border border-dashed border-gray-300 flex flex-col items-center justify-center text-center min-h-[140px]">
             {recipeImage ? (
               <div className="relative w-full aspect-video rounded-xl overflow-hidden group">
-                <img src={recipeImage} alt="Dish photo" className="w-full h-full object-cover" />
+                <img src={recipeImage} alt="Recipe Dish Reference Photo" width={640} height={360} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 <button
                   type="button"
                   onClick={() => setRecipeImage(null)}

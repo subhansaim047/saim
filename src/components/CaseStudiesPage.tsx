@@ -280,7 +280,11 @@ export const CaseStudiesPage = () => {
                       <div className="relative h-56 sm:h-64 overflow-hidden group">
                         <img
                           src={study.previewImage}
-                          alt={study.clientName}
+                          alt={`${study.clientName} Case Study - ${study.headline}`}
+                          width={1200}
+                          height={675}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />

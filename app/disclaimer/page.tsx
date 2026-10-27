@@ -50,7 +50,7 @@ export default function DisclaimerPage() {
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-sm">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
-            <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-full h-full object-cover" />
+            <img src="/saim-dev-logo.jpg" alt="Saim Dev - Studio Logo" width={36} height={36} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           </div>
           <span className="font-bold text-[#1D1D1F] text-base tracking-tight">Saim Dev</span>
         </Link>

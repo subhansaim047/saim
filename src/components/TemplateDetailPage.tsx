@@ -314,6 +314,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             <img
               src={template.thumbUrl || template.imgUrl}
               alt={`${template.title} - Free UK Kitchen Compliance Template (PDF Download)`}
+              width={400}
+              height={566}
               className="max-h-full max-w-full object-contain drop-shadow"
               loading="eager"
               decoding="async"
@@ -441,6 +443,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
               <img
                 src={template.imgUrl}
                 alt={`${template.title} - Printable UK Food Hygiene Standard Document (FSA Aligned)`}
+                width={600}
+                height={848}
                 loading="eager"
                 decoding="async"
                 className="max-h-[600px] print:max-h-none print:w-full w-auto object-contain drop-shadow-sm rounded-lg"
@@ -667,7 +671,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                   className="bg-white rounded-2xl p-4 border border-gray-200 hover:border-gray-400 transition-colors flex flex-col justify-between shadow-sm group"
                 >
                   <div className="aspect-[4/3] rounded-xl bg-gray-50 p-2 flex items-center justify-center mb-2">
-                    <img src={item.imgUrl} alt={item.title} className="max-h-full max-w-full object-contain" />
+                    <img src={item.thumbUrl || item.imgUrl} alt={`${item.title} - Free UK Food Hygiene Template`} width={300} height={424} loading="lazy" decoding="async" className="max-h-full max-w-full object-contain" />
                   </div>
                   <span className="text-xs font-bold text-gray-900 group-hover:text-amber-800 line-clamp-2">{item.title}</span>
                 </Link>

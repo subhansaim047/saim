@@ -185,7 +185,11 @@ export const BlogsPage = () => {
         <button onClick={() => router.push("/")} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img
             src="/saim-dev-logo.jpg"
-            alt="Saim Dev"
+            alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist"
+            width={28}
+            height={28}
+            loading="lazy"
+            decoding="async"
             className="w-7 h-7 rounded-full object-cover border border-white/15"
           />
           <span className="text-sm font-semibold text-white">Saim Dev</span>

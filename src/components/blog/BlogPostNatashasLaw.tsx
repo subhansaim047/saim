@@ -210,6 +210,21 @@ export const BlogPostNatashasLaw: React.FC = () => {
             <p className="text-xs text-white/60">
               *Official guidance allows flexibility in physical label layout (such as printed adhesive labels or wrappers), provided required elements remain prominent and legible.
             </p>
+
+            <figure className="my-6 rounded-2xl overflow-hidden border border-white/10 bg-[#141414] p-4 text-center">
+              <img
+                src="/templates/posters/template-121.webp"
+                alt="UK PPDS Food Allergen Chart and Packaging Reference Guide"
+                width={800}
+                height={1131}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto rounded-xl max-h-[460px] w-auto object-contain shadow-lg"
+              />
+              <figcaption className="mt-3 text-xs text-white/50">
+                Figure 1: Statutory allergen identification and PPDS packaging label reference layout for UK caterers.
+              </figcaption>
+            </figure>
           </section>
 
           {/* ── SECTION 3: The 14 Statutory Allergens ── */}

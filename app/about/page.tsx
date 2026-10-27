@@ -99,7 +99,7 @@ export default function AboutPage() {
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-xs">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
-            <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-full h-full object-cover" />
+            <img src="/saim-dev-logo.jpg" alt="Saim Dev - Studio Logo" width={36} height={36} loading="lazy" decoding="async" className="w-full h-full object-cover" />
           </div>
           <span className="font-bold text-[#1D1D1F] text-base tracking-tight">Saim Dev</span>
         </Link>
@@ -168,7 +168,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-100">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-2xl overflow-hidden border border-gray-300 shadow-sm shrink-0">
-                <img src="/saim-dev-logo.jpg" alt="Saim Dev - Founder" className="w-full h-full object-cover" />
+                <img src="/saim-dev-logo.jpg" alt="Saim Dev - Founder & Next.js Engineer" width={120} height={120} loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h2 className="text-xl font-bold text-gray-900">Saim Dev</h2>

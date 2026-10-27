@@ -61,7 +61,7 @@ export const BlogPostAllergenMatrix: React.FC = () => {
           <span>return to the Saim Dev blog</span>
         </Link>
         <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
-          <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
+          <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={28} height={28} loading="lazy" decoding="async" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white">Saim Dev Hospitality Systems</span>
         </Link>
       </header>
@@ -100,7 +100,7 @@ export const BlogPostAllergenMatrix: React.FC = () => {
           </p>
 
           <div className="mt-8 flex items-center gap-4 pt-6 border-t border-white/10">
-            <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-12 h-12 rounded-full border border-primary/30 object-cover" />
+            <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 rounded-full border border-primary/30 object-cover" />
             <div>
               <div className="text-sm font-bold text-white">Saim Dev Food Safety Architecture</div>
               <div className="text-xs text-white/50">Lead Commercial Kitchen Systems &amp; Web Compliance Engineer</div>
@@ -214,6 +214,21 @@ export const BlogPostAllergenMatrix: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/10 pb-3">
             4. Step-by-Step Blueprint: Building Your Allergen Matrix
           </h2>
+
+          <figure className="my-6 rounded-2xl overflow-hidden border border-white/10 bg-[#141414] p-4 text-center">
+            <img
+              src="/templates/posters/template-146.webp"
+              alt="14 Statutory Food Allergens Reference Chart for UK Food Businesses"
+              width={800}
+              height={1131}
+              loading="lazy"
+              decoding="async"
+              className="mx-auto rounded-xl max-h-[460px] w-auto object-contain shadow-lg"
+            />
+            <figcaption className="mt-3 text-xs text-white/50">
+              Figure 1: Statutory 14 allergens checklist layout for UK commercial kitchens and takeaways.
+            </figcaption>
+          </figure>
           <p>
             Do not build an allergen matrix by reading recipe titles. You must conduct an exhaustive 4-step forensic ingredient audit:
           </p>

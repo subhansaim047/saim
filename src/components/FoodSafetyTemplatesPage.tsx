@@ -176,7 +176,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
-              <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-full h-full object-cover" />
+              <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={40} height={40} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <span className="font-bold text-[#1D1D1F] text-base tracking-tight">Saim Dev</span>
           </Link>
@@ -599,6 +599,8 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     <img
                       src={template.thumbUrl || template.imgUrl}
                       alt={`${template.title} - Free UK Food Hygiene Template (PDF Download)`}
+                      width={300}
+                      height={424}
                       className="max-h-full max-w-full object-contain drop-shadow-sm"
                       loading={idx < 12 ? "eager" : "lazy"}
                       decoding="async"

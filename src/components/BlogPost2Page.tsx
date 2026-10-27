@@ -87,7 +87,7 @@ export const BlogPost2Page = () => {
           <span>return to the Saim Dev blog</span>
         </Link>
         <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
-          <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
+          <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={28} height={28} loading="lazy" decoding="async" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white hidden sm:block">Saim Dev</span>
         </button>
       </header>
@@ -365,7 +365,7 @@ export const BlogPost2Page = () => {
 
         {/* ── Author Card ── */}
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-10">
-          <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
+          <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={56} height={56} loading="lazy" decoding="async" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
           <div>
             <p className="text-white font-semibold text-sm mb-0.5">Saim Dev</p>
             <p className="text-white/40 text-xs mb-3">Full Stack Web Developer · Building business websites since 2020</p>

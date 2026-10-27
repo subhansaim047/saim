@@ -145,6 +145,21 @@ export const BlogPostCoolingGuide: React.FC = () => {
               <li><strong className="text-white">Corrective action:</strong> If cooling lags, subdivide, refresh ice, or discard.</li>
               <li><strong className="text-white">Review procedures:</strong> Re-evaluate cooling in your <Link href="/food-safety-templates/haccp-plan-builder" className="text-primary hover:underline font-medium">HACCP plan builder</Link> whenever recipes or equipment change.</li>
             </ol>
+
+            <figure className="my-6 rounded-2xl overflow-hidden border border-white/10 bg-[#141414] p-4 text-center">
+              <img
+                src="/templates/charts/template-128.webp"
+                alt="Commercial Kitchen Food Cooling Time and Temperature Curve Chart"
+                width={800}
+                height={1131}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto rounded-xl max-h-[460px] w-auto object-contain shadow-lg"
+              />
+              <figcaption className="mt-3 text-xs text-white/50">
+                Figure 1: Safe food cooling temperature progression curve (from 63°C down to 8°C or below within 90 minutes).
+              </figcaption>
+            </figure>
           </section>
 
           {/* ── SECTION 4: Why Container Depth and Portion Size Matter ── */}

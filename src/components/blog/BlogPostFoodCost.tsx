@@ -63,7 +63,7 @@ export const BlogPostFoodCost: React.FC = () => {
           <span>return to the Saim Dev blog</span>
         </Link>
         <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
-          <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-7 h-7 rounded-full object-cover border border-white/15" />
+          <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={28} height={28} loading="lazy" decoding="async" className="w-7 h-7 rounded-full object-cover border border-white/15" />
           <span className="text-sm font-semibold text-white">Saim Dev Hospitality Systems</span>
         </Link>
       </header>
@@ -102,7 +102,7 @@ export const BlogPostFoodCost: React.FC = () => {
           </p>
 
           <div className="mt-8 flex items-center gap-4 pt-6 border-t border-white/10">
-            <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-12 h-12 rounded-full border border-primary/30 object-cover" />
+            <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 rounded-full border border-primary/30 object-cover" />
             <div>
               <div className="text-sm font-bold text-white">Saim Dev Hospitality Systems</div>
               <div className="text-xs text-white/50">Lead Commercial Kitchen Systems &amp; Web Architect</div>

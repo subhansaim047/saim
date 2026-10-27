@@ -250,7 +250,15 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group cursor-pointer">
             <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors">
-              <img src="/saim-dev-logo.png" alt="Saim Dev Logo" className="w-full h-full object-cover" />
+              <img
+                src="/saim-dev-logo.jpg"
+                alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist"
+                width={40}
+                height={40}
+                loading="eager"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="font-semibold text-lg text-white tracking-tight">Saim Dev</span>
           </Link>

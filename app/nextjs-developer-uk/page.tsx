@@ -115,7 +115,7 @@ export default function NextJsDeveloperUkPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2.5 font-bold text-white text-lg tracking-tight">
               <span className="w-8 h-8 rounded-full overflow-hidden border border-white/20">
-                <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-full h-full object-cover" />
+                <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer" width={36} height={36} loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </span>
               <span>Saim Dev <span className="text-xs font-mono text-primary font-normal">UK</span></span>
             </Link>
