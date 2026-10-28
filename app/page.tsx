@@ -124,7 +124,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="min-h-screen overflow-x-hidden bg-black">
+      <main className="min-h-screen overflow-x-clip bg-black">
         <HeroSection />
         <AboutSection />
         <BenefitsSection />

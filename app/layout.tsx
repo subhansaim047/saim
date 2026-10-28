@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Instrument_Serif, Fraunces } from 'next/font/google';
 import '../src/index.css'; // Global CSS
 import { CookieBanner } from '@/components/CookieBanner';
+import { SmoothScroll } from '@/components/SmoothScroll';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const instrument = Instrument_Serif({ weight: "400", style: ["normal", "italic"], subsets: ['latin'], variable: '--font-instrument' });
@@ -181,6 +182,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${instrument.variable} ${fraunces.variable} bg-black text-[#E1E0CC] antialiased selection:bg-primary selection:text-black`}>
+        <SmoothScroll />
         {children}
         <CookieBanner />
       </body>
