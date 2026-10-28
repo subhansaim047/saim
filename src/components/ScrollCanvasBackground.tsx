@@ -32,16 +32,15 @@ export const ScrollCanvasBackground: React.FC = () => {
     imagesRef.current = images;
     isLoadedRef.current = isLoaded;
 
-    // Fast image drawer with cover aspect ratio + dynamic camera dolly
-    const drawImg = (img: HTMLImageElement, zoom: number = 1.0) => {
+    // Pure 1:1 image drawer with natural cover aspect ratio — ZERO zoom in/out, 100% original quality
+    const drawImg = (img: HTMLImageElement) => {
       const cw = canvas.width;
       const ch = canvas.height;
       const iw = img.naturalWidth || img.width;
       const ih = img.naturalHeight || img.height;
       if (!iw || !ih) return;
 
-      const baseScale = Math.max(cw / iw, ch / ih);
-      const scale = baseScale * zoom;
+      const scale = Math.max(cw / iw, ch / ih);
       const nw = Math.ceil(iw * scale);
       const nh = Math.ceil(ih * scale);
       const nx = Math.floor((cw - nw) / 2);
@@ -53,12 +52,10 @@ export const ScrollCanvasBackground: React.FC = () => {
     // Draw the closest loaded frame to the desired index
     const drawFrame = (desiredIndex: number) => {
       const idx = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(desiredIndex)));
-      const progress = idx / (TOTAL_FRAMES - 1);
-      const zoom = 1.0 + progress * 0.12;
 
       // If exact frame is loaded, draw it
       if (isLoaded[idx] && images[idx]) {
-        drawImg(images[idx]!, zoom);
+        drawImg(images[idx]!);
         lastDrawnFrameRef.current = idx;
         return;
       }
@@ -78,7 +75,7 @@ export const ScrollCanvasBackground: React.FC = () => {
       }
 
       if (bestIdx >= 0 && images[bestIdx]) {
-        drawImg(images[bestIdx]!, zoom);
+        drawImg(images[bestIdx]!);
         if (bestIdx === idx) {
           lastDrawnFrameRef.current = idx;
         }
@@ -210,7 +207,7 @@ export const ScrollCanvasBackground: React.FC = () => {
       aria-hidden="true"
       className="fixed inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"
     >
-      {/* Scroll-Driven Video Canvas */}
+      {/* Scroll-Driven Video Canvas — Full Uncropped Pristine Quality */}
       <canvas
         ref={canvasRef}
         className="w-full h-full block transform-gpu will-change-transform"
