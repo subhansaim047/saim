@@ -32,15 +32,16 @@ export const ScrollCanvasBackground: React.FC = () => {
     imagesRef.current = images;
     isLoadedRef.current = isLoaded;
 
-    // Fast image drawer with cover aspect ratio
-    const drawImg = (img: HTMLImageElement) => {
+    // Fast image drawer with cover aspect ratio + dynamic camera dolly
+    const drawImg = (img: HTMLImageElement, zoom: number = 1.0) => {
       const cw = canvas.width;
       const ch = canvas.height;
       const iw = img.naturalWidth || img.width;
       const ih = img.naturalHeight || img.height;
       if (!iw || !ih) return;
 
-      const scale = Math.max(cw / iw, ch / ih);
+      const baseScale = Math.max(cw / iw, ch / ih);
+      const scale = baseScale * zoom;
       const nw = Math.ceil(iw * scale);
       const nh = Math.ceil(ih * scale);
       const nx = Math.floor((cw - nw) / 2);
@@ -52,10 +53,12 @@ export const ScrollCanvasBackground: React.FC = () => {
     // Draw the closest loaded frame to the desired index
     const drawFrame = (desiredIndex: number) => {
       const idx = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(desiredIndex)));
+      const progress = idx / (TOTAL_FRAMES - 1);
+      const zoom = 1.0 + progress * 0.12;
 
       // If exact frame is loaded, draw it
       if (isLoaded[idx] && images[idx]) {
-        drawImg(images[idx]!);
+        drawImg(images[idx]!, zoom);
         lastDrawnFrameRef.current = idx;
         return;
       }
@@ -75,9 +78,7 @@ export const ScrollCanvasBackground: React.FC = () => {
       }
 
       if (bestIdx >= 0 && images[bestIdx]) {
-        drawImg(images[bestIdx]!);
-        // Do NOT set lastDrawnFrameRef to bestIdx if bestIdx != idx,
-        // so that once the true idx finishes downloading, it draws immediately!
+        drawImg(images[bestIdx]!, zoom);
         if (bestIdx === idx) {
           lastDrawnFrameRef.current = idx;
         }
@@ -97,7 +98,7 @@ export const ScrollCanvasBackground: React.FC = () => {
       drawFrame(currentFrameRef.current);
     };
 
-    // Preload all 90 frames concurrently (1.84 MB total payload)
+    // Preload all 90 frames concurrently
     for (let i = 0; i < TOTAL_FRAMES; i++) {
       const img = new Image();
       img.decoding = "async";
@@ -154,7 +155,7 @@ export const ScrollCanvasBackground: React.FC = () => {
 
       const diff = targetFrameRef.current - currentFrameRef.current;
       if (Math.abs(diff) > 0.01) {
-        currentFrameRef.current += diff * 0.22; // Smooth responsive lerp
+        currentFrameRef.current += diff * 0.28; // Snappy smooth lerp
       } else {
         currentFrameRef.current = targetFrameRef.current;
       }
