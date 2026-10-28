@@ -114,7 +114,7 @@ export const FaqSection = () => {
   return (
     <section
       id="faq"
-      className="relative w-full bg-black py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden"
     >
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[550px] h-[550px] bg-[#FF4A1C]/[0.025] rounded-full blur-[160px] pointer-events-none z-0" />

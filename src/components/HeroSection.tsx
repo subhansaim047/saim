@@ -23,8 +23,8 @@ export const HeroSection = () => {
   const [hoveredNav, setHoveredNav] = useState<number | null>(null);
 
   return (
-    <section className="h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-black relative box-border overflow-hidden">
-      <div className="relative h-full w-full rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] overflow-hidden bg-black border border-white/[0.08] shadow-[0_20px_80px_rgba(0,0,0,0.8)]">
+    <section className="h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-transparent relative box-border overflow-hidden">
+      <div className="relative h-full w-full rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] overflow-hidden bg-black/50 backdrop-blur-[2px] border border-white/[0.08] shadow-[0_20px_80px_rgba(0,0,0,0.8)]">
 
         {/* Ambient Subtle Halftone / Radial Glow */}
         <div className="absolute -top-32 -left-32 w-[520px] h-[520px] bg-[#FF4A1C]/[0.07] rounded-full blur-[140px] pointer-events-none z-0" />

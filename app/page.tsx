@@ -10,6 +10,7 @@ import { PricingSection } from "@/components/PricingSection";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { FooterSection } from "@/components/FooterSection";
+import { ScrollCanvasBackground } from "@/components/ScrollCanvasBackground";
 
 export const metadata: Metadata = {
   title: "Next.js Websites for UK Small Businesses | Saim Dev",
@@ -124,7 +125,8 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="min-h-screen overflow-x-clip bg-black">
+      <ScrollCanvasBackground />
+      <main className="min-h-screen overflow-x-clip bg-transparent relative z-10">
         <HeroSection />
         <AboutSection />
         <BenefitsSection />

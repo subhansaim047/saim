@@ -4,9 +4,9 @@ import { TrendingUp, ShieldCheck } from "lucide-react";
 
 export const BenefitsSection = () => {
   return (
-    <section id="benefits" className="w-full bg-black">
+    <section id="benefits" className="w-full bg-transparent">
       <div className="w-full max-w-[1400px] mx-auto">
-        <div className="relative w-full bg-black px-4 sm:px-6 md:px-10 py-12 sm:py-20">
+        <div className="relative w-full bg-transparent px-4 sm:px-6 md:px-10 py-12 sm:py-20">
           {/* Section Heading */}
           <h2
             className="text-white text-3xl sm:text-4xl md:text-5xl font-light text-center mb-12 sm:mb-24"

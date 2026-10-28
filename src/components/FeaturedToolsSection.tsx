@@ -102,7 +102,7 @@ const DOT_COLORS: Record<IconColor, string> = {
 
 export const FeaturedToolsSection = () => {
   return (
-    <section id="kitchen-tools" className="w-full bg-black py-16 sm:py-24 border-t border-white/10">
+    <section id="kitchen-tools" className="w-full bg-transparent py-16 sm:py-24 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">

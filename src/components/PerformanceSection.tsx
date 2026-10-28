@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const PerformanceSection = () => {
   return (
-    <section className="bg-black text-white px-4 sm:px-8 md:px-14 lg:px-20 py-20 sm:py-28 md:py-36 overflow-hidden border-t border-white/[0.06] relative">
+    <section className="bg-transparent text-white px-4 sm:px-8 md:px-14 lg:px-20 py-20 sm:py-28 md:py-36 overflow-hidden border-t border-white/[0.06] relative">
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#FF4A1C]/[0.03] rounded-full blur-[150px] pointer-events-none z-0" />
 
