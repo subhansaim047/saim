@@ -1,11 +1,17 @@
-import { Metadata } from "next";
+import {
+  Tag, Metadata } from "next";
 import Link from "next/link";
-import { IconTile } from "@/components/icons/IconTile";
-import { IconPpdsLabel } from "@/components/icons/ToolIcons";
-import { ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, ChevronDown } from "lucide-react";
-import { PpdsLabelGeneratorTool } from "@/components/tools/PpdsLabelGeneratorTool";
-import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
-import { SiteFooter } from "@/components/SiteFooter";
+import {
+  Tag, IconTile } from "@/components/icons/IconTile";
+import {
+  Tag, ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, ChevronDown } Tag, 
+} from "lucide-react";
+import {
+  Tag, PpdsLabelGeneratorTool } from "@/components/tools/PpdsLabelGeneratorTool";
+import {
+  Tag, FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
+import {
+  Tag, SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "PPDS Label Generator UK | Free Natasha's Law Labels",
@@ -230,7 +236,7 @@ export default function PpdsLabelGeneratorPage() {
           </nav>
 
           <div className="flex items-center gap-3.5 mb-1">
-            <IconTile color="amber" size="md"><IconPpdsLabel /></IconTile>
+            <IconTile color="amber" size="md"><Tag className="w-5 h-5" /></IconTile>
             <div className="flex items-center gap-2 flex-wrap">
             <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-mono font-bold uppercase">
               UK Compliance Tool

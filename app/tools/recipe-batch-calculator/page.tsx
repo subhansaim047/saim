@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { IconTile } from "@/components/icons/IconTile";
-import { IconRecipeScaler } from "@/components/icons/ToolIcons";
 import { ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, Scale, ChefHat, Sliders, Layers } from "lucide-react";
 import { RecipeCalculatorTool } from "@/components/tools/RecipeCalculatorTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
@@ -228,7 +227,7 @@ export default function RecipeBatchCalculatorPage() {
           </nav>
 
           <div className="flex items-center gap-3.5 mb-1">
-            <IconTile color="blue" size="md"><IconRecipeScaler /></IconTile>
+            <IconTile color="blue" size="md"><ChefHat className="w-5 h-5" /></IconTile>
             <div className="flex items-center gap-2 flex-wrap">
             <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-mono font-bold uppercase">
               Free Culinary Scaling Tool

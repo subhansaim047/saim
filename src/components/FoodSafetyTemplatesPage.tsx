@@ -4,7 +4,7 @@ import { SiteFooter } from "./SiteFooter";
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { IconTile } from "./icons/IconTile";
-import { IconPpdsLabel, IconAllergenShield, IconFoodCost, IconRecipeScaler, IconHaccpFolio, IconTempLog, IconCleaningSchedule, IconEhoChecklist, IconDeliveryLog, IconFoodSafetyQuiz } from "./icons/ToolIcons";
+import { Tag, ShieldAlert, Calculator, ChefHat, ClipboardCheck, Snowflake, Droplets, Award } from "lucide-react";
 import {
   Search,
   Filter,
@@ -260,28 +260,28 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 href="/tools/allergen-matrix-generator"
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
-                <IconAllergenShield className="w-4 h-4 shrink-0" />
+                <ShieldAlert className="w-4 h-4 shrink-0" />
                 <span>Allergen Matrix</span>
               </Link>
               <Link
                 href="/tools/food-cost-calculator"
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
-                <IconFoodCost className="w-4 h-4 shrink-0" />
+                <Calculator className="w-4 h-4 shrink-0" />
                 <span>Food Cost Calculator</span>
               </Link>
               <Link
                 href="/tools/recipe-batch-calculator"
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
-                <IconRecipeScaler className="w-4 h-4 shrink-0" />
+                <ChefHat className="w-4 h-4 shrink-0" />
                 <span>Recipe Scaler</span>
               </Link>
               <Link
                 href="/tools/ppds-label-generator"
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
-                <IconPpdsLabel className="w-4 h-4 shrink-0" />
+                <Tag className="w-4 h-4 shrink-0" />
                 <span>PPDS Label Generator</span>
               </Link>
             </div>
@@ -313,7 +313,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     Cluster 1
                   </span>
                   <IconTile color="vermilion" size="sm">
-                    <IconAllergenShield />
+                    <ShieldAlert className="w-4 h-4" />
                   </IconTile>
                 </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Allergens &amp; Natasha&apos;s Law</h3>
@@ -342,7 +342,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     Cluster 2
                   </span>
                   <IconTile color="indigo" size="sm">
-                    <IconHaccpFolio />
+                    <ClipboardCheck className="w-4 h-4" />
                   </IconTile>
                 </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">HACCP &amp; Due Diligence</h3>
@@ -371,7 +371,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     Cluster 3
                   </span>
                   <IconTile color="cyan" size="sm">
-                    <IconTempLog />
+                    <Snowflake className="w-4 h-4" />
                   </IconTile>
                 </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Temperature &amp; SFBB</h3>
@@ -400,7 +400,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     Cluster 4
                   </span>
                   <IconTile color="teal" size="sm">
-                    <IconCleaningSchedule />
+                    <Droplets className="w-4 h-4" />
                   </IconTile>
                 </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Kitchen Cleaning &amp; Hygiene</h3>
@@ -429,7 +429,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     Cluster 5
                   </span>
                   <IconTile color="emerald" size="sm">
-                    <IconFoodCost />
+                    <Calculator className="w-4 h-4" />
                   </IconTile>
                 </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Food Cost &amp; Recipe Management</h3>
@@ -458,7 +458,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     Cluster 6
                   </span>
                   <IconTile color="rose" size="sm">
-                    <IconEhoChecklist />
+                    <Award className="w-4 h-4" />
                   </IconTile>
                 </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Essential Safety Posters &amp; Guides</h3>

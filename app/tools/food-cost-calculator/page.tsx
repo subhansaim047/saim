@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { IconTile } from "@/components/icons/IconTile";
-import { IconFoodCost } from "@/components/icons/ToolIcons";
 import { ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, Calculator, Percent, DollarSign, ChefHat } from "lucide-react";
 import { FoodCostCalculatorTool } from "@/components/tools/FoodCostCalculatorTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
@@ -228,7 +227,7 @@ export default function FoodCostCalculatorPage() {
           </nav>
 
           <div className="flex items-center gap-3.5 mb-1">
-            <IconTile color="emerald" size="md"><IconFoodCost /></IconTile>
+            <IconTile color="emerald" size="md"><Calculator className="w-5 h-5" /></IconTile>
             <div className="flex items-center gap-2 flex-wrap">
             <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-mono font-bold uppercase">
               Free Kitchen Costing Tool
