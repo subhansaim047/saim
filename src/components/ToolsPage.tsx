@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect, useId } from "react";
 import Link from "next/link";
+import { IconTile } from "./icons/IconTile";
+import { IconPpdsLabel, IconAllergenShield, IconFoodCost, IconRecipeScaler, IconHaccpFolio, IconTempLog, IconChecklistAudit } from "./icons/ToolIcons";
 import {
   ShieldAlert,
   DollarSign,
@@ -489,38 +491,48 @@ export const ToolsPage: React.FC = () => {
 
           {/* Quick value cards */}
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-3 w-full mt-4">
-            <Link href="/tools/ppds-label-generator" className="p-3 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center gap-2.5 text-left hover:bg-amber-400/20 transition-all group">
-              <Tag className="w-4 h-4 text-amber-400 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform" />
+            <Link href="/tools/ppds-label-generator" className="p-3 rounded-xl bg-[#141418] border border-amber-400/30 flex items-center gap-3 text-left hover:bg-[#1a1a20] hover:border-amber-400/50 transition-all group shadow-sm">
+              <IconTile color="amber" size="sm">
+                <IconPpdsLabel />
+              </IconTile>
               <div>
-                <div className="text-xs font-bold text-white group-hover:text-amber-300">PPDS Label Maker</div>
-                <div className="text-[10px] text-amber-300/80 font-mono">Natasha's Law Free</div>
+                <div className="text-xs font-bold text-white group-hover:text-amber-300 transition-colors">PPDS Label Maker</div>
+                <div className="text-[10px] text-amber-300/80 font-mono">Natasha&apos;s Law Free</div>
               </div>
             </Link>
-            <div className="p-3 rounded-xl bg-white/[0.02] border border-white/10 flex items-center gap-2.5 text-left">
-              <ShieldAlert className="w-4 h-4 text-primary shrink-0" />
+            <div className="p-3 rounded-xl bg-[#141418] border border-white/10 hover:border-[#FF4A1C]/40 flex items-center gap-3 text-left transition-all group shadow-sm">
+              <IconTile color="vermilion" size="sm">
+                <IconAllergenShield />
+              </IconTile>
               <div>
-                <div className="text-xs font-bold text-white">Allergen Matrix</div>
+                <div className="text-xs font-bold text-white group-hover:text-orange-300 transition-colors">Allergen Matrix</div>
                 <div className="text-[10px] text-white/50">14 Major Allergens</div>
               </div>
             </div>
-            <div className="p-3 rounded-xl bg-white/[0.02] border border-white/10 flex items-center gap-2.5 text-left">
-              <DollarSign className="w-4 h-4 text-emerald-400 shrink-0" />
+            <div className="p-3 rounded-xl bg-[#141418] border border-white/10 hover:border-emerald-400/40 flex items-center gap-3 text-left transition-all group shadow-sm">
+              <IconTile color="emerald" size="sm">
+                <IconFoodCost />
+              </IconTile>
               <div>
-                <div className="text-xs font-bold text-white">Food Costing</div>
+                <div className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors">Food Costing</div>
                 <div className="text-[10px] text-white/50">Real-time Gross Margin</div>
               </div>
             </div>
-            <div className="p-3 rounded-xl bg-white/[0.02] border border-white/10 flex items-center gap-2.5 text-left">
-              <ClipboardCheck className="w-4 h-4 text-sky-400 shrink-0" />
+            <div className="p-3 rounded-xl bg-[#141418] border border-white/10 hover:border-blue-400/40 flex items-center gap-3 text-left transition-all group shadow-sm">
+              <IconTile color="blue" size="sm">
+                <IconChecklistAudit />
+              </IconTile>
               <div>
-                <div className="text-xs font-bold text-white">SFBB Checklist</div>
+                <div className="text-xs font-bold text-white group-hover:text-blue-300 transition-colors">SFBB Checklist</div>
                 <div className="text-[10px] text-white/50">Daily EHO Audit Log</div>
               </div>
             </div>
-            <div className="p-3 rounded-xl bg-white/[0.02] border border-white/10 flex items-center gap-2.5 text-left">
-              <Printer className="w-4 h-4 text-amber-400 shrink-0" />
+            <div className="p-3 rounded-xl bg-[#141418] border border-white/10 hover:border-indigo-400/40 flex items-center gap-3 text-left transition-all group shadow-sm">
+              <IconTile color="indigo" size="sm">
+                <IconHaccpFolio />
+              </IconTile>
               <div>
-                <div className="text-xs font-bold text-white">Print-Ready A4</div>
+                <div className="text-xs font-bold text-white group-hover:text-indigo-300 transition-colors">Print-Ready A4</div>
                 <div className="text-[10px] text-white/50">Kitchen Posters</div>
               </div>
             </div>
@@ -537,7 +549,7 @@ export const ToolsPage: React.FC = () => {
                 : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
             }`}
           >
-            <ShieldAlert className="w-4 h-4" />
+            <IconAllergenShield className="w-4 h-4 shrink-0" />
             <span>1. Allergen Matrix &amp; Chart</span>
           </button>
 
@@ -549,7 +561,7 @@ export const ToolsPage: React.FC = () => {
                 : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
             }`}
           >
-            <DollarSign className="w-4 h-4" />
+            <IconFoodCost className="w-4 h-4 shrink-0" />
             <span>2. Food Cost &amp; Margin</span>
           </button>
 
@@ -561,7 +573,7 @@ export const ToolsPage: React.FC = () => {
                 : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
             }`}
           >
-            <ChefHat className="w-4 h-4" />
+            <IconRecipeScaler className="w-4 h-4 shrink-0" />
             <span>3. Recipe Card &amp; Scaler</span>
           </button>
 
@@ -573,7 +585,7 @@ export const ToolsPage: React.FC = () => {
                 : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
             }`}
           >
-            <ClipboardCheck className="w-4 h-4" />
+            <IconChecklistAudit className="w-4 h-4 shrink-0" />
             <span>4. Daily SFBB Hygiene Log</span>
           </button>
 
@@ -585,7 +597,7 @@ export const ToolsPage: React.FC = () => {
                 : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
             }`}
           >
-            <Thermometer className="w-4 h-4" />
+            <IconTempLog className="w-4 h-4 shrink-0" />
             <span>5. Cooking &amp; Chilling Temps</span>
           </button>
         </div>

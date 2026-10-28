@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { IconTile } from "@/components/icons/IconTile";
+import { IconFoodCost } from "@/components/icons/ToolIcons";
 import { ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, Calculator, Percent, DollarSign, ChefHat } from "lucide-react";
 import { FoodCostCalculatorTool } from "@/components/tools/FoodCostCalculatorTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
@@ -225,15 +227,17 @@ export default function FoodCostCalculatorPage() {
             </ol>
           </nav>
 
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-3.5 mb-1">
+            <IconTile color="emerald" size="md"><IconFoodCost /></IconTile>
+            <div className="flex items-center gap-2 flex-wrap">
             <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-mono font-bold uppercase">
               Free Kitchen Costing Tool
             </span>
             <span className="text-xs text-neutral-500 font-mono">
               UK Hospitality Gross Profit (GP%) & VAT 20% Standard
             </span>
+            </div>
           </div>
-
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-neutral-950">
             Commercial Kitchen Food Cost &amp; Gross Profit Calculator UK
           </h1>

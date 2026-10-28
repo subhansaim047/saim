@@ -3,6 +3,7 @@ import { SiteFooter } from "./SiteFooter";
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { ToolIconRenderer } from "./icons/ToolIcons";
 import {
   ArrowLeft,
   Printer,
@@ -327,9 +328,12 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
           {/* Details & Actions */}
           <div className="w-full md:w-1/2 flex flex-col gap-4">
-            <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full w-fit">
+            <div className="flex items-center gap-3">
+              <ToolIconRenderer slug={template.slug} size="sm" />
+              <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full w-fit">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
               <span>{isAllergenTool ? "Covers the 14 UK/EU allergens" : "Resource • Printable & Digital"}</span>
+              </div>
             </div>
 
             <h1 className="text-2xl sm:text-4xl font-extrabold text-[#1D1D1F] leading-tight">

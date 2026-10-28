@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { IconTile } from "@/components/icons/IconTile";
+import { IconRecipeScaler } from "@/components/icons/ToolIcons";
 import { ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, Scale, ChefHat, Sliders, Layers } from "lucide-react";
 import { RecipeCalculatorTool } from "@/components/tools/RecipeCalculatorTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
@@ -225,15 +227,17 @@ export default function RecipeBatchCalculatorPage() {
             </ol>
           </nav>
 
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-3.5 mb-1">
+            <IconTile color="blue" size="md"><IconRecipeScaler /></IconTile>
+            <div className="flex items-center gap-2 flex-wrap">
             <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-mono font-bold uppercase">
               Free Culinary Scaling Tool
             </span>
             <span className="text-xs text-neutral-500 font-mono">
               Proportional Commercial Batching &amp; Mise en Place Spec
             </span>
+            </div>
           </div>
-
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-neutral-950">
             Commercial Recipe Scaler &amp; Batch Costing Calculator UK
           </h1>

@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { IconTile } from "@/components/icons/IconTile";
+import { IconAllergenShield } from "@/components/icons/ToolIcons";
 import { ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, AlertTriangle, BookOpen, Layers } from "lucide-react";
 import { AllergenMatrixTool } from "@/components/tools/AllergenMatrixTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
@@ -225,15 +227,17 @@ export default function AllergenMatrixGeneratorPage() {
             </ol>
           </nav>
 
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-3.5 mb-1">
+            <IconTile color="vermilion" size="md"><IconAllergenShield /></IconTile>
+            <div className="flex items-center gap-2 flex-wrap">
             <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-mono font-bold uppercase">
               Free Kitchen Compliance Tool
             </span>
             <span className="text-xs text-neutral-500 font-mono">
               Aligned with UK Food Information Regulations (FIR 2014)
             </span>
+            </div>
           </div>
-
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-neutral-950">
             Free 14 Food Allergen Matrix Generator &amp; Kitchen Chart Maker UK
           </h1>

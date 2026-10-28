@@ -3,6 +3,8 @@ import { SiteFooter } from "./SiteFooter";
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
+import { IconTile } from "./icons/IconTile";
+import { IconPpdsLabel, IconAllergenShield, IconFoodCost, IconRecipeScaler, IconHaccpFolio, IconTempLog, IconCleaningSchedule, IconEhoChecklist, IconDeliveryLog, IconFoodSafetyQuiz } from "./icons/ToolIcons";
 import {
   Search,
   Filter,
@@ -258,28 +260,28 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 href="/tools/allergen-matrix-generator"
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
-                <ShieldAlert className="w-3.5 h-3.5 text-blue-600" />
+                <IconAllergenShield className="w-4 h-4 shrink-0" />
                 <span>Allergen Matrix</span>
               </Link>
               <Link
                 href="/tools/food-cost-calculator"
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
-                <Calculator className="w-3.5 h-3.5 text-emerald-600" />
+                <IconFoodCost className="w-4 h-4 shrink-0" />
                 <span>Food Cost Calculator</span>
               </Link>
               <Link
                 href="/tools/recipe-batch-calculator"
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
-                <UtensilsCrossed className="w-3.5 h-3.5 text-amber-600" />
+                <IconRecipeScaler className="w-4 h-4 shrink-0" />
                 <span>Recipe Scaler</span>
               </Link>
               <Link
                 href="/tools/ppds-label-generator"
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
-                <FileText className="w-3.5 h-3.5 text-indigo-600" />
+                <IconPpdsLabel className="w-4 h-4 shrink-0" />
                 <span>PPDS Label Generator</span>
               </Link>
             </div>
@@ -306,9 +308,14 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             {/* Cluster 1 */}
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-red-600 bg-red-50 border border-red-100 px-2 py-0.5 rounded-md inline-block mb-2">
-                  Cluster 1
-                </span>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-red-600 bg-red-50 border border-red-100 px-2 py-0.5 rounded-md inline-block">
+                    Cluster 1
+                  </span>
+                  <IconTile color="vermilion" size="sm">
+                    <IconAllergenShield />
+                  </IconTile>
+                </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Allergens &amp; Natasha&apos;s Law</h3>
                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                   Regulatory tools for declaring 14 statutory allergens and generating Prepacked for Direct Sale (PPDS) adhesive labels.
@@ -330,9 +337,14 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             {/* Cluster 2 */}
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 border border-indigo-100 px-2 py-0.5 rounded-md inline-block mb-2">
-                  Cluster 2
-                </span>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 border border-indigo-100 px-2 py-0.5 rounded-md inline-block">
+                    Cluster 2
+                  </span>
+                  <IconTile color="indigo" size="sm">
+                    <IconHaccpFolio />
+                  </IconTile>
+                </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">HACCP &amp; Due Diligence</h3>
                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                   Systematic hazard analysis templates and Critical Control Point records supporting statutory due diligence defense.
@@ -354,9 +366,14 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             {/* Cluster 3 */}
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-md inline-block mb-2">
-                  Cluster 3
-                </span>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-md inline-block">
+                    Cluster 3
+                  </span>
+                  <IconTile color="cyan" size="sm">
+                    <IconTempLog />
+                  </IconTile>
+                </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Temperature &amp; SFBB</h3>
                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                   Daily fridge, freezer, and cooking temperature logs formatted for FSA Safer Food, Better Business diary packs.
@@ -378,9 +395,14 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             {/* Cluster 4 */}
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-md inline-block mb-2">
-                  Cluster 4
-                </span>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-md inline-block">
+                    Cluster 4
+                  </span>
+                  <IconTile color="teal" size="sm">
+                    <IconCleaningSchedule />
+                  </IconTile>
+                </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Kitchen Cleaning &amp; Hygiene</h3>
                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                   Daily, weekly, and deep-clean sanitisation schedules to pass local council Environmental Health Officer audits.
@@ -402,9 +424,14 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             {/* Cluster 5 */}
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 border border-amber-100 px-2 py-0.5 rounded-md inline-block mb-2">
-                  Cluster 5
-                </span>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 border border-amber-100 px-2 py-0.5 rounded-md inline-block">
+                    Cluster 5
+                  </span>
+                  <IconTile color="emerald" size="sm">
+                    <IconFoodCost />
+                  </IconTile>
+                </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Food Cost &amp; Recipe Management</h3>
                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                   Interactive culinary calculators to protect 70%+ gross profit margins and scale commercial batch catering recipes.
@@ -426,9 +453,14 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             {/* Cluster 6 */}
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 border border-purple-100 px-2 py-0.5 rounded-md inline-block mb-2">
-                  Cluster 6
-                </span>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 border border-purple-100 px-2 py-0.5 rounded-md inline-block">
+                    Cluster 6
+                  </span>
+                  <IconTile color="rose" size="sm">
+                    <IconEhoChecklist />
+                  </IconTile>
+                </div>
                 <h3 className="font-bold text-sm text-gray-900 mb-1.5">Essential Safety Posters &amp; Guides</h3>
                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                   Printable kitchen wall standard operating procedures for colour-coded cutting boards, hand hygiene, and food hygiene test prep.
