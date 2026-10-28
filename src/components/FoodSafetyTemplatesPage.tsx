@@ -48,6 +48,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
   const [selectedPurpose, setSelectedPurpose] = useState<string>("all");
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [activeInteractiveTool, setActiveInteractiveTool] = useState<string | null>(null);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState<boolean>(true);
 
   const handleWhatsAppClick = (location: string) => {
     if (typeof window !== "undefined") {
@@ -444,112 +445,129 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
           {/* ═══════════════════════════════════════════════════════════════
               LEFT SIDEBAR: FILTER RESOURCES (SAIM DEV STYLE)
           ════════════════════════════════════════════════════════════════ */}
-          <aside className="filter-sidebar sticky top-24 rounded-3xl p-6 bg-[#feeedb] border border-[#fddbc0] shadow-sm space-y-5 no-print">
-            <div className="flex items-center justify-between">
-              <span className="font-bold text-lg text-[#1D1D1F]">Filter Kitchen Resources</span>
-              <SlidersHorizontal className="w-4 h-4 text-gray-700" />
-            </div>
-
-            {/* Type Dropdown */}
-            <div className="space-y-1.5">
-              <label htmlFor="filter-type" className="block text-xs font-bold text-gray-700">Type</label>
-              <select
-                id="filter-type"
-                value={selectedType}
-                onChange={e => setSelectedType(e.target.value)}
-                className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
-              >
-                <option value="all">All options ({FOOD_SAFETY_TEMPLATES.length})</option>
-                <option value="smart_tool">Smart tool ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "smart_tool").length})</option>
-                <option value="poster">Poster ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "poster").length})</option>
-                <option value="checklist">Checklist ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "checklist").length})</option>
-                <option value="chart">Chart ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "chart").length})</option>
-                <option value="log">Monitoring log ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "log").length})</option>
-              </select>
-            </div>
-
-            {/* Business Activity Dropdown */}
-            <div className="space-y-1.5">
-              <label htmlFor="filter-activity" className="block text-xs font-bold text-gray-700">Business activity</label>
-              <select
-                id="filter-activity"
-                value={selectedActivity}
-                onChange={e => setSelectedActivity(e.target.value)}
-                className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
-              >
-                <option value="all">All options</option>
-                <option value="restaurant">Hospitality (Restaurants, Takeaways, Cafes)</option>
-                <option value="healthcare">Healthcare &amp; Schools</option>
-                <option value="producer">Manufacturing &amp; Production</option>
-                <option value="retail">Retail &amp; Grocery</option>
-                <option value="wholesale">Wholesale</option>
-              </select>
-            </div>
-
-            {/* Purpose Dropdown */}
-            <div className="space-y-1.5">
-              <label htmlFor="filter-purpose" className="block text-xs font-bold text-gray-700">Purpose</label>
-              <select
-                id="filter-purpose"
-                value={selectedPurpose}
-                onChange={e => setSelectedPurpose(e.target.value)}
-                className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
-              >
-                <option value="all">All options</option>
-                <option value="new">Open my brand new business</option>
-                <option value="operating">Operate my running business effectively</option>
-              </select>
-            </div>
-
-            {/* Search Templates Input */}
-            <div className="space-y-1.5">
-              <label htmlFor="filter-search" className="block text-xs font-bold text-gray-700">Search templates</label>
-              <div className="relative">
-                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                <input
-                  id="filter-search"
-                  type="text"
-                  placeholder="e.g. Allergen, Freezer, Cleaning..."
-                  value={searchTerm}
-                  onChange={e => setSearchTerm(e.target.value)}
-                  className="w-full bg-white border border-[#e5d4be] rounded-xl pl-9 pr-3 py-2.5 text-xs text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 shadow-sm"
-                />
+          <aside className="filter-sidebar lg:sticky lg:top-24 rounded-3xl p-5 sm:p-6 bg-[#feeedb] border border-[#fddbc0] shadow-sm space-y-5 no-print">
+            <button
+              type="button"
+              onClick={() => setIsMobileFilterOpen(prev => !prev)}
+              className="w-full flex items-center justify-between text-left cursor-pointer lg:cursor-default"
+              aria-expanded={isMobileFilterOpen}
+            >
+              <div className="flex items-center gap-2">
+                <span className="font-bold text-lg text-[#1D1D1F]">Filter Kitchen Resources</span>
+                {(selectedType !== "all" || selectedActivity !== "all" || selectedPurpose !== "all" || searchTerm) && (
+                  <span className="lg:hidden text-[10px] font-bold bg-amber-600 text-white px-2 py-0.5 rounded-full">
+                    Active
+                  </span>
+                )}
               </div>
-            </div>
+              <div className="flex items-center gap-1.5 text-gray-700">
+                <SlidersHorizontal className="w-4 h-4" />
+                <ChevronDown className={`w-4 h-4 lg:hidden transition-transform duration-200 ${isMobileFilterOpen ? "rotate-180" : ""}`} />
+              </div>
+            </button>
 
-            {/* Reset Filters */}
-            {(selectedType !== "all" || selectedActivity !== "all" || selectedPurpose !== "all" || searchTerm) && (
-              <button
-                onClick={() => {
-                  setSelectedType("all");
-                  setSelectedActivity("all");
-                  setSelectedPurpose("all");
-                  setSearchTerm("");
-                }}
-                className="w-full py-2 text-xs font-bold text-amber-900 hover:text-black transition-colors flex items-center justify-center gap-1 cursor-pointer"
-              >
-                <RefreshCw className="w-3.5 h-3.5" />
-                <span>Reset all filters</span>
-              </button>
-            )}
+            <div className={`space-y-5 ${isMobileFilterOpen ? "block" : "hidden lg:block"}`}>
+              {/* Type Dropdown */}
+              <div className="space-y-1.5">
+                <label htmlFor="filter-type" className="block text-xs font-bold text-gray-700">Type</label>
+                <select
+                  id="filter-type"
+                  value={selectedType}
+                  onChange={e => setSelectedType(e.target.value)}
+                  className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
+                >
+                  <option value="all">All options ({FOOD_SAFETY_TEMPLATES.length})</option>
+                  <option value="smart_tool">Smart tool ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "smart_tool").length})</option>
+                  <option value="poster">Poster ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "poster").length})</option>
+                  <option value="checklist">Checklist ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "checklist").length})</option>
+                  <option value="chart">Chart ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "chart").length})</option>
+                  <option value="log">Monitoring log ({FOOD_SAFETY_TEMPLATES.filter(t => t.type === "log").length})</option>
+                </select>
+              </div>
 
-            {/* Sidebar Promo Box */}
-            <div className="p-4 rounded-2xl bg-white/80 border border-[#e5d4be] space-y-2">
-              <span className="text-[10px] font-extrabold uppercase font-mono tracking-wider text-amber-800">
-                Custom Takeaway Websites
-              </span>
-              <p className="text-xs text-gray-600 leading-snug">
-                Need an allergen filter on your online menu?
-              </p>
-              <a
-                href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold text-[#1D1D1F] hover:underline flex items-center gap-1 pt-1"
-              >
-                <span>Ask Saim on WhatsApp</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+              {/* Business Activity Dropdown */}
+              <div className="space-y-1.5">
+                <label htmlFor="filter-activity" className="block text-xs font-bold text-gray-700">Business activity</label>
+                <select
+                  id="filter-activity"
+                  value={selectedActivity}
+                  onChange={e => setSelectedActivity(e.target.value)}
+                  className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
+                >
+                  <option value="all">All options</option>
+                  <option value="restaurant">Hospitality (Restaurants, Takeaways, Cafes)</option>
+                  <option value="healthcare">Healthcare &amp; Schools</option>
+                  <option value="producer">Manufacturing &amp; Production</option>
+                  <option value="retail">Retail &amp; Grocery</option>
+                  <option value="wholesale">Wholesale</option>
+                </select>
+              </div>
+
+              {/* Purpose Dropdown */}
+              <div className="space-y-1.5">
+                <label htmlFor="filter-purpose" className="block text-xs font-bold text-gray-700">Purpose</label>
+                <select
+                  id="filter-purpose"
+                  value={selectedPurpose}
+                  onChange={e => setSelectedPurpose(e.target.value)}
+                  className="w-full bg-white border border-[#e5d4be] rounded-xl px-3 py-2.5 text-xs text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer shadow-sm"
+                >
+                  <option value="all">All options</option>
+                  <option value="new">Open my brand new business</option>
+                  <option value="operating">Operate my running business effectively</option>
+                </select>
+              </div>
+
+              {/* Search Templates Input */}
+              <div className="space-y-1.5">
+                <label htmlFor="filter-search" className="block text-xs font-bold text-gray-700">Search templates</label>
+                <div className="relative">
+                  <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                  <input
+                    id="filter-search"
+                    type="text"
+                    placeholder="e.g. Allergen, Freezer, Cleaning..."
+                    value={searchTerm}
+                    onChange={e => setSearchTerm(e.target.value)}
+                    className="w-full bg-white border border-[#e5d4be] rounded-xl pl-9 pr-3 py-2.5 text-xs text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 shadow-sm"
+                  />
+                </div>
+              </div>
+
+              {/* Reset Filters */}
+              {(selectedType !== "all" || selectedActivity !== "all" || selectedPurpose !== "all" || searchTerm) && (
+                <button
+                  onClick={() => {
+                    setSelectedType("all");
+                    setSelectedActivity("all");
+                    setSelectedPurpose("all");
+                    setSearchTerm("");
+                  }}
+                  className="w-full py-2 text-xs font-bold text-amber-900 hover:text-black transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                >
+                  <RefreshCw className="w-3.5 h-3.5" />
+                  <span>Reset all filters</span>
+                </button>
+              )}
+
+              {/* Sidebar Promo Box */}
+              <div className="p-4 rounded-2xl bg-white/80 border border-[#e5d4be] space-y-2">
+                <span className="text-[10px] font-extrabold uppercase font-mono tracking-wider text-amber-800">
+                  Custom Takeaway Websites
+                </span>
+                <p className="text-xs text-gray-600 leading-snug">
+                  Need an allergen filter on your online menu?
+                </p>
+                <a
+                  href="https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-[#1D1D1F] hover:underline flex items-center gap-1 pt-1"
+                >
+                  <span>Ask Saim on WhatsApp</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
             </div>
           </aside>
 
