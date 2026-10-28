@@ -4,13 +4,18 @@ import { SiteFooter } from "./SiteFooter";
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { IconTile } from "./icons/IconTile";
-import { Tag, ShieldAlert, Calculator, ChefHat, ClipboardCheck, Snowflake, Droplets, Award } from "lucide-react";
 import {
+  Tag,
+  ShieldAlert,
+  Calculator,
+  ChefHat,
+  ClipboardCheck,
+  Snowflake,
+  Droplets,
+  Award,
   Search,
   Filter,
   Printer,
-  ShieldAlert,
-  Calculator,
   UtensilsCrossed,
   ArrowRight,
   ExternalLink,
@@ -28,12 +33,10 @@ import {
   Calendar,
   Thermometer,
   DollarSign,
-  ChefHat,
-  ClipboardCheck,
   AlertCircle,
   Sliders,
   Check,
-  HelpCircle
+  HelpCircle,
 } from "lucide-react";
 import { FOOD_SAFETY_TEMPLATES, FoodSafetyTemplate } from "@/data/saim_templates";
 import { ALLERGENS, MenuItem, AllergenStatus } from "./ToolsPage";

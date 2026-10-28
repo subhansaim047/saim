@@ -1,17 +1,10 @@
-import {
-  ShieldAlert, Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
-import {
-  ShieldAlert, IconTile } from "@/components/icons/IconTile";
-import {
-  ShieldAlert, ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, AlertTriangle, BookOpen, Layers } ShieldAlert, 
-} from "lucide-react";
-import {
-  ShieldAlert, AllergenMatrixTool } from "@/components/tools/AllergenMatrixTool";
-import {
-  ShieldAlert, FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
-import {
-  ShieldAlert, SiteFooter } from "@/components/SiteFooter";
+import { IconTile } from "@/components/icons/IconTile";
+import { ShieldAlert, ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, AlertTriangle, BookOpen, Layers } from "lucide-react";
+import { AllergenMatrixTool } from "@/components/tools/AllergenMatrixTool";
+import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "14 Allergen Matrix Generator UK | Free Kitchen Allergy Chart",

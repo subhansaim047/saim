@@ -1,17 +1,10 @@
-import {
-  Tag, Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
-import {
-  Tag, IconTile } from "@/components/icons/IconTile";
-import {
-  Tag, ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, ChevronDown } Tag, 
-} from "lucide-react";
-import {
-  Tag, PpdsLabelGeneratorTool } from "@/components/tools/PpdsLabelGeneratorTool";
-import {
-  Tag, FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
-import {
-  Tag, SiteFooter } from "@/components/SiteFooter";
+import { IconTile } from "@/components/icons/IconTile";
+import { Tag, ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, ChevronDown } from "lucide-react";
+import { PpdsLabelGeneratorTool } from "@/components/tools/PpdsLabelGeneratorTool";
+import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "PPDS Label Generator UK | Free Natasha's Law Labels",

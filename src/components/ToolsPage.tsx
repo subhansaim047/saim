@@ -5,6 +5,7 @@ import Link from "next/link";
 import { IconTile } from "./icons/IconTile";
 // clean icons aligned with ProcessSection
 import {
+  Calculator,
   ShieldAlert,
   DollarSign,
   ChefHat,
