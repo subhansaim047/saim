@@ -7,10 +7,6 @@ export function SmoothScroll() {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    // Respect accessibility settings
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) return;
-
     // Initialize Lenis with agency-grade smooth easing curve
     const lenis = new Lenis({
       duration: 1.15,

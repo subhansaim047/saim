@@ -21,11 +21,6 @@ export const ScrollCanvasBackground: React.FC = () => {
     const ctx = canvas.getContext("2d", { alpha: false });
     if (!ctx) return;
 
-    // Respect reduced motion preference
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
     // Initialize images cache
     const images: (HTMLImageElement | null)[] = new Array(TOTAL_FRAMES).fill(null);
     const isLoaded: boolean[] = new Array(TOTAL_FRAMES).fill(false);
@@ -143,19 +138,18 @@ export const ScrollCanvasBackground: React.FC = () => {
     };
 
     const updateTargetFromScroll = () => {
-      if (prefersReducedMotion) return;
       const progress = getScrollProgress();
       targetFrameRef.current = progress * (TOTAL_FRAMES - 1);
     };
 
-    // 60-120fps scrubbing loop
+    // 60-120fps continuous scrubbing loop
     const animate = () => {
-      // Continually refresh progress in case of Lenis RAF updates
+      // Continually refresh progress from Lenis or native window scroll
       updateTargetFromScroll();
 
       const diff = targetFrameRef.current - currentFrameRef.current;
       if (Math.abs(diff) > 0.01) {
-        currentFrameRef.current += diff * 0.28; // Snappy smooth lerp
+        currentFrameRef.current += diff * 0.32; // Responsive, snappy lerp
       } else {
         currentFrameRef.current = targetFrameRef.current;
       }
@@ -188,12 +182,7 @@ export const ScrollCanvasBackground: React.FC = () => {
     // Initial setup
     updateCanvasSize();
     updateTargetFromScroll();
-
-    if (!prefersReducedMotion) {
-      animFrameIdRef.current = requestAnimationFrame(animate);
-    } else {
-      drawFrame(0);
-    }
+    animFrameIdRef.current = requestAnimationFrame(animate);
 
     return () => {
       clearInterval(checkLenisTimer);
