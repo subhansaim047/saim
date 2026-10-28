@@ -28,6 +28,8 @@ export const FooterSection = () => {
             <Link href="/nextjs-developer-uk" className="text-primary hover:underline">Next.js UK & EU</Link>
             <Link href="/tools" className="text-primary hover:underline">Free Tools</Link>
             <Link href="/tools/ppds-label-generator">PPDS Label Maker</Link>
+            <Link href="/tools/allergen-matrix-generator">Allergen Matrix</Link>
+            <Link href="/tools/food-cost-calculator">Food Cost Tool</Link>
             <Link href="/demos">Demo Sites</Link>
           </nav>
 

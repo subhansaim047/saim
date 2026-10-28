@@ -175,6 +175,10 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        />
       </head>
       <body className={`${inter.variable} ${instrument.variable} ${fraunces.variable} bg-black text-[#E1E0CC] antialiased selection:bg-primary selection:text-black`}>
         {children}

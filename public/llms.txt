@@ -51,6 +51,6 @@
 17. [Commercial Kitchen Food Cooling Temperature Guide](https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide): UK 90-minute cooling rule, blast chilling, and danger zone temperature limits.
 
 ### Top Interactive Kitchen Tools & SOPs
-18. [Food Allergen Matrix Generator](https://www.saimdev.site/food-safety-templates/allergy-matrix): Interactive digital allergen matrix generator covering all 14 mandatory UK allergens with print-ready PDF export.
-19. [Commercial Food Cost Calculator](https://www.saimdev.site/food-safety-templates/commercial-kitchen-food-cost-percentage-calculator): Real-time ingredient cost calculator with portion cost analysis and target margin projections.
-20. [Freezer & Fridge Temperature Log](https://www.saimdev.site/food-safety-templates/freezer-temperature-chart): Daily dual-shift cold storage temperature monitoring sheet meeting UK SFBB requirements.
+18. [Food Allergen Matrix Generator](https://www.saimdev.site/tools/allergen-matrix-generator): Interactive digital allergen matrix generator covering all 14 mandatory UK allergens with print-ready PDF export.
+19. [Commercial Food Cost Calculator](https://www.saimdev.site/tools/food-cost-calculator): Real-time ingredient cost calculator with portion cost analysis and target margin projections.
+20. [Recipe Batch Scaling Calculator](https://www.saimdev.site/tools/recipe-batch-calculator): Daily dual-shift cold storage temperature monitoring sheet meeting UK SFBB requirements.

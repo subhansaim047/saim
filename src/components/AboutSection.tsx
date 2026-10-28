@@ -50,7 +50,7 @@ export const AboutSection = () => {
           {/* AI-Friendly Business Description (LLMO & Search Indexing) */}
           <div className="mt-12 pt-8 border-t border-white/10 max-w-2xl mx-auto relative z-10">
             <p className="text-white/60 text-xs sm:text-sm font-light leading-relaxed">
-              Saim Dev is a bespoke web engineering studio specializing in custom business websites, landing pages, SEO-friendly development, performance optimization, and AI-powered web solutions.
+              Saim Dev is an independent Next.js web engineering studio specializing in custom small business websites, 0% commission takeaway ordering systems, performance engineering, and local SEO architecture for UK & European clients from £250.
             </p>
           </div>
         </div>

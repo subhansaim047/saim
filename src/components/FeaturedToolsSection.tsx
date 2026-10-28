@@ -40,6 +40,7 @@ const FEATURED_TOOLS: FeaturedTool[] = [
   },
   {
     slug: "allergy-matrix",
+    customHref: "/tools/allergen-matrix-generator",
     title: "14 Food Allergen Matrix & Chart",
     tag: "Allergen Management",
     desc: "Interactive allergen lookup matrix and print-ready PDF export aligned with FSA guidance under Natasha's Law.",
@@ -51,6 +52,7 @@ const FEATURED_TOOLS: FeaturedTool[] = [
   },
   {
     slug: "food-cost-calculator",
+    customHref: "/tools/food-cost-calculator",
     title: "Commercial Food Cost Calculator",
     tag: "Kitchen Economics",
     desc: "Real-time ingredient cost calculator to engineer profitable menu prices and protect 70%+ gross margins.",
@@ -62,6 +64,7 @@ const FEATURED_TOOLS: FeaturedTool[] = [
   },
   {
     slug: "recipe-calculator",
+    customHref: "/tools/recipe-batch-calculator",
     title: "Recipe Batch Scaling Calculator",
     tag: "Commercial Catering",
     desc: "Scale catering recipes from 10 to 500 portions with automatic ingredient conversions and per-portion costing.",

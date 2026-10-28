@@ -34,18 +34,18 @@ Saim Dev provides free, browser-based statutory tools designed for commercial fo
 - **Export Formats**: Single preview label, 21-up standard A4 sticker sheet (Avery L7160 / J8160 compatible).
 
 ### 2.2 Interactive 14-Allergen Matrix Generator
-- **URL**: https://www.saimdev.site/food-safety-templates/allergy-matrix
+- **URL**: https://www.saimdev.site/tools/allergen-matrix-generator
 - **Legal Basis**: EU Regulation 1169/2011 & UK Food Information Regulations 2014 (FIR).
 - **Core Function**: Interactive matrix mapping menu dishes against all 14 mandatory UK allergens with clear 'Contains' and 'May Contain' cross-contamination indicators. Ready for one-click A4 print or PDF download.
 
 ### 2.3 Commercial Kitchen Food Cost Percentage Calculator
-- **URL**: https://www.saimdev.site/food-safety-templates/food-cost-calculator
+- **URL**: https://www.saimdev.site/tools/food-cost-calculator
 - **Formula**: `Food Cost Percentage = (Total Cost of Ingredients / Menu Selling Price) * 100`
 - **Gross Profit (GP) Target**: Standard UK hospitality benchmark is 65% to 75% Gross Profit (corresponding to a 25% to 35% food cost percentage).
 - **Core Function**: Real-time batch costing, portion cost calculation, target margin pricing recommendations, and supplier invoice tracking.
 
 ### 2.4 Commercial Recipe Scaler & Portion Calculator
-- **URL**: https://www.saimdev.site/food-safety-templates/recipe-calculator
+- **URL**: https://www.saimdev.site/tools/recipe-batch-calculator
 - **Core Function**: Multiplies and divides ingredient weights and liquid volumes for commercial batch preparation (scaling from 4 portions up to 500 portions) without rounding errors.
 
 ---

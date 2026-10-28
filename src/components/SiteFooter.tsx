@@ -47,6 +47,10 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ theme = "light", classNa
         <span aria-hidden="true">·</span>
         <Link href="/tools/ppds-label-generator" className={isDark ? "hover:text-white transition-colors py-1 px-1 text-amber-300" : "hover:text-black transition-colors py-1 px-1 text-amber-800"}>PPDS Label Maker</Link>
         <span aria-hidden="true">·</span>
+        <Link href="/tools/allergen-matrix-generator" className={isDark ? "hover:text-white transition-colors py-1 px-1 text-orange-300" : "hover:text-black transition-colors py-1 px-1 text-orange-800"}>Allergen Matrix</Link>
+        <span aria-hidden="true">·</span>
+        <Link href="/tools/food-cost-calculator" className={isDark ? "hover:text-white transition-colors py-1 px-1 text-emerald-300" : "hover:text-black transition-colors py-1 px-1 text-emerald-800"}>Food Cost Tool</Link>
+        <span aria-hidden="true">·</span>
         <Link href="/tools" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Free Tools</Link>
         <span aria-hidden="true">·</span>
         <Link href="/demos" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Demos</Link>
