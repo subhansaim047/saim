@@ -116,7 +116,7 @@ const faqSchema = {
 
 export default function HomePage() {
   return (
-    <>
+    <div className="relative min-h-screen bg-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
@@ -125,8 +125,12 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      
+      {/* Scroll-Driven Video Background Canvas (Fixed, z-0) */}
       <ScrollCanvasBackground />
-      <main className="min-h-screen overflow-x-clip bg-transparent relative z-10">
+
+      {/* Main Website Content (Floating Glass over Canvas, z-10) */}
+      <main className="relative z-10 min-h-screen overflow-x-clip bg-transparent">
         <HeroSection />
         <AboutSection />
         <BenefitsSection />
@@ -139,6 +143,6 @@ export default function HomePage() {
         <ContactSection />
         <FooterSection />
       </main>
-    </>
+    </div>
   );
 }

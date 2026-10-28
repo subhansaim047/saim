@@ -29,12 +29,20 @@ export const ScrollCanvasBackground: React.FC = () => {
     const images: HTMLImageElement[] = new Array(TOTAL_FRAMES);
     imagesRef.current = images;
 
-    // Resize canvas with devicePixelRatio
-    const updateCanvasSize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-      canvas.width = Math.floor(window.innerWidth * dpr);
-      canvas.height = Math.floor(window.innerHeight * dpr);
-      drawFrame(currentFrameRef.current);
+    const drawImg = (img: HTMLImageElement) => {
+      const cw = canvas.width;
+      const ch = canvas.height;
+      const iw = img.naturalWidth;
+      const ih = img.naturalHeight;
+      if (!iw || !ih) return;
+
+      const scale = Math.max(cw / iw, ch / ih);
+      const nw = iw * scale;
+      const nh = ih * scale;
+      const nx = (cw - nw) / 2;
+      const ny = (ch - nh) / 2;
+
+      ctx.drawImage(img, 0, 0, iw, ih, nx, ny, nw, nh);
     };
 
     // Draw single frame with object-fit: cover
@@ -59,19 +67,12 @@ export const ScrollCanvasBackground: React.FC = () => {
       lastDrawnFrameRef.current = idx;
     };
 
-    const drawImg = (img: HTMLImageElement) => {
-      const cw = canvas.width;
-      const ch = canvas.height;
-      const iw = img.naturalWidth;
-      const ih = img.naturalHeight;
-
-      const scale = Math.max(cw / iw, ch / ih);
-      const nw = iw * scale;
-      const nh = ih * scale;
-      const nx = (cw - nw) / 2;
-      const ny = (ch - nh) / 2;
-
-      ctx.drawImage(img, 0, 0, iw, ih, nx, ny, nw, nh);
+    // Resize canvas with devicePixelRatio
+    const updateCanvasSize = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      canvas.width = Math.floor(window.innerWidth * dpr);
+      canvas.height = Math.floor(window.innerHeight * dpr);
+      drawFrame(currentFrameRef.current);
     };
 
     // 1. Load initial frame 0 immediately
@@ -85,7 +86,7 @@ export const ScrollCanvasBackground: React.FC = () => {
     // 2. Progressively preload remaining frames in background chunks
     const preloadRest = () => {
       let currentLoadIdx = 1;
-      const CHUNK_SIZE = 6;
+      const CHUNK_SIZE = 8;
 
       const loadNextChunk = () => {
         if (currentLoadIdx >= TOTAL_FRAMES) return;
@@ -103,14 +104,13 @@ export const ScrollCanvasBackground: React.FC = () => {
 
         // Schedule next chunk during browser idle
         if ("requestIdleCallback" in window) {
-          (window as any).requestIdleCallback(loadNextChunk, { timeout: 100 });
+          (window as any).requestIdleCallback(loadNextChunk, { timeout: 80 });
         } else {
-          setTimeout(loadNextChunk, 40);
+          setTimeout(loadNextChunk, 30);
         }
       };
 
-      // Start preloading after initial render
-      setTimeout(loadNextChunk, 80);
+      setTimeout(loadNextChunk, 50);
     };
 
     preloadRest();
@@ -121,15 +121,16 @@ export const ScrollCanvasBackground: React.FC = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const scrollHeight =
         document.documentElement.scrollHeight - window.innerHeight;
-      const progress = scrollHeight > 0 ? Math.max(0, Math.min(1, scrollTop / scrollHeight)) : 0;
+      const progress =
+        scrollHeight > 0 ? Math.max(0, Math.min(1, scrollTop / scrollHeight)) : 0;
       targetFrameRef.current = progress * (TOTAL_FRAMES - 1);
     };
 
-    // 4. Smooth lerp animation loop
+    // 4. Smooth lerp animation loop (smooth 60fps scrubbing)
     const animate = () => {
       const diff = targetFrameRef.current - currentFrameRef.current;
-      if (Math.abs(diff) > 0.05) {
-        currentFrameRef.current += diff * 0.12;
+      if (Math.abs(diff) > 0.03) {
+        currentFrameRef.current += diff * 0.15;
       } else {
         currentFrameRef.current = targetFrameRef.current;
       }
@@ -164,27 +165,22 @@ export const ScrollCanvasBackground: React.FC = () => {
   return (
     <div
       aria-hidden="true"
-      className="fixed inset-0 w-full h-full -z-20 pointer-events-none overflow-hidden bg-black"
+      className="fixed inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"
     >
       {/* Scroll-Driven Video Canvas */}
       <canvas
         ref={canvasRef}
-        className="w-full h-full block transform-gpu will-change-transform opacity-75"
+        className="w-full h-full block transform-gpu will-change-transform"
       />
 
-      {/* Luxury Dark Film & Vignette Overlay */}
-      {/* 1. Global Dark Film to protect contrast */}
-      <div className="absolute inset-0 bg-black/45 pointer-events-none" />
-
-      {/* 2. Top and Bottom soft fade out to pure OLED black */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/85 pointer-events-none" />
-
-      {/* 3. Radial center spotlight */}
+      {/* Balanced Vignette: protects text readability without hiding the video */}
+      <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70 pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at 50% 50%, transparent 40%, rgba(0,0,0,0.65) 100%)",
+            "radial-gradient(circle at 50% 50%, transparent 50%, rgba(0,0,0,0.55) 100%)",
         }}
       />
     </div>
