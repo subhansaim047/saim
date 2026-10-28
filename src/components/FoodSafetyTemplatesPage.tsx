@@ -189,13 +189,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => setActiveInteractiveTool("allergen")}
+          <Link
+            href="/tools/allergen-matrix-generator"
             className="hidden sm:flex items-center gap-1.5 text-xs font-bold bg-[#E8F5E9] text-[#2E7D32] hover:bg-[#C8E6C9] px-3.5 py-1.5 rounded-full transition-colors"
           >
             <ShieldCheck className="w-4 h-4" />
             <span>Interactive Allergen Matrix</span>
-          </button>
+          </Link>
 
           <a
             href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20using%20the%20Food%20Safety%20Templates%20Hub"
@@ -253,35 +253,35 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap items-center gap-2 pt-2">
-              <span className="text-xs font-semibold text-gray-500 uppercase font-mono tracking-wider">Quick Launch:</span>
-              <button
-                onClick={() => setActiveInteractiveTool("allergen")}
-                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer"
+              <span className="text-xs font-semibold text-gray-500 uppercase font-mono tracking-wider">Quick Launch Tools:</span>
+              <Link
+                href="/tools/allergen-matrix-generator"
+                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
                 <ShieldAlert className="w-3.5 h-3.5 text-blue-600" />
                 <span>Allergen Matrix</span>
-              </button>
-              <button
-                onClick={() => setActiveInteractiveTool("cost")}
-                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer"
+              </Link>
+              <Link
+                href="/tools/food-cost-calculator"
+                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
                 <Calculator className="w-3.5 h-3.5 text-emerald-600" />
                 <span>Food Cost Calculator</span>
-              </button>
-              <button
-                onClick={() => setActiveInteractiveTool("recipe")}
-                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer"
+              </Link>
+              <Link
+                href="/tools/recipe-batch-calculator"
+                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
                 <UtensilsCrossed className="w-3.5 h-3.5 text-amber-600" />
-                <span>Recipe Calculator</span>
-              </button>
-              <button
-                onClick={() => setActiveInteractiveTool("temps")}
-                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer"
+                <span>Recipe Scaler</span>
+              </Link>
+              <Link
+                href="/tools/ppds-label-generator"
+                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
-                <Thermometer className="w-3.5 h-3.5 text-red-600" />
-                <span>Safe Cooking Temps Chart</span>
-              </button>
+                <FileText className="w-3.5 h-3.5 text-indigo-600" />
+                <span>PPDS Label Generator</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -315,7 +315,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/food-safety-templates/allergy-matrix" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/tools/allergen-matrix-generator" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; 14 Allergen Matrix Template
                 </Link>
                 <Link href="/tools/ppds-label-generator" className="text-blue-600 hover:underline font-medium block truncate">
@@ -411,10 +411,10 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/food-safety-templates/food-cost-calculator" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/tools/food-cost-calculator" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; Food Cost Percentage Calculator
                 </Link>
-                <Link href="/food-safety-templates/recipe-calculator" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/tools/recipe-batch-calculator" className="text-blue-600 hover:underline font-medium block truncate">
                   &rarr; Recipe Portion Scaler
                 </Link>
                 <Link href="/blog/mastering-food-cost-percentage-commercial-kitchen-calculator" className="text-slate-600 hover:text-black font-medium block truncate">
@@ -743,7 +743,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 <span className="text-xs font-mono font-bold uppercase text-gray-500">Interactive Workspace</span>
                 {activeInteractiveTool === "allergen" && (
                   <Link
-                    href="/food-safety-templates/allergy-matrix"
+                    href="/tools/allergen-matrix-generator"
                     target="_blank"
                     className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold"
                   >
@@ -753,7 +753,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 )}
                 {activeInteractiveTool === "cost" && (
                   <Link
-                    href="/food-safety-templates/food-cost-calculator"
+                    href="/tools/food-cost-calculator"
                     target="_blank"
                     className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold"
                   >
@@ -763,7 +763,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 )}
                 {activeInteractiveTool === "recipe" && (
                   <Link
-                    href="/food-safety-templates/recipe-calculator"
+                    href="/tools/recipe-batch-calculator"
                     target="_blank"
                     className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold"
                   >

@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
-import { Plus, Trash2, Printer, ShieldCheck, Search, RotateCcw, Edit3 } from "lucide-react";
+import { Plus, Trash2, Printer, ShieldCheck, Search, RotateCcw, Edit3, FileSpreadsheet } from "lucide-react";
 import { ALLERGENS, MenuItem, AllergenStatus } from "../ToolsPage";
 
 const STORAGE_KEY = "saim_allergen_matrix_v2";
@@ -129,6 +129,41 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
       console.warn("Failed to save allergen matrix to localStorage", err);
     }
   }, [restaurantName, checkedBy, reviewDate, menuItems]);
+
+  const exportToCsv = () => {
+    const headers = [
+      "Dish Name",
+      "Category",
+      "Ingredients",
+      ...ALLERGENS.map(a => a.name)
+    ];
+
+    const rows: (string | number)[][] = [
+      ["Business Name:", restaurantName || "Commercial Kitchen", "Reviewed By:", checkedBy || "Kitchen Manager", "Date:", reviewDate || "Unspecified Date"],
+      [],
+      headers,
+      ...menuItems.map(dish => [
+        dish.name,
+        dish.category,
+        dish.ingredients,
+        ...ALLERGENS.map(a => {
+          const status = dish.allergens[a.id];
+          if (status === "contains") return "YES (Contains)";
+          if (status === "may") return "MAY (Cross-Contact)";
+          return "NO";
+        })
+      ])
+    ];
+
+    const csvContent = "data:text/csv;charset=utf-8," + rows.map(e => e.map(val => `"${String(val).replace(/"/g, '""')}"`).join(",")).join("\n");
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", `${(restaurantName || "kitchen").toLowerCase().replace(/[^a-z0-9]+/g, "-")}-14-allergen-matrix.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const categories = useMemo(() => {
     const set = new Set(menuItems.map(m => m.category));
@@ -297,6 +332,16 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
           >
             <RotateCcw className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Reset</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={exportToCsv}
+            className="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all shadow cursor-pointer hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-1"
+            title="Download editable CSV matrix for Excel or Google Sheets"
+          >
+            <FileSpreadsheet className="w-4 h-4 text-emerald-200" aria-hidden="true" />
+            <span>Excel / CSV</span>
           </button>
 
           <button

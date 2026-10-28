@@ -12,7 +12,8 @@ import {
   Image as ImageIcon,
   RotateCcw,
   Sliders,
-  Edit3
+  Edit3,
+  FileSpreadsheet
 } from "lucide-react";
 
 export interface RecipeIngredient {
@@ -108,6 +109,41 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
     );
   };
 
+  const exportToCsv = () => {
+    const headers = [
+      "Ingredient Name",
+      "Base Quantity",
+      "Scaled Batch Quantity",
+      "Unit"
+    ];
+
+    const rows = [
+      ["Recipe Name:", recipeName, "Unit System:", unitSystem, "Cooking Temp:", cookingTemp],
+      ["Base Servings:", numOrig, "Desired Batch Servings:", numDesired, "Scaling Factor:", factor.toFixed(2)],
+      ["Prep Time:", prepTime, "Cook Time:", cookTime],
+      [],
+      headers,
+      ...ingredients.map(ing => {
+        const baseQty = typeof ing.qty === "number" ? ing.qty : 0;
+        const scaledQty = baseQty * factor;
+        const displayScaled = Number.isInteger(scaledQty) ? String(scaledQty) : scaledQty.toFixed(1);
+        return [ing.name, baseQty, displayScaled, ing.unit];
+      }),
+      [],
+      ["Preparation Instructions:"],
+      [prepSteps]
+    ];
+
+    const csvContent = "data:text/csv;charset=utf-8," + rows.map(e => e.map(val => `"${String(val).replace(/"/g, '""')}"`).join(",")).join("\n");
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", `${recipeName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-scaled-recipe.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleReset = () => {
     setIngredients(DEFAULT_INGREDIENTS);
     setOrigServings(4);
@@ -193,6 +229,16 @@ export const RecipeCalculatorTool: React.FC<{ templateId?: string; pdfUrl?: stri
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>Reset</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={exportToCsv}
+            className="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all shadow cursor-pointer hover:scale-[1.02]"
+            title="Download editable CSV batch sheet for Excel or Google Sheets"
+          >
+            <FileSpreadsheet className="w-4 h-4 text-emerald-200" />
+            <span>Excel / CSV</span>
           </button>
 
           <button

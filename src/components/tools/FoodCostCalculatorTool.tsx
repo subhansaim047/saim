@@ -13,7 +13,8 @@ import {
   RotateCcw,
   Scale,
   ChefHat,
-  Edit3
+  Edit3,
+  FileSpreadsheet
 } from "lucide-react";
 
 export interface CostItem {
@@ -110,6 +111,49 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
     });
   };
 
+  const exportToCsv = () => {
+    const headers = ["Section", "Ingredient / Item Name", "Quantity", "Unit", "Unit Cost", "Total Line Cost"];
+    const rows = [
+      headers,
+      ...primaryIngredients.map(item => [
+        "Primary Component",
+        item.name,
+        typeof item.qty === "number" ? item.qty : 0,
+        item.unit,
+        typeof item.unitCost === "number" ? item.unitCost.toFixed(3) : "0.000",
+        (typeof item.qty === "number" && typeof item.unitCost === "number" ? item.qty * item.unitCost : 0).toFixed(2)
+      ]),
+      ...secondaryIngredients.map(item => [
+        "Seasoning / Packaging",
+        item.name,
+        typeof item.qty === "number" ? item.qty : 0,
+        item.unit,
+        typeof item.unitCost === "number" ? item.unitCost.toFixed(3) : "0.000",
+        (typeof item.qty === "number" && typeof item.unitCost === "number" ? item.qty * item.unitCost : 0).toFixed(2)
+      ]),
+      [],
+      ["Financial Summary", "Metric", "Calculated Value"],
+      ["Summary", "Total Batch Cost", (totalBatchCost).toFixed(2)],
+      ["Summary", "Portions / Servings", numServings],
+      ["Summary", "Portion Plate Cost", (portionCost).toFixed(2)],
+      ["Summary", "Menu Selling Price (ex. VAT)", (numSalesPrice).toFixed(2)],
+      ["Summary", "Actual Food Cost %", `${actualFoodCostPct.toFixed(1)}%`],
+      ["Summary", "Gross Profit", (grossProfit).toFixed(2)],
+      ["Summary", "Gross Profit (GP%) Margin", `${grossMarginPct.toFixed(1)}%`],
+      ["Summary", "Recommended Selling Price (Target)", (recommendedSellingPrice).toFixed(2)],
+      ["Summary", "Price Inclusive of 20% UK VAT", (numSalesPrice * 1.20).toFixed(2)]
+    ];
+
+    const csvContent = "data:text/csv;charset=utf-8," + rows.map(e => e.map(val => `"${String(val).replace(/"/g, '""')}"`).join(",")).join("\n");
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", `${recipeName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-costing-sheet.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleReset = () => {
     setPrimaryIngredients(DEFAULT_PRIMARY);
     setSecondaryIngredients(DEFAULT_SECONDARY);
@@ -200,6 +244,16 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>Reset</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={exportToCsv}
+            className="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all shadow cursor-pointer hover:scale-[1.02]"
+            title="Download editable CSV spreadsheet for Excel or Google Sheets"
+          >
+            <FileSpreadsheet className="w-4 h-4 text-emerald-200" />
+            <span>Excel / CSV</span>
           </button>
 
           <button
