@@ -8,7 +8,8 @@ const FRAME_PATH = (idx: number) =>
 
 export const ScrollCanvasBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const imagesRef = useRef<(HTMLImageElement | null)[]>([]);
+  const isLoadedRef = useRef<boolean[]>(new Array(TOTAL_FRAMES).fill(false));
   const currentFrameRef = useRef<number>(0);
   const targetFrameRef = useRef<number>(0);
   const animFrameIdRef = useRef<number | null>(null);
@@ -20,117 +21,140 @@ export const ScrollCanvasBackground: React.FC = () => {
     const ctx = canvas.getContext("2d", { alpha: false });
     if (!ctx) return;
 
-    // Check reduced motion
+    // Respect reduced motion preference
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
     // Initialize images cache
-    const images: HTMLImageElement[] = new Array(TOTAL_FRAMES);
+    const images: (HTMLImageElement | null)[] = new Array(TOTAL_FRAMES).fill(null);
+    const isLoaded: boolean[] = new Array(TOTAL_FRAMES).fill(false);
     imagesRef.current = images;
+    isLoadedRef.current = isLoaded;
 
+    // Fast image drawer with cover aspect ratio
     const drawImg = (img: HTMLImageElement) => {
       const cw = canvas.width;
       const ch = canvas.height;
-      const iw = img.naturalWidth;
-      const ih = img.naturalHeight;
+      const iw = img.naturalWidth || img.width;
+      const ih = img.naturalHeight || img.height;
       if (!iw || !ih) return;
 
       const scale = Math.max(cw / iw, ch / ih);
-      const nw = iw * scale;
-      const nh = ih * scale;
-      const nx = (cw - nw) / 2;
-      const ny = (ch - nh) / 2;
+      const nw = Math.ceil(iw * scale);
+      const nh = Math.ceil(ih * scale);
+      const nx = Math.floor((cw - nw) / 2);
+      const ny = Math.floor((ch - nh) / 2);
 
       ctx.drawImage(img, 0, 0, iw, ih, nx, ny, nw, nh);
     };
 
-    // Draw single frame with object-fit: cover
-    const drawFrame = (frameIndex: number) => {
-      const idx = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(frameIndex)));
-      const img = images[idx];
-      if (!img || !img.complete || img.naturalWidth === 0) {
-        // Fallback to closest available earlier frame
-        let fallbackIdx = idx;
-        while (fallbackIdx >= 0) {
-          if (images[fallbackIdx]?.complete && images[fallbackIdx].naturalWidth > 0) {
-            drawImg(images[fallbackIdx]);
-            lastDrawnFrameRef.current = fallbackIdx;
-            return;
-          }
-          fallbackIdx--;
-        }
+    // Draw the closest loaded frame to the desired index
+    const drawFrame = (desiredIndex: number) => {
+      const idx = Math.max(0, Math.min(TOTAL_FRAMES - 1, Math.round(desiredIndex)));
+
+      // If exact frame is loaded, draw it
+      if (isLoaded[idx] && images[idx]) {
+        drawImg(images[idx]!);
+        lastDrawnFrameRef.current = idx;
         return;
       }
 
-      drawImg(img);
-      lastDrawnFrameRef.current = idx;
+      // Search outward for the nearest loaded frame so the screen never freezes or goes black
+      let bestIdx = -1;
+      let minDistance = Infinity;
+
+      for (let i = 0; i < TOTAL_FRAMES; i++) {
+        if (isLoaded[i] && images[i]) {
+          const dist = Math.abs(i - idx);
+          if (dist < minDistance) {
+            minDistance = dist;
+            bestIdx = i;
+          }
+        }
+      }
+
+      if (bestIdx >= 0 && images[bestIdx]) {
+        drawImg(images[bestIdx]!);
+        // Do NOT set lastDrawnFrameRef to bestIdx if bestIdx != idx,
+        // so that once the true idx finishes downloading, it draws immediately!
+        if (bestIdx === idx) {
+          lastDrawnFrameRef.current = idx;
+        }
+      }
     };
 
     // Resize canvas with devicePixelRatio
     const updateCanvasSize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-      canvas.width = Math.floor(window.innerWidth * dpr);
-      canvas.height = Math.floor(window.innerHeight * dpr);
+      const width = Math.floor(window.innerWidth * dpr);
+      const height = Math.floor(window.innerHeight * dpr);
+
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
       drawFrame(currentFrameRef.current);
     };
 
-    // 1. Load initial frame 0 immediately
-    const img0 = new Image();
-    img0.src = FRAME_PATH(0);
-    img0.onload = () => {
-      images[0] = img0;
-      updateCanvasSize();
-    };
+    // Preload all 90 frames concurrently (1.84 MB total payload)
+    for (let i = 0; i < TOTAL_FRAMES; i++) {
+      const img = new Image();
+      img.decoding = "async";
+      img.src = FRAME_PATH(i);
+      const frameIdx = i;
 
-    // 2. Progressively preload remaining frames in background chunks
-    const preloadRest = () => {
-      let currentLoadIdx = 1;
-      const CHUNK_SIZE = 8;
+      img.onload = () => {
+        images[frameIdx] = img;
+        isLoaded[frameIdx] = true;
 
-      const loadNextChunk = () => {
-        if (currentLoadIdx >= TOTAL_FRAMES) return;
-        const end = Math.min(currentLoadIdx + CHUNK_SIZE, TOTAL_FRAMES);
-
-        for (let i = currentLoadIdx; i < end; i++) {
-          const img = new Image();
-          img.src = FRAME_PATH(i);
-          const captureIdx = i;
-          img.onload = () => {
-            images[captureIdx] = img;
-          };
+        // Draw initial frame immediately on first load
+        if (frameIdx === 0 && lastDrawnFrameRef.current === -1) {
+          updateCanvasSize();
+          drawFrame(0);
         }
-        currentLoadIdx = end;
 
-        // Schedule next chunk during browser idle
-        if ("requestIdleCallback" in window) {
-          (window as any).requestIdleCallback(loadNextChunk, { timeout: 80 });
-        } else {
-          setTimeout(loadNextChunk, 30);
+        // If the user's scroll position currently wants this frame, redraw now
+        if (Math.round(currentFrameRef.current) === frameIdx) {
+          drawFrame(frameIdx);
         }
       };
+    }
 
-      setTimeout(loadNextChunk, 50);
-    };
+    // Scroll progress calculator (checks Lenis first, falls back to native scroll)
+    const getScrollProgress = (): number => {
+      // 1. Check Lenis instance
+      const lenis = (window as any).__lenis;
+      if (lenis && typeof lenis.progress === "number" && !isNaN(lenis.progress)) {
+        return Math.max(0, Math.min(1, lenis.progress));
+      }
 
-    preloadRest();
-
-    // 3. Scroll handler
-    const onScroll = () => {
-      if (prefersReducedMotion) return;
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      // 2. Native scroll fallback
+      const scrollY =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        window.scrollY ||
+        0;
       const scrollHeight =
         document.documentElement.scrollHeight - window.innerHeight;
-      const progress =
-        scrollHeight > 0 ? Math.max(0, Math.min(1, scrollTop / scrollHeight)) : 0;
+      if (scrollHeight <= 0) return 0;
+      return Math.max(0, Math.min(1, scrollY / scrollHeight));
+    };
+
+    const updateTargetFromScroll = () => {
+      if (prefersReducedMotion) return;
+      const progress = getScrollProgress();
       targetFrameRef.current = progress * (TOTAL_FRAMES - 1);
     };
 
-    // 4. Smooth lerp animation loop (smooth 60fps scrubbing)
+    // 60-120fps scrubbing loop
     const animate = () => {
+      // Continually refresh progress in case of Lenis RAF updates
+      updateTargetFromScroll();
+
       const diff = targetFrameRef.current - currentFrameRef.current;
-      if (Math.abs(diff) > 0.03) {
-        currentFrameRef.current += diff * 0.15;
+      if (Math.abs(diff) > 0.01) {
+        currentFrameRef.current += diff * 0.22; // Smooth responsive lerp
       } else {
         currentFrameRef.current = targetFrameRef.current;
       }
@@ -143,18 +167,36 @@ export const ScrollCanvasBackground: React.FC = () => {
       animFrameIdRef.current = requestAnimationFrame(animate);
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    // Attach listeners
+    window.addEventListener("scroll", updateTargetFromScroll, { passive: true });
     window.addEventListener("resize", updateCanvasSize, { passive: true });
 
+    // Also connect to Lenis on('scroll') if available
+    const checkLenisTimer = setInterval(() => {
+      const lenis = (window as any).__lenis;
+      if (lenis) {
+        lenis.on("scroll", (e: any) => {
+          if (typeof e?.progress === "number") {
+            targetFrameRef.current = e.progress * (TOTAL_FRAMES - 1);
+          }
+        });
+        clearInterval(checkLenisTimer);
+      }
+    }, 100);
+
+    // Initial setup
     updateCanvasSize();
-    onScroll();
+    updateTargetFromScroll();
 
     if (!prefersReducedMotion) {
       animFrameIdRef.current = requestAnimationFrame(animate);
+    } else {
+      drawFrame(0);
     }
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      clearInterval(checkLenisTimer);
+      window.removeEventListener("scroll", updateTargetFromScroll);
       window.removeEventListener("resize", updateCanvasSize);
       if (animFrameIdRef.current) {
         cancelAnimationFrame(animFrameIdRef.current);
@@ -173,16 +215,9 @@ export const ScrollCanvasBackground: React.FC = () => {
         className="w-full h-full block transform-gpu will-change-transform"
       />
 
-      {/* Balanced Vignette: protects text readability without hiding the video */}
-      <div className="absolute inset-0 bg-black/25 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70 pointer-events-none" />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 50%, transparent 50%, rgba(0,0,0,0.55) 100%)",
-        }}
-      />
+      {/* Crisp Ambient Shading: ensures high contrast for typography while keeping video crystal clear */}
+      <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60 pointer-events-none" />
     </div>
   );
 };

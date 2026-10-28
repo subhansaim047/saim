@@ -24,14 +24,14 @@ export const HeroSection = () => {
 
   return (
     <section className="h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-transparent relative box-border overflow-hidden">
-      <div className="relative h-full w-full rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] overflow-hidden bg-black/20 border border-white/[0.08] shadow-[0_20px_80px_rgba(0,0,0,0.8)]">
+      <div className="relative h-full w-full rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] overflow-hidden bg-black/10 border border-white/15 shadow-[0_20px_80px_rgba(0,0,0,0.8)]">
 
         {/* Ambient Subtle Halftone / Radial Glow */}
-        <div className="absolute -top-32 -left-32 w-[520px] h-[520px] bg-[#FF4A1C]/[0.07] rounded-full blur-[140px] pointer-events-none z-0" />
-        <div className="absolute top-1/2 -right-32 w-[480px] h-[480px] bg-white/[0.03] rounded-full blur-[130px] pointer-events-none z-0" />
+
+
 
         {/* Grain texture */}
-        <div className="absolute inset-0 noise-overlay opacity-[0.22] mix-blend-overlay pointer-events-none z-0" />
+
 
         {/* Top border hairline glow */}
         <div
@@ -120,7 +120,7 @@ export const HeroSection = () => {
               className="flex flex-col gap-2.5 sm:gap-3 self-start"
             >
               {/* STATUS PILL */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 border border-white/20 shadow-md">
                 <span className="section-dot animate-pulse" />
                 <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/90">
                   FULL-STACK WEB STUDIO

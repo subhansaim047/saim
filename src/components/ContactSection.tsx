@@ -53,7 +53,7 @@ export const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative w-full bg-black text-white px-4 sm:px-6 md:px-12 lg:px-20 py-20 sm:py-28 md:py-36 overflow-hidden border-t border-white/[0.06]"
+      className="relative w-full bg-transparent text-white px-4 sm:px-6 md:px-12 lg:px-20 py-20 sm:py-28 md:py-36 overflow-hidden border-t border-white/[0.06]"
     >
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#FF4A1C]/[0.025] rounded-full blur-[170px] pointer-events-none z-0" />
