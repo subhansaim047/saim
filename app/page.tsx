@@ -13,7 +13,7 @@ import { FooterSection } from "@/components/FooterSection";
 
 export const metadata: Metadata = {
   title: "Next.js Websites for UK Small Businesses | Saim Dev",
-  description: "Bespoke Next.js websites for UK small businesses and takeaways from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
+  description: "Bespoke Next.js websites for UK small businesses and takeaways from £250. Fast load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
   alternates: {
     canonical: "https://www.saimdev.site",
     languages: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Next.js Websites for UK Small Businesses | Saim Dev",
-    description: "Bespoke Next.js websites for UK small businesses and takeaways from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
+    description: "Bespoke Next.js websites for UK small businesses and takeaways from £250. Fast load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
     url: "https://www.saimdev.site",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Next.js Websites for UK Small Businesses | Saim Dev",
-    description: "Bespoke Next.js websites for UK small businesses and takeaways from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
+    description: "Bespoke Next.js websites for UK small businesses and takeaways from £250. Fast load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
     creator: "@saimwebdev",
     images: ["https://www.saimdev.site/og-image.png"],
   },
@@ -56,7 +56,7 @@ const webPageSchema = {
   "@id": "https://www.saimdev.site/#webpage",
   "url": "https://www.saimdev.site",
   "name": "Next.js Websites for UK Small Businesses | Saim Dev",
-  "description": "Bespoke Next.js websites for UK small businesses and takeaways from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
+  "description": "Bespoke Next.js websites for UK small businesses and takeaways from £250. Fast load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
   "inLanguage": "en-GB",
   "isPartOf": {
     "@id": "https://www.saimdev.site/#website"
