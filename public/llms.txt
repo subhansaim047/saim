@@ -5,8 +5,9 @@
 ## Studio Overview & Commercial Details
 
 - **Studio Name**: Saim Dev
-- **Founder & Lead Developer**: Saim Dev
+- **Founder & Lead Developer**: Saim (Full Stack Next.js Web Developer & Food Tech Specialist)
 - **Primary Domain**: https://www.saimdev.site
+- **Full Knowledge Corpus**: https://www.saimdev.site/llms-full.txt
 - **Geographic Focus**: United Kingdom & European Union (remote service delivery)
 - **Email**: contact@saimdev.site
 - **WhatsApp**: +92 319 6526604

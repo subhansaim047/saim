@@ -132,6 +132,41 @@ export default function PpdsLabelGeneratorPage() {
     })),
   };
 
+
+  // 4. HowTo Schema
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Generate & Print Compliant Natasha's Law Food Labels",
+    description: "Step-by-step instructions to format and print UK statutory PPDS food labels with automated allergen emphasis.",
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Input Legal Name",
+        text: "State the precise name of the food so consumers immediately know what the product is (e.g. 'Ham & Cheese Baguette').",
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "List All Ingredients",
+        text: "Type ingredients in descending order of weight. Expand compound items like dressings or dough into sub-ingredients in brackets.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Verify Allergens",
+        text: "Check the auto-detected allergen list. The tool automatically bolds all matching allergens throughout your text.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Print Sticker Sheet",
+        text: "Select Single or 21-up A4 sheet, click Print, and feed standard adhesive sticker sheets into your office printer.",
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
       {/* Schema Markup */}
@@ -147,6 +182,11 @@ export default function PpdsLabelGeneratorPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+
 
       {/* Navigation Header */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between no-print">

@@ -234,6 +234,21 @@ export default async function TemplateDetailRoute({ params }: PageProps) {
         }
       ];
 
+
+  // 4. HowTo Schema (when howTo steps exist in core metadata)
+  const howToSchema = coreMeta?.howTo && coreMeta.howTo.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": `How to Use the ${template.title}`,
+    "description": pageDesc,
+    "step": coreMeta.howTo.map((step, idx) => ({
+      "@type": "HowToStep",
+      "position": idx + 1,
+      "name": `Step ${idx + 1}`,
+      "text": step
+    }))
+  } : null;
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -254,6 +269,12 @@ export default async function TemplateDetailRoute({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      {howToSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      )}
       <TemplateDetailPage template={template} />
     </>
   );

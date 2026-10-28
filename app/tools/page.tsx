@@ -154,6 +154,46 @@ export default function Route() {
     ]
   };
 
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are all food safety templates and tools free to download and print?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All 160 templates, charts, checklists, and calculators on Saim Dev are 100% free to customise, download, and print as PDF with zero registration or subscription required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do these kitchen templates comply with UK Food Standards Agency (FSA) regulations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our kitchen checklists, allergen matrices, and temperature logs are designed around official UK FSA guidelines, SFBB (Safer Food, Better Business) standards, and Natasha's Law (Food Information Regulations)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I customise and print a template as a PDF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Select any template card, fill in your restaurant or takeaway business details, and click 'Print / Save PDF' to generate a clean, high-resolution A4 kitchen poster or record sheet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Prepacked for Direct Sale (PPDS) and non-prepacked food?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under Natasha's Law, PPDS food is packaged at the same premises from which it is offered to consumers before ordering (e.g. boxed sandwiches or packaged salads), requiring full ingredients lists with all 14 statutory allergens emphasised in bold."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -163,6 +203,10 @@ export default function Route() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <FoodSafetyTemplatesPage />
     </>

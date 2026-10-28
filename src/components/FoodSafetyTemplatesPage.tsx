@@ -30,7 +30,8 @@ import {
   ClipboardCheck,
   AlertCircle,
   Sliders,
-  Check
+  Check,
+  HelpCircle
 } from "lucide-react";
 import { FOOD_SAFETY_TEMPLATES, FoodSafetyTemplate } from "@/data/saim_templates";
 import { ALLERGENS, MenuItem, AllergenStatus } from "./ToolsPage";
@@ -239,6 +240,17 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mt-1">
           Download free food safety templates for UK commercial kitchens. Access instant kitchen checklists, temperature logs, allergen matrices, and interactive compliance tools built specifically for independent UK takeaways, restaurants, and caterers.
         </p>
+
+            {/* ── 40-50 WORD DIRECT ANSWER BOX FOR AEO & AI EXTRACTION ── */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/80 border border-amber-200/90 text-xs sm:text-sm text-neutral-900 leading-relaxed space-y-1.5 mt-2">
+              <div className="font-bold text-amber-950 flex items-center gap-1.5 uppercase font-mono text-[11px] tracking-wide">
+                <ShieldCheck className="w-4 h-4 text-amber-700" />
+                <span>Direct Compliance Summary</span>
+              </div>
+              <p>
+                Saim Dev provides 160 free, statutory UK food safety templates, SFBB temperature logs, 14-allergen matrices, and interactive calculators designed around Food Standards Agency (FSA) guidelines and Natasha&apos;s Law regulations for commercial catering and takeaway businesses.
+              </p>
+            </div>
 
             <div className="flex flex-wrap items-center gap-2 pt-2">
               <span className="text-xs font-semibold text-gray-500 uppercase font-mono tracking-wider">Quick Launch:</span>
@@ -944,6 +956,66 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
         </div>
       </section>
+
+
+        {/* ── FREQUENTLY ASKED QUESTIONS (AEO & AI EXTRACTION) ── */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm space-y-6">
+          <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
+            <div className="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-700">
+              <HelpCircle className="w-5 h-5" />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-gray-900">
+                UK Food Safety Templates &amp; Kitchen Compliance FAQs
+              </h2>
+              <p className="text-xs text-gray-500">
+                Authoritative compliance answers for UK commercial kitchens, takeaways, and caterers.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4 space-y-1.5">
+              <h3 className="font-bold text-gray-900 flex items-start gap-1.5">
+                <span className="text-amber-600 font-mono">Q1.</span>
+                <span>Are all food safety templates and tools free to download and print?</span>
+              </h3>
+              <p className="text-gray-600 leading-relaxed pl-5">
+                Yes. All 160 templates, charts, checklists, and calculators on Saim Dev are 100% free to customise, download, and print as PDF with zero registration or subscription required.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4 space-y-1.5">
+              <h3 className="font-bold text-gray-900 flex items-start gap-1.5">
+                <span className="text-amber-600 font-mono">Q2.</span>
+                <span>Do these kitchen templates comply with UK Food Standards Agency (FSA) regulations?</span>
+              </h3>
+              <p className="text-gray-600 leading-relaxed pl-5">
+                Yes. Our kitchen checklists, allergen matrices, and temperature logs are designed around official UK FSA guidelines, SFBB (Safer Food, Better Business) standards, and Natasha&apos;s Law (Food Information Regulations).
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4 space-y-1.5">
+              <h3 className="font-bold text-gray-900 flex items-start gap-1.5">
+                <span className="text-amber-600 font-mono">Q3.</span>
+                <span>How do I customise and print a template as a PDF?</span>
+              </h3>
+              <p className="text-gray-600 leading-relaxed pl-5">
+                Select any template card, fill in your restaurant or takeaway business details, and click &apos;Print / Save PDF&apos; to generate a clean, high-resolution A4 kitchen poster or record sheet.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4 space-y-1.5">
+              <h3 className="font-bold text-gray-900 flex items-start gap-1.5">
+                <span className="text-amber-600 font-mono">Q4.</span>
+                <span>What is the difference between Prepacked for Direct Sale (PPDS) and non-prepacked food?</span>
+              </h3>
+              <p className="text-gray-600 leading-relaxed pl-5">
+                Under Natasha&apos;s Law, PPDS food is packaged at the same premises from which it is offered to consumers before ordering (e.g. boxed sandwiches or packaged salads), requiring full ingredients lists with all 14 statutory allergens emphasised in bold.
+              </p>
+            </div>
+          </div>
+        </div>
 
       {/* ── FOOTER ── */}
       <SiteFooter theme="light" />
