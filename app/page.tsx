@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ScrollytellingCanvas } from "@/components/ScrollytellingCanvas";
+import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { ProcessSection } from "@/components/ProcessSection";
@@ -10,6 +10,7 @@ import { PricingSection } from "@/components/PricingSection";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { FooterSection } from "@/components/FooterSection";
+import { ScrollCanvasBackground } from "@/components/ScrollCanvasBackground";
 
 export const metadata: Metadata = {
   title: "Next.js Websites for UK Small Businesses | Saim Dev",
@@ -125,11 +126,12 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
-      {/* Awwwards-Level Sticky Scrollytelling Experience (400vh) */}
-      <ScrollytellingCanvas />
+      {/* Scroll-Driven Video Background Canvas (Fixed, z-0) */}
+      <ScrollCanvasBackground />
 
-      {/* Main Website Content Sections */}
-      <main className="relative z-10 min-h-screen overflow-x-clip bg-[#0a0a0a]">
+      {/* Main Website Content (Floating Glass over Canvas, z-10) */}
+      <main className="relative z-10 min-h-screen overflow-x-clip bg-transparent">
+        <HeroSection />
         <AboutSection />
         <BenefitsSection />
         <PerformanceSection />
