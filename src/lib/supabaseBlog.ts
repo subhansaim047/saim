@@ -11,6 +11,8 @@ export interface BlogPost {
   category_color: string;
   video_url: string;
   poster_url?: string;
+  image_url?: string;
+  tool_badge?: string;
   url: string;
   display_order: number;
 }
@@ -28,7 +30,9 @@ export const DEFAULT_BLOG_POSTS: BlogPost[] = [
     category_color: '#10B981',
     video_url:
       'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260507_155500_808e6fdd-761f-4acd-b3be-cb7e6e700def.mp4',
-    poster_url: '/videos/blog-featured-poster.webp',
+    poster_url: '/images/blog-tools/tool-1-fhrs-hygiene.webp',
+    image_url: '/images/blog-tools/tool-1-fhrs-hygiene.webp',
+    tool_badge: 'EHO 5-Star Inspection Checklist',
     url: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
     display_order: 1,
   },
@@ -44,7 +48,9 @@ export const DEFAULT_BLOG_POSTS: BlogPost[] = [
     category_color: '#EF4444',
     video_url:
       'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260506_030111_a9e15665-d379-4a7f-8116-695bbe452ad1.mp4',
-    poster_url: '/videos/blog-standard-1-poster.webp',
+    poster_url: '/images/blog-tools/tool-2-ppds-generator.webp',
+    image_url: '/images/blog-tools/tool-2-ppds-generator.webp',
+    tool_badge: 'PPDS Label Generator',
     url: '/blog/natashas-law-ppds-food-labelling-guide',
     display_order: 2,
   },
@@ -60,7 +66,9 @@ export const DEFAULT_BLOG_POSTS: BlogPost[] = [
     category_color: '#3B82F6',
     video_url:
       'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4',
-    poster_url: '/videos/blog-standard-2-poster.webp',
+    poster_url: '/images/blog-tools/tool-3-cooling-guide.webp',
+    image_url: '/images/blog-tools/tool-3-cooling-guide.webp',
+    tool_badge: 'Food Cooling Methods & Limits',
     url: '/blog/commercial-kitchen-food-cooling-temperature-guide',
     display_order: 3,
   },
@@ -76,7 +84,9 @@ export const DEFAULT_BLOG_POSTS: BlogPost[] = [
     category_color: '#7D1A4A',
     video_url:
       'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260507_154232_f8809bd2-a6c3-4a38-908d-2005e5b3cb3e.mp4',
-    poster_url: '/videos/blog-standard-3-poster.webp',
+    poster_url: '/images/blog-tools/tool-4-allergen-matrix.webp',
+    image_url: '/images/blog-tools/tool-4-allergen-matrix.webp',
+    tool_badge: '14-Allergen Matrix Builder',
     url: '/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants',
     display_order: 4,
   },

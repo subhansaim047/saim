@@ -6,51 +6,69 @@ import "@/styles/behindTheLens.css";
 import { BlogPost, DEFAULT_BLOG_POSTS, fetchBlogPosts } from "@/lib/supabaseBlog";
 
 /**
- * Reusable Camera Viewfinder Video Container
- * Implements exact hover interaction:
+ * Reusable Camera Viewfinder Media Container
+ * Implements exact hover interaction and ambient animations:
  * - Scale 1.08 over 0.5s cubic-bezier(0.33, 1, 0.68, 1)
  * - Dark overlay rgba(0,0,0,0.25) over 0.4s
  * - Centered '+' icon inside 70px circle scaling 0.7 to 1.0 over 0.3s
  * - White L-shaped corner brackets (12px, 1.5px border, 15px inset) in all 4 corners
+ * - Ambient Ken Burns drift and periodic light shimmer sweep across tool graphics
+ * - Live interactive tool pill badge with green status indicator
  */
-interface VideoContainerProps {
-  videoUrl: string;
+interface MediaContainerProps {
+  videoUrl?: string;
+  imageUrl?: string;
   posterUrl?: string;
+  toolBadge?: string;
   className?: string;
   title?: string;
 }
 
-const VideoContainer: React.FC<VideoContainerProps> = ({
+const MediaContainer: React.FC<MediaContainerProps> = ({
   videoUrl,
+  imageUrl,
   posterUrl,
+  toolBadge,
   className = "",
-  title = "Blog video visual",
+  title = "Interactive Tool Preview",
 }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.muted = true;
-      video.defaultMuted = true;
-      video.play().catch(() => {});
-    }
-  }, [videoUrl]);
+  const displayImage = imageUrl || posterUrl;
 
   return (
     <div className={`btl-video-container ${className}`}>
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        poster={posterUrl}
-        aria-label={title}
-      >
-        <source src={videoUrl} type="video/mp4" />
-      </video>
+      {/* Tool Preview Graphic with Ambient Animation */}
+      {displayImage ? (
+        <img
+          src={displayImage}
+          alt={title}
+          loading="lazy"
+          decoding="async"
+          className="btl-tool-img btl-tool-ambient-motion"
+        />
+      ) : (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster={posterUrl}
+          aria-label={title}
+        >
+          {videoUrl && <source src={videoUrl} type="video/mp4" />}
+        </video>
+      )}
+
+      {/* Sleek horizontal light sweep */}
+      <div className="btl-shimmer-sweep" aria-hidden="true" />
+
+      {/* Floating Interactive Tool Pill Badge */}
+      {toolBadge && (
+        <div className="btl-live-tool-pill" aria-hidden="true">
+          <span className="btl-pill-pulse-dot" />
+          <span>{toolBadge}</span>
+        </div>
+      )}
 
       {/* Dark overlay */}
       <div className="btl-dark-overlay" aria-hidden="true" />
@@ -80,6 +98,8 @@ const VideoContainer: React.FC<VideoContainerProps> = ({
     </div>
   );
 };
+
+export const VideoContainer = MediaContainer;
 
 export interface BehindTheLensBlogProps {
   onViewAllClick?: () => void;
@@ -134,9 +154,11 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
               className="block relative w-full h-full"
               aria-label={`Read ${featuredPost.title}`}
             >
-              <VideoContainer
+              <MediaContainer
+                imageUrl={featuredPost.image_url || featuredPost.poster_url}
                 videoUrl={featuredPost.video_url}
-                posterUrl={featuredPost.poster_url || "/videos/blog-featured-poster.webp"}
+                posterUrl={featuredPost.poster_url || "/images/blog-tools/tool-1-fhrs-hygiene.webp"}
+                toolBadge={featuredPost.tool_badge}
                 className="btl-featured-video-wrapper"
                 title={featuredPost.title}
               />
@@ -185,9 +207,11 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
                 className="block"
                 aria-label={`Read ${post.title}`}
               >
-                <VideoContainer
+                <MediaContainer
+                  imageUrl={post.image_url || post.poster_url}
                   videoUrl={post.video_url}
-                  posterUrl={post.poster_url || `/videos/blog-standard-${idx + 1}-poster.webp`}
+                  posterUrl={post.poster_url || `/images/blog-tools/tool-${idx + 2}.webp`}
+                  toolBadge={post.tool_badge}
                   className="btl-grid-video-wrapper"
                   title={post.title}
                 />
