@@ -2,82 +2,207 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
-import { Plus, Trash2, Printer, ShieldCheck, Search, RotateCcw, Edit3, FileSpreadsheet } from "lucide-react";
+import { Plus, Trash2, Printer, ShieldCheck, Search, RotateCcw, Edit3, FileSpreadsheet, Sparkles, ArrowRight, Layers } from "lucide-react";
 import { ALLERGENS, MenuItem, AllergenStatus } from "../ToolsPage";
 
 const STORAGE_KEY = "saim_allergen_matrix_v2";
 
-const DEFAULT_MENU_ITEMS: MenuItem[] = [
+// ── REGULATORY 14 ALLERGEN KEYWORD DETECTOR ──
+export const detectAllergensFromIngredients = (ingredientsText: string): Record<string, AllergenStatus> => {
+  if (!ingredientsText) return {};
+  const text = ingredientsText.toLowerCase();
+  const detected: Record<string, AllergenStatus> = {};
+
+  const rules: { id: string; regex: RegExp }[] = [
+    { id: "celery", regex: /\b(celery|celeriac|celery\s*salt|celery\s*seed)\b/i },
+    { id: "gluten", regex: /\b(wheat|barley|rye|oat|oats|spelt|kamut|gluten|flour|semolina|breadcrumbs|pasta|batter|malt|noodle|noodles|couscous|brioche|croissant|bagel|panko|bread)\b/i },
+    { id: "crustaceans", regex: /\b(prawn|prawns|crab|lobster|crayfish|shrimp|shrimps|scampi|langoustine|crustacean)\b/i },
+    { id: "eggs", regex: /\b(egg|eggs|mayo|mayonnaise|albumin|meringue|custard|hollandaise|brioche|omelette|yolk|egg\s*white)\b/i },
+    { id: "fish", regex: /\b(fish|salmon|tuna|cod|haddock|anchov|anchovies|bass|trout|plaice|halibut|pollock|fish\s*sauce|worcestershire)\b/i },
+    { id: "lupin", regex: /\b(lupin|lupine|lupin\s*flour)\b/i },
+    { id: "milk", regex: /\b(milk|cheese|butter|cream|whey|casein|yogurt|yoghurt|lactose|ghee|mozzarella|cheddar|parmesan|paneer|custard|buttermilk|dairy)\b/i },
+    { id: "molluscs", regex: /\b(mussel|mussels|oyster|oysters|squid|calamari|clam|clams|snail|snails|scallop|scallops|octopus|cockle|whelk)\b/i },
+    { id: "mustard", regex: /\b(mustard|dijon|wholegrain\s*mustard|mustard\s*seed|mustard\s*flour|english\s*mustard)\b/i },
+    { id: "nuts", regex: /\b(almond|almonds|hazelnut|hazelnuts|walnut|walnuts|cashew|cashews|pecan|pecans|brazil\s*nut|pistachio|pistachios|macadamia|chestnut|praline|marzipan|frangipane)\b/i },
+    { id: "peanuts", regex: /\b(peanut|peanuts|groundnut|groundnuts|monkey\s*nut|peanut\s*butter|satay|arachis)\b/i },
+    { id: "sesame", regex: /\b(sesame|sesame\s*seeds?|tahini|hummus|halva|sesame\s*oil)\b/i },
+    { id: "soya", regex: /\b(soya|soy|tofu|edamame|soy\s*sauce|soya\s*lecithin|tamari|miso|tempeh|soybean)\b/i },
+    { id: "sulphites", regex: /\b(sulphite|sulphites|sulfite|sulfites|sulphur\s*dioxide|wine|cider|beer|balsamic|vinegar|preservative)\b/i }
+  ];
+
+  rules.forEach(rule => {
+    if (rule.regex.test(text)) {
+      detected[rule.id] = "contains";
+    }
+  });
+
+  return detected;
+};
+
+// ── MENU PRESETS ──
+const PRESET_BURGER_PIZZA: MenuItem[] = [
   {
-    id: "dish-1",
+    id: "bp-1",
     name: "Classic Cheeseburger",
     category: "Burgers",
     ingredients: "Beef patty, brioche bun, cheddar cheese, burger sauce, lettuce, tomato",
-    allergens: {
-      gluten: "contains",
-      milk: "contains",
-      eggs: "contains",
-      sesame: "contains",
-      mustard: "contains",
-      soya: "may"
-    }
+    allergens: { gluten: "contains", milk: "contains", eggs: "contains", sesame: "contains", mustard: "contains", soya: "may" }
   },
   {
-    id: "dish-2",
+    id: "bp-2",
     name: "Margherita Pizza 12\"",
     category: "Pizzas",
     ingredients: "Hand-stretched wheat dough, San Marzano tomato sauce, 100% fior di latte mozzarella, basil",
-    allergens: {
-      gluten: "contains",
-      milk: "contains"
-    }
+    allergens: { gluten: "contains", milk: "contains" }
   },
   {
-    id: "dish-3",
+    id: "bp-3",
     name: "Crispy Hot Wings",
     category: "Chicken",
     ingredients: "Buttermilk marinated, seasoned wheat flour coated fried chicken wings, hot cayenne butter glaze, celery dip",
-    allergens: {
-      gluten: "contains",
-      milk: "contains",
-      celery: "contains",
-      mustard: "contains",
-      soya: "may"
-    }
+    allergens: { gluten: "contains", milk: "contains", celery: "contains", mustard: "contains", soya: "may" }
   },
   {
-    id: "dish-4",
+    id: "bp-4",
     name: "Loaded Truffle Fries",
     category: "Sides",
     ingredients: "Skin-on potato fries, black truffle oil, garlic aioli, parmesan cheese",
-    allergens: {
-      milk: "contains",
-      eggs: "contains",
-      mustard: "may"
-    }
+    allergens: { milk: "contains", eggs: "contains", mustard: "may" }
   },
   {
-    id: "dish-5",
+    id: "bp-5",
     name: "Crispy King Prawns",
     category: "Starters",
     ingredients: "Egg-washed panko crumbed king prawns, sweet chilli dip, fresh lime",
-    allergens: {
-      crustaceans: "contains",
-      gluten: "contains",
-      eggs: "contains",
-      fish: "may",
-      sesame: "may"
-    }
+    allergens: { crustaceans: "contains", gluten: "contains", eggs: "contains", fish: "may", sesame: "may" }
   },
   {
-    id: "dish-6",
+    id: "bp-6",
     name: "Vegan Garden Salad",
     category: "Sides",
     ingredients: "Mixed baby leaf salad, cherry tomatoes, cucumber, balsamic vinaigrette (balsamic vinegar, olive oil, mustard)",
-    allergens: {
-      mustard: "contains",
-      sulphites: "contains"
-    }
+    allergens: { mustard: "contains", sulphites: "contains" }
+  }
+];
+
+const PRESET_FISH_CHIPS: MenuItem[] = [
+  {
+    id: "fc-1",
+    name: "Battered Atlantic Cod (Regular)",
+    category: "Fish",
+    ingredients: "Skinless Atlantic cod fillet, seasoned wheat flour beer batter, beef dripping or vegetable oil",
+    allergens: { fish: "contains", gluten: "contains" }
+  },
+  {
+    id: "fc-2",
+    name: "Breaded Wholetail Scampi (10pc)",
+    category: "Seafood",
+    ingredients: "Wholetail Scottish scampi (langoustine tails), crispy wheat crumb coating",
+    allergens: { crustaceans: "contains", gluten: "contains", molluscs: "may" }
+  },
+  {
+    id: "fc-3",
+    name: "Chunky British Chips (Portion)",
+    category: "Chips & Sides",
+    ingredients: "100% British Maris Piper potatoes, pure sunflower or rapeseed oil, table salt",
+    allergens: {}
+  },
+  {
+    id: "fc-4",
+    name: "Traditional Mushy Peas",
+    category: "Chips & Sides",
+    ingredients: "Steeped processed marrowfat peas, water, sugar, salt",
+    allergens: {}
+  },
+  {
+    id: "fc-5",
+    name: "Chip Shop Chinese Curry Sauce",
+    category: "Sauces",
+    ingredients: "Water, wheat flour, vegetable oil, curry powder (coriander, turmeric, mustard, celery seed), onion powder",
+    allergens: { gluten: "contains", mustard: "contains", celery: "contains" }
+  },
+  {
+    id: "fc-6",
+    name: "Creamy Tartar Sauce Dip",
+    category: "Sauces",
+    ingredients: "Rapeseed oil, water, capers, gherkins, pasteurised egg yolk, spirit vinegar, mustard flour",
+    allergens: { eggs: "contains", mustard: "contains", sulphites: "contains" }
+  }
+];
+
+const PRESET_INDIAN_CURRY: MenuItem[] = [
+  {
+    id: "ic-1",
+    name: "Chicken Tikka Masala",
+    category: "Main Curries",
+    ingredients: "Tandoori chicken breast, tomato onion masala, double cream, butter, ground almond powder, fenugreek",
+    allergens: { milk: "contains", nuts: "contains" }
+  },
+  {
+    id: "ic-2",
+    name: "Slow-Cooked Lamb Rogan Josh",
+    category: "Main Curries",
+    ingredients: "Diced tender lamb shoulder, Kashmiri chilli, tomato purée, ginger, garlic, garam masala, mustard oil",
+    allergens: { mustard: "contains" }
+  },
+  {
+    id: "ic-3",
+    name: "Crispy Onion Bhaji (3pc)",
+    category: "Starters",
+    ingredients: "Sliced Spanish onions, gram (chickpea) flour, carom seeds, turmeric, cumin, vegetable oil",
+    allergens: {}
+  },
+  {
+    id: "ic-4",
+    name: "Garlic & Coriander Naan",
+    category: "Breads",
+    ingredients: "Wheat flour dough, pasteurised whole milk, egg, butter ghee, minced fresh garlic, coriander",
+    allergens: { gluten: "contains", milk: "contains", eggs: "contains" }
+  },
+  {
+    id: "ic-5",
+    name: "Crispy Vegetable Samosas (2pc)",
+    category: "Starters",
+    ingredients: "Spiced potatoes and green peas wrapped in crisp wheat pastry, cumin, mustard seeds",
+    allergens: { gluten: "contains", mustard: "may" }
+  },
+  {
+    id: "ic-6",
+    name: "Cucumber & Mint Raita",
+    category: "Sides & Dips",
+    ingredients: "Set natural cow's milk yoghurt, grated fresh cucumber, roasted cumin powder, fresh mint",
+    allergens: { milk: "contains" }
+  }
+];
+
+const PRESET_CAFE_BAKERY: MenuItem[] = [
+  {
+    id: "cb-1",
+    name: "Ham & Mature Cheddar Croissant",
+    category: "Bakery",
+    ingredients: "All-butter laminated wheat croissant, cooked cured ham, mature British cheddar cheese, egg wash",
+    allergens: { gluten: "contains", milk: "contains", eggs: "contains" }
+  },
+  {
+    id: "cb-2",
+    name: "Smoked Salmon & Cream Cheese Bagel",
+    category: "Sandwiches",
+    ingredients: "Toasted seeded wheat bagel (sesame), oak-smoked Atlantic salmon, full-fat soft cheese, dill",
+    allergens: { gluten: "contains", fish: "contains", milk: "contains", sesame: "contains" }
+  },
+  {
+    id: "cb-3",
+    name: "Triple Chocolate Brownie",
+    category: "Sweet Treats",
+    ingredients: "Dark Belgian chocolate, butter, sugar, free-range eggs, wheat flour, cocoa powder, soya lecithin",
+    allergens: { gluten: "contains", milk: "contains", eggs: "contains", soya: "contains", nuts: "may" }
+  },
+  {
+    id: "cb-4",
+    name: "Barista Oat Flat White (Coffee)",
+    category: "Hot Drinks",
+    ingredients: "Espresso coffee shots, steam-foamed gluten-containing oat milk base (water, oats, rapeseed oil)",
+    allergens: { gluten: "contains" }
   }
 ];
 
@@ -91,11 +216,12 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [allergenFilter, setAllergenFilter] = useState("all");
 
-  const [menuItems, setMenuItems] = useState<MenuItem[]>(DEFAULT_MENU_ITEMS);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>(PRESET_BURGER_PIZZA);
 
   const [newDishName, setNewDishName] = useState("");
   const [newDishCategory, setNewDishCategory] = useState("Burgers");
   const [newDishIngredients, setNewDishIngredients] = useState("");
+  const [detectedSummary, setDetectedSummary] = useState<string[]>([]);
 
   // Load from localStorage on mount
   useEffect(() => {
@@ -166,26 +292,53 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
   };
 
   const categories = useMemo(() => {
-    const set = new Set(menuItems.map(m => m.category));
+    const set = new Set<string>();
+    menuItems.forEach(item => {
+      if (item.category) set.add(item.category);
+    });
     return ["all", ...Array.from(set)];
   }, [menuItems]);
 
-  const toggleAllergen = (itemId: string, allergenId: string) => {
+  const toggleAllergen = (dishId: string, allergenId: string) => {
     setMenuItems(prev =>
-      prev.map(item => {
-        if (item.id !== itemId) return item;
-        const current = item.allergens[allergenId] || "none";
-        const next: AllergenStatus =
-          current === "none" ? "contains" : current === "contains" ? "may" : "none";
-        return { ...item, allergens: { ...item.allergens, [allergenId]: next } };
+      prev.map(dish => {
+        if (dish.id !== dishId) return dish;
+        const current = dish.allergens[allergenId] || "none";
+        let next: AllergenStatus = "contains";
+        if (current === "contains") next = "may";
+        else if (current === "may") next = "none";
+        else next = "contains";
+
+        const updatedAllergens = { ...dish.allergens };
+        if (next === "none") {
+          delete updatedAllergens[allergenId];
+        } else {
+          updatedAllergens[allergenId] = next;
+        }
+
+        return { ...dish, allergens: updatedAllergens };
       })
     );
+  };
+
+  const handleSmartDetectNewDish = () => {
+    if (!newDishIngredients.trim()) return;
+    const detected = detectAllergensFromIngredients(newDishIngredients);
+    const names = Object.keys(detected).map(id => {
+      const match = ALLERGENS.find(a => a.id === id);
+      return match ? match.name : id;
+    });
+    setDetectedSummary(names);
   };
 
   const handleAddDish = (e: React.FormEvent) => {
     e.preventDefault();
     if (!newDishName.trim()) return;
     const newId = `dish-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    
+    // Auto detect from ingredients if provided
+    const autoDetected = detectAllergensFromIngredients(newDishIngredients);
+
     setMenuItems(prev => [
       ...prev,
       {
@@ -193,11 +346,12 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
         name: newDishName.trim(),
         category: newDishCategory.trim() || "Mains",
         ingredients: newDishIngredients.trim(),
-        allergens: {}
+        allergens: autoDetected
       }
     ]);
     setNewDishName("");
     setNewDishIngredients("");
+    setDetectedSummary([]);
   };
 
   const handleQuickAddEmpty = () => {
@@ -221,9 +375,16 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
     });
   };
 
+  const handleLoadPreset = (preset: MenuItem[]) => {
+    setMenuItems(preset);
+    setSelectedCategory("all");
+    setSearchQuery("");
+    setAllergenFilter("all");
+  };
+
   const handleReset = () => {
     const confirmed = window.confirm(
-      "Reset all dishes, ingredients, and allergen markings back to the example data? Any custom edits will be cleared."
+      "Reset all dishes, ingredients, and allergen markings back to default? Any custom edits will be cleared."
     );
     if (!confirmed) return;
 
@@ -236,7 +397,7 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
     setRestaurantName("");
     setCheckedBy("");
     setReviewDate("");
-    setMenuItems(DEFAULT_MENU_ITEMS);
+    setMenuItems(PRESET_BURGER_PIZZA);
     setSearchQuery("");
     setSelectedCategory("all");
     setAllergenFilter("all");
@@ -254,7 +415,6 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
       }
       if (allergenFilter !== "all") {
         const status = item.allergens[allergenFilter];
-        // Hide dishes marked YES (contains) or MAY (may contain cross-contact)
         if (status === "contains" || status === "may") return false;
       }
       return true;
@@ -310,24 +470,24 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
             Covers the 14 UK/EU allergens
           </span>
           <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900 mt-1">
-            14 Allergen Chart for Kitchens
+            Commercial Kitchen 14 Allergen Chart
           </h2>
           <p className="text-xs sm:text-sm text-gray-600 mt-0.5">
-            Record which of the 14 allergens each dish contains, then print or save as PDF.
+            Record, filter, and print mandatory food allergen disclosures for UK restaurants, takeaways, and caterers.
           </p>
         </div>
 
         <div className="flex flex-wrap items-center gap-2 no-print">
           <div className="hidden sm:flex items-center gap-1.5 text-xs font-bold text-slate-800 bg-slate-100 border border-slate-200 px-3 py-2 rounded-xl">
             <Edit3 className="w-3.5 h-3.5 text-slate-600" aria-hidden="true" />
-            <span>Editable dishes &amp; allergens</span>
+            <span>Interactive Disclosures</span>
           </div>
 
           <button
             type="button"
             onClick={handleReset}
             className="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-1"
-            title="Reset to example dishes"
+            title="Reset to default dishes"
             aria-label="Reset chart to default example dishes"
           >
             <RotateCcw className="w-3.5 h-3.5" aria-hidden="true" />
@@ -351,7 +511,51 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
             aria-label="Print or save allergen chart as PDF"
           >
             <Printer className="w-4 h-4 text-amber-400" aria-hidden="true" />
-            <span>Print Allergen Chart</span>
+            <span>Print Chart</span>
+          </button>
+        </div>
+      </div>
+
+      {/* ── 1-CLICK TAKEAWAY MENU PRESETS BAR ── */}
+      <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2 no-print">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <Layers className="w-4 h-4 text-slate-700" />
+            <span className="text-xs font-bold text-slate-900">
+              Instant UK Cuisine Templates (Pre-filled):
+            </span>
+          </div>
+          <span className="text-[11px] text-slate-500 font-mono">1-click populate dishes &amp; ingredients</span>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2 text-xs">
+          <button
+            type="button"
+            onClick={() => handleLoadPreset(PRESET_BURGER_PIZZA)}
+            className="px-3 py-1.5 rounded-xl font-bold bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 shadow-2xs transition-all cursor-pointer"
+          >
+            🍔 Burgers &amp; Pizzas
+          </button>
+          <button
+            type="button"
+            onClick={() => handleLoadPreset(PRESET_FISH_CHIPS)}
+            className="px-3 py-1.5 rounded-xl font-bold bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 shadow-2xs transition-all cursor-pointer"
+          >
+            🐟 Fish &amp; Chips Shop
+          </button>
+          <button
+            type="button"
+            onClick={() => handleLoadPreset(PRESET_INDIAN_CURRY)}
+            className="px-3 py-1.5 rounded-xl font-bold bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 shadow-2xs transition-all cursor-pointer"
+          >
+            🍛 Indian &amp; Curry House
+          </button>
+          <button
+            type="button"
+            onClick={() => handleLoadPreset(PRESET_CAFE_BAKERY)}
+            className="px-3 py-1.5 rounded-xl font-bold bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 shadow-2xs transition-all cursor-pointer"
+          >
+            ☕ Bakery &amp; Café
           </button>
         </div>
       </div>
@@ -463,12 +667,6 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
             title="Not declared does not mean the dish has none. Always check with staff."
           >
             <span className="w-3 h-3 rounded bg-gray-200 inline-block" aria-hidden="true" /> — = Not declared
-            <span
-              className="text-[10px] text-gray-400 underline decoration-dotted ml-0.5"
-              title="Not declared does not mean the dish has none. Always check with staff."
-            >
-              (info)
-            </span>
           </span>
         </div>
       </div>
@@ -477,40 +675,31 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
       <div>
         <div className="flex items-center justify-between mb-2">
           <div className="text-xs font-bold text-gray-700 uppercase font-mono tracking-wider">
-            Example dishes (replace with your own)
+            Dishes &amp; Statutory Allergen Declarations ({filteredItems.length} items)
           </div>
-          <div className="text-[11px] text-gray-500 italic no-print">
-            Click any cell to cycle: Contains (YES) &rarr; May contain (MAY) &rarr; Not declared (—)
+          <div className="text-[11px] text-gray-500 font-mono no-print">
+            Click table cells to cycle: <strong>YES</strong> &rarr; <strong>MAY</strong> &rarr; <strong>&mdash;</strong>
           </div>
         </div>
 
         <div className="overflow-x-auto border border-gray-200 rounded-2xl bg-white print:border-none print:overflow-visible">
-          <table className="w-full text-left text-xs" aria-label="14 Allergen Matrix Table">
-            <thead className="bg-[#1D1D1F] text-white uppercase font-mono text-[9px] tracking-wider">
-              <tr>
-                <th scope="col" className="p-3 border-b" style={{ width: "32%", minWidth: "270px" }}>
-                  <div>Dish / Recipe Name &amp; Ingredients</div>
-                  <div className="text-[9px] font-normal text-gray-400 normal-case mt-0.5">
-                    Example dishes (replace with your own)
-                  </div>
+          <table className="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr className="bg-slate-900 text-white font-mono text-[9px] uppercase tracking-wider">
+                <th className="p-2.5 border-b border-gray-700 min-w-[200px]" style={{ width: "24%" }}>
+                  Dish / Recipe &amp; Ingredients
                 </th>
                 {ALLERGENS.map(a => (
                   <th
                     key={a.id}
-                    scope="col"
-                    className="p-2 border-b text-center whitespace-nowrap"
-                    style={{ width: "4.8%" }}
-                    aria-label={a.name}
+                    className="p-1 border-b border-gray-700 text-center text-[8px] font-bold uppercase tracking-tight"
+                    style={{ width: "5%" }}
                     title={a.name}
                   >
-                    <div aria-hidden="true" className="text-sm select-none">{a.icon}</div>
-                    <div className="mt-0.5 text-[8px] opacity-80 uppercase tracking-tighter">
-                      <span className="hidden xl:inline">{a.name}</span>
-                      <span className="xl:hidden">{a.short}</span>
-                    </div>
+                    <span className="block truncate max-w-[50px] mx-auto">{a.name.split(" ")[0]}</span>
                   </th>
                 ))}
-                <th scope="col" className="p-2 border-b text-right no-print" style={{ width: "2%" }}>
+                <th className="p-2 border-b border-gray-700 text-right no-print w-10">
                   <span className="sr-only">Actions</span>
                 </th>
               </tr>
@@ -518,40 +707,56 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
             <tbody className="divide-y divide-gray-100">
               {filteredItems.map(item => (
                 <tr key={item.id} className="hover:bg-gray-50/80 transition-colors">
-                  <td className="p-2.5 align-top" style={{ minWidth: "270px" }}>
+                  <td className="p-2.5 align-top">
                     <input
                       type="text"
+                      placeholder="Dish name"
+                      aria-label="Dish name"
                       value={item.name}
                       onChange={e => {
                         const val = e.target.value;
                         setMenuItems(prev => prev.map(m => m.id === item.id ? { ...m, name: val } : m));
                       }}
-                      placeholder="Dish name..."
-                      aria-label="Dish or recipe name"
-                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-slate-900 focus:ring-2 focus:ring-slate-900 rounded-lg px-3 py-2 font-bold text-xs text-gray-900 focus:outline-none print:hidden shadow-2xs"
+                      className="font-bold text-xs text-gray-900 bg-transparent border-b border-transparent hover:border-gray-300 focus:border-slate-900 focus:outline-none w-full print:hidden"
                     />
-                    <div className="hidden print:block font-bold text-[9pt] text-gray-950 leading-tight">
-                      {item.name}
+                    <div className="hidden print:block font-bold text-xs text-gray-950">
+                      {item.name || "Untitled dish"}
                     </div>
 
                     <textarea
-                      rows={3}
+                      placeholder="Key ingredients list..."
+                      aria-label={`Key ingredients for ${item.name || 'dish'}`}
                       value={item.ingredients}
-                      placeholder="Full ingredient breakdown..."
-                      aria-label={`Ingredient breakdown for ${item.name || 'dish'}`}
+                      rows={2}
                       onChange={e => {
                         const val = e.target.value;
                         setMenuItems(prev => prev.map(m => m.id === item.id ? { ...m, ingredients: val } : m));
                       }}
-                      className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-slate-900 focus:ring-2 focus:ring-slate-900 rounded-lg p-2.5 text-xs text-gray-800 focus:outline-none print:hidden shadow-2xs mt-1.5 resize-y leading-relaxed min-h-[76px]"
+                      className="text-[10px] text-gray-500 bg-transparent border-b border-transparent hover:border-gray-300 focus:border-slate-900 focus:outline-none w-full mt-0.5 resize-none print:hidden"
                     />
-                    <div className="hidden print:block text-[8.5pt] text-gray-950 font-medium leading-relaxed whitespace-pre-wrap mt-1">
+                    <div className="hidden print:block text-[7.5pt] text-gray-600 leading-tight">
                       {item.ingredients}
                     </div>
 
-                    <span className="inline-block mt-1 px-1.5 py-0.5 bg-gray-100 border border-gray-200 rounded text-[9px] font-mono text-gray-600 print:text-[7.5pt] print:border-gray-300">
-                      {item.category}
-                    </span>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="inline-block px-1.5 py-0.5 bg-gray-100 border border-gray-200 rounded text-[9px] font-mono text-gray-600 print:text-[7.5pt] print:border-gray-300">
+                        {item.category}
+                      </span>
+                      
+                      {/* Row Auto-Detect Button */}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const detected = detectAllergensFromIngredients(item.ingredients);
+                          setMenuItems(prev => prev.map(m => m.id === item.id ? { ...m, allergens: { ...m.allergens, ...detected } } : m));
+                        }}
+                        className="no-print inline-flex items-center gap-1 text-[9px] text-amber-700 hover:text-amber-900 font-bold bg-amber-50 hover:bg-amber-100 border border-amber-200 px-1.5 py-0.5 rounded cursor-pointer"
+                        title="Auto-detect allergens from this ingredients list"
+                      >
+                        <Sparkles className="w-2.5 h-2.5 text-amber-600" />
+                        <span>Auto-Scan</span>
+                      </button>
+                    </div>
                   </td>
 
                   {ALLERGENS.map(a => {
@@ -578,7 +783,7 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
                           }`}
                           title={
                             status === "none"
-                              ? `${a.name}: Not declared does not mean the dish has none. Always check with staff.`
+                              ? `${a.name}: Not declared. Check with staff.`
                               : `${a.name}: ${statusLabel} (Click to toggle)`
                           }
                         >
@@ -597,12 +802,7 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
                               MAY
                             </span>
                           ) : (
-                            <span
-                              className="text-gray-300"
-                              title="Not declared does not mean the dish has none. Always check with staff."
-                            >
-                              —
-                            </span>
+                            <span className="text-gray-300">—</span>
                           )}
                         </div>
                       </td>
@@ -632,7 +832,7 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
         </div>
       </div>
 
-      {/* ── ADD NEW DISH & INGREDIENTS FORM ── */}
+      {/* ── ADD NEW DISH & INGREDIENTS FORM WITH SMART SCANNER ── */}
       <div className="space-y-3 no-print">
         <div className="flex items-center justify-between">
           <h4 className="text-xs font-bold text-gray-800 uppercase font-mono">
@@ -648,39 +848,100 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
           </button>
         </div>
 
-        <form onSubmit={handleAddDish} className="flex flex-col sm:flex-row gap-2 items-center p-3 bg-gray-50 rounded-2xl border border-gray-200">
-          <input
-            type="text"
-            placeholder="Dish name (e.g. Garlic Naan)..."
-            aria-label="New dish name"
-            value={newDishName}
-            onChange={e => setNewDishName(e.target.value)}
-            className="flex-1 bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs text-gray-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
-          />
-          <input
-            type="text"
-            placeholder="Category (e.g. Breads)..."
-            aria-label="New dish category"
-            value={newDishCategory}
-            onChange={e => setNewDishCategory(e.target.value)}
-            className="w-full sm:w-36 bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs text-gray-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
-          />
-          <input
-            type="text"
-            placeholder="All ingredients (e.g. Wheat flour, yogurt, ghee, garlic)..."
-            aria-label="New dish ingredients"
-            value={newDishIngredients}
-            onChange={e => setNewDishIngredients(e.target.value)}
-            className="flex-1 bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs text-gray-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
-          />
-          <button
-            type="submit"
-            className="w-full sm:w-auto bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-5 py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition-all shadow cursor-pointer shrink-0 hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-1"
-          >
-            <Plus className="w-3.5 h-3.5" aria-hidden="true" />
-            <span>+ Add Dish</span>
-          </button>
+        <form onSubmit={handleAddDish} className="p-4 bg-gray-50 rounded-2xl border border-gray-200 space-y-3">
+          <div className="flex flex-col sm:flex-row gap-2 items-center">
+            <input
+              type="text"
+              placeholder="Dish name (e.g. Garlic Naan)..."
+              aria-label="New dish name"
+              value={newDishName}
+              onChange={e => setNewDishName(e.target.value)}
+              className="flex-1 bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs text-gray-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
+            />
+            <input
+              type="text"
+              placeholder="Category (e.g. Breads)..."
+              aria-label="New dish category"
+              value={newDishCategory}
+              onChange={e => setNewDishCategory(e.target.value)}
+              className="w-full sm:w-36 bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs text-gray-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
+            />
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-2 items-center">
+            <input
+              type="text"
+              placeholder="Full ingredients list (e.g. Wheat flour, yogurt, butter ghee, garlic)..."
+              aria-label="New dish ingredients"
+              value={newDishIngredients}
+              onChange={e => {
+                setNewDishIngredients(e.target.value);
+                if (e.target.value.length > 5) {
+                  const detected = detectAllergensFromIngredients(e.target.value);
+                  const names = Object.keys(detected).map(id => {
+                    const match = ALLERGENS.find(a => a.id === id);
+                    return match ? match.name : id;
+                  });
+                  setDetectedSummary(names);
+                } else {
+                  setDetectedSummary([]);
+                }
+              }}
+              className="flex-1 bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs text-gray-900 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
+            />
+
+            <button
+              type="button"
+              onClick={handleSmartDetectNewDish}
+              className="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-3 py-2 rounded-xl flex items-center justify-center gap-1.5 transition-all shadow-xs cursor-pointer shrink-0"
+              title="Test scan ingredients for 14 allergens"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Scan 14 Allergens</span>
+            </button>
+
+            <button
+              type="submit"
+              className="w-full sm:w-auto bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-5 py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition-all shadow cursor-pointer shrink-0 hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-1"
+            >
+              <Plus className="w-3.5 h-3.5" aria-hidden="true" />
+              <span>+ Add Dish to Matrix</span>
+            </button>
+          </div>
+
+          {detectedSummary.length > 0 && (
+            <div className="p-2.5 bg-amber-50 rounded-xl border border-amber-200 text-xs flex items-center gap-2">
+              <span className="font-bold text-amber-900">⚡ Auto-Detected:</span>
+              <div className="flex flex-wrap gap-1.5">
+                {detectedSummary.map(name => (
+                  <span key={name} className="px-2 py-0.5 bg-amber-200 text-amber-900 font-bold rounded-md text-[10px]">
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </form>
+      </div>
+
+      {/* ── HIGH-CONVERTING TAKEAWAY WEB DESIGN CALLOUT ── */}
+      <div className="p-4 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs no-print">
+        <div className="space-y-1">
+          <span className="font-bold text-amber-400 block text-sm">
+            💡 Want live allergen filtering on your takeaway ordering website?
+          </span>
+          <p className="text-gray-300 text-xs leading-relaxed max-w-2xl">
+            Saim Dev builds bespoke Next.js takeaway websites featuring instant interactive allergen filters, allowing customers to filter out gluten, dairy, nuts, or any of the 14 allergens with 1 click before ordering.
+          </p>
+        </div>
+
+        <Link
+          href="/takeaway-web-design"
+          className="inline-flex items-center gap-1.5 font-bold text-xs bg-amber-400 hover:bg-amber-300 text-black px-4 py-2.5 rounded-xl transition-all shadow-xs shrink-0 self-start sm:self-auto"
+        >
+          <span>See Live Demo</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
       </div>
 
       {/* ── DISCLAIMER FOOTER NOTE ── */}

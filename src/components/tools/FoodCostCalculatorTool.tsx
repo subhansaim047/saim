@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   Plus,
   Trash2,
@@ -14,7 +15,11 @@ import {
   Scale,
   ChefHat,
   Edit3,
-  FileSpreadsheet
+  FileSpreadsheet,
+  ArrowRight,
+  ShieldCheck,
+  Smartphone,
+  Info
 } from "lucide-react";
 
 export interface CostItem {
@@ -45,6 +50,12 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
   const [salesPrice, setSalesPrice] = useState<number | "">(11.50);
   const [targetCostPct, setTargetCostPct] = useState<number | "">(28);
 
+  // UK Specific VAT & Delivery App States
+  const [vatIncluded, setVatIncluded] = useState(true);
+  const [showDeliveryCalc, setShowDeliveryCalc] = useState(true);
+  const [deliveryPlatform, setDeliveryPlatform] = useState<"justeat" | "deliveroo" | "ubereats" | "custom">("deliveroo");
+  const [customCommissionPct, setCustomCommissionPct] = useState<number | "">(30);
+
   const [primaryIngredients, setPrimaryIngredients] = useState<CostItem[]>(DEFAULT_PRIMARY);
   const [secondaryIngredients, setSecondaryIngredients] = useState<CostItem[]>(DEFAULT_SECONDARY);
 
@@ -69,12 +80,53 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
   const numTargetCostPct = typeof targetCostPct === "number" && targetCostPct > 0 ? targetCostPct : 28;
 
   const portionCost = numServings > 0 ? totalBatchCost / numServings : totalBatchCost;
-  const actualFoodCostPct = numSalesPrice > 0 ? (portionCost / numSalesPrice) * 100 : 0;
-  const grossProfit = numSalesPrice - portionCost;
-  const grossMarginPct = numSalesPrice > 0 ? (grossProfit / numSalesPrice) * 100 : 0;
-  const recommendedSellingPrice = numTargetCostPct > 0 ? portionCost / (numTargetCostPct / 100) : 0;
 
-  // Add primary ingredient handler
+  // UK VAT Stripping Logic (standard UK restaurant & hot takeaway rate = 20%)
+  const isUkVatActive = currency === "£" && vatIncluded;
+  const netSalesPrice = isUkVatActive && numSalesPrice > 0 ? numSalesPrice / 1.20 : numSalesPrice;
+  const vatAmount = isUkVatActive ? numSalesPrice - netSalesPrice : 0;
+
+  // Food cost and gross margin calculated against TRUE net revenue
+  const actualFoodCostPct = netSalesPrice > 0 ? (portionCost / netSalesPrice) * 100 : 0;
+  const grossProfit = netSalesPrice - portionCost;
+  const grossMarginPct = netSalesPrice > 0 ? (grossProfit / netSalesPrice) * 100 : 0;
+  
+  // Recommended selling price to achieve target food cost percentage
+  const recommendedNetPrice = numTargetCostPct > 0 ? portionCost / (numTargetCostPct / 100) : 0;
+  const recommendedSellingPrice = isUkVatActive ? recommendedNetPrice * 1.20 : recommendedNetPrice;
+
+  // Third-Party Delivery Platform Commission Analysis
+  const getCommissionRate = () => {
+    switch (deliveryPlatform) {
+      case "deliveroo":
+        return 32;
+      case "justeat":
+        return 30;
+      case "ubereats":
+        return 30;
+      case "custom":
+        return typeof customCommissionPct === "number" ? customCommissionPct : 30;
+      default:
+        return 30;
+    }
+  };
+
+  const deliveryCommissionRate = getCommissionRate();
+  // App takes commission from the gross customer order price
+  const deliveryCommissionTaken = (numSalesPrice * deliveryCommissionRate) / 100;
+  // Net money received by takeaway after delivery app fee and VAT
+  const netRevenueAfterDelivery = netSalesPrice - deliveryCommissionTaken;
+  const profitAfterDelivery = netRevenueAfterDelivery - portionCost;
+  const marginPctAfterDelivery = netSalesPrice > 0 ? (profitAfterDelivery / netSalesPrice) * 100 : 0;
+
+  // Recommended price on delivery apps to protect the same cash profit (£) as in-store:
+  // We need Net_after_delivery - portionCost = grossProfit
+  // (Price / 1.20) - Price * (comm / 100) = portionCost + grossProfit
+  // Price * (1/1.20 - comm/100) = netSalesPrice
+  const factor = isUkVatActive ? (1 / 1.20 - deliveryCommissionRate / 100) : (1 - deliveryCommissionRate / 100);
+  const recommendedDeliveryMenuPrice = factor > 0 ? netSalesPrice / factor : numSalesPrice * 1.35;
+
+  // Handlers
   const handleAddPrimary = () => {
     const newId = `p-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     setPrimaryIngredients(prev => [
@@ -83,7 +135,6 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
     ]);
   };
 
-  // Add secondary ingredient handler
   const handleAddSecondary = () => {
     const newId = `s-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     setSecondaryIngredients(prev => [
@@ -136,12 +187,16 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
       ["Summary", "Total Batch Cost", (totalBatchCost).toFixed(2)],
       ["Summary", "Portions / Servings", numServings],
       ["Summary", "Portion Plate Cost", (portionCost).toFixed(2)],
-      ["Summary", "Menu Selling Price (ex. VAT)", (numSalesPrice).toFixed(2)],
-      ["Summary", "Actual Food Cost %", `${actualFoodCostPct.toFixed(1)}%`],
-      ["Summary", "Gross Profit", (grossProfit).toFixed(2)],
-      ["Summary", "Gross Profit (GP%) Margin", `${grossMarginPct.toFixed(1)}%`],
-      ["Summary", "Recommended Selling Price (Target)", (recommendedSellingPrice).toFixed(2)],
-      ["Summary", "Price Inclusive of 20% UK VAT", (numSalesPrice * 1.20).toFixed(2)]
+      ["Summary", "Gross Customer Menu Price", (numSalesPrice).toFixed(2)],
+      ["Summary", "UK 20% VAT Deducted", isUkVatActive ? (vatAmount).toFixed(2) : "0.00"],
+      ["Summary", "Net Kitchen Revenue (ex. VAT)", (netSalesPrice).toFixed(2)],
+      ["Summary", "Actual Food Cost % (Net)", `${actualFoodCostPct.toFixed(1)}%`],
+      ["Summary", "Gross Profit (In-Store)", (grossProfit).toFixed(2)],
+      ["Summary", "Gross Profit Margin (In-Store)", `${grossMarginPct.toFixed(1)}%`],
+      ["Summary", `Delivery Fee (${deliveryCommissionRate}%)`, (deliveryCommissionTaken).toFixed(2)],
+      ["Summary", "Profit Left on Delivery App", (profitAfterDelivery).toFixed(2)],
+      ["Summary", "Recommended Delivery Menu Price", (recommendedDeliveryMenuPrice).toFixed(2)],
+      ["Summary", "Recommended In-Store Price", (recommendedSellingPrice).toFixed(2)]
     ];
 
     const csvContent = "data:text/csv;charset=utf-8," + rows.map(e => e.map(val => `"${String(val).replace(/"/g, '""')}"`).join(",")).join("\n");
@@ -161,6 +216,8 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
     setSalesPrice(11.50);
     setTargetCostPct(28);
     setServings(1);
+    setVatIncluded(true);
+    setDeliveryPlatform("deliveroo");
   };
 
   return (
@@ -210,7 +267,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
             Commercial Recipe Costing &amp; Margin Calculator
           </h2>
           <p className="text-xs text-gray-500 mt-0.5">
-            Calculate portion cost, target margin %, and food cost ratio with zero calculation errors.
+            Portion costs, true gross profit margins, UK 20% VAT stripping, and delivery app commission protection.
           </p>
         </div>
 
@@ -300,7 +357,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
             {actualFoodCostPct.toFixed(1)}%
           </div>
           <span className="text-[10px] text-gray-400 font-mono">
-            {actualFoodCostPct <= numTargetCostPct ? "✓ Healthy profit margin" : "⚠️ Exceeds target limit"}
+            {isUkVatActive ? "Calculated on Net (ex. VAT)" : "Calculated on Gross Price"}
           </span>
         </div>
 
@@ -311,7 +368,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
             {grossMarginPct.toFixed(1)}%
           </div>
           <span className="text-[10px] text-gray-400 font-mono">
-            Rec. Price: {currency}{recommendedSellingPrice.toFixed(2)}
+            Target Price: {currency}{recommendedSellingPrice.toFixed(2)}
           </span>
         </div>
 
@@ -322,10 +379,35 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
             {currency}{grossProfit.toFixed(2)}
           </div>
           <span className="text-[10px] text-gray-300 font-mono">
-            Selling Price: {currency}{numSalesPrice.toFixed(2)}
+            Net Revenue: {currency}{netSalesPrice.toFixed(2)}
           </span>
         </div>
       </div>
+
+      {/* ── UK VAT STRIPPING CALLOUT & TOGGLE ── */}
+      {currency === "£" && (
+        <div className="p-4 rounded-2xl bg-blue-50/80 border border-blue-200/90 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 no-print">
+          <div className="flex items-start gap-2.5">
+            <Info className="w-4 h-4 text-blue-700 shrink-0 mt-0.5" />
+            <div>
+              <span className="font-bold text-blue-950 block">UK 20% VAT Commercial Stripping Mode</span>
+              <p className="text-blue-800 text-[11px] leading-relaxed">
+                Hot takeaway food and dine-in sales incur 20% standard VAT. Customer price of {currency}{numSalesPrice.toFixed(2)} includes {currency}{vatAmount.toFixed(2)} for HMRC. Net revenue is {currency}{netSalesPrice.toFixed(2)}.
+              </p>
+            </div>
+          </div>
+
+          <label className="inline-flex items-center gap-2 cursor-pointer bg-white px-3 py-1.5 rounded-xl border border-blue-200 shadow-2xs shrink-0 self-start sm:self-auto">
+            <input
+              type="checkbox"
+              checked={vatIncluded}
+              onChange={e => setVatIncluded(e.target.checked)}
+              className="rounded text-blue-600 focus:ring-blue-500 w-4 h-4"
+            />
+            <span className="text-xs font-bold text-gray-800">Selling Price Includes 20% VAT</span>
+          </label>
+        </div>
+      )}
 
       {/* ── CONTROL CONFIGURATION BAR ── */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-200 text-xs">
@@ -340,7 +422,9 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
           <div className="hidden print:block font-bold text-sm text-gray-950">{recipeName}</div>
         </div>
         <div>
-          <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Menu Selling Price ({currency})</label>
+          <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">
+            Menu Selling Price ({currency}) {isUkVatActive && <span className="text-gray-400 font-normal">(inc. VAT)</span>}
+          </label>
           <input
             type="number"
             step="0.10"
@@ -368,6 +452,141 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
             className="w-full bg-white border border-gray-300 hover:border-gray-400 focus:border-emerald-600 rounded-lg px-3 py-1.5 font-bold text-gray-900 focus:outline-none print:hidden shadow-2xs"
           />
           <div className="hidden print:block font-bold text-xs text-gray-900">{numTargetCostPct}%</div>
+        </div>
+      </div>
+
+      {/* ── THIRD-PARTY DELIVERY APP MARGIN BUFFER (JUST EAT / DELIVEROO / UBER EATS) ── */}
+      <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 space-y-4 no-print">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <Smartphone className="w-5 h-5 text-amber-700" />
+            <div>
+              <h3 className="font-bold text-sm text-amber-950">
+                Delivery App Commission Buffer (Just Eat, Deliveroo, Uber Eats)
+              </h3>
+              <p className="text-xs text-amber-800">
+                Calculate real takeaway profit after third-party 25%–34% commission fees.
+              </p>
+            </div>
+          </div>
+
+          {/* Platform selector */}
+          <div className="flex flex-wrap items-center gap-1.5 text-xs">
+            <button
+              type="button"
+              onClick={() => setDeliveryPlatform("deliveroo")}
+              className={`px-3 py-1 rounded-lg font-bold transition-all ${
+                deliveryPlatform === "deliveroo"
+                  ? "bg-amber-600 text-white shadow-xs"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-amber-200"
+              }`}
+            >
+              Deliveroo (32%)
+            </button>
+            <button
+              type="button"
+              onClick={() => setDeliveryPlatform("justeat")}
+              className={`px-3 py-1 rounded-lg font-bold transition-all ${
+                deliveryPlatform === "justeat"
+                  ? "bg-amber-600 text-white shadow-xs"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-amber-200"
+              }`}
+            >
+              Just Eat (30%)
+            </button>
+            <button
+              type="button"
+              onClick={() => setDeliveryPlatform("ubereats")}
+              className={`px-3 py-1 rounded-lg font-bold transition-all ${
+                deliveryPlatform === "ubereats"
+                  ? "bg-amber-600 text-white shadow-xs"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-amber-200"
+              }`}
+            >
+              Uber Eats (30%)
+            </button>
+            <button
+              type="button"
+              onClick={() => setDeliveryPlatform("custom")}
+              className={`px-3 py-1 rounded-lg font-bold transition-all ${
+                deliveryPlatform === "custom"
+                  ? "bg-amber-600 text-white shadow-xs"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-amber-200"
+              }`}
+            >
+              Custom %
+            </button>
+          </div>
+        </div>
+
+        {deliveryPlatform === "custom" && (
+          <div className="flex items-center gap-2 max-w-xs text-xs pt-1">
+            <label className="font-bold text-gray-700">Custom Commission %:</label>
+            <input
+              type="number"
+              min="0"
+              max="50"
+              value={customCommissionPct}
+              onChange={e => setCustomCommissionPct(e.target.value === "" ? "" : parseFloat(e.target.value) || 0)}
+              className="w-20 bg-white border border-gray-300 rounded-lg px-2 py-1 font-mono font-bold"
+            />
+          </div>
+        )}
+
+        {/* Side-by-side comparison cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          {/* Card 1: In-Store Cash Profit */}
+          <div className="p-3.5 bg-white rounded-xl border border-amber-200/60 shadow-2xs">
+            <span className="text-[10px] font-mono uppercase text-gray-500 font-bold block">In-Store / Direct Sale</span>
+            <div className="text-lg font-extrabold text-emerald-700 mt-1">
+              +{currency}{grossProfit.toFixed(2)} Profit
+            </div>
+            <p className="text-[11px] text-gray-500 mt-0.5">
+              Zero commission fee paid to aggregators.
+            </p>
+          </div>
+
+          {/* Card 2: Sold on Delivery App at Same Price */}
+          <div className="p-3.5 bg-white rounded-xl border border-red-200 shadow-2xs">
+            <span className="text-[10px] font-mono uppercase text-red-600 font-bold block">If Sold on App at Same Price</span>
+            <div className="text-lg font-extrabold text-red-600 mt-1">
+              {currency}{profitAfterDelivery.toFixed(2)} Profit
+            </div>
+            <p className="text-[11px] text-red-700 mt-0.5">
+              App takes -{currency}{deliveryCommissionTaken.toFixed(2)} ({deliveryCommissionRate}% fee). Profit drops by {grossProfit > 0 ? (((grossProfit - profitAfterDelivery) / grossProfit) * 100).toFixed(0) : 0}%.
+            </p>
+          </div>
+
+          {/* Card 3: Recommended Delivery Menu Price */}
+          <div className="p-3.5 bg-[#1D1D1F] text-white rounded-xl shadow-2xs">
+            <span className="text-[10px] font-mono uppercase text-amber-400 font-bold block">Recommended App Menu Price</span>
+            <div className="text-lg font-extrabold text-amber-300 mt-1">
+              {currency}{recommendedDeliveryMenuPrice.toFixed(2)}
+            </div>
+            <p className="text-[11px] text-gray-300 mt-0.5">
+              Markup required on delivery app to keep your full {currency}{grossProfit.toFixed(2)} in-store margin.
+            </p>
+          </div>
+        </div>
+
+        {/* High-Converting Studio Callout */}
+        <div className="p-3.5 bg-white/90 rounded-xl border border-amber-300/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+          <div className="space-y-0.5">
+            <span className="font-bold text-gray-900 block">
+              💡 Stop paying 30% aggregator commissions every month
+            </span>
+            <p className="text-gray-600 text-[11px] leading-relaxed">
+              Saim Dev designs custom online ordering websites for UK takeaways with 0% commission, direct card payments, and instant kitchen order printing.
+            </p>
+          </div>
+
+          <Link
+            href="/takeaway-web-design"
+            className="inline-flex items-center gap-1.5 font-bold text-xs bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-xl transition-all shadow-xs shrink-0 self-start sm:self-auto"
+          >
+            <span>See 0% Commission Takeaway Sites</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
       </div>
 
@@ -443,7 +662,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
                         type="text"
                         value={item.unit}
                         onChange={e => updateItem(setPrimaryIngredients, item.id, "unit", e.target.value)}
-                        placeholder="pc, g, kg"
+                        placeholder="pc, portion, kg"
                         className="w-20 bg-white border border-gray-300 rounded-lg px-2 py-1.5 text-xs text-gray-700 focus:outline-none focus:border-emerald-600 print:hidden shadow-2xs"
                       />
                       <div className="hidden print:block text-[8.5pt] text-gray-700">
@@ -453,7 +672,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
                     <td className="p-2.5">
                       <input
                         type="number"
-                        step="0.001"
+                        step="0.01"
                         min="0"
                         value={item.unitCost}
                         onChange={e => {
@@ -499,7 +718,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
             className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 transition-all shadow cursor-pointer hover:scale-[1.01]"
           >
             <Plus className="w-3.5 h-3.5" />
-            <span>+ Add Primary Ingredient</span>
+            <span>+ Add Primary Component</span>
           </button>
           <span className="text-xs font-mono font-bold text-gray-600">
             Subtotal: {currency}{primarySum.toFixed(2)}
@@ -507,14 +726,14 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
         </div>
       </div>
 
-      {/* ── 2. SECONDARY INGREDIENTS TABLE ── */}
+      {/* ── 2. SECONDARY INGREDIENTS & PACKAGING TABLE ── */}
       <div className="space-y-3 pt-4 border-t border-gray-100">
         <div className="flex items-center justify-between no-print">
           <div>
             <h3 className="text-sm font-bold text-gray-900 uppercase font-mono tracking-wider">
-              2. Secondary Ingredients, Sauces &amp; Packaging
+              2. Sauces, Seasonings, Garnishes &amp; Takeaway Packaging
             </h3>
-            <p className="text-[11px] text-gray-500">Dressings, seasonings, garnishes, and takeaway packaging</p>
+            <p className="text-[11px] text-gray-500">Condiments, oils, bags, boxes, containers, and napkins</p>
           </div>
 
           <button
@@ -523,7 +742,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
             className="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 transition-all shadow-sm cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5" />
-            <span>Add Secondary</span>
+            <span>Add Item</span>
           </button>
         </div>
 
@@ -663,7 +882,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
       {/* ── FOOTER AUDIT STAMP ── */}
       <div className="pt-4 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-gray-400 font-mono gap-2">
         <div>• Saim Dev Commercial Kitchen Tools • Accurate Portion Economics</div>
-        <div>Total Portion Cost: {currency}{portionCost.toFixed(2)} • Margin: {grossMarginPct.toFixed(1)}%</div>
+        <div>Total Portion Cost: {currency}{portionCost.toFixed(2)} • Net Margin: {grossMarginPct.toFixed(1)}%</div>
       </div>
     </div>
   );
