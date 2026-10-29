@@ -75,7 +75,7 @@ export const TechnologiesPage = () => {
                 href="/nextjs-developer-uk"
                 className="text-xs text-primary hover:underline font-medium inline-flex items-center gap-1 mt-3"
               >
-                <span>Hire a Next.js developer for your UK business</span>
+                <span>Hire Next.js Developer UK</span>
                 <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
@@ -225,46 +225,42 @@ export const TechnologiesPage = () => {
             Discover how we apply modern engineering to build high-converting platforms for UK small businesses.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link
-              href="/services"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
+            <div className="relative p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
               <span className="text-xs font-mono text-primary uppercase block mb-1">Fixed-Price Plans</span>
               <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Explore our web development services</span>
+                <Link href="/services" className="after:absolute after:inset-0 focus:outline-none">
+                  Web Development Services
+                </Link>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-            </Link>
-            <Link
-              href="/nextjs-developer-uk"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
+            </div>
+            <div className="relative p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
               <span className="text-xs font-mono text-primary uppercase block mb-1">Specialist UK Freelancer</span>
               <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Dedicated UK Next.js web development</span>
+                <Link href="/nextjs-developer-uk" className="after:absolute after:inset-0 focus:outline-none">
+                  Next.js Web Development
+                </Link>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-            </Link>
-            <Link
-              href="/case-studies"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
+            </div>
+            <div className="relative p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
               <span className="text-xs font-mono text-primary uppercase block mb-1">Client Proof</span>
               <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Inspect verified website case studies</span>
+                <Link href="/case-studies" className="after:absolute after:inset-0 focus:outline-none">
+                  Website Case Studies
+                </Link>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-            </Link>
-            <Link
-              href="/contact"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
+            </div>
+            <div className="relative p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
               <span className="text-xs font-mono text-primary uppercase block mb-1">Direct Consultation</span>
               <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Discuss your website project with Saim</span>
+                <Link href="/contact" className="after:absolute after:inset-0 focus:outline-none">
+                  Discuss Your Project
+                </Link>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-            </Link>
+            </div>
           </div>
         </div>
 
@@ -290,7 +286,7 @@ export const TechnologiesPage = () => {
               href="/contact"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-full transition-all text-xs cursor-pointer border border-white/15"
             >
-              <span>Discuss your website project</span>
+              <span>Discuss Your Project</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

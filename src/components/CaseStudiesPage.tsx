@@ -362,36 +362,33 @@ export const CaseStudiesPage = () => {
 
         {/* CONTEXTUAL INTERNAL LINKS */}
         <div className="mb-16 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <Link
-            href="/services"
-            className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-          >
+          <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
             <span className="text-xs font-mono text-primary uppercase block mb-1">Packaged Solutions</span>
             <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-              <span>Explore our web development services</span>
+              <Link href="/services" className="after:absolute after:inset-0 focus:outline-none">
+                Web Development Services
+              </Link>
               <ArrowRight className="w-3.5 h-3.5" />
             </span>
-          </Link>
-          <Link
-            href="/nextjs-developer-uk"
-            className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-          >
+          </div>
+          <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
             <span className="text-xs font-mono text-primary uppercase block mb-1">UK Specialist</span>
             <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-              <span>Hire a Next.js developer for your UK business</span>
+              <Link href="/nextjs-developer-uk" className="after:absolute after:inset-0 focus:outline-none">
+                Next.js Developer UK
+              </Link>
               <ArrowRight className="w-3.5 h-3.5" />
             </span>
-          </Link>
-          <Link
-            href="/contact"
-            className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-          >
+          </div>
+          <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
             <span className="text-xs font-mono text-primary uppercase block mb-1">Project Enquiry</span>
             <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-              <span>Discuss your website project with our lead engineer</span>
+              <Link href="/contact" className="after:absolute after:inset-0 focus:outline-none">
+                Contact Our Team
+              </Link>
               <ArrowRight className="w-3.5 h-3.5" />
             </span>
-          </Link>
+          </div>
         </div>
 
         {/* CTA */}
@@ -416,7 +413,7 @@ export const CaseStudiesPage = () => {
               href="/contact"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full transition-all text-xs sm:text-sm cursor-pointer border border-white/15"
             >
-              <span>Discuss your website project via enquiry form</span>
+              <span>Send Project Enquiry</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

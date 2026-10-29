@@ -403,7 +403,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                       className="w-full bg-primary hover:bg-white text-black text-xs font-bold py-2.5 px-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-1 cursor-pointer"
                     >
                       <span>Live Site</span>
-                      <span className="sr-only"> - {demo.title}</span>
+                      <span className="sr-only"> ({demo.id})</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -486,46 +486,42 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
             These interactive demos showcase real Next.js performance. We build bespoke digital ordering platforms and high-converting websites from £250.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
-            <Link
-              href="/services"
-              className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
+            <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
               <span className="text-xs font-mono text-primary uppercase block mb-1">Fixed-Price Plans</span>
               <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Explore our web development services</span>
+                <Link href="/services" className="after:absolute after:inset-0 focus:outline-none">
+                  Web Development Services
+                </Link>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-            </Link>
-            <Link
-              href="/services/takeaway-web-design"
-              className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
+            </div>
+            <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
               <span className="text-xs font-mono text-primary uppercase block mb-1">0% Commission System</span>
               <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Takeaway website design &amp; ordering</span>
+                <Link href="/services/takeaway-web-design" className="after:absolute after:inset-0 focus:outline-none">
+                  Takeaway Website Design
+                </Link>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-            </Link>
-            <Link
-              href="/case-studies"
-              className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
+            </div>
+            <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
               <span className="text-xs font-mono text-primary uppercase block mb-1">Speed Benchmarks</span>
               <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>View our website case studies</span>
+                <Link href="/case-studies" className="after:absolute after:inset-0 focus:outline-none">
+                  Website Case Studies
+                </Link>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-            </Link>
-            <Link
-              href="/contact"
-              className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
+            </div>
+            <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
               <span className="text-xs font-mono text-primary uppercase block mb-1">Direct Consultation</span>
               <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Discuss your website project with Saim</span>
+                <Link href="/contact" className="after:absolute after:inset-0 focus:outline-none">
+                  Discuss Your Project
+                </Link>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-            </Link>
+            </div>
           </div>
         </div>
       </div>

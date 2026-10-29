@@ -126,9 +126,8 @@ export const FeaturedToolsSection = () => {
           {FEATURED_TOOLS.map((tool) => {
             const Icon = tool.icon;
             return (
-              <Link
+              <div
                 key={tool.slug}
-                href={tool.customHref || `/food-safety-templates/${tool.slug}`}
                 className="group relative flex flex-col justify-between rounded-2xl bg-[#0f0f12] border border-white/10 p-6 transition-all duration-300 hover:border-white/25 hover:bg-[#15151a] hover:-translate-y-1.5 shadow-xl"
               >
                 <div>
@@ -146,18 +145,23 @@ export const FeaturedToolsSection = () => {
                   </div>
 
                   <p className="text-lg font-medium text-white mb-2 group-hover:text-primary transition-colors">
-                    {tool.title}
+                    <Link
+                      href={tool.customHref || `/food-safety-templates/${tool.slug}`}
+                      className="after:absolute after:inset-0 focus:outline-none"
+                    >
+                      {tool.title}
+                    </Link>
                   </p>
                   <p className="text-xs sm:text-sm text-white/60 leading-relaxed">
                     {tool.desc}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-white/50 group-hover:text-white transition-colors">
+                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-white/50 group-hover:text-white transition-colors pointer-events-none">
                   <span>Open Interactive Tool</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1 text-primary" />
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>

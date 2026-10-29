@@ -679,7 +679,6 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     {/* Preheader Badge */}
                     <span className={`absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-wider font-mono shadow-sm ${getPillColor(template.type)}`}>
                       {template.preheader || template.type.toUpperCase()}
-                      <span className="sr-only"> for {template.title}</span>
                     </span>
                   </Link>
 
@@ -706,7 +705,6 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                         className="w-full py-2.5 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer group-hover:bg-[#2e2d75]"
                       >
                         <span>{template.type === "smart_tool" || template.slug.includes("calc") || template.slug.includes("allergen") || template.slug.includes("quiz") ? "Open Interactive Tool" : "Open Template"}</span>
-                        <span className="sr-only">: {template.title}</span>
                         <ExternalLink className="w-3 h-3 text-gray-400 group-hover:text-white" />
                       </Link>
                     </div>

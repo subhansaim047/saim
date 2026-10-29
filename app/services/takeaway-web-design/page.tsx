@@ -375,41 +375,45 @@ export default function TakeawayWebDesignPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link
-              href="/tools/allergen-matrix-generator"
-              className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/40 transition-all group"
-            >
+            <div className="relative p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/40 transition-all group">
               <div className="text-xs font-mono text-orange-400 font-bold mb-1">Interactive Tool</div>
-              <div className="text-sm font-semibold text-white group-hover:text-amber-300">14 Allergen Matrix</div>
+              <div className="text-sm font-semibold text-white group-hover:text-amber-300">
+                <Link href="/tools/allergen-matrix-generator" className="after:absolute after:inset-0 focus:outline-none">
+                  14 Allergen Matrix
+                </Link>
+              </div>
               <div className="text-[11px] text-white/60 mt-1">Generate dish allergen charts with CSV and PDF export.</div>
-            </Link>
+            </div>
 
-            <Link
-              href="/tools/ppds-label-generator"
-              className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/40 transition-all group"
-            >
+            <div className="relative p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/40 transition-all group">
               <div className="text-xs font-mono text-amber-400 font-bold mb-1">Interactive Tool</div>
-              <div className="text-sm font-semibold text-white group-hover:text-amber-300">PPDS Label Maker</div>
+              <div className="text-sm font-semibold text-white group-hover:text-amber-300">
+                <Link href="/tools/ppds-label-generator" className="after:absolute after:inset-0 focus:outline-none">
+                  PPDS Label Maker
+                </Link>
+              </div>
               <div className="text-[11px] text-white/60 mt-1">Natasha&apos;s Law compliant packaging labels with auto-bolding.</div>
-            </Link>
+            </div>
 
-            <Link
-              href="/tools/food-cost-calculator"
-              className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/40 transition-all group"
-            >
+            <div className="relative p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/40 transition-all group">
               <div className="text-xs font-mono text-emerald-400 font-bold mb-1">Interactive Tool</div>
-              <div className="text-sm font-semibold text-white group-hover:text-amber-300">Food Cost Calculator</div>
+              <div className="text-sm font-semibold text-white group-hover:text-amber-300">
+                <Link href="/tools/food-cost-calculator" className="after:absolute after:inset-0 focus:outline-none">
+                  Food Cost Calculator
+                </Link>
+              </div>
               <div className="text-[11px] text-white/60 mt-1">Calculate gross margins, food cost % and target prices.</div>
-            </Link>
+            </div>
 
-            <Link
-              href="/tools/recipe-batch-calculator"
-              className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/40 transition-all group"
-            >
+            <div className="relative p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/40 transition-all group">
               <div className="text-xs font-mono text-blue-400 font-bold mb-1">Interactive Tool</div>
-              <div className="text-sm font-semibold text-white group-hover:text-amber-300">Recipe Batch Scaling</div>
+              <div className="text-sm font-semibold text-white group-hover:text-amber-300">
+                <Link href="/tools/recipe-batch-calculator" className="after:absolute after:inset-0 focus:outline-none">
+                  Recipe Batch Scaling
+                </Link>
+              </div>
               <div className="text-[11px] text-white/60 mt-1">Scale commercial recipes from 10 to 500 portions instantly.</div>
-            </Link>
+            </div>
           </div>
         </div>
 
