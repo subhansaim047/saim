@@ -158,6 +158,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
+        <link rel="preload" as="image" href="/scroll-frames/frame_000.webp" type="image/webp" />
         {/* Google Consent Mode v2 Default Signals (Default Denied) */}
         <script
           dangerouslySetInnerHTML={{
