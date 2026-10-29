@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { SiteFooter } from "./SiteFooter";
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Tag, ArrowRight } from "lucide-react";
+import { BehindTheLensBlog } from "./BehindTheLensBlog";
 
 interface BlogItem {
   id: number;
@@ -157,32 +157,42 @@ const blogs: BlogItem[] = [
 
 const CATEGORIES = [
   { id: "all", label: "All Guides", count: blogs.length },
-  { id: "hygiene", label: "Food Hygiene & SFBB", count: blogs.filter(b => b.category === "hygiene").length },
-  { id: "allergens", label: "Allergens & Natasha's Law", count: blogs.filter(b => b.category === "allergens").length },
-  { id: "economics", label: "Kitchen Economics & Batching", count: blogs.filter(b => b.category === "economics").length },
-  { id: "web", label: "Web Strategy & Growth", count: blogs.filter(b => b.category === "web").length },
+  { id: "hygiene", label: "Food Hygiene & SFBB", count: blogs.filter((b) => b.category === "hygiene").length },
+  { id: "allergens", label: "Allergens & Natasha's Law", count: blogs.filter((b) => b.category === "allergens").length },
+  { id: "economics", label: "Kitchen Economics & Batching", count: blogs.filter((b) => b.category === "economics").length },
+  { id: "web", label: "Web Strategy & Growth", count: blogs.filter((b) => b.category === "web").length },
 ];
 
 export const BlogsPage = () => {
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  const filteredBlogs = selectedCategory === "all"
-    ? blogs
-    : blogs.filter(b => b.category === selectedCategory);
+  const filteredBlogs =
+    selectedCategory === "all" ? blogs : blogs.filter((b) => b.category === selectedCategory);
+
+  const scrollToAllGuides = () => {
+    const el = document.getElementById("all-posts");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-black text-[#E1E0CC]">
-      {/* ── Header Bar ── */}
-      <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
+    <div className="min-h-screen bg-white text-[#0a0a0a]">
+      {/* ── Top Navigation Bar ── */}
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#f0f0f0] px-4 sm:px-8 py-3.5 flex items-center justify-between">
         <button
           onClick={() => router.push("/")}
-          className="flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors cursor-pointer"
+          className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </button>
-        <button onClick={() => router.push("/")} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
+        <button
+          onClick={() => router.push("/")}
+          className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left"
+          title="Go to Homepage"
+        >
           <img
             src="/saim-dev-logo.jpg"
             alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist"
@@ -190,168 +200,106 @@ export const BlogsPage = () => {
             height={28}
             loading="lazy"
             decoding="async"
-            className="w-7 h-7 rounded-full object-cover border border-white/15"
+            className="w-7 h-7 rounded-full object-cover border border-gray-200"
           />
-          <span className="text-sm font-semibold text-white">Saim Dev</span>
+          <span className="text-sm font-semibold text-black">Saim Dev</span>
         </button>
       </header>
 
-      {/* ── Hero ── */}
-      <section className="px-4 sm:px-8 pt-16 pb-8 max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {/* Visible Breadcrumb Navigation */}
-          <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center gap-1.5 text-xs text-white/50 flex-wrap">
-              <li>
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              </li>
-              <li aria-hidden="true" className="text-white/30">/</li>
-              <li className="text-white font-medium" aria-current="page">
-                Blog
-              </li>
-            </ol>
-          </nav>
+      {/* ── Behind the Lens Photography Blog Section ── */}
+      <BehindTheLensBlog onViewAllClick={scrollToAllGuides} />
 
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-white/60 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            Commercial Kitchen Systems &amp; Web Growth Blog
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-4 leading-tight">
-            Hospitality Insights &amp;<br />
-            <span className="text-primary">Kitchen Growth Systems</span>
-          </h1>
-          <p className="text-white/50 text-base sm:text-lg max-w-xl leading-relaxed">
-          Explore actionable hospitality insights and kitchen growth systems. Practical operational playbooks on UK food safety law, EHO inspection readiness, recipe portion economics, and commission-free web ordering systems.
-        </p>
-        </motion.div>
-      </section>
-
-      {/* ── Topical Silo Banners ── */}
-      <section className="px-4 sm:px-8 pb-8 max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
+      {/* ── Additional Web & Operational Guides Directory ── */}
+      <section id="all-posts" className="bg-[#fcfcfc] border-t border-[#f0f0f0] px-4 sm:px-8 py-20">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-6 border-b border-[#ececec]">
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1">
-                Topical Silo A &bull; Web Engineering
+              <span className="inline-block bg-[#f4f4f4] text-[#555] text-xs font-semibold px-2.5 py-1 rounded-md mb-2">
+                Knowledge Library
               </span>
-              <h2 className="text-base font-semibold text-white mb-1.5">
-                Web Development &amp; Small Business Growth
-              </h2>
-              <p className="text-xs text-white/60 leading-relaxed mb-3">
-                Insights on Next.js performance, local SEO, mobile conversions, and commission-free ordering systems.
+              <h3 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#0a0a0a]" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                All Published Guides &amp; Insights
+              </h3>
+              <p className="text-sm text-gray-500 mt-1 max-w-lg">
+                Practical, in-depth playbooks on web development, small business growth, food safety compliance, and commercial kitchen systems.
               </p>
             </div>
-            <Link
-              href="/services"
-              className="text-xs font-medium text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5 transition-colors"
-            >
-              <span>Explore Fixed-Price Web Services from £250</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
 
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1">
-                Topical Silo B &bull; Hospitality Compliance
-              </span>
-              <h2 className="text-base font-semibold text-white mb-1.5">
-                Food Safety, SFBB &amp; Kitchen Operations
-              </h2>
-              <p className="text-xs text-white/60 leading-relaxed mb-3">
-                Practical playbooks on FSA standards, 14 statutory allergens, Natasha&apos;s Law, and 5-star EHO audits.
-              </p>
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap items-center gap-2">
+              {CATEGORIES.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                    selectedCategory === cat.id
+                      ? "bg-black text-white font-semibold shadow-sm"
+                      : "bg-[#f0f0f0] text-gray-600 hover:text-black hover:bg-[#e4e4e4]"
+                  }`}
+                >
+                  {cat.label} ({cat.count})
+                </button>
+              ))}
             </div>
-            <Link
-              href="/tools"
-              className="text-xs font-medium text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1.5 transition-colors"
-            >
-              <span>Access 160+ Free Food Safety Tools &amp; Logs</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
           </div>
-        </div>
-      </section>
 
-      {/* ── Category Filter Links ── */}
-      <section className="px-4 sm:px-8 pb-10 max-w-5xl mx-auto">
-        <div className="flex flex-wrap items-center gap-2">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setSelectedCategory(cat.id)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
-                selectedCategory === cat.id
-                  ? "bg-primary text-black font-semibold shadow-md shadow-primary/20"
-                  : "bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 hover:border-white/20"
-              }`}
-            >
-              {cat.label} ({cat.count})
-            </button>
-          ))}
-        </div>
-      </section>
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredBlogs.map((blog, i) => (
+              <motion.article
+                key={blog.id}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: i * 0.04 }}
+                className="group relative flex flex-col rounded-2xl border border-[#ececec] bg-white p-6 hover:border-gray-300 hover:shadow-lg transition-all duration-300 overflow-hidden"
+              >
+                <Link href={blog.url} className="absolute inset-0 z-10" aria-label={blog.title}>
+                  <span className="sr-only">{blog.title}</span>
+                </Link>
 
-      {/* ── Blog Grid ── */}
-      <section className="px-4 sm:px-8 pb-24 max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredBlogs.map((blog, i) => (
-            <motion.article
-              key={blog.id}
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: i * 0.05 }}
-              className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 overflow-hidden shadow-lg"
-            >
-              <Link href={blog.url} className="absolute inset-0 z-10" aria-label={blog.title}>
-                <span className="sr-only">{blog.title}</span>
-              </Link>
-              {/* Glow on hover */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-500 pointer-events-none" />
+                {/* Tag */}
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-gray-500 mb-3">
+                  <Tag className="w-3 h-3 text-gray-400" />
+                  {blog.tag}
+                </span>
 
-              {/* Tag */}
-              <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase text-primary/80 mb-4">
-                <Tag className="w-2.5 h-2.5" />
-                {blog.tag}
-              </span>
+                {/* Title */}
+                <h4 className="text-[17px] font-semibold text-[#0a0a0a] leading-snug mb-2.5 group-hover:text-black transition-colors duration-200 flex-1" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                  {blog.title}
+                </h4>
 
-              {/* Title */}
-              <h2 className="text-base font-semibold text-white leading-snug mb-3 group-hover:text-primary transition-colors duration-200 flex-1">
-                {blog.title}
-              </h2>
+                {/* Excerpt */}
+                <p className="text-xs text-gray-500 leading-relaxed mb-5 line-clamp-3">
+                  {blog.excerpt}
+                </p>
 
-              {/* Excerpt */}
-              <p className="text-xs text-white/45 leading-relaxed mb-5 line-clamp-3">
-                {blog.excerpt}
-              </p>
-
-              {/* Footer row */}
-              <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/8">
-                <div className="flex items-center gap-3 text-[10px] text-white/35">
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    {blog.date}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    {blog.readTime}
+                {/* Footer row */}
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#f4f4f4]">
+                  <div className="flex items-center gap-3 text-[11px] text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
+                      {blog.date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3 h-3" />
+                      {blog.readTime}
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-bold text-black flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    Read Guide
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
-                <span className="text-[10px] font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Read Guide
-                  <ArrowRight className="w-3 h-3" />
-                </span>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <SiteFooter theme="dark" />
+      {/* ── Clean Light Footer ── */}
+      <SiteFooter theme="light" />
     </div>
   );
 };
+
+export default BlogsPage;
