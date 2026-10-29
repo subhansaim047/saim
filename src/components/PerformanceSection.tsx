@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const PerformanceSection = () => {
   return (
-    <section className="bg-transparent text-white px-4 sm:px-8 md:px-14 lg:px-20 py-20 sm:py-28 md:py-36 overflow-hidden border-t border-white/[0.06] relative">
+    <section id="performance" className="bg-transparent text-white px-4 sm:px-8 md:px-14 lg:px-20 py-20 sm:py-28 md:py-36 overflow-hidden border-t border-white/[0.06] relative">
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#FF4A1C]/[0.03] rounded-full blur-[150px] pointer-events-none z-0" />
 
@@ -50,7 +50,7 @@ export const PerformanceSection = () => {
           </p>
 
           {/* 4K Vector Chart Component — Restored Original Clean Container */}
-          <div className="relative w-full bg-[#050505] rounded-2xl p-4 sm:p-6 border border-white/5 shadow-2xl">
+          <div className="relative w-full bg-black/25 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             {/* SVG Chart Area */}
             <div className="relative w-full aspect-[16/9]">
               <svg
@@ -127,7 +127,7 @@ export const PerformanceSection = () => {
 
               {/* Core Web Vitals Benchmark Box */}
               <div
-                className="absolute bg-[#181818]/95 border border-white/15 rounded-xl px-3.5 py-2.5 shadow-2xl flex flex-col gap-2 pointer-events-none backdrop-blur-md"
+                className="absolute bg-black/60 border border-white/20 rounded-xl px-3.5 py-2.5 shadow-2xl flex flex-col gap-2 pointer-events-none backdrop-blur-xl"
                 style={{
                   top: "16%",
                   left: "48%",
