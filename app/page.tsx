@@ -136,11 +136,11 @@ export default function HomePage() {
         <BenefitsSection />
         <PerformanceSection />
         <TechStackSection />
-        <FeaturedToolsSection />
         <ProcessSection />
         <PricingSection />
         <FaqSection />
         <ContactSection />
+        <FeaturedToolsSection />
         <FooterSection />
       </main>
     </div>
