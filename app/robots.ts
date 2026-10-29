@@ -1,12 +1,21 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
+  const disallowPaths = [
+    '/api/',
+    '/hotbite/',
+    '/anzaar/',
+    '/frenchyse/',
+    '/demos/*/',
+    '/test-images.html',
+  ];
+
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/'],
+        disallow: disallowPaths,
       },
       {
         userAgent: [
@@ -20,7 +29,7 @@ export default function robots(): MetadataRoute.Robots {
           'CCBot',
         ],
         allow: '/',
-        disallow: ['/api/'],
+        disallow: disallowPaths,
       },
     ],
     sitemap: 'https://www.saimdev.site/sitemap.xml',

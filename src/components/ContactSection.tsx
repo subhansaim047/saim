@@ -141,9 +141,9 @@ export const ContactSection = () => {
                 onClick={() => setFormOpen(!formOpen)}
                 className="flex items-center gap-3 text-left group cursor-pointer focus:outline-none"
               >
-                <h3 className="text-lg sm:text-xl font-medium text-white group-hover:text-white/90 transition-colors">
+                <span className="text-lg sm:text-xl font-medium text-white group-hover:text-white/90 transition-colors">
                   Prefer to send a project brief?
-                </h3>
+                </span>
                 <div className={cn("sybiosme-disclosure-icon", formOpen && "bg-[#FF4A1C]/15 border-[#FF4A1C]/35 text-[#FF4A1C]")}>
                   <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", formOpen && "rotate-180")} />
                 </div>

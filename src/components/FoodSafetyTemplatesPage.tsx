@@ -271,7 +271,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
               >
                 <Calculator className="w-4 h-4 shrink-0" />
-                <span>Food Cost Calculator</span>
+                <span>Interactive Food Cost Calculator</span>
               </Link>
               <Link
                 href="/tools/recipe-batch-calculator"
@@ -659,6 +659,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     href={`/food-safety-templates/${getCanonicalTemplateSlug(template.slug)}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Preview ${template.title}`}
                     className={`p-4 aspect-[4/3] flex items-center justify-center relative overflow-hidden transition-transform group-hover:scale-[1.02] ${getCardBg(template.type)}`}
                   >
                     <img
@@ -678,6 +679,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     {/* Preheader Badge */}
                     <span className={`absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-wider font-mono shadow-sm ${getPillColor(template.type)}`}>
                       {template.preheader || template.type.toUpperCase()}
+                      <span className="sr-only"> for {template.title}</span>
                     </span>
                   </Link>
 
@@ -700,9 +702,11 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                         href={`/food-safety-templates/${getCanonicalTemplateSlug(template.slug)}`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Open ${template.title}`}
                         className="w-full py-2.5 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer group-hover:bg-[#2e2d75]"
                       >
                         <span>{template.type === "smart_tool" || template.slug.includes("calc") || template.slug.includes("allergen") || template.slug.includes("quiz") ? "Open Interactive Tool" : "Open Template"}</span>
+                        <span className="sr-only">: {template.title}</span>
                         <ExternalLink className="w-3 h-3 text-gray-400 group-hover:text-white" />
                       </Link>
                     </div>

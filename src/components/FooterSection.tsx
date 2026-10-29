@@ -15,9 +15,9 @@ export const FooterSection = () => {
       <div className="site-footer__inner">
         {/* TOP GRID */}
         <div className="site-footer__top">
-          <h2 className="site-footer__heading">
+          <p className="site-footer__heading">
             High-Performance Web Architecture for Growing Businesses.
-          </h2>
+          </p>
 
           <nav className="site-footer__nav" aria-label="Page sections navigation">
             <a href="/#our-story">Our Story</a>
@@ -37,9 +37,9 @@ export const FooterSection = () => {
             <a href="/#benefits">Key Benefits</a>
             <a href="/#process">Our Process</a>
             <a href="/#pricing">Pricing Plans</a>
-            <a href="/#faq">FAQ</a>
+            <a href="/#faq">FAQ &amp; Help</a>
             <Link href="/blogs">Blogs</Link>
-            <a href="/#contact">Contact</a>
+            <a href="/#contact">Get in Touch</a>
             <a href="mailto:contact@saimdev.site" className="text-primary hover:underline">
               contact@saimdev.site
             </a>
@@ -106,13 +106,13 @@ export const FooterSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-white/70">
             <Link href="/" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Home</Link>
             <span>•</span>
-            <Link href="/services" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Services</Link>
+            <Link href="/services" className="hover:text-white transition-colors py-2 px-1.5 inline-block">All Services</Link>
             <span>•</span>
-            <Link href="/demos" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Demos</Link>
+            <Link href="/demos" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Demo Showcase</Link>
             <span>•</span>
             <Link href="/about" className="hover:text-white transition-colors py-2 px-1.5 inline-block">About</Link>
             <span>•</span>
-            <Link href="/contact" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Contact</Link>
+            <Link href="/contact" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Contact Us</Link>
             <span>•</span>
             <Link href="/privacy" className="hover:text-white transition-colors py-2 px-1.5 inline-block">Privacy Policy</Link>
             <span>•</span>

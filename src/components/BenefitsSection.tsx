@@ -32,11 +32,11 @@ export const BenefitsSection = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-white text-xl sm:text-2xl font-light leading-tight">
+                  <p className="text-white text-xl sm:text-2xl font-light leading-tight">
                     Business Growth &amp;
                     <br />
                     Lead Conversion
-                  </h3>
+                  </p>
                 </div>
 
                 <p className="text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[280px]">
@@ -79,11 +79,11 @@ export const BenefitsSection = () => {
                 <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-black/20" />
               </div>
               <div className="flex-1 flex flex-col justify-center p-6 sm:p-8 pt-2">
-                <h3 className="text-white text-xl sm:text-2xl font-light leading-tight text-left">
+                <p className="text-white text-xl sm:text-2xl font-light leading-tight text-left">
                   Performance, Speed &amp;
                   <br />
                   SEO Optimization
-                </h3>
+                </p>
                 <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
                   Sub-second Next.js architecture, optimised Core Web Vitals, and structured schema markup engineered to rank on Google.
                 </p>
@@ -105,11 +105,11 @@ export const BenefitsSection = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-white text-xl sm:text-2xl font-light leading-tight">
+                  <p className="text-white text-xl sm:text-2xl font-light leading-tight">
                     Marketing Integration &amp;
                     <br />
                     Technical Security
-                  </h3>
+                  </p>
                 </div>
 
                 <p className="text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">

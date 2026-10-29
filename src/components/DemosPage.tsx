@@ -347,8 +347,9 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                     href={demo.demoUrl}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label={`Open ${demo.title} interactive demo`}
                     className="bg-primary hover:bg-white text-black p-2.5 rounded-xl transition-all shadow-lg cursor-pointer"
-                    title="Open Fullscreen Demo"
+                    title={`Open ${demo.title} Demo`}
                   >
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -398,9 +399,11 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                       href={demo.demoUrl}
                       target="_blank"
                       rel="noreferrer"
+                      aria-label={`View live site for ${demo.title}`}
                       className="w-full bg-primary hover:bg-white text-black text-xs font-bold py-2.5 px-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-1 cursor-pointer"
                     >
                       <span>Live Site</span>
+                      <span className="sr-only"> - {demo.title}</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>

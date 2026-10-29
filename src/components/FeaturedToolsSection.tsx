@@ -145,9 +145,9 @@ export const FeaturedToolsSection = () => {
                     </IconTile>
                   </div>
 
-                  <h3 className="text-lg font-medium text-white mb-2 group-hover:text-primary transition-colors">
+                  <p className="text-lg font-medium text-white mb-2 group-hover:text-primary transition-colors">
                     {tool.title}
-                  </h3>
+                  </p>
                   <p className="text-xs sm:text-sm text-white/60 leading-relaxed">
                     {tool.desc}
                   </p>

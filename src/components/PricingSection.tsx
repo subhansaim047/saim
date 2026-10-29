@@ -75,9 +75,9 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
 
         <div className="relative z-10">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white">
+            <p className="text-2xl sm:text-3xl font-medium tracking-tight text-white">
               {plan.name}
-            </h3>
+            </p>
             {plan.featured && <span className="section-dot" />}
           </div>
           <p className="text-xs sm:text-sm text-white/60 font-light leading-relaxed min-h-[40px]">
@@ -144,6 +144,7 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
             href={orderUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={plan.featured ? `Order ${plan.name} on WhatsApp` : `Get started with ${plan.name} package`}
             className={cn(
               "sybiosme-action-btn w-full",
               plan.featured
@@ -152,7 +153,7 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
             )}
           >
             <span className="text-sm font-medium tracking-tight">
-              {plan.featured ? "Order on WhatsApp" : "Get Started"}
+              {plan.featured ? "Order on WhatsApp" : `Get Started — ${plan.name}`}
             </span>
             <div
               className={cn(

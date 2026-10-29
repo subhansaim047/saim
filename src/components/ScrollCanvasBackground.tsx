@@ -317,8 +317,7 @@ export const ScrollCanvasBackground: React.FC = () => {
       {/* Instant First Paint: Paints in < 50ms at full 1764x1176 max quality before JS/Canvas runs */}
       <img
         src="/scroll-frames/frame_000.webp"
-        alt=""
-        aria-hidden="true"
+        alt="Saim Dev - Next.js Full Stack Web Development & High Performance Scrollytelling Showcase"
         decoding="async"
         className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
       />

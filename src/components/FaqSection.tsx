@@ -164,9 +164,9 @@ export const FaqSection = () => {
                       open={gIdx === 0 && idx === 0}
                     >
                       <summary className="w-full text-left flex items-center justify-between gap-4 cursor-pointer select-none list-none focus:outline-none">
-                        <h3 className="text-white text-base sm:text-lg font-medium leading-snug group-hover:text-white/90 transition-colors">
+                        <span className="text-white text-base sm:text-lg font-medium leading-snug group-hover:text-white/90 transition-colors">
                           {item.question}
-                        </h3>
+                        </span>
                         <div className="sybiosme-disclosure-icon">
                           <ChevronDown className="w-4 h-4" />
                         </div>

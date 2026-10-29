@@ -112,9 +112,9 @@ export const ProcessSection = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-white text-lg sm:text-xl font-medium mb-3 group-hover:text-white transition-colors">
+                    <p className="text-white text-lg sm:text-xl font-medium mb-3 group-hover:text-white transition-colors">
                       {item.title}
-                    </h3>
+                    </p>
 
                     <p className="text-white/65 text-xs sm:text-sm leading-relaxed font-light">
                       {item.description}
