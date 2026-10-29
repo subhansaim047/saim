@@ -162,6 +162,65 @@ Disallow: /frenchyse/
 Disallow: /burger-garage/
 Disallow: /demos/*/
 Disallow: /test-images.html
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /api/
+Disallow: /hotbite/
+Disallow: /anzaar/
+Disallow: /frenchyse/
+Disallow: /burger-garage/
+Disallow: /demos/*/
+Disallow: /test-images.html
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+Disallow: /api/
+Disallow: /hotbite/
+Disallow: /anzaar/
+Disallow: /frenchyse/
+Disallow: /burger-garage/
+Disallow: /demos/*/
+Disallow: /test-images.html
+
+User-agent: GoogleOther
+Allow: /
+Disallow: /api/
+Disallow: /hotbite/
+Disallow: /anzaar/
+Disallow: /frenchyse/
+Disallow: /burger-garage/
+Disallow: /demos/*/
+Disallow: /test-images.html
+
+User-agent: DeepSeekBot
+Allow: /
+Disallow: /api/
+Disallow: /hotbite/
+Disallow: /anzaar/
+Disallow: /frenchyse/
+Disallow: /burger-garage/
+Disallow: /demos/*/
+Disallow: /test-images.html
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /api/
+Disallow: /hotbite/
+Disallow: /anzaar/
+Disallow: /frenchyse/
+Disallow: /burger-garage/
+Disallow: /demos/*/
+Disallow: /test-images.html
+
+User-agent: Bytespider
+Allow: /
+Disallow: /api/
+Disallow: /hotbite/
+Disallow: /anzaar/
+Disallow: /frenchyse/
+Disallow: /burger-garage/
+Disallow: /demos/*/
+Disallow: /test-images.html
 
 # Sitemaps
 Sitemap: https://www.saimdev.site/sitemap.xml

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostCoolingGuide } from '@/components/blog/BlogPostCoolingGuide';
 
 export const metadata: Metadata = {
-  title: 'UK Food Cooling Temperature Guide: 90-Minute Rule',
+  title: 'UK Food Cooling Temperature Guide: 90-Minute Rule | Saim Dev',
   description: 'Master safe food cooling in commercial kitchens. Step-by-step advice on blast chilling, ice baths, and FSA requirements to prevent bacterial growth.',
   robots: {
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'UK Food Cooling Temperature Guide: 90-Minute Rule',
+    title: 'UK Food Cooling Temperature Guide: 90-Minute Rule | Saim Dev',
     description: 'Master safe food cooling in commercial kitchens. Step-by-step advice on blast chilling, ice baths, and FSA requirements to prevent bacterial growth.',
     url: 'https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide',
     siteName: 'Saim Dev',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'UK Food Cooling Temperature Guide: 90-Minute Rule',
+    title: 'UK Food Cooling Temperature Guide: 90-Minute Rule | Saim Dev',
     description: 'Master safe food cooling in commercial kitchens. Step-by-step advice on blast chilling, ice baths, and FSA requirements to prevent bacterial growth.',
     images: ['https://www.saimdev.site/og-image.png']
   }

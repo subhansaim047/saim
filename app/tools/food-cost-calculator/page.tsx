@@ -7,7 +7,7 @@ import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Food Cost Calculator UK | Commercial Kitchen GP% & Menu Pricing",
+  title: "Food Cost Calculator UK | Kitchen GP% Tool | Saim Dev",
   description: "Free commercial food cost calculator for UK restaurants, takeaways, and caterers. Calculate plate cost, gross profit margins, and VAT-inclusive menu prices.",
   robots: {
     index: true,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Food Cost Calculator UK | Commercial Kitchen GP% & Menu Pricing",
+    title: "Food Cost Calculator UK | Kitchen GP% Tool | Saim Dev",
     description: "Free commercial food cost calculator for UK restaurants, takeaways, and caterers. Calculate plate cost, gross profit margins, and VAT-inclusive menu prices.",
     url: "https://www.saimdev.site/tools/food-cost-calculator",
     siteName: "Saim Dev",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@saimwebdev",
-    title: "Food Cost Calculator UK | Commercial Kitchen GP% & Menu Pricing",
+    title: "Food Cost Calculator UK | Kitchen GP% Tool | Saim Dev",
     description: "Free commercial food cost calculator for UK restaurants, takeaways, and caterers. Calculate plate cost, gross profit margins, and VAT-inclusive menu prices.",
     images: ["https://www.saimdev.site/og-image.png"],
   },

@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, Clock, ShieldCheck, Zap, HelpCircle, Code2 } 
 import { FooterSection } from "@/components/FooterSection";
 
 export const metadata: Metadata = {
-  title: 'Freelance Next.js Developer UK | Fast Custom Sites',
+  title: 'Freelance Next.js Developer UK | Fast Websites | Saim Dev',
   description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
   robots: {
     index: true,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Freelance Next.js Developer UK | Fast Custom Sites',
+    title: 'Freelance Next.js Developer UK | Fast Websites | Saim Dev',
     description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
     url: "https://www.saimdev.site/nextjs-developer-uk",
     siteName: "Saim Dev",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@saimwebdev",
-    title: 'Freelance Next.js Developer UK | Fast Custom Sites',
+    title: 'Freelance Next.js Developer UK | Fast Websites | Saim Dev',
     description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
     images: ["https://www.saimdev.site/og-image.png"]
   }

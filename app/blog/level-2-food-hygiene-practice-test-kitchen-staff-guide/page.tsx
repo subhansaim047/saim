@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostHygieneQuiz } from '@/components/blog/BlogPostHygieneQuiz';
 
 export const metadata: Metadata = {
-  title: 'Level 2 Food Hygiene Practice Test: 10 Key Questions',
+  title: 'Level 2 Food Hygiene Practice Test Guide | Saim Dev',
   description: 'Prepare kitchen staff for UK Food Safety Level 2 certification with this practice test covering critical temperatures, hygiene, and cross-contamination.',
   robots: {
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Level 2 Food Hygiene Practice Test: 10 Key Questions',
+    title: 'Level 2 Food Hygiene Practice Test Guide | Saim Dev',
     description: 'Prepare kitchen staff for UK Food Safety Level 2 certification with this practice test covering critical temperatures, hygiene, and cross-contamination.',
     url: 'https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide',
     siteName: 'Saim Dev',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'Level 2 Food Hygiene Practice Test: 10 Key Questions',
+    title: 'Level 2 Food Hygiene Practice Test Guide | Saim Dev',
     description: 'Prepare kitchen staff for UK Food Safety Level 2 certification with this practice test covering critical temperatures, hygiene, and cross-contamination.',
     images: ['https://www.saimdev.site/og-image.png']
   }

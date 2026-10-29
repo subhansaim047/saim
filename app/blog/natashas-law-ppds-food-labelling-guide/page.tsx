@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostNatashasLaw } from '@/components/blog/BlogPostNatashasLaw';
 
 export const metadata: Metadata = {
-  title: "Natasha's Law PPDS Food Labelling Guide for UK Food",
+  title: "Natasha's Law PPDS Food Labelling Guide UK | Saim Dev",
   description: "Complete UK guide to Natasha's Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.",
   robots: {
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Natasha's Law PPDS Food Labelling Guide for UK Food",
+    title: "Natasha's Law PPDS Food Labelling Guide UK | Saim Dev",
     description: "Complete UK guide to Natasha's Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.",
     url: 'https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide',
     siteName: 'Saim Dev',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: "Natasha's Law PPDS Food Labelling Guide for UK Food",
+    title: "Natasha's Law PPDS Food Labelling Guide UK | Saim Dev",
     description: "Complete UK guide to Natasha's Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.",
     images: ['https://www.saimdev.site/og-image.png']
   }

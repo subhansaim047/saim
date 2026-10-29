@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { FoodSafetyTemplatesPage } from "@/components/FoodSafetyTemplatesPage";
 
 export const metadata: Metadata = {
-  title: "Free Food Safety Templates UK | Kitchen Compliance Hub",
+  title: "Free Food Safety Templates UK | Kitchen Hub | Saim Dev",
   description: "Free food safety templates for UK commercial kitchens. Download 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.",
   robots: {
     index: true,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Free Food Safety Templates UK | Kitchen Compliance Hub",
+    title: "Free Food Safety Templates UK | Kitchen Hub | Saim Dev",
     description: "Free food safety templates for UK commercial kitchens. Download 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.",
     url: "https://www.saimdev.site/tools",
     siteName: "Saim Dev",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@saimwebdev",
-    title: "Free Food Safety Templates UK | Kitchen Compliance Hub",
+    title: "Free Food Safety Templates UK | Kitchen Hub | Saim Dev",
     description: "Free food safety templates for UK commercial kitchens. Download 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.",
     images: ["https://www.saimdev.site/og-tools.png"]
   }

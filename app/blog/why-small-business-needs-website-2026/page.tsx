@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPost1Page } from '@/components/BlogPost1Page';
 
 export const metadata: Metadata = {
-  title: 'Why UK Small Businesses Need a Custom Website in 2026',
+  title: 'Why UK Small Businesses Need a Custom Website | Saim Dev',
   description: 'Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.',
   robots: {
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Why UK Small Businesses Need a Custom Website in 2026',
+    title: 'Why UK Small Businesses Need a Custom Website | Saim Dev',
     description: 'Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.',
     url: 'https://www.saimdev.site/blog/why-small-business-needs-website-2026',
     siteName: 'Saim Dev',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'Why UK Small Businesses Need a Custom Website in 2026',
+    title: 'Why UK Small Businesses Need a Custom Website | Saim Dev',
     description: 'Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.',
     images: ['https://www.saimdev.site/og-image.png']
   }

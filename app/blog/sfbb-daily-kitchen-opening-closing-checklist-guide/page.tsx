@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostChecklist } from '@/components/blog/BlogPostChecklist';
 
 export const metadata: Metadata = {
-  title: 'SFBB Opening & Closing Checklist Guide for UK Cafes',
+  title: 'SFBB Kitchen Opening & Closing Guide UK | Saim Dev',
   description: 'Master your daily opening and closing checks with Safer Food, Better Business guidance. Protect kitchen hygiene and secure a 5-star council rating.',
   robots: {
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'SFBB Opening & Closing Checklist Guide for UK Cafes',
+    title: 'SFBB Kitchen Opening & Closing Guide UK | Saim Dev',
     description: 'Master your daily opening and closing checks with Safer Food, Better Business guidance. Protect kitchen hygiene and secure a 5-star council rating.',
     url: 'https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide',
     siteName: 'Saim Dev',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'SFBB Opening & Closing Checklist Guide for UK Cafes',
+    title: 'SFBB Kitchen Opening & Closing Guide UK | Saim Dev',
     description: 'Master your daily opening and closing checks with Safer Food, Better Business guidance. Protect kitchen hygiene and secure a 5-star council rating.',
     images: ['https://www.saimdev.site/og-image.png']
   }

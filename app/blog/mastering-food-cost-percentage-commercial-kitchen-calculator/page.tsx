@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostFoodCost } from '@/components/blog/BlogPostFoodCost';
 
 export const metadata: Metadata = {
-  title: 'How to Calculate Food Cost Percentage in UK Kitchens',
+  title: 'How to Calculate Food Cost Percentage UK | Saim Dev',
   description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
   robots: {
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'How to Calculate Food Cost Percentage in UK Kitchens',
+    title: 'How to Calculate Food Cost Percentage UK | Saim Dev',
     description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
     url: 'https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator',
     siteName: 'Saim Dev',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'How to Calculate Food Cost Percentage in UK Kitchens',
+    title: 'How to Calculate Food Cost Percentage UK | Saim Dev',
     description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
     images: ['https://www.saimdev.site/og-image.png']
   }

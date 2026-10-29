@@ -19,7 +19,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { CommissionSavingsCalculator } from "@/components/CommissionSavingsCalculator";
 
 export const metadata: Metadata = {
-  title: 'Takeaway Website Design UK | Commission-Free Orders',
+  title: 'Takeaway Website Design UK | Online Ordering | Saim Dev',
   description: "Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
   robots: {
     index: true,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Takeaway Website Design UK | Commission-Free Orders',
+    title: 'Takeaway Website Design UK | Online Ordering | Saim Dev',
     description: "Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
     url: "https://www.saimdev.site/services/takeaway-web-design",
     siteName: "Saim Dev",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@saimwebdev",
-    title: 'Takeaway Website Design UK | Commission-Free Orders',
+    title: 'Takeaway Website Design UK | Online Ordering | Saim Dev',
     description: "Custom Next.js takeaway ordering websites from £250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
     images: ["https://www.saimdev.site/og-services.png"],
   },

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostHaccpPlan } from '@/components/blog/BlogPostHaccpPlan';
 
 export const metadata: Metadata = {
-  title: 'How to Write a UK Takeaway HACCP Plan Step-by-Step',
+  title: 'How to Write a UK Takeaway HACCP Plan | Saim Dev',
   description: 'Learn how to write a commercial kitchen HACCP plan under Regulation (EC) 852/2004. Plain-English guide to hazard analysis, CCPs, and record keeping.',
   robots: {
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'How to Write a UK Takeaway HACCP Plan Step-by-Step',
+    title: 'How to Write a UK Takeaway HACCP Plan | Saim Dev',
     description: 'Learn how to write a commercial kitchen HACCP plan under Regulation (EC) 852/2004. Plain-English guide to hazard analysis, CCPs, and record keeping.',
     url: 'https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step',
     siteName: 'Saim Dev',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'How to Write a UK Takeaway HACCP Plan Step-by-Step',
+    title: 'How to Write a UK Takeaway HACCP Plan | Saim Dev',
     description: 'Learn how to write a commercial kitchen HACCP plan under Regulation (EC) 852/2004. Plain-English guide to hazard analysis, CCPs, and record keeping.',
     images: ['https://www.saimdev.site/og-image.png']
   }

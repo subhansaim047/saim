@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostRecipeScaler } from '@/components/blog/BlogPostRecipeScaler';
 
 export const metadata: Metadata = {
-  title: 'How to Scale Catering Recipes Without Quality Loss',
+  title: 'How to Scale Commercial Catering Recipes | Saim Dev',
   description: 'Guide to scaling commercial catering recipes from 10 to 500 portions. Avoid common conversion errors, calculate yields, and manage ingredient costs.',
   robots: {
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'How to Scale Catering Recipes Without Quality Loss',
+    title: 'How to Scale Commercial Catering Recipes | Saim Dev',
     description: 'Guide to scaling commercial catering recipes from 10 to 500 portions. Avoid common conversion errors, calculate yields, and manage ingredient costs.',
     url: 'https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator',
     siteName: 'Saim Dev',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'How to Scale Catering Recipes Without Quality Loss',
+    title: 'How to Scale Commercial Catering Recipes | Saim Dev',
     description: 'Guide to scaling commercial catering recipes from 10 to 500 portions. Avoid common conversion errors, calculate yields, and manage ingredient costs.',
     images: ['https://www.saimdev.site/og-image.png']
   }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { ServicesPage } from '@/components/ServicesPage';
 
 export const metadata: Metadata = {
-  title: 'Web Development Services UK | Fixed Price Next.js',
+  title: 'Web Development Services UK | Fixed Price | Saim Dev',
   description: 'Fixed-price Next.js web development for UK businesses from £250. Includes bespoke ordering systems, landing pages, local SEO setup, and fast delivery.',
   robots: {
     index: true,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    title: 'Web Development Services UK | Fixed Price Next.js',
+    title: 'Web Development Services UK | Fixed Price | Saim Dev',
     description: 'Fixed-price Next.js web development for UK businesses from £250. Includes bespoke ordering systems, landing pages, local SEO setup, and fast delivery.',
     url: 'https://www.saimdev.site/services',
     siteName: 'Saim Dev',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'Web Development Services UK | Fixed Price Next.js',
+    title: 'Web Development Services UK | Fixed Price | Saim Dev',
     description: 'Fixed-price Next.js web development for UK businesses from £250. Includes bespoke ordering systems, landing pages, local SEO setup, and fast delivery.',
     images: ['https://www.saimdev.site/og-services.png']
   }

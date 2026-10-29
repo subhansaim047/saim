@@ -7,7 +7,7 @@ import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "14 Allergen Matrix Generator UK | Free Kitchen Allergy Chart",
+  title: "14 Allergen Matrix Generator UK | Allergy Chart | Saim Dev",
   description: "Create a statutory 14 allergen matrix chart for your UK restaurant or takeaway. Free interactive allergen table generator with printable A4 kitchen poster export.",
   robots: {
     index: true,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "14 Allergen Matrix Generator UK | Free Kitchen Allergy Chart",
+    title: "14 Allergen Matrix Generator UK | Allergy Chart | Saim Dev",
     description: "Create a statutory 14 allergen matrix chart for your UK restaurant or takeaway. Free interactive allergen table generator with printable A4 kitchen poster export.",
     url: "https://www.saimdev.site/tools/allergen-matrix-generator",
     siteName: "Saim Dev",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@saimwebdev",
-    title: "14 Allergen Matrix Generator UK | Free Kitchen Allergy Chart",
+    title: "14 Allergen Matrix Generator UK | Allergy Chart | Saim Dev",
     description: "Create a statutory 14 allergen matrix chart for your UK restaurant or takeaway. Free interactive allergen table generator with printable A4 kitchen poster export.",
     images: ["https://www.saimdev.site/og-image.png"],
   },
