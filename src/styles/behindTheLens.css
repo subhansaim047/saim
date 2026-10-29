@@ -345,3 +345,15 @@
     padding: 30px 24px;
   }
 }
+
+.btl-featured-title a,
+.btl-grid-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.btl-featured-title a:hover,
+.btl-grid-title a:hover {
+  opacity: 0.85;
+}

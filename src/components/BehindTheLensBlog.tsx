@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import "@/styles/behindTheLens.css";
 import { BlogPost, DEFAULT_BLOG_POSTS, fetchBlogPosts } from "@/lib/supabaseBlog";
 
@@ -14,11 +15,17 @@ import { BlogPost, DEFAULT_BLOG_POSTS, fetchBlogPosts } from "@/lib/supabaseBlog
  */
 interface VideoContainerProps {
   videoUrl: string;
+  posterUrl?: string;
   className?: string;
   title?: string;
 }
 
-const VideoContainer: React.FC<VideoContainerProps> = ({ videoUrl, className = "", title = "Photography clip" }) => {
+const VideoContainer: React.FC<VideoContainerProps> = ({
+  videoUrl,
+  posterUrl,
+  className = "",
+  title = "Blog video visual",
+}) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -39,6 +46,7 @@ const VideoContainer: React.FC<VideoContainerProps> = ({ videoUrl, className = "
         muted
         playsInline
         preload="metadata"
+        poster={posterUrl}
         aria-label={title}
       >
         <source src={videoUrl} type="video/mp4" />
@@ -96,15 +104,15 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
   const standardPosts = posts.filter((p) => p !== featuredPost).slice(0, 3);
 
   return (
-    <section className="behind-the-lens-root" aria-label="Behind the Lens Photography Blog">
+    <section className="behind-the-lens-root" aria-label="Behind the Lens Photography & Tech Blog">
       <div className="behind-the-lens-container">
         {/* ── Section Header ── */}
         <header>
-          <span className="btl-badge">Blog</span>
+          <span className="btl-badge">Blog &amp; Insights</span>
           <h2 className="btl-heading">Behind the lens</h2>
           <div className="btl-header-bottom">
             <p className="btl-subtitle">
-              Thoughts, insights, and stories from my photography journey. Take a peek into my creative process and recent projects.
+              Thoughts, insights, and stories from our creative journey. Take a peek into our development process, compliance playbooks, and recent client systems.
             </p>
             <button
               type="button"
@@ -120,12 +128,19 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
         {/* ── Featured Post Card ── */}
         {featuredPost && (
           <article className="btl-featured-card" aria-label={`Featured: ${featuredPost.title}`}>
-            {/* Left Column: Autoplaying Video */}
-            <VideoContainer
-              videoUrl={featuredPost.video_url}
-              className="btl-featured-video-wrapper"
-              title={featuredPost.title}
-            />
+            {/* Left Column: Autoplaying Video with High-Res Poster */}
+            <Link
+              href={featuredPost.url}
+              className="block relative w-full h-full"
+              aria-label={`Read ${featuredPost.title}`}
+            >
+              <VideoContainer
+                videoUrl={featuredPost.video_url}
+                posterUrl={featuredPost.poster_url || "/videos/blog-featured-poster.webp"}
+                className="btl-featured-video-wrapper"
+                title={featuredPost.title}
+              />
+            </Link>
 
             {/* Right Column: Post Information */}
             <div className="btl-featured-content">
@@ -133,7 +148,14 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
                 <span className="btl-must-read-badge">{featuredPost.badge}</span>
               )}
 
-              <h3 className="btl-featured-title">{featuredPost.title}</h3>
+              <h3 className="btl-featured-title">
+                <Link
+                  href={featuredPost.url}
+                  className="hover:text-black transition-colors"
+                >
+                  {featuredPost.title}
+                </Link>
+              </h3>
 
               {featuredPost.description && (
                 <p className="btl-featured-desc">{featuredPost.description}</p>
@@ -141,7 +163,7 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
 
               <footer className="btl-featured-footer">
                 <span className="btl-author-name">
-                  {featuredPost.author || "By August Renner (c)"}
+                  {featuredPost.author || "By Saim Dev"}
                 </span>
                 <span
                   className="btl-category-badge"
@@ -158,13 +180,27 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
         <div className="btl-blog-grid">
           {standardPosts.map((post, idx) => (
             <article key={post.id || idx} className="btl-grid-card">
-              <VideoContainer
-                videoUrl={post.video_url}
-                className="btl-grid-video-wrapper"
-                title={post.title}
-              />
+              <Link
+                href={post.url}
+                className="block"
+                aria-label={`Read ${post.title}`}
+              >
+                <VideoContainer
+                  videoUrl={post.video_url}
+                  posterUrl={post.poster_url || `/videos/blog-standard-${idx + 1}-poster.webp`}
+                  className="btl-grid-video-wrapper"
+                  title={post.title}
+                />
+              </Link>
               <div className="btl-grid-meta">
-                <h4 className="btl-grid-title">{post.title}</h4>
+                <h4 className="btl-grid-title">
+                  <Link
+                    href={post.url}
+                    className="hover:text-black transition-colors"
+                  >
+                    {post.title}
+                  </Link>
+                </h4>
                 <span
                   className="btl-category-badge"
                   style={{ backgroundColor: post.category_color }}
