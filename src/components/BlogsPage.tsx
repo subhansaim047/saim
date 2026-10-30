@@ -217,9 +217,9 @@ export const BlogsPage = () => {
               <span className="inline-block bg-[#f4f4f4] text-[#555] text-xs font-semibold px-2.5 py-1 rounded-md mb-2">
                 Knowledge Library
               </span>
-              <h3 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#0a0a0a]" style={{ fontFamily: 'Outfit, sans-serif' }}>
+              <h1 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#0a0a0a]" style={{ fontFamily: 'Outfit, sans-serif' }}>
                 All Published Guides &amp; Insights
-              </h3>
+              </h1>
               <p className="text-sm text-gray-500 mt-1 max-w-lg">
                 Practical, in-depth playbooks on web development, small business growth, food safety compliance, and commercial kitchen systems.
               </p>

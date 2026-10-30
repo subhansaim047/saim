@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.saimdev.site'),
   alternates: {
     canonical: 'https://www.saimdev.site',
+    languages: {
+      'en-GB': 'https://www.saimdev.site',
+      'x-default': 'https://www.saimdev.site',
+    },
   },
   verification: {
     google: 'google0191625097e7b0a7',

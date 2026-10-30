@@ -3,7 +3,7 @@ import { PrivacyPolicy } from '@/components/PrivacyPolicy';
 
 export const metadata: Metadata = {
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
   title: "Privacy Policy | Saim Dev",

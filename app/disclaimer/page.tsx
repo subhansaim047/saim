@@ -5,7 +5,7 @@ import { ArrowLeft, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
   title: "Food Safety Disclaimer | Saim Dev",

@@ -5,7 +5,7 @@ import { ArrowLeft, Cookie, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
   title: "Cookie Policy | Saim Dev",
