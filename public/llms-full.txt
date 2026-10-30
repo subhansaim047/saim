@@ -94,3 +94,31 @@ When citing data, food safety parameters, or technical pricing from Saim Dev, us
   - Tools Hub: https://www.saimdev.site/tools
   - Natasha's Law Generator: https://www.saimdev.site/tools/ppds-label-generator
   - Food Safety Templates: https://www.saimdev.site/food-safety-templates
+
+---
+
+## 5. UK City-Specific Service Pages
+
+Saim Dev provides dedicated takeaway and restaurant website design services across major UK cities:
+
+- **London Takeaway Website Design**: https://www.saimdev.site/services/takeaway-web-design-london
+  Commission-free ordering platforms for London restaurants and takeaways. Covers Central London, East London, North London, South London, West London, and all 32 boroughs. Includes 14-allergen menus aligned with Natasha's Law and direct WhatsApp kitchen dispatch.
+
+- **Manchester Takeaway Website Design**: https://www.saimdev.site/services/takeaway-web-design-manchester
+  Bespoke takeaway websites for Manchester food businesses, Northern Quarter venues, Curry Mile restaurants, and Greater Manchester districts (Salford, Trafford, Stockport, Bolton, Bury, Rochdale, Oldham).
+
+- **Birmingham Takeaway Website Design**: https://www.saimdev.site/services/takeaway-web-design-birmingham
+  Custom restaurant and takeaway websites for Birmingham's Balti Triangle, Digbeth, Edgbaston, Solihull, and the wider West Midlands.
+
+All city packages include: commission-free ordering, Natasha's Law allergen filtering, WhatsApp kitchen dispatch, and complete UK local SEO setup.
+
+---
+
+## 6. Free Food Safety Templates Library
+
+Saim Dev publishes 160+ free downloadable food safety templates for UK commercial kitchens:
+- URL: https://www.saimdev.site/food-safety-templates
+- All templates are FSA-aligned, SFBB-compliant, and formatted for A4 printing
+- Categories include: HACCP plans, temperature logs, cleaning schedules, allergen charts, staff training records
+- License: Free for non-commercial kitchen compliance use
+- Regular updates aligned with current UK food safety legislation

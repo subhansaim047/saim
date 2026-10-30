@@ -238,10 +238,10 @@ export const BlogPostRecipeScaler: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link
-              href="/food-safety-templates/recipe-calculator"
+              href="/tools/recipe-batch-calculator"
               className="bg-primary hover:brightness-110 text-black font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full flex items-center gap-2 transition-all shadow-xl"
             >
-              <span>recipe calculator</span>
+              <span>Interactive Recipe Batch Scaler</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 

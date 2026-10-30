@@ -298,18 +298,18 @@ export const BlogPostHaccpPlan: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link
-              href="/food-safety-templates/haccp-plan-builder"
+              href="/tools/allergen-matrix-generator"
               className="bg-primary hover:brightness-110 text-black font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full flex items-center gap-2 transition-all shadow-xl"
             >
-              <span>HACCP plan builder</span>
+              <span>Interactive Allergen Matrix Tool</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
             <Link
-              href="/tools"
+              href="/food-safety-templates/haccp-plan-builder"
               className="border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm px-5 py-3.5 rounded-full transition-all"
             >
-              <span>return to all kitchen tools</span>
+              <span>HACCP Plan Template</span>
             </Link>
           </div>
         </section>

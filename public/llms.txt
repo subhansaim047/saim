@@ -33,6 +33,9 @@
 2. [Free UK Kitchen Tools & Templates Hub](https://www.saimdev.site/tools): Free printable food safety templates, checklists, logs, and calculators for UK restaurants and takeaways.
 3. [Next.js Developer UK](https://www.saimdev.site/nextjs-developer-uk): Specialist freelance Next.js web development for UK businesses seeking 95+ PageSpeed and sub-second load times.
 4. [Takeaway Website Design UK](https://www.saimdev.site/services/takeaway-web-design): Commission-free direct ordering websites for UK takeaways & restaurants with built-in Natasha's Law allergen filters. Fixed £250.
+   - [Takeaway Website Design London](https://www.saimdev.site/services/takeaway-web-design-london): Direct ordering websites for London restaurants and food operators across all 32 boroughs.
+   - [Takeaway Website Design Manchester](https://www.saimdev.site/services/takeaway-web-design-manchester): Bespoke takeaway websites for Greater Manchester eateries and curry houses.
+   - [Takeaway Website Design Birmingham](https://www.saimdev.site/services/takeaway-web-design-birmingham): Custom websites for Birmingham, Balti Triangle, and West Midlands takeaways.
 5. [Web Development Services](https://www.saimdev.site/services): Full-stack web development, online ordering systems, speed optimization, and technical SEO architecture.
 5. [Case Studies & Results](https://www.saimdev.site/case-studies): Real business website case studies showing sub-second speed metrics and organic conversion improvements.
 6. [Modern Tech Stack](https://www.saimdev.site/technologies): Architectural breakdown of Next.js App Router, Tailwind CSS, TypeScript, and edge infrastructure.

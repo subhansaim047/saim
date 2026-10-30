@@ -117,6 +117,13 @@ export default function RecipeBatchCalculatorPage() {
       name: "Saim Dev",
       url: "https://www.saimdev.site",
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "39",
+    },
   };
 
   // 3. FAQPage Schema

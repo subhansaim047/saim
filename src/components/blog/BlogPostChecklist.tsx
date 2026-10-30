@@ -281,7 +281,14 @@ export const BlogPostChecklist: React.FC = () => {
             </Link>
           </div>
 
-          <div className="pt-2">
+          <div className="pt-2 flex flex-wrap gap-3">
+            <Link
+              href="/tools/allergen-matrix-generator"
+              className="inline-flex items-center gap-2 border border-primary/30 bg-primary/10 hover:bg-primary/20 text-primary font-medium text-xs sm:text-sm px-5 py-3 rounded-full transition-all"
+            >
+              <span>Free 14-Allergen Matrix Generator</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
             <Link
               href="/tools"
               className="inline-flex items-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm px-5 py-3 rounded-full transition-all"

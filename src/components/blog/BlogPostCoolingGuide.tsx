@@ -313,6 +313,13 @@ export const BlogPostCoolingGuide: React.FC = () => {
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
               <Link
+                href="/tools/food-cost-calculator"
+                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
+              >
+                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">commercial food cost calculator</span>
+                <ArrowRight className="w-4 h-4 text-primary shrink-0" />
+              </Link>
+              <Link
                 href="/tools"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >

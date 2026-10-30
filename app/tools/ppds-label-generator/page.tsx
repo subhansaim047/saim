@@ -117,6 +117,13 @@ export default function PpdsLabelGeneratorPage() {
       name: "Saim Dev",
       url: "https://www.saimdev.site",
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "48",
+    },
   };
 
   // 3. FAQPage Schema

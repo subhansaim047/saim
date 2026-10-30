@@ -369,6 +369,60 @@ export const ContactPage = () => {
             ))}
           </div>
         </div>
+
+        {/* CONTACT FAQ — Questions Before Enquiring */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF4A1C] block mb-2">
+              Quick Answers
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-white" style={{ letterSpacing: "-0.04em" }}>
+              Frequently Asked Questions Before You Enquire
+            </h2>
+            <p className="text-white/65 text-xs sm:text-sm max-w-xl mx-auto mt-2 font-light">
+              Clear answers on pricing, delivery timelines, code ownership, and remote delivery for UK and European clients.
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-3">
+            {[
+              {
+                q: "How much does a website cost for a UK business?",
+                a: "Our transparent fixed pricing starts from £250 for a single high-converting landing page, £390 for a full multi-page business website, and £790 for a custom takeaway ordering system with allergen filters. There are zero hidden monthly fees or agency markups — you pay once and own everything.",
+              },
+              {
+                q: "How quickly can you build and launch my website?",
+                a: "Landing pages are typically delivered within 3–5 business days. Full multi-page business websites take 5–7 days, and complete takeaway systems with ordering menus take 7–10 days from brief to live production deployment.",
+              },
+              {
+                q: "Do you work with UK businesses remotely?",
+                a: "Yes. Saim Dev operates as a dedicated remote studio serving UK and European clients from Pakistan. All communication happens directly via WhatsApp or email — no account managers, no delays, just direct access to your lead developer.",
+              },
+              {
+                q: "What areas of the UK do you cover?",
+                a: "We serve businesses across the entire United Kingdom including London, Manchester, Birmingham, Leeds, Glasgow, Edinburgh, Bristol, Liverpool, and all surrounding areas. Our services are delivered 100% remotely with zero travel fees.",
+              },
+              {
+                q: "What makes Saim Dev different from a traditional UK web agency?",
+                a: "Traditional UK digital agencies charge £2,000–£10,000 for websites that take months to deliver. Saim Dev offers fixed prices from £250, direct developer communication, sub-second page speeds with 95+ PageSpeed scores, and 5–10 day turnaround — without agency bloat.",
+              },
+            ].map((item, i) => (
+              <details
+                key={i}
+                className="group rounded-[1.5rem] bg-[#121212] border border-white/10 px-6 py-4 cursor-pointer hover:border-white/20 transition-colors"
+              >
+                <summary className="flex items-center justify-between gap-4 list-none select-none focus:outline-none">
+                  <span className="text-white text-sm font-medium leading-snug">
+                    {item.q}
+                  </span>
+                  <span className="text-[#FF4A1C] text-lg font-light flex-shrink-0">+</span>
+                </summary>
+                <p className="pt-3 pb-1 text-white/65 text-xs sm:text-sm leading-relaxed font-light">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
       </div>
 
       <SiteFooter theme="dark" />

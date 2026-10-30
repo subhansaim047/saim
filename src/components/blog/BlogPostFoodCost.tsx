@@ -302,10 +302,10 @@ export const BlogPostFoodCost: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link
-              href="/food-safety-templates/food-cost-calculator"
+              href="/tools/food-cost-calculator"
               className="bg-primary hover:brightness-110 text-black font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full flex items-center gap-2 transition-all shadow-xl"
             >
-              <span>commercial food cost calculator</span>
+              <span>Interactive Food Cost Calculator</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
