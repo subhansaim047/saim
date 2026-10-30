@@ -1,15 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const disallowPaths = [
-    '/api/',
-    '/hotbite/',
-    '/anzaar/',
-    '/frenchyse/',
-    '/burger-garage/',
-    '/demos/*/',
-    '/test-images.html',
-  ];
+  const disallowPaths = ['/api/'];
 
   return {
     rules: [

@@ -1,226 +1,95 @@
-# Saim Dev — robots.txt
+# Saim Dev - robots.txt
 # https://www.saimdev.site
 
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 # Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: Bingbot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 # AI Search & LLM Engine Crawlers (Explicitly Allowed for GEO/AEO Citations)
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: GPTBot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: Claude-SearchBot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: Claude-User
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: Perplexity-User
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: Applebot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: Applebot-Extended
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
-
-User-agent: cohere-ai
-Allow: /
-Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
-
-User-agent: CCBot
-Allow: /
-Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
-User-agent: Meta-ExternalAgent
-Allow: /
-Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
-
-User-agent: Meta-ExternalFetcher
-Allow: /
-Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: GoogleOther
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /api/
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+Disallow: /api/
 
 User-agent: DeepSeekBot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: Amazonbot
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
 
 User-agent: Bytespider
 Allow: /
 Disallow: /api/
-Disallow: /hotbite/
-Disallow: /anzaar/
-Disallow: /frenchyse/
-Disallow: /burger-garage/
-Disallow: /demos/*/
-Disallow: /test-images.html
+
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/
 
 # Sitemaps
 Sitemap: https://www.saimdev.site/sitemap.xml
