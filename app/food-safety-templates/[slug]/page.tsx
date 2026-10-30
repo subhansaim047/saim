@@ -77,10 +77,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "website",
       images: [
         {
-          url: "https://www.saimdev.site/og-image.png",
+          url: `https://www.saimdev.site${template.imgUrl || template.thumbUrl || '/og-image.png'}`,
           width: 1200,
           height: 630,
-          alt: `${template.title} - Saim Dev`,
+          alt: `${template.title} - Free UK Food Hygiene Template (PDF Download)`,
         },
       ],
     },
@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       creator: "@saimwebdev",
       title: pageTitle,
       description: pageDesc,
-      images: ["https://www.saimdev.site/og-image.png"],
+      images: [`https://www.saimdev.site${template.imgUrl || template.thumbUrl || '/og-image.png'}`],
     },
   };
 }
@@ -106,6 +106,7 @@ export default async function TemplateDetailRoute({ params }: PageProps) {
   const pageTitle = coreMeta ? coreMeta.title : `${template.title} | Saim Dev`;
   const pageDesc = coreMeta ? coreMeta.desc : template.desc;
   const canonicalUrl = `https://www.saimdev.site/food-safety-templates/${slug}`;
+  const previewImageUrl = `https://www.saimdev.site${template.imgUrl || template.thumbUrl || '/og-image.png'}`;
 
   // 1. BreadcrumbList Schema
   const breadcrumbSchema = {
@@ -150,6 +151,7 @@ export default async function TemplateDetailRoute({ params }: PageProps) {
         "description": pageDesc,
         "url": canonicalUrl,
         "applicationCategory": "BusinessApplication",
+        "image": previewImageUrl,
         "operatingSystem": "All / Web Browser",
         "browserRequirements": "Requires JavaScript. Requires HTML5.",
         "offers": {
@@ -171,6 +173,7 @@ export default async function TemplateDetailRoute({ params }: PageProps) {
         "description": pageDesc,
         "url": canonicalUrl,
         "fileFormat": "application/pdf",
+        "image": previewImageUrl,
         "isAccessibleForFree": true,
         "dateModified": "2026-10-27",
         "publisher": {
@@ -249,6 +252,22 @@ export default async function TemplateDetailRoute({ params }: PageProps) {
     }))
   } : null;
 
+  const imageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": previewImageUrl,
+    "url": previewImageUrl,
+    "name": `${template.title} Template`,
+    "caption": `${template.title} - Printable UK Food Hygiene & Safety Sheet (PDF Download)`,
+    "description": template.desc,
+    "representativeOfPage": true,
+    "author": {
+      "@type": "Organization",
+      "name": "Saim Dev",
+      "url": "https://www.saimdev.site"
+    }
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -264,6 +283,10 @@ export default async function TemplateDetailRoute({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
       />
       <script
         type="application/ld+json"

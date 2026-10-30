@@ -11,6 +11,11 @@ export default function robots(): MetadataRoute.Robots {
         disallow: disallowPaths,
       },
       {
+        userAgent: 'Googlebot-Image',
+        allow: '/',
+        disallow: disallowPaths,
+      },
+      {
         userAgent: [
           'Googlebot',
           'Bingbot',
@@ -38,6 +43,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: disallowPaths,
       },
     ],
-    sitemap: 'https://www.saimdev.site/sitemap.xml',
+    sitemap: [
+      'https://www.saimdev.site/sitemap.xml',
+      'https://www.saimdev.site/image-sitemap.xml',
+    ],
   };
 }

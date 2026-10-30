@@ -10,6 +10,10 @@ User-agent: Googlebot
 Allow: /
 Disallow: /api/
 
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /api/
+
 User-agent: Bingbot
 Allow: /
 Disallow: /api/
@@ -93,3 +97,4 @@ Disallow: /api/
 
 # Sitemaps
 Sitemap: https://www.saimdev.site/sitemap.xml
+Sitemap: https://www.saimdev.site/image-sitemap.xml
