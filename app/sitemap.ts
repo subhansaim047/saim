@@ -11,7 +11,7 @@ const pagePlan: PagePlan = pagePlanData as PagePlan;
 export default function sitemap(): MetadataRoute.Sitemap {
   // ─── Static core pages ─────────────────────────────────────────────────────
   const corePages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/`,                 lastModified: NOW, changeFrequency: 'weekly',  priority: 1.0 },
+    { url: `${BASE_URL}`,                  lastModified: NOW, changeFrequency: 'weekly',  priority: 1.0 },
     { url: `${BASE_URL}/tools`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE_URL}/tools/ppds-label-generator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/services/takeaway-web-design`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
