@@ -101,7 +101,7 @@ export default function RecipeBatchCalculatorPage() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "Commercial Recipe Scaler & Batch Costing Calculator UK",
-    description: "Free interactive browser tool for UK chefs, bakeries, event caterers, and dark kitchens to automatically rescale recipes, convert portion yields, and print standardized kitchen prep cards.",
+    description: "Free interactive browser tool for UK chefs, bakeries, event caterers, and dark kitchens to automatically rescale recipes, convert portion yields, and print standardised kitchen prep cards.",
     url: canonicalUrl,
     applicationCategory: "BusinessApplication",
     operatingSystem: "All / Web Browser",
@@ -201,7 +201,7 @@ export default function RecipeBatchCalculatorPage() {
           className="flex items-center gap-2 text-xs font-bold text-gray-700 hover:text-black transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>return to all kitchen tools</span>
+          <span>Return to All Kitchen Tools</span>
         </Link>
         <div className="flex items-center gap-3">
           <Link

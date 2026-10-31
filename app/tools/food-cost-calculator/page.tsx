@@ -169,7 +169,7 @@ export default function FoodCostCalculatorPage() {
         "@type": "HowToStep",
         position: 4,
         name: "Calculate Price Inclusive of 20% UK VAT & Print Spec Sheet",
-        text: "Review the net selling price, verify total plate margin, add standard 20% UK VAT for hot food and dine-in, and print your standardized recipe costing sheet.",
+        text: "Review the net selling price, verify total plate margin, add standard 20% UK VAT for hot food and dine-in, and print your standardised recipe costing sheet.",
       },
     ],
   };
@@ -201,7 +201,7 @@ export default function FoodCostCalculatorPage() {
           className="flex items-center gap-2 text-xs font-bold text-gray-700 hover:text-black transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>return to all kitchen tools</span>
+          <span>Return to All Kitchen Tools</span>
         </Link>
         <div className="flex items-center gap-3">
           <Link
