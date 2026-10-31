@@ -39,7 +39,7 @@ export const TermsOfService = () => {
           <section>
             <h2 className="text-white text-xl font-medium mb-3">1. Scope of Services</h2>
             <p>
-              Saim Dev provides custom web architecture, e-commerce solutions, mobile responsive development, speed optimization, and SEO setup. Services are provided under three primary tiers: Landing Page (from £250, 3–5 days delivery), Starter Plan (from £390, 5–7 days delivery), and Business Plan (from £790, 7–10 days delivery), as well as bespoke web architecture solutions.
+              Saim Dev provides custom web architecture, e-commerce solutions, mobile responsive development, speed optimisation, and SEO setup. Services are provided under three primary tiers: Landing Page (from £250, 3–5 days delivery), Starter Plan (from £390, 5–7 days delivery), and Business Plan (from £790, 7–10 days delivery), as well as bespoke web architecture solutions.
             </p>
           </section>
 
