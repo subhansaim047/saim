@@ -36,11 +36,11 @@ export const TechnologiesPage = () => {
             ENGINEERING STACK
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4">
-            Technologies & Expertise
+            Next.js Tech Stack &amp; Web Engineering
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-          Explore our core web development technologies and technical expertise: Modern, sub-second web architecture powered by cutting-edge frontend frameworks, performance engineering, and robust cloud infrastructure.
-        </p>
+            Saim Dev leverages a modern Next.js tech stack combining React 19, TypeScript, Tailwind CSS, and Vercel edge deployment. We engineer sub-second web applications for UK businesses, delivering 90+ Core Web Vitals, enterprise security, and seamless API integrations with zero maintenance overhead.
+          </p>
         </div>
 
         {/* 2. FRONTEND */}
@@ -104,7 +104,7 @@ export const TechnologiesPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="liquid-glass rounded-2xl p-7 border border-white/10">
-              <h3 className="text-white font-medium text-lg mb-2">Core Web Vitals Optimization</h3>
+              <h3 className="text-white font-medium text-lg mb-2">Core Web Vitals Optimisation</h3>
               <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed mb-3">
                 Sub-second LCP (Largest Contentful Paint &lt; 2.5s), minimal CLS (&lt; 0.1), and rapid INP (&lt; 200ms) for high Google search rankings.
               </p>
@@ -161,7 +161,7 @@ export const TechnologiesPage = () => {
             </div>
             <div className="liquid-glass rounded-2xl p-6 border border-white/10">
               <h3 className="text-white font-medium mb-1">AI Search (LLMO)</h3>
-              <p className="text-white/60 text-xs font-light">Optimized text blocks for ChatGPT, Claude, and Perplexity indexing.</p>
+              <p className="text-white/60 text-xs font-light">Optimised text blocks for ChatGPT, Claude, and Perplexity indexing.</p>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ export const TechnologiesPage = () => {
             <div className="liquid-glass rounded-2xl p-6 border border-white/10">
               <h3 className="text-white font-medium text-lg mb-2">Smart Chatbots</h3>
               <p className="text-white/60 text-xs font-light leading-relaxed">
-                24/7 client support AI assistants that answer inquiries and qualify leads automatically.
+                24/7 client support AI assistants that answer enquiries and qualify leads automatically.
               </p>
             </div>
             <div className="liquid-glass rounded-2xl p-6 border border-white/10">

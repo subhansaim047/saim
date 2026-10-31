@@ -133,7 +133,7 @@ export default function AboutPage() {
             About Saim Dev
           </h1>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
-            Learn more about Saim Dev: We are a Next.js web development studio serving UK and European clients remotely. We specialize in high-performance websites for hospitality, service businesses, and ambitious independent brands.
+            Saim Dev is an independent Next.js web development studio serving UK and European businesses remotely. We engineer sub-second websites, conversion-focused landing pages, and commission-free takeaway ordering systems starting from £250. Clients receive direct founder-led communication, full code ownership on GitHub, and zero monthly retainers.
           </p>
         </div>
 

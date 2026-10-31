@@ -168,7 +168,7 @@ export default function NextJsDeveloperUkPage() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mb-10">
-            Stop losing UK customers to bloated, sluggish WordPress sites. I provide high-performance Next.js web development for UK businesses, delivering custom, sub-second web applications engineered for Optimised Core Web Vitals, Google top rankings, and high conversion rates.
+            Saim Dev provides specialist freelance Next.js web development for UK businesses from £250. We build custom, sub-second web applications engineered for 90+ Core Web Vitals, top Google search visibility, and maximum conversions without the high agency retainers or WordPress plugin bloat.
           </p>
 
           {/* CTA Buttons */}

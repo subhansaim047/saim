@@ -232,7 +232,7 @@ export default function BirminghamTakeawayWebDesignPage() {
           </h1>
 
           <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-light">
-            Bespoke Next.js direct ordering platforms for Birmingham curry houses, grill rooms, and takeaways. Keep 100% of order totals with direct WhatsApp kitchen notifications from £250.
+            Saim Dev builds bespoke Next.js takeaway ordering websites for Birmingham and West Midlands restaurants, Balti houses, and burger bars starting from £250. Our lightweight systems bypass 30%+ Just Eat commissions, routing customer orders directly to WhatsApp or online checkout with integrated Natasha&apos;s Law 14-allergen menus across Birmingham, Solihull, and Wolverhampton.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
@@ -423,7 +423,7 @@ export default function BirminghamTakeawayWebDesignPage() {
               href="/contact"
               className="bg-white/10 hover:bg-white/15 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full transition-all border border-white/15"
             >
-              Submit Project Inquiry
+              Submit Project Enquiry
             </Link>
           </div>
         </div>

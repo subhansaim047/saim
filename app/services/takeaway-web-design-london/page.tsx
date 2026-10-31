@@ -232,7 +232,7 @@ export default function LondonTakeawayWebDesignPage() {
           </h1>
 
           <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-light">
-            Empowering independent London takeaways, cafes, and dark kitchens to eliminate 30%+ Just Eat and Deliveroo fees with custom, lightning-fast Next.js direct ordering websites.
+            Saim Dev designs custom takeaway ordering websites for London restaurants, cafes, and dark kitchens starting from £250. Our sub-second Next.js platforms eliminate 30%+ Just Eat and Deliveroo commissions, routing customer orders directly to WhatsApp or online checkout with integrated Natasha&apos;s Law allergen filters across all 32 London boroughs.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
@@ -339,7 +339,7 @@ export default function LondonTakeawayWebDesignPage() {
               Hyper-Local Coverage
             </span>
             <h2 className="text-2xl font-bold text-white">
-              Serving All London Boroughs &amp; Neighborhoods
+              Serving All London Boroughs &amp; Neighbourhoods
             </h2>
             <p className="text-xs sm:text-sm text-white/70 font-light">
               Whether you manage a fish and chip shop in East London, an artisan bakery in South London, or a high-volume pizza takeaway in West London:
@@ -423,7 +423,7 @@ export default function LondonTakeawayWebDesignPage() {
               href="/contact"
               className="bg-white/10 hover:bg-white/15 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full transition-all border border-white/15"
             >
-              Submit Project Inquiry
+              Submit Project Enquiry
             </Link>
           </div>
         </div>

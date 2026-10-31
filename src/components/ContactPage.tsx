@@ -45,7 +45,7 @@ export const ContactPage = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      const text = `Hi Saim Dev! I would like to inquire about a website project:
+      const text = `Hi Saim Dev! I would like to enquire about a website project:
 
 • *Name*: ${formData.name}
 • *Business*: ${formData.businessName || "N/A"}
@@ -95,11 +95,11 @@ export const ContactPage = () => {
             className="text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white mb-4 leading-[1.08]"
             style={{ letterSpacing: "-0.04em" }}
           >
-            Let&apos;s build something <span className="text-white/40">remarkable.</span>
+            Contact Saim Dev — Hire Next.js Developer UK
           </h1>
 
           <p className="text-white/65 text-sm sm:text-base leading-relaxed font-light">
-            Ready to build something remarkable for your business? Enjoy direct communication with your lead web engineer to build custom websites without middlemen or agency bloat.
+            Get in touch with Saim Dev to discuss your Next.js website project or takeaway ordering system. We deliver fixed-price quotes from £250 with sub-second performance, direct WhatsApp communication, and zero agency markups for UK and European businesses.
           </p>
         </div>
 
@@ -178,10 +178,10 @@ export const ContactPage = () => {
               <div className="bg-white/5 border border-emerald-500/30 rounded-2xl p-8 text-center my-4">
                 <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
                 <h3 className="text-white text-xl font-medium mb-2">
-                  Inquiry Form Formatted!
+                  Enquiry Form Formatted!
                 </h3>
                 <p className="text-white/70 text-sm max-w-md mx-auto mb-6">
-                  Click the button below to send your pre-filled inquiry to Saim Dev on WhatsApp:
+                  Click the button below to send your pre-filled enquiry to Saim Dev on WhatsApp:
                 </p>
                 <a
                   href={igLink || "https://wa.me/923196526604"}
@@ -323,7 +323,7 @@ export const ContactPage = () => {
                   type="submit"
                   className="sybiosme-action-btn w-full bg-[#FF4A1C] hover:bg-[#e03f15] text-white shadow-xl py-3.5 pl-6 pr-2.5 mt-2"
                 >
-                  <span className="text-sm font-semibold tracking-tight">Submit Project Inquiry via WhatsApp</span>
+                  <span className="text-sm font-semibold tracking-tight">Submit Project Enquiry via WhatsApp</span>
                   <div className="btn-arrow bg-white text-black">
                     <svg viewBox="0 0 17 15" className="w-3.5 h-3.5 fill-current" aria-hidden="true">
                       <path d="M16.56 8.555L10.56 14.555C10.26 14.855 9.88 14.995 9.5 14.995C9.12 14.995 8.74 14.855 8.44 14.555C7.86 13.975 7.86 13.015 8.44 12.435L11.88 8.995H1.5C0.68 8.995 0 8.315 0 7.495C0 6.675 0.68 5.995 1.5 5.995H11.88L8.44 2.555C7.86 1.975 7.86 1.015 8.44 0.435C9.02 -0.145 9.98 -0.145 10.56 0.435L16.56 6.435C17.14 7.015 17.14 7.975 16.56 8.555Z" />

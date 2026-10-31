@@ -29,7 +29,7 @@ const demos: DemoItem[] = [
     tags: ["Fast Food", "Street Food", "Framer", "Interactive Slider"],
     features: [
       "Interactive Pizza & Food Slider",
-      "Categorized Street Food Menu & Combos",
+      "Categorised Street Food Menu & Combos",
       "Social Proof & Testimonials Showcase",
       "Responsive Layout & Smooth Scroll"
     ],
@@ -150,7 +150,7 @@ const demos: DemoItem[] = [
     id: "atelier-noir",
     title: "ATELIER NOIR - Luxury Interior Architecture & Design",
     category: "Interior Architecture & Luxury Living",
-    description: "A minimalist, editorial interior design and architecture studio showcase featuring high-end residential case studies, filterable project portfolios, and architectural project inquiry flows.",
+    description: "A minimalist, editorial interior design and architecture studio showcase featuring high-end residential case studies, filterable project portfolios, and architectural project enquiry flows.",
     demoUrl: "/demos/atelier-noir/index.html",
     previewImage: "/demos/previews/atelier-noir-luxury-interior-design.webp",
     tags: ["Interior Design", "Architecture", "Minimalist Luxury", "Editorial Layout"],
@@ -182,7 +182,7 @@ const demos: DemoItem[] = [
     id: "valeria",
     title: "VALERIA - Luxury Beauty Salon & Cosmetics",
     category: "Beauty Salon & High-End Aesthetics",
-    description: "An ultra-luxurious, editorial aesthetic beauty salon platform featuring animated hero marquees, comprehensive multi-page service menus, curated lookbook gallery, and interactive booking inquiry.",
+    description: "An ultra-luxurious, editorial aesthetic beauty salon platform featuring animated hero marquees, comprehensive multi-page service menus, curated lookbook gallery, and interactive booking enquiry.",
     demoUrl: "/demos/valeria/index.html",
     previewImage: "/demos/previews/valeria-luxury-beauty-salon.webp",
     tags: ["Luxury Design", "Beauty & Cosmetics", "Editorial Aesthetic", "Full Template"],
@@ -299,11 +299,11 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
           </nav>
 
           <h1 className="text-3xl sm:text-6xl font-bold tracking-tight text-white max-w-4xl mx-auto">
-            Experience Live Client Websites & Demos
+            Restaurant Website Demos &amp; Live Projects
           </h1>
           <p className="mt-4 text-sm sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-          Experience live client websites and interactive demos built with high-performance web architecture, ultra-smooth interactions, and instant load speeds.
-        </p>
+            Explore interactive restaurant website demos and production web applications built by Saim Dev. Test real-time ordering workflows, GSAP scroll animations, sub-second mobile speeds, and built-in Natasha&apos;s Law allergen filtering across our live UK client showcases.
+          </p>
         </div>
 
         {/* Demos Grid */}

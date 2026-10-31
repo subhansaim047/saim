@@ -79,7 +79,7 @@ const blogs: BlogItem[] = [
   {
     id: 7,
     title: "The Commercial Kitchen Guide to Recipe Scaling: How to Scale from 10 to 500 Portions Without Taste Breakdown",
-    excerpt: "Why linear math destroys bulk catering recipes, how to handle non-linear spices and liquids, and how to generate standardized chef prep cards with our free batch scaler.",
+    excerpt: "Why linear math destroys bulk catering recipes, how to handle non-linear spices and liquids, and how to generate standardised chef prep cards with our free batch scaler.",
     date: "Oct 23, 2026",
     readTime: "8 min read",
     tag: "Batch Catering",
@@ -218,10 +218,10 @@ export const BlogsPage = () => {
                 Knowledge Library
               </span>
               <h1 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#0a0a0a]" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                All Published Guides &amp; Insights
+                Restaurant Tech &amp; Web Development Guides
               </h1>
               <p className="text-sm text-gray-500 mt-1 max-w-lg">
-                Practical, in-depth playbooks on web development, small business growth, food safety compliance, and commercial kitchen systems.
+                Practical operational guides and engineering playbooks on Next.js web development, Natasha&apos;s Law 14-allergen compliance, SFBB kitchen logs, and commercial restaurant profitability for UK business owners.
               </p>
             </div>
 

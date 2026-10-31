@@ -232,7 +232,7 @@ export default function ManchesterTakeawayWebDesignPage() {
           </h1>
 
           <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-light">
-            Fast, bespoke Next.js direct ordering websites for Greater Manchester takeaways, curry houses, and pizza bars. Zero commissions and direct WhatsApp kitchen orders from £250.
+            Saim Dev crafts custom Next.js direct ordering websites for Greater Manchester takeaways, curry houses, and pizzerias starting from £250. Our high-performance platforms eliminate 30%+ Just Eat commissions, routing customer orders directly to WhatsApp or online checkout with integrated Natasha&apos;s Law 14-allergen filtering across Manchester, Salford, and Stockport.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
@@ -423,7 +423,7 @@ export default function ManchesterTakeawayWebDesignPage() {
               href="/contact"
               className="bg-white/10 hover:bg-white/15 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full transition-all border border-white/15"
             >
-              Submit Project Inquiry
+              Submit Project Enquiry
             </Link>
           </div>
         </div>

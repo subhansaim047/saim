@@ -70,7 +70,7 @@ const detailedServices: ServiceDetail[] = [
     description:
       "High-impact 1-page conversion engines designed specifically for ad campaigns, product launches, or service lead capture.",
     benefits: [
-      "Optimized for 3x higher click-through rate",
+      "Optimised for 3x higher click-through rate",
       "Direct Instagram & CRM integration",
       "Zero distraction, hyper-focused UX",
     ],
@@ -93,7 +93,7 @@ const detailedServices: ServiceDetail[] = [
     ],
     deliverables: [
       "Figma / Wireframe Mockups",
-      "Custom Color Palette & Typography",
+      "Custom Colour Palette & Typography",
       "Interactive Components Prototype",
     ],
     timeline: "3 – 5 Days",
@@ -222,10 +222,10 @@ export const ServicesPage = () => {
             PREMIUM SERVICES
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4">
-            Conversion-Focused Web Solutions
+            Web Development Services UK
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Explore our conversion-focused web solutions engineered with modern, minimal, and high-performing web architecture tailored to turn visitors into loyal, paying clients.
+            Saim Dev delivers fixed-price Next.js web development services for UK businesses starting from £250. We build bespoke online ordering platforms, responsive corporate websites, and high-conversion landing pages featuring sub-second load times, 90+ Core Web Vitals, built-in statutory compliance, and zero recurring monthly fees.
           </p>
         </div>
 

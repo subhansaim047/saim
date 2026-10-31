@@ -43,7 +43,7 @@ const caseStudiesData: CaseStudy[] = [
     problemText:
       "Apex Dental was losing over 60% of mobile visitors due to a slow WordPress template that loaded in 4.8 seconds and lacked instant online booking options.",
     solutionText:
-      "Engineered a bespoke React + Tailwind web platform featuring click-to-book WhatsApp integration, MedicalBusiness JSON-LD schema, and local SEO maps optimization.",
+      "Engineered a bespoke React + Tailwind web platform featuring click-to-book WhatsApp integration, MedicalBusiness JSON-LD schema, and local SEO maps optimisation.",
     designText:
       "Clean, medical-grade dark luxury aesthetic with high-contrast typography, trust badges, and frictionless appointment CTA buttons.",
     beforeStats: { loadTime: "4.8s", score: 38, bounceRate: "68%" },
@@ -91,7 +91,7 @@ const caseStudiesData: CaseStudy[] = [
     metricBadge: "Fully Booked 3 Weeks Ahead",
     metricHighlight: "Fully Booked Out 3 Weeks in Advance",
     problemText:
-      "An outdated site failed to convey the salon's premium luxury pricing, resulting in low inquiry conversion and price pushback from prospective clients.",
+      "An outdated site failed to convey the salon's premium luxury pricing, resulting in low enquiry conversion and price pushback from prospective clients.",
     solutionText:
       "Designed a minimalist editorial web experience with smooth Framer Motion interactions, high-definition portfolio galleries, and frictionless appointment flows.",
     designText:
@@ -150,10 +150,10 @@ export const CaseStudiesPage = () => {
             PROVEN CLIENT RESULTS
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white mb-5">
-            Real Results. Real Websites.
+            Next.js Website Case Studies &amp; Results
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Explore real client results and real websites engineered by Saim Dev. See how we transform slow, outdated digital presence into high-converting web platforms built for sub-second speed, top Google rankings, and predictable revenue growth.
+            Explore real Next.js website case studies and verified client performance metrics from Saim Dev. We engineer sub-second web platforms for UK and European businesses that cut bounce rates, boost search visibility, and increase customer bookings.
           </p>
         </div>
 
