@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "How much does a professional small business website cost?",
-    a: "A professionally built, custom website typically starts from $500–$1,000 for small businesses. That's a one-time investment. Compare that to the revenue you lose each month without one — most businesses recover the cost within weeks through a single new customer.",
+    a: "A professionally built, custom website typically starts from £500–£1,000 for small businesses. That's a one-time investment. Compare that to the revenue you lose each month without one — most businesses recover the cost within weeks through a single new customer.",
   },
   {
     q: "How long does it take to build a small business website?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Can I build my own website using Wix or Squarespace?",
-    a: "You can, but there are real trade-offs. Page builders limit your performance, SEO, and customization. They also charge monthly fees that add up over time. A professionally built website is faster, ranked more effectively by Google, and tailored to how your specific customers behave.",
+    a: "You can, but there are real trade-offs. Page builders limit your performance, SEO, and customisation. They also charge monthly fees that add up over time. A professionally built website is faster, ranked more effectively by Google, and tailored to how your specific customers behave.",
   },
   {
     q: "What's the most important thing a small business website needs?",
@@ -144,7 +144,7 @@ export const BlogPost1Page = () => {
             <li aria-hidden="true">/</li>
             <li><Link href="/blogs" className="hover:text-white transition-colors">Blog</Link></li>
             <li aria-hidden="true">/</li>
-            <li className="text-white font-medium truncate" aria-current="page">Why UK Small Businesses Need a Custom Website in 2026</li>
+            <li className="text-white font-medium truncate" aria-current="page">Why UK Small Businesses Need a Professional Website</li>
           </ol>
         </nav>
 
@@ -153,20 +153,52 @@ export const BlogPost1Page = () => {
             Business Growth
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-6">
-            Why Every Small Business Needs a Professional Website
+            Why UK Small Businesses Need a Professional Website
           </h1>
-          <p className="text-white/55 text-base sm:text-lg leading-relaxed mb-7">
-            Most small business owners know they need a professional website, but very few understand how much customer revenue they lose without one. This article covers the latest industry data, real examples, and practical steps so you can make an informed investment decision.
-          </p>
-          <div className="flex flex-wrap items-center gap-5 text-sm text-white/40 pb-7 border-b border-white/10">
-            <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" />Aug 11, 2026</span>
-            <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" />12 min read</span>
-            <button
-              onClick={() => { if (navigator.share) { navigator.share({ title: document.title, url: window.location.href }); } else { navigator.clipboard.writeText(window.location.href); } }}
-              className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer ml-auto"
-            >
-              <Share2 className="w-4 h-4" />Share
-            </button>
+          <div className="p-4 rounded-xl border border-primary/20 bg-primary/5 text-white/90 text-sm sm:text-base leading-relaxed mb-6">
+            <strong>Direct Answer:</strong> A professional website is essential for any UK small business because 98% of consumers research local services online before buying. Without a dedicated website, your business misses out on Google local search traffic, loses referral customers who verify you online, and remains vulnerable to third-party social media algorithms.
+          </div>
+
+          <div className="flex flex-wrap items-center justify-between gap-4 py-4 px-5 rounded-xl border border-white/10 bg-white/[0.02] mb-6 text-xs text-white/70">
+            <div className="flex items-center gap-3">
+              <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-9 h-9 rounded-full border border-white/20 object-cover" width={36} height={36} />
+              <div>
+                <Link href="/about" className="font-semibold text-white hover:text-primary transition-colors">
+                  Saim Dev
+                </Link>
+                <span className="block text-white/50 text-[11px]">Lead Next.js Architect & Full-Stack Specialist</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 text-white/50">
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />Aug 11, 2026 (Updated: Oct 31, 2026)</span>
+              <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" />12 min read</span>
+            </div>
+          </div>
+
+          {/* Key Takeaways Box */}
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-6 mb-8">
+            <p className="text-xs font-bold tracking-widest uppercase text-primary mb-3 flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-primary" />
+              Key Takeaways for UK Business Owners
+            </p>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-white/80">
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span><strong>98% of UK consumers</strong> use online search to research and verify local businesses before calling or visiting.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span><strong>Permanent Search Equity:</strong> A custom domain accumulates ranking power on Google, unlike rented social media profiles subject to reach throttling.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span><strong>Sub-2-Second Speed Matters:</strong> Over 53% of mobile visits are abandoned if loading takes more than 3 seconds. Fast Next.js architecture converts visitors immediately.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span><strong>Zero Recurring Platform Fees:</strong> One-off bespoke builds eliminate ongoing builder subscriptions and 30% marketplace aggregator fees.</span>
+              </li>
+            </ul>
           </div>
         </motion.div>
 
@@ -398,7 +430,7 @@ export const BlogPost1Page = () => {
                   ["Lost revenue per week", "$400"],
                   ["Lost revenue per month", "$1,600"],
                   ["Lost revenue per year", "$19,200"],
-                  ["Cost of a professional website", "$500–$1,000 (once)"],
+                  ["Cost of a professional website", "£500–£1,000 (once)"],
                 ].map(([label, value], i) => (
                   <div key={i} className={`flex justify-between items-center py-1.5 ${i === 4 ? "border-t border-primary/20 pt-3 mt-1" : ""}`}>
                     <span className={`text-white/60 ${i === 4 ? "font-semibold text-white" : ""}`}>{label}</span>
