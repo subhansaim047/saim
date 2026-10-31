@@ -144,14 +144,14 @@ const blogs: BlogItem[] = [
   },
   {
     id: 1,
-    title: "Why Every Small Business Needs a Professional Website in 2026",
+    title: "Why Every Small Business Needs a Professional Website",
     excerpt: "97% of consumers search online before making a purchase. If your business isn't showing up professionally, you're handing customers straight to your competitors — every single day.",
     date: "Aug 11, 2026",
     readTime: "8 min read",
     tag: "Business Growth",
     category: "web",
     tagColor: "#DEDBC8",
-    url: "/blog/why-small-business-needs-website-2026",
+    url: "/blog/why-small-business-needs-website",
   },
 ];
 

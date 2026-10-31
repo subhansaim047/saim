@@ -33,6 +33,12 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Evergreen Blog Migration
+      {
+        source: '/blog/why-small-business-needs-website-2026',
+        destination: '/blog/why-small-business-needs-website',
+        permanent: true,
+      },
       // 1. Hub Canonicalization
       {
         source: '/food-safety-templates',

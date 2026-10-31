@@ -153,7 +153,7 @@ const staticPages = [
   { url: "https://www.saimdev.site/about", priority: "0.8", changefreq: "monthly" },
   { url: "https://www.saimdev.site/contact", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blogs", priority: "0.9", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/blog/why-small-business-needs-website-2026", priority: "0.85", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/blog/why-small-business-needs-website", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blog/free-website-for-local-business", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blog/50-percent-off-agency-launch", priority: "0.85", changefreq: "monthly" },
   {

@@ -8,7 +8,7 @@ import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, XCircle, ChevronDown, 
 
 const faqs = [
   {
-    q: "Do small businesses still need a website in 2026?",
+    q: "Do small businesses still need a website?",
     a: "Yes — more than ever. According to BrightLocal's 2024 Local Consumer Review Survey, 98% of consumers used the internet to find information about local businesses in the past year. A website is no longer optional; it's the minimum standard customers expect before they trust a business.",
   },
   {
@@ -152,10 +152,10 @@ export const BlogPost1Page = () => {
             Business Growth
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-6">
-            Why Every Small Business Needs a Professional Website in 2026
+            Why Every Small Business Needs a Professional Website
           </h1>
           <p className="text-white/55 text-base sm:text-lg leading-relaxed mb-7">
-            Most small business owners know they need a professional website in 2026, but very few understand how much customer revenue they lose without one. This article covers the latest industry data, real examples, and practical steps so you can make an informed investment decision.
+            Most small business owners know they need a professional website, but very few understand how much customer revenue they lose without one. This article covers the latest industry data, real examples, and practical steps so you can make an informed investment decision.
           </p>
           <div className="flex flex-wrap items-center gap-5 text-sm text-white/40 pb-7 border-b border-white/10">
             <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" />Aug 11, 2026</span>
@@ -464,7 +464,7 @@ export const BlogPost1Page = () => {
           <section className="mb-14 rounded-2xl border border-white/10 bg-white/[0.03] p-7">
             <h2 className="text-xl font-bold text-white mb-4">The Bottom Line</h2>
             <p className="text-white/65 text-base mb-4">
-              In 2026, a professional website isn't optional for a small business — it's the baseline expectation every customer brings to their first interaction with you. It's the difference between being found and being invisible. Between being trusted and being questioned. Between growing and staying stuck.
+              A professional website isn't optional for a small business — it's the baseline expectation every customer brings to their first interaction with you. It's the difference between being found and being invisible. Between being trusted and being questioned. Between growing and staying stuck.
             </p>
             <p className="text-white/65 text-base">
               The data is clear. The examples are real. The maths works in your favour. The businesses that invest in a quality website this year will look back in three years and recognise it as one of the most straightforward decisions they made. The ones that don't will wonder why they keep losing customers to competitors who offer no better service — just a better first impression.
