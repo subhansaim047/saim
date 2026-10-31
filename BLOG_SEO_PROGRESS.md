@@ -28,7 +28,7 @@ Within Silo 5, posts are grouped into two thematic clusters:
 | 9 | `/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide` | `level 2 food hygiene practice test questions and answers` | `food safety level 2 mock exam uk`, `temperature danger zone food hygiene questions`, `cross contamination prevention food test`, `who needs level 2 food hygiene certificate` | Educational & Training | done |
 | 10 | `/blog/uk-food-hygiene-rating-scheme-5-star-checklist` | `how to get 5 star food hygiene rating uk` | `fhrs food hygiene inspection scoring criteria`, `what do eho look for during inspection`, `hygiene food safety management confidence scoring`, `how to appeal food hygiene rating` | Informational & Strategic | done |
 | 11 | `/blog/natashas-law-ppds-food-labelling-guide` | `natashas law ppds food labelling requirements guide` | `prepacked for direct sale food examples uk`, `how to label ppds foods legally`, `minimum font size for food allergen labels`, `natashas law fines and penalties uk` | Informational & Regulatory | done |
-| 12 | `/blog/commercial-kitchen-food-cooling-temperature-guide` | `commercial kitchen food cooling temperature rules uk` | `fsa 90 minute cooling rule catering`, `safe hot food cooling methods restaurant`, `cooling temperature log sheet template`, `danger zone cooling food safety regulations` | Informational & Technical | todo |
+| 12 | `/blog/commercial-kitchen-food-cooling-temperature-guide` | `commercial kitchen food cooling temperature rules uk` | `fsa 90 minute cooling rule catering`, `safe hot food cooling methods restaurant`, `cooling temperature log sheet template`, `danger zone cooling food safety regulations` | Informational & Technical | done |
 
 ---
 
