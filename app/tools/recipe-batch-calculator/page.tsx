@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2,
 import { RecipeCalculatorTool } from "@/components/tools/RecipeCalculatorTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ToolsSiloNav } from "@/components/tools/ToolsSiloNav";
 
 export const metadata: Metadata = {
   title: "Recipe Scaler & Batch Calculator UK | Free Tool | Saim Dev",
@@ -477,6 +478,9 @@ export default function RecipeBatchCalculatorPage() {
               </Link>
             </div>
           </section>
+
+          {/* Silo Cross-Navigation */}
+          <ToolsSiloNav currentSlug="recipe-batch-calculator" />
 
           {/* Legal Disclaimer */}
           <FoodSafetyDisclaimer />

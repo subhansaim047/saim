@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BlogSiloNav } from "./BlogSiloNav";
 import { 
   ArrowLeft, ArrowRight, Calculator, CheckCircle2, TrendingUp, 
   Coins, Scale, ChevronDown, ChevronUp, AlertCircle, Clock, MessageSquare 
@@ -347,6 +348,8 @@ export const BlogPostFoodCost: React.FC = () => {
             })}
           </div>
         </section>
+
+        <BlogSiloNav currentSlug="mastering-food-cost-percentage-commercial-kitchen-calculator" category="compliance" />
 
         {/* ── Bottom Navigation ── */}
         <div className="text-center mb-8">

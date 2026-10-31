@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { BlogSiloNav } from "./BlogSiloNav";
 import { 
   ArrowLeft, ArrowRight, ShieldCheck, CheckCircle2, AlertTriangle, 
   Printer, FileText, ChevronDown, ChevronUp, Scale, Clock, ThermometerSnowflake,

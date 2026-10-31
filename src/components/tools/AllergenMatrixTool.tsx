@@ -936,7 +936,7 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
         </div>
 
         <Link
-          href="/takeaway-web-design"
+          href="/services/takeaway-web-design"
           className="inline-flex items-center gap-1.5 font-bold text-xs bg-amber-400 hover:bg-amber-300 text-black px-4 py-2.5 rounded-xl transition-all shadow-xs shrink-0 self-start sm:self-auto"
         >
           <span>See Live Demo</span>

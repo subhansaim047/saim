@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BlogSiloNav } from "@/components/blog/BlogSiloNav";
 import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 
 const faqs = [
@@ -331,6 +332,8 @@ export const BlogPost2Page = () => {
             <ArrowRight className="w-4 h-4" />
           </a>
         </motion.div>
+
+        <BlogSiloNav currentSlug="free-website-for-local-business" category="growth" />
 
         {/* ── Related resources ── */}
         <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 mb-8">

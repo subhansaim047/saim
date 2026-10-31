@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BlogSiloNav } from "@/components/blog/BlogSiloNav";
 
 import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, XCircle, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -500,6 +501,8 @@ export const BlogPost1Page = () => {
             </button>
           </div>
         </motion.div>
+
+        <BlogSiloNav currentSlug="why-small-business-needs-website" category="growth" />
 
         {/* ── Related resources ── */}
         <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 mb-10">

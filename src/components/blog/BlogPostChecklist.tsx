@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BlogSiloNav } from "./BlogSiloNav";
 import { 
   ArrowLeft, ArrowRight, CheckSquare, ShieldCheck, AlertCircle, 
   Thermometer, CheckCircle2, ChevronDown, ChevronUp, Clock, MessageSquare 
@@ -327,6 +328,8 @@ export const BlogPostChecklist: React.FC = () => {
             })}
           </div>
         </section>
+
+        <BlogSiloNav currentSlug="sfbb-daily-kitchen-opening-closing-checklist-guide" category="compliance" />
 
         {/* ── Bottom Navigation ── */}
         <div className="text-center mb-8">

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BlogSiloNav } from "./BlogSiloNav";
 import { 
   ArrowLeft, ArrowRight, UtensilsCrossed, Scale, AlertTriangle, 
   CheckCircle2, Printer, ChevronDown, ChevronUp, Clock, MessageSquare 
@@ -283,6 +284,8 @@ export const BlogPostRecipeScaler: React.FC = () => {
             })}
           </div>
         </section>
+
+        <BlogSiloNav currentSlug="how-to-scale-recipes-commercial-catering-batch-calculator" category="compliance" />
 
         {/* ── Bottom Navigation ── */}
         <div className="text-center mb-8">

@@ -401,6 +401,59 @@ export default function BirminghamTakeawayWebDesignPage() {
           </div>
         </div>
 
+        {/* REGIONAL SIBLING & NATIONAL SILO HUBS */}
+        <div className="rounded-3xl p-8 bg-white/[0.03] border border-white/10 space-y-6">
+          <div className="flex items-center gap-3 border-b border-white/10 pb-4">
+            <MapPin className="w-5 h-5 text-amber-400" />
+            <div>
+              <h2 className="text-xl sm:text-2xl font-bold text-white">
+                UK Regional &amp; National Takeaway Web Design Network
+              </h2>
+              <p className="text-xs text-white/60">
+                Explore our national takeaway web development architecture or discover sister regional ordering hubs.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link
+              href="/services/takeaway-web-design"
+              className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.07] transition-all group"
+            >
+              <span className="text-[11px] font-mono uppercase text-amber-400 block mb-1">National Pillar</span>
+              <span className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors block mb-1">
+                UK Takeaway Web Design (Main Hub)
+              </span>
+              <p className="text-xs text-white/60 leading-relaxed font-light">
+                National £250 fixed-price takeaway ordering package with interactive 14-allergen menus and zero commission fees.
+              </p>
+            </Link>
+            <Link
+              href="/services/takeaway-web-design-london"
+              className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.07] transition-all group"
+            >
+              <span className="text-[11px] font-mono uppercase text-amber-400 block mb-1">Regional Sibling</span>
+              <span className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors block mb-1">
+                London Takeaway Web Design
+              </span>
+              <p className="text-xs text-white/60 leading-relaxed font-light">
+                Zero-commission online ordering and Natasha&apos;s Law digital menus covering all 32 London boroughs.
+              </p>
+            </Link>
+            <Link
+              href="/services/takeaway-web-design-manchester"
+              className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.07] transition-all group"
+            >
+              <span className="text-[11px] font-mono uppercase text-amber-400 block mb-1">Regional Sibling</span>
+              <span className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors block mb-1">
+                Manchester Takeaway Web Design
+              </span>
+              <p className="text-xs text-white/60 leading-relaxed font-light">
+                High-speed digital menus and direct ordering engineered for Curry Mile, Rusholme, and Greater Manchester takeaways.
+              </p>
+            </Link>
+          </div>
+        </div>
+
         {/* BOTTOM CTA */}
         <div className="text-center p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-neutral-900 to-black border border-white/10 space-y-6">
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white">

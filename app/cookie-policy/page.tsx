@@ -45,8 +45,28 @@ export const metadata: Metadata = {
 };
 
 export default function CookiePolicyPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.saimdev.site/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Cookie Policy",
+        "item": "https://www.saimdev.site/cookie-policy"
+      }
+    ]
+  };
   return (
-    <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-sm">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
@@ -162,5 +182,6 @@ export default function CookiePolicyPage() {
 
       <SiteFooter theme="light" />
     </div>
+    </>
   );
 }

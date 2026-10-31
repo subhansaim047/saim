@@ -5,6 +5,7 @@ import { ShieldAlert, ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, 
 import { AllergenMatrixTool } from "@/components/tools/AllergenMatrixTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ToolsSiloNav } from "@/components/tools/ToolsSiloNav";
 
 export const metadata: Metadata = {
   title: "14 Allergen Matrix Generator UK | Allergy Chart | Saim Dev",
@@ -506,6 +507,9 @@ export default function AllergenMatrixGeneratorPage() {
               </Link>
             </div>
           </section>
+
+          {/* Silo Cross-Navigation */}
+          <ToolsSiloNav currentSlug="allergen-matrix-generator" />
 
           {/* Legal Disclaimer */}
           <FoodSafetyDisclaimer />

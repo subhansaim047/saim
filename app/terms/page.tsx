@@ -3,7 +3,7 @@ import { TermsOfService } from '@/components/TermsOfService';
 
 export const metadata: Metadata = {
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
   title: "Terms of Service | Saim Dev",
@@ -43,5 +43,32 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <TermsOfService />;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.saimdev.site/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms of Service",
+        "item": "https://www.saimdev.site/terms"
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <TermsOfService />
+    </>
+  );
 }

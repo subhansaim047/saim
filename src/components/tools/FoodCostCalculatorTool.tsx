@@ -581,7 +581,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
           </div>
 
           <Link
-            href="/takeaway-web-design"
+            href="/services/takeaway-web-design"
             className="inline-flex items-center gap-1.5 font-bold text-xs bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-xl transition-all shadow-xs shrink-0 self-start sm:self-auto"
           >
             <span>See 0% Commission Takeaway Sites</span>

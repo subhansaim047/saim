@@ -29,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/contact`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE_URL}/blogs`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/food-safety-templates`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/terms`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/privacy`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/cookie-policy`,    lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
@@ -42,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ─── Blog posts ────────────────────────────────────────────────────────────
   const blogSlugs = [
-    'why-small-business-needs-website-2026',
+    'why-small-business-needs-website',
     'free-website-for-local-business',
     '50-percent-off-agency-launch',
     'how-to-create-compliant-14-allergen-matrix-uk-restaurants',

@@ -5,6 +5,7 @@ import { Tag, ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCir
 import { PpdsLabelGeneratorTool } from "@/components/tools/PpdsLabelGeneratorTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ToolsSiloNav } from "@/components/tools/ToolsSiloNav";
 
 export const metadata: Metadata = {
   title: "PPDS Label Generator UK | Natasha's Law Labels | Saim Dev",
@@ -491,6 +492,9 @@ export default function PpdsLabelGeneratorPage() {
             </div>
           </div>
         </div>
+
+        {/* Silo Cross-Navigation */}
+        <ToolsSiloNav currentSlug="ppds-label-generator" />
       </main>
 
       <SiteFooter theme="light" className="mt-12" />

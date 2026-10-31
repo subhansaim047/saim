@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BlogSiloNav } from "./BlogSiloNav";
 import { 
   ArrowLeft, ArrowRight, Award, CheckCircle2, AlertTriangle, 
   HelpCircle, ChevronDown, ChevronUp, Clock, MessageSquare 
@@ -294,6 +295,8 @@ export const BlogPostHygieneQuiz: React.FC = () => {
             })}
           </div>
         </section>
+
+        <BlogSiloNav currentSlug="level-2-food-hygiene-practice-test-kitchen-staff-guide" category="compliance" />
 
         {/* ── BOTTOM CTA ── */}
         <div className="p-8 rounded-3xl bg-[#0a0a0d] border border-white/10 text-center space-y-4">

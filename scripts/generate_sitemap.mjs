@@ -140,7 +140,6 @@ const staticPages = [
   { url: "https://www.saimdev.site/services/takeaway-web-design-manchester", priority: "0.9", changefreq: "monthly" },
   { url: "https://www.saimdev.site/services/takeaway-web-design-birmingham", priority: "0.9", changefreq: "monthly" },
   { url: "https://www.saimdev.site/nextjs-developer-uk", priority: "0.95", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/food-safety-templates", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/technologies", priority: "0.8", changefreq: "monthly" },
   { url: "https://www.saimdev.site/case-studies", priority: "0.85", changefreq: "monthly" },

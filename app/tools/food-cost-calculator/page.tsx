@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2,
 import { FoodCostCalculatorTool } from "@/components/tools/FoodCostCalculatorTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ToolsSiloNav } from "@/components/tools/ToolsSiloNav";
 
 export const metadata: Metadata = {
   title: "Food Cost Calculator UK | Kitchen GP% Tool | Saim Dev",
@@ -545,6 +546,9 @@ export default function FoodCostCalculatorPage() {
               </Link>
             </div>
           </section>
+
+          {/* Silo Cross-Navigation */}
+          <ToolsSiloNav currentSlug="food-cost-calculator" />
 
           {/* Legal Disclaimer */}
           <FoodSafetyDisclaimer />

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BlogSiloNav } from "@/components/blog/BlogSiloNav";
 import { ArrowLeft, ArrowRight, Share2, ChevronDown, ChevronUp, CheckCircle, Smartphone, Zap, Search, Layout } from "lucide-react";
 
 const faqs = [
@@ -247,6 +248,8 @@ export const BlogPost3Page = () => {
           </section>
 
         </motion.article>
+
+        <BlogSiloNav currentSlug="50-percent-off-agency-launch" category="growth" />
 
         {/* ── Related resources ── */}
         <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 mb-8">

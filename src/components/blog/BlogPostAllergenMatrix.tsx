@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BlogSiloNav } from "./BlogSiloNav";
 import { 
   ArrowLeft, ArrowRight, ShieldAlert, CheckCircle2, AlertTriangle, 
   Printer, FileText, ChevronDown, ChevronUp, Scale, Clock, MessageSquare 
@@ -340,6 +341,8 @@ export const BlogPostAllergenMatrix: React.FC = () => {
             })}
           </div>
         </section>
+
+        <BlogSiloNav currentSlug="how-to-create-compliant-14-allergen-matrix-uk-restaurants" category="compliance" />
 
         {/* ── Bottom Navigation ── */}
         <div className="text-center mb-8">

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BlogSiloNav } from "./BlogSiloNav";
 import { 
   ArrowLeft, ArrowRight, ShieldCheck, CheckCircle2, AlertTriangle, 
   FileSpreadsheet, ClipboardList, ChevronDown, ChevronUp, Clock, MessageSquare 
@@ -343,6 +344,8 @@ export const BlogPostHaccpPlan: React.FC = () => {
             })}
           </div>
         </section>
+
+        <BlogSiloNav currentSlug="how-to-write-haccp-plan-uk-food-business-step-by-step" category="compliance" />
 
         {/* ── Bottom Navigation ── */}
         <div className="text-center mb-8">
