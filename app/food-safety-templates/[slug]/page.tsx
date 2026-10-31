@@ -44,9 +44,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     reason: "Default plan",
   };
 
-  const needsReplacement = isRouteNeedsReplacement(`/food-safety-templates/${slug}`);
-  const isIndexable = !isOffAudience(slug) && !needsReplacement && (plan.bucket === "KEEP" || plan.bucket === "IMPROVE");
-  const canonicalSlug = plan.bucket === "MERGE" ? plan.target_canonical_slug : slug;
+  const isIndexable = true;
+  const canonicalSlug = slug;
   const canonicalUrl = `https://www.saimdev.site/food-safety-templates/${canonicalSlug}`;
 
   // Check if hand-crafted core metadata exists

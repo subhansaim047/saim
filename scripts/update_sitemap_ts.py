@@ -1,0 +1,84 @@
+"""
+Update app/sitemap.ts to include all static core, legal, tools, demos, and all 160 templates.
+"""
+sitemap_code = """import { MetadataRoute } from 'next';
+import { FOOD_SAFETY_TEMPLATES } from '@/data/saim_templates';
+import pagePlanData from '@/data/page_plan.json';
+
+const BASE_URL = 'https://www.saimdev.site';
+const NOW = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+
+type PagePlan = Record<string, { bucket: 'KEEP' | 'IMPROVE' | 'MERGE' | 'NOINDEX'; target_canonical_slug: string }>;
+const pagePlan: PagePlan = pagePlanData as PagePlan;
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  // ─── Static core pages, tools, services, legal, and showcase demos ─────────
+  const corePages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}`,                  lastModified: NOW, changeFrequency: 'weekly',  priority: 1.0 },
+    { url: `${BASE_URL}/tools`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.95 },
+    { url: `${BASE_URL}/tools/ppds-label-generator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/allergen-matrix-generator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/food-cost-calculator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/recipe-batch-calculator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/services/takeaway-web-design`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/services/takeaway-web-design-london`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/takeaway-web-design-manchester`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/takeaway-web-design-birmingham`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/nextjs-developer-uk`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/services`,         lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${BASE_URL}/technologies`,     lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/case-studies`,     lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE_URL}/demos`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.85 },
+    { url: `${BASE_URL}/about`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/contact`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE_URL}/blogs`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${BASE_URL}/food-safety-templates`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/terms`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/privacy`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/cookie-policy`,    lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/disclaimer`,       lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/burger-garage`,    lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/frenchyse`,        lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/anzaar`,           lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/hotbite`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+  ];
+
+  // ─── Blog posts ────────────────────────────────────────────────────────────
+  const blogSlugs = [
+    'why-small-business-needs-website-2026',
+    'free-website-for-local-business',
+    '50-percent-off-agency-launch',
+    'how-to-create-compliant-14-allergen-matrix-uk-restaurants',
+    'mastering-food-cost-percentage-commercial-kitchen-calculator',
+    'how-to-scale-recipes-commercial-catering-batch-calculator',
+    'sfbb-daily-kitchen-opening-closing-checklist-guide',
+    'how-to-write-haccp-plan-uk-food-business-step-by-step',
+    'level-2-food-hygiene-practice-test-kitchen-staff-guide',
+    'uk-food-hygiene-rating-scheme-5-star-checklist',
+    'natashas-law-ppds-food-labelling-guide',
+    'commercial-kitchen-food-cooling-temperature-guide',
+  ];
+  const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: NOW,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+
+  // ─── All 160 Food safety template detail pages ─────────────────────────────
+  const templatePages: MetadataRoute.Sitemap = FOOD_SAFETY_TEMPLATES
+    .map((t) => ({
+      url: `${BASE_URL}/food-safety-templates/${t.slug}`,
+      lastModified: NOW,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }));
+
+  return [...corePages, ...blogPages, ...templatePages];
+}
+"""
+
+with open(r"C:\Users\subhan\.gemini\antigravity\scratch\saim\app\sitemap.ts", "w", encoding="utf-8") as f:
+    f.write(sitemap_code)
+
+print("Updated app/sitemap.ts successfully!")

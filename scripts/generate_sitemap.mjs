@@ -198,6 +198,14 @@ const staticPages = [
       }
     ]
   },
+  { url: "https://www.saimdev.site/terms", priority: "0.6", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/privacy", priority: "0.6", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/cookie-policy", priority: "0.6", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/disclaimer", priority: "0.6", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/burger-garage", priority: "0.8", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/frenchyse", priority: "0.8", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/anzaar", priority: "0.8", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/hotbite", priority: "0.8", changefreq: "monthly" },
 ];
 
 // Add only KEEP and IMPROVE pages

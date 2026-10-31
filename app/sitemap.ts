@@ -9,11 +9,14 @@ type PagePlan = Record<string, { bucket: 'KEEP' | 'IMPROVE' | 'MERGE' | 'NOINDEX
 const pagePlan: PagePlan = pagePlanData as PagePlan;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // ─── Static core pages ─────────────────────────────────────────────────────
+  // ─── Static core pages, tools, services, legal, and showcase demos ─────────
   const corePages: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}`,                  lastModified: NOW, changeFrequency: 'weekly',  priority: 1.0 },
-    { url: `${BASE_URL}/tools`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/tools/ppds-label-generator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/tools`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.95 },
+    { url: `${BASE_URL}/tools/ppds-label-generator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/allergen-matrix-generator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/food-cost-calculator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/recipe-batch-calculator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/services/takeaway-web-design`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/services/takeaway-web-design-london`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/services/takeaway-web-design-manchester`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.9 },
@@ -22,13 +25,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services`,         lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE_URL}/technologies`,     lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/case-studies`,     lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/demos`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${BASE_URL}/demos`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.85 },
     { url: `${BASE_URL}/about`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/contact`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE_URL}/blogs`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${BASE_URL}/food-safety-templates`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/terms`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/privacy`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/cookie-policy`,    lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/disclaimer`,       lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/burger-garage`,    lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/frenchyse`,        lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/anzaar`,           lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/hotbite`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
   ];
 
-  // ─── Blog posts (including new high-intent guides) ─────────────────────────
+  // ─── Blog posts ────────────────────────────────────────────────────────────
   const blogSlugs = [
     'why-small-business-needs-website-2026',
     'free-website-for-local-business',
@@ -50,17 +62,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // ─── Food safety template detail pages (only KEEP & IMPROVE) ───────────────
+  // ─── All 160 Food safety template detail pages ─────────────────────────────
   const templatePages: MetadataRoute.Sitemap = FOOD_SAFETY_TEMPLATES
-    .filter((t) => {
-      const plan = pagePlan[t.slug];
-      return plan && (plan.bucket === 'KEEP' || plan.bucket === 'IMPROVE');
-    })
     .map((t) => ({
       url: `${BASE_URL}/food-safety-templates/${t.slug}`,
       lastModified: NOW,
       changeFrequency: 'weekly' as const,
-      priority: t.slug === 'food-allergen-chart' || t.slug === 'allergy-matrix' ? 0.9 : 0.8,
+      priority: 0.8,
     }));
 
   return [...corePages, ...blogPages, ...templatePages];

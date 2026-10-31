@@ -256,5 +256,1335 @@
       "Verify the reading reaches 75°C for 30 seconds (or equivalent time/temperature, 82°C in Scotland).",
       "Record batch item name, time, core temperature, and cook initials on the daily kitchen record sheet."
     ]
+  },
+  "consumer-advisory": {
+    "title": "Free Consumer Advisory Template | Saim Dev",
+    "desc": "Download our free consumer advisory template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Consumer Advisory for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-allergy-warning": {
+    "title": "Free Food Allergy Warning Template | Saim Dev",
+    "desc": "Download our free food allergy warning template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Food Allergy Warning for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "brc-audit": {
+    "title": "Free BRC Audit Checklist Template | Saim Dev",
+    "desc": "Download our free brc audit checklist template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the BRC Audit Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "kosher-certification": {
+    "title": "Free Kosher Template | Saim Dev",
+    "desc": "Download our free kosher template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Kosher for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "turkey-pasteurization-chart": {
+    "title": "Free Turkey Pasteurization Chart Template | Saim Dev",
+    "desc": "Free UK turkey pasteurization chart template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Turkey Pasteurization Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "waste-management-plan": {
+    "title": "Free Waste Management Plan Template | Saim Dev",
+    "desc": "Download our free waste management plan template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Waste Management Plan for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "waste-management-schedule": {
+    "title": "Free Waste Management Schedule Template | Saim Dev",
+    "desc": "Access a free waste management schedule template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "howTo": [
+      "Download and print the Waste Management Schedule for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "haccp-flow-chart-template": {
+    "title": "Free Flow Chart Template | Saim Dev",
+    "desc": "Download our free flow chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Flow Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-flow-chart": {
+    "title": "Free Food Flow Chart Template | Saim Dev",
+    "desc": "Download our free food flow chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Food Flow Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-safety-plan": {
+    "title": "Free Food Safety Plan Template | Saim Dev",
+    "desc": "Download our free food safety plan template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Food Safety Plan for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "product-specification-sheet": {
+    "title": "Free Product Specification Sheet Template | Saim Dev",
+    "desc": "Free UK product specification sheet template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Product Specification Sheet for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "product-specification-template": {
+    "title": "Free Product Specification Template | Saim Dev",
+    "desc": "Free product specification template template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the Product Specification Template for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "cleaning-checklist-template": {
+    "title": "Free Daily Kitchen Cleaning Schedule & Checklist | Saim Dev",
+    "desc": "Free daily kitchen cleaning schedule & checklist template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the Daily Kitchen Cleaning Schedule & Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "cleaning-restaurant": {
+    "title": "Free Full Restaurant Deep Cleaning Plan Template | Saim Dev",
+    "desc": "Free full restaurant deep cleaning plan template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Full Restaurant Deep Cleaning Plan for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "pest-control-inspection-checklist": {
+    "title": "Free Daily Pest Inspection & Monitoring Log | Saim Dev",
+    "desc": "Free daily pest inspection & monitoring log template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Daily Pest Inspection & Monitoring Log for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "pest-management-plan": {
+    "title": "Free Integrated Pest Management Plan (IPM) | Saim Dev",
+    "desc": "Free integrated pest management plan (ipm) template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Integrated Pest Management Plan (IPM) for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "pest-control-template": {
+    "title": "Free Kitchen Pest Prevention Action Plan Template | Saim Dev",
+    "desc": "Free kitchen pest prevention action plan template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Kitchen Pest Prevention Action Plan for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "bar-opening-closing-checklist": {
+    "title": "Free Bar Daily Opening & Closing Checklist | Saim Dev",
+    "desc": "Free bar daily opening & closing checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Bar Daily Opening & Closing Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "bar-opening-checklist": {
+    "title": "Free Interactive Bar Operations Checklist | Saim Dev",
+    "desc": "Free interactive bar operations checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Interactive Bar Operations Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-opening-checklist": {
+    "title": "Free Morning Restaurant Opening Checklist | Saim Dev",
+    "desc": "Free morning restaurant opening checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Morning Restaurant Opening Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-checklist": {
+    "title": "Free Interactive Front-of-House Restaurant Tool | Saim Dev",
+    "desc": "Free interactive front-of-house restaurant tool template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Interactive Front-of-House Restaurant Tool for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "printable-retail-store-daily-checklist": {
+    "title": "Free Food Retail Store Daily Checklist Template | Saim Dev",
+    "desc": "Free food retail store daily checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Food Retail Store Daily Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "retail-store-daily-checklist": {
+    "title": "Free Interactive Retail Store Daily Checklist | Saim Dev",
+    "desc": "Free interactive retail store daily checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Interactive Retail Store Daily Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "kitchen-opening-and-closing-checklist": {
+    "title": "Free Interactive Kitchen Opening & Closing Tool | Saim Dev",
+    "desc": "Free interactive kitchen opening & closing tool template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Interactive Kitchen Opening & Closing Tool for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "health-inspection-checklist": {
+    "title": "Free Health Inspection Checklist Template | Saim Dev",
+    "desc": "Free UK health inspection checklist template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Health Inspection Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-health-inspection-checklist": {
+    "title": "Free Restaurant Health Inspection Checklist | Saim Dev",
+    "desc": "Free restaurant health inspection checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Restaurant Health Inspection Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-equipment-list": {
+    "title": "Free Restaurant Equipment List Template | Saim Dev",
+    "desc": "Access a free restaurant equipment list template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "howTo": [
+      "Download and print the Restaurant Equipment List for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "kitchen-utensils-list": {
+    "title": "Free Kitchen Utensils List Template | Saim Dev",
+    "desc": "Download our free kitchen utensils list template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Kitchen Utensils List for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "fridge-layout-poster": {
+    "title": "Free Fridge Layout Food Safety Poster Template | Saim Dev",
+    "desc": "Free fridge layout food safety poster template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Fridge Layout Food Safety Poster for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "meat-cooking-chart": {
+    "title": "Free Meat Cooking Chart Template | Saim Dev",
+    "desc": "Download our free meat cooking chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Meat Cooking Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "steak-cooking-chart": {
+    "title": "Free Steak Doneness Chart Template | Saim Dev",
+    "desc": "Download our free steak doneness chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Steak Doneness Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "ham-cooking-temperature-chart": {
+    "title": "Free Ham Cooking Temperature Chart Template | Saim Dev",
+    "desc": "Free ham cooking temperature chart template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the Ham Cooking Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "when-should-you-wash-your-hands": {
+    "title": "Free When Should You Wash Hands Poster Template | Saim Dev",
+    "desc": "Free when should you wash hands poster template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the When Should You Wash Hands Poster for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "venison-cooking-temperature-chart": {
+    "title": "Free Venison Cooking Temperature Chart Template | Saim Dev",
+    "desc": "Free venison cooking temperature chart template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Venison Cooking Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-temperatures-poster": {
+    "title": "Free Food Safety Temperatures Poster Template | Saim Dev",
+    "desc": "Free food safety temperatures poster template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the Food Safety Temperatures Poster for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "chicken-temperature-chart": {
+    "title": "Free Chicken Cooking Temperature Chart Template | Saim Dev",
+    "desc": "Free chicken cooking temperature chart template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Chicken Cooking Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "opening-a-restaurant-checklist": {
+    "title": "Free Opening A Restaurant Template | Saim Dev",
+    "desc": "Download our free opening a restaurant template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Opening A Restaurant for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "starting-a-food-business-checklist": {
+    "title": "Free Starting A Food Business Checklist Template | Saim Dev",
+    "desc": "Free starting a food business checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Starting A Food Business Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "duck-cooking-temperature-chart": {
+    "title": "Free Duck Cooking Temperature Chart Template | Saim Dev",
+    "desc": "Free duck cooking temperature chart template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the Duck Cooking Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "beef-temperature-chart": {
+    "title": "Free Beef Temperature Chart Template | Saim Dev",
+    "desc": "Download our free beef temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Beef Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "turkey-cooking-chart": {
+    "title": "Free Turkey Cooking Chart Template | Saim Dev",
+    "desc": "Download our free turkey cooking chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Turkey Cooking Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "lamb-temperature-chart": {
+    "title": "Free Lamb Temperature Chart Template | Saim Dev",
+    "desc": "Download our free lamb temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Lamb Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "fish-temperature-chart": {
+    "title": "Free Fish Temperature Chart Template | Saim Dev",
+    "desc": "Download our free fish temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Fish Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "thermometer-calibration-log": {
+    "title": "Free Thermometer Calibration Template | Saim Dev",
+    "desc": "Download our free thermometer calibration template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Thermometer Calibration for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "how-do-you-calibrate-a-thermometer": {
+    "title": "Free How Do You Calibrate A Thermometer Poster | Saim Dev",
+    "desc": "Free how do you calibrate a thermometer poster template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the How Do You Calibrate A Thermometer Poster for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "haccp-audit-checklist-template": {
+    "title": "Free HACCP Audit Checklist Template | Saim Dev",
+    "desc": "Free haccp audit checklist template template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the HACCP Audit Checklist Template for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "haccp-audit": {
+    "title": "Free HACCP Audit Checklist Template 1 | Saim Dev",
+    "desc": "Download our free haccp audit checklist template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the HACCP Audit Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "danger-zone-for-food": {
+    "title": "Free Temperature Danger Zone Chart Template | Saim Dev",
+    "desc": "Free temperature danger zone chart template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the Temperature Danger Zone Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-safety-and-sanitation": {
+    "title": "Free Food Safety And Sanitation Poster Template | Saim Dev",
+    "desc": "Free food safety and sanitation poster template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Food Safety And Sanitation Poster for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "big-6-foodborne-illnesses": {
+    "title": "Free Big 6 Foodborne Illnesses Template | Saim Dev",
+    "desc": "Access a free big 6 foodborne illnesses template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "howTo": [
+      "Download and print the Big 6 Foodborne Illnesses for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "fridge-temperature-chart": {
+    "title": "Free Fridge Temperature Chart Template | Saim Dev",
+    "desc": "Download our free fridge temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Fridge Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-temperature-chart": {
+    "title": "Free Food Temperature Template | Saim Dev",
+    "desc": "Download our free food temperature template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Food Temperature for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "haccp-risk-assessment": {
+    "title": "Free Define Critical Control Point With HACCP | Saim Dev",
+    "desc": "Free define critical control point with haccp matrix template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the Define Critical Control Point With HACCP Matrix for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "proper-food-storage-chart": {
+    "title": "Free Proper Food Storage Chart Template | Saim Dev",
+    "desc": "Access a free proper food storage chart template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "howTo": [
+      "Download and print the Proper Food Storage Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "sanitation-standard-operating-procedures": {
+    "title": "Free SSOP Template | Saim Dev",
+    "desc": "Download our free ssop template template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the SSOP Template for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "ssop": {
+    "title": "Free SSOP Template 1 | Saim Dev",
+    "desc": "Download our free ssop template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the SSOP for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "what-are-the-critical-control-points-for-food-safety": {
+    "title": "Free Define Critical Control Point With Decision | Saim Dev",
+    "desc": "Free define critical control point with decision tree template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the Define Critical Control Point With Decision Tree for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "burger-temp-chart": {
+    "title": "Free Burger Temperature Chart Template | Saim Dev",
+    "desc": "Download our free burger temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Burger Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "hot-holding-temperature": {
+    "title": "Free Hot Holding Temperature Chart Template | Saim Dev",
+    "desc": "Free hot holding temperature chart template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the Hot Holding Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "what-is-the-minimum-hot-holding-temperature-for-fried-chicken": {
+    "title": "Free Hot Holding Temperature For Fried Chicken | Saim Dev",
+    "desc": "Free hot holding temperature for fried chicken template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Hot Holding Temperature For Fried Chicken for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "what-is-the-minimum-hot-holding-temperature-requirement-for-pizza": {
+    "title": "Free Pizza Hot Holding Template | Saim Dev",
+    "desc": "Download our free pizza hot holding template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Pizza Hot Holding for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "what-is-the-minimum-hot-holding-temperature-for-hot-dog": {
+    "title": "Free Hot Dog Template | Saim Dev",
+    "desc": "Download our free hot dog template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Hot Dog for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "fridge-organization-chart": {
+    "title": "Free Fridge Organization Template | Saim Dev",
+    "desc": "Download our free fridge organization template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Fridge Organization for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "cleaning-a-meat-slicer-poster": {
+    "title": "Free Cleaning A Meat Slicer Template | Saim Dev",
+    "desc": "Download our free cleaning a meat slicer template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Cleaning A Meat Slicer for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "allergen-poster": {
+    "title": "Free Food Allergen Poster Template | Saim Dev",
+    "desc": "Download our free food allergen poster template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Food Allergen Poster for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "how-to-use-a-meat-thermometer": {
+    "title": "Free How To Use A Meat Thermometer Template | Saim Dev",
+    "desc": "Free how to use a meat thermometer template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the How To Use A Meat Thermometer for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "how-to-use-a-food-thermometer": {
+    "title": "Free How To Use A Food Thermometer Template | Saim Dev",
+    "desc": "Free how to use a food thermometer template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the How To Use A Food Thermometer for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-sanitation-rules": {
+    "title": "Free Food Sanitation Rules Poster Template | Saim Dev",
+    "desc": "Free UK food sanitation rules poster template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Food Sanitation Rules Poster for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "cold-food-storage-rules": {
+    "title": "Free Cold Food Storage Rules Template | Saim Dev",
+    "desc": "Download our free cold food storage rules template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Cold Food Storage Rules for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "receiving-log": {
+    "title": "Free Receiving Temperature Template | Saim Dev",
+    "desc": "Download our free receiving temperature template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Receiving Temperature for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-receiving-procedure": {
+    "title": "Free Food Receiving Procedure Template | Saim Dev",
+    "desc": "Download our free food receiving procedure template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Food Receiving Procedure for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "deep-cleaning-checklist": {
+    "title": "Free Deep Cleaning Checklist Template | Saim Dev",
+    "desc": "Download our free deep cleaning checklist template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Deep Cleaning Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-deep-cleaning-checklist": {
+    "title": "Free Restaurant Deep Cleaning Template | Saim Dev",
+    "desc": "Download our free restaurant deep cleaning template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Restaurant Deep Cleaning for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "vacuum-sealed-food-shelf-life-chart": {
+    "title": "Free Vacuum-Sealed Food Shelf-Life Chart Template | Saim Dev",
+    "desc": "Free vacuum-sealed food shelf-life chart template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Vacuum-Sealed Food Shelf-Life Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "calculating-food-cost": {
+    "title": "Free Food Cost & Margin Target Formulas Chart | Saim Dev",
+    "desc": "Free food cost & margin target formulas chart template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Food Cost & Margin Target Formulas Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "gmp-audit-checklist": {
+    "title": "Free GMP Audit Checklist - Template | Saim Dev",
+    "desc": "Free gmp audit checklist - template template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the GMP Audit Checklist - Template for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-production-gmp-audit-checklist": {
+    "title": "Free GMP Audit Checklist - Smart Tool Template | Saim Dev",
+    "desc": "Free gmp audit checklist - smart tool template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the GMP Audit Checklist - Smart Tool for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "gfsi-audit-checklist": {
+    "title": "Free How To Get GFSI Certified? Template | Saim Dev",
+    "desc": "Download this free how to get gfsi certified? template for commercial catering and takeaway kitchens. Formatted for instant A4 printing and record keeping.",
+    "howTo": [
+      "Download and print the How To Get GFSI Certified? for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "get-iso-22000-certified": {
+    "title": "Free How To Get ISO 22000 Certified? Template | Saim Dev",
+    "desc": "Free how to get iso 22000 certified? template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the How To Get ISO 22000 Certified? for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "fsma-food-traceability-list": {
+    "title": "Free UK & EU Food Traceability & Batch Tracking | Saim Dev",
+    "desc": "Free uk & eu food traceability & batch tracking guide template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the UK & EU Food Traceability & Batch Tracking Guide for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "approved-supplier-list": {
+    "title": "Free Approved Supplier List Template | Saim Dev",
+    "desc": "Download our free approved supplier list template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Approved Supplier List for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "sqf-audit-checklist": {
+    "title": "Free SQF Internal Audit Checklist | Template | Saim Dev",
+    "desc": "Free sqf internal audit checklist | download free template template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the SQF Internal Audit Checklist | Download Free Template for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "iso-22000-internal-audit-checklist": {
+    "title": "Free ISO 22000 Internal Audit Checklist Template | Saim Dev",
+    "desc": "Free iso 22000 internal audit checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the ISO 22000 Internal Audit Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "fsma-compliance-checklist": {
+    "title": "Free UK Food Hygiene Due Diligence & Compliance | Saim Dev",
+    "desc": "Free uk food hygiene due diligence & compliance checklist template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the UK Food Hygiene Due Diligence & Compliance Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "fssc-certification-checklist": {
+    "title": "Free How To Get FSSC 22000 Certified? Template | Saim Dev",
+    "desc": "Free how to get fssc 22000 certified? template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the How To Get FSSC 22000 Certified? for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "ingredient-traceability": {
+    "title": "Free Ingredient Traceability Template | Saim Dev",
+    "desc": "Download our free ingredient traceability template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Ingredient Traceability for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-production-sheet": {
+    "title": "Free Production Sheet Template | Saim Dev",
+    "desc": "Download our free production sheet template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Production Sheet for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "dispatch-log": {
+    "title": "Free Dispatch Log Template | Saim Dev",
+    "desc": "Download our free dispatch log template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Dispatch Log for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "food-expiration-dates-guidelines-chart": {
+    "title": "Free Food Expiration Dates Guidelines Template | Saim Dev",
+    "desc": "Free food expiration dates guidelines template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Food Expiration Dates Guidelines for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "canned-food-expiration-dates-chart": {
+    "title": "Free Canned Food Expiration Dates Template | Saim Dev",
+    "desc": "Free UK canned food expiration dates template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Canned Food Expiration Dates for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "hazard-analysis-template": {
+    "title": "Free Hazard Analysis Example Template | Saim Dev",
+    "desc": "Download our free hazard analysis example template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Hazard Analysis Example for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "three-sink-method": {
+    "title": "Free Three Sink Method Poster Template | Saim Dev",
+    "desc": "Download our free three sink method poster template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Three Sink Method Poster for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "proper-method-for-cleaning-dirty-utensils": {
+    "title": "Free Cleaning And Sanitizing Dirty Utensils | Saim Dev",
+    "desc": "Free cleaning and sanitizing dirty utensils template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Cleaning And Sanitizing Dirty Utensils for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "cold-holding-food": {
+    "title": "Free Max. Temp. And Rules For Cold Holding Food | Saim Dev",
+    "desc": "Free max. temp. and rules for cold holding food template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Max. Temp. And Rules For Cold Holding Food for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "sell-by-date": {
+    "title": "Free Sell-By, Use-By, Expiration Dates Template | Saim Dev",
+    "desc": "Free sell-by, use-by, expiration dates template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Sell-By, Use-By, Expiration Dates for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "how-long-to-keep-leftovers-chart": {
+    "title": "Free How Long To Keep The Leftovers Template | Saim Dev",
+    "desc": "Free how long to keep the leftovers template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the How Long To Keep The Leftovers for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "fat-tom-poster": {
+    "title": "Free FATTOM Template | Saim Dev",
+    "desc": "Download our free fattom template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the FATTOM for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "how-long-does-butter-last-poster": {
+    "title": "Free How Long Does Butter Last? Template | Saim Dev",
+    "desc": "Download this free how long does butter last? template for commercial catering and takeaway kitchens. Formatted for instant A4 printing and record keeping.",
+    "howTo": [
+      "Download and print the How Long Does Butter Last? for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "cutting-board-color-chart": {
+    "title": "Free UK Colour-Coded Chopping Board Chart | Saim Dev",
+    "desc": "Free uk colour-coded chopping board chart template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the UK Colour-Coded Chopping Board Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "natashas-law": {
+    "title": "Free Natasha'S Law Template | Saim Dev",
+    "desc": "Download our free natasha's law template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Natasha'S Law for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "recipe-card-generator": {
+    "title": "Free Recipe Generator Template | Saim Dev",
+    "desc": "Download our free recipe generator template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Recipe Generator for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "defrosting-foods": {
+    "title": "Free Food Defrosting Template | Saim Dev",
+    "desc": "Download our free food defrosting template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Food Defrosting for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "boiling-water-thermometer-calibration": {
+    "title": "Free Thermometer Calibration Boiling Point Method | Saim Dev",
+    "desc": "Free thermometer calibration boiling point method template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the Thermometer Calibration Boiling Point Method for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "non-gmo": {
+    "title": "Free How To Get The Non-GMO Certification? | Saim Dev",
+    "desc": "Free how to get the non-gmo certification? template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the How To Get The Non-GMO Certification? for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "amazon-seller-and-product-requirements": {
+    "title": "Free UK E-Commerce Food Selling & Packaging | Saim Dev",
+    "desc": "Free uk e-commerce food selling & packaging requirements template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the UK E-Commerce Food Selling & Packaging Requirements for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "milk-pasteurization-temperature-time-chart": {
+    "title": "Free Milk Pasteurization Chart Template | Saim Dev",
+    "desc": "Access a free milk pasteurization chart template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "howTo": [
+      "Download and print the Milk Pasteurization Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "pork-temperature-chart": {
+    "title": "Free Pork Temperature Chart Template | Saim Dev",
+    "desc": "Download our free pork temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Pork Temperature Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "freeze-drying-time-chart": {
+    "title": "Free Freeze Drying Time Chart Template | Saim Dev",
+    "desc": "Download our free freeze drying time chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Freeze Drying Time Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "juice-pasteurization-temperature-time-chart": {
+    "title": "Free Juice-Pasteurization-Chart Template | Saim Dev",
+    "desc": "Download this free juice-pasteurization-chart template for commercial catering and takeaway kitchens. Formatted for instant A4 printing and record keeping.",
+    "howTo": [
+      "Download and print the Juice-Pasteurization-Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "meat-pasteurization-chart": {
+    "title": "Free Meat-Pasteurization-Chart Template | Saim Dev",
+    "desc": "Access a free meat-pasteurization-chart template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "howTo": [
+      "Download and print the Meat-Pasteurization-Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "poultry-pasteurization-chart": {
+    "title": "Free Poultry Pasteurization Chart Template | Saim Dev",
+    "desc": "Free UK poultry pasteurization chart template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Poultry Pasteurization Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "chicken-pasteurization-chart": {
+    "title": "Free Chicken Pasteurization Chart Template | Saim Dev",
+    "desc": "Free UK chicken pasteurization chart template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Chicken Pasteurization Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "freezer-organization-chart": {
+    "title": "Free Freezer Organization Chart Template | Saim Dev",
+    "desc": "Download this free freezer organization chart template for commercial catering and takeaway kitchens. Formatted for instant A4 printing and record keeping.",
+    "howTo": [
+      "Download and print the Freezer Organization Chart for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "prevent-freezer-burn": {
+    "title": "Free Prevent Freezer Burn Poster Template | Saim Dev",
+    "desc": "Free UK prevent freezer burn poster template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Prevent Freezer Burn Poster for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "ecosure-inspection-checklist": {
+    "title": "Free Third-Party Kitchen Hygiene Audit Checklist | Saim Dev",
+    "desc": "Free third-party kitchen hygiene audit checklist template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the Third-Party Kitchen Hygiene Audit Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "5-whys-root-cause-analysis-template": {
+    "title": "Free 5 Whys Root Cause Analysis Template | Saim Dev",
+    "desc": "Download this free 5 whys root cause analysis template for commercial catering and takeaway kitchens. Formatted for instant A4 printing and record keeping.",
+    "howTo": [
+      "Download and print the 5 Whys Root Cause Analysis for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "corrective-action-plan-template": {
+    "title": "Free Corrective Action Plan Template | Saim Dev",
+    "desc": "Download our free corrective action plan template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Corrective Action Plan for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-fire-inspection-checklist": {
+    "title": "Free Restaurant Fire Inspection Checklist | Saim Dev",
+    "desc": "Free restaurant fire inspection checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Restaurant Fire Inspection Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-maintenance-checklist": {
+    "title": "Free Restaurant Maintenance Checklist Template | Saim Dev",
+    "desc": "Free restaurant maintenance checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Restaurant Maintenance Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-hood-cleaning": {
+    "title": "Free Restaurant Hood Cleaning Template | Saim Dev",
+    "desc": "Download our free restaurant hood cleaning template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Restaurant Hood Cleaning for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "grease-trap-cleaning": {
+    "title": "Free Grease Trap Cleaning Guide Template | Saim Dev",
+    "desc": "Download this free grease trap cleaning guide template for commercial catering and takeaway kitchens. Formatted for instant A4 printing and record keeping.",
+    "howTo": [
+      "Download and print the Grease Trap Cleaning Guide for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restroom-cleaning-checklist-log": {
+    "title": "Free Restroom Cleaning Checklist Template | Saim Dev",
+    "desc": "Free UK restroom cleaning checklist template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Restroom Cleaning Checklist for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-inventory-template": {
+    "title": "Free Restaurant Inventory Template | Saim Dev",
+    "desc": "Free restaurant inventory template template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "howTo": [
+      "Download and print the Restaurant Inventory Template for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-schedule-template": {
+    "title": "Free Restaurant Schedule Template | Saim Dev",
+    "desc": "Free UK restaurant schedule template template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Restaurant Schedule Template for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-steps-of-service": {
+    "title": "Free Restaurant Steps Of Service Template | Saim Dev",
+    "desc": "Free UK restaurant steps of service template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "howTo": [
+      "Download and print the Restaurant Steps Of Service for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-food-safety-procedures": {
+    "title": "Free Restaurant Food Safety Procedures Template | Saim Dev",
+    "desc": "Free restaurant food safety procedures template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Restaurant Food Safety Procedures for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-manager-responsibilities": {
+    "title": "Free Restaurant Manager Responsibilities Template | Saim Dev",
+    "desc": "Free restaurant manager responsibilities template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "howTo": [
+      "Download and print the Restaurant Manager Responsibilities for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "restaurant-sop": {
+    "title": "Free Restaurant SOP Template | Saim Dev",
+    "desc": "Download our free restaurant sop template template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Restaurant SOP Template for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "standard-operating-procedure-in-food-industry": {
+    "title": "Free SOPs In The Food Industry Template | Saim Dev",
+    "desc": "Access a free sops in the food industry template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "howTo": [
+      "Download and print the SOPs In The Food Industry for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "pest-control-sop": {
+    "title": "Free Pest Control Standard Operating Procedure | Saim Dev",
+    "desc": "Free pest control standard operating procedure (sop) template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "howTo": [
+      "Download and print the Pest Control Standard Operating Procedure (SOP) for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "allergen-control-sop": {
+    "title": "Free Allergen Control SOP Template | Saim Dev",
+    "desc": "Download our free allergen control sop template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Allergen Control SOP for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "waste-management-plan-sop": {
+    "title": "Free Waste Management Plan SOP Template | Saim Dev",
+    "desc": "Access a free waste management plan sop template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "howTo": [
+      "Download and print the Waste Management Plan SOP for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
+  },
+  "kitchen-sop": {
+    "title": "Free Kitchen SOP Template | Saim Dev",
+    "desc": "Download our free kitchen sop template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "howTo": [
+      "Download and print the Kitchen SOP for your kitchen.",
+      "Display or store this record in an accessible location for prep and hygiene staff.",
+      "Ensure all relevant staff members are briefed on completing and logging required checks.",
+      "Review and update this documentation regularly to maintain ongoing compliance standards."
+    ]
   }
 }
