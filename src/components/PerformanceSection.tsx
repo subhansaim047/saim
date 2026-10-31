@@ -43,10 +43,10 @@ export const PerformanceSection = () => {
           className="flex flex-col gap-8 w-full"
         >
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Good performance is crucial for the success of your website. Fast loading times
-            increase session durations, boost conversion rates and improve search engine
-            ranking. Optimised code, compressed data and the right server configuration
-            provide you with a decisive competitive edge in the digital world.
+            Fast page speeds directly increase user session length, raise enquiry conversion rates,
+            and boost Google search visibility. We engineer lightweight Next.js code, modern AVIF
+            image compression, and edge cloud caching to give your UK business a distinct competitive
+            advantage across desktop and mobile devices.
           </p>
 
           {/* 4K Vector Chart Component — Restored Original Clean Container */}

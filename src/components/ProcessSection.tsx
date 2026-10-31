@@ -6,9 +6,9 @@ const processSteps = [
   {
     step: "01",
     icon: PhoneCall,
-    title: "Discovery Call",
+    title: "Discovery & Brief",
     description:
-      "We discuss your business goals, target clients, project scope, and design preferences.",
+      "We define your business goals, target clients, project scope, and design preferences.",
     glow: "from-[#FF4A1C]/35 to-transparent",
     iconHover: "group-hover:rotate-12 group-hover:scale-115",
     color: "text-[#FF4A1C]",
@@ -17,9 +17,9 @@ const processSteps = [
   {
     step: "02",
     icon: Compass,
-    title: "Strategy & Planning",
+    title: "Strategy & Architecture",
     description:
-      "Structuring website architecture, page layout wireframes, and high-converting copy paths.",
+      "We map your website architecture, page layout wireframes, and high-converting customer journeys.",
     glow: "from-sky-500/35 to-transparent",
     iconHover: "group-hover:rotate-90 group-hover:scale-115",
     color: "text-sky-400",
@@ -30,7 +30,7 @@ const processSteps = [
     icon: Code2,
     title: "Design & Development",
     description:
-      "Crafting pixel-perfect custom designs and building fast, sub-second clean code.",
+      "We engineer pixel-perfect designs with clean, sub-second Next.js code and mobile accessibility.",
     glow: "from-emerald-500/35 to-transparent",
     iconHover: "group-hover:scale-125",
     color: "text-emerald-400",
@@ -41,7 +41,7 @@ const processSteps = [
     icon: Rocket,
     title: "Launch & Support",
     description:
-      "Final testing, Google SEO indexing, live deployment, and 14–30 days dedicated support.",
+      "We test cross-browser speed, submit sitemaps to Google, deploy to edge servers, and provide 14–30 days of direct support.",
     glow: "from-purple-500/35 to-transparent",
     iconHover: "group-hover:-translate-y-1.5 group-hover:translate-x-1.5 group-hover:scale-115",
     color: "text-purple-400",
