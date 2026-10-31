@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { BlogPostFhrsChecklist } from '@/components/blog/BlogPostFhrsChecklist';
 
 export const metadata: Metadata = {
-  title: '5-Star Food Hygiene Rating: UK EHO Checklist | Saim Dev',
-  description: 'Complete UK inspection checklist to secure a 5-star Food Hygiene Rating. Practical tips for structure, hygiene practices, and confidence in management.',
+  title: 'How to Get a 5-Star Food Hygiene Rating UK: EHO Checklist | Saim Dev',
+  description: 'Complete UK inspection checklist on how to get a 5 star food hygiene rating. Practical guide to scoring 0-5 across food hygiene, structure, and management.',
   robots: {
     index: true,
     follow: true,
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: '5-Star Food Hygiene Rating: UK EHO Checklist | Saim Dev',
-    description: 'Complete UK inspection checklist to secure a 5-star Food Hygiene Rating. Practical tips for structure, hygiene practices, and confidence in management.',
+    title: 'How to Get a 5-Star Food Hygiene Rating UK: EHO Checklist | Saim Dev',
+    description: 'Complete UK inspection checklist on how to get a 5 star food hygiene rating. Practical guide to scoring 0-5 across food hygiene, structure, and management.',
     url: 'https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: '5-Star Food Hygiene Rating: UK EHO Checklist | Saim Dev',
-    description: 'Complete UK inspection checklist to secure a 5-star Food Hygiene Rating. Practical tips for structure, hygiene practices, and confidence in management.',
+    title: 'How to Get a 5-Star Food Hygiene Rating UK: EHO Checklist | Saim Dev',
+    description: 'Complete UK inspection checklist on how to get a 5 star food hygiene rating. Practical guide to scoring 0-5 across food hygiene, structure, and management.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
 export default function Page() {
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist | Saim Dev",
     "description": "Complete inspection guide for UK restaurants and takeaways to achieve a 5-star Food Hygiene Rating. Covers food safety, cleanliness, and HACCP records.",
     "url": "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
     "datePublished": "2026-10-25",
-    "dateModified": "2026-10-29",
+    "dateModified": "2026-10-31",
     "author": {
       "@type": "Person",
       "name": "Saim Dev",

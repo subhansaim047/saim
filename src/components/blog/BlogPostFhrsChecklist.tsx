@@ -138,7 +138,7 @@ export const BlogPostFhrsChecklist: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            UK Food Hygiene Rating 5-Star Checklist for Restaurants and Takeaways
+            How to Get a 5-Star Food Hygiene Rating: UK Restaurant &amp; Takeaway Checklist
           </h1>
 
           <p className="text-base sm:text-lg text-white/70 leading-relaxed mb-6">
