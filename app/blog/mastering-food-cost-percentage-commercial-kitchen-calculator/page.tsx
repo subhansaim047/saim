@@ -2,16 +2,12 @@ import type { Metadata } from 'next';
 import { BlogPostFoodCost } from '@/components/blog/BlogPostFoodCost';
 
 export const metadata: Metadata = {
-  title: 'How to Calculate Food Cost Percentage UK | Saim Dev',
-  description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
+  title: 'How to Calculate Food Cost Percentage Commercial Kitchen UK | Saim Dev',
+  description: 'Learn how to calculate food cost percentage in a commercial kitchen. Formulas, shrinkage math, target gross margins, and free online calculator.',
   robots: {
-
     index: true,
-
     follow: true,
-
   },
-
   alternates: {
     canonical: 'https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator',
     languages: {
@@ -19,22 +15,22 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'How to Calculate Food Cost Percentage UK | Saim Dev',
-    description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
+    title: 'How to Calculate Food Cost Percentage Commercial Kitchen UK | Saim Dev',
+    description: 'Learn how to calculate food cost percentage in a commercial kitchen. Formulas, shrinkage math, target gross margins, and free online calculator.',
     url: 'https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator',
     siteName: 'Saim Dev',
     locale: 'en_GB',
     type: 'article',
     publishedTime: '2026-10-23T00:00:00.000Z',
-    modifiedTime: '2026-10-25T00:00:00.000Z',
+    modifiedTime: '2026-10-31T00:00:00.000Z',
     authors: ['https://www.saimdev.site/about'],
-    images: [{ url: 'https://www.saimdev.site/og-image.png', width: 1200, height: 630, alt: "How to Calculate Food Cost Percentage & Protect 70%+ Margins" }]
+    images: [{ url: 'https://www.saimdev.site/og-image.png', width: 1200, height: 630, alt: "How to Calculate Food Cost Percentage Commercial Kitchen" }]
   },
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'How to Calculate Food Cost Percentage UK | Saim Dev',
-    description: 'Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.',
+    title: 'How to Calculate Food Cost Percentage Commercial Kitchen UK | Saim Dev',
+    description: 'Learn how to calculate food cost percentage in a commercial kitchen. Formulas, shrinkage math, target gross margins, and free online calculator.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };
@@ -42,16 +38,16 @@ export const metadata: Metadata = {
 export default function Page() {
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": "How to Calculate Food Cost Percentage & Protect 70%+ Margins | Saim Dev",
-    "description": "Calculate food cost percentage and protect 70%+ margins. Use our free interactive commercial kitchen calculator built for UK takeaways and cafes.",
+    "description": "Learn how to calculate food cost percentage in a commercial kitchen. Formulas, shrinkage math, target gross margins, and free online calculator.",
     "url": "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
     "datePublished": "2026-10-23",
-    "dateModified": "2026-10-25",
+    "dateModified": "2026-10-31",
     "author": {
       "@type": "Person",
       "name": "Saim Dev",
-      "jobTitle": "Founder & Lead Next.js Architect",
+      "jobTitle": "Lead Commercial Kitchen Systems & Web Architect",
       "url": "https://www.saimdev.site/about"
     },
     "publisher": {
@@ -89,8 +85,47 @@ export default function Page() {
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "How to Calculate Food Cost Percentage & Protect 70%+ Margins",
+        "name": "Commercial Kitchen Food Cost Percentage Guide",
         "item": "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator"
+      }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an acceptable food cost percentage for a commercial kitchen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the UK hospitality industry, the standard benchmark for food cost is between 28% and 32%, which corresponds to a Gross Profit (GP) margin of 68% to 72%. For premium steakhouses or seafood, food cost may reach 34%, while pizza and pasta concepts often operate at 18% to 22% food cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the formula to calculate food cost percentage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For an individual dish: Food Cost Percentage = (Total Cost of Ingredients ÷ Selling Price Excluding VAT) × 100. For overall monthly restaurant operations: Actual Food Cost % = [(Beginning Inventory + Purchases - Ending Inventory) ÷ Total Food Revenue] × 100."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I factor in third-party delivery commissions (Just Eat, Deliveroo, UberEats)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Delivery aggregators charge between 20% and 30% commission plus VAT. To protect your bottom line, either set higher menu prices on third-party delivery apps or incentivise direct ordering through your own commission-free takeaway website."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should a restaurant recalculate its recipe costs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recipe costing should be audited at least quarterly. In times of wholesale ingredient inflation or when commodity prices shift significantly, high-volume menu items should be reviewed monthly."
+        }
       }
     ]
   };
@@ -104,6 +139,10 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <BlogPostFoodCost />
     </>
