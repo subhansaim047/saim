@@ -22,7 +22,7 @@ const SAMPLE_QUESTIONS = [
     why: "This heat profile delivers a mandatory 6-log (99.9999%) reduction in Campylobacter and Salmonella populations."
   },
   {
-    q: "How long must a food handler stay away from work after suffering from vomiting or diarrhea?",
+    q: "How long must a food handler stay away from work after suffering from vomiting or diarrhoea?",
     a: "48 hours after symptoms have completely stopped.",
     why: "Viral particles (especially Norovirus) continue shedding in stool and vomitus for up to 48 hours after clinical recovery, representing a massive outbreak vector."
   },
@@ -98,19 +98,54 @@ export const BlogPostHygieneQuiz: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-[1.12]">
-            Level 2 Food Hygiene Practice Test: 10 Critical Questions Every Kitchen Worker &amp; Chef Must Pass
+            Level 2 Food Hygiene Practice Test: Questions &amp; Answers for Kitchen Staff
           </h1>
 
-          <p className="text-base sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-          Test your kitchen team with 10 critical food safety questions that every chef and kitchen worker must pass before an inspection. Review temperature danger zones, cross-contamination prevention, and statutory hygiene standards with our interactive practice quiz.
-        </p>
+          <div className="p-4 rounded-xl border border-primary/20 bg-primary/5 text-white/90 text-sm sm:text-base leading-relaxed mb-6">
+            <strong>Direct Answer:</strong> This Level 2 food hygiene practice test helps UK chefs, caterers, and food handlers revise core statutory requirements before council inspections or accredited examinations. Key legal topics include the 8°C chilled storage ceiling, 75°C core cooking temperature, 48-hour sickness exclusion rule, and cross-contamination prevention protocols.
+          </div>
 
-          <div className="mt-8 flex items-center gap-4 pt-6 border-t border-white/10">
-            <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 rounded-full border border-primary/30 object-cover" />
-            <div>
-              <div className="text-sm font-bold text-white">Saim Dev Food Safety Architecture</div>
-              <div className="text-xs text-white/50">Lead Commercial Kitchen Systems &amp; Web Architect</div>
+          <div className="flex flex-wrap items-center justify-between gap-4 py-4 px-5 rounded-xl border border-white/10 bg-white/[0.02] mb-6 text-xs text-white/70">
+            <div className="flex items-center gap-3">
+              <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-9 h-9 rounded-full border border-white/20 object-cover" width={36} height={36} />
+              <div>
+                <Link href="/about" className="font-semibold text-white hover:text-primary transition-colors">
+                  Saim Dev
+                </Link>
+                <span className="block text-white/50 text-[11px]">Lead Commercial Kitchen Systems &amp; Web Architect</span>
+              </div>
             </div>
+            <div className="flex items-center gap-4 text-white/50">
+              <span>Published: Oct 23, 2026</span>
+              <span>•</span>
+              <span>Updated: Oct 31, 2026</span>
+            </div>
+          </div>
+
+          {/* Key Takeaways Box */}
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-6 mb-8">
+            <p className="text-xs font-bold tracking-widest uppercase text-primary mb-3 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-primary" />
+              Key Takeaways for Kitchen Workers &amp; Managers
+            </p>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-white/80">
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span><strong>Verbal EHO Spot Checks:</strong> Officers frequently question line cooks and porters directly on temperature limits and sanitisation steps.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span><strong>The 3 Critical Numbers:</strong> 8°C maximum legal chill, 63°C minimum hot hold, and 75°C core cook temp for 30 seconds.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span><strong>48-Hour Sickness Rule:</strong> Any staff member with vomiting or diarrhoea must remain off-duty until 48 hours after symptoms cease.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span><strong>Full Mock Quiz:</strong> Test your staff knowledge with our printable <Link href="/food-safety-templates/food-safety-quiz" className="text-primary underline font-medium">Food Safety Practice Quiz Template</Link>.</span>
+              </li>
+            </ul>
           </div>
         </header>
 
@@ -130,7 +165,7 @@ export const BlogPostHygieneQuiz: React.FC = () => {
           <h2 className="text-xs font-mono uppercase tracking-widest text-primary mb-4 font-bold">Table of Contents</h2>
           <ul className="space-y-2.5 text-sm text-white/70">
             <li><a href="#why-training-matters" className="hover:text-primary hover:underline">&rarr; 1. Why Verbal Staff Testing Decides Your Hygiene Rating</a></li>
-            <li><a href="#critical-numbers" className="hover:text-primary hover:underline">&rarr; 2. The 3 Numbers Every Food Handler Must Memorize</a></li>
+            <li><a href="#critical-numbers" className="hover:text-primary hover:underline">&rarr; 2. The 3 Numbers Every Food Handler Must Memorise</a></li>
             <li><a href="#high-risk-foods" className="hover:text-primary hover:underline">&rarr; 3. High-Risk Foods &amp; Cross-Contamination Defenses</a></li>
             <li><a href="#personal-hygiene" className="hover:text-primary hover:underline">&rarr; 4. Sickness Reporting: The 48-Hour Exclusion Rule</a></li>
             <li><a href="#sample-questions" className="hover:text-primary hover:underline">&rarr; 5. High-Yield Practice Exam Questions &amp; Rationale</a></li>
@@ -157,7 +192,7 @@ export const BlogPostHygieneQuiz: React.FC = () => {
         {/* ── SECTION 2 ── */}
         <section id="critical-numbers" className="space-y-4 mb-14 text-white/80 leading-relaxed text-base">
           <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/10 pb-3">
-            2. The 3 Numbers Every Food Handler Must Memorize
+            2. The 3 Numbers Every Food Handler Must Memorise
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
             <div className="p-5 rounded-2xl bg-[#0e0e12] border border-white/10 space-y-1 text-center">
@@ -199,7 +234,7 @@ export const BlogPostHygieneQuiz: React.FC = () => {
             4. Sickness Reporting: The 48-Hour Exclusion Rule
           </h2>
           <p>
-            Food handlers are legally obligated to report gastrointestinal illness (diarrhea, vomiting, severe stomach cramps) to their manager immediately. 
+            Food handlers are legally obligated to report gastrointestinal illness (diarrhoea, vomiting, severe stomach cramps) to their manager immediately. 
             Under UK public health guidelines, <strong>staff must be excluded from all food handling duties for a full 48 hours after symptoms have naturally ceased</strong>.
           </p>
           <p>
