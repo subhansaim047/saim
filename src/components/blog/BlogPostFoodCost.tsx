@@ -124,7 +124,7 @@ export const BlogPostFoodCost: React.FC = () => {
           <h2 className="text-xs font-mono uppercase tracking-widest text-primary mb-4 font-bold">Table of Contents</h2>
           <ul className="space-y-2.5 text-sm text-white/70">
             <li><a href="#the-formula" className="hover:text-primary hover:underline">&rarr; 1. The Core Formulas: Food Cost % vs Gross Profit (GP) %</a></li>
-            <li><a href="#shrinkage-yield" className="hover:text-primary hover:underline">&rarr; 2. Yield Factor &amp; Cooking Shrinkage: The Math Most Chefs Skip</a></li>
+            <li><a href="#shrinkage-yield" className="hover:text-primary hover:underline">&rarr; 2. Yield Factor &amp; Cooking Shrinkage: The Maths Most Chefs Skip</a></li>
             <li><a href="#step-by-step-costing" className="hover:text-primary hover:underline">&rarr; 3. Step-by-Step Breakdown: Costing a Signature Dish</a></li>
             <li><a href="#pricing-strategy" className="hover:text-primary hover:underline">&rarr; 4. Menu Engineering: Pricing for Target 70%–75% Margins</a></li>
             <li><a href="#stopping-leaks" className="hover:text-primary hover:underline">&rarr; 5. Stopping the 4 Biggest Kitchen Profit Leaks</a></li>
@@ -166,7 +166,7 @@ export const BlogPostFoodCost: React.FC = () => {
         {/* ── SECTION 2 ── */}
         <section id="shrinkage-yield" className="space-y-4 mb-14 text-white/80 leading-relaxed text-base">
           <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight border-b border-white/10 pb-3">
-            2. Yield Factor &amp; Cooking Shrinkage: The Math Most Chefs Skip
+            2. Yield Factor &amp; Cooking Shrinkage: The Maths Most Chefs Skip
           </h2>
           <p>
             The single most common error in kitchen costing is calculating costs based on <em>As Purchased (AP)</em> weight rather than <em>Edible Portion (EP)</em> weight.

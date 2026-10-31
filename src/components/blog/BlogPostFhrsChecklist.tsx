@@ -259,7 +259,7 @@ export const BlogPostFhrsChecklist: React.FC = () => {
                     </li>
                     <li className="flex items-start gap-1.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span><strong>Cross-contamination:</strong> Color-coded boards &amp; raw meat segregation.</span>
+                      <span><strong>Cross-contamination:</strong> Colour-coded boards &amp; raw meat segregation.</span>
                     </li>
                   </ul>
                 </div>

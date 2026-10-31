@@ -157,7 +157,7 @@ export const BlogPostAllergenMatrix: React.FC = () => {
             and over 600,000 live with coeliac disease. An Environmental Health Officer will not accept excuses like <em>&quot;The chef was on holiday when the supplier swapped the brand of mayonnaise.&quot;</em>
           </p>
           <p>
-            A standardized 14-allergen matrix bridges the gap between supplier invoices, kitchen prep staff, front-of-house service, and the end customer.
+            A standardised 14-allergen matrix bridges the gap between supplier invoices, kitchen prep staff, front-of-house service, and the end customer.
           </p>
         </section>
 
@@ -261,7 +261,7 @@ export const BlogPostAllergenMatrix: React.FC = () => {
             <ul className="list-disc pl-5 space-y-1 text-white/70">
               <li><strong>Deep-Fat Fryers:</strong> Frying oil transfers microscopic gluten, fish, and crustacean proteins instantly. Separate dedicated allergen fryers are required for free-from claims.</li>
               <li><strong>Toasters &amp; Salamanders:</strong> Toasting regular wheat bread leaves crumbs that contaminate gluten-free bread.</li>
-              <li><strong>Chopping Boards &amp; Color Coding:</strong> Using purple allergen-dedicated boards and tongs prevents accidental knife cross-contact.</li>
+              <li><strong>Chopping Boards &amp; Colour Coding:</strong> Using purple allergen-dedicated boards and tongs prevents accidental knife cross-contact.</li>
             </ul>
           </div>
         </section>

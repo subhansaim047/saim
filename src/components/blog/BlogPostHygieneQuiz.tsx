@@ -26,7 +26,7 @@ const SAMPLE_QUESTIONS = [
     why: "Viral particles (especially Norovirus) continue shedding in stool and vomitus for up to 48 hours after clinical recovery, representing a massive outbreak vector."
   },
   {
-    q: "What is the primary food safety reason for using color-coded chopping boards?",
+    q: "What is the primary food safety reason for using colour-coded chopping boards?",
     a: "To prevent cross-contamination between raw foods (especially raw poultry and red meat) and ready-to-eat (RTE) foods like salads, cooked meats, and bread.",
     why: "Raw meat naturally harbours bacterial flora that is destroyed only by cooking; if transferred to salad via a shared board, it will be consumed directly by the customer."
   }

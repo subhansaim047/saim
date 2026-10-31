@@ -47,7 +47,7 @@ const objections = [
   {
     objection: '"Websites are too expensive for a small business."',
     answer:
-      "The math works the other way. If your average customer is worth $200 and you lose just one inquiry per week because you're not visible online, that's $10,400 per year in missed revenue. A professional website costs a fraction of that — once. After that, it works for you every single day at no additional cost.",
+      "The maths works the other way. If your average customer is worth £200 and you lose just one enquiry per week because you're not visible online, that's £10,400 per year in missed revenue. A professional website costs a fraction of that — once. After that, it works for you every single day at no additional cost.",
   },
   {
     objection: `"I don't really need more customers right now."`,
@@ -286,7 +286,7 @@ export const BlogPost1Page = () => {
               Your shop closes. Your phone goes to voicemail. Your staff clocks out. Your website doesn't.
             </p>
             <p className="text-white/65 text-base mb-4">
-              A well-built website answers questions, showcases your services, displays pricing, and captures inquiries at 2am just as effectively as it does at 2pm. It's a sales tool that operates 24 hours a day, 365 days a year, without sick days, overtime, or inconsistency.
+              A well-built website answers questions, showcases your services, displays pricing, and captures enquiries at 2am just as effectively as it does at 2pm. It's a sales tool that operates 24 hours a day, 365 days a year, without sick days, overtime, or inconsistency.
             </p>
             <p className="text-white/65 text-base mb-6">
               Research from Blue Corona found that 88% of consumers who search for a local business on mobile visit or call that business within 24 hours. Your website is often the difference between capturing that person and losing them to a competitor who was easier to find at that moment.
@@ -296,7 +296,7 @@ export const BlogPost1Page = () => {
             <div className="rounded-2xl border border-primary/15 bg-primary/5 p-6 mb-2">
               <p className="text-[10px] font-bold tracking-widest uppercase text-primary/60 mb-3">Real Example</p>
               <p className="text-white/75 text-sm leading-relaxed">
-                A plumbing company in a mid-sized city relied entirely on word-of-mouth and a basic Facebook page for three years. After launching a professionally built website with a service area page, a contact form, and basic local SEO, the owner reported receiving seven to ten new inquiries per month directly from Google — without running a single paid ad. Most came in during evenings and weekends when the office was closed.
+                A plumbing company in a mid-sized city relied entirely on word-of-mouth and a basic Facebook page for three years. After launching a professionally built website with a service area page, a contact form, and basic local SEO, the owner reported receiving seven to ten new enquiries per month directly from Google — without running a single paid ad. Most came in during evenings and weekends when the office was closed.
               </p>
             </div>
           </section>
@@ -363,7 +363,7 @@ export const BlogPost1Page = () => {
               {[
                 {
                   type: "Local Roofing Company",
-                  story: "A family-run roofing company in a suburban area relied entirely on Facebook and referrals for five years. After launching a professional website with dedicated service pages, a local SEO setup, and a Google Business Profile, they began receiving eight to twelve qualified inquiries per month directly from Google Search and Maps. Within four months, online leads exceeded referral leads for the first time in the company's history.",
+                  story: "A family-run roofing company in a suburban area relied entirely on Facebook and referrals for five years. After launching a professional website with dedicated service pages, a local SEO setup, and a Google Business Profile, they began receiving eight to twelve qualified enquiries per month directly from Google Search and Maps. Within four months, online leads exceeded referral leads for the first time in the company's history.",
                 },
                 {
                   type: "Independent Hair Salon",
@@ -371,7 +371,7 @@ export const BlogPost1Page = () => {
                 },
                 {
                   type: "Home Cleaning Service",
-                  story: "A solo cleaning service operator added a simple five-page professional website with a pricing guide, a contact form, and testimonials from existing clients. Within six weeks, she received enough new inquiries to hire her first part-time employee. She noted that the majority of new clients mentioned finding her through Google when they couldn't get through to a competitor by phone.",
+                  story: "A solo cleaning service operator added a simple five-page professional website with a pricing guide, a contact form, and testimonials from existing clients. Within six weeks, she received enough new enquiries to hire her first part-time employee. She noted that the majority of new clients mentioned finding her through Google when they couldn't get through to a competitor by phone.",
                 },
               ].map((ex, i) => (
                 <div key={i} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
@@ -392,8 +392,8 @@ export const BlogPost1Page = () => {
               <p className="text-primary text-sm font-bold mb-4">Revenue Loss Calculator — Conservative Estimate</p>
               <div className="space-y-2 text-sm">
                 {[
-                  ["Lost inquiries per week (conservative)", "2"],
-                  ["Average customer value", "$200"],
+                  ["Lost enquiries per week (conservative)", "2"],
+                  ["Average customer value", "£200"],
                   ["Lost revenue per week", "$400"],
                   ["Lost revenue per month", "$1,600"],
                   ["Lost revenue per year", "$19,200"],
@@ -442,7 +442,7 @@ export const BlogPost1Page = () => {
             </p>
             <div className="space-y-4 mb-7">
               {[
-                { n: "01", t: "Define the goal", d: "What do you want the website to do — generate inquiries, take bookings, sell products, or build credibility? Every design decision flows from this answer. Without it, you'll get a website that looks good but doesn't perform." },
+                { n: "01", t: "Define the goal", d: "What do you want the website to do — generate enquiries, take bookings, sell products, or build credibility? Every design decision flows from this answer. Without it, you'll get a website that looks good but doesn't perform." },
                 { n: "02", t: "Know your customer", d: "A website built for a 24-year-old professional looks and communicates differently from one built for a 55-year-old homeowner. Your site must speak directly to the person making the purchase decision, in the language they use and at the pace they prefer." },
                 { n: "03", t: "Clarify your difference", d: "What makes your business the right choice over a competitor? Your website has approximately five seconds to communicate that. If visitors can't identify your unique value in that window, the site is not working hard enough." },
               ].map((item) => (
@@ -467,7 +467,7 @@ export const BlogPost1Page = () => {
               In 2026, a professional website isn't optional for a small business — it's the baseline expectation every customer brings to their first interaction with you. It's the difference between being found and being invisible. Between being trusted and being questioned. Between growing and staying stuck.
             </p>
             <p className="text-white/65 text-base">
-              The data is clear. The examples are real. The math works in your favour. The businesses that invest in a quality website this year will look back in three years and recognise it as one of the most straightforward decisions they made. The ones that don't will wonder why they keep losing customers to competitors who offer no better service — just a better first impression.
+              The data is clear. The examples are real. The maths works in your favour. The businesses that invest in a quality website this year will look back in three years and recognise it as one of the most straightforward decisions they made. The ones that don't will wonder why they keep losing customers to competitors who offer no better service — just a better first impression.
             </p>
           </section>
 

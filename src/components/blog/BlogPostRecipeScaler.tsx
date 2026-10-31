@@ -97,7 +97,7 @@ export const BlogPostRecipeScaler: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-          Discover how to scale recipes without flavor breakdown or texture collapse. Learn why linear multiplication fails in bulk catering, how to calculate non-linear spices and liquids, and how to generate standardized chef prep cards.
+          Discover how to scale recipes without flavor breakdown or texture collapse. Learn why linear multiplication fails in bulk catering, how to calculate non-linear spices and liquids, and how to generate standardised chef prep cards.
         </p>
 
           <div className="mt-8 flex items-center gap-4 pt-6 border-t border-white/10">
