@@ -3,7 +3,7 @@
  *
  * Authoritative, server-rendered deep content for the 24 KEEP food safety tools.
  * Engineered for UK/EU commercial kitchen compliance, Google Answer Search,
- * and Generative Engine Optimization (GEO / LLMO).
+ * and Generative Engine Optimisation (GEO / LLMO).
  */
 
 export interface ToolFaq {
@@ -360,7 +360,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       },
       {
         q: "Why do EHOs penalise kitchen cloth reuse?",
-        a: "Reusable, damp kitchen cloths spread bacteria across work surfaces. EHOs insist on single-use disposable cloths or color-coded cloths washed daily on a 90°C thermal laundry cycle."
+        a: "Reusable, damp kitchen cloths spread bacteria across work surfaces. EHOs insist on single-use disposable cloths or colour-coded cloths washed daily on a 90°C thermal laundry cycle."
       },
       {
         q: "How does a documented cleaning rota help food businesses pass inspections?",
@@ -438,7 +438,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       },
       {
         q: "How fast must a food business be able to produce traceability records?",
-        a: "Under UK FSA guidelines, food businesses should be able to produce full supplier and batch traceability documentation within 4 hours during an urgent food incident inquiry."
+        a: "Under UK FSA guidelines, food businesses should be able to produce full supplier and batch traceability documentation within 4 hours during an urgent food incident enquiry."
       },
       {
         q: "Does this template apply to small independent takeaways?",
@@ -844,7 +844,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
 
   "chopping-board-colour-chart": {
     directAnswer:
-      "A UK colour-coded chopping board chart establishes standard culinary color assignments to prevent cross-contamination between raw proteins, cooked meats, vegetables, and allergen-free preparations. Displaying this chart and training staff on board separation is a fundamental requirement for passing UK Environmental Health Officer inspections.",
+      "A UK colour-coded chopping board chart establishes standard culinary colour assignments to prevent cross-contamination between raw proteins, cooked meats, vegetables, and allergen-free preparations. Displaying this chart and training staff on board separation is a fundamental requirement for passing UK Environmental Health Officer inspections.",
     howTo: [
       "Mount this chart directly above cutting board racks at central kitchen food preparation stations.",
       "Use RED boards exclusively for raw meat and poultry.",
@@ -870,7 +870,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
         a: "Wash in a commercial pass-through dishwasher with a thermal wash cycle (>=60°C) and hot rinse (>=82°C), or follow the manual two-stage clean with approved sanitiser."
       },
       {
-        q: "What board color should be used for allergen-free preparations?",
+        q: "What board colour should be used for allergen-free preparations?",
         a: "The UK hospitality industry widely utilizes PURPLE chopping boards and dedicated purple utensils exclusively for preparing allergen-safe and gluten-free customer orders."
       }
     ],
@@ -928,7 +928,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       "Check current station walk-in inventory against established minimum station par levels.",
       "Calculate required prep batch quantities for sauces, portioned proteins, side dishes, and dressings.",
       "Assign specific prep tasks to station chefs with designated completion deadlines before service.",
-      "Verify stock rotation using First In, First Out (FIFO) protocols and apply standardized date labels."
+      "Verify stock rotation using First In, First Out (FIFO) protocols and apply standardised date labels."
     ],
     faqs: [
       {

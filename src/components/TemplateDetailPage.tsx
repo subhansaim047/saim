@@ -221,12 +221,12 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between no-print">
         <Link href="/tools" className="flex items-center gap-2 text-xs font-bold text-gray-700 hover:text-black">
           <ArrowLeft className="w-4 h-4" />
-          <span>return to all kitchen tools</span>
+          <span>Return to All Kitchen Tools</span>
         </Link>
 
         <div className="flex items-center gap-3">
           <a
-            href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions"
+            href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20enquiring%20about%20the%20takeaway%20web%20solutions"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5 transition-all shadow"
@@ -691,7 +691,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             className="inline-flex items-center gap-2 text-xs font-semibold text-gray-600 hover:text-black transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>return to all kitchen tools</span>
+            <span>Return to All Kitchen Tools</span>
           </Link>
         </div>
 

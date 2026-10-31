@@ -26,7 +26,7 @@
       "Enter raw ingredient invoice costs in GBP (£) including packaging and portion weights.",
       "Input target kitchen Gross Profit margin percentage (standard UK takeaway target is 65% to 75%).",
       "Review suggested takeaway menu selling price and gross profit contribution per portion.",
-      "Adjust portion sizes or supplier cost inputs to optimize takeaway menu profitability."
+      "Adjust portion sizes or supplier cost inputs to optimise takeaway menu profitability."
     ]
   },
   "recipe-calculator": {
