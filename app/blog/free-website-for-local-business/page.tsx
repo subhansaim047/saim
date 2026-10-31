@@ -2,16 +2,12 @@ import type { Metadata } from 'next';
 import { BlogPost2Page } from '@/components/BlogPost2Page';
 
 export const metadata: Metadata = {
-  title: 'Why Saim Dev Builds Free Starter Sites for Local Shops',
-  description: 'Case study on our local business starter initiative. How bespoke Next.js websites outperform heavy CMS templates in real-world local Google search.',
+  title: 'Free Website for Small Business: Pros, Cons & Hidden Costs | Saim Dev',
+  description: 'Compare free website builders with bespoke starter websites for UK small businesses. Learn the real pros, cons, hidden fees, and SEO trade-offs.',
   robots: {
-
     index: true,
-
     follow: true,
-
   },
-
   alternates: {
     canonical: 'https://www.saimdev.site/blog/free-website-for-local-business',
     languages: {
@@ -19,22 +15,22 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Why Saim Dev Builds Free Starter Sites for Local Shops',
-    description: 'Case study on our local business starter initiative. How bespoke Next.js websites outperform heavy CMS templates in real-world local Google search.',
+    title: 'Free Website for Small Business: Pros, Cons & Hidden Costs | Saim Dev',
+    description: 'Compare free website builders with bespoke starter websites for UK small businesses. Learn the real pros, cons, hidden fees, and SEO trade-offs.',
     url: 'https://www.saimdev.site/blog/free-website-for-local-business',
     siteName: 'Saim Dev',
     locale: 'en_GB',
     type: 'article',
     publishedTime: '2026-09-20T00:00:00.000Z',
-    modifiedTime: '2026-10-25T00:00:00.000Z',
+    modifiedTime: '2026-10-31T00:00:00.000Z',
     authors: ['https://www.saimdev.site/about'],
-    images: [{ url: 'https://www.saimdev.site/og-image.png', width: 1200, height: 630, alt: "I'm Building 5 Free Websites for Local Businesses \u2014 Here's Why" }]
+    images: [{ url: 'https://www.saimdev.site/og-image.png', width: 1200, height: 630, alt: "Free Website for Small Business: Pros, Cons & Hidden Costs" }]
   },
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'Why Saim Dev Builds Free Starter Sites for Local Shops',
-    description: 'Case study on our local business starter initiative. How bespoke Next.js websites outperform heavy CMS templates in real-world local Google search.',
+    title: 'Free Website for Small Business: Pros, Cons & Hidden Costs | Saim Dev',
+    description: 'Compare free website builders with bespoke starter websites for UK small businesses. Learn the real pros, cons, hidden fees, and SEO trade-offs.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };
@@ -42,16 +38,16 @@ export const metadata: Metadata = {
 export default function Page() {
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "I'm Building 5 Free Websites for Local Businesses \u2014 Here's Why | Saim Dev",
-    "description": "Saim Dev is building 5 free Next.js websites for independent UK local businesses to expand our portfolio. Learn how to claim your slot today.",
+    "@type": "BlogPosting",
+    "headline": "Free Website for Small Business: Pros, Cons & Hidden Costs | Saim Dev",
+    "description": "Compare free website builders with bespoke starter websites for UK small businesses. Learn the real pros, cons, hidden fees, and SEO trade-offs.",
     "url": "https://www.saimdev.site/blog/free-website-for-local-business",
     "datePublished": "2026-09-20",
-    "dateModified": "2026-10-25",
+    "dateModified": "2026-10-31",
     "author": {
       "@type": "Person",
       "name": "Saim Dev",
-      "jobTitle": "Founder & Lead Next.js Architect",
+      "jobTitle": "Lead Next.js Architect & Full-Stack Specialist",
       "url": "https://www.saimdev.site/about"
     },
     "publisher": {
@@ -89,8 +85,63 @@ export default function Page() {
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "I'm Building 5 Free Websites for Local Businesses \u2014 Here's Why",
+        "name": "Free Website for Small Business",
         "item": "https://www.saimdev.site/blog/free-website-for-local-business"
+      }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is there really no cost at all for a starter website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The custom website design and development are 100% free with no labour charge. You only cover standard direct infrastructure (your own domain name and hosting account, which remain under your complete ownership)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the biggest downsides of free website builders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generic free website builders enforce intrusive third-party advertisements, lock you into subdomains (like yourname.wixsite.com), restrict local SEO meta controls, and charge steep monthly upgrade fees for basic features like custom forms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build a custom small business website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A complete bespoke Next.js website typically takes 5 to 10 business days from specification agreement to deployment, complete with mobile testing and schema validation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What assets does a business owner need to provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your business name, logo, brief service descriptions, contact details, and photos. If you do not have photos, we advise on compliant, high-resolution photography alternatives."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if our existing business website is simply outdated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An outdated or sluggish website qualifies for a complete performance rebuild. Replacing an old WordPress or builder site with modern Next.js instantly elevates local search rankings and mobile conversions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after the free website is delivered?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You retain 100% ownership of the website codebase and domain. There are zero ongoing obligations, lock-in contracts, or mandatory service fees."
+        }
       }
     ]
   };
@@ -104,6 +155,10 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <BlogPost2Page />
     </>
