@@ -129,13 +129,14 @@
     ]
   },
   "opening-and-closing-checklist-template": {
-    "title": "Free SFBB Opening & Closing Checks | Saim Dev",
-    "desc": "Free SFBB opening and closing checks template for UK food businesses. Daily hygiene checks, fridge temperatures, and routines for 5-star EHO ratings.",
+    "title": "Free Kitchen Open & Close Checklist | Saim Dev",
+    "desc": "Master commercial kitchen opening, midday turnaround, and evening closing deep cleans. Free operational opening and closing checklist with probe logs.",
     "howTo": [
-      "Complete morning opening checks before food prep commences (fridge temps, sanitiser levels, handwash basins).",
-      "Verify all refrigeration units operate below 8°C and probe thermometers are sanitised and calibrated.",
-      "Carry out evening closing checks (surfaces disinfected, food covered and dated, waste bins cleared, premises locked).",
-      "Sign and date the daily record sheet as evidence of management oversight for your local council EHO audit."
+      "Complete morning start-up: power on exhaust hoods, sanitise boards, and check fridges.",
+      "Conduct pre-lunch and pre-dinner line-checks: verify core temps and hot-holding wells.",
+      "Cover, label, and transfer prepped ingredients to walk-in storage at service end.",
+      "Filter fryer oil, scrub griddles, clean dishwasher filters, and degrease floors.",
+      "Complete nightly manager security walkthrough and lock external refuse doors."
     ]
   },
   "kitchen-prep-list-template": {
@@ -453,13 +454,14 @@
     ]
   },
   "restaurant-opening-checklist": {
-    "title": "Free Morning Restaurant Opening Checklist | Saim Dev",
-    "desc": "Free morning restaurant opening checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Restaurant Opening Checklist Guide | Saim Dev",
+    "desc": "Streamline morning restaurant opening operations from FOH setup to kitchen line readiness. Free customisable daily restaurant opening checklist template.",
     "howTo": [
-      "Download and print the Morning Restaurant Opening Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Perform perimeter security check, unlock guest entrance, and power on lighting.",
+      "Record temperatures of walk-in coolers, reach-in units, and prep line wells.",
+      "Preheat cooking ranges, flat tops, and fryers; verify kitchen hood exhaust flow.",
+      "Stock front-of-house service stations, polish glassware, and count till drawers.",
+      "Hold morning team briefing to review allergen notes, daily specials, and 86'd items."
     ]
   },
   "restaurant-checklist": {
@@ -473,13 +475,14 @@
     ]
   },
   "printable-retail-store-daily-checklist": {
-    "title": "Free Food Retail Store Daily Checklist Template | Saim Dev",
-    "desc": "Free food retail store daily checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Retail Store Daily Checklist Guide | Saim Dev",
+    "desc": "Ensure clean, compliant, and profitable retail food operations from opening to closing. Free daily food retail store checklist with temperature audit logs.",
     "howTo": [
-      "Download and print the Food Retail Store Daily Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Log display chiller and freezer temperatures (verify dairy ≤4°C, raw meat ≤3°C).",
+      "Audit packaged foods on shelves for use-by expiration dates and damaged packaging.",
+      "Sanitise customer shopping carts, checkout conveyor belts, and payment terminals.",
+      "Restock dry goods using First-In, First-Out (FIFO) facing and rotation protocols.",
+      "Reconcile daily cash registers and complete evening security lockup sign-offs."
     ]
   },
   "retail-store-daily-checklist": {
@@ -527,13 +530,14 @@
     ]
   },
   "restaurant-equipment-list": {
-    "title": "Free Restaurant Equipment List Template | Saim Dev",
-    "desc": "Access a free restaurant equipment list template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "title": "Free Restaurant Equipment List Checklist | Saim Dev",
+    "desc": "Plan and audit commercial kitchen infrastructure with a master restaurant equipment list. Free categorised checklist covering cooking, cooling, and prep.",
     "howTo": [
-      "Download and print the Restaurant Equipment List for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit heavy cooking line: ranges, combi ovens, fryers, charbroilers, and hoods.",
+      "Specify refrigeration capacity: walk-in chillers, reach-in freezers, and prep tables.",
+      "Inventory food prep machinery: planetary mixers, food processors, and meat slicers.",
+      "Verify warewashing stations: pass-through dishwashers, three-compartment sinks.",
+      "Track smallwares: calibrated probe thermometers, GN pans, and colour-coded boards."
     ]
   },
   "kitchen-utensils-list": {
@@ -629,13 +633,14 @@
     ]
   },
   "opening-a-restaurant-checklist": {
-    "title": "Free Opening A Restaurant Template | Saim Dev",
-    "desc": "Download our free opening a restaurant template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Opening a Restaurant Checklist | Saim Dev",
+    "desc": "Complete pre-opening roadmap for UK restaurants, cafes, and takeaways. Free checklist covering local authority registration, HACCP, and equipment setup.",
     "howTo": [
-      "Download and print the Opening A Restaurant for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Register food business with the local authority at least 28 days before opening.",
+      "Develop and document the site-specific HACCP or Safer Food, Better Business system.",
+      "Secure premises licensing, public liability insurance, and commercial waste contracts.",
+      "Procure, install, and commission commercial kitchen equipment and fire suppression.",
+      "Deliver certified Level 2 Food Hygiene and Natasha's Law training to all kitchen staff."
     ]
   },
   "starting-a-food-business-checklist": {

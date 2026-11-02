@@ -1360,7 +1360,9 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     templateTitle.toLowerCase().includes("starting") ||
     templateTitle.toLowerCase().includes("new business") ||
     templateTitle.toLowerCase().includes("start a food") ||
-    templateTitle.toLowerCase().includes("start-up");
+    templateTitle.toLowerCase().includes("start-up") ||
+    templateTitle.toLowerCase().includes("opening a restaurant") ||
+    (templateId && templateId.includes("opening-a-restaurant"));
   const isBar =
     templateTitle.toLowerCase().includes("bar") ||
     templateTitle.toLowerCase().includes("cellar") ||
@@ -1369,12 +1371,13 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     !isRetailStore &&
     !isKitchenOpeningClosing &&
     !isStartingFoodBusiness &&
+    (templateTitle.toLowerCase().includes("restaurant opening") || (templateId && templateId.includes("restaurant-opening")) ||
     (templateTitle.toLowerCase().includes("front of house") ||
      templateTitle.toLowerCase().includes("foh") ||
      (templateTitle.toLowerCase().includes("restaurant") &&
       !templateTitle.toLowerCase().includes("cleaning") &&
       !templateTitle.toLowerCase().includes("inspection") &&
-      !templateTitle.toLowerCase().includes("health")));
+      !templateTitle.toLowerCase().includes("health"))));
   const isWasteManagement =
     templateTitle.toLowerCase().includes("waste") ||
     templateTitle.toLowerCase().includes("refuse") ||
