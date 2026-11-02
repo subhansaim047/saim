@@ -1619,9 +1619,11 @@
     "main_keyword": "product specification sheet uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 76
+    "priority_rank": 76,
+    "audit_completed": true,
+    "batch": 16
   },
   {
     "index": 29,
@@ -1638,9 +1640,11 @@
     "main_keyword": "integrated pest management plan (ipm) uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 77
+    "priority_rank": 77,
+    "audit_completed": true,
+    "batch": 16
   },
   {
     "index": 45,
@@ -1657,9 +1661,11 @@
     "main_keyword": "meat cooking chart uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 78
+    "priority_rank": 78,
+    "audit_completed": true,
+    "batch": 16
   },
   {
     "index": 47,
@@ -1676,9 +1682,11 @@
     "main_keyword": "steak doneness chart uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 79
+    "priority_rank": 79,
+    "audit_completed": true,
+    "batch": 16
   },
   {
     "index": 58,
@@ -1695,9 +1703,11 @@
     "main_keyword": "turkey cooking chart uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 80
+    "priority_rank": 80,
+    "audit_completed": true,
+    "batch": 16
   },
   {
     "index": 72,

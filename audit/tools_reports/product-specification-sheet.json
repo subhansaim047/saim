@@ -1,0 +1,95 @@
+{
+  "rank": 76,
+  "tool_id": "template-138",
+  "name": "Product Specification Sheet Template",
+  "slug": "product-specification-sheet",
+  "url": "https://www.saimdev.site/food-safety-templates/product-specification-sheet",
+  "primary_keyword": "product specification sheet template",
+  "secondary_keywords": [
+    "food product specification template excel",
+    "commercial food technical spec sheet",
+    "retail product specification document",
+    "ingredient and allergen specification template",
+    "brcgs food spec template"
+  ],
+  "search_intent": "Food manufacturers, NPD technologists, commercial bakers, and caterers requiring a comprehensive technical product specification document that complies with BRCGS, SALSA, and UK FIC food labelling regulations.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Table Snippets",
+    "Spreadsheet Templates"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "fooddocs.com",
+      "url": "https://www.fooddocs.com/templates/product-specification-sheet",
+      "title": "Product Specification Sheet Template | FoodDocs",
+      "strengths": "Clean layout, mentions food safety standards.",
+      "weaknesses": "Paywalled behind software trial, requires card or business email."
+    },
+    {
+      "rank": 2,
+      "domain": "safetyculture.com",
+      "url": "https://safetyculture.com/checklists/product-specification-sheet/",
+      "title": "Product Specification Sheet Checklist | SafetyCulture",
+      "strengths": "Mobile-ready checklist format.",
+      "weaknesses": "App download gate, lacks interactive web-based calculation of QUID and 14 UK allergens."
+    },
+    {
+      "rank": 3,
+      "domain": "smartsheet.com",
+      "url": "https://www.smartsheet.com/free-product-specification-templates",
+      "title": "Free Product Specification Templates | Smartsheet",
+      "strengths": "Broad project management visibility.",
+      "weaknesses": "Generic manufacturing template, entirely missing food safety, allergens, and shelf-life micro criteria."
+    },
+    {
+      "rank": 4,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/food-product-specification/",
+      "title": "How to Create a Food Product Specification | High Speed Training",
+      "strengths": "Clear UK regulatory context.",
+      "weaknesses": "Informational blog article only, no interactive builder or printable PDF spec creator."
+    },
+    {
+      "rank": 5,
+      "domain": "campdenbri.co.uk",
+      "url": "https://www.campdenbri.co.uk/product-specifications.php",
+      "title": "Product Specification Services | Campden BRI",
+      "strengths": "Premier UK food science consultancy.",
+      "weaknesses": "High-cost commercial service brochure, no free templates or digital tools."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Generic spreadsheets or paywalled enterprise software demos.",
+    "what_they_lack": "An ungated, interactive browser-based food product specification builder with real-time QUID percentage calculation, 14 UK allergen matrix checkboxes, packaging gas options, and instant PDF technical data sheet generation.",
+    "what_we_offer": "Fully responsive Product Specification Tool with multi-tab data entry (general, ingredients, allergens, nutrition, micro criteria), live document preview, and one-click PDF/print export."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 84
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 83
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 90
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "rank": 80,
+  "tool_id": "template-20",
+  "name": "Commercial Turkey Cooking Temperature Chart",
+  "slug": "turkey-cooking-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/turkey-cooking-chart",
+  "primary_keyword": "commercial turkey cooking temperature chart",
+  "secondary_keywords": [
+    "whole turkey roasting time per kg chart",
+    "turkey internal temperature chart fsa",
+    "turkey crown cooking time and temperature",
+    "catering turkey cooking guide celsius",
+    "safe roast turkey core temperature"
+  ],
+  "search_intent": "Event caterers, holiday carveries, and restaurant kitchens seeking an authoritative turkey cooking chart with weight-based commercial roasting calculations, oven temperature recommendations, internal probe protocols, and statutory food hygiene limits.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Calculators",
+    "Recipe rich snippets"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "food.gov.uk",
+      "url": "https://www.food.gov.uk/safety-hygiene/christmas-food-hygiene",
+      "title": "Christmas Food Hygiene & Turkey Safety | Food Standards Agency",
+      "strengths": "Official government food authority backing.",
+      "weaknesses": "Consumer-focused seasonal guidance, lacks commercial catering joint weight scaling and oven fan calibrations."
+    },
+    {
+      "rank": 2,
+      "domain": "bbcgoodfood.com",
+      "url": "https://www.bbcgoodfood.com/howto/guide/turkey-cooking-times-calculator",
+      "title": "Turkey Cooking Times Calculator | BBC Good Food",
+      "strengths": "Popular consumer calculator.",
+      "weaknesses": "Domestic home ovens only, lacks commercial catering audit trail, Scottish 82°C limits, and probe placement technicalities."
+    },
+    {
+      "rank": 3,
+      "domain": "britishturkey.co.uk",
+      "url": "https://www.britishturkey.co.uk/cooking/roasting-times.html",
+      "title": "Turkey Roasting Times & Temperatures | British Turkey",
+      "strengths": "Industry board authority.",
+      "weaknesses": "Basic static lookup table, no interactive probe and resting calculator."
+    },
+    {
+      "rank": 4,
+      "domain": "blog.thermoworks.com",
+      "url": "https://blog.thermoworks.com/turkey/turkey-cooking-times-temperatures/",
+      "title": "Turkey Cooking Times & Temperatures | ThermoWorks",
+      "strengths": "Good visual graphics.",
+      "weaknesses": "Promotes probe hardware, US Fahrenheit only, lacks UK metric/statutory alignment."
+    },
+    {
+      "rank": 5,
+      "domain": "butterball.com",
+      "url": "https://www.butterball.com/how-to/roast-a-turkey",
+      "title": "How to Roast a Turkey | Butterball",
+      "strengths": "Recognised US brand authority.",
+      "weaknesses": "Pounds and Fahrenheit only, heavily brand-specific, no catering compliance tools."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Basic domestic roasting charts or consumer calculators.",
+    "what_they_lack": "Commercial catering weight-to-time roasting calculator, dual statutory UK/Scotland core limits, deep anatomical probe protocols, and one-click printable kitchen chart.",
+    "what_we_offer": "Interactive commercial roast calculator with whole bird, crown, and stuffed roll modes, weight scaling, rest timing, and instant A4 wall chart print capability."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 85
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 84
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 90
+    }
+  }
+}

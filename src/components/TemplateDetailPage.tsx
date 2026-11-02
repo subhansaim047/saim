@@ -203,9 +203,12 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     !isMasterFoodTempTool &&
     (template.slug.includes("temperature-chart") ||
       template.slug.includes("temp-chart") ||
+      template.slug.includes("cooking-chart") ||
       template.slug.includes("pasteurization-chart") ||
       template.slug.includes("pasteurisation-chart")) &&
-    (template.slug.includes("venison") ||
+    (template.slug.includes("meat") ||
+      template.slug.includes("steak") ||
+      template.slug.includes("venison") ||
       template.slug.includes("chicken") ||
       template.slug.includes("duck") ||
       template.slug.includes("beef") ||
@@ -218,11 +221,11 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
   const initialMeat: MeatCategory =
     template.slug.includes("turkey") ? "turkey" :
+    (template.slug.includes("steak") || template.slug.includes("beef") || template.slug.includes("meat")) ? "beef" :
     template.slug.includes("burger") ? "burger" :
     template.slug.includes("venison") ? "venison" :
     template.slug.includes("chicken") ? "chicken" :
     template.slug.includes("duck") ? "duck" :
-    template.slug.includes("beef") ? "beef" :
     template.slug.includes("lamb") ? "lamb" :
     template.slug.includes("ham") ? "ham" :
     template.slug.includes("pork") ? "pork" :
@@ -249,6 +252,9 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     !isHaccpTool &&
     !isQuizTool &&
     !isAllergenTool &&
+    !isProductSpecTool &&
+    !isUtensilsTool &&
+    !isMeatCookingTool &&
     (template.type === "checklist" ||
       template.type === "log" ||
       template.slug.includes("checklist") ||
@@ -264,6 +270,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("cleaning") ||
       template.slug.includes("slicer") ||
       template.slug.includes("waste") ||
+      template.slug.includes("pest") ||
       template.slug.includes("utensil"));
 
   // Related templates: only link to indexed KEEP and IMPROVE pages (no NOINDEX or duplicates)

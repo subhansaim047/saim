@@ -1,0 +1,95 @@
+{
+  "rank": 77,
+  "tool_id": "template-148",
+  "name": "Integrated Pest Management Plan (IPM)",
+  "slug": "pest-management-plan",
+  "url": "https://www.saimdev.site/food-safety-templates/pest-management-plan",
+  "primary_keyword": "integrated pest management plan food business",
+  "secondary_keywords": [
+    "commercial kitchen pest control plan template",
+    "restaurant pest management checklist",
+    "food business ipm procedure",
+    "pest control contract audit log",
+    "eho pest inspection requirements"
+  ],
+  "search_intent": "Restaurant owners, hotel food managers, and food manufacturers seeking an Integrated Pest Management (IPM) plan and audit checklist to prevent rodent, insect, and bird ingress, manage contractor bait logs, and comply with Regulation (EC) No 852/2004 Annex II.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Bullet Lists",
+    "PDF Guides"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "bpca.org.uk",
+      "url": "https://bpca.org.uk/pest-advice/pest-control-in-food-businesses",
+      "title": "Pest Control in Food Businesses | BPCA",
+      "strengths": "Definitive British Pest Control Association guidance.",
+      "weaknesses": "Directory to hire contractors, lacks internal kitchen daily opening and proofing checklist."
+    },
+    {
+      "rank": 2,
+      "domain": "rentokil.co.uk",
+      "url": "https://www.rentokil.co.uk/pest-control/food-and-beverage/",
+      "title": "Pest Control for Food & Beverage | Rentokil UK",
+      "strengths": "Corporate market leader authority.",
+      "weaknesses": "Sales brochure aiming to sell high-ticket monitoring services, no free digital checklist."
+    },
+    {
+      "rank": 3,
+      "domain": "food.gov.uk",
+      "url": "https://www.food.gov.uk/business-guidance/pest-control",
+      "title": "Pest Control for Food Businesses | Food Standards Agency",
+      "strengths": "Official government food authority backing.",
+      "weaknesses": "Brief overview page without interactive logging, bait station mapping, or corrective action workflow."
+    },
+    {
+      "rank": 4,
+      "domain": "safetyculture.com",
+      "url": "https://safetyculture.com/checklists/pest-control/",
+      "title": "Pest Control Checklists & Inspections | SafetyCulture",
+      "strengths": "Structured checklist format.",
+      "weaknesses": "Gated download requiring mobile app installation and email registration."
+    },
+    {
+      "rank": 5,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/pest-control-in-food-premises/",
+      "title": "Pest Control in Food Premises | High Speed Training",
+      "strengths": "Strong educational explanation of signs of infestation.",
+      "weaknesses": "Static article promoting online hygiene courses, no practical digital tool."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Contractor directories or basic advice articles.",
+    "what_they_lack": "An interactive digital IPM compliance checklist tracking building proofing, bait stations, daily opening checks, EFK fly killer maintenance, and BPCA contractor report logging.",
+    "what_we_offer": "Complete digital audit suite aligned with the UK Food Safety Act 1990 and Regulation (EC) No 852/2004, with real-time pass/flag tracking and CSV export."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 96,
+      "best_competitor": 78
+    },
+    "content_depth_score": {
+      "saim_dev": 96,
+      "best_competitor": 84
+    },
+    "mobile_ux_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 84
+    },
+    "technical_seo_score": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    },
+    "trust_eeat_score": {
+      "saim_dev": 96,
+      "best_competitor": 90
+    }
+  }
+}

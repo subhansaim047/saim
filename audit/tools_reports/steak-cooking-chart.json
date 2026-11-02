@@ -1,0 +1,95 @@
+{
+  "rank": 79,
+  "tool_id": "template-19",
+  "name": "Commercial Steak Doneness & Cooking Chart",
+  "slug": "steak-cooking-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/steak-cooking-chart",
+  "primary_keyword": "commercial steak doneness cooking temperature chart",
+  "secondary_keywords": [
+    "steak internal temperature celsius chart",
+    "steak doneness temp guide fsa",
+    "rare medium well done steak temperatures",
+    "commercial steak probe protocol",
+    "steak resting time and temperature rise"
+  ],
+  "search_intent": "Steakhouses, gastro-pubs, and restaurant grill chefs needing definitive internal core temperatures, surface searing rules, probe protocols, and resting guidance for Blue (45°C), Rare (50–52°C), Medium-Rare (54–57°C), Medium (60–63°C), Medium-Well (65–68°C), and Well-Done (71–75°C) intact whole-muscle beef steaks under UK food hygiene regulations.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Charts",
+    "Image Carousels"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "seriouseats.com",
+      "url": "https://www.seriouseats.com/how-to-cook-steak-temperature-chart",
+      "title": "Steak Doneness Temperature Guide | Serious Eats",
+      "strengths": "Detailed food science exploration of muscle protein denaturation.",
+      "weaknesses": "Consumer-oriented, narrative blog, US Fahrenheit only, lacks commercial catering HACCP/EHO context."
+    },
+    {
+      "rank": 2,
+      "domain": "blog.thermoworks.com",
+      "url": "https://blog.thermoworks.com/beef/steak-doneness-temps/",
+      "title": "Steak Doneness Temperatures & Resting Guide | ThermoWorks",
+      "strengths": "High-quality temperature graphics.",
+      "weaknesses": "Static image, built to sell thermometer hardware, no interactive cooking calculator."
+    },
+    {
+      "rank": 3,
+      "domain": "thehawksmoor.com",
+      "url": "https://thehawksmoor.com/cook-steak/",
+      "title": "How to Cook the Perfect Steak | Hawksmoor",
+      "strengths": "High culinary prestige and branding.",
+      "weaknesses": "Informal prose, lacks downloadable technical chart or statutory regulatory details on intact vs pinned steaks."
+    },
+    {
+      "rank": 4,
+      "domain": "bbcgoodfood.com",
+      "url": "https://www.bbcgoodfood.com/howto/guide/how-to-cook-the-perfect-steak",
+      "title": "How to Cook the Perfect Steak | BBC Good Food",
+      "strengths": "Massive organic search reach.",
+      "weaknesses": "Domestic kitchen tips, misses commercial flat-top/char-grill searing temperatures and probe hygiene."
+    },
+    {
+      "rank": 5,
+      "domain": "steaksandgame.com",
+      "url": "https://www.steaksandgame.com/steak-doneness-guide",
+      "title": "Steak Doneness Guide & Temperatures | Steaks and Game",
+      "strengths": "Clear descriptions of firmness and doneness.",
+      "weaknesses": "US units, heavy display ads, no digital tools or EHO compliance guidance."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Basic doneness descriptions and Fahrenheit cooking times.",
+    "what_they_lack": "An interactive digital chart with core vs pull temperatures, carry-over heat calculations, probe positioning standards, and UK FSA surface searing regulatory compliance.",
+    "what_we_offer": "Digital interactive steak temperature tool with 6 doneness stages, intact muscle safety rationale, touch test comparison, and instant A4 kitchen pass print layout."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 86
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 84
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 88
+    }
+  }
+}

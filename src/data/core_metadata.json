@@ -361,12 +361,12 @@
   },
   "product-specification-sheet": {
     "title": "Free Product Specification Sheet Template | Saim Dev",
-    "desc": "Free UK product specification sheet template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "desc": "Free food product specification sheet template for UK manufacturers. Document ingredients, 14 allergens, shelf life, microbiological limits, and CCPs.",
     "howTo": [
-      "Download and print the Product Specification Sheet for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Enter product trade name, recipe batch code, and manufacturer site accreditation numbers.",
+      "Document complete quantitative ingredient list with QUID percentages and compound origins.",
+      "Check all present and cross-contact allergens according to the UK 14 major allergens list.",
+      "Specify storage temperatures, shelf life testing limits, and target microbiological criteria."
     ]
   },
   "product-specification-template": {
@@ -411,12 +411,12 @@
   },
   "pest-management-plan": {
     "title": "Free Integrated Pest Management Plan (IPM) | Saim Dev",
-    "desc": "Free integrated pest management plan (ipm) template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "desc": "Free integrated pest management plan (IPM) for UK food businesses. Prevent rodent and insect ingress, audit bait stations, and meet EHO standards.",
     "howTo": [
-      "Download and print the Integrated Pest Management Plan (IPM) for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Inspect building envelope, door bristle strips, and pipe seals to eliminate rodent ingress points.",
+      "Map all tamper-resistant external bait boxes and internal non-toxic insect monitoring traps.",
+      "Conduct daily kitchen opening checks for droppings, grease smear marks, or packaging gnawing.",
+      "Review BPCA contractor inspection reports and complete recommended pest proofing actions."
     ]
   },
   "pest-control-template": {
@@ -555,23 +555,23 @@
     ]
   },
   "meat-cooking-chart": {
-    "title": "Free Meat Cooking Chart Template | Saim Dev",
-    "desc": "Download our free meat cooking chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Meat Cooking Temperature Chart & Guide | Saim Dev",
+    "desc": "Free commercial meat cooking temperature chart. Master UK statutory core temperatures, resting carry-over heat, and safe probe locations for all meats.",
     "howTo": [
-      "Download and print the Meat Cooking Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Select the commercial meat category (poultry, beef, lamb, pork, duck, venison, or burger).",
+      "Enter raw joint weight to calculate oven roasting time and recommended resting duration.",
+      "Insert a calibrated probe thermometer into the thermal geometric center of the thickest cut.",
+      "Verify minimum UK statutory core temperature (75°C poultry/mince, or approved rare beef sear)."
     ]
   },
   "steak-cooking-chart": {
-    "title": "Free Steak Doneness Chart Template | Saim Dev",
-    "desc": "Download our free steak doneness chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Steak Doneness & Cooking Temp Chart | Saim Dev",
+    "desc": "Free commercial steak doneness and cooking temperature chart. Master internal temperatures for blue, rare, medium, and well-done steaks with safe resting.",
     "howTo": [
-      "Download and print the Steak Doneness Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Bring steaks to room temperature for 20 minutes and preheat heavy grill or pan to high heat.",
+      "Sear all external surfaces thoroughly to kill surface bacteria according to FSA regulations.",
+      "Insert a fine digital needle probe horizontally into the exact centre of the steak.",
+      "Remove at target internal temperature (e.g. 52°C for rare) and rest 5–8 minutes before serving."
     ]
   },
   "ham-cooking-temperature-chart": {
@@ -667,13 +667,13 @@
     ]
   },
   "turkey-cooking-chart": {
-    "title": "Free Turkey Cooking Chart Template | Saim Dev",
-    "desc": "Download our free turkey cooking chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Turkey Cooking Temperature Chart | Saim Dev",
+    "desc": "Free commercial turkey cooking temperature chart. Calculate roasting times by weight, verify 75°C core probe limits, and ensure safe holiday catering.",
     "howTo": [
-      "Download and print the Turkey Cooking Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Weigh whole turkey or turkey crown to determine precise commercial oven cooking duration.",
+      "Insert digital probe into thickest part of breast and innermost thigh without touching bone.",
+      "Ensure core temperature reaches 75°C for 30 seconds (or 82°C in Scotland) before removal.",
+      "Allow a minimum 20 to 30-minute tented foil rest to facilitate safe heat distribution."
     ]
   },
   "lamb-temperature-chart": {

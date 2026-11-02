@@ -1,0 +1,95 @@
+{
+  "rank": 78,
+  "tool_id": "template-18",
+  "name": "Commercial Meat Cooking Temperature Chart",
+  "slug": "meat-cooking-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/meat-cooking-chart",
+  "primary_keyword": "commercial meat cooking temperature chart",
+  "secondary_keywords": [
+    "uk fsa meat cooking temperature guide",
+    "catering cooking temperature chart pdf",
+    "restaurant meat temp chart celsius",
+    "safe meat core temperatures fsa",
+    "commercial roasting temperature chart"
+  ],
+  "search_intent": "Professional chefs, caterers, and culinary students seeking a master commercial meat cooking chart providing internal core temperatures, cook times per kilogram, resting carry-over rise, and probe protocols across all culinary meats (beef, lamb, pork, poultry, duck, venison, fish).",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Calculators",
+    "Image Packs"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "food.gov.uk",
+      "url": "https://www.food.gov.uk/safety-hygiene/cooking-your-food",
+      "title": "Cooking Your Food Safely | Food Standards Agency",
+      "strengths": "Definitive UK statutory regulatory authority.",
+      "weaknesses": "Static text page mentioning only the broad 70°C for 2m / 75°C rule without species-specific cut breakdowns or rest calculations."
+    },
+    {
+      "rank": 2,
+      "domain": "blog.thermoworks.com",
+      "url": "https://blog.thermoworks.com/meat-temperatures/",
+      "title": "Chef-Recommended Meat Temperature Chart | ThermoWorks",
+      "strengths": "Attractive visual design and probe marketing.",
+      "weaknesses": "US Fahrenheit focus, static graphics, no interactive weight-to-time roast calculator."
+    },
+    {
+      "rank": 3,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/food-cooking-temperatures/",
+      "title": "Safe Cooking Temperatures & Time Limits | High Speed Training",
+      "strengths": "Good explanation of pathogen kill times.",
+      "weaknesses": "Static table, no interactive joint weight scaling or printable commercial kitchen charts."
+    },
+    {
+      "rank": 4,
+      "domain": "bbcgoodfood.com",
+      "url": "https://www.bbcgoodfood.com/howto/guide/meat-cooking-times-temperatures",
+      "title": "Meat Cooking Times & Temperatures | BBC Good Food",
+      "strengths": "High search volume consumer recipe portal.",
+      "weaknesses": "Domestic recipes, lacks commercial kitchen CCP protocols, Scotland 82°C standards, and EHO audit trails."
+    },
+    {
+      "rank": 5,
+      "domain": "webstaurantstore.com",
+      "url": "https://www.webstaurantstore.com/article/85/meat-temperature-chart.html",
+      "title": "Internal Meat Temperature Chart | WebstaurantStore",
+      "strengths": "Commercial foodservice focus.",
+      "weaknesses": "US FDA Food Code standards, lacks UK FSA regulatory alignment and interactive controls."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Static reference tables or domestic recipe advice.",
+    "what_they_lack": "An interactive digital master meat calculator supporting multiple species, weight-based time estimates, dual UK/Scotland regulatory limits, and probe placement guides.",
+    "what_we_offer": "Interactive species switcher covering British Beef, Poultry, Lamb, Pork, Duck, Venison, Ham, Fish, Burgers, and Turkey with real-time roast calculator and one-click printable A4 kitchen chart."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 88
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 84
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 92
+    }
+  }
+}
