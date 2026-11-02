@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-37",
+  "name": "Commercial Kitchen Deep Cleaning Checklist & Sanitation Rota",
+  "slug": "deep-cleaning-checklist",
+  "url": "https://www.saimdev.site/food-safety-templates/deep-cleaning-checklist",
+  "primary_keyword": "deep cleaning checklist commercial kitchen uk",
+  "secondary_keywords": [
+    "restaurant deep cleaning schedule template",
+    "tr19 extraction deep cleaning checklist",
+    "fryer boil out procedure catering",
+    "commercial kitchen sanitiser contact time bs en 1276",
+    "printable deep cleaning checklist pdf"
+  ],
+  "search_intent": "Kitchen managers, head chefs, and contract cleaning supervisors requiring a comprehensive, heavy-duty commercial kitchen deep cleaning schedule covering TR19 ventilation degreasing, fryer boil-outs, and two-stage disinfection.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Table"
+  ],
+  "competitors": [
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/kitchen-cleaning-schedule/",
+      "features": "Static cleaning rota guide with course promotions; no interactive timers."
+    },
+    {
+      "name": "BICS (British Institute of Cleaning Science)",
+      "url": "https://www.bics.org.uk/colour-coding-standards",
+      "features": "Industry colour-coding reference; non-operational kitchen log."
+    },
+    {
+      "name": "SafetyCulture / iAuditor",
+      "url": "https://safetyculture.com/checklists/commercial-kitchen-cleaning/",
+      "features": "Mobile software app requiring account sign-up and paid tier."
+    },
+    {
+      "name": "Kitchen Cut",
+      "url": "https://www.kitchencut.com/kitchen-cleaning-templates",
+      "features": "F&B management platform hiding templates behind demo booking."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/restaurant-cleaning-checklist",
+      "features": "Paywalled software platform ($79/mo)."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive chemical contact stopwatch for BS EN 1276 compliance (30s/60s/120s)",
+      "No cut-and-dry breakdown of daily vs heavy deep cleaning tasks (TR19 extraction, fryer boil-out)",
+      "No pre-configured high-temperature pass-through warewash thermal rinse check (>=82°C)",
+      "No print-ready A4 commercial kitchen wall sheet with supervisor sign-off"
+    ],
+    "our_differentiators": [
+      "Interactive deep cleaning digital checklist with pass/fail/pending task verification",
+      "Integrated countdown stopwatch for statutory chemical disinfectant contact times",
+      "Full TR19 extraction and fryer boil-out standard operating procedures",
+      "High-contrast printable A4 wall poster with shift manager verification"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.0,
+    "top_competitor_overall_score": 75.8
+  }
+}

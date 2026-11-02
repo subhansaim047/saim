@@ -231,12 +231,12 @@
   },
   "eho-checklist": {
     "title": "Free EHO Inspection Checklist UK | Saim Dev",
-    "desc": "Complete EHO inspection checklist for UK restaurants and takeaways. Audit food hygiene, cross-contamination, structural cleaning, and HACCP paperwork.",
+    "desc": "Free UK EHO food hygiene inspection checklist. Audit food handling, cross-contamination, premises structure, SFBB management, and achieve a 5-star rating.",
     "howTo": [
-      "Audit kitchen practices across the 3 EHO scoring pillars: Food Hygiene, Structural Compliance, and Management Confidence.",
-      "Verify that hot holding (>63°C), chilling (<8°C), and cooking (75°C) logs are up to date and signed daily.",
-      "Inspect physical premises for pest proofing, hot running water, soap, paper towels, and surface sanitation.",
-      "Organise your SFBB diary or HACCP binder so it can be handed to the visiting officer immediately."
+      "Audit Pillar 1: Verify separation of raw meat and ready-to-eat foods, probe cooking temperatures (>=75°C), and fridge holding under 5°C.",
+      "Audit Pillar 2: Inspect structural cleanliness, ventilation filters, non-slip flooring, drainage, and building pest-proofing integrity.",
+      "Audit Pillar 3: Verify documented SFBB management packs, daily diary sign-offs, 14-allergen matrices, and staff hygiene certificates.",
+      "Click Print / Save as PDF to output a comprehensive pre-inspection audit scorecard for your kitchen team."
     ]
   },
   "delivery-log": {
@@ -972,12 +972,12 @@
   },
   "deep-cleaning-checklist": {
     "title": "Free Deep Cleaning Checklist Template | Saim Dev",
-    "desc": "Download our free deep cleaning checklist template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "desc": "Free commercial kitchen deep cleaning checklist. Heavy equipment rotas, TR19 extraction degreasing, fryer boil-outs, and printable supervisor sign-offs.",
     "howTo": [
-      "Download and print the Deep Cleaning Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "De-energise appliances, isolate gas lines, and remove cookware from the deep clean zone.",
+      "Execute chemical boil-outs for deep fat fryers and degrease extraction hood baffle filters under TR19 standards.",
+      "Pull refrigeration units away from walls to vacuum condenser coils and pressure wash floor gullies.",
+      "Apply two-stage cleaning and BS EN 1276 chemical disinfection to all stainless steel counters and splashbacks."
     ]
   },
   "restaurant-deep-cleaning-checklist": {
@@ -1091,13 +1091,13 @@
     ]
   },
   "fsma-compliance-checklist": {
-    "title": "Free UK Food Hygiene Due Diligence & Compliance | Saim Dev",
-    "desc": "Free uk food hygiene due diligence & compliance checklist template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "title": "Free UK Food Hygiene Due Diligence Checklist | Saim Dev",
+    "desc": "Free UK food hygiene due diligence checklist. Section 21 statutory defense, cold chain monitoring, staff training records, and printable audit sheets.",
     "howTo": [
-      "Download and print the UK Food Hygiene Due Diligence & Compliance Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit goods-inwards delivery temperatures and supplier lot numbers under Article 18 of Regulation (EC) No 178/2002.",
+      "Verify complete daily refrigeration logs (<=5°C), cooking core logs (>=75°C), and hot holding logs (>=63°C).",
+      "Confirm full Natasha's Law compliance: PPDS food ingredient labelling with all 14 statutory allergens emphasized in bold.",
+      "Review staff Level 2 and Level 3 Food Hygiene training credentials and monthly thermometer calibration logs."
     ]
   },
   "fssc-certification-checklist": {
@@ -1401,13 +1401,13 @@
     ]
   },
   "ecosure-inspection-checklist": {
-    "title": "Free Third-Party Kitchen Hygiene Audit Checklist | Saim Dev",
-    "desc": "Free third-party kitchen hygiene audit checklist template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "title": "Free Third-Party Kitchen Hygiene Audit | Saim Dev",
+    "desc": "Free commercial kitchen third-party hygiene audit checklist. Brand standard evaluations, unannounced inspector audits, and printable compliance logs.",
     "howTo": [
-      "Download and print the Third-Party Kitchen Hygiene Audit Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Conduct unannounced mock kitchen walk-through assessing brand standards, food safety CCPs, and employee handwashing compliance.",
+      "Probe active cookline temperatures and holding displays to verify zero food exposure in the 8°C–63°C danger zone.",
+      "Inspect dry storage, cold room stacking hierarchies (>15cm floor clearance), and FIFO stock rotation dates.",
+      "Generate actionable deficiency logs with immediate corrective actions and supervisor follow-up dates."
     ]
   },
   "5-whys-root-cause-analysis-template": {
@@ -1472,12 +1472,12 @@
   },
   "restroom-cleaning-checklist-log": {
     "title": "Free Restroom Cleaning Checklist Template | Saim Dev",
-    "desc": "Free UK restroom cleaning checklist template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "desc": "Free commercial restroom cleaning checklist. Hourly washroom inspection logs, BS EN 1499 soap replenishment, surface sanitation, and printable rotas.",
     "howTo": [
-      "Download and print the Restroom Cleaning Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Replenish bactericidal unperfumed hand soap (BS EN 1499) and blue disposable paper towel dispensers at all sinks.",
+      "Verify continuous hot running water (>=45°C) and clean push-tap operation across all handwash basins.",
+      "Descale and disinfect WC bowls, seats, urinals, and high-touch door handles with commercial bactericidal cleaner.",
+      "Mop non-slip flooring using dedicated yellow-coded washroom mops and record hourly supervisor initials on the door log."
     ]
   },
   "restaurant-inventory-template": {

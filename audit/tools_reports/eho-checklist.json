@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-36",
+  "name": "EHO Food Hygiene Inspection Checklist & 5-Star Readiness Audit",
+  "slug": "eho-checklist",
+  "url": "https://www.saimdev.site/food-safety-templates/eho-checklist",
+  "primary_keyword": "eho inspection checklist uk commercial kitchen",
+  "secondary_keywords": [
+    "eho food hygiene checklist pdf",
+    "fhrs 5 star rating inspection checklist",
+    "environmental health inspection preparation",
+    "sfbb diary eho compliance audit",
+    "printable eho inspection checklist"
+  ],
+  "search_intent": "Hospitality business owners, restaurant general managers, and head chefs seeking the official UK local authority Environmental Health Officer inspection framework to self-audit food handling, physical premises cleanliness, and confidence in management for a 5-star rating.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Table"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/food-hygiene-ratings-for-businesses",
+      "features": "Official government guidance on FHRS ratings; text-heavy without interactive audit tools."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/eho-inspection-checklist/",
+      "features": "Educational guide with static PDF download and paid course marketing."
+    },
+    {
+      "name": "The Food Hygiene Company",
+      "url": "https://www.foodhygienecompany.co.uk/eho-inspection/",
+      "features": "Training company blog post linking to certification packages."
+    },
+    {
+      "name": "Virtual College",
+      "url": "https://www.virtual-college.co.uk/resources/eho-inspection-checklist",
+      "features": "Basic informational checklist requiring email opt-in."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/eho-inspection-checklist",
+      "features": "Commercial software locked behind a $79/mo subscription wall."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital audit checklist with pass/fail/pending scoring across all 3 statutory pillars",
+      "No built-in temperature probe logger with automated compliance validation",
+      "No chemical sanitiser contact time stopwatch (BS EN 1276 compliance)",
+      "No instant A4 landscape audit report printable directly without watermarks"
+    ],
+    "our_differentiators": [
+      "Interactive 3-pillar FHRS self-audit tool with pre-loaded UK statutory criteria",
+      "Full alignment with Food Safety Act 1990 Section 21 due diligence defense",
+      "Integrated BS EN 1276 chemical contact stopwatch (30s/60s/120s)",
+      "Instant print and CSV export with supervisor and auditor sign-off blocks"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.4,
+    "top_competitor_overall_score": 76.5
+  }
+}

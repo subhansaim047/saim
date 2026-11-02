@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-40",
+  "name": "Commercial Restroom Cleaning Checklist & Hourly Washroom Log",
+  "slug": "restroom-cleaning-checklist-log",
+  "url": "https://www.saimdev.site/food-safety-templates/restroom-cleaning-checklist-log",
+  "primary_keyword": "restroom cleaning checklist commercial kitchen uk",
+  "secondary_keywords": [
+    "restaurant washroom cleaning schedule template",
+    "hourly toilet inspection checklist catering",
+    "commercial washroom colour coding bics yellow",
+    "food premises customer toilet hygiene log",
+    "printable restroom cleaning checklist a4"
+  ],
+  "search_intent": "Restaurant managers, bar supervisors, and facilities cleaning staff requiring a compliant, hourly restroom inspection log to maintain sanitary conditions, prevent cross-contamination into food areas, and comply with Workplace Regulations 1992.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Table"
+  ],
+  "competitors": [
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/toilet-cleaning-checklist/",
+      "features": "Static educational blog post with printable PDF download."
+    },
+    {
+      "name": "SafetyCulture / iAuditor",
+      "url": "https://safetyculture.com/checklists/restroom-cleaning/",
+      "features": "Mobile software app requiring paid monthly subscription and account creation."
+    },
+    {
+      "name": "BICS (British Institute of Cleaning Science)",
+      "url": "https://www.bics.org.uk/colour-coding-standards",
+      "features": "National colour-coding guideline; non-operational kitchen log."
+    },
+    {
+      "name": "Jangro",
+      "url": "https://www.jangro.net/washroom-cleaning-guide",
+      "features": "Janitorial supply distributor catalog linking to chemical sales."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/restroom-cleaning-checklist",
+      "features": "Paywalled compliance software ($79/mo) requiring user signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital washroom checklist with pass/fail/pending status tracking",
+      "No explicit emphasis on BICS yellow colour-coding to prevent washroom-to-kitchen cross-contamination",
+      "No BS EN 1499 unperfumed bactericidal hand soap verification standard",
+      "No high-resolution A4 door-mountable inspection sheet ready for instant printing"
+    ],
+    "our_differentiators": [
+      "Interactive hourly restroom cleaning checklist with pre-configured sanitary inspection points",
+      "Strict adherence to BICS yellow washroom colour-coding and BS EN 1499 unperfumed soap standards",
+      "Full compliance with Workplace (Health, Safety and Welfare) Regulations 1992",
+      "Printable A4 back-of-door inspection log with supervisor hourly sign-off blocks"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.0,
+    "top_competitor_overall_score": 74.5
+  }
+}
