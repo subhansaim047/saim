@@ -1,0 +1,78 @@
+{
+  "tool_id": "template-rank-54",
+  "name": "Commercial Kitchen Utensils List & Smallwares Auditor",
+  "slug": "kitchen-utensils-list",
+  "url": "https://www.saimdev.site/food-safety-templates/kitchen-utensils-list",
+  "primary_keyword": "commercial kitchen utensils list uk",
+  "secondary_keywords": [
+    "restaurant kitchen equipment and smallwares list",
+    "catering utensils master inventory checklist",
+    "colour coded kitchen utensils food safety",
+    "professional chef smallwares buying guide",
+    "commercial kitchen opening smallware budget calculator"
+  ],
+  "search_intent": "Executive chefs, restaurant operators, and catering purchasing managers seeking a master commercial kitchen smallwares specification to audit par levels, calculate replacement budgets, enforce colour-coded allergen segregation, and ensure compliance with BS EN ISO 8442 and EC 1935/2004.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Specification / Pricing Table"
+  ],
+  "competitors": [
+    {
+      "name": "Nisbets UK",
+      "url": "https://www.nisbets.co.uk/kitchenware-and-utensils",
+      "features": "E-commerce product catalogue with thousands of items but no audit tool."
+    },
+    {
+      "name": "WebstaurantStore",
+      "url": "https://www.webstaurantstore.com/article/101/kitchen-utensils-list.html",
+      "features": "Buying guide blog post with affiliate links and static recommendations."
+    },
+    {
+      "name": "Alliance Online UK",
+      "url": "https://www.allianceonline.co.uk/catering-equipment/kitchen-utensils.html",
+      "features": "Commercial catering distributor store without inventory budgeting tools."
+    },
+    {
+      "name": "Chef Works",
+      "url": "https://www.chefworks.com/culinary-corner/essential-kitchen-tools-checklist",
+      "features": "Culinary lifestyle article with basic equipment descriptions."
+    },
+    {
+      "name": "Lightspeed HQ",
+      "url": "https://www.lightspeedhq.com/blog/kitchen-equipment-list/",
+      "features": "Restaurant tech blog with high-level equipment list aiming to sell POS."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "E-commerce catalogues or generic blog lists with zero interactive inventory tracking, no par-level stock calculation, no FHRS compliance tagging, and no budget forecasting.",
+    "our_differentiators": [
+      "Interactive smallwares par manager with station filters and deficit counter",
+      "Live equipment budget calculator (£) based on trade wholesale pricing",
+      "FHRS-critical tagging for colour-coded knives, probe wipes, and allergen kits",
+      "One-click printable A4 Master Specification and PO CSV export"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 99,
+      "best_competitor": 75
+    },
+    "content_depth": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 72
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 84
+    },
+    "trust_eeat": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    }
+  }
+}

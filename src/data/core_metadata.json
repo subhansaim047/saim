@@ -480,23 +480,25 @@
     ]
   },
   "retail-store-daily-checklist": {
-    "title": "Free Interactive Retail Store Daily Checklist | Saim Dev",
-    "desc": "Free interactive retail store daily checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Retail Store Daily Checklist | Saim Dev",
+    "desc": "Download our free retail store daily checklist. Audit shop floor hygiene, grab-and-go chiller temperatures, and shelf stock rotation for UK stores.",
     "howTo": [
-      "Download and print the Interactive Retail Store Daily Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Verify perimeter security, alarms, CCTV, and cash float balances upon opening.",
+      "Audit grab-and-go open chillers (1°C to 5°C, legal max 8°C) and display freezers.",
+      "Execute First-In, First-Out (FIFO) stock rotation and inspect use-by date codes.",
+      "Sanitise customer shopping baskets and trolley handles with BS EN 1276 disinfectant.",
+      "Reconcile daily cash takings, empty refuse bins, and arm store alarm at night."
     ]
   },
   "kitchen-opening-and-closing-checklist": {
-    "title": "Free Interactive Kitchen Opening & Closing Tool | Saim Dev",
-    "desc": "Free interactive kitchen opening & closing tool template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Kitchen Opening & Closing Checklist | Saim Dev",
+    "desc": "Free commercial kitchen opening and closing checklist. Complete daily SFBB diary tasks, refrigeration audits, sanitiser logs, and secure night shutdown.",
     "howTo": [
-      "Download and print the Interactive Kitchen Opening & Closing Tool for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Check and log morning chiller (1°C–5°C) and freezer (≤-18°C) probe temperatures.",
+      "Restock dedicated handwashing basins with unperfumed bactericidal soap and blue roll.",
+      "Power on kitchen extraction canopy and confirm gas interlock safety valve is active.",
+      "Cool cooked food to below 8°C within 90 minutes before covered refrigerated storage.",
+      "Isolate commercial gas supplies, lock waste compactors, and verify pest barriers."
     ]
   },
   "health-inspection-checklist": {
@@ -512,12 +514,13 @@
   },
   "restaurant-health-inspection-checklist": {
     "title": "Free Restaurant Health Inspection Checklist | Saim Dev",
-    "desc": "Free restaurant health inspection checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "desc": "Free restaurant health inspection checklist for UK kitchens. Audit hygiene handling, clean facilities, and HACCP management before your EHO inspection.",
     "howTo": [
-      "Download and print the Restaurant Health Inspection Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit food handling practices: check cooking core (≥75°C) and chiller (≤5°C) limits.",
+      "Verify physical segregation of raw poultry, meat, and fish from ready-to-eat foods.",
+      "Inspect handwash stations for hot running water, bactericidal soap, and paper roll.",
+      "Review SFBB or HACCP diary documentation, 4-weekly reviews, and temperature logs.",
+      "Confirm staff Level 2 food hygiene certificates and supplier delivery invoices."
     ]
   },
   "restaurant-equipment-list": {
@@ -531,13 +534,14 @@
     ]
   },
   "kitchen-utensils-list": {
-    "title": "Free Kitchen Utensils List Template | Saim Dev",
-    "desc": "Download our free kitchen utensils list template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Commercial Kitchen Utensils List | Saim Dev",
+    "desc": "Interactive commercial kitchen utensils list. Manage par levels, colour-coded prep smallwares, UKAS probes, and smallware budgets for UK kitchens.",
     "howTo": [
-      "Download and print the Kitchen Utensils List for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit current smallware inventory against station par requirements.",
+      "Verify full colour-coded sets for knives and chopping boards (6 standard colours).",
+      "Inspect UKAS-calibrated needle probes and infrared thermometer accuracy.",
+      "Check food-contact compliance (Type 304 stainless steel and BPA-free storage).",
+      "Calculate missing smallware deficit and export ready-to-order purchase specification."
     ]
   },
   "fridge-layout-poster": {
@@ -631,13 +635,14 @@
     ]
   },
   "starting-a-food-business-checklist": {
-    "title": "Free Starting A Food Business Checklist Template | Saim Dev",
-    "desc": "Free starting a food business checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Starting a Food Business Checklist | Saim Dev",
+    "desc": "Free UK checklist for starting a food business. Follow step-by-step guidance on council registration, HACCP setup, trade waste, and food safety training.",
     "howTo": [
-      "Download and print the Starting A Food Business Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Register your food premises with the local council at least 28 days before opening.",
+      "Implement a documented HACCP plan or complete the FSA Safer Food, Better Business pack.",
+      "Ensure all food handlers complete certified Level 2 Food Hygiene training courses.",
+      "Arrange commercial trade waste disposal and grease management with licensed carriers.",
+      "Conduct a pre-opening inspection audit across all three FHRS hygiene pillars."
     ]
   },
   "duck-cooking-temperature-chart": {

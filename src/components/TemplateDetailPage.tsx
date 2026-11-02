@@ -44,6 +44,7 @@ import { MasterFoodTemperatureChartTool } from "./tools/MasterFoodTemperatureCha
 import { ConsumerAdvisoryNoticeTool } from "./tools/ConsumerAdvisoryNoticeTool";
 import { FoodFlowChartTool } from "./tools/FoodFlowChartTool";
 import { ProductSpecificationTool } from "./tools/ProductSpecificationTool";
+import KitchenUtensilsTool from "./tools/KitchenUtensilsTool";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
@@ -134,6 +135,11 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const isProductSpecTool =
     template.slug === "product-specification-template" ||
     template.slug.includes("product-specification");
+
+  const isUtensilsTool =
+    template.slug === "kitchen-utensils-list" ||
+    template.slug.includes("utensil") ||
+    template.slug.includes("equipment-list");
 
   const isHaccpTool =
     !isFoodFlowChartTool &&
@@ -553,6 +559,11 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <ProductSpecificationTool templateId={template.id} />
         )}
 
+        {/* 4o. Commercial Kitchen Utensils & Equipment Inventory Auditor */}
+        {isUtensilsTool && (
+          <KitchenUtensilsTool templateId={template.id} />
+        )}
+
         {/* 5. 14 Food Allergen Matrix & Kitchen Chart Tool */}
         {isAllergenTool && (
           <AllergenMatrixTool templateId={template.id} />
@@ -564,7 +575,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         )}
 
         {/* 7. Standard Poster / Reference Chart View (Fully Printable & Editable) */}
-        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && !isFoodCoolingTool && !isWalkInStorageTool && !isFridgeRecordTool && !isTraceabilityTool && !isHamCookingTool && !isMeatCookingTool && !isMasterFoodTempTool && !isConsumerAdvisoryTool && !isFoodFlowChartTool && !isProductSpecTool && (
+        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && !isFoodCoolingTool && !isWalkInStorageTool && !isFridgeRecordTool && !isTraceabilityTool && !isHamCookingTool && !isMeatCookingTool && !isMasterFoodTempTool && !isConsumerAdvisoryTool && !isFoodFlowChartTool && !isProductSpecTool && !isUtensilsTool && (
           <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-6 printable-doc shadow-sm">
             {/* Printable & Editable Sign-Off Header */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-2xl bg-amber-50/50 border border-amber-200/60 text-xs">
