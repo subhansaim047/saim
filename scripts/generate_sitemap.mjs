@@ -93,6 +93,11 @@ const demoImages = [
     loc: "https://www.saimdev.site/demos/previews/serenia-luxury-wellness-spa.webp",
     title: "Serenia Holistic Wellness Sanctuary & Spa",
     caption: "Calming botanical wellness retreat website design with treatment booking engine"
+  },
+  {
+    loc: "https://www.saimdev.site/demos/previews/idrees-leather-preview.webp",
+    title: "Idrees Leather Handcrafted Luxury Goods E-Commerce Showcase",
+    caption: "High-end bespoke luxury leather goods e-commerce store demo with responsive product catalogs"
   }
 ];
 
@@ -213,6 +218,7 @@ const staticPages = [
   { url: "https://www.saimdev.site/frenchyse", priority: "0.8", changefreq: "monthly" },
   { url: "https://www.saimdev.site/anzaar", priority: "0.8", changefreq: "monthly" },
   { url: "https://www.saimdev.site/hotbite", priority: "0.8", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/idreesleather", priority: "0.8", changefreq: "monthly" },
 ];
 
 // Add only KEEP and IMPROVE pages

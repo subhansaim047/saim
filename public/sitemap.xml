@@ -235,6 +235,11 @@
       <image:title>Serenia Holistic Wellness Sanctuary &amp; Spa</image:title>
       <image:caption>Calming botanical wellness retreat website design with treatment booking engine</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://www.saimdev.site/demos/previews/idrees-leather-preview.webp</image:loc>
+      <image:title>Idrees Leather Handcrafted Luxury Goods E-Commerce Showcase</image:title>
+      <image:caption>High-end bespoke luxury leather goods e-commerce store demo with responsive product catalogs</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.saimdev.site/about</loc>
@@ -385,6 +390,12 @@
   </url>
   <url>
     <loc>https://www.saimdev.site/hotbite</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.saimdev.site/idreesleather</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
