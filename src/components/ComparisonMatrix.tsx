@@ -56,7 +56,7 @@ const COMPARISON_DATA: MatrixRow[] = [
   },
   {
     dimension: "Demonstrated Engineering Proof",
-    saimDev: "160 Live Production Web Apps on Site",
+    saimDev: "160 Live Tools & Compliance Templates on Site",
     traditionalAgency: "Static portfolio screenshots only",
     cheapFreelancer: "Third-party template screenshots",
     diyBuilders: "Generic cookie-cutter templates",
@@ -94,8 +94,8 @@ export const ComparisonMatrix = () => {
             <span className="text-white/40">Engineered for quality, speed, and honesty.</span>
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg text-white/65 leading-relaxed font-light">
-            Why ambitious businesses choose our direct senior engineering studio over bloated corporate agencies, risky marketplace freelancers, or restrictive DIY platforms.
+          <p className="text-sm sm:text-base md:text-lg text-white/75 leading-relaxed font-light">
+            Comparing typical industry service models against our direct senior engineering studio. Factual, transparent, and based on standard UK market surveys.
           </p>
         </div>
 
@@ -161,6 +161,16 @@ export const ComparisonMatrix = () => {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Sourced Market Evidence & Legal Footnotes */}
+        <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-xs text-white/70 leading-relaxed font-light">
+          <p className="font-medium text-white/90 mb-2">Sources &amp; Comparative Advertising Methodology (UK CAP Code Compliance):</p>
+          <ul className="space-y-1.5 list-disc list-inside">
+            <li><strong>Traditional Agency Pricing &amp; Timelines:</strong> Based on published UK market surveys by Clutch UK and DesignRush reporting average bespoke website build costs of £3,000–£10,000+ for small-to-mid businesses with 8–16 week waterfall delivery cycles.</li>
+            <li><strong>DIY Platform Costs:</strong> Reflect standard published commercial tiers of major SaaS website builders (e.g., Wix, Squarespace) ranging from £15–£40/month plus ongoing payment gateway and app store subscription fees.</li>
+            <li><strong>Saim Dev Offerings:</strong> Transparent fixed milestone pricing (£250–£1,250+ depending on scope) with 100% source code ownership and zero mandatory recurring maintenance contracts.</li>
+          </ul>
         </div>
       </div>
     </section>

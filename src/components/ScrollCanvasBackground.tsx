@@ -17,17 +17,24 @@ export const ScrollCanvasBackground: React.FC = () => {
   const lastDrawnFrameRef = useRef<number>(-1);
 
   useEffect(() => {
+    // Respect reduced motion preference and mobile viewports
+    const prefersReducedMotion = typeof window !== "undefined" && window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
+    // Mobile viewports (< 768px) and users with prefersReducedMotion use the instant static frame_000.webp
+    // to achieve green mobile Core Web Vitals (zero CPU main thread blocking)
+    if (isMobile || prefersReducedMotion) {
+      return;
+    }
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d", { alpha: false });
     if (!ctx) return;
 
     let isDisposed = false;
-
-    // Respect reduced motion preference
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
 
     // Initialize images cache
     const images: (HTMLImageElement | null)[] = new Array(TOTAL_FRAMES).fill(null);
@@ -187,30 +194,42 @@ export const ScrollCanvasBackground: React.FC = () => {
       processQueue();
     };
 
-    // Schedule progressive streaming after first paint (150ms delay)
-    // This allows the browser tab to finish its load event in < 0.5s!
-    const backgroundTimer = setTimeout(() => {
-      if (isDisposed) return;
+    // Mobile & Reduced Motion Check: On mobile screens (< 768px), keep frame 0 static
+    // and skip loading 89 extra frames over cellular networks to protect Core Web Vitals (LCP < 2.5s)
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
-      // Phase A: Next 6 immediate frames for smooth initial scroll
-      enqueue([1, 2, 3, 4, 5, 6]);
+    let backgroundTimer: any = null;
+    if (!isMobile && !prefersReducedMotion) {
+      // On desktop, schedule progressive streaming only after idle (2.5s delay)
+      const scheduleStreaming = () => {
+        if (isDisposed) return;
 
-      // Phase B: Keyframe milestones (every 3rd frame) across the whole timeline
-      const keyframes: number[] = [];
-      for (let i = 9; i < TOTAL_FRAMES; i += 3) {
-        keyframes.push(i);
-      }
-      enqueue(keyframes);
+        // Phase A: Next 6 immediate frames for smooth initial scroll
+        enqueue([1, 2, 3, 4, 5, 6]);
 
-      // Phase C: Intermediate filler frames in idle background
-      const remaining: number[] = [];
-      for (let i = 0; i < TOTAL_FRAMES; i++) {
-        if (!keyframes.includes(i) && i > 6) {
-          remaining.push(i);
+        // Phase B: Keyframe milestones (every 3rd frame) across the whole timeline
+        const keyframes: number[] = [];
+        for (let i = 9; i < TOTAL_FRAMES; i += 3) {
+          keyframes.push(i);
         }
+        enqueue(keyframes);
+
+        // Phase C: Intermediate filler frames in idle background
+        const remaining: number[] = [];
+        for (let i = 0; i < TOTAL_FRAMES; i++) {
+          if (!keyframes.includes(i) && i > 6) {
+            remaining.push(i);
+          }
+        }
+        enqueue(remaining);
+      };
+
+      if (typeof (window as any).requestIdleCallback === "function") {
+        (window as any).requestIdleCallback(scheduleStreaming, { timeout: 3000 });
+      } else {
+        backgroundTimer = setTimeout(scheduleStreaming, 2500);
       }
-      enqueue(remaining);
-    }, 150);
+    }
 
     // =========================================================================
     // 4. SCROLL PROGRESS TRACKING & DIRECTIONAL BUFFERING

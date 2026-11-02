@@ -1,0 +1,464 @@
+{
+  "fetches": [
+    {
+      "url": "https://www.saimdev.site/sitemap.xml",
+      "status": 200,
+      "error": "",
+      "fetched_at": "2026-10-26T16:41:59.244028+00:00",
+      "sha256": "33b6ce2f456da3b6a6c2671ecc55bac00787b3a5ad4ddc84a9b47aa3e8654a63",
+      "redirects": [],
+      "entries": 48,
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/sitemap.xml",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:41:59.244458+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ],
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "kind": "urlset",
+      "xml_path": "sitemap-evidence/87345f895115fa65b8056ce8270ee71b4f93e2f011658f7efb5fa821476580fc.xml"
+    },
+    {
+      "url": "https://www.saimdev.site/sitemap_index.xml",
+      "status": 404,
+      "error": "",
+      "fetched_at": "2026-10-26T16:41:59.842400+00:00",
+      "sha256": "6d9a4076d09d87acb277651d4a86d6af58e0f752ceaeaa9e8fe1ab4b80ffa59c",
+      "redirects": [],
+      "entries": 0,
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/sitemap_index.xml",
+          "status": 404,
+          "error": "",
+          "fetched_at": "2026-10-26T16:41:59.842577+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ],
+      "access": {
+        "code": "http_error",
+        "confidence": "observed",
+        "evidence": "HTTP 404"
+      }
+    },
+    {
+      "url": "https://www.saimdev.site/wp-sitemap.xml",
+      "status": 404,
+      "error": "",
+      "fetched_at": "2026-10-26T16:42:00.733928+00:00",
+      "sha256": "6d9a4076d09d87acb277651d4a86d6af58e0f752ceaeaa9e8fe1ab4b80ffa59c",
+      "redirects": [],
+      "entries": 0,
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/wp-sitemap.xml",
+          "status": 404,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:00.735171+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ],
+      "access": {
+        "code": "http_error",
+        "confidence": "observed",
+        "evidence": "HTTP 404"
+      }
+    }
+  ],
+  "urls": [
+    {
+      "url": "https://www.saimdev.site/",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:01.340740+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/tools",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:07.044973+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/tools/ppds-label-generator",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/services/takeaway-web-design",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:02.322473+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/nextjs-developer-uk",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:07.048852+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/services",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:02.321754+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/technologies",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:07.049421+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/case-studies",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:04.619097+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/demos",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:07.049779+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/about",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:02.320722+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/contact",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:02.321063+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/blogs",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:04.619681+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:04.619325+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/blog/free-website-for-local-business",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "response_received",
+      "http_status": 200,
+      "captured_at": "2026-10-26T16:42:04.619496+00:00"
+    },
+    {
+      "url": "https://www.saimdev.site/blog/50-percent-off-agency-launch",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/basic-food-preparation-rules",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/food-allergen-chart",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/recipe-calculator",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/food-safety-quiz",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/fridge-temperature-record-sheet-pdf",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/haccp-plan-builder",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/walk-in-cooler-food-storage-chart",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/cleaning-schedule",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/restaurant-cleaning-checklist",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/food-traceability",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/food-recall",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/pest-control-checklist",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/kitchen-safety-poster",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/food-cooling-poster",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/food-cost-calculator",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/reheating-food-temperature-guide",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/five-food-safety-rules",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/chopping-board-colour-chart",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/hot-holding-food-temperature-log",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    },
+    {
+      "url": "https://www.saimdev.site/food-safety-templates/kitchen-prep-list-template",
+      "sitemap": "https://www.saimdev.site/sitemap.xml",
+      "lastmod": "2026-10-26",
+      "verification": "not_inspected",
+      "http_status": null,
+      "captured_at": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+with open(r'C:\Users\subhan\.gemini\antigravity\scratch\saim\src\data\tool_deep_content.ts', 'r', encoding='utf-8') as f:
+    text = f.read()
+
+idx = text.find('"cleaning-schedule"')
+if idx != -1:
+    end_idx = text.find('},\n  "', idx + 30)
+    print(text[idx:min(len(text), idx + 800)])
+else:
+    print("Not found!")

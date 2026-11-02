@@ -4,32 +4,47 @@ import { TrendingUp, ShieldCheck } from "lucide-react";
 
 export const BenefitsSection = () => {
   return (
-    <section id="benefits" className="w-full bg-transparent">
+    <section id="benefits" className="w-full bg-black">
       <div className="w-full max-w-[1400px] mx-auto">
-        <div className="relative w-full bg-transparent px-4 sm:px-6 md:px-10 py-12 sm:py-20">
-          {/* Section Heading — Matching Pricing Section Typography */}
-          <h2
-            className="text-white text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-center mb-12 sm:mb-20"
-            style={{ letterSpacing: "-0.04em" }}
-          >
-            Key Benefits
-          </h2>
+        <div className="relative w-full bg-black px-4 sm:px-6 md:px-10 py-16 sm:py-24">
+          
+          {/* Eyebrow & Section Heading matching Pricing Section */}
+          <div className="text-center max-w-xl mx-auto mb-12 sm:mb-20">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
+              <span className="section-dot" />
+              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
+                Core Advantages
+              </span>
+            </div>
+            <h2
+              className="text-white text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-center"
+              style={{ letterSpacing: "-0.04em" }}
+            >
+              Key Benefits
+            </h2>
+          </div>
 
           {/* Three-Column Card Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            
             {/* Card 1: Text Card (Left) */}
-            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-xl border border-white/10 hover:border-white/20 transition-all">
+            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-2xl border border-white/10 hover:border-[#FF4A1C]/40 transition-all duration-300">
               {/* Subtle Ambient Brand Glow matching Pricing Section */}
-              <div className="absolute -top-24 -left-24 w-48 h-48 bg-[#FF4A1C]/[0.06] rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
+              <div className="absolute top-0 left-0 w-56 h-56 bg-[#FF4A1C]/[0.06] rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
               
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div>
-                  {/* Icon Container & Color matching Pricing Section */}
-                  <div className="w-11 h-11 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-6">
-                    <TrendingUp className="w-5 h-5 text-[#FF4A1C]" />
+                  {/* Icon Container matching Pricing Section styling & Brand Orange */}
+                  <div className="mb-6">
+                    <div className="relative inline-flex items-center justify-center">
+                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#FF4A1C]/30 to-transparent opacity-60 group-hover:opacity-100 blur-md transition-all duration-500 pointer-events-none" />
+                      <div className="relative w-12 h-12 rounded-2xl bg-[#161616] border border-white/10 group-hover:border-[#FF4A1C]/50 flex items-center justify-center transition-all duration-300 shadow-lg">
+                        <TrendingUp className="w-5 h-5 text-[#FF4A1C] group-hover:scale-110 transition-transform duration-300" />
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Title matching Pricing Section font style */}
+                  {/* Title matching Pricing Section typography */}
                   <h3
                     className="text-white text-xl sm:text-2xl font-medium tracking-tight leading-tight"
                     style={{ letterSpacing: "-0.03em" }}
@@ -40,15 +55,15 @@ export const BenefitsSection = () => {
                   </h3>
                 </div>
 
-                {/* Description matching Pricing Section typography */}
-                <p className="text-xs sm:text-sm leading-relaxed text-white/60 font-light max-w-[280px]">
+                {/* Description matching Pricing Section font style */}
+                <p className="text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[280px]">
                   High-converting websites engineered to turn visitors into leads and bookings with 24/7 online presence, fast loading speed, and modern custom design.
                 </p>
               </div>
             </div>
 
             {/* Card 2: Video Card (Center) */}
-            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden flex flex-col justify-between group shadow-xl border border-white/10 hover:border-white/20 transition-all">
+            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden flex flex-col shadow-2xl border border-white/10 hover:border-[#FF4A1C]/40 transition-all duration-300 group">
               {/* Subtle Ambient Brand Glow matching Pricing Section */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#FF4A1C]/[0.04] rounded-full blur-3xl pointer-events-none" />
 
@@ -87,22 +102,27 @@ export const BenefitsSection = () => {
                   <br />
                   SEO Optimization
                 </h3>
-                <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-white/60 font-light max-w-[320px]">
+                <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
                   Sub-second Next.js architecture, optimised Core Web Vitals, and structured schema markup engineered to rank on Google.
                 </p>
               </div>
             </div>
 
             {/* Card 3: Text Card (Right) */}
-            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-xl border border-white/10 hover:border-white/20 transition-all">
+            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-2xl border border-white/10 hover:border-[#FF4A1C]/40 transition-all duration-300">
               {/* Subtle Ambient Brand Glow matching Pricing Section */}
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#FF4A1C]/[0.06] rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
+              <div className="absolute top-0 right-0 w-56 h-56 bg-[#FF4A1C]/[0.06] rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
 
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div>
-                  {/* Icon Container & Color matching Pricing Section */}
-                  <div className="w-11 h-11 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-6">
-                    <ShieldCheck className="w-5 h-5 text-[#FF4A1C]" />
+                  {/* Icon Container matching Pricing Section styling & Brand Orange */}
+                  <div className="mb-6">
+                    <div className="relative inline-flex items-center justify-center">
+                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#FF4A1C]/30 to-transparent opacity-60 group-hover:opacity-100 blur-md transition-all duration-500 pointer-events-none" />
+                      <div className="relative w-12 h-12 rounded-2xl bg-[#161616] border border-white/10 group-hover:border-[#FF4A1C]/50 flex items-center justify-center transition-all duration-300 shadow-lg">
+                        <ShieldCheck className="w-5 h-5 text-[#FF4A1C] group-hover:scale-110 transition-transform duration-300" />
+                      </div>
+                    </div>
                   </div>
 
                   <h3
@@ -115,11 +135,12 @@ export const BenefitsSection = () => {
                   </h3>
                 </div>
 
-                <p className="text-xs sm:text-sm leading-relaxed text-white/60 font-light max-w-[320px]">
+                <p className="text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
                   Complete Google indexing, local SEO, SSL security, Instagram and social integration, with clean, scalable code built for reliable business growth.
                 </p>
               </div>
             </div>
+
           </div>
         </div>
       </div>

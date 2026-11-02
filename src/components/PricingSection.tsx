@@ -194,7 +194,7 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
             href={orderUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={plan.featured ? `Order ${plan.name} on WhatsApp` : `Get started with ${plan.name} package`}
+            aria-label={plan.featured ? "Order on WhatsApp" : `Get Started — ${plan.name}`}
             className={cn(
               "sybiosme-action-btn w-full",
               plan.featured
@@ -245,7 +245,7 @@ export const PricingSection = () => {
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
                 <span className="section-dot" />
                 <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
-                  Packages <span className="text-white/40">01/03</span>
+                  Packages <span className="text-white/70">01/03</span>
                 </span>
               </div>
             </FadeUp>
@@ -254,7 +254,7 @@ export const PricingSection = () => {
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.08] text-white"
                 style={{ letterSpacing: "-0.04em" }}
               >
-                Choose. <span className="text-white/40">Your plan.</span>
+                Choose. <span className="text-white/70">Your plan.</span>
               </h2>
               <p className="mt-3.5 text-sm sm:text-base text-white/65 font-light leading-relaxed">
                 No monthly retainers. No hidden fees. 100% custom Next.js engineering.
@@ -373,7 +373,7 @@ export const PricingSection = () => {
                           <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                             <Icon className="w-5 h-5 text-[#FF4A1C]" />
                           </div>
-                          <span className="text-[10px] font-mono uppercase tracking-wider text-white/40 px-2 py-0.5 rounded-full bg-white/[0.04] border border-white/5">
+                          <span className="text-[10px] font-mono uppercase tracking-wider text-white/70 px-2 py-0.5 rounded-full bg-white/[0.04] border border-white/5">
                             {ind.badge}
                           </span>
                         </div>
@@ -396,7 +396,7 @@ export const PricingSection = () => {
                           </Link>
                         </div>
                       ) : (
-                        <div className="mt-4 pt-3 border-t border-white/5 flex items-center gap-1.5 text-xs text-white/40">
+                        <div className="mt-4 pt-3 border-t border-white/5 flex items-center gap-1.5 text-xs text-white/70">
                           <Check className="w-3 h-3 text-emerald-400" />
                           <span>Custom Next.js Stack</span>
                         </div>

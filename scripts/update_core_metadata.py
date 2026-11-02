@@ -1,0 +1,183 @@
+import json
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+
+with open('src/data/core_metadata.json', 'r', encoding='utf-8') as f:
+    meta = json.load(f)
+
+# Define exact targeted titles, descriptions, and how-to steps for the tools
+updates = {
+    # 1. allergy-matrix
+    "allergy-matrix": {
+        "title": "Allergen Matrix Template UK | Free 14 Allergen Chart",
+        "desc": "Create a compliant allergen matrix template for your UK takeaway or restaurant. Filter ingredients interactively and export a printable A4 kitchen poster.",
+        "howTo": [
+            "Input all dishes and recipes currently prepared and served in your kitchen.",
+            "Cross-reference supplier ingredient declarations for each of the 14 UK statutory allergens.",
+            "Mark Contains (YES) for confirmed ingredients and May Contain (MAY) only after thorough risk assessment.",
+            "Print the A4 allergen matrix and place it where kitchen and front-of-house staff can instantly reference it."
+        ]
+    },
+    # 2. food-allergen-chart
+    "food-allergen-chart": {
+        "title": "Allergen Chart for Takeaway UK | Free 14 Allergen Poster",
+        "desc": "Download a free 14 allergen chart for takeaway and restaurant kitchens. Display statutory allergens clearly for customers and pass EHO hygiene inspections.",
+        "howTo": [
+            "Display this statutory 14-allergen chart in prominent customer-facing ordering and kitchen collection areas.",
+            "Train front-of-house and takeaway telephone staff to ask customers about allergy requirements before taking orders.",
+            "Ensure kitchen prep staff consult current supplier packaging sheets when receiving substitute food products.",
+            "Review and reprint your takeaway allergen chart whenever ingredients, brands, or recipes change."
+        ]
+    },
+    # 3. food-cost-calculator
+    "food-cost-calculator": {
+        "title": "Food Cost Calculator UK | Takeaway Margins & Recipe Pricing",
+        "desc": "Calculate recipe food cost percentages, gross profit margins, and profitable takeaway prices with our free UK food cost calculator for commercial kitchens.",
+        "howTo": [
+            "Enter raw ingredient invoice costs in GBP (£) including packaging and portion weights.",
+            "Input target kitchen Gross Profit margin percentage (standard UK takeaway target is 65% to 75%).",
+            "Review suggested takeaway menu selling price and gross profit contribution per portion.",
+            "Adjust portion sizes or supplier cost inputs to optimize takeaway menu profitability."
+        ]
+    },
+    # 4. haccp-plan-builder
+    "haccp-plan-builder": {
+        "title": "HACCP Plan Template UK Takeaway | Free Online Plan Builder",
+        "desc": "Build a compliant HACCP plan template for your UK takeaway or restaurant. Identify critical control points, set safety limits, and download audit-ready PDFs.",
+        "howTo": [
+            "Map out your kitchen process steps from goods intake and storage through cooking and hot holding.",
+            "Identify biological, chemical, physical, and allergen hazards at every preparation stage.",
+            "Define Critical Control Points (CCPs) such as core cooking temperature (75°C) and chilled storage (<8°C).",
+            "Establish corrective actions and supervisor verification sign-off schedules for your EHO due diligence file."
+        ]
+    },
+    # 5. opening-and-closing-checklist-template
+    "opening-and-closing-checklist-template": {
+        "title": "SFBB Opening and Closing Checks Template | UK Kitchen Diary",
+        "desc": "Free SFBB opening and closing checks template for UK food businesses. Daily hygiene checks, fridge temperatures, and closing routines for 5-star EHO ratings.",
+        "howTo": [
+            "Complete morning opening checks before food prep commences (fridge temps, sanitiser levels, handwash basins).",
+            "Verify all refrigeration units operate below 8°C and probe thermometers are sanitised and calibrated.",
+            "Carry out evening closing checks (surfaces disinfected, food covered and dated, waste bins cleared, premises locked).",
+            "Sign and date the daily record sheet as evidence of management oversight for your local council EHO audit."
+        ]
+    },
+    # 6. fridge-temperature-record-sheet-pdf
+    "fridge-temperature-record-sheet-pdf": {
+        "title": "Fridge Temperature Log Sheet UK (PDF) | Daily Kitchen Log",
+        "desc": "Download a free fridge temperature log sheet for UK restaurants and takeaways. Record 8°C chilled holding limits twice daily for EHO due diligence evidence.",
+        "howTo": [
+            "Mount printed fridge temperature sheets adjacent to commercial walk-in and under-counter chillers.",
+            "Record probe air or core food temperatures twice daily (morning opening and afternoon/evening service).",
+            "Verify that internal temperatures remain strictly at or below 8°C (recommended 1°C to 5°C).",
+            "Log corrective actions immediately if any chiller unit rises above 8°C (seal check, stock transfer, technician call)."
+        ]
+    },
+    # 7. freezer-temperature-chart
+    "freezer-temperature-chart": {
+        "title": "Freezer Temperature Chart UK | Daily Kitchen Log Sheet (PDF)",
+        "desc": "Free printable freezer temperature chart for UK commercial kitchens. Record daily checks at or below -18°C to maintain statutory EHO hygiene compliance.",
+        "howTo": [
+            "Mount the freezer temperature log sheet on or next to commercial walk-in and chest freezers.",
+            "Inspect calibrated digital displays or probe ambient freezer air twice every working day.",
+            "Log the exact temperature reading and staff initials on the sheet immediately.",
+            "Take corrective action if temperatures rise above -18°C (check defrost cycle, ice buildup, or door seals)."
+        ]
+    },
+    # 8. cleaning-schedule
+    "cleaning-schedule": {
+        "title": "Takeaway Cleaning Schedule Template UK | Kitchen Rota (PDF)",
+        "desc": "Download a free takeaway cleaning schedule template for UK food businesses. Daily, weekly, and deep cleaning rotas aligned with FSA hygiene standards.",
+        "howTo": [
+            "List every piece of equipment, work surface, wall, and floor space requiring routine cleaning.",
+            "Specify cleaning frequency (after each use, daily at close, weekly deep clean, monthly maintenance).",
+            "Document approved cleaning chemicals (BS EN 1276 / BS EN 13697 certified sanitisers) and contact times.",
+            "Require cleaning staff and the supervising shift manager to initial each task upon successful completion."
+        ]
+    },
+    # 9. eho-checklist
+    "eho-checklist": {
+        "title": "EHO Inspection Checklist UK | 5-Star Food Hygiene Guide",
+        "desc": "Complete EHO inspection checklist for UK restaurants and takeaways. Audit food hygiene, cross-contamination, structural cleaning, and HACCP paperwork.",
+        "howTo": [
+            "Audit kitchen practices across the 3 EHO scoring pillars: Food Hygiene, Structural Compliance, and Management Confidence.",
+            "Verify that hot holding (>63°C), chilling (<8°C), and cooking (75°C) logs are up to date and signed daily.",
+            "Inspect physical premises for pest proofing, hot running water, soap, paper towels, and surface sanitation.",
+            "Organise your SFBB diary or HACCP binder so it can be handed to the visiting officer immediately."
+        ]
+    },
+    # 10. delivery-log
+    "delivery-log": {
+        "title": "Goods In Temperature Log Sheet UK | Delivery Intake Record",
+        "desc": "Download a free goods in temperature log sheet for UK commercial kitchens. Check chilled (<8°C) and frozen (<-18°C) deliveries, date codes, and packaging.",
+        "howTo": [
+            "Check delivery vehicle hygiene and inspect arriving food packaging for tears, leaks, or pest damage.",
+            "Probe chilled goods to confirm temperature is at or below 8°C (reject stock exceeding 8°C).",
+            "Verify frozen items are solidly frozen at or below -18°C with no signs of thawing or refreezing.",
+            "Check use-by dates, record vehicle and supplier details, and file the signed delivery intake sheet."
+        ]
+    },
+    # 11. hot-holding-food-temperature-log
+    "hot-holding-food-temperature-log": {
+        "title": "Hot Holding Temperature Log UK | Free Kitchen Sheet (PDF)",
+        "desc": "Download a free hot holding temperature log for UK kitchens. Monitor hot-held food above 63°C and record time limits to comply with Food Hygiene Regulations.",
+        "howTo": [
+            "Preheat hot-holding equipment (bain-marie, hot cabinet, pass heat lamps) before adding hot food.",
+            "Ensure food is cooked thoroughly to 75°C (82°C in Scotland) before transferring to hot holding units.",
+            "Probe core temperatures at least every two hours to ensure food stays consistently above 63°C.",
+            "Apply the UK 2-hour exemption rule strictly if food drops below 63°C: serve or discard immediately."
+        ]
+    },
+    # 12. cooking-log-template
+    "cooking-log-template": {
+        "title": "Cooking Temperature Record Sheet UK | Core Temp Log (PDF)",
+        "desc": "Free cooking temperature record sheet for UK commercial kitchens. Verify core cooking temperatures reach 75°C (82°C in Scotland) for safe batch cooking.",
+        "howTo": [
+            "Sanitise the digital probe thermometer using a food-grade antibacterial wipe before and after each test.",
+            "Insert the probe into the thickest part of the meat, poultry, or batch dish away from bones.",
+            "Verify the reading reaches 75°C for 30 seconds (or equivalent time/temperature, 82°C in Scotland).",
+            "Record batch item name, time, core temperature, and cook initials on the daily kitchen record sheet."
+        ]
+    },
+    # 13. recipe-calculator
+    "recipe-calculator": {
+        "title": "Recipe Scaler Calculator UK | Scale Catering Batch Yields",
+        "desc": "Scale commercial recipes up or down accurately with our free recipe scaler calculator. Convert portion sizes, batch ingredient weights, and kitchen yields.",
+        "howTo": [
+            "Enter your base recipe ingredient weights in metric grams (g) or kilograms (kg).",
+            "Set base portion yield and your target production batch quantity (e.g., 20 to 120 covers).",
+            "Review scaled batch ingredient measurements instantly with automatic rounding for kitchen prep.",
+            "Export or print scaled recipe cards for prep cooks to ensure consistent seasoning and portion control."
+        ]
+    },
+    # 14. basic-food-preparation-rules (fix desc length)
+    "basic-food-preparation-rules": {
+        "title": "Basic Food Preparation Rules Poster UK | Kitchen Hygiene",
+        "desc": "Printable UK commercial kitchen food preparation rules poster. Visual guidance covering handwashing, temperature control, and cross-contamination prevention.",
+        "howTo": [
+            "Display this food preparation rules poster in active kitchen prep and wash-up areas.",
+            "Review standard operating procedures with new kitchen assistants during induction training.",
+            "Enforce strict separation between raw meats and ready-to-eat salads, cooked meats, and garnishes.",
+            "Ensure all prep staff wash hands thoroughly before touching ready-to-eat foods or utensils."
+        ]
+    },
+    # 15. restaurant-cleaning-checklist (fix desc length)
+    "restaurant-cleaning-checklist": {
+        "title": "Restaurant Cleaning Checklist UK | Front & Back of House",
+        "desc": "Comprehensive restaurant cleaning checklist covering dining room, bar, kitchen prep, and washrooms. Daily and weekly tasks aligned with UK food hygiene rules.",
+        "howTo": [
+            "Assign specific cleaning zones to front-of-house, kitchen, and bar teams at start and end of shifts.",
+            "Verify that food contact surfaces and table touchpoints are sanitised using EN 1276 certified sanitisers.",
+            "Check that customer washrooms are restocked with antibacterial soap, hot water, and hand towels.",
+            "Sign off completed daily cleaning logs to maintain management due diligence records for council inspections."
+        ]
+    }
+}
+
+for slug, data in updates.items():
+    meta[slug] = data
+
+with open('src/data/core_metadata.json', 'w', encoding='utf-8') as f:
+    json.dump(meta, f, indent=2, ensure_ascii=False)
+
+print("Updated core_metadata.json successfully.")

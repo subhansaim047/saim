@@ -162,7 +162,7 @@ export const ServicesBentoSection = () => {
             style={{ letterSpacing: "-0.04em" }}
           >
             Web development services <br />
-            <span className="text-white/40">engineered for commercial growth.</span>
+            <span className="text-white/70">engineered for commercial growth.</span>
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-white/65 leading-relaxed font-light">
@@ -202,7 +202,7 @@ export const ServicesBentoSection = () => {
                         {service.featured && <Sparkles className="w-3 h-3 text-[#FF4A1C]" />}
                         <span>{service.badge}</span>
                       </div>
-                      <span className="text-[11px] font-mono text-white/45 tracking-wide">
+                      <span className="text-[11px] font-mono text-white/70 tracking-wide">
                         {service.timeline}
                       </span>
                     </div>
@@ -225,7 +225,7 @@ export const ServicesBentoSection = () => {
 
                     {/* Key Deliverables */}
                     <div className="space-y-2 mb-6 pt-4 border-t border-white/5">
-                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 block mb-2">
+                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/70 block mb-2">
                         Key Deliverables
                       </span>
                       {service.deliverables.map((item) => (
@@ -243,7 +243,7 @@ export const ServicesBentoSection = () => {
                       {service.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="text-[10px] font-mono text-white/50 bg-white/[0.03] border border-white/5 px-2.5 py-0.5 rounded-full"
+                          className="text-[10px] font-mono text-white/75 bg-white/[0.03] border border-white/5 px-2.5 py-0.5 rounded-full"
                         >
                           {tech}
                         </span>
@@ -279,10 +279,10 @@ export const ServicesBentoSection = () => {
             href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20custom%20web%20project%20architecture"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FF4A1C] hover:bg-[#FF4A1C]/90 text-white font-medium text-xs sm:text-sm tracking-tight shadow-[0_4px_24px_rgba(255,74,28,0.3)] transition-all shrink-0 active:scale-95"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-neutral-100 text-black font-semibold text-xs sm:text-sm tracking-tight shadow-[0_4px_24px_rgba(255,255,255,0.15)] transition-all shrink-0 active:scale-95"
           >
             <span>Direct WhatsApp Consultation</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-black" />
           </a>
         </div>
       </div>

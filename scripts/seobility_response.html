@@ -1,0 +1,2459 @@
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Query-Parameter-Erhaltung für seocheck
+        function preserveQueryParamsForseocheck() {
+            const currentUrl = new URL(window.location.href);
+            const currentParams = {};
+            
+            // Alle aktuellen Parameter sammeln
+            currentUrl.searchParams.forEach((value, key) => {
+                currentParams[key] = value;
+            });
+            
+            if (Object.keys(currentParams).length > 0) {
+                // Language-Switcher-Links anpassen
+                const languageLinks = document.querySelectorAll('a[href*="lang="], .wpml-ls-item a, .wpml-ls-link, [data-lang] a');
+                
+                languageLinks.forEach(link => {
+                    const originalHref = link.getAttribute('data-original-href') || link.href;
+                    link.setAttribute('data-original-href', originalHref);
+                    
+                    try {
+                        const linkUrl = new URL(originalHref, window.location.origin);
+                        Object.keys(currentParams).forEach(param => {
+                            linkUrl.searchParams.set(param, currentParams[param]);
+                        });
+                        link.href = linkUrl.toString();
+                    } catch (e) {
+                        console.warn('Could not modify language switcher link:', e);
+                    }
+                });
+            }
+        }
+        
+        // Altbestand entfernen: frühere Versionen haben hier Parameter gespeichert und wiederhergestellt
+        try {
+            localStorage.removeItem("seocheck" + '_params');
+        } catch (e) {}
+
+        // Funktion beim Laden ausführen
+        preserveQueryParamsForseocheck();
+        
+        // Bei URL-Änderungen überwachen
+        let lastUrl = window.location.href;
+        new MutationObserver(() => {
+            const currentUrl = window.location.href;
+            if (currentUrl !== lastUrl) {
+                lastUrl = currentUrl;
+                preserveQueryParamsForseocheck();
+            }
+        }).observe(document, {subtree: true, childList: true});
+    });
+    </script><!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    
+    <!-- Performance optimizations: DNS prefetch and resource hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+        <!-- Varify.io® code for seobility GmbH-->
+        <script>
+        window.varify = window.varify || {};
+        window.varify.iid = 4942;
+        </script>
+        <script src="https://app.varify.io/varify.js"></script>
+
+	<!-- Core CSS moved to wp_enqueue_style() in functions.php -->
+	
+    <!-- HREFLANG DEBUG START -->
+<!-- Template File: template-results.php -->
+<!-- Current URL: /en/seocheck/check/?utm_source=chatgpt.com&amp;url=https%3A%2F%2Fwww.saimdev.site%2F&amp;mode=standard -->
+<!-- Yoast SEO Active-: YES -->
+<!-- HREFLANG DEBUG END -->
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, noarchive' />
+
+
+
+
+<link rel="canonical" href="https://www.seobility.net/en/seocheck/" />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v28.5 (Yoast SEO v28.5) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>SEO Checker | Test your website for free with Seobility</title>
+	<meta name="description" content="Instantly review your website for free with the SEO checker from Seobility and get tips for a better search engine optimization and higher rankings." />
+	<link rel="canonical" href="https://www.seobility.net/en/seocheck/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="SEO Checker | Test your website for free with Seobility" />
+	<meta property="og:description" content="Instantly review your website for free with the SEO checker from Seobility and get tips for a better search engine optimization and higher rankings." />
+	<meta property="og:url" content="https://www.seobility.net/en/seocheck/" />
+	<meta property="og:site_name" content="Seobility" />
+	<meta property="article:publisher" content="https://www.facebook.com/seobility.net/" />
+	<meta property="article:modified_time" content="2026-09-18T07:31:45+00:00" />
+	<meta property="og:image" content="https://www.seobility.net/wp-content/uploads/2025/06/seobility-og-image.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@seobility_net" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"TechArticle","@id":"https:\/\/www.seobility.net\/en\/seocheck\/#article","isPartOf":{"@id":"https:\/\/www.seobility.net\/en\/seocheck\/check\/"},"author":{"name":"stefpaz","@id":"https:\/\/www.seobility.net\/en\/#\/schema\/person\/92707f55f01790246f87eaddad5082c5"},"headline":"SEO Checker (results)","datePublished":"2024-10-31T03:02:42+00:00","dateModified":"2026-09-18T07:31:45+00:00","mainEntityOfPage":{"@id":"https:\/\/www.seobility.net\/en\/seocheck\/check\/"},"wordCount":3,"publisher":{"@id":"https:\/\/www.seobility.net\/en\/#organization"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https:\/\/www.seobility.net\/en\/seocheck\/check\/","url":"https:\/\/www.seobility.net\/en\/seocheck\/","name":"SEO Checker | Test your website for free with Seobility","isPartOf":{"@id":"https:\/\/www.seobility.net\/en\/#website"},"datePublished":"2024-10-31T03:02:42+00:00","dateModified":"2026-09-18T07:31:45+00:00","description":"Instantly review your website for free with the SEO checker from Seobility and get tips for a better search engine optimization and higher rankings.","breadcrumb":{"@id":"https:\/\/www.seobility.net\/en\/seocheck\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.seobility.net\/en\/seocheck\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/www.seobility.net\/en\/seocheck\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.seobility.net\/en\/"},{"@type":"ListItem","position":2,"name":"SEO Checker (results)","item":"https:\/\/www.seobility.net\/en\/seocheck\/check\/"}]},{"@type":"WebSite","@id":"https:\/\/www.seobility.net\/en\/#website","url":"https:\/\/www.seobility.net\/en\/","name":"Seobility","description":"Online SEO Software &amp; Tools For Better Rankings","publisher":{"@id":"https:\/\/www.seobility.net\/en\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.seobility.net\/en\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":["Organization","Place"],"@id":"https:\/\/www.seobility.net\/en\/#organization","name":"seobility GmbH","alternateName":"Seobility","url":"https:\/\/www.seobility.net\/en\/","logo":{"@id":"https:\/\/www.seobility.net\/en\/seocheck\/#local-main-organization-logo"},"image":{"@id":"https:\/\/www.seobility.net\/en\/seocheck\/#local-main-organization-logo"},"sameAs":["https:\/\/www.facebook.com\/seobility.net\/","https:\/\/x.com\/seobility_net","https:\/\/www.linkedin.com\/company\/seobility-seo-tool\/","https:\/\/www.instagram.com\/seobility\/","https:\/\/www.capterra.com\/p\/188553\/Seobility\/","https:\/\/omr.com\/en\/reviews\/product\/seobility","https:\/\/www.g2.com\/products\/seobility\/reviews"],"numberOfEmployees":{"@type":"QuantitativeValue","minValue":"11","maxValue":"50"},"ownershipFundingInfo":"https:\/\/www.seobility.net\/en\/team\/","address":{"@id":"https:\/\/www.seobility.net\/en\/seocheck\/#local-main-place-address"},"telephone":["+4991123756261"],"contactPoint":{"@type":"ContactPoint","telephone":"+4991123756261","email":"support@seobility.net"},"openingHoursSpecification":[],"email":"info@seobility.net","faxNumber":"+49911 99287499","vatID":"DE272712190"},{"@type":"Person","@id":"https:\/\/www.seobility.net\/en\/#\/schema\/person\/92707f55f01790246f87eaddad5082c5","name":"stefpaz","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/secure.gravatar.com\/avatar\/f90adf4917e58da40838d82385e5b7106e42db4322c077de93657f5332c85a70?s=96&d=mm&r=g","url":"https:\/\/secure.gravatar.com\/avatar\/f90adf4917e58da40838d82385e5b7106e42db4322c077de93657f5332c85a70?s=96&d=mm&r=g","contentUrl":"https:\/\/secure.gravatar.com\/avatar\/f90adf4917e58da40838d82385e5b7106e42db4322c077de93657f5332c85a70?s=96&d=mm&r=g","caption":"stefpaz"},"description":"Lorem ipsum dolor sit amet consectetur. Ut vel mollis amet nunc mauris pretium erat nibh sed. Nibh habitant mi nullam turpis facilisi eu id. Sit faucibus auctor felis egestas eu. Lacinia massa tincidunt vitae congue est nulla blandit maecenas.","sameAs":["https:\/\/www.seobility.net"],"url":"https:\/\/www.seobility.net\/en\/blog\/author\/stefpaz\/"},{"@type":"PostalAddress","@id":"https:\/\/www.seobility.net\/en\/seocheck\/#local-main-place-address","streetAddress":"Willy-Brandt-Platz 16","addressLocality":"Nürnberg","postalCode":"90402","addressCountry":"DE"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.seobility.net\/en\/seocheck\/#local-main-organization-logo","url":"https:\/\/www.seobility.net\/wp-content\/uploads\/2026\/05\/seobility-logo-banner.png","contentUrl":"https:\/\/www.seobility.net\/wp-content\/uploads\/2026\/05\/seobility-logo-banner.png","width":500,"height":241,"caption":"seobility GmbH"}]}</script>
+	<meta name="geo.placename" content="Nürnberg" />
+	<meta name="geo.region" content="Germany" />
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//kit.fontawesome.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.seobility.net/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.seobility.net%2Fen%2Fseocheck%2Fcheck%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.seobility.net/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.seobility.net%2Fen%2Fseocheck%2Fcheck%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+/**
+ * Colors
+ */
+/**
+ * Typography
+ */
+/**
+ * SCSS Variables.
+ *
+ * Please use variables from this sheet to ensure consistency across the UI.
+ * Don't add to this sheet unless you're pretty sure the value will be reused in many places.
+ * For example, don't add rules to this sheet that affect block visuals. It's purely for UI.
+ */
+/**
+ * Fonts & basic variables.
+ */
+/**
+ * Typography
+ */
+/**
+ * Grid System.
+ * https://make.wordpress.org/design/2019/10/31/proposal-a-consistent-spacing-system-for-wordpress/
+ */
+/**
+ * Radius scale.
+ */
+/**
+ * Elevation scale.
+ */
+/**
+ * Dimensions.
+ */
+/**
+ * Mobile specific styles
+ */
+/**
+ * Editor styles.
+ */
+/**
+ * Block & Editor UI.
+ */
+/**
+ * Block paddings.
+ */
+/**
+ * React Native specific.
+ * These variables do not appear to be used anywhere else.
+ */
+/**
+ * Breakpoints & Media Queries
+ */
+/**
+*  Converts a hex value into the rgb equivalent.
+*
+* @param {string} hex - the hexadecimal value to convert
+* @return {string} comma separated rgb values
+*/
+/**
+ * Long content fade mixin
+ *
+ * Creates a fading overlay to signify that the content is longer
+ * than the space allows.
+ */
+/**
+ * Breakpoint mixins
+ */
+/**
+ * Focus styles.
+ */
+/**
+ * Standard focus rings for the WordPress Design System.
+ *
+ * Apply `outset-ring__focus` inside the relevant pseudo-class at the call site,
+ * e.g. `&:focus { @include outset-ring__focus(); }`.
+ */
+/**
+ * Applies editor left position to the selector passed as argument
+ */
+/**
+ * Styles that are reused verbatim in a few places
+ */
+/**
+ * Allows users to opt-out of animations via OS-level preferences.
+ */
+/**
+ * Reset default styles for JavaScript UI based pages.
+ * This is a WP-admin agnostic reset
+ */
+/**
+ * Reset the WP Admin page styles for Gutenberg-like pages.
+ */
+/**
+ * Creates a checkerboard pattern background to indicate transparency.
+ * @param {String} $size - The size of the squares in the checkerboard pattern. Default is 12px.
+ */
+:root {
+  --wp-block-synced-color: #7a00df;
+  --wp-block-synced-color--rgb: 122, 0, 223;
+  --wp-bound-block-color: var(--wp-block-synced-color);
+  --wp-editor-canvas-background: #ddd;
+  --wp-admin-theme-color: #007cba;
+  --wp-admin-theme-color--rgb: 0, 124, 186;
+  --wp-admin-theme-color-darker-10: rgb(0, 107, 160.5);
+  --wp-admin-theme-color-darker-10--rgb: 0, 107, 160.5;
+  --wp-admin-theme-color-darker-20: #005a87;
+  --wp-admin-theme-color-darker-20--rgb: 0, 90, 135;
+  --wp-admin-border-width-focus: 2px;
+}
+@media (min-resolution: 192dpi) {
+  :root {
+    --wp-admin-border-width-focus: 1.5px;
+  }
+}
+
+/**
+ * Element styles.
+ */
+.wp-element-button {
+  cursor: pointer;
+}
+
+:root .has-very-light-gray-background-color {
+  background-color: #eee;
+}
+:root .has-very-dark-gray-background-color {
+  background-color: #313131;
+}
+:root .has-very-light-gray-color {
+  color: #eee;
+}
+:root .has-very-dark-gray-color {
+  color: #313131;
+}
+:root {
+  /* stylelint-disable @stylistic/function-comma-space-after -- We can not use spacing because of WP multi site kses rule. */
+}
+:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background {
+  background: linear-gradient(135deg, rgb(0, 208, 132) 0%, rgb(6, 147, 227) 100%);
+}
+:root .has-purple-crush-gradient-background {
+  background: linear-gradient(135deg, rgb(52, 226, 228) 0%, rgb(71, 33, 251) 50%, rgb(171, 29, 254) 100%);
+}
+:root .has-hazy-dawn-gradient-background {
+  background: linear-gradient(135deg, rgb(250, 172, 168) 0%, rgb(218, 208, 236) 100%);
+}
+:root .has-subdued-olive-gradient-background {
+  background: linear-gradient(135deg, rgb(250, 250, 225) 0%, rgb(103, 166, 113) 100%);
+}
+:root .has-atomic-cream-gradient-background {
+  background: linear-gradient(135deg, rgb(253, 215, 154) 0%, rgb(0, 74, 89) 100%);
+}
+:root .has-nightshade-gradient-background {
+  background: linear-gradient(135deg, rgb(51, 9, 104) 0%, rgb(49, 205, 207) 100%);
+}
+:root .has-midnight-gradient-background {
+  background: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+}
+:root {
+  /* stylelint-enable @stylistic/function-comma-space-after */
+  --wp--preset--font-size--normal: 16px;
+  --wp--preset--font-size--huge: 42px;
+}
+
+.has-regular-font-size {
+  font-size: 1em;
+}
+
+.has-larger-font-size {
+  font-size: 2.625em;
+}
+
+.has-normal-font-size {
+  font-size: var(--wp--preset--font-size--normal);
+}
+
+.has-huge-font-size {
+  font-size: var(--wp--preset--font-size--huge);
+}
+
+:root .has-text-align-center {
+  text-align: center;
+}
+
+:root .has-text-align-left {
+  /*rtl:ignore*/
+  text-align: left;
+}
+
+:root .has-text-align-right {
+  /*rtl:ignore*/
+  text-align: right;
+}
+
+.has-fit-text {
+  white-space: nowrap !important;
+}
+
+#end-resizable-editor-section {
+  display: none;
+}
+
+.aligncenter {
+  clear: both;
+}
+
+.items-justified-left {
+  justify-content: flex-start;
+}
+
+.items-justified-center {
+  justify-content: center;
+}
+
+.items-justified-right {
+  justify-content: flex-end;
+}
+
+.items-justified-space-between {
+  justify-content: space-between;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+  word-break: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #ddd;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+/**
+ * The following provide a simple means of applying a default border style when
+ * a user first makes a selection in the border block support panel.
+ * This prevents issues such as where the user could set a border width
+ * and see no border due there being no border style set.
+ *
+ * This is intended to be removed once intelligent defaults can be set while
+ * making border selections via the block support.
+ *
+ * See: https://github.com/WordPress/gutenberg/pull/33743
+ */
+html :where(.has-border-color) {
+  border-style: solid;
+}
+
+html :where([style^=border-color],
+[style*=";border-color"],
+[style*="; border-color"]) {
+  border-style: solid;
+}
+
+html :where([style^=border-top-color],
+[style*=";border-top-color"],
+[style*="; border-top-color"]) {
+  border-top-style: solid;
+}
+
+html :where([style^=border-right-color],
+[style*=";border-right-color"],
+[style*="; border-right-color"]) {
+  /*rtl:ignore*/
+  border-right-style: solid;
+}
+
+html :where([style^=border-bottom-color],
+[style*=";border-bottom-color"],
+[style*="; border-bottom-color"]) {
+  border-bottom-style: solid;
+}
+
+html :where([style^=border-left-color],
+[style*=";border-left-color"],
+[style*="; border-left-color"]) {
+  /*rtl:ignore*/
+  border-left-style: solid;
+}
+
+html :where([style^=border-width],
+[style*=";border-width"],
+[style*="; border-width"]) {
+  border-style: solid;
+}
+
+html :where([style^=border-top-width],
+[style*=";border-top-width"],
+[style*="; border-top-width"]) {
+  border-top-style: solid;
+}
+
+html :where([style^=border-right-width],
+[style*=";border-right-width"],
+[style*="; border-right-width"]) {
+  /*rtl:ignore*/
+  border-right-style: solid;
+}
+
+html :where([style^=border-bottom-width],
+[style*=";border-bottom-width"],
+[style*="; border-bottom-width"]) {
+  border-bottom-style: solid;
+}
+
+html :where([style^=border-left-width],
+[style*=";border-left-width"],
+[style*="; border-left-width"]) {
+  /*rtl:ignore*/
+  border-left-style: solid;
+}
+
+/**
+ * Provide baseline responsiveness for images.
+ */
+html :where(img[class*=wp-image-]) {
+  height: auto;
+  max-width: 100%;
+}
+
+/**
+ * Reset user agent styles for figure element margins.
+ */
+:where(figure) {
+  margin: 0 0 1em 0;
+}
+
+html :where(.is-position-sticky) {
+  --wp-admin--admin-bar--position-offset: var(--wp-admin--admin-bar--height, 0px);
+}
+
+@media screen and (max-width: 600px) {
+  html :where(.is-position-sticky) {
+    --wp-admin--admin-bar--position-offset: 0px;
+  }
+}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/**
+ * These rules are needed for backwards compatibility.
+ * They should match the button element rules in the base theme.json file.
+ */
+.wp-block-button__link {
+	color: #ffffff;
+	background-color: #32373c;
+	border-radius: 9999px; /* 100% causes an oval, but any explicit but really high value retains the pill shape. */
+
+	/* This needs a low specificity so it won't override the rules from the button element if defined in theme.json. */
+	box-shadow: none;
+	text-decoration: none;
+
+	/* The extra 2px are added to size solids the same as the outline versions.*/
+	padding: calc(0.667em + 2px) calc(1.333em + 2px);
+
+	font-size: 1.125em;
+}
+
+.wp-block-file__button {
+	background: #32373c;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*# sourceURL=/wp-includes/css/classic-themes.css */
+</style>
+
+<style id="font-awesome-svg-styles-default-inline-css">
+.svg-inline--fa {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
+}
+/*# sourceURL=font-awesome-svg-styles-default-inline-css */
+</style>
+<link rel='stylesheet' id='font-awesome-svg-styles-css' href='https://www.seobility.net/wp-content/uploads/font-awesome/v6.7.2/css/svg-with-js.css' media='all' />
+<style id="font-awesome-svg-styles-inline-css">
+   .wp-block-font-awesome-icon svg::before,
+   .wp-rich-text-font-awesome-icon svg::before {content: unset;}
+/*# sourceURL=font-awesome-svg-styles-inline-css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='wpa-css-css' href='https://www.seobility.net/wp-content/plugins/honeypot/includes/css/wpa.css?ver=2.4.02' media='all' />
+<link rel='stylesheet' id='wpml-menu-item-0-css' href='https://www.seobility.net/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css?ver=1' media='all' />
+<link rel='stylesheet' id='seobility-style-css' href='https://www.seobility.net/wp-content/themes/seobility/style.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='tailwind-styles-css' href='https://www.seobility.net/wp-content/themes/seobility/dist/output.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='seobility-stefan-css' href='https://www.seobility.net/wp-content/themes/seobility/stefan.css?ver=1793001146' media='all' />
+<link rel='stylesheet' id='seobility-luis-css' href='https://www.seobility.net/wp-content/themes/seobility/luis.css?ver=1793001116' media='all' />
+<link rel='stylesheet' id='seobility-agency-css' href='https://www.seobility.net/wp-content/themes/seobility/agency.css?ver=1793001055' media='all' />
+<link rel='stylesheet' id='theme-custom-fonts-css' href='https://www.seobility.net/wp-content/themes/seobility/fonts.css?ver=e5e7c248c43335b5014e6ef515b2cf52' media='all' />
+<link rel='stylesheet' id='inter-font-css' href='https://fonts.googleapis.com/css2?family=Inter:wght@500&#038;display=swap&#038;ver=7.1.3' media='all' />
+<link rel='stylesheet' id='seobility-marketing-banner-css' href='https://www.seobility.net/wp-content/themes/seobility/components/marketing-banner/marketing-banner.css?ver=1793001065' media='all' />
+<link rel='stylesheet' id='seobility-marketing-banner-simple-css' href='https://www.seobility.net/wp-content/themes/seobility/components/marketing-banner/marketing-banner-simple.css?ver=1793001065' media='all' />
+<script id="wpml-cookie-js-extra">
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"/"}};
+//# sourceURL=wpml-cookie-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="wpml-cookie-js" src="https://www.seobility.net/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=497000"></script>
+<script defer crossorigin="anonymous" id="font-awesome-official-js" src="https://kit.fontawesome.com/f5e03c8317.js"></script>
+<script id="jquery-core-js" src="https://www.seobility.net/wp-includes/js/jquery/jquery.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.seobility.net/wp-includes/js/jquery/jquery-migrate.js?ver=3.4.1"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=G-9Y8843FJWR" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.seobility.net"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-9Y8843FJWR", {"googlesitekit_post_type":"page"});
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+</script>
+<link rel="https://api.w.org/" href="https://www.seobility.net/en/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.seobility.net/en/wp-json/wp/v2/pages/29705" /><meta name="generator" content="WPML ver:4.9.7 stt:1,3,2;" />
+<meta name="generator" content="Site Kit by Google 1.190.0" />		<script type="text/javascript">
+			(function(c, l, a, r, i, t, y) {
+				c[a] = c[a] || function() {
+					(c[a].q = c[a].q || []).push(arguments)
+				};
+				t = l.createElement(r);
+				t.async = 1;
+				t.src = "https://www.clarity.ms/tag/" + i + "?ref=wordpress";
+				y = l.getElementsByTagName(r)[0];
+				y.parentNode.insertBefore(t, y);
+			})(window, document, "clarity", "script", "yjr839ogo1");
+		</script>
+	    <!-- GOOGLE TAG MANAGER -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NC59GL9');
+    </script>
+    <link rel="icon" href="https://www.seobility.net/wp-content/uploads/2025/06/seobility-favicon-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://www.seobility.net/wp-content/uploads/2025/06/seobility-favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.seobility.net/wp-content/uploads/2025/06/seobility-favicon.png" />
+<meta name="msapplication-TileImage" content="https://www.seobility.net/wp-content/uploads/2025/06/seobility-favicon.png" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>
+        
+<!-- Corrected hreflang links -->
+<link rel="alternate" hreflang="en" href="https://www.seobility.net/en/seocheck/">
+<link rel="alternate" hreflang="de" href="https://www.seobility.net/de/seocheck/">
+<link rel="alternate" hreflang="es" href="https://www.seobility.net/es/seochecker/">
+<link rel="alternate" hreflang="x-default" href="https://www.seobility.net/en/seocheck/">
+<style id="core-block-supports-inline-css">
+/**
+ * Core styles: block-supports
+ */
+
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+
+</head>
+
+<body data-rsssl=1 class="wp-singular page-template page-template-template-results page-template-template-results-php page page-id-29705 wp-theme-seobility">
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC59GL9" 
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div id="page" class="site">
+    <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+    <header id="masthead" class="site-header relative top-0 left-0 z-50 w-full bg-transparent transition-all duration-300">
+        <div class="mx-auto flex items-center justify-between space-x-4 gap-0 lg:gap-6 e-container" >
+
+<div class="site-branding flex items-center">
+    <!-- Optimized Logo Image with WebP support and preload -->
+                <link rel="preload" as="image" href="https://www.seobility.net/wp-content/uploads/2024/02/Vector.svg">        <a href="https://www.seobility.net/en/">
+            <picture>
+                                <source srcset="https://www.seobility.net/wp-content/uploads/2024/02/Vector.svg" type="image/webp">
+                <img src="https://www.seobility.net/wp-content/uploads/2024/02/Vector.svg" 
+                     alt="Seobility logo" 
+                     class="default-logo"
+                     loading="eager"
+                     width="150"
+                     height="42">
+            </picture>
+        </a>
+    
+    <!-- Conditional Header Text -->
+    </div><!-- .site-branding -->
+
+            <nav id="site-navigation" class="flex-grow flex items-center">
+				
+				 
+<button  class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+        <i style="color: #1F2937;" >
+            <div class="menu-open-icon">
+        <svg  width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="0.65" y1="1.35" x2="17.35" y2="1.35" stroke="#1F2937" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="0.65" y1="6.35" x2="17.35" y2="6.35" stroke="#1F2937" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="0.65" y1="11.35" x2="17.35" y2="11.35" stroke="#1F2937" stroke-width="1.3" stroke-linecap="round"/>
+</svg>
+</div>
+<div class="menu-close-icon hidden">
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.1875 15.3125L8 9.07812L1.76562 15.3125C1.48438 15.5938 1.01562 15.5938 0.6875 15.3125C0.40625 14.9844 0.40625 14.5156 0.6875 14.2344L6.92188 8L0.6875 1.8125C0.40625 1.53125 0.40625 1.0625 0.6875 0.734375C1.01562 0.453125 1.48438 0.453125 1.76562 0.734375L8 6.96875L14.1875 0.734375C14.4688 0.453125 14.9375 0.453125 15.2656 0.734375C15.5469 1.0625 15.5469 1.53125 15.2656 1.8125L9.03125 8L15.2656 14.2344C15.5469 14.5156 15.5469 14.9844 15.2656 15.3125C14.9375 15.5938 14.4688 15.5938 14.1875 15.3125Z" fill="#1F2937"/>
+</svg>
+</div>
+        </i>
+        
+  
+
+        
+    </button>
+                <div class="menu-primary-container"><ul id="primary-menu" class="main-menu e-container"><li class="side-by-side menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown">
+                            <a href="#" class="main-menu-link">Features &amp; Use Cases</a>
+                            
+                        <div class="menu-spacing"></div><div class="sub-menu-grid"><ul class="sub-menu-columns"><li class="menu-heading with-seperator menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                            <a href="#" class="sub-menu-link">Seobility Features</a>
+                            <p class="menu-item-description">Get an overview of our all-in-one SEO software suite</p>
+                        <ul class="sub-sub-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/website-audit/" class="sub-menu-link">Website Audit</a>
+                            <p class="menu-item-description">Analyze your website and uncover technical and SEO-related issues</p>
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/ranking-monitoring/" class="sub-menu-link">Ranking Monitoring</a>
+                            <p class="menu-item-description">Track your SEO success in Google Search, incl. AI Overviews</p>
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/ai-visibility-tracking-tool/" class="sub-menu-link">AI Visibility Tracking (Coming soon)</a>
+                            <p class="menu-item-description">Track how visible your brand is in AI answers from ChatGPT and more</p>
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/backlink-monitoring/" class="sub-menu-link">Backlink Monitoring &amp; Analysis</a>
+                            <p class="menu-item-description">Keep an eye on your link profile and improve off-page SEO</p>
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/seo-competitor-analysis-tools/" class="sub-menu-link">SEO Competitor Analysis</a>
+                            <p class="menu-item-description">Get insight into your competitors’ rankings, backlinks, and keywords</p>
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/seo-content-tools/" class="sub-menu-link">Keyword Research &amp; Content Tools</a>
+                            <p class="menu-item-description">Find the right keywords to target and optimize your content</p>
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/uptime-monitoring/" class="sub-menu-link">Uptime Monitoring</a>
+                            <p class="menu-item-description">Let Seobility watch over your site and notify you when it’s down</p>
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/seo-mcp/" class="sub-menu-link">Seobility MCP (Beta)</a>
+                            <p class="menu-item-description">Connect AI assistants to your Seobility data</p>
+                        </li></ul></li><li class="menu-heading with-seperator menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                            <a href="#" class="sub-menu-link">Use Cases</a>
+                            <p class="menu-item-description">Discover how to use Seobility for your business and needs</p>
+                        <ul class="sub-sub-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/seobility-for-businesses/" class="sub-menu-link">Seobility for Businesses</a>
+                            
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/seo-software-for-agencies-and-freelancers/" class="sub-menu-link">Seobility for Agencies &amp; Freelancers</a>
+                            
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/seo-tool-for-local-businesses/" class="sub-menu-link">Seobility for Local Businesses</a>
+                            
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/generative-engine-optimization-tool/" class="sub-menu-link">Generative Engine Optimization (GEO) with Seobility</a>
+                            
+                        </li></ul></li></ul></div></li><li class=" menu-item menu-item-type-post_type menu-item-object-page dropdown">
+                            <a href="https://www.seobility.net/en/pricing/" class="main-menu-link">Pricing</a>
+                            
+                        </li><li class="side-by-side menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown">
+                            <a href="#" class="main-menu-link">Resources</a>
+                            
+                        <div class="menu-spacing"></div><div class="sub-menu-grid"><ul class="sub-menu-columns"><li class="menu-heading with-seperator menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                            <a href="#" class="sub-menu-link">Resources</a>
+                            
+                        <ul class="sub-sub-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/blog/" class="sub-menu-link">SEO Blog</a>
+                            <p class="menu-item-description">Actionable guides to help you optimize your website</p>
+                        </li><li class=" menu-item menu-item-type-custom menu-item-object-custom">
+                            <a href="/en/wiki" class="sub-menu-link">SEO Wiki</a>
+                            <p class="menu-item-description">Clear explanations of important SEO terminology</p>
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/faq/" class="sub-menu-link">FAQs about Seobility</a>
+                            <p class="menu-item-description">Get answers to common questions about our SEO software</p>
+                        </li><li class=" menu-item menu-item-type-custom menu-item-object-custom">
+                            <a href="/en/blog/seobility-beginners-guide/" class="sub-menu-link">Seobility Beginner&#039;s Guide</a>
+                            <p class="menu-item-description">Learn how to get started with Seobility</p>
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/free-seo-tools/" class="sub-menu-link">Free SEO Tools</a>
+                            <p class="menu-item-description">Use these tools for free and without registration!</p>
+                        </li></ul></li><li class="menu-heading menu-item-about with-seperator menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                            <a href="#" class="sub-menu-link">About</a>
+                            
+                        <ul class="sub-sub-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/team/" class="sub-menu-link">Seobility Team</a>
+                            
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/contact/" class="sub-menu-link">Contact</a>
+                            
+                        </li><li class=" menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="https://www.seobility.net/en/customers/" class="sub-menu-link">Seobility Customers</a>
+                            
+                        </li></ul></li></ul></div></li><li class="sign-in-mobile add-languagecode menu-item menu-item-type-custom menu-item-object-custom dropdown">
+                            <a href="https://app.seobility.net/user/login" class="main-menu-link">Log in</a>
+                            
+                        </li><li class="sign-up-mobile add-languagecode menu-item menu-item-type-custom menu-item-object-custom dropdown">
+                            <a href="https://app.seobility.net/user/register?productid=1&#038;payinterval=1" class="main-menu-link">Try for free</a>
+                            
+                        </li><li class="dashboard-mobile hidden menu-item menu-item-type-custom menu-item-object-custom dropdown">
+                            <a href="https://app.seobility.net" class="main-menu-link">Go to Dashboard</a>
+                            
+                        </li><li class="menu-item wpml-ls-slot-2 wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-menu-item wpml-ls-first-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-has-children wpml-ls-current dropdown">
+                            <a href="https://www.seobility.net/en/seocheck/check/" class="main-menu-link"><span class="wpml-ls-globe-icon" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 2a15 15 0 0 1 0 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 2a15 15 0 0 0 0 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>EN</a>
+                            
+                        <div class="menu-spacing"></div><div class="sub-menu-grid"><ul class="sub-menu-columns"><li class="menu-item wpml-ls-item wpml-ls-current"><a href="https://www.seobility.net/en/seocheck/check/" class="sub-menu-link">English <span class="wpml-ls-current-marker" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg></span></a></li><li class="menu-item wpml-ls-slot-2 wpml-ls-item wpml-ls-item-de wpml-ls-menu-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item">
+                            <a href="https://www.seobility.net/de/seocheck/check/" class="sub-menu-link">Deutsch</a>
+                            
+                        </li><li class="menu-item wpml-ls-slot-2 wpml-ls-item wpml-ls-item-es wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item">
+                            <a href="https://www.seobility.net/es/seochecker/check/" class="sub-menu-link">Español</a>
+                            
+                        </li></ul></div></li></ul></div>            </nav><!-- #site-navigation -->
+            <div class="flex items-center gap-6 header-buttons" style="margin:0;">
+            <!-- Default Buttons for Other Pages -->
+                                    <a class="sign-in add-languagecode auth-hidden" href="https://app.seobility.net/user/login" target="">
+                Log in            </a>
+                            <a class="sign-up add-languagecode auth-hidden" href="https://app.seobility.net/user/register" target="">
+                Try it free            </a>
+                
+    <!-- Dashboard Button (hidden by default, shown when authenticated) -->
+    <a class="dashboard-btn add-languagecode" href="#" style="display: none;">
+        Go to Dashboard    </a>
+</div>
+        </div>
+    </header><!-- #masthead -->
+	
+<!-- Auth Status Script -->
+<script defer src="https://www.seobility.net/wp-content/themes/seobility/js/auth-status.js"></script>
+<script>
+// Pass PHP variables to JavaScript
+window.seobilityAppDomain = 'https://app.seobility.net';
+
+// Unregister any existing Service Workers (cleanup)
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        registrations.forEach(function(registration) {
+            registration.unregister();
+        });
+    }).catch(function(error) {
+        console.log('Service Worker unregister failed:', error);
+    });
+}
+</script>
+
+
+
+<div class="breadcrumbs-container"><div class="breadcrumbs-inner e-container" style=""><p id="breadcrumbs"><span><span><a href="https://www.seobility.net/en/">Home</a></span> <i class="fa-regular fa-chevron-right" style="font-size:12px"></i> <span class="breadcrumb_last" aria-current="page">SEO Checker (results)</span></span></p></div></div><div class="free-tool-result">
+	
+
+
+<section class="e-container free-tool-result">
+  		<div class="">
+			<div class="tabs-container menu-slider-container flex">
+	<div class="tabs-read-less" onclick="scrollLeftMenu()">
+        <span>
+		<i class="fa-solid fa-chevron-left"></i>
+		</span>
+    </div>
+    <ul id="menu-free-tools-nav" class="tabs flex"><li class="menu-seo-checker menu-item menu-item-type-post_type menu-item-object-free_tools tab-item active"><a class="tab-link" href="https://www.seobility.net/en/seocheck/">SEO Checker</a></li><li class="menu-ranking-checker menu-item menu-item-type-post_type menu-item-object-free_tools tab-item"><a class="tab-link" href="https://www.seobility.net/en/rankingcheck/">Ranking Checker</a></li><li class="menu-backlink-checker menu-item menu-item-type-post_type menu-item-object-free_tools tab-item"><a class="tab-link" href="https://www.seobility.net/en/backlinkchecker/">Backlink Checker</a></li><li class="menu-keyword-research menu-item menu-item-type-post_type menu-item-object-free_tools tab-item"><a class="tab-link" href="https://www.seobility.net/en/keyword-research-tool/">Keyword Research</a></li><li class="menu-snippet-generator menu-item menu-item-type-post_type menu-item-object-free_tools tab-item"><a class="tab-link" href="https://www.seobility.net/en/serp-snippet-generator/">Snippet Generator</a></li><li class="menu-tf-idf-tool menu-item menu-item-type-post_type menu-item-object-free_tools tab-item"><a class="tab-link" href="https://www.seobility.net/en/tf-idf-keyword-tool/">TF*IDF Tool</a></li><li class="menu-redirect-checker menu-item menu-item-type-post_type menu-item-object-free_tools tab-item"><a class="tab-link" href="https://www.seobility.net/en/redirectcheck/">Redirect Checker</a></li><li class="menu-seo-compare menu-item menu-item-type-post_type menu-item-object-free_tools tab-item"><a class="tab-link" href="https://www.seobility.net/en/seocompare/">SEO Compare</a></li><li class="menu-keyword-checker menu-item menu-item-type-post_type menu-item-object-free_tools tab-item"><a class="tab-link" href="https://www.seobility.net/en/keywordcheck/">Keyword Checker</a></li></ul>	<div class="tabs-read-more" onclick="scrollRight()">
+	<span><span>More </span>
+		<i class="fa-solid fa-chevron-right"></i>
+		</span>
+</div>
+
+</div>
+<div class="e-login-notification e-container" id="auth-notification" style="display:none">
+		<span>
+		You are using a limited version of this tool.				<a href="https://app.seobility.net/user/login?locale=en">
+			Switch to Application		</a>
+		.
+	</span>
+</div>
+
+<script>
+	//AGENCY
+
+function scrollRight() {
+    const menu = document.querySelector('.tabs');
+    let activeTab = menu.querySelector('.tab-item.phantom-active');
+    if (!activeTab) {
+        activeTab = menu.querySelector('.tab-item.active');
+    }
+    
+    if (menu && activeTab) {
+        let nextTab = activeTab.nextElementSibling;
+
+        if (!nextTab) {
+            nextTab = menu.querySelector('.tab-item:first-child');
+        }
+
+        activeTab.classList.remove('phantom-active');
+        nextTab.classList.add('phantom-active');
+        
+        menu.scrollTo({
+            left: nextTab.offsetLeft,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Function to scroll left
+function scrollLeftMenu() {
+    const menu = document.querySelector('.tabs');
+    let activeTab = menu.querySelector('.tab-item.phantom-active');
+    
+    if (!activeTab) {
+		
+        activeTab = menu.querySelector('.tab-item.active');
+    }
+	
+    
+    if (menu && activeTab) {
+        let prevTab = activeTab.previousElementSibling;
+
+        if (!prevTab) {
+            const tabItems = menu.querySelectorAll('.tab-item');
+			prevTab = tabItems[tabItems.length - 2];
+        }
+
+        activeTab.classList.remove('phantom-active');
+        prevTab.classList.add('phantom-active');
+        
+        menu.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Function to check scrolling and show/hide buttons
+function checkScrolling() {
+
+    const menu = document.querySelector('.tabs');
+    const scrollRightButton = document.querySelector('.tabs-read-more');
+    const scrollLeftButton = document.querySelector('.tabs-read-less');
+	
+    if (!menu || !scrollRightButton || !scrollLeftButton) return;
+
+    // Show/hide right button
+    if (menu.scrollWidth > menu.clientWidth && menu.scrollLeft < menu.scrollWidth - menu.clientWidth) {
+        scrollRightButton.style.display = 'flex';
+    } else {
+        scrollRightButton.style.display = 'none';
+    }
+
+    // Show/hide left button
+    if (menu.scrollLeft > 0) {
+        scrollLeftButton.style.display = 'flex';
+    } else {
+        scrollLeftButton.style.display = 'none';
+    }
+}
+
+// Run the check on page load, window resize, and scroll events
+window.addEventListener('load', checkScrolling);
+window.addEventListener('resize', checkScrolling);
+document.querySelector('.tabs').addEventListener('scroll', checkScrolling);
+
+window.addEventListener('load', () => {
+    const menu = document.querySelector('.tabs');
+    const activeTab = menu?.querySelector('.tab-item.active');
+
+    if (menu && activeTab) {
+        const scrollTo = activeTab.offsetLeft - (menu.clientWidth / 2) + (activeTab.clientWidth);
+
+        menu.scrollTo({
+            left: scrollTo,
+            behavior: 'auto'
+        });
+    }
+});
+	
+	
+//DISPLAY NOTIFICATRION IF USER IS LOGGED IN
+(function watchAuthStatus() {
+	const checkAuth = () => {
+		if (window.authStatus && window.authStatus.authenticated === true) {
+	
+			const el = document.getElementById("auth-notification");
+			if (el && el.style.display !== "flex") {
+				el.style.display = "flex";
+			}
+		} else {
+			// Optional: hide it again if user becomes unauthenticated
+			const el = document.getElementById("auth-notification");
+			if (el && el.style.display !== "none") {
+				el.style.display = "none";
+			}
+		}
+	};
+
+	// Check every 300ms
+	setInterval(checkAuth, 3000);
+})();
+
+
+</script>	</div>
+	<img class="hidden lg:block" style="width:100%" src="/wp-content/uploads/2025/05/confetti-small-2.svg"/>
+	<img class="lg:hidden block" style="width:100%" src="/wp-content/uploads/2025/05/confetti-small-2-mobile.svg"/>
+		
+	
+		
+	<div class="pt-5">
+		<div id="results-heading-wrapper">
+	
+	<div class="flex justify-between mb-3 lg:mb-4">
+		<h1 class="results-heading">
+			SEO Checker
+		</h1>
+		<div class="free-tools-results-buttons grid grid-cols-3 gap-x-2 text-sm">
+			<div class="col-span-3 flex justify-end gap-x-2">
+						<div class="share-wrapper">
+			<button class="" id="result-share" onclick="showSocialShareDialog()">
+                        <a class="flex align-items-center justify-center" style="gap:5px">
+                            Share							<img class="self-center" src="/wp-content/uploads/2025/05/share-1.svg" alt="Share Icon" style="width: 16px; height: 16px;"/>  
+                        </a>
+              </button>
+			</div>
+			    
+			<button class="tool-tip premium-btn">
+                        <a target="_blank" href="https://www.seobility.net/en/pricing/" class="flex align-items-center justify-center" style="gap:5px">
+                            PDF
+							<img class="self-center" src="/wp-content/uploads/2025/05/download-1.svg" alt="Download Icon" style="width: 16px; height: 16px;"/>  
+                        </a>
+						<span class="tool-tip-text">Save your results as a PDF report with Seobility Premium. Try it free for 14 days!</span>
+              </button>
+		</div>
+		</div>
+		
+		
+	</div>
+	<p class="text-body-s">
+		Analyze any web page for technical errors and on-page SEO problems, and get tips on how to optimize it.	</p>
+	<div id="copy-toast" style="position:absolute; display:none;">Page Url copied to clipboard!</div>
+
+	        <style>
+            .social-share-dialog {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 9999;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .social-share-dialog.hidden {
+                display: none;
+            }
+            
+            .social-share-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(2px);
+            }
+            
+            .social-share-content {
+                position: relative;
+                background: white;
+                border-radius: 12px;
+                max-width: 500px;
+                width: 90%;
+                max-height: 80vh;
+                overflow-y: auto;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                animation: socialShareSlideIn 0.3s ease-out;
+            }
+            
+            @keyframes socialShareSlideIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px) scale(0.95);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+            
+            .social-share-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 24px;
+                border-bottom: 1px solid #E5E7EB;
+            }
+            
+            .social-share-header h3 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+                color: #1F2937;
+            }
+            
+            .social-share-close {
+                background: none;
+                border: none;
+                font-size: 16px;
+                color: #6B7280;
+                cursor: pointer;
+                padding: 4px;
+                border-radius: 4px;
+                transition: all 0.2s;
+            }
+            
+            .social-share-close:hover {
+                background: #F3F4F6;
+                color: #374151;
+            }
+            
+            .social-share-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 12px;
+                padding: 20px 24px;
+            }
+            
+            .social-share-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                padding: 16px 12px;
+                border: 1px solid #E5E7EB;
+                border-radius: 8px;
+                background: white;
+                cursor: pointer;
+                transition: all 0.2s;
+                text-decoration: none;
+                color: #374151;
+            }
+            
+            .social-share-item:hover {
+                border-color: var(--platform-color);
+                background: var(--platform-color);
+                color: white;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+            
+            .social-share-item i {
+                font-size: 20px;
+                transition: color 0.2s;
+            }
+            
+            .social-share-item span {
+                font-size: 12px;
+                font-weight: 500;
+                text-align: center;
+                line-height: 1.2;
+            }
+            
+            .social-share-footer {
+                padding: 16px 24px;
+                border-top: 1px solid #E5E7EB;
+                background: #F9FAFB;
+                border-radius: 0 0 12px 12px;
+            }
+            
+            .social-share-url {
+                font-size: 12px;
+                color: #6B7280;
+                margin: 0;
+                word-break: break-all;
+                background: white;
+                padding: 8px 12px;
+                border-radius: 6px;
+                border: 1px solid #E5E7EB;
+            }
+            
+            .social-share-toast {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #10B981;
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 500;
+                z-index: 999999;
+                opacity: 0;
+                transform: translateX(100px);
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+            
+            .social-share-toast.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            
+            @media (max-width: 768px) {
+                .social-share-content {
+                    width: 95%;
+                    max-height: 85vh;
+                }
+                
+                .social-share-grid {
+                    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                    gap: 8px;
+                    padding: 16px 20px;
+                }
+                
+                .social-share-item {
+                    padding: 12px 8px;
+                }
+                
+                .social-share-header {
+                    padding: 16px 20px;
+                }
+                
+                .social-share-footer {
+                    padding: 12px 20px;
+                }
+            }
+            
+            @media print {
+                .social-share-dialog {
+                    display: none !important;
+                }
+                
+                .social-share-toast {
+                    display: none !important;
+                }
+                
+                /* Erzwinge Desktop-Layout beim Drucken */
+                body {
+                    width: auto !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    font-size: 12pt !important;
+                    line-height: 1.4 !important;
+                }
+                
+                /* Verhindere mobile Responsive-Regeln beim Drucken */
+                * {
+                    max-width: none !important;
+                    width: auto !important;
+                }
+                
+                /* Container und Layout-Elemente */
+                .container, .main-content, .content,.e-container {
+                    width: 100% !important;
+                    max-width: none !important;
+                    margin: 0 !important;
+                    padding: 0 15px !important;
+                }
+                
+                /* Navigation und Header für Druck optimieren */
+                .navigation, .mobile-menu, .hamburger {
+                    display: none !important;
+                }
+                
+                /* Nur .main Bereich drucken - alles andere ausblenden */
+                body > *:not(.free-tool-result) {
+                    display: none !important;
+                }
+                
+                header, footer, .header, .footer, 
+                .sidebar, .nav, .navigation,
+                .breadcrumb, .breadcrumbs,
+                .comments, .comment-form,
+                .widget, .widgets,
+                .social-links, .share-buttons:not(.social-share-dialog) {
+                    display: none !important;
+                }
+            }
+        </style>
+                <div id="social-share-dialog-6ae1bffa5d82f" class="social-share-dialog hidden">
+            <div class="social-share-overlay"></div>
+            <div class="social-share-content">
+                <div class="social-share-header">
+                    <h3>Share this page</h3>
+                                            <button class="social-share-close" type="button">
+                            <i class="fas fa-times"></i>
+                        </button>
+                                    </div>
+                <div class="social-share-grid">
+                                                                        <button class="social-share-item" 
+                                    data-platform="twitter"
+                                    data-url="https://twitter.com/intent/tweet?url={url}&amp;text={text}"
+                                    data-name="X (Twitter)"
+                                    style="--platform-color: #1DA1F2">
+                                <i class="fab fa-twitter"></i>
+                                <span>X (Twitter)</span>
+                            </button>
+                                                                                                <button class="social-share-item" 
+                                    data-platform="facebook"
+                                    data-url="https://www.facebook.com/sharer/sharer.php?u={url}"
+                                    data-name="Facebook"
+                                    style="--platform-color: #1877F2">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </button>
+                                                                                                <button class="social-share-item" 
+                                    data-platform="linkedin"
+                                    data-url="https://www.linkedin.com/shareArticle?mini=true&amp;url={url}&amp;title={title}"
+                                    data-name="LinkedIn"
+                                    style="--platform-color: #0077B5">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </button>
+                                                                                                <button class="social-share-item" 
+                                    data-platform="pinterest"
+                                    data-url="https://pinterest.com/pin/create/button/?url={url}&amp;description={text}"
+                                    data-name="Pinterest"
+                                    style="--platform-color: #E60023">
+                                <i class="fab fa-pinterest-p"></i>
+                                <span>Pinterest</span>
+                            </button>
+                                                                                                <button class="social-share-item" 
+                                    data-platform="reddit"
+                                    data-url="https://www.reddit.com/submit?url={url}&amp;title={title}"
+                                    data-name="Reddit"
+                                    style="--platform-color: #FF4500">
+                                <i class="fab fa-reddit-alien"></i>
+                                <span>Reddit</span>
+                            </button>
+                                                                                                <button class="social-share-item" 
+                                    data-platform="whatsapp"
+                                    data-url="https://api.whatsapp.com/send?text={text}%20{url}"
+                                    data-name="WhatsApp"
+                                    style="--platform-color: #25D366">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </button>
+                                                                                                <button class="social-share-item" 
+                                    data-platform="email"
+                                    data-url="mailto:?subject={title}&amp;body={text}%20{url}"
+                                    data-name="Email"
+                                    style="--platform-color: #DD4B39">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </button>
+                                                                                                <button class="social-share-item" 
+                                    data-platform="copy"
+                                    data-url="copy"
+                                    data-name="Copy Link"
+                                    style="--platform-color: #6C757D">
+                                <i class="fas fa-link"></i>
+                                <span>Copy Link</span>
+                            </button>
+                                                            </div>
+                <div class="social-share-footer">
+                    <p class="social-share-url" id="social-share-url-display"></p>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const dialog = document.getElementById('social-share-dialog-6ae1bffa5d82f');
+                const closeBtn = dialog.querySelector('.social-share-close');
+                const overlay = dialog.querySelector('.social-share-overlay');
+                const shareItems = dialog.querySelectorAll('.social-share-item');
+                const urlDisplayEl = document.getElementById('social-share-url-display');
+                
+                // Statische Share-Daten (title, text) - url wird immer frisch ermittelt
+                const shareDataStatic = {
+                    title: "SEO Checker (results)",
+                    text: "SEO Checker (results)",
+                    urlOverride: null                };
+                
+                // Ermittelt die aktuelle Share-URL - immer zur Laufzeit, um Caching und 
+                // dynamische URL-Änderungen (z.B. replaceState) zu berücksichtigen.
+                function getShareUrl() {
+                    if (shareDataStatic.urlOverride) {
+                        return shareDataStatic.urlOverride;
+                    }
+                    return window.location.href.split('#')[0];
+                }
+                
+                // Function to show dialog
+                window.showSocialShareDialog = function() {
+                    const currentShareUrl = getShareUrl();
+                    if (urlDisplayEl) {
+                        urlDisplayEl.textContent = currentShareUrl;
+                    }
+                    dialog.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                };
+                
+                // Function to hide dialog
+                function hideDialog() {
+                    dialog.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+                
+                // Event listeners
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', hideDialog);
+                }
+                
+                overlay.addEventListener('click', hideDialog);
+                
+                // ESC key to close
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && !dialog.classList.contains('hidden')) {
+                        hideDialog();
+                    }
+                });
+                
+                // Handle share button clicks - URL immer frisch bei Klick ermitteln
+                shareItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const platform = this.getAttribute('data-platform');
+                        const urlTemplate = this.getAttribute('data-url');
+                        const shareUrlCurrent = getShareUrl();
+                        
+                        if (platform === 'copy') {
+                            navigator.clipboard.writeText(shareUrlCurrent).then(() => {
+                                showToast('Link copied to clipboard!');
+                            }).catch(() => {
+                                showToast('Failed to copy link');
+                            });
+                        } else if (platform === 'print') {
+                            window.print();
+                        } else {
+                            const shareUrl = urlTemplate
+                                .replace('{url}', encodeURIComponent(shareUrlCurrent))
+                                .replace('{title}', encodeURIComponent(shareDataStatic.title))
+                                .replace('{text}', encodeURIComponent(shareDataStatic.text));
+                            window.open(shareUrl, '_blank', 'width=600,height=400,scrollbars=yes,resizable=yes');
+                        }
+                    });
+                });
+                
+                // Toast notification function
+                function showToast(message) {
+                    const toast = document.createElement('div');
+                    toast.className = 'social-share-toast z-50';
+                    toast.textContent = message;
+                    document.body.appendChild(toast);
+                    
+                    setTimeout(() => {
+                        toast.classList.add('show');
+                    }, 100);
+                    
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                        setTimeout(() => {
+                            document.body.removeChild(toast);
+                        }, 300);
+                    }, 3000);
+                }
+            });
+        </script>
+        
+	<div class="e-notification e-conversion-notification e-container" id="conv-notification" style="
+	display: none;
+	margin-top:36px;
+	justify-content: space-between;
+	height: 36px;
+	padding: 0px 12px;
+	flex-shrink: 0;
+	width:100%;
+	border-radius: 6px;
+	border: 1px solid #F3D372;
+	min-width: 96px;
+	align-items: center;
+	gap: 8px;
+	background: #FFFAEB;" id="conversion-notification">
+		<span style="display:flex;gap:8px; flex-wrap:nowrap;
+				 color: #404040;
+				text-align: center;
+				font-family: Graphik;
+				font-size: 14px;
+				align-items: center;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 16px; ">
+		<div class="e-icon" style="border: 1px solid rgb(175, 139, 29);
+    border-radius: 3px; background-color: rgb(253,241,206); padding:3px;">
+					<svg style="color: rgb(175, 139, 29);" xmlns="http://www.w3.org/2000/svg" 
+						 width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2.001H6c-1.104 0-2 .897-2 2v10c0 4.529 6.828 7.586 7.605 7.919.127.055.26.081.395.081a.987.987 0 0 0 .395-.081c.777-.333 7.605-3.39 7.605-7.919v-10c0-1.103-.896-2-2-2Zm0 2v2H6v-2h12Zm0 10c0 2.549-4.018 4.969-6 5.903-1.984-.933-6-3.347-6-5.903v-6h12v6Z" fill="currentColor"></path><path d="m13 12.001-1-3-1 3H8l2 2-1 3 3-2 3 2-1-3 2-2h-3Z" fill="currentColor"></path></svg>
+		</div>
+		<strong>Need more checks per day?</strong>
+		<span>(Unlock 50 daily queries with Seobility Premium!)</span>
+	</span>
+	<button style="color: #404040;
+				text-align: center;
+				font-family: Graphik;
+				font-size: 14px;
+				align-items: center;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 16px;
+				   text-decoration:underline;" 
+			id="show-conversion-widget-button">
+		Learn more	</button>
+</div>
+<div id="show-conversion-widget-content" style="max-width:900px; margin:auto; height:0; overflow:hidden;" class="conversion-widget">
+<div style="margin: auto;" class="">
+	
+	    <div style="margin: 100px 0" class="flex flex-col gap-2 exceed-plans-rows">
+        <!-- Header -->
+        <div class="hidden md:flex font-semibold bg-gray-100 py-3 px-10 rounded-lg">
+            <div class="flex-1">Plan</div>
+            <div class="flex-1">Checks per day</div>
+            <div class="flex-1">Cost</div>
+            <div class="flex-1">Unlock</div>
+        </div>
+
+        <!-- Rows -->
+                    <div class="flex md:items-center flex-col md:flex-row bg-white py-6 md:py-2 rounded-lg shadow-sm hover:bg-gray-50 px-10 exceed-plans-row transition">
+                <div class="font-semibold md:justify-start justify-between flex flex-1 text-lg md:text-base">Basic</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Checks per day: </div>5</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Cost: </div>Free forever</div>
+                <div class="mt-2 sm:mt-0 sm:flex-1 w-full sm:w-auto">
+                                            <a href="https://app.seobility.net/user/register?productid=0"
+                           target=""
+                           class="inline-block px-4 py-2 text-sm  transition">
+                            Sign up for free                        </a>
+                                    </div>
+            </div>
+                    <div class="flex md:items-center flex-col md:flex-row bg-white py-6 md:py-2 rounded-lg shadow-sm hover:bg-gray-50 px-10 exceed-plans-row transition">
+                <div class="font-semibold md:justify-start justify-between flex flex-1 text-lg md:text-base">Premium</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Checks per day: </div>50</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Cost: </div>$69.90 / month</div>
+                <div class="mt-2 sm:mt-0 sm:flex-1 w-full sm:w-auto">
+                                            <a href="https://app.seobility.net/user/register"
+                           target=""
+                           class="inline-block px-4 py-2 text-sm  transition">
+                            Try it free for 14 days                        </a>
+                                    </div>
+            </div>
+                    <div class="flex md:items-center flex-col md:flex-row bg-white py-6 md:py-2 rounded-lg shadow-sm hover:bg-gray-50 px-10 exceed-plans-row transition">
+                <div class="font-semibold md:justify-start justify-between flex flex-1 text-lg md:text-base">Professional</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Checks per day: </div>100</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Cost: </div>$109.90 / month</div>
+                <div class="mt-2 sm:mt-0 sm:flex-1 w-full sm:w-auto">
+                                            <a href="https://app.seobility.net/user/register?productid=4&#038;payinterval=1&#038;vouchercode=freetrialprofessional"
+                           target=""
+                           class="inline-block px-4 py-2 text-sm  transition">
+                            Try it free for 14 days                        </a>
+                                    </div>
+            </div>
+                    <div class="flex md:items-center flex-col md:flex-row bg-white py-6 md:py-2 rounded-lg shadow-sm hover:bg-gray-50 px-10 exceed-plans-row transition">
+                <div class="font-semibold md:justify-start justify-between flex flex-1 text-lg md:text-base">Agency</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Checks per day: </div>200</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Cost: </div>$239.90 / month</div>
+                <div class="mt-2 sm:mt-0 sm:flex-1 w-full sm:w-auto">
+                                            <a href="https://app.seobility.net/user/register?productid=2&#038;payinterval=1&#038;vouchercode=freetrialagency"
+                           target=""
+                           class="inline-block px-4 py-2 text-sm  transition">
+                            Try it free for 14 days                        </a>
+                                    </div>
+            </div>
+            </div>
+<p class="mx-auto" style="max-width:700px">
+	<p>Questions? Contact us anytime at <a href="mailto:support@seobility.net" target="_blank" rel="noopener">support@seobility.net</a> &#8211; we&#8217;re happy to help!</p>
+<p>&nbsp;</p>
+<p>Prices exclude VAT where applicable.</p>
+	</p>
+</div></div>
+
+
+<script>
+	
+	   // Select the button and content
+    const button = document.getElementById('show-conversion-widget-button');
+    const content = document.getElementById('show-conversion-widget-content');
+
+    // Function to animate the height from 0 to fit-content
+    function toggleContent() {
+        // If the content is hidden (height is 0), animate to fit-content
+        if (content.style.height === '0px' || content.style.height === '') {
+            content.style.height = 'auto'; // Temporarily set it to 'auto' to get its natural height
+            const fullHeight = content.scrollHeight + 'px'; // Get the actual height of the content
+            content.style.height = '0px'; // Reset it back to 0 for the animation
+            setTimeout(() => {
+                content.style.transition = 'height 0.5s ease'; // Set the animation transition
+                content.style.height = fullHeight; // Animate to the full height
+            }, 10); // Wait for a tiny moment to reset the height before animating
+        } else {
+            // If the content is already shown, animate to height 0
+            content.style.transition = 'height 0.5s ease';
+            content.style.height = '0px';
+        }
+    }
+
+    // Add event listener to the button
+    button.addEventListener('click', toggleContent);
+	
+	//HIDE NOtification if user ios logged in
+	//DISPLAY NOTIFICATRION IF USER IS LOGGED IN
+(function watchAuthStatus() {
+	const checkAuth = () => {
+		if (window.authStatus && window.authStatus.authenticated === true) {
+	
+			const el = document.getElementById("conv-notification");
+			if (el) {
+				el.style.display = "none";
+			}
+		}else{
+			const el = document.getElementById("conv-notification");
+			if (el) {
+				el.style.display = "flex";
+			}
+		}
+	};
+
+	// Check every 300ms
+	setInterval(checkAuth, 3000);
+})();
+	
+</script></div>
+
+
+
+<script>
+// Legacy copy toast function - wird noch für andere Funktionen benötigt
+async function copyPageUrl(event) {
+  try {
+    await navigator.clipboard.writeText(location.href);
+	  showCopyToast(event);
+
+    console.log('Page URL copied to clipboard');
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+}
+
+function showCopyToast(event) {
+  const toast = document.getElementById('copy-toast');
+
+  // Position the toast near the mouse click
+  const offsetX = 0; // pixels right of cursor
+  const offsetY = 0; // pixels below cursor
+  toast.style.left = `${event.pageX + offsetX}px`;
+  toast.style.top = `${event.pageY + offsetY}px`;
+
+  // Show the toast
+  toast.style.display = 'block';
+  toast.style.opacity = '1';
+
+  // Hide after 2 seconds
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    // After fade out, hide it completely
+    setTimeout(() => {
+      toast.style.display = 'none';
+    }, 300);
+  }, 2000);
+}
+
+// Social Share Dialog wird jetzt über den Shortcode und die separate Datei verwaltet
+</script>
+
+<style>
+	#result-share {
+		cursor: pointer;
+	}
+	
+	.results-heading strong{
+		color:#1D85ED;
+	}
+	
+	.free-tools-results-buttons button{
+		padding:0 12px;
+		font-weight:600;
+		height:36px;
+		background-color:#F4F6FA;
+		border:1px solid #C2D4E5;
+		min-width:96px;
+		border-radius:3px;
+	}
+	
+	#copy-toast {
+		background-color: #333;
+		color: #fff;
+		padding: 8px 12px;
+		border-radius: 4px;
+		font-size: 14px;
+		pointer-events: none; /* so it doesn't block clicks */
+		user-select: none;
+		transform: translate(-50%,-200%);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	#copy-toast.show {
+		visibility: visible;
+		opacity: 1;
+	}
+</style>	</div>
+	
+</section>
+
+<main id="primary" class="site-main e-container py-5 pb-10">
+	
+<div id="no-checks-container" style="display:none;max-width:900px; margin: auto; margin-top:0px;margin-bottom:32px;" class="unavailable">
+    <div style="max-width:700px; margin:auto">
+		<div style="font-size:36px" class="mb-3 font-bold text-center">
+        No more checks available today    </div>
+    <div class="text-center">
+    <p>You have reached your maximum number of free queries for today. Sign up for free to get more queries per day.</p>
+</div>
+	</div>
+	
+	    <div style="margin: 100px 0" class="flex flex-col gap-2 exceed-plans-rows">
+        <!-- Header -->
+        <div class="hidden md:flex font-semibold bg-gray-100 py-3 px-10 rounded-lg">
+            <div class="flex-1">Plan</div>
+            <div class="flex-1">Checks per day</div>
+            <div class="flex-1">Cost</div>
+            <div class="flex-1">Unlock</div>
+        </div>
+
+        <!-- Rows -->
+                    <div class="flex md:items-center flex-col md:flex-row bg-white py-6 md:py-2 rounded-lg shadow-sm hover:bg-gray-50 px-10 exceed-plans-row transition">
+                <div class="font-semibold md:justify-start justify-between flex flex-1 text-lg md:text-base">Basic</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Checks per day: </div>5</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Cost: </div>Free forever</div>
+                <div class="mt-2 sm:mt-0 sm:flex-1 w-full sm:w-auto">
+                                            <a href="https://app.seobility.net/user/register?productid=0"
+                           target=""
+                           class="inline-block px-4 py-2 text-sm  transition">
+                            Sign up for free                        </a>
+                                    </div>
+            </div>
+                    <div class="flex md:items-center flex-col md:flex-row bg-white py-6 md:py-2 rounded-lg shadow-sm hover:bg-gray-50 px-10 exceed-plans-row transition">
+                <div class="font-semibold md:justify-start justify-between flex flex-1 text-lg md:text-base">Premium</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Checks per day: </div>50</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Cost: </div>$69.90 / month</div>
+                <div class="mt-2 sm:mt-0 sm:flex-1 w-full sm:w-auto">
+                                            <a href="https://app.seobility.net/user/register"
+                           target=""
+                           class="inline-block px-4 py-2 text-sm  transition">
+                            Try it free for 14 days                        </a>
+                                    </div>
+            </div>
+                    <div class="flex md:items-center flex-col md:flex-row bg-white py-6 md:py-2 rounded-lg shadow-sm hover:bg-gray-50 px-10 exceed-plans-row transition">
+                <div class="font-semibold md:justify-start justify-between flex flex-1 text-lg md:text-base">Professional</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Checks per day: </div>100</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Cost: </div>$109.90 / month</div>
+                <div class="mt-2 sm:mt-0 sm:flex-1 w-full sm:w-auto">
+                                            <a href="https://app.seobility.net/user/register?productid=4&#038;payinterval=1&#038;vouchercode=freetrialprofessional"
+                           target=""
+                           class="inline-block px-4 py-2 text-sm  transition">
+                            Try it free for 14 days                        </a>
+                                    </div>
+            </div>
+                    <div class="flex md:items-center flex-col md:flex-row bg-white py-6 md:py-2 rounded-lg shadow-sm hover:bg-gray-50 px-10 exceed-plans-row transition">
+                <div class="font-semibold md:justify-start justify-between flex flex-1 text-lg md:text-base">Agency</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Checks per day: </div>200</div>
+                <div class="justify-between md:justify-start flex flex-1"><div class="block md:hidden">Cost: </div>$239.90 / month</div>
+                <div class="mt-2 sm:mt-0 sm:flex-1 w-full sm:w-auto">
+                                            <a href="https://app.seobility.net/user/register?productid=2&#038;payinterval=1&#038;vouchercode=freetrialagency"
+                           target=""
+                           class="inline-block px-4 py-2 text-sm  transition">
+                            Try it free for 14 days                        </a>
+                                    </div>
+            </div>
+            </div>
+<p class="mx-auto" style="max-width:700px">
+	<p>Questions? Contact us anytime at <a href="mailto:support@seobility.net" target="_blank" rel="noopener">support@seobility.net</a> &#8211; we&#8217;re happy to help!</p>
+<p>&nbsp;</p>
+<p>Prices exclude VAT where applicable.</p>
+	</p>
+</div>
+
+<script>
+	function toggleVisibilty(hasFreeChecks){
+		let container = document.getElementById("free-checks-container");
+		let noChecksContainer = document.getElementById("no-checks-container");
+		
+		if(hasFreeChecks){
+			if(container) container.style.display="block";
+			if(noChecksContainer) noChecksContainer.style.display="none";
+		}else{
+			if(container) container.style.display="none"; //Switxch to none to hide
+			if(noChecksContainer) noChecksContainer.style.display="block";
+		}
+	}
+function fetchSeobilityCredits() {
+	let url = 'https://app.seobility.net/dapi/live-tools/credits';
+    fetch(url,{
+	credentials: "include"
+})
+        .then(response => response.json())
+        .then(data => {
+            let max = data?.data?.max_credits || 0;
+            const usedRaw = data?.data?.count || 0;
+            let isResult = true;
+            let used = isResult ? usedRaw : usedRaw;
+            if (used < 0) used = 0;
+		
+			let container = document.getElementById("free-checks-container");
+			let noChecksContainer = document.getElementById("no-checks-container");
+            if (used < max || !isResult) { 
+                let availableElement = document.getElementById("available-checks");
+				let maxElement = document.getElementById("max-checks");
+				if(availableElement && maxElement){
+					let availableChecksTmp = max - used;
+					if(availableChecksTmp < 0) availableChecksTmp = 0;
+					availableElement.textContent = availableChecksTmp;
+                	maxElement.textContent = max;
+				}
+				
+				if(container){
+					toggleVisibilty(true);
+				}
+            } else {
+                toggleVisibilty(false);
+				let seobilitySnippetElement = document.getElementById("seobility-snippet");
+				if(seobilitySnippetElement){
+					seobilitySnippetElement.style.display = "none";
+				}
+				let headingElement = document.getElementById("results-heading-wrapper");
+				if(headingElement){
+					headingElement.style.display="none";
+				}
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching Seobility credits:', error);
+		
+			let availableElement = document.getElementById("available-checks");
+				let maxElement = document.getElementById("max-checks");
+				if(availableElement && maxElement){
+					availableElement.textContent = 0;
+                	maxElement.textContent = 0;
+				}
+				
+				
+			
+                let container = document.getElementById("free-checks-container");
+				
+				if(container){
+					container.style.display = "block";
+                    const buttons = container.querySelectorAll('button');
+                    buttons.forEach(button => {
+                        button.classList.add('disabled-checks');
+                    });
+           
+				}
+		
+          //  document.getElementById("no-checks-container").style.display = "block";
+        });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetchSeobilityCredits();
+    //const intervalInSeconds = 10; 
+    //setInterval(fetchSeobilityCredits, intervalInSeconds * 1000);
+});
+
+</script>
+<style>
+
+	.exceed-plans-rows .exceed-plans-row:nth-child(3) a{
+		border:1px solid #2BC46A;
+		color:white;
+		background-color:#2BC46A;
+		
+	}
+	.exceed-plans-rows .exceed-plans-row:nth-child(3) a:hover{
+		border:1px solid #2BC46A;
+		color:white;
+		background-color:#2BC46A;
+		transform:scale(0.98);
+		
+	}
+	.exceed-plans-rows .exceed-plans-row a{
+		border:1px solid #1D85ED;
+		color:#1D85ED;
+		padding:13px 21px;
+		width:100%;
+		text-align:center;
+		
+	}
+	
+	
+	.exceed-plans-rows .exceed-plans-row a:hover{
+		border:1px solid #AFD6FE;
+		color:white;
+		background-color:#AFD6FE;
+		
+	}
+	.exceed-plans-rows .exceed-plans-row:nth-child(4) a:hover{
+		border:1px solid #FFFFFF;
+		color:#1F2937;
+		background-color:#FFFFFF;
+	}
+	.exceed-plans-rows .exceed-plans-row a{
+		border-radius:8px;
+	}
+	.exceed-plans-rows .exceed-plans-row:nth-child(2){
+		background-color:#FFFFFF;
+	}
+	.exceed-plans-rows .exceed-plans-row:nth-child(3){
+		background-color:#AFD6FE;
+	}
+	.exceed-plans-rows .exceed-plans-row:nth-child(4){
+		background-color:#D6EBFF;
+	}
+	
+
+</style><script type="text/javascript" src="https://app.seobility.net/widget_build/app-widgets.js"></script>
+<div id="seobility-snippet">
+	<seobility-freetools-seo-check url="https://www.saimdev.site/" username="" 
+								   password=""
+								   mode="standard"
+								   marketing-todo-perform-full-seo="true">
+                                   
+<div class="seobility-hide-during-freetool-loading seobility-marketing-slot-simple" slot="banner6">
+    <div class="seobility-marketing-slot-simple-inner">
+
+        <div class="seobility-marketing-slot-simple-left">
+                            <img
+                    src="https://www.seobility.net/wp-content/uploads/2026/02/idea.svg"
+                    alt="light bulb icon"
+                    class="seobility-marketing-slot-simple-icon"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                />
+            
+            <div class="seobility-marketing-slot-simple-body">
+                                    <h3 class="seobility-marketing-slot-simple-title">Not sure how to complete these tasks?</h3>
+                                                    <p class="seobility-marketing-slot-simple-text">Our SEO software Seobility helps you fix these issues with <strong>clear, easy-to-understand reports for your entire website</strong>. Each report explains what an issue means, why it matters for SEO, and how to fix it.</p>
+                                                    <a
+                    href="https://www.seobility.net/en/"
+                    class="seobility-marketing-slot-simple-button mt-2 mobile-only"
+                >Learn more</a>
+            
+                             </div>
+        </div>
+
+                    <div class=" seobility-marketing-slot-simple-right">
+                <a
+                    href="https://www.seobility.net/en/"
+                    class="seobility-marketing-slot-simple-button"
+                >Learn more</a>
+            </div>
+        
+    </div>
+</div>
+
+<div class="seobility-hide-during-freetool-loading seobility-marketing-slot-simple" slot="banner7">
+    <div class="seobility-marketing-slot-simple-inner">
+
+        <div class="seobility-marketing-slot-simple-left">
+                            <img
+                    src="https://www.seobility.net/wp-content/uploads/2026/02/idea.svg"
+                    alt="light bulb icon"
+                    class="seobility-marketing-slot-simple-icon"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                />
+            
+            <div class="seobility-marketing-slot-simple-body">
+                                    <h3 class="seobility-marketing-slot-simple-title">Tip: Check the rest of your website for similar SEO issues</h3>
+                                                    <p class="seobility-marketing-slot-simple-text">The SEO Checker only looks at your checked URL. With Seobility’s full Website Audit, you can automatically crawl your entire website, get a prioritized to-do list, and monitor your progress over time.</p>
+                                                    <a
+                    href="https://www.seobility.net/en/"
+                    class="seobility-marketing-slot-simple-button mt-2 mobile-only"
+                >Learn more</a>
+            
+                             </div>
+        </div>
+
+                    <div class=" seobility-marketing-slot-simple-right">
+                <a
+                    href="https://www.seobility.net/en/"
+                    class="seobility-marketing-slot-simple-button"
+                >Learn more</a>
+            </div>
+        
+    </div>
+</div>
+
+<div class="seobility-hide-during-freetool-loading seobility-marketing-slot-simple" slot="banner10">
+    <div class="seobility-marketing-slot-simple-inner">
+
+        <div class="seobility-marketing-slot-simple-left">
+                            <img
+                    src="https://www.seobility.net/wp-content/uploads/2026/02/idea.svg"
+                    alt="light bulb icon"
+                    class="seobility-marketing-slot-simple-icon"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                />
+            
+            <div class="seobility-marketing-slot-simple-body">
+                                    <h3 class="seobility-marketing-slot-simple-title">Tip: Each page on your website should have a unique meta title</h3>
+                                                    <p class="seobility-marketing-slot-simple-text">This check only looks at the title of the checked URL, but if multiple pages on your website have the same title, it can still hurt your rankings. To find duplicate page titles on your website, you can use Seobility's Website Audit.</p>
+                                                    <a
+                    href="https://www.seobility.net/en/website-audit/"
+                    class="seobility-marketing-slot-simple-button mt-2 mobile-only"
+                >Learn more</a>
+            
+                             </div>
+        </div>
+
+                    <div class=" seobility-marketing-slot-simple-right">
+                <a
+                    href="https://www.seobility.net/en/website-audit/"
+                    class="seobility-marketing-slot-simple-button"
+                >Learn more</a>
+            </div>
+        
+    </div>
+</div>
+	</seobility-freetools-seo-check>
+</div>
+	
+</main>
+
+<div class="tool-section-wrapper">
+    <div class="tool-section mx-auto flex w-full text-center md:text-left e-container">
+        
+        <!-- Text Column (40%) -->
+        <div class="text-area mx-auto max-w-xl w-full md:w-2/5">
+			<div id="overlay" style="    position: absolute;
+				top: 0;
+				left: -115px;
+				max-width:100%;
+				width: 220%;
+				height: 100%;
+				transform: translateX(-50%);
+				background-color: #F6FBFF;
+									 z-index:-1;">
+				
+			</div>
+            <span class="tool-offer-subtitle">Start your 14-day trial now!</span>
+            
+            <h2 class="tool-offer-title">
+                Seobility Premium                            </h2>
+            
+            <p class="tool-offer-p">Analyze more than just one URL and unlock all features of our SEO software suite:</p>
+            
+            <ul class="tool-offer-list text-left">
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Comprehensive SEO audit for your entire website</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Ranking Monitoring</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Backlink Monitoring &amp; Analysis</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Competitor Analysis</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> And more!</li>
+                            </ul>
+            
+            <div class="single-tool-pricing">
+                <div class="pricing-switcher-wrapper">
+                    <span class="trial-mark">Free 14-day trial</span>
+                    <div class="switcher">
+                        <label class="switch">
+                            <input type="checkbox" id="trialToggle" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+<span id="priceLabel" class="price-label" style="display: none;">
+    FREE</span>
+            </div>
+            
+            <div class="single-tool-pricing-bottom text-left">
+                <span class="tool-per-month ">Price per month</span> 
+                <span class="tool-price ">$69.90</span>
+                
+                <p class="canceled ">Can be canceled at any time! Automatically renews to our monthly Premium plan for $69.90/month.</p>
+            </div>
+            
+                            <a class="tool-free-trial-button" href="https://app.seobility.net/user/register?productid=1&#038;payinterval=1" target="">
+                    Start free trial                </a>
+                    </div>
+
+        <!-- Image Column (60%) -->
+        <div class="image-area w-full max-w-full md:w-3/5 flex items-center justify-center">
+                                        <picture class="w-full h-auto object-cover">
+<source type="image/webp" srcset="https://www.seobility.net/wp-content/uploads/2024/10/seo-checker-banner.png.webp"/>
+<img src="https://www.seobility.net/wp-content/uploads/2024/10/seo-checker-banner.png" alt="Seobility Website Audit"/>
+</picture>
+
+            			<img class="image-badge" src="https://www.seobility.net/wp-content/uploads/2026/03/g2-high-performer-spring-2026.svg" alt="G2 High Performer SEO Tools Spring 2026" style="position: absolute;filter: drop-shadow(4px 4px 12px rgba(31, 41, 55, 0.15));
+    bottom: 0;
+    left: 0;
+    width: 114px;
+height: 128px;
+    width: auto;
+    border: none;
+    border-radius: 0;
+    transform: translate(-50%, 50%);">
+        </div>
+        
+    </div>
+</div>
+
+
+<footer id="colophon" class="site-footer">
+    <div class="mx-auto" style="max-width: 1216px;">
+		<img style="height:40px;" class="mb-10" src="/wp-content/uploads/2024/02/Vector.svg" alt="Seobility Logo"/>
+		<div class="mb-10 flex flex-col lg:flex-row justify-start gap-8" style="color:white;">
+			
+<a class="contact-btn" href="/en/contact/" target="_self">
+    <button class="border rounded-md px-4 py-2 border-white hover:border-white hover:white">
+        Contact us    </button>
+</a>
+			<div style="color:#6B7280;align-self: left;" class="flex items-center align-center">Seobility GmbH, Willy-Brandt-Platz 16, 90402 Nuremberg, Germany</div>
+		</div>
+		<div class="footer-menus">
+			
+			
+			<!-- Desktop Menu -->
+			<div class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+				<div class="flex gap-8 flex-col">
+					<!-- Col 1 -->
+					<div>
+                <span class="font-semibold mb-4">Features</span>
+                <div>
+                    <nav aria-label="Footer Menu 3">
+                        <div class="menu-footer-menu-features-container"><ul id="menu-footer-menu-features" class="menu-f"><li id="menu-item-32561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32561"><a href="https://www.seobility.net/en/website-audit/">Website Audit</a></li>
+<li id="menu-item-32562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32562"><a href="https://www.seobility.net/en/ranking-monitoring/">Ranking Monitoring</a></li>
+<li id="menu-item-41400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41400"><a href="https://www.seobility.net/en/ai-visibility-tracking-tool/">AI Visibility Tracking (Coming soon)</a></li>
+<li id="menu-item-32564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32564"><a href="https://www.seobility.net/en/backlink-monitoring/">Backlink Monitoring</a></li>
+<li id="menu-item-36831" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36831"><a href="https://www.seobility.net/en/seo-competitor-analysis-tools/">SEO Competitor Analysis</a></li>
+<li id="menu-item-32565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32565"><a href="https://www.seobility.net/en/seo-content-tools/">Keyword Research &#038; Content Tools</a></li>
+<li id="menu-item-32566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32566"><a href="https://www.seobility.net/en/uptime-monitoring/">Uptime Monitoring</a></li>
+<li id="menu-item-41076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41076"><a href="https://www.seobility.net/en/seo-mcp/">Seobility MCP (Beta)</a></li>
+</ul></div>                    </nav>
+                </div>
+				</div>
+					<div>
+                <span class="font-semibold mb-4">Use Cases</span>
+                <div>
+                    <nav aria-label="Footer Menu 2">
+                        <div class="menu-footer-use-cases-container"><ul id="menu-footer-use-cases" class="menu-f"><li id="menu-item-32569" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32569"><a href="https://www.seobility.net/en/seobility-for-businesses/">Seobility for Businesses</a></li>
+<li id="menu-item-32570" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32570"><a href="https://www.seobility.net/en/seo-software-for-agencies-and-freelancers/">Seobility for Agencies &#038; Freelancers</a></li>
+<li id="menu-item-32568" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32568"><a href="https://www.seobility.net/en/seo-tool-for-local-businesses/">Seobility for Local Businesses</a></li>
+<li id="menu-item-39171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39171"><a href="https://www.seobility.net/en/generative-engine-optimization-tool/">Generative Engine Optimization (GEO) with Seobility</a></li>
+</ul></div>                    </nav>
+                </div>
+            </div>
+					<!-- End Col 1 -->
+					
+					
+				</div>
+				<div class="flex gap-8 flex-col">
+					<!-- Col 2 -->
+					<div>
+                <span class="font-semibold mb-4">Free SEO Tools</span>
+                <div>
+                    <nav aria-label="Footer Menu 3">
+                        <div class="menu-footer-menu-2-free-tools-container"><ul id="menu-footer-menu-2-free-tools" class="menu-f"><li id="menu-item-29749" class="menu-item menu-item-type-post_type menu-item-object-free_tools menu-item-29749"><a href="https://www.seobility.net/en/seocheck/">SEO Checker</a></li>
+<li id="menu-item-29753" class="menu-item menu-item-type-post_type menu-item-object-free_tools menu-item-29753"><a href="https://www.seobility.net/en/rankingcheck/">Ranking Checker</a></li>
+<li id="menu-item-29752" class="menu-item menu-item-type-post_type menu-item-object-free_tools menu-item-29752"><a href="https://www.seobility.net/en/backlinkchecker/">Backlink Checker</a></li>
+<li id="menu-item-29751" class="menu-item menu-item-type-post_type menu-item-object-free_tools menu-item-29751"><a href="https://www.seobility.net/en/keyword-research-tool/">Keyword Research Tool</a></li>
+<li id="menu-item-31032" class="menu-item menu-item-type-post_type menu-item-object-free_tools menu-item-31032"><a href="https://www.seobility.net/en/tf-idf-keyword-tool/">TF*IDF Tool</a></li>
+<li id="menu-item-29754" class="menu-item menu-item-type-post_type menu-item-object-free_tools menu-item-29754"><a href="https://www.seobility.net/en/redirectcheck/">Redirect Checker</a></li>
+<li id="menu-item-29750" class="menu-item menu-item-type-post_type menu-item-object-free_tools menu-item-29750"><a href="https://www.seobility.net/en/serp-snippet-generator/">SERP Snippet Generator</a></li>
+<li id="menu-item-29756" class="menu-item menu-item-type-post_type menu-item-object-free_tools menu-item-29756"><a href="https://www.seobility.net/en/keywordcheck/">Keyword Checker</a></li>
+<li id="menu-item-29755" class="menu-item menu-item-type-post_type menu-item-object-free_tools menu-item-29755"><a href="https://www.seobility.net/en/seocompare/">SEO Compare</a></li>
+</ul></div>                    </nav>
+                </div>
+					</div>
+					<!-- End Col 2 -->
+				</div>
+				<div class="flex gap-8 flex-col">
+					<!-- Col 3 -->
+					<div>
+                <span class="font-semibold mb-4">Seobility</span>
+                <div>
+                    <nav aria-label="Footer Menu 1">
+                        <div class="menu-footer-menu-1-seobility-container"><ul id="menu-footer-menu-1-seobility" class="menu-f"><li id="menu-item-42121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42121"><a href="https://www.seobility.net/en/pricing/">Plans &#038; Pricing</a></li>
+<li id="menu-item-32557" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32557"><a href="https://www.seobility.net/en/team/">Seobility Team</a></li>
+<li id="menu-item-32558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32558"><a href="https://www.seobility.net/en/contact/">Contact</a></li>
+<li id="menu-item-37999" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37999"><a href="https://www.seobility.net/en/customers/">Seobility Customers</a></li>
+<li id="menu-item-32560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32560"><a href="https://www.seobility.net/en/affiliates/">Affiliate Program</a></li>
+<li id="menu-item-37095" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37095"><a href="https://seobility.net/docs/ai/product-overview.html">Entity &#038; Relational Grounding Data</a></li>
+</ul></div>                    </nav>
+                </div>
+			</div>
+						<div>
+                <span class="font-semibold mb-4">Resources</span>
+                <div>
+                    <nav aria-label="Footer Menu Resources">
+                        <div class="menu-footer-menu-3-resources-container"><ul id="menu-footer-menu-3-resources" class="menu-f"><li id="menu-item-29546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29546"><a href="https://www.seobility.net/en/blog/">Blog</a></li>
+<li id="menu-item-32679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32679"><a href="/en/wiki">Wiki</a></li>
+<li id="menu-item-29547" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29547"><a href="https://www.seobility.net/en/faq/">FAQ</a></li>
+<li id="menu-item-33991" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33991"><a href="https://www.seobility.net/en/blog/seobility-beginners-guide/">Seobility Beginner’s Guide</a></li>
+</ul></div>                    </nav>
+                </div>
+				</div>
+					<!-- End Col 3 -->
+				</div>
+				<div class="flex gap-8 flex-col">
+					<!-- Col 4 -->
+					<div>
+                <span class="font-semibold mb-4">Legal</span>
+                <div>
+                    <nav aria-label="Footer Menu Legal">
+                        <div class="menu-footer-menu-legal-container"><ul id="menu-footer-menu-legal" class="menu-f"><li id="menu-item-32571" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32571"><a href="https://www.seobility.net/en/terms/">Terms &#038; Conditions</a></li>
+<li id="menu-item-32572" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32572"><a href="https://www.seobility.net/en/privacy/">Privacy</a></li>
+<li id="menu-item-32573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32573"><a href="https://www.seobility.net/en/imprint/">Imprint</a></li>
+</ul></div>                    </nav>
+                </div>
+				</div>
+					<!-- End Col 4 -->
+				</div>
+				 
+		
+            <!-- Second Column with Second Menu -->
+            
+			
+				 
+				
+				
+			</div>
+		</div>
+    </div>
+
+    <div class="copyright-section mx-auto" style="max-width: 1216px;">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <!-- Copyright Notice -->
+            <div class="text-left copyright">
+    © <span id="currentYear">2025</span> - Seobility.net
+</div>
+
+            <!-- Social Icons -->
+<div class="flex items-center footer-socials">
+                        <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/company/seobility-seo-tool/" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+                    <!-- Facebook Icon -->
+            <a href="https://www.facebook.com/seobility.net/" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+                    <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/seobility/" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            </div>
+
+        </div>
+    </div>
+	
+		<script>
+  (async function() {
+    try {
+      // Dynamically load the domain from PHP
+      const appDomain = "https://app.seobility.net";
+      if (!appDomain) {
+        console.error("App domain not found.");
+        return;
+      }
+
+      // Construct the API URL
+      const apiUrl = `${appDomain}/dapi/_int/as`;
+
+      // Fetch the authentication status
+      const response = await fetch(apiUrl, {
+	method: "GET",
+	credentials: "include"});
+      if (!response.ok) {
+        console.error("Failed to fetch authentication status:", response.statusText);
+        return;
+      }
+
+      const result = await response.json();
+
+      // Add the authentication status to the window object
+      window.authStatus = {
+        authenticated: result.data.authenticated,
+        user: result.data.user,
+        email: result.data.email
+      };
+
+      console.log("Authentication status added to window object:", window.authStatus);
+    } catch (error) {
+      console.error("Error fetching authentication status:", error);
+    }
+  })();
+</script>	
+</footer>
+
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/en/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/seobility/*","/en/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+    <script>
+      window.$seobility = window.$seobility || {};
+      window.$seobility.locale = "en";
+
+      const cookieDomain = ".seobility.net";
+      console.log("Setting seobility_locale cookie for domain:", cookieDomain);
+
+      document.cookie = "seobility_locale=" + window.$seobility.locale +
+                        "; path=/; domain=" + cookieDomain + "; samesite=lax" +
+                        (location.protocol === "https:" ? "; secure" : "");
+    </script>
+    <script id="wpascript-js" src="https://www.seobility.net/wp-content/plugins/honeypot/includes/js/wpa.js?ver=2.4.02"></script>
+<script id="wpascript-js-after">
+wpa_field_info = JSON.parse(atob("eyJ3cGFfZmllbGRfbmFtZSI6IndyY3phbjcyODEiLCJ3cGFfZmllbGRfdmFsdWUiOjE0NTQwLCJ3cGFfYWRkX3Rlc3QiOiJubyJ9"));
+//# sourceURL=wpascript-js-after
+</script>
+<script id="rocket_lazyload_css-js-extra">
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+</script>
+<script id="rocket_lazyload_css-js-after">
+!function o(n,a,c){function l(t,e){if(!a[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(u)return u(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=a[t]={exports:{}},n[t][0].call(r.exports,function(e){return l(n[t][1][e]||e)},r,r.exports,o,n,a,c)}return a[t].exports}for(var u="function"==typeof require&&require,e=0;e<c.length;e++)l(c[e]);return l}({1:[function(e,t,r){{let r="undefined"==typeof rocket_pairs?[]:rocket_pairs,o=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var a=rocket_lazyload_css_data.threshold||300;let n=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&r.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,o.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{n.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:a+"px"});function c(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&r.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(n.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}c(),(()=>{let r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}})()(document.querySelector("body"),c)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+</script>
+<script id="seobility-navigation-js" src="https://www.seobility.net/wp-content/themes/seobility/js/navigation.js?ver=1.0.0"></script>
+<script id="googlesitekit-events-provider-contact-form-7-js" src="https://www.seobility.net/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-7-3ac287af84a753cfbaa5.js" defer></script>
+<script id="googlesitekit-events-provider-content-events-js-before">
+window._googlesitekit = window._googlesitekit || {};
+window._googlesitekit.contentEvents = {"postID":29705,"isReadableSinglePost":false,"hasVimeoEmbed":false,"wordCount":0,"estimatedReadTimeSeconds":0,"isLastPageOfMultiPagePost":false,"readTimeThresholdPercent":85,"minimumReadTimeSeconds":5};
+//# sourceURL=googlesitekit-events-provider-content-events-js-before
+</script>
+<script id="googlesitekit-events-provider-content-events-js" src="https://www.seobility.net/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-90bacb156ab34fa090db.js" defer></script>
+<script id="cookie-tracking-js" src="https://www.seobility.net/wp-content/themes/seobility/js/cookie-tracking.js?ver=1793001113"></script>
+		<script>
+		(function() {
+			'use strict';
+			var parentSelector = '.menu-item.wpml-ls-current-language.menu-item-has-children';
+			
+			function toggleSubmenu(link, forceClose) {
+				var isExpanded = link.getAttribute('aria-expanded') === 'true';
+				if (forceClose || isExpanded) {
+					link.setAttribute('aria-expanded', 'false');
+				} else {
+					link.setAttribute('aria-expanded', 'true');
+				}
+			}
+			
+			function handleKeydown(e) {
+				var key = e.key || e.keyCode;
+				if (key === 'Enter' || key === ' ' || key === 13 || key === 32) {
+					e.preventDefault();
+					toggleSubmenu(this);
+				} else if (key === 'Escape' || key === 'Esc' || key === 27) {
+					if (this.getAttribute('aria-expanded') === 'true') {
+						e.preventDefault();
+						toggleSubmenu(this, true);
+					}
+				}
+			}
+			
+			function handleBlur(e) {
+				var link = this;
+				var parent = link.closest(parentSelector);
+				if (!parent) return;
+				
+				setTimeout(function() {
+					if (!parent.contains(document.activeElement)) {
+						toggleSubmenu(link, true);
+					}
+				}, 100);
+			}
+			
+			function init() {
+				var parents = document.querySelectorAll(parentSelector);
+				for (var i = 0; i < parents.length; i++) {
+					var link = parents[i].querySelector('a[aria-expanded]');
+					if (link) {
+						link.addEventListener('keydown', handleKeydown);
+						link.addEventListener('blur', handleBlur);
+					}
+				}
+			}
+			
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', init);
+			} else {
+				init();
+			}
+		})();
+		</script>
+		<script>window.lazyLoadOptions = [{
+                elements_selector: "img[data-lazy-src],.rocket-lazyload",
+                data_src: "lazy-src",
+                data_srcset: "lazy-srcset",
+                data_sizes: "lazy-sizes",
+                class_loading: "lazyloading",
+                class_loaded: "lazyloaded",
+                threshold: 300,
+                callback_loaded: function(element) {
+                    if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
+                        if (element.classList.contains("lazyloaded") ) {
+                            if (typeof window.jQuery != "undefined") {
+                                if (jQuery.fn.fitVids) {
+                                    jQuery(element).parent().fitVids();
+                                }
+                            }
+                        }
+                    }
+                }},{
+				elements_selector: ".rocket-lazyload",
+				data_src: "lazy-src",
+				data_srcset: "lazy-srcset",
+				data_sizes: "lazy-sizes",
+				class_loading: "lazyloading",
+				class_loaded: "lazyloaded",
+				threshold: 300,
+			}];
+        window.addEventListener('LazyLoad::Initialized', function (e) {
+            var lazyLoadInstance = e.detail.instance;
+
+            if (window.MutationObserver) {
+                var observer = new MutationObserver(function(mutations) {
+                    var image_count = 0;
+                    var iframe_count = 0;
+                    var rocketlazy_count = 0;
+
+                    mutations.forEach(function(mutation) {
+                        for (var i = 0; i < mutation.addedNodes.length; i++) {
+                            if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') {
+                                continue;
+                            }
+
+                            if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') {
+                                continue;
+                            }
+
+                            images = mutation.addedNodes[i].getElementsByTagName('img');
+                            is_image = mutation.addedNodes[i].tagName == "IMG";
+                            iframes = mutation.addedNodes[i].getElementsByTagName('iframe');
+                            is_iframe = mutation.addedNodes[i].tagName == "IFRAME";
+                            rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');
+
+                            image_count += images.length;
+			                iframe_count += iframes.length;
+			                rocketlazy_count += rocket_lazy.length;
+
+                            if(is_image){
+                                image_count += 1;
+                            }
+
+                            if(is_iframe){
+                                iframe_count += 1;
+                            }
+                        }
+                    } );
+
+                    if(image_count > 0 || iframe_count > 0 || rocketlazy_count > 0){
+                        lazyLoadInstance.update();
+                    }
+                } );
+
+                var b      = document.getElementsByTagName("body")[0];
+                var config = { childList: true, subtree: true };
+
+                observer.observe(b, config);
+            }
+        }, false);</script><script data-no-minify="1" async src="https://www.seobility.net/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.js"></script>
+<script type="text/javascript" id="pap_x2s6df8d" src="https://affiliate.seobility.net/scripts/trackjs.js"></script>
+<script type="text/javascript">
+PostAffTracker.setAccountId('default1');
+try {
+PostAffTracker.track();
+} catch (err) { }
+</script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a518e778abe5f452',t:'MTc5MzE3OTY0MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<script>
+  // Get current year
+  const year = new Date().getFullYear();
+
+  // Check if the year is a valid number and within a reasonable range (e.g., 1900 - 2100)
+  const displayYear = (typeof year === 'number' && year >= 1900 && year <= 2100) ? year : 2025;
+
+  // Set the year in the span
+  document.getElementById('currentYear').textContent = displayYear;
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Check if trial toggle and price label exist before running
+    const trialToggle = document.getElementById("trialToggle");
+    const priceLabel = document.getElementById("priceLabel");
+	const priceItem = document.querySelector(".tool-price");
+	
+    if (trialToggle && priceLabel && priceItem) {
+        const freeText = priceLabel.textContent.trim(); 
+
+        function updatePriceLabel() {
+            priceLabel.textContent = trialToggle.checked ? freeText : "";
+            priceLabel.style.display = trialToggle.checked ? "inline" : "none";
+			priceItem.style.textDecoration = trialToggle.checked ? "line-through" : "none";
+        }
+
+        updatePriceLabel(); // Initial state
+        trialToggle.addEventListener("change", function () {
+            priceLabel.classList.add("fade-out");
+            setTimeout(() => {
+                updatePriceLabel();
+                priceLabel.classList.remove("fade-out");
+            }, 300);
+        });
+    }
+});
+</script>

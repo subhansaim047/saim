@@ -1,0 +1,105 @@
+[
+  {
+    "name": "Cheap Web Designer",
+    "url": "https://cheapwebdesigner.co.uk/",
+    "error": "HTTP Error 520: <none>"
+  },
+  {
+    "name": "Finley Design (Takeaway Specialist)",
+    "url": "https://www.finleydesign.co.uk/",
+    "status": 200,
+    "title": "Finley Design",
+    "desc": "N/A",
+    "h1": [
+      "E-commerce &amp; Raffle \nDesign Agency"
+    ],
+    "h2_sample": [
+      "Professional Website Design",
+      "eCommerce Website Designers",
+      "Run a successful Competition Business",
+      "Why choose Finley Design",
+      "See what just some of our clients are saying!"
+    ],
+    "schemas": [],
+    "tech": "WordPress, Divi, Next.js",
+    "plugins_count": 5,
+    "plugins_sample": [
+      "*\",\"",
+      "js_composer",
+      "Ultimate_VC_Addons",
+      "fd-logo-carousel",
+      "mpc-massive"
+    ],
+    "html_size_kb": 169.9,
+    "prices_sample": []
+  },
+  {
+    "name": "Universal Web Design",
+    "url": "https://universalwebdesign.co.uk/",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "name": "Fixed Price Web",
+    "url": "https://fixedpriceweb.co.uk/",
+    "status": 200,
+    "title": "Fixed Price Website Design Manchester | Fixed Price Web",
+    "desc": "Custom websites for local businesses and ambitious brands that deserve more than just an online presence.",
+    "h1": [
+      "Professional WebsitesDesigned for One Fixed Price."
+    ],
+    "h2_sample": [
+      "One Fixed Price",
+      "No Hidden Charges",
+      "Modern Design",
+      "Fast Turnaround",
+      "Mobile Friendly"
+    ],
+    "schemas": [
+      "Unknown"
+    ],
+    "tech": "Next.js",
+    "plugins_count": 0,
+    "plugins_sample": [],
+    "html_size_kb": 27.5,
+    "prices_sample": [
+      "\u00a31,499"
+    ]
+  },
+  {
+    "name": "Dial A Website",
+    "url": "https://dialawebsite.co.uk/",
+    "status": 200,
+    "title": "custom website design - Dial a Website",
+    "desc": "Get a professional custom website design tailored to your business needs. Affordable, mobile-friendly, and ready fast\u2014perfect for startups and small businesses worldwide.",
+    "h1": [
+      "1. Send us your website requirements.",
+      "2. We develop the site for you.",
+      "3. You review the website.",
+      "4. Your website goes live."
+    ],
+    "h2_sample": [
+      "Home",
+      "custom website design UK",
+      "Get a Complete Custom Website Design for just \u00a310/month",
+      "Every website is custom built and  incrediblyespeciallyextremely beautiful and fully responsive.",
+      "STANDARD FEATURES"
+    ],
+    "schemas": [
+      "Unknown"
+    ],
+    "tech": "WordPress, Elementor, Divi, Next.js",
+    "plugins_count": 11,
+    "plugins_sample": [
+      "*\",\"",
+      "elementor",
+      "porto-functionality",
+      "tlp-portfolio",
+      "wp-whatsapp-chat",
+      "woocommerce"
+    ],
+    "html_size_kb": 164.2,
+    "prices_sample": [
+      "\u00a310"
+    ]
+  }
+]

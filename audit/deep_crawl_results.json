@@ -1,0 +1,2553 @@
+{
+  "sitemap_urls_count": 48,
+  "total_crawled": 53,
+  "discovered_all_count": 209,
+  "results": {
+    "https://www.saimdev.site/blog/free-website-for-local-business": {
+      "url": "https://www.saimdev.site/blog/free-website-for-local-business",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/free-website-for-local-business",
+      "latency_ms": 438,
+      "in_sitemap": true,
+      "title": "Why Saim Dev Builds Free Starter Sites for Local Shops",
+      "title_len": 54,
+      "description": "Case study on our local business starter initiative. How bespoke Next.js websites outperform heavy CMS templates in real-world local Google search.",
+      "desc_len": 147,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/free-website-for-local-business",
+      "h1_count": 1,
+      "h1": "I'm Building 5 Free Websites for Local Businesses \u2014 Here's Why (and How to Claim One)",
+      "h2_count": 9,
+      "h3_count": 0,
+      "h2_sample": [
+        "Why I'm Doing This",
+        "What You'll Actually Get",
+        "Who This Is For",
+        "Why Online Presence Matters",
+        "What I Ask In Return"
+      ],
+      "word_count": 989,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 0,
+      "ext_sample": [],
+      "inbound_count": 1,
+      "inbound_sources": [
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart": {
+      "url": "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+      "latency_ms": 701,
+      "in_sitemap": true,
+      "title": "Free Freezer & Fridge Temperature Log Sheet (PDF)",
+      "title_len": 49,
+      "description": "Download free dual-shift commercial fridge and freezer temperature logs. Keep your kitchen aligned with UK Food Standards Agency due diligence rules.",
+      "desc_len": 149,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+      "h1_count": 1,
+      "h1": "Freezer Temperature Chart",
+      "h2_count": 2,
+      "h3_count": 6,
+      "h2_sample": [
+        "How to Implement the Freezer Temperature Chart in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1077,
+      "img_count": 6,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 26,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/food-recall",
+        "https://www.saimdev.site/food-safety-templates/chopping-board-colour-chart",
+        "https://www.saimdev.site/food-safety-templates/haccp-plan-builder"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/food-recall": {
+      "url": "https://www.saimdev.site/food-safety-templates/food-recall",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/food-recall",
+      "latency_ms": 482,
+      "in_sitemap": true,
+      "title": "Food Recall & Product Withdrawal Procedure Log (UK)",
+      "title_len": 51,
+      "description": "Standard operating procedure and customer notification log for food product recalls and withdrawals under UK Food Standards Agency regulations.",
+      "desc_len": 143,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/food-recall",
+      "h1_count": 1,
+      "h1": "Food Recall",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Food Recall",
+        "How to Implement the Food Recall in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1322,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/allergy-matrix": {
+      "url": "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+      "latency_ms": 557,
+      "in_sitemap": true,
+      "title": "Free 14 Allergen Matrix Tool for UK Restaurants",
+      "title_len": 47,
+      "description": "Map all 14 statutory allergens across your commercial menu. Filter ingredients interactively and export an ink-friendly A4 kitchen poster in seconds.",
+      "desc_len": 149,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+      "h1_count": 1,
+      "h1": "Free UK Takeaway Allergen Chart Generator (14 Allergens)",
+      "h2_count": 3,
+      "h3_count": 5,
+      "h2_sample": [
+        "14 Allergen Chart for Kitchens",
+        "How to Implement the Allergy Matrix in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1546,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 5,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools",
+        "https://www.saimdev.site/food-safety-templates/food-allergen-chart",
+        "https://www.saimdev.site/"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template": {
+      "url": "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+      "latency_ms": 420,
+      "in_sitemap": true,
+      "title": "Kitchen Opening & Closing Checklist Template UK",
+      "title_len": 47,
+      "description": "Free printable opening and closing hygiene checklist for UK food businesses. Maintain SFBB standards across food storage, safety, and kitchen locks.",
+      "desc_len": 148,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+      "h1_count": 1,
+      "h1": "Daily Kitchen Opening & Closing Checklist",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Daily Kitchen Opening & Closing Checklist",
+        "How to Implement the Daily Kitchen Opening & Closing Checklist in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1337,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/hand-washing-poster": {
+      "url": "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+      "latency_ms": 525,
+      "in_sitemap": true,
+      "title": "Commercial Kitchen Hand Washing Steps Poster (UK)",
+      "title_len": 49,
+      "description": "Printable 6-step hand washing technique poster for food handlers. Aligned with UK Food Standards Agency hygiene rules for commercial kitchen washbasins.",
+      "desc_len": 152,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+      "h1_count": 1,
+      "h1": "Hand Washing Poster",
+      "h2_count": 2,
+      "h3_count": 6,
+      "h2_sample": [
+        "How to Implement the Hand Washing Poster in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1017,
+      "img_count": 6,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/terms": {
+      "url": "https://www.saimdev.site/terms",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/terms",
+      "latency_ms": 336,
+      "in_sitemap": false,
+      "title": "Terms of Service | Saim Dev",
+      "title_len": 27,
+      "description": "Terms of Service for Saim Dev web architecture and digital resources. Review service delivery, client terms, intellectual property, and usage.",
+      "desc_len": 142,
+      "robots": "noindex, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/terms",
+      "h1_count": 1,
+      "h1": "Terms of Service",
+      "h2_count": 6,
+      "h3_count": 0,
+      "h2_sample": [
+        "1. Scope of Services",
+        "2. Client Responsibilities",
+        "3. Revisions & Technical Support",
+        "4. Intellectual Property & Code Ownership",
+        "5. Payment Terms & Refunds"
+      ],
+      "word_count": 320,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 41,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/about": {
+      "url": "https://www.saimdev.site/about",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/about",
+      "latency_ms": 440,
+      "in_sitemap": true,
+      "title": "About Saim Dev | Remote Next.js Studio for UK & EU",
+      "title_len": 50,
+      "description": "Learn about Saim Dev, an independent Next.js developer providing fast, fixed-price websites and digital kitchen systems for UK small businesses.",
+      "desc_len": 144,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/about",
+      "h1_count": 1,
+      "h1": "About Saim Dev",
+      "h2_count": 4,
+      "h3_count": 3,
+      "h2_sample": [
+        "Transparent Remote Partnership",
+        "Saim Dev",
+        "Our Approach to Web Engineering",
+        "Food Safety Tools & Resources"
+      ],
+      "word_count": 445,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Person",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://github.com/subhansaim047",
+        "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
+        "https://x.com/saimwebdev",
+        "https://www.instagram.com/saim_agency/",
+        "https://saimswebagency.quora.com/"
+      ],
+      "inbound_count": 41,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/chopping-board-colour-chart": {
+      "url": "https://www.saimdev.site/food-safety-templates/chopping-board-colour-chart",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/chopping-board-colour-chart",
+      "latency_ms": 450,
+      "in_sitemap": true,
+      "title": "Colour Coded Chopping Board Chart UK Kitchens (PDF)",
+      "title_len": 51,
+      "description": "Printable colour-coded cutting board wall poster for UK food businesses. Prevent cross-contamination between raw meat, poultry, fish, and salads.",
+      "desc_len": 145,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/chopping-board-colour-chart",
+      "h1_count": 1,
+      "h1": "UK Chopping Board Colour Chart",
+      "h2_count": 2,
+      "h3_count": 6,
+      "h2_sample": [
+        "How to Implement the UK Chopping Board Colour Chart in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1021,
+      "img_count": 6,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/services/takeaway-web-design": {
+      "url": "https://www.saimdev.site/services/takeaway-web-design",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/services/takeaway-web-design",
+      "latency_ms": 430,
+      "in_sitemap": true,
+      "title": "Takeaway Website Design UK | Commission-Free Orders",
+      "title_len": 51,
+      "description": "Custom Next.js takeaway ordering websites from \u00a3250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
+      "desc_len": 153,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/services/takeaway-web-design",
+      "h1_count": 1,
+      "h1": "Stop Paying 30%+ Just Eat & Deliveroo Fees",
+      "h2_count": 4,
+      "h3_count": 9,
+      "h2_sample": [
+        "How Much Are You Giving Away Every Month?",
+        "Complete Digital Takeaway Architecture",
+        "Frequently Asked Questions",
+        "Ready to Take Back Control of Your Takeaway Orders?"
+      ],
+      "word_count": 868,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "ProfessionalService",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 5,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20takeaway%20website%20demo",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20%C2%A3250%20takeaway%20website",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20ready%20to%20get%20the%20%C2%A3250%20takeaway%20website%20system",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20here%20is%20my%20takeaway%20menu,%20can%20you%20set%20up%20a%20demo%3F",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 67,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/haccp-plan-builder": {
+      "url": "https://www.saimdev.site/food-safety-templates/haccp-plan-builder",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/haccp-plan-builder",
+      "latency_ms": 566,
+      "in_sitemap": true,
+      "title": "Free UK Takeaway HACCP Plan Builder & CCP Matrix",
+      "title_len": 48,
+      "description": "Build a compliant commercial kitchen HACCP plan online. Identify critical control points, set control limits, and print structured kitchen logs to PDF.",
+      "desc_len": 151,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/haccp-plan-builder",
+      "h1_count": 1,
+      "h1": "HACCP Plan Template",
+      "h2_count": 3,
+      "h3_count": 6,
+      "h2_sample": [
+        "HACCP Plan Builder & CCP Hazard Analysis Matrix",
+        "How to Implement the HACCP Plan Template in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1722,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 5,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools",
+        "https://www.saimdev.site/tools/ppds-label-generator",
+        "https://www.saimdev.site/"
+      ]
+    },
+    "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist": {
+      "url": "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+      "latency_ms": 440,
+      "in_sitemap": true,
+      "title": "How to Get a 5-Star Food Hygiene Rating: UK Checklist",
+      "title_len": 53,
+      "description": "Complete UK inspection checklist to secure a 5-star Food Hygiene Rating. Practical tips for structure, hygiene practices, and confidence in management.",
+      "desc_len": 151,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+      "h1_count": 1,
+      "h1": "How to Get a 5-Star Food Hygiene Rating in the UK: Complete EHO Inspection Checklist",
+      "h2_count": 3,
+      "h3_count": 5,
+      "h2_sample": [
+        "Why a 5-Star Food Hygiene Rating Is Crucial for Commercial Revenue",
+        "The Three Inspection Pillars: How EHO Officers Calculate Your Rating",
+        "Frequently Asked Questions About UK Food Hygiene Inspections"
+      ],
+      "word_count": 663,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 2,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20saw%20your%205-star%20hygiene%20checklist%20and%20want%20to%20discuss%20a%20website%20for%20my%20restaurant",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 8,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/cleaning-schedule",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/five-food-safety-rules",
+        "https://www.saimdev.site/blogs",
+        "https://www.saimdev.site/food-safety-templates/kitchen-safety-poster"
+      ]
+    },
+    "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide": {
+      "url": "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
+      "latency_ms": 417,
+      "in_sitemap": true,
+      "title": "Natasha's Law PPDS Food Labelling Guide for UK Food",
+      "title_len": 51,
+      "description": "Complete UK guide to Natasha's Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.",
+      "desc_len": 148,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
+      "h1_count": 1,
+      "h1": "Natasha's Law PPDS Food Labelling Guide for UK Takeaways, Cafes & Delis",
+      "h2_count": 4,
+      "h3_count": 6,
+      "h2_sample": [
+        "Understanding Natasha's Law: What UK Food Operators Must Know",
+        "Is Your Food PPDS? Takeaway & Cafe Classification Matrix",
+        "The Three Mandatory Elements of a PPDS Label",
+        "Frequently Asked Questions on Natasha's Law"
+      ],
+      "word_count": 578,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 2,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20looking%20for%20an%20online%20menu%20website%20with%20allergen%20filtering",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/food-allergen-chart",
+        "https://www.saimdev.site/tools/ppds-label-generator",
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/cleaning-schedule": {
+      "url": "https://www.saimdev.site/food-safety-templates/cleaning-schedule",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/cleaning-schedule",
+      "latency_ms": 445,
+      "in_sitemap": true,
+      "title": "Commercial Kitchen Cleaning Schedule Template UK",
+      "title_len": 48,
+      "description": "Download a free commercial kitchen cleaning rota covering daily, weekly, and deep-clean tasks. Ready to print and display for council inspections.",
+      "desc_len": 146,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/cleaning-schedule",
+      "h1_count": 1,
+      "h1": "Cleaning Schedule",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Cleaning Schedule",
+        "How to Implement the Cleaning Schedule in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1337,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 5,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools",
+        "https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
+        "https://www.saimdev.site/"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/five-food-safety-rules": {
+      "url": "https://www.saimdev.site/food-safety-templates/five-food-safety-rules",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/five-food-safety-rules",
+      "latency_ms": 473,
+      "in_sitemap": true,
+      "title": "WHO 5 Keys to Safer Food Kitchen Poster & Guide",
+      "title_len": 47,
+      "description": "World Health Organisation 5 keys to safer food reference poster for staff training. Covers cleanliness, separation, cooking, temperature, and safe water.",
+      "desc_len": 153,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/five-food-safety-rules",
+      "h1_count": 1,
+      "h1": "5 Food Safety Rules",
+      "h2_count": 2,
+      "h3_count": 6,
+      "h2_sample": [
+        "How to Implement the 5 Food Safety Rules in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1027,
+      "img_count": 6,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/services": {
+      "url": "https://www.saimdev.site/services",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/services",
+      "latency_ms": 460,
+      "in_sitemap": true,
+      "title": "Web Development Services UK | Fixed Price Next.js",
+      "title_len": 49,
+      "description": "Fixed-price Next.js web development for UK businesses from \u00a3250. Includes bespoke ordering systems, landing pages, local SEO setup, and fast delivery.",
+      "desc_len": 150,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/services",
+      "h1_count": 1,
+      "h1": "Conversion-Focused Web Solutions",
+      "h2_count": 8,
+      "h3_count": 18,
+      "h2_sample": [
+        "Takeaway & Restaurant Web System (Commission-Free)",
+        "Custom Small Business Website",
+        "Landing Page Development",
+        "UI/UX Design & Wireframing",
+        "SEO & Search Optimization"
+      ],
+      "word_count": 749,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 2,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 52,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/blogs": {
+      "url": "https://www.saimdev.site/blogs",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blogs",
+      "latency_ms": 436,
+      "in_sitemap": true,
+      "title": "Web Development & Food Safety Blog | Saim Dev",
+      "title_len": 45,
+      "description": "Practical guides on Next.js web development for small businesses and food hygiene compliance, SFBB logs, and Natasha's Law for UK restaurants.",
+      "desc_len": 142,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blogs",
+      "h1_count": 1,
+      "h1": "Hospitality Insights &Kitchen Growth Systems",
+      "h2_count": 12,
+      "h3_count": 0,
+      "h2_sample": [
+        "How to Get a 5-Star Food Hygiene Rating in the UK: Complete EHO Inspection Checklist",
+        "Natasha's Law PPDS Food Labelling Guide for UK Takeaways, Cafes & Delis",
+        "Commercial Kitchen Food Cooling Guide: The UK 90-Minute Rule & Temperature Limits",
+        "How to Create a Compliant 14-Allergen Matrix for UK Restaurants & Takeaways",
+        "How to Calculate Food Cost Percentage & Protect 70%+ Gross Margins in Your Commercial Kitchen"
+      ],
+      "word_count": 870,
+      "img_count": 1,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 49,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/fridge-temperature-record-sheet-pdf": {
+      "url": "https://www.saimdev.site/food-safety-templates/fridge-temperature-record-sheet-pdf",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/fridge-temperature-record-sheet-pdf",
+      "latency_ms": 432,
+      "in_sitemap": true,
+      "title": "Commercial Fridge Temperature Record Sheet UK (PDF)",
+      "title_len": 51,
+      "description": "Print daily commercial fridge temperature monitoring sheets for UK restaurants. Record morning prep and evening service checks for EHO inspections.",
+      "desc_len": 147,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/fridge-temperature-record-sheet-pdf",
+      "h1_count": 1,
+      "h1": "Temperature Sheet",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Temperature Sheet",
+        "How to Implement the Temperature Sheet in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1364,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 4,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools",
+        "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/walk-in-cooler-food-storage-chart": {
+      "url": "https://www.saimdev.site/food-safety-templates/walk-in-cooler-food-storage-chart",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/walk-in-cooler-food-storage-chart",
+      "latency_ms": 526,
+      "in_sitemap": true,
+      "title": "Commercial Walk-In Chiller Food Storage Layout Chart",
+      "title_len": 52,
+      "description": "Visual food storage shelf chart for commercial walk-in chillers. Prevent drip cross-contamination by organizing raw poultry, meats, and ready-to-eat foods.",
+      "desc_len": 155,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/walk-in-cooler-food-storage-chart",
+      "h1_count": 1,
+      "h1": "Walk-In-Cooler Food Storage Chart",
+      "h2_count": 2,
+      "h3_count": 6,
+      "h2_sample": [
+        "How to Implement the Walk-In-Cooler Food Storage Chart in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1022,
+      "img_count": 6,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/food-cooling-poster": {
+      "url": "https://www.saimdev.site/food-safety-templates/food-cooling-poster",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/food-cooling-poster",
+      "latency_ms": 452,
+      "in_sitemap": true,
+      "title": "Commercial Food Cooling 90-Minute Guide Poster",
+      "title_len": 46,
+      "description": "Download a free kitchen wall poster explaining the UK 90-minute cooling rule, blast chilling, and danger zone temperature limits for safe catering.",
+      "desc_len": 147,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/food-cooling-poster",
+      "h1_count": 1,
+      "h1": "Food Cooling Methods & Two-Stage Chilling Poster",
+      "h2_count": 2,
+      "h3_count": 6,
+      "h2_sample": [
+        "How to Implement the Food Cooling Methods & Two-Stage Chilling Poster in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1046,
+      "img_count": 6,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 5,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools",
+        "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide"
+      ]
+    },
+    "https://www.saimdev.site/cookie-policy": {
+      "url": "https://www.saimdev.site/cookie-policy",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/cookie-policy",
+      "latency_ms": 360,
+      "in_sitemap": false,
+      "title": "Cookie Policy | Saim Dev",
+      "title_len": 24,
+      "description": "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive kitchen tools save data locally.",
+      "desc_len": 155,
+      "robots": "noindex, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/cookie-policy",
+      "h1_count": 1,
+      "h1": "Cookie & Local Storage Policy",
+      "h2_count": 5,
+      "h3_count": 0,
+      "h2_sample": [
+        "1. Overview & Privacy-First Architecture",
+        "2. Complete Browser Storage Inventory",
+        "3. Third-Party External Services",
+        "4. Managing Browser Storage",
+        "5. Contact Information"
+      ],
+      "word_count": 324,
+      "img_count": 1,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 42,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/basic-food-preparation-rules": {
+      "url": "https://www.saimdev.site/food-safety-templates/basic-food-preparation-rules",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/basic-food-preparation-rules",
+      "latency_ms": 536,
+      "in_sitemap": true,
+      "title": "Basic Food Hygiene & Safe Prep Rules Poster (UK)",
+      "title_len": 48,
+      "description": "Printable food preparation hygiene poster for commercial kitchens. Essential due diligence guidelines covering hand hygiene, cross-contamination, and cooking.",
+      "desc_len": 158,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/basic-food-preparation-rules",
+      "h1_count": 1,
+      "h1": "Safe Food Prep",
+      "h2_count": 2,
+      "h3_count": 6,
+      "h2_sample": [
+        "How to Implement the Safe Food Prep in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1032,
+      "img_count": 6,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 24,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/food-recall",
+        "https://www.saimdev.site/food-safety-templates/chopping-board-colour-chart"
+      ]
+    },
+    "https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step": {
+      "url": "https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
+      "latency_ms": 414,
+      "in_sitemap": true,
+      "title": "How to Write a UK Takeaway HACCP Plan Step-by-Step",
+      "title_len": 50,
+      "description": "Learn how to write a commercial kitchen HACCP plan under Regulation (EC) 852/2004. Plain-English guide to hazard analysis, CCPs, and record keeping.",
+      "desc_len": 148,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
+      "h1_count": 1,
+      "h1": "How to Write a HACCP Plan for Your UK Food Business (7 Principles + Free Digital Plan Builder)",
+      "h2_count": 7,
+      "h3_count": 3,
+      "h2_sample": [
+        "Table of Contents",
+        "1. What is HACCP & Why is It Legally Enforced?",
+        "2. The 7 Principles of HACCP Broken Down",
+        "3. Identifying Real Critical Control Points (The Decision Tree)",
+        "4. Critical Limits & Measurable Thresholds"
+      ],
+      "word_count": 944,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20custom%20restaurant%20website"
+      ],
+      "inbound_count": 4,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/haccp-plan-builder",
+        "https://www.saimdev.site/food-safety-templates/food-recall",
+        "https://www.saimdev.site/food-safety-templates/food-traceability",
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/hot-holding-food-temperature-log": {
+      "url": "https://www.saimdev.site/food-safety-templates/hot-holding-food-temperature-log",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/hot-holding-food-temperature-log",
+      "latency_ms": 494,
+      "in_sitemap": true,
+      "title": "Commercial Hot Holding Temperature Log Sheet UK",
+      "title_len": 47,
+      "description": "Record hot-held food temperatures above 63\u00b0C throughout service. Free printable log sheet meeting UK Food Standards Agency hot holding requirements.",
+      "desc_len": 148,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/hot-holding-food-temperature-log",
+      "h1_count": 1,
+      "h1": "Hot Holding Food Log",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Hot Holding Food Log",
+        "How to Implement the Hot Holding Food Log in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1375,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/demos": {
+      "url": "https://www.saimdev.site/demos",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/demos",
+      "latency_ms": 446,
+      "in_sitemap": true,
+      "title": "Interactive Takeaway & Business Web Demos | Saim Dev",
+      "title_len": 52,
+      "description": "Test live interactive Next.js website demos, online ordering menus, allergen filters, and digital food-safety tools built for UK businesses.",
+      "desc_len": 140,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/demos",
+      "h1_count": 1,
+      "h1": "Experience Live Client Websites & Demos",
+      "h2_count": 1,
+      "h3_count": 13,
+      "h2_sample": [
+        "High-Performance Web Architecture for Growing Businesses."
+      ],
+      "word_count": 889,
+      "img_count": 15,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project",
+        "https://x.com/saimwebdev",
+        "https://saimswebagency.quora.com/",
+        "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
+        "https://www.instagram.com/saim_agency/"
+      ],
+      "inbound_count": 46,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/reheating-food-temperature-guide": {
+      "url": "https://www.saimdev.site/food-safety-templates/reheating-food-temperature-guide",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/reheating-food-temperature-guide",
+      "latency_ms": 482,
+      "in_sitemap": true,
+      "title": "Food Reheating Temperature Guide UK Kitchens (PDF)",
+      "title_len": 50,
+      "description": "Learn safe reheating rules for UK catering kitchens. Ensure hot core temperatures reach 75\u00b0C to destroy pathogens and pass local authority audits.",
+      "desc_len": 146,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/reheating-food-temperature-guide",
+      "h1_count": 1,
+      "h1": "Food Reheating Poster",
+      "h2_count": 2,
+      "h3_count": 6,
+      "h2_sample": [
+        "How to Implement the Food Reheating Poster in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1039,
+      "img_count": 6,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/tools": {
+      "url": "https://www.saimdev.site/tools",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/tools",
+      "latency_ms": 745,
+      "in_sitemap": true,
+      "title": "Free UK Kitchen Tools & Food Safety Templates Hub",
+      "title_len": 49,
+      "description": "Free compliance tools for UK commercial kitchens. Access 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.",
+      "desc_len": 147,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/tools",
+      "h1_count": 1,
+      "h1": "UK Restaurant & Takeaway Kitchen Tools: Daily Checklists, Logs & Allergen Matrices",
+      "h2_count": 5,
+      "h3_count": 2,
+      "h2_sample": [
+        "Key Takeaways",
+        "UK Kitchen Wall SOPs: Visual Standards for Food Handlers & Prep Lines",
+        "Printable Takeaway Due Diligence Sheets: Practical Daily Records",
+        "Opening, Closing & Sanitisation Checklists for Busy Shifts",
+        "4 Key Operational Advantages for UK Food Businesses"
+      ],
+      "word_count": 1875,
+      "img_count": 161,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 5,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20using%20the%20Food%20Safety%20Templates%20Hub",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20with%20allergen%20filtering",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 104,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/recipe-calculator": {
+      "url": "https://www.saimdev.site/food-safety-templates/recipe-calculator",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/recipe-calculator",
+      "latency_ms": 440,
+      "in_sitemap": true,
+      "title": "Commercial Recipe Scaling Calculator | Batch Yields",
+      "title_len": 51,
+      "description": "Scale commercial catering recipes from 10 to 500 portions accurately. Calculate exact batch ingredient weights and kitchen production costs for free.",
+      "desc_len": 149,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/recipe-calculator",
+      "h1_count": 1,
+      "h1": "Recipe Calculator",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Commercial Recipe Calculator & Batch Scaler",
+        "How to Implement the Recipe Calculator in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1430,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 25,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/food-recall",
+        "https://www.saimdev.site/food-safety-templates/chopping-board-colour-chart"
+      ]
+    },
+    "https://www.saimdev.site/privacy": {
+      "url": "https://www.saimdev.site/privacy",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/privacy",
+      "latency_ms": 346,
+      "in_sitemap": false,
+      "title": "Privacy Policy | Saim Dev",
+      "title_len": 25,
+      "description": "Read how Saim Dev collects, uses, and protects personal data from enquiries and free tools in compliance with UK GDPR and the Data Protection Act 2018.",
+      "desc_len": 151,
+      "robots": "noindex, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/privacy",
+      "h1_count": 1,
+      "h1": "Privacy Policy",
+      "h2_count": 9,
+      "h3_count": 0,
+      "h2_sample": [
+        "1. Data Controller Information",
+        "2. Data We Collect & How It Is Obtained",
+        "3. Cookies & Local Browser Storage",
+        "4. Purposes and Lawful Bases for Processing",
+        "5. Data Sharing & Processors"
+      ],
+      "word_count": 719,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 3,
+      "ext_sample": [
+        "https://adssettings.google.com",
+        "https://ico.org.uk",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 41,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants": {
+      "url": "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
+      "latency_ms": 421,
+      "in_sitemap": true,
+      "title": "How to Build a 14-Allergen Matrix for UK Kitchens",
+      "title_len": 49,
+      "description": "Step-by-step guide to auditing recipes and creating a 14-allergen chart for UK restaurants, takeaways, and pubs under Food Information Regulations.",
+      "desc_len": 147,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
+      "h1_count": 1,
+      "h1": "How to Create a Compliant 14-Allergen Matrix for UK Restaurants & Takeaways",
+      "h2_count": 7,
+      "h3_count": 3,
+      "h2_sample": [
+        "Table of Contents",
+        "1. The Legal Reality: Why Hand-Written Notes Fail EHO Audits",
+        "2. The 14 Statutory Allergens & Their Hidden Kitchen Sources",
+        "3. Prepacked for Direct Sale (PPDS) vs Loose Food Rules",
+        "4. Step-by-Step Blueprint: Building Your Allergen Matrix"
+      ],
+      "word_count": 1022,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20takeaway%20website%20with%20automated%20allergen%20filtering"
+      ],
+      "inbound_count": 2,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator": {
+      "url": "https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
+      "latency_ms": 552,
+      "in_sitemap": true,
+      "title": "How to Scale Catering Recipes Without Quality Loss",
+      "title_len": 50,
+      "description": "Guide to scaling commercial catering recipes from 10 to 500 portions. Avoid common conversion errors, calculate yields, and manage ingredient costs.",
+      "desc_len": 148,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
+      "h1_count": 1,
+      "h1": "The Commercial Kitchen Guide to Recipe Scaling: How to Scale from 10 to 500 Portions Without Taste Breakdown",
+      "h2_count": 7,
+      "h3_count": 2,
+      "h2_sample": [
+        "Table of Contents",
+        "1. The Fallacy of Linear Multiplication",
+        "2. The Recipe Conversion Factor (RCF) Formula",
+        "3. Grams vs Spoons: Why Volume Fails in Commercial Kitchens",
+        "4. The 4 Non-Linear Ingredients (Salt, Spices, Leaveners, Roux)"
+      ],
+      "word_count": 791,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20custom%20catering%20and%20takeaway%20website"
+      ],
+      "inbound_count": 2,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/recipe-calculator",
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/technologies": {
+      "url": "https://www.saimdev.site/technologies",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/technologies",
+      "latency_ms": 335,
+      "in_sitemap": true,
+      "title": "Modern Next.js & React Tech Stack | Saim Dev",
+      "title_len": 44,
+      "description": "Explore our high-performance web development stack: Next.js 16 App Router, React, Tailwind CSS, TypeScript, and edge cloud hosting for speed.",
+      "desc_len": 141,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/technologies",
+      "h1_count": 1,
+      "h1": "Technologies & Expertise",
+      "h2_count": 5,
+      "h3_count": 14,
+      "h2_sample": [
+        "Frontend Frameworks",
+        "Performance Engineering",
+        "SEO, GEO & Search Indexing",
+        "AI & Automation Integrations",
+        "Development Process & Standards"
+      ],
+      "word_count": 283,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+      ],
+      "inbound_count": 43,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/blog/why-small-business-needs-website-2026": {
+      "url": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+      "latency_ms": 435,
+      "in_sitemap": true,
+      "title": "Why UK Small Businesses Need a Custom Website in 2026",
+      "title_len": 53,
+      "description": "Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.",
+      "desc_len": 152,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+      "h1_count": 1,
+      "h1": "Why Every Small Business Needs a Professional Website in 2026",
+      "h2_count": 13,
+      "h3_count": 0,
+      "h2_sample": [
+        "The Numbers Behind the Shift",
+        "First Impressions Happen Online",
+        "Website vs Social Media",
+        "Your Competitors Are Already There",
+        "A Website Works While You Sleep"
+      ],
+      "word_count": 2431,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 0,
+      "ext_sample": [],
+      "inbound_count": 1,
+      "inbound_sources": [
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/blog/50-percent-off-agency-launch": {
+      "url": "https://www.saimdev.site/blog/50-percent-off-agency-launch",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/50-percent-off-agency-launch",
+      "latency_ms": 427,
+      "in_sitemap": true,
+      "title": "Saim Dev Studio Launch: Fixed Price Web Development",
+      "title_len": 51,
+      "description": "Special introductory fixed-price packages for UK and European small businesses seeking sub-second Next.js web applications and takeaway systems.",
+      "desc_len": 144,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/50-percent-off-agency-launch",
+      "h1_count": 1,
+      "h1": "I Just Launched My Web Agency \u2014 And I'm Offering 50% Off to My First Clients",
+      "h2_count": 6,
+      "h3_count": 5,
+      "h2_sample": [
+        "The Announcement",
+        "Why Am I Cutting Prices in Half?",
+        "What You Actually Get",
+        "Who I Want to Work With",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 590,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+      ],
+      "inbound_count": 1,
+      "inbound_sources": [
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/kitchen-safety-poster": {
+      "url": "https://www.saimdev.site/food-safety-templates/kitchen-safety-poster",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/kitchen-safety-poster",
+      "latency_ms": 438,
+      "in_sitemap": true,
+      "title": "Commercial Kitchen Health & Safety Rules Poster UK",
+      "title_len": 50,
+      "description": "Essential health and safety guidelines for commercial kitchen staff. Covers hot oil handling, slip hazards, knife safety, and emergency protocols.",
+      "desc_len": 146,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/kitchen-safety-poster",
+      "h1_count": 1,
+      "h1": "Kitchen Safety Poster",
+      "h2_count": 2,
+      "h3_count": 6,
+      "h2_sample": [
+        "How to Implement the Kitchen Safety Poster in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1010,
+      "img_count": 6,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/food-allergen-chart": {
+      "url": "https://www.saimdev.site/food-safety-templates/food-allergen-chart",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/food-allergen-chart",
+      "latency_ms": 545,
+      "in_sitemap": true,
+      "title": "Free UK Takeaway 14 Food Allergen Chart Matrix",
+      "title_len": 46,
+      "description": "Create and print a compliant 14-allergen chart for your UK food business. Free interactive menu matrix, customer filter, and instant A4 PDF export.",
+      "desc_len": 147,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/food-allergen-chart",
+      "h1_count": 1,
+      "h1": "Free UK Takeaway Allergen Chart Generator (14 Allergens)",
+      "h2_count": 3,
+      "h3_count": 5,
+      "h2_sample": [
+        "14 Allergen Chart for Kitchens",
+        "How to Implement the Free UK Takeaway Allergen Chart Generator (14 Allergens) in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1569,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 31,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/food-safety-quiz": {
+      "url": "https://www.saimdev.site/food-safety-templates/food-safety-quiz",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/food-safety-quiz",
+      "latency_ms": 485,
+      "in_sitemap": true,
+      "title": "UK Food Hygiene Level 2 Practice Exam & Quiz Tool",
+      "title_len": 49,
+      "description": "Test your kitchen team with this interactive UK Food Hygiene Level 2 quiz. Review temperature rules, cross-contamination, and Natasha's Law online.",
+      "desc_len": 147,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/food-safety-quiz",
+      "h1_count": 1,
+      "h1": "Food Safety Quiz",
+      "h2_count": 3,
+      "h3_count": 5,
+      "h2_sample": [
+        "Food Safety & Hygiene Knowledge Exam",
+        "How to Implement the Food Safety Quiz in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1421,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 7,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/basic-food-preparation-rules",
+        "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide",
+        "https://www.saimdev.site/tools",
+        "https://www.saimdev.site/food-safety-templates/recipe-calculator"
+      ]
+    },
+    "https://www.saimdev.site/disclaimer": {
+      "url": "https://www.saimdev.site/disclaimer",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/disclaimer",
+      "latency_ms": 337,
+      "in_sitemap": false,
+      "title": "Food Safety Disclaimer | Saim Dev",
+      "title_len": 33,
+      "description": "Regulatory and guidance notice for kitchen templates, checklists, and calculators. General reference only and not official advice from the FSA.",
+      "desc_len": 143,
+      "robots": "noindex, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/disclaimer",
+      "h1_count": 1,
+      "h1": "Food Safety & Legal Disclaimer",
+      "h2_count": 4,
+      "h3_count": 0,
+      "h2_sample": [
+        "1. General Guidance Only",
+        "2. Business Operator Responsibility",
+        "3. No Agency Approval or Endorsement",
+        "4. Limitation of Liability"
+      ],
+      "word_count": 374,
+      "img_count": 1,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 2,
+      "ext_sample": [
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 41,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/kitchen-prep-list-template": {
+      "url": "https://www.saimdev.site/food-safety-templates/kitchen-prep-list-template",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/kitchen-prep-list-template",
+      "latency_ms": 471,
+      "in_sitemap": true,
+      "title": "Commercial Kitchen Daily Food Prep List Template",
+      "title_len": 48,
+      "description": "Organise daily kitchen production with this commercial prep sheet. Track batch pars, prep quantities, FIFO rotation, and morning line readiness.",
+      "desc_len": 144,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/kitchen-prep-list-template",
+      "h1_count": 1,
+      "h1": "Kitchen Prep List Template",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Kitchen Prep List Template",
+        "How to Implement the Kitchen Prep List Template in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1312,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/invalid-404-test-page": {
+      "url": "https://www.saimdev.site/invalid-404-test-page",
+      "status": 404,
+      "final_url": "https://www.saimdev.site/invalid-404-test-page",
+      "latency_ms": 326,
+      "in_sitemap": false,
+      "title": "Page Not Found (404) | Saim Dev",
+      "title_len": 31,
+      "description": "The page you are looking for does not exist or has been moved. Explore our web architecture services or free food safety tools.",
+      "desc_len": 127,
+      "robots": "noindex",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site",
+      "h1_count": 1,
+      "h1": "Page Not Found",
+      "h2_count": 0,
+      "h3_count": 0,
+      "h2_sample": [],
+      "word_count": 81,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 0,
+      "inbound_sources": []
+    },
+    "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide": {
+      "url": "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide",
+      "latency_ms": 444,
+      "in_sitemap": true,
+      "title": "Level 2 Food Hygiene Practice Test: 10 Key Questions",
+      "title_len": 52,
+      "description": "Prepare kitchen staff for UK Food Safety Level 2 certification with this practice test covering critical temperatures, hygiene, and cross-contamination.",
+      "desc_len": 152,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide",
+      "h1_count": 1,
+      "h1": "Level 2 Food Hygiene Practice Test: 10 Critical Questions Every Kitchen Worker & Chef Must Pass",
+      "h2_count": 7,
+      "h3_count": 2,
+      "h2_sample": [
+        "Table of Contents",
+        "1. Why Verbal Staff Testing Decides Your Hygiene Rating",
+        "2. The 3 Numbers Every Food Handler Must Memorize",
+        "3. High-Risk Foods & Cross-Contamination Defenses",
+        "4. Sickness Reporting: The 48-Hour Exclusion Rule"
+      ],
+      "word_count": 869,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20compliant%20takeaway%20website"
+      ],
+      "inbound_count": 2,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/food-safety-quiz",
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/case-studies": {
+      "url": "https://www.saimdev.site/case-studies",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/case-studies",
+      "latency_ms": 424,
+      "in_sitemap": true,
+      "title": "Client Web Development Case Studies | Saim Dev",
+      "title_len": 46,
+      "description": "Review real Next.js website case studies for UK and European clients. Proven sub-second loading speeds, mobile conversion gains, and clean delivery.",
+      "desc_len": 148,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/case-studies",
+      "h1_count": 1,
+      "h1": "Real Results. Real Websites.",
+      "h2_count": 4,
+      "h3_count": 1,
+      "h2_sample": [
+        "Transforming a 4.8-Second Legacy Site into a Sub-Second Patient Lead Engine",
+        "Mobile-First Emergency Service Platform Driving 2.2x Revenue Growth",
+        "Editorial Brand Elevation & Direct Instagram Appointment Engine",
+        "Guaranteed Performance Contract"
+      ],
+      "word_count": 521,
+      "img_count": 3,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 4,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+      ],
+      "inbound_count": 41,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/nextjs-developer-uk": {
+      "url": "https://www.saimdev.site/nextjs-developer-uk",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/nextjs-developer-uk",
+      "latency_ms": 435,
+      "in_sitemap": true,
+      "title": "Freelance Next.js Developer UK | Fast Custom Sites",
+      "title_len": 50,
+      "description": "Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from \u00a3250.",
+      "desc_len": 146,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/nextjs-developer-uk",
+      "h1_count": 1,
+      "h1": "High-Performance Next.js Web Development for UK Businesses.",
+      "h2_count": 5,
+      "h3_count": 9,
+      "h2_sample": [
+        "Why Pay \u00a33,000\u2013\u00a35,000+ to Slow UK Agencies?",
+        "Transparent GBP Pricing",
+        "Frequently Asked Questions",
+        "Ready to Upgrade Your UK Digital Presence?",
+        "High-Performance Web Architecture for Growing Businesses."
+      ],
+      "word_count": 617,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 11,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20a%20UK%20business%20looking%20for%20a%20Next.js%20developer",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Next.js%20website%20for%20my%20UK%20business",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Landing%20Page%20package%20(\u00a3250)",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Starter%20Plan%20(\u00a3390)",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Business%20Plan%20(\u00a3790)"
+      ],
+      "inbound_count": 41,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/": {
+      "url": "https://www.saimdev.site/",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/",
+      "latency_ms": 656,
+      "in_sitemap": true,
+      "title": "Next.js Websites for UK Small Businesses | Saim Dev",
+      "title_len": 51,
+      "description": "Custom Next.js websites for UK small businesses from \u00a3250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.",
+      "desc_len": 151,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site",
+      "h1_count": 1,
+      "h1": "Next.js Websites for UK & EU Small Businesses - Fixed Price from \u00a3250",
+      "h2_count": 10,
+      "h3_count": 32,
+      "h2_sample": [
+        "High-Performance Web Architecture",
+        "Key Benefits",
+        "Performance as a key to success.",
+        "Tools and technologies we love to use.",
+        "UK Restaurant & Takeaway Kitchen Tools"
+      ],
+      "word_count": 1658,
+      "img_count": 9,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 10,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20starting%20a%20website%20project",
+        "https://wa.me/923196526604?text=Hi%20Saim%2C%20I'd%20like%20to%20get%20started%20with%20the%20Landing%20Page%20(%C2%A3250).",
+        "https://wa.me/923196526604?text=Hi%20Saim%2C%20I'd%20like%20to%20get%20started%20with%20the%20Starter%20Plan%20(%C2%A3390).",
+        "https://wa.me/923196526604?text=Hi%20Saim%2C%20I'd%20like%20to%20get%20started%20with%20the%20Business%20Plan%20(%C2%A3790).",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20website%20project"
+      ],
+      "inbound_count": 111,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/contact": {
+      "url": "https://www.saimdev.site/contact",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/contact",
+      "latency_ms": 330,
+      "in_sitemap": true,
+      "title": "Contact Saim Dev | Fast Fixed-Price Website Quotes",
+      "title_len": 50,
+      "description": "Get a fixed-price quote for your UK small-business website. Contact Saim Dev via WhatsApp or enquiry form for quick responses within 24 hours.",
+      "desc_len": 142,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/contact",
+      "h1_count": 1,
+      "h1": "Let's build something remarkable.",
+      "h2_count": 2,
+      "h3_count": 4,
+      "h2_sample": [
+        "Start your project.Direct on WhatsApp or Email.",
+        "Why Work With Us?"
+      ],
+      "word_count": 201,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 2,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20website%20project",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 46,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/restaurant-cleaning-checklist": {
+      "url": "https://www.saimdev.site/food-safety-templates/restaurant-cleaning-checklist",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/restaurant-cleaning-checklist",
+      "latency_ms": 529,
+      "in_sitemap": true,
+      "title": "Commercial Restaurant Deep Cleaning Checklist (UK)",
+      "title_len": 50,
+      "description": "Comprehensive daily, weekly, and monthly cleaning checklist for UK commercial restaurant kitchens. Audit extraction canopies, grease traps, and line equipment.",
+      "desc_len": 159,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/restaurant-cleaning-checklist",
+      "h1_count": 1,
+      "h1": "Restaurant Cleaning Checklist",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Restaurant Cleaning Checklist",
+        "How to Implement the Restaurant Cleaning Checklist in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1302,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/food-traceability": {
+      "url": "https://www.saimdev.site/food-safety-templates/food-traceability",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/food-traceability",
+      "latency_ms": 432,
+      "in_sitemap": true,
+      "title": "UK Commercial Food Traceability Log Sheet Template",
+      "title_len": 50,
+      "description": "Document one-step-back and one-step-forward ingredient traceability for UK food businesses. Record delivery batch codes, invoices, and use-by dates.",
+      "desc_len": 148,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/food-traceability",
+      "h1_count": 1,
+      "h1": "Food Traceability",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Food Traceability",
+        "How to Implement the Food Traceability in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1315,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/tools/ppds-label-generator": {
+      "url": "https://www.saimdev.site/tools/ppds-label-generator",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/tools/ppds-label-generator",
+      "latency_ms": 469,
+      "in_sitemap": true,
+      "title": "Free PPDS Food Label Template UK | Natasha's Law",
+      "title_len": 48,
+      "description": "Generate compliant Natasha's Law PPDS food labels online for free. Automatically bold all 14 statutory allergens, set expiry dates, and print A4 sheets.",
+      "desc_len": 152,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/tools/ppds-label-generator",
+      "h1_count": 1,
+      "h1": "Free Natasha's Law PPDS Food Label Template UK",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Interactive PPDS Food Label Generator",
+        "How to Generate & Print Compliant Natasha's Law Food Labels",
+        "Natasha's Law & PPDS Labelling FAQs"
+      ],
+      "word_count": 1112,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 3,
+      "ext_sample": [
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20takeaway%20website%20with%20Natasha's%20Law%20allergen%20filtering",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 43,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "https://www.saimdev.site/food-safety-templates/hand-washing-poster",
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/food-safety-templates/food-recall"
+      ]
+    },
+    "https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide": {
+      "url": "https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
+      "latency_ms": 409,
+      "in_sitemap": true,
+      "title": "SFBB Opening & Closing Checklist Guide for UK Cafes",
+      "title_len": 51,
+      "description": "Master your daily opening and closing checks with Safer Food, Better Business guidance. Protect kitchen hygiene and secure a 5-star council rating.",
+      "desc_len": 147,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
+      "h1_count": 1,
+      "h1": "SFBB Opening & Closing Checklists: The Daily Kitchen Routine That Helps You Prepare for a 5-Star Food Hygiene Rating",
+      "h2_count": 7,
+      "h3_count": 2,
+      "h2_sample": [
+        "Table of Contents",
+        "1. What EHOs Inspect in the First 15 Minutes",
+        "2. The 4 C's of UK Food Safety",
+        "3. The Morning Opening Checklist (Crucial Temperatures)",
+        "4. The Night Closing Checklist (Pest & Spoilage Defense)"
+      ],
+      "word_count": 858,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%205-star%20compliant%20takeaway%20website"
+      ],
+      "inbound_count": 4,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/restaurant-cleaning-checklist",
+        "https://www.saimdev.site/food-safety-templates/opening-and-closing-checklist-template",
+        "https://www.saimdev.site/food-safety-templates/kitchen-prep-list-template",
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/pest-control-checklist": {
+      "url": "https://www.saimdev.site/food-safety-templates/pest-control-checklist",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/pest-control-checklist",
+      "latency_ms": 437,
+      "in_sitemap": true,
+      "title": "Commercial Kitchen Pest Control Inspection Checklist",
+      "title_len": 52,
+      "description": "Routine pest prevention and monitoring checklist for UK commercial caterers. Inspect bait stations, building proofing, and waste storage areas daily.",
+      "desc_len": 149,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/pest-control-checklist",
+      "h1_count": 1,
+      "h1": "Commercial Kitchen Pest Control Checklist",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Commercial Kitchen Pest Control Checklist",
+        "How to Implement the Commercial Kitchen Pest Control Checklist in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1322,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "DigitalDocument",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 3,
+      "inbound_sources": [
+        "https://www.saimdev.site/tools"
+      ]
+    },
+    "https://www.saimdev.site/food-safety-templates/food-cost-calculator": {
+      "url": "https://www.saimdev.site/food-safety-templates/food-cost-calculator",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/food-safety-templates/food-cost-calculator",
+      "latency_ms": 432,
+      "in_sitemap": true,
+      "title": "Free Food Cost Percentage Calculator for UK Kitchens",
+      "title_len": 52,
+      "description": "Calculate recipe food cost percentages, gross margins, and profitable takeaway menu prices with our free interactive commercial kitchen calculator.",
+      "desc_len": 147,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/food-safety-templates/food-cost-calculator",
+      "h1_count": 1,
+      "h1": "Food Cost Calculator",
+      "h2_count": 3,
+      "h3_count": 7,
+      "h2_sample": [
+        "Commercial Recipe Costing & Margin Calculator",
+        "How to Implement the Food Cost Calculator in Your Commercial Kitchen",
+        "Frequently Asked Questions"
+      ],
+      "word_count": 1291,
+      "img_count": 5,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "BreadcrumbList",
+        "WebApplication",
+        "FAQPage"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 6,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20inquiring%20about%20the%20takeaway%20web%20solutions",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk",
+        "https://www.food.gov.uk/",
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20commission-free%20takeaway%20website%20from%20%C2%A3250"
+      ],
+      "inbound_count": 5,
+      "inbound_sources": [
+        "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
+        "https://www.saimdev.site/tools",
+        "https://www.saimdev.site/"
+      ]
+    },
+    "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator": {
+      "url": "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
+      "latency_ms": 418,
+      "in_sitemap": true,
+      "title": "How to Calculate Food Cost Percentage in UK Kitchens",
+      "title_len": 52,
+      "description": "Master restaurant food cost percentages and target 70%+ gross margins. Learn commercial costing formulas, portion tracking, and menu pricing.",
+      "desc_len": 141,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
+      "h1_count": 1,
+      "h1": "How to Calculate Food Cost Percentage & Protect 70%+ Gross Margins in Your Commercial Kitchen",
+      "h2_count": 7,
+      "h3_count": 2,
+      "h2_sample": [
+        "Table of Contents",
+        "1. The Core Formulas: Food Cost % vs Gross Profit (GP) %",
+        "2. Yield Factor & Cooking Shrinkage: The Math Most Chefs Skip",
+        "3. Step-by-Step Breakdown: Costing a Signature Cheeseburger",
+        "4. Menu Engineering: Pricing for Target 70%\u201375% Margins"
+      ],
+      "word_count": 812,
+      "img_count": 2,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 1,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20zero%20commission%20takeaway%20ordering%20website"
+      ],
+      "inbound_count": 2,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/food-cost-calculator",
+        "https://www.saimdev.site/blogs"
+      ]
+    },
+    "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide": {
+      "url": "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide",
+      "status": 200,
+      "final_url": "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide",
+      "latency_ms": 415,
+      "in_sitemap": true,
+      "title": "UK Food Cooling Temperature Guide: 90-Minute Rule",
+      "title_len": 49,
+      "description": "Master safe food cooling in commercial kitchens. Step-by-step advice on blast chilling, ice baths, and FSA requirements to prevent bacterial growth.",
+      "desc_len": 148,
+      "robots": "index, follow",
+      "x_robots": "",
+      "canonical": "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide",
+      "h1_count": 1,
+      "h1": "Commercial Kitchen Food Cooling Guide: The UK 90-Minute Rule & Temperature Limits",
+      "h2_count": 4,
+      "h3_count": 6,
+      "h2_sample": [
+        "The Science of Rapid Food Cooling in Commercial Hospitality",
+        "Approved Kitchen Methods to Achieve the 90-Minute Target",
+        "UK Temperature Control Critical Limits",
+        "Frequently Asked Questions on Commercial Food Cooling"
+      ],
+      "word_count": 473,
+      "img_count": 0,
+      "missing_alt": 0,
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ],
+      "has_og": true,
+      "has_tw": true,
+      "external_link_count": 2,
+      "ext_sample": [
+        "https://wa.me/923196526604?text=Hi%20Saim,%20I%20am%20interested%20in%20a%20website%20for%20my%20catering%20or%20restaurant%20business",
+        "https://wa.me/923196526604"
+      ],
+      "inbound_count": 7,
+      "inbound_sources": [
+        "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "https://www.saimdev.site/blogs",
+        "https://www.saimdev.site/food-safety-templates/food-cooling-poster",
+        "https://www.saimdev.site/food-safety-templates/fridge-temperature-record-sheet-pdf",
+        "https://www.saimdev.site/food-safety-templates/walk-in-cooler-food-storage-chart"
+      ]
+    }
+  }
+}

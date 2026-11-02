@@ -1,0 +1,336 @@
+{
+  "summary": {
+    "assessment": "No supported access-denial or challenge signal was observed in this sample. This does not predict larger or later crawls.",
+    "page_access_counts": {
+      "response_received": 15
+    },
+    "remote_denial_or_challenge_pages": 0,
+    "remote_denial_or_challenge_discovery_responses": 0,
+    "http_access_denied_attempts_recorded": 0,
+    "challenge_attempts_recorded": 0,
+    "http_429_attempts_recorded": 0,
+    "http_attempts_recorded": 19,
+    "stop_reasons": [
+      "configured_page_limit"
+    ],
+    "browser_restriction_counts": {},
+    "history_note": "Only instrumented HTTP attempts are counted, including recorded browser requests; legacy runs may lack attempt history."
+  },
+  "pages": [
+    {
+      "url": "https://www.saimdev.site/",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:01.341008+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/about",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/about",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:02.320860+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/contact",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/contact",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:02.821714+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/services",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/services",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:03.321114+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/services/takeaway-web-design",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/services/takeaway-web-design",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:03.821326+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/case-studies",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/case-studies",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:04.619236+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/blogs",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/blogs",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:06.129706+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:05.119770+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/blog/free-website-for-local-business",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/blog/free-website-for-local-business",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:05.620035+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/tools",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/tools",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:07.050035+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/nextjs-developer-uk",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/nextjs-developer-uk",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:07.547586+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/technologies",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/technologies",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:08.064117+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/demos",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/demos",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:08.547462+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/privacy",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/privacy",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:09.347745+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/terms",
+      "status": 200,
+      "access": {
+        "code": "response_received",
+        "confidence": "observed",
+        "evidence": "HTTP 200 received; no supported denial/challenge marker detected."
+      },
+      "robots_decision": null,
+      "withheld_url": "",
+      "http_events": [
+        {
+          "url": "https://www.saimdev.site/terms",
+          "status": 200,
+          "error": "",
+          "fetched_at": "2026-10-26T16:42:09.848137+00:00",
+          "retry_after": null,
+          "challenge_detected": false
+        }
+      ]
+    }
+  ]
+}

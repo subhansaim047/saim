@@ -1,0 +1,724 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-26T16:42:10.733540+00:00",
+  "seed": "https://www.saimdev.site/",
+  "coverage_limited": true,
+  "sitemap_urls_observed": 48,
+  "sitemap_fetch_failures": 0,
+  "pages": [
+    {
+      "url": "https://www.saimdev.site/",
+      "final_url": "https://www.saimdev.site/",
+      "representation": "http",
+      "status": 200,
+      "main_words": 1659,
+      "body_words": 1659,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "Answer",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "Question",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/about",
+      "final_url": "https://www.saimdev.site/about",
+      "representation": "http",
+      "status": 200,
+      "main_words": 375,
+      "body_words": 433,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/contact",
+      "final_url": "https://www.saimdev.site/contact",
+      "representation": "http",
+      "status": 200,
+      "main_words": 144,
+      "body_words": 198,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/services",
+      "final_url": "https://www.saimdev.site/services",
+      "representation": "http",
+      "status": 200,
+      "main_words": 707,
+      "body_words": 761,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/services/takeaway-web-design",
+      "final_url": "https://www.saimdev.site/services/takeaway-web-design",
+      "representation": "http",
+      "status": 200,
+      "main_words": 806,
+      "body_words": 868,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "Answer",
+        "BreadcrumbList",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "ListItem",
+        "Offer",
+        "OfferCatalog",
+        "Organization",
+        "Person",
+        "ProfessionalService",
+        "Question",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/case-studies",
+      "final_url": "https://www.saimdev.site/case-studies",
+      "representation": "http",
+      "status": 200,
+      "main_words": 526,
+      "body_words": 526,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/blogs",
+      "final_url": "https://www.saimdev.site/blogs",
+      "representation": "http",
+      "status": 200,
+      "main_words": 839,
+      "body_words": 898,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+      "final_url": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+      "representation": "http",
+      "status": 200,
+      "main_words": 2179,
+      "body_words": 2457,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "Person",
+        "WebPage",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/blog/free-website-for-local-business",
+      "final_url": "https://www.saimdev.site/blog/free-website-for-local-business",
+      "representation": "http",
+      "status": 200,
+      "main_words": 803,
+      "body_words": 992,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "Article",
+        "BreadcrumbList",
+        "ContactPoint",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "Person",
+        "WebPage",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/tools",
+      "final_url": "https://www.saimdev.site/tools",
+      "representation": "http",
+      "status": 200,
+      "main_words": 1198,
+      "body_words": 1905,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/nextjs-developer-uk",
+      "final_url": "https://www.saimdev.site/nextjs-developer-uk",
+      "representation": "http",
+      "status": 200,
+      "main_words": 502,
+      "body_words": 616,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "Answer",
+        "ContactPoint",
+        "FAQPage",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "Question",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/technologies",
+      "final_url": "https://www.saimdev.site/technologies",
+      "representation": "http",
+      "status": 200,
+      "main_words": 284,
+      "body_words": 284,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/demos",
+      "final_url": "https://www.saimdev.site/demos",
+      "representation": "http",
+      "status": 200,
+      "main_words": 946,
+      "body_words": 946,
+      "in_observed_sitemap": true,
+      "schema_types": [
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": true,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": []
+    },
+    {
+      "url": "https://www.saimdev.site/privacy",
+      "final_url": "https://www.saimdev.site/privacy",
+      "representation": "http",
+      "status": 200,
+      "main_words": 672,
+      "body_words": 734,
+      "in_observed_sitemap": false,
+      "schema_types": [
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": true,
+        "generic_meta": [
+          "noindex, follow"
+        ],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": false,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": true,
+        "generic_meta": [
+          "noindex, follow"
+        ],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": false,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": [
+        {
+          "code": "noindex_observed",
+          "observation": "A noindex instruction was observed in the response or captured DOM.",
+          "why_it_matters": "This can prevent the page from appearing in Google Search, including its AI features.",
+          "next_step": "Confirm whether the page should be public in search before changing this instruction."
+        }
+      ]
+    },
+    {
+      "url": "https://www.saimdev.site/terms",
+      "final_url": "https://www.saimdev.site/terms",
+      "representation": "http",
+      "status": 200,
+      "main_words": 264,
+      "body_words": 318,
+      "in_observed_sitemap": false,
+      "schema_types": [
+        "ContactPoint",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": true,
+        "Bingbot": true
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": true,
+        "generic_meta": [
+          "noindex, follow"
+        ],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": false,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": true,
+        "generic_meta": [
+          "noindex, follow"
+        ],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": false,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": [
+        {
+          "code": "noindex_observed",
+          "observation": "A noindex instruction was observed in the response or captured DOM.",
+          "why_it_matters": "This can prevent the page from appearing in Google Search, including its AI features.",
+          "next_step": "Confirm whether the page should be public in search before changing this instruction."
+        }
+      ]
+    }
+  ],
+  "not_measured": [
+    "actual indexing",
+    "AI answer inclusion",
+    "competitor rankings",
+    "independent reputation",
+    "schema semantic validity"
+  ],
+  "interpretation": "These are access, text and markup observations. They do not measure an engine's trust, indexing or citations."
+}

@@ -1,0 +1,340 @@
+{
+  "https://www.saimdev.site/": {
+    "url": "https://www.saimdev.site/",
+    "raw_status": 200,
+    "rendered_status": 0,
+    "raw_title": "Next.js Websites for UK Small Businesses | Saim Dev",
+    "rendered_title": "Next.js Websites for UK Small Businesses | Saim Dev",
+    "raw_desc": "Custom Next.js websites for UK small businesses from \u00a3250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.",
+    "rendered_desc": "Custom Next.js websites for UK small businesses from \u00a3250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.",
+    "raw_canonical": "https://www.saimdev.site",
+    "rendered_canonical": "https://www.saimdev.site",
+    "raw_h1": [
+      "Next.js Websites for UK & EU Small Businesses - Fixed Price from \u00a3250"
+    ],
+    "rendered_h1": [
+      "Next.js Websites for UK & EU Small Businesses - Fixed Price from \u00a3250"
+    ],
+    "raw_h2_count": 10,
+    "rendered_h2_count": 10,
+    "raw_jsonld_blocks": 4,
+    "rendered_jsonld_blocks": 4,
+    "raw_links_count": 73,
+    "rendered_links_count": 75,
+    "raw_words": 1532,
+    "rendered_words": 1578,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/services": {
+    "url": "https://www.saimdev.site/services",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Web Development Services UK | Fixed Price Next.js",
+    "rendered_title": "Web Development Services UK | Fixed Price Next.js",
+    "raw_desc": "Fixed-price Next.js web development for UK businesses from \u00a3250. Includes bespoke ordering systems, landing pages, local SEO setup, and fast delivery.",
+    "rendered_desc": "Fixed-price Next.js web development for UK businesses from \u00a3250. Includes bespoke ordering systems, landing pages, local SEO setup, and fast delivery.",
+    "raw_canonical": "https://www.saimdev.site/services",
+    "rendered_canonical": "https://www.saimdev.site/services",
+    "raw_h1": [
+      "Conversion-Focused Web Solutions"
+    ],
+    "rendered_h1": [
+      "Conversion-Focused Web Solutions"
+    ],
+    "raw_h2_count": 8,
+    "rendered_h2_count": 8,
+    "raw_jsonld_blocks": 3,
+    "rendered_jsonld_blocks": 3,
+    "raw_links_count": 20,
+    "rendered_links_count": 22,
+    "raw_words": 689,
+    "rendered_words": 735,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/services/takeaway-web-design": {
+    "url": "https://www.saimdev.site/services/takeaway-web-design",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Takeaway Website Design UK | Commission-Free Orders",
+    "rendered_title": "Takeaway Website Design UK | Commission-Free Orders",
+    "raw_desc": "Custom Next.js takeaway ordering websites from \u00a3250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
+    "rendered_desc": "Custom Next.js takeaway ordering websites from \u00a3250. Avoid 30%+ Just Eat fees with built-in Natasha's Law allergen filters and WhatsApp kitchen dispatch.",
+    "raw_canonical": "https://www.saimdev.site/services/takeaway-web-design",
+    "rendered_canonical": "https://www.saimdev.site/services/takeaway-web-design",
+    "raw_h1": [
+      "Stop Paying 30%+ Just Eat & Deliveroo Fees"
+    ],
+    "rendered_h1": [
+      "Stop Paying 30%+ Just Eat & Deliveroo Fees"
+    ],
+    "raw_h2_count": 4,
+    "rendered_h2_count": 4,
+    "raw_jsonld_blocks": 6,
+    "rendered_jsonld_blocks": 6,
+    "raw_links_count": 25,
+    "rendered_links_count": 27,
+    "raw_words": 832,
+    "rendered_words": 878,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/nextjs-developer-uk": {
+    "url": "https://www.saimdev.site/nextjs-developer-uk",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Freelance Next.js Developer UK | Fast Custom Sites",
+    "rendered_title": "Freelance Next.js Developer UK | Fast Custom Sites",
+    "raw_desc": "Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from \u00a3250.",
+    "rendered_desc": "Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from \u00a3250.",
+    "raw_canonical": "https://www.saimdev.site/nextjs-developer-uk",
+    "rendered_canonical": "https://www.saimdev.site/nextjs-developer-uk",
+    "raw_h1": [
+      "High-Performance Next.js Web Development for UK Businesses."
+    ],
+    "rendered_h1": [
+      "High-Performance Next.js Web Development for UK Businesses."
+    ],
+    "raw_h2_count": 5,
+    "rendered_h2_count": 5,
+    "raw_jsonld_blocks": 4,
+    "rendered_jsonld_blocks": 4,
+    "raw_links_count": 46,
+    "rendered_links_count": 48,
+    "raw_words": 591,
+    "rendered_words": 637,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/technologies": {
+    "url": "https://www.saimdev.site/technologies",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Modern Next.js & React Tech Stack | Saim Dev",
+    "rendered_title": "Modern Next.js & React Tech Stack | Saim Dev",
+    "raw_desc": "Explore our high-performance web development stack: Next.js 16 App Router, React, Tailwind CSS, TypeScript, and edge cloud hosting for speed.",
+    "rendered_desc": "Explore our high-performance web development stack: Next.js 16 App Router, React, Tailwind CSS, TypeScript, and edge cloud hosting for speed.",
+    "raw_canonical": "https://www.saimdev.site/technologies",
+    "rendered_canonical": "https://www.saimdev.site/technologies",
+    "raw_h1": [
+      "Technologies & Expertise"
+    ],
+    "rendered_h1": [
+      "Technologies & Expertise"
+    ],
+    "raw_h2_count": 5,
+    "rendered_h2_count": 5,
+    "raw_jsonld_blocks": 3,
+    "rendered_jsonld_blocks": 3,
+    "raw_links_count": 1,
+    "rendered_links_count": 3,
+    "raw_words": 265,
+    "rendered_words": 311,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/case-studies": {
+    "url": "https://www.saimdev.site/case-studies",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Client Web Development Case Studies | Saim Dev",
+    "rendered_title": "Client Web Development Case Studies | Saim Dev",
+    "raw_desc": "Review real Next.js website case studies for UK and European clients. Proven sub-second loading speeds, mobile conversion gains, and clean delivery.",
+    "rendered_desc": "Review real Next.js website case studies for UK and European clients. Proven sub-second loading speeds, mobile conversion gains, and clean delivery.",
+    "raw_canonical": "https://www.saimdev.site/case-studies",
+    "rendered_canonical": "https://www.saimdev.site/case-studies",
+    "raw_h1": [
+      "Real Results. Real Websites."
+    ],
+    "rendered_h1": [
+      "Real Results. Real Websites."
+    ],
+    "raw_h2_count": 4,
+    "rendered_h2_count": 4,
+    "raw_jsonld_blocks": 3,
+    "rendered_jsonld_blocks": 3,
+    "raw_links_count": 4,
+    "rendered_links_count": 6,
+    "raw_words": 490,
+    "rendered_words": 536,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/blogs": {
+    "url": "https://www.saimdev.site/blogs",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Web Development & Food Safety Blog | Saim Dev",
+    "rendered_title": "Web Development & Food Safety Blog | Saim Dev",
+    "raw_desc": "Practical guides on Next.js web development for small businesses and food hygiene compliance, SFBB logs, and Natasha's Law for UK restaurants.",
+    "rendered_desc": "Practical guides on Next.js web development for small businesses and food hygiene compliance, SFBB logs, and Natasha's Law for UK restaurants.",
+    "raw_canonical": "https://www.saimdev.site/blogs",
+    "rendered_canonical": "https://www.saimdev.site/blogs",
+    "raw_h1": [
+      "Hospitality Insights &Kitchen Growth Systems"
+    ],
+    "rendered_h1": [
+      "Hospitality Insights &Kitchen Growth Systems"
+    ],
+    "raw_h2_count": 12,
+    "rendered_h2_count": 12,
+    "raw_jsonld_blocks": 3,
+    "rendered_jsonld_blocks": 3,
+    "raw_links_count": 30,
+    "rendered_links_count": 32,
+    "raw_words": 827,
+    "rendered_words": 873,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/blog/why-small-business-needs-website-2026": {
+    "url": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Why UK Small Businesses Need a Custom Website in 2026",
+    "rendered_title": "Why UK Small Businesses Need a Custom Website in 2026",
+    "raw_desc": "Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.",
+    "rendered_desc": "Discover why modern UK small businesses require ultra-fast, mobile-friendly websites to capture local search demand and avoid agency subscription traps.",
+    "raw_canonical": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+    "rendered_canonical": "https://www.saimdev.site/blog/why-small-business-needs-website-2026",
+    "raw_h1": [
+      "Why Every Small Business Needs a Professional Website in 2026"
+    ],
+    "rendered_h1": [
+      "Why Every Small Business Needs a Professional Website in 2026"
+    ],
+    "raw_h2_count": 13,
+    "rendered_h2_count": 13,
+    "raw_jsonld_blocks": 5,
+    "rendered_jsonld_blocks": 5,
+    "raw_links_count": 0,
+    "rendered_links_count": 2,
+    "raw_words": 2388,
+    "rendered_words": 2434,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/tools": {
+    "url": "https://www.saimdev.site/tools",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Free UK Kitchen Tools & Food Safety Templates Hub",
+    "rendered_title": "Free UK Kitchen Tools & Food Safety Templates Hub",
+    "raw_desc": "Free compliance tools for UK commercial kitchens. Access 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.",
+    "rendered_desc": "Free compliance tools for UK commercial kitchens. Access 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.",
+    "raw_canonical": "https://www.saimdev.site/tools",
+    "rendered_canonical": "https://www.saimdev.site/tools",
+    "raw_h1": [
+      "UK Restaurant & Takeaway Kitchen Tools: Daily Checklists, Logs & Allergen Matrices"
+    ],
+    "rendered_h1": [
+      "UK Restaurant & Takeaway Kitchen Tools: Daily Checklists, Logs & Allergen Matrices"
+    ],
+    "raw_h2_count": 5,
+    "rendered_h2_count": 5,
+    "raw_jsonld_blocks": 3,
+    "rendered_jsonld_blocks": 3,
+    "raw_links_count": 503,
+    "rendered_links_count": 505,
+    "raw_words": 1394,
+    "rendered_words": 1440,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/food-safety-templates/allergy-matrix": {
+    "url": "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Free 14 Allergen Matrix Tool for UK Restaurants",
+    "rendered_title": "Free 14 Allergen Matrix Tool for UK Restaurants",
+    "raw_desc": "Map all 14 statutory allergens across your commercial menu. Filter ingredients interactively and export an ink-friendly A4 kitchen poster in seconds.",
+    "rendered_desc": "Map all 14 statutory allergens across your commercial menu. Filter ingredients interactively and export an ink-friendly A4 kitchen poster in seconds.",
+    "raw_canonical": "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+    "rendered_canonical": "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+    "raw_h1": [
+      "Free UK Takeaway Allergen Chart Generator (14 Allergens)"
+    ],
+    "rendered_h1": [
+      "Free UK Takeaway Allergen Chart Generator (14 Allergens)"
+    ],
+    "raw_h2_count": 3,
+    "rendered_h2_count": 3,
+    "raw_jsonld_blocks": 6,
+    "rendered_jsonld_blocks": 6,
+    "raw_links_count": 29,
+    "rendered_links_count": 31,
+    "raw_words": 1399,
+    "rendered_words": 1445,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/food-safety-templates/haccp-plan-builder": {
+    "url": "https://www.saimdev.site/food-safety-templates/haccp-plan-builder",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Free UK Takeaway HACCP Plan Builder & CCP Matrix",
+    "rendered_title": "Free UK Takeaway HACCP Plan Builder & CCP Matrix",
+    "raw_desc": "Build a compliant commercial kitchen HACCP plan online. Identify critical control points, set control limits, and print structured kitchen logs to PDF.",
+    "rendered_desc": "Build a compliant commercial kitchen HACCP plan online. Identify critical control points, set control limits, and print structured kitchen logs to PDF.",
+    "raw_canonical": "https://www.saimdev.site/food-safety-templates/haccp-plan-builder",
+    "rendered_canonical": "https://www.saimdev.site/food-safety-templates/haccp-plan-builder",
+    "raw_h1": [
+      "HACCP Plan Template"
+    ],
+    "rendered_h1": [
+      "HACCP Plan Template"
+    ],
+    "raw_h2_count": 3,
+    "rendered_h2_count": 3,
+    "raw_jsonld_blocks": 6,
+    "rendered_jsonld_blocks": 6,
+    "raw_links_count": 32,
+    "rendered_links_count": 34,
+    "raw_words": 1647,
+    "rendered_words": 1693,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide": {
+    "url": "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
+    "raw_status": 200,
+    "rendered_status": 200,
+    "raw_title": "Natasha's Law PPDS Food Labelling Guide for UK Food",
+    "rendered_title": "Natasha's Law PPDS Food Labelling Guide for UK Food",
+    "raw_desc": "Complete UK guide to Natasha's Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.",
+    "rendered_desc": "Complete UK guide to Natasha's Law and PPDS food labelling. Learn packaging rules, compound ingredient declarations, and mandatory allergen bolding.",
+    "raw_canonical": "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
+    "rendered_canonical": "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
+    "raw_h1": [
+      "Natasha's Law PPDS Food Labelling Guide for UK Takeaways, Cafes & Delis"
+    ],
+    "rendered_h1": [
+      "Natasha's Law PPDS Food Labelling Guide for UK Takeaways, Cafes & Delis"
+    ],
+    "raw_h2_count": 4,
+    "rendered_h2_count": 4,
+    "raw_jsonld_blocks": 5,
+    "rendered_jsonld_blocks": 5,
+    "raw_links_count": 26,
+    "rendered_links_count": 28,
+    "raw_words": 574,
+    "rendered_words": 620,
+    "js_dependent_content_gap": 46
+  },
+  "https://www.saimdev.site/invalid-test-404-check": {
+    "url": "https://www.saimdev.site/invalid-test-404-check",
+    "raw_status": 404,
+    "rendered_status": 404,
+    "raw_title": "Page Not Found (404) | Saim Dev",
+    "rendered_title": "Page Not Found (404) | Saim Dev",
+    "raw_desc": "The page you are looking for does not exist or has been moved. Explore our web architecture services or free food safety tools.",
+    "rendered_desc": "The page you are looking for does not exist or has been moved. Explore our web architecture services or free food safety tools.",
+    "raw_canonical": "https://www.saimdev.site",
+    "rendered_canonical": "https://www.saimdev.site",
+    "raw_h1": [
+      "Page Not Found"
+    ],
+    "rendered_h1": [
+      "Page Not Found"
+    ],
+    "raw_h2_count": 0,
+    "rendered_h2_count": 0,
+    "raw_jsonld_blocks": 3,
+    "rendered_jsonld_blocks": 3,
+    "raw_links_count": 7,
+    "rendered_links_count": 9,
+    "raw_words": 68,
+    "rendered_words": 115,
+    "js_dependent_content_gap": 47
+  }
+}

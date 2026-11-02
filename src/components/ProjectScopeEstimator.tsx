@@ -158,7 +158,7 @@ Can we discuss scheduling my project?`;
             style={{ letterSpacing: "-0.04em" }}
           >
             Estimate your project. <br />
-            <span className="text-white/40">Zero hidden costs, zero sales calls.</span>
+            <span className="text-white/70">Zero hidden costs, zero sales calls.</span>
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-white/65 leading-relaxed font-light">
@@ -176,7 +176,7 @@ Can we discuss scheduling my project?`;
                 <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF4A1C]">
                   Step 1 • Select Architecture Type
                 </span>
-                <span className="text-xs text-white/40 font-mono">1 of 3</span>
+                <span className="text-xs text-white/70 font-mono">1 of 3</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -203,10 +203,10 @@ Can we discuss scheduling my project?`;
                           </div>
                         )}
                       </div>
-                      <p className="text-xs text-white/55 font-light leading-relaxed mb-3">
+                      <p className="text-xs text-white/75 font-light leading-relaxed mb-3">
                         {pt.description}
                       </p>
-                      <div className="flex items-center justify-between text-[11px] font-mono text-white/40 pt-2 border-t border-white/5">
+                      <div className="flex items-center justify-between text-[11px] font-mono text-white/70 pt-2 border-t border-white/5">
                         <span>From £{pt.basePrice}</span>
                         <span>~{pt.baseDays} days</span>
                       </div>
@@ -222,7 +222,7 @@ Can we discuss scheduling my project?`;
                 <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF4A1C]">
                   Step 2 • Add Integrations &amp; Capabilities
                 </span>
-                <span className="text-xs text-white/40 font-mono">2 of 3</span>
+                <span className="text-xs text-white/70 font-mono">2 of 3</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -253,7 +253,7 @@ Can we discuss scheduling my project?`;
                           {feat.label}
                         </span>
                       </div>
-                      <span className="text-[11px] font-mono text-white/40 shrink-0">
+                      <span className="text-[11px] font-mono text-white/70 shrink-0">
                         +£{feat.price}
                       </span>
                     </button>
@@ -271,16 +271,19 @@ Can we discuss scheduling my project?`;
                 <span className="text-white text-sm font-medium tracking-tight block">
                   Fast-Track Priority Sprint
                 </span>
-                <span className="text-white/55 text-xs font-light">
+                <span className="text-white/75 text-xs font-light">
                   Direct priority queue with 35% faster deployment turnaround.
                 </span>
               </div>
 
               <button
                 type="button"
+                role="switch"
+                aria-checked={isFastTrack}
+                aria-label="Toggle fast-track priority sprint"
                 onClick={() => setIsFastTrack((prev) => !prev)}
-                className={`relative inline-flex h-7 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
-                  isFastTrack ? "bg-[#FF4A1C]" : "bg-white/10"
+                className={`relative inline-flex h-7 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#FF4A1C] ${
+                  isFastTrack ? "bg-[#FF4A1C]" : "bg-white/20"
                 }`}
               >
                 <span
@@ -313,18 +316,18 @@ Can we discuss scheduling my project?`;
 
                 {/* Main Estimated Cost Range */}
                 <div>
-                  <span className="text-xs font-mono uppercase tracking-[0.2em] text-white/45 block mb-1">
+                  <span className="text-xs font-mono uppercase tracking-[0.2em] text-white/70 block mb-1">
                     Estimated Investment
                   </span>
                   <div className="flex items-baseline gap-2">
                     <span className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
                       £{calculatedEstimate.priceMin}
                     </span>
-                    <span className="text-white/50 text-xl font-light">
+                    <span className="text-white/75 text-xl font-light">
                       — £{calculatedEstimate.priceMax}
                     </span>
                   </div>
-                  <span className="text-[11px] text-white/50 font-light block mt-1">
+                  <span className="text-[11px] text-white/75 font-light block mt-1">
                     Transparent milestone fee. 50% deposit, 50% on final launch approval.
                   </span>
                 </div>
@@ -335,7 +338,7 @@ Can we discuss scheduling my project?`;
                     <Clock className="w-5 h-5 text-[#FF4A1C]" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xs text-white/50 font-mono uppercase tracking-wider">
+                    <span className="text-xs text-white/75 font-mono uppercase tracking-wider">
                       Turnaround Timeline
                     </span>
                     <span className="text-white text-base font-medium tracking-tight">
@@ -346,7 +349,7 @@ Can we discuss scheduling my project?`;
 
                 {/* Standard Included Core Deliverables */}
                 <div className="space-y-2 pt-2">
-                  <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-white/40 block mb-2">
+                  <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-white/70 block mb-2">
                     Included with Every Build
                   </span>
                   {[

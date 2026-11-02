@@ -1,0 +1,17 @@
+Target,Device,Run,Performance,Accessibility,BestPractices,SEO,FCP_ms,LCP_ms,TBT_INP_ms,CLS
+LiveHomepage,Mobile,Run1,50,91,93,100,1560,5749,1321,0
+LiveHomepage,Mobile,Run2,32,91,93,100,3210,7153,7972,0
+LiveHomepage,Mobile,Run3,48,91,93,100,1270,5853,1585,0
+LiveHomepage,Mobile,MEDIAN,48,91,93,100,1560,5853,1585,0
+LiveHomepage,Desktop,Run1,83,91,93,100,327,1158,261,0
+LiveHomepage,Desktop,Run2,91,91,93,100,648,1193,118,0
+LiveHomepage,Desktop,Run3,84,91,93,100,642,1128,234,0
+LiveHomepage,Desktop,MEDIAN,84,91,93,100,642,1158,234,0
+TransformedHomepage,Mobile,Run1,34,96,93,100,3412,7534,4224,0
+TransformedHomepage,Mobile,Run2,36,96,93,100,3933,6750,1660,0
+TransformedHomepage,Mobile,Run3,32,96,93,100,3730,7266,3910,0
+TransformedHomepage,Mobile,MEDIAN,34,96,93,100,3730,7266,3910,0
+TransformedHomepage,Desktop,Run1,88,96,93,100,368,1361,216,0
+TransformedHomepage,Desktop,Run2,89,96,93,100,632,1427,179,0
+TransformedHomepage,Desktop,Run3,93,96,93,100,522,1373,117,0
+TransformedHomepage,Desktop,MEDIAN,89,96,93,100,522,1373,179,0
