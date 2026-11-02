@@ -1,0 +1,38 @@
+{
+  "priority_rank": 98,
+  "slug": "restaurant-sop",
+  "name": "Restaurant SOP Template",
+  "category": "chart",
+  "target_keyword": "restaurant sop",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://pos.toasttab.com/blog/on-the-line/restaurant-standard-operating-procedures",
+    "https://www.7shifts.com/blog/restaurant-standard-operating-procedures/",
+    "https://www.touchbistro.com/blog/restaurant-standard-operating-procedures/",
+    "https://ontheline.com/restaurant-sop-templates/",
+    "https://www.fooddocs.com/post/restaurant-sop-templates"
+  ],
+  "competitor_gaps": [
+    "Lengthy blog articles hiding templates behind email gates or paid subscriptions",
+    "No interactive shift-based execution (Opening, Midday, Closing)",
+    "Lacks integrated digital temperature logging with pass/fail validation",
+    "Missing UK/EU statutory citations (48-hour sickness exclusion, Natasha's Law)"
+  ],
+  "our_differentiators": [
+    "Interactive shift-based digital checklist spanning FOH, BOH, and hygiene",
+    "Integrated commercial temperature probe logs for walk-ins, freezers, and hot holds",
+    "Mandatory 48-hour staff illness exclusion and allergen communication SOPs",
+    "Zero login or paywall: fully accessible and customizable in-browser",
+    "1-click printable manager audit sheets for Food Standards Agency inspections"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

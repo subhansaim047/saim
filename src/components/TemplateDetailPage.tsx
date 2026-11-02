@@ -289,7 +289,9 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("pest") ||
       template.slug.includes("sanitation") ||
       template.slug.includes("procedure") ||
-      template.slug.includes("utensil"));
+      template.slug.includes("utensil") ||
+      template.slug.includes("5-whys") ||
+      template.slug.includes("root-cause"));
 
   // Related templates: only link to indexed KEEP and IMPROVE pages (no NOINDEX or duplicates)
   const isIndexableSlug = (slug: string) => {

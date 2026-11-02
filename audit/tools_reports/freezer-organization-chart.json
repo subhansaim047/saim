@@ -1,0 +1,38 @@
+{
+  "priority_rank": 96,
+  "slug": "freezer-organization-chart",
+  "name": "Freezer Organization Chart",
+  "category": "chart",
+  "target_keyword": "freezer organization chart",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://www.fooddocs.com/post/walk-in-freezer-organization",
+    "https://www.kitchenall.com/blog/commercial-freezer-organization-rules",
+    "https://westernequipments.com/commercial-kitchen-freezer-organization/",
+    "https://www.partstown.com/about-us/commercial-freezer-organization-tips",
+    "https://www.webstaurantstore.com/article/348/walk-in-freezer-storage-guide.html"
+  ],
+  "competitor_gaps": [
+    "Static, generic layout diagrams without interactive 5-tier vertical hierarchy",
+    "No searchable food directory with minimum cooking temperatures and leak risks",
+    "Missing guidance on 6-inch dunnage floor clearance rules under UK FSA and FDA codes",
+    "Lacks a printable visual layout map for kitchen freezer doors"
+  ],
+  "our_differentiators": [
+    "Integrated into Walk-In Cooler Storage Chart featuring 5 interactive tiers",
+    "Raw poultry and meats isolated on lowest shelves in leak-proof drip pans",
+    "Searchable database of 40+ foods with preparation rules and storage standards",
+    "Mandatory 6-inch dunnage floor clearance and evaporator airflow buffer rules",
+    "1-click printable EHO-compliant kitchen freezer layout map"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

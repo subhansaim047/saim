@@ -1,0 +1,38 @@
+{
+  "priority_rank": 100,
+  "slug": "pest-control-sop",
+  "name": "Pest Control Standard Operating Procedure (SOP)",
+  "category": "chart",
+  "target_keyword": "pest control sop",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://www.fooddocs.com/post/pest-control-sop-restaurant",
+    "https://www.rentokil.co.uk/pest-control/food-safety-regulations/",
+    "https://www.ecolab.com/solutions/commercial-pest-elimination",
+    "https://ssfpa.net/food-safety-sop-pest-management/",
+    "https://safefoodalliance.com/pest-control-standard-operating-procedures/"
+  ],
+  "competitor_gaps": [
+    "Sales pitches for commercial extermination contracts without practical operational checklists",
+    "Missing internal pest sightings log template for daily kitchen staff",
+    "No clear guidance on the legal prohibition of toxic rodenticide in food prep zones",
+    "Lacks physical exclusion barrier audit routines (door sweeps, fly screens)"
+  ],
+  "our_differentiators": [
+    "Interactive Integrated Pest Management (IPM) checklist covering the 4 D's",
+    "Weekly physical exclusion audit routine (door sweeps, window mesh, pipe seals)",
+    "Strict non-toxic device mandates for prep areas (mechanical traps, glue boards)",
+    "Internal pest sighting register protocol with emergency escalation triggers",
+    "1-click printable Food Safety Binder audit sheet with PCO sign-off blocks"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}
