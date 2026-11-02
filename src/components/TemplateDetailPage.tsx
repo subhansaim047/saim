@@ -31,6 +31,9 @@ import { FoodCostCalculatorTool } from "./tools/FoodCostCalculatorTool";
 import { HaccpPlanBuilderTool } from "./tools/HaccpPlanBuilderTool";
 import { FoodSafetyQuizTool } from "./tools/FoodSafetyQuizTool";
 import { FreezerTemperatureChartTool } from "./tools/FreezerTemperatureChartTool";
+import { HandWashingPosterTool } from "./tools/HandWashingPosterTool";
+import { ChoppingBoardColourChartTool } from "./tools/ChoppingBoardColourChartTool";
+import { SafeFoodPrepRulesTool } from "./tools/SafeFoodPrepRulesTool";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
@@ -124,6 +127,19 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const isFreezerTool =
     template.slug === "freezer-temperature-chart" ||
     template.slug.includes("freezer-temperature");
+
+  const isHandWashingTool =
+    template.slug === "hand-washing-poster" ||
+    template.slug.includes("hand-washing");
+
+  const isChoppingBoardTool =
+    template.slug === "chopping-board-colour-chart" ||
+    template.slug.includes("chopping-board");
+
+  const isSafeFoodPrepTool =
+    template.slug === "basic-food-preparation-rules" ||
+    template.slug.includes("safe-food-prep") ||
+    template.slug.includes("food-preparation-rules");
 
   const isAllergenTool =
     !isRecipeTool &&
@@ -405,6 +421,21 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <FreezerTemperatureChartTool templateId={template.id} />
         )}
 
+        {/* 4c. Commercial Handwashing Poster & 20s Trainer */}
+        {isHandWashingTool && (
+          <HandWashingPosterTool templateId={template.id} />
+        )}
+
+        {/* 4d. UK Chopping Board Colour Chart & Classifier */}
+        {isChoppingBoardTool && (
+          <ChoppingBoardColourChartTool templateId={template.id} />
+        )}
+
+        {/* 4e. Commercial Safe Food Preparation Rules & Station SOP */}
+        {isSafeFoodPrepTool && (
+          <SafeFoodPrepRulesTool templateId={template.id} />
+        )}
+
         {/* 5. 14 Food Allergen Matrix & Kitchen Chart Tool */}
         {isAllergenTool && (
           <AllergenMatrixTool templateId={template.id} />
@@ -416,7 +447,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         )}
 
         {/* 7. Standard Poster / Reference Chart View (Fully Printable & Editable) */}
-        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && (
+        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && (
           <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-6 printable-doc shadow-sm">
             {/* Printable & Editable Sign-Off Header */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-2xl bg-amber-50/50 border border-amber-200/60 text-xs">
