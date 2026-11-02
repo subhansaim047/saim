@@ -45,6 +45,9 @@ export const CookieBanner: React.FC = () => {
 
     if (type === "accepted") {
       updateGoogleConsent("granted");
+      if (typeof window !== "undefined" && typeof (window as any).clarity === "function") {
+        (window as any).clarity("consent");
+      }
     } else {
       updateGoogleConsent("denied");
     }

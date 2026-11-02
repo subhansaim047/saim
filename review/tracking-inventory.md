@@ -42,3 +42,4 @@
 1. **Hosting & Edge Delivery:** Vercel Inc. (hosts the Next.js serverless application and technical access logs).
 2. **WhatsApp Direct Messaging:** Meta Platforms Ireland Ltd / WhatsApp LLC (initiated when user clicks "Discuss on WhatsApp" or submits a project brief).
 3. **Instagram:** Meta Platforms Inc. (external link in site footer: `@saim_agency`).
+4. **Behavioral Analytics & Session Replay:** Microsoft Corporation (Microsoft Clarity tag `z7342zyo0u` used for anonymous UX heatmaps and session recordings with sensitive field masking).
