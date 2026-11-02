@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-27",
+  "name": "Commercial Chicken Cooking Temperature Chart & Rotisserie Guide",
+  "slug": "chicken-temperature-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/chicken-temperature-chart",
+  "primary_keyword": "chicken cooking temperature chart uk commercial kitchen",
+  "secondary_keywords": [
+    "chicken core probe temperature fsa",
+    "commercial poultry cooking temperature haccp",
+    "chicken breast internal temperature catering",
+    "chicken thigh safe cooking temperature",
+    "printable chicken temperature chart"
+  ],
+  "search_intent": "Head chefs, rotisserie operators, and fast-casual chicken restaurants requiring statutory FSA core probe thermal lethality verification (75°C for 30s / 80°C for 6s / 82°C Scotland) to eliminate Campylobacter and Salmonella enterica.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Table"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/safety-hygiene/cooking-safely",
+      "features": "Authoritative regulatory statement of 75°C core temperature; lacks interactive timing calculators."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/poultry-cooking-temperatures/",
+      "features": "Educational guide with courses; static tables without portion weight adjustments."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/chicken-cooking-log",
+      "features": "Paywalled template subscription ($79/mo) requiring account registration."
+    },
+    {
+      "name": "Thermapen UK",
+      "url": "https://thermometer.co.uk/meat-temperatures",
+      "features": "Basic probe temperature lookup for domestic and catering kitchens."
+    },
+    {
+      "name": "Safe Food Pro",
+      "url": "https://safefoodpro.com/poultry-safety",
+      "features": "Proprietary software platform without instant free access."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive weight-based poultry roasting and rotisserie cook-time calculator",
+      "No multi-cut selector (whole bird, breast, bone-in thighs, wings) with exact probe insertion points",
+      "No instant validation of FSA equivalent time-temperature combinations (70°C 2m, 75°C 30s, 80°C 6s)",
+      "No high-contrast kitchen wall chart ready for instant A4 printing without watermarks"
+    ],
+    "our_differentiators": [
+      "Interactive commercial poultry calculator calculating exact oven duration and probe targets",
+      "Clear step-by-step anatomical probe guidance (thickest part avoiding bone cavity)",
+      "Full UK & Scotland regulatory compliance toggle (75°C vs 82°C)",
+      "A4 kitchen wall-sheet with supervisor verification and corrective action protocol"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.8,
+    "top_competitor_overall_score": 75.2
+  }
+}

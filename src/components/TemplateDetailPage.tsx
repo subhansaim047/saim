@@ -39,6 +39,7 @@ import { WalkInCoolerStorageChartTool } from "./tools/WalkInCoolerStorageChartTo
 import { FridgeTemperatureRecordTool } from "./tools/FridgeTemperatureRecordTool";
 import { FoodTraceabilityLogTool } from "./tools/FoodTraceabilityLogTool";
 import { HamCookingTemperatureTool } from "./tools/HamCookingTemperatureTool";
+import { MeatCookingTemperatureChartTool, MeatCategory } from "./tools/MeatCookingTemperatureChartTool";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
@@ -163,6 +164,27 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const isTraceabilityTool =
     template.slug === "food-traceability" ||
     template.slug.includes("traceability");
+
+  const isMeatCookingTool =
+    template.slug.includes("temperature-chart") &&
+    (template.slug.includes("venison") ||
+      template.slug.includes("chicken") ||
+      template.slug.includes("duck") ||
+      template.slug.includes("beef") ||
+      template.slug.includes("lamb") ||
+      template.slug.includes("pork") ||
+      template.slug.includes("ham") ||
+      template.slug.includes("turkey") ||
+      template.slug.includes("fish-temperature") ||
+      template.slug.includes("food-temperature"));
+
+  const initialMeat: MeatCategory =
+    template.slug.includes("venison") ? "venison" :
+    template.slug.includes("chicken") ? "chicken" :
+    template.slug.includes("duck") ? "duck" :
+    template.slug.includes("beef") ? "beef" :
+    template.slug.includes("lamb") ? "lamb" :
+    template.slug.includes("ham") ? "ham" : "chicken";
 
   const isHamCookingTool =
     template.slug === "ham-cooking-temperature-chart" ||
@@ -483,9 +505,9 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <FoodTraceabilityLogTool templateId={template.id} />
         )}
 
-        {/* 4j. Ham & Gammon Cooking Temperature & Core Probe Chart */}
-        {isHamCookingTool && (
-          <HamCookingTemperatureTool templateId={template.id} />
+        {/* 4j. Commercial Meat & Poultry Cooking Temperature Chart */}
+        {(isMeatCookingTool || isHamCookingTool) && (
+          <MeatCookingTemperatureChartTool templateId={template.id} initialMeat={initialMeat} />
         )}
 
         {/* 5. 14 Food Allergen Matrix & Kitchen Chart Tool */}
@@ -499,7 +521,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         )}
 
         {/* 7. Standard Poster / Reference Chart View (Fully Printable & Editable) */}
-        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && !isFoodCoolingTool && !isWalkInStorageTool && !isFridgeRecordTool && !isTraceabilityTool && !isHamCookingTool && (
+        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && !isFoodCoolingTool && !isWalkInStorageTool && !isFridgeRecordTool && !isTraceabilityTool && !isHamCookingTool && !isMeatCookingTool && (
           <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-6 printable-doc shadow-sm">
             {/* Printable & Editable Sign-Off Header */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-2xl bg-amber-50/50 border border-amber-200/60 text-xs">

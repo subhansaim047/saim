@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-30",
+  "name": "Lamb Cooking Temperature Chart & Roast Core Probe Calculator",
+  "slug": "lamb-temperature-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/lamb-temperature-chart",
+  "primary_keyword": "lamb cooking temperature chart uk commercial kitchen",
+  "secondary_keywords": [
+    "lamb cooking temperature chart fsa",
+    "roast leg of lamb core temperature catering",
+    "lamb cutlets internal temperature",
+    "pink lamb safe cooking guidelines uk",
+    "printable lamb temperature chart"
+  ],
+  "search_intent": "Commercial kitchens and roast carveries cooking whole legs, shoulders, racks, and noisettes of lamb, needing authoritative core temperature benchmarks and bone-avoiding probe protocols to meet FSA standards.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Table"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/safety-hygiene/cooking-safely",
+      "features": "General thermal advice; lacks cut-specific culinary times and temperatures."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/lamb-cooking-temperatures/",
+      "features": "Educational overview of lamb temperatures with course marketing."
+    },
+    {
+      "name": "AHDB Beef & Lamb",
+      "url": "https://ahdb.org.uk/lamb-roasting-guide",
+      "features": "Industry board culinary timings; consumer-oriented without commercial HACCP sign-off sheets."
+    },
+    {
+      "name": "Thermapen UK",
+      "url": "https://thermometer.co.uk/lamb-temperatures",
+      "features": "Digital probe reference table without weight or cut calculator."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/meat-temperature-log",
+      "features": "Commercial software locked behind subscription ($79/mo)."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive weight-based roasting time calculator for bone-in leg, rolled shoulder, and crown roast",
+      "No pink lamb whole muscle thermal safety validation vs rolled stuffed joints",
+      "No resting duration engine projecting final core temperature rise",
+      "No A4 commercial kitchen wall chart with probe calibration checks"
+    ],
+    "our_differentiators": [
+      "Interactive lamb calculator factoring joint weight, cut type, and preferred doneness",
+      "HACCP hazard analysis on rolled lamb vs intact cutlets to prevent internal contamination",
+      "Scotland 82°C regulatory toggle for comprehensive compliance across Great Britain",
+      "Printable A4 carvery wall poster with supervisor sign-off"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.5,
+    "top_competitor_overall_score": 74.5
+  }
+}

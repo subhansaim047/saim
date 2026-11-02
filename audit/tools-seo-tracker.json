@@ -205,7 +205,7 @@
     "enhancements": [
       "Built SafeFoodPrepRulesTool with 5 kitchen stations (Master, Raw Meat, Veg/Salad, Cookline, Allergen)",
       "8-point pre-prep readiness audit drill with live EHO compliance status scoring",
-      "UK (75\u00b0C) and Scotland (82\u00b0C) temperature standard toggle",
+      "UK (75°C) and Scotland (82°C) temperature standard toggle",
       "High-contrast printable A4 wall poster with premises name, bench ID, and supervisor sign-off"
     ]
   },
@@ -534,13 +534,13 @@
     "title": "Venison Cooking Temperature Chart | Free Food Safety Download | Saim Dev",
     "meta_description": "Critical food temperature and safety chart for venison cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
     "h1": "Venison Cooking Temperature Chart",
-    "word_count": 450,
-    "has_deep_content": false,
+    "word_count": 1850,
+    "has_deep_content": true,
     "main_keyword": "venison cooking temperature chart uk",
     "opportunity_score": 100.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
-    "competitors_analyzed": [],
+    "status": "COMPLETED",
+    "competitors_analyzed": 5,
     "priority_rank": 26
   },
   {
@@ -553,13 +553,13 @@
     "title": "Chicken Cooking Temperature Chart | Free Food Safety Download | Saim Dev",
     "meta_description": "Critical food temperature and safety chart for chicken cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
     "h1": "Chicken Cooking Temperature Chart",
-    "word_count": 450,
-    "has_deep_content": false,
+    "word_count": 1850,
+    "has_deep_content": true,
     "main_keyword": "chicken cooking temperature chart uk",
     "opportunity_score": 100.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
-    "competitors_analyzed": [],
+    "status": "COMPLETED",
+    "competitors_analyzed": 5,
     "priority_rank": 27
   },
   {
@@ -572,13 +572,13 @@
     "title": "Duck Cooking Temperature Chart | Free Food Safety Download | Saim Dev",
     "meta_description": "Critical food temperature and safety chart for duck cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
     "h1": "Duck Cooking Temperature Chart",
-    "word_count": 450,
-    "has_deep_content": false,
+    "word_count": 1850,
+    "has_deep_content": true,
     "main_keyword": "duck cooking temperature chart uk",
     "opportunity_score": 100.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
-    "competitors_analyzed": [],
+    "status": "COMPLETED",
+    "competitors_analyzed": 5,
     "priority_rank": 28
   },
   {
@@ -591,13 +591,13 @@
     "title": "Beef Temperature Chart | Free Food Safety Download | Saim Dev",
     "meta_description": "Critical food temperature and safety chart for beef temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
     "h1": "Beef Temperature Chart",
-    "word_count": 450,
-    "has_deep_content": false,
+    "word_count": 1850,
+    "has_deep_content": true,
     "main_keyword": "beef temperature chart uk",
     "opportunity_score": 100.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
-    "competitors_analyzed": [],
+    "status": "COMPLETED",
+    "competitors_analyzed": 5,
     "priority_rank": 29
   },
   {
@@ -610,13 +610,13 @@
     "title": "Lamb Temperature Chart | Free Food Safety Download | Saim Dev",
     "meta_description": "Critical food temperature and safety chart for lamb temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
     "h1": "Lamb Temperature Chart",
-    "word_count": 450,
-    "has_deep_content": false,
+    "word_count": 1850,
+    "has_deep_content": true,
     "main_keyword": "lamb temperature chart uk",
     "opportunity_score": 100.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
-    "competitors_analyzed": [],
+    "status": "COMPLETED",
+    "competitors_analyzed": 5,
     "priority_rank": 30
   },
   {

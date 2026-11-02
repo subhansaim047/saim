@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-28",
+  "name": "Duck Cooking Temperature Chart & Safe Confit Probe Guide",
+  "slug": "duck-cooking-temperature-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/duck-cooking-temperature-chart",
+  "primary_keyword": "duck cooking temperature chart uk commercial kitchen",
+  "secondary_keywords": [
+    "duck breast core temperature fsa",
+    "duck leg confit cooking temperature catering",
+    "duck internal probe chart commercial kitchen",
+    "pink duck breast safety haccp",
+    "printable duck cooking chart"
+  ],
+  "search_intent": "Fine-dining and gastro-pub chefs preparing duck breast (seared pink / medium) or whole roast duck needing FSA-compliant time-temperature pathogen lethality tables and core probe guidelines.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Table"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/safety-hygiene/duck-and-game-safety",
+      "features": "Regulatory advice on pink duck meat risk assessment; text-only without tools."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/cooking-duck-safely/",
+      "features": "Articles on food safety; static recommendations without cut-by-cut calculators."
+    },
+    {
+      "name": "Great British Chefs",
+      "url": "https://www.greatbritishchefs.com/how-to-cook/how-to-cook-duck-breast",
+      "features": "Culinary guidance for consumer and professional chefs; no HACCP validation sheets."
+    },
+    {
+      "name": "ThermoWorks",
+      "url": "https://blog.thermoworks.com/poultry/duck-temperature-guide",
+      "features": "Hardware blog with temperature advice; lacks UK-specific regulatory compliance steps."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/meat-temperature-log",
+      "features": "Subscription software ($79/mo) hiding tools behind account sign-up."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive weight-based roasting and confit time calculator for catering volumes",
+      "No clear thermal validation breakdown for pink duck breasts vs thoroughly cooked whole birds",
+      "No resting heat carryover calculation engine for precision service timing",
+      "No free downloadable high-contrast A4 kitchen wall chart"
+    ],
+    "our_differentiators": [
+      "Interactive cut selector (whole roast duck, seared pink breast, slow-cooked confit leg)",
+      "Detailed microbial safety guide explaining surface searing lethality on whole muscle cuts",
+      "Carryover heat projection allowing chefs to pull at exact core temperatures before resting",
+      "Free A4 commercial kitchen wall chart with shift sign-off"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.2,
+    "top_competitor_overall_score": 74.0
+  }
+}

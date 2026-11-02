@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-26",
+  "name": "Venison Cooking Temperature Chart & Core Probe Guide",
+  "slug": "venison-cooking-temperature-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/venison-cooking-temperature-chart",
+  "primary_keyword": "venison cooking temperature chart uk commercial kitchen",
+  "secondary_keywords": [
+    "wild venison core temperature fsa",
+    "farmed venison loin roasting temperature",
+    "venison haunch core probe catering",
+    "game meat haccp cooking standards",
+    "printable venison temperature poster"
+  ],
+  "search_intent": "Professional game chefs, gastro-pub cooks, and butchery kitchens preparing wild or farmed venison looking for exact core probe temperatures, resting periods, and parasite inactivation standards (Toxoplasma & Salmonella).",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Table"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/safety-hygiene/wild-game",
+      "features": "General wild game hygienic processing guidelines with basic 75°C core reference."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/meat-cooking-temperatures/",
+      "features": "Broad meat temperature overview without dedicated wild game or haunch/loin distinctions."
+    },
+    {
+      "name": "British Game Assurance (BGA)",
+      "url": "https://www.britishgameassurance.co.uk/cooking-venison",
+      "features": "Culinary game recipes with recommended doneness but lacking commercial kitchen HACCP logs."
+    },
+    {
+      "name": "Thermapen / ETI UK",
+      "url": "https://thermometer.co.uk/meat-temperatures",
+      "features": "Digital thermometer reference table without weight-based cook time calculator."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/meat-temperature-log",
+      "features": "Paywalled compliance software ($79/mo) requiring user signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No cut-specific roasting calculator for haunch, loin, steaks, or slow-braised shanks",
+      "No distinction between wild shot venison parasite risk vs farmed venison handling",
+      "No Scotland 82°C vs England/Wales 75°C core thermal toggle",
+      "No printable high-contrast commercial kitchen A4 chart with supervisor verification"
+    ],
+    "our_differentiators": [
+      "Interactive multi-species commercial meat cooking calculator with dedicated Venison cut profile",
+      "Rigorous thermal lethality guide addressing Toxoplasma gondii and Salmonella enterica",
+      "Scottish Food Hygiene regulations toggle (82°C instant core lethality)",
+      "Print-ready high-contrast A4 poster with calibration and supervisor signature blocks"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.4,
+    "top_competitor_overall_score": 73.6
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-29",
+  "name": "Commercial Beef Temperature Chart & Steak Doneness Calculator",
+  "slug": "beef-temperature-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/beef-temperature-chart",
+  "primary_keyword": "beef cooking temperature chart uk commercial kitchen",
+  "secondary_keywords": [
+    "beef core probe temperature fsa",
+    "steak cooking temperature chart catering",
+    "roast beef joint cooking time per kg",
+    "rare beef safety guidelines haccp",
+    "printable beef temperature chart"
+  ],
+  "search_intent": "Steakhouse chefs, carvery operations, and catering kitchens seeking FSA-compliant core temperatures for rare, medium-rare, medium, and well-done beef, along with searing surface pathogen destruction protocols for whole muscle cuts.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Table"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/safety-hygiene/less-thoroughly-cooked-beef",
+      "features": "Official guidelines on serving rare beef and whole muscle steaks safely; strict legal language."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/beef-cooking-temperatures/",
+      "features": "Informative hub article covering doneness levels; static text and charts."
+    },
+    {
+      "name": "Steak School by Stanbroke",
+      "url": "https://steakschool.com/learn/steak-temperature-chart/",
+      "features": "Steak enthusiast resource; non-commercial focus without EHO audit parameters."
+    },
+    {
+      "name": "Thermapen UK",
+      "url": "https://thermometer.co.uk/beef-cooking-temperatures",
+      "features": "Temperature lookup guide tied to commercial hardware."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/beef-temperature-log",
+      "features": "Compliance platform with paywall ($79/mo)."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive roasting time calculator per kg with joint style selection (rib-eye, topside, striploin)",
+      "No dynamic doneness core temperature matrix (Rare 52°C, Med-Rare 55°C, Med 60°C, Well 75°C)",
+      "No explicit HACCP clarification between intact whole muscle beef and rolled/mechanically tenderized joints",
+      "No high-resolution A4 kitchen reference poster for chef de partie pass stations"
+    ],
+    "our_differentiators": [
+      "Interactive beef doneness calculator calculating resting carryover and oven timings",
+      "Full EHO compliance notes detailing 2-minute searing protocols for rare steak serving",
+      "Scotland 82°C statutory requirement toggle for minced and rolled beef products",
+      "Printable A4 chef pass wall poster with supervisor log entries"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.6,
+    "top_competitor_overall_score": 76.0
+  }
+}

@@ -591,13 +591,13 @@
     ]
   },
   "venison-cooking-temperature-chart": {
-    "title": "Free Venison Cooking Temperature Chart Template | Saim Dev",
-    "desc": "Free venison cooking temperature chart template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Venison Cooking Temperature Chart | Saim Dev",
+    "desc": "Free venison cooking temperature chart for UK commercial kitchens. Calculate haunch roasting times and safe core temperatures for wild game catering.",
     "howTo": [
-      "Download and print the Venison Cooking Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Select the venison cut: whole roasting haunch, prime loin saddle medallions, or wild game burgers.",
+      "Input the raw joint weight to calculate oven roasting time and required resting period under foil.",
+      "Insert an antibacterial sanitized probe thermometer into the geometric center of the meat cut.",
+      "Ensure whole intact loins reach at least 55\u00b0C (medium-rare) or 60\u00b0C (haunch), while game mince reaches 75\u00b0C."
     ]
   },
   "food-temperatures-poster": {
@@ -611,13 +611,13 @@
     ]
   },
   "chicken-temperature-chart": {
-    "title": "Free Chicken Cooking Temperature Chart Template | Saim Dev",
-    "desc": "Free chicken cooking temperature chart template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Chicken Cooking Temperature Chart | Saim Dev",
+    "desc": "Free chicken cooking temperature chart for UK commercial kitchens. Verify 75\u00b0C core temperatures to eliminate Campylobacter and Salmonella risks.",
     "howTo": [
-      "Download and print the Chicken Cooking Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Select the poultry cut: whole roasting bird, bone-in thighs/legs, boneless breasts, or chicken livers.",
+      "Never wash raw chicken under taps to prevent spreading Campylobacter droplets across work surfaces.",
+      "Probe the thickest part of the inner thigh without touching bone; hold reading for at least 30 seconds.",
+      "Verify internal core reaches at least 75\u00b0C (82\u00b0C in Scotland) and juices run completely clear before serving."
     ]
   },
   "opening-a-restaurant-checklist": {
@@ -641,23 +641,23 @@
     ]
   },
   "duck-cooking-temperature-chart": {
-    "title": "Free Duck Cooking Temperature Chart Template | Saim Dev",
-    "desc": "Free duck cooking temperature chart template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free Duck Cooking Temperature Chart | Saim Dev",
+    "desc": "Free duck cooking temperature chart for UK commercial kitchens. Accurate core probing guidance for whole roast duck, confit legs, and seared breasts.",
     "howTo": [
-      "Download and print the Duck Cooking Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Identify duck dish: whole roasted duck, slow-rendered confit leg, or pan-seared duck breast.",
+      "Cook whole birds to a minimum core temperature of 75\u00b0C for 30 seconds (82\u00b0C in Scotland).",
+      "If serving seared duck breast pink (62\u00b0C), enforce strict HACCP supplier accreditation and log batch times.",
+      "Cool leftover roasted duck meat to under 8\u00b0C within 90 minutes before chilling."
     ]
   },
   "beef-temperature-chart": {
-    "title": "Free Beef Temperature Chart Template | Saim Dev",
-    "desc": "Download our free beef temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Beef Cooking Temperature Chart | Saim Dev",
+    "desc": "Free beef temperature chart for UK commercial kitchens. Rare, medium, and well-done core limits with mandatory 75\u00b0C cooking rules for minced burgers.",
     "howTo": [
-      "Download and print the Beef Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Distinguish between intact whole muscle cuts (steaks, roasts) and non-intact meats (mince, rolled joints).",
+      "Sear all external surfaces of intact beef joints; internal core can be medium-rare (54\u00b0C) or medium (60\u00b0C).",
+      "All minced beef burgers, rolled briskets, and kebabs must strictly achieve 75\u00b0C core for 30 seconds.",
+      "Maintain cooked carvery beef joints on hot holding units at or above 63\u00b0C continuously."
     ]
   },
   "turkey-cooking-chart": {
@@ -671,13 +671,13 @@
     ]
   },
   "lamb-temperature-chart": {
-    "title": "Free Lamb Temperature Chart Template | Saim Dev",
-    "desc": "Download our free lamb temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Lamb Cooking Temperature Chart | Saim Dev",
+    "desc": "Free lamb cooking temperature chart for UK commercial kitchens. Calculate roasting times for leg, shoulder, and rack of lamb with safe core limits.",
     "howTo": [
-      "Download and print the Lamb Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Select the lamb joint: bone-in leg of lamb, French-trimmed rack, rolled shoulder, or minced koftas.",
+      "Weigh joint to calculate roasting time per kilogram plus mandatory 15-20 minute post-roast resting under foil.",
+      "Probe thickest meat center: medium-rare intact racks (58\u00b0C), medium roast leg (65\u00b0C), or rolled shoulder (75\u00b0C).",
+      "Minced lamb preparations must reach at least 75\u00b0C for 30 seconds throughout the thermal core."
     ]
   },
   "fish-temperature-chart": {
