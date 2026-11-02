@@ -1035,13 +1035,14 @@
     ]
   },
   "gmp-audit-checklist": {
-    "title": "Free GMP Audit Checklist - Template | Saim Dev",
-    "desc": "Free gmp audit checklist - template template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free GMP Audit Checklist Template | Saim Dev",
+    "desc": "Master Good Manufacturing Practice compliance across food processing lines. Free GMP audit checklist covering PRPs, pest control, hygiene, and staff.",
     "howTo": [
-      "Download and print the GMP Audit Checklist - Template for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit personnel hygiene: verify clean protective uniforms, hairnets, beard snoods, and handwash basins.",
+      "Inspect facility fabric: verify floors, walls, and ceilings are smooth, impervious, and crack-free.",
+      "Check raw material storage: ensure colour-coded allergen segregation and strict temperature compliance.",
+      "Verify equipment preventative maintenance schedules, calibration logs, and food-contact surface swabbing.",
+      "Log findings, categorise non-conformances, and establish immediate corrective actions with assigned owners."
     ]
   },
   "food-production-gmp-audit-checklist": {
@@ -1056,23 +1057,25 @@
     ]
   },
   "gfsi-audit-checklist": {
-    "title": "Free How To Get GFSI Certified? Template | Saim Dev",
-    "desc": "Download this free how to get gfsi certified? template for commercial catering and takeaway kitchens. Formatted for instant A4 printing and record keeping.",
+    "title": "Free GFSI Audit Checklist Guide | Saim Dev",
+    "desc": "Prepare for BRCGS, SQF, and FSSC 22000 certification audits. Free GFSI audit checklist covering management commitment, HACCP checks, and recall tests.",
     "howTo": [
-      "Download and print the How To Get GFSI Certified? for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Review senior management commitment: verify documented food safety culture policy and executive review minutes.",
+      "Audit HACCP plan: validate critical control limits (e.g. 75°C core for 30s) against scientific evidence.",
+      "Inspect environmental pathogen monitoring programme and review zone-by-zone swabbing trend analysis.",
+      "Execute 4-hour mock recall exercise and confirm 100% mass-balance reconciliation across production batches.",
+      "Review supplier assurance records, TACCP threat assessments, and VACCP food fraud vulnerability studies."
     ]
   },
   "get-iso-22000-certified": {
-    "title": "Free How To Get ISO 22000 Certified? Template | Saim Dev",
-    "desc": "Free how to get iso 22000 certified? template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free ISO 22000 Certification Checklist | Saim Dev",
+    "desc": "Follow a step-by-step 10-stage roadmap to achieve ISO 22000 certification. Free implementation checklist covering PRPs, CCP validation, and Stage 2 audits.",
     "howTo": [
-      "Download and print the How To Get ISO 22000 Certified? for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Establish FSMS context, define food safety scope, and map interested party statutory requirements.",
+      "Secure executive commitment, publish Food Safety Policy, and appoint certified Food Safety Team Leader.",
+      "Implement sector-specific Prerequisite Programmes (PRPs) according to ISO/TS 22002-1 technical standards.",
+      "Conduct hazard identification, determine acceptable levels, and categorise control measures into CCPs and OPRPs.",
+      "Complete full internal audit cycle across Clauses 4 to 10, execute Stage 1 audit, and clear findings for Stage 2."
     ]
   },
   "fsma-food-traceability-list": {
@@ -1096,23 +1099,25 @@
     ]
   },
   "sqf-audit-checklist": {
-    "title": "Free SQF Internal Audit Checklist | Template | Saim Dev",
-    "desc": "Free sqf internal audit checklist | download free template template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "title": "Free SQF Audit Checklist Template | Saim Dev",
+    "desc": "Streamline Safe Quality Food Edition 9 compliance with an interactive audit tool. Free SQF checklist covering Module 2 system elements and Module 11 GMPs.",
     "howTo": [
-      "Download and print the SQF Internal Audit Checklist | Download Free Template for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Verify Module 2 management commitment: inspect SQF Practitioner credentials and document control registers.",
+      "Audit Module 2.4 food safety plan: review HACCP flow diagrams, critical limits, and monitoring frequencies.",
+      "Test product identification, trace, and recall: verify bi-annual 4-hour mass-balance mock recall records.",
+      "Inspect Module 11 premises construction: verify sanitary drainage, shatterproof lighting, and pest proofing.",
+      "Challenge foreign matter detection: test inline metal detectors hourly with certified Fe, Non-Fe, and SS wands."
     ]
   },
   "iso-22000-internal-audit-checklist": {
-    "title": "Free ISO 22000 Internal Audit Checklist Template | Saim Dev",
-    "desc": "Free iso 22000 internal audit checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free ISO 22000 Internal Audit Checklist | Saim Dev",
+    "desc": "Conduct rigorous ISO 22000:2018 internal audits across Clauses 4 to 10. Free interactive checklist with evidence logging and non-conformance tracking.",
     "howTo": [
-      "Download and print the ISO 22000 Internal Audit Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Plan internal audit schedule: assign impartial, qualified auditors and define scope for Clauses 4 through 10.",
+      "Audit Clause 5 leadership and Clause 6 risk planning: review food safety culture metrics and measurable KPIs.",
+      "Examine Clause 7 support: verify equipment calibration certificates, staff competency files, and document controls.",
+      "Audit Clause 8 operations: review PRP monitoring, hazard control plan execution, and non-conformance quarantine.",
+      "Evaluate Clause 9 performance and Clause 10 improvement: log audit findings, issue CARs, and track corrective action closure."
     ]
   },
   "fsma-compliance-checklist": {

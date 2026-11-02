@@ -1249,6 +1249,243 @@ const KOSHER_CERTIFICATION_TASKS: CheckItem[] = [
   }
 ];
 
+
+const GFSI_AUDIT_TASKS: CheckItem[] = [
+  {
+    id: "gfsi-1",
+    category: "Senior Management Commitment",
+    task: "Documented Food Safety Culture policy active, measurable safety objectives published, quarterly executive review minutes recorded, and confidential employee reporting channels operational.",
+    status: "pass",
+    actionNotes: "Q4 executive food safety review minutes signed"
+  },
+  {
+    id: "gfsi-2",
+    category: "HACCP & Hazard Control",
+    task: "Multidisciplinary HACCP plan validated on-site; critical control limits confirmed against scientific literature (e.g. 75°C core for 30s or 70°C for 2 min); daily monitoring records signed off.",
+    status: "pass",
+    actionNotes: "All CCP thermal logs verified compliant"
+  },
+  {
+    id: "gfsi-3",
+    category: "Environmental Monitoring & Hygiene",
+    task: "Documented environmental pathogen swabbing plan active in high-care zones targeting Listeria monocytogenes and Salmonella; results trended with clear quarantine trigger limits.",
+    status: "pass",
+    actionNotes: "Zone 1 food-contact surfaces negative on latest swab"
+  },
+  {
+    id: "gfsi-4",
+    category: "Allergen Management & Natasha's Law",
+    task: "All 14 statutory allergens segregated in designated colour-coded bins; dedicated purple utensils used; verified wet cleaning washdown and lateral flow swab tests recorded between runs.",
+    status: "pass",
+    actionNotes: "Post-sanitisation ELISA test negative"
+  },
+  {
+    id: "gfsi-5",
+    category: "Traceability & Mass-Balance Recall",
+    task: "Annual mock recall completed within a strict 4-hour window, achieving 100% mass-balance reconciliation across raw ingredients, packaging, work-in-progress, and distributed finished stock.",
+    status: "pass",
+    actionNotes: "Mass-balance reconciled 99.8% within 3 hours 15 mins"
+  },
+  {
+    id: "gfsi-6",
+    category: "Supplier Assurance & Food Defense",
+    task: "Approved supplier programme verified against GFSI certification databases; Food Defense (TACCP) threat assessment and Food Fraud (VACCP) vulnerability assessments documented and active.",
+    status: "pass",
+    actionNotes: "Raw material supplier certificates up-to-date"
+  }
+];
+
+const ISO_22000_CERTIFICATION_TASKS: CheckItem[] = [
+  {
+    id: "iso-cert-1",
+    category: "Stage 1: Context & Scope",
+    task: "Document internal and external food safety issues, define interested party expectations, and establish formal scope of the Food Safety Management System (FSMS) (Clause 4).",
+    status: "pass",
+    actionNotes: "FSMS scope document approved by steering committee"
+  },
+  {
+    id: "iso-cert-2",
+    category: "Stage 2: Leadership & Commitment",
+    task: "Top management publishes Food Safety Policy, assigns organisational roles and authorities, and appoints certified Food Safety Team Leader (Clause 5).",
+    status: "pass",
+    actionNotes: "Food Safety Team Leader appointment charter signed"
+  },
+  {
+    id: "iso-cert-3",
+    category: "Stage 3: Prerequisite Programmes (PRPs)",
+    task: "Implement and document sector-specific PRPs (ISO/TS 22002-1) covering facility layout, utilities, waste disposal, equipment suitability, pest management, and personnel hygiene.",
+    status: "pass",
+    actionNotes: "ISO/TS 22002-1 gap audit completed"
+  },
+  {
+    id: "iso-cert-4",
+    category: "Stage 4: Hazard Analysis & CCPs/OPRPs",
+    task: "Conduct comprehensive hazard identification; determine acceptable levels; categorise control measures into Operational PRPs (OPRPs) or Critical Control Points (CCPs) via logical decision matrix.",
+    status: "pass",
+    actionNotes: "Hazard assessment matrix signed off by HACCP team"
+  },
+  {
+    id: "iso-cert-5",
+    category: "Stage 5: Validation of Control Measures",
+    task: "Validate CCP critical limits and OPRP action criteria prior to implementation using experimental trials, thermal validation data, and statutory standards (Clause 8.5.3).",
+    status: "pass",
+    actionNotes: "Core temperature lethality curves validated"
+  },
+  {
+    id: "iso-cert-6",
+    category: "Stage 6: Monitoring & Corrective Action",
+    task: "Establish continuous monitoring systems, calibrated digital probes, and predetermined corrective action protocols for CCP breaches and OPRP non-conformities.",
+    status: "pass",
+    actionNotes: "Digital data-logger alert thresholds configured"
+  },
+  {
+    id: "iso-cert-7",
+    category: "Stage 7: Full Internal Audit Cycle",
+    task: "Execute formal internal audit programme covering all ISO 22000:2018 clauses (4 to 10) using independent trained auditors; log findings in corrective action tracker.",
+    status: "pass",
+    actionNotes: "Internal audit completed with 2 minor findings closed"
+  },
+  {
+    id: "iso-cert-8",
+    category: "Stage 8: Executive Management Review",
+    task: "Convene executive management review meeting evaluating FSMS performance, customer feedback, audit results, resource adequacy, and continual improvement initiatives.",
+    status: "pass",
+    actionNotes: "Executive review minutes and resource budget recorded"
+  },
+  {
+    id: "iso-cert-9",
+    category: "Stage 9: Stage 1 Certification Audit",
+    task: "Host accredited certification body auditor for Stage 1 document review; evaluate FSMS preparedness, regulatory permits, and PRP readiness.",
+    status: "pass",
+    actionNotes: "Stage 1 audit passed; approved for Stage 2 on-site"
+  },
+  {
+    id: "iso-cert-10",
+    category: "Stage 10: Stage 2 On-Site Certification",
+    task: "Undergo on-site Stage 2 certification assessment: demonstrate operational adherence, staff competency, CCP controls, and traceability under live operating conditions.",
+    status: "pending",
+    actionNotes: "Stage 2 on-site audit scheduled for next month"
+  }
+];
+
+const SQF_AUDIT_TASKS: CheckItem[] = [
+  {
+    id: "sqf-1",
+    category: "Module 2.1: Management Commitment",
+    task: "Food safety policy statement signed and displayed; designated SQF Practitioner appointed with full HACCP training; monthly executive food safety meetings minuted.",
+    status: "pass",
+    actionNotes: "SQF Practitioner certificate on file"
+  },
+  {
+    id: "sqf-2",
+    category: "Module 2.2: Document Control & Records",
+    task: "Food safety manual maintained with revision controls; all critical monitoring logs, inspection records, and calibration certificates securely archived.",
+    status: "pass",
+    actionNotes: "Electronic register updated with version control"
+  },
+  {
+    id: "sqf-3",
+    category: "Module 2.4: Food Safety Plan (HACCP)",
+    task: "Comprehensive HACCP plan formulated according to CODEX principles, validated with scientific data, and reviewed annually or upon recipe change.",
+    status: "pass",
+    actionNotes: "Annual HACCP reassessment documented"
+  },
+  {
+    id: "sqf-4",
+    category: "Module 2.6: Traceability & Recall",
+    task: "Mock recall test conducted bi-annually demonstrating 100% mass-balance reconciliation of finished product, ingredients, and rework within 4 hours.",
+    status: "pass",
+    actionNotes: "Traceability exercise achieved 100% in 2h 45m"
+  },
+  {
+    id: "sqf-5",
+    category: "Module 2.8: Allergen Management",
+    task: "Allergen management plan active; incoming allergens identified and quarantined; dedicated colour-coded handling tools used; cleaning verified with ATP and allergen swabs.",
+    status: "pass",
+    actionNotes: "Protein swab tests verified clean prior to start-up"
+  },
+  {
+    id: "sqf-6",
+    category: "Module 11.2: Construction of Premises",
+    task: "Floors, walls, doors, and ceilings constructed of impervious, non-toxic materials; drainage sloped toward grease traps; overhead lighting protected with shatterproof diffusers.",
+    status: "pass",
+    actionNotes: "Facility fabric audit completed"
+  },
+  {
+    id: "sqf-7",
+    category: "Module 11.3: Personnel Hygiene & Welfare",
+    task: "Staff follow protective clothing policy; handwash basins equipped with warm water (35°C to 40°C), antibacterial soap, and disposable paper towels; sickness reporting enforced.",
+    status: "pass",
+    actionNotes: "Hand hygiene training audited on floor"
+  },
+  {
+    id: "sqf-8",
+    category: "Module 11.7: Foreign Matter Detection",
+    task: "Inline metal detectors and optical sorters tested and challenged at start of shift, end of shift, and hourly with certified test pieces; reject mechanisms functional.",
+    status: "pass",
+    actionNotes: "Hourly metal detector test logs verified"
+  }
+];
+
+const ISO_22000_INTERNAL_AUDIT_TASKS: CheckItem[] = [
+  {
+    id: "iso-audit-1",
+    category: "Clause 4: Context of the Organisation",
+    task: "Determine external and internal issues affecting food safety outcomes; map stakeholder needs; define and document the boundaries and applicability of the FSMS.",
+    status: "pass",
+    actionNotes: "Context analysis matrix reviewed and updated"
+  },
+  {
+    id: "iso-audit-2",
+    category: "Clause 5: Leadership & Commitment",
+    task: "Top management demonstrates active leadership; ensures food safety policy is communicated and understood; establishes organizational roles, responsibilities, and authorities.",
+    status: "pass",
+    actionNotes: "Leadership interviews confirmed policy awareness"
+  },
+  {
+    id: "iso-audit-3",
+    category: "Clause 6: Planning for the FSMS",
+    task: "Risk and opportunity assessment completed; measurable food safety objectives established across relevant functions and verified against continuous improvement plans.",
+    status: "pass",
+    actionNotes: "FSMS quality objectives reviewed against KPIs"
+  },
+  {
+    id: "iso-audit-4",
+    category: "Clause 7: Support & Resources",
+    task: "Adequate infrastructure, hygiene facilities, and monitoring equipment provided; staff competency verified through training records; documented information controlled.",
+    status: "pass",
+    actionNotes: "Staff food hygiene training records verified"
+  },
+  {
+    id: "iso-audit-5",
+    category: "Clause 8: Operation & Hazard Control",
+    task: "PRPs operational; hazard analysis conducted; CCPs and OPRPs monitored continuously within validated critical limits; emergency preparedness protocols documented.",
+    status: "pass",
+    actionNotes: "CCP thermal kill logs confirmed fully compliant"
+  },
+  {
+    id: "iso-audit-6",
+    category: "Clause 8.9: Non-Conforming Products",
+    task: "Clear procedures for quarantining non-conforming product lots; corrective action root cause investigations logged; disposition authorised by Food Safety Team Leader.",
+    status: "pass",
+    actionNotes: "Quarantine cage locked and disposal log verified"
+  },
+  {
+    id: "iso-audit-7",
+    category: "Clause 9: Performance Evaluation",
+    task: "Internal audit schedule executed by competent, impartial auditors; monitoring and measurement data analysed; executive management review conducted at planned intervals.",
+    status: "pass",
+    actionNotes: "Clause 9.2 internal audit plan executed on schedule"
+  },
+  {
+    id: "iso-audit-8",
+    category: "Clause 10: Continual Improvement",
+    task: "Non-conformities and audit findings addressed with preventive and corrective actions; FSMS systematically updated to reflect new operational changes and scientific standards.",
+    status: "pass",
+    actionNotes: "Corrective action log verified with 100% closure"
+  }
+];
+
 const DEFAULT_GENERAL_TASKS: CheckItem[] = [
   {
     id: "1",
@@ -1308,6 +1545,19 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     { id: "5", unit: "Raw Poultry Cooking Core", target: ">= 75°C", time: "12:10", temp: "78.5°C", signedBy: "MB", status: "pass" }
   ]);
 
+  const isGfsi =
+    templateTitle.toLowerCase().includes("gfsi") ||
+    (templateId && templateId.includes("gfsi"));
+  const isIsoCert =
+    templateTitle.toLowerCase().includes("get-iso-22000") ||
+    templateTitle.toLowerCase().includes("get iso 22000") ||
+    (templateId && templateId.includes("get-iso-22000"));
+  const isSqfAudit =
+    templateTitle.toLowerCase().includes("sqf") ||
+    (templateId && templateId.includes("sqf"));
+  const isIsoInternalAudit =
+    (templateTitle.toLowerCase().includes("iso 22000") && templateTitle.toLowerCase().includes("internal")) ||
+    (templateId && templateId.includes("iso-22000-internal"));
   const isBrcAudit =
     templateTitle.toLowerCase().includes("brc") ||
     (templateId && templateId.includes("brc"));
@@ -1409,7 +1659,11 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
 
   // Checklist Tasks
   const [tasks, setTasks] = useState<CheckItem[]>(() => {
-        if (isBrcAudit) return BRC_AUDIT_TASKS;
+        if (isGfsi) return GFSI_AUDIT_TASKS;
+    if (isIsoCert) return ISO_22000_CERTIFICATION_TASKS;
+    if (isSqfAudit) return SQF_AUDIT_TASKS;
+    if (isIsoInternalAudit) return ISO_22000_INTERNAL_AUDIT_TASKS;
+    if (isBrcAudit) return BRC_AUDIT_TASKS;
     if (isKosher) return KOSHER_CERTIFICATION_TASKS;
     if (isFiveWhys) return FIVE_WHYS_RCA_TASKS;
     if (isHoodCleaning) return HOOD_CLEANING_TASKS;

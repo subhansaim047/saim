@@ -4428,6 +4428,216 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       title: "SFBB Daily Kitchen Opening and Closing Checklist Guide",
       slug: "sfbb-daily-kitchen-opening-closing-checklist-guide"
     }
+  },
+  "gmp-audit-checklist": {
+    directAnswer:
+      "A Good Manufacturing Practice (GMP) audit checklist verifies that a food processing facility adheres to foundational hygiene, environmental, and operational standards required by UK food hygiene regulations and Codex Alimentarius. Conducting systematic GMP audits ensures personnel hygiene, facility sanitation, pest barriers, and allergen controls are operating effectively to prevent contamination.",
+    howTo: [
+      "Audit personnel hygiene: verify staff wear clean protective uniforms, hairnets, beard snoods, and wash hands at designated stations upon entering production.",
+      "Inspect facility infrastructure: check floors, walls, and ceilings for smooth, impervious surfaces with no cracks, condensation, or flaking paint.",
+      "Review raw ingredient storage: confirm colour-coded allergen segregation, raw and ready-to-eat separation, and chiller temperatures maintained below 5.0°C.",
+      "Examine equipment maintenance: inspect preventative maintenance logs, sanitary welds, oil seals, and annual calibration certificates for thermometer probes.",
+      "Log audit findings, categorise non-conformances into minor, major, or critical, and assign corrective action owners with completion deadlines."
+    ],
+    faqs: [
+      {
+        q: "How frequently should a food manufacturing plant conduct internal GMP audits?",
+        a: "High-care and ready-to-eat food facilities typically conduct GMP audits on a monthly or bi-weekly cycle, with individual operational sections (e.g. hygiene, pest control, equipment condition) audited on a rotating weekly schedule."
+      },
+      {
+        q: "What is the difference between GMP and HACCP?",
+        a: "GMPs (Good Manufacturing Practices) are the foundational prerequisite programmes (PRPs) that establish a clean, controlled environment across the entire plant. HACCP is a product- and process-specific food safety plan that targets specific microbiological, chemical, and physical hazards at critical control points."
+      },
+      {
+        q: "What are the common non-conformances discovered during GMP audits?",
+        a: "Frequent findings include broken or missing handwash station supplies (soap/paper towels), damaged rubber door sweeps allowing pest ingress, unlabelled allergen scoops, water pooling due to poor floor drainage slope, and flaking paint on overhead structures."
+      },
+      {
+        q: "How does a structured GMP audit checklist support GFSI certification?",
+        a: "GFSI-benchmarked schemes such as BRCGS, SQF, and FSSC 22000 require robust prerequisite programmes. Documented GMP audit records with evidence of root-cause corrective actions serve as mandatory compliance evidence during third-party certification audits."
+      },
+      {
+        q: "Can this GMP audit checklist be used for warehouse and distribution facilities?",
+        a: "Yes. The checklist can be adapted for ambient, chilled, and frozen storage facilities by focusing on pallet condition, vehicle cleanliness, pest monitoring, temperature logging, and stock rotation (FIFO)."
+      }
+    ],
+    relatedTools: [
+      "gfsi-audit-checklist",
+      "haccp-plan-template",
+      "commercial-kitchen-cleaning-checklist"
+    ],
+    relatedBlog: {
+      title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist",
+      slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
+    }
+  },
+  "gfsi-audit-checklist": {
+    directAnswer:
+      "A GFSI audit checklist prepares food manufacturers and processors for third-party audits benchmarked by the Global Food Safety Initiative (GFSI), such as BRCGS Global Standard for Food Safety, SQF Code, and FSSC 22000. It covers senior management commitment, HACCP validation, environmental monitoring, mock recalls, and supply chain security.",
+    howTo: [
+      "Evaluate senior management commitment: review documented Food Safety Culture initiatives, measurable safety objectives, and quarterly executive review minutes.",
+      "Audit HACCP plan: verify process flow diagrams against live production and confirm critical control limits are validated with scientific literature.",
+      "Review environmental monitoring: audit pathogen swabbing trends for Listeria monocytogenes and Salmonella in high-risk post-lethality areas.",
+      "Execute traceability exercise: conduct an unannounced mock recall and confirm 100% mass-balance reconciliation across ingredients and finished batches within 4 hours.",
+      "Verify supplier assurance: inspect approved vendor files, TACCP threat assessments for food defense, and VACCP vulnerability studies for food fraud."
+    ],
+    faqs: [
+      {
+        q: "What standards are benchmarked under the Global Food Safety Initiative (GFSI)?",
+        a: "Major GFSI-benchmarked standards include BRCGS Global Standard for Food Safety, SQF (Safe Quality Food) Code, FSSC 22000, IFS Food, and GlobalGAP. Certification to any benchmarked scheme is internationally recognised by major retailers and food service operators."
+      },
+      {
+        q: "What is the mandatory mock recall window required for GFSI audits?",
+        a: "GFSI benchmarked standards, including BRCGS Issue 9 and SQF Edition 9, require a complete traceability and mass-balance recall exercise to be executed and reconciled within a maximum timeframe of 4 hours."
+      },
+      {
+        q: "How does GFSI audit readiness differ from standard local council EHO inspections?",
+        a: "While UK Local Authority EHO audits evaluate statutory compliance with Food Hygiene Regulations (EC 852/2004), GFSI audits evaluate a comprehensive management system including food safety culture, supplier approval, foreign body prevention, validation data, and continuous improvement."
+      },
+      {
+        q: "What is Food Safety Culture in a GFSI audit context?",
+        a: "Food Safety Culture refers to the shared values, beliefs, and operational norms affecting food safety attitudes across all levels of an organisation, evidenced through clear whistleblowing channels, staff training, management investment, and employee engagement."
+      },
+      {
+        q: "How often are GFSI certification audits conducted?",
+        a: "GFSI certification audits occur annually. Facilities typically undergo announced audits, with accredited certification bodies also requiring unannounced audits at least once every three years."
+      }
+    ],
+    relatedTools: [
+      "gmp-audit-checklist",
+      "brc-audit",
+      "sqf-audit-checklist"
+    ],
+    relatedBlog: {
+      title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    }
+  },
+  "get-iso-22000-certified": {
+    directAnswer:
+      "Getting ISO 22000 certified involves implementing a globally recognized Food Safety Management System (FSMS) based on ISO 22000:2018. The certification roadmap encompasses 10 systematic phases: context definition, leadership commitment, hazard analysis, prerequisite programmes (PRPs), CCP and OPRP validation, internal audits, management reviews, Stage 1 documentation assessment, and Stage 2 on-site certification.",
+    howTo: [
+      "Phase 1 & 2: Define FSMS scope, identify internal/external food safety issues, secure leadership commitment, and appoint the Food Safety Team Leader.",
+      "Phase 3 & 4: Implement sector-specific Prerequisite Programmes (ISO/TS 22002-1) and execute hazard analysis to categorise control measures into CCPs and OPRPs.",
+      "Phase 5 & 6: Scientifically validate critical limits, deploy continuous digital monitoring equipment, and document corrective action protocols.",
+      "Phase 7 & 8: Conduct full internal audit cycle across Clauses 4 to 10 and convene executive management review meeting to evaluate system performance.",
+      "Phase 9 & 10: Undergo independent Stage 1 readiness audit, resolve any non-conformances, and complete Stage 2 on-site certification audit to achieve accredited certification."
+    ],
+    faqs: [
+      {
+        q: "What is the primary difference between ISO 22000 and FSSC 22000?",
+        a: "ISO 22000 is an international food safety management system standard issued by ISO. FSSC 22000 combines ISO 22000 with sector-specific PRPs (ISO/TS 22002-1) and additional FSSC-specific requirements, making FSSC 22000 fully benchmarked by GFSI."
+      },
+      {
+        q: "How long does it take for a food business to achieve ISO 22000 certification?",
+        a: "The implementation timeline typically ranges from 6 to 12 months, depending on the maturity of existing food safety controls, staff training requirements, and time needed to collect sufficient verification and internal audit data."
+      },
+      {
+        q: "What is an OPRP in ISO 22000:2018?",
+        a: "An Operational Prerequisite Programme (OPRP) is a control measure identified by hazard analysis as essential to prevent or reduce a significant food safety hazard to an acceptable level, managed with action criteria rather than traditional strict critical limits."
+      },
+      {
+        q: "What happens during the Stage 1 and Stage 2 ISO 22000 audits?",
+        a: "Stage 1 is a documentation and readiness review where the certification body verifies that FSMS policies, hazard analysis, and internal audits comply with ISO requirements. Stage 2 is an extensive on-site audit evaluating live operational implementation and staff adherence."
+      },
+      {
+        q: "Is ISO 22000 certification mandatory for UK food businesses?",
+        a: "No. Statutory UK law requires compliance with hygiene regulations and HACCP principles (EC 852/2004), but ISO 22000 is voluntary and sought by commercial food manufacturers to access tier-one retail, contract manufacturing, and international export markets."
+      }
+    ],
+    relatedTools: [
+      "iso-22000-internal-audit-checklist",
+      "gfsi-audit-checklist",
+      "haccp-plan-template"
+    ],
+    relatedBlog: {
+      title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    }
+  },
+  "sqf-audit-checklist": {
+    directAnswer:
+      "An SQF audit checklist benchmarks food manufacturing and packaging operations against the Safe Quality Food (SQF) Code Edition 9. It evaluates Module 2 System Elements—including management commitment, HACCP, allergen control, and traceability—alongside Module 11 Good Manufacturing Practices (GMP) for food processing facilities.",
+    howTo: [
+      "Audit Module 2.1 Management Commitment: verify appointment of certified SQF Practitioner, monthly food safety review minutes, and displayed policy statement.",
+      "Review Module 2.4 Food Safety Plan: inspect validated HACCP flow diagrams, critical limits, hazard analysis records, and mandatory annual reassessments.",
+      "Verify Module 2.6 Product Traceability: review bi-annual 4-hour mass-balance mock recall records demonstrating 100% reconciliation across raw materials and finished goods.",
+      "Inspect Module 11 Facility Hygiene: check sanitary drainage, impervious floors and walls, insect screens, and shatterproof lighting diffusers.",
+      "Audit Module 11.7 Foreign Matter Controls: challenge inline metal detectors hourly with certified ferrous, non-ferrous, and stainless steel test pieces; verify reject arm function."
+    ],
+    faqs: [
+      {
+        q: "What are the core requirements to become an SQF Practitioner?",
+        a: "An SQF Practitioner must be a permanent, full-time employee, have completed an accredited HACCP training course (minimum 2 days / 16 hours), and demonstrate comprehensive knowledge of the SQF Code Edition 9."
+      },
+      {
+        q: "How does SQF classify non-conformances during an audit?",
+        a: "SQF classifies audit findings into Minor Non-Conformance (1 point deduction), Major Non-Conformance (10 points deduction), and Critical Non-Conformance (immediate audit failure and certification suspension if public health is threatened)."
+      },
+      {
+        q: "What score is required to achieve an SQF Excellent rating?",
+        a: "An SQF audit score of 96% to 100% achieves an 'Excellent' rating with an annual audit cycle. A score of 86% to 95% achieves 'Good'. Scores between 70% and 85% achieve 'Complies', requiring a 6-month surveillance audit."
+      },
+      {
+        q: "Are unannounced audits required under SQF Edition 9?",
+        a: "Yes. Every SQF-certified site must undergo one mandatory unannounced audit once every three years to verify that standard operating procedures are maintained continuously on ordinary operating days."
+      },
+      {
+        q: "What allergen controls does SQF Edition 9 mandate?",
+        a: "SQF mandates an active Allergen Management Plan, validation of cleaning procedures with quantitative test swabs (e.g. ELISA/lateral flow), segregation of allergen ingredients, and training for all staff handling allergenic materials."
+      }
+    ],
+    relatedTools: [
+      "gfsi-audit-checklist",
+      "gmp-audit-checklist",
+      "brc-audit"
+    ],
+    relatedBlog: {
+      title: "Natasha's Law PPDS Food Labelling Guide",
+      slug: "natashas-law-ppds-food-labelling-guide"
+    }
+  },
+  "iso-22000-internal-audit-checklist": {
+    directAnswer:
+      "An ISO 22000 internal audit checklist enables food businesses to systematically verify compliance with Clauses 4 through 10 of ISO 22000:2018. It guides internal auditors through evaluating context of the organisation, leadership, risk planning, prerequisite programmes (PRPs), hazard analysis (CCPs/OPRPs), performance measurement, and corrective action closure.",
+    howTo: [
+      "Plan internal audit schedule: define audit scope, ensure auditor independence from audited activities, and review previous non-conformances.",
+      "Audit Clause 4 & 5: evaluate documented FSMS scope, food safety policy communication, and top management resource allocation.",
+      "Audit Clause 6 & 7: review food safety objectives, risk and opportunity registers, monitoring device calibration, and personnel competence records.",
+      "Audit Clause 8: assess PRP monitoring records, hazard control plans, CCP thermal logs (e.g. 75°C core for 30s), and product non-conformance quarantine procedures.",
+      "Audit Clause 9 & 10: evaluate internal audit reports, executive management review minutes, and root-cause corrective action closure rates."
+    ],
+    faqs: [
+      {
+        q: "Who is qualified to conduct an ISO 22000 internal audit?",
+        a: "Internal auditors must be trained in ISO 22000:2018 standards and audit methodologies (ISO 19011). Crucially, auditors must be impartial and cannot audit their own day-to-day operational responsibilities."
+      },
+      {
+        q: "How often must internal audits be conducted under ISO 22000 Clause 9.2?",
+        a: "The standard requires internal audits to be conducted at planned intervals. Best practice is to establish an annual schedule where all clauses and operational departments are audited at least once per year, with high-risk processes audited quarterly."
+      },
+      {
+        q: "What documentation must be available during an ISO 22000 internal audit?",
+        a: "Auditors examine the Food Safety Manual, PRP procedures, HACCP plans, hazard analysis studies, CCP/OPRP monitoring logs, calibration records, supplier evaluations, mock recall results, and corrective action requests (CARs)."
+      },
+      {
+        q: "How should internal audit findings and non-conformances be managed?",
+        a: "Every finding must be logged in a Corrective Action Request (CAR) with immediate containment, root-cause investigation (e.g. 5 Whys), corrective action implementation, and auditor verification of effectiveness before sign-off."
+      },
+      {
+        q: "What role does the executive management review play in ISO 22000 internal audits?",
+        a: "Under Clause 9.3, all internal audit findings, trends, and non-conformances must be formally presented to executive management during planned review meetings to determine resource allocation and strategic FSMS improvements."
+      }
+    ],
+    relatedTools: [
+      "get-iso-22000-certified",
+      "gfsi-audit-checklist",
+      "haccp-plan-template"
+    ],
+    relatedBlog: {
+      title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    }
   }
 
 };
