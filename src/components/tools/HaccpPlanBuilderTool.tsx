@@ -9,7 +9,9 @@ import {
   CheckCircle2,
   AlertOctagon,
   RotateCcw,
-  Edit3
+  Edit3,
+  FileSpreadsheet,
+  BookOpen
 } from "lucide-react";
 
 export interface HaccpStep {
@@ -53,7 +55,7 @@ const DEFAULT_STEPS: HaccpStep[] = [
     hazardType: "Allergenic",
     hazardDesc: "Cross-contact of gluten/nuts with allergen-free meals; cross-contamination of raw poultry.",
     isCcp: false,
-    criticalLimit: "Strict color-coded boards (Yellow: poultry, Red: raw meat, Green: salad, Purple: allergen).",
+    criticalLimit: "Strict colour-coded boards (Yellow: poultry, Red: raw meat, Green: salad, Purple: allergen).",
     monitoring: "Visual inspection by shift supervisor; sanitiser wipe down between tasks.",
     correctiveAction: "Re-wash and sanitise station; re-prepare allergen order if cross-contact suspected."
   },
@@ -126,6 +128,24 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = () => {
 
   const handleUpdateStep = (id: string, field: keyof HaccpStep, val: any) => {
     setSteps(prev => prev.map(s => (s.id === id ? { ...s, [field]: val } : s)));
+  };
+
+    const exportHaccpCSV = () => {
+    let csv = "Business Name,Food Category,Supervisor,Audit Date\n";
+    csv += `"${businessName || "Commercial Kitchen"}","${foodCategory}","${managerName || "Head Chef"}","${auditDate}"\n\n`;
+    csv += "Step,Hazard Type,Hazard Description,Is CCP,CCP #,Critical Limit,Monitoring Procedure,Corrective Action\n";
+    steps.forEach(s => {
+      csv += `"${s.stepName}","${s.hazardType}","${s.hazardDesc.replace(/"/g, '""')}","${s.isCcp ? "YES" : "NO"}","${s.ccpNumber || "PRP"}","${s.criticalLimit.replace(/"/g, '""')}","${s.monitoring.replace(/"/g, '""')}","${s.correctiveAction.replace(/"/g, '""')}"\n`;
+    });
+
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", `HACCP_Plan_${(businessName || "Kitchen").replace(/\s+/g, "_")}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleReset = () => {

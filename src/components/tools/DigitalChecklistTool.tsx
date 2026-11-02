@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Plus, Trash2, Printer, Check, AlertCircle, Clock, Thermometer, ShieldCheck, Edit3 } from "lucide-react";
+import { Plus, Trash2, Printer, Check, AlertCircle, Clock, Thermometer, ShieldCheck, Edit3, FileSpreadsheet, Timer, Play, Pause, RotateCcw } from "lucide-react";
+import { useEffect } from "react";
 
 interface CheckItem {
   id: string;
@@ -21,6 +22,148 @@ interface TempEntry {
   status: "pass" | "fail";
 }
 
+const HEALTH_INSPECTION_TASKS: CheckItem[] = [
+  {
+    id: "fhrs-1",
+    category: "Pillar 1: Food Hygiene & Handling",
+    task: "Cross-contamination controls verified: raw meats stored strictly on bottom refrigerator shelves beneath ready-to-eat foods; distinct colour-coded chopping boards (Red for raw meat, Yellow for poultry, Blue for fish, Green for salad) in use.",
+    status: "pass",
+    actionNotes: "Boards separated and sanitised"
+  },
+  {
+    id: "fhrs-2",
+    category: "Pillar 1: Food Hygiene & Handling",
+    task: "Temperature control adherence: commercial chillers operating at or below 5°C, freezers at or below -18°C, hot holding held above 63°C, and core cooking temps verified at 75°C (82°C in Scotland) with calibrated needle probe.",
+    status: "pass",
+    actionNotes: "All probe temperatures logged"
+  },
+  {
+    id: "fhrs-3",
+    category: "Pillar 1: Food Hygiene & Handling",
+    task: "Allergen management (Natasha's Law): all 14 statutory allergens declared for every menu dish; PPDS foods labelled with complete ingredient lists with allergens emphasised in bold; 14 allergen matrix accessible.",
+    status: "pass",
+    actionNotes: "14 allergen matrix verified"
+  },
+  {
+    id: "fhrs-4",
+    category: "Pillar 2: Cleanliness & Structure",
+    task: "Dedicated handwash basins fully equipped: hot and cold running water, unperfumed bactericidal liquid soap (BS EN 1499), and disposable blue paper towels. Basins strictly used for hand hygiene only.",
+    status: "pass",
+    actionNotes: "Soap & paper roll fully stocked"
+  },
+  {
+    id: "fhrs-5",
+    category: "Pillar 2: Cleanliness & Structure",
+    task: "Physical premises & pest proofing: no gaps under external doors, fly screens intact on openable windows, grease filters clean, walls and non-slip floors in good repair with no cracked tiles or standing water.",
+    status: "pass",
+    actionNotes: "No pest ingress points observed"
+  },
+  {
+    id: "fhrs-6",
+    category: "Pillar 3: Confidence in Management",
+    task: "Documented Food Safety Management System: Safer Food, Better Business (SFBB) pack or HACCP binder fully completed, daily opening/closing checks signed off by supervisor, and last 12 months archived.",
+    status: "pass",
+    actionNotes: "SFBB diary up to date and signed"
+  },
+  {
+    id: "fhrs-7",
+    category: "Pillar 3: Confidence in Management",
+    task: "Staff training & due diligence: valid Level 2 Food Hygiene certificates on file for all food handlers; Level 3 for supervisor; supplier delivery invoices and batch traceability records immediately accessible.",
+    status: "pass",
+    actionNotes: "Training certificates filed in binder"
+  }
+];
+
+const CLEANING_TASKS: CheckItem[] = [
+  {
+    id: "clean-1",
+    category: "Two-Stage Disinfection (BS EN 1276)",
+    task: "Food-contact surfaces cleaned with detergent to remove soil and grease, followed by BS EN 1276 sanitiser left for statutory contact time (30–60s) before final clean wipe.",
+    status: "pass",
+    actionNotes: "Two-stage disinfection method completed"
+  },
+  {
+    id: "clean-2",
+    category: "Commercial Cook Line & Prep",
+    task: "Fryer wells skimmed/filtered, plancha and char-grill scraped, oven door gaskets cleaned, and extraction hood grease baffle filters soaked and degreased.",
+    status: "pass",
+    actionNotes: "Extraction filters degreased and refitted"
+  },
+  {
+    id: "clean-3",
+    category: "Dining Room & Front-of-House",
+    task: "Dining tables, dining chairs, card payment terminals, door touchpoints, and laminated takeaway menus disinfected with food-safe antibacterial wipes.",
+    status: "pass",
+    actionNotes: "High-touch points disinfected between service runs"
+  },
+  {
+    id: "clean-4",
+    category: "Potwash & Warewashing",
+    task: "Commercial pass-through dishwasher operating with wash temp >=55°C and final rinse >=82°C. Wash arms cleared and chemical dosing lines verified.",
+    status: "pass",
+    actionNotes: "Rinse temperature verified at 84°C"
+  },
+  {
+    id: "clean-5",
+    category: "Customer & Staff Restrooms",
+    task: "Toilets descaled, hand basins disinfected, antibacterial hand soap (BS EN 1499) replenished, warm running water verified, and paper roll dispensers filled.",
+    status: "pass",
+    actionNotes: "Restrooms inspected and signed off"
+  },
+  {
+    id: "clean-6",
+    category: "Refuse, Waste & COSHH Cupboard",
+    task: "Internal bins emptied and relined; external commercial waste wheelie bins locked; grease trap area checked; all cleaning chemicals locked in COSHH cupboard.",
+    status: "pass",
+    actionNotes: "External bins locked & COSHH secured"
+  }
+];
+
+const DEFAULT_GENERAL_TASKS: CheckItem[] = [
+  {
+    id: "1",
+    category: "Refrigeration & Cold Chain",
+    task: "All commercial chillers operating under 5°C; probes sanitised before & after use.",
+    status: "pass",
+    actionNotes: "Calibrated probe reading verified"
+  },
+  {
+    id: "2",
+    category: "Cross-Contamination",
+    task: "Raw meats stored strictly beneath ready-to-eat foods; distinct colour-coded chopping boards in place.",
+    status: "pass",
+    actionNotes: "Yellow poultry and Red meat boards separated"
+  },
+  {
+    id: "3",
+    category: "Personal Hygiene",
+    task: "Handwashing basins stocked with warm water, antibacterial soap (BS EN 1499) and blue paper roll.",
+    status: "pass",
+    actionNotes: "Basin 2 refilled with soap"
+  },
+  {
+    id: "4",
+    category: "Natasha's Law & Labelling",
+    task: "All pre-prepped items and PPDS foods labelled with preparation date, use-by date & 14 allergens.",
+    status: "pass",
+    actionNotes: "Day dots updated"
+  },
+  {
+    id: "5",
+    category: "Chemicals & Sanitation",
+    task: "Surface sanitiser mixed to correct manufacturer dilution (BS EN 1276 compliance verified).",
+    status: "pending",
+    actionNotes: "New spray bottle required"
+  },
+  {
+    id: "6",
+    category: "Waste & Refuse",
+    task: "External bins locked, waste bags intact, grease trap lid sealed and clean.",
+    status: "pass",
+    actionNotes: "Refuse area swept"
+  }
+];
+
 export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?: string }> = ({ templateTitle, templateId }) => {
   const [shift, setShift] = useState<"Opening" | "Midday" | "Closing">("Opening");
   const [inspectorName, setInspectorName] = useState("Shift Manager / Supervisor");
@@ -35,51 +178,64 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     { id: "5", unit: "Raw Poultry Cooking Core", target: ">= 75°C", time: "12:10", temp: "78.5°C", signedBy: "MB", status: "pass" }
   ]);
 
+  const isCleaning = templateTitle.toLowerCase().includes("cleaning");
+  const isHealthInspection =
+    templateTitle.toLowerCase().includes("inspection") ||
+    templateTitle.toLowerCase().includes("eho") ||
+    templateTitle.toLowerCase().includes("hygiene audit");
+
   // Checklist Tasks
-  const [tasks, setTasks] = useState<CheckItem[]>([
-    {
-      id: "1",
-      category: "Refrigeration & Cold Chain",
-      task: "All commercial chillers operating under 5°C; probes sanitized before & after use.",
-      status: "pass",
-      actionNotes: "Calibrated probe reading verified"
-    },
-    {
-      id: "2",
-      category: "Cross-Contamination",
-      task: "Raw meats stored strictly beneath ready-to-eat foods; distinct color chopping boards in place.",
-      status: "pass",
-      actionNotes: "Yellow poultry and Red meat boards separated"
-    },
-    {
-      id: "3",
-      category: "Personal Hygiene",
-      task: "Handwashing basins stocked with warm water, antibacterial soap (BS EN 1499) and blue paper roll.",
-      status: "pass",
-      actionNotes: "Basin 2 refilled with soap"
-    },
-    {
-      id: "4",
-      category: "Natasha's Law & Labelling",
-      task: "All pre-prepped items and PPDS foods labeled with preparation date, use-by date & 14 allergens.",
-      status: "pass",
-      actionNotes: "Day dots updated"
-    },
-    {
-      id: "5",
-      category: "Chemicals & Sanitation",
-      task: "Surface sanitiser mixed to correct manufacturer dilution (BS EN 1276 compliance verified).",
-      status: "pending",
-      actionNotes: "New spray bottle required"
-    },
-    {
-      id: "6",
-      category: "Waste & Refuse",
-      task: "External bins locked, waste bags intact, grease trap lid sealed and clean.",
-      status: "pass",
-      actionNotes: "Refuse area swept"
+  const [tasks, setTasks] = useState<CheckItem[]>(() => {
+    if (isHealthInspection) return HEALTH_INSPECTION_TASKS;
+    if (isCleaning) return CLEANING_TASKS;
+    return DEFAULT_GENERAL_TASKS;
+  });
+
+  // BS EN 1276 Chemical Sanitiser Contact Time Stopwatch
+  const [timerTarget, setTimerTarget] = useState(30);
+  const [timerSecondsLeft, setTimerSecondsLeft] = useState(30);
+  const [timerActive, setTimerActive] = useState(false);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout | null = null;
+    if (timerActive && timerSecondsLeft > 0) {
+      interval = setInterval(() => {
+        setTimerSecondsLeft(s => s - 1);
+      }, 1000);
+    } else if (timerSecondsLeft === 0) {
+      setTimerActive(false);
     }
-  ]);
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [timerActive, timerSecondsLeft]);
+
+  const resetTimer = (sec: number) => {
+    setTimerTarget(sec);
+    setTimerSecondsLeft(sec);
+    setTimerActive(false);
+  };
+
+  const exportChecklistCSV = () => {
+    let csv = "Shift,Date,Inspector,Category,Task Description,Status,Action Notes\n";
+    tasks.forEach(t => {
+      csv += `"${shift}","${logDate}","${inspectorName}","${t.category}","${t.task.replace(/"/g, '""')}","${t.status.toUpperCase()}","${(t.actionNotes || "").replace(/"/g, '""')}"\n`;
+    });
+    csv += "\nTEMPERATURE PROBE RECORDS\n";
+    csv += "Unit,Target,Time,Recorded Temp,Signed By,Status\n";
+    tempRecords.forEach(r => {
+      csv += `"${r.unit}","${r.target}","${r.time}","${r.temp}","${r.signedBy}","${r.status.toUpperCase()}"\n`;
+    });
+
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", `Kitchen_Checklist_${logDate}_${shift}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const [newTaskText, setNewTaskText] = useState("");
   const [newTaskCategory, setNewTaskCategory] = useState("Hygiene");
@@ -201,12 +357,110 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
 
           <button
             type="button"
+            onClick={exportChecklistCSV}
+            className="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all border border-slate-300 cursor-pointer"
+          >
+            <FileSpreadsheet className="w-4 h-4 text-emerald-600" />
+            <span>Export CSV</span>
+          </button>
+          <button
+            type="button"
             onClick={() => window.print()}
             className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-5 py-2.5 rounded-xl flex items-center gap-2 transition-all shadow cursor-pointer hover:scale-[1.02]"
           >
             <Printer className="w-4 h-4 text-amber-400" />
             <span>Print Official Log</span>
           </button>
+        </div>
+      </div>
+
+      {/* FHRS 5-Star Readiness Estimator Banner */}
+      {isHealthInspection && (
+        <div className="bg-gradient-to-r from-emerald-900 to-teal-950 text-white rounded-2xl p-5 border border-emerald-700/50 shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 no-print">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 text-emerald-400" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-300">
+                UK Food Hygiene Rating Scheme (FHRS) Readiness
+              </span>
+            </div>
+            <p className="text-xs text-emerald-100 max-w-xl">
+              Based on the 3 official EHO scoring pillars: Food Hygiene (Cross-contamination &amp; Temps), Structural Condition (Cleanliness &amp; Pest proofing), and Confidence in Management (SFBB Diary).
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2.5 text-center shrink-0">
+            {tasks.filter(t => t.status === "fail").length === 0 ? (
+              <div>
+                <span className="text-amber-300 text-lg font-black tracking-widest block">★★★★★</span>
+                <span className="text-xs font-bold text-white uppercase">5-Star Ready (Very Good)</span>
+              </div>
+            ) : tasks.filter(t => t.status === "fail").length === 1 ? (
+              <div>
+                <span className="text-amber-300 text-lg font-black tracking-widest block">★★★★☆</span>
+                <span className="text-xs font-bold text-amber-200 uppercase">4-Star Potential (1 Issue to Fix)</span>
+              </div>
+            ) : (
+              <div>
+                <span className="text-rose-400 text-lg font-black tracking-widest block">★★☆☆☆</span>
+                <span className="text-xs font-bold text-rose-200 uppercase">Risk of EHO Action (Fix Breaches)</span>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* BS EN 1276 Sanitiser Contact Time Verification Widget */}
+      <div className="bg-gradient-to-r from-amber-50 to-orange-50/60 border border-amber-200/90 rounded-2xl p-4 sm:p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 no-print shadow-xs">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <Timer className="w-4 h-4 text-amber-700" />
+            <span className="text-xs font-extrabold uppercase tracking-wider text-amber-950 font-mono">
+              BS EN 1276 Disinfectant Contact Time Guide
+            </span>
+          </div>
+          <p className="text-xs text-gray-700 max-w-xl">
+            UK Food Standards Agency (FSA) regulations require kitchen surface sanitisers to remain visibly wet on food-contact counters for the certified dwell time (typically 30 to 60 seconds) to destroy 99.999% of bacteria.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-1.5 bg-white border border-amber-300 rounded-xl px-2.5 py-1">
+            {[30, 60, 120].map(s => (
+              <button
+                key={s}
+                type="button"
+                onClick={() => resetTimer(s)}
+                className={`px-2.5 py-1 rounded-lg text-xs font-bold cursor-pointer transition ${
+                  timerTarget === s ? "bg-amber-800 text-white" : "text-gray-600 hover:text-black"
+                }`}
+              >
+                {s}s
+              </button>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-2 bg-white border border-amber-300 rounded-xl px-3 py-1.5">
+            <span className={`font-mono text-base font-black ${timerSecondsLeft === 0 ? "text-emerald-600 animate-pulse" : "text-gray-900"}`}>
+              {timerSecondsLeft}s
+            </span>
+            <button
+              type="button"
+              onClick={() => setTimerActive(!timerActive)}
+              className="text-xs font-bold px-2 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded-lg flex items-center gap-1 cursor-pointer"
+            >
+              {timerActive ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+              <span>{timerActive ? "Pause" : "Start"}</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => resetTimer(timerTarget)}
+              className="text-gray-400 hover:text-gray-700 cursor-pointer p-1"
+              title="Reset timer"
+            >
+              <RotateCcw className="w-3 h-3" />
+            </button>
+          </div>
         </div>
       </div>
 

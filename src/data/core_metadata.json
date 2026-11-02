@@ -50,22 +50,23 @@
     ]
   },
   "food-safety-quiz": {
-    "title": "Free Food Safety Level 2 Practice Quiz | Saim Dev",
-    "desc": "Test your kitchen team with this interactive UK Food Hygiene Level 2 quiz. Review temperature rules, cross-contamination, and Natasha's Law online.",
+    "title": "Level 2 Food Hygiene Practice Test UK | Free Quiz | Saim Dev",
+    "desc": "Free UK Level 2 food hygiene practice test. 25 official mock exam questions with answers, statutory temperatures, and printable staff training scorecards.",
     "howTo": [
-      "Complete the multiple-choice assessment covering core UK hygiene standards.",
-      "Review detailed explanations on cold holding, reheating, and sanitiser rules.",
-      "Retake the quiz during staff onboarding to reinforce kitchen compliance."
+      "Select either Exam Mode (graded with an 80% pass threshold) or Study Mode (instant guidance hints).",
+      "Answer 25 multiple-choice questions covering statutory temperature limits, allergens, and HACCP.",
+      "Review the detailed FSA guidance notes and print your completed assessment scorecard for staff records."
     ]
   },
   "freezer-temperature-chart": {
-    "title": "Free Freezer Temperature Chart UK | Saim Dev",
-    "desc": "Free printable freezer temperature chart for UK commercial kitchens. Record daily checks at or below -18°C to maintain statutory EHO hygiene compliance.",
+    "title": "Freezer Temperature Log Sheet UK | Free Chart | Saim Dev",
+    "desc": "Free UK commercial freezer temperature log sheet. Daily AM and PM temperature tracking, EHO corrective action prompts, and printable SFBB kitchen chart.",
     "howTo": [
-      "Mount the freezer temperature log sheet on or next to commercial walk-in and chest freezers.",
-      "Inspect calibrated digital displays or probe ambient freezer air twice every working day.",
-      "Log the exact temperature reading and staff initials on the sheet immediately.",
-      "Take corrective action if temperatures rise above -18°C (check defrost cycle, ice buildup, or door seals)."
+      "Select your commercial freezer unit and configure opening AM and closing PM check times.",
+      "Record internal probe temperatures twice daily to verify units remain at or below -18°C.",
+      "Review automatic compliance badges and log root causes for any defrost or temperature spikes.",
+      "Execute the built-in thermometer probe ice point calibration check monthly for EHO audits.",
+      "Print the official UK FSA SFBB weekly record sheet or export CSV data for your HACCP binder."
     ]
   },
   "food-cooling-poster": {
@@ -117,13 +118,14 @@
     ]
   },
   "restaurant-cleaning-checklist": {
-    "title": "Free Restaurant Cleaning Checklist | Saim Dev",
-    "desc": "Restaurant cleaning checklist covering dining area, bar, kitchen prep, and washrooms. Daily and weekly tasks aligned with UK food hygiene regulations.",
+    "title": "Restaurant Cleaning Checklist UK | Free Sheet | Saim Dev",
+    "desc": "Free UK restaurant cleaning checklist. Daily opening, closing, and deep clean tasks, BS EN 1276 sanitiser contact times, and printable EHO kitchen logs.",
     "howTo": [
-      "Assign specific cleaning zones to front-of-house, kitchen, and bar teams at start and end of shifts.",
-      "Verify that food contact surfaces and table touchpoints are sanitised using EN 1276 certified sanitisers.",
-      "Check that customer washrooms are restocked with antibacterial soap, hot water, and hand towels.",
-      "Sign off completed daily cleaning logs to maintain management due diligence records for council inspections."
+      "Assign distinct cleaning duties across front-of-house dining, kitchen prep, cookline, and washrooms.",
+      "Perform two-stage surface cleaning: remove surface grease with detergent before applying BS EN 1276 sanitiser.",
+      "Observe certified disinfectant contact times (30 to 60 seconds) on high-risk food prep counters.",
+      "Inspect customer and staff washrooms to ensure antibacterial soap (BS EN 1499) and paper towels are stocked.",
+      "Complete and sign the daily verification log sheet to maintain due diligence records for visiting EHO officers."
     ]
   },
   "opening-and-closing-checklist-template": {
@@ -498,13 +500,14 @@
     ]
   },
   "health-inspection-checklist": {
-    "title": "Free Health Inspection Checklist Template | Saim Dev",
-    "desc": "Free UK health inspection checklist template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "title": "Free Health Inspection Checklist UK | EHO Audit | Saim Dev",
+    "desc": "Free UK health inspection checklist for commercial kitchens. Self-audit food hygiene, premises cleanliness, HACCP records, and secure a 5-star FHRS rating.",
     "howTo": [
-      "Download and print the Health Inspection Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit food hygiene procedures: verify chilled storage (<5°C), core cooking temperatures (75°C), and colour-coded board segregation.",
+      "Inspect kitchen physical structure: check handwash basins, hot running water, BS EN 1499 soap, and pest-proofing barriers.",
+      "Verify management records: complete daily SFBB opening and closing checks, allergen matrices, and staff hygiene training logs.",
+      "Review estimated Food Hygiene Rating Scheme (FHRS) star score and resolve identified non-compliance points immediately.",
+      "Print out the signed inspection audit sheet and file with your due diligence documentation ready for visiting council officers."
     ]
   },
   "restaurant-health-inspection-checklist": {

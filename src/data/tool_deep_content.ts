@@ -52,7 +52,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       },
       {
         q: "How long should completed freezer temperature charts be archived?",
-        a: "Retain all signed sheets for at least 6 to 12 months, or 3 months past the maximum shelf-life of frozen batches, to maintain your due diligence defense under Section 21 of the Food Safety Act 1990."
+        a: "Retain all signed sheets for at least 6 to 12 months, or 3 months past the maximum shelf-life of frozen batches, to maintain your due diligence defence under Section 21 of the Food Safety Act 1990."
       }
     ],
     relatedTools: ["fridge-temperature-record-sheet-pdf", "walk-in-cooler-food-storage-chart", "hot-holding-food-temperature-log"],
@@ -181,39 +181,43 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
 
   "food-safety-quiz": {
     directAnswer:
-      "The Food Safety Level 2 hygiene practice exam tests commercial kitchen staff on essential food handling, critical temperatures, cross-contamination controls, and HACCP principles. Designed around UK Food Standards Agency syllabus topics, this interactive test helps hospitality managers assess onboarding competence and prepare teams for council hygiene audits.",
+      "The UK Food Safety Level 2 hygiene practice exam tests commercial kitchen and catering personnel on critical statutory food handling, core thermal Critical Control Points (CCPs), cross-contamination prevention, the 14 major allergens, and HACCP compliance. Aligned directly with the UK Food Standards Agency (FSA) and CIEH syllabi, this 25-question mock test prepares hospitality staff for official accreditation and council Environmental Health Officer (EHO) inspections.",
     howTo: [
-      "Review the core UK food hygiene topics: cooking temperatures, chilling limits, and allergen rules.",
-      "Complete the multiple-choice questions covering real-world commercial kitchen scenarios.",
-      "Read detailed explanations for each answer to reinforce correct statutory procedures.",
-      "Review your total score and identify operational knowledge gaps requiring refresher training.",
-      "Retake the quiz periodically during annual staff hygiene review sessions."
+      "Select either Exam Mode (graded with an 80% pass threshold) or Study Mode (instant statutory guidance notes after every question).",
+      "Optionally filter by specific food safety knowledge domain: Temperatures, Allergens & Natasha's Law, Cross-Contamination, Personal Hygiene, or HACCP.",
+      "Complete the 25 multiple-choice questions reflecting real commercial catering operational scenarios.",
+      "Review the detailed FSA Guidance Note provided for each answer to master statutory temperatures and legal compliance limits.",
+      "Click 'Print Paper' to generate a physical assessment paper for kitchen staff onboarding or to file your completed score in SFBB Section 4 (Staff Training)."
     ],
     faqs: [
       {
-        q: "Is Level 2 Food Hygiene training legally required in the UK?",
-        a: "UK food law requires all food handlers to be supervised and instructed or trained in food hygiene matters commensurate with their work activity. A Level 2 certificate is the hospitality industry benchmark."
+        q: "What is the official pass mark for a UK Level 2 Food Hygiene and Safety exam?",
+        a: "Under UK accredited awarding bodies (including City & Guilds, Highfield, CIEH, and RSPH), the standard pass threshold is 80% (typically 20 correct answers out of 25 multiple-choice questions)."
       },
       {
-        q: "What passing score is typically required for Level 2 food hygiene?",
-        a: "Most accredited UK awarding bodies (such as City & Guilds or Highfield) require a score of 75% or higher to achieve a Level 2 Food Safety certificate."
+        q: "How long is a UK Level 2 Food Hygiene certificate valid for?",
+        a: "While UK food legislation does not specify an automatic statutory expiration date, Environmental Health Officers (EHOs) and industry auditing bodies strongly recommend that hospitality and catering staff renew their Level 2 certification every 2 to 3 years to ensure awareness of updated legislation such as Natasha's Law."
       },
       {
-        q: "How often should kitchen staff refresh their food hygiene training?",
-        a: "Industry best practice recommends refreshing food hygiene qualifications every three years, alongside continuous in-house toolbox talks on critical kitchen SOPs."
+        q: "Is Level 2 Food Hygiene certification legally mandatory for kitchen workers in the UK?",
+        a: "Under Retained EU Regulation (EC) No 852/2004, UK food business operators are legally required to ensure that food handlers are supervised, instructed, and trained in food hygiene matters commensurate with their work activity. A Level 2 Food Safety and Hygiene certificate is the universal industry-accepted benchmark to prove compliance during local authority inspections."
       },
       {
-        q: "Does this online quiz award an accredited certificate?",
-        a: "This practice quiz is an educational and self-audit assessment tool. While it tests official syllabus standards, formal certification requires an exam with an accredited training provider."
+        q: "What core temperature rules must be memorized for the Level 2 exam?",
+        a: "Key statutory temperatures include: commercial refrigerators at 1°C to 5°C (legal maximum 8°C); commercial freezers at -18°C or below; core cooking temperature at 75°C for 30 seconds (or 70°C for 2 minutes); hot holding buffet service at 63°C or above; and leftover food reheating to at least 75°C (82°C in Scotland)."
       },
       {
-        q: "What topics do Environmental Health Officers focus on during staff interviews?",
-        a: "EHOs routinely question floor staff about safe cooking core temperatures (75°C), cold holding limits (8°C), the 14 allergens, and proper two-stage sanitiser use."
+        q: "What happens if a trainee fails the practice mock test?",
+        a: "Unlike paid accredited exam portals that charge re-sit fees, our practice tool is 100% free with unlimited retakes. Trainees can review the instant statutory guidance notes, focus on weaker domains using topic filters, and retake the test until scoring 100%."
       }
     ],
-    relatedTools: ["basic-food-preparation-rules", "five-food-safety-rules", "hand-washing-poster"],
+    relatedTools: [
+      "freezer-temperature-chart",
+      "food-allergen-chart",
+      "haccp-plan-builder"
+    ],
     relatedBlog: {
-      title: "Level 2 Food Hygiene Practice Test & Kitchen Staff Training Guide",
+      title: "Level 2 Food Hygiene Practice Test Kitchen Staff Guide",
       slug: "level-2-food-hygiene-practice-test-kitchen-staff-guide"
     }
   },
@@ -378,8 +382,8 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
     directAnswer:
       "A restaurant cleaning checklist provides a daily shift-by-shift breakdown of essential sanitation tasks for front-of-house dining rooms and back-of-house culinary areas. Using structured checklists prevents neglected hygiene blind spots, ensures consistent customer-facing cleanliness, and maintains compliance with UK Food Hygiene Rating Scheme requirements.",
     howTo: [
-      "Complete morning pre-opening checks: wipe customer tables, sanitize prep benches, check hand soap.",
-      "Execute mid-shift wipe-downs: sweep service lines, empty intermediate bins, sanitize high-touch handles.",
+      "Complete morning pre-opening checks: wipe customer tables, sanitise prep benches, check hand soap.",
+      "Execute mid-shift wipe-downs: sweep service lines, empty intermediate bins, sanitise high-touch handles.",
       "Perform evening closing clean: clean fryer wells, degrease grill tops, mop floors with approved chemical sanitiser.",
       "Inspect guest washrooms hourly for cleanliness, soap replenishment, and hygienic drying towels.",
       "Sign and date the master checklist at the conclusion of every operational shift."
@@ -390,7 +394,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
         a: "Inspectors frequently flag dirty door handles, fridge door gaskets, grease behind cookers, neglected handwash basins, and floor-to-wall junctions."
       },
       {
-        q: "How should dining room tables be sanitized between customer seatings?",
+        q: "How should dining room tables be sanitised between customer seatings?",
         a: "Clear dirty crockery, spray tables with BS EN 1276 approved food-safe sanitiser, allow the manufacturer contact time (usually 30–60 seconds), and wipe with clean paper towel."
       },
       {
@@ -402,7 +406,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
         a: "Archive signed daily cleaning checklists for at least 12 months in your kitchen compliance binder for unannounced council audits."
       },
       {
-        q: "Can this checklist be customized for specific restaurant setups?",
+        q: "Can this checklist be customised for specific restaurant setups?",
         a: "Yes. This printable template is designed with flexible task rows that allow management to write in bespoke equipment like pizza ovens, espresso machines, or bar taps."
       }
     ],
@@ -573,8 +577,8 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
     directAnswer:
       "A daily kitchen opening and closing checklist establishes systematic operational routines for commercial food premises before service begins and after service ends. Aligned with the FSA Safer Food, Better Business (SFBB) diary system, completing opening and closing checks ensures food hygiene, equipment safety, and audit readiness.",
     howTo: [
-      "Execute morning opening checks: confirm chillers are <=5°C, sanitizer buckets are fresh, hand soap is stocked.",
-      "Verify hot water supply, probe thermometers are calibrated, and prep surfaces are sanitized.",
+      "Execute morning opening checks: confirm chillers are <=5°C, sanitiser buckets are fresh, hand soap is stocked.",
+      "Verify hot water supply, probe thermometers are calibrated, and prep surfaces are sanitised.",
       "Execute evening closing checks: verify hot food is cooled within 90 minutes, equipment is turned off, bins emptied.",
       "Inspect pest proofing barriers and verify waste bins outside are securely closed.",
       "Designated Head Chef or duty manager reviews and signs off the day's record in the master log."
@@ -586,7 +590,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       },
       {
         q: "What should be checked first thing in the morning?",
-        a: "First check all refrigerator and freezer temperatures to confirm units did not lose power overnight, then verify hot running water and sanitized work stations."
+        a: "First check all refrigerator and freezer temperatures to confirm units did not lose power overnight, then verify hot running water and sanitised work stations."
       },
       {
         q: "What are critical closing checks before locking up?",
@@ -789,7 +793,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       },
       {
         q: "How should thick soups, gravies, and pies be probed?",
-        a: "Stir liquid dishes thoroughly before probing the centre. For solid dishes like meat pies, insert the sanitized probe into the geometric centre of the thickest portion."
+        a: "Stir liquid dishes thoroughly before probing the centre. For solid dishes like meat pies, insert the sanitised probe into the geometric centre of the thickest portion."
       },
       {
         q: "What records do EHOs check regarding reheating?",
@@ -850,7 +854,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       "Use RED boards exclusively for raw meat and poultry.",
       "Use BLUE boards for raw fish and seafood; YELLOW for cooked sliced meats.",
       "Use GREEN for washed salads and fruit; BROWN for unwashed root vegetables; WHITE for dairy and bakery.",
-      "Scrape, wash with hot detergent, and sanitize boards in commercial dishwashers operating at >=82°C."
+      "Scrape, wash with hot detergent, and sanitise boards in commercial dishwashers operating at >=82°C."
     ],
     faqs: [
       {
@@ -887,7 +891,7 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
     howTo: [
       "Preheat bain-maries, hot display cabinets, and carving stations before loading hot cooked dishes.",
       "Verify cooked dishes reach a minimum core temperature of 75°C before transferring to hot holding.",
-      "Probe and record food temperatures every 2 hours using a sanitized digital needle probe thermometer.",
+      "Probe and record food temperatures every 2 hours using a sanitised digital needle probe thermometer.",
       "If temperature drops below 63°C, apply the UK 2-hour rule: reheat above 75°C (once only) or serve within 2 hours.",
       "Document all corrective actions and sign off the daily hot holding record at the end of service."
     ],
@@ -1070,6 +1074,45 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
     relatedBlog: {
       title: "Commercial Kitchen Food Cooling & Temperature Limits Guide",
       slug: "commercial-kitchen-food-cooling-temperature-guide"
+    }
+  },
+
+  "health-inspection-checklist": {
+    directAnswer:
+      "A commercial health inspection checklist is a structured self-audit tool used by UK catering managers and head chefs to prepare for unannounced Environmental Health Officer (EHO) visits. It evaluates operational compliance across the three official Food Hygiene Rating Scheme (FHRS) scoring pillars: Food Hygiene Practices, Structural Condition, and Confidence in Management.",
+    howTo: [
+      "Audit Pillar 1 (Food Hygiene): probe chilled storage (<5°C), verify core cooking temperatures reach 75°C, and separate raw meat prep.",
+      "Audit Pillar 2 (Structural Condition): inspect kitchen cleanliness, verify hot running water and BS EN 1499 soap at handwash basins, and check pest barriers.",
+      "Audit Pillar 3 (Management Confidence): review daily SFBB diary opening and closing checks, verify staff training certificates, and check supplier invoices.",
+      "Identify non-compliances: log corrective actions immediately for any structural defects, faulty seals, or missing temperature entries.",
+      "Sign and file the completed self-audit sheet in your master due diligence binder for visiting local authority inspectors."
+    ],
+    faqs: [
+      {
+        q: "What do UK Environmental Health Officers check during an inspection?",
+        a: "An EHO assesses three statutory pillars: (1) Hygienic food handling (cooking, cooling, reheating, cross-contamination, and allergens), (2) Cleanliness and physical condition of the premises (lighting, ventilation, layout, pest control, handwashing), and (3) Food safety management documentation (HACCP/SFBB diary, staff training records, supplier traceability)."
+      },
+      {
+        q: "How is a Food Hygiene Rating calculated from 0 to 5 stars?",
+        a: "Scores from 0 (best) to 25/30 (worst) are assigned to each of the three pillars. To achieve a 5-star rating ('Very Good'), a food business must score no more than 5 points in any individual category, proving high standards across hygiene, structure, and management."
+      },
+      {
+        q: "Do Environmental Health Officers announce their inspections in advance?",
+        a: "No. Routine food hygiene inspections conducted by UK local authority councils are almost always unannounced. Food businesses must operate in inspection-ready condition during every operational service shift."
+      },
+      {
+        q: "What documents must be ready when an EHO arrives?",
+        a: "Officers will ask to inspect your completed Safer Food, Better Business (SFBB) pack or bespoke HACCP plan, daily temperature logs (fridge, freezer, hot holding, cook line), staff Food Hygiene certificates (Level 2/3), allergen matrices, and pest control contractor service reports."
+      },
+      {
+        q: "Can an EHO close down a restaurant immediately?",
+        a: "Yes. If an inspector identifies an imminent risk to public health—such as severe active pest infestation (rats, mice, cockroaches), absence of potable hot water, raw sewage backup, or total lack of food safety controls—they can serve a Hygiene Emergency Prohibition Notice, closing the premises immediately."
+      }
+    ],
+    relatedTools: ["eho-checklist", "restaurant-cleaning-checklist", "freezer-temperature-chart"],
+    relatedBlog: {
+      title: "UK Food Hygiene Rating Scheme: Complete 5-Star Inspection Checklist",
+      slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
     }
   }
 };
