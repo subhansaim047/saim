@@ -1,0 +1,95 @@
+{
+  "rank": 71,
+  "tool_id": "template-154",
+  "name": "Restaurant Hood Cleaning Checklist",
+  "slug": "restaurant-hood-cleaning",
+  "url": "https://www.saimdev.site/food-safety-templates/restaurant-hood-cleaning",
+  "primary_keyword": "restaurant hood cleaning checklist",
+  "secondary_keywords": [
+    "commercial kitchen exhaust hood cleaning",
+    "kitchen canopy cleaning log",
+    "TR19 grease filter cleaning schedule",
+    "restaurant hood maintenance pdf",
+    "baffle filter degreasing procedure"
+  ],
+  "search_intent": "Commercial kitchen operators, head chefs, and facility maintenance managers seeking an operational checklist and frequency schedule for cleaning commercial extract canopies, baffle filters, plenum chambers, and ductwork to comply with TR19 fire safety guidance and insurance requirements.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Images",
+    "PDF downloads"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "katom.com",
+      "url": "https://www.katom.com/learning-center/how-to-clean-commercial-range-hood.html",
+      "title": "How to Clean a Commercial Range Hood | KaTom",
+      "strengths": "Detailed breakdown of kitchen degreasing chemicals and soak techniques.",
+      "weaknesses": "US focus, no digital checklist or interactive audit tracking, purely informational."
+    },
+    {
+      "rank": 2,
+      "domain": "webstaurantstore.com",
+      "url": "https://www.webstaurantstore.com/article/339/how-to-clean-restaurant-exhaust-hood.html",
+      "title": "How to Clean a Restaurant Exhaust Hood - WebstaurantStore",
+      "strengths": "High domain authority, strong commercial supply links.",
+      "weaknesses": "Heavy product placement, lacks UK TR19 compliance framework and downloadable SOP log."
+    },
+    {
+      "rank": 3,
+      "domain": "safetyculture.com",
+      "url": "https://safetyculture.com/checklists/kitchen-exhaust-hood-cleaning/",
+      "title": "Kitchen Exhaust Hood Cleaning Checklist | SafetyCulture",
+      "strengths": "Structured checklist format.",
+      "weaknesses": "Mandatory sign-up paywall / gated mobile app download, zero public browser utility."
+    },
+    {
+      "rank": 4,
+      "domain": "filta.co.uk",
+      "url": "https://www.filta.co.uk/kitchen-extraction-cleaning/",
+      "title": "Commercial Kitchen Extraction Cleaning | Filta UK",
+      "strengths": "UK BESA TR19 service expertise.",
+      "weaknesses": "Commercial sales brochure, no free operational checklist or printable staff SOP."
+    },
+    {
+      "rank": 5,
+      "domain": "swiftclean.co.uk",
+      "url": "https://www.swiftclean.co.uk/duct-cleaning-services/kitchen-extract-cleaning/",
+      "title": "Kitchen Extract Cleaning (TR19) | Swiftclean",
+      "strengths": "Authoritative TR19 fire safety technical guidance.",
+      "weaknesses": "Contractor quotes only, no in-house daily/weekly maintenance SOP or tool."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Basic text descriptions and contractor quoting forms.",
+    "what_they_lack": "An ungated, interactive digital inspection tool with real-time pass/flag/action checkboxes, daily-to-annual breakdown, and one-click CSV/print exports.",
+    "what_we_offer": "Complete dual-mode browser checklist + A4 printable kitchen wall SOP covering daily baffle filter soaking, drip cup emptying, plenum degreasing, and insurance-mandated TR19 certification logging."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 96,
+      "best_competitor": 78
+    },
+    "content_depth_score": {
+      "saim_dev": 95,
+      "best_competitor": 82
+    },
+    "mobile_ux_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    },
+    "trust_eeat_score": {
+      "saim_dev": 95,
+      "best_competitor": 88
+    }
+  }
+}

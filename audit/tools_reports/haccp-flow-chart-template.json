@@ -1,0 +1,95 @@
+{
+  "rank": 75,
+  "tool_id": "template-16",
+  "name": "HACCP Process Flow Chart Template & Diagram",
+  "slug": "haccp-flow-chart-template",
+  "url": "https://www.saimdev.site/food-safety-templates/haccp-flow-chart-template",
+  "primary_keyword": "haccp flow chart template",
+  "secondary_keywords": [
+    "food safety process flow diagram",
+    "haccp steps flow chart example",
+    "restaurant haccp flow diagram",
+    "critical control points flow chart",
+    "catering food preparation process flow"
+  ],
+  "search_intent": "Catering businesses, food processors, and food safety managers creating the required Step 4 / Principle 1 process flow diagram for their HACCP manual, identifying where biological, chemical, physical, and allergen hazards occur and which steps are Critical Control Points (CCPs).",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Flowchart Diagrams",
+    "Image Packs"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "fooddocs.com",
+      "url": "https://www.fooddocs.com/post/haccp-flowchart",
+      "title": "HACCP Flow Chart: Complete Guide & Examples | FoodDocs",
+      "strengths": "Clear diagrams explaining linear catering steps.",
+      "weaknesses": "Aggressive sales funnel requiring paid subscription or trial signup to download or edit."
+    },
+    {
+      "rank": 2,
+      "domain": "safetyculture.com",
+      "url": "https://safetyculture.com/topics/haccp/flowchart/",
+      "title": "HACCP Flow Chart Guide & Free Templates | SafetyCulture",
+      "strengths": "Well-structured introductory concepts.",
+      "weaknesses": "Gated download requiring mobile app installation and email registration."
+    },
+    {
+      "rank": 3,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/haccp-flow-chart/",
+      "title": "How to Create a HACCP Flow Chart | High Speed Training",
+      "strengths": "Strong UK pedagogical training explanation.",
+      "weaknesses": "Static blog article designed to sell Level 3 HACCP training courses, no interactive builder."
+    },
+    {
+      "rank": 4,
+      "domain": "campdenbri.co.uk",
+      "url": "https://www.campdenbri.co.uk/haccp-flowchart-guidance.php",
+      "title": "HACCP Flowcharting Best Practice | Campden BRI",
+      "strengths": "Academic manufacturing authority.",
+      "weaknesses": "Dense industrial consultancy text, no catering-level interactive diagram or free tool."
+    },
+    {
+      "rank": 5,
+      "domain": "safefoodpro.com",
+      "url": "https://www.safefoodpro.com/haccp-process-flow",
+      "title": "HACCP Process Flow Diagram Software | Safe Food Pro",
+      "strengths": "Modern UI screenshots.",
+      "weaknesses": "Demo request paywall, zero public utility without sales call."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Paywalled software trials, course marketing posts, or static diagram images.",
+    "what_they_lack": "An ungated, interactive browser flow chart diagram mapping sequential steps from goods receiving to service, complete with hazard identification, CCP classification, critical limits, and instant print layout.",
+    "what_we_offer": "Fully interactive step-by-step HACCP diagram tool with expandable hazards, statutory critical limits, monitoring protocols, corrective action SOPs, and one-click PDF generation."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 84
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 89
+    }
+  }
+}

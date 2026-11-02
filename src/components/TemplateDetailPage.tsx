@@ -126,7 +126,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
   const isFoodFlowChartTool =
     template.slug === "food-flow-chart" ||
-    template.slug.includes("food-flow");
+    template.slug.includes("food-flow") ||
+    template.slug.includes("flow-chart");
 
   const isConsumerAdvisoryTool =
     template.slug === "consumer-advisory" ||
@@ -200,7 +201,10 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
   const isMeatCookingTool =
     !isMasterFoodTempTool &&
-    (template.slug.includes("temperature-chart") || template.slug.includes("temp-chart")) &&
+    (template.slug.includes("temperature-chart") ||
+      template.slug.includes("temp-chart") ||
+      template.slug.includes("pasteurization-chart") ||
+      template.slug.includes("pasteurisation-chart")) &&
     (template.slug.includes("venison") ||
       template.slug.includes("chicken") ||
       template.slug.includes("duck") ||
@@ -213,6 +217,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("burger"));
 
   const initialMeat: MeatCategory =
+    template.slug.includes("turkey") ? "turkey" :
     template.slug.includes("burger") ? "burger" :
     template.slug.includes("venison") ? "venison" :
     template.slug.includes("chicken") ? "chicken" :
@@ -258,6 +263,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("inspection") ||
       template.slug.includes("cleaning") ||
       template.slug.includes("slicer") ||
+      template.slug.includes("waste") ||
       template.slug.includes("utensil"));
 
   // Related templates: only link to indexed KEEP and IMPROVE pages (no NOINDEX or duplicates)

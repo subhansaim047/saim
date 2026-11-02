@@ -1,0 +1,95 @@
+{
+  "rank": 72,
+  "tool_id": "template-155",
+  "name": "Commercial Kitchen Grease Trap Cleaning Guide",
+  "slug": "grease-trap-cleaning",
+  "url": "https://www.saimdev.site/food-safety-templates/grease-trap-cleaning",
+  "primary_keyword": "grease trap cleaning guide",
+  "secondary_keywords": [
+    "commercial kitchen grease trap cleaning procedure",
+    "grease interceptor maintenance log",
+    "restaurant fog control checklist",
+    "how to clean an indoor grease trap",
+    "grease trap waste transfer note"
+  ],
+  "search_intent": "Food business operators and kitchen managers needing step-by-step cleaning procedures, maintenance frequency, and compliance logs for indoor and external grease traps to prevent blocked sewers, foul odours, and fines under the Water Industry Act 1991.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Video Carousels",
+    "Diagrams"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "webstaurantstore.com",
+      "url": "https://www.webstaurantstore.com/article/570/how-to-clean-a-grease-trap.html",
+      "title": "How to Clean a Grease Trap | WebstaurantStore",
+      "strengths": "Good general overview of physical cleaning steps.",
+      "weaknesses": "Lacks UK legal framework (Water Industry Act s.111), no duty of care waste transfer note guidance."
+    },
+    {
+      "rank": 2,
+      "domain": "alpheco.co.uk",
+      "url": "https://alpheco.co.uk/grease-trap-cleaning-maintenance-guide/",
+      "title": "Grease Trap Cleaning & Maintenance Guide | Alpheco UK",
+      "strengths": "UK focus, mentions commercial waste regulations.",
+      "weaknesses": "Sales pitch for pumping services, no interactive digital log or free printable checklist."
+    },
+    {
+      "rank": 3,
+      "domain": "good-sense.co.uk",
+      "url": "https://good-sense.co.uk/grease-trap-maintenance-tips/",
+      "title": "Grease Trap Maintenance Tips | Good Sense Solutions",
+      "strengths": "Focuses on biological dosing enzymes.",
+      "weaknesses": "Thin content, primarily promotes chemical products, lacks operational SOP."
+    },
+    {
+      "rank": 4,
+      "domain": "aquamundus.co.uk",
+      "url": "https://aquamundus.co.uk/grease-traps/grease-trap-maintenance/",
+      "title": "Grease Trap Maintenance Services | Aqua Mundus",
+      "strengths": "Commercial plumbing engineering depth.",
+      "weaknesses": "Gated service brochure, no DIY in-house cleaning steps or free downloadable log."
+    },
+    {
+      "rank": 5,
+      "domain": "southernwater.co.uk",
+      "url": "https://www.southernwater.co.uk/business/fats-oils-and-greases",
+      "title": "Fats, Oils and Greases (FOG) Management | Southern Water",
+      "strengths": "High authority water company guidance on sewer obstruction offences.",
+      "weaknesses": "Broad policy leaflet, lacks detailed hands-on operational checklist for kitchen porters."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Basic overview articles and contractor booking pages.",
+    "what_they_lack": "Interactive digital FOG maintenance log, 25% capacity rule calculator, and clear duty of care transfer note verification.",
+    "what_we_offer": "Digital checklist with 7 specific stages: wastewater cooling, baffle scraping, FOG crust skimming, bottom sludge pumping, gasket seal inspection, bio-enzyme verification, and registered waste note archiving."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 97,
+      "best_competitor": 75
+    },
+    "content_depth_score": {
+      "saim_dev": 96,
+      "best_competitor": 80
+    },
+    "mobile_ux_score": {
+      "saim_dev": 98,
+      "best_competitor": 78
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 84
+    },
+    "technical_seo_score": {
+      "saim_dev": 98,
+      "best_competitor": 81
+    },
+    "trust_eeat_score": {
+      "saim_dev": 96,
+      "best_competitor": 86
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "rank": 73,
+  "tool_id": "template-12",
+  "name": "Turkey Pasteurisation & Cooking Temperature Chart",
+  "slug": "turkey-pasteurization-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/turkey-pasteurization-chart",
+  "primary_keyword": "turkey pasteurization chart",
+  "secondary_keywords": [
+    "whole turkey cooking temperature chart",
+    "turkey internal temperature pasteurisation",
+    "turkey sous vide time and temperature",
+    "salmonella lethality poultry chart",
+    "safe turkey core temperature fsa"
+  ],
+  "search_intent": "Chefs, butchers, caterers, and holiday roast cooks looking for exact internal core temperatures and required holding times to achieve a 7D (7-log / 99.99999%) reduction of Salmonella in whole turkey, crowns, and ground turkey, both for traditional roasting and low-temperature sous-vide or combi-oven cooking.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Calculators",
+    "Recipe rich snippets"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "fsis.usda.gov",
+      "url": "https://www.fsis.usda.gov/guidelines/2021-0004",
+      "title": "FSIS Salmonella Lethality Guide (Appendix A) | USDA",
+      "strengths": "Definitive scientific time-temperature lethality tables.",
+      "weaknesses": "Dense, complex 40-page technical PDF, virtually unusable in a commercial kitchen."
+    },
+    {
+      "rank": 2,
+      "domain": "seriouseats.com",
+      "url": "https://www.seriouseats.com/how-to-cook-a-turkey-temperature-chart",
+      "title": "The Food Lab's Guide to Turkey Temperatures | Serious Eats",
+      "strengths": "Engaging culinary science explanations and culinary tests.",
+      "weaknesses": "Consumer-oriented, narrative blog format, lacks catering audit features, CSV export, and UK FSA regulatory alignment."
+    },
+    {
+      "rank": 3,
+      "domain": "blog.thermoworks.com",
+      "url": "https://blog.thermoworks.com/turkey/turkey-temperature-guide/",
+      "title": "Turkey Temperature Guide - ThermoWorks",
+      "strengths": "High-quality temperature charts and probe location graphics.",
+      "weaknesses": "Static graphic primarily built to sell thermometers, no interactive weight-to-time roasting calculator."
+    },
+    {
+      "rank": 4,
+      "domain": "amazingribs.com",
+      "url": "https://amazingribs.com/technique-and-science/more-cooking-science/safe-serving-temperatures/",
+      "title": "Meat Temperature Guide & Salmonella Lethality | AmazingRibs",
+      "strengths": "Detailed pasteurisation curve explanations.",
+      "weaknesses": "Ad-heavy layout, US Fahrenheit only, cumbersome mobile layout."
+    },
+    {
+      "rank": 5,
+      "domain": "fsai.ie",
+      "url": "https://www.fsai.ie/cooking-turkey-safely/",
+      "title": "Cooking Turkey Safely | Food Safety Authority of Ireland",
+      "strengths": "Official government food authority backing.",
+      "weaknesses": "Rigid single-temperature rule (75°C instant), ignores scientifically proven low-temperature pasteurisation tables."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Academic PDF tables or single-temperature static consumer blog posts.",
+    "what_they_lack": "Dual-mode interactive tool supporting statutory limits (75°C core / 82°C Scotland), weight-based commercial cook time calculations, precision sous-vide lethality dwell times, and instant A4 kitchen wall chart printing.",
+    "what_we_offer": "Interactive species/cut selector with dedicated Turkey Pasteurisation standards, weight calculator, probe positioning guide, and full 60°C to 75°C lethality time-temperature tables."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 88
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 84
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 92
+    }
+  }
+}

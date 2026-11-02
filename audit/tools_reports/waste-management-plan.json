@@ -1,0 +1,95 @@
+{
+  "rank": 74,
+  "tool_id": "template-14",
+  "name": "Commercial Kitchen Waste Management Plan",
+  "slug": "waste-management-plan",
+  "url": "https://www.saimdev.site/food-safety-templates/waste-management-plan",
+  "primary_keyword": "food business waste management plan",
+  "secondary_keywords": [
+    "commercial kitchen waste management template",
+    "restaurant waste segregation plan",
+    "category 3 animal by product disposal",
+    "kitchen waste duty of care",
+    "commercial food waste log"
+  ],
+  "search_intent": "Hospitality business owners, caterers, and environmental hygiene officers seeking a structured waste management procedure and audit checklist covering general refuse, dry mixed recycling, used cooking oil (UCO), and Category 3 Animal By-Products (ABP).",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Policy Documents",
+    "PDF templates"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "wrap.org.uk",
+      "url": "https://www.wrap.org.uk/resources/guide/food-waste-management-action-plan",
+      "title": "Food Waste Management Action Plan | WRAP UK",
+      "strengths": "National benchmark data on food waste reduction.",
+      "weaknesses": "Macro-level corporate policy report, lacks ready-to-use operational kitchen checklist."
+    },
+    {
+      "rank": 2,
+      "domain": "zerowastescotland.org.uk",
+      "url": "https://www.zerowastescotland.org.uk/food-waste-reduction-plan-hospitality",
+      "title": "Hospitality Food Waste Reduction Plan | Zero Waste Scotland",
+      "strengths": "Solid sustainability and cost-saving metrics.",
+      "weaknesses": "Dense PDF guide, lacks interactive digital auditing and printable shift checklists."
+    },
+    {
+      "rank": 3,
+      "domain": "food.gov.uk",
+      "url": "https://www.food.gov.uk/business-guidance/handling-food-waste",
+      "title": "Handling Food Waste in a Food Business | Food Standards Agency",
+      "strengths": "Authoritative guidance on ABP Category 3 segregation and pest prevention.",
+      "weaknesses": "Short generic webpage, no structured daily/weekly compliance log or tool."
+    },
+    {
+      "rank": 4,
+      "domain": "hubbub.org.uk",
+      "url": "https://www.hubbub.org.uk/business-food-waste-guide",
+      "title": "Business Food Waste Reduction Guide | Hubbub",
+      "strengths": "Accessible design and staff engagement tips.",
+      "weaknesses": "Promotional non-profit content, no legal Duty of Care audit trail or technical specs."
+    },
+    {
+      "rank": 5,
+      "domain": "biffa.co.uk",
+      "url": "https://www.biffa.co.uk/waste-management/food-waste",
+      "title": "Commercial Food Waste Collection | Biffa",
+      "strengths": "Nationwide commercial waste service provider.",
+      "weaknesses": "Pure commercial sales pitch to sign bin collection contracts, no free internal audit tool."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "General policy overviews or corporate bin contract marketing.",
+    "what_they_lack": "Interactive digital audit checklist tracking internal bin segregation, UCO bunded storage, ABP Cat 3 separation, corral hygiene, and waste transfer note documentation.",
+    "what_we_offer": "Complete digital audit suite aligned with the UK Environmental Protection Act 1990 Section 34 and Animal By-Products Regulations 2013, with real-time signoff and CSV export."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 96,
+      "best_competitor": 76
+    },
+    "content_depth_score": {
+      "saim_dev": 96,
+      "best_competitor": 82
+    },
+    "mobile_ux_score": {
+      "saim_dev": 98,
+      "best_competitor": 79
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 83
+    },
+    "technical_seo_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "trust_eeat_score": {
+      "saim_dev": 96,
+      "best_competitor": 89
+    }
+  }
+}

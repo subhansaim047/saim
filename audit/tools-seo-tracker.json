@@ -1514,9 +1514,11 @@
     "main_keyword": "restaurant hood cleaning uk",
     "opportunity_score": 75.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 71
+    "priority_rank": 71,
+    "audit_completed": true,
+    "batch": 15
   },
   {
     "index": 147,
@@ -1533,9 +1535,11 @@
     "main_keyword": "grease trap cleaning guide uk",
     "opportunity_score": 75.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 72
+    "priority_rank": 72,
+    "audit_completed": true,
+    "batch": 15
   },
   {
     "index": 10,
@@ -1552,9 +1556,11 @@
     "main_keyword": "turkey pasteurization chart uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 73
+    "priority_rank": 73,
+    "audit_completed": true,
+    "batch": 15
   },
   {
     "index": 12,
@@ -1571,9 +1577,11 @@
     "main_keyword": "waste management plan uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 74
+    "priority_rank": 74,
+    "audit_completed": true,
+    "batch": 15
   },
   {
     "index": 14,
@@ -1590,9 +1598,11 @@
     "main_keyword": "flow chart uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 75
+    "priority_rank": 75,
+    "audit_completed": true,
+    "batch": 15
   },
   {
     "index": 18,
