@@ -3334,9 +3334,25 @@
     "main_keyword": "production sheet uk",
     "opportunity_score": 55.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 131
+    "priority_rank": 131,
+    "target_keyword": "food production sheet template",
+    "top_5_competitors": [
+      "https://pos.toasttab.com/blog/on-the-line/food-production-sheet",
+      "https://safetyculture.com/checklists/food-production-sheet/",
+      "https://www.fooddocs.com/post/food-production-sheet",
+      "https://www.touchbistro.com/blog/food-production-sheet-template/",
+      "https://www.restaurantowner.com/public/Daily-Food-Production-Sheet.cfm"
+    ],
+    "differentiators": [
+      "Real-time yield & portion calculator: planned portions vs actual yielded units",
+      "Integrated CCP thermal validation checks (core cooking 75°C for 30s)",
+      "Natasha's Law allergen cross-contact sign-off on every production batch",
+      "Zero login, zero paywall, client-side interactive tool",
+      "Clean A4 PDF export formatted for kitchen production binders"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 110,
@@ -3353,9 +3369,25 @@
     "main_keyword": "dispatch log uk",
     "opportunity_score": 55.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 132
+    "priority_rank": 132,
+    "target_keyword": "food dispatch log template",
+    "top_5_competitors": [
+      "https://www.fooddocs.com/post/food-dispatch-log",
+      "https://safetyculture.com/checklists/food-transport-log/",
+      "https://www.highspeedtraining.co.uk/hub/food-transport-temperature-rules/",
+      "https://www.virtual-college.co.uk/resources/food-transportation-guidelines",
+      "https://www.ncass.org.uk/resources/daily-record-sheets/"
+    ],
+    "differentiators": [
+      "Temperature verification at loading: hot >=63°C, chilled <=5°C (legal max 8°C), frozen <=-18°C",
+      "Vehicle hygiene, thermal insulation boxes, and tamper-evident container seal tracking",
+      "Estimated delivery transit time and client temperature acceptance signature",
+      "Local storage persistence, custom customer route additions",
+      "1-click printable dispatch manifest for drivers and dispatch managers"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 138,
@@ -3372,9 +3404,25 @@
     "main_keyword": "hot holding food log uk",
     "opportunity_score": 55.0,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 133
+    "priority_rank": 133,
+    "target_keyword": "hot holding food temperature log",
+    "top_5_competitors": [
+      "https://www.fooddocs.com/post/hot-holding-temperature-log",
+      "https://safetyculture.com/checklists/hot-holding-temperature-log/",
+      "https://www.highspeedtraining.co.uk/hub/hot-holding-temperatures/",
+      "https://www.virtual-college.co.uk/resources/hot-holding-monitoring-sheet",
+      "https://www.ncass.org.uk/resources/daily-record-sheets/"
+    ],
+    "differentiators": [
+      "Continuous >=63.0°C critical limit validation (Food Safety Regulations 2013)",
+      "Multi-station logging: bain-maries, soup kettles, heated gantries, carvery wells",
+      "2-hour display exemption countdown tracker for buffet service",
+      "Pre-configured corrective actions (re-heating to 75°C / 82°C Scotland or safe disposal)",
+      "Unbranded clean A4 PDF print conforming to local council EHO audit expectations"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 143,
@@ -3391,9 +3439,25 @@
     "main_keyword": "corrective action plan uk",
     "opportunity_score": 55.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 134
+    "priority_rank": 134,
+    "target_keyword": "corrective action plan template food safety",
+    "top_5_competitors": [
+      "https://safetyculture.com/checklists/corrective-action-plan/",
+      "https://www.fooddocs.com/post/haccp-corrective-actions",
+      "https://www.process.st/templates/corrective-action-plan-template/",
+      "https://www.lumiform.app/template/corrective-action-plan",
+      "https://www.highspeedtraining.co.uk/hub/haccp-principles-corrective-actions/"
+    ],
+    "differentiators": [
+      "Full 5-stage CAPA workflow: containment, root cause (5 Whys), corrective action, deadline, verification",
+      "Severity classification: Minor non-conformance, Major, or Critical public health risk",
+      "Product disposition logging: reprocess, destroy, quarantine, or release under concession",
+      "Zero signup gate, client-side interactive tool",
+      "Clean A4 PDF audit certificate for EHO inspection close-out"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 44,
@@ -3410,9 +3474,25 @@
     "main_keyword": "fridge layout food safety poster uk",
     "opportunity_score": 45.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 135
+    "priority_rank": 135,
+    "target_keyword": "fridge layout poster commercial kitchen",
+    "top_5_competitors": [
+      "https://www.highspeedtraining.co.uk/hub/fridge-storage-order/",
+      "https://www.virtual-college.co.uk/resources/fridge-storage-order-guide",
+      "https://www.fooddocs.com/post/fridge-layout-poster",
+      "https://safetyculture.com/checklists/safe-fridge-layout/",
+      "https://www.ncass.org.uk/resources/fridge-organization-guide/"
+    ],
+    "differentiators": [
+      "Visual vertical shelf hierarchy strictly aligned with FSA food hygiene rules",
+      "Temperature tiering guide (air circulation rules, 0°C to 5.0°C range, legal max 8.0°C)",
+      "Allergen segregation rules (top-shelf purple bins for allergen-free preps)",
+      "Interactive shelf simulator and high-resolution printable A4/A3 kitchen wall poster",
+      "Zero watermark, 100% free download"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 50,

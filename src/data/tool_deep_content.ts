@@ -5142,6 +5142,174 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
       slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
     }
+  },
+  "food-production-sheet": {
+    directAnswer:
+      "A food production sheet organizes daily commercial culinary manufacturing and kitchen prep operations. It translates sales and cover forecasts into precise ingredient quantities, portion yields, CCP cooking lethality checks (75°C for 30s), 90-minute cooling compliance, and Natasha's Law allergen declarations across kitchen sections.",
+    howTo: [
+      "Calculate batch production pars: multiply standard recipe batch sizes by forecasted customer covers for lunch and dinner services.",
+      "Log raw material batch lot numbers: record supplier intake lot codes and use-by dates for traceability across all ingredients.",
+      "Verify thermal critical limits: probe core cooking temperatures to confirm batches achieve at least 75°C for 30 seconds (or 70°C for 2 minutes).",
+      "Monitor statutory cooling: chill hot-cooked stocks, gravies, and braised meats from 60°C to below 8°C (ideally <5°C) within 90 minutes.",
+      "Affix day-dot batch labels: record item name, prep date, use-by date, batch number, chef initials, and bold 14 statutory allergens."
+    ],
+    faqs: [
+      {
+        q: "What is the difference between a kitchen prep list and a food production sheet?",
+        a: "A prep list focuses on station-by-station mise-en-place for daily service, whereas a food production sheet focuses on batch manufacturing—tracking ingredient scaling, recipe yields, batch lot numbers, CCP cooking temperatures, and portion variance."
+      },
+      {
+        q: "How does a food production sheet reduce kitchen food waste?",
+        a: "By setting exact production pars based on cover forecasts and comparing theoretical ingredient weights against actual yielded portions, managers detect over-portioning, prep shrinkage, and excessive batch scrap."
+      },
+      {
+        q: "Why are raw material lot numbers recorded on production sheets?",
+        a: "Under Regulation (EC) No 178/2002 Article 18, recording raw material lot codes links incoming supplier deliveries to finished menu items, enabling rapid targeted product recalls in the event of upstream contamination."
+      },
+      {
+        q: "What cooling parameters must be verified during batch food production?",
+        a: "Under UK Food Standards Agency guidelines, hot food passing through the danger zone (8°C to 60°C) must be cooled to below 8°C within 90 minutes to prevent spore germination of Bacillus cereus and Clostridium perfringens."
+      },
+      {
+        q: "How long should completed food production sheets be retained?",
+        a: "Under UK due diligence defence (Food Safety Act 1990), completed daily production logs should be archived for at least 12 months for Environmental Health Officer (EHO) and third-party audit verification."
+      }
+    ],
+    relatedTools: [
+      "kitchen-prep-list-template",
+      "cooking-log-template",
+      "recipe-batch-calculator"
+    ],
+    relatedBlog: {
+      title: "Commercial Kitchen Food Cooling Temperature Guide",
+      slug: "commercial-kitchen-food-cooling-temperature-guide"
+    }
+  },
+  "dispatch-log": {
+    directAnswer:
+      "A food dispatch log records outbound transport conditions for catered events, mobile delivery vans, and off-premise food distribution. Aligned with Regulation (EC) No 852/2004, it verifies vehicle cleanliness, temperature controls (hot food ≥63.0°C; chilled food ≤5.0°C; frozen ≤-18.0°C), tamper-evident container seals, departure times, and recipient delivery handovers.",
+    howTo: [
+      "Inspect transport vehicle hygiene: ensure delivery van cargo holds are sanitised, odour-free, and pre-chilled or heated as required.",
+      "Probe chilled catering items: verify core or between-pack temperatures are at or below 5.0°C (statutory maximum 8.0°C) prior to loading.",
+      "Verify hot-holding transport units: confirm insulated Cambros or electric warming cabinets maintain food at or above 63.0°C at dispatch.",
+      "Check packaging integrity: ensure tamper-evident seals are intact and catering containers carry clear product and allergen labels.",
+      "Log handover and arrival temperatures: record dispatch time, vehicle registration, driver initials, and client signature upon delivery."
+    ],
+    faqs: [
+      {
+        q: "What are the legal temperature limits for transporting food in the UK?",
+        a: "Under the Food Safety and Hygiene (England) Regulations 2013, chilled food must be transported at or below 8.0°C (best practice ≤5.0°C) and hot food must be maintained at or above 63.0°C throughout transit."
+      },
+      {
+        q: "How long can food be transported in passive insulated containers without active refrigeration?",
+        a: "High-grade insulated containers (e.g. heavy-duty polyurethane Cambros) can maintain safe temperatures for up to 4 hours. However, internal temperatures must be probed and logged at departure and arrival to prove compliance."
+      },
+      {
+        q: "What should happen if food arrives at an event below 63°C?",
+        a: "If hot food drops below 63°C during transit, it must be either reheated to 75°C core (82°C in Scotland) and served immediately, served within the 2-hour legal exemption window, or safely discarded."
+      },
+      {
+        q: "Why are tamper-evident seals recommended for food delivery vans?",
+        a: "Tamper-evident seals on delivery boxes and vehicle doors provide verifiable chain-of-custody assurance that food was not subjected to unauthorized interference, contamination, or theft during transit."
+      },
+      {
+        q: "Can delivery drivers log temperatures digitally?",
+        a: "Yes. Digital temperature data-loggers, vehicle telematics probes, and mobile checklist apps provide tamper-proof, time-stamped records accepted by Environmental Health Officers."
+      }
+    ],
+    relatedTools: [
+      "delivery-log",
+      "hot-holding-food-temperature-log",
+      "ingredient-traceability"
+    ],
+    relatedBlog: {
+      title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    }
+  },
+  "corrective-action-plan-template": {
+    directAnswer:
+      "A corrective action plan (CAPA) template documents the systematic containment, investigation, and resolution of food safety non-conformances. In accordance with HACCP Principle 5 and ISO 22000, it establishes immediate quarantine of compromised products, 5 Whys root cause analysis, preventative corrective measures, product disposition decisions, and 14-day effectiveness verifications.",
+    howTo: [
+      "Identify and log non-conformance: document the date, time, location, affected food batch, and specific safety limit breached.",
+      "Execute immediate containment: isolate and tag affected food inventory with bold red 'QUARANTINE / DO NOT USE' labels.",
+      "Conduct root cause investigation: apply the 5 Whys methodology to determine the underlying mechanical, operational, or human failure.",
+      "Assign corrective and preventive actions: specify exact remediation tasks, designate accountable personnel, and establish implementation deadlines.",
+      "Verify CAPA effectiveness: re-audit the affected process after 14 to 30 days to confirm the defect has not recurred before closing the file."
+    ],
+    faqs: [
+      {
+        q: "What is HACCP Principle 5?",
+        a: "HACCP Principle 5 requires food businesses to establish corrective actions to be taken when monitoring indicates that a particular Critical Control Point (CCP) is not under control."
+      },
+      {
+        q: "What is the difference between a correction and a corrective action?",
+        a: "A correction is an immediate containment step to address a symptom (e.g. discarding an undercooked chicken breast). A corrective action identifies and eliminates the root cause to prevent the issue from happening again (e.g. recalibrating the oven thermostat and re-training the cook)."
+      },
+      {
+        q: "What product disposition options exist under a food safety CAPA?",
+        a: "Depending on scientific hazard evaluation, disposition options include: reprocessing (e.g. re-cooking to verified lethality), downgrading (e.g. diverting to animal feed), returning to supplier, or condemning and denaturing for secure waste disposal."
+      },
+      {
+        q: "How does a robust CAPA system protect against EHO enforcement?",
+        a: "Environmental Health Officers recognize that equipment and operational glitches happen. Demonstrating a documented CAPA system that immediately identifies, isolates, and rectifies breaches provides powerful legal proof of 'due diligence' under the Food Safety Act 1990."
+      },
+      {
+        q: "Who is responsible for signing off on a completed corrective action?",
+        a: "The designated Food Safety Team Leader, Head Chef, or Technical Quality Manager must independently review implementation evidence and verify effectiveness before formally signing off on CAPA closure."
+      }
+    ],
+    relatedTools: [
+      "root-cause-analysis",
+      "haccp-plan-template",
+      "health-inspection-checklist"
+    ],
+    relatedBlog: {
+      title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    }
+  },
+  "fridge-layout-poster": {
+    directAnswer:
+      "A commercial fridge layout poster provides a visual food safety hierarchy for organizing walk-in cold rooms and reach-in refrigerators. In accordance with UK Food Standards Agency (FSA) guidelines, it establishes vertical shelf segregation to prevent cross-contamination: ready-to-eat foods at the top, dairy and unwashed produce in the middle, raw seafood in lower sections, and raw poultry and meats at the bottom.",
+    howTo: [
+      "Top shelf: store ready-to-eat (RTE) foods, cooked meats, prepared salads, sandwich fillings, and delicate desserts requiring no further cooking.",
+      "Middle shelves: store pasteurised dairy items, butter, cheeses, cooked leftovers, and unwashed whole fruit and vegetables.",
+      "Lower-middle shelves: store raw fish fillets, whole seafood, and whole cuts of raw beef and pork in sealed stainless containers.",
+      "Bottom shelf: store raw poultry, minced meats, sausages, and raw game in deep drip-proof containers to prevent juices dripping onto other foods.",
+      "Temperature and airflow: maintain continuous refrigeration between 0°C and 5.0°C (legal max 8.0°C) and avoid blocking evaporator airflow vents."
+    ],
+    faqs: [
+      {
+        q: "Why must raw poultry and meats always be stored on the bottom shelf of a fridge?",
+        a: "Raw chicken and meats carry high bacterial loads of Salmonella and Campylobacter. Storing them on the lowest shelf ensures that any accidental leaks or drippings cannot contaminate ready-to-eat foods below them."
+      },
+      {
+        q: "What is the legal maximum temperature for a commercial food refrigerator in the UK?",
+        a: "Under the Food Safety and Hygiene (England) Regulations 2013, cold food must be held at or below 8.0°C. Best practice recommended by the Food Standards Agency is to operate fridges between 0°C and 5.0°C."
+      },
+      {
+        q: "Where should allergen-free or gluten-free prepared foods be stored in a fridge?",
+        a: "Allergen-free and gluten-free ingredients should be stored on top shelves inside clearly labelled purple containers with airtight lids, physically segregated from allergenic items like dairy, peanuts, or wheat flour."
+      },
+      {
+        q: "Why is airflow crucial in a commercial refrigerator?",
+        a: "Commercial chillers rely on forced-air circulation to distribute cold air evenly. Overcrowding shelves with boxes or lining wire racks with cardboard or foil impedes airflow, creating warm pockets that exceed 8.0°C."
+      },
+      {
+        q: "How should opened canned foods be stored in a refrigerator?",
+        a: "Food should never be stored in opened metal cans because the tin and iron can react with acidic contents in the presence of air, causing metallic contamination. Food must be transferred into food-grade plastic or stainless containers with lids."
+      }
+    ],
+    relatedTools: [
+      "walk-in-cooler-food-storage-chart",
+      "freezer-temperature-chart",
+      "basic-food-preparation-rules"
+    ],
+    relatedBlog: {
+      title: "Commercial Kitchen Food Cooling Temperature Guide",
+      slug: "commercial-kitchen-food-cooling-temperature-guide"
+    }
   }
 
 };

@@ -2112,6 +2112,142 @@ const INGREDIENT_TRACEABILITY_TASKS: CheckItem[] = [
   }
 ];
 
+
+const FOOD_PRODUCTION_TASKS: CheckItem[] = [
+  {
+    id: "prod-1",
+    category: "Recipe Scaling & Yield Target",
+    task: "Review daily service covers, calculate recipe ingredient multipliers, and establish target portion yields across all production batches.",
+    status: "pass",
+    actionNotes: "Batch recipe scaling verified for 200 portions"
+  },
+  {
+    id: "prod-2",
+    category: "Raw Material Lot Verification",
+    task: "Verify manufacturer lot codes, use-by dates, and 14 statutory allergen profiles before assembling raw ingredients into mixing bowls.",
+    status: "pass",
+    actionNotes: "All raw material lot codes logged"
+  },
+  {
+    id: "prod-3",
+    category: "Cooking Lethality Verification",
+    task: "Insert calibrated probe into core of cooking batches; verify core temperature reaches minimum 75°C for 30s or 70°C for 2 min.",
+    status: "pass",
+    actionNotes: "Core lethality confirmed at 76.5°C"
+  },
+  {
+    id: "prod-4",
+    category: "Rapid 90-Minute Cooling",
+    task: "Transfer hot cooked batches to blast chillers or ice water baths; cool from 60°C to below 8°C (ideally <5°C) within 90 minutes.",
+    status: "pass",
+    actionNotes: "Cooling cycle verified at 68 minutes"
+  },
+  {
+    id: "prod-5",
+    category: "Day-Dot & Allergen Labelling",
+    task: "Affix food rotation day-dot label with production date, use-by date, batch number, chef initials, and bold allergen declarations.",
+    status: "pass",
+    actionNotes: "Storage containers labelled and sealed"
+  },
+  {
+    id: "prod-6",
+    category: "Yield & Waste Reconciliation",
+    task: "Weigh finished batch yield against expected portion counts; record kitchen prep trimmings and waste deductions on daily ledger.",
+    status: "pass",
+    actionNotes: "Yield efficiency 98.4%; trim waste logged"
+  }
+];
+
+const DISPATCH_LOG_TASKS: CheckItem[] = [
+  {
+    id: "disp-1",
+    category: "Vehicle Hygiene & Pre-Trip Check",
+    task: "Inspect delivery vehicle cargo bay; ensure interior surfaces are clean, sanitised, odour-free, and sealed against pest ingress.",
+    status: "pass",
+    actionNotes: "Refrigerated van cargo bay clean and sanitised"
+  },
+  {
+    id: "disp-2",
+    category: "Chilled Food Dispatch (<=5.0°C)",
+    task: "Probe core or between-pack temperatures of chilled catering dishes; confirm reading is at or below 5.0°C (legal max 8.0°C) before loading.",
+    status: "pass",
+    actionNotes: "Chilled trays loaded at 3.4°C"
+  },
+  {
+    id: "disp-3",
+    category: "Hot Food Dispatch (>=63.0°C)",
+    task: "Verify insulated transport Cambros and thermal boxes maintain cooked hot meals at or above 63.0°C at point of vehicle dispatch.",
+    status: "pass",
+    actionNotes: "Hot holding boxes loaded at 67.8°C"
+  },
+  {
+    id: "disp-4",
+    category: "Frozen Goods State (<=-18.0°C)",
+    task: "Confirm frozen inventory remains frozen rock-solid with zero signs of surface thawing, ice crystals, or softening edges.",
+    status: "pass",
+    actionNotes: "Frozen stock verified at -19.2°C"
+  },
+  {
+    id: "disp-5",
+    category: "Tamper Seals & Security Slips",
+    task: "Affix numbered tamper-evident security tags to transport containers; verify delivery manifest matches customer order paperwork.",
+    status: "pass",
+    actionNotes: "Tamper seals #8841-8846 recorded on manifest"
+  },
+  {
+    id: "disp-6",
+    category: "Transit Times & Consignee Sign-Off",
+    task: "Record departure time, route transit duration, driver signature, and client temperature acceptance signature upon drop-off.",
+    status: "pass",
+    actionNotes: "Client receipt signed with delivery temp 64.5°C"
+  }
+];
+
+const CORRECTIVE_ACTION_TASKS: CheckItem[] = [
+  {
+    id: "capa-1",
+    category: "Incident & Defect Logging",
+    task: "Document specific food safety non-conformance (e.g. refrigeration failure >8°C, undercooked poultry <75°C, packaging breach, pest sighting).",
+    status: "pass",
+    actionNotes: "Walk-in chiller #2 temperature excursion logged"
+  },
+  {
+    id: "capa-2",
+    category: "Immediate Containment Action",
+    task: "Quarantine affected food lots immediately; lock quarantine area and affix red 'DO NOT USE / UNDER INVESTIGATION' hazard tags.",
+    status: "pass",
+    actionNotes: "4 cases of chicken thighs locked in quarantine"
+  },
+  {
+    id: "capa-3",
+    category: "Root Cause Analysis (5 Whys)",
+    task: "Convene HACCP team to execute 5 Whys analysis: determine whether breach was mechanical failure, human error, or procedural defect.",
+    status: "pass",
+    actionNotes: "Root cause: evaporator fan motor relay burnt out"
+  },
+  {
+    id: "capa-4",
+    category: "Corrective & Preventive Action",
+    task: "Execute repair, service equipment, revise SOPs, and deliver refresher hygiene training to prevent incident recurrence.",
+    status: "pass",
+    actionNotes: "Fan motor replaced by engineer; backup alarm fitted"
+  },
+  {
+    id: "capa-5",
+    category: "Product Disposition Decision",
+    task: "Authorise safe product disposition: re-cook to verified 75°C lethality, safely condemn and destroy, or return defective goods to vendor.",
+    status: "pass",
+    actionNotes: "Product exceeded 8°C for >4h; safely condemned and denatured"
+  },
+  {
+    id: "capa-6",
+    category: "Effectiveness Verification & Closure",
+    task: "Food Safety Team Leader reviews operational temperature logs after 14 days to verify permanent resolution before signing CAPA closure.",
+    status: "pass",
+    actionNotes: "14-day post-repair audit normal; CAPA closed"
+  }
+];
+
 const DEFAULT_GENERAL_TASKS: CheckItem[] = [
   {
     id: "1",
@@ -2232,6 +2368,15 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     templateTitle.toLowerCase().includes("ingredient-traceability") ||
     (templateTitle.toLowerCase().includes("traceability") && templateTitle.toLowerCase().includes("ingredient")) ||
     (templateId && templateId.includes("ingredient-traceability"));
+  const isFoodProduction =
+    templateTitle.toLowerCase().includes("production") ||
+    (templateId && templateId.includes("food-production-sheet"));
+  const isDispatch =
+    templateTitle.toLowerCase().includes("dispatch") ||
+    (templateId && templateId.includes("dispatch-log"));
+  const isCorrectiveActionPlan =
+    templateTitle.toLowerCase().includes("corrective action") ||
+    (templateId && templateId.includes("corrective-action"));
   const isBrcAudit =
     templateTitle.toLowerCase().includes("brc") ||
     (templateId && templateId.includes("brc"));
@@ -2351,6 +2496,9 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     if (isPizzaHotHolding) return PIZZA_HOT_HOLDING_TASKS;
     if (isApprovedSupplier) return APPROVED_SUPPLIER_TASKS;
     if (isIngredientTraceability) return INGREDIENT_TRACEABILITY_TASKS;
+    if (isFoodProduction) return FOOD_PRODUCTION_TASKS;
+    if (isDispatch) return DISPATCH_LOG_TASKS;
+    if (isCorrectiveActionPlan) return CORRECTIVE_ACTION_TASKS;
     if (isBrcAudit) return BRC_AUDIT_TASKS;
     if (isKosher) return KOSHER_CERTIFICATION_TASKS;
     if (isFiveWhys) return FIVE_WHYS_RCA_TASKS;

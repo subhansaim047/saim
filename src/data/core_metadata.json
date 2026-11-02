@@ -223,13 +223,14 @@
     ]
   },
   "hot-holding-food-temperature-log": {
-    "title": "Free Hot Holding Temperature Log | Saim Dev",
-    "desc": "Download a free hot holding temperature log for UK kitchens. Monitor food above 63°C and record time limits to comply with Food Hygiene Regulations.",
+    "title": "Free Hot Holding Temperature Log Sheet | Saim Dev",
+    "desc": "Monitor commercial kitchen bain-maries and heated display cabinets at ≥63°C. Free hot holding temperature log sheet for UK EHO compliance.",
     "howTo": [
-      "Preheat hot-holding equipment (bain-marie, hot cabinet, pass heat lamps) before adding hot food.",
-      "Ensure food is cooked thoroughly to 75°C (82°C in Scotland) before transferring to hot holding units.",
-      "Probe core temperatures at least every two hours to ensure food stays consistently above 63°C.",
-      "Apply the UK 2-hour exemption rule strictly if food drops below 63°C: serve or discard immediately."
+      "Preheat heated display cabinets, hot wells, and bain-maries to at least 65°C.",
+      "Verify cooked food reaches 75°C core temperature before transferring to wells.",
+      "Probe hot-held dishes every 2 hours; verify core temperature remains ≥63.0°C.",
+      "Apply UK 2-hour display exemption rule if holding food at ambient counters.",
+      "Log temperatures, probe sanitisation wipes, chef initials, and corrective actions."
     ]
   },
   "eho-checklist": {
@@ -556,13 +557,14 @@
     ]
   },
   "fridge-layout-poster": {
-    "title": "Free Fridge Layout Food Safety Poster Template | Saim Dev",
-    "desc": "Free fridge layout food safety poster template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Commercial Fridge Layout Poster | Saim Dev",
+    "desc": "Organise commercial kitchen walk-in and reach-in refrigerators safely. Free printable fridge layout poster showing raw and ready-to-eat shelf tiers.",
     "howTo": [
-      "Download and print the Fridge Layout Food Safety Poster for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Store ready-to-eat foods, prepped salads, and cooked meats on top shelves.",
+      "Place dairy products, cheeses, and unwashed produce on middle shelves.",
+      "Position raw seafood, whole cuts of beef, and pork on lower-middle shelves.",
+      "Store raw poultry, minced meats, and raw game on bottom shelf in drip trays.",
+      "Maintain continuous air circulation and verify temperature remains below 5.0°C."
     ]
   },
   "meat-cooking-chart": {
@@ -1160,23 +1162,25 @@
     ]
   },
   "food-production-sheet": {
-    "title": "Free Production Sheet Template | Saim Dev",
-    "desc": "Download our free production sheet template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Food Production Sheet Template | Saim Dev",
+    "desc": "Manage daily commercial kitchen culinary batch production with par levels. Free food production sheet covering recipe yields, CCPs, and allergens.",
     "howTo": [
-      "Download and print the Production Sheet for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Calculate recipe ingredient scaling based on forecasted daily service covers.",
+      "Verify raw ingredient batch lot numbers, use-by dates, and allergen warnings.",
+      "Probe core cooking temperatures to confirm compliance with FSA 75°C lethality.",
+      "Cool batch preparations from 60°C to below 8°C within the 90-minute limit.",
+      "Attach food rotation day-dot labels with batch IDs, dates, and allergen notes."
     ]
   },
   "dispatch-log": {
-    "title": "Free Dispatch Log Template | Saim Dev",
-    "desc": "Download our free dispatch log template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Food Dispatch Temperature Log Sheet | Saim Dev",
+    "desc": "Record food transport temperatures for catering and deliveries. Free dispatch log covering hot holding, chilled van temps, and vehicle cleanliness.",
     "howTo": [
-      "Download and print the Dispatch Log for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Inspect transport vehicle cargo bay hygiene, refrigeration, and cleanliness.",
+      "Probe chilled catering items to verify temperature is ≤5.0°C (legal max 8.0°C).",
+      "Confirm hot meals in insulated transport boxes remain at or above 63.0°C.",
+      "Affix tamper-evident security seals to transport containers and record numbers.",
+      "Log vehicle departure time, transit duration, and consignee arrival signatures."
     ]
   },
   "food-expiration-dates-guidelines-chart": {
@@ -1474,12 +1478,13 @@
   },
   "corrective-action-plan-template": {
     "title": "Free Corrective Action Plan Template | Saim Dev",
-    "desc": "Download our free corrective action plan template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "desc": "Document food safety non-conformances, 5 Whys root causes, and CAPA actions. Free corrective action plan template for HACCP and EHO audits.",
     "howTo": [
-      "Download and print the Corrective Action Plan for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Identify and log food safety non-conformance (e.g. temperature breach, contamination).",
+      "Immediately quarantine compromised food lots and attach clear hazard warning tags.",
+      "Convene HACCP team to conduct 5 Whys root cause investigation on the failure.",
+      "Assign corrective and preventive actions (CAPA) with designated owners and deadlines.",
+      "Determine safe product disposition and sign off verification after 14 days."
     ]
   },
   "restaurant-fire-inspection-checklist": {
