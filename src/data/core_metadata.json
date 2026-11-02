@@ -799,23 +799,23 @@
     ]
   },
   "proper-food-storage-chart": {
-    "title": "Free Proper Food Storage Chart Template | Saim Dev",
-    "desc": "Access a free proper food storage chart template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "title": "Free Proper Food Storage Chart & Guide | Saim Dev",
+    "desc": "Free commercial food storage chart. Master top-to-bottom fridge shelf hierarchy, raw meat separation, FIFO rotation, and statutory temperature limits.",
     "howTo": [
-      "Download and print the Proper Food Storage Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Place ready-to-eat cooked dishes and salads on the top shelves of the walk-in chiller.",
+      "Position whole raw beef, pork, and seafood on middle shelves below prepared foods.",
+      "Store raw ground meats and burgers below whole cuts on dedicated drip trays.",
+      "Keep raw poultry on the bottom shelf to eliminate bacterial cross-contamination drips."
     ]
   },
   "sanitation-standard-operating-procedures": {
-    "title": "Free SSOP Template | Saim Dev",
-    "desc": "Download our free ssop template template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free SSOP Template & Sanitation SOP Guide | Saim Dev",
+    "desc": "Free Sanitation Standard Operating Procedures (SSOP) template for UK food businesses. Master 5-stage cleaning, chemical dilution, and hygiene logs.",
     "howTo": [
-      "Download and print the SSOP Template for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Define pre-operational and operational cleaning responsibilities across all food zones.",
+      "Specify chemical dilution ratios, contact times, and BS EN 1276 compliance requirements.",
+      "Execute the 5-stage cleaning process: scrape, wash, rinse, disinfect, and air-dry.",
+      "Sign off daily SSOP verification logs and archive chemical dilution batch records."
     ]
   },
   "ssop": {
@@ -830,13 +830,13 @@
     ]
   },
   "what-are-the-critical-control-points-for-food-safety": {
-    "title": "Free Define Critical Control Point With Decision | Saim Dev",
-    "desc": "Free define critical control point with decision tree template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "title": "Free Critical Control Points (CCP) Guide | Saim Dev",
+    "desc": "Free Critical Control Points (CCP) guide and Codex decision tree. Identify biological hazards, set critical limits, and build a compliant HACCP plan.",
     "howTo": [
-      "Download and print the Define Critical Control Point With Decision Tree for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Map every process step from raw material intake through prep, cooking, and service.",
+      "Identify significant biological, chemical, physical, and allergenic hazards at each step.",
+      "Apply the 4 questions of the Codex decision tree to confirm CCP vs PRP status.",
+      "Establish measurable critical limits, monitoring frequency, and corrective action protocols."
     ]
   },
   "burger-temp-chart": {
@@ -1006,13 +1006,13 @@
     ]
   },
   "vacuum-sealed-food-shelf-life-chart": {
-    "title": "Free Vacuum-Sealed Food Shelf-Life Chart Template | Saim Dev",
-    "desc": "Free vacuum-sealed food shelf-life chart template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Vacuum-Sealed Food Shelf-Life Chart | Saim Dev",
+    "desc": "Free vacuum-sealed food shelf-life chart and VP/MAP guide. Master UK FSA 10-day rules, botulism barrier controls, and sous-vide chilling standards.",
     "howTo": [
-      "Download and print the Vacuum-Sealed Food Shelf-Life Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Ensure chilled vacuum-packed raw meats and cooked foods are held under 3°C or 5°C.",
+      "Apply the UK FSA 10-day maximum shelf life rule for foods without controlling barriers.",
+      "Verify controlling factors: heat (90°C for 10m), pH <= 5.0, salt >= 3.5%, or water activity aw <= 0.97.",
+      "Clearly label vacuum packs with packaging date, use-by date, and storage temperatures."
     ]
   },
   "calculating-food-cost": {
@@ -1068,13 +1068,13 @@
     ]
   },
   "fsma-food-traceability-list": {
-    "title": "Free UK & EU Food Traceability & Batch Tracking | Saim Dev",
-    "desc": "Free uk & eu food traceability & batch tracking guide template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "title": "Free Food Traceability Log & Guide | Saim Dev",
+    "desc": "Free food traceability log and one-step-back one-step-forward tracking sheet. Meet UK General Food Law and FSMA Rule 204 batch tracking standards.",
     "howTo": [
-      "Download and print the UK & EU Food Traceability & Batch Tracking Guide for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Log supplier name, address, delivery vehicle temp, and batch code at goods receipt.",
+      "Assign unique internal lot numbers to batch prepped ingredients and sauces.",
+      "Maintain customer dispatch records for wholesale, catering, and delivery orders.",
+      "Conduct bi-annual mock recall traceability audits achieving 100% reconciliation."
     ]
   },
   "approved-supplier-list": {

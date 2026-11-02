@@ -1,0 +1,95 @@
+{
+  "rank": 82,
+  "tool_id": "template-24",
+  "name": "Sanitation Standard Operating Procedures (SSOP)",
+  "slug": "sanitation-standard-operating-procedures",
+  "url": "https://www.saimdev.site/food-safety-templates/sanitation-standard-operating-procedures",
+  "primary_keyword": "sanitation standard operating procedures template",
+  "secondary_keywords": [
+    "commercial kitchen ssop template free",
+    "food manufacturing sanitation sop pdf",
+    "ssop daily cleaning log catering",
+    "uk food hygiene ssop example",
+    "brcgs ssop procedure format"
+  ],
+  "search_intent": "Food manufacturers, catering supervisors, and hygiene managers looking for a comprehensive Sanitation Standard Operating Procedures (SSOP) manual and digital checklist covering pre-operational sanitation, operational cleaning, chemical concentrations, contact times, and verification sign-offs.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Document Templates",
+    "PDFs"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "fooddocs.com",
+      "url": "https://www.fooddocs.com/templates/ssop-template",
+      "title": "SSOP Template & Daily Cleaning Log | FoodDocs",
+      "strengths": "Clean template structure.",
+      "weaknesses": "Paywalled behind software trial, requires card or business email."
+    },
+    {
+      "rank": 2,
+      "domain": "safetyculture.com",
+      "url": "https://safetyculture.com/checklists/ssop/",
+      "title": "SSOP Checklists & Templates | SafetyCulture",
+      "strengths": "Mobile inspection format.",
+      "weaknesses": "Gated mobile app download, zero public browser utility without account."
+    },
+    {
+      "rank": 3,
+      "domain": "fsis.usda.gov",
+      "url": "https://www.fsis.usda.gov/guidelines/2005-0012",
+      "title": "Sanitation SOP Regulatory Guide | USDA FSIS",
+      "strengths": "Definitive federal regulatory depth.",
+      "weaknesses": "Extremely dense, 50-page complex PDF, unsuitable for catering kitchens."
+    },
+    {
+      "rank": 4,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/cleaning-schedules-for-catering/",
+      "title": "Cleaning Schedules for Catering | High Speed Training",
+      "strengths": "Good UK food safety context.",
+      "weaknesses": "Static article promoting online courses, lacks operational digital logging tool."
+    },
+    {
+      "rank": 5,
+      "domain": "campdenbri.co.uk",
+      "url": "https://www.campdenbri.co.uk/hygiene-management.php",
+      "title": "Hygiene & Sanitation Management | Campden BRI",
+      "strengths": "Food manufacturing science authority.",
+      "weaknesses": "Commercial consultancy brochure, no free templates or tools."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Paywalled SaaS apps or static regulatory PDFs.",
+    "what_they_lack": "An ungated, interactive digital SSOP checklist with pre-operational inspection, 5-stage cleaning steps, BS EN 1276 chemical dilution verification, and digital sign-off.",
+    "what_we_offer": "Digital checklist tool with 8 dedicated SSOP tasks, real-time status checkboxes, corrective notes, CSV export, and printable audit sheet."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 97,
+      "best_competitor": 78
+    },
+    "content_depth_score": {
+      "saim_dev": 96,
+      "best_competitor": 82
+    },
+    "mobile_ux_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 84
+    },
+    "technical_seo_score": {
+      "saim_dev": 98,
+      "best_competitor": 81
+    },
+    "trust_eeat_score": {
+      "saim_dev": 96,
+      "best_competitor": 90
+    }
+  }
+}

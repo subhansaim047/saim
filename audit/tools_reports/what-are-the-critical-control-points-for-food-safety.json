@@ -1,0 +1,95 @@
+{
+  "rank": 83,
+  "tool_id": "template-26",
+  "name": "Critical Control Points (CCP) Guide & Decision Tree",
+  "slug": "what-are-the-critical-control-points-for-food-safety",
+  "url": "https://www.saimdev.site/food-safety-templates/what-are-the-critical-control-points-for-food-safety",
+  "primary_keyword": "critical control points food safety ccp decision tree",
+  "secondary_keywords": [
+    "what is a ccp in haccp",
+    "haccp critical control points examples catering",
+    "codex ccp decision tree questions",
+    "difference between ccp and prp",
+    "critical limits food safety monitoring"
+  ],
+  "search_intent": "Food business operators, catering managers, and HACCP team leaders needing a definitive explanation of Critical Control Points (CCPs), how to apply the 4-question Codex Alimentarius decision tree to operational steps, and examples of validated critical limits.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Decision Tree Diagrams",
+    "FAQs"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "safefoodpro.com",
+      "url": "https://www.safefoodpro.com/blog/critical-control-points-food-safety",
+      "title": "Critical Control Points in Food Safety | Safe Food Pro",
+      "strengths": "Clear definitions of CCP vs PRP.",
+      "weaknesses": "SaaS sales funnel, no interactive plan builder or free exportable template."
+    },
+    {
+      "rank": 2,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/what-is-a-critical-control-point/",
+      "title": "What is a Critical Control Point (CCP)? | High Speed Training",
+      "strengths": "Strong UK training curriculum explanation.",
+      "weaknesses": "Static training blog post, lacks interactive digital HACCP building features."
+    },
+    {
+      "rank": 3,
+      "domain": "food.gov.uk",
+      "url": "https://www.food.gov.uk/business-guidance/haccp",
+      "title": "HACCP Guidance & Food Safety Management | FSA",
+      "strengths": "Official UK regulatory benchmark.",
+      "weaknesses": "High-level policy text, no interactive decision tree tool or downloadable catering templates."
+    },
+    {
+      "rank": 4,
+      "domain": "safetyculture.com",
+      "url": "https://safetyculture.com/topics/haccp/critical-control-points/",
+      "title": "Critical Control Points Guide | SafetyCulture",
+      "strengths": "Good visual diagrams.",
+      "weaknesses": "Gated mobile app download, requires company email registration."
+    },
+    {
+      "rank": 5,
+      "domain": "fooddocs.com",
+      "url": "https://www.fooddocs.com/post/critical-control-points",
+      "title": "How to Determine Critical Control Points | FoodDocs",
+      "strengths": "Walkthrough of Codex decision tree.",
+      "weaknesses": "Software paywall, locked behind paid subscription."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Basic educational blogs or paywalled software subscriptions.",
+    "what_they_lack": "An ungated, interactive browser HACCP builder that maps process steps, hazards, CCP classifications, critical limits, and corrective actions.",
+    "what_we_offer": "Full interactive HACCP Plan Builder tool pre-loaded with commercial catering CCPs, complete with real-time hazard editing and one-click PDF generation."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 84
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 90
+    }
+  }
+}

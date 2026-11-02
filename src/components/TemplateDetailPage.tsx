@@ -147,6 +147,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     (template.slug.includes("haccp") ||
       template.slug.includes("hazard-analysis") ||
       template.slug.includes("food-safety-plan") ||
+      template.slug.includes("critical-control") ||
       template.slug.includes("critical-control-point"));
 
   const isQuizTool =
@@ -178,7 +179,9 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const isWalkInStorageTool =
     template.slug === "walk-in-cooler-food-storage-chart" ||
     template.slug.includes("walk-in-cooler") ||
-    template.slug.includes("food-storage-chart");
+    template.slug.includes("food-storage") ||
+    template.slug.includes("storage-chart") ||
+    template.slug.includes("shelf-life");
 
   const isFridgeRecordTool =
     template.slug === "fridge-temperature-record-sheet-pdf" ||
@@ -271,6 +274,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("slicer") ||
       template.slug.includes("waste") ||
       template.slug.includes("pest") ||
+      template.slug.includes("sanitation") ||
+      template.slug.includes("procedure") ||
       template.slug.includes("utensil"));
 
   // Related templates: only link to indexed KEEP and IMPROVE pages (no NOINDEX or duplicates)

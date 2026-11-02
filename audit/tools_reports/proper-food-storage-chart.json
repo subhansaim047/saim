@@ -1,0 +1,95 @@
+{
+  "rank": 81,
+  "tool_id": "template-21",
+  "name": "Commercial Proper Food Storage Chart",
+  "slug": "proper-food-storage-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/proper-food-storage-chart",
+  "primary_keyword": "proper food storage chart commercial kitchen",
+  "secondary_keywords": [
+    "refrigerator food storage hierarchy chart",
+    "walk in cooler storage order fsa",
+    "commercial fridge shelf organization raw meat",
+    "food storage order chart pdf",
+    "safe food storage temperatures celsius"
+  ],
+  "search_intent": "Chefs, kitchen porters, and food safety managers looking for a visual walk-in chiller and upright fridge storage hierarchy diagram showing the exact top-to-bottom placement of ready-to-eat foods, raw fish, raw whole meats, raw ground meats, and raw poultry to prevent cross-contamination drips and comply with FSA food safety guidelines.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Infographics",
+    "Image Carousels"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "webstaurantstore.com",
+      "url": "https://www.webstaurantstore.com/article/11/refrigerator-storage-order.html",
+      "title": "Proper Refrigerator Storage Order | WebstaurantStore",
+      "strengths": "Detailed American FDA hierarchy diagram.",
+      "weaknesses": "Fahrenheit focus, static blog layout, lacks interactive ingredient search simulator."
+    },
+    {
+      "rank": 2,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/fridge-storage-for-business/",
+      "title": "Commercial Fridge Storage Order | High Speed Training",
+      "strengths": "UK food hygiene regulatory alignment.",
+      "weaknesses": "Static illustration promoting Level 2 courses, no printable wall poster download or interactive filtering."
+    },
+    {
+      "rank": 3,
+      "domain": "statefoodsafety.com",
+      "url": "https://www.statefoodsafety.com/Resources/Resources/fridge-storage-order-infographic",
+      "title": "Fridge Storage Order Infographic | StateFoodSafety",
+      "strengths": "Graphic infographic visual appeal.",
+      "weaknesses": "Built to sell food handler certificates, lacks commercial catering equipment scaling."
+    },
+    {
+      "rank": 4,
+      "domain": "katom.com",
+      "url": "https://www.katom.com/learning-center/proper-refrigerator-storage-order.html",
+      "title": "Commercial Refrigerator Storage Order | KaTom",
+      "strengths": "Covers walk-in cooler shelf layouts.",
+      "weaknesses": "Heavy equipment sales links, lacks statutory UK/EU cross-contamination rules."
+    },
+    {
+      "rank": 5,
+      "domain": "safetyculture.com",
+      "url": "https://safetyculture.com/checklists/refrigerator-organization/",
+      "title": "Fridge Organization Checklists | SafetyCulture",
+      "strengths": "Checklist format.",
+      "weaknesses": "Mobile app gate, requires user account creation."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Basic static infographics or course marketing blogs.",
+    "what_they_lack": "An interactive digital refrigeration simulator with real-time food search, 5-tier vertical hierarchy, cooking temperature safety rationale, and instant print layout.",
+    "what_we_offer": "Complete 5-tier interactive storage tool with dynamic search by food type, raw vs ready-to-eat separation rules, and high-resolution A4 kitchen chart print capability."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 86
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 83
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 89
+    }
+  }
+}
