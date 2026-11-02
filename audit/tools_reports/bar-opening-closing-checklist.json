@@ -1,0 +1,38 @@
+{
+  "priority_rank": 105,
+  "slug": "bar-opening-closing-checklist",
+  "name": "Bar Daily Opening & Closing Checklist",
+  "category": "checklist",
+  "target_keyword": "bar opening and closing checklist",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://pos.toasttab.com/blog/on-the-line/bar-opening-checklist",
+    "https://www.7shifts.com/blog/bar-closing-checklist/",
+    "https://www.touchbistro.com/blog/bar-opening-and-closing-checklist/",
+    "https://binwise.com/blog/bar-opening-and-closing-checklist",
+    "https://www.webstaurantstore.com/article/78/bar-cleaning-checklist.html"
+  ],
+  "competitor_gaps": [
+    "Unstructured blog posts without interactive task completion or state saving",
+    "No integrated refrigeration probe logs for bottle coolers, wine fridges, and cellars",
+    "Missing draft beer line chemical flushing frequency schedules",
+    "Lacks ice machine hygiene and dedicated scoop storage rules"
+  ],
+  "our_differentiators": [
+    "Interactive shift-based digital checklist for morning setup, active service, and nightly shutdown",
+    "Integrated digital temperature logging for bar refrigeration (<4.0\u00b0C target)",
+    "Draft beer line maintenance schedules and soda gun sanitisation procedures",
+    "Strict ice machine biofilm prevention and dedicated scoop holder rules",
+    "1-click printable shift log for bar managers and supervisors"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

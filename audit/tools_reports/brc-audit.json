@@ -1,0 +1,38 @@
+{
+  "priority_rank": 103,
+  "slug": "brc-audit",
+  "name": "BRC Audit Checklist",
+  "category": "checklist",
+  "target_keyword": "brc audit checklist",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://goaudits.com/checklists/brc-food-safety-audit-checklist/",
+    "https://miratag.ee/brcgs-internal-audit-checklist/",
+    "https://www.brcgs.com/our-standards/food-safety/",
+    "https://safetyculture.com/checklists/brc-food-safety/",
+    "https://www.qima.com/brcgs-certification-audit"
+  ],
+  "competitor_gaps": [
+    "Gated behind proprietary audit apps requiring credit card or corporate registration",
+    "Missing specific foreign body challenge wand test sizes (1.5mm Fe, 2.0mm Non-Fe, 2.5mm SS)",
+    "Omission of the statutory 4-hour mock recall mass-balance window",
+    "No direct link to food safety culture evaluation plans"
+  ],
+  "our_differentiators": [
+    "Comprehensive BRCGS Global Standard Issue 9 digital audit checklist",
+    "Clauses covering Senior Management, HACCP, Site Standards, Foreign Body, and Personnel",
+    "Built-in 4-hour forward and backward mock recall traceability verification",
+    "Metal detector and X-ray hourly challenge wand log protocols",
+    "1-click printable internal audit report for accreditation bodies"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

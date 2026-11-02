@@ -2284,9 +2284,25 @@
     "main_keyword": "waste management plan sop uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 101
+    "priority_rank": 101,
+    "target_keyword": "waste management plan sop",
+    "top_5_competitors": [
+      "https://www.fooddocs.com/post/waste-management-plan-sop",
+      "https://mahoneyes.com/restaurant-waste-management-sop/",
+      "https://www.restaurantware.com/blog/sustainable-kitchen-waste-management/",
+      "https://cloudkitchens.com/blog/commercial-kitchen-waste-management/",
+      "https://pacepartners.com/grease-and-waste-sop/"
+    ],
+    "differentiators": [
+      "Interactive digital checklist for kitchen waste segregation, oil disposal, and dumpster control",
+      "Explicit Duty of Care Waste Transfer Note archival protocols (2-year retention)",
+      "Step-by-step cooking oil cooling (<38°C) and outdoor containment procedures",
+      "Zero login or paywall: fully accessible and customizable in-browser",
+      "1-click printable EHO-compliant kitchen waste management audit log"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 160,
@@ -2303,9 +2319,25 @@
     "main_keyword": "kitchen sop uk",
     "opportunity_score": 70.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 102
+    "priority_rank": 102,
+    "target_keyword": "kitchen sop",
+    "top_5_competitors": [
+      "https://pos.toasttab.com/blog/on-the-line/kitchen-sop",
+      "https://www.7shifts.com/blog/kitchen-standard-operating-procedures/",
+      "https://www.fooddocs.com/post/kitchen-sop-templates",
+      "https://www.touchbistro.com/blog/back-of-house-sop/",
+      "https://www.lightspeedhq.com/blog/kitchen-sop-guide/"
+    ],
+    "differentiators": [
+      "Shift-based interactive digital checklist covering opening, midday prep, and closing deep cleans",
+      "Integrated commercial temperature probe logs with real-time pass/fail validation",
+      "Full color-coded chopping board hygiene standards and Natasha's Law allergen controls",
+      "Due diligence verification compliant with Section 21 of the UK Food Safety Act 1990",
+      "1-click printable supervisor shift sign-off audit records"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 8,
@@ -2322,9 +2354,25 @@
     "main_keyword": "brc audit checklist uk",
     "opportunity_score": 65.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 103
+    "priority_rank": 103,
+    "target_keyword": "brc audit checklist",
+    "top_5_competitors": [
+      "https://goaudits.com/checklists/brc-food-safety-audit-checklist/",
+      "https://miratag.ee/brcgs-internal-audit-checklist/",
+      "https://www.brcgs.com/our-standards/food-safety/",
+      "https://safetyculture.com/checklists/brc-food-safety/",
+      "https://www.qima.com/brcgs-certification-audit"
+    ],
+    "differentiators": [
+      "Comprehensive BRCGS Global Standard Issue 9 digital audit checklist",
+      "Clauses covering Senior Management, HACCP, Site Standards, Foreign Body, and Personnel",
+      "Built-in 4-hour forward and backward mock recall traceability verification",
+      "Metal detector and X-ray hourly challenge wand log protocols",
+      "1-click printable internal audit report for accreditation bodies"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 9,
@@ -2341,9 +2389,25 @@
     "main_keyword": "kosher uk",
     "opportunity_score": 65.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 104
+    "priority_rank": 104,
+    "target_keyword": "kosher certification checklist",
+    "top_5_competitors": [
+      "https://oukosher.org/commercial-kitchen-guidelines/",
+      "https://www.star-k.org/articles/kosher-kitchen-certification/",
+      "https://www.koshercertification.org.uk/standards/",
+      "https://www.klbdkosher.org/restaurant-certification-guide/",
+      "https://www.chabad.org/library/article_cdo/aid/82668/jewish/Koshering-the-Kitchen.htm"
+    ],
+    "differentiators": [
+      "Interactive Kosher Kitchen Certification checklist covering Meat, Dairy, and Pareve segregation",
+      "Approved rabbinic agency symbol verification (OU, Star-K, KLBD) for incoming goods",
+      "Bedikat Tola'im produce lightbox inspection protocols for zero insect infestation",
+      "Step-by-step equipment purging (Hagala/Libbun) 24-hour resting guidelines",
+      "1-click printable Mashgiach compliance audit sheet"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 32,
@@ -2360,9 +2424,25 @@
     "main_keyword": "bar daily opening & closing checklist uk",
     "opportunity_score": 65.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 105
+    "priority_rank": 105,
+    "target_keyword": "bar opening and closing checklist",
+    "top_5_competitors": [
+      "https://pos.toasttab.com/blog/on-the-line/bar-opening-checklist",
+      "https://www.7shifts.com/blog/bar-closing-checklist/",
+      "https://www.touchbistro.com/blog/bar-opening-and-closing-checklist/",
+      "https://binwise.com/blog/bar-opening-and-closing-checklist",
+      "https://www.webstaurantstore.com/article/78/bar-cleaning-checklist.html"
+    ],
+    "differentiators": [
+      "Interactive shift-based digital checklist for morning setup, active service, and nightly shutdown",
+      "Integrated digital temperature logging for bar refrigeration (<4.0°C target)",
+      "Draft beer line maintenance schedules and soda gun sanitisation procedures",
+      "Strict ice machine biofilm prevention and dedicated scoop holder rules",
+      "1-click printable shift log for bar managers and supervisors"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 34,

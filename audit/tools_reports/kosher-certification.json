@@ -1,0 +1,38 @@
+{
+  "priority_rank": 104,
+  "slug": "kosher-certification",
+  "name": "Kosher",
+  "category": "checklist",
+  "target_keyword": "kosher certification checklist",
+  "search_volume": "Medium",
+  "winnability": "High",
+  "competitors": [
+    "https://oukosher.org/commercial-kitchen-guidelines/",
+    "https://www.star-k.org/articles/kosher-kitchen-certification/",
+    "https://www.koshercertification.org.uk/standards/",
+    "https://www.klbdkosher.org/restaurant-certification-guide/",
+    "https://www.chabad.org/library/article_cdo/aid/82668/jewish/Koshering-the-Kitchen.htm"
+  ],
+  "competitor_gaps": [
+    "Academic theological articles lacking modern commercial kitchen operational checklists",
+    "Missing practical produce inspection (Bedikat Tola'im) procedures for kitchen staff",
+    "No structured equipment kashering (Hagala) resting and boiling schedules",
+    "Lacks digital supervisor sign-off for daily Mashgiach on-duty logs"
+  ],
+  "our_differentiators": [
+    "Interactive Kosher Kitchen Certification checklist covering Meat, Dairy, and Pareve segregation",
+    "Approved rabbinic agency symbol verification (OU, Star-K, KLBD) for incoming goods",
+    "Bedikat Tola'im produce lightbox inspection protocols for zero insect infestation",
+    "Step-by-step equipment purging (Hagala/Libbun) 24-hour resting guidelines",
+    "1-click printable Mashgiach compliance audit sheet"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

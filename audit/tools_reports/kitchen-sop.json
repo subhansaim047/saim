@@ -1,0 +1,38 @@
+{
+  "priority_rank": 102,
+  "slug": "kitchen-sop",
+  "name": "Kitchen SOP",
+  "category": "chart",
+  "target_keyword": "kitchen sop",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://pos.toasttab.com/blog/on-the-line/kitchen-sop",
+    "https://www.7shifts.com/blog/kitchen-standard-operating-procedures/",
+    "https://www.fooddocs.com/post/kitchen-sop-templates",
+    "https://www.touchbistro.com/blog/back-of-house-sop/",
+    "https://www.lightspeedhq.com/blog/kitchen-sop-guide/"
+  ],
+  "competitor_gaps": [
+    "Paywalled PDF downloads or generic text without interactive execution",
+    "No integrated temperature probe logging for walk-in coolers, freezers, and hot holds",
+    "Missing statutory UK Food Standards Agency 75\u00b0C core cooking parameters",
+    "Lacks rapid 90-minute two-stage cooling protocols for batch preparation"
+  ],
+  "our_differentiators": [
+    "Shift-based interactive digital checklist covering opening, midday prep, and closing deep cleans",
+    "Integrated commercial temperature probe logs with real-time pass/fail validation",
+    "Full color-coded chopping board hygiene standards and Natasha's Law allergen controls",
+    "Due diligence verification compliant with Section 21 of the UK Food Safety Act 1990",
+    "1-click printable supervisor shift sign-off audit records"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

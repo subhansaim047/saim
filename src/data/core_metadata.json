@@ -280,23 +280,25 @@
     ]
   },
   "brc-audit": {
-    "title": "Free BRC Audit Checklist Template | Saim Dev",
-    "desc": "Download our free brc audit checklist template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free BRCGS Food Safety Audit Checklist | Saim Dev",
+    "desc": "Prepare for BRCGS Issue 9 certification audits with a complete food safety management checklist. Free HACCP, site standards, and traceability audit sheet.",
     "howTo": [
-      "Download and print the BRC Audit Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Review senior management food safety culture commitment and executive reviews.",
+      "Validate HACCP flow diagrams, critical limits, and CCP monitoring protocols.",
+      "Conduct physical factory audits covering building fabric, drainage, and pest traps.",
+      "Challenge foreign body detectors (metal detection/X-ray) with calibrated test wands.",
+      "Execute a 4-hour forward and backward mass-balance traceability mock recall."
     ]
   },
   "kosher-certification": {
-    "title": "Free Kosher Template | Saim Dev",
-    "desc": "Download our free kosher template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Kosher Kitchen Certification Guide | Saim Dev",
+    "desc": "Maintain strict Kosher standards with meat, dairy, and pareve segregation checklists. Free Mashgiach supervision, produce checking, and kashering SOPs.",
     "howTo": [
-      "Download and print the Kosher for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Segregate cookware, preparation tables, and refrigeration for meat and dairy.",
+      "Verify all incoming ingredients, oils, and chemicals carry approved Kosher logos.",
+      "Facilitate Mashgiach on-duty supervision, oven lighting, and key security.",
+      "Inspect leafy produce under backlighting to verify zero insect contamination.",
+      "Follow rabbinic kashering (Hagala) protocols when equipment crossover occurs."
     ]
   },
   "turkey-pasteurization-chart": {
@@ -430,13 +432,14 @@
     ]
   },
   "bar-opening-closing-checklist": {
-    "title": "Free Bar Daily Opening & Closing Checklist | Saim Dev",
-    "desc": "Free bar daily opening & closing checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Bar Opening & Closing Checklist | Saim Dev",
+    "desc": "Ensure clean, compliant, and efficient bar operations from pre-service setup to nightly shutdown. Free customizable bar opening and closing checklist.",
     "howTo": [
-      "Download and print the Bar Daily Opening & Closing Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Clean and sanitize bar counters, cutting boards, and cocktail prep stations.",
+      "Check and record refrigeration temperatures for beer coolers and wine fridges.",
+      "Prime beer draft lines, inspect CO2 levels, and ensure clean ice scoop holders.",
+      "Cover, label, and refrigerate cut citrus, herbs, and fresh garnishes at close.",
+      "Sanitize soda gun nozzles, flush beer drip trays, and secure liquor cabinets."
     ]
   },
   "bar-opening-checklist": {
@@ -1601,23 +1604,25 @@
     ]
   },
   "waste-management-plan-sop": {
-    "title": "Free Waste Management Plan SOP Template | Saim Dev",
-    "desc": "Access a free waste management plan sop template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "title": "Free Waste Management Plan SOP Guide | Saim Dev",
+    "desc": "Establish compliant kitchen waste segregation, oil recycling, and external dumpster SOPs. Free waste management plan checklist for food businesses.",
     "howTo": [
-      "Download and print the Waste Management Plan SOP for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Source-separate waste streams into organic food scraps, recyclables, and landfill.",
+      "Transfer cooled cooking oil into secure outdoor grease recovery collection tanks.",
+      "Empty kitchen waste bins every 2 hours and sanitize all bins at closing shift.",
+      "Keep external dumpster lids locked and maintain clean, odor-free bin pads.",
+      "Maintain waste transfer notes and certified carrier collection logs for audits."
     ]
   },
   "kitchen-sop": {
-    "title": "Free Kitchen SOP Template | Saim Dev",
-    "desc": "Download our free kitchen sop template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Kitchen SOP Template & Checklist | Saim Dev",
+    "desc": "Standardise kitchen shift prep, sanitisation, cross-contamination, and safety controls. Free commercial kitchen standard operating procedures template.",
     "howTo": [
-      "Download and print the Kitchen SOP for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Execute structured morning kitchen station opening and equipment checks.",
+      "Enforce color-coded chopping board segregation for raw meat, fish, and produce.",
+      "Verify core cooking temperatures (75°C for 30s) and log probe readings.",
+      "Complete rapid two-stage food cooling to below 5°C within 90 minutes.",
+      "Complete nightly closing deep clean and supervisor sign-off verification."
     ]
   }
 }

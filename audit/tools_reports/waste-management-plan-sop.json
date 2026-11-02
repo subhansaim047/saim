@@ -1,0 +1,38 @@
+{
+  "priority_rank": 101,
+  "slug": "waste-management-plan-sop",
+  "name": "Waste Management Plan SOP",
+  "category": "chart",
+  "target_keyword": "waste management plan sop",
+  "search_volume": "Medium",
+  "winnability": "High",
+  "competitors": [
+    "https://www.fooddocs.com/post/waste-management-plan-sop",
+    "https://mahoneyes.com/restaurant-waste-management-sop/",
+    "https://www.restaurantware.com/blog/sustainable-kitchen-waste-management/",
+    "https://cloudkitchens.com/blog/commercial-kitchen-waste-management/",
+    "https://pacepartners.com/grease-and-waste-sop/"
+  ],
+  "competitor_gaps": [
+    "Generic environmental blog tips without actionable kitchen shift checklists",
+    "Missing statutory citations under UK Duty of Care and Section 111 Water Industry Act",
+    "Omission of the 25% capacity rule for commercial grease trap pumping",
+    "No 1-click printable shift sign-off sheets for EHO inspection"
+  ],
+  "our_differentiators": [
+    "Interactive digital checklist for kitchen waste segregation, oil disposal, and dumpster control",
+    "Explicit Duty of Care Waste Transfer Note archival protocols (2-year retention)",
+    "Step-by-step cooking oil cooling (<38\u00b0C) and outdoor containment procedures",
+    "Zero login or paywall: fully accessible and customizable in-browser",
+    "1-click printable EHO-compliant kitchen waste management audit log"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}
