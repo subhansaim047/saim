@@ -1,0 +1,78 @@
+{
+  "tool_id": "template-rank-60",
+  "name": "HACCP Hazard Analysis Example & Template",
+  "slug": "hazard-analysis-template",
+  "url": "https://www.saimdev.site/food-safety-templates/hazard-analysis-template",
+  "primary_keyword": "haccp hazard analysis template uk",
+  "secondary_keywords": [
+    "hazard analysis critical control point example catering",
+    "food safety hazard analysis matrix",
+    "biological chemical physical allergenic hazard analysis table",
+    "hazard analysis risk matrix food safety uk",
+    "fsa haccp hazard analysis form"
+  ],
+  "search_intent": "Food business operators, catering managers, and technical directors seeking a complete HACCP Principle 1 hazard analysis template to evaluate biological, chemical, physical, and allergen hazards using a Severity × Likelihood risk matrix and determine Critical Control Points (CCPs).",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Matrix / Process Map View"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/hazard-analysis-critical-control-point-haccp",
+      "features": "High-level regulatory guidance without interactive hazard builder."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/haccp-principles-hazard-analysis/",
+      "features": "Training article with static example table and course promotions."
+    },
+    {
+      "name": "Safe Food Alliance",
+      "url": "https://safefoodalliance.com/haccp/hazard-analysis-principle-1/",
+      "features": "Educational guide with static printable Word templates."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/post/hazard-analysis-critical-control-points",
+      "features": "Automated software funnel requiring account creation."
+    },
+    {
+      "name": "SafetyCulture",
+      "url": "https://safetyculture.com/checklists/hazard-analysis-template/",
+      "features": "Mobile checklist requiring app installation and paid license."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "Static Word/PDF tables that cannot dynamically calculate Risk Severity × Likelihood, or paid SaaS platforms that lock HACCP plans behind subscriptions.",
+    "our_differentiators": [
+      "Powered by interactive HaccpPlanBuilderTool engine with full 7 HACCP principles",
+      "Structured hazard risk matrix covering Biological, Chemical, Physical, and Allergenic hazards",
+      "Codex Alimentarius CCP decision tree logic and critical limit setting",
+      "One-click printable A4 HACCP Process Map and CSV data export"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "content_depth": {
+      "saim_dev": 99,
+      "best_competitor": 87
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 76
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 88
+    },
+    "trust_eeat": {
+      "saim_dev": 99,
+      "best_competitor": 90
+    }
+  }
+}

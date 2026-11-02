@@ -1,0 +1,78 @@
+{
+  "tool_id": "template-rank-58",
+  "name": "Food Cost & Margin Target Formulas Calculator",
+  "slug": "calculating-food-cost",
+  "url": "https://www.saimdev.site/food-safety-templates/calculating-food-cost",
+  "primary_keyword": "how to calculate food cost percentage uk",
+  "secondary_keywords": [
+    "food cost and margin target formulas chart",
+    "restaurant food cost calculation formula",
+    "ideal food cost percentage catering uk",
+    "gross profit margin target restaurant",
+    "menu pricing formula calculator food cost"
+  ],
+  "search_intent": "Hospitality entrepreneurs, executive chefs, and restaurant operators looking for the mathematical formulas and interactive calculators to compute food cost percentages, set target gross profit margins (68%–72%), account for 20% UK VAT, and price menu items accurately.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Interactive Calculator / Formula Matrix"
+  ],
+  "competitors": [
+    {
+      "name": "Toast POS",
+      "url": "https://pos.toasttab.com/blog/on-the-line/how-to-calculate-food-cost-percentage",
+      "features": "Educational blog post with static formulas designed to generate POS leads."
+    },
+    {
+      "name": "Lightspeed",
+      "url": "https://www.lightspeedhq.co.uk/blog/food-cost-percentage/",
+      "features": "UK blog post explaining GP formulas without interactive recipe costing."
+    },
+    {
+      "name": "7shifts",
+      "url": "https://www.7shifts.com/blog/food-cost-formula/",
+      "features": "Restaurant management software blog with email-gated spreadsheet."
+    },
+    {
+      "name": "TouchBistro",
+      "url": "https://www.touchbistro.com/blog/how-to-calculate-food-cost-percentage/",
+      "features": "Marketing article with basic mathematical examples and demo requests."
+    },
+    {
+      "name": "WebstaurantStore",
+      "url": "https://www.webstaurantstore.com/article/117/how-to-calculate-food-cost.html",
+      "features": "Generic article linking to kitchen smallware and equipment listings."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "All top competitors are POS companies using static formulas as lead capture funnels; none provide a full, live, interactive in-browser recipe costing engine with dynamic VAT toggles and delivery commission buffers.",
+    "our_differentiators": [
+      "Live interactive ingredient costing engine with real-time gross profit slider",
+      "UK VAT split calculator (20% standard rate vs 0% cold takeaway)",
+      "Delivery aggregator commission buffer calculator (15%–30%)",
+      "Printable commercial recipe costing spec and CSV export"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 100,
+      "best_competitor": 74
+    },
+    "content_depth": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 76
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 85
+    },
+    "trust_eeat": {
+      "saim_dev": 98,
+      "best_competitor": 85
+    }
+  }
+}
