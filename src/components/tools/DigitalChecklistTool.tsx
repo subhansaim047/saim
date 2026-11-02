@@ -2294,6 +2294,44 @@ const FOOD_SANITATION_TASKS: CheckItem[] = [
   }
 ];
 
+const DEFROSTING_SOP_TASKS: CheckItem[] = [
+  {
+    id: "defrost-1",
+    category: "Chilled Thawing Control",
+    task: "Transfer frozen products into dedicated refrigeration units maintained strictly at or below 5.0°C; never defrost at ambient room temperature.",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "defrost-2",
+    category: "Drip Containment & Raw Separation",
+    task: "Place thawing raw meats in deep-lipped containers or perforated drip pans on the lowest refrigerator shelf to prevent liquid cross-contamination.",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "defrost-3",
+    category: "Thaw Date Labelling",
+    task: "Apply day-dot or defrost labels recording the date and time thawing began, expected completion time, and designated use-by deadline (within 24 hours of complete thaw).",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "defrost-4",
+    category: "Core Temperature & Softness Check",
+    task: "Probe internal meat core with a sanitised thermometer to verify complete thawing (no lingering ice crystals) prior to cooking.",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "defrost-5",
+    category: "Immediate Cooking Protocol",
+    task: "Cook defrosted foods thoroughly to FSA core temperature (>=75.0°C for 30s) within 24 hours; never refreeze thawed raw food items.",
+    status: "pass",
+    actionNotes: ""
+  }
+];
+
 const THERMOMETER_SOP_TASKS: CheckItem[] = [
   {
     id: "therm-1",
@@ -2523,6 +2561,9 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
   const isThermometerSop =
     templateTitle.toLowerCase().includes("how to use") && templateTitle.toLowerCase().includes("thermometer") ||
     (templateId && templateId.includes("how-to-use") && templateId.includes("thermometer"));
+  const isDefrosting =
+    templateTitle.toLowerCase().includes("defrost") ||
+    (templateId && templateId.includes("defrost"));
   const isFoodSanitation =
     templateTitle.toLowerCase().includes("sanitation") ||
     (templateId && templateId.includes("food-safety-and-sanitation"));
@@ -2655,6 +2696,7 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     if (isDispatch) return DISPATCH_LOG_TASKS;
     if (isCorrectiveActionPlan) return CORRECTIVE_ACTION_TASKS;
     if (isThermometerSop) return THERMOMETER_SOP_TASKS;
+    if (isDefrosting) return DEFROSTING_SOP_TASKS;
     if (isFoodSanitation) return FOOD_SANITATION_TASKS;
     if (isBig6Pathogens) return BIG_6_PATHOGENS_TASKS;
     if (isBrcAudit) return BRC_AUDIT_TASKS;

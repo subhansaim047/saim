@@ -1251,23 +1251,23 @@
     ]
   },
   "cold-holding-food": {
-    "title": "Free Max. Temp. And Rules For Cold Holding Food | Saim Dev",
-    "desc": "Free max. temp. and rules for cold holding food template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Cold Holding Food Rules & Log | Saim Dev",
+    "desc": "UK commercial cold holding food temperature rules. Comply with 8°C legal limits, 4-hour display exemptions, probe calibration, and daily kitchen logs.",
     "howTo": [
-      "Download and print the Max. Temp. And Rules For Cold Holding Food for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Maintain cold holding wells and chilled counters at or below 5.0°C",
+      "Probe food temperatures every 2 hours using a disinfected digital probe",
+      "Apply the 4-hour single display exemption for open buffet service",
+      "Discard or rapidly chill any cold foods that exceed the 4-hour display window"
     ]
   },
   "sell-by-date": {
-    "title": "Free Sell-By, Use-By, Expiration Dates Template | Saim Dev",
-    "desc": "Free sell-by, use-by, expiration dates template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Food Date Markings Guide UK | Saim Dev",
+    "desc": "UK commercial food date marking guide. Understand Use-By versus Best-Before legal definitions, manufacturer shelf life, day-dots, and EHO compliance.",
     "howTo": [
-      "Download and print the Sell-By, Use-By, Expiration Dates for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Identify Use-By dates as strict statutory safety boundaries for high-risk foods",
+      "Recognise Best-Before dates as food quality benchmarks for dry and frozen goods",
+      "Apply day-dot stickers upon opening with a mandatory 48-hour discard time",
+      "Never sell, prep, or serve foods past their verified Use-By expiration date"
     ]
   },
   "how-long-to-keep-leftovers-chart": {
@@ -1281,13 +1281,13 @@
     ]
   },
   "fat-tom-poster": {
-    "title": "Free FATTOM Template | Saim Dev",
-    "desc": "Download our free fattom template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free FAT TOM Food Safety Poster | Saim Dev",
+    "desc": "Commercial kitchen FAT TOM food safety reference poster. Learn how Food, Acidity, Time, Temperature, Oxygen, and Moisture control bacterial proliferation.",
     "howTo": [
-      "Download and print the FATTOM for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Control Temperature: Maintain chilled foods below 5°C and hot food above 63°C",
+      "Control Time: Restrict high-risk food exposure within the 8°C-63°C danger zone to <2 hours",
+      "Control Moisture: Reduce water activity (Aw) via dehydration, salting, or curing",
+      "Control Oxygen: Implement vacuum packing or airtight containers to inhibit aerobic pathogens"
     ]
   },
   "how-long-does-butter-last-poster": {
@@ -1301,13 +1301,14 @@
     ]
   },
   "cutting-board-color-chart": {
-    "title": "Free UK Colour-Coded Chopping Board Chart | Saim Dev",
-    "desc": "Free uk colour-coded chopping board chart template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free UK Chopping Board Colour Chart | Saim Dev",
+    "desc": "Free UK colour-coded chopping board chart for commercial kitchens. Master Red (raw meat), Yellow (cooked meat), Blue (fish), and Green (salad) rules.",
     "howTo": [
-      "Download and print the UK Colour-Coded Chopping Board Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Dedicate RED boards strictly to raw beef, pork, lamb, and poultry preparation",
+      "Dedicate YELLOW boards strictly to cooked roasts, deli meats, and carved proteins",
+      "Dedicate BLUE boards strictly to raw fish, salmon, shellfish, and seafood",
+      "Dedicate GREEN boards strictly to washed salads, fresh fruit, and fresh herbs",
+      "Sanitise all colour-coded boards in a commercial dishwasher operating at 82°C"
     ]
   },
   "natashas-law": {
@@ -1333,13 +1334,14 @@
     ]
   },
   "defrosting-foods": {
-    "title": "Free Food Defrosting Template | Saim Dev",
-    "desc": "Download our free food defrosting template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Food Defrosting SOP & Log | Saim Dev",
+    "desc": "Commercial food defrosting SOP and thawing log. Follow refrigerator thawing (<=5°C), cold running water, and microwave prep rules under FSA guidelines.",
     "howTo": [
-      "Download and print the Food Defrosting for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Thaw food inside commercial chillers maintained strictly at or below 5.0°C",
+      "Place thawing items in deep drip pans on the lowest shelf to catch melting juices",
+      "Never defrost high-risk meats, poultry, or seafood at ambient room temperature",
+      "Cook thoroughly defrosted foods within 24 hours of thawing completion",
+      "Verify core is completely thawed with no interior ice crystals before cooking"
     ]
   },
   "boiling-water-thermometer-calibration": {
