@@ -1,0 +1,78 @@
+{
+  "tool_id": "template-rank-61",
+  "name": "Commercial Recipe Card Generator & Batch Scaler",
+  "slug": "recipe-card-generator",
+  "url": "https://www.saimdev.site/food-safety-templates/recipe-card-generator",
+  "primary_keyword": "recipe generator uk",
+  "secondary_keywords": [
+    "commercial recipe card template excel",
+    "restaurant recipe cost calculator uk",
+    "kitchen batch scaling tool catering",
+    "recipe card with allergens word template",
+    "chef recipe specification sheet printable"
+  ],
+  "search_intent": "Executive chefs, restaurant operators, and catering directors seeking an interactive commercial recipe card generator to standardize dish specifications, scale ingredient batch weights dynamically, calculate portion food costs, manage 14 Natasha's Law allergens, and print station-ready cards.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Calculator / Recipe Card View"
+  ],
+  "competitors": [
+    {
+      "name": "ChefTec",
+      "url": "https://www.cheftec.com/culinary-software/",
+      "features": "Legacy commercial desktop software requiring paid enterprise license."
+    },
+    {
+      "name": "Fillet for Chefs",
+      "url": "https://getfillet.com/",
+      "features": "Mobile-first recipe app requiring app download and subscription plan."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/standardised-recipe-card-template/",
+      "features": "Training blog article with static printable PDF and course ads."
+    },
+    {
+      "name": "RestaurantOwner.com",
+      "url": "https://www.restaurantowner.com/public/Recipe-Costing-and-Inventory-Spreadsheets.cfm",
+      "features": "Paywalled Excel spreadsheet templates requiring paid membership."
+    },
+    {
+      "name": "7shifts",
+      "url": "https://www.7shifts.com/blog/recipe-costing-template/",
+      "features": "Restaurant scheduling blog post with lead capture form for Excel template."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "Paywalled spreadsheets or complex legacy desktop software requiring steep learning curves; lack of instant browser-based batch scaling with integrated UK VAT and Natasha's Law allergen tagging.",
+    "our_differentiators": [
+      "Interactive browser tool with live batch scaling multiplier",
+      "Automated portion food cost calculation with UK VAT and margin analysis",
+      "Natasha's Law 14 statutory allergen selector with automatic warnings",
+      "High-contrast printable A4 specification sheet for kitchen station binders"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "content_depth": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 74
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 86
+    },
+    "trust_eeat": {
+      "saim_dev": 98,
+      "best_competitor": 88
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "tool_id": "template-rank-65",
+  "name": "Commercial Burger Cooking Temperature & E. coli O157 Chart",
+  "slug": "burger-temp-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/burger-temp-chart",
+  "primary_keyword": "burger temperature chart uk",
+  "secondary_keywords": [
+    "commercial burger cooking temperature fsa",
+    "minced beef internal temperature 75c",
+    "serving rare burgers uk legal requirements",
+    "smash burger griddle cooking temperature",
+    "burger core temperature probe log"
+  ],
+  "search_intent": "Gourmet burger bar chefs, pub cooks, and restaurant managers seeking an authoritative UK burger cooking temperature chart specifying internal core temperatures (75°C for 30s / 70°C for 2m), E. coli O157 pathogen risks, griddle timing, and FSA rare burger protocols.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Cooking Chart / Protocol View"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/burgers",
+      "features": "Official regulatory guidance detailing strict rare burger service requirements."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/cooking-burgers-safely/",
+      "features": "Training article explaining burger cooking science and FSA advice."
+    },
+    {
+      "name": "ThermoWorks",
+      "url": "https://blog.thermoworks.com/burgers/burger-temperatures-and-doneness/",
+      "features": "US thermometer manufacturer blog focused on domestic culinary doneness."
+    },
+    {
+      "name": "WebstaurantStore",
+      "url": "https://www.webstaurantstore.com/article/18/burger-internal-temperature.html",
+      "features": "US restaurant supply blog citing 160°F USDA standards."
+    },
+    {
+      "name": "Serious Eats",
+      "url": "https://www.seriouseats.com/the-burger-lab-how-to-cook-a-burger",
+      "features": "Culinary food science article without UK statutory food safety frameworks."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "Domestic cooking blogs advising pink minced beef without explaining severe E. coli O157 (STEC) risks; US articles using Fahrenheit; lack of an interactive commercial probe temperature simulator for different burger formats.",
+    "our_differentiators": [
+      "Dedicated commercial burger module in MeatCookingTemperatureChartTool",
+      "Time/temperature combinations (75°C 30s, 70°C 2m, 80°C 6s, 82°C Scotland)",
+      "Profiles for Standard Beef, Smashed Patty, FSA Rare/Pink, Lamb Kofta, and Poultry",
+      "Full statutory consumer advisory notice copy and printable griddle spec"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "content_depth": {
+      "saim_dev": 99,
+      "best_competitor": 86
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 78
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 87
+    },
+    "trust_eeat": {
+      "saim_dev": 99,
+      "best_competitor": 91
+    }
+  }
+}

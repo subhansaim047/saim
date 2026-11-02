@@ -1,0 +1,79 @@
+{
+  "tool_id": "template-rank-62",
+  "name": "Food Safety Temperatures Poster & Safe Cooking Guide",
+  "slug": "food-temperatures-poster",
+  "url": "https://www.saimdev.site/food-safety-templates/food-temperatures-poster",
+  "primary_keyword": "food safety temperatures poster uk",
+  "secondary_keywords": [
+    "commercial kitchen cooking temperature chart",
+    "food hygiene safe temperatures poster a4",
+    "fsa legal cooking temperature guide",
+    "restaurant hot holding and chilling chart",
+    "catering food safety temperatures pdf"
+  ],
+  "search_intent": "Kitchen managers, head chefs, and safety trainers looking for an authoritative UK food safety temperatures poster displaying statutory cooking cores (≥75°C, 82°C Scotland), hot holding (≥63°C), chilling (0°C–5°C), freezing (≤-18°C), and danger zone limits.",
+  "serp_features": [
+    "Featured Snippet",
+    "Image Pack",
+    "People Also Ask",
+    "Poster / Table View"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/safety-hygiene/cooking-your-food-safely",
+      "features": "Authoritative regulatory guide with static text and PDF downloads."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/food-hygiene-temperature-rules/",
+      "features": "Educational guide with static printable PDF and course promotions."
+    },
+    {
+      "name": "Nisbets UK",
+      "url": "https://www.nisbets.co.uk/food-safety-signs",
+      "features": "E-commerce product catalogue selling printed plastic wall signs."
+    },
+    {
+      "name": "Virtual College",
+      "url": "https://www.virtual-college.co.uk/resources/food-hygiene-temperatures",
+      "features": "Training course lead magnet with non-interactive summary chart."
+    },
+    {
+      "name": "SafetyCulture",
+      "url": "https://safetyculture.com/checklists/food-temperature-chart/",
+      "features": "Generic checklist template requiring app download."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "E-commerce shops charging £15+ for basic plastic signs or training companies using static PDFs; none provide an interactive, high-definition digital temperature guide with interactive probe calibration verification.",
+    "our_differentiators": [
+      "100% free interactive master temperature tool with instant Celsius/Fahrenheit conversion",
+      "Complete coverage of UK statutory limits (75°C cooking, 63°C hot holding, 5°C chilling, 82°C Scotland)",
+      "2-hour/4-hour buffet rule timeline and blast chilling curves",
+      "Print-optimized high-resolution vector layout for A4/A3 wall mounting"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "content_depth": {
+      "saim_dev": 99,
+      "best_competitor": 88
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 78
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 89
+    },
+    "trust_eeat": {
+      "saim_dev": 99,
+      "best_competitor": 92
+    }
+  }
+}

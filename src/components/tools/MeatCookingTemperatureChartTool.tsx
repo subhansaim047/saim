@@ -16,7 +16,7 @@ import {
   Scale
 } from "lucide-react";
 
-export type MeatCategory = "chicken" | "beef" | "lamb" | "duck" | "venison" | "ham" | "pork" | "fish";
+export type MeatCategory = "chicken" | "beef" | "lamb" | "duck" | "venison" | "ham" | "pork" | "fish" | "burger";
 
 export interface MeatCutOption {
   id: string;
@@ -101,6 +101,78 @@ const MEAT_PROFILES: Record<MeatCategory, MeatProfile> = {
         targetCoreScotland: 82.0,
         probeProtocol: "Probe the center of largest liver piece; must hold at ≥ 70°C for at least 2 full minutes.",
         pathogenRisk: "Campylobacter can be internalised in liver tissue. Pink liver pâté has caused major UK outbreaks."
+      }
+    ]
+  },
+  burger: {
+    id: "burger",
+    name: "Commercial Burgers & Minced Meat Patties",
+    subtitle: "STEC & E. coli O157 Thermal Inactivation Protocol",
+    badge: "Strict CCP Control",
+    badgeColor: "bg-red-600 text-white",
+    accentBg: "bg-red-50/70",
+    accentBorder: "border-red-300",
+    fsaGuidance: "Because surface bacteria are mixed throughout ground meat during mincing, burgers must be cooked to 75°C core for 30s (70°C for 2 min). Serving rare burgers requires strict FSA validated source controls and local council approval.",
+    cuts: [
+      {
+        id: "classic-beef-burger",
+        name: "Standard Commercial Beef Burger Patty (6oz)",
+        cutType: "Minced Patty",
+        recommendedOvenTemp: "Griddle / Chargrill: 190°C – 210°C",
+        cookMinsPerKg: 12,
+        restMins: 2,
+        targetCoreUK: 75.0,
+        targetCoreScotland: 82.0,
+        probeProtocol: "Insert probe horizontally into the geometric center of the patty while on griddle.",
+        pathogenRisk: "E. coli O157 (STEC) and Salmonella. Minced meat has bacteria distributed throughout the entire product."
+      },
+      {
+        id: "smashed-beef-patty",
+        name: "Smashed Beef Burger (3oz - 4oz Crispy Sear)",
+        cutType: "Smashed Patty",
+        recommendedOvenTemp: "Flat-Top Plancha: 220°C – 240°C",
+        cookMinsPerKg: 8,
+        restMins: 1,
+        targetCoreUK: 75.0,
+        targetCoreScotland: 82.0,
+        probeProtocol: "Verify rapid crust formation and probe thickest edge before assembling.",
+        pathogenRisk: "High heat flash sear must achieve full thermal lethality across the center."
+      },
+      {
+        id: "gourmet-pink-burger",
+        name: "FSA-Validated Rare/Pink Gourmet Burger (Strict Protocol)",
+        cutType: "Validated Mince",
+        recommendedOvenTemp: "Sous-vide / Seared: 60°C water bath + hard sear",
+        cookMinsPerKg: 25,
+        restMins: 3,
+        targetCoreUK: 70.0,
+        targetCoreScotland: 70.0,
+        probeProtocol: "Time/temperature logging mandatory: 70°C for 2 min or 65°C for 10 min under validated HACCP.",
+        pathogenRisk: "Strictly prohibited unless operating with accredited supplier, surface searing prior to mincing, and local authority approval."
+      },
+      {
+        id: "lamb-burger",
+        name: "Lamb & Kofta Burger Patty",
+        cutType: "Minced Lamb",
+        recommendedOvenTemp: "Chargrill: 200°C – 210°C",
+        cookMinsPerKg: 14,
+        restMins: 3,
+        targetCoreUK: 75.0,
+        targetCoreScotland: 82.0,
+        probeProtocol: "Probe center of patty; internal fat must render and juices run completely clear.",
+        pathogenRisk: "Campylobacter and Toxoplasma gondii risks in undercooked minced ovine products."
+      },
+      {
+        id: "poultry-burger",
+        name: "Chicken / Turkey Breast Patty",
+        cutType: "Minced Poultry",
+        recommendedOvenTemp: "Grill / Oven: 180°C – 200°C",
+        cookMinsPerKg: 15,
+        restMins: 2,
+        targetCoreUK: 75.0,
+        targetCoreScotland: 82.0,
+        probeProtocol: "Never serve rare or pink. Core temperature must strictly reach 75°C (82°C in Scotland).",
+        pathogenRisk: "Extreme risk of Campylobacter and Salmonella infection from undercooked minced poultry."
       }
     ]
   },

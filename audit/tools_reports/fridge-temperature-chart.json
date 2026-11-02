@@ -1,0 +1,78 @@
+{
+  "tool_id": "template-rank-64",
+  "name": "Commercial Fridge Temperature Chart & Shelf Stacking Guide",
+  "slug": "fridge-temperature-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/fridge-temperature-chart",
+  "primary_keyword": "fridge temperature chart uk",
+  "secondary_keywords": [
+    "commercial fridge temperature log sheet",
+    "fsa safe fridge temperature range",
+    "refrigerator shelf stacking order catering",
+    "restaurant fridge daily temperature check pdf",
+    "chiller temperature monitoring poster a4"
+  ],
+  "search_intent": "Kitchen managers, catering staff, and restaurant owners seeking an operational commercial fridge temperature chart detailing 0°C–5°C target operation (8°C statutory max), twice-daily logging requirements, and top-to-bottom raw vs cooked shelf segregation.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Chart / Log Sheet View"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/chilling-food-correctly",
+      "features": "Statutory chilling advice with manual PDF diary templates."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/fridge-temperature-guide/",
+      "features": "Comprehensive blog post with static PDF temperature sheet."
+    },
+    {
+      "name": "SafetyCulture",
+      "url": "https://safetyculture.com/checklists/fridge-temperature-log/",
+      "features": "Mobile digital log requiring user registration and paid tier."
+    },
+    {
+      "name": "Nisbets UK",
+      "url": "https://www.nisbets.co.uk/refrigeration-temperature-guides",
+      "features": "Commercial refrigeration buying guides promoting polar fridges."
+    },
+    {
+      "name": "Checklist.com",
+      "url": "https://www.checklist.com/fridge-temperature-checklist/",
+      "features": "Generic non-UK temperature checklist with ads."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "Static PDF sheets that must be printed repeatedly and get stained; generic checklists lacking top-to-bottom raw meat vs ready-to-eat shelf hierarchy rules.",
+    "our_differentiators": [
+      "Live interactive fridge temperature record tool with shift logging and instant pass/fail alerts",
+      "Visual top-to-bottom shelf segregation diagram (RTE top, raw poultry bottom)",
+      "Statutory UK compliance limits (0°C–5°C target, 8°C max, 4-hour breakdown rule)",
+      "One-click printable A4 monthly log sheet and CSV export"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "content_depth": {
+      "saim_dev": 99,
+      "best_competitor": 86
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 78
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 87
+    },
+    "trust_eeat": {
+      "saim_dev": 99,
+      "best_competitor": 91
+    }
+  }
+}

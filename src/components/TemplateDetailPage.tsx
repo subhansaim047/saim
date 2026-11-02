@@ -181,7 +181,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
   const isFridgeRecordTool =
     template.slug === "fridge-temperature-record-sheet-pdf" ||
-    template.slug.includes("fridge-temperature-record");
+    template.slug === "fridge-temperature-chart" ||
+    template.slug.includes("fridge-temperature");
 
   const isTraceabilityTool =
     template.slug === "food-traceability" ||
@@ -190,11 +191,15 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const isMasterFoodTempTool =
     template.slug === "food-temperature-chart" ||
     template.slug === "food-temperature" ||
-    template.slug === "food-temperature-log";
+    template.slug === "food-temperature-log" ||
+    template.slug === "food-temperatures-poster" ||
+    template.slug.includes("food-temperatures-poster") ||
+    template.slug === "danger-zone-for-food" ||
+    template.slug.includes("danger-zone");
 
   const isMeatCookingTool =
     !isMasterFoodTempTool &&
-    template.slug.includes("temperature-chart") &&
+    (template.slug.includes("temperature-chart") || template.slug.includes("temp-chart")) &&
     (template.slug.includes("venison") ||
       template.slug.includes("chicken") ||
       template.slug.includes("duck") ||
@@ -203,9 +208,11 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("pork") ||
       template.slug.includes("ham") ||
       template.slug.includes("turkey") ||
-      template.slug.includes("fish"));
+      template.slug.includes("fish") ||
+      template.slug.includes("burger"));
 
   const initialMeat: MeatCategory =
+    template.slug.includes("burger") ? "burger" :
     template.slug.includes("venison") ? "venison" :
     template.slug.includes("chicken") ? "chicken" :
     template.slug.includes("duck") ? "duck" :

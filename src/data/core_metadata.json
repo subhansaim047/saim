@@ -605,13 +605,14 @@
     ]
   },
   "food-temperatures-poster": {
-    "title": "Free Food Safety Temperatures Poster Template | Saim Dev",
-    "desc": "Free food safety temperatures poster template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free Food Temperatures Poster & Safe Guide | Saim Dev",
+    "desc": "Free commercial food temperatures poster for UK kitchens. Master legal cooking cores over 75°C, hot holding above 63°C, chilling, and the danger zone.",
     "howTo": [
-      "Download and print the Food Safety Temperatures Poster for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Mount the printed A4/A3 safe temperatures chart above cooking and prep ranges.",
+      "Verify core cooking reach 75°C for 30s (70°C for 2 min; 82°C in Scotland).",
+      "Maintain hot holding equipment at or above 63°C throughout continuous service.",
+      "Ensure commercial food chillers operate strictly between 0°C and 5°C.",
+      "Cool cooked hot batches to below 8°C within 90 minutes before refrigerated storage."
     ]
   },
   "chicken-temperature-chart": {
@@ -736,13 +737,14 @@
     ]
   },
   "danger-zone-for-food": {
-    "title": "Free Temperature Danger Zone Chart Template | Saim Dev",
-    "desc": "Free temperature danger zone chart template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free Food Temperature Danger Zone Chart | Saim Dev",
+    "desc": "Free food temperature danger zone chart for UK caterers. Learn safe heating limits above 63°C, cold chain controls under 5°C, and the 2-hour cooling rule.",
     "howTo": [
-      "Download and print the Temperature Danger Zone Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Identify the statutory UK bacterial Danger Zone (8°C to 63°C) across all prep steps.",
+      "Minimize the time high-risk foods remain between 20°C and 45°C during active preparation.",
+      "Apply the 2-hour cooling rule to bring hot food below 8°C using blast chillers.",
+      "Maintain hot buffet wells at ≥63°C or discard unheated food held over 2 hours.",
+      "Archive daily temperature probe verification logs to maintain your due diligence."
     ]
   },
   "food-safety-and-sanitation": {
@@ -766,13 +768,14 @@
     ]
   },
   "fridge-temperature-chart": {
-    "title": "Free Fridge Temperature Chart Template | Saim Dev",
-    "desc": "Download our free fridge temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Commercial Fridge Temperature Chart | Saim Dev",
+    "desc": "Free commercial fridge temperature chart for UK kitchens. Verify daily chiller targets between 1°C and 5°C, shelf stacking rules, and statutory compliance.",
     "howTo": [
-      "Download and print the Fridge Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Mount the fridge temperature reference chart directly on commercial chiller doors.",
+      "Record probe readings twice daily at morning opening and evening closing.",
+      "Maintain operating chiller temperatures between 1°C and 5°C (statutory max 8°C).",
+      "Enforce top-to-bottom shelf rules: raw meats on bottom shelves beneath cooked items.",
+      "Execute corrective actions immediately if internal air temperatures rise above 5°C."
     ]
   },
   "food-temperature-chart": {
@@ -837,13 +840,14 @@
     ]
   },
   "burger-temp-chart": {
-    "title": "Free Burger Temperature Chart Template | Saim Dev",
-    "desc": "Download our free burger temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Burger Cooking Temperature Chart | Saim Dev",
+    "desc": "Free burger cooking temperature chart for UK restaurants. Master E. coli O157 safety rules, 75°C core cooking limits, griddle timing, and FSA rare burgers.",
     "howTo": [
-      "Download and print the Burger Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Insert calibrated needle thermometer into the thickest center of burger patties.",
+      "Verify core temperature reaches 75°C for 30 seconds (or 70°C for 2 minutes).",
+      "Ensure meat juices run completely clear and no pink minced beef remains.",
+      "Follow strict FSA accredited supplier protocols if licensed to serve rare burgers.",
+      "Log core griddle temperatures daily in your kitchen HACCP due diligence diary."
     ]
   },
   "hot-holding-temperature": {
@@ -1271,13 +1275,14 @@
     ]
   },
   "recipe-card-generator": {
-    "title": "Free Recipe Generator Template | Saim Dev",
-    "desc": "Download our free recipe generator template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Recipe Card Generator & Batch Scaler | Saim Dev",
+    "desc": "Free commercial recipe card generator. Scale ingredient quantities, calculate portion food costs, manage allergen tags, and export printable recipe specs.",
     "howTo": [
-      "Download and print the Recipe Generator for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Input base recipe ingredient weights, unit costs, and initial portion yield.",
+      "Enter desired batch multiplier or target servings to automatically scale quantities.",
+      "Select statutory Natasha's Law allergens present in recipe sub-components.",
+      "Calculate ingredient cost per portion and optimal menu selling price with VAT.",
+      "Export A4 commercial recipe specification sheet for kitchen station binders."
     ]
   },
   "defrosting-foods": {
