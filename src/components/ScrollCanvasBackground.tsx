@@ -194,9 +194,7 @@ export const ScrollCanvasBackground: React.FC = () => {
       processQueue();
     };
 
-    // Mobile & Reduced Motion Check: On mobile screens (< 768px), keep frame 0 static
-    // and skip loading 89 extra frames over cellular networks to protect Core Web Vitals (LCP < 2.5s)
-    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
 
     let backgroundTimer: any = null;
     if (!isMobile && !prefersReducedMotion) {
