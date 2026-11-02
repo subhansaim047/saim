@@ -3159,9 +3159,25 @@
     "main_keyword": "thermometer calibration uk",
     "opportunity_score": 55.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 126
+    "priority_rank": 126,
+    "target_keyword": "thermometer calibration log",
+    "top_5_competitors": [
+      "https://www.fooddocs.com/post/thermometer-calibration-log",
+      "https://safetyculture.com/checklists/thermometer-calibration/",
+      "https://www.highspeedtraining.co.uk/hub/thermometer-calibration-record/",
+      "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/kitchen-thermometers",
+      "https://www.ncass.org.uk/resources/daily-record-sheets/"
+    ],
+    "differentiators": [
+      "Ice point (0.0°C) and boiling point (100.0°C) dual-point calibration verification",
+      "Serial number / asset ID tagging for every kitchen probe with tolerance calculation",
+      "Automatic Pass / Fail / Re-calibrate logic (±1.0°C standard; ±0.5°C high-care limit)",
+      "Zero paywall, interactive digital calibration log with local storage",
+      "Clean A4 PDF export formatted for EHO and BRCGS due diligence inspections"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 79,
@@ -3178,9 +3194,25 @@
     "main_keyword": "pizza hot holding uk",
     "opportunity_score": 55.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 127
+    "priority_rank": 127,
+    "target_keyword": "minimum hot holding temperature for pizza",
+    "top_5_competitors": [
+      "https://www.fooddocs.com/post/hot-holding-temperature",
+      "https://www.highspeedtraining.co.uk/hub/hot-holding-temperatures/",
+      "https://www.virtual-college.co.uk/resources/hot-holding-regulations",
+      "https://pos.toasttab.com/blog/on-the-line/hot-holding-temperature",
+      "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40-f-140-f"
+    ],
+    "differentiators": [
+      "Definitive UK statutory direct answer: continuous holding at or above 63.0°C (Regulations 2013)",
+      "2-Hour Legal Exemption rule control with interactive ambient countdown timer",
+      "Interactive hot cabinet monitoring calculator with digital timer alert and core probe logger",
+      "Quality preservation guidance (crust crispness vs humidity control in heated display merchandisers)",
+      "Watermark-free printable temperature check sheet for pizza delivery and slice displays"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 102,
@@ -3197,9 +3229,25 @@
     "main_keyword": "approved supplier list uk",
     "opportunity_score": 55.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 128
+    "priority_rank": 128,
+    "target_keyword": "approved supplier list template food safety",
+    "top_5_competitors": [
+      "https://www.fooddocs.com/post/approved-supplier-list",
+      "https://safetyculture.com/checklists/approved-supplier-list/",
+      "https://www.process.st/templates/approved-supplier-evaluation-checklist/",
+      "https://www.highspeedtraining.co.uk/hub/supplier-audit-checklist/",
+      "https://www.fsrmagazine.com/expert-take/how-manage-restaurant-supplier-relationships/"
+    ],
+    "differentiators": [
+      "Categorised vendor management: meat, seafood, dairy, produce, ambient, and packaging",
+      "Statutory assurance verification: Council registration, EC approval codes, BRCGS/SALSA certification",
+      "Natasha's Law supplier allergen questionnaire tracking",
+      "100% free interactive database with status tracking and contact cards",
+      "Clean A4 PDF export for EHO and third-party vendor assurance audits"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 107,
@@ -3216,9 +3264,25 @@
     "main_keyword": "ingredient traceability uk",
     "opportunity_score": 55.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 129
+    "priority_rank": 129,
+    "target_keyword": "ingredient traceability template",
+    "top_5_competitors": [
+      "https://www.fooddocs.com/post/food-traceability-template",
+      "https://safetyculture.com/checklists/food-traceability/",
+      "https://www.highspeedtraining.co.uk/hub/food-traceability-rules/",
+      "https://www.virtual-college.co.uk/resources/food-traceability-legislation",
+      "https://www.food.gov.uk/business-guidance/traceability-and-labelling-guidance"
+    ],
+    "differentiators": [
+      "Regulation (EC) No 178/2002 Article 18 'one step back, one step forward' legal compliance",
+      "Batch/lot number reconciliation connecting supplier delivery notes to finished prepared dish batches",
+      "Mock recall 4-hour mass-balance calculation verification",
+      "Free interactive tracker with client-side persistence",
+      "Print-ready traceability ledger for Environmental Health and BRCGS auditors"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 108,
@@ -3235,9 +3299,25 @@
     "main_keyword": "delivery log uk",
     "opportunity_score": 55.0,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 130
+    "priority_rank": 130,
+    "target_keyword": "food delivery log sheet template",
+    "top_5_competitors": [
+      "https://www.fooddocs.com/post/food-delivery-log",
+      "https://safetyculture.com/checklists/food-delivery-intake/",
+      "https://www.highspeedtraining.co.uk/hub/food-delivery-temperature-sheet/",
+      "https://www.virtual-college.co.uk/resources/delivery-temperature-log",
+      "https://www.ncass.org.uk/resources/daily-record-sheets/"
+    ],
+    "differentiators": [
+      "Multi-temperature intake validation: chilled foods <=5.0°C (legal max 8.0°C), raw red meat <=3.0°C, frozen <=-18.0°C",
+      "Vehicle cleanliness, pest signs, and temperature data-logger printout audit checks",
+      "Packaging integrity, tamper seal, and 'Use-By' date expiry inspection",
+      "Instant Pass / Quarantine / Reject workflow with supplier non-conformance notes",
+      "100% free interactive tool with printable goods receiving sheet"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 109,

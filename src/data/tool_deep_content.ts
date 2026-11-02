@@ -4974,7 +4974,176 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist",
       slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
     }
+  },
+  "thermometer-calibration-log": {
+    directAnswer:
+      "A thermometer calibration log documents monthly verification checks performed on commercial kitchen probe thermometers and temperature data-loggers. Aligned with UK Food Standards Agency (FSA) due diligence requirements, it tracks dual-point calibration tests in crushed melting ice (0.0°C ±1.0°C) and rolling boiling water (100.0°C ±1.0°C), probe serial numbers, observed error variances, and corrective recalibrations.",
+    howTo: [
+      "Prepare ice slurry: fill a beaker with crushed melting ice and a small amount of cold water; stir and wait 2 minutes for equilibrium.",
+      "Execute ice-point check: immerse probe needle 5 cm into slurry without touching glass; verify reading settles between -1.0°C and +1.0°C.",
+      "Execute boiling-point check: place probe needle in rolling boiling water; verify reading settles between 99.0°C and 101.0°C (at sea level).",
+      "Record calibration findings: log thermometer ID/serial number, date, ice reading, boiling reading, variance, and tester initials.",
+      "Initiate corrective action: if variance exceeds ±1.0°C (or ±0.5°C in high-care processing), adjust calibration nut, change battery, or replace thermometer."
+    ],
+    faqs: [
+      {
+        q: "How frequently must kitchen probe thermometers be calibrated?",
+        a: "Under UK food safety guidelines, digital probe thermometers should be calibrated at least once a month, or immediately following any severe impact (e.g. being dropped on a tiled kitchen floor) or extreme temperature exposure."
+      },
+      {
+        q: "What is an acceptable error tolerance for a commercial food thermometer?",
+        a: "An error tolerance of ±1.0°C is acceptable for general commercial catering. In high-risk manufacturing and BRCGS-certified plants, thermometers must remain accurate within ±0.5°C of reference standards."
+      },
+      {
+        q: "Does altitude affect boiling-point calibration of thermometers?",
+        a: "Yes. Water boils at 100.0°C at sea level, but boils approximately 1°C lower for every 300 metres of elevation. For UK kitchens located close to sea level, 99°C to 101°C is the standard calibration range."
+      },
+      {
+        q: "Can infrared thermometers replace probe thermometers for food safety logs?",
+        a: "No. Infrared thermometers only measure surface temperatures and cannot verify internal core microbiological lethality (e.g. 75°C core for 30 seconds). Internal core readings require a calibrated penetration needle probe."
+      },
+      {
+        q: "How should probe needles be disinfected during calibration?",
+        a: "Probe needles must be wiped with food-safe antibacterial probe wipes conforming to BS EN 1276 or BS EN 13697 before and after testing to prevent chemical or microbial contamination."
+      }
+    ],
+    relatedTools: [
+      "cooking-log-template",
+      "meat-cooking-temperatures",
+      "freezer-temperature-chart"
+    ],
+    relatedBlog: {
+      title: "Commercial Kitchen Food Cooling Temperature Guide",
+      slug: "commercial-kitchen-food-cooling-temperature-guide"
+    }
+  },
+  "what-is-the-minimum-hot-holding-temperature-requirement-for-pizza": {
+    directAnswer:
+      "Under the Food Safety and Hygiene (England) Regulations 2013 (Schedule 4) and UK Food Standards Agency guidelines, the minimum legal hot-holding temperature requirement for pizza is 63.0°C (145.4°F). Once baked, hot pizza held for customer service in display cabinets, heated merchandisers, or takeaway delivery warmers must be kept at or above 63.0°C continuously to prevent the proliferation of pathogenic bacteria like Staphylococcus aureus and Bacillus cereus.",
+    howTo: [
+      "Preheat holding merchandiser: set display cabinet air temperature to at least 65°C to 70°C prior to transferring fresh hot pizza.",
+      "Verify core temperature with probe: insert sanitised digital probe into the centre of pizza slices to confirm core temperature is ≥63.0°C.",
+      "Apply the UK 2-Hour Exemption rule: if pizza is displayed below 63°C for ambient counter sales, record exact start time and sell or safely discard within 2 hours maximum.",
+      "Maintain moisture balance: adjust display cabinet airflow louvres to keep bottom crusts crisp without allowing cheese and sauce to dry out.",
+      "Log hot-holding audits: record cabinet and pizza core temperatures every 2 hours on your daily HACCP hot-holding verification sheet."
+    ],
+    faqs: [
+      {
+        q: "What is the legal hot holding temperature for pizza in the UK?",
+        a: "The statutory minimum hot-holding temperature in England, Wales, and Northern Ireland is 63.0°C. Holding food at or above 63°C prevents dangerous bacterial pathogens from multiplying."
+      },
+      {
+        q: "What is the 2-hour rule for hot-held pizza in the UK?",
+        a: "Under Regulation 2013 Schedule 4, hot food may be held below 63°C for display purposes for a single period of up to 2 hours. After 2 hours, the food must be sold immediately, rapidly cooled to 8°C or below, or safely discarded."
+      },
+      {
+        q: "Can leftover hot-held pizza be reheated the following day?",
+        a: "Under commercial food hygiene best practice, food that has been hot-held for service should not be chilled and reheated for a second service, as multiple heating and cooling cycles severely increase microbial and toxin risk."
+      },
+      {
+        q: "What temperature should pizza be reheated to in Scotland?",
+        a: "Under the Food Hygiene (Scotland) Regulations 2006, reheated foods must reach a minimum internal core temperature of 82.0°C, compared to 75.0°C (for 30 seconds) in England and Wales."
+      },
+      {
+        q: "How can pizza operators maintain pizza crust crispness in heated cabinets?",
+        a: "Use heated display merchandisers equipped with perforated pizza trays and adjustable moisture exhaust vents. Trapped steam causes soggy crusts, while completely dry heat hardens cheese."
+      }
+    ],
+    relatedTools: [
+      "food-temperature-chart",
+      "cooking-log-template",
+      "opening-and-closing-checklist-template"
+    ],
+    relatedBlog: {
+      title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    }
+  },
+  "approved-supplier-list": {
+    directAnswer:
+      "An approved supplier list is a foundational food safety and quality assurance document that details all certified vendors authorized to supply raw ingredients, chilled and frozen foods, packaging, and cleaning chemicals to a commercial food business. It logs supplier contact information, local authority registration, third-party food safety certifications (BRCGS, SALSA), delivery temperature specifications, and Natasha's Law allergen declarations.",
+    howTo: [
+      "Catalog all commercial suppliers: categorize vendors by product risk tier (fresh meat/poultry, seafood, dairy, produce, ambient dry goods, and packaging).",
+      "Verify statutory compliance: collect and verify local council food business registration numbers and EC plant approval codes for animal products.",
+      "Audit certification credentials: confirm suppliers hold accredited food safety certifications (e.g. BRCGS, SALSA, Red Tractor) or minimum 4-star food hygiene ratings.",
+      "Enforce Natasha's Law allergen declarations: require signed product specification sheets detailing all 14 statutory allergens and allergen cross-contact risks.",
+      "Conduct annual supplier reviews: evaluate on-time delivery percentages, delivery temperature compliance, product defects, and corrective action responsiveness."
+    ],
+    faqs: [
+      {
+        q: "Why is an approved supplier list mandatory for UK food businesses?",
+        a: "Under Regulation (EC) No 852/2004 and HACCP Principle 1, food businesses must ensure incoming raw materials are safe. Buying from approved suppliers provides verifiable due diligence that ingredients originate from inspected, legitimate premises."
+      },
+      {
+        q: "What third-party food safety certifications are recognized on an approved supplier list?",
+        a: "Widely recognized certifications in the UK include BRCGS (Global Standard for Food Safety), SALSA (Safe and Local Supplier Approval), FSSC 22000, SQF, Red Tractor, and Soil Association Organic certification."
+      },
+      {
+        q: "How should a kitchen respond if an unapproved supplier delivers goods?",
+        a: "Deliveries from unapproved suppliers must be quarantined on intake. Kitchen managers must verify registration and obtain product specifications before accepting stock into inventory."
+      },
+      {
+        q: "How often should an approved supplier list be reviewed and updated?",
+        a: "The master supplier list should be reviewed at least annually, or immediately whenever a supplier updates their certifications, changes manufacturing sites, or introduces new recipe formulations."
+      },
+      {
+        q: "What allergen documentation must suppliers provide under Natasha's Law?",
+        a: "Suppliers must provide comprehensive ingredient specification sheets declaring any of the 14 statutory allergens present as ingredients or potential cross-contact risks on shared production lines."
+      }
+    ],
+    relatedTools: [
+      "delivery-log",
+      "ingredient-traceability",
+      "food-allergen-chart"
+    ],
+    relatedBlog: {
+      title: "How to Create a Compliant 14 Allergen Matrix for UK Restaurants",
+      slug: "how-to-create-compliant-14-allergen-matrix-uk-restaurants"
+    }
+  },
+  "ingredient-traceability": {
+    directAnswer:
+      "An ingredient traceability template tracks raw materials and food components along the supply chain from delivery receipt through batch preparation to customer sale or distribution. Mandated by Regulation (EC) No 178/2002 (Article 18), robust 'one step back, one step forward' traceability enables commercial kitchens to rapidly identify, quarantine, and recall contaminated product batches within a 4-hour window.",
+    howTo: [
+      "Log intake lot numbers: record supplier name, delivery date, purchase invoice number, and manufacturer lot codes for all incoming goods.",
+      "Label decanted bulk ingredients: ensure dry store containers and storage tubs display the original supplier batch lot number and date of opening.",
+      "Record lot codes on prep sheets: transfer raw ingredient batch numbers to daily kitchen prep sheets for batch sauces, stocks, and cooked fillings.",
+      "Map prep batches to service dates: link batch codes to specific service shifts, dining reservations, or customer takeaway order receipts.",
+      "Perform mock recall tests: test traceability annually by picking an ingredient at random and reconciling 100% of received stock against finished dishes within 4 hours."
+    ],
+    faqs: [
+      {
+        q: "What is the 'one step back, one step forward' traceability principle?",
+        a: "Under Regulation (EC) No 178/2002 Article 18, food businesses must be able to identify exactly who supplied every ingredient (one step back) and to whom their finished products were sold or distributed (one step forward, excluding direct sales to final consumers)."
+      },
+      {
+        q: "What is the industry time limit for completing a mock recall exercise?",
+        a: "Under GFSI-benchmarked standards including BRCGS and SQF, a food business must be able to complete a 100% mass-balance reconciliation traceability exercise within 4 hours."
+      },
+      {
+        q: "How does ingredient traceability help during an allergen incident?",
+        a: "If a supplier issues an allergen contamination alert (e.g. undeclared peanut traces in cumin), traceability records allow chefs to immediately pinpoint every prep batch, sauce, and finished dish using that specific supplier lot."
+      },
+      {
+        q: "How long must commercial food traceability records be retained?",
+        a: "Traceability records, delivery invoices, and batch prep sheets must be retained for at least 12 months for perishable foods, or 6 months beyond the product's use-by or best-before date for extended shelf-life goods."
+      },
+      {
+        q: "Can digital spreadsheets replace paper batch sheets for traceability?",
+        a: "Yes. Digital spreadsheets, kitchen management apps, and POS inventory systems are fully recognized by Environmental Health Officers (EHO) provided data is entered consistently and backed up securely."
+      }
+    ],
+    relatedTools: [
+      "approved-supplier-list",
+      "delivery-log",
+      "recipe-batch-calculator"
+    ],
+    relatedBlog: {
+      title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    }
   }
+
 };
 
 export const FALLBACK_DEEP_CONTENT: ToolDeepContent = {

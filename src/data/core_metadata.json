@@ -243,13 +243,14 @@
     ]
   },
   "delivery-log": {
-    "title": "Free Goods In Temperature Log UK | Saim Dev",
-    "desc": "Download a free goods in temperature log sheet for UK commercial kitchens. Check chilled (<8°C) and frozen (<-18°C) deliveries, date codes, and packaging.",
+    "title": "Free Food Delivery Temperature Log Sheet | Saim Dev",
+    "desc": "Audit goods receiving temperatures for chilled, raw meat, and frozen stock. Free food delivery temperature log sheet for UK commercial kitchens.",
     "howTo": [
-      "Check delivery vehicle hygiene and inspect arriving food packaging for tears, leaks, or pest damage.",
-      "Probe chilled goods to confirm temperature is at or below 8°C (reject stock exceeding 8°C).",
-      "Verify frozen items are solidly frozen at or below -18°C with no signs of thawing or refreezing.",
-      "Check use-by dates, record vehicle and supplier details, and file the signed delivery intake sheet."
+      "Inspect supplier delivery vehicle hygiene, odour, and refrigeration cooling unit.",
+      "Probe chilled deliveries between packs or in core; verify temperature is ≤5.0°C (legal max 8.0°C).",
+      "Check raw poultry and red meat; verify core temperature is maintained at or below 3.0°C.",
+      "Verify frozen goods are frozen rock-solid at ≤-18.0°C with no signs of thawing or refreezing.",
+      "Audit use-by dates, tamper seals, and packaging integrity; record on delivery log sheet."
     ]
   },
   "cooking-log-template": {
@@ -708,13 +709,14 @@
     ]
   },
   "thermometer-calibration-log": {
-    "title": "Free Thermometer Calibration Template | Saim Dev",
-    "desc": "Download our free thermometer calibration template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Thermometer Calibration Log Sheet | Saim Dev",
+    "desc": "Calibrate commercial kitchen probe thermometers with ice and boiling water checks. Free calibration log sheet for FSA and EHO compliance.",
     "howTo": [
-      "Download and print the Thermometer Calibration for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Inspect thermometer probe needle for physical fractures, bends, and battery power.",
+      "Immerse probe into crushed melting ice slurry; verify reading stabilizes at 0.0°C (±1.0°C).",
+      "Immerse probe tip into rolling boiling water; verify reading reaches 100.0°C (±1.0°C).",
+      "Record thermometer serial number, test date, calibration variance, and chef signature.",
+      "Quarantine, adjust, or replace any kitchen probe thermometer with error exceeding ±1.0°C."
     ]
   },
   "how-do-you-calibrate-a-thermometer": {
@@ -884,13 +886,14 @@
     ]
   },
   "what-is-the-minimum-hot-holding-temperature-requirement-for-pizza": {
-    "title": "Free Pizza Hot Holding Template | Saim Dev",
-    "desc": "Download our free pizza hot holding template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Hot Holding Temperature Guide for Pizza | Saim Dev",
+    "desc": "Master UK hot-holding rules for pizza and display merchandisers. Free guidance covering the legal 63°C requirement and the 2-hour exemption rule.",
     "howTo": [
-      "Download and print the Pizza Hot Holding for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Preheat heated display merchandisers or pizza pass-through units to at least 65°C.",
+      "Insert sanitised core probe into pizza slice; verify internal core temperature is ≥63.0°C.",
+      "Under UK Food Safety Regulations 2013, hold pizza at or above 63.0°C continuously.",
+      "If displaying at ambient counter temperatures, enforce the strict 2-hour exemption limit.",
+      "Safely discard or rapidly cool any pizza slices held beyond the permitted display window."
     ]
   },
   "what-is-the-minimum-hot-holding-temperature-for-hot-dog": {
@@ -1093,12 +1096,13 @@
   },
   "approved-supplier-list": {
     "title": "Free Approved Supplier List Template | Saim Dev",
-    "desc": "Download our free approved supplier list template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "desc": "Manage commercial food vendors, audit certifications, and allergen compliance. Free approved supplier list template for HACCP and EHO records.",
     "howTo": [
-      "Download and print the Approved Supplier List for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Verify supplier food business registration and required statutory approval codes.",
+      "Collect copies of BRCGS, SALSA, or minimum 4-star Food Hygiene Rating certificates.",
+      "Ensure vendor submits signed Natasha's Law allergen declarations for all ingredients.",
+      "Establish delivery temperature thresholds: chilled ≤5.0°C, meat ≤3.0°C, frozen ≤-18.0°C.",
+      "Review supplier punctuality, product defects, and temperature rejections annually."
     ]
   },
   "sqf-audit-checklist": {
@@ -1145,13 +1149,14 @@
     ]
   },
   "ingredient-traceability": {
-    "title": "Free Ingredient Traceability Template | Saim Dev",
-    "desc": "Download our free ingredient traceability template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Ingredient Traceability Matrix Sheet | Saim Dev",
+    "desc": "Track food ingredients from delivery to customer plating under EC 178/2002. Free ingredient traceability matrix sheet with mock recall support.",
     "howTo": [
-      "Download and print the Ingredient Traceability for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Log supplier lot numbers, delivery dates, and receiving tags on intake delivery sheets.",
+      "Label decanted bulk ingredient containers with original supplier batch identification.",
+      "Cross-reference ingredient lot numbers on daily kitchen batch cooking prep sheets.",
+      "Link finished menu batch numbers to date of service and customer order dispatch.",
+      "Execute annual 4-hour mock recall reconciling 100% of ingredients through to customer."
     ]
   },
   "food-production-sheet": {

@@ -1931,6 +1931,187 @@ const COOKING_LOG_TASKS: CheckItem[] = [
   }
 ];
 
+
+const CALIBRATION_LOG_TASKS: CheckItem[] = [
+  {
+    id: "cal-1",
+    category: "Probe Visual & Battery Inspection",
+    task: "Inspect probe needle for bends, fractures, or loose cable connections; verify battery voltage and clean digital readout with zero error codes.",
+    status: "pass",
+    actionNotes: "Probe casing intact and display clear"
+  },
+  {
+    id: "cal-2",
+    category: "Ice-Point Calibration (0.0°C)",
+    task: "Immerse probe 5 cm into crushed melting ice and water slurry; stir gently and verify reading stabilizes between -1.0°C and +1.0°C (target 0.0°C).",
+    status: "pass",
+    actionNotes: "Ice slurry reading stabilized at 0.1°C"
+  },
+  {
+    id: "cal-3",
+    category: "Boiling-Point Calibration (100.0°C)",
+    task: "Immerse probe tip into rolling boiling water without touching pan bottom; verify reading stabilizes between 99.0°C and 101.0°C (target 100.0°C).",
+    status: "pass",
+    actionNotes: "Boiling point reading stabilized at 99.8°C"
+  },
+  {
+    id: "cal-4",
+    category: "Infrared Gun Accuracy Check",
+    task: "Compare non-contact infrared surface thermometer against calibrated probe on matte surface; verify difference remains within ±1.0°C.",
+    status: "pass",
+    actionNotes: "Infrared gun verified within 0.5°C of probe"
+  },
+  {
+    id: "cal-5",
+    category: "Corrective Action & Tolerance",
+    task: "If probe variance exceeds ±1.0°C (or ±0.5°C under high-care HACCP), recalibrate using manufacturer screw or remove from service and replace.",
+    status: "pass",
+    actionNotes: "All active kitchen probes within ±0.3°C tolerance"
+  },
+  {
+    id: "cal-6",
+    category: "Probe Sanitisation & Sign-Off",
+    task: "Disinfect probe needle with food-safe wipe conforming to BS EN 1276 and record results on monthly master calibration certificate.",
+    status: "pass",
+    actionNotes: "Probe sanitised and monthly calibration signed"
+  }
+];
+
+const PIZZA_HOT_HOLDING_TASKS: CheckItem[] = [
+  {
+    id: "pizza-1",
+    category: "Hot Holding Cabinet Preheating",
+    task: "Power on heated display cabinet or pass-through heat lamps at least 30 minutes before loading pizza; verify display air cavity reads above 65°C.",
+    status: "pass",
+    actionNotes: "Cabinet cavity preheated to 68.5°C"
+  },
+  {
+    id: "pizza-2",
+    category: "Core Temperature Check (≥63.0°C)",
+    task: "Insert sanitised probe into thickest part of pizza slice; verify core temperature is maintained at or above 63.0°C continuously.",
+    status: "pass",
+    actionNotes: "Pepperoni pizza slice core verified at 65.2°C"
+  },
+  {
+    id: "pizza-3",
+    category: "2-Hour Exemption Time Control",
+    task: "If pizza is displayed at ambient counter temperature below 63°C, record start time; sell, rapidly chill below 8°C, or discard within 2 hours.",
+    status: "pass",
+    actionNotes: "Ambient display timer logged (max 2 hours)"
+  },
+  {
+    id: "pizza-4",
+    category: "Crust Texture & Moisture Control",
+    task: "Adjust cabinet humidity louvres to preserve bottom crust crispness while preventing cheese and toppings from drying out during holding.",
+    status: "pass",
+    actionNotes: "Cabinet humidity adjusted for optimal crispness"
+  },
+  {
+    id: "pizza-5",
+    category: "Allergen Segregation in Display",
+    task: "Physically segregate gluten-free or vegan pizza slices on dedicated upper tier with designated colour-coded serving tongs.",
+    status: "pass",
+    actionNotes: "Gluten-free slices protected with acrylic divider"
+  },
+  {
+    id: "pizza-6",
+    category: "End-of-Holding Disposition",
+    task: "Discard any leftover pizza slices held beyond maximum permitted holding window; never return hot-held slices to chillers for next-day resale.",
+    status: "pass",
+    actionNotes: "Unsold held slices discarded and logged"
+  }
+];
+
+const APPROVED_SUPPLIER_TASKS: CheckItem[] = [
+  {
+    id: "supp-1",
+    category: "Food Business Registration",
+    task: "Confirm supplier holds active Local Authority food business registration and required approval codes (e.g. EC plant numbers for meat/fish/dairy).",
+    status: "pass",
+    actionNotes: "Council registration and EC approval codes verified"
+  },
+  {
+    id: "supp-2",
+    category: "Hygiene Rating & Certifications",
+    task: "Collect and verify third-party certification certificates (BRCGS, SALSA, Red Tractor) or confirm minimum 4/5-star Food Hygiene Rating.",
+    status: "pass",
+    actionNotes: "SALSA certification and 5-star FHRS on file"
+  },
+  {
+    id: "supp-3",
+    category: "Allergen Disclosures (Natasha's Law)",
+    task: "Ensure supplier submits signed product specifications disclosing all 14 statutory allergens and cross-contact preventative procedures.",
+    status: "pass",
+    actionNotes: "Annual allergen matrices signed by vendor"
+  },
+  {
+    id: "supp-4",
+    category: "Contracted Cold-Chain Specs",
+    task: "Enforce contract delivery temperatures: chilled food <= 5.0°C (legal max 8.0°C), fresh raw meat <= 3.0°C, and frozen food <= -18.0°C.",
+    status: "pass",
+    actionNotes: "Temperature SLA signed by delivery contractor"
+  },
+  {
+    id: "supp-5",
+    category: "Recall & Emergency Notification",
+    task: "Establish 24-hour emergency recall contact details and written notification protocols in the event of upstream contamination or product recall.",
+    status: "pass",
+    actionNotes: "Emergency 24/7 contacts tested and updated"
+  },
+  {
+    id: "supp-6",
+    category: "Annual Vendor Review",
+    task: "Evaluate vendor performance: delivery punctuality, temperature rejections, packaging integrity, and invoice price variance.",
+    status: "pass",
+    actionNotes: "Annual vendor evaluation scorecard completed"
+  }
+];
+
+const INGREDIENT_TRACEABILITY_TASKS: CheckItem[] = [
+  {
+    id: "trace-1",
+    category: "Goods Intake Batch Logging",
+    task: "Record manufacturer batch numbers, delivery date, supplier name, and internal receiving tag for all incoming food commodities.",
+    status: "pass",
+    actionNotes: "Goods intake lot codes logged in inventory system"
+  },
+  {
+    id: "trace-2",
+    category: "Dry Storage Bin Lot Labeling",
+    task: "Transfer bulk ingredients (flour, rice, grains, pulses) into clear containers labelled with original batch lot number and intake date.",
+    status: "pass",
+    actionNotes: "All decanted bulk containers labelled with batch IDs"
+  },
+  {
+    id: "trace-3",
+    category: "Prep Batch Sheet Reconciliation",
+    task: "Record raw ingredient lot numbers on daily kitchen prep sheets for batch-cooked stocks, sauces, marinades, and braises.",
+    status: "pass",
+    actionNotes: "Sauce prep batch cross-referenced to meat lot #492"
+  },
+  {
+    id: "trace-4",
+    category: "Finished Service Batch Mapping",
+    task: "Map cooked batch codes to date of service and customer table or takeaway dispatch orders under EC 178/2002 Article 18.",
+    status: "pass",
+    actionNotes: "Daily sales orders mapped to batch kitchen ledger"
+  },
+  {
+    id: "trace-5",
+    category: "Mock Recall Mass-Balance Test",
+    task: "Execute annual 4-hour mock recall exercise reconciling 100% of selected raw material input through prep to customer distribution.",
+    status: "pass",
+    actionNotes: "Mock recall achieved 99.7% reconciliation in 3h 10m"
+  },
+  {
+    id: "trace-6",
+    category: "Traceability Record Retention",
+    task: "Archive all supplier delivery notes, batch cooking logs, and customer distribution records for at least 12 months for EHO audit inspection.",
+    status: "pass",
+    actionNotes: "Past 12 months of batch records archived"
+  }
+];
+
 const DEFAULT_GENERAL_TASKS: CheckItem[] = [
   {
     id: "1",
@@ -2037,6 +2218,20 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     templateTitle.toLowerCase().includes("cooking log") ||
     templateTitle.toLowerCase().includes("cooking-log") ||
     (templateId && templateId.includes("cooking-log"));
+  const isCalibrationLog =
+    templateTitle.toLowerCase().includes("calibration") ||
+    (templateId && templateId.includes("calibration"));
+  const isPizzaHotHolding =
+    (templateTitle.toLowerCase().includes("hot holding") || templateTitle.toLowerCase().includes("hot-holding")) &&
+    templateTitle.toLowerCase().includes("pizza") ||
+    (templateId && templateId.includes("hot-holding-temperature-requirement-for-pizza"));
+  const isApprovedSupplier =
+    templateTitle.toLowerCase().includes("supplier") ||
+    (templateId && templateId.includes("approved-supplier"));
+  const isIngredientTraceability =
+    templateTitle.toLowerCase().includes("ingredient-traceability") ||
+    (templateTitle.toLowerCase().includes("traceability") && templateTitle.toLowerCase().includes("ingredient")) ||
+    (templateId && templateId.includes("ingredient-traceability"));
   const isBrcAudit =
     templateTitle.toLowerCase().includes("brc") ||
     (templateId && templateId.includes("brc"));
@@ -2152,6 +2347,10 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     if (isSchedule) return RESTAURANT_SCHEDULE_TASKS;
     if (isPrepList) return KITCHEN_PREP_LIST_TASKS;
     if (isCookingLog) return COOKING_LOG_TASKS;
+    if (isCalibrationLog) return CALIBRATION_LOG_TASKS;
+    if (isPizzaHotHolding) return PIZZA_HOT_HOLDING_TASKS;
+    if (isApprovedSupplier) return APPROVED_SUPPLIER_TASKS;
+    if (isIngredientTraceability) return INGREDIENT_TRACEABILITY_TASKS;
     if (isBrcAudit) return BRC_AUDIT_TASKS;
     if (isKosher) return KOSHER_CERTIFICATION_TASKS;
     if (isFiveWhys) return FIVE_WHYS_RCA_TASKS;
