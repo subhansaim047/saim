@@ -157,7 +157,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
   const isFreezerTool =
     template.slug === "freezer-temperature-chart" ||
-    template.slug.includes("freezer-temperature");
+    template.slug.includes("freezer-temperature") ||
+    template.slug.includes("freezer-burn");
 
   const isHandWashingTool =
     template.slug === "hand-washing-poster" ||
@@ -294,6 +295,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("thermometer") ||
       template.slug.includes("sink") ||
       template.slug.includes("defrost") ||
+      template.slug.includes("manager") ||
+      template.slug.includes("steps-of-service") ||
       template.slug.includes("delivery") ||
       template.slug.includes("inspection") ||
       template.slug.includes("cleaning") ||

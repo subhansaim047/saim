@@ -1345,13 +1345,14 @@
     ]
   },
   "boiling-water-thermometer-calibration": {
-    "title": "Free Thermometer Calibration Boiling Point Method | Saim Dev",
-    "desc": "Free thermometer calibration boiling point method template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "title": "Free Boiling Water Calibration SOP | Saim Dev",
+    "desc": "Boiling water thermometer calibration SOP for UK kitchens. Verify 100°C ±1°C accuracy, probe adjustment, and statutory monthly EHO logging records.",
     "howTo": [
-      "Download and print the Thermometer Calibration Boiling Point Method for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Bring a deep pan of clean water to a vigorous rolling boil",
+      "Submerge the probe stem at least 50mm without touching pot sides",
+      "Hold stationary for 10 seconds until the digital reading stabilises",
+      "Verify the thermometer reads 100.0°C within ±1.0°C tolerance",
+      "Record the reading, calibration date, and chef initials in the log"
     ]
   },
   "non-gmo": {
@@ -1463,13 +1464,14 @@
     ]
   },
   "prevent-freezer-burn": {
-    "title": "Free Prevent Freezer Burn Poster Template | Saim Dev",
-    "desc": "Free UK prevent freezer burn poster template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "title": "Free Freezer Burn Prevention Guide | Saim Dev",
+    "desc": "Commercial kitchen freezer burn prevention guide. Master vacuum sealing, airtight containers, continuous -18°C controls, and FIFO stock rotation.",
     "howTo": [
-      "Download and print the Prevent Freezer Burn Poster for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Wrap meats in heavy-duty food-grade moisture-vapour-proof barrier film",
+      "Vacuum seal proteins to eliminate all interior headspace air pockets",
+      "Maintain commercial freezers at a steady -18.0°C without fluctuations",
+      "Apply First-In, First-Out (FIFO) stock rotation with clear date markers",
+      "Never place warm foods directly into commercial sub-zero storage"
     ]
   },
   "ecosure-inspection-checklist": {
@@ -1579,33 +1581,36 @@
     ]
   },
   "restaurant-steps-of-service": {
-    "title": "Free Restaurant Steps Of Service Template | Saim Dev",
-    "desc": "Free UK restaurant steps of service template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "title": "Free Restaurant Steps Of Service SOP | Saim Dev",
+    "desc": "UK restaurant front-of-house steps of service SOP. From guest greeting, dietary & allergen inquiries, order entry, to payment and table reset.",
     "howTo": [
-      "Download and print the Restaurant Steps Of Service for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Greet guests within 60 seconds of arrival with warm hospitality",
+      "Inquire proactively about statutory food allergies and dietary needs",
+      "Relay allergen alerts directly to Head Chef before ringing tickets",
+      "Deliver courses simultaneously using tray stands and correct cutlery",
+      "Process card payments tableside and reset sanitised covers promptly"
     ]
   },
   "restaurant-food-safety-procedures": {
-    "title": "Free Restaurant Food Safety Procedures Template | Saim Dev",
-    "desc": "Free restaurant food safety procedures template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Food Safety Procedures SOP UK | Saim Dev",
+    "desc": "UK restaurant food safety procedures SOP. Implement 4Cs (Cleaning, Cooking, Chilling, Cross-contamination), CCP limits, and FSA SFBB compliance.",
     "howTo": [
-      "Download and print the Restaurant Food Safety Procedures for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Cleaning: Execute two-stage detergent wash and BS EN 1276 sanitisation",
+      "Cooking: Verify internal core temperatures reach at least 75.0°C for 30s",
+      "Chilling: Rapidly chill cooked items to below 8.0°C within 90 minutes",
+      "Cross-Contamination: Separate raw and ready-to-eat via colour-coded tools",
+      "Due Diligence: Complete and file daily opening and closing SFBB logs"
     ]
   },
   "restaurant-manager-responsibilities": {
-    "title": "Free Restaurant Manager Responsibilities Template | Saim Dev",
-    "desc": "Free restaurant manager responsibilities template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Kitchen Manager Compliance SOP | Saim Dev",
+    "desc": "Commercial kitchen manager responsibilities SOP. Master EHO audit readiness, staff hygiene training, HACCP diary verification, and due diligence.",
     "howTo": [
-      "Download and print the Restaurant Manager Responsibilities for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit daily opening and closing food hygiene checklists before service",
+      "Verify all temperature probe logs are signed and within critical limits",
+      "Supervise staff allergen communications and Natasha's Law compliance",
+      "Maintain pest control reports, supplier certificates, and staff training",
+      "Act as primary liaison during local authority EHO statutory inspections"
     ]
   },
   "restaurant-sop": {

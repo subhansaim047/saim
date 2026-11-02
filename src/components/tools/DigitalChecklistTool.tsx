@@ -2639,6 +2639,8 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     (templateTitle.toLowerCase().includes("restaurant opening") || (templateId && templateId.includes("restaurant-opening")) ||
     (templateTitle.toLowerCase().includes("front of house") ||
      templateTitle.toLowerCase().includes("foh") ||
+    templateTitle.toLowerCase().includes("steps of service") ||
+    (templateId && templateId.includes("steps-of-service")) ||
      (templateTitle.toLowerCase().includes("restaurant") &&
       !templateTitle.toLowerCase().includes("cleaning") &&
       !templateTitle.toLowerCase().includes("inspection") &&
@@ -2653,6 +2655,8 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     templateTitle.toLowerCase().includes("toilet");
   const isDueDiligence =
     templateTitle.toLowerCase().includes("due diligence") ||
+    templateTitle.toLowerCase().includes("manager") ||
+    (templateId && templateId.includes("restaurant-manager-responsibilities")) ||
     templateTitle.toLowerCase().includes("compliance") ||
     templateTitle.toLowerCase().includes("ecosure");
   const isAllergenSop =
