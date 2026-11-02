@@ -34,6 +34,9 @@ import { FreezerTemperatureChartTool } from "./tools/FreezerTemperatureChartTool
 import { HandWashingPosterTool } from "./tools/HandWashingPosterTool";
 import { ChoppingBoardColourChartTool } from "./tools/ChoppingBoardColourChartTool";
 import { SafeFoodPrepRulesTool } from "./tools/SafeFoodPrepRulesTool";
+import { FoodCoolingPosterTool } from "./tools/FoodCoolingPosterTool";
+import { WalkInCoolerStorageChartTool } from "./tools/WalkInCoolerStorageChartTool";
+import { FridgeTemperatureRecordTool } from "./tools/FridgeTemperatureRecordTool";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
@@ -140,6 +143,20 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug === "basic-food-preparation-rules" ||
     template.slug.includes("safe-food-prep") ||
     template.slug.includes("food-preparation-rules");
+
+  const isFoodCoolingTool =
+    template.slug === "food-cooling-poster" ||
+    template.slug.includes("food-cooling") ||
+    template.slug.includes("cooling-poster");
+
+  const isWalkInStorageTool =
+    template.slug === "walk-in-cooler-food-storage-chart" ||
+    template.slug.includes("walk-in-cooler") ||
+    template.slug.includes("food-storage-chart");
+
+  const isFridgeRecordTool =
+    template.slug === "fridge-temperature-record-sheet-pdf" ||
+    template.slug.includes("fridge-temperature-record");
 
   const isAllergenTool =
     !isRecipeTool &&
@@ -436,6 +453,21 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <SafeFoodPrepRulesTool templateId={template.id} />
         )}
 
+        {/* 4f. Commercial Food Cooling Standard & 90-Minute Log */}
+        {isFoodCoolingTool && (
+          <FoodCoolingPosterTool templateId={template.id} />
+        )}
+
+        {/* 4g. Walk-In Cooler Food Storage Shelf Hierarchy Chart */}
+        {isWalkInStorageTool && (
+          <WalkInCoolerStorageChartTool templateId={template.id} />
+        )}
+
+        {/* 4h. Commercial Fridge Temperature Record Sheet & Calibration Log */}
+        {isFridgeRecordTool && (
+          <FridgeTemperatureRecordTool templateId={template.id} />
+        )}
+
         {/* 5. 14 Food Allergen Matrix & Kitchen Chart Tool */}
         {isAllergenTool && (
           <AllergenMatrixTool templateId={template.id} />
@@ -447,7 +479,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         )}
 
         {/* 7. Standard Poster / Reference Chart View (Fully Printable & Editable) */}
-        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && (
+        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && !isFoodCoolingTool && !isWalkInStorageTool && !isFridgeRecordTool && (
           <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-6 printable-doc shadow-sm">
             {/* Printable & Editable Sign-Off Header */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-2xl bg-amber-50/50 border border-amber-200/60 text-xs">

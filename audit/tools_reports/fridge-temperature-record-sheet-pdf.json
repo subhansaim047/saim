@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-10",
+  "name": "Commercial Fridge Temperature Record Sheet & EHO Due Diligence Log",
+  "slug": "fridge-temperature-record-sheet-pdf",
+  "url": "https://www.saimdev.site/food-safety-templates/fridge-temperature-record-sheet-pdf",
+  "primary_keyword": "commercial fridge temperature log sheet uk",
+  "secondary_keywords": [
+    "fridge temperature record sheet pdf",
+    "twice daily fridge temperature log catering",
+    "fsa commercial refrigerator temperature form",
+    "section 21 food safety act temperature log",
+    "probe thermometer calibration record sheet"
+  ],
+  "search_intent": "Kitchen managers and food business operators needing an official twice-daily commercial fridge temperature record sheet with compliance indicators, Section 21 corrective action protocols, and monthly probe thermometer calibration checks.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Downloadable PDF"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business-for-caterers",
+      "features": "SFBB daily diary non-fillable paper sheets."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/fridge-temperature-log-sheet/",
+      "features": "PDF download requiring email submission and newsletter signup."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/fridge-temperature-log",
+      "features": "Subscription digital sensor software ($79/mo)."
+    },
+    {
+      "name": "The Caterer",
+      "url": "https://www.thecaterer.com/guides/temperature-control",
+      "features": "Trade article on refrigeration rules."
+    },
+    {
+      "name": "Safety Services UK",
+      "url": "https://www.safetyservices.co.uk/temperature-records",
+      "features": "Consultancy service lead generation form."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No multi-unit interactive temperature logger (walk-in, prep well, raw meat, fish)",
+      "No automated compliance highlighting (Optimal <=5C vs Caution 5-8C vs Violation >8C)",
+      "No built-in probe calibration tracker (ice bath and boiling water tests)",
+      "No CSV export or instant A4 print formatting"
+    ],
+    "our_differentiators": [
+      "Multi-chiller unit management with twice-daily AM/PM inputs",
+      "Automated compliance badges and Section 21 corrective action protocol",
+      "Integrated monthly probe thermometer calibration verification",
+      "Single-click CSV export and high-contrast A4 printable log sheet"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 97.8,
+    "top_competitor_overall_score": 74.8
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-6",
+  "name": "Food Cooling Poster & 90-Minute Rapid Chill Tracker",
+  "slug": "food-cooling-poster",
+  "url": "https://www.saimdev.site/food-safety-templates/food-cooling-poster",
+  "primary_keyword": "commercial kitchen food cooling rules poster uk",
+  "secondary_keywords": [
+    "blast chiller cycle temperature log sheet",
+    "food cooling 90 minute rule uk",
+    "fsa rapid chilling guidance catering",
+    "food cooling danger zone guidelines",
+    "printable commercial food cooling poster"
+  ],
+  "search_intent": "Commercial kitchen chefs, caterers, and food handlers seeking official UK FSA guidance and a printable A4 kitchen poster on cooling hot cooked foods to under 8\u00b0C within the 90-minute limit to prevent spore germination.",
+  "serp_features": [
+    "Featured Snippet (90-minute cooling rule)",
+    "People Also Ask",
+    "AI Overview"
+  ],
+  "competitors": [
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/cooling-food-safely-regulations/",
+      "features": "Educational blog post on cooling food safely, upsells \u00a320+ course."
+    },
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business-for-caterers",
+      "features": "SFBB safe method chilling PDFs."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/cooling-temperature-log",
+      "features": "SaaS software log ($79/mo paywall)."
+    },
+    {
+      "name": "Nisbets UK",
+      "url": "https://www.nisbets.co.uk/catering-cooling-methods-guide",
+      "features": "Commercial cooling equipment sales catalog."
+    },
+    {
+      "name": "NCASS",
+      "url": "https://www.ncass.org.uk/resources/cooling-times/",
+      "features": "Event catering association cooling advice (\u00a3180/yr membership)."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive 90-minute cooling drill stopwatch",
+      "No real-time batch cooling log simulator with pass/fail evaluation",
+      "No CSV export for due diligence temperature audit records",
+      "No free printable high-contrast A4 poster with emergency corrective action protocols"
+    ],
+    "our_differentiators": [
+      "Interactive 90-minute cooling drill timer and 2-stage milestone guide (0-45m drop to 21\u00b0C, 45-90m drop to 8\u00b0C)",
+      "Interactive batch cooling log with automated pass/fail verification and instant CSV export",
+      "5 approved rapid cooling methods matrix (shallow pans, ice baths, blast chilling, meat joint portioning)",
+      "High-contrast printable A4 wall poster with premises name, unit ID, and supervisor sign-off"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 97.4,
+    "top_competitor_overall_score": 73.6
+  }
+}

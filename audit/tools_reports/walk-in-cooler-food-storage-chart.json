@@ -1,0 +1,64 @@
+{
+  "tool_id": "template-8",
+  "name": "Walk-In Cooler Food Storage Shelf Hierarchy Chart",
+  "slug": "walk-in-cooler-food-storage-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/walk-in-cooler-food-storage-chart",
+  "primary_keyword": "walk in cooler food storage chart commercial kitchen uk",
+  "secondary_keywords": [
+    "commercial fridge shelf storage hierarchy poster",
+    "fsa walk in chiller food organisation",
+    "prevent drip cross contamination commercial fridge",
+    "raw meat bottom shelf rule uk catering",
+    "printable walk in cooler door chart"
+  ],
+  "search_intent": "Catering managers and head chefs seeking an authoritative 5-tier vertical storage hierarchy diagram for walk-in chillers and commercial upright refrigerators to eliminate drip cross-contamination under FSA SFBB rules.",
+  "serp_features": [
+    "Featured Snippet",
+    "Image Pack",
+    "People Also Ask"
+  ],
+  "competitors": [
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/fridge-shelf-food-safety/",
+      "features": "Static blog diagram with course sales."
+    },
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/safety-hygiene/cross-contamination",
+      "features": "Text guidelines on separating raw and cooked foods."
+    },
+    {
+      "name": "WebstaurantStore / Nisbets",
+      "url": "https://www.nisbets.co.uk/commercial-refrigeration-storage-guide",
+      "features": "Refrigeration equipment e-commerce store."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/fridge-organization-chart",
+      "features": "Paywalled software template preview."
+    },
+    {
+      "name": "Signs4Safety",
+      "url": "https://www.safetysigns4less.co.uk/catering-signs/",
+      "features": "Plastic wall signs for purchase (\u00a312-\u00a325)."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive food ingredient search classifier highlighting correct shelves",
+      "No spacing and airflow standards (15cm floor clearance, 5cm perimeter gap)",
+      "No free high-contrast A4/A3 printable cooler door chart"
+    ],
+    "our_differentiators": [
+      "Interactive 5-tier vertical shelf hierarchy from Ready-to-Eat down to Raw Poultry",
+      "Live ingredient search classifier with legal EHO justification",
+      "Airflow, evaporator clearance, and dunnage rack clearance standards",
+      "A4/A3 high-contrast printable cooler door poster with manager sign-off"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 97.6,
+    "top_competitor_overall_score": 72.4
+  }
+}

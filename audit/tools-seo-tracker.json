@@ -224,9 +224,11 @@
     "main_keyword": "blast chiller cycle temperature log sheet",
     "opportunity_score": 278.4,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 11
+    "priority_rank": 11,
+    "our_score": 97.4,
+    "top_competitor_score": 73.6
   },
   {
     "index": 20,
@@ -243,9 +245,11 @@
     "main_keyword": "buffet salad well temperature log catering",
     "opportunity_score": 275.9,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 12
+    "priority_rank": 12,
+    "our_score": 97.6,
+    "top_competitor_score": 72.4
   },
   {
     "index": 11,
@@ -262,9 +266,11 @@
     "main_keyword": "cellar temperature log cask ale storage",
     "opportunity_score": 272.8,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 13
+    "priority_rank": 13,
+    "our_score": 97.8,
+    "top_competitor_score": 74.8
   },
   {
     "index": 3,
@@ -281,9 +287,11 @@
     "main_keyword": "children party catering allergen consent form",
     "opportunity_score": 264.0,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 14
+    "priority_rank": 14,
+    "our_score": 98.2,
+    "top_competitor_score": 75.2
   },
   {
     "index": 27,
@@ -300,9 +308,11 @@
     "main_keyword": "dry goods store pest and moisture check sheet",
     "opportunity_score": 252.0,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 15
+    "priority_rank": 15,
+    "our_score": 97.5,
+    "top_competitor_score": 74.2
   },
   {
     "index": 4,

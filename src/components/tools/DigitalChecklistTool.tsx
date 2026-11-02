@@ -164,6 +164,65 @@ const CLEANING_TASKS: CheckItem[] = [
   }
 ];
 
+const PEST_CONTROL_TASKS: CheckItem[] = [
+  {
+    id: "p1",
+    category: "Rodent Monitoring & Bait Stations",
+    task: "Inspect all numbered exterior and internal tamper-resistant rodent bait stations: verify boxes are locked, undamaged, anchored in place, and inspected by BPCA/CEPA certified contractor under Regulation (EC) No 852/2004 Annex II Chap IX.",
+    status: "pass",
+    actionNotes: "All bait boxes secure; no droppings or gnaw marks"
+  },
+  {
+    id: "p2",
+    category: "Flying Insect Control & EFKs",
+    task: "Check Electric Fly Killers (EFKs): verify UV lamps are illuminated (tubes replaced within 12 months), catch trays clean without insect overflow, and positioned away from open food prep benches.",
+    status: "pass",
+    actionNotes: "EFK catch trays emptied; UV tubes active"
+  },
+  {
+    id: "p3",
+    category: "Physical Building Proofing",
+    task: "Inspect exterior door bottom bristle/rubber proofing strips (gap clearance strictly under 5mm); confirm fine fly screens on openable kitchen windows are intact with no tears or mesh holes.",
+    status: "pass",
+    actionNotes: "Door proofing strips flush; fly screens intact"
+  },
+  {
+    id: "p4",
+    category: "Service Penetrations & Drainage",
+    task: "Check pipework penetrations through external walls, floor drains, and conduit entries: ensure tight seals with wire wool, concrete, or metal plates with zero rodent ingress voids.",
+    status: "pass",
+    actionNotes: "Pipe entry points sealed; drain grates fastened"
+  },
+  {
+    id: "p5",
+    category: "Dry Goods & Flour Store",
+    task: "Inspect bulk grain sacks, flour bins, and dry store shelving for stored product insects (weevils, beetles, webbing, larvae). Ensure all stock is raised >15cm off floor on clean dunnage racks.",
+    status: "pass",
+    actionNotes: "Dry store clean; FIFO rotated; no insect webbing"
+  },
+  {
+    id: "p6",
+    category: "Crawling Insect Monitoring Traps",
+    task: "Examine sticky insect monitoring blunder traps placed behind cookline ranges, underneath dishwashers, and near motor compressors for cockroach (Blattella germanica) or ant activity.",
+    status: "pass",
+    actionNotes: "Zero crawling insects detected on monitoring pads"
+  },
+  {
+    id: "p7",
+    category: "External Waste & Refuse Enclosure",
+    task: "Verify external commercial wheelie bins and oil fat drums have tight-fitting lids closed; ensure waste corral floor is free from grease spills, standing effluent, or harborage debris.",
+    status: "pass",
+    actionNotes: "Bin corral clean; lids sealed; no food spillage"
+  },
+  {
+    id: "p8",
+    category: "Contractor Service Reports & SFBB",
+    task: "Verify latest BPCA/NPTA pest control technician service report is signed, filed in the SFBB Management folder, and any recommended structural proofing repairs completed.",
+    status: "pass",
+    actionNotes: "Latest contractor report on file with zero active alerts"
+  }
+];
+
 const DEFAULT_GENERAL_TASKS: CheckItem[] = [
   {
     id: "1",
@@ -229,9 +288,14 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     templateTitle.toLowerCase().includes("inspection") ||
     templateTitle.toLowerCase().includes("eho") ||
     templateTitle.toLowerCase().includes("hygiene audit");
+  const isPestControl =
+    templateTitle.toLowerCase().includes("pest") ||
+    templateTitle.toLowerCase().includes("rodent") ||
+    templateTitle.toLowerCase().includes("insect");
 
   // Checklist Tasks
   const [tasks, setTasks] = useState<CheckItem[]>(() => {
+    if (isPestControl) return PEST_CONTROL_TASKS;
     if (isRecall) return RECALL_INCIDENT_TASKS;
     if (isHealthInspection) return HEALTH_INSPECTION_TASKS;
     if (isCleaning) return CLEANING_TASKS;

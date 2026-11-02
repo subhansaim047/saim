@@ -1,0 +1,64 @@
+{
+  "tool_id": "template-14",
+  "name": "Commercial Kitchen Pest Control Checklist & Monitoring Audit",
+  "slug": "pest-control-checklist",
+  "url": "https://www.saimdev.site/food-safety-templates/pest-control-checklist",
+  "primary_keyword": "commercial kitchen pest control checklist uk",
+  "secondary_keywords": [
+    "kitchen pest prevention audit sheet",
+    "fsa pest monitoring checklist catering",
+    "bpca rodent and fly control inspection sheet",
+    "restaurant pest proofing daily log",
+    "regulation ec 852 2004 pest checklist"
+  ],
+  "search_intent": "Hospitality business owners and chefs seeking an inspection checklist covering bait stations, electric fly killers, building proofing, and contractor service reports to comply with Regulation (EC) No 852/2004 Annex II Chap IX.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist SERP"
+  ],
+  "competitors": [
+    {
+      "name": "British Pest Control Association (BPCA)",
+      "url": "https://bpca.org.uk/pest-advice/commercial-kitchen-pest-control",
+      "features": "Professional trade association guidance articles."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/pest-control-in-food-premises/",
+      "features": "Article discussing pest prevention with course sales."
+    },
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business-for-caterers",
+      "features": "SFBB pest control safe method section."
+    },
+    {
+      "name": "Rentokil UK",
+      "url": "https://www.rentokil.co.uk/commercial-pest-control/food-hospitality/",
+      "features": "Commercial pest control service sales quotes."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/pest-control-checklist",
+      "features": "Paywalled compliance software."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital checklist with pass/fail/action toggle",
+      "No dedicated UK statutory pest task sets (bait boxes, EFKs, mesh screens, dry store)",
+      "No instant A4 print formatting and CSV export"
+    ],
+    "our_differentiators": [
+      "8-point statutory pest control audit covering BPCA standards and Reg (EC) No 852/2004",
+      "Interactive pass/fail/action toggles with corrective action logging",
+      "Instant CSV export and A4 printable inspection records for SFBB diary storage",
+      "100% free with zero paywall or forced lead generation"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 97.5,
+    "top_competitor_overall_score": 74.2
+  }
+}

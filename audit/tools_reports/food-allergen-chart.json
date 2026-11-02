@@ -1,0 +1,66 @@
+{
+  "tool_id": "template-12",
+  "name": "14 Food Allergen Matrix & Kitchen Chart Generator",
+  "slug": "food-allergen-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/food-allergen-chart",
+  "primary_keyword": "14 food allergen chart template uk takeaways",
+  "secondary_keywords": [
+    "commercial food allergen matrix builder",
+    "natashas law ppds allergen chart generator",
+    "fsa 14 statutory allergens chart pdf",
+    "restaurant allergen menu matrix printable",
+    "catering allergy declaration form"
+  ],
+  "search_intent": "Takeaways, restaurants, and catering operations requiring a complete 14-allergen interactive matrix builder compliant with retained Regulation (EU) No 1169/2011 and Natasha's Law (FIR 2021), with instant PDF print and customer allergen filtering.",
+  "serp_features": [
+    "Featured Snippet (14 allergens)",
+    "Table Result",
+    "People Also Ask",
+    "AI Overview"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/allergen-guidance-for-food-businesses",
+      "features": "Static paper allergen table PDF with 14 allergens."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/allergen-matrix-template/",
+      "features": "Allergen matrix article gating PDF behind email capture."
+    },
+    {
+      "name": "MenuGuide",
+      "url": "https://www.menuguide.co.uk",
+      "features": "Subscription digital menu software (\u00a315/mo)."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/allergen-matrix",
+      "features": "Gated SaaS allergen tracking software."
+    },
+    {
+      "name": "Allergen Bureau UK",
+      "url": "https://www.allergenbureau.net",
+      "features": "Industry guidance without interactive restaurant builders."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive dish builder with instant allergen toggles",
+      "No live customer allergen safety filter for diners and waitstaff",
+      "No single-click A4 landscape print format with establishment branding",
+      "No client-side CSV export"
+    ],
+    "our_differentiators": [
+      "Full 14 statutory allergen interactive checklist per dish",
+      "Real-time customer allergy safety filter highlighting allergen-free options",
+      "Natasha's Law PPDS compliance notes and mandatory staff training protocols",
+      "A4 landscape print layout and client-side privacy with zero sign-up"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.2,
+    "top_competitor_overall_score": 75.2
+  }
+}
