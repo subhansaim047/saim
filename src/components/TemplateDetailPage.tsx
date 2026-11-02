@@ -40,6 +40,7 @@ import { FridgeTemperatureRecordTool } from "./tools/FridgeTemperatureRecordTool
 import { FoodTraceabilityLogTool } from "./tools/FoodTraceabilityLogTool";
 import { HamCookingTemperatureTool } from "./tools/HamCookingTemperatureTool";
 import { MeatCookingTemperatureChartTool, MeatCategory } from "./tools/MeatCookingTemperatureChartTool";
+import { MasterFoodTemperatureChartTool } from "./tools/MasterFoodTemperatureChartTool";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
@@ -165,7 +166,13 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug === "food-traceability" ||
     template.slug.includes("traceability");
 
+  const isMasterFoodTempTool =
+    template.slug === "food-temperature-chart" ||
+    template.slug === "food-temperature" ||
+    template.slug === "food-temperature-log";
+
   const isMeatCookingTool =
+    !isMasterFoodTempTool &&
     template.slug.includes("temperature-chart") &&
     (template.slug.includes("venison") ||
       template.slug.includes("chicken") ||
@@ -175,8 +182,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("pork") ||
       template.slug.includes("ham") ||
       template.slug.includes("turkey") ||
-      template.slug.includes("fish-temperature") ||
-      template.slug.includes("food-temperature"));
+      template.slug.includes("fish"));
 
   const initialMeat: MeatCategory =
     template.slug.includes("venison") ? "venison" :
@@ -184,7 +190,9 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug.includes("duck") ? "duck" :
     template.slug.includes("beef") ? "beef" :
     template.slug.includes("lamb") ? "lamb" :
-    template.slug.includes("ham") ? "ham" : "chicken";
+    template.slug.includes("ham") ? "ham" :
+    template.slug.includes("pork") ? "pork" :
+    template.slug.includes("fish") ? "fish" : "chicken";
 
   const isHamCookingTool =
     template.slug === "ham-cooking-temperature-chart" ||
@@ -510,6 +518,11 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <MeatCookingTemperatureChartTool templateId={template.id} initialMeat={initialMeat} />
         )}
 
+        {/* 4k. UK Commercial Kitchen Master Food Temperature Danger Zone Chart */}
+        {isMasterFoodTempTool && (
+          <MasterFoodTemperatureChartTool templateId={template.id} />
+        )}
+
         {/* 5. 14 Food Allergen Matrix & Kitchen Chart Tool */}
         {isAllergenTool && (
           <AllergenMatrixTool templateId={template.id} />
@@ -521,7 +534,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         )}
 
         {/* 7. Standard Poster / Reference Chart View (Fully Printable & Editable) */}
-        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && !isFoodCoolingTool && !isWalkInStorageTool && !isFridgeRecordTool && !isTraceabilityTool && !isHamCookingTool && !isMeatCookingTool && (
+        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && !isFoodCoolingTool && !isWalkInStorageTool && !isFridgeRecordTool && !isTraceabilityTool && !isHamCookingTool && !isMeatCookingTool && !isMasterFoodTempTool && (
           <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-6 printable-doc shadow-sm">
             {/* Printable & Editable Sign-Off Header */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-2xl bg-amber-50/50 border border-amber-200/60 text-xs">

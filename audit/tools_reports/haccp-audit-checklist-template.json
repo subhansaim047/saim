@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-35",
+  "name": "Commercial Kitchen HACCP Internal Audit Checklist Template",
+  "slug": "haccp-audit-checklist-template",
+  "url": "https://www.saimdev.site/food-safety-templates/haccp-audit-checklist-template",
+  "primary_keyword": "haccp audit checklist template uk commercial kitchen",
+  "secondary_keywords": [
+    "internal haccp audit checklist catering uk",
+    "sfbb management review audit template",
+    "ccp verification checklist commercial kitchen",
+    "eho haccp inspection readiness checklist",
+    "printable haccp audit template pdf"
+  ],
+  "search_intent": "Executive chefs, technical quality managers, and catering supervisors conducting internal food safety audits to verify HACCP principles, CCP monitoring records, and EHO inspection readiness under Regulation (EC) No 852/2004 Article 5.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Table / Checklist"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/hazard-analysis-critical-control-point-haccp",
+      "features": "Authoritative legislative advice; text-based guidance without dynamic audit checklists."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/haccp-internal-audit-checklist/",
+      "features": "Informative article and static checklist PDF with training course promotion."
+    },
+    {
+      "name": "SafetyCulture / iAuditor",
+      "url": "https://safetyculture.com/checklists/haccp-audit/",
+      "features": "Software app requiring account creation, subscription, and mobile app download."
+    },
+    {
+      "name": "Safe Food Pro",
+      "url": "https://safefoodpro.com/haccp-audit-checklist",
+      "features": "Proprietary subscription software ($50+/mo) with no instant web access."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/haccp-audit-checklist",
+      "features": "Paywalled compliance software ($79/mo) hiding tools behind signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No free interactive digital HACCP audit tool with live task verification and temperature logs",
+      "No comprehensive 7-principle audit sequence (PRPs, CCP logs, calibration, corrective actions)",
+      "No integrated probe calibration verification protocol (ice slush & boiling water)",
+      "No watermark-free A4 landscape audit report printable directly from the browser"
+    ],
+    "our_differentiators": [
+      "Interactive digital HACCP audit checklist with 7 prerequisite and CCP audit categories",
+      "Integrated 5-point probe temperature logger with instant pass/fail validation",
+      "Statutory Regulation (EC) No 852/2004 Article 5 due diligence compliance framework",
+      "Printable A4 audit sign-off sheet with supervisor and EHO audit fields"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.1,
+    "top_competitor_overall_score": 76.2
+  }
+}

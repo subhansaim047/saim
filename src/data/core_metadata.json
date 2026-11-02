@@ -23,7 +23,7 @@
     "title": "Free Commercial Kitchen Food Cost Calculator | Saim Dev",
     "desc": "Calculate recipe food cost percentages, gross profit margins, and profitable takeaway prices with our free UK food cost calculator for commercial kitchens.",
     "howTo": [
-      "Enter raw ingredient invoice costs in GBP (\u00a3) including packaging and portion weights.",
+      "Enter raw ingredient invoice costs in GBP (£) including packaging and portion weights.",
       "Input target kitchen Gross Profit margin percentage (standard UK takeaway target is 65% to 75%).",
       "Review suggested takeaway menu selling price and gross profit contribution per portion.",
       "Adjust portion sizes or supplier cost inputs to optimise takeaway menu profitability."
@@ -45,7 +45,7 @@
     "howTo": [
       "Map out your kitchen process steps from goods intake and storage through cooking and hot holding.",
       "Identify biological, chemical, physical, and allergen hazards at every preparation stage.",
-      "Define Critical Control Points (CCPs) such as core cooking temperature (75\u00b0C) and chilled storage (<8\u00b0C).",
+      "Define Critical Control Points (CCPs) such as core cooking temperature (75°C) and chilled storage (<8°C).",
       "Establish corrective actions and supervisor verification sign-off schedules for your EHO due diligence file."
     ]
   },
@@ -63,7 +63,7 @@
     "desc": "Free UK commercial freezer temperature log sheet. Daily AM and PM temperature tracking, EHO corrective action prompts, and printable SFBB kitchen chart.",
     "howTo": [
       "Select your commercial freezer unit and configure opening AM and closing PM check times.",
-      "Record internal probe temperatures twice daily to verify units remain at or below -18\u00b0C.",
+      "Record internal probe temperatures twice daily to verify units remain at or below -18°C.",
       "Review automatic compliance badges and log root causes for any defrost or temperature spikes.",
       "Execute the built-in thermometer probe ice point calibration check monthly for EHO audits.",
       "Print the official UK FSA SFBB weekly record sheet or export CSV data for your HACCP binder."
@@ -74,7 +74,7 @@
     "desc": "Download a free kitchen wall poster explaining the UK 90-minute cooling rule, blast chilling, and danger zone temperature limits for safe catering.",
     "howTo": [
       "Divide hot cooked batches into shallow stainless steel pans before chilling.",
-      "Cool food to 8\u00b0C or colder within 90 minutes to prevent spore germination.",
+      "Cool food to 8°C or colder within 90 minutes to prevent spore germination.",
       "Cover, date-code, and transfer chilled containers into cold storage promptly."
     ]
   },
@@ -99,12 +99,12 @@
   },
   "fridge-temperature-record-sheet-pdf": {
     "title": "Free Fridge Temperature Log Sheet | Saim Dev",
-    "desc": "Download a free fridge temperature log sheet for UK restaurants and takeaways. Record 8\u00b0C chilled limits twice daily for EHO due diligence evidence.",
+    "desc": "Download a free fridge temperature log sheet for UK restaurants and takeaways. Record 8°C chilled limits twice daily for EHO due diligence evidence.",
     "howTo": [
       "Mount printed fridge temperature sheets adjacent to commercial walk-in and under-counter chillers.",
       "Record probe air or core food temperatures twice daily (morning opening and afternoon/evening service).",
-      "Verify that internal temperatures remain strictly at or below 8\u00b0C (recommended 1\u00b0C to 5\u00b0C).",
-      "Log corrective actions immediately if any chiller unit rises above 8\u00b0C (seal check, stock transfer, technician call)."
+      "Verify that internal temperatures remain strictly at or below 8°C (recommended 1°C to 5°C).",
+      "Log corrective actions immediately if any chiller unit rises above 8°C (seal check, stock transfer, technician call)."
     ]
   },
   "cleaning-schedule": {
@@ -133,7 +133,7 @@
     "desc": "Free SFBB opening and closing checks template for UK food businesses. Daily hygiene checks, fridge temperatures, and routines for 5-star EHO ratings.",
     "howTo": [
       "Complete morning opening checks before food prep commences (fridge temps, sanitiser levels, handwash basins).",
-      "Verify all refrigeration units operate below 8\u00b0C and probe thermometers are sanitised and calibrated.",
+      "Verify all refrigeration units operate below 8°C and probe thermometers are sanitised and calibrated.",
       "Carry out evening closing checks (surfaces disinfected, food covered and dated, waste bins cleared, premises locked).",
       "Sign and date the daily record sheet as evidence of management oversight for your local council EHO audit."
     ]
@@ -194,9 +194,9 @@
   },
   "reheating-food-temperature-guide": {
     "title": "Free Reheating Food Temperature Guide | Saim Dev",
-    "desc": "Learn safe reheating rules for UK catering kitchens. Ensure hot core temperatures reach 75\u00b0C to destroy pathogens and pass local authority audits.",
+    "desc": "Learn safe reheating rules for UK catering kitchens. Ensure hot core temperatures reach 75°C to destroy pathogens and pass local authority audits.",
     "howTo": [
-      "Reheat pre-cooked foods rapidly until core temperature reaches at least 75\u00b0C.",
+      "Reheat pre-cooked foods rapidly until core temperature reaches at least 75°C.",
       "Stir soups, gravies, and stews during reheating to distribute heat evenly.",
       "Never reheat food more than once; discard leftovers that are not consumed."
     ]
@@ -221,12 +221,12 @@
   },
   "hot-holding-food-temperature-log": {
     "title": "Free Hot Holding Temperature Log | Saim Dev",
-    "desc": "Download a free hot holding temperature log for UK kitchens. Monitor food above 63\u00b0C and record time limits to comply with Food Hygiene Regulations.",
+    "desc": "Download a free hot holding temperature log for UK kitchens. Monitor food above 63°C and record time limits to comply with Food Hygiene Regulations.",
     "howTo": [
       "Preheat hot-holding equipment (bain-marie, hot cabinet, pass heat lamps) before adding hot food.",
-      "Ensure food is cooked thoroughly to 75\u00b0C (82\u00b0C in Scotland) before transferring to hot holding units.",
-      "Probe core temperatures at least every two hours to ensure food stays consistently above 63\u00b0C.",
-      "Apply the UK 2-hour exemption rule strictly if food drops below 63\u00b0C: serve or discard immediately."
+      "Ensure food is cooked thoroughly to 75°C (82°C in Scotland) before transferring to hot holding units.",
+      "Probe core temperatures at least every two hours to ensure food stays consistently above 63°C.",
+      "Apply the UK 2-hour exemption rule strictly if food drops below 63°C: serve or discard immediately."
     ]
   },
   "eho-checklist": {
@@ -234,28 +234,28 @@
     "desc": "Complete EHO inspection checklist for UK restaurants and takeaways. Audit food hygiene, cross-contamination, structural cleaning, and HACCP paperwork.",
     "howTo": [
       "Audit kitchen practices across the 3 EHO scoring pillars: Food Hygiene, Structural Compliance, and Management Confidence.",
-      "Verify that hot holding (>63\u00b0C), chilling (<8\u00b0C), and cooking (75\u00b0C) logs are up to date and signed daily.",
+      "Verify that hot holding (>63°C), chilling (<8°C), and cooking (75°C) logs are up to date and signed daily.",
       "Inspect physical premises for pest proofing, hot running water, soap, paper towels, and surface sanitation.",
       "Organise your SFBB diary or HACCP binder so it can be handed to the visiting officer immediately."
     ]
   },
   "delivery-log": {
     "title": "Free Goods In Temperature Log UK | Saim Dev",
-    "desc": "Download a free goods in temperature log sheet for UK commercial kitchens. Check chilled (<8\u00b0C) and frozen (<-18\u00b0C) deliveries, date codes, and packaging.",
+    "desc": "Download a free goods in temperature log sheet for UK commercial kitchens. Check chilled (<8°C) and frozen (<-18°C) deliveries, date codes, and packaging.",
     "howTo": [
       "Check delivery vehicle hygiene and inspect arriving food packaging for tears, leaks, or pest damage.",
-      "Probe chilled goods to confirm temperature is at or below 8\u00b0C (reject stock exceeding 8\u00b0C).",
-      "Verify frozen items are solidly frozen at or below -18\u00b0C with no signs of thawing or refreezing.",
+      "Probe chilled goods to confirm temperature is at or below 8°C (reject stock exceeding 8°C).",
+      "Verify frozen items are solidly frozen at or below -18°C with no signs of thawing or refreezing.",
       "Check use-by dates, record vehicle and supplier details, and file the signed delivery intake sheet."
     ]
   },
   "cooking-log-template": {
     "title": "Free Cooking Temperature Log Sheet | Saim Dev",
-    "desc": "Free cooking temperature record sheet for UK commercial kitchens. Verify core cooking temperatures reach 75\u00b0C (82\u00b0C in Scotland) for safe batch cooking.",
+    "desc": "Free cooking temperature record sheet for UK commercial kitchens. Verify core cooking temperatures reach 75°C (82°C in Scotland) for safe batch cooking.",
     "howTo": [
       "Sanitise the digital probe thermometer using a food-grade antibacterial wipe before and after each test.",
       "Insert the probe into the thickest part of the meat, poultry, or batch dish away from bones.",
-      "Verify the reading reaches 75\u00b0C for 30 seconds (or equivalent time/temperature, 82\u00b0C in Scotland).",
+      "Verify the reading reaches 75°C for 30 seconds (or equivalent time/temperature, 82°C in Scotland).",
       "Record batch item name, time, core temperature, and cook initials on the daily kitchen record sheet."
     ]
   },
@@ -503,7 +503,7 @@
     "title": "Free Health Inspection Checklist UK | EHO Audit | Saim Dev",
     "desc": "Free UK health inspection checklist for commercial kitchens. Self-audit food hygiene, premises cleanliness, HACCP records, and secure a 5-star FHRS rating.",
     "howTo": [
-      "Audit food hygiene procedures: verify chilled storage (<5\u00b0C), core cooking temperatures (75\u00b0C), and colour-coded board segregation.",
+      "Audit food hygiene procedures: verify chilled storage (<5°C), core cooking temperatures (75°C), and colour-coded board segregation.",
       "Inspect kitchen physical structure: check handwash basins, hot running water, BS EN 1499 soap, and pest-proofing barriers.",
       "Verify management records: complete daily SFBB opening and closing checks, allergen matrices, and staff hygiene training logs.",
       "Review estimated Food Hygiene Rating Scheme (FHRS) star score and resolve identified non-compliance points immediately.",
@@ -572,12 +572,12 @@
   },
   "ham-cooking-temperature-chart": {
     "title": "Free Ham Cooking Temperature Chart | Saim Dev",
-    "desc": "Free ham cooking temperature chart for UK commercial kitchens. Calculate gammon roasting times and verify 75\u00b0C core temperatures for safe catering.",
+    "desc": "Free ham cooking temperature chart for UK commercial kitchens. Calculate gammon roasting times and verify 75°C core temperatures for safe catering.",
     "howTo": [
       "Select the ham or gammon cut: bone-in joint, boneless rolled roast, or carvery glazed ham.",
       "Weigh the raw meat joint and calculate roasting duration based on oven temperature and weight.",
       "Insert a sanitised digital probe thermometer into the thickest part of the meat away from the bone.",
-      "Verify the internal core reaches at least 75\u00b0C for 30 seconds (82\u00b0C in Scotland) before resting."
+      "Verify the internal core reaches at least 75°C for 30 seconds (82°C in Scotland) before resting."
     ]
   },
   "when-should-you-wash-your-hands": {
@@ -597,7 +597,7 @@
       "Select the venison cut: whole roasting haunch, prime loin saddle medallions, or wild game burgers.",
       "Input the raw joint weight to calculate oven roasting time and required resting period under foil.",
       "Insert an antibacterial sanitized probe thermometer into the geometric center of the meat cut.",
-      "Ensure whole intact loins reach at least 55\u00b0C (medium-rare) or 60\u00b0C (haunch), while game mince reaches 75\u00b0C."
+      "Ensure whole intact loins reach at least 55°C (medium-rare) or 60°C (haunch), while game mince reaches 75°C."
     ]
   },
   "food-temperatures-poster": {
@@ -612,12 +612,12 @@
   },
   "chicken-temperature-chart": {
     "title": "Free Chicken Cooking Temperature Chart | Saim Dev",
-    "desc": "Free chicken cooking temperature chart for UK commercial kitchens. Verify 75\u00b0C core temperatures to eliminate Campylobacter and Salmonella risks.",
+    "desc": "Free chicken cooking temperature chart for UK commercial kitchens. Verify 75°C core temperatures to eliminate Campylobacter and Salmonella risks.",
     "howTo": [
       "Select the poultry cut: whole roasting bird, bone-in thighs/legs, boneless breasts, or chicken livers.",
       "Never wash raw chicken under taps to prevent spreading Campylobacter droplets across work surfaces.",
       "Probe the thickest part of the inner thigh without touching bone; hold reading for at least 30 seconds.",
-      "Verify internal core reaches at least 75\u00b0C (82\u00b0C in Scotland) and juices run completely clear before serving."
+      "Verify internal core reaches at least 75°C (82°C in Scotland) and juices run completely clear before serving."
     ]
   },
   "opening-a-restaurant-checklist": {
@@ -645,19 +645,19 @@
     "desc": "Free duck cooking temperature chart for UK commercial kitchens. Accurate core probing guidance for whole roast duck, confit legs, and seared breasts.",
     "howTo": [
       "Identify duck dish: whole roasted duck, slow-rendered confit leg, or pan-seared duck breast.",
-      "Cook whole birds to a minimum core temperature of 75\u00b0C for 30 seconds (82\u00b0C in Scotland).",
-      "If serving seared duck breast pink (62\u00b0C), enforce strict HACCP supplier accreditation and log batch times.",
-      "Cool leftover roasted duck meat to under 8\u00b0C within 90 minutes before chilling."
+      "Cook whole birds to a minimum core temperature of 75°C for 30 seconds (82°C in Scotland).",
+      "If serving seared duck breast pink (62°C), enforce strict HACCP supplier accreditation and log batch times.",
+      "Cool leftover roasted duck meat to under 8°C within 90 minutes before chilling."
     ]
   },
   "beef-temperature-chart": {
     "title": "Free Beef Cooking Temperature Chart | Saim Dev",
-    "desc": "Free beef temperature chart for UK commercial kitchens. Rare, medium, and well-done core limits with mandatory 75\u00b0C cooking rules for minced burgers.",
+    "desc": "Free beef temperature chart for UK commercial kitchens. Rare, medium, and well-done core limits with mandatory 75°C cooking rules for minced burgers.",
     "howTo": [
       "Distinguish between intact whole muscle cuts (steaks, roasts) and non-intact meats (mince, rolled joints).",
-      "Sear all external surfaces of intact beef joints; internal core can be medium-rare (54\u00b0C) or medium (60\u00b0C).",
-      "All minced beef burgers, rolled briskets, and kebabs must strictly achieve 75\u00b0C core for 30 seconds.",
-      "Maintain cooked carvery beef joints on hot holding units at or above 63\u00b0C continuously."
+      "Sear all external surfaces of intact beef joints; internal core can be medium-rare (54°C) or medium (60°C).",
+      "All minced beef burgers, rolled briskets, and kebabs must strictly achieve 75°C core for 30 seconds.",
+      "Maintain cooked carvery beef joints on hot holding units at or above 63°C continuously."
     ]
   },
   "turkey-cooking-chart": {
@@ -676,18 +676,18 @@
     "howTo": [
       "Select the lamb joint: bone-in leg of lamb, French-trimmed rack, rolled shoulder, or minced koftas.",
       "Weigh joint to calculate roasting time per kilogram plus mandatory 15-20 minute post-roast resting under foil.",
-      "Probe thickest meat center: medium-rare intact racks (58\u00b0C), medium roast leg (65\u00b0C), or rolled shoulder (75\u00b0C).",
-      "Minced lamb preparations must reach at least 75\u00b0C for 30 seconds throughout the thermal core."
+      "Probe thickest meat center: medium-rare intact racks (58°C), medium roast leg (65°C), or rolled shoulder (75°C).",
+      "Minced lamb preparations must reach at least 75°C for 30 seconds throughout the thermal core."
     ]
   },
   "fish-temperature-chart": {
-    "title": "Free Fish Temperature Chart Template | Saim Dev",
-    "desc": "Download our free fish temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Fish Temperature Chart | Saim Dev",
+    "desc": "Free UK commercial fish cooking temperature chart. Core probe temperatures, parasite freeze controls, species timings, and printable kitchen poster.",
     "howTo": [
-      "Download and print the Fish Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Select the seafood cut: oily salmon supreme, white fish fillets, seared tuna loin, or whole round fish.",
+      "Verify raw fish storage history: fresh fish must be stored between 0°C and 2°C on melting flaked ice.",
+      "Insert a sanitised needle probe horizontally into the thickest center part of the fillet away from bone.",
+      "Verify core reaches 63°C for 2 minutes (or 70°C / Scottish 82°C) until flesh becomes completely opaque."
     ]
   },
   "thermometer-calibration-log": {
@@ -712,12 +712,12 @@
   },
   "haccp-audit-checklist-template": {
     "title": "Free HACCP Audit Checklist Template | Saim Dev",
-    "desc": "Free haccp audit checklist template template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "desc": "Free commercial kitchen HACCP internal audit checklist. CCP verification, PRPs, calibration reviews, corrective action logs, and printable audit sheets.",
     "howTo": [
-      "Download and print the HACCP Audit Checklist Template for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Review operational prerequisite programmes (PRPs) including pest control, waste contracts, and staff health logs.",
+      "Examine CCP monitoring records: confirm chiller logs (<=5°C), cooking core logs (>=75°C), and hot holding logs are signed.",
+      "Inspect probe thermometer calibration log, checking monthly ice water (-1°C to +1°C) and boiling water (99°C to 101°C) tests.",
+      "Check non-conformance and corrective action reports to verify that root-cause investigations were documented."
     ]
   },
   "haccp-audit": {
@@ -771,13 +771,13 @@
     ]
   },
   "food-temperature-chart": {
-    "title": "Free Food Temperature Template | Saim Dev",
-    "desc": "Download our free food temperature template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Food Temperature Chart | Saim Dev",
+    "desc": "Free UK master food temperature chart. Explore legal 8°C–63°C danger zone limits, fridge and freezer storage benchmarks, and printable A4 kitchen poster.",
     "howTo": [
-      "Download and print the Food Temperature for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Position calibrated dial or digital thermometers in all refrigeration units (1°C–5°C) and deep freezers (<= -18°C).",
+      "Record twice-daily AM and PM ambient appliance temperatures in the kitchen SFBB compliance log.",
+      "Monitor hot-holding buffet equipment and carvery passes every 2 hours to confirm core remains strictly >= 63°C.",
+      "Probe every cooked high-risk batch with a disinfected digital probe to ensure core reaches >= 75°C (82°C Scotland)."
     ]
   },
   "haccp-risk-assessment": {
@@ -787,7 +787,7 @@
       "List all process steps from supplier intake and raw butchery to chilling, reheating, and service.",
       "Identify specific microbiological, physical, chemical, and allergenic hazards at each step.",
       "Apply the Codex Alimentarius decision tree to determine whether the hazard is a true Critical Control Point.",
-      "Establish measurable critical limits (e.g. core temp >= 75\u00b0C for 30 seconds) and corrective action logs."
+      "Establish measurable critical limits (e.g. core temp >= 75°C for 30 seconds) and corrective action logs."
     ]
   },
   "proper-food-storage-chart": {
@@ -1321,13 +1321,13 @@
     ]
   },
   "pork-temperature-chart": {
-    "title": "Free Pork Temperature Chart Template | Saim Dev",
-    "desc": "Download our free pork temperature chart template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Pork Temperature Chart | Saim Dev",
+    "desc": "Free UK commercial pork cooking temperature chart. Joint roasting calculator, core probe standards, mince safety rules, and printable kitchen wall sheet.",
     "howTo": [
-      "Download and print the Pork Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Determine cut category: intact loin joint, bone-in chop, rolled belly porchetta, or minced pork sausage.",
+      "Calculate oven duration factoring joint weight (e.g. 50 mins/kg for whole loins at 180°C Fan).",
+      "Insert sanitised needle probe into the geometric center of the meat, avoiding bones and thick fat deposits.",
+      "Ensure minced pork and rolled joints achieve 75°C for 30 seconds (82°C Scotland); allow chops to rest 8–10 minutes."
     ]
   },
   "freeze-drying-time-chart": {
@@ -1561,13 +1561,13 @@
     ]
   },
   "allergen-control-sop": {
-    "title": "Free Allergen Control SOP Template | Saim Dev",
-    "desc": "Download our free allergen control sop template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Allergen Control SOP | Saim Dev",
+    "desc": "Free commercial kitchen allergen control SOP checklist. Natasha's Law protocols, segregation procedures, purple tool rules, and printable kitchen audit.",
     "howTo": [
-      "Download and print the Allergen Control SOP for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Inspect all incoming goods against approved ingredient matrices, checking for unnotified allergen formulation alerts.",
+      "Store 14 statutory allergens in designated, airtight, sealed containers beneath allergen-free ingredients.",
+      "Allocate dedicated purple colour-coded cutting boards, chef knives, and cookware for allergen-free orders.",
+      "Require food handlers to wash hands with warm water and BS EN 1499 soap and put on a clean apron before cooking."
     ]
   },
   "waste-management-plan-sop": {

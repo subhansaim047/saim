@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-32",
+  "name": "UK Master Food Temperature Danger Zone & Storage Chart",
+  "slug": "food-temperature-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/food-temperature-chart",
+  "primary_keyword": "food temperature chart uk commercial kitchen",
+  "secondary_keywords": [
+    "food temperature danger zone uk fsa",
+    "commercial fridge legal temperature limit",
+    "hot holding food temperature catering",
+    "commercial kitchen master temperature chart",
+    "printable food temperature chart a4"
+  ],
+  "search_intent": "Commercial kitchen managers, head chefs, and catering operators needing an authoritative master UK food temperature chart encompassing freezer (≤-18°C), chilled holding (1°C–5°C, legal max 8°C), danger zone (8°C–63°C), hot holding (≥63°C), and cooking lethality (75°C / 82°C Scotland).",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Table / Checklist"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business",
+      "features": "Official SFBB diary temperature guide; static PDF pages without interactive diagnostics."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/food-temperature-danger-zone/",
+      "features": "Educational blog article explaining danger zone; static illustrations without custom temperature probing."
+    },
+    {
+      "name": "Virtual College",
+      "url": "https://www.virtual-college.co.uk/resources/food-hygiene-temperatures",
+      "features": "Course marketing page with basic temperature summary table."
+    },
+    {
+      "name": "NCASS",
+      "url": "https://www.ncass.org.uk/resources/food-safety/temperature-controls/",
+      "features": "Catering association guide; locked behind membership for advanced tools."
+    },
+    {
+      "name": "Safety First UK",
+      "url": "https://www.safetyfirstuk.com/food-safety-temperature-guide/",
+      "features": "Consultancy overview; lacks printable high-contrast supervisor compliance charts."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive live temperature probe inspector (-25°C to 100°C) with instant zone diagnostics",
+      "No dynamic statutory legal status and corrective action guidance per degree",
+      "No instant °C to °F conversion with Scottish 82°C regulatory toggle",
+      "No high-resolution A4 kitchen master poster with monthly probe calibration checklist"
+    ],
+    "our_differentiators": [
+      "Interactive master temperature slider diagnosing any probe reading in real-time",
+      "Complete statutory legal breakdown (Food Hygiene England 2013 8°C max, Scotland 82°C, hot-holding 63°C)",
+      "Comprehensive CCP hierarchy table covering dishwashing rinse and blast chilling",
+      "Printable high-contrast commercial A4 wall chart with lead chef and EHO audit fields"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.2,
+    "top_competitor_overall_score": 76.5
+  }
+}

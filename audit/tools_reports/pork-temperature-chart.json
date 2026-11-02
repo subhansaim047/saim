@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-33",
+  "name": "Commercial Pork Cooking Temperature Chart & Roasting Guide",
+  "slug": "pork-temperature-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/pork-temperature-chart",
+  "primary_keyword": "pork cooking temperature chart uk commercial kitchen",
+  "secondary_keywords": [
+    "pork core probe temperature fsa",
+    "roast pork joint cooking time per kg catering",
+    "pork chops internal temperature safe",
+    "minced pork safe cooking temperature uk",
+    "printable pork temperature chart"
+  ],
+  "search_intent": "Commercial roast chefs, catering cooks, and butcher kitchen operators seeking precise roasting times, rest durations, and statutory core temperatures for whole loins, bone-in chops, rolled porchetta, pulled shoulder, and minced pork products.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Table / Checklist"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/safety-hygiene/cooking-safely",
+      "features": "General meat temperature advice (75°C core); lacks joint weight calculators."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/pork-cooking-temperatures/",
+      "features": "Educational overview of pork doneness; static tables without portion scaling."
+    },
+    {
+      "name": "AHDB Pork",
+      "url": "https://ahdb.org.uk/pork-temperatures-and-timings",
+      "features": "Industry board culinary advice; non-commercial focus lacking HACCP sign-off sheets."
+    },
+    {
+      "name": "Thermapen UK",
+      "url": "https://thermometer.co.uk/meat-temperatures",
+      "features": "Digital thermometer reference table without weight or cut calculator."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/pork-temperature-log",
+      "features": "Subscription software ($79/mo) with paywalled access."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive weight-based roasting calculator (min/kg) for whole loins, belly, and chops",
+      "No clear distinction between whole intact muscle searing vs rolled/minced pork thermal requirements",
+      "No pull-temperature carryover heat calculation engine for precision resting",
+      "No high-contrast A4 commercial kitchen wall chart ready for instant printing"
+    ],
+    "our_differentiators": [
+      "Interactive pork cut calculator factoring joint weight, cut type, and oven temperatures",
+      "HACCP hazard analysis on rolled belly vs intact loins preventing internal contamination",
+      "Full UK & Scotland regulatory compliance toggle (75°C vs 82°C)",
+      "Printable A4 carvery wall poster with supervisor sign-off and probe calibration blocks"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.8,
+    "top_competitor_overall_score": 74.8
+  }
+}
