@@ -7,7 +7,7 @@ import {
   ArrowLeft, ArrowRight, ShieldCheck, CheckCircle2, AlertTriangle, 
   FileText, ChevronDown, ChevronUp, Scale, Clock, Award, Star,
   Info, AlertOctagon, HelpCircle, ExternalLink, Flame, ShieldAlert,
-  Sparkles, XCircle, TrendingUp, Smartphone, Utensils
+  XCircle, TrendingUp, Smartphone, Utensils
 } from "lucide-react";
 import { SiteFooter } from "../SiteFooter";
 

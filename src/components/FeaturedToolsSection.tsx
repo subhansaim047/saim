@@ -6,7 +6,7 @@ import {
   ShieldAlert,
   Calculator,
   Tag,
-  Sparkles,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import { IconTile, IconColor } from "./icons/IconTile";
@@ -161,7 +161,7 @@ export const FeaturedToolsSection = () => {
                 {/* Bottom Action Footer */}
                 <div className="relative z-10 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono font-medium text-white/60 group-hover:text-white transition-colors pointer-events-none">
                   <span className="flex items-center gap-1.5 text-white/50 text-[11px]">
-                    <Sparkles className="w-3.5 h-3.5 text-primary" />
+                    <Zap className="w-3.5 h-3.5 text-primary" />
                     <span>Free Interactive Tool</span>
                   </span>
                   <span className="inline-flex items-center gap-1.5 text-primary group-hover:translate-x-1.5 transition-transform font-semibold">

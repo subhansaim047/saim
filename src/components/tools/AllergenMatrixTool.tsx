@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
-import { Plus, Trash2, Printer, ShieldCheck, Search, RotateCcw, Edit3, FileSpreadsheet, Sparkles, ArrowRight, Layers } from "lucide-react";
+import { Plus, Trash2, Printer, ShieldCheck, Search, RotateCcw, Edit3, FileSpreadsheet, ArrowRight, Layers } from "lucide-react";
 import { ALLERGENS, MenuItem, AllergenStatus } from "../ToolsPage";
 
 const STORAGE_KEY = "saim_allergen_matrix_v2";
@@ -753,7 +753,7 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
                         className="no-print inline-flex items-center gap-1 text-[9px] text-amber-700 hover:text-amber-900 font-bold bg-amber-50 hover:bg-amber-100 border border-amber-200 px-1.5 py-0.5 rounded cursor-pointer"
                         title="Auto-detect allergens from this ingredients list"
                       >
-                        <Sparkles className="w-2.5 h-2.5 text-amber-600" />
+                        <Search className="w-2.5 h-2.5 text-amber-600" />
                         <span>Auto-Scan</span>
                       </button>
                     </div>
@@ -896,7 +896,7 @@ export const AllergenMatrixTool: React.FC<{ templateId?: string }> = () => {
               className="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-3 py-2 rounded-xl flex items-center justify-center gap-1.5 transition-all shadow-xs cursor-pointer shrink-0"
               title="Test scan ingredients for 14 allergens"
             >
-              <Sparkles className="w-3.5 h-3.5" />
+              <Search className="w-3.5 h-3.5" />
               <span>Scan 14 Allergens</span>
             </button>
 

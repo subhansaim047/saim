@@ -8,7 +8,7 @@ import Link from "next/link";
 import { 
   ShoppingBag, 
   Briefcase, 
-  Sparkles, 
+  HeartPulse, 
   Wrench, 
   UtensilsCrossed, 
   LayoutDashboard, 
@@ -29,7 +29,7 @@ const INDUSTRIES = [
     badge: "Corporate & B2B"
   },
   {
-    icon: Sparkles,
+    icon: HeartPulse,
     title: "Healthcare, Clinics & Salons",
     desc: "Interactive booking flows, patient trust signals, and service showcases for dentists, aesthetic clinics, and wellness studios.",
     badge: "Medical & Wellness"
