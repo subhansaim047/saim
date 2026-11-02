@@ -1,0 +1,393 @@
+"use client";
+
+import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Calculator, 
+  Sparkles, 
+  Clock, 
+  Check, 
+  ArrowRight, 
+  Layers, 
+  Zap, 
+  ShieldCheck, 
+  Code2 
+} from "lucide-react";
+
+interface ProjectTypeOption {
+  id: string;
+  label: string;
+  basePrice: number;
+  baseDays: number;
+  description: string;
+}
+
+interface FeatureOption {
+  id: string;
+  label: string;
+  price: number;
+  days: number;
+  category: string;
+}
+
+const PROJECT_TYPES: ProjectTypeOption[] = [
+  {
+    id: "landing",
+    label: "Landing Page / Single Offer",
+    basePrice: 250,
+    baseDays: 5,
+    description: "High-converting single page for ad campaigns, launches, or local promotions.",
+  },
+  {
+    id: "business",
+    label: "Full Business Website",
+    basePrice: 550,
+    baseDays: 8,
+    description: "Multi-page bespoke digital flagship with CMS, local SEO, and lead forms.",
+  },
+  {
+    id: "ecommerce",
+    label: "E-Commerce / Storefront",
+    basePrice: 850,
+    baseDays: 10,
+    description: "Shopify or WooCommerce store with payments, catalog search, and cart optimization.",
+  },
+  {
+    id: "webapp",
+    label: "Custom Web App / SaaS MVP",
+    basePrice: 1250,
+    baseDays: 14,
+    description: "Interactive full-stack web software with auth, database, and custom API logic.",
+  },
+  {
+    id: "redesign",
+    label: "Redesign & Speed Overhaul",
+    basePrice: 390,
+    baseDays: 6,
+    description: "Modernize existing slow website, eliminate bloat, and achieve 90+ Core Web Vitals.",
+  },
+];
+
+const ADDON_FEATURES: FeatureOption[] = [
+  { id: "cms", label: "Custom CMS (Sanity / WordPress)", price: 150, days: 2, category: "Content" },
+  { id: "auth", label: "User Auth & Client Portal", price: 250, days: 3, category: "Functionality" },
+  { id: "payments", label: "Stripe / Online Payments", price: 180, days: 2, category: "Commerce" },
+  { id: "booking", label: "Interactive Booking & Calendar", price: 140, days: 2, category: "Conversion" },
+  { id: "multilang", label: "Multi-Language & Global SEO", price: 160, days: 2, category: "SEO" },
+  { id: "schema", label: "Advanced Rich Schema & GEO Data", price: 100, days: 1, category: "SEO" },
+];
+
+export const ProjectScopeEstimator = () => {
+  const [selectedType, setSelectedType] = useState<string>("business");
+  const [selectedFeatures, setSelectedFeatures] = useState<string[]>(["cms", "schema"]);
+  const [isFastTrack, setIsFastTrack] = useState<boolean>(false);
+
+  const activeType = useMemo(
+    () => PROJECT_TYPES.find((t) => t.id === selectedType) || PROJECT_TYPES[1],
+    [selectedType]
+  );
+
+  const toggleFeature = (id: string) => {
+    setSelectedFeatures((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
+
+  const calculatedEstimate = useMemo(() => {
+    const featureCost = selectedFeatures.reduce((acc, featId) => {
+      const feat = ADDON_FEATURES.find((f) => f.id === featId);
+      return acc + (feat ? feat.price : 0);
+    }, 0);
+
+    const featureDays = selectedFeatures.reduce((acc, featId) => {
+      const feat = ADDON_FEATURES.find((f) => f.id === featId);
+      return acc + (feat ? feat.days : 0);
+    }, 0);
+
+    let totalBase = activeType.basePrice + featureCost;
+    let totalDays = activeType.baseDays + Math.round(featureDays * 0.6);
+
+    if (isFastTrack) {
+      totalBase = Math.round(totalBase * 1.15); // 15% fast-track priority fee
+      totalDays = Math.max(3, Math.round(totalDays * 0.65)); // 35% faster delivery
+    }
+
+    return {
+      priceMin: totalBase,
+      priceMax: Math.round(totalBase * 1.2),
+      daysMin: totalDays,
+      daysMax: totalDays + 3,
+    };
+  }, [activeType, selectedFeatures, isFastTrack]);
+
+  const whatsAppMessage = useMemo(() => {
+    const selectedFeatureLabels = selectedFeatures
+      .map((id) => ADDON_FEATURES.find((f) => f.id === id)?.label)
+      .filter(Boolean)
+      .join(", ");
+
+    const text = `Hi Saim, I used your Project Scope Estimator on saimdev.site:
+- Type: ${activeType.label}
+- Features: ${selectedFeatureLabels || "Core Essentials"}
+- Priority: ${isFastTrack ? "Fast-Track Priority Sprint" : "Standard Agile Sprint"}
+- Estimated Budget: £${calculatedEstimate.priceMin} - £${calculatedEstimate.priceMax}
+- Estimated Timeline: ${calculatedEstimate.daysMin} - ${calculatedEstimate.daysMax} days.
+
+Can we discuss scheduling my project?`;
+
+    return encodeURIComponent(text);
+  }, [activeType, selectedFeatures, isFastTrack, calculatedEstimate]);
+
+  return (
+    <section id="estimator" className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden">
+      {/* Ambient Radial Accent */}
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.025] rounded-full blur-[170px] pointer-events-none z-0" />
+
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 relative z-10">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
+            <span className="section-dot" />
+            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
+              Instant Scope &amp; Pricing Calculator
+            </span>
+          </div>
+
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-4"
+            style={{ letterSpacing: "-0.04em" }}
+          >
+            Estimate your project. <br />
+            <span className="text-white/40">Zero hidden costs, zero sales calls.</span>
+          </h2>
+
+          <p className="text-sm sm:text-base md:text-lg text-white/65 leading-relaxed font-light">
+            Select your project type and desired integrations below to get a transparent, real-time estimate of cost, timeline, and deliverables.
+          </p>
+        </div>
+
+        {/* Main Interactive Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* LEFT 7 COLS: Selection Controls */}
+          <div className="lg:col-span-7 flex flex-col gap-8">
+            {/* Step 1: Project Type */}
+            <div className="rounded-3xl bg-[#121212] border border-white/10 p-6 sm:p-8 shadow-xl">
+              <div className="flex items-center justify-between mb-5">
+                <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF4A1C]">
+                  Step 1 • Select Architecture Type
+                </span>
+                <span className="text-xs text-white/40 font-mono">1 of 3</span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {PROJECT_TYPES.map((pt) => {
+                  const isSelected = selectedType === pt.id;
+                  return (
+                    <button
+                      key={pt.id}
+                      type="button"
+                      onClick={() => setSelectedType(pt.id)}
+                      className={`text-left p-4 rounded-2xl border transition-all duration-200 relative flex flex-col justify-between cursor-pointer ${
+                        isSelected
+                          ? "bg-[#FF4A1C]/10 border-[#FF4A1C] shadow-[0_4px_24px_rgba(255,74,28,0.15)]"
+                          : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]"
+                      }`}
+                    >
+                      <div className="flex items-start justify-between gap-2 mb-2">
+                        <span className={`text-sm font-medium tracking-tight ${isSelected ? "text-white" : "text-white/85"}`}>
+                          {pt.label}
+                        </span>
+                        {isSelected && (
+                          <div className="w-4 h-4 rounded-full bg-[#FF4A1C] flex items-center justify-center shrink-0 mt-0.5">
+                            <Check className="w-2.5 h-2.5 text-white stroke-[3]" />
+                          </div>
+                        )}
+                      </div>
+                      <p className="text-xs text-white/55 font-light leading-relaxed mb-3">
+                        {pt.description}
+                      </p>
+                      <div className="flex items-center justify-between text-[11px] font-mono text-white/40 pt-2 border-t border-white/5">
+                        <span>From £{pt.basePrice}</span>
+                        <span>~{pt.baseDays} days</span>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Step 2: Integrations & Features */}
+            <div className="rounded-3xl bg-[#121212] border border-white/10 p-6 sm:p-8 shadow-xl">
+              <div className="flex items-center justify-between mb-5">
+                <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF4A1C]">
+                  Step 2 • Add Integrations &amp; Capabilities
+                </span>
+                <span className="text-xs text-white/40 font-mono">2 of 3</span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {ADDON_FEATURES.map((feat) => {
+                  const isChecked = selectedFeatures.includes(feat.id);
+                  return (
+                    <button
+                      key={feat.id}
+                      type="button"
+                      onClick={() => toggleFeature(feat.id)}
+                      className={`text-left p-3.5 rounded-2xl border transition-all duration-200 flex items-center justify-between gap-3 cursor-pointer ${
+                        isChecked
+                          ? "bg-white/[0.08] border-white/30 text-white"
+                          : "bg-white/[0.02] border-white/10 text-white/70 hover:border-white/20 hover:text-white"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div
+                          className={`w-5 h-5 rounded-md border flex items-center justify-center transition-colors ${
+                            isChecked
+                              ? "bg-[#FF4A1C] border-[#FF4A1C]"
+                              : "border-white/20 bg-white/[0.02]"
+                          }`}
+                        >
+                          {isChecked && <Check className="w-3.5 h-3.5 text-white stroke-[3]" />}
+                        </div>
+                        <span className="text-xs font-medium tracking-tight">
+                          {feat.label}
+                        </span>
+                      </div>
+                      <span className="text-[11px] font-mono text-white/40 shrink-0">
+                        +£{feat.price}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Step 3: Priority Sprint Speed */}
+            <div className="rounded-3xl bg-[#121212] border border-white/10 p-6 sm:p-8 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF4A1C] block mb-1">
+                  Step 3 • Delivery Speed
+                </span>
+                <span className="text-white text-sm font-medium tracking-tight block">
+                  Fast-Track Priority Sprint
+                </span>
+                <span className="text-white/55 text-xs font-light">
+                  Direct priority queue with 35% faster deployment turnaround.
+                </span>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setIsFastTrack((prev) => !prev)}
+                className={`relative inline-flex h-7 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
+                  isFastTrack ? "bg-[#FF4A1C]" : "bg-white/10"
+                }`}
+              >
+                <span
+                  className={`pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out ${
+                    isFastTrack ? "translate-x-7" : "translate-x-0"
+                  }`}
+                />
+              </button>
+            </div>
+          </div>
+
+          {/* RIGHT 5 COLS: Sticky Dynamic Estimate Summary Card */}
+          <div className="lg:col-span-5 lg:sticky lg:top-28">
+            <div className="rounded-3xl bg-gradient-to-b from-[#161616] to-[#0f0f0f] border border-white/15 p-6 sm:p-8 shadow-[0_24px_80px_rgba(0,0,0,0.8)] relative overflow-hidden">
+              {/* Subtle Ambient Glow */}
+              <div className="absolute -top-24 -right-24 w-60 h-60 bg-[#FF4A1C]/15 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="relative z-10 flex flex-col gap-6">
+                <div className="flex items-center justify-between pb-4 border-b border-white/10">
+                  <div className="flex items-center gap-2">
+                    <Calculator className="w-4 h-4 text-[#FF4A1C]" />
+                    <span className="text-xs font-mono uppercase tracking-widest text-white/80">
+                      Scope Calculation
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
+                    Fixed-Price Guaranteed
+                  </span>
+                </div>
+
+                {/* Main Estimated Cost Range */}
+                <div>
+                  <span className="text-xs font-mono uppercase tracking-[0.2em] text-white/45 block mb-1">
+                    Estimated Investment
+                  </span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+                      £{calculatedEstimate.priceMin}
+                    </span>
+                    <span className="text-white/50 text-xl font-light">
+                      — £{calculatedEstimate.priceMax}
+                    </span>
+                  </div>
+                  <span className="text-[11px] text-white/50 font-light block mt-1">
+                    Transparent milestone fee. 50% deposit, 50% on final launch approval.
+                  </span>
+                </div>
+
+                {/* Delivery Timeline */}
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.05] flex items-center justify-center shrink-0">
+                    <Clock className="w-5 h-5 text-[#FF4A1C]" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs text-white/50 font-mono uppercase tracking-wider">
+                      Turnaround Timeline
+                    </span>
+                    <span className="text-white text-base font-medium tracking-tight">
+                      {calculatedEstimate.daysMin} to {calculatedEstimate.daysMax} Business Days
+                    </span>
+                  </div>
+                </div>
+
+                {/* Standard Included Core Deliverables */}
+                <div className="space-y-2 pt-2">
+                  <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-white/40 block mb-2">
+                    Included with Every Build
+                  </span>
+                  {[
+                    "100% Full Source Code & Repository Ownership",
+                    "Sub-second Next.js SSR/SSG edge performance",
+                    "Full mobile responsiveness & Core Web Vitals pass",
+                    "Structured Schema.org JSON-LD & Google Indexing",
+                    "14 to 30 days dedicated post-launch support",
+                    "Direct senior engineer access via WhatsApp/Email",
+                  ].map((inc) => (
+                    <div key={inc} className="flex items-start gap-2.5 text-xs text-white/70 font-light">
+                      <Check className="w-3.5 h-3.5 text-[#FF4A1C] shrink-0 mt-0.5" />
+                      <span>{inc}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Actions */}
+                <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+                  <a
+                    href={`https://wa.me/923196526604?text=${whatsAppMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3.5 px-6 rounded-2xl bg-[#FF4A1C] hover:bg-[#FF4A1C]/90 text-white font-medium text-sm tracking-tight flex items-center justify-center gap-2 shadow-[0_4px_24px_rgba(255,74,28,0.25)] transition-all active:scale-[0.98]"
+                  >
+                    <span>Lock In This Scope on WhatsApp</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+
+                  <a
+                    href="#contact"
+                    className="w-full py-3 px-6 rounded-2xl bg-white/[0.05] hover:bg-white/10 text-white/80 hover:text-white font-medium text-xs tracking-tight flex items-center justify-center border border-white/10 transition-colors"
+                  >
+                    Submit Scope via Web Inquiry Form
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

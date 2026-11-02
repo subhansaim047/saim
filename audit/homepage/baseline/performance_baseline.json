@@ -1,0 +1,23 @@
+{
+  "url": "https://www.saimdev.site",
+  "timestamp": "2026-11-02T13:39:46.502Z",
+  "networkLoadTimeMs": 21715,
+  "paintMetrics": [
+    {
+      "name": "first-paint",
+      "startTime": 3584
+    },
+    {
+      "name": "first-contentful-paint",
+      "startTime": 4056
+    }
+  ],
+  "timing": {
+    "dnsMs": 17,
+    "connectMs": 237,
+    "responseMs": 270,
+    "domInteractiveMs": 4444,
+    "domContentLoadedMs": 4444,
+    "loadEventEndMs": 21191
+  }
+}

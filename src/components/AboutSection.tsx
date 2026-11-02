@@ -2,16 +2,16 @@
 import { WordsPullUpMultiStyle } from "./WordsPullUpMultiStyle";
 
 const aboutSegments = [
-  { text: "We are web architects,", className: "font-normal text-white" },
-  { text: "engineering high-converting platforms.", className: "italic font-serif text-white/90" },
+  { text: "We are digital product architects,", className: "font-normal text-white" },
+  { text: "engineering bespoke websites & web apps.", className: "italic font-serif text-white/90" },
   {
-    text: "Specialized in bespoke web design, lead conversion, and performance optimization.",
+    text: "Specialized in custom software, e-commerce, headless CMS, and sub-second performance.",
     className: "font-normal text-white/70",
   },
 ];
 
 const paragraphText =
-  "Our studio engineers fast, modern, high-converting platforms for service leaders — dentists, mechanics, salons, contractors, and ambitious brands. Together, we craft digital platforms designed to rank, load instantly, and turn visitors into loyal, paying clients.";
+  "Our studio engineers bespoke digital flagships and full-stack web software for ambitious companies — from e-commerce brands and SaaS startups to professional services and enterprise teams. We combine modern Next.js and TypeScript engineering with conversion-focused design to build platforms that rank, load in milliseconds, and turn visitors into paying clients.";
 
 export const AboutSection = () => {
   return (
@@ -50,7 +50,7 @@ export const AboutSection = () => {
           {/* AI-Friendly Business Description (LLMO & Search Indexing) */}
           <div className="mt-12 pt-8 border-t border-white/10 max-w-2xl mx-auto relative z-10">
             <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed">
-              Saim Dev is an independent Next.js web engineering studio that builds custom websites, ecommerce stores, and high-performance digital platforms for UK small businesses from £250. Every website includes sub-second edge speeds, full code ownership, built-in technical SEO, and direct developer communication via WhatsApp without recurring monthly agency retainers.
+              Saim Dev is an independent UK full-stack digital engineering studio building bespoke business websites, Shopify & WooCommerce stores, custom Next.js SaaS web applications, and headless CMS platforms. We provide guaranteed sub-second performance, 100% source code ownership, built-in structured schema, and direct senior engineer collaboration with zero agency markups or mandatory monthly retainers.
             </p>
           </div>
         </div>

@@ -2,17 +2,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calculator } from "lucide-react";
 import { WordsPullUp } from "./WordsPullUp";
 
 const navItems = [
   { label: "Our story", href: "#our-story" },
-  { label: "Services", href: "/services" },
+  { label: "Services", href: "#services" },
+  { label: "Estimator", href: "#estimator" },
+  { label: "Compare", href: "#comparison" },
   { label: "Tech Stack", href: "/technologies" },
-  { label: "Free Tools", href: "/tools" },
-  { label: "Demo Sites", href: "/demos" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Benefits", href: "#benefits" },
+  { label: "160 Tools", href: "/tools" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
@@ -123,15 +122,15 @@ export const HeroSection = () => {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 border border-white/20 shadow-md">
                 <span className="section-dot animate-pulse" />
                 <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/90">
-                  FULL-STACK WEB STUDIO
+                  FULL-STACK DIGITAL STUDIO
                 </span>
               </div>
 
               {/* Tech chips */}
-              <div className="flex items-center gap-0 pl-1">
-                {["Next.js", "React", "Node.js"].map((tech, i, arr) => (
+              <div className="flex items-center gap-0 pl-1 flex-wrap">
+                {["Next.js 14+", "React", "TypeScript", "Node.js", "Shopify", "WordPress"].map((tech, i, arr) => (
                   <span key={tech} className="flex items-center">
-                    <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-white/45">
+                    <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-white/50">
                       {tech}
                     </span>
                     {i < arr.length - 1 && (
@@ -143,10 +142,10 @@ export const HeroSection = () => {
 
               {/* Tagline */}
               <div className="pl-1 mt-1.5 sm:mt-2">
-                <span className="text-xs sm:text-sm font-normal text-white/70 tracking-tight leading-relaxed">
-                  Better websites for{" "}
+                <span className="text-xs sm:text-sm font-normal text-white/75 tracking-tight leading-relaxed">
+                  High-converting websites &amp; software for{" "}
                   <span className="text-white font-medium underline decoration-[#FF4A1C] decoration-2 underline-offset-4">
-                    ambitious local businesses
+                    ambitious businesses
                   </span>
                   .
                 </span>
@@ -162,7 +161,7 @@ export const HeroSection = () => {
             />
 
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold tracking-tight text-white leading-tight mt-1 mb-2">
-              Next.js Websites for UK Small Businesses — From £250
+              Custom Web Development &amp; Digital Engineering Studio
             </h1>
 
             {/* Sub-headline + description + CTA */}
@@ -175,17 +174,17 @@ export const HeroSection = () => {
               {/* Highlighted sub-headline */}
               <div className="border-l-2 border-[#FF4A1C] pl-4 sm:pl-5 py-1">
                 <h2 className="text-white text-base sm:text-lg md:text-xl font-medium tracking-tight">
-                  Fast,{" "}
+                  Bespoke Websites, E-Commerce{" "}
                   <span className="text-white/50">
-                    SEO-Friendly Websites
+                    &amp; Custom Web Apps
                   </span>
                 </h2>
-                <p className="text-white/45 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-1.5">
-                  CUSTOM DESIGN • MOBILE-FIRST PERFORMANCE • FULL OWNERSHIP
+                <p className="text-white/50 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-1.5">
+                  SUB-SECOND SPEED • 100% CODE OWNERSHIP • ZERO MONTHLY RETAINERS
                 </p>
               </div>
 
-              {/* CTA — Sybiosme Nested Island Button */}
+              {/* Dual CTAs — Sybiosme Nested Island Buttons */}
               <div className="flex flex-wrap items-center gap-3 pt-0.5">
                 <motion.a
                   href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20starting%20a%20website%20project"
@@ -201,6 +200,14 @@ export const HeroSection = () => {
                     <ArrowRight className="w-3.5 h-3.5 text-white" />
                   </div>
                 </motion.a>
+
+                <a
+                  href="#estimator"
+                  className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white/[0.06] hover:bg-white/15 border border-white/15 text-white text-xs sm:text-sm font-medium tracking-tight transition-all duration-200"
+                >
+                  <Calculator className="w-3.5 h-3.5 text-[#FF4A1C]" />
+                  <span>Estimate Project Cost</span>
+                </a>
               </div>
             </motion.div>
           </div>

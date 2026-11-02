@@ -79,18 +79,18 @@ export const FeaturedToolsSection = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono uppercase tracking-widest mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              <span>Free Software Showcase &amp; Tools</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF4A1C]/10 border border-[#FF4A1C]/20 text-[#FF4A1C] text-xs font-mono uppercase tracking-widest mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C] animate-pulse" />
+              <span>160 Live Tools • Engineering Capability Proof</span>
             </div>
             <h2
-              className="text-white text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mb-4"
+              className="text-white text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight mb-4"
               style={{ letterSpacing: "-0.04em" }}
             >
-              Interactive Web Tools &amp; Systems
+              160+ Production Web Tools &amp; Interactive Applications
             </h2>
-            <p className="text-white/60 text-sm sm:text-base leading-relaxed">
-              Explore custom interactive web applications built by our studio. From commercial compliance engines to business generators — engineered to demonstrate how bespoke web software automates complex business operations.
+            <p className="text-white/65 text-sm sm:text-base leading-relaxed font-light">
+              We don't just build marketing pages — we engineer complex, high-performance web software. Browse our library of 160 active calculators, automated business systems, and compliance tools running live on saimdev.site.
             </p>
           </div>
 

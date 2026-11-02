@@ -1,0 +1,156 @@
+{
+  "updated_at": "2026-11-02T16:50:00Z",
+  "target_market": "United Kingdom (Primary: London, Manchester, Birmingham, Leeds, Bristol, Glasgow, Edinburgh) & English-Speaking Global (US, CA, AU, EU)",
+  "primary_homepage_focus": "Commercial Website Development & Engineering Across All Verticals",
+  "clusters": [
+    {
+      "id": "commercial_core",
+      "cluster_name": "Commercial Web Development Agency Core",
+      "intent": "Transactional / Commercial",
+      "target_serp_features": ["Local Pack", "People Also Ask", "Organic Listings", "AI Overview"],
+      "primary_keyword": "custom web development agency uk",
+      "secondary_keywords": [
+        "web development company uk",
+        "bespoke website development services",
+        "hire web developers uk",
+        "full stack web development studio",
+        "professional web design and development uk",
+        "nextjs web development company",
+        "independent web development agency"
+      ],
+      "search_volume_tier": "High",
+      "competition": "High",
+      "geo_signals": "UK Nationwide (London, Manchester, Birmingham, Leeds, Bristol)",
+      "target_page_element": "Hero Section, Header, Intro Hook, Primary Metadata"
+    },
+    {
+      "id": "ecommerce_vertical",
+      "cluster_name": "E-Commerce & Storefront Development",
+      "intent": "Commercial / Transactional",
+      "target_serp_features": ["Product Listings", "PAA", "Case Studies", "AI Overview"],
+      "primary_keyword": "ecommerce website development uk",
+      "secondary_keywords": [
+        "shopify web design agency uk",
+        "custom woocommerce development",
+        "headless ecommerce developer",
+        "bespoke ecommerce solutions uk",
+        "fast ecommerce storefront development",
+        "shopify store setup and redesign"
+      ],
+      "search_volume_tier": "High",
+      "competition": "High",
+      "geo_signals": "UK / Global English",
+      "target_page_element": "Services Grid: E-Commerce Card, Scope Estimator Option, Technology Section"
+    },
+    {
+      "id": "wordpress_headless_cms",
+      "cluster_name": "WordPress, Headless CMS & Content Sites",
+      "intent": "Commercial",
+      "target_serp_features": ["PAA", "Organic Snippet", "AI Overview"],
+      "primary_keyword": "custom wordpress development uk",
+      "secondary_keywords": [
+        "clean wordpress web development",
+        "headless wordpress nextjs developer",
+        "custom cms website development",
+        "bespoke wordpress theme development",
+        "wordpress speed optimization agency",
+        "sanity headless cms development uk"
+      ],
+      "search_volume_tier": "High",
+      "competition": "Medium-High",
+      "geo_signals": "UK / Global",
+      "target_page_element": "Services Grid: CMS Card, Comparison Section (Next.js vs WordPress)"
+    },
+    {
+      "id": "web_apps_saas",
+      "cluster_name": "Custom Web Applications & SaaS MVPs",
+      "intent": "Commercial / Technical",
+      "target_serp_features": ["Organic Snippets", "Tech Profiles", "AI Overview"],
+      "primary_keyword": "custom web application development uk",
+      "secondary_keywords": [
+        "saas mvp development agency",
+        "react nextjs web app developers",
+        "bespoke client portal development",
+        "full stack nextjs developers uk",
+        "internal business tools development",
+        "database driven web apps"
+      ],
+      "search_volume_tier": "Medium-High",
+      "competition": "Medium",
+      "geo_signals": "UK / US / Global Tech Hubs",
+      "target_page_element": "Services Grid: SaaS/App Card, Interactive Tools Proof Section"
+    },
+    {
+      "id": "landing_pages_redesigns",
+      "cluster_name": "High-Converting Landing Pages & Redesigns",
+      "intent": "Commercial / CRO",
+      "target_serp_features": ["Organic Snippets", "PAA"],
+      "primary_keyword": "website redesign services uk",
+      "secondary_keywords": [
+        "high converting landing page design",
+        "b2b landing page development",
+        "cro web design agency uk",
+        "marketing campaign landing page",
+        "legacy website modern migration"
+      ],
+      "search_volume_tier": "Medium",
+      "competition": "Medium",
+      "geo_signals": "UK / US / English-Speaking",
+      "target_page_element": "Services Grid: Redesign & Landing Page Card, Process Section"
+    },
+    {
+      "id": "speed_maintenance",
+      "cluster_name": "Performance Overhaul, Core Web Vitals & Website Care",
+      "intent": "Commercial / Problem-Solving",
+      "target_serp_features": ["Direct Answers", "PAA", "AI Overview"],
+      "primary_keyword": "website speed optimization services uk",
+      "secondary_keywords": [
+        "core web vitals optimization agency",
+        "sub second nextjs performance",
+        "fix slow website uk",
+        "website maintenance and security packages",
+        "monthly website support uk"
+      ],
+      "search_volume_tier": "Medium",
+      "competition": "Medium-Low",
+      "geo_signals": "UK / Global",
+      "target_page_element": "Performance Benchmark Section, Saim Dev Advantage Grid"
+    },
+    {
+      "id": "pricing_commercial",
+      "cluster_name": "Web Design Pricing & Cost Transparency",
+      "intent": "Transactional / Decision-Making",
+      "target_serp_features": ["Featured Snippet", "PAA", "Tables", "AI Overview"],
+      "primary_keyword": "how much does a website cost uk",
+      "secondary_keywords": [
+        "web design pricing uk",
+        "custom web development cost uk",
+        "small business website packages uk",
+        "fixed price website development",
+        "cost of bespoke web development"
+      ],
+      "search_volume_tier": "High",
+      "competition": "Medium",
+      "geo_signals": "UK Nationwide",
+      "target_page_element": "Interactive Scope & Cost Estimator, Pricing Tiers, FAQ Section"
+    },
+    {
+      "id": "ai_answers_geo",
+      "cluster_name": "Generative Engine Optimization (GEO) & Direct Answer Entities",
+      "intent": "Informational / Evaluation",
+      "target_serp_features": ["AI Overviews", "ChatGPT Search", "Perplexity Citations", "Knowledge Panels"],
+      "primary_keyword": "what is custom web development",
+      "secondary_keywords": [
+        "nextjs vs wordpress for business website",
+        "why choose custom web development over wix",
+        "how long does it take to build a bespoke website",
+        "what should be included in a web development quote",
+        "how to choose a web development agency uk"
+      ],
+      "search_volume_tier": "Medium",
+      "competition": "Informational",
+      "geo_signals": "Global / UK",
+      "target_page_element": "Semantic Definition Cards, Comparison Table, Direct Answer FAQ Block"
+    }
+  ]
+}

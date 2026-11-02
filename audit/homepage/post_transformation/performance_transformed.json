@@ -1,0 +1,23 @@
+{
+  "url": "http://localhost:3009",
+  "timestamp": "2026-11-02T13:58:45.784Z",
+  "networkLoadTimeMs": 1960,
+  "paintMetrics": [
+    {
+      "name": "first-paint",
+      "startTime": 1580
+    },
+    {
+      "name": "first-contentful-paint",
+      "startTime": 1580
+    }
+  ],
+  "timing": {
+    "dnsMs": 3,
+    "connectMs": 6,
+    "responseMs": 10,
+    "domInteractiveMs": 1540,
+    "domContentLoadedMs": 1540,
+    "loadEventEndMs": 2036
+  }
+}

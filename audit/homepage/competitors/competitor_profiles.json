@@ -1,0 +1,170 @@
+{
+  "updated_at": "2026-11-02T16:55:00Z",
+  "competitors": [
+    {
+      "name": "MadeByShape",
+      "url": "https://madebyshape.co.uk",
+      "headquarters": "Manchester, UK",
+      "year_founded": 2010,
+      "positioning": "Independent creative web design, branding, and digital development agency for startups, established brands, and global companies.",
+      "services": [
+        "Web Design & UI/UX",
+        "Web Development (Craft CMS, Shopify, WordPress)",
+        "Branding & Creative Identity",
+        "Organic SEO & Digital Strategy"
+      ],
+      "tech_stack": ["Craft CMS", "Shopify", "PHP", "Tailwind CSS", "JavaScript"],
+      "pricing_transparency": "Low — No public pricing tiers or estimates; requires enquiry/quote form.",
+      "turnaround_time": "Estimated 8 to 14 weeks",
+      "ui_ux_style": "High-end editorial, clean typography, whitespace-heavy, case study visual previews.",
+      "technical_seo": {
+        "schema": ["Organization", "WebSite", "LocalBusiness"],
+        "cwv_performance": "Mobile ~65-75; heavy video/asset payloads slow mobile TTFB and LCP.",
+        "direct_answer_readiness": "Moderate; primarily portfolio-led rather than answer-engine structured."
+      },
+      "strengths": [
+        "14+ years of brand authority and awards (Awwwards, CSSDA)",
+        "Verified Craft CMS and Shopify partner badges",
+        "Comprehensive visual case studies with high-profile clients"
+      ],
+      "weaknesses": [
+        "Zero pricing transparency (clients have no idea of cost without booking calls)",
+        "Traditional slow agency turnaround (months, not days)",
+        "Heavy reliance on traditional PHP/Craft CMS rather than modern sub-second Next.js SSR/SSG architecture",
+        "No interactive project estimation or self-serve discovery tools"
+      ]
+    },
+    {
+      "name": "Lightflows",
+      "url": "https://lightflows.co.uk",
+      "headquarters": "London & Guildford (Surrey), UK",
+      "year_founded": 2008,
+      "positioning": "Award-winning digital product and web development agency blending emerging tech, AI, and human-centred UX.",
+      "services": [
+        "Custom Web Design & High-Performance Web Development",
+        "Web Applications & Digital Platforms",
+        "Mobile App Development (iOS & Android)",
+        "AI Integration & Digital Transformation"
+      ],
+      "tech_stack": ["Laravel", "Drupal", "React", "Vue.js", "Node.js", "Python"],
+      "pricing_transparency": "Low — High enterprise agency rates (£10,000+ minimum project budget).",
+      "turnaround_time": "Estimated 10 to 20 weeks",
+      "ui_ux_style": "Dark mode modern tech studio aesthetic, sleek micro-interactions, isometric product mockups.",
+      "technical_seo": {
+        "schema": ["Organization", "Service", "WebSite"],
+        "cwv_performance": "Mobile ~70; good desktop, but heavy scripts impact mobile TBT.",
+        "direct_answer_readiness": "Good for high-level digital product queries, weak on small-to-mid commercial pricing."
+      },
+      "strengths": [
+        "ISO accreditation and BIMA member status",
+        "Strong focus on complex web apps and platform engineering",
+        "Polished, tech-forward aesthetic"
+      ],
+      "weaknesses": [
+        "Out of reach for startups and growing SMEs (£10k–£50k price barrier)",
+        "Complex procurement and long discovery timelines",
+        "Clients do not get direct access to engineers (multi-layered project manager hierarchy)",
+        "Forced monthly retainers for ongoing support"
+      ]
+    },
+    {
+      "name": "Propeller",
+      "url": "https://propeller.co.uk",
+      "headquarters": "London, UK",
+      "year_founded": 2001,
+      "positioning": "Full-service digital agency specializing in luxury, lifestyle, hospitality, and e-commerce websites.",
+      "services": [
+        "Luxury Web Design & Development",
+        "Shopify Plus & E-Commerce",
+        "Bespoke WordPress Development",
+        "Growth Marketing & Performance SEO"
+      ],
+      "tech_stack": ["Shopify Plus", "WordPress", "WooCommerce", "PHP", "Custom Frontends"],
+      "pricing_transparency": "Very Low — Premium agency pricing (£15,000 – £50,000+).",
+      "turnaround_time": "12 to 24 weeks",
+      "ui_ux_style": "High-fashion luxury aesthetic, large hero imagery, smooth parallax scroll, serif typography.",
+      "technical_seo": {
+        "schema": ["Organization", "WebSite", "LocalBusiness"],
+        "cwv_performance": "Mobile ~55-65; large high-res imagery creates heavy LCP on mobile networks.",
+        "direct_answer_readiness": "Poor; strictly brand-led and image-centric."
+      },
+      "strengths": [
+        "Established luxury brand client roster",
+        "Shopify Plus certified partner status",
+        "Exquisite creative direction and visual design"
+      ],
+      "weaknesses": [
+        "Extreme price barrier for 95% of businesses",
+        "Very heavy page weights harming mobile Core Web Vitals",
+        "Lengthy corporate contracts and high monthly retainers",
+        "Little focus on sub-second technical architecture"
+      ]
+    },
+    {
+      "name": "KOTA",
+      "url": "https://kota.co.uk",
+      "headquarters": "London, UK",
+      "year_founded": 2013,
+      "positioning": "Creative digital agency specializing in bespoke branding, web design, and digital experiences.",
+      "services": [
+        "Bespoke Website Design",
+        "Creative Web Development (WordPress, Webflow, Shopify)",
+        "Brand Identity & Visual Storytelling",
+        "Digital Marketing & Social"
+      ],
+      "tech_stack": ["WordPress", "Webflow", "Shopify", "GSAP Animations", "Tailwind CSS"],
+      "pricing_transparency": "Low — Standard agency quote model starting at £8,000–£15,000.",
+      "turnaround_time": "8 to 16 weeks",
+      "ui_ux_style": "Vibrant, avant-garde creative agency aesthetic, experimental typography, dynamic cursor effects.",
+      "technical_seo": {
+        "schema": ["Organization", "WebSite"],
+        "cwv_performance": "Mobile ~60; heavy canvas animations and custom JavaScript libraries.",
+        "direct_answer_readiness": "Low; focuses entirely on visual flair over structured informative content."
+      },
+      "strengths": [
+        "Outstanding artistic and creative animation skills",
+        "Award-winning showcase on CSS Design Awards and Awwwards",
+        "Vibrant, energetic branding"
+      ],
+      "weaknesses": [
+        "Style over performance: animation scripts harm Core Web Vitals and mobile UX",
+        "No transparent pricing or instant project scoping",
+        "Relies heavily on traditional WordPress/Webflow rather than modern full-stack web applications",
+        "High barrier to entry for pragmatic commercial businesses"
+      ]
+    },
+    {
+      "name": "Chilliapple",
+      "url": "https://chilliapple.co.uk",
+      "headquarters": "London / Regional UK",
+      "year_founded": 2008,
+      "positioning": "Bespoke web development and custom software engineering company helping businesses scale.",
+      "services": [
+        "Custom Web Application Development",
+        "E-Commerce Development (Magento, Shopify, WooCommerce)",
+        "Mobile App Development",
+        "Dedicated Development Teams & Staff Augmentation"
+      ],
+      "tech_stack": ["PHP", "Laravel", "React", "Node.js", "Magento", "Shopify", "WordPress"],
+      "pricing_transparency": "Moderate — Hourly rate ranges published (£35–£65/hr), but project costs remain gated behind sales calls.",
+      "turnaround_time": "4 to 12 weeks",
+      "ui_ux_style": "Corporate IT services style, structured blue/orange corporate color palette, feature-driven layouts.",
+      "technical_seo": {
+        "schema": ["Organization", "Service", "WebSite"],
+        "cwv_performance": "Mobile ~75; respectable but lacks edge-cached modern SSR/SSG.",
+        "direct_answer_readiness": "Moderate; good service descriptions, but lacks interactive tooling and AI-first answer blocks."
+      },
+      "strengths": [
+        "Broad technology capabilities across legacy and modern platforms",
+        "Affordable hourly pricing compared to Mayfair London agencies",
+        "Solid UK client base across multiple commercial sectors"
+      ],
+      "weaknesses": [
+        "Corporate, dated visual design aesthetic",
+        "Often relies on offshore developer teams, diluting direct senior engineering communication",
+        "No live working interactive proof tools on site",
+        "Complex scopes with frequent change-order cost escalations"
+      ]
+    }
+  ]
+}

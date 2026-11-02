@@ -1,0 +1,417 @@
+{
+  "url": "https://www.saimdev.site",
+  "title": "Next.js Websites for UK Small Businesses | Saim Dev",
+  "title_length": 51,
+  "meta_description": "Bespoke Next.js websites for UK small businesses, ecommerce, and local brands from £250. Sub-second speed, clean code ownership, and zero monthly retainers.",
+  "meta_desc_length": 156,
+  "canonical": "https://www.saimdev.site",
+  "robots": "index, follow",
+  "word_count": 1826,
+  "schemas_count": 6,
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.saimdev.site/#organization",
+      "name": "Saim Dev",
+      "url": "https://www.saimdev.site",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.saimdev.site/saim-dev-logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://www.saimdev.site/og-image.png",
+      "description": "Custom, high-performance Next.js websites for UK and European small businesses. Transparent fixed pricing from £250.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "contact@saimdev.site",
+        "url": "https://wa.me/923196526604",
+        "availableLanguage": [
+          "English"
+        ]
+      },
+      "sameAs": [
+        "https://x.com/saimwebdev",
+        "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
+        "https://github.com/subhansaim047",
+        "https://www.instagram.com/saim_agency/",
+        "https://saimswebagency.quora.com/",
+        "https://www.tiktok.com/@saimdev.site",
+        "https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://www.saimdev.site/#person",
+      "name": "Saim Dev",
+      "jobTitle": "Founder & Lead Next.js Architect",
+      "worksFor": {
+        "@id": "https://www.saimdev.site/#organization"
+      },
+      "url": "https://www.saimdev.site/about",
+      "image": "https://www.saimdev.site/saim-dev-logo.jpg",
+      "sameAs": [
+        "https://x.com/saimwebdev",
+        "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
+        "https://github.com/subhansaim047",
+        "https://www.instagram.com/saim_agency/",
+        "https://saimswebagency.quora.com/",
+        "https://www.tiktok.com/@saimdev.site",
+        "https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.saimdev.site/#website",
+      "name": "Saim Dev",
+      "url": "https://www.saimdev.site",
+      "publisher": {
+        "@id": "https://www.saimdev.site/#organization"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://www.saimdev.site/#professionalservice",
+      "name": "Saim Dev - Next.js Web Architecture & Takeaway Systems",
+      "url": "https://www.saimdev.site",
+      "image": "https://www.saimdev.site/og-image.png",
+      "priceRange": "£250 - £790",
+      "areaServed": [
+        "GB",
+        "EU"
+      ],
+      "parentOrganization": {
+        "@id": "https://www.saimdev.site/#organization"
+      },
+      "founder": {
+        "@id": "https://www.saimdev.site/#person"
+      },
+      "sameAs": [
+        "https://x.com/saimwebdev",
+        "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
+        "https://github.com/subhansaim047",
+        "https://www.instagram.com/saim_agency/",
+        "https://saimswebagency.quora.com/",
+        "https://www.tiktok.com/@saimdev.site",
+        "https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.saimdev.site/#webpage",
+      "url": "https://www.saimdev.site",
+      "name": "Next.js Websites for UK Small Businesses | Saim Dev",
+      "description": "Bespoke Next.js websites for UK small businesses, ecommerce, and local brands from £250. Sub-second speed, clean code ownership, and zero monthly retainers.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@id": "https://www.saimdev.site/#website"
+      },
+      "about": {
+        "@id": "https://www.saimdev.site/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does a website take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Starter websites are typically completed within 5–7 business days. Full Business Plan websites take 7–10 days from initial discovery to final deployment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide hosting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We guide you through selecting and setting up ultra-fast cloud hosting, custom domain configuration, and free SSL security setup for sub-second page loads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I edit content myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Your website is engineered with clean content architecture and clear instructions so you can easily update text, images, blog posts, and services whenever needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer support after launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Every project includes 14 to 30 days of free dedicated technical support post-launch to handle minor tweaks, bug fixes, backups, and security checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's included in SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On-page SEO includes optimized title tags, meta descriptions, structured schema markup, sub-second page speed optimization, mobile responsiveness, and Google Search Console indexing setup."
+          }
+        }
+      ]
+    }
+  ],
+  "headings_count": 23,
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Next.js Websites for UK Small Businesses — From £250"
+    },
+    {
+      "tag": "h2",
+      "text": "Fast, SEO-Friendly Websites"
+    },
+    {
+      "tag": "h2",
+      "text": "Key Benefits"
+    },
+    {
+      "tag": "h3",
+      "text": "Business Growth &amp;Lead Conversion"
+    },
+    {
+      "tag": "h3",
+      "text": "Performance, Speed &amp;SEO Optimization"
+    },
+    {
+      "tag": "h3",
+      "text": "Marketing Integration &amp;Technical Security"
+    },
+    {
+      "tag": "h2",
+      "text": "Performance as a key to success."
+    },
+    {
+      "tag": "h2",
+      "text": "Tools and technologies we love to use."
+    },
+    {
+      "tag": "h2",
+      "text": "Our Process In 4 Steps."
+    },
+    {
+      "tag": "h2",
+      "text": "Choose. Your plan."
+    },
+    {
+      "tag": "h3",
+      "text": "Custom Websites For Every Business Model"
+    },
+    {
+      "tag": "h4",
+      "text": "E-Commerce &amp; Retail"
+    },
+    {
+      "tag": "h4",
+      "text": "Professional Services &amp; B2B"
+    },
+    {
+      "tag": "h4",
+      "text": "Healthcare, Clinics &amp; Salons"
+    },
+    {
+      "tag": "h4",
+      "text": "Trades &amp; Home Services"
+    },
+    {
+      "tag": "h4",
+      "text": "Hospitality &amp; Takeaways"
+    },
+    {
+      "tag": "h4",
+      "text": "SaaS &amp; Custom Web Apps"
+    },
+    {
+      "tag": "h2",
+      "text": "Your questions. Our answers."
+    },
+    {
+      "tag": "h2",
+      "text": "Another question?Let’s talk."
+    },
+    {
+      "tag": "h2",
+      "text": "Interactive Web Tools &amp; Systems"
+    },
+    {
+      "tag": "h3",
+      "text": "Natasha&#x27;s Law PPDS Label Maker"
+    },
+    {
+      "tag": "h3",
+      "text": "14 Food Allergen Matrix &amp; Chart"
+    },
+    {
+      "tag": "h3",
+      "text": "Commercial Food Cost Calculator"
+    }
+  ],
+  "links_count": 74,
+  "internal_links_count": 63,
+  "external_links_count": 11,
+  "sample_links": [
+    {
+      "href": "#our-story",
+      "anchor": "Our story",
+      "is_internal": true
+    },
+    {
+      "href": "/services",
+      "anchor": "Services",
+      "is_internal": true
+    },
+    {
+      "href": "/technologies",
+      "anchor": "Tech Stack",
+      "is_internal": true
+    },
+    {
+      "href": "/tools",
+      "anchor": "Free Tools",
+      "is_internal": true
+    },
+    {
+      "href": "/demos",
+      "anchor": "Demo Sites",
+      "is_internal": true
+    },
+    {
+      "href": "/blogs",
+      "anchor": "Blogs",
+      "is_internal": true
+    },
+    {
+      "href": "#benefits",
+      "anchor": "Benefits",
+      "is_internal": true
+    },
+    {
+      "href": "#process",
+      "anchor": "Process",
+      "is_internal": true
+    },
+    {
+      "href": "#pricing",
+      "anchor": "Pricing",
+      "is_internal": true
+    },
+    {
+      "href": "#faq",
+      "anchor": "FAQ",
+      "is_internal": true
+    },
+    {
+      "href": "#contact",
+      "anchor": "Contact",
+      "is_internal": true
+    },
+    {
+      "href": "#our-story",
+      "anchor": "Our story",
+      "is_internal": true
+    },
+    {
+      "href": "/services",
+      "anchor": "Services",
+      "is_internal": true
+    },
+    {
+      "href": "/technologies",
+      "anchor": "Tech Stack",
+      "is_internal": true
+    },
+    {
+      "href": "/tools",
+      "anchor": "Free Tools",
+      "is_internal": true
+    },
+    {
+      "href": "/demos",
+      "anchor": "Demo Sites",
+      "is_internal": true
+    },
+    {
+      "href": "/blogs",
+      "anchor": "Blogs",
+      "is_internal": true
+    },
+    {
+      "href": "#benefits",
+      "anchor": "Benefits",
+      "is_internal": true
+    },
+    {
+      "href": "#process",
+      "anchor": "Process",
+      "is_internal": true
+    },
+    {
+      "href": "#pricing",
+      "anchor": "Pricing",
+      "is_internal": true
+    },
+    {
+      "href": "#faq",
+      "anchor": "FAQ",
+      "is_internal": true
+    },
+    {
+      "href": "#contact",
+      "anchor": "Contact",
+      "is_internal": true
+    },
+    {
+      "href": "https://wa.me/923196526604?text=Hi%20Saim,%20I&#x27;m%20interested%20in%20starting%20a%20website%20project",
+      "anchor": "Start on WhatsApp",
+      "is_internal": false
+    },
+    {
+      "href": "https://wa.me/923196526604?text=Hi%20Saim%2C%20I&#x27;d%20like%20to%20get%20started%20with%20the%20Landing%20Page%20(%C2%A3250).",
+      "anchor": "Get Started — Landing Page",
+      "is_internal": false
+    },
+    {
+      "href": "https://wa.me/923196526604?text=Hi%20Saim%2C%20I&#x27;d%20like%20to%20get%20started%20with%20the%20Starter%20Plan%20(%C2%A3390).",
+      "anchor": "Get Started — Starter Plan",
+      "is_internal": false
+    },
+    {
+      "href": "https://wa.me/923196526604?text=Hi%20Saim%2C%20I&#x27;d%20like%20to%20get%20started%20with%20the%20Business%20Plan%20(%C2%A3790).",
+      "anchor": "Order on WhatsApp",
+      "is_internal": false
+    },
+    {
+      "href": "/services/takeaway-web-design",
+      "anchor": "Explore Takeaway Solutions",
+      "is_internal": true
+    },
+    {
+      "href": "https://wa.me/923196526604?text=Hi%20Saim,%20I&#x27;d%20like%20to%20discuss%20a%20custom%20website%20project%20for%20my%20business.",
+      "anchor": "Discuss Your Project",
+      "is_internal": false
+    },
+    {
+      "href": "https://wa.me/923196526604?text=Hi%20Saim,%20I&#x27;m%20interested%20in%20a%20website%20project",
+      "anchor": "Book a call / WhatsApp20min – No commitment",
+      "is_internal": false
+    },
+    {
+      "href": "/tools",
+      "anchor": "Explore All Tools &amp; Templates",
+      "is_internal": true
+    }
+  ]
+}
