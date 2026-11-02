@@ -2294,6 +2294,58 @@ const FOOD_SANITATION_TASKS: CheckItem[] = [
   }
 ];
 
+const THERMOMETER_SOP_TASKS: CheckItem[] = [
+  {
+    id: "therm-1",
+    category: "Pre-Use Inspection",
+    task: "Inspect digital thermometer casing, display, and battery level; verify casing integrity and clean probe tip.",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "therm-2",
+    category: "BS EN 1276 Sanitisation",
+    task: "Disinfect metal probe sensor stem using an approved BS EN 1276 single-use food-grade alcohol probe wipe before every temperature check.",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "therm-3",
+    category: "Insertion Depth & Placement",
+    task: "Insert probe needle into geometric centre/thickest portion of food item, avoiding direct contact with bones, gristle, skewers, or metal pans.",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "therm-4",
+    category: "Reading Stabilisation",
+    task: "Hold probe stationary for 5 to 10 seconds until the digital temperature reading holds steady without fluctuating.",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "therm-5",
+    category: "Statutory Cooking Verification",
+    task: "Verify food item meets UK FSA core lethality standard (>=75.0°C for 30 seconds or Scottish standard >=82.0°C).",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "therm-6",
+    category: "Post-Use Decontamination",
+    task: "Immediately clean and disinfect probe stem with a fresh BS EN 1276 sanitising wipe before stowing probe in protective sheath.",
+    status: "pass",
+    actionNotes: ""
+  },
+  {
+    id: "therm-7",
+    category: "Monthly Dual Calibration",
+    task: "Perform dual ice bath (0.0°C ±1°C) and boiling water (100.0°C ±1°C) accuracy verification; log in calibration register.",
+    status: "pass",
+    actionNotes: ""
+  }
+];
+
 const BIG_6_PATHOGENS_TASKS: CheckItem[] = [
   {
     id: "path-1",
@@ -2468,6 +2520,9 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
   const isCorrectiveActionPlan =
     templateTitle.toLowerCase().includes("corrective action") ||
     (templateId && templateId.includes("corrective-action"));
+  const isThermometerSop =
+    templateTitle.toLowerCase().includes("how to use") && templateTitle.toLowerCase().includes("thermometer") ||
+    (templateId && templateId.includes("how-to-use") && templateId.includes("thermometer"));
   const isFoodSanitation =
     templateTitle.toLowerCase().includes("sanitation") ||
     (templateId && templateId.includes("food-safety-and-sanitation"));
@@ -2597,6 +2652,7 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     if (isFoodProduction) return FOOD_PRODUCTION_TASKS;
     if (isDispatch) return DISPATCH_LOG_TASKS;
     if (isCorrectiveActionPlan) return CORRECTIVE_ACTION_TASKS;
+    if (isThermometerSop) return THERMOMETER_SOP_TASKS;
     if (isFoodSanitation) return FOOD_SANITATION_TASKS;
     if (isBig6Pathogens) return BIG_6_PATHOGENS_TASKS;
     if (isBrcAudit) return BRC_AUDIT_TASKS;

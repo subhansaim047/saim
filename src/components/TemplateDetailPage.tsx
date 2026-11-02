@@ -185,6 +185,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const isWalkInStorageTool =
     template.slug === "walk-in-cooler-food-storage-chart" ||
     template.slug.includes("fridge-layout") ||
+    template.slug.includes("fridge-org") ||
     template.slug.includes("walk-in-cooler") ||
     template.slug.includes("food-storage") ||
     template.slug.includes("storage-chart") ||
@@ -283,6 +284,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("closing") ||
       template.slug.includes("sop") ||
       template.slug.includes("audit") ||
+      template.slug.includes("thermometer") ||
       template.slug.includes("delivery") ||
       template.slug.includes("inspection") ||
       template.slug.includes("cleaning") ||

@@ -905,23 +905,24 @@
     ]
   },
   "what-is-the-minimum-hot-holding-temperature-for-hot-dog": {
-    "title": "Free Hot Dog Template | Saim Dev",
-    "desc": "Download our free hot dog template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Hot Dog Hot Holding Temp Guide | Saim Dev",
+    "desc": "UK hot dog hot holding temperature guide. Maintain cooked sausages at 63°C or above under FSA rules with legal 2-hour single display exemptions.",
     "howTo": [
-      "Download and print the Hot Dog for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Verify cooked hot dogs reach 75°C core before transfer",
+      "Hold hot dogs in dry warmers or water wells above 63.0°C",
+      "Log core probe readings every 2 hours in digital register",
+      "Apply the 2-hour service exemption once only before disposal"
     ]
   },
   "fridge-organization-chart": {
-    "title": "Free Fridge Organization Template | Saim Dev",
-    "desc": "Download our free fridge organization template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Fridge Organisation Chart UK | Saim Dev",
+    "desc": "Free commercial fridge organisation chart for UK kitchens. Prevent cross-contamination with 5-tier raw and ready-to-eat shelf hierarchy rules.",
     "howTo": [
-      "Download and print the Fridge Organization for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Store ready-to-eat food and salads on top shelves",
+      "Position whole raw meats and fish on intermediate tiers",
+      "Place raw ground burgers and minced meat on lower shelf",
+      "Isolate raw poultry and chicken strictly on the bottom shelf",
+      "Maintain chiller air circulation and core temp at or below 5°C"
     ]
   },
   "cleaning-a-meat-slicer-poster": {
@@ -947,33 +948,36 @@
     ]
   },
   "how-to-use-a-meat-thermometer": {
-    "title": "Free How To Use A Meat Thermometer Template | Saim Dev",
-    "desc": "Free how to use a meat thermometer template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free Meat Thermometer Guide & SOP | Saim Dev",
+    "desc": "How to use a digital meat thermometer in commercial kitchens. Step-by-step probe insertion, sanitising wipes, and FSA core cooking targets.",
     "howTo": [
-      "Download and print the How To Use A Meat Thermometer for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Sanitise probe stem with a BS EN 1276 alcohol wipe",
+      "Insert probe tip into thickest part avoiding bone or gristle",
+      "Wait 5 to 10 seconds for the digital display to stabilise",
+      "Confirm FSA minimum core lethality of 75°C for 30 seconds",
+      "Clean and wipe probe before returning to storage sheath"
     ]
   },
   "how-to-use-a-food-thermometer": {
-    "title": "Free How To Use A Food Thermometer Template | Saim Dev",
-    "desc": "Free how to use a food thermometer template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free Food Thermometer SOP Guide | Saim Dev",
+    "desc": "Master commercial kitchen food thermometers. Step-by-step insertion depths, probe wipe protocols, calibration SOPs, and FSA temperature checks.",
     "howTo": [
-      "Download and print the How To Use A Food Thermometer for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Inspect probe casing and batteries before service starts",
+      "Disinfect sensor needle using a food-grade alcohol wipe",
+      "Submerge probe at least 50mm into core centre of food",
+      "Record stabilized temperature in the digital kitchen log",
+      "Perform monthly ice bath (0°C) and boiling (100°C) calibration"
     ]
   },
   "food-sanitation-rules": {
-    "title": "Free Food Sanitation Rules Poster Template | Saim Dev",
-    "desc": "Free UK food sanitation rules poster template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "title": "Free Food Sanitation Rules Poster | Saim Dev",
+    "desc": "UK commercial food sanitation rules poster. Follow 2-stage cleaning, BS EN 1276 disinfection, hand hygiene, and EHO cross-contamination controls.",
     "howTo": [
-      "Download and print the Food Sanitation Rules Poster for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Remove loose physical debris and wash with hot detergent",
+      "Rinse clean water to remove chemical surfactant residues",
+      "Apply BS EN 1276 disinfectant for mandatory contact time",
+      "Allow surfaces to air dry or wipe with single-use paper",
+      "Document daily cleaning schedule sign-offs for EHO audits"
     ]
   },
   "cold-food-storage-rules": {
