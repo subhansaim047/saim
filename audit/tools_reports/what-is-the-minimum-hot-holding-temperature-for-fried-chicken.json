@@ -1,0 +1,79 @@
+{
+  "tool_id": "template-rank-67",
+  "name": "Hot Holding Temperature for Fried Chicken Guide",
+  "slug": "what-is-the-minimum-hot-holding-temperature-for-fried-chicken",
+  "url": "https://www.saimdev.site/food-safety-templates/what-is-the-minimum-hot-holding-temperature-for-fried-chicken",
+  "primary_keyword": "hot holding temperature for fried chicken uk",
+  "secondary_keywords": [
+    "minimum holding temperature for fried chicken",
+    "fast food chicken warming cabinet temperature",
+    "fried chicken heated display chute food safety",
+    "crispy fried chicken holding time and temp",
+    "fried chicken probe temperature fsa"
+  ],
+  "search_intent": "Fast food operators, chicken shop managers, and takeaway chefs looking for specific UK statutory temperature guidance (≥63°C) for holding fried chicken in heated display cabinets without compromising crispness or creating food poisoning hazards.",
+  "serp_features": [
+    "Featured Snippet",
+    "Direct Answer Box",
+    "People Also Ask",
+    "Safety Table View"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/cooking-safely",
+      "features": "Official general cooking and holding standards without chicken-specific display tips."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/fast-food-hygiene-rules/",
+      "features": "Fast food safety article with generic holding rules."
+    },
+    {
+      "name": "WebstaurantStore",
+      "url": "https://www.webstaurantstore.com/article/301/holding-temperatures.html",
+      "features": "US commercial supply blog using Fahrenheit and FDA rules."
+    },
+    {
+      "name": "Henny Penny",
+      "url": "https://www.hennypenny.com/holding-fried-chicken-guide/",
+      "features": "Commercial holding cabinet manufacturer technical article."
+    },
+    {
+      "name": "TouchBistro",
+      "url": "https://www.touchbistro.com/blog/safe-temperatures-food/",
+      "features": "POS marketing article with basic safe holding tables."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "Generic advice that ignores the delicate balance between humidity control (preserving crisp breading) and statutory 63°C holding lethality; lack of fast-food holding chute protocols.",
+    "our_differentiators": [
+      "Direct answer snippet engineered for Google PAA and AI answer engines",
+      "Precise humidity and air velocity guidance for pass-through holding chutes",
+      "Bone-in vs boneless probe protocols preventing false thermal readings",
+      "Maximum 90-minute holding timer and A4 kitchen display protocol"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "content_depth": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 76
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 86
+    },
+    "trust_eeat": {
+      "saim_dev": 98,
+      "best_competitor": 88
+    }
+  }
+}

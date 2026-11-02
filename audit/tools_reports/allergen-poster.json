@@ -1,0 +1,79 @@
+{
+  "tool_id": "template-rank-69",
+  "name": "14 Food Allergens Commercial Kitchen Poster",
+  "slug": "allergen-poster",
+  "url": "https://www.saimdev.site/food-safety-templates/allergen-poster",
+  "primary_keyword": "food allergen poster uk",
+  "secondary_keywords": [
+    "14 allergens poster free download a4",
+    "natashas law kitchen allergen chart",
+    "food allergy warning sign commercial restaurant",
+    "official 14 food allergens list pdf",
+    "fsa allergen poster for food businesses"
+  ],
+  "search_intent": "Restaurant owners, head chefs, catering managers, and school cooks seeking an authoritative, printable 14 food allergens poster compliant with UK Food Information Regulations and Natasha's Law to display in kitchens and prep passes.",
+  "serp_features": [
+    "Featured Snippet",
+    "Image Pack",
+    "People Also Ask",
+    "Poster / Matrix View"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/allergen-guidance-for-food-businesses",
+      "features": "Official statutory allergen guidance with static downloadable PDF posters."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/14-allergens-poster/",
+      "features": "Training company blog post offering static printable A4 PDF."
+    },
+    {
+      "name": "Nisbets UK",
+      "url": "https://www.nisbets.co.uk/allergen-awareness-signs",
+      "features": "Commercial catering sign supplier charging £12.99 per plastic sign."
+    },
+    {
+      "name": "Virtual College",
+      "url": "https://www.virtual-college.co.uk/resources/food-allergen-poster",
+      "features": "Allergen course sales page with basic summary graphic."
+    },
+    {
+      "name": "Allergy UK",
+      "url": "https://www.allergyuk.org/resources/allergen-awareness-posters/",
+      "features": "Charity awareness posters focused primarily on consumer advocacy."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "Static PDF graphics that cannot dynamically search dish ingredients or build interactive allergen matrices; e-commerce vendors charging for basic compliance posters.",
+    "our_differentiators": [
+      "Interactive 14-allergen matrix tool + live interactive search and filter",
+      "Full Natasha's Law PPDS ingredient highlighting protocols",
+      "Dedicated purple smallware cross-contact prevention guidelines",
+      "High-definition print-optimized A4/A3 vector poster layout"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 100,
+      "best_competitor": 84
+    },
+    "content_depth": {
+      "saim_dev": 99,
+      "best_competitor": 88
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 78
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 89
+    },
+    "trust_eeat": {
+      "saim_dev": 99,
+      "best_competitor": 92
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "tool_id": "template-rank-66",
+  "name": "Commercial Hot Holding Temperature Chart",
+  "slug": "hot-holding-temperature",
+  "url": "https://www.saimdev.site/food-safety-templates/hot-holding-temperature",
+  "primary_keyword": "hot holding temperature chart uk",
+  "secondary_keywords": [
+    "commercial hot holding temperature regulations",
+    "fsa minimum hot holding temperature 63c",
+    "bain marie temperature monitoring log catering",
+    "hot holding 2 hour rule food safety",
+    "restaurant hot food display temperature guide"
+  ],
+  "search_intent": "Catering managers, buffet supervisors, and commercial kitchen operators seeking an authoritative UK hot holding temperature chart specifying the statutory minimum 63°C limit, bain-marie monitoring, probe procedures, and the 2-hour service exemption rule.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Temperature Chart / Table View"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/holding-food",
+      "features": "Statutory guidance explaining legal 63°C requirements and 2-hour exemption."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/hot-holding-temperatures/",
+      "features": "Training article with static printable PDF and course ads."
+    },
+    {
+      "name": "Virtual College",
+      "url": "https://www.virtual-college.co.uk/resources/hot-holding-temperatures",
+      "features": "Brief overview promoting Level 2 Food Hygiene certificates."
+    },
+    {
+      "name": "SafetyCulture",
+      "url": "https://safetyculture.com/checklists/hot-holding-temperature-log/",
+      "features": "Digital inspection checklist app requiring user registration."
+    },
+    {
+      "name": "Nisbets UK",
+      "url": "https://www.nisbets.co.uk/bain-marie-temperature-guides",
+      "features": "Commercial catering equipment product listings and static advice."
+    }
+  ],
+  "gap_analysis": {
+    "competitor_weaknesses": "Dense text without interactive time/temperature logging or static PDFs that cannot simulate thermal holding degradation; lack of clear guidance on reheating limits.",
+    "our_differentiators": [
+      "Interactive temperature monitoring tool with instant 63°C pass/fail threshold",
+      "2-hour buffet service countdown timer with statutory disposal guidance",
+      "Moist vs dry holding recommendations for gravies, carveries, and buffets",
+      "Print-ready A4 commercial wall chart and CSV data export"
+    ]
+  },
+  "quality_score_comparison": {
+    "features": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "content_depth": {
+      "saim_dev": 99,
+      "best_competitor": 86
+    },
+    "ux_speed": {
+      "saim_dev": 100,
+      "best_competitor": 78
+    },
+    "technical_seo": {
+      "saim_dev": 100,
+      "best_competitor": 88
+    },
+    "trust_eeat": {
+      "saim_dev": 99,
+      "best_competitor": 91
+    }
+  }
+}

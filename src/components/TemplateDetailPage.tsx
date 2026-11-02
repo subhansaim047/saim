@@ -195,7 +195,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug === "food-temperatures-poster" ||
     template.slug.includes("food-temperatures-poster") ||
     template.slug === "danger-zone-for-food" ||
-    template.slug.includes("danger-zone");
+    template.slug.includes("danger-zone") ||
+    template.slug.includes("hot-holding");
 
   const isMeatCookingTool =
     !isMasterFoodTempTool &&
@@ -254,7 +255,10 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("sop") ||
       template.slug.includes("audit") ||
       template.slug.includes("delivery") ||
-      template.slug.includes("inspection"));
+      template.slug.includes("inspection") ||
+      template.slug.includes("cleaning") ||
+      template.slug.includes("slicer") ||
+      template.slug.includes("utensil"));
 
   // Related templates: only link to indexed KEEP and IMPROVE pages (no NOINDEX or duplicates)
   const isIndexableSlug = (slug: string) => {
