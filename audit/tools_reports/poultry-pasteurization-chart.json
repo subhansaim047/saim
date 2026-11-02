@@ -1,0 +1,38 @@
+{
+  "priority_rank": 94,
+  "slug": "poultry-pasteurization-chart",
+  "name": "Poultry Pasteurization Chart",
+  "category": "chart",
+  "target_keyword": "poultry pasteurization chart",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://www.fsis.usda.gov/guidelines/2021-0015",
+    "https://anovaculinary.com/blogs/sous-vide-poultry-guide",
+    "https://www.seriouseats.com/the-food-lab-complete-guide-to-sous-vide-chicken-breast",
+    "https://www.bccdc.ca/resource-gallery/Documents/Guidelines-and-Forms/Guidelines-Manuals/Health-Protection/Food-Safety/Sous-Vide-Safety-Guideline.pdf",
+    "https://blog.thermoworks.com/chicken/chicken-internal-temps-everything-you-need-to-know/"
+  ],
+  "competitor_gaps": [
+    "Focus exclusively on chicken breast fillets, ignoring whole carcasses and dark meat connective tissue",
+    "No structured distinction between Salmonella 7-log lethality and spore-forming risks",
+    "Missing commercial kitchen probe placement diagrams for bone-in cuts",
+    "Zero interactive thickness calculators for frozen vs chilled poultry"
+  ],
+  "our_differentiators": [
+    "Dedicated Poultry category with whole carcass, sous-vide breast, and 7-log pasteurisation cuts",
+    "Comprehensive 58\u00b0C to 75\u00b0C lethality dwell table (58\u00b0C for 65m, 60\u00b0C for 26m, 65.6\u00b0C for 3m)",
+    "Dark meat collagen rendering guidelines (74\u00b0C-79\u00b0C for 2-4 hours)",
+    "Thickness heating buffers with 50% extra time rule for frozen poultry",
+    "Printable audit-ready FSA compliance certificate"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

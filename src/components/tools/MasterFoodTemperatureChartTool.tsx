@@ -159,6 +159,7 @@ export function MasterFoodTemperatureChartTool({
     { label: "Fridge Limit", temp: 8, icon: AlertCircle },
     { label: "Peak Danger", temp: 37, icon: AlertTriangle },
     { label: "Hot Holding", temp: 63, icon: Flame },
+    { label: "Juice / HTST", temp: 71, icon: Flame },
     { label: "FSA Cooking", temp: 75, icon: CheckCircle2 },
     { label: "Scotland / Rinse", temp: 82, icon: Sparkles }
   ];

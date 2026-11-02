@@ -1,0 +1,38 @@
+{
+  "priority_rank": 95,
+  "slug": "chicken-pasteurization-chart",
+  "name": "Chicken Pasteurization Chart",
+  "category": "chart",
+  "target_keyword": "chicken pasteurization chart",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://www.seriouseats.com/the-food-lab-complete-guide-to-sous-vide-chicken-breast",
+    "https://anovaculinary.com/pages/chicken-pasteurization-times",
+    "https://cookingissues.com/2010/02/05/sous-vide-chicken-temperature-and-time/",
+    "https://amazingribs.com/more-technique-and-science/more-cooking-science/chicken-internal-temperature/",
+    "https://douglasbaldwin.com/sous-vide.html#Poultry"
+  ],
+  "competitor_gaps": [
+    "Unstructured blog posts without interactive tool widgets or instant calculations",
+    "Omission of specialized chicken preparations like chicken liver p\u00e2t\u00e9 (70\u00b0C for 2 min rule)",
+    "Lacks rapid ice-slurry cook-chill protocols for commercial meal prep",
+    "No printable temperature monitoring log sheet for Environmental Health Officer inspection"
+  ],
+  "our_differentiators": [
+    "Comprehensive Chicken module with 5 cuts: whole chicken, bone-in thighs, boneless breasts, chicken liver p\u00e2t\u00e9, and 7-log sous-vide pasteurisation",
+    "Precise time-temperature pairs: 60\u00b0C (26m), 63.3\u00b0C (7m), 65\u00b0C (3m), 70\u00b0C (2m), 75\u00b0C (30s)",
+    "Thickness penetration rules (15mm vs 25mm vs 40mm) and frozen meat adjustments",
+    "Campylobacter eradication standards for chicken liver p\u00e2t\u00e9 preparation",
+    "Printable EHO-ready kitchen compliance sheet with probe calibration sign-offs"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

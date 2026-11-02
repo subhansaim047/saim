@@ -1,0 +1,38 @@
+{
+  "priority_rank": 91,
+  "slug": "freeze-drying-time-chart",
+  "name": "Freeze Drying Time Chart",
+  "category": "chart",
+  "target_keyword": "freeze drying time chart",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://harvestright.com/freeze-drying-times/",
+    "https://trimleaf.com/blogs/articles/freeze-drying-time-chart",
+    "https://greenthumbdepot.com/blogs/news/freeze-drying-time-chart",
+    "https://extension.psu.edu/freeze-drying-food-at-home",
+    "https://wave.cc/freeze-drying-guide/"
+  ],
+  "competitor_gaps": [
+    "Static, rough estimates without interactive thickness or tray loading weight calculators",
+    "No guidance on residual moisture verification (< 2% target) or sensory snap tests",
+    "Missing commercial HACCP batch traceability log sheets",
+    "Zero advice on lipid/fat rancidity hazards in long-term freeze-dried storage"
+  ],
+  "our_differentiators": [
+    "Interactive sublimation, desorption, and pre-freezing cycle time calculator for 13+ foods",
+    "Customisable slice thickness (thin cut, standard 12mm, thick chunk) and tray load density",
+    "4-step residual moisture verification checklist (snap test, core warmth, jar condensation, weight stability)",
+    "Searchable and filterable reference table with rehydration ratios and preparation protocols",
+    "1-click printable HACCP-compliant freeze-drying batch log sheet for food safety audits"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

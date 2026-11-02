@@ -39,6 +39,7 @@ import { WalkInCoolerStorageChartTool } from "./tools/WalkInCoolerStorageChartTo
 import { FridgeTemperatureRecordTool } from "./tools/FridgeTemperatureRecordTool";
 import { FoodTraceabilityLogTool } from "./tools/FoodTraceabilityLogTool";
 import { HamCookingTemperatureTool } from "./tools/HamCookingTemperatureTool";
+import { FreezeDryingChartTool } from "./tools/FreezeDryingChartTool";
 import { MeatCookingTemperatureChartTool, MeatCategory } from "./tools/MeatCookingTemperatureChartTool";
 import { MasterFoodTemperatureChartTool } from "./tools/MasterFoodTemperatureChartTool";
 import { ConsumerAdvisoryNoticeTool } from "./tools/ConsumerAdvisoryNoticeTool";
@@ -176,6 +177,10 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug.includes("food-cooling") ||
     template.slug.includes("cooling-poster");
 
+  const isFreezeDryingTool =
+    template.slug === "freeze-drying-time-chart" ||
+    template.slug.includes("freeze-drying");
+
   const isWalkInStorageTool =
     template.slug === "walk-in-cooler-food-storage-chart" ||
     template.slug.includes("walk-in-cooler") ||
@@ -205,7 +210,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug === "danger-zone-for-food" ||
     template.slug.includes("danger-zone") ||
     template.slug.includes("hot-holding") ||
-    template.slug.includes("milk-pasteurization");
+    template.slug.includes("milk-pasteurization") ||
+    template.slug.includes("juice-pasteurization");
 
   const isMeatCookingTool =
     !isMasterFoodTempTool &&
@@ -224,11 +230,13 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("pork") ||
       template.slug.includes("ham") ||
       template.slug.includes("turkey") ||
+      template.slug.includes("poultry") ||
       template.slug.includes("fish") ||
       template.slug.includes("burger"));
 
   const initialMeat: MeatCategory =
     template.slug.includes("turkey") ? "turkey" :
+    template.slug.includes("poultry") ? "poultry" :
     (template.slug.includes("steak") || template.slug.includes("beef") || template.slug.includes("meat")) ? "beef" :
     template.slug.includes("burger") ? "burger" :
     template.slug.includes("venison") ? "venison" :

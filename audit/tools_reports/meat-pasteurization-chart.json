@@ -1,0 +1,38 @@
+{
+  "priority_rank": 93,
+  "slug": "meat-pasteurization-chart",
+  "name": "Meat-Pasteurization-Chart",
+  "category": "chart",
+  "target_keyword": "meat pasteurization chart",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://www.fsis.usda.gov/guidelines/2021-0014",
+    "https://douglasbaldwin.com/sous-vide.html",
+    "https://anovaculinary.com/pages/pasteurization-time-temperature-table",
+    "https://www.truenaturemeats.com/meat-pasteurization-temperatures/",
+    "https://www.engineeringtoolbox.com/pasteurization-food-d_1991.html"
+  ],
+  "competitor_gaps": [
+    "Academic tables separated across multiple PDF appendices without interactive UI",
+    "No automatic Celsius/Fahrenheit conversion toggle",
+    "Missing Scottish 82\u00b0C legal reheating and hot holding compliance toggles",
+    "Omission of critical meat thickness come-up time calculation buffer rules"
+  ],
+  "our_differentiators": [
+    "Interactive Meat Cooking Temperature Tool with dedicated low-temperature 6.5D/7D pasteurisation cut",
+    "Exact lethality times from 54.4\u00b0C (121 mins) to 63\u00b0C (instant) and 75\u00b0C (30s)",
+    "Dynamic toggle between English FSA guidelines (75\u00b0C) and Scottish standards (82\u00b0C)",
+    "Closed-cell foam tape needle probe verification protocol for vacuum-sealed pouches",
+    "Printable commercial EHO audit trail with probe calibration protocols"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}

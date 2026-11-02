@@ -1,0 +1,38 @@
+{
+  "priority_rank": 92,
+  "slug": "juice-pasteurization-temperature-time-chart",
+  "name": "Juice-Pasteurization-Chart",
+  "category": "chart",
+  "target_keyword": "juice pasteurization temperature time chart",
+  "search_volume": "High",
+  "winnability": "High",
+  "competitors": [
+    "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-juice-hazard-analysis-critical-control-point-hazards-and-controls-guidance-first",
+    "https://www.ifsqn.com/forum/index.php/topic/26442-juice-pasteurisation-times-and-temperatures/",
+    "https://londonjuicecompany.com/blogs/news/juice-pasteurization-methods",
+    "https://cals.cornell.edu/food-science/outreach-extension/juice-haccp",
+    "https://www.agrovin.com/en/pasteurization-in-fruit-juices/"
+  ],
+  "competitor_gaps": [
+    "Dense, unsearchable government PDF documentation lacking interactive quick-reference tools",
+    "No clear matrix comparing HTST continuous-flow vs vat batch vs hot-fill pasteurisation",
+    "Missing distinction between high-acid (pH < 4.0) and low-acid vegetable blends (pH > 4.5)",
+    "No digital thermometer probe calibration verification protocols"
+  ],
+  "our_differentiators": [
+    "Integrated into Master Food Temperature Chart with dedicated Juice / HTST 71.1\u00b0C preset",
+    "5-log pathogen reduction reference matrix covering Apple Cider, Citrus, Tomato, and Low-Acid Blends",
+    "Detailed scientific holding times: 71.1\u00b0C for 6.0s down to 82.2\u00b0C for 0.3s",
+    "Clear regulatory compliance under FDA 21 CFR Part 120 and UK FSA standards",
+    "Printable daily kitchen temperature and calibration audit record"
+  ],
+  "status": "COMPLETED",
+  "phase1_audit": {
+    "features_score": 10,
+    "content_depth_score": 10,
+    "ux_speed_score": 10,
+    "technical_seo_score": 10,
+    "trust_eeat_score": 10,
+    "overall_status": "BEATS_ALL_COMPETITORS"
+  }
+}
