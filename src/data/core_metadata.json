@@ -140,12 +140,14 @@
     ]
   },
   "kitchen-prep-list-template": {
-    "title": "Free Kitchen Daily Prep List Template | Saim Dev",
-    "desc": "Organise daily kitchen production with this commercial prep sheet. Track batch pars, prep quantities, FIFO rotation, and morning line readiness.",
+    "title": "Free Kitchen Prep List Checklist Guide | Saim Dev",
+    "desc": "Organise daily commercial kitchen culinary prep stations with par levels. Free kitchen prep sheet covering batch pars, cooling times, and allergens.",
     "howTo": [
-      "Review forecast covers and record required batch quantities by station.",
-      "Assign prep responsibilities to station chefs before service begins.",
-      "Label all prepped containers with ingredient names and use-by date dots."
+      "Review daily booking forecast to determine required prep par quantities for lunch and dinner services.",
+      "Prep hot cookline mise-en-place: portion steaks, truss poultry, simmer sauces, and blanch cookline vegetables.",
+      "Stock cold larder station: wash and spin salad greens, slice charcuterie, and portion chilled appetisers.",
+      "Ensure all cooked hot prep is cooled from 60°C to below 8°C (ideally <5°C) within the statutory 90-minute limit.",
+      "Affix day-dot labels with prep date, use-by date, chef initials, and 14 bold statutory allergen declarations."
     ]
   },
   "pest-control-checklist": {
@@ -252,12 +254,13 @@
   },
   "cooking-log-template": {
     "title": "Free Cooking Temperature Log Sheet | Saim Dev",
-    "desc": "Free cooking temperature record sheet for UK commercial kitchens. Verify core cooking temperatures reach 75°C (82°C in Scotland) for safe batch cooking.",
+    "desc": "Record daily commercial kitchen cooking core temperatures for EHO audits. Free cooking temperature log sheet with FSA 75°C critical limit validation.",
     "howTo": [
-      "Sanitise the digital probe thermometer using a food-grade antibacterial wipe before and after each test.",
-      "Insert the probe into the thickest part of the meat, poultry, or batch dish away from bones.",
-      "Verify the reading reaches 75°C for 30 seconds (or equivalent time/temperature, 82°C in Scotland).",
-      "Record batch item name, time, core temperature, and cook initials on the daily kitchen record sheet."
+      "Calibrate digital probe thermometer using melting ice (0.0°C) or boiling water (100.0°C) before service.",
+      "Sanitise probe with food-safe probe wipe conforming to BS EN 1276 / 13697 before taking core temperatures.",
+      "Insert probe into thickest core of meat/poultry and verify reading reaches at least 75°C for 30s or 70°C for 2 min.",
+      "For Scottish food businesses, verify pre-cooked reheated dishes reach a minimum core temperature of 82°C.",
+      "Log dish name, batch number, core temperature, time, and chef signature; initiate corrective action if under temp."
     ]
   },
   "consumer-advisory": {
@@ -1486,13 +1489,14 @@
     ]
   },
   "restaurant-maintenance-checklist": {
-    "title": "Free Restaurant Maintenance Checklist Template | Saim Dev",
-    "desc": "Free restaurant maintenance checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Restaurant Maintenance Checklist | Saim Dev",
+    "desc": "Keep commercial kitchen equipment and facilities running reliably. Free preventative maintenance checklist covering HVAC, refrigeration, and Gas Safe.",
     "howTo": [
-      "Download and print the Restaurant Maintenance Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit daily refrigeration: inspect walk-in chiller gaskets, evaporator fan motors, and coil frost build-up.",
+      "Execute weekly cookline maintenance: boil out deep fat fryers and degrease griddles and range burners.",
+      "Inspect monthly water filtration cartridges on ice makers, combi ovens, and commercial coffee machines.",
+      "Verify quarterly extraction degreasing certificates conforming to BESA TR19 commercial kitchen standards.",
+      "Review annual Gas Safe commercial appliance certificates, PAT electrical tests, and fixed wire EICR reports."
     ]
   },
   "restaurant-hood-cleaning": {
@@ -1526,23 +1530,25 @@
     ]
   },
   "restaurant-inventory-template": {
-    "title": "Free Restaurant Inventory Template | Saim Dev",
-    "desc": "Free restaurant inventory template template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free Restaurant Inventory Template Guide | Saim Dev",
+    "desc": "Track commercial kitchen food stock, par levels, and inventory costs. Free customisable restaurant inventory sheet covering cold storage and dry stock.",
     "howTo": [
-      "Download and print the Restaurant Inventory Template for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit cold storage proteins: count steaks, poultry, and fish in walk-in chillers (maintained below 5.0°C).",
+      "Inspect deep freezer inventory: verify frozen stock counts, FIFO rotation, and continuous storage below -18.0°C.",
+      "Reconcile dry pantry supplies: count bulk grains, oils, seasonings, and flour against minimum par levels.",
+      "Audit cellar and bar stock: log draught keg volumes, spirit bottles, and wines against POS sales records.",
+      "Calculate total food inventory value, flag items needing replenishment, and submit daily food waste deductions."
     ]
   },
   "restaurant-schedule-template": {
-    "title": "Free Restaurant Schedule Template | Saim Dev",
-    "desc": "Free UK restaurant schedule template template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "title": "Free Restaurant Staff Schedule Template | Saim Dev",
+    "desc": "Streamline weekly FOH and BOH hospitality staff scheduling. Free restaurant rota template with shift planning, rest break rules, and labour budgets.",
     "howTo": [
-      "Download and print the Restaurant Schedule Template for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Forecast weekly covers and revenue per shift to establish targeted labour percentage targets (28-32%).",
+      "Schedule back-of-house kitchen brigade: ensure Head Chef, line cooks, and kitchen porters cover peak rush.",
+      "Assign front-of-house staff: schedule hosts, servers, runners, and bartenders based on table bookings.",
+      "Audit shifts against Working Time Regulations 1998: ensure minimum 11 consecutive hours rest between shifts.",
+      "Publish finalised weekly rota at least 7 to 14 days in advance to staff mobile portal and kitchen noticeboard."
     ]
   },
   "restaurant-steps-of-service": {

@@ -2984,9 +2984,25 @@
     "main_keyword": "restaurant maintenance checklist uk",
     "opportunity_score": 65.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 121
+    "priority_rank": 121,
+    "target_keyword": "restaurant maintenance checklist",
+    "top_5_competitors": [
+      "https://pos.toasttab.com/blog/on-the-line/restaurant-maintenance-checklist",
+      "https://safetyculture.com/checklists/restaurant-preventative-maintenance/",
+      "https://www.touchbistro.com/blog/restaurant-maintenance-checklist/",
+      "https://www.lightspeedhq.com/blog/restaurant-maintenance-checklist/",
+      "https://www.fooddocs.com/post/restaurant-maintenance-checklist"
+    ],
+    "differentiators": [
+      "Multi-frequency preventative maintenance intervals: daily, weekly, monthly, quarterly, and annual Gas Safe certification",
+      "Asset tagging and equipment warranty/service contract tracking",
+      "Real-time pass/fail/pending interactive status tracking with technician log notes",
+      "Zero login, zero paywall, fully accessible interactive browser tool",
+      "Clean A4 PDF export formatted for facility audits and insurance compliance"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 149,
@@ -3003,9 +3019,25 @@
     "main_keyword": "restaurant inventory template uk",
     "opportunity_score": 65.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 122
+    "priority_rank": 122,
+    "target_keyword": "restaurant inventory template",
+    "top_5_competitors": [
+      "https://pos.toasttab.com/blog/on-the-line/restaurant-inventory-template",
+      "https://www.touchbistro.com/blog/restaurant-inventory-spreadsheet-template/",
+      "https://www.lightspeedhq.com/blog/restaurant-inventory-management-template/",
+      "https://www.7shifts.com/blog/restaurant-inventory-sheet/",
+      "https://www.fooddocs.com/post/restaurant-inventory-template"
+    ],
+    "differentiators": [
+      "Categorised stock auditing: dry store, walk-in chiller (0-5°C), deep freezer (-18°C), bar/cellar, and chemicals",
+      "Standard unit-of-measure logging with par-level re-order threshold alerts",
+      "Direct cross-links to interactive Food Cost Calculator and Recipe Batch Calculator",
+      "Local storage persistence so inventory isn't lost on browser refresh",
+      "1-click printable count sheet and CSV export"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 150,
@@ -3022,9 +3054,25 @@
     "main_keyword": "restaurant schedule template uk",
     "opportunity_score": 65.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 123
+    "priority_rank": 123,
+    "target_keyword": "restaurant schedule template",
+    "top_5_competitors": [
+      "https://www.7shifts.com/blog/restaurant-schedule-template/",
+      "https://pos.toasttab.com/blog/on-the-line/restaurant-schedule-template",
+      "https://www.touchbistro.com/blog/restaurant-employee-schedule-template/",
+      "https://www.wheniwork.com/templates/restaurant-schedule-template",
+      "https://www.lightspeedhq.com/blog/restaurant-scheduling-template/"
+    ],
+    "differentiators": [
+      "Shift-based scheduling covering FOH and BOH brigade matched to sales/covers forecasts",
+      "Working Time Regulations 1998 compliance checks (48-hour weekly max, mandatory 11-hour rest intervals)",
+      "Target labour cost percentage forecasting (28-32% guideline)",
+      "Free interactive shift builder with local storage and instant A4 rota print",
+      "Zero signup gate or recurring SaaS subscription required"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 151,
@@ -3041,9 +3089,25 @@
     "main_keyword": "kitchen prep list template uk",
     "opportunity_score": 65.0,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 124
+    "priority_rank": 124,
+    "target_keyword": "kitchen prep list template",
+    "top_5_competitors": [
+      "https://pos.toasttab.com/blog/on-the-line/kitchen-prep-list-template",
+      "https://www.touchbistro.com/blog/kitchen-prep-list-template/",
+      "https://www.lightspeedhq.com/blog/restaurant-prep-list-template/",
+      "https://www.fooddocs.com/post/kitchen-prep-list",
+      "https://safetyculture.com/checklists/kitchen-prep-list/"
+    ],
+    "differentiators": [
+      "Interactive culinary prep station routing: grill, saute, cold larder, pastry, and butcher prep",
+      "Par-level calculations based on weekday vs weekend cover forecasts",
+      "Natasha's Law allergen segregation notes and 90-minute cooling window reminders for hot prep",
+      "Local storage persistence, custom item additions, and real-time completion progress",
+      "Clean, watermark-free A4 PDF export designed for stainless-steel kitchen clipboards"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 46,
@@ -3060,9 +3124,25 @@
     "main_keyword": "cooking log uk",
     "opportunity_score": 55.0,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 125
+    "priority_rank": 125,
+    "target_keyword": "cooking log template",
+    "top_5_competitors": [
+      "https://www.fooddocs.com/post/cooking-temperature-log",
+      "https://safetyculture.com/checklists/cooking-temperature-log/",
+      "https://www.highspeedtraining.co.uk/hub/food-temperature-log-sheet/",
+      "https://www.virtual-college.co.uk/resources/food-temperature-log-sheet",
+      "https://www.ncass.org.uk/resources/daily-record-sheets/"
+    ],
+    "differentiators": [
+      "Validated UK Food Standards Agency critical limits: 75°C core for 30 seconds or 70°C for 2 minutes",
+      "Scottish 82°C reheating rule validation integrated",
+      "Digital temperature probe input with instantaneous Pass / Corrective Action status evaluation",
+      "Batch number, food item, core temp, probe sanitisation tick, and chef signature fields",
+      "100% free interactive tool with unbranded A4 print format conforming to EHO due diligence requirements"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 61,

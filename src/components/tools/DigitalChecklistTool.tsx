@@ -1705,6 +1705,232 @@ const RESTAURANT_FIRE_TASKS: CheckItem[] = [
   }
 ];
 
+
+const RESTAURANT_MAINTENANCE_TASKS: CheckItem[] = [
+  {
+    id: "maint-1",
+    category: "Daily HVAC & Refrigeration",
+    task: "Walk-in chiller and freezer coils inspected, evaporator fans spinning freely, and door magnetic gaskets clean and airtight with zero frost build-up.",
+    status: "pass",
+    actionNotes: "Refrigeration seals and airflow verified"
+  },
+  {
+    id: "maint-2",
+    category: "Weekly Cookline Deep Clean",
+    task: "Deep fat fryers boiled out, thermostatic controls calibrated, flat-top griddles scraped and seasoned, and range burner ports degreased.",
+    status: "pass",
+    actionNotes: "Fryer boil-out and griddle calibration complete"
+  },
+  {
+    id: "maint-3",
+    category: "Monthly Water Filtration",
+    task: "Water softening and filtration cartridges replaced or inspected on ice machines, combi steamers, and espresso machines to prevent limescale scale.",
+    status: "pass",
+    actionNotes: "Combi oven water filter cartridge swapped"
+  },
+  {
+    id: "maint-4",
+    category: "Quarterly Extraction Degreasing",
+    task: "Kitchen extraction canopies, grease baffle filters, and vertical duct risers degreased and certified to BESA TR19 fire safety standards.",
+    status: "pass",
+    actionNotes: "TR19 duct degreasing certificate on file"
+  },
+  {
+    id: "maint-5",
+    category: "Semi-Annual Suppression Inspection",
+    task: "Ansul / R-102 wet chemical fire suppression discharge nozzles inspected, pull-stations tested, and emergency gas shut-off valve verified.",
+    status: "pass",
+    actionNotes: "6-month Ansul service tag signed"
+  },
+  {
+    id: "maint-6",
+    category: "Annual Statutory Certification",
+    task: "Commercial Gas Safe safety inspection, Portable Appliance Testing (PAT), and fixed electrical wiring inspection (EICR) completed.",
+    status: "pass",
+    actionNotes: "Gas Safe and PAT certificates updated"
+  }
+];
+
+const RESTAURANT_INVENTORY_TASKS: CheckItem[] = [
+  {
+    id: "inv-1",
+    category: "Walk-In Chiller Protein Pars",
+    task: "Count high-value chilled proteins (prime steaks, poultry, fish fillets) against minimum par levels; confirm storage below 5.0°C.",
+    status: "pass",
+    actionNotes: "Chilled proteins audited against par counts"
+  },
+  {
+    id: "inv-2",
+    category: "Deep Freezer Stock Audit",
+    task: "Audit frozen seafood, frozen bakery, and batch-prepped sauces; confirm FIFO stock rotation and continuous storage below -18.0°C.",
+    status: "pass",
+    actionNotes: "Freezer inventory rotated with FIFO facing"
+  },
+  {
+    id: "inv-3",
+    category: "Dry Storage Par Levels",
+    task: "Reconcile dry pantry goods (flour, oils, grains, spices, canned goods) and flag items approaching minimum replenishment thresholds.",
+    status: "pass",
+    actionNotes: "Dry store replenishment re-order logged"
+  },
+  {
+    id: "inv-4",
+    category: "Bar & Cellar Inventory",
+    task: "Audit draught beer kegs, premium spirits, liqueurs, and wine cellar cases against POS sales depletion reports to detect inventory shrinkage.",
+    status: "pass",
+    actionNotes: "Keg weights and spirit dip-levels reconciled"
+  },
+  {
+    id: "inv-5",
+    category: "Chemicals & Hygiene Supplies",
+    task: "Count warewashing chemicals, food-grade surface sanitisers (BS EN 1276), blue roll, and disposable food handler gloves.",
+    status: "pass",
+    actionNotes: "Sanitiser stock verified adequate for 2 weeks"
+  },
+  {
+    id: "inv-6",
+    category: "Waste & Spoilage Reconciliation",
+    task: "Record kitchen prep trim loss, expired items, and customer return waste on the daily waste sheet before finalizing stock valuation.",
+    status: "pass",
+    actionNotes: "Daily kitchen waste log reconciled with chef"
+  }
+];
+
+const RESTAURANT_SCHEDULE_TASKS: CheckItem[] = [
+  {
+    id: "sched-1",
+    category: "Sales & Covers Forecasting",
+    task: "Forecast weekly covers and revenue per service shift to set targeted labour cost percentages (target 28% to 32% of projected turnover).",
+    status: "pass",
+    actionNotes: "Labour budget model aligned with sales forecast"
+  },
+  {
+    id: "sched-2",
+    category: "BOH Kitchen Rota Coverage",
+    task: "Schedule Head Chef, sous chefs, line cooks, kitchen porters, and prep leads ensuring full line coverage across lunch and dinner services.",
+    status: "pass",
+    actionNotes: "Cookline station coverage verified"
+  },
+  {
+    id: "sched-3",
+    category: "FOH Hospitality Rota Coverage",
+    task: "Assign hosts, servers, runners, bartenders, and floor managers matched to expected table turnover and reservation density.",
+    status: "pass",
+    actionNotes: "Peak Saturday shift fully staffed with backup runner"
+  },
+  {
+    id: "sched-4",
+    category: "Working Time Regulations 1998",
+    task: "Audit scheduled shifts ensuring compliance with UK Working Time Regulations: maximum 48-hour week and mandatory 11-hour rest between shifts.",
+    status: "pass",
+    actionNotes: "11-hour rest intervals between closing and opening verified"
+  },
+  {
+    id: "sched-5",
+    category: "Shift Trades & Leave Requests",
+    task: "Review and approve employee holiday requests, sick cover replacements, and shift trade authorizations before final schedule lock.",
+    status: "pass",
+    actionNotes: "All leave requests reconciled on rota"
+  },
+  {
+    id: "sched-6",
+    category: "Rota Publication & Dispatch",
+    task: "Publish finalized weekly schedule at least 7 to 14 days in advance to employee mobile app and display printed copy on kitchen staff noticeboard.",
+    status: "pass",
+    actionNotes: "Weekly rota published to team portal"
+  }
+];
+
+const KITCHEN_PREP_LIST_TASKS: CheckItem[] = [
+  {
+    id: "prep-1",
+    category: "Morning Cover Par Planning",
+    task: "Review daily reservations, VIP covers, and catering orders to calculate required batch prep pars across all kitchen stations.",
+    status: "pass",
+    actionNotes: "Prep pars calculated for 160 covers"
+  },
+  {
+    id: "prep-2",
+    category: "Hot Cookline Prep Pars",
+    task: "Simmer stocks, portion prime steaks, truss poultry, batch reduction sauces, and blanch cookline vegetables needed for saute and grill lines.",
+    status: "pass",
+    actionNotes: "Sauces and stock reductions completed"
+  },
+  {
+    id: "prep-3",
+    category: "Cold Larder & Garde Manger",
+    task: "Wash, dry, and spin salad greens, slice charcuterie, dress terrines, and portion chilled starters into stainless GN containers.",
+    status: "pass",
+    actionNotes: "Larder station mise-en-place fully stocked"
+  },
+  {
+    id: "prep-4",
+    category: "Pastry & Dessert Station",
+    task: "Bake fresh service breads, portion cheesecakes and tarts, whip pastry creams, and refresh dessert garnish wells.",
+    status: "pass",
+    actionNotes: "Service bread rolls and desserts prepped"
+  },
+  {
+    id: "prep-5",
+    category: "90-Minute Cooling Window",
+    task: "Ensure all hot cooked prep batches are cooled from 60°C to below 8°C (ideally below 5°C) within 90 minutes before walk-in chiller storage.",
+    status: "pass",
+    actionNotes: "Blast chiller cooling logs verified within 70 minutes"
+  },
+  {
+    id: "prep-6",
+    category: "Day-Dot & Natasha's Law Labelling",
+    task: "Affix day-dot label with prep date, use-by date, preparer initials, and 14 bold statutory allergen declarations on every container.",
+    status: "pass",
+    actionNotes: "All containers labelled with batch dates and allergens"
+  }
+];
+
+const COOKING_LOG_TASKS: CheckItem[] = [
+  {
+    id: "cook-1",
+    category: "Probe Thermometer Calibration",
+    task: "Calibrate digital probe thermometer using boiling water (99°C to 101°C) or crushed melting ice (-1°C to +1°C) prior to start of cooking service.",
+    status: "pass",
+    actionNotes: "Ice point checked at 0.2°C; probe sanitised"
+  },
+  {
+    id: "cook-2",
+    category: "Poultry Core Temperature Check",
+    task: "Insert probe into the thickest part of chicken, turkey, or duck; confirm core temperature reaches minimum 75°C for 30 seconds (or 70°C for 2 min).",
+    status: "pass",
+    actionNotes: "Roast chicken breast reached 77.4°C for 45s"
+  },
+  {
+    id: "cook-3",
+    category: "Minced Meat & Burger Lethality",
+    task: "Verify core temperature of beef patties, sausages, and minced meat dishes reaches 75°C for 30 seconds to ensure destruction of pathogenic E. coli.",
+    status: "pass",
+    actionNotes: "Burger patty core confirmed 76.1°C"
+  },
+  {
+    id: "cook-4",
+    category: "Pork, Game & Stew Casseroles",
+    task: "Confirm core temperature of pork joints, braised game meats, and casseroles exceeds 75°C for 30 seconds before serving or hot-holding.",
+    status: "pass",
+    actionNotes: "Braised pork shoulder core reached 78.5°C"
+  },
+  {
+    id: "cook-5",
+    category: "Scottish Reheating Critical Limit",
+    task: "For reheated dishes (soups, stews, curries), ensure core temperature reaches a minimum of 82°C (Food Hygiene Scotland Regulations 2006).",
+    status: "pass",
+    actionNotes: "Reheated soup core reached 84.0°C"
+  },
+  {
+    id: "cook-6",
+    category: "Corrective Action & Probe Hygiene",
+    task: "If core temperature is under critical limit, return dish to heat immediately and re-test; sanitise probe with food-safe wipe between food items.",
+    status: "pass",
+    actionNotes: "Probe sanitising wipes verified BS EN 1276"
+  }
+];
+
 const DEFAULT_GENERAL_TASKS: CheckItem[] = [
   {
     id: "1",
@@ -1793,6 +2019,24 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
   const isFireInspection =
     templateTitle.toLowerCase().includes("fire") ||
     (templateId && templateId.includes("fire"));
+  const isMaintenance =
+    templateTitle.toLowerCase().includes("maintenance") ||
+    (templateId && templateId.includes("maintenance"));
+  const isInventory =
+    templateTitle.toLowerCase().includes("inventory") ||
+    (templateId && templateId.includes("inventory"));
+  const isSchedule =
+    templateTitle.toLowerCase().includes("schedule") ||
+    templateTitle.toLowerCase().includes("rota") ||
+    (templateId && templateId.includes("schedule"));
+  const isPrepList =
+    templateTitle.toLowerCase().includes("prep list") ||
+    templateTitle.toLowerCase().includes("prep-list") ||
+    (templateId && templateId.includes("prep-list"));
+  const isCookingLog =
+    templateTitle.toLowerCase().includes("cooking log") ||
+    templateTitle.toLowerCase().includes("cooking-log") ||
+    (templateId && templateId.includes("cooking-log"));
   const isBrcAudit =
     templateTitle.toLowerCase().includes("brc") ||
     (templateId && templateId.includes("brc"));
@@ -1903,6 +2147,11 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     if (isNonGmo) return NON_GMO_TASKS;
     if (isAmazonSeller) return AMAZON_FOOD_SELLER_TASKS;
     if (isFireInspection) return RESTAURANT_FIRE_TASKS;
+    if (isMaintenance) return RESTAURANT_MAINTENANCE_TASKS;
+    if (isInventory) return RESTAURANT_INVENTORY_TASKS;
+    if (isSchedule) return RESTAURANT_SCHEDULE_TASKS;
+    if (isPrepList) return KITCHEN_PREP_LIST_TASKS;
+    if (isCookingLog) return COOKING_LOG_TASKS;
     if (isBrcAudit) return BRC_AUDIT_TASKS;
     if (isKosher) return KOSHER_CERTIFICATION_TASKS;
     if (isFiveWhys) return FIVE_WHYS_RCA_TASKS;

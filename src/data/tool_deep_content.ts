@@ -4848,8 +4848,133 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       title: "SFBB Daily Kitchen Opening and Closing Checklist Guide",
       slug: "sfbb-daily-kitchen-opening-closing-checklist-guide"
     }
+  },
+  "restaurant-maintenance-checklist": {
+    directAnswer:
+      "A restaurant maintenance checklist organizes preventative upkeep schedules for commercial kitchen equipment, refrigeration systems, HVAC ventilation, plumbing, and structural fabric. Implementing structured daily, weekly, monthly, quarterly, and annual maintenance checks prevents catastrophic equipment failures during peak service, ensures energy efficiency, and satisfies statutory Gas Safe and fire safety regulations.",
+    howTo: [
+      "Daily maintenance: clean refrigeration condenser vents, inspect walk-in chiller door gaskets, and verify dishwasher wash/rinse operating temperatures.",
+      "Weekly maintenance: boil out and descale deep fat fryers, clean griddle surfaces, and flush beer draft lines.",
+      "Monthly maintenance: inspect water softening cartridges on combi steamers and ice machines, and test kitchen emergency gas shut-off valves.",
+      "Quarterly maintenance: service HVAC air makeup units and arrange professional TR19 grease extraction duct degreasing.",
+      "Annual statutory maintenance: complete Gas Safe CP42 commercial appliance certification, portable appliance testing (PAT), and fixed wiring inspections."
+    ],
+    faqs: [
+      {
+        q: "Why is preventative maintenance critical for restaurant refrigeration?",
+        a: "Dirty condenser coils cause compressor motors to overheat and consume up to 35% more electricity. If a walk-in compressor fails overnight, thousands of pounds of perishable food stock can spoil or breach the legal 8.0°C chilled food threshold."
+      },
+      {
+        q: "What commercial kitchen maintenance tasks are legally mandatory in the UK?",
+        a: "Annual Gas Safe inspection of commercial gas appliances (Gas Safety Installation and Use Regulations 1998), TR19 certified kitchen extraction duct cleaning for fire insurance, and annual testing of portable electrical equipment (PAT)."
+      },
+      {
+        q: "How often should commercial deep fat fryers undergo boil-out maintenance?",
+        a: "Commercial fryers should undergo a thorough boil-out cleaning using dedicated fryer cleaner chemicals once every 1 to 2 weeks, depending on oil usage volume, to remove carbonized grease buildup on heating elements."
+      },
+      {
+        q: "How can regular equipment maintenance lower restaurant operating costs?",
+        a: "Descaling combi ovens and steamers reduces heating element burn-out, properly sealed walk-in doors prevent compressor burnout, and calibrated cooking thermostats prevent unnecessary gas and electricity consumption."
+      },
+      {
+        q: "What should be included in a kitchen equipment asset register?",
+        a: "Each machine should have an asset tag recording manufacturer, model number, serial number, electrical/gas specifications, purchase date, warranty expiration date, service contractor contact, and preventative maintenance logs."
+      }
+    ],
+    relatedTools: [
+      "restaurant-equipment-list",
+      "commercial-kitchen-cleaning-checklist",
+      "restaurant-fire-inspection-checklist"
+    ],
+    relatedBlog: {
+      title: "SFBB Daily Kitchen Opening and Closing Checklist Guide",
+      slug: "sfbb-daily-kitchen-opening-closing-checklist-guide"
+    }
+  },
+  "restaurant-inventory-template": {
+    directAnswer:
+      "A restaurant inventory template provides a systematic spreadsheet and digital count sheet for auditing food, beverage, and cleaning stock across commercial food establishments. It tracks inventory on hand, unit costs, par levels, usage rates, and food cost variances across walk-in chillers, deep freezers, dry storage, and bar cellars.",
+    howTo: [
+      "Organize stock sheet by physical location: mirror the layout of dry storage shelves, walk-in chillers (0-5°C), deep freezers (-18°C), and bar storerooms.",
+      "Count inventory consistently: conduct physical inventory counts at the same time each week (e.g. Sunday night after closing or Monday morning before deliveries).",
+      "Record standard units of measure: log items in unambiguous inventory units (e.g. kilograms for meat, litres for milk, cases for canned produce).",
+      "Reconcile against POS depletion data: compare physical ending inventory against expected theoretical inventory calculated by POS recipe sales.",
+      "Calculate food cost variance and waste: identify shrinkage, over-portioning, or inventory spoilage and adjust future purchasing orders accordingly."
+    ],
+    faqs: [
+      {
+        q: "How frequently should a restaurant conduct physical food inventory?",
+        a: "High-volume commercial kitchens perform weekly inventory counts on perishable and high-cost proteins (meat, poultry, seafood, dairy), and monthly counts on dry goods, frozen inventory, and cleaning supplies."
+      },
+      {
+        q: "What is the difference between physical inventory and theoretical inventory?",
+        a: "Physical inventory is the actual counted quantity of goods present in the kitchen. Theoretical inventory is what should be on hand based on starting inventory plus received purchases minus POS sales. The difference represents inventory variance or waste."
+      },
+      {
+        q: "What is an inventory par level in a restaurant?",
+        a: "A par level is the minimum quantity of an ingredient required on hand to meet customer demand between delivery cycles, with a safety buffer to prevent stockouts without causing food spoilage."
+      },
+      {
+        q: "How does proper inventory management protect food safety?",
+        a: "Accurate inventory tracking enforces First-In, First-Out (FIFO) stock rotation, ensures food items approaching use-by dates are utilized promptly, and prevents overcrowding in walk-in chillers which impedes proper airflow."
+      },
+      {
+        q: "How does tracking food inventory tie into food cost percentage?",
+        a: "Cost of Goods Sold (COGS) is calculated as: Beginning Inventory + Purchases - Ending Inventory. Dividing COGS by total food revenue gives the restaurant's actual food cost percentage (target 28% to 32%)."
+      }
+    ],
+    relatedTools: [
+      "food-cost-calculator",
+      "recipe-batch-calculator",
+      "restaurant-equipment-list"
+    ],
+    relatedBlog: {
+      title: "Mastering Food Cost Percentage: Commercial Kitchen Calculator",
+      slug: "mastering-food-cost-percentage-commercial-kitchen-calculator"
+    }
+  },
+  "restaurant-schedule-template": {
+    directAnswer:
+      "A restaurant schedule template organizes front-of-house (FOH) and back-of-house (BOH) staff rotas across weekly shifts. It matches staffing levels to forecasted guest covers, tracks labour cost percentages, and enforces compliance with UK Working Time Regulations 1998 regarding maximum weekly hours, rest breaks, and minimum intervals between shifts.",
+    howTo: [
+      "Forecast shift demand: analyze historical sales trends, reservations, weather, and local events to project required front-of-house and kitchen labour hours.",
+      "Schedule core station leads: assign Head Chef, sous chefs, head bartender, and lead floor manager before scheduling part-time support staff.",
+      "Balance station staffing: ensure appropriate server-to-table ratios (typically 4-5 tables per server) and line cook staffing based on expected ticket volume.",
+      "Audit UK employment compliance: verify no employee exceeds the 48-hour working week without an opt-out agreement and ensure 11 consecutive hours of daily rest.",
+      "Publish schedule 7 to 14 days in advance: distribute finalized rota via employee mobile app and display printed A4 sheet on kitchen noticeboards."
+    ],
+    faqs: [
+      {
+        q: "What is an acceptable labour cost percentage for a restaurant?",
+        a: "Prime labour costs in full-service restaurants typically target 28% to 35% of total gross sales, while quick-service takeaways and fast-casual concepts target 22% to 28%."
+      },
+      {
+        q: "What rest break rules apply to restaurant workers under UK law?",
+        a: "Under the Working Time Regulations 1998, workers are entitled to an uninterrupted 20-minute rest break during shifts lasting longer than 6 hours, 11 consecutive hours of daily rest between shifts, and 24 hours of uninterrupted weekly rest."
+      },
+      {
+        q: "How can staggered shifts prevent labor overspending during quiet hours?",
+        a: "Rather than scheduling all staff for full 8-hour shifts, managers use staggered start times (e.g. prep team at 9 AM, opening servers at 11:30 AM, rush support at 12:30 PM) and cut staff as cover volume diminishes."
+      },
+      {
+        q: "How far in advance should restaurant schedules be published?",
+        a: "Best practice is to publish weekly rotas at least 7 to 14 days in advance. Consistent scheduling reduces last-minute shift call-offs, improves staff morale, and lowers employee turnover."
+      },
+      {
+        q: "How do split shifts work in hospitality scheduling?",
+        a: "A split shift involves working two distinct periods on the same day (e.g. 11:00 AM - 3:00 PM for lunch, and 6:00 PM - 10:30 PM for dinner) separated by an unpaid break of several hours. Rest periods must be monitored carefully."
+      }
+    ],
+    relatedTools: [
+      "restaurant-opening-checklist",
+      "kitchen-sop",
+      "restaurant-sop"
+    ],
+    relatedBlog: {
+      title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist",
+      slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
+    }
   }
-
 };
 
 export const FALLBACK_DEEP_CONTENT: ToolDeepContent = {
