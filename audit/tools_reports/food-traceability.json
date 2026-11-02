@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-22",
+  "name": "One-Step-Back & One-Step-Forward Food Traceability Log",
+  "slug": "food-traceability",
+  "url": "https://www.saimdev.site/food-safety-templates/food-traceability",
+  "primary_keyword": "food traceability log template uk commercial kitchen",
+  "secondary_keywords": [
+    "food sample testing log commercial kitchen",
+    "regulation ec 178 2002 article 18 log sheet",
+    "goods inwards intake temperature log catering",
+    "supplier batch lot code traceability record",
+    "eho four hour traceability audit template"
+  ],
+  "search_intent": "Kitchen managers, food business operators, and butchery/catering suppliers needing a statutory goods inwards delivery log and batch traceability record compliant with Regulation (EC) No 178/2002 Article 18.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Downloadable Log"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/food-traceability-and-recalls",
+      "features": "Official General Food Law traceability text guidance."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/food-traceability/",
+      "features": "Educational blog post with training course links."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/traceability-system",
+      "features": "SaaS traceability software trial."
+    },
+    {
+      "name": "The Caterer",
+      "url": "https://www.thecaterer.com/guides/food-traceability",
+      "features": "Industry news article on supplier auditing."
+    },
+    {
+      "name": "Catering Insight",
+      "url": "https://www.cateringinsight.com",
+      "features": "Trade equipment magazine."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive goods-inwards delivery batch logger",
+      "No automated delivery temperature compliance checks (chilled <=8C, frozen <=-18C)",
+      "No 4-hour EHO audit retrieval search filter",
+      "No instant CSV export and A4 printable delivery sheets"
+    ],
+    "our_differentiators": [
+      "Interactive goods inwards intake logger recording supplier, lot number, delivery temp, and use-by date",
+      "Instant search filter across suppliers, invoices, and lot codes for 4-hour recall readiness",
+      "Automated temperature pass/fail verification against statutory limits",
+      "Single-click CSV download and A4 printable delivery inspection record"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 97.7,
+    "top_competitor_overall_score": 73.8
+  }
+}

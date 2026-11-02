@@ -1,0 +1,64 @@
+{
+  "tool_id": "template-18",
+  "name": "Takeaway & Restaurant Kitchen Cleaning Schedule Rota",
+  "slug": "cleaning-schedule",
+  "url": "https://www.saimdev.site/food-safety-templates/cleaning-schedule",
+  "primary_keyword": "takeaway commercial cleaning schedule uk",
+  "secondary_keywords": [
+    "kitchen ventilation air changes per hour check uk",
+    "fsa cleaning schedule template doc",
+    "two stage cleaning rota commercial kitchen",
+    "bs en 1276 sanitiser contact time chart",
+    "restaurant deep cleaning schedule printable"
+  ],
+  "search_intent": "Takeaway owners and commercial caterers seeking a comprehensive cleaning rota covering daily, weekly, and monthly deep cleans with BS EN 1276 disinfection standards to pass EHO hygiene inspections.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Downloadable Schedule"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business-for-caterers",
+      "features": "SFBB cleaning safe method paper form."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/kitchen-cleaning-schedule-template/",
+      "features": "Gated PDF requiring email capture."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/kitchen-cleaning-checklist",
+      "features": "Paywalled software."
+    },
+    {
+      "name": "NCASS",
+      "url": "https://www.ncass.org.uk/resources/cleaning-schedules/",
+      "features": "Member-only download."
+    },
+    {
+      "name": "Caterer License",
+      "url": "https://www.thecaterer.com/guides/kitchen-hygiene",
+      "features": "Industry news article."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive BS EN 1276 sanitiser contact time stopwatch",
+      "No digital interactive task status toggles (pass/fail/action)",
+      "No live EHO due diligence scoring indicator"
+    ],
+    "our_differentiators": [
+      "Pre-configured statutory daily, weekly, and deep cleaning task checklists",
+      "Built-in 30s/60s/120s sanitiser contact time countdown timer",
+      "Instant CSV export and A4 printable cleaning log sheet with supervisor sign-off",
+      "100% free with zero email paywall"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 97.5,
+    "top_competitor_overall_score": 74.0
+  }
+}

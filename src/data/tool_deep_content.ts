@@ -339,6 +339,45 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
     }
   },
 
+"cleaning-checklist-template": {
+    directAnswer:
+      "A commercial daily kitchen cleaning checklist provides catering teams with an itemised, station-by-station protocol for cleaning and two-stage disinfection. Using structured daily records ensures commercial food businesses meet the hygiene benchmarks required by local authority Environmental Health Officers (EHOs) and complies with retained Regulation (EC) No 852/2004.",
+    howTo: [
+      "Stage 1: Clean physical surfaces with hot water and detergent to strip grease, crumbs, and organic matter.",
+      "Stage 2: Disinfect all pre-cleaned food contact surfaces using a chemical sanitiser conforming to BS EN 1276 or BS EN 13697.",
+      "Strictly adhere to manufacturer chemical contact times (typically 30 to 60 seconds) before drying with single-use blue roll.",
+      "Clean extraction filters, cookline wheels, and behind fryers on scheduled weekly and monthly rotas.",
+      "Record daily supervisor sign-offs in your Safer Food, Better Business (SFBB) diary as statutory due diligence evidence."
+    ],
+    faqs: [
+      {
+        q: "What is the two-stage cleaning process in UK commercial catering?",
+        a: "The FSA two-stage cleaning method requires staff to first wash surfaces with detergent and hot water to remove surface grease and dirt, followed by applying a BS EN 1276 certified chemical sanitiser left for its stated contact time before wiping dry."
+      },
+      {
+        q: "Why do EHOs check daily kitchen cleaning checklists?",
+        a: "Environmental Health Officers review cleaning checklists as primary proof of active hygiene management and due diligence defence under Section 21 of the Food Safety Act 1990."
+      },
+      {
+        q: "How often must commercial extraction grease filters be cleaned?",
+        a: "Under TR19 industry fire and hygiene standards, commercial grease filters must be cleaned at least weekly for high-volume fryers and cooklines, and professionally ducted deep cleaned at least annually."
+      },
+      {
+        q: "Can reusable tea towels or bar wipes be used for cleaning prep tables?",
+        a: "No. Reusable cloth towels spread pathogenic cross-contamination between kitchen stations. Staff must use single-use disposable blue roll or colour-coded microfibre cloths laundered at >= 82°C."
+      },
+      {
+        q: "Who is responsible for signing off the daily kitchen cleaning checklist?",
+        a: "The designated head chef, shift supervisor, or kitchen manager must physically inspect stations at closing and sign off the cleaning sheet."
+      }
+    ],
+    relatedTools: ["restaurant-cleaning-checklist", "cleaning-schedule", "health-inspection-checklist"],
+    relatedBlog: {
+      title: "UK Food Hygiene Rating Scheme: Complete 5-Star Inspection Checklist",
+      slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
+    }
+  },
+
   "cleaning-schedule": {
     directAnswer:
       "A commercial kitchen cleaning schedule details what kitchen items must be cleaned, who is responsible, cleaning frequency, and exact chemical contact times. Operating a documented cleaning schedule ensures food prep areas comply with BS EN 1276 disinfection standards and satisfies council hygiene inspection requirements.",

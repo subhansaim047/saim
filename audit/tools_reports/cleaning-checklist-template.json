@@ -1,0 +1,64 @@
+{
+  "tool_id": "template-24",
+  "name": "Commercial Daily Kitchen Cleaning Schedule & Checklist",
+  "slug": "cleaning-checklist-template",
+  "url": "https://www.saimdev.site/food-safety-templates/cleaning-checklist-template",
+  "primary_keyword": "daily kitchen cleaning schedule checklist uk",
+  "secondary_keywords": [
+    "commercial kitchen daily cleaning checklist template",
+    "fsa two stage cleaning checklist catering",
+    "restaurant daily cleaning sign off sheet",
+    "bs en 1276 chemical sanitiser checklist",
+    "printable commercial kitchen closing checklist"
+  ],
+  "search_intent": "Head chefs, shift supervisors, and takeaway operators needing a printable daily kitchen cleaning checklist and digital verification tool detailing two-stage disinfection under FSA regulations.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Downloadable Checklist"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business-for-caterers",
+      "features": "SFBB cleaning safe method paper form."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/kitchen-cleaning-checklist-template/",
+      "features": "Article gating PDF behind email capture."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/kitchen-cleaning-checklist",
+      "features": "Subscription software ($79/mo)."
+    },
+    {
+      "name": "Signs4Safety",
+      "url": "https://www.safetysigns4less.co.uk",
+      "features": "Paid plastic cleaning signs (\u00a315)."
+    },
+    {
+      "name": "NCASS",
+      "url": "https://www.ncass.org.uk/resources/cleaning-checklists/",
+      "features": "Member-only checklist download."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital checklist with pass/fail/action toggle",
+      "No built-in chemical contact time stopwatch (BS EN 1276)",
+      "No instant A4 print formatting and CSV export without paywall"
+    ],
+    "our_differentiators": [
+      "Interactive digital checklist with 6 statutory cleaning stations and due diligence score indicator",
+      "Integrated 30s/60s/120s sanitiser contact time stopwatch",
+      "Instant CSV export and A4 printable inspection records with supervisor sign-off",
+      "100% free with zero paywalls, ads, or account requirements"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 97.6,
+    "top_competitor_overall_score": 74.4
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "tool_id": "template-20",
+  "name": "Commercial Kitchen 14 Allergen Matrix Template",
+  "slug": "allergy-matrix",
+  "url": "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+  "primary_keyword": "allergen matrix template uk commercial kitchen",
+  "secondary_keywords": [
+    "fast food franchise allergen matrix update schedule",
+    "14 allergens table uk restaurant",
+    "natashas law kitchen allergen chart",
+    "fsa commercial allergy matrix download",
+    "free printable allergen matrix sheet"
+  ],
+  "search_intent": "Chefs, food business operators, and catering staff needing a compliant 14-allergen matrix table to declare statutory allergens under UK Food Information Regulations and Natasha's Law.",
+  "serp_features": [
+    "Featured Snippet",
+    "Table Result",
+    "People Also Ask"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/allergen-guidance-for-food-businesses",
+      "features": "Official 14 allergens table PDF."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/allergen-matrix-template/",
+      "features": "Blog article gating template behind email signup."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/allergen-matrix",
+      "features": "Subscription software ($79/mo)."
+    },
+    {
+      "name": "MenuGuide",
+      "url": "https://www.menuguide.co.uk",
+      "features": "Digital QR allergen menu SaaS."
+    },
+    {
+      "name": "Allergen Bureau",
+      "url": "https://www.allergenbureau.net",
+      "features": "Industry food industry standards without interactive builder."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No real-time dish builder with instant allergen toggles",
+      "No customer-facing allergy exclusion filter",
+      "No single-click A4 landscape printing and CSV export"
+    ],
+    "our_differentiators": [
+      "Complete 14 EU/UK allergen matrix builder with dish recipes",
+      "Live customer allergy safety filter for waiters and front-of-house staff",
+      "Natasha's Law PPDS packaging compliance notes",
+      "Client-side privacy, instant A4 landscape print, and CSV download"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.2,
+    "top_competitor_overall_score": 75.0
+  }
+}

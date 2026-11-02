@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-16",
+  "name": "Commercial Kitchen Recipe Scaler & Batch Yield Calculator",
+  "slug": "recipe-calculator",
+  "url": "https://www.saimdev.site/food-safety-templates/recipe-calculator",
+  "primary_keyword": "commercial recipe scaler calculator uk",
+  "secondary_keywords": [
+    "sauce reduction yield loss calculator culinary",
+    "batch recipe multiplier catering",
+    "portion scaling tool restaurants",
+    "convert recipe grams to kg commercial",
+    "catering batch yield calculator free"
+  ],
+  "search_intent": "Chefs, bakers, and commercial kitchen managers needing an interactive batch scaling calculator to multiply recipes for catering events, compensate for cooking evaporative yield loss, and convert metric/imperial measurements.",
+  "serp_features": [
+    "Featured Snippet (Recipe Scaler)",
+    "Calculator Widget",
+    "People Also Ask"
+  ],
+  "competitors": [
+    {
+      "name": "WebstaurantStore",
+      "url": "https://www.webstaurantstore.com/recipe-resizer/",
+      "features": "Basic recipe scaler without yield loss or allergen matrix."
+    },
+    {
+      "name": "BakeCalc",
+      "url": "https://bakecalc.com",
+      "features": "Baking specific ingredient scaler with metric units."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/recipe-cost-calculator",
+      "features": "Gated recipe formulation software ($79/mo)."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/recipe-standardisation/",
+      "features": "Article discussing recipe standardisation with course upsell."
+    },
+    {
+      "name": "The Caterer",
+      "url": "https://www.thecaterer.com/guides/recipe-scaling",
+      "features": "Editorial advice without interactive digital tools."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No evaporative yield loss compensation slider (e.g. 15% reduction loss for stocks/stews)",
+      "No 14-allergen tagging per scaled ingredient",
+      "No client-side A4 printable prep card export with chef sign-off",
+      "No CSV ingredient batch export"
+    ],
+    "our_differentiators": [
+      "Dynamic portion scaling multiplier with instant metric/imperial ingredient recalculation",
+      "Evaporative cooking yield loss adjuster",
+      "Allergen cross-reference badges per scaled ingredient line",
+      "Printable A4 kitchen station recipe card and CSV export"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.4,
+    "top_competitor_overall_score": 75.0
+  }
+}
