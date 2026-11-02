@@ -1,0 +1,95 @@
+{
+  "rank": 86,
+  "tool_id": "template-33",
+  "name": "Food Expiration Dates Guidelines Chart",
+  "slug": "food-expiration-dates-guidelines-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/food-expiration-dates-guidelines-chart",
+  "primary_keyword": "food expiration dates guidelines chart",
+  "secondary_keywords": [
+    "use by vs best before food hygiene fsa",
+    "commercial food shelf life guidelines chart",
+    "restaurant date labelling system",
+    "food expiry date legal requirements uk",
+    "ambient chilled frozen food shelf life"
+  ],
+  "search_intent": "Catering staff, food handlers, and storekeepers wanting a clear, authoritative visual chart explaining the statutory difference between 'Use-By' (food safety law) and 'Best-Before' (quality benchmark), along with standard shelf-life durations across chilled, frozen, and ambient pantry foods.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Tables",
+    "Infographics"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "food.gov.uk",
+      "url": "https://www.food.gov.uk/safety-hygiene/best-before-and-use-by-dates",
+      "title": "Best Before & Use-By Dates Guidance | Food Standards Agency",
+      "strengths": "Official statutory UK definition.",
+      "weaknesses": "Short generic webpage, lacks structured kitchen wall poster layout and category shelf-life lookup."
+    },
+    {
+      "rank": 2,
+      "domain": "wrap.org.uk",
+      "url": "https://www.wrap.org.uk/resources/guide/labelling-guidance",
+      "title": "Date Labelling Guidance | WRAP UK",
+      "strengths": "Focuses on preventing unnecessary commercial food waste.",
+      "weaknesses": "Technical policy guide, no interactive browser tool or printable catering day-dot checklist."
+    },
+    {
+      "rank": 3,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/use-by-vs-best-before/",
+      "title": "Use-By vs Best Before Dates Explained | High Speed Training",
+      "strengths": "Clear educational tone.",
+      "weaknesses": "Static illustration promoting Level 2 courses, no printable catering wall chart."
+    },
+    {
+      "rank": 4,
+      "domain": "webstaurantstore.com",
+      "url": "https://www.webstaurantstore.com/article/30/food-storage-dating-chart.html",
+      "title": "Food Storage & Dating Chart | WebstaurantStore",
+      "strengths": "Good food category breakdown.",
+      "weaknesses": "US FDA regulations, Fahrenheit units, no UK legal framework (Regulation 1169/2014)."
+    },
+    {
+      "rank": 5,
+      "domain": "eatbydate.com",
+      "url": "https://www.eatbydate.com/",
+      "title": "How Long Does Food Last? | Eat By Date",
+      "strengths": "Extensive consumer food database.",
+      "weaknesses": "Ad-heavy consumer interface, lacks commercial catering HACCP context and audit trails."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Basic text descriptions or domestic expiration lookups.",
+    "what_they_lack": "An ungated, interactive digital storage tool integrating Use-By statutory liabilities, 5-tier walk-in chiller hierarchy, opened container labelling protocols, and instant A4 printing.",
+    "what_we_offer": "Interactive refrigeration hierarchy simulator with built-in search, statutory UK FIR criminal liability guidance, opened food shelf-life rules, and printable kitchen wall chart."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 86
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 83
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 90
+    }
+  }
+}

@@ -1158,23 +1158,23 @@
     ]
   },
   "food-expiration-dates-guidelines-chart": {
-    "title": "Free Food Expiration Dates Guidelines Template | Saim Dev",
-    "desc": "Free food expiration dates guidelines template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Food Expiration Dates Guidelines Chart | Saim Dev",
+    "desc": "Free food expiration dates guidelines chart for UK catering. Understand Use-By versus Best-Before dates, legal sale rules, and food waste reduction.",
     "howTo": [
-      "Download and print the Food Expiration Dates Guidelines for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Differentiate between statutory food safety Use-By dates and quality Best-Before dates.",
+      "Enforce strict zero-use policy for any foodstuffs past their printed Use-By date.",
+      "Inspect dry goods and ambient pantry products past Best-Before for sensory quality.",
+      "Apply day dots to opened commercial packaging specifying date opened and use-by limit."
     ]
   },
   "canned-food-expiration-dates-chart": {
-    "title": "Free Canned Food Expiration Dates Template | Saim Dev",
-    "desc": "Free UK canned food expiration dates template for restaurants, takeaways, and commercial kitchens. Keep clear daily records and support hygiene compliance.",
+    "title": "Free Canned Food Expiration Dates Chart | Saim Dev",
+    "desc": "Free canned food expiration dates chart. Inspect dented, rusted, or swollen cans, manage commercial ambient pantry storage, and prevent botulism risks.",
     "howTo": [
-      "Download and print the Canned Food Expiration Dates for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Inspect canned deliveries for sharp rim dents, seam fractures, swelling, or rusting.",
+      "Store commercial canned goods in a cool, dry, well-ventilated storeroom below 21°C.",
+      "Rotate stock using First-In, First-Out (FIFO) based on manufacturer Best-Before dates.",
+      "Decant opened canned foods immediately into food-grade plastic containers before chilling."
     ]
   },
   "hazard-analysis-template": {
@@ -1230,13 +1230,13 @@
     ]
   },
   "how-long-to-keep-leftovers-chart": {
-    "title": "Free How Long To Keep The Leftovers Template | Saim Dev",
-    "desc": "Free how long to keep the leftovers template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free Leftover Food Storage Time Chart | Saim Dev",
+    "desc": "Free commercial leftovers storage chart. Master UK 2-day chilling rules, rapid 90-minute cooling limits, and 75°C core reheating standards for catering.",
     "howTo": [
-      "Download and print the How Long To Keep The Leftovers for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Cool batch-cooked food to below 8°C within 90 minutes using shallow pans or blast chillers.",
+      "Transfer cooled leftovers into airtight, date-labelled food containers in the walk-in fridge.",
+      "Consume or safely discard refrigerated cooked leftovers within 48 hours (day of prep + 2).",
+      "Reheat leftovers only once, ensuring internal core temperature reaches at least 75°C."
     ]
   },
   "fat-tom-poster": {
@@ -1250,13 +1250,13 @@
     ]
   },
   "how-long-does-butter-last-poster": {
-    "title": "Free How Long Does Butter Last? Template | Saim Dev",
-    "desc": "Download this free how long does butter last? template for commercial catering and takeaway kitchens. Formatted for instant A4 printing and record keeping.",
+    "title": "Free How Long Does Butter Last Poster | Saim Dev",
+    "desc": "Free butter storage and shelf life poster for commercial kitchens. Master salted vs unsalted butter storage, ambient service limits, and rancidity tests.",
     "howTo": [
-      "Download and print the How Long Does Butter Last? for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Store unopened salted and unsalted butter in commercial refrigeration at 1°C to 5°C.",
+      "Keep service butter at ambient room temperature in covered crocks for up to 24 hours.",
+      "Protect butter blocks from light and pungent kitchen aromas using airtight greaseproof wraps.",
+      "Freeze surplus blocks at -18°C for up to 9 months, thawing slowly in the refrigerator."
     ]
   },
   "cutting-board-color-chart": {
@@ -1331,13 +1331,13 @@
     ]
   },
   "milk-pasteurization-temperature-time-chart": {
-    "title": "Free Milk Pasteurization Chart Template | Saim Dev",
-    "desc": "Access a free milk pasteurization chart template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "title": "Free Milk Pasteurization Temp & Time Chart | Saim Dev",
+    "desc": "Free milk pasteurization temperature-time chart. Master HTST (72°C for 15s), LTLT vat batching, and UHT standards for commercial dairy processing.",
     "howTo": [
-      "Download and print the Milk Pasteurization Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Select dairy thermal processing method: HTST continuous flow, LTLT vat batch, or UHT.",
+      "Heat raw milk to statutory parameters (e.g. 72°C held continuously for at least 15 seconds).",
+      "Chill pasteurised milk immediately to below 6°C to inhibit spore germination and spoilage.",
+      "Verify complete pathogen inactivation using standard alkaline phosphatase (ALP) enzyme tests."
     ]
   },
   "pork-temperature-chart": {

@@ -1,0 +1,95 @@
+{
+  "rank": 90,
+  "tool_id": "template-38",
+  "name": "Milk Pasteurization Temperature & Time Chart",
+  "slug": "milk-pasteurization-temperature-time-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/milk-pasteurization-temperature-time-chart",
+  "primary_keyword": "milk pasteurization temperature time chart",
+  "secondary_keywords": [
+    "htst milk pasteurisation time and temperature",
+    "ltlt vat batch pasteurization chart",
+    "uht milk processing temperature",
+    "alkaline phosphatase testing milk pasteurisation",
+    "dairy food safety pasteurization legal limits uk"
+  ],
+  "search_intent": "Dairy farmers, artisanal cheesemakers, commercial baristas, and food technology students needing statutory time-temperature pasteurisation combinations for bovine and caprine milk (HTST continuous, LTLT batch, UHT sterilization), thermal lethality curves for Coxiella burnetii, and alkaline phosphatase validation.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Tables",
+    "Scientific Literature"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "fda.gov",
+      "url": "https://www.fda.gov/media/114169/download",
+      "title": "Grade A Pasteurized Milk Ordinance (PMO) | FDA",
+      "strengths": "Definitive federal pasteurisation standards.",
+      "weaknesses": "400-page complex regulatory PDF, impossible to parse on mobile."
+    },
+    {
+      "rank": 2,
+      "domain": "food.gov.uk",
+      "url": "https://www.food.gov.uk/business-guidance/milk-and-dairy-hygiene",
+      "title": "Milk and Dairy Hygiene Guidance | Food Standards Agency",
+      "strengths": "Official statutory UK dairy standards.",
+      "weaknesses": "Legal text summary, lacks clear visual comparison of HTST vs LTLT vs UHT and ALP testing."
+    },
+    {
+      "rank": 3,
+      "domain": "dairyprocessinghandbook.tetrapak.com",
+      "url": "https://dairyprocessinghandbook.tetrapak.com/chapter/pasteurization",
+      "title": "Pasteurization of Milk | Dairy Processing Handbook",
+      "strengths": "Exceptional industrial engineering depth.",
+      "weaknesses": "Industrial engineering textbook format, lacks quick reference tools for catering or smallholders."
+    },
+    {
+      "rank": 4,
+      "domain": "fil-idf.org",
+      "url": "https://www.fil-idf.org/pasteurization-standards",
+      "title": "International Dairy Federation Pasteurization Standards | IDF",
+      "strengths": "Global scientific authority.",
+      "weaknesses": "Academic publications gated behind paywalls."
+    },
+    {
+      "rank": 5,
+      "domain": "sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/food-science/milk-pasteurization",
+      "title": "Milk Pasteurization Overview | ScienceDirect",
+      "strengths": "Peer-reviewed microbiological data.",
+      "weaknesses": "Academic journal paywall, lacks usable commercial chart format."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "400-page regulatory PDFs or paywalled academic literature.",
+    "what_they_lack": "An ungated, interactive browser chart comparing all 4 dairy processing profiles (LTLT, HTST, HHST, UHT), alkaline phosphatase (ALP) verification criteria, and printable wall chart.",
+    "what_we_offer": "Interactive dairy pasteurisation tool with time-temperature matrices, target zoonotic pathogen destruction profiles, ALP testing benchmarks, and one-click printable chart."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 88
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 83
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 92
+    }
+  }
+}

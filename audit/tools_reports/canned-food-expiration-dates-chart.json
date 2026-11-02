@@ -1,0 +1,95 @@
+{
+  "rank": 87,
+  "tool_id": "template-34",
+  "name": "Canned Food Expiration Dates & Safety Chart",
+  "slug": "canned-food-expiration-dates-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/canned-food-expiration-dates-chart",
+  "primary_keyword": "canned food expiration dates chart",
+  "secondary_keywords": [
+    "how long do canned foods last after expiration date",
+    "canned goods shelf life commercial kitchen",
+    "dented can food safety inspection rules",
+    "botulism canned food risks catering",
+    "acid vs low acid canned food storage"
+  ],
+  "search_intent": "Store managers, kitchen stock keepers, and caterers looking for an authoritative canned food shelf-life guide, shelf life of high-acid vs low-acid canned goods, can integrity inspection protocols (sharp dents, seam flaws, bulging, rusting), and botulism prevention.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Bullet Lists",
+    "Inspection Guides"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "fsis.usda.gov",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/shelf-stable-food-safety",
+      "title": "Shelf-Stable Food Safety & Canned Foods | USDA FSIS",
+      "strengths": "Definitive federal microbiology standards.",
+      "weaknesses": "Dense, text-only portal, lacks commercial kitchen inspection checklists."
+    },
+    {
+      "rank": 2,
+      "domain": "webstaurantstore.com",
+      "url": "https://www.webstaurantstore.com/article/522/dented-cans-food-safety.html",
+      "title": "Dented Cans Food Safety Guide | WebstaurantStore",
+      "strengths": "Clear photos of acceptable vs dangerous can dents.",
+      "weaknesses": "Commercial sales angle, lacks printable storeroom SOP poster."
+    },
+    {
+      "rank": 3,
+      "domain": "cancentral.com",
+      "url": "https://www.cancentral.com/food-cans/shelf-life",
+      "title": "Canned Food Shelf Life | Can Manufacturers Institute",
+      "strengths": "Packaging industry manufacturing data.",
+      "weaknesses": "Trade lobbying bias, glosses over botulism risks and acid corrosion realities."
+    },
+    {
+      "rank": 4,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/canned-food-safety/",
+      "title": "Canned Food Safety in Catering | High Speed Training",
+      "strengths": "Clear UK regulatory context.",
+      "weaknesses": "Informational blog, no interactive digital tools or downloadable inspection logs."
+    },
+    {
+      "rank": 5,
+      "domain": "thespruceeats.com",
+      "url": "https://www.thespruceeats.com/how-long-do-canned-goods-last-1388319",
+      "title": "How Long Do Canned Goods Really Last? | The Spruce Eats",
+      "strengths": "Consumer lifestyle recipe context.",
+      "weaknesses": "Consumer domestic tone, ad clutter, no commercial catering HACCP guidance."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Basic advice articles or industry lobbying pages.",
+    "what_they_lack": "An actionable commercial inspection tool distinguishing high-acid vs low-acid shelf lives, seam integrity checks, mandatory tin decanting rules, and printable A4 storeroom guidelines.",
+    "what_we_offer": "Complete canned goods food safety reference featuring the 4 critical defect indicators, ambient storeroom temperature rules, and one-click printable poster."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 85
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 84
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 89
+    }
+  }
+}

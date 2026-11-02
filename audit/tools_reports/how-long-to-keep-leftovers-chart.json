@@ -1,0 +1,95 @@
+{
+  "rank": 88,
+  "tool_id": "template-35",
+  "name": "How Long To Keep Leftovers Chart",
+  "slug": "how-long-to-keep-leftovers-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/how-long-to-keep-leftovers-chart",
+  "primary_keyword": "how long to keep leftovers chart commercial kitchen",
+  "secondary_keywords": [
+    "cooked food refrigeration shelf life rules",
+    "fsa 2 day leftover rule commercial catering",
+    "how long does cooked chicken last in fridge",
+    "cooling and reheating leftovers food safety",
+    "leftover storage times chart pdf"
+  ],
+  "search_intent": "Chefs, caterers, and food handlers seeking strict commercial kitchen limits on how long cooked batch dishes, soups, roasted meats, rice, and pasta can be safely kept in refrigeration, the 2-day rule (day of prep + 2), and statutory 75°C single-reheat protocols.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Tables",
+    "Video Guides"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "food.gov.uk",
+      "url": "https://www.food.gov.uk/safety-hygiene/chilling",
+      "title": "Chilling Food Correctly | Food Standards Agency",
+      "strengths": "Statutory UK authority on danger zone (8°C to 63°C).",
+      "weaknesses": "Broad summary, lacks dish-by-dish commercial holding durations and printable kitchen charts."
+    },
+    {
+      "rank": 2,
+      "domain": "bbcgoodfood.com",
+      "url": "https://www.bbcgoodfood.com/howto/guide/how-long-can-you-keep-leftovers",
+      "title": "How Long Can You Keep Leftovers? | BBC Good Food",
+      "strengths": "Popular consumer brand authority.",
+      "weaknesses": "Domestic consumer focus, lacks commercial catering 90-minute blast chilling mandate and EHO audit rules."
+    },
+    {
+      "rank": 3,
+      "domain": "healthline.com",
+      "url": "https://www.healthline.com/nutrition/how-long-do-leftovers-last",
+      "title": "How Long Do Leftovers Really Last? | Healthline",
+      "strengths": "Strong nutritional and medical references.",
+      "weaknesses": "General US consumer article, no commercial kitchen workflow or printable checklists."
+    },
+    {
+      "rank": 4,
+      "domain": "highspeedtraining.co.uk",
+      "url": "https://www.highspeedtraining.co.uk/hub/how-long-can-food-be-stored-in-the-fridge/",
+      "title": "Fridge Storage Times & Food Safety | High Speed Training",
+      "strengths": "UK food hygiene syllabus structure.",
+      "weaknesses": "Static article, lacks interactive tool functionality."
+    },
+    {
+      "rank": 5,
+      "domain": "foodkeeper.fsi.usda.gov",
+      "url": "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app",
+      "title": "FoodKeeper Storage Tool | FoodSafety.gov",
+      "strengths": "Comprehensive searchable food database.",
+      "weaknesses": "Clunky mobile interface, US Fahrenheit focus, no commercial catering workflow."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Domestic home tips or searchable lookup apps.",
+    "what_they_lack": "Commercial catering framework enforcing the 2-day rule, 90-minute cooling mandate, Bacillus cereus rice safety, single-reheat rules, and printable wall chart.",
+    "what_we_offer": "Interactive storage hierarchy tool with dish search, commercial blast-chilling protocols, statutory reheat limits (75°C core / 82°C Scotland), and instant A4 print layout."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 82
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 86
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 83
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 90
+    }
+  }
+}

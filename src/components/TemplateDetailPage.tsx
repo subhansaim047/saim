@@ -181,7 +181,11 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug.includes("walk-in-cooler") ||
     template.slug.includes("food-storage") ||
     template.slug.includes("storage-chart") ||
-    template.slug.includes("shelf-life");
+    template.slug.includes("shelf-life") ||
+    template.slug.includes("expiration") ||
+    template.slug.includes("canned") ||
+    template.slug.includes("leftover") ||
+    template.slug.includes("butter");
 
   const isFridgeRecordTool =
     template.slug === "fridge-temperature-record-sheet-pdf" ||
@@ -200,7 +204,8 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug.includes("food-temperatures-poster") ||
     template.slug === "danger-zone-for-food" ||
     template.slug.includes("danger-zone") ||
-    template.slug.includes("hot-holding");
+    template.slug.includes("hot-holding") ||
+    template.slug.includes("milk-pasteurization");
 
   const isMeatCookingTool =
     !isMasterFoodTempTool &&

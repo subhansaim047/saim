@@ -1,0 +1,95 @@
+{
+  "rank": 89,
+  "tool_id": "template-37",
+  "name": "How Long Does Butter Last Poster",
+  "slug": "how-long-does-butter-last-poster",
+  "url": "https://www.saimdev.site/food-safety-templates/how-long-does-butter-last-poster",
+  "primary_keyword": "how long does butter last commercial kitchen",
+  "secondary_keywords": [
+    "salted vs unsalted butter shelf life chart",
+    "can butter be kept at room temperature catering",
+    "butter refrigeration temperature limits",
+    "how long does frozen butter last",
+    "butter rancidity food safety"
+  ],
+  "search_intent": "Restaurant kitchen managers, bakers, and pastry chefs seeking authoritative shelf-life standards for salted vs unsalted butter at ambient room temperatures, commercial refrigeration (1°C–5°C), and deep freezing (-18°C), and food safety rules regarding ambient service crocks.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Tables",
+    "Recipe Guides"
+  ],
+  "competitors": [
+    {
+      "rank": 1,
+      "domain": "fsis.usda.gov",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/butter-storage",
+      "title": "Butter Storage & Food Safety | USDA FSIS",
+      "strengths": "Government authority.",
+      "weaknesses": "Extremely brief FAQ text, lacks culinary differentiation between salted and unsalted butter."
+    },
+    {
+      "rank": 2,
+      "domain": "webstaurantstore.com",
+      "url": "https://www.webstaurantstore.com/article/525/how-long-does-butter-last.html",
+      "title": "How Long Does Butter Last? | WebstaurantStore",
+      "strengths": "Foodservice equipment and supplies context.",
+      "weaknesses": "Promotes butter dishes and refrigeration units, lacks printable poster format."
+    },
+    {
+      "rank": 3,
+      "domain": "landolakes.com",
+      "url": "https://www.landolakes.com/expert-advice/how-long-does-butter-last/",
+      "title": "Butter Shelf Life & Storage Tips | Land O'Lakes",
+      "strengths": "Commercial dairy brand expertise.",
+      "weaknesses": "Consumer-focused promotional content, lacks UK catering compliance standards."
+    },
+    {
+      "rank": 4,
+      "domain": "thekitchn.com",
+      "url": "https://www.thekitchn.com/how-long-does-butter-last-261546",
+      "title": "How Long Butter Lasts in the Fridge & Freezer | The Kitchn",
+      "strengths": "Friendly culinary writing.",
+      "weaknesses": "Domestic kitchen focus, heavy advertisements, no commercial safety posters."
+    },
+    {
+      "rank": 5,
+      "domain": "ahdb.org.uk",
+      "url": "https://ahdb.org.uk/dairy-storage",
+      "title": "Dairy Storage & Quality Management | AHDB Dairy",
+      "strengths": "UK agricultural science authority.",
+      "weaknesses": "Farm-level technical report, not tailored to kitchen operations or front-of-house service."
+    }
+  ],
+  "gap_analysis": {
+    "what_they_have": "Basic domestic tips or equipment supply blogs.",
+    "what_they_lack": "An operational catering chart comparing salted vs unsalted water activity, ambient table crock limits, freezing guidelines for pastry kitchens, and printable wall poster.",
+    "what_we_offer": "Complete commercial butter safety guide with storage temperature matrices, rancidity prevention protocols, and instant A4 printable kitchen poster."
+  },
+  "quality_score_comparison": {
+    "features_score": {
+      "saim_dev": 98,
+      "best_competitor": 80
+    },
+    "content_depth_score": {
+      "saim_dev": 97,
+      "best_competitor": 84
+    },
+    "mobile_ux_score": {
+      "saim_dev": 99,
+      "best_competitor": 80
+    },
+    "speed_vitals_score": {
+      "saim_dev": 99,
+      "best_competitor": 85
+    },
+    "technical_seo_score": {
+      "saim_dev": 99,
+      "best_competitor": 82
+    },
+    "trust_eeat_score": {
+      "saim_dev": 97,
+      "best_competitor": 88
+    }
+  }
+}
