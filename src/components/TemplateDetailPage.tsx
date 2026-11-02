@@ -171,7 +171,9 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
   const isSafeFoodPrepTool =
     template.slug === "basic-food-preparation-rules" ||
     template.slug.includes("safe-food-prep") ||
-    template.slug.includes("food-preparation-rules");
+    template.slug.includes("food-preparation-rules") ||
+    template.slug.includes("five-food-safety") ||
+    template.slug === "five-food-safety-rules";
 
   const isFoodCoolingTool =
     template.slug === "food-cooling-poster" ||
@@ -213,6 +215,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug === "danger-zone-for-food" ||
     template.slug.includes("danger-zone") ||
     template.slug.includes("hot-holding") ||
+    template.slug.includes("reheating") ||
     template.slug.includes("milk-pasteurization") ||
     template.slug.includes("juice-pasteurization");
 
@@ -285,6 +288,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("sop") ||
       template.slug.includes("audit") ||
       template.slug.includes("thermometer") ||
+      template.slug.includes("sink") ||
       template.slug.includes("delivery") ||
       template.slug.includes("inspection") ||
       template.slug.includes("cleaning") ||

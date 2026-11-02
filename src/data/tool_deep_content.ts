@@ -5688,7 +5688,132 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist",
       slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
     }
-  }
+  },
+  "cold-food-storage-rules": {
+    directAnswer:
+      "Under Schedule 4 of the Food Safety and Hygiene (England) Regulations 2013, cold food storage in commercial kitchens must be maintained at or below 8.0°C, with FSA best practice operating strictly between 1.0°C and 5.0°C. Storing foods using the 5-tier vertical hierarchy prevents cross-contamination between raw meats and ready-to-eat items.",
+    howTo: [
+      "Maintain commercial refrigerator temperatures between 1.0°C and 5.0°C.",
+      "Position raw meat and poultry strictly below ready-to-eat foods.",
+      "Seal and date-mark all prepped ingredients with 48-hour day-dot labels.",
+      "Check and record internal temperatures twice daily in the digital log."
+    ],
+    faqs: [
+      {
+        q: "What is the legal maximum cold food storage temperature in the UK?",
+        a: "Under the Food Safety and Hygiene (England) Regulations 2013, the legal maximum temperature for high-risk chilled foods is 8.0°C."
+      },
+      {
+        q: "What is the FSA recommended operating temperature for commercial fridges?",
+        a: "The UK Food Standards Agency recommends maintaining commercial kitchen refrigerators between 1.0°C and 5.0°C to provide a safety buffer below the 8.0°C legal ceiling."
+      },
+      {
+        q: "How long can high-risk prepped food be stored in a commercial chiller?",
+        a: "Under SFBB guidelines, commercially prepared and opened high-risk foods should be consumed or discarded within 48 to 72 hours, labelled with a day-dot sticker."
+      },
+      {
+        q: "What is the 4-hour rule for cold food display in the UK?",
+        a: "Under Schedule 4, chilled food can be kept above 8.0°C for a single display period of up to 4 hours (e.g. buffet service). After 4 hours, it must be chilled or discarded."
+      },
+      {
+        q: "Can raw and ready-to-eat food be stored together in cold storage?",
+        a: "Never unsealed or without vertical segregation. Raw food must always be positioned on lower shelves beneath ready-to-eat foods to prevent cross-contamination drips."
+      }
+    ],
+    relatedTools: [
+      "fridge-organization-chart",
+      "walk-in-cooler-food-storage-chart",
+      "fridge-temperature-record-sheet-pdf"
+    ],
+    relatedBlog: {
+      title: "Commercial Kitchen Food Cooling & Temperature Guide",
+      slug: "commercial-kitchen-food-cooling-temperature-guide"
+    }
+  },
+  "food-receiving-procedure": {
+    directAnswer:
+      "A commercial food receiving procedure verifies that incoming food deliveries meet statutory safety criteria before acceptance. Operators must probe chilled items (5.0°C or below), verify frozen goods (-18.0°C), check vehicle cleanliness, confirm tamper seals and use-by dates, and reject any non-compliant stock under Regulation (EC) No 852/2004.",
+    howTo: [
+      "Inspect delivery vehicle cleanliness, pest evidence, and refrigeration unit.",
+      "Probe temperatures between packages without puncturing seals (chilled <=5°C, frozen <=-18°C).",
+      "Inspect use-by dates, packaging seals, batch codes, and allergen declarations.",
+      "Record delivery details, supplier name, temperatures, and sign off in the intake log.",
+      "Immediately quarantine and reject any damaged, warm, or unlabelled stock."
+    ],
+    faqs: [
+      {
+        q: "What temperature should chilled food be upon delivery in the UK?",
+        a: "Chilled food must be delivered at 8.0°C or below by law, with best practice intake temperature being 5.0°C or colder (or 3.0°C for fresh red meat)."
+      },
+      {
+        q: "What is the mandatory temperature for deep-frozen deliveries?",
+        a: "Deep-frozen products must be delivered at -18.0°C or colder with no signs of thawing, softening, or ice crystal refreezing."
+      },
+      {
+        q: "How should staff measure delivery temperature without damaging packaging?",
+        a: "Place a calibrated digital probe flat between two vacuum-sealed packs or folded packaging edges, holding firmly for 10 seconds without piercing the plastic."
+      },
+      {
+        q: "When must a commercial food delivery be rejected?",
+        a: "Deliveries must be rejected if temperatures exceed 8.0°C, packaging is punctured or bloated, products are past their use-by date, or the vehicle is unhygienic."
+      },
+      {
+        q: "How long must commercial food delivery logs be retained for due diligence?",
+        a: "Delivery inspection sheets should be retained for at least 12 months under Section 21 of the Food Safety Act 1990 to prove supplier traceability."
+      }
+    ],
+    relatedTools: [
+      "delivery-log",
+      "approved-supplier-list",
+      "ingredient-traceability"
+    ],
+    relatedBlog: {
+      title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    }
+  },
+  "three-sink-method": {
+    directAnswer:
+      "The three-sink method is the statutory commercial warewashing procedure for manual cleaning of pots, pans, and utensils. Sink 1 washes with detergent at 45.0°C, Sink 2 rinses with clean warm water, and Sink 3 sanitises using a BS EN 1276 chemical solution or 77.0°C hot water, followed by complete air drying.",
+    howTo: [
+      "Scrape and pre-rinse food residues and grease into waste disposal bins.",
+      "Sink 1 (Wash): Scrub items in hot water at 45.0°C with commercial detergent.",
+      "Sink 2 (Rinse): Dip in clean warm water to strip all soap surfactants.",
+      "Sink 3 (Sanitise): Submerge in BS EN 1276 disinfectant for 30-60s (or 77°C water for 30s).",
+      "Air Dry: Invert clean items on sanitised wire shelving; never towel dry."
+    ],
+    faqs: [
+      {
+        q: "What are the three steps in the commercial three-sink method?",
+        a: "The three sequential steps are Wash (hot soapy water at 45°C), Rinse (clean warm water), and Sanitise (BS EN 1276 chemical solution or 77°C hot water)."
+      },
+      {
+        q: "What water temperature is required for the wash sink in manual dishwashing?",
+        a: "The wash sink should maintain a minimum water temperature of 45.0°C (113°F) to effectively dissolve animal fats, greases, and food soils."
+      },
+      {
+        q: "How long must items be submerged in the sanitising sink?",
+        a: "Items must remain submerged for the chemical manufacturer contact time (typically 30 to 60 seconds for BS EN 1276 sanitisers) or 30 seconds if using 77°C hot water."
+      },
+      {
+        q: "Can kitchen staff dry washed utensils with clean tea towels?",
+        a: "No. Towel drying spreads bacteria across freshly sanitised equipment. All warewashed pots, pans, and cutlery must be left to air dry completely."
+      },
+      {
+        q: "How frequently must water in the three sinks be changed?",
+        a: "Sink water must be drained and replaced whenever it becomes greasy, dirty, soapy in the rinse sink, or drops below effective working temperatures."
+      }
+    ],
+    relatedTools: [
+      "food-sanitation-rules",
+      "kitchen-safety-poster",
+      "hand-washing-poster"
+    ],
+    relatedBlog: {
+      title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist",
+      slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
+    }
+  },
 };
 
 export const FALLBACK_DEEP_CONTENT: ToolDeepContent = {

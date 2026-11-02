@@ -198,21 +198,25 @@
     ]
   },
   "reheating-food-temperature-guide": {
-    "title": "Free Reheating Food Temperature Guide | Saim Dev",
-    "desc": "Learn safe reheating rules for UK catering kitchens. Ensure hot core temperatures reach 75°C to destroy pathogens and pass local authority audits.",
+    "title": "Free Reheating Food Temp Guide UK | Saim Dev",
+    "desc": "UK food reheating temperature guide for caterers. Ensure hot core temperatures reach 75°C for 30s (or 82°C in Scotland) to destroy foodborne pathogens.",
     "howTo": [
-      "Reheat pre-cooked foods rapidly until core temperature reaches at least 75°C.",
-      "Stir soups, gravies, and stews during reheating to distribute heat evenly.",
-      "Never reheat food more than once; discard leftovers that are not consumed."
+      "Reheat food rapidly to at least 75.0°C core (82.0°C in Scotland)",
+      "Stir liquids and gravies midway to eliminate internal cold spots",
+      "Probe core temperature with a sanitised digital food thermometer",
+      "Serve immediately or transfer directly to 63.0°C hot holding",
+      "Never reheat food items more than once; safely discard leftovers"
     ]
   },
   "five-food-safety-rules": {
     "title": "Free 5 Key Food Safety Rules Poster | Saim Dev",
     "desc": "World Health Organisation 5 keys to safer food reference poster for staff training. Covers cleanliness, separation, cooking, temperature, and safe water.",
     "howTo": [
-      "Display prominently in staff breakrooms and near food preparation stations.",
-      "Use as a visual teaching aid during new employee hygiene onboarding sessions.",
-      "Reinforce daily standards for temperature control, cleaning, and sanitising."
+      "Keep kitchen surfaces, equipment, and hands thoroughly clean",
+      "Separate raw meat and poultry from cooked and ready-to-eat foods",
+      "Cook food thoroughly to 75.0°C core for 30 seconds",
+      "Keep food at safe temperatures below 5.0°C or above 63.0°C",
+      "Use safe drinking water and raw ingredients from approved sources"
     ]
   },
   "chopping-board-colour-chart": {
@@ -981,13 +985,13 @@
     ]
   },
   "cold-food-storage-rules": {
-    "title": "Free Cold Food Storage Rules Template | Saim Dev",
-    "desc": "Download our free cold food storage rules template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Cold Food Storage Rules Guide | Saim Dev",
+    "desc": "UK commercial cold food storage rules guide. Master 8°C statutory limits, 0-5°C refrigeration best practice, 5-tier raw food separation, and EHO logs.",
     "howTo": [
-      "Download and print the Cold Food Storage Rules for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Maintain chilled food at or below 5.0°C (statutory legal maximum 8.0°C)",
+      "Enforce 5-tier raw food vertical separation to prevent cross-contamination",
+      "Apply day-dot labels with preparation dates and strict 48-hour shelf life",
+      "Record chiller probe temperatures twice daily in the digital HACCP log"
     ]
   },
   "receiving-log": {
@@ -1002,13 +1006,13 @@
     ]
   },
   "food-receiving-procedure": {
-    "title": "Free Food Receiving Procedure Template | Saim Dev",
-    "desc": "Download our free food receiving procedure template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Food Receiving Procedure SOP | Saim Dev",
+    "desc": "Commercial kitchen food receiving procedure SOP. Check intake temperatures, vehicle hygiene, use-by dates, tamper seals, and delivery rejection rules.",
     "howTo": [
-      "Download and print the Food Receiving Procedure for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Inspect delivery vehicle cleanliness and refrigeration unit temperature",
+      "Probe chilled food packages between folds ensuring readings are 5.0°C or below",
+      "Check product use-by dates, packaging integrity, and allergen labelling",
+      "Reject out-of-temperature or damaged goods and record in delivery log"
     ]
   },
   "deep-cleaning-checklist": {
@@ -1225,13 +1229,14 @@
     ]
   },
   "three-sink-method": {
-    "title": "Free Three Sink Method Poster Template | Saim Dev",
-    "desc": "Download our free three sink method poster template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Three Sink Method Kitchen SOP | Saim Dev",
+    "desc": "Commercial kitchen three-sink method SOP poster. Follow Wash (45°C), Rinse (clean warm), and Sanitise (BS EN 1276 chemical or 77°C hot water) steps.",
     "howTo": [
-      "Download and print the Three Sink Method Poster for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Scrape physical food residues into waste bin before washing",
+      "Sink 1: Wash in hot water at 45°C with food-grade detergent",
+      "Sink 2: Rinse thoroughly in clean warm water to strip soap",
+      "Sink 3: Sanitise in BS EN 1276 chemical solution or 77°C water",
+      "Air dry all utensils upside down on clean, sanitized wire racks"
     ]
   },
   "proper-method-for-cleaning-dirty-utensils": {

@@ -2551,6 +2551,8 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     templateTitle.toLowerCase().includes("meat slicer") ||
     templateTitle.toLowerCase().includes("slicer");
   const isUtensilCleaning =
+    templateTitle.toLowerCase().includes("sink") ||
+    (templateId && templateId.includes("three-sink")) ||
     templateTitle.toLowerCase().includes("dirty utensils") ||
     templateTitle.toLowerCase().includes("cleaning and sanitizing") ||
     (templateTitle.toLowerCase().includes("utensil") && templateTitle.toLowerCase().includes("cleaning"));
