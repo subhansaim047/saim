@@ -1,0 +1,64 @@
+{
+  "tool_id": "template-30",
+  "name": "HACCP Risk Assessment & Critical Control Point Matrix",
+  "slug": "haccp-risk-assessment",
+  "url": "https://www.saimdev.site/food-safety-templates/haccp-risk-assessment",
+  "primary_keyword": "define critical control point with haccp matrix uk",
+  "secondary_keywords": [
+    "haccp risk assessment matrix commercial kitchen",
+    "codex alimentarius ccp decision tree catering",
+    "hazard analysis critical limit table uk",
+    "allergen and biological hazard risk evaluation",
+    "printable haccp risk assessment form"
+  ],
+  "search_intent": "Food business owners, compliance managers, and head chefs seeking a systematic HACCP risk assessment matrix to evaluate hazards and define Critical Control Points using the Codex decision tree.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Matrix Table SERP"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/general-food-law",
+      "features": "Retained EU regulation guidance."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/haccp-decision-tree/",
+      "features": "Article with decision tree graphic and course pitch."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/haccp-plan",
+      "features": "Gated automated HACCP software ($79/mo)."
+    },
+    {
+      "name": "Catering Insight",
+      "url": "https://www.cateringinsight.com",
+      "features": "Industry news and editorial articles."
+    },
+    {
+      "name": "Campden BRI",
+      "url": "https://www.campdenbri.co.uk",
+      "features": "Scientific consultancy fee-based services."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive CCP hazard matrix with severity and likelihood scoring",
+      "No customizable critical limit presets for UK commercial catering",
+      "No instant A4 print formatting and CSV export"
+    ],
+    "our_differentiators": [
+      "Interactive 7-principle HACCP builder with dedicated CCP matrix",
+      "Pre-configured critical limits (75\u00b0C cooking, <8\u00b0C chilling, 63\u00b0C hot-holding)",
+      "Natasha's Law allergen cross-contact risk assessment integration",
+      "Printable A4 landscape compliance documentation and CSV export"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.1,
+    "top_competitor_overall_score": 75.6
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "tool_id": "template-32",
+  "name": "Restaurant Deep Cleaning Checklist & Sanitation Rota",
+  "slug": "restaurant-deep-cleaning-checklist",
+  "url": "https://www.saimdev.site/food-safety-templates/restaurant-deep-cleaning-checklist",
+  "primary_keyword": "restaurant deep cleaning checklist uk",
+  "secondary_keywords": [
+    "commercial kitchen deep cleaning rota",
+    "fsa commercial restaurant deep clean template",
+    "tr19 grease extraction canopy cleaning checklist",
+    "heavy duty kitchen equipment cleaning sign off",
+    "free printable restaurant deep clean checklist"
+  ],
+  "search_intent": "Kitchen directors and catering cleaning teams needing a structured, heavy-duty deep cleaning checklist for periodic deep cleans of extractors, fryers, refrigeration coils, and drainage channels.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Downloadable Checklist"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business-for-caterers",
+      "features": "SFBB cleaning safe method paper form."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/kitchen-deep-cleaning-checklist/",
+      "features": "Blog article with email gated PDF download."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/kitchen-deep-cleaning",
+      "features": "Gated SaaS compliance software."
+    },
+    {
+      "name": "Signs4Safety",
+      "url": "https://www.safetysigns4less.co.uk",
+      "features": "Commercial plastic signs for purchase (\u00a315-\u00a325)."
+    },
+    {
+      "name": "NCASS",
+      "url": "https://www.ncass.org.uk/resources/deep-cleaning/",
+      "features": "Member-only checklist download."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital checklist with pass/fail/action status",
+      "No chemical contact time stopwatch (BS EN 1276)",
+      "No instant A4 print formatting and CSV export without paywall"
+    ],
+    "our_differentiators": [
+      "Comprehensive deep cleaning tasks covering heavy equipment, canopies, and compressors",
+      "Integrated 30s/60s/120s chemical contact time stopwatch",
+      "Instant CSV export and A4 printable inspection records with supervisor sign-off",
+      "100% free with zero paywalls, ads, or account requirements"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 97.6,
+    "top_competitor_overall_score": 74.4
+  }
+}

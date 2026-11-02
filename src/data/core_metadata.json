@@ -390,13 +390,13 @@
     ]
   },
   "cleaning-restaurant": {
-    "title": "Free Full Restaurant Deep Cleaning Plan Template | Saim Dev",
-    "desc": "Free full restaurant deep cleaning plan template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Restaurant Deep Cleaning Plan | Saim Dev",
+    "desc": "Download a free full restaurant deep cleaning plan template for UK catering kitchens. Schedule canopy, fryer, and floor sanitisation for EHO audits.",
     "howTo": [
-      "Download and print the Full Restaurant Deep Cleaning Plan for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Divide the restaurant into primary deep-cleaning zones: cookline, wash-up, refrigeration, and dining room.",
+      "Assign specific frequencies: weekly filter degreasing, monthly equipment pull-outs, quarterly duct deep cleans.",
+      "Use certified BS EN 1276 chemical degreasers and disinfectants with correct dwell times.",
+      "Record duty manager verification and employee signatures in the kitchen compliance log."
     ]
   },
   "pest-control-inspection-checklist": {
@@ -571,13 +571,13 @@
     ]
   },
   "ham-cooking-temperature-chart": {
-    "title": "Free Ham Cooking Temperature Chart Template | Saim Dev",
-    "desc": "Free ham cooking temperature chart template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free Ham Cooking Temperature Chart | Saim Dev",
+    "desc": "Free ham cooking temperature chart for UK commercial kitchens. Calculate gammon roasting times and verify 75\u00b0C core temperatures for safe catering.",
     "howTo": [
-      "Download and print the Ham Cooking Temperature Chart for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Select the ham or gammon cut: bone-in joint, boneless rolled roast, or carvery glazed ham.",
+      "Weigh the raw meat joint and calculate roasting duration based on oven temperature and weight.",
+      "Insert a sanitised digital probe thermometer into the thickest part of the meat away from the bone.",
+      "Verify the internal core reaches at least 75\u00b0C for 30 seconds (82\u00b0C in Scotland) before resting."
     ]
   },
   "when-should-you-wash-your-hands": {
@@ -721,13 +721,13 @@
     ]
   },
   "haccp-audit": {
-    "title": "Free HACCP Audit Checklist Template 1 | Saim Dev",
-    "desc": "Download our free haccp audit checklist template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Commercial HACCP Audit Checklist | Saim Dev",
+    "desc": "Download a free commercial HACCP audit checklist template for UK food businesses. Inspect Critical Control Points and verify records for EHO inspections.",
     "howTo": [
-      "Download and print the HACCP Audit Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Review each operational stage from goods receiving through storage, prep, cooking, and hot holding.",
+      "Check that calibrated probe thermometer logs are complete with zero missing shift records.",
+      "Verify that corrective action procedures are documented for any temperature excursions.",
+      "Archive completed audit sheets in your Safer Food, Better Business (SFBB) management folder."
     ]
   },
   "danger-zone-for-food": {
@@ -781,13 +781,13 @@
     ]
   },
   "haccp-risk-assessment": {
-    "title": "Free Define Critical Control Point With HACCP | Saim Dev",
-    "desc": "Free define critical control point with haccp matrix template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "title": "Free HACCP Risk Assessment & CCP Matrix | Saim Dev",
+    "desc": "Free HACCP risk assessment matrix template for UK catering kitchens. Evaluate biological, chemical, and physical hazards to define Critical Control Points.",
     "howTo": [
-      "Download and print the Define Critical Control Point With HACCP Matrix for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "List all process steps from supplier intake and raw butchery to chilling, reheating, and service.",
+      "Identify specific microbiological, physical, chemical, and allergenic hazards at each step.",
+      "Apply the Codex Alimentarius decision tree to determine whether the hazard is a true Critical Control Point.",
+      "Establish measurable critical limits (e.g. core temp >= 75\u00b0C for 30 seconds) and corrective action logs."
     ]
   },
   "proper-food-storage-chart": {
@@ -981,13 +981,13 @@
     ]
   },
   "restaurant-deep-cleaning-checklist": {
-    "title": "Free Restaurant Deep Cleaning Template | Saim Dev",
-    "desc": "Download our free restaurant deep cleaning template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Restaurant Deep Cleaning Checklist | Saim Dev",
+    "desc": "Download our free restaurant deep cleaning checklist for UK commercial kitchens. Organise weekly and monthly deep clean rotas for EHO hygiene compliance.",
     "howTo": [
-      "Download and print the Restaurant Deep Cleaning for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Schedule heavy-duty deep cleans during closed kitchen hours to prevent chemical overspray.",
+      "Pull out mobile cookline ranges and combi ovens to deep clean and degrease floor drainage channels.",
+      "Dismantle and soak commercial fryer baskets, extraction baffle filters, and mixer attachments.",
+      "Have the shift supervisor inspect all items with a torch and sign off completed tasks."
     ]
   },
   "vacuum-sealed-food-shelf-life-chart": {

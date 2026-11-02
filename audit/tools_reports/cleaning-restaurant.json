@@ -1,0 +1,64 @@
+{
+  "tool_id": "template-26",
+  "name": "Full Restaurant Deep Cleaning Plan Template",
+  "slug": "cleaning-restaurant",
+  "url": "https://www.saimdev.site/food-safety-templates/cleaning-restaurant",
+  "primary_keyword": "full restaurant deep cleaning plan uk",
+  "secondary_keywords": [
+    "commercial kitchen deep clean rota",
+    "restaurant extract canopy deep cleaning schedule",
+    "tr19 kitchen ductwork cleaning checklist",
+    "bs en 1276 restaurant sanitisation plan",
+    "printable restaurant deep clean template"
+  ],
+  "search_intent": "Restaurant general managers and executive chefs looking for a complete commercial deep cleaning rota covering monthly, quarterly, and TR19 extraction maintenance to satisfy environmental health and building insurance requirements.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Downloadable Plan"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business-for-caterers",
+      "features": "SFBB cleaning safe method paper sheets."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/kitchen-cleaning-schedule-template/",
+      "features": "Gated cleaning plan PDF behind newsletter signup."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/restaurant-cleaning-checklist",
+      "features": "Subscription software ($79/mo)."
+    },
+    {
+      "name": "Nationwide Ventilation",
+      "url": "https://www.nationwideventilation.co.uk",
+      "features": "Duct cleaning commercial sales page."
+    },
+    {
+      "name": "The Caterer",
+      "url": "https://www.thecaterer.com/guides/kitchen-hygiene",
+      "features": "Editorial article without downloadable template."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital checklist with pass/fail/action toggle",
+      "No chemical contact time stopwatch (BS EN 1276)",
+      "No instant A4 print formatting with supervisor verification"
+    ],
+    "our_differentiators": [
+      "Multi-zone deep clean checklists (cookline, refrigeration coils, grease traps, extraction canopies)",
+      "Built-in 30s/60s/120s sanitiser contact time stopwatch",
+      "Instant CSV export and A4 printable deep cleaning log sheet",
+      "100% free with zero paywalls"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 97.5,
+    "top_competitor_overall_score": 74.2
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "tool_id": "template-28",
+  "name": "Commercial Kitchen HACCP Audit Checklist",
+  "slug": "haccp-audit",
+  "url": "https://www.saimdev.site/food-safety-templates/haccp-audit",
+  "primary_keyword": "haccp audit checklist uk commercial kitchen",
+  "secondary_keywords": [
+    "commercial food safety haccp audit sheet",
+    "internal haccp verification checklist catering",
+    "regulation ec 852 2004 article 5 audit",
+    "critical control point verification checklist",
+    "printable haccp audit form free"
+  ],
+  "search_intent": "Quality assurance leads, head chefs, and catering operators needing an official internal HACCP audit checklist to verify CCP logs, calibration records, and corrective actions ahead of local authority EHO inspections.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Downloadable Checklist"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/hazard-analysis-and-critical-control-point-haccp",
+      "features": "Official HACCP principle guidance text."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/haccp-principles-explained/",
+      "features": "Educational article with \u00a335 training course upsell."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/haccp-audit-checklist",
+      "features": "Paywalled software trial ($79/mo)."
+    },
+    {
+      "name": "NCASS",
+      "url": "https://www.ncass.org.uk/resources/haccp-systems/",
+      "features": "Member-only HACCP resources (\u00a3180/yr)."
+    },
+    {
+      "name": "Safe Food Pro",
+      "url": "https://safefoodpro.com",
+      "features": "Commercial audit app trial."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive 7-principle HACCP builder with live CCP table",
+      "No internal audit scoring drill",
+      "No instant A4 landscape printable plan without login"
+    ],
+    "our_differentiators": [
+      "Complete 7-principle HACCP builder with customisable CCP thresholds",
+      "Interactive hazard analysis matrix covering biological, chemical, physical, and allergenic risks",
+      "A4 landscape print layout with supervisor sign-off block",
+      "Client-side CSV export with zero account creation required"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 98.0,
+    "top_competitor_overall_score": 75.4
+  }
+}
