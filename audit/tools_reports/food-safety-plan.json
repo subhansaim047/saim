@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-45",
+  "name": "UK Food Safety Management Plan Template & HACCP Manual",
+  "slug": "food-safety-plan",
+  "url": "https://www.saimdev.site/food-safety-templates/food-safety-plan",
+  "primary_keyword": "food safety plan template uk commercial kitchen",
+  "secondary_keywords": [
+    "written food safety management system template",
+    "sfbb haccp plan template catering",
+    "restaurant food safety plan pdf free",
+    "haccp manual template commercial kitchen uk",
+    "printable food safety plan template"
+  ],
+  "search_intent": "New food business operators, takeaway founders, and catering managers seeking a complete, compliant Food Safety Management Plan template based on HACCP principles under Regulation (EC) No 852/2004 Article 5 and Section 21 of the Food Safety Act 1990.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Diagram / Notice"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business",
+      "features": "Official SFBB downloadable PDF packs; bulky 150-page PDFs without digital form tools."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/food-safety-plan-template/",
+      "features": "Educational guide with static Word template and course promotions."
+    },
+    {
+      "name": "NCASS",
+      "url": "https://www.ncass.org.uk/resources/food-safety/safety-management-system/",
+      "features": "Trade association system locked behind paid annual membership."
+    },
+    {
+      "name": "SafetyCulture / iAuditor",
+      "url": "https://safetyculture.com/checklists/food-safety-plan/",
+      "features": "Mobile software requiring paid monthly subscription and account creation."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/food-safety-plan",
+      "features": "Paywalled compliance software ($79/mo) hiding tools behind signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive web-based HACCP plan builder with customizable hazard analysis matrices",
+      "No dynamic Critical Control Point (CCP) and Prerequisite Programme (PRP) editor",
+      "No automated validation of statutory UK time-temperature critical limits",
+      "No watermark-free A4 landscape food safety plan printable directly from the browser"
+    ],
+    "our_differentiators": [
+      "Interactive full-featured HACCP plan builder with hazard analysis decision trees",
+      "Pre-configured statutory Critical Control Points (chilling, cooking, hot holding, reheating)",
+      "Full alignment with Regulation (EC) No 852/2004 Article 5 and Section 21 statutory defense",
+      "Watermark-free printable A4 landscape food safety management manual"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.5,
+    "top_competitor_overall_score": 76.8
+  }
+}

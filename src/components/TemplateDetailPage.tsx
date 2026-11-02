@@ -41,6 +41,8 @@ import { FoodTraceabilityLogTool } from "./tools/FoodTraceabilityLogTool";
 import { HamCookingTemperatureTool } from "./tools/HamCookingTemperatureTool";
 import { MeatCookingTemperatureChartTool, MeatCategory } from "./tools/MeatCookingTemperatureChartTool";
 import { MasterFoodTemperatureChartTool } from "./tools/MasterFoodTemperatureChartTool";
+import { ConsumerAdvisoryNoticeTool } from "./tools/ConsumerAdvisoryNoticeTool";
+import { FoodFlowChartTool } from "./tools/FoodFlowChartTool";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
@@ -120,12 +122,20 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.title.toLowerCase().includes("cost") ||
       template.title.toLowerCase().includes("margin"));
 
+  const isFoodFlowChartTool =
+    template.slug === "food-flow-chart" ||
+    template.slug.includes("food-flow");
+
+  const isConsumerAdvisoryTool =
+    template.slug === "consumer-advisory" ||
+    template.slug.includes("consumer-advisory");
+
   const isHaccpTool =
-    template.slug.includes("haccp") ||
-    template.slug.includes("flow-chart") ||
-    template.slug.includes("hazard-analysis") ||
-    template.slug.includes("food-safety-plan") ||
-    template.slug.includes("critical-control-point");
+    !isFoodFlowChartTool &&
+    (template.slug.includes("haccp") ||
+      template.slug.includes("hazard-analysis") ||
+      template.slug.includes("food-safety-plan") ||
+      template.slug.includes("critical-control-point"));
 
   const isQuizTool =
     template.slug.includes("quiz") ||
@@ -523,6 +533,16 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <MasterFoodTemperatureChartTool templateId={template.id} />
         )}
 
+        {/* 4l. Consumer Advisory Notice & Signage Tool */}
+        {isConsumerAdvisoryTool && (
+          <ConsumerAdvisoryNoticeTool templateId={template.id} />
+        )}
+
+        {/* 4m. Commercial Kitchen HACCP Food Flow Chart Process Map */}
+        {isFoodFlowChartTool && (
+          <FoodFlowChartTool templateId={template.id} />
+        )}
+
         {/* 5. 14 Food Allergen Matrix & Kitchen Chart Tool */}
         {isAllergenTool && (
           <AllergenMatrixTool templateId={template.id} />
@@ -534,7 +554,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         )}
 
         {/* 7. Standard Poster / Reference Chart View (Fully Printable & Editable) */}
-        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && !isFoodCoolingTool && !isWalkInStorageTool && !isFridgeRecordTool && !isTraceabilityTool && !isHamCookingTool && !isMeatCookingTool && !isMasterFoodTempTool && (
+        {!isRecipeTool && !isCostTool && !isHaccpTool && !isQuizTool && !isAllergenTool && !isChecklistOrLog && !isFreezerTool && !isHandWashingTool && !isChoppingBoardTool && !isSafeFoodPrepTool && !isFoodCoolingTool && !isWalkInStorageTool && !isFridgeRecordTool && !isTraceabilityTool && !isHamCookingTool && !isMeatCookingTool && !isMasterFoodTempTool && !isConsumerAdvisoryTool && !isFoodFlowChartTool && (
           <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 space-y-6 printable-doc shadow-sm">
             {/* Printable & Editable Sign-Off Header */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-2xl bg-amber-50/50 border border-amber-200/60 text-xs">

@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-43",
+  "name": "Commercial Kitchen Waste Management Schedule & Disposal Rota",
+  "slug": "waste-management-schedule",
+  "url": "https://www.saimdev.site/food-safety-templates/waste-management-schedule",
+  "primary_keyword": "kitchen waste management schedule commercial uk",
+  "secondary_keywords": [
+    "restaurant waste disposal log template",
+    "category 3 abp waste storage catering",
+    "used cooking oil collection schedule",
+    "commercial kitchen duty of care waste record",
+    "printable waste management schedule pdf"
+  ],
+  "search_intent": "Executive chefs, restaurant operations managers, and catering supervisors needing a comprehensive commercial waste management schedule covering food waste segregation, used cooking oil (UCO) recycling, Category 3 ABP compliance, and Duty of Care transfer notes under the Environmental Protection Act 1990.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Diagram / Notice"
+  ],
+  "competitors": [
+    {
+      "name": "WRAP UK",
+      "url": "https://wrap.org.uk/resources/guide/waste-management-hospitality",
+      "features": "Sustainability research and hospitality guidance; broad text without operational kitchen checklists."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/kitchen-waste-management/",
+      "features": "Educational article explaining waste regulations with training course sales."
+    },
+    {
+      "name": "Biffa / Veolia UK",
+      "url": "https://www.biffa.co.uk/waste-services/food-waste",
+      "features": "Commercial waste contractor landing page aimed at enterprise contracts."
+    },
+    {
+      "name": "SafetyCulture / iAuditor",
+      "url": "https://safetyculture.com/checklists/waste-management/",
+      "features": "Mobile software app requiring paid monthly subscription and account signup."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/waste-management-log",
+      "features": "Subscription compliance platform ($79/mo) hiding tools behind paywall."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital checklist with pass/fail status tracking across 7 statutory waste areas",
+      "No specific operational protocols for Category 3 Animal By-Product (ABP) segregation",
+      "No integrated Duty of Care Waste Transfer Note (WTN) compliance verification check",
+      "No free printable high-contrast A4 waste yard inspection sheet with supervisor sign-off"
+    ],
+    "our_differentiators": [
+      "Interactive digital waste management checklist with pre-loaded UK statutory criteria",
+      "Strict alignment with Environmental Protection Act 1990 and ABP Regulations 2013",
+      "Integrated chemical contact timer and temperature probe checks for grease interceptors",
+      "Printable A4 compliance rota with lead chef and contractor signature blocks"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.0,
+    "top_competitor_overall_score": 75.0
+  }
+}

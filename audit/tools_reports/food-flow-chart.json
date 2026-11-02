@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-44",
+  "name": "Commercial Kitchen HACCP Food Flow Chart & Process Map",
+  "slug": "food-flow-chart",
+  "url": "https://www.saimdev.site/food-safety-templates/food-flow-chart",
+  "primary_keyword": "haccp food flow chart commercial kitchen uk",
+  "secondary_keywords": [
+    "catering process flow diagram haccp",
+    "food flow process map sfbb",
+    "ccp food flow chart restaurant",
+    "commercial kitchen hazard analysis process steps",
+    "printable food flow chart a4 landscape"
+  ],
+  "search_intent": "HACCP team leaders, food safety consultants, and executive chefs looking for an authoritative 10-stage commercial catering food flow process diagram mapping Critical Control Points (CCPs), critical limits, monitoring methods, and corrective actions under Regulation (EC) No 852/2004 Article 5.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Diagram / Notice"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/hazard-analysis-critical-control-point-haccp",
+      "features": "General HACCP guidance; text explanations without interactive visual process diagrams."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/haccp-process-flow-diagram/",
+      "features": "Informative guide on flow diagram creation; static PDF with course promotion."
+    },
+    {
+      "name": "Safe Food Pro",
+      "url": "https://safefoodpro.com/haccp-flow-chart",
+      "features": "Proprietary software platform without free web access."
+    },
+    {
+      "name": "CIEH",
+      "url": "https://www.cieh.org/policy/food-safety/haccp/",
+      "features": "Policy and professional training pages lacking ready-to-use digital templates."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/haccp-process-flow",
+      "features": "Subscription software ($79/mo) hiding tools behind signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive 10-stage food flow inspector with clickable process stages",
+      "No explicit Critical Control Point (CCP) vs Prerequisite Programme (PRP) tagging",
+      "No step-by-step statutory critical limits, monitoring frequencies, and corrective actions",
+      "No high-resolution A4 landscape process flow chart printable directly from the browser"
+    ],
+    "our_differentiators": [
+      "Interactive HACCP Process Flow tool with deep inspection across all 10 catering stages",
+      "Statutory CCP tagging (CCP 1 Delivery, CCP 2 Storage, CCP 3 Cooking, CCP 4 Holding, etc.)",
+      "Complete UK & Scotland regulatory compliance baselines for every process step",
+      "Printable A4 landscape master process flow diagram with supervisor authorization"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.4,
+    "top_competitor_overall_score": 76.2
+  }
+}

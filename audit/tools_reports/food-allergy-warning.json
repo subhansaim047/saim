@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-42",
+  "name": "Food Allergy Warning Sign Template & Front-of-House Notice",
+  "slug": "food-allergy-warning",
+  "url": "https://www.saimdev.site/food-safety-templates/food-allergy-warning",
+  "primary_keyword": "food allergy warning sign template uk",
+  "secondary_keywords": [
+    "restaurant allergen notice sign printable",
+    "natashas law customer allergy warning",
+    "14 food allergens counter notice catering",
+    "takeaway food allergy disclaimer poster",
+    "printable food allergy warning pdf"
+  ],
+  "search_intent": "Takeaway owners, coffee shop managers, and restaurant operators seeking an official, high-contrast customer allergy warning sign complying with Natasha's Law (FIR 2021) and Regulation (EU) No 1169/2011 to encourage diners to disclose dietary restrictions.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Diagram / Notice"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/allergen-guidance-for-food-businesses",
+      "features": "Official static allergy poster PDFs; text-only without customizable interactive tools."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/allergen-signage-rules/",
+      "features": "Educational guide and course marketing; static PDF download."
+    },
+    {
+      "name": "Allergy UK",
+      "url": "https://www.allergyuk.org/resources/catering-allergy-signs/",
+      "features": "Charity advice leaflets and resource links; non-customizable."
+    },
+    {
+      "name": "Safe Food Pro",
+      "url": "https://safefoodpro.com/allergen-signage",
+      "features": "Proprietary software platform requiring paid subscription ($50+/mo)."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/allergy-warning-sign",
+      "features": "Paywalled compliance tool ($79/mo) requiring account signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive 14-allergen customer filter linked directly to menu items",
+      "No dual-mode kitchen matrix and front-of-house warning poster tool",
+      "No custom establishment branding or manager sign-off integration",
+      "No free downloadable high-contrast A4 poster without watermarks"
+    ],
+    "our_differentiators": [
+      "Interactive allergen warning generator tied to statutory 14-allergen matrix engine",
+      "Full compliance with Natasha's Law (FIR 2021) and Regulation (EU) No 1169/2011",
+      "Clear customer call-to-action advising open communication before ordering",
+      "Print-ready A4 front-of-house poster with bold, accessible typography"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.3,
+    "top_competitor_overall_score": 75.5
+  }
+}
