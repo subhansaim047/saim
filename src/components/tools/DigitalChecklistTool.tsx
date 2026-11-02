@@ -2248,6 +2248,97 @@ const CORRECTIVE_ACTION_TASKS: CheckItem[] = [
   }
 ];
 
+
+const FOOD_SANITATION_TASKS: CheckItem[] = [
+  {
+    id: "san-1",
+    category: "Two-Stage Cleaning Protocol",
+    task: "Stage 1: Clean food-contact surfaces with warm water and detergent to lift grease and food debris; Stage 2: Spray BS EN 1276 chemical disinfectant.",
+    status: "pass",
+    actionNotes: "Prep benches cleaned and disinfected via two-stage process"
+  },
+  {
+    id: "san-2",
+    category: "Chemical Contact Time (30-60s)",
+    task: "Allow surface sanitiser to remain visibly wet on surfaces for the full statutory manufacturer contact time before wiping with disposable blue roll.",
+    status: "pass",
+    actionNotes: "60-second contact time timed and verified"
+  },
+  {
+    id: "san-3",
+    category: "BS EN 1276 / 13697 Standards",
+    task: "Confirm all commercial kitchen sanitisers and bactericidal disinfectants are certified to BS EN 1276 or BS EN 13697 standards.",
+    status: "pass",
+    actionNotes: "Chemical technical data sheets verified compliant"
+  },
+  {
+    id: "san-4",
+    category: "Colour-Coded Cleaning Equipment",
+    task: "Enforce four-colour equipment segregation: Red (washrooms), Blue (bar/dining), Yellow (kitchen prep surfaces), Green (produce prep).",
+    status: "pass",
+    actionNotes: "Colour-coded cloths and mop buckets audited"
+  },
+  {
+    id: "san-5",
+    category: "Master Cleaning Schedule Sign-Off",
+    task: "Complete and initial daily, weekly, and monthly deep clean items on the master cleaning schedule (hood baffles, floor drains, ice machines).",
+    status: "pass",
+    actionNotes: "Daily kitchen sanitation log signed by head chef"
+  },
+  {
+    id: "san-6",
+    category: "Sanitiser Chemical Dilution Testing",
+    task: "Test chemical dispenser dilution with quat or chlorine test strips to ensure sanitiser concentration is within effective bactericidal range.",
+    status: "pass",
+    actionNotes: "Chemical test strip confirmed 200 ppm quat active"
+  }
+];
+
+const BIG_6_PATHOGENS_TASKS: CheckItem[] = [
+  {
+    id: "path-1",
+    category: "Norovirus Controls & Spill Kit",
+    task: "Strictly exclude staff with vomiting or diarrhoea for 48 hours after symptoms cease; maintain dedicated emergency bodily fluid spill kit.",
+    status: "pass",
+    actionNotes: "48-hour exclusion rule enforced on staff register"
+  },
+  {
+    id: "path-2",
+    category: "Non-Typhoidal Salmonella Lethality",
+    task: "Cook raw poultry, liquid eggs, and poultry dishes to a minimum core temperature of 75°C for 30s (or 70°C for 2m); store on lowest fridge shelf.",
+    status: "pass",
+    actionNotes: "Core temperature logs confirm 75°C lethality achieved"
+  },
+  {
+    id: "path-3",
+    category: "Salmonella Typhi & Paratyphi",
+    task: "Require medical questionnaires for staff returning from typhoid-endemic travel; enforce absolute exclusion of confirmed carriers.",
+    status: "pass",
+    actionNotes: "Pre-employment health declarations verified"
+  },
+  {
+    id: "path-4",
+    category: "Shiga Toxin-Producing E. coli (STEC)",
+    task: "Cook minced beef burgers and rolled meat joints thoroughly to 75°C core; enforce dedicated red boards and dual-pack vacuum packers.",
+    status: "pass",
+    actionNotes: "Raw red meat separation protocols verified"
+  },
+  {
+    id: "path-5",
+    category: "Shigella spp. Hygiene Barriers",
+    task: "Sanitise customer and staff restroom flush levers, cubicle locks, and washbasins every 2 hours; provide non-touch sensor taps.",
+    status: "pass",
+    actionNotes: "Restroom sanitisation schedule initialled"
+  },
+  {
+    id: "path-6",
+    category: "Hepatitis A Jaundice Screening",
+    task: "Immediately exclude any food handler displaying jaundice, fever, dark urine, or abdominal pain; notify local Environmental Health Officer.",
+    status: "pass",
+    actionNotes: "Daily staff wellness checks recorded on opening sheet"
+  }
+];
+
 const DEFAULT_GENERAL_TASKS: CheckItem[] = [
   {
     id: "1",
@@ -2377,6 +2468,13 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
   const isCorrectiveActionPlan =
     templateTitle.toLowerCase().includes("corrective action") ||
     (templateId && templateId.includes("corrective-action"));
+  const isFoodSanitation =
+    templateTitle.toLowerCase().includes("sanitation") ||
+    (templateId && templateId.includes("food-safety-and-sanitation"));
+  const isBig6Pathogens =
+    templateTitle.toLowerCase().includes("big 6") ||
+    templateTitle.toLowerCase().includes("big-6") ||
+    (templateId && templateId.includes("big-6-foodborne"));
   const isBrcAudit =
     templateTitle.toLowerCase().includes("brc") ||
     (templateId && templateId.includes("brc"));
@@ -2499,6 +2597,8 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     if (isFoodProduction) return FOOD_PRODUCTION_TASKS;
     if (isDispatch) return DISPATCH_LOG_TASKS;
     if (isCorrectiveActionPlan) return CORRECTIVE_ACTION_TASKS;
+    if (isFoodSanitation) return FOOD_SANITATION_TASKS;
+    if (isBig6Pathogens) return BIG_6_PATHOGENS_TASKS;
     if (isBrcAudit) return BRC_AUDIT_TASKS;
     if (isKosher) return KOSHER_CERTIFICATION_TASKS;
     if (isFiveWhys) return FIVE_WHYS_RCA_TASKS;

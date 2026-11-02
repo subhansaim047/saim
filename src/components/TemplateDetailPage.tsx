@@ -161,6 +161,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
 
   const isHandWashingTool =
     template.slug === "hand-washing-poster" ||
+    template.slug.includes("wash-your-hands") ||
     template.slug.includes("hand-washing");
 
   const isChoppingBoardTool =

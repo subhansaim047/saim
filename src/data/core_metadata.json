@@ -188,11 +188,13 @@
   },
   "kitchen-safety-poster": {
     "title": "Free Commercial Kitchen Safety Poster | Saim Dev",
-    "desc": "Essential health and safety guidelines for commercial kitchen staff. Covers hot oil handling, slip hazards, knife safety, and emergency protocols.",
+    "desc": "Prevent slips, cuts, burns, and chemical accidents in professional kitchens. Free printable kitchen safety poster conforming to HSE catering rules.",
     "howTo": [
-      "Mount in main kitchen thoroughfares near cooking lines and wash-up zones.",
-      "Review emergency fire blanket and first-aid kit locations with new team members.",
-      "Ensure staff wear slip-resistant safety shoes and correct protective aprons."
+      "Display safety poster prominently in kitchen cooking lines and prep areas.",
+      "Enforce slip-resistant footwear, apron tie safety, and knife-carrying protocols.",
+      "Ensure deep fryer splash guards, hot oil PPE, and steam vent covers are used.",
+      "Store cleaning chemicals in locked COSHH cupboards away from food prep areas.",
+      "Keep kitchen fire blankets, Class F extinguishers, and emergency gas shut-offs clear."
     ]
   },
   "reheating-food-temperature-guide": {
@@ -598,13 +600,14 @@
     ]
   },
   "when-should-you-wash-your-hands": {
-    "title": "Free When Should You Wash Hands Poster Template | Saim Dev",
-    "desc": "Free when should you wash hands poster template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free When to Wash Hands Poster Guide | Saim Dev",
+    "desc": "Master kitchen hand hygiene triggers under UK food safety laws. Free food service handwashing poster covering raw meat handling, bins, and coughs.",
     "howTo": [
-      "Download and print the When Should You Wash Hands Poster for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Wash hands before commencing work, handling food, or putting on disposable gloves.",
+      "Wash immediately after handling raw meats, poultry, unwashed eggs, or raw seafood.",
+      "Wash after using the toilet, blowing nose, coughing, sneezing, or touching hair.",
+      "Wash after handling waste bins, cleaning chemicals, dirty cutlery, or money.",
+      "Scrub with antibacterial soap and warm water for 20 seconds; dry with paper towels."
     ]
   },
   "venison-cooking-temperature-chart": {
@@ -722,13 +725,14 @@
     ]
   },
   "how-do-you-calibrate-a-thermometer": {
-    "title": "Free How Do You Calibrate A Thermometer Poster | Saim Dev",
-    "desc": "Free how do you calibrate a thermometer poster template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free How to Calibrate a Thermometer Guide | Saim Dev",
+    "desc": "Calibrate kitchen probe thermometers using ice slurry and boiling water. Free step-by-step calibration guide with ±1.0°C FSA accuracy tolerances.",
     "howTo": [
-      "Download and print the How Do You Calibrate A Thermometer Poster for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Prepare crushed ice slurry with minimal cold water in a glass beaker; stir well.",
+      "Immerse probe needle 5 cm deep; verify reading stabilizes at 0.0°C (±1.0°C range).",
+      "Bring pot of water to a rolling boil; immerse probe tip without touching pan bottom.",
+      "Verify boiling water reading stabilizes at 100.0°C (99.0°C to 101.0°C tolerance).",
+      "Record calibration test on monthly log; service or replace probe if error exceeds ±1°C."
     ]
   },
   "haccp-audit-checklist-template": {
@@ -763,23 +767,25 @@
     ]
   },
   "food-safety-and-sanitation": {
-    "title": "Free Food Safety And Sanitation Poster Template | Saim Dev",
-    "desc": "Free food safety and sanitation poster template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Food Safety & Sanitation Poster Guide | Saim Dev",
+    "desc": "Master commercial kitchen two-stage cleaning and BS EN 1276 sanitising. Free printable food safety sanitation poster with contact time rules.",
     "howTo": [
-      "Download and print the Food Safety And Sanitation Poster for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Stage 1: Clean surfaces with warm water and detergent to remove grease and food soils.",
+      "Stage 2: Apply BS EN 1276 approved disinfectant or bactericidal sanitiser spray.",
+      "Allow chemical sanitiser to remain wet on surfaces for full manufacturer contact time.",
+      "Use colour-coded cloths and mops: Red for washrooms, Yellow for kitchen prep surfaces.",
+      "Sign off daily cleaning schedule logs and verify sanitiser dispenser dilution rates."
     ]
   },
   "big-6-foodborne-illnesses": {
-    "title": "Free Big 6 Foodborne Illnesses Template | Saim Dev",
-    "desc": "Access a free big 6 foodborne illnesses template for commercial kitchens. Helps UK food businesses maintain structured hygiene records and daily standards.",
+    "title": "Free Big 6 Foodborne Illnesses Poster | Saim Dev",
+    "desc": "Identify and prevent the Big 6 pathogens: Norovirus, Salmonella, E. coli, and more. Free foodborne illnesses chart with 48-hour exclusion rules.",
     "howTo": [
-      "Download and print the Big 6 Foodborne Illnesses for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Enforce 48-hour exclusion for staff experiencing vomiting or diarrhoea symptoms.",
+      "Cook poultry and eggs to minimum 75°C core temperature to eliminate Salmonella.",
+      "Cook minced beef burgers to 75°C to destroy Shiga toxin-producing E. coli (STEC).",
+      "Sanitise customer restrooms every 2 hours to prevent Shigella and Norovirus spread.",
+      "Immediately exclude and report food handlers exhibiting jaundice (Hepatitis A)."
     ]
   },
   "fridge-temperature-chart": {

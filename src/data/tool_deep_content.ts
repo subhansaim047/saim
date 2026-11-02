@@ -5310,6 +5310,174 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       title: "Commercial Kitchen Food Cooling Temperature Guide",
       slug: "commercial-kitchen-food-cooling-temperature-guide"
     }
+  },
+  "when-should-you-wash-your-hands": {
+    directAnswer:
+      "Under UK Food Safety Regulation (EC) No 852/2004 and FSA guidelines, commercial food handlers must wash their hands frequently and thoroughly with warm running water and antibacterial soap (BS EN 1499). Mandatory triggers include: before starting food prep, immediately after handling raw meats, poultry, or eggs, after visiting the toilet, after touching waste bins, after coughing, sneezing, or blowing your nose, after touching your face or hair, between handling allergen and non-allergen foods, and before donning disposable gloves.",
+    howTo: [
+      "Wash before starting work: scrub hands thoroughly before entering food prep areas or handling clean crockery.",
+      "Wash after raw protein contact: immediately scrub hands after touching raw meat, poultry, seafood, or unwashed produce.",
+      "Wash after biological triggers: wash hands following toilet visits, coughing, sneezing, nose-blowing, or touching hair.",
+      "Wash after environmental contact: wash after emptying waste bins, sweeping floors, handling cash, or using cleaning chemicals.",
+      "Execute 20-second technique: wet hands under warm water, apply antibacterial soap, scrub palms, backs, fingers, and thumbs for 20 seconds, and dry with disposable paper towels."
+    ],
+    faqs: [
+      {
+        q: "What is the legal handwashing time recommended for food handlers?",
+        a: "The UK Food Standards Agency and World Health Organization recommend scrubbing hands with antibacterial soap for at least 20 seconds, followed by complete drying using disposable single-use paper towels."
+      },
+      {
+        q: "Can hand sanitiser gel replace handwashing with soap and water?",
+        a: "No. Alcohol-based hand sanitisers cannot cut through grease, organic protein soils, or food residues and are ineffective against Norovirus. Hand sanitiser may only be used as an extra barrier after thorough soap and water handwashing."
+      },
+      {
+        q: "Why are reusable fabric towels banned in commercial kitchens?",
+        a: "Fabric tea towels quickly harbor moisture and cross-contaminate bacteria (like E. coli and Salmonella) between handlers. Commercial food hygiene regulations require touchless dispensers and disposable single-use paper towels."
+      },
+      {
+        q: "Do food handlers have to wash hands before putting on gloves?",
+        a: "Yes. Gloves are not sterile. Sweaty hands transfer bacteria onto the outside of gloves during donning, and punctures or tears can leak pathogens onto food. Hands must always be washed before donning clean gloves."
+      },
+      {
+        q: "What washbasin facilities are legally mandatory in a UK food business?",
+        a: "Under Regulation (EC) No 852/2004, kitchens must provide separate dedicated handwash basins equipped with warm running water (or mixer taps), antibacterial soap in dispensers, and disposable paper towels, separate from food sinks."
+      }
+    ],
+    relatedTools: [
+      "hand-washing-poster",
+      "personal-hygiene",
+      "basic-food-preparation-rules"
+    ],
+    relatedBlog: {
+      title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist",
+      slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
+    }
+  },
+  "how-do-you-calibrate-a-thermometer": {
+    directAnswer:
+      "Calibrating a food thermometer verifies that temperature probes provide accurate readings to guarantee microbiological food safety. Commercial kitchens calibrate probes using two standard scientific reference methods: the Ice-Point Slurry method (target 0.0°C, acceptable range -1.0°C to +1.0°C) and the Boiling-Water method (target 100.0°C, acceptable range 99.0°C to 101.0°C at sea level). Probes with error exceeding ±1.0°C must be recalibrated or replaced.",
+    howTo: [
+      "Prepare ice bath: fill a glass beaker with crushed ice and add cold water until ice is saturated; stir and let sit for 2 minutes.",
+      "Test ice point: insert probe 5 cm into slurry without touching glass walls; wait for reading to stabilize at 0.0°C (±1.0°C tolerance).",
+      "Prepare boiling water: bring a deep saucepan of clean water to a rapid rolling boil on the cookline range.",
+      "Test boiling point: immerse probe tip into center of boiling water; confirm stabilized reading reads 100.0°C (±1.0°C tolerance).",
+      "Document and adjust: record variance in your monthly calibration log; adjust manual hex calibration screw or replace unit if variance exceeds ±1°C."
+    ],
+    faqs: [
+      {
+        q: "How often should commercial kitchen food thermometers be calibrated?",
+        a: "Under UK food hygiene due diligence guidelines, food thermometers should be calibrated at least once per month, and immediately after being dropped or exposed to extreme heat or cold shocks."
+      },
+      {
+        q: "What is the acceptable tolerance for kitchen thermometers under EHO standards?",
+        a: "Environmental Health Officers expect food thermometers to be accurate within ±1.0°C of true temperature for general catering, and within ±0.5°C for high-care BRCGS food manufacturing."
+      },
+      {
+        q: "Why does water boil below 100°C at high altitudes?",
+        a: "Atmospheric pressure decreases with altitude, lowering the boiling point of water by approximately 1.0°C per 300 metres of elevation. Kitchens above sea level must adjust boiling-point calibration targets accordingly."
+      },
+      {
+        q: "How do you adjust a digital probe thermometer if the reading is inaccurate?",
+        a: "Many digital probes have a 'CAL' button that resets the ice point to 0.0°C when held down in an ice bath. For manual dial thermometers, adjust the hex calibration nut beneath the dial using a small wrench."
+      },
+      {
+        q: "Why is probe needle sanitisation critical during calibration?",
+        a: "Immersing an unsanitised probe into test beakers can cross-contaminate testing equipment. Probes must be wiped with food-safe antibacterial probe wipes conforming to BS EN 1276 before and after calibration testing."
+      }
+    ],
+    relatedTools: [
+      "thermometer-calibration-log",
+      "cooking-log-template",
+      "food-temperature-chart"
+    ],
+    relatedBlog: {
+      title: "Commercial Kitchen Food Cooling Temperature Guide",
+      slug: "commercial-kitchen-food-cooling-temperature-guide"
+    }
+  },
+  "food-safety-and-sanitation": {
+    directAnswer:
+      "Commercial food safety and sanitation ensures that kitchen surfaces, preparation equipment, utensils, and food contact zones are systematically cleaned and disinfected to prevent foodborne illness and allergen cross-contact. Aligned with Regulation (EC) No 852/2004, it enforces the UK Two-Stage Cleaning method (detergent clean followed by BS EN 1276 chemical disinfection), strict contact times, and four-colour cleaning equipment segregation.",
+    howTo: [
+      "Stage 1 Cleaning: scrape physical debris and wash surfaces with hot water and commercial detergent to dissolve grease and organic soils.",
+      "Stage 2 Disinfection: spray chemical sanitiser or disinfectant certified to BS EN 1276 across the entire surface area.",
+      "Observe contact time: allow sanitiser to remain wet on surfaces for the full manufacturer-specified contact time (typically 30 to 60 seconds).",
+      "Wipe with disposable paper: wipe surfaces with clean, single-use blue paper roll; air drying is recommended for food equipment.",
+      "Segregate cleaning tools: use Red cloths/mops for washrooms, Blue for customer areas, Yellow for kitchen prep surfaces, and Green for vegetable prep."
+    ],
+    faqs: [
+      {
+        q: "What is the difference between cleaning and sanitising?",
+        a: "Cleaning removes physical dirt, grease, and food residues using detergent and water. Sanitising uses chemical agents or high thermal heat (82°C+) to kill 99.999% of bacteria, viruses, and pathogens to safe public health levels."
+      },
+      {
+        q: "What is the British Standard BS EN 1276?",
+        a: "BS EN 1276 is the official European standard for chemical bactericidal disinfectants used in food, industrial, domestic, and institutional areas. It proves that a disinfectant achieves a 5-log (99.999%) reduction of bacteria within 5 minutes at 20°C."
+      },
+      {
+        q: "Why is the Two-Stage Cleaning method mandatory under UK food hygiene?",
+        a: "Disinfectants cannot penetrate layers of grease and protein debris. Attempting to sanitise a dirty surface neutralises the chemical agent. Stage 1 lifts the soil, allowing Stage 2 disinfectant to contact and kill exposed pathogens."
+      },
+      {
+        q: "Why are colour-coded mops and cloths required in commercial kitchens?",
+        a: "Equipment colour-coding prevents dangerous cross-contamination—ensuring that cloths or mop buckets used in customer toilets (Red) are never accidentally used to wipe kitchen sandwich prep counters (Yellow)."
+      },
+      {
+        q: "How frequently must high-touch kitchen surfaces be disinfected?",
+        a: "High-touch points such as refrigerator door handles, knife handles, microwave touchpads, POS screens, and prep line surfaces should be disinfected every 2 hours during service, and after any change in food task."
+      }
+    ],
+    relatedTools: [
+      "commercial-kitchen-cleaning-checklist",
+      "kitchen-safety-poster",
+      "master-cleaning-schedule"
+    ],
+    relatedBlog: {
+      title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist",
+      slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
+    }
+  },
+  "big-6-foodborne-illnesses": {
+    directAnswer:
+      "The 'Big 6' foodborne illnesses refer to the six most highly infectious, easily transmissible foodborne pathogens recognized by food safety authorities (FSA and FDA): Norovirus, Non-typhoidal Salmonella, Salmonella Typhi, Shiga toxin-producing E. coli (STEC), Shigella spp., and Hepatitis A virus. Due to low infectious doses and severe health risks, food handlers diagnosed with or exhibiting symptoms of any Big 6 pathogen must be excluded from food operations for at least 48 hours symptom-free.",
+    howTo: [
+      "Enforce mandatory staff symptom reporting: require immediate reporting of vomiting, diarrhoea, jaundice, sore throat with fever, or infected skin lesions.",
+      "Apply the 48-Hour Exclusion rule: exclude any food handler experiencing vomiting or diarrhoea for at least 48 hours after symptoms have completely cleared.",
+      "Achieve thermal kill limits: cook poultry and meat to an internal core temperature of at least 75°C for 30 seconds (or 70°C for 2 minutes) to destroy Salmonella and E. coli.",
+      "Prevent raw-to-ready cross-contamination: use dedicated colour-coded cutting boards (Red: raw meat, Yellow: cooked meat) and separate vacuum packaging machines.",
+      "Disinfect vomit and bodily fluid spills immediately: seal off area, wear PPE, and disinfect using chlorine bleach at 1000 ppm concentration to destroy Norovirus."
+    ],
+    faqs: [
+      {
+        q: "What are the Big 6 foodborne pathogens?",
+        a: "The Big 6 pathogens are: 1. Norovirus, 2. Non-typhoidal Salmonella, 3. Salmonella Typhi, 4. Shiga toxin-producing Escherichia coli (STEC/E. coli O157), 5. Shigella spp., and 6. Hepatitis A virus."
+      },
+      {
+        q: "What is the statutory 48-hour exclusion rule in UK food premises?",
+        a: "Under UK Food Standards Agency guidelines, any food worker who experiences diarrhoea or vomiting must stay off work until at least 48 hours after symptoms have completely ceased naturally, without anti-diarrhoeal medication."
+      },
+      {
+        q: "Why is Norovirus the leading cause of foodborne gastrointestinal outbreaks?",
+        a: "Norovirus has an extremely low infectious dose (as few as 18 viral particles cause infection), spreads through aerosols generated by vomiting, resists standard alcohol sanitiser gels, and survives on stainless steel surfaces for days."
+      },
+      {
+        q: "What are the primary food sources of Shiga toxin-producing E. coli (STEC)?",
+        a: "STEC (including E. coli O157) is predominantly found in undercooked minced beef (burgers), raw unpasteurised milk and cheeses, and raw salad produce contaminated by agricultural runoff."
+      },
+      {
+        q: "What symptoms warrant immediate exclusion for Hepatitis A?",
+        a: "Jaundice (yellowing of the eyes or skin), accompanied by fatigue, abdominal pain, dark urine, and fever. Food handlers with suspected Hepatitis A must be excluded immediately and cleared medically before returning."
+      }
+    ],
+    relatedTools: [
+      "food-safety-and-sanitation",
+      "personal-hygiene",
+      "when-should-you-wash-your-hands"
+    ],
+    relatedBlog: {
+      title: "How to Get a 5-Star Food Hygiene Rating: UK EHO Checklist",
+      slug: "uk-food-hygiene-rating-scheme-5-star-checklist"
+    }
   }
 
 };

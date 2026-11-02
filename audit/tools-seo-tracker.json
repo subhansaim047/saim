@@ -3509,9 +3509,25 @@
     "main_keyword": "when should you wash hands poster uk",
     "opportunity_score": 45.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 136
+    "priority_rank": 136,
+    "target_keyword": "when should you wash your hands in food service",
+    "top_5_competitors": [
+      "https://www.food.gov.uk/safety-hygiene/handwashing",
+      "https://www.highspeedtraining.co.uk/hub/when-should-food-handlers-wash-their-hands/",
+      "https://www.virtual-college.co.uk/resources/when-to-wash-hands-food-hygiene",
+      "https://www.cdc.gov/clean-hands/about/index.html",
+      "https://safetyculture.com/checklists/handwashing-in-food-service/"
+    ],
+    "differentiators": [
+      "12 operational triggers: raw prep, restroom, waste bins, coughing, phones, allergens, glove changes",
+      "WHO and FSA 20-second technique breakdown with antibacterial soap (BS EN 1499)",
+      "Interactive hand hygiene audit checklist with daily shift compliance logging",
+      "Zero paywall, 100% free downloadable A4 kitchen noticeboard poster",
+      "High-contrast visual cues for non-English kitchen workers"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 62,
@@ -3528,9 +3544,25 @@
     "main_keyword": "how do you calibrate a thermometer poster uk",
     "opportunity_score": 45.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 137
+    "priority_rank": 137,
+    "target_keyword": "how do you calibrate a food thermometer",
+    "top_5_competitors": [
+      "https://www.highspeedtraining.co.uk/hub/how-to-calibrate-a-probe-thermometer/",
+      "https://www.fooddocs.com/post/how-to-calibrate-a-thermometer",
+      "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/kitchen-thermometers",
+      "https://safetyculture.com/checklists/how-to-calibrate-a-thermometer/",
+      "https://www.thermoworks.com/ice-bath-calibration-guide/"
+    ],
+    "differentiators": [
+      "Dual-method step-by-step instructions: Ice-Point Slurry (0.0°C) and Boiling-Water (100.0°C)",
+      "Digital vs dial bimetallic adjustment mechanisms explained (hex calibration nut vs digital offset)",
+      "Interactive digital calibration tool with auto-calculated error variance",
+      "Clear EHO compliance threshold (±0.5°C preferred, ±1.0°C statutory cutoff)",
+      "Clean printable A4 calibration protocol sheet for kitchen prep clipboards"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 66,
@@ -3547,9 +3579,25 @@
     "main_keyword": "kitchen safety poster uk",
     "opportunity_score": 45.0,
     "current_ranking": "Top 10-20 (indexed)",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 138
+    "priority_rank": 138,
+    "target_keyword": "commercial kitchen safety poster",
+    "top_5_competitors": [
+      "https://www.hse.gov.uk/catering/",
+      "https://www.highspeedtraining.co.uk/hub/kitchen-safety-rules/",
+      "https://safetyculture.com/checklists/commercial-kitchen-safety/",
+      "https://www.virtual-college.co.uk/resources/kitchen-safety-guide",
+      "https://www.fooddocs.com/post/kitchen-safety-poster"
+    ],
+    "differentiators": [
+      "6-pillar safety framework: slips/trips, knife handling, burns, COSHH, manual handling, fire response",
+      "Visual icon badges with bold typography optimized for distant wall visibility",
+      "Interactive kitchen safety inspection checklist integrated directly on page",
+      "100% free downloadable high-res vector A4/A3 wall poster",
+      "Conforms to HSE Catering Information Sheet No 24 & Health and Safety at Work Act 1974"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 67,
@@ -3566,9 +3614,25 @@
     "main_keyword": "food safety and sanitation poster uk",
     "opportunity_score": 45.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 139
+    "priority_rank": 139,
+    "target_keyword": "food safety and sanitation poster",
+    "top_5_competitors": [
+      "https://www.food.gov.uk/business-guidance/cleaning-effectively-in-your-business",
+      "https://www.highspeedtraining.co.uk/hub/cleaning-in-food-premises/",
+      "https://www.virtual-college.co.uk/resources/food-hygiene-cleaning-procedure",
+      "https://safetyculture.com/checklists/food-safety-and-sanitation/",
+      "https://www.fooddocs.com/post/food-safety-and-sanitation"
+    ],
+    "differentiators": [
+      "Definitive UK Two-Stage Cleaning process: Stage 1 clean, Stage 2 disinfect with BS EN 1276",
+      "Colour-coded cleaning equipment standard (Red: washrooms; Blue: bar/dining; Yellow: prep; Green: produce)",
+      "Dilution ratio calculation helper for concentrated sanitisers",
+      "Interactive sanitation schedule tool with daily supervisor sign-offs",
+      "Printable high-resolution kitchen wall chart ready for laminated display"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 68,
@@ -3585,9 +3649,25 @@
     "main_keyword": "big 6 foodborne illnesses uk",
     "opportunity_score": 45.0,
     "current_ranking": "Unranked / Baseline",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "competitors_analyzed": [],
-    "priority_rank": 140
+    "priority_rank": 140,
+    "target_keyword": "big 6 foodborne illnesses poster",
+    "top_5_competitors": [
+      "https://www.fda.gov/food/retail-food-industryregulatory-assistance-training/employee-health-and-personal-hygiene-handbook",
+      "https://www.highspeedtraining.co.uk/hub/foodborne-pathogens-chart/",
+      "https://safetyculture.com/checklists/big-6-foodborne-illnesses/",
+      "https://www.statefoodsafety.com/Resources/Resources/the-big-6-foodborne-illnesses-poster",
+      "https://www.fooddocs.com/post/big-6-foodborne-illnesses"
+    ],
+    "differentiators": [
+      "Authoritative breakdown of all 6 high-infectivity pathogens (Norovirus, Salmonella, E. coli, etc.)",
+      "Statutory staff exclusion rules: 48 hours symptom-free for vomiting/diarrhoea; jaundice notifications",
+      "Critical control points: thermal lethality, chlorination, hand hygiene, and exclusion protocols",
+      "Interactive foodborne disease diagnostic & quarantine checklist",
+      "Free full-colour printable high-resolution educational A4 poster"
+    ],
+    "phase1_completed": true
   },
   {
     "index": 81,
