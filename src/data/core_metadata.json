@@ -370,13 +370,13 @@
     ]
   },
   "product-specification-template": {
-    "title": "Free Product Specification Template | Saim Dev",
-    "desc": "Free product specification template template for UK commercial kitchens. Download, print, and maintain accurate records for daily food hygiene operations.",
+    "title": "Free Food Product Specification Template | Saim Dev",
+    "desc": "Free commercial food product specification template. QUID ingredient declarations, Natasha's Law allergens, microbial criteria, and printable QA sheets.",
     "howTo": [
-      "Download and print the Product Specification Template for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Input finished product name, internal SKU code, recipe category, and manufacturing CPU details.",
+      "Formulate Quantitative Ingredient Declarations (QUID %) and flag statutory allergens under Natasha's Law.",
+      "Establish validated microbiological process hygiene criteria (Regulation EC No 2073/2005) and shelf-life.",
+      "Click Print / Save as PDF to output a comprehensive technical food specification for BRCGS and EHO compliance."
     ]
   },
   "cleaning-checklist-template": {
@@ -400,13 +400,13 @@
     ]
   },
   "pest-control-inspection-checklist": {
-    "title": "Free Daily Pest Inspection & Monitoring Log | Saim Dev",
-    "desc": "Free daily pest inspection & monitoring log template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Daily Pest Inspection Checklist | Saim Dev",
+    "desc": "Free commercial kitchen pest inspection checklist. BPCA bait stations, electronic fly killers, building proofing checks, and printable monitoring logs.",
     "howTo": [
-      "Download and print the Daily Pest Inspection & Monitoring Log for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Inspect numbered exterior and interior tamper-resistant rodent bait boxes for undisturbed locks and secure placement.",
+      "Examine Electric Fly Killers (EFKs): confirm UV tube illumination, empty catch trays, and clean insect grilles.",
+      "Check physical building proofing: verify door bristles (<5mm gap), intact window mesh, and sealed pipework penetrations.",
+      "Click Print / Save as PDF to output a completed pest monitoring log for your SFBB food safety management folder."
     ]
   },
   "pest-management-plan": {
@@ -420,13 +420,13 @@
     ]
   },
   "pest-control-template": {
-    "title": "Free Kitchen Pest Prevention Action Plan Template | Saim Dev",
-    "desc": "Free kitchen pest prevention action plan template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Kitchen Pest Prevention Action Plan | Saim Dev",
+    "desc": "Free commercial kitchen pest prevention action plan. P.E.R.D. exclusion standards, contractor service audits, proofing rotas, and printable action logs.",
     "howTo": [
-      "Download and print the Kitchen Pest Prevention Action Plan for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Implement the P.E.R.D. pest management framework: Proofing, Exclusion, Restriction of food/water, and Destruction.",
+      "Schedule quarterly service visits with a certified BPCA / CEPA pest control specialist contractor.",
+      "Document prompt corrective actions and proofing repairs whenever monitoring traps detect pest ingress.",
+      "Click Print / Save as PDF to archive a complete kitchen pest prevention procedure ready for EHO audits."
     ]
   },
   "bar-opening-closing-checklist": {
@@ -440,13 +440,13 @@
     ]
   },
   "bar-opening-checklist": {
-    "title": "Free Interactive Bar Operations Checklist | Saim Dev",
-    "desc": "Free interactive bar operations checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Bar Opening & Operations Checklist | Saim Dev",
+    "desc": "Free commercial bar opening checklist. Cellar temperature monitoring, beer line sanitation, glasswasher hygiene checks, and printable operations rotas.",
     "howTo": [
-      "Download and print the Interactive Bar Operations Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Verify cellar cold chain: ensure cellar cooling system maintains beer and kegs between 10°C and 12°C.",
+      "Inspect commercial glasswasher: verify wash temp (>=55°C), final rinse temp (>=65°C), and chemical levels.",
+      "Sanitize ice machine chute, ensure ice scoop is stored in sanitized wall holster, and date-label cocktail garnishes.",
+      "Click Print / Save as PDF to output an opening bar checklist for shift bartenders and cellar supervisors."
     ]
   },
   "restaurant-opening-checklist": {
@@ -460,13 +460,13 @@
     ]
   },
   "restaurant-checklist": {
-    "title": "Free Interactive Front-of-House Restaurant Tool | Saim Dev",
-    "desc": "Free interactive front-of-house restaurant tool template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Restaurant Operations Checklist | Saim Dev",
+    "desc": "Free restaurant front-of-house operations checklist. Table sanitisation rotas, POS terminal disinfection, customer washroom checks, and printable logs.",
     "howTo": [
-      "Download and print the Interactive Front-of-House Restaurant Tool for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Disinfect dining tables, chairs, highchairs, and laminated menus using food-safe antibacterial wipes (BS EN 1276).",
+      "Wipe point-of-sale touchscreens, chip-and-pin card readers, and payment terminals with sanitising wipes.",
+      "Conduct pre-service washroom inspection: verify unperfumed soap, blue paper roll, clean sanitary bins, and signed log.",
+      "Click Print / Save as PDF to output a comprehensive front-of-house operational checklist for restaurant supervisors."
     ]
   },
   "printable-retail-store-daily-checklist": {

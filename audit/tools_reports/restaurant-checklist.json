@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-50",
+  "name": "Interactive Front-of-House Restaurant Operations Checklist",
+  "slug": "restaurant-checklist",
+  "url": "https://www.saimdev.site/food-safety-templates/restaurant-checklist",
+  "primary_keyword": "restaurant operations checklist front of house uk",
+  "secondary_keywords": [
+    "restaurant foh opening closing checklist",
+    "dining room sanitisation checklist catering",
+    "restaurant table hygiene checklist eho",
+    "pos card reader disinfection log hospitality",
+    "printable restaurant checklist a4"
+  ],
+  "search_intent": "General managers, assistant managers, restaurant supervisors, and front-of-house teams seeking a thorough operational checklist to inspect dining rooms, table sanitisation, POS contactless terminals, customer restrooms, and pre-service allergen briefings under UK food safety standards.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Specification / Table"
+  ],
+  "competitors": [
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/front-of-house-cleaning-checklist/",
+      "features": "Static educational blog post with downloadable PDF checklist."
+    },
+    {
+      "name": "SafetyCulture / iAuditor",
+      "url": "https://safetyculture.com/checklists/restaurant-operations/",
+      "features": "Mobile software app requiring paid monthly subscription and account creation."
+    },
+    {
+      "name": "Toast POS UK / US",
+      "url": "https://pos.toasttab.com/blog/on-the-line/restaurant-opening-checklist",
+      "features": "POS marketing article with broad bullet points; non-interactive."
+    },
+    {
+      "name": "TouchBistro",
+      "url": "https://www.touchbistro.com/blog/restaurant-opening-and-closing-checklist/",
+      "features": "Software marketing guide hiding comprehensive templates behind email capture."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/restaurant-foh-checklist",
+      "features": "Paywalled compliance software ($79/mo) hiding tools behind signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital FOH checklist with pass/fail/pending status tracking and supervisor notes",
+      "No pre-service staff allergen briefing verification linking directly to Natasha's Law requirements",
+      "No high-touch electronic terminal (POS, card reader) sanitisation protocol",
+      "No free downloadable high-contrast A4 dining room shift sheet without watermarks"
+    ],
+    "our_differentiators": [
+      "Interactive front-of-house operations checklist with 7 dedicated customer area inspection points",
+      "Full alignment with UK EHO front-of-house inspection criteria and BS EN 1276 surface disinfection",
+      "Mandatory pre-service team briefing checking daily food specials against the 14-allergen matrix",
+      "Printable A4 front-of-house shift checklist with supervisor and general manager sign-off"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.2,
+    "top_competitor_overall_score": 75.5
+  }
+}

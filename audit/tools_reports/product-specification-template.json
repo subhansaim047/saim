@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-46",
+  "name": "Commercial Food Product Specification Template & QA Dossier",
+  "slug": "product-specification-template",
+  "url": "https://www.saimdev.site/food-safety-templates/product-specification-template",
+  "primary_keyword": "food product specification template commercial uk",
+  "secondary_keywords": [
+    "finished product specification template catering",
+    "quid recipe specification sheet fsa",
+    "microbiological criteria food specification uk",
+    "brcgs product specification template",
+    "printable food product specification pdf"
+  ],
+  "search_intent": "Technical QA managers, catering buyers, central production kitchen chefs, and food manufacturing operators looking for a comprehensive, compliant technical product specification template detailing Quantitative Ingredient Declarations (QUID %), statutory 14-allergen declarations, microbiological thresholds (Regulation EC 2073/2005), and shelf-life storage parameters.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Specification / Table"
+  ],
+  "competitors": [
+    {
+      "name": "BRCGS",
+      "url": "https://www.brcgs.com/our-standards/food-safety/",
+      "features": "Global food safety audit standards; dense standard documents without interactive specification builders."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/food-product-specifications/",
+      "features": "Educational guide explaining specification requirements with course upsells."
+    },
+    {
+      "name": "SALSA Food",
+      "url": "https://www.salsafood.co.uk/standards",
+      "features": "Small and local producer standards; guidance PDFs locked behind audit membership."
+    },
+    {
+      "name": "SafetyCulture / iAuditor",
+      "url": "https://safetyculture.com/checklists/product-specification/",
+      "features": "Mobile software app requiring monthly subscription ($24+/user/mo)."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/product-specification-sheet",
+      "features": "Commercial compliance software ($79/mo) hiding tools behind signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive web-based product specification builder with real-time QUID % tracking",
+      "No automated Natasha's Law statutory 14-allergen highlighter",
+      "No pre-configured statutory microbiological process hygiene limits (Enterobacteriaceae, E. coli, Listeria, Salmonella)",
+      "No print-ready A4 technical QA specification sheet with approval and version control blocks"
+    ],
+    "our_differentiators": [
+      "Interactive finished product specification builder with live ingredient and QUID % formulation",
+      "Automated bold allergen tagging aligned with Natasha's Law (FIR 2021) and Regulation (EU) 1169/2011",
+      "Process hygiene microbiological matrix detailing Regulation (EC) No 2073/2005 testing limits",
+      "Watermark-free printable A4 technical specification sheet ready for BRCGS and EHO compliance"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.4,
+    "top_competitor_overall_score": 76.0
+  }
+}

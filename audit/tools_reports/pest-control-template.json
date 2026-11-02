@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-48",
+  "name": "Kitchen Pest Prevention Action Plan & Contractor Management SOP",
+  "slug": "pest-control-template",
+  "url": "https://www.saimdev.site/food-safety-templates/pest-control-template",
+  "primary_keyword": "kitchen pest prevention action plan uk",
+  "secondary_keywords": [
+    "commercial pest control procedure template",
+    "perd pest management framework catering",
+    "restaurant pest contractor service agreement log",
+    "food hygiene pest exclusion procedure sfbb",
+    "printable pest prevention template pdf"
+  ],
+  "search_intent": "Food business operators, catering managers, and technical compliance directors needing a formalized, documented Pest Prevention Action Plan based on the P.E.R.D. principles (Proofing, Exclusion, Restriction, Destruction) to eliminate pest attraction, manage specialist contractors, and pass EHO audits.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Specification / Table"
+  ],
+  "competitors": [
+    {
+      "name": "Food Standards Agency (FSA)",
+      "url": "https://www.food.gov.uk/business-guidance/safer-food-better-business",
+      "features": "Official SFBB pest prevention section; static PDF text without interactive digital tools."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/pest-prevention-action-plan/",
+      "features": "Educational guide on pest control with course promotions."
+    },
+    {
+      "name": "CIEH",
+      "url": "https://www.cieh.org/policy/environmental-protection/pest-control/",
+      "features": "Policy documents for environmental health professionals; non-operational."
+    },
+    {
+      "name": "Safe Food Pro",
+      "url": "https://safefoodpro.com/features/pest-management",
+      "features": "Proprietary software platform without free web access."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/pest-control-plan",
+      "features": "Subscription compliance platform ($79/mo) hiding tools behind signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital action plan organizing the complete P.E.R.D. pest management framework",
+      "No clear contractor accreditation verification guidelines (BPCA / CEPA / NPTA)",
+      "No pre-configured high-risk zone audit sequence (cookline degreasing, waste corals, dry store dunnage)",
+      "No watermark-free A4 procedure manual printable directly from the browser"
+    ],
+    "our_differentiators": [
+      "Interactive digital pest prevention action plan with pre-configured statutory tasks",
+      "Comprehensive P.E.R.D. framework detailing physical proofing, restriction, and licensed destruction",
+      "Full integration with Section 21 due diligence defense under the Food Safety Act 1990",
+      "Printable A4 compliance procedure with manager and pest contractor authorization blocks"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.1,
+    "top_competitor_overall_score": 75.2
+  }
+}

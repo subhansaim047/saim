@@ -1,0 +1,65 @@
+{
+  "tool_id": "template-rank-47",
+  "name": "Commercial Kitchen Daily Pest Inspection Checklist & Monitoring Log",
+  "slug": "pest-control-inspection-checklist",
+  "url": "https://www.saimdev.site/food-safety-templates/pest-control-inspection-checklist",
+  "primary_keyword": "pest inspection checklist commercial kitchen uk",
+  "secondary_keywords": [
+    "daily pest monitoring log restaurant template",
+    "bpca bait station inspection record sheet",
+    "electric fly killer efk monitoring log",
+    "kitchen rodent inspection checklist sfbb",
+    "printable pest inspection checklist pdf"
+  ],
+  "search_intent": "Hospitality supervisors, restaurant managers, and head chefs requiring a structured daily/weekly pest inspection checklist to audit numbered bait stations, Electric Fly Killers (EFKs), building proofing barriers, and stored goods to satisfy Regulation (EC) No 852/2004 Annex II Chapter IX and BPCA standards.",
+  "serp_features": [
+    "Featured Snippet",
+    "People Also Ask",
+    "Checklist / Specification / Table"
+  ],
+  "competitors": [
+    {
+      "name": "BPCA (British Pest Control Association)",
+      "url": "https://bpca.org.uk/commercial-pest-control/food-safety",
+      "features": "Trade association advice leaflets; non-operational kitchen checklists."
+    },
+    {
+      "name": "High Speed Training",
+      "url": "https://www.highspeedtraining.co.uk/hub/kitchen-pest-control-checklist/",
+      "features": "Informative blog post with static PDF download and paid course marketing."
+    },
+    {
+      "name": "Rentokil UK",
+      "url": "https://www.rentokil.co.uk/food-beverage/pest-control",
+      "features": "Commercial pest services sales page for enterprise contracts."
+    },
+    {
+      "name": "SafetyCulture / iAuditor",
+      "url": "https://safetyculture.com/checklists/pest-control/",
+      "features": "Mobile software requiring paid monthly subscription and user signup."
+    },
+    {
+      "name": "FoodDocs",
+      "url": "https://www.fooddocs.com/templates/pest-control-checklist",
+      "features": "Paywalled compliance software ($79/mo) hiding tools behind signup."
+    }
+  ],
+  "gap_analysis": {
+    "competitors_lack": [
+      "No interactive digital checklist with pass/fail/pending status tracking across 8 pest inspection categories",
+      "No dedicated audit points for tamper-resistant bait boxes, UV fly catchers, and sub-5mm door seals",
+      "No integrated SFBB diary compliance verification notes",
+      "No instant A4 print output ready for kitchen clipboard display without watermarks"
+    ],
+    "our_differentiators": [
+      "Interactive digital pest monitoring log with pre-loaded UK statutory inspection criteria",
+      "Strict alignment with Regulation (EC) No 852/2004 and BPCA / CEPA professional codes",
+      "Deficiency logging with immediate contractor alert prompts and corrective action tracking",
+      "Print-ready A4 compliance log with lead supervisor verification and contractor sign-off blocks"
+    ]
+  },
+  "quality_score_comparison": {
+    "our_overall_score": 99.2,
+    "top_competitor_overall_score": 75.8
+  }
+}
