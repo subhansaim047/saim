@@ -1131,13 +1131,14 @@
     ]
   },
   "fssc-certification-checklist": {
-    "title": "Free How To Get FSSC 22000 Certified? Template | Saim Dev",
-    "desc": "Free how to get fssc 22000 certified? template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free FSSC Certification Checklist Guide | Saim Dev",
+    "desc": "Prepare for FSSC 22000 Version 6 certification audits. Free FSSC checklist covering ISO 22000 requirements, sector PRPs, and food defense plans.",
     "howTo": [
-      "Download and print the How To Get FSSC 22000 Certified? for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Audit ISO 22000 FSMS foundation: verify Food Safety Policy, HACCP plan, and leadership commitment.",
+      "Review sector-specific prerequisite programmes (ISO/TS 22002-1) for hygienic zoning and drainage.",
+      "Inspect FSSC Additional Requirements: verify Food Safety Culture plan and measurable team KPIs.",
+      "Audit TACCP food defense threats and VACCP food fraud vulnerability assessments across all ingredients.",
+      "Review hygienic design sign-offs for all processing machinery under equipment management clause 2.5.15."
     ]
   },
   "ingredient-traceability": {
@@ -1283,13 +1284,14 @@
     ]
   },
   "natashas-law": {
-    "title": "Free Natasha'S Law Template | Saim Dev",
-    "desc": "Download our free natasha's law template for UK food businesses. Designed for easy printing, daily kitchen records, and food hygiene compliance.",
+    "title": "Free Natasha's Law Compliance Checklist | Saim Dev",
+    "desc": "Ensure complete PPDS food labelling compliance under UK Natasha's Law. Free food business checklist covering 14 allergens, font size, and ingredients.",
     "howTo": [
-      "Download and print the Natasha'S Law for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Identify and catalog all Prepacked for Direct Sale (PPDS) foods prepared and packed on-site.",
+      "Verify descriptive legal food name is prominently printed on the primary product packaging.",
+      "List complete ingredients in descending order of weight at the mixing stage with all sub-ingredients.",
+      "Emphasise all 14 statutory allergens in bold capital letters each time they appear in the list.",
+      "Check typography meets minimum statutory x-height (1.2 mm, or 0.9 mm if packaging area <80 cm²)."
     ]
   },
   "recipe-card-generator": {
@@ -1324,23 +1326,25 @@
     ]
   },
   "non-gmo": {
-    "title": "Free How To Get The Non-GMO Certification? | Saim Dev",
-    "desc": "Free how to get the non-gmo certification? template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "title": "Free Non-GMO Food Audit Checklist Guide | Saim Dev",
+    "desc": "Audit food supply chains for non-GMO compliance and certification. Free checklist covering segregation, PCR testing logs, and organic verification.",
     "howTo": [
-      "Download and print the How To Get The Non-GMO Certification? for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Maintain high-risk crop register: verify non-GMO Identity Preserved certificates for soy and maize.",
+      "Audit independent laboratory PCR Certificates of Analysis to confirm GMO levels remain below 0.9%.",
+      "Inspect physical segregation of dedicated non-GMO bulk storage silos, bins, and transport augers.",
+      "Validate documented line cleanout and flush purge protocols between conventional and non-GMO batches.",
+      "Review retail packaging and marketing claims against UK Trading Standards substantiation rules."
     ]
   },
   "amazon-seller-and-product-requirements": {
-    "title": "Free UK E-Commerce Food Selling & Packaging | Saim Dev",
-    "desc": "Free uk e-commerce food selling & packaging requirements template for UK kitchens. Download and print for daily records and food hygiene for UK kitchens.",
+    "title": "Free Amazon Food Seller Checklist Guide | Saim Dev",
+    "desc": "Master Amazon UK grocery ungating and food safety compliance. Free seller checklist covering expiry date rules, packaging standards, and cold chain.",
     "howTo": [
-      "Download and print the UK E-Commerce Food Selling & Packaging Requirements for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Secure Grocery category ungating: provide commercial distributor invoices and UK food business registration.",
+      "Verify inventory shelf-life: ensure perishable items have at least 50+ days remaining upon FBA delivery.",
+      "Print high-contrast expiration dates in DD-MM-YYYY format in 36-point font on cartons and retail units.",
+      "Apply polybags with printed suffocation warnings to powdered or liquid products with openings over 5 inches.",
+      "Verify full English ingredient list and 14 bold allergens conform to UK Food Information Regulations 2014."
     ]
   },
   "milk-pasteurization-temperature-time-chart": {
@@ -1472,12 +1476,13 @@
   },
   "restaurant-fire-inspection-checklist": {
     "title": "Free Restaurant Fire Inspection Checklist | Saim Dev",
-    "desc": "Free restaurant fire inspection checklist template for UK kitchens. Download and print for daily records and food hygiene compliance. Free A4 format.",
+    "desc": "Ensure commercial kitchen fire safety compliance under the 2005 Order. Free inspection checklist covering hood suppression, extinguishers, and exits.",
     "howTo": [
-      "Download and print the Restaurant Fire Inspection Checklist for your kitchen.",
-      "Display or store this record in an accessible location for prep and hygiene staff.",
-      "Ensure all relevant staff members are briefed on completing and logging required checks.",
-      "Review and update this documentation regularly to maintain ongoing compliance standards."
+      "Verify commercial kitchen hood automatic wet chemical suppression (Ansul) inspected within 6 months.",
+      "Confirm extraction ducts, canopies, and grease baffle filters are degreased to BESA TR19 standards.",
+      "Inspect Class F extinguisher stationed near deep fryers and CO2 extinguisher near electrical cookline.",
+      "Check BS EN 1869 compliant fire blanket mounted on kitchen wall in an unobstructed position.",
+      "Test gas interlock ventilation fail-safe and verify emergency exits are illuminated and unobstructed."
     ]
   },
   "restaurant-maintenance-checklist": {

@@ -1486,6 +1486,225 @@ const ISO_22000_INTERNAL_AUDIT_TASKS: CheckItem[] = [
   }
 ];
 
+
+const FSSC_AUDIT_TASKS: CheckItem[] = [
+  {
+    id: "fssc-1",
+    category: "ISO 22000 FSMS Core",
+    task: "Food Safety Policy signed by senior leadership, Food Safety Team Leader appointed, and HACCP plan validated against statutory lethality standards (e.g. 75°C core for 30s or 70°C for 2 min).",
+    status: "pass",
+    actionNotes: "FSMS governance documents approved"
+  },
+  {
+    id: "fssc-2",
+    category: "Sector PRPs (ISO/TS 22002-1)",
+    task: "Hygienic zoning maintained with physical barrier separation between raw materials and ready-to-eat packaging areas; positive air pressure verified in high-care zones.",
+    status: "pass",
+    actionNotes: "Zoning and air filtration logs verified"
+  },
+  {
+    id: "fssc-3",
+    category: "FSSC Req 2.5.1: Food Safety Culture",
+    task: "Documented executive food safety culture plan active with measurable behavioural KPIs, employee food safety suggestions logged, and confidential whistleblowing hotline displayed.",
+    status: "pass",
+    actionNotes: "Annual staff culture survey completed"
+  },
+  {
+    id: "fssc-4",
+    category: "FSSC Req 2.5.3: Food Fraud Mitigation",
+    task: "Documented food fraud vulnerability assessment (VACCP) covering all raw material supply chains, economic adulteration threats identified, and mitigation controls operational.",
+    status: "pass",
+    actionNotes: "High-risk raw ingredients audited against fraud index"
+  },
+  {
+    id: "fssc-5",
+    category: "FSSC Req 2.5.4: Food Defense (TACCP)",
+    task: "Threat assessment (TACCP) conducted; facility perimeter security doors locked with key-card access; bulk raw material delivery and storage silos sealed and logged.",
+    status: "pass",
+    actionNotes: "Silo intake locks and CCTV feeds verified"
+  },
+  {
+    id: "fssc-6",
+    category: "FSSC Req 2.5.15: Equipment Management",
+    task: "Hygienic design specifications verified for all newly commissioned machinery; sanitary welds inspected; cleanability and chemical compatibility documented.",
+    status: "pass",
+    actionNotes: "Equipment design sign-offs on file"
+  }
+];
+
+const NATASHAS_LAW_TASKS: CheckItem[] = [
+  {
+    id: "nat-1",
+    category: "PPDS Food Classification",
+    task: "Identify and register all Prepacked for Direct Sale (PPDS) foods packed on-site prior to customer order (e.g. packaged sandwiches, baguettes, boxed salads, takeaway pies).",
+    status: "pass",
+    actionNotes: "PPDS menu inventory catalogued"
+  },
+  {
+    id: "nat-2",
+    category: "Exact Legal Name",
+    task: "The precise descriptive name of the food clearly displayed on the front of packaging (e.g. 'Roast Chicken Salad with Mustard Mayonnaise Sandwich').",
+    status: "pass",
+    actionNotes: "Product title matches recipe specification"
+  },
+  {
+    id: "nat-3",
+    category: "Complete Ingredients List",
+    task: "Full ingredients listed in descending order by incoming weight at mixing bowl stage, including sub-ingredients of compound foods (e.g. bread flour components, sauces).",
+    status: "pass",
+    actionNotes: "Ingredient weight breakdowns verified"
+  },
+  {
+    id: "nat-4",
+    category: "14 Allergen Emphasising",
+    task: "All 14 statutory allergens emphasised in BOLD, CAPITAL LETTERS, or high-contrast styling each time they appear within the ingredient list (e.g. Wheat flour, Mustard, Egg).",
+    status: "pass",
+    actionNotes: "Allergen typographical emphasis audited"
+  },
+  {
+    id: "nat-5",
+    category: "Typography & Font Size",
+    task: "Label typography meets UK Food Information Regulations 2014 minimum x-height of 1.2 mm (or 0.9 mm if packaging printable surface is under 80 cm²).",
+    status: "pass",
+    actionNotes: "Print x-height verified with scale gauge"
+  },
+  {
+    id: "nat-6",
+    category: "Supplier Recipe Change Controls",
+    task: "Formal sign-off procedure requiring kitchen management review whenever ingredient suppliers or recipes alter allergen profiles before printing new labels.",
+    status: "pass",
+    actionNotes: "Supplier change notification protocol active"
+  }
+];
+
+const NON_GMO_TASKS: CheckItem[] = [
+  {
+    id: "gmo-1",
+    category: "High-Risk Crop Register",
+    task: "Maintain comprehensive register of all high-risk agricultural inputs (soy, maize, canola, sugar beet, cotton derivatives) with valid non-GMO Identity Preserved (IP) certificates.",
+    status: "pass",
+    actionNotes: "Supplier non-GMO declarations verified"
+  },
+  {
+    id: "gmo-2",
+    category: "PCR Testing Verification",
+    task: "Certificates of Analysis (COA) reviewed for every bulk lot verifying GMO genetic material remains below statutory thresholds (0.9% for food under UK/EU retained regulations).",
+    status: "pass",
+    actionNotes: "Lab PCR test reports confirmed negative"
+  },
+  {
+    id: "gmo-3",
+    category: "Physical Segregation",
+    task: "Storage bins, transport hoppers, and production lines physically segregated and labelled 'Non-GMO / GMO-Free Only' to prevent crossover with conventional commodities.",
+    status: "pass",
+    actionNotes: "Dedicated non-GMO bulk bins inspected"
+  },
+  {
+    id: "gmo-4",
+    category: "Flush-Out & Cleanout Protocols",
+    task: "Documented wet-cleaning purge and vacuum cleanout protocols executed and inspected between conventional and non-GMO production runs.",
+    status: "pass",
+    actionNotes: "Line clearance flush documented"
+  },
+  {
+    id: "gmo-5",
+    category: "Packaging Claims Substantiation",
+    task: "Finished product labelling audited against Non-GMO Project standard and UK Trading Standards regulations with verifiable audit trail from farm gate to packed unit.",
+    status: "pass",
+    actionNotes: "Claim substantiation file complete"
+  }
+];
+
+const AMAZON_FOOD_SELLER_TASKS: CheckItem[] = [
+  {
+    id: "amz-1",
+    category: "Account & Ungating Approvals",
+    task: "Commercial invoices from verified manufacturer/distributor on file, UK local authority food business registration active, and minimum 4-star food hygiene rating documented.",
+    status: "pass",
+    actionNotes: "Amazon Grocery category approval granted"
+  },
+  {
+    id: "amz-2",
+    category: "Shelf-Life & Expiration Window",
+    task: "Perishable food inventory delivered to Amazon FBA fulfilment centres has at least 50+ days shelf-life remaining (90+ days recommended for rapid inventory turnover).",
+    status: "pass",
+    actionNotes: "Inbound inventory shelf-life exceeds 120 days"
+  },
+  {
+    id: "amz-3",
+    category: "Expiry Date Print Standards",
+    task: "Expiration dates printed in DD-MM-YYYY or MM-YYYY format in minimum 36-point bold font on master shipping cartons and individual retail units.",
+    status: "pass",
+    actionNotes: "Outer carton expiry date labels verified"
+  },
+  {
+    id: "amz-4",
+    category: "Meltable & Heat-Sensitive Goods",
+    task: "Heat-sensitive products and chocolate confectionery restricted to October 16 - April 30 shipping window unless temperature-controlled FBA logistics utilized.",
+    status: "pass",
+    actionNotes: "Seasonal meltable inventory calendar flagged"
+  },
+  {
+    id: "amz-5",
+    category: "Packaging Integrity & Polybagging",
+    task: "Liquid containers double-sealed or shrink-wrapped; powders hermetically sealed; poly bags with opening 5 inches or wider carry printed suffocation warning.",
+    status: "pass",
+    actionNotes: "Polybag suffocation warnings verified"
+  },
+  {
+    id: "amz-6",
+    category: "UK Food Labelling Compliance",
+    task: "Packaging displays full English ingredients list, 14 statutory allergens highlighted in bold, net quantity, and UK manufacturer or importer business address.",
+    status: "pass",
+    actionNotes: "FIR 2014 compliant retail packaging approved"
+  }
+];
+
+const RESTAURANT_FIRE_TASKS: CheckItem[] = [
+  {
+    id: "fire-1",
+    category: "Automatic Suppression (Ansul)",
+    task: "Commercial kitchen hood fire suppression system (Ansul / R-102 wet chemical) inspected, serviced, and tagged by certified technician within the last 6 months.",
+    status: "pass",
+    actionNotes: "Semi-annual Ansul service certificate valid"
+  },
+  {
+    id: "fire-2",
+    category: "Extraction Hood & Duct TR19 Degreasing",
+    task: "Commercial extraction hoods, grease baffle filters, and kitchen ducts professionally degreased and certified to BESA TR19 fire safety standards.",
+    status: "pass",
+    actionNotes: "TR19 duct cleaning certificate displayed"
+  },
+  {
+    id: "fire-3",
+    category: "Class F & CO2 Extinguishers",
+    task: "Class F wet chemical extinguisher stationed within 5 metres of deep fat fryers; CO2 extinguisher mounted near electrical cookline switchgear; annual service tags intact.",
+    status: "pass",
+    actionNotes: "All extinguishers inspected and pressure verified"
+  },
+  {
+    id: "fire-4",
+    category: "Fire Blanket Positioning",
+    task: "Fire blanket conforming to BS EN 1869 mounted on kitchen wall away from cookline in an unobstructed, clearly signposted location.",
+    status: "pass",
+    actionNotes: "Kitchen fire blanket quick-release verified"
+  },
+  {
+    id: "fire-5",
+    category: "Emergency Exits & Lighting",
+    task: "All emergency exit doors unlocked, push-bars functional, escape routes free from storage clutter, and illuminated exit signage operational on backup battery.",
+    status: "pass",
+    actionNotes: "Emergency exit walkthrough clear"
+  },
+  {
+    id: "fire-6",
+    category: "Gas Interlock & Emergency Shut-Off",
+    task: "Gas interlock system cuts gas supply when ventilation fails; emergency manual gas shut-off valve clearly labelled, accessible, and tested weekly.",
+    status: "pass",
+    actionNotes: "Gas interlock fail-safe test passed"
+  }
+];
+
 const DEFAULT_GENERAL_TASKS: CheckItem[] = [
   {
     id: "1",
@@ -1558,6 +1777,22 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
   const isIsoInternalAudit =
     (templateTitle.toLowerCase().includes("iso 22000") && templateTitle.toLowerCase().includes("internal")) ||
     (templateId && templateId.includes("iso-22000-internal"));
+  const isFssc =
+    templateTitle.toLowerCase().includes("fssc") ||
+    (templateId && templateId.includes("fssc"));
+  const isNatashas =
+    templateTitle.toLowerCase().includes("natasha") ||
+    (templateId && templateId.includes("natasha"));
+  const isNonGmo =
+    templateTitle.toLowerCase().includes("non-gmo") ||
+    templateTitle.toLowerCase().includes("non gmo") ||
+    (templateId && templateId.includes("non-gmo"));
+  const isAmazonSeller =
+    templateTitle.toLowerCase().includes("amazon") ||
+    (templateId && templateId.includes("amazon"));
+  const isFireInspection =
+    templateTitle.toLowerCase().includes("fire") ||
+    (templateId && templateId.includes("fire"));
   const isBrcAudit =
     templateTitle.toLowerCase().includes("brc") ||
     (templateId && templateId.includes("brc"));
@@ -1663,6 +1898,11 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
     if (isIsoCert) return ISO_22000_CERTIFICATION_TASKS;
     if (isSqfAudit) return SQF_AUDIT_TASKS;
     if (isIsoInternalAudit) return ISO_22000_INTERNAL_AUDIT_TASKS;
+    if (isFssc) return FSSC_AUDIT_TASKS;
+    if (isNatashas) return NATASHAS_LAW_TASKS;
+    if (isNonGmo) return NON_GMO_TASKS;
+    if (isAmazonSeller) return AMAZON_FOOD_SELLER_TASKS;
+    if (isFireInspection) return RESTAURANT_FIRE_TASKS;
     if (isBrcAudit) return BRC_AUDIT_TASKS;
     if (isKosher) return KOSHER_CERTIFICATION_TASKS;
     if (isFiveWhys) return FIVE_WHYS_RCA_TASKS;

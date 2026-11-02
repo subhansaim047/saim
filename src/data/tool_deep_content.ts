@@ -4638,6 +4638,216 @@ export const TOOL_DEEP_CONTENT: Record<string, ToolDeepContent> = {
       title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
       slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
     }
+  },
+  "fssc-certification-checklist": {
+    directAnswer:
+      "An FSSC certification checklist audits food processing, packaging, and manufacturing facilities against the FSSC 22000 Version 6 scheme benchmarked by GFSI. It integrates ISO 22000:2018 food safety management requirements, sector-specific prerequisite programmes (ISO/TS 22002-1), and FSSC Additional Requirements including Food Safety Culture, Food Fraud Mitigation, Food Defense, and Equipment Management.",
+    howTo: [
+      "Review ISO 22000 foundations: inspect documented Food Safety Policy, appoint Food Safety Team Leader, and validate HACCP critical limits (e.g. 75°C core for 30s).",
+      "Audit sector PRPs (ISO/TS 22002-1): verify facility layout, physical segregation of raw and ready-to-eat zones, pest control, and drainage gradients.",
+      "Inspect FSSC Additional Requirement 2.5.1: audit Food Safety Culture plan, measurable executive KPIs, staff training records, and confidential reporting channels.",
+      "Review TACCP (Food Defense) and VACCP (Food Fraud): evaluate site security access controls, bulk silo seals, and raw material adulteration vulnerability assessments.",
+      "Verify Equipment Management (Clause 2.5.15): confirm hygienic design certificates, cleanability sign-offs, and sanitary weld inspection records for all processing machinery."
+    ],
+    faqs: [
+      {
+        q: "What are the major new updates in FSSC 22000 Version 6?",
+        a: "Version 6 introduced strengthened requirements for Food Safety and Quality Culture, Food Loss and Waste reduction targets, Equipment Management (hygienic design), and enhanced Allergen Management including mandatory supplier allergen declarations."
+      },
+      {
+        q: "How does FSSC 22000 differ from standalone ISO 22000?",
+        a: "Standalone ISO 22000 is not recognized by GFSI. FSSC 22000 combines ISO 22000 with sector-specific technical PRPs (ISO/TS 22002-x) and 18 FSSC Additional Requirements, providing full GFSI benchmarking recognized by global food retailers."
+      },
+      {
+        q: "What is the mandatory mock recall requirement under FSSC 22000?",
+        a: "Sites must conduct an annual mock recall testing both upstream supplier traceability and downstream customer distribution, achieving 100% mass-balance reconciliation within a strict 4-hour window."
+      },
+      {
+        q: "How are non-conformances graded during an FSSC 22000 audit?",
+        a: "Findings are categorized into Minor Non-Conformance (resolved within 3 months), Major Non-Conformance (requires corrective action plan within 14 days and closure within 28 days), and Critical Non-Conformance (immediate certification suspension)."
+      },
+      {
+        q: "Are unannounced audits compulsory under FSSC 22000 Version 6?",
+        a: "Yes. In every 3-year certification cycle, at least one of the two annual surveillance audits must be conducted unannounced by the accredited certification body."
+      }
+    ],
+    relatedTools: [
+      "gfsi-audit-checklist",
+      "get-iso-22000-certified",
+      "iso-22000-internal-audit-checklist"
+    ],
+    relatedBlog: {
+      title: "How to Write a HACCP Plan for UK Food Businesses: Step-by-Step",
+      slug: "how-to-write-haccp-plan-uk-food-business-step-by-step"
+    }
+  },
+  "natashas-law": {
+    directAnswer:
+      "A Natasha's Law compliance checklist ensures UK food businesses adhere to the Food Information (Amendment) (England) Regulations 2020. Enacted on 1 October 2021, Natasha's Law requires all Prepacked for Direct Sale (PPDS) food to feature a complete, clear ingredient list with all 14 statutory allergens highlighted in bold, capitalized, or contrasting typography.",
+    howTo: [
+      "Identify PPDS foods: audit all foods packaged on-site before a customer selects or orders them (e.g. sandwiches, wraps, salads, bottled juices, and packaged bakery goods).",
+      "Verify exact food name: ensure the precise descriptive name of the food appears prominently on the front of packaging.",
+      "Audit full ingredients: verify ingredients are listed in descending order by weight at mixing stage, including sub-ingredients of compound foods.",
+      "Emphasise 14 statutory allergens: ensure Celery, Cereals containing gluten, Crustaceans, Eggs, Fish, Lupin, Milk, Molluscs, Mustard, Nuts, Peanuts, Sesame, Soya, and Sulphur dioxide are in bold.",
+      "Check font legibility: verify typography meets statutory Food Information Regulations 2014 minimum x-height of 1.2 mm (or 0.9 mm if package area is under 80 cm²)."
+    ],
+    faqs: [
+      {
+        q: "What food qualifies as Prepacked for Direct Sale (PPDS) under Natasha's Law?",
+        a: "PPDS food is food that is packed on the same premises from which it is sold (or from a mobile unit operated by the same business) before the customer chooses or orders it. This includes pre-wrapped sandwiches, packaged salads, and boxed cakes placed on display shelves."
+      },
+      {
+        q: "What food is exempt from Natasha's Law labelling?",
+        a: "Food that is not prepacked (e.g. meals served on plates in restaurants, unwrapped food in glass displays) and food packed after the customer orders it (e.g. a sandwich made to order, takeaway food ordered over the phone or via deliver apps) is exempt from PPDS label requirements, but allergen info must still be provided orally or in writing."
+      },
+      {
+        q: "What are the legal penalties for non-compliance with Natasha's Law in the UK?",
+        a: "Failing to comply with Natasha's Law is a criminal offence under the Food Safety Act 1990. Local council Environmental Health Officers (EHO) can issue Improvement Notices, hefty fines, and pursue criminal prosecution resulting in unlimited commercial fines."
+      },
+      {
+        q: "Can handwritten labels be used to comply with Natasha's Law?",
+        a: "Yes, handwritten labels are legally permissible provided they are easily visible, clearly legible, and strictly adhere to the 1.2 mm minimum x-height and bold allergen emphasis requirements. However, digital label printers are strongly recommended to avoid handwriting errors."
+      },
+      {
+        q: "How should compound ingredients be listed on a PPDS label?",
+        a: "Compound ingredients (e.g. mayonnaise) must be declared with their full constituent ingredients in parentheses, with any statutory allergens emphasised (e.g. 'Mayonnaise [Rapeseed Oil, Water, Pasteurised **Egg** Yolk, Spirit Vinegar, Salt, **Mustard** Flour]')."
+      }
+    ],
+    relatedTools: [
+      "food-allergen-chart",
+      "allergen-cross-contamination-sop",
+      "allergen-matrix-generator"
+    ],
+    relatedBlog: {
+      title: "Natasha's Law PPDS Food Labelling Guide",
+      slug: "natashas-law-ppds-food-labelling-guide"
+    }
+  },
+  "non-gmo": {
+    directAnswer:
+      "A Non-GMO food audit checklist establishes identity preservation, traceability, and testing protocols across agricultural and food processing supply chains. It verifies that ingredients adhere to strict non-GMO standards—such as the Non-GMO Project Standard and UK/EU Retained Regulations (EC) No 1829/2003 and 1830/2003—maintaining genetically engineered components below statutory thresholds (0.9%).",
+    howTo: [
+      "Review high-risk crop register: verify non-GMO Identity Preserved (IP) certificates for soy, maize, canola, sugar beet, and cotton derivatives.",
+      "Audit laboratory testing: inspect PCR (Polymerase Chain Reaction) testing Certificates of Analysis (COA) for every raw material production lot.",
+      "Inspect physical segregation: confirm dedicated silos, hoppers, conveyors, and storage zones are labelled 'Non-GMO / GMO-Free Only'.",
+      "Validate cleanout procedures: verify documented equipment flush-outs, wet sanitisation, and dry vacuum sweeps between conventional and non-GMO production runs.",
+      "Review retail packaging and claims: audit finished labels against UK Trading Standards rules to ensure non-GMO claims are accurate, truthful, and substantiated."
+    ],
+    faqs: [
+      {
+        q: "What is the legal threshold for GMO presence in the UK and European Union?",
+        a: "Under Retained EU Regulations (EC) No 1829/2003 and 1830/2003, food and feed containing adventitious or technically unavoidable GMO presence below 0.9% do not require GMO labelling, provided the operator can prove appropriate preventative controls."
+      },
+      {
+        q: "Which agricultural crops are classified as high-risk for GMO contamination?",
+        a: "Major high-risk crops include soybeans, field corn (maize), canola (rapeseed), sugar beets, cotton, alfalfa, papaya, and summer squash (zucchini), along with animal-derived products fed on GM rations."
+      },
+      {
+        q: "What laboratory testing method is the gold standard for non-GMO verification?",
+        a: "Quantitative Real-Time Polymerase Chain Reaction (qPCR) testing conducted by an ISO 17025 accredited laboratory is the recognized scientific standard for detecting and quantifying GMO DNA sequences."
+      },
+      {
+        q: "How does identity preservation (IP) work in non-GMO manufacturing?",
+        a: "Identity preservation tracks non-GMO commodities through every step of the supply chain—from certified non-GM seed selection and dedicated harvesting to segregated transport, processing, and packaging—backed by documented chain-of-custody records."
+      },
+      {
+        q: "Can organic certified foods automatically claim non-GMO status?",
+        a: "Yes. Under UK and EU organic standards, the use of genetically modified organisms (GMOs) and ingredients produced from GMOs is strictly prohibited across all organic production."
+      }
+    ],
+    relatedTools: [
+      "kosher-certification",
+      "gmp-audit-checklist",
+      "haccp-plan-template"
+    ],
+    relatedBlog: {
+      title: "How to Create a Compliant 14 Allergen Matrix for UK Restaurants",
+      slug: "how-to-create-compliant-14-allergen-matrix-uk-restaurants"
+    }
+  },
+  "amazon-seller-and-product-requirements": {
+    directAnswer:
+      "An Amazon food seller requirements checklist guides grocery brand owners and third-party merchants through Amazon UK grocery gating, food safety compliance, and Fulfilment by Amazon (FBA) standards. It covers commercial distributor invoices, local authority food business registrations, expiration date formatting, packaging polybagging, and temperature-sensitive seasonal storage rules.",
+    howTo: [
+      "Complete Amazon Grocery ungating: submit valid commercial distributor invoices, active UK local council food business registration, and food hygiene rating certification.",
+      "Audit inventory shelf-life: verify perishable food delivered to Amazon FBA centres has at least 50+ days shelf-life remaining (90+ days recommended).",
+      "Apply expiration date labelling: print dates in DD-MM-YYYY format in minimum 36-point font on both master cartons and individual retail packaging.",
+      "Comply with polybagging rules: double-seal liquid containers and package powdered goods in polybags bearing printed suffocation warnings for openings 5 inches or wider.",
+      "Ensure UK packaging compliance: verify ingredients, 14 bold allergens, net weights, and UK manufacturer or importer business details comply with FIR 2014."
+    ],
+    faqs: [
+      {
+        q: "What documentation is required to ungate the Grocery category on Amazon UK?",
+        a: "Amazon requires at least one dated commercial invoice from a recognized manufacturer or distributor within the past 180 days showing purchase of at least 10 units, matching seller account details, and proof of local council food business registration."
+      },
+      {
+        q: "What is Amazon FBA's policy regarding perishable food expiration dates?",
+        a: "Amazon requires that all food products arriving at FBA fulfilment centres have at least 50 days of remaining shelf-life. Products with fewer than 50 days are flagged as expired and discarded at the seller's expense."
+      },
+      {
+        q: "What are the rules for selling meltable food items via Amazon FBA?",
+        a: "Meltable products—such as chocolate, gummies, and wax-based confectionery—are only accepted at Amazon FBA fulfilment centres between October 16 and April 30. During warmer summer months, meltable inventory is automatically disposed of unless merchant-fulfilled with cold-chain logistics."
+      },
+      {
+        q: "What packaging requirements apply to glass containers sold on Amazon?",
+        a: "Glass containers containing food must be packaged to withstand a 3-foot drop test onto concrete without breaking. Sellers must use bubble wrap, heavy cardboard dividers, or individual form-fitting boxes."
+      },
+      {
+        q: "Does Amazon accept food products packaged without English labels?",
+        a: "No. All food items sold on Amazon UK must feature complete English labelling conforming to UK Food Information Regulations 2014, including legal product name, ingredients, 14 allergens highlighted in bold, and UK business address."
+      }
+    ],
+    relatedTools: [
+      "printable-retail-store-daily-checklist",
+      "natashas-law",
+      "food-allergen-chart"
+    ],
+    relatedBlog: {
+      title: "Natasha's Law PPDS Food Labelling Guide",
+      slug: "natashas-law-ppds-food-labelling-guide"
+    }
+  },
+  "restaurant-fire-inspection-checklist": {
+    directAnswer:
+      "A restaurant fire inspection checklist audits commercial kitchens and dining premises for compliance with the Regulatory Reform (Fire Safety) Order 2005 and local fire authority standards. It covers commercial kitchen hood automatic suppression systems (Ansul), BESA TR19 extraction duct degreasing, Class F fire extinguishers, emergency exit lighting, fire blankets, and gas interlock fail-safe systems.",
+    howTo: [
+      "Inspect automatic hood suppression: confirm the Ansul / R-102 wet chemical fire suppression system has been serviced and tagged by a qualified engineer within the last 6 months.",
+      "Verify extraction duct degreasing: audit TR19 certification records confirming hoods, grease baffle filters, and ducts have been professionally cleaned.",
+      "Check fire extinguisher positioning: verify a Class F wet chemical extinguisher is located within 5 metres of deep fat fryers and a CO2 extinguisher is mounted near electrical panels.",
+      "Inspect fire blankets and emergency exits: confirm BS EN 1869 compliant fire blankets are mounted away from cooklines and all fire exit doors are unlocked and unobstructed.",
+      "Test emergency systems: verify gas interlock system cuts fuel supply when extraction fans stop, and conduct weekly fire alarm and emergency lighting battery tests."
+    ],
+    faqs: [
+      {
+        q: "What fire safety legislation governs commercial restaurants in England and Wales?",
+        a: "Commercial kitchens are legally governed by the Regulatory Reform (Fire Safety) Order 2005. The designated 'Responsible Person' must conduct a documented Fire Risk Assessment, maintain firefighting equipment, and train staff."
+      },
+      {
+        q: "Why is a Class F fire extinguisher mandatory in commercial kitchens?",
+        a: "Class F extinguishers are specifically designed for high-temperature cooking oil and fat fires (deep fat fryers). Standard water or foam extinguishers cause explosive boiling flare-ups, while Class F wet chemical agents saponify the oil into a non-combustible soap foam."
+      },
+      {
+        q: "How frequently must restaurant extraction ducts be cleaned to comply with insurance?",
+        a: "Under BESA TR19 standards, extraction systems in heavy-use kitchens (12-16 hours/day) must be professionally degreased every 3 months; moderate-use kitchens (6-12 hours/day) every 6 months; light-use kitchens (2-6 hours/day) annually."
+      },
+      {
+        q: "What is a gas interlock system and why is it legally required in commercial kitchens?",
+        a: "Under BS 6173 and Gas Safe regulations, a gas interlock system automatically shuts off the gas supply to cooking equipment if the mechanical ventilation hood fails, preventing dangerous carbon monoxide accumulation and fire hazards."
+      },
+      {
+        q: "How often should commercial kitchen fire suppression systems be serviced?",
+        a: "Automatic wet chemical suppression systems (e.g. Ansul R-102) must undergo comprehensive professional servicing and recertification every 6 months by an authorized BAFE-registered technician."
+      }
+    ],
+    relatedTools: [
+      "commercial-kitchen-cleaning-checklist",
+      "opening-and-closing-checklist-template",
+      "kitchen-sop"
+    ],
+    relatedBlog: {
+      title: "SFBB Daily Kitchen Opening and Closing Checklist Guide",
+      slug: "sfbb-daily-kitchen-opening-closing-checklist-guide"
+    }
   }
 
 };
