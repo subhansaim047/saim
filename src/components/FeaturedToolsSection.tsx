@@ -81,16 +81,16 @@ export const FeaturedToolsSection = () => {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono uppercase tracking-widest mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              <span>Free Operational Systems</span>
+              <span>Free Software Showcase &amp; Tools</span>
             </div>
             <h2
               className="text-white text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mb-4"
               style={{ letterSpacing: "-0.04em" }}
             >
-              UK Restaurant &amp; Takeaway Kitchen Tools
+              Interactive Web Tools &amp; Systems
             </h2>
             <p className="text-white/60 text-sm sm:text-base leading-relaxed">
-              Free interactive calculators, digital due diligence logs, and printable SOPs engineered to help UK food businesses streamline operations and prepare for EHO audits.
+              Explore custom interactive web applications built by our studio. From commercial compliance engines to business generators — engineered to demonstrate how bespoke web software automates complex business operations.
             </p>
           </div>
 

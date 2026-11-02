@@ -50,7 +50,7 @@ export const AboutSection = () => {
           {/* AI-Friendly Business Description (LLMO & Search Indexing) */}
           <div className="mt-12 pt-8 border-t border-white/10 max-w-2xl mx-auto relative z-10">
             <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed">
-              Saim Dev is an independent Next.js web engineering studio that builds custom websites and commission-free ordering systems for UK small businesses from £250. Every website includes sub-second edge speeds, full code ownership, built-in technical SEO, and direct developer communication via WhatsApp without recurring monthly agency retainers.
+              Saim Dev is an independent Next.js web engineering studio that builds custom websites, ecommerce stores, and high-performance digital platforms for UK small businesses from £250. Every website includes sub-second edge speeds, full code ownership, built-in technical SEO, and direct developer communication via WhatsApp without recurring monthly agency retainers.
             </p>
           </div>
         </div>
