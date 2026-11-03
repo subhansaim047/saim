@@ -1,0 +1,13 @@
+{
+  "detected_values": {
+    "country": {
+      "name": "Pakistan",
+      "handle": "PK"
+    },
+    "currency": {
+      "name": "Pakistani Rupee",
+      "iso_code": "PKR",
+      "symbol": "Rs."
+    }
+  }
+}

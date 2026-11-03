@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/frenchyse`,        lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/anzaar`,           lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/hotbite`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/thejacketmaker`,   lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
   ];
 
   // ─── Blog posts ────────────────────────────────────────────────────────────

@@ -44,6 +44,12 @@ const nextConfig = {
         destination: '/blog/why-small-business-needs-website',
         permanent: true,
       },
+      // Demo Showcase Routes
+      {
+        source: '/thejacketmaker',
+        destination: '/thejacketmaker/index.html',
+        permanent: true,
+      },
       // 1. Hub Canonicalization
       {
         source: '/food-safety-templates',

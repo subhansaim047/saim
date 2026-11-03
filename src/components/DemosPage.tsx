@@ -20,6 +20,23 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
+    id: "thejacketmaker",
+    title: "The Jacket Maker – E-Commerce Storefront",
+    category: "E-Commerce / Shopify",
+    description: "A 1:1 bespoke e-commerce platform clone featuring 65+ interactive pages, multi-collection lookbooks, flagship product detail pages, bespoke jacket builders, and responsive mobile architecture.",
+    demoUrl: "/thejacketmaker/index.html",
+    previewImage: "/demos/previews/thejacketmaker-ecommerce-storefront.png",
+    tags: ["E-Commerce", "Shopify", "Interactive Storefront", "Full Catalog"],
+    features: [
+      "1:1 Exact Storefront Architecture",
+      "Full Multi-Collection Navigation (Men, Women, Custom)",
+      "Flagship Product Pages with Swatches & Specs",
+      "Custom Jacket Inquiry & Bespoke Workflows",
+      "Responsive Desktop & Mobile Viewports"
+    ],
+    badge: "Flagship E-Commerce"
+  },
+  {
     id: "hotbite",
     title: "Hotbite – Street Food That Hits",
     category: "Fast Food & Street Food",
