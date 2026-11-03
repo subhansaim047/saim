@@ -20,22 +20,6 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
-    id: "idrees-leather",
-    title: "Idrees Leather – Handcrafted Luxury Goods",
-    category: "E-Commerce & Luxury Retail",
-    description: "An ultra-luxury bespoke e-commerce storefront for handcrafted leather goods. Engineered with high-performance responsive grids, collection galleries, interactive product showcases, and seamless mobile purchasing UI.",
-    demoUrl: "/idreesleather/index.html",
-    previewImage: "/demos/previews/idrees-leather-preview.webp",
-    tags: ["E-Commerce", "Shopify Storefront", "Luxury Goods", "Custom Theme"],
-    features: [
-      "100% Offline Asset Bundling & Zero-Latency Navigation",
-      "Dynamic Product Sliders & Featured Collection Lookbooks",
-      "Integrated Quick-Add & Responsive Filter Navigation",
-      "Tailored for International Shipping & Multi-Currency Sales"
-    ],
-    badge: "New E-Commerce Release"
-  },
-  {
     id: "hotbite",
     title: "Hotbite – Street Food That Hits",
     category: "Fast Food & Street Food",

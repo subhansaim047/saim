@@ -36,15 +36,7 @@ const nextConfig = {
       },
     ];
   },
-    async rewrites() {
-    return [
-      {
-        source: '/idreesleather',
-        destination: '/idreesleather/index.html',
-      },
-    ];
-  },
-async redirects() {
+  async redirects() {
     return [
       // Evergreen Blog Migration
       {
