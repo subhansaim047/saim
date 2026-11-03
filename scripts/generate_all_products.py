@@ -24,15 +24,23 @@ def get_discount_pct(price, compare_price):
         pass
     return None
 
+def normalize_url(url):
+    if not url:
+        return ""
+    if url.startswith("//"):
+        return "https:" + url
+    return url
+
 def build_image_slide_html(title, img_src, media_id):
+    src = normalize_url(img_src)
     return f'''<div class="slide" data-media-id="{media_id}">
   <div class="product-media-wrapper" data-media-id="template--{media_id}" id="FeaturedMedia-template--{media_id}-wrapper" tabindex="-1">
     <div class="product-media product-media--image" style="padding-bottom: 100.0%">
       <div class="rimage-outer-wrapper">
         <div class="rimage-wrapper lazyload--placeholder" style="padding-top:100.0%">
-          <img alt="{title}" class="rimage__image lazyload fade-in cover lazyloaded" data-aspectratio="1.0" data-parent-fit="cover" data-sizes="auto" data-src="{img_src}" src="{img_src}"/>
+          <img alt="{title}" class="rimage__image lazyload fade-in cover lazyloaded" data-aspectratio="1.0" data-parent-fit="cover" data-sizes="auto" data-src="{src}" src="{src}"/>
           <noscript>
-            <img alt="{title}" class="rimage__image lazyloaded" src="{img_src}"/>
+            <img alt="{title}" class="rimage__image lazyloaded" src="{src}"/>
           </noscript>
         </div>
       </div>
@@ -41,42 +49,41 @@ def build_image_slide_html(title, img_src, media_id):
 </div>'''
 
 def build_video_slide_html(title, video_url, poster_url, media_id):
-    return f'''<div class="slide" data-media-id="{media_id}">
+    v_url = normalize_url(video_url)
+    p_url = normalize_url(poster_url)
+    return f'''<div class="slide slide--video" data-media-id="{media_id}">
   <div class="product-media-wrapper" data-media-id="template--{media_id}" id="FeaturedMedia-template--{media_id}-wrapper" tabindex="-1">
-    <div class="product-media product-media--video product-media--frame" data-enable-video-looping="true" data-video-id="" data-video-type="external" style="padding-bottom: 100.0%">
-      <div class="product-media__poster lazyload--placeholder">
-        <div class="rimage-background lazyload fade-in lazyloaded" style="background-image: url('{poster_url}') !important;"></div>
-        <button aria-label="Play video" class="product-media__video-play-btn">
-          <svg aria-hidden="true" class="icon icon--full-color icon-video-badge-full-color" focusable="false" role="presentation" viewbox="0 0 26 26"><path clip-rule="evenodd" d="M1 25h24V1H1v24z" fill-rule="evenodd"></path><path class="icon-video-badge-full-color-outline" d="M.5 25v.5h25V.5H.5V25z"></path><path class="icon-video-badge-full-color-element" clip-rule="evenodd" d="M9.718 6.72a1 1 0 0 0-1.518.855v10.736a1 1 0 0 0 1.562.827l8.35-5.677a1 1 0 0 0-.044-1.682l-8.35-5.06z" fill-rule="evenodd" opacity=".6"></path></svg>
-        </button>
+    <div class="product-media product-media--video product-media--frame" data-enable-video-looping="true" style="padding-bottom: 100.0%; position: relative; background: #000;">
+      <video class="product-video-element" playsinline="playsinline" loop="loop" preload="auto" controls="controls" poster="{p_url}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 5;">
+        <source src="{v_url}" type="video/mp4">
+      </video>
+      <div class="product-media__poster" style="display: none;">
+        <div class="rimage-background" style="background-image: url('{p_url}') !important;"></div>
       </div>
-      <script class="product-media__video-template" type="text/template">
-        <video playsinline="playsinline" loop="loop" preload="none" aspect-ratio="1.0" aria-label="{title} Video" poster="{poster_url}">
-          <source src="{video_url}" type="video/mp4">
-          <img alt="{title} Video" src="{poster_url}">
-        </video>
-      </script>
     </div>
   </div>
 </div>'''
 
 def build_image_thumb_html(title, img_src, media_id):
-    return f'''<a class="thumbnail thumbnail--media-image" data-media-id="{media_id}" href="{img_src}">
+    src = normalize_url(img_src)
+    return f'''<a class="thumbnail thumbnail--media-image" data-media-id="{media_id}" href="{src}">
   <div class="rimage-outer-wrapper" style="max-width: 1080px">
-    <div class="rimage-wrapper lazyload--placeholder" style="padding-top:100.0%">
-      <img alt="{title}" class="rimage__image lazyload fade-in lazyloaded" src="{img_src}"/>
+    <div class="rimage-wrapper" style="padding-top:100.0%; position: relative; overflow: hidden;">
+      <img alt="" class="thumb__img" src="{src}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;"/>
     </div>
   </div>
 </a>'''
 
 def build_video_thumb_html(title, video_url, poster_url, media_id):
-    return f'''<a class="thumbnail thumbnail--media-video" data-media-id="{media_id}" href="{poster_url}">
+    v_url = normalize_url(video_url)
+    p_url = normalize_url(poster_url)
+    return f'''<a class="thumbnail thumbnail--media-video" data-media-id="{media_id}" href="{p_url}" data-video-src="{v_url}">
   <div class="rimage-outer-wrapper" style="max-width: 1080px">
-    <div class="rimage-wrapper lazyload--placeholder" style="padding-top:100.0%">
-      <img alt="{title} Video" class="rimage__image lazyload fade-in lazyloaded" src="{poster_url}"/>
+    <div class="rimage-wrapper" style="padding-top:100.0%; position: relative; overflow: hidden;">
+      <img alt="" class="thumb__img" src="{p_url}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;"/>
     </div>
   </div>
-  <span data-src="{video_url}">
+  <span data-src="{v_url}">
     <span class="watchvideo">Watch Video</span>
   </span>
 </a>'''
@@ -185,6 +192,11 @@ def main():
         h1 = soup.find('h1', class_='title') or soup.find('h1')
         if h1:
             h1.string = title
+
+        bc = soup.find(class_='breadcrumbs-list__link', attrs={'aria-current': 'page'})
+        if bc:
+            bc.string = title
+            bc['href'] = f"/thejacketmaker/products/{handle}/index.html"
 
         price_el = soup.find(class_='product-price__amount')
         if price_el:
