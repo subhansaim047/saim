@@ -1,6 +1,6 @@
 /**
- * The Jacket Maker - High Performance Interactive Controller
- * Native integration with Slick Slider, Video Players, Swatches, and Filters
+ * HQ Leathercon - High Performance Interactive Controller
+ * Native integration with Slick Slider, Swatches, Cart and Filters
  */
 
 (function () {
@@ -10,41 +10,6 @@
     const $ = window.jQuery;
     const $slideshow = $('.product-slideshow');
     const thumbLinks = Array.from(document.querySelectorAll('.thumbnails a'));
-    const slides = Array.from(document.querySelectorAll('.product-slideshow .slide'));
-
-    // Find the slide index that contains the video
-    let videoSlideIndex = -1;
-    slides.forEach((slide, idx) => {
-      if (slide.querySelector('video') || slide.classList.contains('slide--video') || slide.querySelector('.product-media--video')) {
-        videoSlideIndex = idx;
-      }
-    });
-
-    // Ensure all videos in slideshow are properly configured
-    const videos = Array.from(document.querySelectorAll('.product-slideshow video'));
-    videos.forEach(v => {
-      v.setAttribute('playsinline', 'true');
-      v.setAttribute('loop', 'true');
-      v.setAttribute('controls', 'true');
-      v.style.width = '100%';
-      v.style.height = '100%';
-      v.style.objectFit = 'cover';
-      v.style.position = 'absolute';
-      v.style.top = '0';
-      v.style.left = '0';
-      v.style.zIndex = '5';
-
-      // Hide any poster or button overlays when video is ready
-      const parentMedia = v.closest('.product-media');
-      if (parentMedia) {
-        const posterEl = parentMedia.querySelector('.product-media__poster');
-        const playBtn = parentMedia.querySelector('.product-media__video-play-btn');
-        v.addEventListener('play', () => {
-          if (posterEl) posterEl.style.display = 'none';
-          if (playBtn) playBtn.style.display = 'none';
-        });
-      }
-    });
 
     function highlightThumbnail(index) {
       thumbLinks.forEach((t, i) => {
@@ -59,7 +24,7 @@
       });
     }
 
-    // Attach click listeners to all thumbnails
+    // Attach click listeners to all image thumbnails
     thumbLinks.forEach((link, idx) => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -70,27 +35,6 @@
         if ($ && $slideshow.length && $slideshow.hasClass('slick-initialized')) {
           $slideshow.slick('slickGoTo', idx);
         }
-
-        const isVideoThumb = link.classList.contains('thumbnail--media-video') ||
-                             !!link.querySelector('.watchvideo') ||
-                             link.hasAttribute('data-video-src') ||
-                             idx === videoSlideIndex;
-
-        if (isVideoThumb) {
-          const activeVideo = document.querySelector('.product-slideshow video');
-          if (activeVideo) {
-            activeVideo.currentTime = 0;
-            const p = activeVideo.play();
-            if (p !== undefined) {
-              p.catch(() => {
-                activeVideo.muted = true;
-                activeVideo.play();
-              });
-            }
-          }
-        } else {
-          videos.forEach(v => v.pause());
-        }
       });
     });
 
@@ -98,21 +42,6 @@
       // Hook into Slick afterChange
       $slideshow.on('afterChange', function (event, slick, currentSlide) {
         highlightThumbnail(currentSlide);
-
-        if (currentSlide === videoSlideIndex) {
-          const activeVideo = document.querySelector('.product-slideshow video');
-          if (activeVideo) {
-            const p = activeVideo.play();
-            if (p !== undefined) {
-              p.catch(() => {
-                activeVideo.muted = true;
-                activeVideo.play();
-              });
-            }
-          }
-        } else {
-          videos.forEach(v => v.pause());
-        }
       });
 
       // Highlight initial thumbnail
@@ -122,30 +51,21 @@
 
   function initProductSwatches() {
     // 1. Color Swatches
-    const colorSwatches = Array.from(document.querySelectorAll('.custom-swatch a'));
-    const colorLabel = document.querySelector('legend.label');
-
-    colorSwatches.forEach(swatch => {
+    const swatches = Array.from(document.querySelectorAll('.opt-label--swatch, .color-swatch, .swatch-element'));
+    swatches.forEach(swatch => {
       swatch.addEventListener('click', function (e) {
-        const title = (this.getAttribute('title') || '').trim();
-        const href = this.getAttribute('href');
-
-        const currentPath = window.location.pathname;
-        if (href && href !== '#' && href !== currentPath && !href.endsWith(currentPath.split('/').pop())) {
-          return;
-        }
-
         e.preventDefault();
-        colorSwatches.forEach(s => {
-          s.style.outline = 'none';
-          s.style.borderRadius = '50%';
-        });
-        this.style.outline = '2px solid #000';
-        this.style.outlineOffset = '2px';
-        this.style.borderRadius = '50%';
+        swatches.forEach(s => s.classList.remove('opt-label--active', 'is-selected'));
+        this.classList.add('opt-label--active', 'is-selected');
 
-        if (colorLabel && title) {
-          colorLabel.textContent = 'Color: ' + title;
+        const colorName = this.getAttribute('data-swatch') ||
+                          this.getAttribute('data-value') ||
+                          this.getAttribute('title') ||
+                          this.textContent.trim();
+
+        const colorLabel = document.querySelector('.option-selector[data-option="Color"] .option-selector__label-value, .cc-swatches__label-value, .swatch-value-display');
+        if (colorLabel && colorName) {
+          colorLabel.textContent = colorName;
         }
       });
     });

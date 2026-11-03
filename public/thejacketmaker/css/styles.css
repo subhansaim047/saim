@@ -13197,3 +13197,20 @@ svg.feather {
   min-width: 0 !important;
   position: relative !important;
 }
+
+
+/* Global removal overrides per user requirements */
+.watchvideo,
+.section-background-video,
+.video-container--background,
+[data-section-type="background-video"],
+[data-video-type],
+video {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+}
