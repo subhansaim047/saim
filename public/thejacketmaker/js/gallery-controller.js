@@ -165,8 +165,16 @@
     });
 
     // 3. Add to Cart button feedback
-    const addToCartBtn = document.querySelector('.product-form__add-button, [name="add"], .add-to-cart');
-    if (addToCartBtn) {
+    const addToCartBtns = Array.from(document.querySelectorAll('.product-form__add-button, [name="add"], .add-to-cart, .quantity-submit-row__submit button, .button--large'));
+    addToCartBtns.forEach(addToCartBtn => {
+      // Ensure text is Add to Cart if it says Sold out
+      if (addToCartBtn.textContent.trim().toLowerCase() === 'sold out') {
+        addToCartBtn.textContent = 'Add to Cart';
+        addToCartBtn.style.background = '#111';
+        addToCartBtn.style.color = '#fff';
+        addToCartBtn.style.cursor = 'pointer';
+      }
+
       addToCartBtn.addEventListener('click', function (e) {
         e.preventDefault();
         const oldText = this.innerHTML;
@@ -176,11 +184,11 @@
 
         setTimeout(() => {
           this.innerHTML = oldText;
-          this.style.backgroundColor = '';
-          this.style.color = '';
+          this.style.backgroundColor = '#111';
+          this.style.color = '#ffffff';
         }, 2000);
       });
-    }
+    });
   }
 
   function initCollectionInteractions() {
