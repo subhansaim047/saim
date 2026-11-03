@@ -277,7 +277,6 @@ Shopify.SignInWithShop.User.recognized = false;</script>
 </script>
 <script id="shop-js-analytics" type="application/json">{"pageType":"page"}</script>
 <script async="" defer="defer" src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js" type="module"></script>
-
 <script id="__st">var __st={"a":77420626207,"offset":-28800,"reqid":"b37e0d4c-29be-4707-85ba-220ee25d66f4-1793709278","pageurl":"www.thejacketmaker.pk\/pages\/women-jackets","s":"pages-126765302047","u":"5f0cd915acd9","p":"page","rtyp":"page","rid":126765302047};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.3.iife.js',D={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
@@ -2721,7 +2720,7 @@ if (!window.GSC_COUNTDOWN_META) {
 </div>
 <div class="logo-area__middle logo-area__middle--logo-image">
 <div class="logo-area__middle__inner">
-<div class="logo"><a class="logo__link" href="/thejacketmaker/index.html" title="The Jacket Maker"><img alt="The Jacket Maker" class="logo__image" height="290" itemprop="logo" src="/thejacketmaker/images/512-logo-black_1e5d3070-b9c0-4dc5-ac39-8ea250f9b448.svg" width="512"/></a></div>
+<div class="logo"><a class="logo__link" href="/thejacketmaker/index.html" title="The Jacket Maker"><img alt="The Jacket Maker" class="logo__image lazyloaded" height="290" itemprop="logo" src="/thejacketmaker/images/512-logo-black_1e5d3070-b9c0-4dc5-ac39-8ea250f9b448.svg" width="512"/></a></div>
 </div>
 </div>
 <div class="logo-area__right">
@@ -6060,9 +6059,9 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="flexible-layout flexible-layout--variable-columns flexible-layout--columns-6 align-center">
 <div class="column text-column" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.15s" id="block-id-text_block_6QhhGf">
 <div class="text-column__image lightly-spaced-row"><a href="/thejacketmaker/collections/womens-leather-jackets/index.html"><div class="rimage-outer-wrapper" style="max-width: 500px">
-<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Leather-Jackets-1582971755151_846057fd-14c4-45dd-afe8-5525b70d01a5.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Leather-Jackets-1582971755151_846057fd-14c4-45dd-afe8-5525b70d01a5.webp"/>
+<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in lazyloaded" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Leather-Jackets-1582971755151_846057fd-14c4-45dd-afe8-5525b70d01a5.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Leather-Jackets-1582971755151_846057fd-14c4-45dd-afe8-5525b70d01a5.webp"/>
 <noscript>
-<img alt="" class="rimage__image" src="/thejacketmaker/images/Women-Leather-Jackets-1582971755151_846057fd-14c4-45dd-afe8-5525b70d01a5.webp"/>
+<img alt="" class="rimage__image lazyloaded" src="/thejacketmaker/images/Women-Leather-Jackets-1582971755151_846057fd-14c4-45dd-afe8-5525b70d01a5.webp"/>
 </noscript>
 </div>
 </div>
@@ -6074,9 +6073,9 @@ if (!window.GSC_COUNTDOWN_META) {
 </div>
 <div class="column text-column" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.3s" id="block-id-text_block_9dCeNt">
 <div class="text-column__image lightly-spaced-row"><a href="/thejacketmaker/collections/all/index.html"><div class="rimage-outer-wrapper" style="max-width: 500px">
-<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Leather-Bomber-Jackets-1582971772570_11e11687-beb1-4364-b052-2a7c92ff7ce9.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Leather-Bomber-Jackets-1582971772570_11e11687-beb1-4364-b052-2a7c92ff7ce9.webp"/>
+<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in lazyloaded" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Leather-Bomber-Jackets-1582971772570_11e11687-beb1-4364-b052-2a7c92ff7ce9.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Leather-Bomber-Jackets-1582971772570_11e11687-beb1-4364-b052-2a7c92ff7ce9.webp"/>
 <noscript>
-<img alt="" class="rimage__image" src="/thejacketmaker/images/Women-Leather-Bomber-Jackets-1582971772570_11e11687-beb1-4364-b052-2a7c92ff7ce9.webp"/>
+<img alt="" class="rimage__image lazyloaded" src="/thejacketmaker/images/Women-Leather-Bomber-Jackets-1582971772570_11e11687-beb1-4364-b052-2a7c92ff7ce9.webp"/>
 </noscript>
 </div>
 </div>
@@ -6088,9 +6087,9 @@ if (!window.GSC_COUNTDOWN_META) {
 </div>
 <div class="column text-column" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.45s" id="block-id-text_block_M8CCXE">
 <div class="text-column__image lightly-spaced-row"><a href="/thejacketmaker/collections/all/index.html"><div class="rimage-outer-wrapper" style="max-width: 500px">
-<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Biker-Leather-Jackets-1582971780515_7e5ae243-c8a5-49c2-af7a-15d431a4aebd.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Biker-Leather-Jackets-1582971780515_7e5ae243-c8a5-49c2-af7a-15d431a4aebd.webp"/>
+<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in lazyloaded" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Biker-Leather-Jackets-1582971780515_7e5ae243-c8a5-49c2-af7a-15d431a4aebd.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Biker-Leather-Jackets-1582971780515_7e5ae243-c8a5-49c2-af7a-15d431a4aebd.webp"/>
 <noscript>
-<img alt="" class="rimage__image" src="/thejacketmaker/images/Women-Biker-Leather-Jackets-1582971780515_7e5ae243-c8a5-49c2-af7a-15d431a4aebd.webp"/>
+<img alt="" class="rimage__image lazyloaded" src="/thejacketmaker/images/Women-Biker-Leather-Jackets-1582971780515_7e5ae243-c8a5-49c2-af7a-15d431a4aebd.webp"/>
 </noscript>
 </div>
 </div>
@@ -6102,9 +6101,9 @@ if (!window.GSC_COUNTDOWN_META) {
 </div>
 <div class="column text-column" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.6s" id="block-id-text_block_4RtCTU">
 <div class="text-column__image lightly-spaced-row"><a href="/thejacketmaker/collections/all/index.html"><div class="rimage-outer-wrapper" style="max-width: 500px">
-<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Trench-Coats-1582971855982_811480c1-b4c0-4d18-a8f1-6999eff2e009.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Trench-Coats-1582971855982_811480c1-b4c0-4d18-a8f1-6999eff2e009.webp"/>
+<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in lazyloaded" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Trench-Coats-1582971855982_811480c1-b4c0-4d18-a8f1-6999eff2e009.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Trench-Coats-1582971855982_811480c1-b4c0-4d18-a8f1-6999eff2e009.webp"/>
 <noscript>
-<img alt="" class="rimage__image" src="/thejacketmaker/images/Women-Trench-Coats-1582971855982_811480c1-b4c0-4d18-a8f1-6999eff2e009.webp"/>
+<img alt="" class="rimage__image lazyloaded" src="/thejacketmaker/images/Women-Trench-Coats-1582971855982_811480c1-b4c0-4d18-a8f1-6999eff2e009.webp"/>
 </noscript>
 </div>
 </div>
@@ -6116,9 +6115,9 @@ if (!window.GSC_COUNTDOWN_META) {
 </div>
 <div class="column text-column" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.75s" id="block-id-text_block_gECXDX">
 <div class="text-column__image lightly-spaced-row"><a href="/thejacketmaker/collections/all/index.html"><div class="rimage-outer-wrapper" style="max-width: 500px">
-<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Leather-Blazers-1582971765016_802aa083-2535-49ba-870e-6707ed0cdbca.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Leather-Blazers-1582971765016_802aa083-2535-49ba-870e-6707ed0cdbca.webp"/>
+<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in lazyloaded" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/Women-Leather-Blazers-1582971765016_802aa083-2535-49ba-870e-6707ed0cdbca.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/Women-Leather-Blazers-1582971765016_802aa083-2535-49ba-870e-6707ed0cdbca.webp"/>
 <noscript>
-<img alt="" class="rimage__image" src="/thejacketmaker/images/Women-Leather-Blazers-1582971765016_802aa083-2535-49ba-870e-6707ed0cdbca.webp"/>
+<img alt="" class="rimage__image lazyloaded" src="/thejacketmaker/images/Women-Leather-Blazers-1582971765016_802aa083-2535-49ba-870e-6707ed0cdbca.webp"/>
 </noscript>
 </div>
 </div>
@@ -6130,9 +6129,9 @@ if (!window.GSC_COUNTDOWN_META) {
 </div>
 <div class="column text-column" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.9s" id="block-id-text_block_MFJY4a">
 <div class="text-column__image lightly-spaced-row"><a href="/thejacketmaker/collections/all/index.html"><div class="rimage-outer-wrapper" style="max-width: 500px">
-<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/women-suede.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/women-suede.webp"/>
+<div class="rimage-wrapper lazyload--placeholder" style="padding-top:109.39999999999999%"><img alt="" class="rimage__image lazyload fade-in lazyloaded" data-aspectratio="0.9140767824497258" data-sizes="auto" data-src="/thejacketmaker/images/women-suede.webp" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" src="/thejacketmaker/images/women-suede.webp"/>
 <noscript>
-<img alt="" class="rimage__image" src="/thejacketmaker/images/women-suede.webp"/>
+<img alt="" class="rimage__image lazyloaded" src="/thejacketmaker/images/women-suede.webp"/>
 </noscript>
 </div>
 </div>

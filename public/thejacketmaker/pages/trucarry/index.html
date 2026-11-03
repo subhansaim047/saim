@@ -277,7 +277,6 @@ Shopify.SignInWithShop.User.recognized = false;</script>
 </script>
 <script id="shop-js-analytics" type="application/json">{"pageType":"page"}</script>
 <script async="" defer="defer" src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js" type="module"></script>
-
 <script id="__st">var __st={"a":77420626207,"offset":-28800,"reqid":"da265845-ab1a-4c72-b76f-d39603988be4-1793709278","pageurl":"www.thejacketmaker.pk\/pages\/trucarry","s":"pages-127209734431","u":"78907033d6d1","p":"page","rtyp":"page","rid":127209734431};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.3.iife.js',D={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
@@ -2721,7 +2720,7 @@ if (!window.GSC_COUNTDOWN_META) {
 </div>
 <div class="logo-area__middle logo-area__middle--logo-image">
 <div class="logo-area__middle__inner">
-<div class="logo"><a class="logo__link" href="/thejacketmaker/index.html" title="The Jacket Maker"><img alt="The Jacket Maker" class="logo__image" height="290" itemprop="logo" src="/thejacketmaker/images/512-logo-black_1e5d3070-b9c0-4dc5-ac39-8ea250f9b448.svg" width="512"/></a></div>
+<div class="logo"><a class="logo__link" href="/thejacketmaker/index.html" title="The Jacket Maker"><img alt="The Jacket Maker" class="logo__image lazyloaded" height="290" itemprop="logo" src="/thejacketmaker/images/512-logo-black_1e5d3070-b9c0-4dc5-ac39-8ea250f9b448.svg" width="512"/></a></div>
 </div>
 </div>
 <div class="logo-area__right">
@@ -6031,7 +6030,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="carousel-inner" role="listbox">
 <div class="head" style="background-image: url(//www.thejacketmaker.pk/cdn/shop/files/01-header-d3c803ab6c2c14a09ec348a3ff24b913f3e4238e01f41a3876a35dd17cf3795b.jpg?v=1693699725)">
 <p class="logo">
-<img class="mbm" src="/thejacketmaker/images/trucarry_logo.png" width="200"/>
+<img class="mbm lazyloaded" src="/thejacketmaker/images/trucarry_logo.png" width="200"/>
 <span class="pull-left">
 <span data-mce-fragment="1">Driven by a passion for shaping leather into elegant &amp; functional essentials for authentic use, TruCarry combines the excellence of heirloom craftsmanship and detailedness of human touch with the finest materials to create long-lasting leather bags for those who value true quality at accessible prices.</span>
 </span>
@@ -6089,7 +6088,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="overlapping-title">
 <span>Philos Backpack</span>
 </div>
-<img alt="featured image" src="/thejacketmaker/images/Backpack-1666635284235.jpg"/>
+<img alt="featured image" class="lazyloaded" src="/thejacketmaker/images/Backpack-1666635284235.jpg"/>
 </a>
 </div>
 <div class="multiple-products-tc">
@@ -6097,7 +6096,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Philos_Black_Leather_Backpack_front-2-1666636426776_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Philos_Black_Leather_Backpack_front-2-1666636426776_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Black</div>
 <div class="smallprice">Rs.24,200.00</div>
@@ -6108,7 +6107,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Philos_Brown_Leather_Backpack_front-3-1666105573812_e0a54a8e-eb62-4d00-a092-f76ae7575b12_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Philos_Brown_Leather_Backpack_front-3-1666105573812_e0a54a8e-eb62-4d00-a092-f76ae7575b12_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Brown</div>
 <div class="smallprice">Rs.24,200.00</div>
@@ -6119,7 +6118,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02--The-Philos-Navy-Blue-Leather-Backpack-front-3-1666634069825_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02--The-Philos-Navy-Blue-Leather-Backpack-front-3-1666634069825_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Navy Blue</div>
 <div class="smallprice">Rs.24,200.00</div>
@@ -6130,7 +6129,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Philos_Grey_Leather_Backpack_front-3-1666107772776_24cad2d9-07cf-4429-bffc-fd9f73b2f04d_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Philos_Grey_Leather_Backpack_front-3-1666107772776_24cad2d9-07cf-4429-bffc-fd9f73b2f04d_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Grey</div>
 <div class="smallprice">Rs.24,200.00</div>
@@ -6260,7 +6259,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="overlapping-title">
 <span>The Captain Briefcase</span>
 </div>
-<img alt="featured image" src="/thejacketmaker/images/Briefcase-1666635295965.jpg"/>
+<img alt="featured image" class="lazyloaded" src="/thejacketmaker/images/Briefcase-1666635295965.jpg"/>
 </a>
 </div>
 <div class="multiple-products-tc">
@@ -6268,7 +6267,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The-Captain-Black-Leather-Briefcase-front-_1_-3-1666634243142_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The-Captain-Black-Leather-Briefcase-front-_1_-3-1666634243142_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Black</div>
 <div class="smallprice">Rs.21,900.00</div>
@@ -6279,7 +6278,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-The_Captain_Brown_Leather_Briefcase_front-3-1666109644439_25949c2f-119c-4d06-9388-a2bb7684dd41_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-The_Captain_Brown_Leather_Briefcase_front-3-1666109644439_25949c2f-119c-4d06-9388-a2bb7684dd41_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Brown</div>
 <div class="smallprice">Rs.21,900.00</div>
@@ -6290,7 +6289,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Captain_Navy_Blue_Leather_Briefcase_front-3-1666109866908_279d8f5f-e356-45cc-b15f-bdd985cb90a1_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Captain_Navy_Blue_Leather_Briefcase_front-3-1666109866908_279d8f5f-e356-45cc-b15f-bdd985cb90a1_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Navy Blue</div>
 <div class="smallprice">Rs.21,900.00</div>
@@ -6420,7 +6419,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="overlapping-title">
 <span>The Darrio Duffle</span>
 </div>
-<img alt="featured image" src="/thejacketmaker/images/Duffle-1666635313005.jpg"/>
+<img alt="featured image" class="lazyloaded" src="/thejacketmaker/images/Duffle-1666635313005.jpg"/>
 </a>
 </div>
 <div class="multiple-products-tc">
@@ -6428,7 +6427,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Darrio_Black_Leather_Duffle_Bag_front-3-1666111480499_f7d65d5b-f437-4de7-80c6-fa0745758a7b_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Darrio_Black_Leather_Duffle_Bag_front-3-1666111480499_f7d65d5b-f437-4de7-80c6-fa0745758a7b_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Black</div>
 <div class="smallprice">Rs.28,400.00</div>
@@ -6439,7 +6438,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Darrio_Brown_Leather_Duffle_Bag_front-3-1666111893589_fa26ab89-a159-4090-bc4a-87d51d236145_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Darrio_Brown_Leather_Duffle_Bag_front-3-1666111893589_fa26ab89-a159-4090-bc4a-87d51d236145_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Brown</div>
 <div class="smallprice">Rs.28,400.00</div>
@@ -6569,7 +6568,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="overlapping-title">
 <span>The Carismatico Messenger</span>
 </div>
-<img alt="featured image" src="/thejacketmaker/images/Messenger-1666635328699.jpg"/>
+<img alt="featured image" class="lazyloaded" src="/thejacketmaker/images/Messenger-1666635328699.jpg"/>
 </a>
 </div>
 <div class="multiple-products-tc">
@@ -6577,7 +6576,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Carismatico_Black_Leather_Messenger_Bag_front-3-1666108129668_5670da8a-4bb4-44e5-9107-73000f4b8bcb_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Carismatico_Black_Leather_Messenger_Bag_front-3-1666108129668_5670da8a-4bb4-44e5-9107-73000f4b8bcb_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Black</div>
 <div class="smallprice">Rs.20,100.00</div>
@@ -6588,7 +6587,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Carismatico_Brown_Leather_Messenger_Bag_front-3-1666108475831_53c7a59e-a6d9-4e69-a4e9-e113abb5e01a_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Carismatico_Brown_Leather_Messenger_Bag_front-3-1666108475831_53c7a59e-a6d9-4e69-a4e9-e113abb5e01a_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Brown</div>
 <div class="smallprice">Rs.20,100.00</div>
@@ -6599,7 +6598,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Carismatico_Grey_Leather_Messenger_Bag_front-3-1666108805544_16cb1ae1-131a-4792-ab3b-66f0351a49cd_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Carismatico_Grey_Leather_Messenger_Bag_front-3-1666108805544_16cb1ae1-131a-4792-ab3b-66f0351a49cd_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Grey</div>
 <div class="smallprice">Rs.20,100.00</div>
@@ -6729,7 +6728,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="overlapping-title">
 <span>The Eclectic Folio</span>
 </div>
-<img alt="featured image" src="/thejacketmaker/images/Folio-Organiser-1666635415199.jpg"/>
+<img alt="featured image" class="lazyloaded" src="/thejacketmaker/images/Folio-Organiser-1666635415199.jpg"/>
 </a>
 </div>
 <div class="multiple-products-tc">
@@ -6737,7 +6736,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Eclectic_Black_Leather_Folio_Organiser_front-3-1666110087884_bf2ca6a3-f4b0-42d5-a1b8-051ada64e26d_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Eclectic_Black_Leather_Folio_Organiser_front-3-1666110087884_bf2ca6a3-f4b0-42d5-a1b8-051ada64e26d_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Black</div>
 <div class="smallprice">Rs.17,700.00</div>
@@ -6748,7 +6747,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Eclectic_Brown_Leather_Folio_Organiser_front-3-1666110790042_f2dfae54-ac31-47bb-9016-d4327de729de_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Eclectic_Brown_Leather_Folio_Organiser_front-3-1666110790042_f2dfae54-ac31-47bb-9016-d4327de729de_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Brown</div>
 <div class="smallprice">Rs.17,700.00</div>
@@ -6759,7 +6758,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Eclectic_Navy_Leather_Folio_Organiser_front-2-1666636610752_12a497b1-d806-432e-94d6-b0d6f555e196_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Eclectic_Navy_Leather_Folio_Organiser_front-2-1666636610752_12a497b1-d806-432e-94d6-b0d6f555e196_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Navy Blue</div>
 <div class="smallprice">Rs.17,700.00</div>
@@ -6889,7 +6888,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="overlapping-title">
 <span>The Poet Tote</span>
 </div>
-<img alt="featured image" src="/thejacketmaker/images/Tote-1666635434877.jpg"/>
+<img alt="featured image" class="lazyloaded" src="/thejacketmaker/images/Tote-1666635434877.jpg"/>
 </a>
 </div>
 <div class="multiple-products-tc">
@@ -6897,7 +6896,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Poet_Black_Leather_Tote_Bag_back-3-1666112096194_84e2363d-4899-4400-bc3f-991140625b92_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Poet_Black_Leather_Tote_Bag_back-3-1666112096194_84e2363d-4899-4400-bc3f-991140625b92_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Black</div>
 <div class="smallprice">Rs.17,700.00</div>
@@ -6908,7 +6907,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Poet_Brown_Leather_Tote_Bag_back-3-1666112472831_5eb8fb3f-b398-4be2-964b-952242a36135_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Poet_Brown_Leather_Tote_Bag_back-3-1666112472831_5eb8fb3f-b398-4be2-964b-952242a36135_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Brown</div>
 <div class="smallprice">Rs.17,700.00</div>
@@ -6919,7 +6918,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Poet_Navy_Blue_Leather_Tote_Bag_back-3-1666112702931_4fb56fb5-0760-478a-b0bc-9d64396989b7_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Poet_Navy_Blue_Leather_Tote_Bag_back-3-1666112702931_4fb56fb5-0760-478a-b0bc-9d64396989b7_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Navy Blue</div>
 <div class="smallprice">Rs.17,700.00</div>
@@ -6930,7 +6929,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Poet_Grey_Leather_Tote_Bag_back_2-3-1666112888846_9fa1a473-4944-483a-9e98-2e0ad67f1438_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Poet_Grey_Leather_Tote_Bag_back_2-3-1666112888846_9fa1a473-4944-483a-9e98-2e0ad67f1438_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Grey</div>
 <div class="smallprice">Rs.17,700.00</div>
@@ -7060,7 +7059,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="overlapping-title">
 <span>The Baxter Sleeve</span>
 </div>
-<img alt="featured image" src="/thejacketmaker/images/Laptop-Sleeve-1666635340264.jpg"/>
+<img alt="featured image" class="lazyloaded" src="/thejacketmaker/images/Laptop-Sleeve-1666635340264.jpg"/>
 </a>
 </div>
 <div class="multiple-products-tc">
@@ -7068,7 +7067,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Baxter_Black_Leather_Laptop_Sleeve_front-3-1666113317155_825513e4-c5d8-48ab-bc64-548a28441ea9_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Baxter_Black_Leather_Laptop_Sleeve_front-3-1666113317155_825513e4-c5d8-48ab-bc64-548a28441ea9_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Black</div>
 <div class="smallprice">Rs.13,000.00</div>
@@ -7079,7 +7078,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Baxter_Brown_Leather_Laptop_Sleeve_front-3-1666113616714_4d8d63a4-1e8a-49cb-83ad-b627bb2f1990_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Baxter_Brown_Leather_Laptop_Sleeve_front-3-1666113616714_4d8d63a4-1e8a-49cb-83ad-b627bb2f1990_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Brown</div>
 <div class="smallprice">Rs.13,000.00</div>
@@ -7090,7 +7089,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Baxter_Navy_Blue_Leather_Laptop_Sleeve_front-3-1666113901509_8e0eae60-4292-4008-8df4-202d1d4636cf_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Baxter_Navy_Blue_Leather_Laptop_Sleeve_front-3-1666113901509_8e0eae60-4292-4008-8df4-202d1d4636cf_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Navy Blue</div>
 <div class="smallprice">Rs.13,000.00</div>
@@ -7101,7 +7100,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="tc-grid-item">
 <div class="mp-product">
 <a href="/thejacketmaker/products/ionic-black-leather-jacket/index.html">
-<img alt="featured small product" src="/thejacketmaker/images/02-_The_Baxter_Grey_Leather_Laptop_Sleeve_front-3-1666114048878_92912ac4-cfe7-4e52-9fde-7e6868cfc9c6_medium.jpg"/>
+<img alt="featured small product" class="lazyloaded" src="/thejacketmaker/images/02-_The_Baxter_Grey_Leather_Laptop_Sleeve_front-3-1666114048878_92912ac4-cfe7-4e52-9fde-7e6868cfc9c6_medium.jpg"/>
 <div class="tc-product-info">
 <div class="smalltext">Grey</div>
 <div class="smallprice">Rs.13,000.00</div>
@@ -7239,7 +7238,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="outer-container">
 <div class="flex-container-tc">
 <div class="image-wrapper-tc">
-<img alt="Slider Image" src="/thejacketmaker/images/1.jpg"/>
+<img alt="Slider Image" class="lazyloaded" src="/thejacketmaker/images/1.jpg"/>
 </div>
 <div class="flex-content-tc">
 <div class="slider-heading-tc">Naturally Milled Full-Grain Leather</div>
@@ -7250,7 +7249,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="outer-container">
 <div class="flex-container-tc">
 <div class="image-wrapper-tc">
-<img alt="Slider Image" src="/thejacketmaker/images/2.jpg"/>
+<img alt="Slider Image" class="lazyloaded" src="/thejacketmaker/images/2.jpg"/>
 </div>
 <div class="flex-content-tc">
 <div class="slider-heading-tc">Durable &amp; Designed To Last</div>
@@ -7261,7 +7260,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="outer-container">
 <div class="flex-container-tc">
 <div class="image-wrapper-tc">
-<img alt="Slider Image" src="/thejacketmaker/images/3.jpg"/>
+<img alt="Slider Image" class="lazyloaded" src="/thejacketmaker/images/3.jpg"/>
 </div>
 <div class="flex-content-tc">
 <div class="slider-heading-tc">Short Supply Chain, Honest Prices</div>
@@ -7272,7 +7271,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="outer-container">
 <div class="flex-container-tc">
 <div class="image-wrapper-tc">
-<img alt="Slider Image" src="/thejacketmaker/images/4.jpg"/>
+<img alt="Slider Image" class="lazyloaded" src="/thejacketmaker/images/4.jpg"/>
 </div>
 <div class="flex-content-tc">
 <div class="slider-heading-tc">High-Grade Raw Materials</div>
@@ -7283,7 +7282,7 @@ if (!window.GSC_COUNTDOWN_META) {
 <div class="outer-container">
 <div class="flex-container-tc">
 <div class="image-wrapper-tc">
-<img alt="Slider Image" src="/thejacketmaker/images/5.jpg"/>
+<img alt="Slider Image" class="lazyloaded" src="/thejacketmaker/images/5.jpg"/>
 </div>
 <div class="flex-content-tc">
 <div class="slider-heading-tc">Your TruCarry, Your Way</div>
@@ -7355,28 +7354,10 @@ if (!window.GSC_COUNTDOWN_META) {
   </style>
 <div class="video-container video-container--image video-container--modal-mobile image-overlay image-overlay--bg-shadow" data-cc-animate="" data-cc-animate-delay="0.2s" data-video-autoplay="false" data-video-loop="false" data-video-url="https://vimeo.com/762940789?share=copy">
 <a aria-label="Stop video" class="video-container__stop" href="#"><svg aria-hidden="true" class="feather feather-x" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></a>
-<div class="video-container__video"></div><div class="video-container__cover"><div class="rimage-outer-wrapper rimage-background lazyload fade-in" data-bgset="//www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_180x.png?v=1693708550 180w 75h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_360x.png?v=1693708550 360w 150h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_540x.png?v=1693708550 540w 225h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_720x.png?v=1693708550 720w 300h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_900x.png?v=1693708550 900w 375h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_1080x.png?v=1693708550 1080w 450h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_1296x.png?v=1693708550 1296w 540h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_1512x.png?v=1693708550 1512w 630h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_1728x.png?v=1693708550 1728w 720h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_1950x.png?v=1693708550 1950w 812h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_2100x.png?v=1693708550 2100w 875h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_2260x.png?v=1693708550 2260w 941h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_2450x.png?v=1693708550 2450w 1021h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_2700x.png?v=1693708550 2700w 1125h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_3000x.png?v=1693708550 3000w 1250h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_3350x.png?v=1693708550 3350w 1396h,
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail_3750x.png?v=1693708550 3750w 1562h,
-  
-  //www.thejacketmaker.pk/cdn/shop/files/video_thumbnail.png?v=1693708550 3800w 1583h" data-parent-fit="cover" data-sizes="auto" style="background-position: 50.0% 50.0%">
+<div class="video-container__video"></div><div class="video-container__cover"><div class="rimage-outer-wrapper rimage-background lazyload fade-in lazyloaded" data-bgset="/thejacketmaker/images/video_thumbnail.png" data-parent-fit="cover" data-sizes="auto" style="background-position: 50.0% 50.0%; background-image: url('/thejacketmaker/images/video_thumbnail.png') !important;">
 <noscript>
 <div class="rimage-wrapper" style="padding-top:41.6578947368421%">
-<img alt="" class="rimage__image" src="/thejacketmaker/images/video_thumbnail.png"/>
+<img alt="" class="rimage__image lazyloaded" src="/thejacketmaker/images/video_thumbnail.png"/>
 </div>
 </noscript>
 </div></div>

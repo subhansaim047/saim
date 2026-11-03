@@ -13002,3 +13002,19 @@ svg.feather {
     background-color: #313131 !important;
     transition: 500ms ease-out 0s;
 }
+/* Saim Dev Storefront 1:1 Exact Rendering Fixes */
+.rimage__image {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.lazyload--placeholder {
+  background: transparent !important;
+}
+.rimage-background {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.rimage-outer-wrapper {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
