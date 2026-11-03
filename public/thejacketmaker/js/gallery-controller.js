@@ -10,65 +10,39 @@
     const $ = window.jQuery;
     const $slideshow = $('.product-slideshow');
     const thumbLinks = Array.from(document.querySelectorAll('.thumbnails a'));
-
-    // Unpack video templates in all slides
     const slides = Array.from(document.querySelectorAll('.product-slideshow .slide'));
-    slides.forEach((slide) => {
-      const videoTemplate = slide.querySelector('script.product-media__video-template');
-      if (videoTemplate) {
-        let tempDiv = document.createElement('div');
-        tempDiv.innerHTML = videoTemplate.textContent || videoTemplate.innerHTML;
-        const videoEl = tempDiv.querySelector('video');
-        if (videoEl) {
-          const sources = videoEl.querySelectorAll('source');
-          sources.forEach(s => {
-            let src = s.getAttribute('src');
-            if (src && src.startsWith('//')) {
-              s.setAttribute('src', 'https:' + src);
-            }
-          });
-          let poster = videoEl.getAttribute('poster');
-          if (poster && poster.startsWith('//')) {
-            videoEl.setAttribute('poster', 'https:' + poster);
-          }
 
-          videoEl.setAttribute('controls', 'true');
-          videoEl.setAttribute('playsinline', 'true');
-          videoEl.setAttribute('preload', 'auto');
-          videoEl.setAttribute('loop', 'true');
-          videoEl.style.width = '100%';
-          videoEl.style.height = '100%';
-          videoEl.style.objectFit = 'cover';
-          videoEl.style.position = 'absolute';
-          videoEl.style.top = '0';
-          videoEl.style.left = '0';
-          videoEl.style.zIndex = '10';
+    // Find the slide index that contains the video
+    let videoSlideIndex = -1;
+    slides.forEach((slide, idx) => {
+      if (slide.querySelector('video') || slide.classList.contains('slide--video') || slide.querySelector('.product-media--video')) {
+        videoSlideIndex = idx;
+      }
+    });
 
-          const mediaFrame = slide.querySelector('.product-media');
-          if (mediaFrame) {
-            mediaFrame.style.position = 'relative';
-            mediaFrame.appendChild(videoEl);
+    // Ensure all videos in slideshow are properly configured
+    const videos = Array.from(document.querySelectorAll('.product-slideshow video'));
+    videos.forEach(v => {
+      v.setAttribute('playsinline', 'true');
+      v.setAttribute('loop', 'true');
+      v.setAttribute('controls', 'true');
+      v.style.width = '100%';
+      v.style.height = '100%';
+      v.style.objectFit = 'cover';
+      v.style.position = 'absolute';
+      v.style.top = '0';
+      v.style.left = '0';
+      v.style.zIndex = '5';
 
-            const posterEl = mediaFrame.querySelector('.product-media__poster');
-            const playBtn = mediaFrame.querySelector('.product-media__video-play-btn');
-
-            if (playBtn) {
-              playBtn.style.zIndex = '15';
-              playBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                if (posterEl) posterEl.style.display = 'none';
-                playBtn.style.display = 'none';
-                videoEl.play();
-              });
-            }
-
-            videoEl.addEventListener('play', () => {
-              if (posterEl) posterEl.style.display = 'none';
-              if (playBtn) playBtn.style.display = 'none';
-            });
-          }
-        }
+      // Hide any poster or button overlays when video is ready
+      const parentMedia = v.closest('.product-media');
+      if (parentMedia) {
+        const posterEl = parentMedia.querySelector('.product-media__poster');
+        const playBtn = parentMedia.querySelector('.product-media__video-play-btn');
+        v.addEventListener('play', () => {
+          if (posterEl) posterEl.style.display = 'none';
+          if (playBtn) playBtn.style.display = 'none';
+        });
       }
     });
 
@@ -77,7 +51,7 @@
         if (i === index) {
           t.classList.add('thumb--active');
           t.style.outline = '2px solid #000';
-          t.style.outlineOffset = '2px';
+          t.style.outlineOffset = '1px';
         } else {
           t.classList.remove('thumb--active');
           t.style.outline = 'none';
@@ -85,36 +59,60 @@
       });
     }
 
+    // Attach click listeners to all thumbnails
+    thumbLinks.forEach((link, idx) => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        highlightThumbnail(idx);
+
+        if ($ && $slideshow.length && $slideshow.hasClass('slick-initialized')) {
+          $slideshow.slick('slickGoTo', idx);
+        }
+
+        const isVideoThumb = link.classList.contains('thumbnail--media-video') ||
+                             !!link.querySelector('.watchvideo') ||
+                             link.hasAttribute('data-video-src') ||
+                             idx === videoSlideIndex;
+
+        if (isVideoThumb) {
+          const activeVideo = document.querySelector('.product-slideshow video');
+          if (activeVideo) {
+            activeVideo.currentTime = 0;
+            const p = activeVideo.play();
+            if (p !== undefined) {
+              p.catch(() => {
+                activeVideo.muted = true;
+                activeVideo.play();
+              });
+            }
+          }
+        } else {
+          videos.forEach(v => v.pause());
+        }
+      });
+    });
+
     if ($ && $slideshow.length) {
       // Hook into Slick afterChange
       $slideshow.on('afterChange', function (event, slick, currentSlide) {
         highlightThumbnail(currentSlide);
 
-        // Manage video playback
-        slides.forEach((s, idx) => {
-          const video = s.querySelector('video');
-          if (video) {
-            if (idx === currentSlide) {
-              const posterEl = s.querySelector('.product-media__poster');
-              const playBtn = s.querySelector('.product-media__video-play-btn');
-              if (posterEl) posterEl.style.display = 'none';
-              if (playBtn) playBtn.style.display = 'none';
-              video.currentTime = 0;
-              const p = video.play();
-              if (p) p.catch(() => { video.muted = true; video.play(); });
-            } else {
-              video.pause();
+        if (currentSlide === videoSlideIndex) {
+          const activeVideo = document.querySelector('.product-slideshow video');
+          if (activeVideo) {
+            const p = activeVideo.play();
+            if (p !== undefined) {
+              p.catch(() => {
+                activeVideo.muted = true;
+                activeVideo.play();
+              });
             }
           }
-        });
-      });
-
-      // Hook thumbnail clicks to slickGoTo
-      thumbLinks.forEach((link, idx) => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          $slideshow.slick('slickGoTo', idx);
-        });
+        } else {
+          videos.forEach(v => v.pause());
+        }
       });
 
       // Highlight initial thumbnail
@@ -167,7 +165,6 @@
     // 3. Add to Cart button feedback
     const addToCartBtns = Array.from(document.querySelectorAll('.product-form__add-button, [name="add"], .add-to-cart, .quantity-submit-row__submit button, .button--large'));
     addToCartBtns.forEach(addToCartBtn => {
-      // Ensure text is Add to Cart if it says Sold out
       if (addToCartBtn.textContent.trim().toLowerCase() === 'sold out') {
         addToCartBtn.textContent = 'Add to Cart';
         addToCartBtn.style.background = '#111';
