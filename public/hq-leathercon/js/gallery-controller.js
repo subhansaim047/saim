@@ -722,6 +722,18 @@
 
   function cleanLiquidTokens() {
     try {
+      const banner = document.getElementById('saimdev-demo-banner');
+      if (banner) {
+        banner.style.setProperty('padding', '4px 12px', 'important');
+        banner.style.setProperty('border-bottom', '1px solid rgba(0, 229, 255, 0.3)', 'important');
+        banner.style.setProperty('flex-wrap', 'nowrap', 'important');
+        banner.style.setProperty('min-height', '28px', 'important');
+        banner.querySelectorAll('span').forEach(sp => {
+          if (sp.textContent && sp.textContent.includes('1:1 Interactive')) {
+            sp.textContent = 'HQ Leathercon';
+          }
+        });
+      }
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
       let node;
       while ((node = walker.nextNode())) {

@@ -14527,4 +14527,73 @@ html body .navigation__tier-1 {
   }
 }
 
+/* Ultra-slim Portfolio Demo Banner (#saimdev-demo-banner) */
+#saimdev-demo-banner {
+  padding: 4px 14px !important;
+  min-height: 28px !important;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.3) !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25) !important;
+}
+#saimdev-demo-banner > div:first-child {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: nowrap !important;
+  min-width: 0 !important;
+}
+#saimdev-demo-banner > div:first-child > a {
+  padding: 3px 10px !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(0, 229, 255, 0.28) !important;
+  border-radius: 4px !important;
+  gap: 5px !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+}
+#saimdev-demo-banner > div:first-child > a svg {
+  width: 12px !important;
+  height: 12px !important;
+  stroke-width: 2 !important;
+  flex-shrink: 0 !important;
+}
+#saimdev-demo-banner > div:first-child > div {
+  gap: 6px !important;
+  white-space: nowrap !important;
+}
+#saimdev-demo-banner > div:first-child > div > span:first-child {
+  width: 6px !important;
+  height: 6px !important;
+  flex-shrink: 0 !important;
+}
+#saimdev-demo-banner > div:first-child > div > span:last-child {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+#saimdev-demo-banner > div:last-child {
+  font-size: 11.5px !important;
+  gap: 10px !important;
+  white-space: nowrap !important;
+}
+@media (max-width: 768px) {
+  #saimdev-demo-banner {
+    padding: 3px 10px !important;
+    min-height: 26px !important;
+  }
+  #saimdev-demo-banner > div:first-child > a {
+    padding: 2px 8px !important;
+    font-size: 10.5px !important;
+  }
+  #saimdev-demo-banner > div:first-child > div > span:last-child {
+    font-size: 11px !important;
+  }
+  #saimdev-demo-banner > div:last-child > a,
+  #saimdev-demo-banner > div:last-child > span {
+    display: none !important;
+  }
+}
+
 /* ===== END HQ CUSTOM FIXES ===== */
