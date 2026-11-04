@@ -25,115 +25,107 @@
 
     if (!quotesCarousel) return;
 
-    const quoteSlides = Array.from(quotesCarousel.querySelectorAll('.logo-list-content:not(.slick-cloned)'));
-    const logoSlides = logosCarousel ? Array.from(logosCarousel.querySelectorAll('.logo-list-image-wrap:not(.slick-cloned)')) : [];
+    // Remove cloned slides that cause track offset bugs
+    quotesCarousel.querySelectorAll('.slick-cloned').forEach(el => el.remove());
+    if (logosCarousel) {
+      logosCarousel.querySelectorAll('.slick-cloned').forEach(el => el.remove());
+    }
+
+    const quoteSlides = Array.from(quotesCarousel.querySelectorAll('.logo-list-content'));
+    const logoSlides = logosCarousel ? Array.from(logosCarousel.querySelectorAll('.logo-list-image-wrap')) : [];
     const total = quoteSlides.length;
     if (total === 0) return;
 
     let currentIndex = 0;
-    // Find initial active index
-    quoteSlides.forEach((s, idx) => {
-      if (s.classList.contains('slick-current') || s.classList.contains('slick-active')) {
-        currentIndex = idx;
-      }
-    });
 
     const qTrack = quotesCarousel.querySelector('.slick-track');
-    const qList = quotesCarousel.querySelector('.slick-list');
-    const lTrack = logosCarousel ? logosCarousel.querySelector('.slick-track') : null;
+    if (qTrack) {
+      qTrack.style.width = '100%';
+      qTrack.style.transform = 'none';
+      qTrack.style.display = 'flex';
+      qTrack.style.justifyContent = 'center';
+      qTrack.style.alignItems = 'center';
+      qTrack.style.margin = '0 auto';
+    }
 
-    function goToQuote(idx) {
+    // Reset styles on all quote slides
+    quoteSlides.forEach((slide) => {
+      slide.style.width = '100%';
+      slide.style.maxWidth = '850px';
+      slide.style.margin = '0 auto';
+      slide.style.textAlign = 'center';
+      slide.style.position = 'relative';
+      slide.style.left = '0';
+      slide.style.right = '0';
+      slide.style.transition = 'opacity 0.4s ease';
+    });
+
+    function showQuote(idx) {
       if (idx < 0) idx = total - 1;
       if (idx >= total) idx = 0;
       currentIndex = idx;
 
-      // Update quote slides
-      const allQSlides = quotesCarousel.querySelectorAll('.logo-list-content');
-      allQSlides.forEach(slide => {
-        const sIdx = parseInt(slide.getAttribute('data-slick-index'), 10);
-        if (sIdx === currentIndex) {
+      quoteSlides.forEach((slide, i) => {
+        if (i === currentIndex) {
           slide.classList.add('slick-current', 'slick-active');
+          slide.style.display = 'block';
+          slide.style.opacity = '1';
           slide.setAttribute('aria-hidden', 'false');
         } else {
           slide.classList.remove('slick-current', 'slick-active');
+          slide.style.display = 'none';
+          slide.style.opacity = '0';
           slide.setAttribute('aria-hidden', 'true');
         }
       });
 
-      // Smooth slide track
-      if (qTrack && qList) {
-        const width = qList.clientWidth || 1360;
-        const offset = -(currentIndex + 1) * width;
-        qTrack.style.transition = 'transform 450ms cubic-bezier(0.25, 1, 0.5, 1)';
-        qTrack.style.transform = `translate3d(${offset}px, 0px, 0px)`;
-      }
-
-      // Update logos
-      if (logosCarousel && lTrack) {
-        const allLSlides = logosCarousel.querySelectorAll('.logo-list-image-wrap');
-        allLSlides.forEach(logo => {
-          const lIdx = parseInt(logo.getAttribute('data-slick-index'), 10);
-          if (lIdx === currentIndex) {
+      // Synchronize logos below
+      if (logoSlides.length > 0) {
+        logoSlides.forEach((logo, i) => {
+          if (i === currentIndex) {
             logo.classList.add('slick-current', 'slick-center', 'slick-active');
-            logo.setAttribute('aria-hidden', 'false');
             logo.style.opacity = '1';
+            logo.style.filter = 'none';
+            logo.style.transform = 'scale(1.15)';
+            logo.style.transition = 'all 0.3s ease';
           } else {
-            logo.classList.remove('slick-current', 'slick-center');
-            logo.style.opacity = '0.5';
-            if (Math.abs(lIdx - currentIndex) <= 2) {
-              logo.classList.add('slick-active');
-              logo.setAttribute('aria-hidden', 'false');
-            } else {
-              logo.classList.remove('slick-active');
-              logo.setAttribute('aria-hidden', 'true');
-            }
+            logo.classList.remove('slick-current', 'slick-center', 'slick-active');
+            logo.style.opacity = '0.45';
+            logo.style.filter = 'grayscale(100%)';
+            logo.style.transform = 'scale(1)';
           }
         });
-
-        const logoItemWidth = 272;
-        const logoOffset = -(currentIndex) * logoItemWidth;
-        lTrack.style.transition = 'transform 450ms cubic-bezier(0.25, 1, 0.5, 1)';
-        lTrack.style.transform = `translate3d(${logoOffset}px, 0px, 0px)`;
       }
     }
 
+    // Initialize with Quote 0 centered
+    showQuote(0);
+
     if (prevBtn) {
       prevBtn.style.cursor = 'pointer';
-      prevBtn.addEventListener('click', function (e) {
+      prevBtn.onclick = function (e) {
         e.preventDefault();
-        goToQuote(currentIndex - 1);
-      });
+        e.stopPropagation();
+        showQuote(currentIndex - 1);
+      };
     }
 
     if (nextBtn) {
       nextBtn.style.cursor = 'pointer';
-      nextBtn.addEventListener('click', function (e) {
+      nextBtn.onclick = function (e) {
         e.preventDefault();
-        goToQuote(currentIndex + 1);
-      });
+        e.stopPropagation();
+        showQuote(currentIndex + 1);
+      };
     }
 
-    // Logo click selection
-    if (logosCarousel) {
-      const allLogos = logosCarousel.querySelectorAll('.logo-list-image-wrap');
-      allLogos.forEach(logo => {
-        logo.style.cursor = 'pointer';
-        logo.addEventListener('click', function () {
-          const idx = parseInt(this.getAttribute('data-slick-index'), 10);
-          if (!isNaN(idx) && idx >= 0 && idx < total) {
-            goToQuote(idx);
-          }
-        });
-      });
-    }
-
-    // Auto rotate every 6 seconds, pause on hover
-    let timer = setInterval(() => goToQuote(currentIndex + 1), 6000);
-    const container = quotesCarousel.closest('.section-quote-slider') || quotesCarousel;
-    container.addEventListener('mouseenter', () => clearInterval(timer));
-    container.addEventListener('mouseleave', () => {
-      clearInterval(timer);
-      timer = setInterval(() => goToQuote(currentIndex + 1), 6000);
+    // Logo click triggers quote jump
+    logoSlides.forEach((logo, idx) => {
+      logo.style.cursor = 'pointer';
+      logo.onclick = function (e) {
+        e.preventDefault();
+        showQuote(idx);
+      };
     });
   }
 
@@ -149,18 +141,25 @@
     if (total <= 1) return;
 
     let currentIndex = 0;
-    slides.forEach((s, idx) => {
-      if (s.classList.contains('slick-current') || s.classList.contains('slick-active')) {
-        currentIndex = idx;
-      }
+
+    // Reset track and slides
+    const track = slideshow.querySelector('.slick-track');
+    if (track) {
+      track.style.width = '100%';
+      track.style.transform = 'none';
+      track.style.position = 'relative';
+      track.style.display = 'block';
+    }
+
+    slides.forEach((s) => {
+      s.style.width = '100%';
+      s.style.left = '0px';
+      s.style.top = '0px';
+      s.style.right = '0px';
+      s.style.bottom = '0px';
     });
 
-    const prevBtn = slideshow.querySelector('.slick-prev');
-    const nextBtn = slideshow.querySelector('.slick-next');
-    const track = slideshow.querySelector('.slick-track');
-    const list = slideshow.querySelector('.slick-list');
-
-    function goToSlide(idx) {
+    function showSlide(idx) {
       if (idx < 0) idx = total - 1;
       if (idx >= total) idx = 0;
       currentIndex = idx;
@@ -168,43 +167,56 @@
       slides.forEach((s, i) => {
         if (i === currentIndex) {
           s.classList.add('slick-current', 'slick-active');
+          s.style.display = 'block';
           s.style.opacity = '1';
           s.style.visibility = 'visible';
+          s.style.zIndex = '5';
+          s.setAttribute('aria-hidden', 'false');
         } else {
           s.classList.remove('slick-current', 'slick-active');
+          s.style.display = 'none';
+          s.style.opacity = '0';
+          s.style.visibility = 'hidden';
+          s.style.zIndex = '1';
+          s.setAttribute('aria-hidden', 'true');
         }
       });
-
-      if (track && list) {
-        const width = list.clientWidth || window.innerWidth;
-        track.style.transition = 'transform 500ms ease';
-        track.style.transform = `translate3d(-${currentIndex * width}px, 0px, 0px)`;
-      }
     }
+
+    // Initialize slide 0 cleanly
+    showSlide(0);
+
+    const prevBtn = slideshow.querySelector('.slick-prev');
+    const nextBtn = slideshow.querySelector('.slick-next');
 
     if (prevBtn) {
       prevBtn.style.cursor = 'pointer';
-      prevBtn.addEventListener('click', (e) => {
+      prevBtn.onclick = function (e) {
         e.preventDefault();
-        goToSlide(currentIndex - 1);
-      });
+        e.stopPropagation();
+        showSlide(currentIndex - 1);
+      };
     }
 
     if (nextBtn) {
       nextBtn.style.cursor = 'pointer';
-      nextBtn.addEventListener('click', (e) => {
+      nextBtn.onclick = function (e) {
         e.preventDefault();
-        goToSlide(currentIndex + 1);
-      });
+        e.stopPropagation();
+        showSlide(currentIndex + 1);
+      };
     }
 
-    // Auto rotate every 5s, pause on hover
-    let timer = setInterval(() => goToSlide(currentIndex + 1), 5000);
-    slideshow.addEventListener('mouseenter', () => clearInterval(timer));
-    slideshow.addEventListener('mouseleave', () => {
+    // Auto-advance every 5 seconds
+    let timer = setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, 5000);
+
+    slideshow.onmouseenter = () => clearInterval(timer);
+    slideshow.onmouseleave = () => {
       clearInterval(timer);
-      timer = setInterval(() => goToSlide(currentIndex + 1), 5000);
-    });
+      timer = setInterval(() => showSlide(currentIndex + 1), 5000);
+    };
   }
 
   // ============================================================
