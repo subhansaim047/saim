@@ -1,0 +1,46 @@
+{
+  "live": {
+    "title": "The Jacket Maker | Finest Leather Jackets In Pakistan",
+    "sectionCount": 2,
+    "sections": [
+      {
+        "tag": "HEADER",
+        "id": "",
+        "className": "cart-drawer__header cart-drawer__content-item",
+        "textPreview": " Shopping cart "
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "container cf newcontainer",
+        "textPreview": "FINEST QUALITY. FAIR PRICING. SHOP MENSHOP WOMEN FINEST QUALITY. FAIR PRICES. Shop MenShop Women TRU"
+      }
+    ],
+    "imageCount": 172,
+    "visibleImages": 111,
+    "brokenImages": 43,
+    "navItems": []
+  },
+  "local": {
+    "title": "The Jacket Maker | Finest Leather Jackets In Pakistan",
+    "sectionCount": 2,
+    "sections": [
+      {
+        "tag": "HEADER",
+        "id": "",
+        "className": "cart-drawer__header cart-drawer__content-item",
+        "textPreview": " Shopping cart "
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "className": "container cf newcontainer",
+        "textPreview": "FINEST QUALITY. FAIR PRICING. SHOP MENSHOP WOMEN FINEST QUALITY. FAIR PRICES. Shop MenShop Women TRU"
+      }
+    ],
+    "imageCount": 181,
+    "visibleImages": 154,
+    "brokenImages": 0,
+    "navItems": []
+  }
+}

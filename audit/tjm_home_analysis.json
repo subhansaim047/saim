@@ -1,0 +1,293 @@
+{
+  "css_links": [
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/styles.css?v=23192325485103501651793168988",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/swatches.css?v=63535705673985646561793168988",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/swatches.css?v=63535705673985646561793168988",
+    "https://www.thejacketmaker.pk/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/slick.css?v=11371836161327267251793168718",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/slick-theme.css?v=138219439532829345231793168718",
+    "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/modal.min.css?v=110497937847514292711793168717",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/design-v2.min.css",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-option-set-template.min.css",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-step-option.min.css",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/swatch-slider.min.css",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-options.min.css",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apoPhoneInput.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/global.7237ee84c39f4a6cc092.min.css",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/cropper.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/fontawesome-embed.3422a4cc844b1c79fe87.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/rebuy-smart-cart-v2.a714bda0fe06468db4b9.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/cart-widget.146ce90dc46a59cf6346.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/announcement-bar.26bdda823247ac49bd9f.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/cart-share.b988c7803775ace2df6a.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/cart-discount-input.c5dfa35e8c35fd0b28b4.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/cart-login-link.44462bc406c8d6331fe1.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/cart-notes.e3ca3b7442f7eeea58db.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/cart-progress-bar.4cbeebf873c6e5fc57a2.min.css",
+    "https://cdn.rebuyengine.com/onsite/css/cart-title-bar.7a68bc0287d7dc1e16eb.min.css",
+    "https://cached.rebuyengine.com/api/v1/user/stylesheet?shop=35d34f-2.myshopify.com&cache_key=1793681107",
+    "https://cached.rebuyengine.com/api/v1/widgets/styles?id=243628&format=css&cache_key=1793681107",
+    "https://cdn.shopify.com/extensions/01a182df-3f68-70df-b00f-b684a106c8e3/klaviyo-email-marketing-80/assets/app.css",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/intlTelInput.css?v=88961508673648375711793168988"
+  ],
+  "scripts": [
+    "https://js.smile.io/v1/smile-shopify.js?shop=35d34f-2.myshopify.com",
+    "https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop=35d34f-2.myshopify.com",
+    "https://cdn.zigpoll.com/zigpoll-shopify-embed.js?accountId=686bdefed9f7c4fea6c74f7f&shop=35d34f-2.myshopify.com",
+    "https://dr4qe3ddw9y32.cloudfront.net/awin-shopify-integration-code.js?aid=90071&v=shopifyApp_5.2.3&ts=1761920220685&shop=35d34f-2.myshopify.com",
+    "https://atlantis.live.zoko.io/scripts/main.js?v=v2&shop=35d34f-2.myshopify.com",
+    "https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop=35d34f-2.myshopify.com",
+    "https://cdn.attn.tv/thejacketmaker/dtag.js?shop=35d34f-2.myshopify.com",
+    "https://cdn.weglot.com/weglot_script_tag.js?shop=35d34f-2.myshopify.com",
+    "https://static.klaviyo.com/onsite/js/S6FbQX/klaviyo.js?company_id=S6FbQX&shop=35d34f-2.myshopify.com",
+    "https://tag.rmp.rakuten.com/124907.ct.js?shop=35d34f-2.myshopify.com",
+    "https://ecom-app.rakutenadvertising.io/rakuten_advertising.js?shop=35d34f-2.myshopify.com",
+    "https://thejacketmaker.postaffiliatepro.com/plugins/Shopify/shopify.php?ac=getCode&shop=35d34f-2.myshopify.com",
+    "https://gtm.gropulse.com/get_script?shop=35d34f-2.myshopify.com",
+    "https://cdn-widgetsrepository.yotpo.com/v1/loader/htgERmhPK6qCypkHMMPflnSdpWe3poJLZuMZSWi5?shop=35d34f-2.myshopify.com",
+    "https://trust.conversionbear.com/script?app=trust_badge&shop=35d34f-2.myshopify.com",
+    "https://connect.facebook.net/signals/config/673744700181494?v=2.9.433&r=stable&domain=www.thejacketmaker.pk&hme=4453c87d489b6902031c012cadd2731893cd69feb64fe8a61b339727247a7703&ex_m=118%2C242%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C56%2C127%2C54%2C161%2C72%2C185%2C110%2C184%2C211%2C263%2C84%2C283%2C282%2C281%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C333%2C334%2C335%2C332%2C349%2C371%2C256%2C238%2C70%2C239%2C237%2C374%2C365%2C59%2C257%2C121%2C145%2C92%2C135%2C61%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189",
+    "https://connect.facebook.net/en_US/fbevents.js",
+    "https://www.googletagmanager.com/gtag/js?id=G-BM50ZZ555M&l=groPulseGTMDatalayer&cx=c&gtm=4e6b20h2",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-P4FPJLMM&l=groPulseGTMDatalayer",
+    "//staticw2.yotpo.com/htgERmhPK6qCypkHMMPflnSdpWe3poJLZuMZSWi5/widget.js",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/vendor.min.js?v=11589511144441591071793168723",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/theme.js?v=139047352831704519031793168722",
+    "/checkouts/internal/preloads.js?locale=en-PK&default_configuration_id=5965512991",
+    "https://shop.app/checkouts/internal/preloads.js?locale=en-PK&default_configuration_id=5965512991&shop_id=77420626207",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js",
+    "//www.thejacketmaker.pk/cdn/shopifycloud/storefront/assets/storefront/load_feature-ed94c51f.js",
+    "//www.thejacketmaker.pk/cdn/shopifycloud/storefront/assets/shopify_pay/storefront-f0e26bdf.js?v=20250812",
+    "//cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js",
+    "https://cdn-widgetsrepository.yotpo.com/v1/loader/htgERmhPK6qCypkHMMPflnSdpWe3poJLZuMZSWi5",
+    "https://cdn-widgetsrepository.yotpo.com/v1/loader/htgERmhPK6qCypkHMMPflnSdpWe3poJLZuMZSWi5?languageCode=en",
+    "https://widget.gotolstoy.com/we/widget.js",
+    "https://play.gotolstoy.com/widget-v2/widget.js",
+    "https://play.gotolstoy.com/widget-v2/widget.brand-mcp.js",
+    "https://cdn.attn.tv/thejacketmaker/dtag.js?source=app-embed",
+    "https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop=35d34f-2.myshopify.com",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-sanitizer.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-date.min.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-price-legacy.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apoPhoneInput.min.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/utils.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-color-picker.min.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-font.min.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-product-options-v3.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-options.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-a11y.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-style-selectors.js",
+    "https://static.klaviyo.com/onsite/js/S6FbQX/klaviyo.js?company_id=S6FbQX",
+    "https://www.thejacketmaker.pk/cdn/wpm/b610a19cewf693d529pf324840bm6169d9b4m.js",
+    "//www.thejacketmaker.pk/cdn/shopifycloud/storefront/assets/shop_events_listener-819172a8.js",
+    "https://www.thejacketmaker.pk/web-pixels@610a19cewf693d529pf324840bm6169d9b4/app/web-pixel-348258591@bd2f978c17a94bbb8a74d43de2165dc5~2/pixel.modern.js",
+    "https://cdn.rebuyengine.com/onsite/js/global-5bb9e679c4d3e8e68aa1.js",
+    "https://www.thejacketmaker.pk/cdn/shopifycloud/consent-tracking-api/v0.1/consent-tracking-api.js",
+    "https://cdn.attn.tv/tag/2026-latest/unified-tag.js?v=2026-latest_27fa5bc0762",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/apo-file.min.js",
+    "https://cdn.shopify.com/extensions/01a1a0ed-5935-7113-9a12-d09b9b1b512f/aris-options-v1.2.183/assets/cropper.min.js",
+    "//www.thejacketmaker.pk/cdn/shopifycloud/storefront/assets/storefront/webmcp-23c12384.js",
+    "https://static-tracking.klaviyo.com/onsite/js/fender_analytics.d96631e4c27e2.js?cb=2",
+    "https://static-tracking.klaviyo.com/onsite/js/static.0d6d31623aba7.js?cb=2",
+    "https://static.klaviyo.com/onsite/js/runtime.df7bd7e65dad0.js?cb=2",
+    "https://static.klaviyo.com/onsite/js/sharedUtils.cec92fd08e073.js?cb=2",
+    "https://static.klaviyo.com/onsite/js/vendors~static~in_app_forms~signup_forms~fender_analytics~post_identification_sync~web_personalization~client_identity~server_side_cookies~reviews~atlas~~telemetry.7bfc6cc1e5e87.js?cb=2",
+    "https://static.klaviyo.com/onsite/js/event_adapter.940cbe9e0eba3.js?cb=2",
+    "https://static-tracking.klaviyo.com/onsite/js/telemetry.5d581a0a34a88.js?cb=2",
+    "https://static-tracking.klaviyo.com/onsite/js/post_identification_sync.7beee9e65774c.js?cb=2",
+    "https://static.klaviyo.com/onsite/js/vendors~reviews~in_app_forms~signup_forms~atlas~product_recommendations.38d3e585cdff7.js?cb=2",
+    "https://static.klaviyo.com/onsite/js/vendors~signup_forms~in_app_forms.f4cef19c5596a.js?cb=2",
+    "https://static.klaviyo.com/onsite/js/default~signup_forms~in_app_forms.31d698874cd08.js?cb=2",
+    "https://static.klaviyo.com/onsite/js/signup_forms.61e329817281a.js?cb=2",
+    "https://cdn-widgetsrepository.yotpo.com/widget-assets/yotpo-pixel/2026-05-19_07-47-44/bundle.js",
+    "https://cdn-widgetsrepository.yotpo.com/widget-assets/widgets-initializer/app.v0.9.11-42.js",
+    "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-reviews-star-ratings/app.v0.39.0-1490.js",
+    "https://cdn.attn.tv/growth-tag-assets/client-configs/WU_.js",
+    "https://cdn.zigpoll.com/static/js/main.js",
+    "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-reviews-star-ratings/app.v0.39.0-1490.js",
+    "https://js.smile.io/v1/smile-lite-6e2ae68cb4.js",
+    "https://cdn.shopify.com/extensions/01a181bf-86bd-7031-92f5-95b00cca9953/selecty-190/assets/selectors.js",
+    "https://cdn.shopify.com/extensions/01a19c24-b47a-79c0-b380-9f7bc5a63eeb/sc-easy-redirects-18/assets/esc-redirect-app.js",
+    "https://cdn.shopify.com/extensions/01a19d5f-164c-73e7-9cd6-4ae0ce8215f9/2026-11-02-17-46-01-UTC--79350f4/assets/smile-loader.js",
+    "https://cdn.shopify.com/extensions/01a182df-3f68-70df-b00f-b684a106c8e3/klaviyo-email-marketing-80/assets/app.js",
+    "https://cdn.shopify.com/extensions/01a19bfe-e8c0-7266-a72e-c50ef94bd857/form-builder-by-hulkapps-83/assets/form-builder-script.js",
+    "https://cdn.shopify.com/extensions/01a19be3-3b8a-720d-a17b-be53cfd8b9bb/getsitecontrol-countdown-timer-90/assets/gsc-countdown-widget.js",
+    "https://www.thejacketmaker.pk/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.14.0.min.js",
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/intlTelInput.min.js?v=169975622367914620791793168715",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/modal.min.js?v=159519910713626114401793168717",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/jquery.min.js?v=98014222988859431451793168716",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/slick.min.js?v=71779134894361685811793168719",
+    "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/custom.js?v=25268110243007141951793168712",
+    "https://static.zdassets.com/ekr/snippet.js?key=07b32adf-0188-49d4-a883-fb00508bec02",
+    "https://cdn.shopify.com/storefront/standard-actions.js",
+    "//www.thejacketmaker.pk/cdn/shop/t/101/assets/utils.js?v=22537019896550327031793168722",
+    "/apps/awin/90071.js",
+    "https://lantern.roeyecdn.com/lantern_global_90071.min.js"
+  ],
+  "font_links": [
+    "https://fonts.shopify.com",
+    "//www.thejacketmaker.pk/cdn/fonts/roboto/roboto_n4.2019d890f07b1852f56ce63ba45b2db45d852cba.woff2",
+    "//www.thejacketmaker.pk/cdn/fonts/roboto/roboto_n4.2019d890f07b1852f56ce63ba45b2db45d852cba.woff2",
+    "//www.thejacketmaker.pk/cdn/fonts/roboto/roboto_n7.f38007a10afbbde8976c4056bfe890710d51dec2.woff2",
+    "//www.thejacketmaker.pk/cdn/fonts/roboto/roboto_n7.f38007a10afbbde8976c4056bfe890710d51dec2.woff2"
+  ],
+  "images_count": 156,
+  "sample_images": [
+    "//www.thejacketmaker.pk/cdn/shop/files/512-logo-black_1e5d3070-b9c0-4dc5-ac39-8ea250f9b448_120x.svg?v=1691223671",
+    "//www.thejacketmaker.pk/cdn/shop/products/TJM-0408-_287-of-7_29-1492000055392-1508939199594_397ac52d-60c9-4ca6-a355-20b34bef18b5_1024x1024.jpg?v=1760635258",
+    "//www.thejacketmaker.pk/cdn/shop/files/Ionic_Black_Leather_Jacket_With_Minimalist_Design_made_of_100_Real_Leather_in_matte_black_finish_1_821aa6f2-e2d8-4b7b-9144-c9311b10ed8a_1024x1024.jpg?v=1760634233",
+    "//www.thejacketmaker.pk/cdn/shop/files/Dean_Brown_Leather_Biker_Jacket_With_Cowhide_Oil_Pull_Leather_Finish_1_dbba41e8-a89b-40bd-95b2-981a56af1e2f_1024x1024.jpg?v=1760635645",
+    "//www.thejacketmaker.pk/cdn/shop/files/Inferno_Black_Leather_Jacket_Made_of_100_Real_Sheepskin_Leather_fc7e93d2-fc85-4a78-aec3-81cd0cc2c2ed_1024x1024.jpg?v=1760635705",
+    "//www.thejacketmaker.pk/cdn/shop/files/Mystical_Black_Leather_Jacket_2e4fb493-b499-4195-8c70-ffe1a7699d10_1024x1024.jpg?v=1760637205",
+    "//www.thejacketmaker.pk/cdn/shop/files/Mens-Legacy-Black-Leather-Biker-Jacket_1_905b5523-3a11-4dc5-9865-ad6ddf81d310_1024x1024.jpg?v=1760635138",
+    "//www.thejacketmaker.pk/cdn/shop/files/Men_s_Blain_Mocha_Suede_Bomber_Jacket_Open_Front_1024x1024.webp?v=1760634884",
+    "//www.thejacketmaker.pk/cdn/shop/files/Men_s_Allaric_Alley_Black_Leather_Biker_Jacket_2_11ac1524-562b-450d-bc1c-641e2af60a29_1024x1024.jpg?v=1760636123",
+    "//www.thejacketmaker.pk/cdn/shop/files/Design_Your_Own_-_1_1024x1024.jpg?v=1778757186",
+    "//www.thejacketmaker.pk/cdn/shop/files/Air_Rolf_Brown_Leather_Bomber_Jacket_For_Men_Made_of_100_Real_Sheepskin_Leather_cb4e0801-21df-4f75-b939-e5ed11139c5e_1024x1024.jpg?v=1760635601",
+    "//www.thejacketmaker.pk/cdn/shop/files/homepage-0ffc82f66b90dae06d83f627fcb8739e8dcc70a4e279e5e2f133512cae941e9f_1024x1024.webp?v=1739204409",
+    "//www.thejacketmaker.pk/cdn/shop/files/Men-Mobile-03_1024x1024.jpg?v=1691156613",
+    "//www.thejacketmaker.pk/cdn/shop/files/2048_x_1024_-_TJM_1024x1024.webp?v=1695726287",
+    "//www.thejacketmaker.pk/cdn/shop/files/2048_x_1024_-_TJM_1024x1024.webp?v=1695726287",
+    "//www.thejacketmaker.pk/cdn/shop/files/2048_x_1024_-_Trucarry_1024x1024.webp?v=1695726611",
+    "//www.thejacketmaker.pk/cdn/shop/files/1024_x_1024_-_Trucarry_1024x1024.webp?v=1695726628",
+    "//www.thejacketmaker.pk/cdn/shop/files/2048_x_1024_-_Eviternity_1024x1024.webp?v=1695726757",
+    "//www.thejacketmaker.pk/cdn/shop/files/1024_x_1024_-_Eviternity_1024x1024.webp?v=1695726756",
+    "//www.thejacketmaker.pk/cdn/shop/files/Elle-Logo_300x.webp?v=1692278009"
+  ],
+  "link_prefixes": {
+    "other": 224,
+    "checkout": 1,
+    "collections": 179,
+    "search": 2,
+    "cart": 1,
+    "pages": 142,
+    "products": 135,
+    "": 1
+  },
+  "sample_links": [
+    {
+      "text": "Skip to content",
+      "href": "#content"
+    },
+    {
+      "text": "Check out",
+      "href": "/checkout"
+    },
+    {
+      "text": "Start shopping",
+      "href": "/collections/all"
+    },
+    {
+      "text": "Search",
+      "href": "/search"
+    },
+    {
+      "text": "Albania(ALL\u00a0L)",
+      "href": "#"
+    },
+    {
+      "text": "Algeria(DZD\u00a0\u062f.\u062c)",
+      "href": "#"
+    },
+    {
+      "text": "Argentina(USD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Armenia(AMD\u00a0\u0564\u0580.)",
+      "href": "#"
+    },
+    {
+      "text": "Australia(AUD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Austria(EUR\u00a0\u20ac)",
+      "href": "#"
+    },
+    {
+      "text": "Azerbaijan(AZN\u00a0\u20bc)",
+      "href": "#"
+    },
+    {
+      "text": "Bahrain(USD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Belarus(USD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Belgium(EUR\u00a0\u20ac)",
+      "href": "#"
+    },
+    {
+      "text": "Bermuda(USD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Bolivia(BOB\u00a0Bs.)",
+      "href": "#"
+    },
+    {
+      "text": "Bosnia & Herzegovina(BAM\u00a0\u041a\u041c)",
+      "href": "#"
+    },
+    {
+      "text": "Botswana(BWP\u00a0P)",
+      "href": "#"
+    },
+    {
+      "text": "Brazil(USD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "British Virgin Islands(USD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Brunei(BND\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Bulgaria(EUR\u00a0\u20ac)",
+      "href": "#"
+    },
+    {
+      "text": "Canada(CAD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Caribbean Netherlands(USD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Cayman Islands(KYD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Chile(CLP\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "China(CNY\u00a0\u00a5)",
+      "href": "#"
+    },
+    {
+      "text": "Colombia(USD\u00a0$)",
+      "href": "#"
+    },
+    {
+      "text": "Costa Rica(CRC\u00a0\u20a1)",
+      "href": "#"
+    },
+    {
+      "text": "Croatia(EUR\u00a0\u20ac)",
+      "href": "#"
+    }
+  ]
+}

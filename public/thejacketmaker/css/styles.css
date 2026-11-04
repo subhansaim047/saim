@@ -13955,3 +13955,381 @@ html body .navigation__tier-1 {
 .quotes-carousel .slick-next-custom:hover svg {
   stroke: #ffffff !important;
 }
+
+
+/* ============================================================
+   HQ LEATHERCON VERTICAL BRANDING & MOBILE RESPONSIVE ENGINE
+   ============================================================ */
+.logo__link {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  padding: 4px 0 !important;
+}
+
+.logo__image {
+  height: 48px !important;
+  max-height: 52px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  margin: 0 auto 4px auto !important;
+  display: block !important;
+}
+
+.logo__brand-title {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  color: #111111 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+@media screen and (max-width: 767px) {
+  .logo-area.container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .logo-area__middle {
+    flex: 2 1 auto !important;
+  }
+  .logo__image {
+    height: 34px !important;
+    max-height: 36px !important;
+    margin: 0 auto 2px auto !important;
+  }
+  .logo__brand-title {
+    font-size: 11px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  /* Mobile product gallery: clean horizontal thumbnail strip below photo */
+  .product-gallery .product-gallery__thumbnails,
+  .product-gallery--with-thumbnails .product-gallery__thumbnails {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    justify-content: flex-start !important;
+    margin: 10px 0 6px 0 !important;
+    padding: 4px 10px !important;
+    z-index: 5 !important;
+    gap: 8px !important;
+  }
+  .product-gallery .product-gallery__thumbnails .product-gallery__thumbnail {
+    width: 54px !important;
+    height: 54px !important;
+    margin: 0 !important;
+    flex: 0 0 54px !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+  }
+
+  /* Quotes Carousel on mobile */
+  .quotes-carousel {
+    max-width: 100% !important;
+    padding: 0 10px !important;
+  }
+  .quotes-carousel .slick-track {
+    max-width: 100% !important;
+  }
+  .quotes-carousel .logo-list-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 35px !important;
+  }
+  .quotes-carousel .logo-list-content-wrap {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    padding: 0 10px !important;
+    height: auto !important;
+    min-height: 55px !important;
+  }
+  .quotes-carousel .slick-prev-custom {
+    left: 0 !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .quotes-carousel .slick-next-custom {
+    right: 0 !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  /* Mobile page bottom padding for sticky cart bar */
+  body.template-product,
+  main#content {
+    padding-bottom: 75px !important;
+  }
+}
+
+
+/* ============================================================
+   DEFINITIVE HQ LEATHERCON BRANDING & QUOTE SLIDER ENGINE
+   ============================================================ */
+
+/* 1. Header & Footer Logo Branding */
+.logo__link {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  padding: 4px 0 !important;
+}
+
+.logo__image {
+  height: 56px !important;
+  max-height: 60px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  margin: 0 auto 5px auto !important;
+  display: block !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10)) !important;
+}
+
+.logo__brand-title {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.16em !important;
+  color: #111111 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+/* 2. As Featured In Quote Carousel */
+.section-quote-slider {
+  position: relative !important;
+  width: 100% !important;
+  padding: 44px 0 32px !important;
+  background: #ffffff !important;
+  overflow: hidden !important;
+}
+
+.section-quote-slider h2 {
+  font-weight: 400 !important;
+  letter-spacing: 5px !important;
+  font-size: 14px !important;
+  margin-bottom: 2rem !important;
+  text-align: center !important;
+  color: #666666 !important;
+}
+
+.quotes-carousel {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 960px !important;
+  margin: 0 auto 24px auto !important;
+  padding: 0 60px !important;
+  min-height: 110px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.quotes-carousel .quotes-track-wrapper {
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+
+.quotes-carousel .logo-list-content {
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+.quotes-carousel .logo-list-content-wrap {
+  font-size: 22px !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+  color: #1a1a1a !important;
+  margin: 0 auto !important;
+  padding: 0 10px !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+.quotes-carousel .slick-prev-custom,
+.quotes-carousel .slick-next-custom {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 30 !important;
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 50% !important;
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  color: #111111 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10) !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+}
+
+.quotes-carousel .slick-prev-custom {
+  left: 6px !important;
+}
+
+.quotes-carousel .slick-next-custom {
+  right: 6px !important;
+}
+
+.quotes-carousel .slick-prev-custom:hover,
+.quotes-carousel .slick-next-custom:hover {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+}
+
+.quotes-carousel .slick-prev-custom svg,
+.quotes-carousel .slick-next-custom svg {
+  display: inline-block !important;
+  width: 20px !important;
+  height: 20px !important;
+  stroke: #111111 !important;
+  fill: none !important;
+  stroke-width: 2.5px !important;
+  pointer-events: none !important;
+  transition: stroke 0.2s ease !important;
+}
+
+.quotes-carousel .slick-prev-custom:hover svg,
+.quotes-carousel .slick-next-custom:hover svg {
+  stroke: #ffffff !important;
+}
+
+/* 3. Publication Logos Carousel */
+.logos-carousel {
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin: 0 auto 2.5rem auto !important;
+  overflow: hidden !important;
+}
+
+.logos-carousel .logos-track-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 28px !important;
+  margin: 0 auto !important;
+}
+
+.logos-carousel .logo-list-image-wrap {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  padding: 8px 12px !important;
+}
+
+.logos-carousel .logo-list-image-wrap img {
+  height: 38px !important;
+  width: auto !important;
+  max-width: 130px !important;
+  object-fit: contain !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 4. Mobile Responsiveness */
+@media screen and (max-width: 767px) {
+  .logo-area.container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .logo__image {
+    height: 38px !important;
+    max-height: 40px !important;
+    margin: 0 auto 3px auto !important;
+  }
+  .logo__brand-title {
+    font-size: 12px !important;
+    letter-spacing: 0.10em !important;
+  }
+
+  .quotes-carousel {
+    padding: 0 46px !important;
+    min-height: 85px !important;
+    margin-bottom: 16px !important;
+  }
+  .quotes-carousel .logo-list-content-wrap {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    padding: 0 !important;
+  }
+  .quotes-carousel .slick-prev-custom {
+    left: 2px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .quotes-carousel .slick-next-custom {
+    right: 2px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .logos-carousel .logos-track-wrapper {
+    gap: 16px !important;
+  }
+  .logos-carousel .logo-list-image-wrap img {
+    height: 28px !important;
+    max-width: 95px !important;
+  }
+}
+
+
+/* Universal Single-Quote Display for all .quotes-carousel instances */
+.quotes-carousel .logo-list-content {
+  display: none !important;
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.quotes-carousel .logo-list-content.is-active,
+.quotes-carousel .logo-list-content.slick-active,
+.quotes-carousel .logo-list-content:first-child:not(.is-inactive) {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.quotes-carousel .logo-list-content.is-hidden {
+  display: none !important;
+}
+
+/* Deduplicate any extra arrows */
+.quotes-carousel button.slick-arrow ~ button.slick-prev,
+.quotes-carousel button.slick-arrow ~ button.slick-prev-custom,
+.quotes-carousel button.slick-arrow ~ button.slick-next,
+.quotes-carousel button.slick-arrow ~ button.slick-next-custom {
+  display: none !important;
+}

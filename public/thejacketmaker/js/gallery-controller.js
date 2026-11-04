@@ -15,20 +15,52 @@
   'use strict';
 
   // ============================================================
-  // 1. AS FEATURED IN QUOTE & LOGO CAROUSEL
+    // ============================================================
+    // ============================================================
+  // 1. AS FEATURED IN QUOTE & LOGO CAROUSEL (UNIVERSAL ENGINE)
   // ============================================================
   function initQuoteSlider() {
     const quotesCarousel = document.querySelector('.quotes-carousel');
     const logosCarousel = document.querySelector('.logos-carousel');
-    const prevBtn = document.querySelector('.slick-prev-custom');
-    const nextBtn = document.querySelector('.slick-next-custom');
-
     if (!quotesCarousel) return;
 
-    // Remove cloned slides that cause track offset bugs
+    // Remove any leftover cloned slides
     quotesCarousel.querySelectorAll('.slick-cloned').forEach(el => el.remove());
     if (logosCarousel) {
       logosCarousel.querySelectorAll('.slick-cloned').forEach(el => el.remove());
+    }
+
+    // Ensure exactly ONE prev button and ONE next button exist
+    const existingPrev = Array.from(quotesCarousel.querySelectorAll('.slick-prev, .slick-prev-custom'));
+    const existingNext = Array.from(quotesCarousel.querySelectorAll('.slick-next, .slick-next-custom'));
+
+    // Remove duplicates
+    if (existingPrev.length > 1) {
+      for (let i = 1; i < existingPrev.length; i++) existingPrev[i].remove();
+    }
+    if (existingNext.length > 1) {
+      for (let i = 1; i < existingNext.length; i++) existingNext[i].remove();
+    }
+
+    let prevBtn = quotesCarousel.querySelector('.slick-prev, .slick-prev-custom');
+    let nextBtn = quotesCarousel.querySelector('.slick-next, .slick-next-custom');
+
+    if (!prevBtn) {
+      prevBtn = document.createElement('button');
+      prevBtn.className = 'slick-prev-custom slick-arrow';
+      prevBtn.setAttribute('aria-label', 'Previous quote');
+      prevBtn.setAttribute('type', 'button');
+      prevBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+      quotesCarousel.insertBefore(prevBtn, quotesCarousel.firstChild);
+    }
+
+    if (!nextBtn) {
+      nextBtn = document.createElement('button');
+      nextBtn.className = 'slick-next-custom slick-arrow';
+      nextBtn.setAttribute('aria-label', 'Next quote');
+      nextBtn.setAttribute('type', 'button');
+      nextBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+      quotesCarousel.appendChild(nextBtn);
     }
 
     const quoteSlides = Array.from(quotesCarousel.querySelectorAll('.logo-list-content'));
@@ -37,42 +69,31 @@
     if (total === 0) return;
 
     let currentIndex = 0;
+    let autoPlayTimer = null;
 
-    const qTrack = quotesCarousel.querySelector('.slick-track');
-    if (qTrack) {
-      qTrack.style.width = '100%';
-      qTrack.style.transform = 'none';
-      qTrack.style.display = 'flex';
-      qTrack.style.justifyContent = 'center';
-      qTrack.style.alignItems = 'center';
-      qTrack.style.margin = '0 auto';
-    }
-
-    // Reset styles on all quote slides
-    quoteSlides.forEach((slide) => {
-      slide.style.width = '100%';
-      slide.style.maxWidth = '850px';
-      slide.style.margin = '0 auto';
-      slide.style.textAlign = 'center';
-      slide.style.position = 'relative';
-      slide.style.left = '0';
-      slide.style.right = '0';
-      slide.style.transition = 'opacity 0.4s ease';
-    });
-
-    function showQuote(idx) {
+    function showQuote(idx, animate = true) {
       if (idx < 0) idx = total - 1;
       if (idx >= total) idx = 0;
       currentIndex = idx;
 
       quoteSlides.forEach((slide, i) => {
         if (i === currentIndex) {
-          slide.classList.add('slick-current', 'slick-active');
+          slide.classList.add('is-active', 'slick-current', 'slick-active');
+          slide.classList.remove('is-inactive', 'is-hidden');
           slide.style.display = 'block';
-          slide.style.opacity = '1';
           slide.setAttribute('aria-hidden', 'false');
+          if (animate) {
+            slide.style.opacity = '0';
+            requestAnimationFrame(() => {
+              slide.style.transition = 'opacity 0.25s ease';
+              slide.style.opacity = '1';
+            });
+          } else {
+            slide.style.opacity = '1';
+          }
         } else {
-          slide.classList.remove('slick-current', 'slick-active');
+          slide.classList.remove('is-active', 'slick-current', 'slick-active');
+          slide.classList.add('is-inactive', 'is-hidden');
           slide.style.display = 'none';
           slide.style.opacity = '0';
           slide.setAttribute('aria-hidden', 'true');
@@ -83,13 +104,16 @@
       if (logoSlides.length > 0) {
         logoSlides.forEach((logo, i) => {
           if (i === currentIndex) {
-            logo.classList.add('slick-current', 'slick-center', 'slick-active');
+            logo.classList.add('is-active', 'slick-current', 'slick-center', 'slick-active');
             logo.style.opacity = '1';
             logo.style.filter = 'none';
             logo.style.transform = 'scale(1.15)';
             logo.style.transition = 'all 0.3s ease';
+            if (logo.scrollIntoViewIfNeeded) {
+              logo.scrollIntoViewIfNeeded({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
           } else {
-            logo.classList.remove('slick-current', 'slick-center', 'slick-active');
+            logo.classList.remove('is-active', 'slick-current', 'slick-center', 'slick-active');
             logo.style.opacity = '0.45';
             logo.style.filter = 'grayscale(100%)';
             logo.style.transform = 'scale(1)';
@@ -98,33 +122,52 @@
       }
     }
 
-    // Initialize with Quote 0 centered
-    showQuote(0);
-
-    if (prevBtn) {
-      prevBtn.style.cursor = 'pointer';
-      prevBtn.onclick = function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        showQuote(currentIndex - 1);
-      };
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(() => {
+        showQuote(currentIndex + 1, true);
+      }, 4500);
     }
 
-    if (nextBtn) {
-      nextBtn.style.cursor = 'pointer';
-      nextBtn.onclick = function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        showQuote(currentIndex + 1);
-      };
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
     }
 
-    // Logo click triggers quote jump
+    // Initialize with Quote 0
+    showQuote(0, false);
+    startAutoPlay();
+
+    // Pause on hover
+    quotesCarousel.addEventListener('mouseenter', stopAutoPlay);
+    quotesCarousel.addEventListener('mouseleave', startAutoPlay);
+    if (logosCarousel) {
+      logosCarousel.addEventListener('mouseenter', stopAutoPlay);
+      logosCarousel.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    prevBtn.onclick = function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      showQuote(currentIndex - 1, true);
+      startAutoPlay();
+    };
+
+    nextBtn.onclick = function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      showQuote(currentIndex + 1, true);
+      startAutoPlay();
+    };
+
     logoSlides.forEach((logo, idx) => {
       logo.style.cursor = 'pointer';
       logo.onclick = function (e) {
         e.preventDefault();
-        showQuote(idx);
+        showQuote(idx, true);
+        startAutoPlay();
       };
     });
   }
@@ -493,7 +536,21 @@
     });
   }
 
+  
+  function cleanLiquidTokens() {
+    try {
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let node;
+      while ((node = walker.nextNode())) {
+        if (node.nodeValue && node.nodeValue.includes('[points_amount]')) {
+          node.nodeValue = node.nodeValue.replace(/[points_amount]/g, 'reward points');
+        }
+      }
+    } catch(e) {}
+  }
+
   function init() {
+    cleanLiquidTokens();
     initDesktopMegaMenu();
     initQuoteSlider();
     initHeroSlider();
