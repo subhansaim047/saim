@@ -20,12 +20,12 @@ interface DemoItem {
 
 const demos: DemoItem[] = [
   {
-    id: "thejacketmaker",
+    id: "hq-leathercon",
     title: "HQ Leathercon – E-Commerce Storefront",
     category: "E-Commerce / Shopify",
     description: "A 1:1 bespoke e-commerce platform clone featuring 65+ interactive pages, multi-collection lookbooks, flagship product detail pages, bespoke leather goods builders, and responsive mobile architecture.",
-    demoUrl: "/thejacketmaker/index.html",
-    previewImage: "/demos/previews/thejacketmaker-ecommerce-storefront.png",
+    demoUrl: "/hq-leathercon/index.html",
+    previewImage: "/demos/previews/hq-leathercon-ecommerce-storefront.png",
     tags: ["E-Commerce", "Shopify", "Interactive Storefront", "Full Catalog"],
     features: [
       "1:1 Exact Storefront Architecture",

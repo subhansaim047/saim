@@ -47,7 +47,27 @@ const nextConfig = {
       // Demo Showcase Routes
       {
         source: '/thejacketmaker',
-        destination: '/thejacketmaker/index.html',
+        destination: '/hq-leathercon/index.html',
+        permanent: true,
+      },
+      {
+        source: '/thejacketmaker/:path*',
+        destination: '/hq-leathercon/:path*',
+        permanent: true,
+      },
+      {
+        source: '/hq-leathercon',
+        destination: '/hq-leathercon/index.html',
+        permanent: true,
+      },
+      {
+        source: '/hqleathercon',
+        destination: '/hq-leathercon/index.html',
+        permanent: true,
+      },
+      {
+        source: '/hqleathercon/:path*',
+        destination: '/hq-leathercon/:path*',
         permanent: true,
       },
       // 1. Hub Canonicalization
