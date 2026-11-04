@@ -109,8 +109,9 @@
             logo.style.filter = 'none';
             logo.style.transform = 'scale(1.15)';
             logo.style.transition = 'all 0.3s ease';
-            if (logo.scrollIntoViewIfNeeded) {
-              logo.scrollIntoViewIfNeeded({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            if (logosCarousel && logosCarousel.scrollWidth > logosCarousel.clientWidth) {
+              const targetLeft = logo.offsetLeft - (logosCarousel.clientWidth - logo.clientWidth) / 2;
+              logosCarousel.scrollTo({ left: targetLeft, behavior: 'smooth' });
             }
           } else {
             logo.classList.remove('is-active', 'slick-current', 'slick-center', 'slick-active');
