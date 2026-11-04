@@ -455,7 +455,46 @@
   // ============================================================
   // INITIALIZE EVERYTHING ON DOM READY
   // ============================================================
+  
+  function initDesktopMegaMenu() {
+    if (window.innerWidth < 769) return;
+    const items = document.querySelectorAll('.navigation--main .navigation__item--with-children');
+    items.forEach(item => {
+      const tier2 = item.querySelector('.navigation__tier-2-container');
+      if (!tier2) return;
+
+      item.addEventListener('mouseenter', () => {
+        items.forEach(other => {
+          if (other !== item) {
+            other.classList.remove('navigation__item--show-children', 'is-hovered');
+            const otherTier = other.querySelector('.navigation__tier-2-container');
+            if (otherTier) {
+              otherTier.style.opacity = '0';
+              otherTier.style.visibility = 'hidden';
+              otherTier.style.display = 'none';
+            }
+          }
+        });
+
+        item.classList.add('navigation__item--show-children', 'is-hovered');
+        tier2.style.opacity = '1';
+        tier2.style.visibility = 'visible';
+        tier2.style.display = 'block';
+        tier2.style.pointerEvents = 'auto';
+      });
+
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('navigation__item--show-children', 'is-hovered');
+        tier2.style.opacity = '0';
+        tier2.style.visibility = 'hidden';
+        tier2.style.display = 'none';
+        tier2.style.pointerEvents = 'none';
+      });
+    });
+  }
+
   function init() {
+    initDesktopMegaMenu();
     initQuoteSlider();
     initHeroSlider();
     initAnnouncementBar();
