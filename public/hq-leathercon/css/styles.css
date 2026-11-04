@@ -13809,10 +13809,22 @@ html body .navigation__tier-1 {
   max-height: none !important;
 }
 
-/* DESKTOP MEGA-MENU HOVER DROPDOWN (RESTORES 1:1 LIVE BEHAVIOR) */
+/* DESKTOP MEGA-MENU & SMALL-MENU HOVER DROPDOWN (RESTORES 1:1 LIVE BEHAVIOR) */
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/hq-leathercon/fonts/cinzel_latin.woff2') format('woff2');
+}
+
 @media screen and (min-width: 769px) {
-  .navigation .navigation__item--with-children {
+  .navigation .navigation__item--with-mega-menu {
     position: static !important;
+  }
+
+  .navigation .navigation__item--with-small-menu {
+    position: relative !important;
   }
 
   .navigation .navigation__item--with-children:hover > .navigation__tier-2-container,
@@ -13838,8 +13850,31 @@ html body .navigation__tier-1 {
     transition: opacity 0.18s ease-in-out, visibility 0.18s ease-in-out !important;
   }
 
+  /* Compact dropdown for BRAND, CORPORATE GIFTS, GIFTING, SALE directly below the link */
+  .navigation .navigation__item--with-small-menu > .navigation__tier-2-container {
+    left: 0 !important;
+    right: auto !important;
+    width: max-content !important;
+    min-width: 215px !important;
+    max-width: 290px !important;
+    padding: 8px 0 !important;
+  }
+
+  .navigation .navigation__item--with-small-menu > .navigation__tier-2-container > .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 22px !important;
+    margin: 0 !important;
+  }
+
+  .navigation .navigation__item--with-small-menu .navigation__tier-2 {
+    padding: 4px 0 !important;
+    margin: 0 !important;
+  }
+
   .navigation .navigation__tier-1 > .navigation__item > .navigation__link {
     cursor: pointer !important;
+    position: relative !important;
   }
 
   .navigation .navigation__tier-1 > .navigation__item:hover > .navigation__link {
@@ -13869,14 +13904,14 @@ html body .navigation__tier-1 {
 }
 
 .logo__brand-title {
-  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif !important;
-  font-size: 24px !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.08em !important;
+  font-family: 'Cinzel', 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
   color: #111111 !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
-  line-height: 1 !important;
+  line-height: 1.1 !important;
 }
 
 @media screen and (max-width: 767px) {
@@ -13980,14 +14015,14 @@ html body .navigation__tier-1 {
 }
 
 .logo__brand-title {
-  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif !important;
-  font-size: 15px !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.12em !important;
+  font-family: 'Cinzel', 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
   color: #111111 !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
-  line-height: 1 !important;
+  line-height: 1.1 !important;
   display: block !important;
   text-align: center !important;
 }
@@ -14086,30 +14121,48 @@ html body .navigation__tier-1 {
   justify-content: center !important;
   text-decoration: none !important;
   text-align: center !important;
-  padding: 4px 0 !important;
+  padding: 6px 0 !important;
 }
 
 .logo__image {
-  height: 56px !important;
-  max-height: 60px !important;
+  height: 58px !important;
+  max-height: 62px !important;
   width: auto !important;
   object-fit: contain !important;
-  margin: 0 auto 5px auto !important;
+  margin: 0 auto 6px auto !important;
   display: block !important;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10)) !important;
 }
 
-.logo__brand-title {
-  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.16em !important;
+.logo__brand-title,
+.footer__brand-block span,
+.footer__brand-title {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
   color: #111111 !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
-  line-height: 1 !important;
+  line-height: 1.1 !important;
   display: block !important;
   text-align: center !important;
+}
+
+.footer__brand-block a {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-decoration: none !important;
+}
+
+.footer__brand-block img {
+  height: 56px !important;
+  max-height: 60px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  margin: 0 auto 6px auto !important;
+  display: block !important;
 }
 
 /* 2. As Featured In Quote Carousel */

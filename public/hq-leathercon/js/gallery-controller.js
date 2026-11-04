@@ -732,6 +732,142 @@
     } catch(e) {}
   }
 
+  function initCustomBuilderOptions() {
+    const container = document.getElementById('avpoptions-container__v2');
+    if (!container) return;
+
+    const options = Array.from(container.querySelectorAll(':scope > .avp-option'));
+
+    function recalculateBuilderPrice() {
+      const priceEl = document.querySelector('.price-container .current-price');
+      if (!priceEl) return;
+      const basePrice = parseFloat(priceEl.getAttribute('data-base-price') || '56000');
+      let addonTotal = 0;
+
+      container.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked').forEach(inp => {
+        const optionBox = inp.closest('.avp-option');
+        if (optionBox && optionBox.style.display === 'none') return;
+        addonTotal += parseFloat(inp.getAttribute('data-addon-pkr') || '0');
+      });
+
+      container.querySelectorAll('select').forEach(sel => {
+        const optionBox = sel.closest('.avp-option');
+        if (optionBox && optionBox.style.display === 'none') return;
+        const opt = sel.options[sel.selectedIndex];
+        if (opt) {
+          addonTotal += parseFloat(opt.getAttribute('data-addon-pkr') || '0');
+        }
+      });
+
+      const finalPrice = Math.max(0, basePrice + addonTotal);
+      priceEl.textContent = 'Rs.' + finalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' PKR';
+    }
+
+    function updateConditionalFields() {
+      // 1: Base Style file upload
+      const baseChecked = options[0] ? options[0].querySelector('input[type="radio"]:checked') : null;
+      if (options[1]) {
+        const showFile1 = baseChecked && baseChecked.value && baseChecked.value.toLowerCase().includes("design isn't here");
+        options[1].style.setProperty('display', showFile1 ? 'block' : 'none', 'important');
+        options[1].style.opacity = showFile1 ? '1' : '0';
+      }
+      // 7: Inner Lining custom file upload
+      const liningChecked = options[6] ? options[6].querySelector('input[type="radio"]:checked') : null;
+      if (options[7]) {
+        const showFile7 = liningChecked && liningChecked.value && liningChecked.value.toLowerCase().includes('custom');
+        options[7].style.setProperty('display', showFile7 ? 'block' : 'none', 'important');
+        options[7].style.opacity = showFile7 ? '1' : '0';
+      }
+      // 9: Artwork/Logo Embroidery file upload
+      const artChecked = options[8] ? options[8].querySelectorAll('input[type="checkbox"]:checked').length > 0 : false;
+      if (options[9]) {
+        options[9].style.setProperty('display', artChecked ? 'block' : 'none', 'important');
+        options[9].style.opacity = artChecked ? '1' : '0';
+      }
+      // 11 & 12: Personalization Embroidery text & font
+      const persChecked = options[10] ? options[10].querySelector('input[type="radio"]:checked') : null;
+      const showPers = persChecked && persChecked.value && persChecked.value.toLowerCase().includes('embroidery');
+      [11, 12].forEach(idx => {
+        if (options[idx]) {
+          options[idx].style.setProperty('display', showPers ? 'block' : 'none', 'important');
+          options[idx].style.opacity = showPers ? '1' : '0';
+        }
+      });
+    }
+
+    // Swatch wrappers (radio & checkbox)
+    container.querySelectorAll('.apo-swatch-wrapper').forEach(wrapper => {
+      wrapper.addEventListener('click', function(e) {
+        e.preventDefault();
+        const inp = wrapper.querySelector('input');
+        if (!inp) return;
+        const optGroup = wrapper.closest('.avp-option');
+        if (inp.type === 'radio') {
+          if (optGroup) {
+            optGroup.querySelectorAll('.apo-swatch-wrapper').forEach(w => w.classList.remove('apo-swatch-selected'));
+            optGroup.querySelectorAll('input[type="radio"]').forEach(r => { r.checked = false; });
+          }
+          inp.checked = true;
+          wrapper.classList.add('apo-swatch-selected');
+        } else if (inp.type === 'checkbox') {
+          inp.checked = !inp.checked;
+          wrapper.classList.toggle('apo-swatch-selected', inp.checked);
+        }
+        updateConditionalFields();
+        recalculateBuilderPrice();
+      });
+    });
+
+    // Custom swatch dropdowns (Leather Shade & Hardware)
+    container.querySelectorAll('.option-avis-dropdown-inner').forEach(dropInner => {
+      const trigger = dropInner.querySelector('.option-avis-swatch-drop-down');
+      const menu = dropInner.querySelector('.option-avis-dropdown-values');
+      if (!trigger || !menu) return;
+
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = menu.style.display === 'block';
+        container.querySelectorAll('.option-avis-dropdown-values').forEach(m => { m.style.display = 'none'; });
+        menu.style.display = isOpen ? 'none' : 'block';
+      });
+
+      dropInner.querySelectorAll('.option-avis-value').forEach(li => {
+        li.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const inp = li.querySelector('input[type="radio"]');
+          if (inp) {
+            dropInner.querySelectorAll('input[type="radio"]').forEach(r => { r.checked = false; });
+            inp.checked = true;
+          }
+          const srcBox = li.querySelector('.option-avis-swatch-value-box');
+          const srcTitle = li.querySelector('.choice-list-variatnt-title');
+          const destBox = trigger.querySelector('.option-avis-swatch-value-box');
+          const destTitle = trigger.querySelector('.choice-list-variatnt-title');
+          if (srcBox && destBox) {
+            destBox.setAttribute('style', srcBox.getAttribute('style') || '');
+          }
+          if (srcTitle && destTitle) {
+            destTitle.innerHTML = srcTitle.innerHTML;
+          }
+          menu.style.display = 'none';
+          recalculateBuilderPrice();
+        });
+      });
+    });
+
+    document.addEventListener('click', function() {
+      container.querySelectorAll('.option-avis-dropdown-values').forEach(m => { m.style.display = 'none'; });
+    });
+
+    container.querySelectorAll('select').forEach(sel => {
+      sel.addEventListener('change', recalculateBuilderPrice);
+    });
+
+    updateConditionalFields();
+    recalculateBuilderPrice();
+  }
+
   function init() {
     normalizeNavigationLinks();
     cleanLiquidTokens();
@@ -742,6 +878,7 @@
     initMobileDrawer();
     initProductGallery();
     initProductSwatches();
+    initCustomBuilderOptions();
     initCollectionInteractions();
     initConsultationForms();
   }
