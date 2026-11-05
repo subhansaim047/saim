@@ -17,7 +17,7 @@ export const AboutSection = () => {
   return (
     <section id="our-story" className="bg-transparent py-20 sm:py-28 md:py-36 px-4 sm:px-6 md:px-8 relative overflow-hidden">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.03] rounded-full blur-[160px] pointer-events-none z-0" />
+      <div data-gsap-parallax="140" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.03] rounded-full blur-[160px] pointer-events-none z-0" />
 
       {/* Double-Bezel Concentric Squircle Frame */}
       <div className="relative z-10 max-w-6xl mx-auto rounded-[2.5rem] bg-white/[0.02] border border-white/10 p-2 sm:p-3 shadow-[0_24px_80px_rgba(0,0,0,0.8)]">
@@ -43,9 +43,24 @@ export const AboutSection = () => {
           </div>
 
           {/* Body paragraph with normal, accessible word spacing */}
-          <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-10 md:mt-14 leading-relaxed font-light relative z-10">
+          <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-10 md:mt-14 leading-relaxed font-light relative z-10" data-gsap-reveal>
             {paragraphText}
           </p>
+
+          {/* Studio proof metrics */}
+          <dl data-gsap-stagger className="mt-12 md:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto relative z-10">
+            {[
+              { k: "Sub-second", v: "Load speed" },
+              { k: "100%", v: "Code ownership" },
+              { k: "£0", v: "Forced retainers" },
+            ].map((m) => (
+              <div key={m.v} className="rounded-2xl bg-white/[0.03] border border-white/10 px-5 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                <dt className="sr-only">{m.v}</dt>
+                <dd className="text-2xl sm:text-3xl font-bold tracking-tight text-white font-mono-tech">{m.k}</dd>
+                <p aria-hidden="true" className="mt-1 text-[10px] font-mono-tech uppercase tracking-[0.2em] text-white/50">{m.v}</p>
+              </div>
+            ))}
+          </dl>
 
           {/* AI-Friendly Business Description (LLMO & Search Indexing) */}
           <div className="mt-12 pt-8 border-t border-white/10 max-w-2xl mx-auto relative z-10">

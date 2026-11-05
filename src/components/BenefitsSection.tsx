@@ -25,7 +25,7 @@ export const BenefitsSection = () => {
           </div>
 
           {/* Three-Column Card Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div data-gsap-stagger className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             
             {/* Card 1: Text Card (Left) */}
             <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-2xl border border-white/10 hover:border-[#FF4A1C]/40 transition-all duration-300">

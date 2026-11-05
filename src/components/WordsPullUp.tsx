@@ -1,6 +1,10 @@
 "use client";
 import { useRef, type CSSProperties } from "react";
-import { motion, useInView } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "./useGsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface WordsPullUpProps {
   text: string;
@@ -18,34 +22,44 @@ export const WordsPullUp = ({
   style,
   as: Component = "div",
 }: WordsPullUpProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const ref = useRef<HTMLElement>(null);
   const words = text.split(" ");
+
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        const targets = ref.current?.querySelectorAll("[data-word]");
+        if (!targets || !targets.length) return;
+        gsap.from(targets, {
+          yPercent: 115,
+          rotateX: -35,
+          opacity: 0,
+          transformOrigin: "50% 100%",
+          duration: 1,
+          delay,
+          ease: "power4.out",
+          stagger: 0.06,
+          scrollTrigger: { trigger: ref.current, start: "top 92%", once: true },
+        });
+      });
+      return () => mm.revert();
+    },
+    ref,
+    [text, delay]
+  );
 
   return (
     <Component ref={ref as any} className={`relative ${className}`} style={style}>
-      {/* Screen reader text: clean single string with proper pronunciation and no double-reading */}
+      {/* Screen reader text: clean single string, no double-reading */}
       <span className="sr-only">{text}</span>
 
-      {/* Visual animation aria-hidden="true" with explicit whitespace between spans */}
-      <span aria-hidden="true" className="inline-flex flex-wrap">
+      <span aria-hidden="true" className="inline-flex flex-wrap" style={{ perspective: "800px" }}>
         {words.map((word, i) => (
-          <span
-            key={i}
-            className="inline-block overflow-hidden mr-[0.25em] last:mr-0 relative py-1"
-          >
-            <motion.span
-              className="inline-block relative"
-              initial={{ y: 20, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: delay + i * 0.08,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
+          <span key={i} className="inline-block overflow-hidden pr-[0.15em] mr-[0.1em] last:mr-0 relative py-[0.12em]">
+            <span data-word className="inline-block relative will-change-transform">
               {word}
-            </motion.span>
+            </span>
             {" "}
           </span>
         ))}

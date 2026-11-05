@@ -106,7 +106,7 @@ export const FeaturedToolsSection = () => {
         </div>
 
         {/* 3-Card High-Impact Showcase */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div data-gsap-stagger className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {FEATURED_TOOLS.map((tool) => {
             const Icon = tool.icon;
             return (

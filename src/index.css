@@ -2,18 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --hero-max-width: 1820px;
+  --surface-void: #050505;
+  --surface-deep: #08080A;
+  --surface-card: #0E0E11;
+  --surface-elevated: #151519;
+  --accent-vermilion: #FF4A1C;
+  --accent-amber: #FF7A45;
+  --accent-champagne: #E8E4D9;
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-hairline-hover: rgba(255, 255, 255, 0.20);
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
 * {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
+.font-mono-tech {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.font-editorial {
+  font-family: var(--font-fraunces), var(--font-instrument), Georgia, serif;
+}
+
+/* Accessibility Focus Ring */
+*:focus-visible {
+  outline: 2px solid #FF4A1C;
+  outline-offset: 3px;
+}
+
 /* Custom Liquid Glass Frosted Surface Utility */
 .liquid-glass {
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(255, 255, 255, 0.02);
   background-blend-mode: luminosity;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: none;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.14);
   position: relative;
   overflow: hidden;
 }
@@ -23,11 +53,11 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1.4px;
+  padding: 1.2px;
   background: linear-gradient(180deg,
-    rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
-    rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
-    rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+    rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.12) 22%,
+    rgba(255,255,255,0.02) 45%, rgba(255,255,255,0.02) 60%,
+    rgba(255,255,255,0.14) 82%, rgba(255,255,255,0.38) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -39,11 +69,11 @@
   text-shadow: 0 0 80px rgba(255, 255, 255, 0.3), 0 0 160px rgba(255, 255, 255, 0.1);
 }
 
-/* Velorah hero keyframe animations (Hardware Accelerated 60 FPS) */
+/* Hardware Accelerated Keyframe Animations */
 @keyframes fade-rise {
   from {
     opacity: 0;
-    transform: translate3d(0, 14px, 0);
+    transform: translate3d(0, 16px, 0);
   }
   to {
     opacity: 1;
@@ -52,17 +82,17 @@
 }
 
 .animate-fade-rise {
-  animation: fade-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: fade-rise 0.85s var(--ease-out-expo) both;
   will-change: transform, opacity;
 }
 
 .animate-fade-rise-delay {
-  animation: fade-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+  animation: fade-rise 0.85s var(--ease-out-expo) 0.2s both;
   will-change: transform, opacity;
 }
 
 .animate-fade-rise-delay-2 {
-  animation: fade-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+  animation: fade-rise 0.85s var(--ease-out-expo) 0.4s both;
   will-change: transform, opacity;
 }
 
@@ -87,13 +117,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
-  background-color: #000000 !important;
-  color: #E1E0CC;
+  background-color: #050505 !important;
+  color: #E8E4D9;
 }
 
 body {
-  background-color: #000000 !important;
-  color: #E1E0CC;
+  background-color: #050505 !important;
+  color: #E8E4D9;
+  overflow-x: hidden;
 }
 
 /* Lenis smooth scrolling rules */
@@ -121,76 +152,135 @@ html.lenis, html.lenis body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #050505;
 }
 ::-webkit-scrollbar-thumb {
-  background: #212121;
+  background: #1E1E24;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #333333;
+  background: #FF4A1C;
 }
 
-/* EngineTech Site Footer Styles (Continuous 60FPS Hardware Accelerated Loop) */
-:root {
-  --hero-max-width: 1820px;
-  --surface-deep: #000000;
-  --surface-card: #121212;
-  --surface-elevated: #181818;
-  --accent-vermilion: #FF4A1C;
-  --border-hairline: rgba(255, 255, 255, 0.08);
-  --border-hairline-hover: rgba(255, 255, 255, 0.18);
-}
+/* ============================================================================
+   HIGH-CRAFT DESIGN SYSTEM TOKENS & DOUBLE-BEZEL (DOPPELRAND) ARCHITECTURE
+   ============================================================================ */
 
-/* Sybiosme Tactile & Aesthetic Tokens */
 .section-dot {
   display: inline-block;
   width: 6px;
   height: 6px;
   border-radius: 9999px;
   background-color: #FF4A1C;
-  box-shadow: 0 0 10px rgba(255, 74, 28, 0.7);
+  box-shadow: 0 0 12px rgba(255, 74, 28, 0.85);
 }
 
 .text-dual-tone {
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.44);
 }
 
-.bento-card-sybiosme {
-  background-color: #121212;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Outer Double-Bezel Shell */
+.double-bezel-shell {
+  padding: 6px;
   border-radius: 2.25rem;
-  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.75);
+  transition: border-color 0.45s var(--ease-out-expo), transform 0.45s var(--ease-out-expo), box-shadow 0.45s var(--ease-out-expo);
+}
+
+.double-bezel-shell:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Upgraded Sybiosme Double-Bezel Bento Card */
+.bento-card-sybiosme {
+  background: linear-gradient(180deg, #131317 0%, #0C0C0F 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2.15rem;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.12),
+    0 0 0 4px rgba(255, 255, 255, 0.018),
+    0 20px 50px -15px rgba(0, 0, 0, 0.75);
+  transition:
+    border-color 0.45s var(--ease-out-expo),
+    transform 0.45s var(--ease-out-expo),
+    box-shadow 0.45s var(--ease-out-expo);
 }
 
 .bento-card-sybiosme:hover {
-  border-color: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.20);
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.20),
+    0 0 0 5px rgba(255, 74, 28, 0.05),
+    0 28px 65px -12px rgba(0, 0, 0, 0.85);
 }
 
+/* Floating Glass Pill Island */
 .pill-island {
   border-radius: 9999px;
-  background: rgba(18, 18, 18, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(14, 14, 18, 0.78);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 12px 32px -8px rgba(0, 0, 0, 0.65);
 }
 
-/* Sybiosme Magnetic Action Button */
+/* Sybiosme Magnetic Action Button (Nested Button-in-Button Physics) */
 .sybiosme-action-btn {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
   border-radius: 9999px;
-  padding: 0.625rem 0.625rem 0.625rem 1.35rem;
-  font-weight: 500;
+  padding: 0.625rem 0.625rem 0.625rem 1.4rem;
+  font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: -0.01em;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    transform 0.35s var(--ease-out-expo),
+    box-shadow 0.35s var(--ease-out-expo),
+    background-color 0.3s ease,
+    border-color 0.3s ease;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  will-change: transform;
 }
+
+.sybiosme-action-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.16),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.65s var(--ease-out-expo);
+  pointer-events: none;
+}
+
+.sybiosme-action-btn:hover::after {
+  left: 140%;
+}
+
+.sybiosme-action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.sybiosme-action-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
 .sybiosme-action-btn .btn-arrow {
   width: 2.25rem;
   height: 2.25rem;
@@ -198,18 +288,22 @@ html.lenis, html.lenis body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  transition:
+    transform 0.35s var(--ease-out-expo),
+    background-color 0.3s ease,
+    color 0.3s ease;
   flex-shrink: 0;
 }
+
 .sybiosme-action-btn:hover .btn-arrow {
-  transform: translateX(3px) scale(1.06);
+  transform: translateX(3px) translateY(-1px) scale(1.08);
 }
 
 /* Sybiosme Disclosure Icon */
 .sybiosme-disclosure-icon {
   position: relative;
-  width: 2rem;
-  height: 2rem;
+  width: 2.15rem;
+  height: 2.15rem;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -217,21 +311,23 @@ html.lenis, html.lenis body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.35s var(--ease-out-expo);
+  color: rgba(255, 255, 255, 0.65);
 }
 .sybiosme-disclosure-icon svg {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.35s var(--ease-out-expo);
 }
 details[open] .sybiosme-disclosure-icon {
-  background: rgba(255, 74, 28, 0.15);
-  border-color: rgba(255, 74, 28, 0.35);
+  background: rgba(255, 74, 28, 0.16);
+  border-color: rgba(255, 74, 28, 0.42);
   color: #FF4A1C;
+  box-shadow: 0 0 18px rgba(255, 74, 28, 0.25);
 }
 details[open] .sybiosme-disclosure-icon svg {
   transform: rotate(180deg);
 }
 
+/* EngineTech Site Footer Styles (Continuous 60FPS Hardware Accelerated Loop) */
 @keyframes footerDotsMove {
   0% { transform: translate3d(0, -50%, 0); }
   100% { transform: translate3d(-50%, -50%, 0); }
@@ -241,9 +337,9 @@ details[open] .sybiosme-disclosure-icon svg {
   position: relative;
   z-index: 100;
   overflow: hidden;
-  background-color: #000000;
+  background-color: #050505;
   color: #ffffff;
-  font-family: "Geist", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
 }
@@ -257,7 +353,7 @@ details[open] .sybiosme-disclosure-icon svg {
   position: relative;
   height: 120px;
   overflow: hidden;
-  background-color: #000000;
+  background-color: #050505;
 }
 
 .footer-dots__line {
@@ -272,7 +368,7 @@ details[open] .sybiosme-disclosure-icon svg {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   background-image: 
-    radial-gradient(circle, rgb(255 255 255 / 0.55) 1.5px, transparent 2px),
+    radial-gradient(circle, rgb(255 74 28 / 0.65) 1.5px, transparent 2px),
     radial-gradient(circle, rgb(255 255 255 / 0.35) 1px, transparent 1.5px),
     radial-gradient(circle, rgb(255 255 255 / 0.45) 1.2px, transparent 1.8px);
   background-position: 0 8px, 24px 22px, 48px 14px;
@@ -298,8 +394,8 @@ details[open] .sybiosme-disclosure-icon svg {
   margin: 0;
   color: #ffffff;
   font-size: clamp(34px, 3.5vw, 62px);
-  font-weight: 220;
-  letter-spacing: 0;
+  font-weight: 300;
+  letter-spacing: -0.02em;
   line-height: 1.06;
 }
 
@@ -313,14 +409,14 @@ details[open] .sybiosme-disclosure-icon svg {
 .site-footer__nav a {
   color: rgb(255 255 255 / 0.88);
   font-size: 16px;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.1;
   transition: color 180ms ease, transform 180ms ease;
 }
 
 .site-footer__nav a:hover {
-  color: #ffffff;
-  transform: translateX(3px);
+  color: #FF4A1C;
+  transform: translateX(4px);
 }
 
 .site-footer__brand-row {
@@ -354,7 +450,7 @@ details[open] .sybiosme-disclosure-icon svg {
   flex: 1 1 auto;
   min-width: 0;
   font-size: clamp(58px, 11.1vw, 214px);
-  font-weight: 760;
+  font-weight: 800;
   letter-spacing: -0.055em;
   line-height: 0.78;
   white-space: nowrap;
@@ -368,7 +464,7 @@ details[open] .sybiosme-disclosure-icon svg {
   gap: 8px 18px;
   margin-top: clamp(14px, 1.4vw, 24px);
   color: rgb(255 255 255 / 0.52);
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.35;
 }
 
@@ -449,7 +545,7 @@ input[type="range"].sybiosme-slider::-webkit-slider-thumb {
   background: #FF4A1C;
   border: 3px solid #ffffff;
   box-shadow: 0 0 16px rgba(255, 74, 28, 0.7), 0 2px 8px rgba(0, 0, 0, 0.6);
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  transition: transform 0.2s var(--ease-out-expo), box-shadow 0.2s ease;
 }
 
 input[type="range"].sybiosme-slider::-webkit-slider-thumb:hover,
@@ -465,11 +561,23 @@ input[type="range"].sybiosme-slider::-moz-range-thumb {
   background: #FF4A1C;
   border: 3px solid #ffffff;
   box-shadow: 0 0 16px rgba(255, 74, 28, 0.7), 0 2px 8px rgba(0, 0, 0, 0.6);
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  transition: transform 0.2s var(--ease-out-expo), box-shadow 0.2s ease;
 }
 
 input[type="range"].sybiosme-slider::-moz-range-thumb:hover,
 input[type="range"].sybiosme-slider::-moz-range-thumb:active {
   transform: scale(1.18);
   box-shadow: 0 0 24px rgba(255, 74, 28, 0.95), 0 4px 14px rgba(0, 0, 0, 0.7);
+}
+
+/* Reduced Motion Accessibility Safeguard */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

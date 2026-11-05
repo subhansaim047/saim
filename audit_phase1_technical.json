@@ -1,0 +1,64 @@
+{
+  "technical": {
+    "robots_txt": {
+      "status": 200,
+      "length": 735,
+      "has_googlebot_image": true,
+      "has_sitemap": true,
+      "has_image_sitemap": true,
+      "has_gptbot": true,
+      "has_claude": true,
+      "has_perplexity": true,
+      "has_disallow_api": true,
+      "any_blocked_demos": false
+    },
+    "sitemap_xml": {
+      "status": 200,
+      "urls_count": 51,
+      "sample_urls": [
+        "https://www.saimdev.site",
+        "https://www.saimdev.site/tools",
+        "https://www.saimdev.site/tools/ppds-label-generator",
+        "https://www.saimdev.site/services/takeaway-web-design",
+        "https://www.saimdev.site/nextjs-developer-uk",
+        "https://www.saimdev.site/services",
+        "https://www.saimdev.site/technologies",
+        "https://www.saimdev.site/case-studies",
+        "https://www.saimdev.site/demos",
+        "https://www.saimdev.site/about"
+      ]
+    },
+    "image_sitemap": {
+      "status": 200,
+      "urls_count": 178
+    },
+    "infra": {
+      "https_redirect": true,
+      "non_www_redirect": true,
+      "trailing_slash_behavior": 200,
+      "trailing_slash_final": "https://www.saimdev.site/tools",
+      "security_headers": {
+        "strict_transport_security": null,
+        "x_content_type_options": null,
+        "x_frame_options": null,
+        "referrer_policy": null,
+        "content_security_policy": null,
+        "permissions_policy": null
+      }
+    }
+  },
+  "on_page": {},
+  "schema": {},
+  "aeo": {},
+  "geo": {},
+  "llmo": {
+    "llms_txt": {
+      "status": 200,
+      "length": 5394,
+      "has_brand": true,
+      "has_pricing": true,
+      "content_preview": "# Saim Dev \u2014 Next.js Web Architecture & Takeaway Systems\n\n> Saim Dev is a specialized Next.js studio based in Pakistan that builds bespoke, high-performance websites and digital takeaway systems for small businesses across the United Kingdom and Europe. All projects are delivered remotely with fixed"
+    }
+  },
+  "issues": []
+}

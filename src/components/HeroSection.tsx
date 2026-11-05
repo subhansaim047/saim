@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Calculator } from "lucide-react";
@@ -18,6 +18,33 @@ const navItems = [
 
 export const HeroSection = () => {
   const [hoveredNav, setHoveredNav] = useState<number | null>(null);
+  const [activeHref, setActiveHref] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Scroll-spy: highlight the nav item for the section currently in view
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const anchors = navItems.filter((n) => n.href.startsWith("#"));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveHref("#" + entry.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -50% 0px" }
+    );
+    anchors.forEach((a) => {
+      const el = document.querySelector(a.href);
+      if (el) observer.observe(el);
+    });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <section className="min-h-[100dvh] lg:h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-transparent relative box-border overflow-hidden">
@@ -35,9 +62,9 @@ export const HeroSection = () => {
         {/* ==============================================
             NAVBAR — Floating Glass Pill Island
         =============================================== */}
-        <nav className="absolute top-0 left-0 right-0 z-20 flex justify-center px-2 sm:px-6 pt-3 sm:pt-4">
+        <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-[90] flex justify-center px-2 sm:px-6 transition-all duration-500 ease-spring-expo ${scrolled ? "pt-2 sm:pt-3" : "pt-3 sm:pt-5"}`}>
           {/* Mobile Floating Pill Bar */}
-          <div className="flex sm:hidden items-center justify-start gap-1 p-1.5 bg-[#121212]/90 backdrop-blur-xl rounded-full border border-white/10 max-w-[94vw] overflow-x-auto scrollbar-hide shadow-2xl">
+          <div className="flex sm:hidden pill-island items-center justify-start gap-1 p-1.5 max-w-[94vw] overflow-x-auto scrollbar-hide">
             <span className="section-dot ml-2 mr-1 animate-pulse shrink-0" />
             {navItems.map((item) =>
               item.href.startsWith("/") ? (
@@ -61,7 +88,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Desktop Floating Pill Island */}
-          <div className="hidden sm:flex bg-[#121212]/80 backdrop-blur-xl rounded-full px-5 py-2 items-center justify-center gap-1.5 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.6)]">
+          <div className="hidden sm:flex pill-island px-5 py-2 items-center justify-center gap-1.5">
             <div className="flex items-center gap-1.5 mr-2 pl-1">
               <span className="section-dot animate-pulse" />
               <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/50">UK/EU</span>
@@ -74,7 +101,7 @@ export const HeroSection = () => {
                   onMouseEnter={() => setHoveredNav(index)}
                   onMouseLeave={() => setHoveredNav(null)}
                   className="text-xs lg:text-[13px] font-medium tracking-tight transition-all duration-200 whitespace-nowrap cursor-pointer px-3 py-1.5 rounded-full hover:bg-white/10"
-                  style={{ color: hoveredNav === index ? "#ffffff" : "rgba(255, 255, 255, 0.72)" }}
+                  style={{ color: hoveredNav === index || activeHref === item.href ? "#ffffff" : "rgba(255, 255, 255, 0.72)", background: activeHref === item.href ? "rgba(255, 74, 28, 0.18)" : undefined }}
                 >
                   {item.label}
                 </Link>
@@ -85,7 +112,7 @@ export const HeroSection = () => {
                   onMouseEnter={() => setHoveredNav(index)}
                   onMouseLeave={() => setHoveredNav(null)}
                   className="text-xs lg:text-[13px] font-medium tracking-tight transition-all duration-200 whitespace-nowrap cursor-pointer px-3 py-1.5 rounded-full hover:bg-white/10"
-                  style={{ color: hoveredNav === index ? "#ffffff" : "rgba(255, 255, 255, 0.72)" }}
+                  style={{ color: hoveredNav === index || activeHref === item.href ? "#ffffff" : "rgba(255, 255, 255, 0.72)", background: activeHref === item.href ? "rgba(255, 74, 28, 0.18)" : undefined }}
                 >
                   {item.label}
                 </a>
@@ -193,6 +220,7 @@ export const HeroSection = () => {
                 </motion.a>
 
                 <a
+                  data-magnetic
                   href="#estimator"
                   className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white/[0.06] hover:bg-white/15 border border-white/15 text-white text-xs sm:text-sm font-medium tracking-tight transition-all duration-200"
                 >

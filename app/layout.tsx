@@ -1,12 +1,33 @@
 import type { Metadata } from 'next';
-import { Inter, Instrument_Serif, Fraunces } from 'next/font/google';
+import { Plus_Jakarta_Sans, Instrument_Serif, Fraunces, JetBrains_Mono } from 'next/font/google';
 import '../src/index.css'; // Global CSS
 import { CookieBanner } from '@/components/CookieBanner';
 import { SmoothScroll } from '@/components/SmoothScroll';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const instrument = Instrument_Serif({ weight: "400", style: ["normal", "italic"], subsets: ['latin'], variable: '--font-instrument' });
-const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces' });
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+const instrument = Instrument_Serif({
+  weight: '400',
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-instrument',
+  display: 'swap',
+});
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-fraunces',
+  display: 'swap',
+});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-mono',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Next.js Websites for UK Small Businesses | Saim Dev',
@@ -212,7 +233,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
         />
       </head>
-      <body className={`${inter.variable} ${instrument.variable} ${fraunces.variable} bg-black text-[#E1E0CC] antialiased selection:bg-primary selection:text-black`}>
+      <body className={`${jakarta.variable} ${instrument.variable} ${fraunces.variable} ${jetbrainsMono.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#FF4A1C] selection:text-white`}>
         <SmoothScroll />
         {children}
         <CookieBanner />

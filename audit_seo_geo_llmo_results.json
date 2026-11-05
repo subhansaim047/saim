@@ -1,0 +1,458 @@
+{
+  "site": "https://www.saimdev.site",
+  "pages_audited": [
+    {
+      "route": "/",
+      "html_exists": true,
+      "seo": {
+        "title": "Next.js Websites for UK Small Businesses | Saim Dev",
+        "title_len": 51,
+        "title_score": "OK",
+        "description": "Bespoke Next.js websites for UK small businesses and takeaways from \u00a3250. Fast load speeds, clean code ownership, built-in SEO, and zero monthly fees.",
+        "desc_len": 150,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site",
+        "canonical_match": true,
+        "h1_count": 1,
+        "h1_text": "Next.js Websites for UK Small Businesses \u2014 From \u00a3250",
+        "h2_count": 10,
+        "h3_count": 32,
+        "total_images": 9,
+        "missing_alts": 0,
+        "missing_h1_words": []
+      },
+      "aeo_geo": {
+        "schemas_found": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "WebPage",
+          "FAQPage"
+        ],
+        "has_faq_schema": true,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": false,
+        "opening_paragraph": "CUSTOM DESIGN \u2022 MOBILE-FIRST PERFORMANCE \u2022 FULL OWNERSHIP...",
+        "opening_length": 57
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": true,
+        "mentions_uk_regulations": true
+      },
+      "issues": []
+    },
+    {
+      "route": "/tools",
+      "html_exists": true,
+      "seo": {
+        "title": "Free Food Safety Templates UK | Kitchen Compliance Hub",
+        "title_len": 54,
+        "title_score": "OK",
+        "description": "Free food safety templates for UK commercial kitchens. Download 14-allergen matrices, PPDS label makers, food cost calculators, and SFBB temperature logs.",
+        "desc_len": 154,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site/tools",
+        "canonical_match": true,
+        "h1_count": 1,
+        "h1_text": "Free Food Safety Templates UK: Kitchen Checklists, Logs & Allergen Matrices",
+        "h2_count": 6,
+        "h3_count": 8,
+        "total_images": 138,
+        "missing_alts": 0,
+        "missing_h1_words": []
+      },
+      "aeo_geo": {
+        "schemas_found": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "BreadcrumbList",
+          "ItemList"
+        ],
+        "has_faq_schema": false,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": true,
+        "opening_paragraph": "Download free food safety templates for UK commercial kitchens. Access instant kitchen checklists, temperature logs, all...",
+        "opening_length": 244
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": true,
+        "mentions_uk_regulations": true
+      },
+      "issues": []
+    },
+    {
+      "route": "/tools/ppds-label-generator",
+      "html_exists": true,
+      "seo": {
+        "title": "PPDS Label Generator UK | Free Natasha's Law Labels",
+        "title_len": 51,
+        "title_score": "OK",
+        "description": "Generate compliant Natasha's Law PPDS food labels online. Automatically bold all 14 UK allergens, set use-by dates, and print free A4 sticker sheets.",
+        "desc_len": 149,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site/tools/ppds-label-generator",
+        "canonical_match": true,
+        "h1_count": 1,
+        "h1_text": "PPDS Label Generator: Free Natasha's Law Food Labels",
+        "h2_count": 4,
+        "h3_count": 7,
+        "total_images": 0,
+        "missing_alts": 0,
+        "missing_h1_words": []
+      },
+      "aeo_geo": {
+        "schemas_found": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "BreadcrumbList",
+          "WebApplication",
+          "FAQPage"
+        ],
+        "has_faq_schema": true,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": true,
+        "opening_paragraph": "Under Natasha's Law (FIR 2020), UK food businesses selling prepacked for direct sale (PPDS) food must display the food n...",
+        "opening_length": 347
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": true,
+        "mentions_uk_regulations": true
+      },
+      "issues": []
+    },
+    {
+      "route": "/food-safety-templates",
+      "html_exists": true,
+      "seo": {
+        "title": "Food Safety Templates UK (Redirecting) | Saim Dev",
+        "title_len": 49,
+        "title_score": "OK",
+        "description": "Custom Next.js websites for UK small businesses from \u00a3250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.",
+        "desc_len": 151,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site",
+        "canonical_match": false,
+        "h1_count": 0,
+        "h1_text": "",
+        "h2_count": 0,
+        "h3_count": 0,
+        "total_images": 0,
+        "missing_alts": 0
+      },
+      "aeo_geo": {
+        "schemas_found": [],
+        "has_faq_schema": false,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": false,
+        "opening_paragraph": "None",
+        "opening_length": 0
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": false,
+        "mentions_uk_regulations": false
+      },
+      "issues": [
+        "Page has 0 H1 headings (must be exactly 1)"
+      ]
+    },
+    {
+      "route": "/food-safety-templates/freezer-temperature-chart",
+      "html_exists": true,
+      "seo": {
+        "title": "Free Freezer Temperature Chart UK | Saim Dev",
+        "title_len": 44,
+        "title_score": "OK",
+        "description": "Free printable freezer temperature chart for UK commercial kitchens. Record daily checks at or below -18\u00b0C to maintain statutory EHO hygiene compliance.",
+        "desc_len": 152,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site/food-safety-templates/freezer-temperature-chart",
+        "canonical_match": true,
+        "h1_count": 1,
+        "h1_text": "Free Freezer Temperature Chart UK",
+        "h2_count": 2,
+        "h3_count": 6,
+        "total_images": 6,
+        "missing_alts": 0,
+        "missing_h1_words": []
+      },
+      "aeo_geo": {
+        "schemas_found": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "BreadcrumbList",
+          "DigitalDocument",
+          "FAQPage"
+        ],
+        "has_faq_schema": true,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": true,
+        "opening_paragraph": "Free printable freezer temperature chart for UK commercial kitchens. Record daily checks at or below -18\u00b0C to maintain s...",
+        "opening_length": 152
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": true,
+        "mentions_uk_regulations": true
+      },
+      "issues": []
+    },
+    {
+      "route": "/food-safety-templates/food-allergen-chart",
+      "html_exists": true,
+      "seo": {
+        "title": "Free Allergen Chart for Takeaways | Saim Dev",
+        "title_len": 44,
+        "title_score": "OK",
+        "description": "Download a free 14 allergen chart for takeaway and restaurant kitchens. Display statutory allergens clearly for customers and pass EHO hygiene inspections.",
+        "desc_len": 155,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site/food-safety-templates/food-allergen-chart",
+        "canonical_match": true,
+        "h1_count": 1,
+        "h1_text": "Free Allergen Chart for Takeaways",
+        "h2_count": 3,
+        "h3_count": 5,
+        "total_images": 2,
+        "missing_alts": 0,
+        "missing_h1_words": []
+      },
+      "aeo_geo": {
+        "schemas_found": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "BreadcrumbList",
+          "WebApplication",
+          "FAQPage"
+        ],
+        "has_faq_schema": true,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": true,
+        "opening_paragraph": "Download a free 14 allergen chart for takeaway and restaurant kitchens. Display statutory allergens clearly for customer...",
+        "opening_length": 155
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": true,
+        "mentions_uk_regulations": true
+      },
+      "issues": []
+    },
+    {
+      "route": "/food-safety-templates/allergy-matrix",
+      "html_exists": true,
+      "seo": {
+        "title": "Free Allergen Matrix Template UK | Saim Dev",
+        "title_len": 43,
+        "title_score": "OK",
+        "description": "Create a compliant allergen matrix template for your UK takeaway or restaurant. Filter ingredients interactively and export a printable A4 kitchen poster.",
+        "desc_len": 154,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site/food-safety-templates/allergy-matrix",
+        "canonical_match": true,
+        "h1_count": 1,
+        "h1_text": "Free Allergen Matrix Template UK",
+        "h2_count": 3,
+        "h3_count": 5,
+        "total_images": 2,
+        "missing_alts": 0,
+        "missing_h1_words": []
+      },
+      "aeo_geo": {
+        "schemas_found": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "BreadcrumbList",
+          "DigitalDocument",
+          "FAQPage"
+        ],
+        "has_faq_schema": true,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": true,
+        "opening_paragraph": "Create a compliant allergen matrix template for your UK takeaway or restaurant. Filter ingredients interactively and exp...",
+        "opening_length": 154
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": true,
+        "mentions_uk_regulations": true
+      },
+      "issues": []
+    },
+    {
+      "route": "/food-safety-templates/food-cost-calculator",
+      "html_exists": true,
+      "seo": {
+        "title": "Free Food Cost Calculator UK | Saim Dev",
+        "title_len": 39,
+        "title_score": "WARN",
+        "description": "Calculate recipe food cost percentages, gross profit margins, and profitable takeaway prices with our free UK food cost calculator for commercial kitchens.",
+        "desc_len": 155,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site/food-safety-templates/food-cost-calculator",
+        "canonical_match": true,
+        "h1_count": 1,
+        "h1_text": "Free Food Cost Calculator UK",
+        "h2_count": 3,
+        "h3_count": 7,
+        "total_images": 5,
+        "missing_alts": 0,
+        "missing_h1_words": []
+      },
+      "aeo_geo": {
+        "schemas_found": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "BreadcrumbList",
+          "WebApplication",
+          "FAQPage"
+        ],
+        "has_faq_schema": true,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": true,
+        "opening_paragraph": "Calculate recipe food cost percentages, gross profit margins, and profitable takeaway prices with our free UK food cost ...",
+        "opening_length": 155
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": true,
+        "mentions_uk_regulations": true
+      },
+      "issues": [
+        "Title length 39 chars (recommended: 50-60)"
+      ]
+    },
+    {
+      "route": "/food-safety-templates/recipe-calculator",
+      "html_exists": true,
+      "seo": {
+        "title": "Free Recipe Scaler Calculator UK | Saim Dev",
+        "title_len": 43,
+        "title_score": "OK",
+        "description": "Scale commercial recipes up or down accurately with our free recipe scaler calculator. Convert portion sizes, batch ingredient weights, and kitchen yields.",
+        "desc_len": 155,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site/food-safety-templates/recipe-calculator",
+        "canonical_match": true,
+        "h1_count": 1,
+        "h1_text": "Free Recipe Scaler Calculator UK",
+        "h2_count": 3,
+        "h3_count": 7,
+        "total_images": 5,
+        "missing_alts": 0,
+        "missing_h1_words": []
+      },
+      "aeo_geo": {
+        "schemas_found": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "BreadcrumbList",
+          "WebApplication",
+          "FAQPage"
+        ],
+        "has_faq_schema": true,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": true,
+        "opening_paragraph": "Scale commercial recipes up or down accurately with our free recipe scaler calculator. Convert portion sizes, batch ingr...",
+        "opening_length": 155
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": true,
+        "mentions_uk_regulations": true
+      },
+      "issues": []
+    },
+    {
+      "route": "/food-safety-templates/reheating-food-temperature-guide",
+      "html_exists": true,
+      "seo": {
+        "title": "Free Reheating Food Temperature Guide | Saim Dev",
+        "title_len": 48,
+        "title_score": "OK",
+        "description": "Learn safe reheating rules for UK catering kitchens. Ensure hot core temperatures reach 75\u00b0C to destroy pathogens and pass local authority audits.",
+        "desc_len": 146,
+        "desc_score": "OK",
+        "canonical": "https://www.saimdev.site/food-safety-templates/reheating-food-temperature-guide",
+        "canonical_match": true,
+        "h1_count": 1,
+        "h1_text": "Free Reheating Food Temperature Guide",
+        "h2_count": 2,
+        "h3_count": 6,
+        "total_images": 6,
+        "missing_alts": 0,
+        "missing_h1_words": []
+      },
+      "aeo_geo": {
+        "schemas_found": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "BreadcrumbList",
+          "DigitalDocument",
+          "FAQPage"
+        ],
+        "has_faq_schema": true,
+        "has_howto_schema": false,
+        "has_software_app": false,
+        "has_breadcrumbs": true,
+        "opening_paragraph": "Learn safe reheating rules for UK catering kitchens. Ensure hot core temperatures reach 75\u00b0C to destroy pathogens and pa...",
+        "opening_length": 146
+      },
+      "llmo": {
+        "mentions_saim_dev": true,
+        "mentions_fsa": true,
+        "mentions_uk_regulations": true
+      },
+      "issues": []
+    }
+  ],
+  "robots_txt": {
+    "exists": true,
+    "bots_status": {
+      "GPTBot": true,
+      "OAI-SearchBot": true,
+      "ChatGPT-User": true,
+      "ClaudeBot": true,
+      "Claude-SearchBot": false,
+      "Claude-User": false,
+      "PerplexityBot": true,
+      "Perplexity-User": false,
+      "Applebot": false,
+      "Applebot-Extended": false,
+      "Google-Extended": false,
+      "CCBot": true
+    },
+    "raw_snippet": "# Saim Dev \u2014 robots.txt\n# https://www.saimdev.site\n\nUser-agent: *\nAllow: /\nDisallow: /api/\n\n# Search Engine Crawlers\nUser-agent: Googlebot\nAllow: /\nDisallow: /api/\n\nUser-agent: Bingbot\nAllow: /\nDisallow: /api/\n\n# AI Search & LLM Engine Crawlers (Explicitly Allowed)\nUser-agent: OAI-SearchBot\nAllow: /"
+  },
+  "llms_txt": {
+    "llms_txt_exists": true,
+    "llms_full_txt_exists": false
+  },
+  "sitemap_xml": {
+    "exists": true,
+    "total_urls": 51,
+    "total_images": 48,
+    "has_tools": true
+  },
+  "overall_findings": []
+}
