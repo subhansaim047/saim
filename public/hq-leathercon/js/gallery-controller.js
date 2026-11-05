@@ -303,40 +303,171 @@
   }
 
   // ============================================================
-  // 4. MOBILE NAVIGATION DRAWER & ACCORDIONS
+  // 4. MOBILE NAVIGATION DRAWER & ACCORDIONS (MATCHES LAPTOP FOOTER + BELTS & WALLETS)
   // ============================================================
   function initMobileDrawer() {
-    const toggles = Array.from(document.querySelectorAll('.mobile-nav-toggle, button.mobile-nav-toggle, [data-action="toggle-drawer"]'));
-    const mobileNav = document.querySelector('.mobile-nav, #mobile-nav, .navigation--mobile, .drawer--navigation');
+    try {
+      // Remove legacy broken mobile drawer template so theme.js doesn't overlay a blank white panel
+      document.querySelectorAll('.mobile-navigation-drawer-template, .mobile-navigation-drawer').forEach(el => el.remove());
 
-    if (toggles.length > 0 && mobileNav) {
-      toggles.forEach(btn => {
-        btn.addEventListener('click', function (e) {
+      let drawerOverlay = document.getElementById('hq-mobile-drawer-overlay');
+      if (!drawerOverlay) {
+        drawerOverlay = document.createElement('div');
+        drawerOverlay.id = 'hq-mobile-drawer-overlay';
+        drawerOverlay.style.cssText = 'display:none; position:fixed; inset:0; z-index:99999990; background:rgba(15,23,42,0.55); backdrop-filter:blur(2px);';
+        drawerOverlay.innerHTML = `
+          <nav id="hq-mobile-drawer" aria-label="Mobile Navigation" style="width:86%; max-width:330px; height:100%; background:#ffffff; color:#111111; display:flex; flex-direction:column; box-shadow:6px 0 28px rgba(0,0,0,0.25); overflow-y:auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 18px; border-bottom:1px solid #e5e7eb; background:#fafafa;">
+              <a href="/hq-leathercon/index.html" style="display:flex; align-items:center; gap:10px; text-decoration:none; color:#111;">
+                <img src="/hq-leathercon/images/hq-crest-logo.png" alt="HQ Leathercon" style="height:30px; width:auto;" />
+                <span style="font-family:'Cinzel',Georgia,serif; font-size:13px; font-weight:700; letter-spacing:0.14em; color:#111;">HQ LEATHERCON</span>
+              </a>
+              <button type="button" id="hq-mobile-drawer-close" aria-label="Close menu" style="background:none; border:none; width:34px; height:34px; font-size:24px; line-height:1; color:#111; cursor:pointer; display:flex; align-items:center; justify-content:center;">&times;</button>
+            </div>
+
+            <ul style="list-style:none; margin:0; padding:0; flex:1;">
+              <!-- MEN (Shop) -->
+              <li class="hq-mob-item" style="border-bottom:1px solid #f1f5f9;">
+                <div class="hq-mob-trigger" style="display:flex; align-items:center; justify-content:space-between; padding:14px 18px; cursor:pointer; font-size:13.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#111;">
+                  <span>MEN</span>
+                  <span class="hq-mob-chevron" style="font-size:16px; font-weight:400; transition:transform 0.2s;">+</span>
+                </div>
+                <ul class="hq-mob-sub" style="display:none; list-style:none; margin:0; padding:4px 0 12px 28px; background:#f8fafc;">
+                  <li><a href="/hq-leathercon/pages/men-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13.5px; font-weight:600;">Men's Outerwear</a></li>
+                  <li><a href="/hq-leathercon/collections/mens-leather-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#475569; text-decoration:none; font-size:13px;">All Leather Jackets</a></li>
+                  <li><a href="/hq-leathercon/collections/mens-biker-leather-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#475569; text-decoration:none; font-size:13px;">Biker Jackets</a></li>
+                  <li><a href="/hq-leathercon/collections/mens-bomber-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#475569; text-decoration:none; font-size:13px;">Bomber Jackets</a></li>
+                  <li><a href="/hq-leathercon/collections/mens-suede-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#475569; text-decoration:none; font-size:13px;">Suede Jackets</a></li>
+                  <li><a href="/hq-leathercon/pages/eviternity/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13.5px; font-weight:600;">Men's Shoes</a></li>
+                  <li><a href="/hq-leathercon/pages/trucarry/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13.5px; font-weight:600;">Bags &amp; Accessories</a></li>
+                </ul>
+              </li>
+
+              <!-- WOMEN (Shop) -->
+              <li class="hq-mob-item" style="border-bottom:1px solid #f1f5f9;">
+                <div class="hq-mob-trigger" style="display:flex; align-items:center; justify-content:space-between; padding:14px 18px; cursor:pointer; font-size:13.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#111;">
+                  <span>WOMEN</span>
+                  <span class="hq-mob-chevron" style="font-size:16px; font-weight:400; transition:transform 0.2s;">+</span>
+                </div>
+                <ul class="hq-mob-sub" style="display:none; list-style:none; margin:0; padding:4px 0 12px 28px; background:#f8fafc;">
+                  <li><a href="/hq-leathercon/pages/women-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13.5px; font-weight:600;">Women's Outerwear</a></li>
+                  <li><a href="/hq-leathercon/collections/womens-leather-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#475569; text-decoration:none; font-size:13px;">All Leather Jackets</a></li>
+                  <li><a href="/hq-leathercon/collections/womens-biker-leather-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#475569; text-decoration:none; font-size:13px;">Biker Jackets</a></li>
+                  <li><a href="/hq-leathercon/collections/women-bomber-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#475569; text-decoration:none; font-size:13px;">Bomber Jackets</a></li>
+                  <li><a href="/hq-leathercon/collections/womens-suede-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#475569; text-decoration:none; font-size:13px;">Suede Jackets</a></li>
+                  <li><a href="/hq-leathercon/collections/womens-leather-bags/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13.5px; font-weight:600;">Women's Leather Bags</a></li>
+                </ul>
+              </li>
+
+              <!-- CUSTOMIZE (Matches Laptop Footer Bespoke: Custom Jackets, Custom Shoes, Custom Bags) -->
+              <li class="hq-mob-item" style="border-bottom:1px solid #f1f5f9;">
+                <div class="hq-mob-trigger" style="display:flex; align-items:center; justify-content:space-between; padding:14px 18px; cursor:pointer; font-size:13.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#111;">
+                  <span>CUSTOMIZE</span>
+                  <span class="hq-mob-chevron" style="font-size:16px; font-weight:400; transition:transform 0.2s;">+</span>
+                </div>
+                <ul class="hq-mob-sub" style="display:none; list-style:none; margin:0; padding:4px 0 12px 28px; background:#f8fafc;">
+                  <li><a href="/hq-leathercon/pages/custom-jackets/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13.5px; font-weight:600;">Custom Jackets</a></li>
+                  <li><a href="/hq-leathercon/pages/custom-made-shoes/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13.5px; font-weight:600;">Custom Shoes</a></li>
+                  <li><a href="/hq-leathercon/pages/custom-bag/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13.5px; font-weight:600;">Custom Bags</a></li>
+                </ul>
+              </li>
+
+              <!-- BRAND (Matches Laptop Footer: ONLY Our Story) -->
+              <li class="hq-mob-item" style="border-bottom:1px solid #f1f5f9;">
+                <div class="hq-mob-trigger" style="display:flex; align-items:center; justify-content:space-between; padding:14px 18px; cursor:pointer; font-size:13.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#111;">
+                  <span>BRAND</span>
+                  <span class="hq-mob-chevron" style="font-size:16px; font-weight:400; transition:transform 0.2s;">+</span>
+                </div>
+                <ul class="hq-mob-sub" style="display:none; list-style:none; margin:0; padding:4px 0 12px 28px; background:#f8fafc;">
+                  <li><a href="/hq-leathercon/pages/our-story/index.html" style="display:block; padding:7px 14px 7px 0; color:#111827; text-decoration:none; font-size:13.5px; font-weight:600;">Our Story</a></li>
+                </ul>
+              </li>
+
+              <!-- SALE -->
+              <li class="hq-mob-item" style="border-bottom:1px solid #f1f5f9;">
+                <div class="hq-mob-trigger" style="display:flex; align-items:center; justify-content:space-between; padding:14px 18px; cursor:pointer; font-size:13.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#b91c1c;">
+                  <span>SALE</span>
+                  <span class="hq-mob-chevron" style="font-size:16px; font-weight:400; transition:transform 0.2s;">+</span>
+                </div>
+                <ul class="hq-mob-sub" style="display:none; list-style:none; margin:0; padding:4px 0 12px 28px; background:#f8fafc;">
+                  <li><a href="/hq-leathercon/pages/black-friday-jacket-deals/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13px;">Cyber Monday Sale</a></li>
+                  <li><a href="/hq-leathercon/collections/factory-seconds/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13px;">Factory Seconds - 40% OFF</a></li>
+                  <li><a href="/hq-leathercon/collections/sale/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13px;">Leather Bags - 50% OFF</a></li>
+                </ul>
+              </li>
+
+              <!-- HELP (Matches Laptop Footer Help: Contact Us, Privacy Policy, Terms of Service) -->
+              <li class="hq-mob-item" style="border-bottom:1px solid #f1f5f9;">
+                <div class="hq-mob-trigger" style="display:flex; align-items:center; justify-content:space-between; padding:14px 18px; cursor:pointer; font-size:13.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#111;">
+                  <span>HELP</span>
+                  <span class="hq-mob-chevron" style="font-size:16px; font-weight:400; transition:transform 0.2s;">+</span>
+                </div>
+                <ul class="hq-mob-sub" style="display:none; list-style:none; margin:0; padding:4px 0 12px 28px; background:#f8fafc;">
+                  <li><a href="/hq-leathercon/pages/contact-us/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13px;">Contact Us</a></li>
+                  <li><a href="/hq-leathercon/policies/privacy-policy/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13px;">Privacy Policy</a></li>
+                  <li><a href="/hq-leathercon/policies/terms-of-service/index.html" style="display:block; padding:7px 14px 7px 0; color:#334155; text-decoration:none; font-size:13px;">Terms of Service</a></li>
+                </ul>
+              </li>
+
+              <!-- DESIGN YOUR OWN -->
+              <li style="border-bottom:1px solid #f1f5f9;">
+                <a href="/hq-leathercon/products/custom-leather-jacket-builder/index.html" style="display:block; padding:14px 18px; font-size:13.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#111; text-decoration:none;">DESIGN YOUR OWN</a>
+              </li>
+
+              <!-- BELTS & WALLETS BUTTON (After all items in mobile menu) -->
+              <li class="hq-mob-item" style="padding:14px 16px;">
+                <div class="hq-mob-trigger" id="hq-mob-belts-wallets-btn" style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px; background:#111111; color:#ffffff; border-radius:6px; cursor:pointer; font-size:13.5px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+                  <span>BELTS &amp; WALLETS</span>
+                  <span class="hq-mob-chevron" style="font-size:16px; font-weight:400; color:#ffffff;">+</span>
+                </div>
+                <ul class="hq-mob-sub" style="display:none; list-style:none; margin:6px 0 0 0; padding:8px 14px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px;">
+                  <li><a href="/hq-leathercon/collections/mens-leather-belts/index.html" style="display:block; padding:8px 0; color:#0f172a; text-decoration:none; font-size:13.5px; font-weight:600; border-bottom:1px solid #e2e8f0;">Leather Belts</a></li>
+                  <li><a href="/hq-leathercon/collections/leather-wallets/index.html" style="display:block; padding:8px 0; color:#0f172a; text-decoration:none; font-size:13.5px; font-weight:600; border-bottom:1px solid #e2e8f0;">Leather Wallets</a></li>
+                  <li><a href="/hq-leathercon/pages/custom-leather-belts/index.html" style="display:block; padding:8px 0; color:#334155; text-decoration:none; font-size:13px; border-bottom:1px solid #e2e8f0;">Custom Leather Belts</a></li>
+                  <li><a href="/hq-leathercon/pages/custom-leather-wallets/index.html" style="display:block; padding:8px 0; color:#334155; text-decoration:none; font-size:13px;">Custom Leather Wallets</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        `;
+        document.body.appendChild(drawerOverlay);
+      }
+
+      const closeBtn = document.getElementById('hq-mobile-drawer-close');
+      function openDrawer(e) {
+        if (e) {
           e.preventDefault();
-          const isOpen = mobileNav.classList.contains('is-open') || mobileNav.style.display === 'block';
-          if (isOpen) {
-            mobileNav.classList.remove('is-open');
-            mobileNav.style.display = 'none';
-          } else {
-            mobileNav.classList.add('is-open');
-            mobileNav.style.display = 'block';
-          }
+          e.stopPropagation();
+        }
+        document.body.classList.remove('mobile-nav-open');
+        drawerOverlay.style.display = 'block';
+      }
+      function closeDrawer() {
+        drawerOverlay.style.display = 'none';
+      }
+
+      document.querySelectorAll('.mobile-nav-toggle, button.mobile-nav-toggle, [data-action="toggle-drawer"]').forEach(btn => {
+        btn.addEventListener('click', openDrawer, true);
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      drawerOverlay.addEventListener('click', function (e) {
+        if (e.target === drawerOverlay) closeDrawer();
+      });
+
+      drawerOverlay.querySelectorAll('.hq-mob-trigger').forEach(trig => {
+        trig.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const sub = this.nextElementSibling;
+          const chev = this.querySelector('.hq-mob-chevron');
+          if (!sub) return;
+          const isOpen = sub.style.display === 'block';
+          sub.style.display = isOpen ? 'none' : 'block';
+          if (chev) chev.textContent = isOpen ? '+' : '−';
         });
       });
-    }
-
-    // Mobile navigation accordion submenus
-    const mobileColumns = Array.from(document.querySelectorAll('.mobile-nav__sublinks-toggle, .mobile-nav__item--has-sublinks > a'));
-    mobileColumns.forEach(link => {
-      link.addEventListener('click', function (e) {
-        const sub = this.nextElementSibling;
-        if (sub && (sub.classList.contains('mobile-nav__sublinks') || sub.tagName === 'UL')) {
-          e.preventDefault();
-          const isShown = sub.style.display === 'block';
-          sub.style.display = isShown ? 'none' : 'block';
-        }
-      });
-    });
+    } catch (e) {}
   }
 
   // ============================================================
@@ -880,7 +1011,305 @@
     recalculateBuilderPrice();
   }
 
+  // ============================================================
+  // 9. CLEAN HEADER, BRAND="OUR STORY" ONLY, & BELTS/WALLETS NAV
+  // ============================================================
+  function enforceCleanHeaderAndMobileNav() {
+    try {
+      // Remove Account & Cart buttons
+      document.querySelectorAll('.header-account-link, .logo-area__right a[href*="/account"], .mobile-navigation-drawer a[href*="/account"], a.cart-link, .logo-area__right .show-search-link').forEach(el => el.remove());
+
+      // Clean Desktop & Mobile Nav Tier 1
+      const navLists = document.querySelectorAll('.navigation--main .navigation__tier-1, .mobile-navigation-drawer .navigation__tier-1');
+      navLists.forEach(ul => {
+        const isMobile = !!ul.closest('.mobile-navigation-drawer');
+        Array.from(ul.children).forEach(li => {
+          const topLink = li.querySelector(':scope > a.navigation__link');
+          if (!topLink) return;
+          const label = (topLink.textContent || '').trim().toUpperCase();
+
+          // Remove Corporate Gifts & Gifting
+          if (label === 'CORPORATE GIFTS' || label === 'GIFTING') {
+            li.remove();
+            return;
+          }
+
+          // Under BRAND: keep ONLY "Our Story"
+          if (label === 'BRAND') {
+            const tier2 = li.querySelector('.navigation__tier-2');
+            if (tier2) {
+              tier2.innerHTML = '<li class="navigation__item"><a class="navigation__link" href="/hq-leathercon/pages/our-story/index.html">Our Story</a></li>';
+            }
+          }
+
+          // Under CUSTOMIZE: match Laptop Footer Bespoke (Custom Jackets, Custom Shoes, Custom Bags)
+          if (label === 'CUSTOMIZE') {
+            li.classList.remove('navigation__item--with-mega-menu');
+            li.classList.add('navigation__item--with-small-menu');
+            const tier2 = li.querySelector('.navigation__tier-2');
+            if (tier2) {
+              tier2.className = 'navigation__tier-2';
+              tier2.innerHTML = `
+                <li class="navigation__item"><a class="navigation__link" href="/hq-leathercon/pages/custom-jackets/index.html">Custom Jackets</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/hq-leathercon/pages/custom-made-shoes/index.html">Custom Shoes</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="/hq-leathercon/pages/custom-bag/index.html">Custom Bags</a></li>
+              `;
+            }
+          }
+        });
+
+        // Add BELTS & WALLETS button if not already present
+        const hasBeltsWallets = Array.from(ul.children).some(li => /BELTS\s*&\s*WALLETS/i.test(li.textContent || ''));
+        if (!hasBeltsWallets) {
+          const bwLi = document.createElement('li');
+          bwLi.className = 'navigation__item navigation__item--with-children navigation__item--with-small-menu';
+          const tierId = isMobile ? 'NavigationTier2-BeltsWalletsMob' : 'NavigationTier2-BeltsWalletsDesk';
+          bwLi.innerHTML = `
+            <a aria-controls="${tierId}" aria-expanded="false" aria-haspopup="true" class="navigation__link" href="/hq-leathercon/collections/leather-wallets/index.html">BELTS &amp; WALLETS</a>
+            <a class="navigation__children-toggle" href="#"><svg class="feather feather-chevron-down" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" viewBox="0 0 24 24" width="24"><title>Toggle menu</title><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="navigation__tier-2-container navigation__child-tier" id="${tierId}">
+              <div class="container">
+                <ul class="navigation__tier-2">
+                  <li class="navigation__item"><a class="navigation__link" href="/hq-leathercon/collections/mens-leather-belts/index.html">Leather Belts</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="/hq-leathercon/collections/leather-wallets/index.html">Leather Wallets</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="/hq-leathercon/pages/custom-leather-belts/index.html">Custom Leather Belts</a></li>
+                  <li class="navigation__item"><a class="navigation__link" href="/hq-leathercon/pages/custom-leather-wallets/index.html">Custom Leather Wallets</a></li>
+                </ul>
+              </div>
+            </div>
+          `;
+          ul.appendChild(bwLi);
+        }
+      });
+    } catch (e) {}
+  }
+
+  // ============================================================
+  // 10. REPLACE ADD TO CART WITH WHATSAPP ORDER / INQUIRY
+  // ============================================================
+  function initWhatsAppOrderButtons() {
+    try {
+      const waSvg = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.625.846 5.059 2.284 7.033l-1.492 5.448 5.601-1.469c1.908 1.213 4.168 1.922 6.607 1.922 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>';
+
+      function buildWhatsAppUrl() {
+        const titleEl = document.querySelector('h1.title, .product-detail h1, h1');
+        const priceEl = document.querySelector('.price-container .current-price, .product-price .current-price');
+        const title = titleEl ? titleEl.textContent.trim() : document.title;
+        const price = priceEl ? priceEl.textContent.trim() : '';
+
+        const details = [];
+        // Standard size/color selectors
+        document.querySelectorAll('.option-selector input:checked, .swatch input:checked').forEach(inp => {
+          details.push(inp.value);
+        });
+        const selSize = document.querySelector('select.original-selector option:checked');
+        if (selSize && selSize.textContent && selSize.value) {
+          details.push('Size: ' + selSize.textContent.trim());
+        }
+        // Custom builder options
+        document.querySelectorAll('#avpoptions-container__v2 .avp-option').forEach(opt => {
+          if (opt.style.display === 'none') return;
+          const optName = opt.querySelector('.apo-title')?.textContent?.trim();
+          const checked = Array.from(opt.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked')).map(i => i.value);
+          const sel = opt.querySelector('select');
+          if (checked.length && optName) {
+            details.push(`${optName}: ${checked.join(', ')}`);
+          } else if (sel && sel.value && optName) {
+            details.push(`${optName}: ${sel.value}`);
+          }
+        });
+
+        let msg = `Hi HQ Leathercon! I would like to send an order / inquiry for:\n• Product: ${title}`;
+        if (price) msg += `\n• Price: ${price}`;
+        if (details.length) msg += `\n• Options: ${details.join(' | ')}`;
+        msg += `\n• Link: ${window.location.href}`;
+        return 'https://wa.me/?text=' + encodeURIComponent(msg);
+      }
+
+      // Remove duplicate org addcart button
+      document.querySelectorAll('button.avis-org-addcart-button').forEach(b => b.remove());
+
+      const cartButtons = document.querySelectorAll(
+        '.quantity-submit-row__submit button[type="submit"], button.avis-new-addcart-button, button[name="add"], .add-to-cart, .product-form__cart-submit'
+      );
+
+      cartButtons.forEach(btn => {
+        btn.type = 'button';
+        btn.classList.add('hq-whatsapp-order-btn');
+        btn.innerHTML = `${waSvg}<span>Send Order / Inquiry on WhatsApp</span>`;
+        btn.onclick = function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.open(buildWhatsAppUrl(), '_blank', 'noopener,noreferrer');
+        };
+      });
+
+      // Also update any sticky mobile ATC bar if present
+      document.querySelectorAll('.my__atc button, .sticky-atc button').forEach(btn => {
+        btn.type = 'button';
+        btn.classList.add('hq-whatsapp-order-btn');
+        btn.innerHTML = `${waSvg}<span>Order / Inquiry on WhatsApp</span>`;
+        btn.onclick = function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.open(buildWhatsAppUrl(), '_blank', 'noopener,noreferrer');
+        };
+      });
+    } catch (e) {}
+  }
+
+  // ============================================================
+  // 11. INTERACTIVE WORKING SEARCH BAR ACROSS ALL PAGES
+  // ============================================================
+  function initLiveSearchBar() {
+    try {
+      // Load search catalog asynchronously if not already loaded
+      if (!window.HQ_SEARCH_CATALOG && !document.getElementById('hq-search-catalog-script')) {
+        const s = document.createElement('script');
+        s.id = 'hq-search-catalog-script';
+        s.src = '/hq-leathercon/js/search-catalog.js';
+        document.head.appendChild(s);
+      }
+
+      // Create search modal if not exists
+      let modal = document.getElementById('hq-live-search-modal');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'hq-live-search-modal';
+        modal.style.cssText = 'display:none; position:fixed; inset:0; z-index:99999999; background:rgba(15,23,42,0.68); backdrop-filter:blur(4px); overflow-y:auto; padding:20px 12px;';
+        modal.innerHTML = `
+          <div style="max-width:860px; margin:20px auto; background:#ffffff; border-radius:10px; box-shadow:0 20px 50px rgba(0,0,0,0.3); overflow:hidden; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+            <div style="display:flex; align-items:center; gap:10px; padding:14px 18px; border-bottom:1px solid #e5e7eb; background:#f8fafc;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input id="hq-live-search-input" type="text" placeholder="Search leather jackets, biker, bomber, suede, shoes, bags, belts, wallets..." style="flex:1; border:none; background:transparent; font-size:16px; color:#111827; outline:none; padding:4px 0;" autocomplete="off" />
+              <button id="hq-live-search-close" type="button" style="background:#e2e8f0; border:none; border-radius:6px; width:32px; height:32px; font-size:18px; line-height:1; color:#334155; cursor:pointer; display:flex; align-items:center; justify-content:center;">&times;</button>
+            </div>
+            <div style="padding:10px 18px; border-bottom:1px solid #f1f5f9; display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:12px; color:#64748b;">
+              <span>Popular:</span>
+              <button type="button" class="hq-search-chip" data-q="biker" style="background:#f1f5f9; border:1px solid #e2e8f0; border-radius:20px; padding:3px 10px; font-size:12px; color:#1e293b; cursor:pointer;">Biker Jackets</button>
+              <button type="button" class="hq-search-chip" data-q="bomber" style="background:#f1f5f9; border:1px solid #e2e8f0; border-radius:20px; padding:3px 10px; font-size:12px; color:#1e293b; cursor:pointer;">Bomber Jackets</button>
+              <button type="button" class="hq-search-chip" data-q="suede" style="background:#f1f5f9; border:1px solid #e2e8f0; border-radius:20px; padding:3px 10px; font-size:12px; color:#1e293b; cursor:pointer;">Suede</button>
+              <button type="button" class="hq-search-chip" data-q="shoes" style="background:#f1f5f9; border:1px solid #e2e8f0; border-radius:20px; padding:3px 10px; font-size:12px; color:#1e293b; cursor:pointer;">Leather Shoes</button>
+              <button type="button" class="hq-search-chip" data-q="bag" style="background:#f1f5f9; border:1px solid #e2e8f0; border-radius:20px; padding:3px 10px; font-size:12px; color:#1e293b; cursor:pointer;">Leather Bags</button>
+              <button type="button" class="hq-search-chip" data-q="belt" style="background:#f1f5f9; border:1px solid #e2e8f0; border-radius:20px; padding:3px 10px; font-size:12px; color:#1e293b; cursor:pointer;">Belts</button>
+              <button type="button" class="hq-search-chip" data-q="wallet" style="background:#f1f5f9; border:1px solid #e2e8f0; border-radius:20px; padding:3px 10px; font-size:12px; color:#1e293b; cursor:pointer;">Wallets</button>
+            </div>
+            <div id="hq-live-search-results" style="padding:16px 18px; max-height:65vh; overflow-y:auto;"></div>
+          </div>
+        `;
+        document.body.appendChild(modal);
+      }
+
+      const input = document.getElementById('hq-live-search-input');
+      const resultsBox = document.getElementById('hq-live-search-results');
+      const closeBtn = document.getElementById('hq-live-search-close');
+
+      function renderResults(query) {
+        const catalog = window.HQ_SEARCH_CATALOG || [];
+        const q = (query || '').trim().toLowerCase();
+        const terms = q ? q.split(/\s+/) : [];
+
+        const matched = q
+          ? catalog.filter(item => {
+              const hay = (item.t + ' ' + item.c).toLowerCase();
+              return terms.every(term => hay.includes(term));
+            }).slice(0, 24)
+          : catalog.slice(0, 12);
+
+        if (!matched.length) {
+          resultsBox.innerHTML = `<div style="text-align:center; padding:32px 16px; color:#64748b; font-size:14px;">No matching products found for "<strong>${query}</strong>". Try searching for <em>biker, bomber, brown, suede, shoes, bag, belt, wallet</em>.</div>`;
+          return;
+        }
+
+        const heading = q ? `Showing ${matched.length} results for "${query}"` : 'Featured Categories & Bestsellers';
+        let html = `<div style="font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; margin-bottom:12px;">${heading}</div>`;
+        html += `<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(145px, 1fr)); gap:10px;">`;
+        matched.forEach(item => {
+          const imgSrc = typeof item.i === 'string' ? item.i : (item.i && item.i.src ? item.i.src : '');
+          const imgHtml = imgSrc
+            ? `<img src="${imgSrc}" alt="${item.t}" style="width:100%; height:140px; object-fit:cover; display:block; background:#f8fafc;" loading="lazy" />`
+            : `<div style="width:100%; height:80px; background:linear-gradient(135deg,#1e293b,#334155); color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; padding:8px; text-align:center;">${item.c || 'Collection'}</div>`;
+          html += `
+            <a href="${item.u}" style="display:flex; flex-direction:column; border:1px solid #e2e8f0; border-radius:8px; overflow:hidden; text-decoration:none; color:#111827; background:#fff; transition:box-shadow 0.2s;">
+              ${imgHtml}
+              <div style="padding:10px;">
+                <div style="font-size:10px; text-transform:uppercase; color:#64748b; font-weight:600; margin-bottom:3px;">${item.c || 'Product'}</div>
+                <div style="font-size:12.5px; font-weight:600; line-height:1.35; color:#0f172a; margin-bottom:4px;">${item.t}</div>
+                ${item.p ? `<div style="font-size:12px; font-weight:700; color:#128C7E;">${item.p}</div>` : ''}
+              </div>
+            </a>
+          `;
+        });
+        html += `</div>`;
+        resultsBox.innerHTML = html;
+      }
+
+      function openSearch(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        modal.style.display = 'block';
+        renderResults(input.value);
+        setTimeout(() => input.focus(), 50);
+      }
+
+      function closeSearch() {
+        modal.style.display = 'none';
+      }
+
+      document.querySelectorAll('.show-search-link, a[href="/search"]').forEach(btn => {
+        btn.addEventListener('click', openSearch);
+      });
+
+      closeBtn.addEventListener('click', closeSearch);
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeSearch();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') closeSearch();
+      });
+      input.addEventListener('input', function () {
+        renderResults(this.value);
+      });
+      modal.querySelectorAll('.hq-search-chip').forEach(chip => {
+        chip.addEventListener('click', function () {
+          input.value = this.getAttribute('data-q') || '';
+          renderResults(input.value);
+          input.focus();
+        });
+      });
+    } catch (e) {}
+  }
+
+  // ============================================================
+  // 12. MOBILE COLLECTION LAYOUT SWITCHER (2-COL VS 1-COL)
+  // ============================================================
+  function initMobileCollectionGridSwitcher() {
+    try {
+      const switchers = document.querySelectorAll('.layout-switchers .layout-switch');
+      const prodList = document.querySelector('.collection-listing .product-list');
+      if (!switchers.length || !prodList) return;
+
+      switchers.forEach((btn, idx) => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          switchers.forEach(b => b.classList.remove('layout-switch--active'));
+          btn.classList.add('layout-switch--active');
+          if (idx === 1) {
+            prodList.classList.remove('product-list--per-row-mob-2');
+            prodList.classList.add('product-list--per-row-mob-1');
+          } else {
+            prodList.classList.remove('product-list--per-row-mob-1');
+            prodList.classList.add('product-list--per-row-mob-2');
+          }
+        });
+      });
+    } catch (e) {}
+  }
+
   function init() {
+    enforceCleanHeaderAndMobileNav();
     normalizeNavigationLinks();
     cleanLiquidTokens();
     initDesktopMegaMenu();
@@ -891,6 +1320,9 @@
     initProductGallery();
     initProductSwatches();
     initCustomBuilderOptions();
+    initWhatsAppOrderButtons();
+    initLiveSearchBar();
+    initMobileCollectionGridSwitcher();
     initCollectionInteractions();
     initConsultationForms();
   }

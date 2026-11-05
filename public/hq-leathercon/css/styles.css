@@ -14596,4 +14596,128 @@ html body .navigation__tier-1 {
   }
 }
 
+/* 1. Mobile Category / Collection 2-Column Grid Fix (Eliminates 50% right-side empty gap) */
+@media screen and (max-width: 767.98px) {
+  .collection-listing .product-list:not(.carousel),
+  .product-list.product-list--per-row-4:not(.carousel),
+  .product-list.product-list--per-row-3:not(.carousel),
+  .product-list.product-list--per-row-2:not(.carousel),
+  .product-list--per-row-mob-2:not(.carousel) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .collection-listing .product-list.product-list--per-row-mob-1:not(.carousel),
+  .product-list.product-list--per-row-mob-1:not(.carousel) {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 12px !important;
+    width: 100% !important;
+  }
+
+  .collection-listing .product-list:not(.carousel) > .product-block,
+  .product-list.product-list--per-row-4:not(.carousel) > .product-block,
+  .product-list.product-list--per-row-3:not(.carousel) > .product-block,
+  .product-list.product-list--per-row-2:not(.carousel) > .product-block,
+  .product-list--per-row-mob-2:not(.carousel) > .product-block,
+  .product-list--per-row-mob-1:not(.carousel) > .product-block {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ensure mobile hamburger & search icons are crisp and never squished by button rules */
+  button.mobile-nav-toggle,
+  .logo-area__left .mobile-nav-toggle,
+  .logo-area__left .show-search-link {
+    padding: 6px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    color: #111111 !important;
+    background: transparent !important;
+  }
+  button.mobile-nav-toggle svg,
+  .logo-area__left .show-search-link svg {
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    stroke: #111111 !important;
+  }
+}
+
+/* 2. Remove Account & Cart Links Globally */
+.header-account-link,
+a.header-account-link,
+.logo-area__right a[href*="/account"],
+.mobile-navigation-drawer a[href*="/account"],
+.mobile-navigation-drawer .mobile-navigation__account,
+a.cart-link,
+.logo-area__right .cart-link,
+.logo-area__right .show-search-link {
+  display: none !important;
+}
+
+/* 3. WhatsApp Order / Inquiry Button Styling */
+.hq-whatsapp-order-btn,
+button.hq-whatsapp-order-btn,
+a.hq-whatsapp-order-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  padding: 15px 22px !important;
+  background: #128C7E !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(18, 140, 126, 0.28) !important;
+  transition: background 0.2s ease, transform 0.15s ease !important;
+  line-height: 1.2 !important;
+}
+.hq-whatsapp-order-btn:hover {
+  background: #075E54 !important;
+  color: #ffffff !important;
+}
+.hq-whatsapp-order-btn svg {
+  width: 20px !important;
+  height: 20px !important;
+  fill: #ffffff !important;
+  flex-shrink: 0 !important;
+}
+
+/* 4. Clean Mobile Drawer Submenu Lists (No bullets) */
+#hq-mobile-drawer ul,
+#hq-mobile-drawer li {
+  list-style: none !important;
+}
+
+
 /* ===== END HQ CUSTOM FIXES ===== */
