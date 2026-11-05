@@ -14,50 +14,109 @@ export const metadata: Metadata = {
     description: "Transparent 4-stage website engineering workflow: discovery, architecture, Next.js build, and zero-downtime deployment.",
     url: "https://www.saimdev.site/process",
     siteName: "Saim Dev",
+    locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "https://www.saimdev.site/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Web Development Process & Delivery Workflow | Saim Dev",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Development Process & Delivery Workflow | Saim Dev",
+    description: "Transparent 4-stage website engineering workflow: discovery, architecture, Next.js build, and zero-downtime deployment.",
+    creator: "@saimwebdev",
+    images: ["https://www.saimdev.site/og-image.png"],
   },
 };
 
 const processSchema = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
+  "@type": "WebPage",
+  "@id": "https://www.saimdev.site/process/#webpage",
   "name": "Saim Dev 4-Stage Website Engineering Process",
   "description": "Step-by-step bespoke website engineering workflow from brief to zero-downtime edge deployment.",
-  "step": [
+  "url": "https://www.saimdev.site/process",
+  "inLanguage": "en-GB",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "h2"]
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "4-Stage Website Engineering Sprint",
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Stage 01: Discovery & Strategic Brief (Day 1–2)",
+        "description": "Define commercial objectives, target audience personas, feature requirements, and fixed delivery schedule."
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Stage 02: Information Architecture & Wireframing (Day 2–4)",
+        "description": "Map information architecture, user journeys, Schema.org JSON-LD data structures, and conversion wireframes."
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Stage 03: Design & Next.js Full-Stack Engineering (Day 4–8)",
+        "description": "Develop bespoke UI components with Next.js App Router, Tailwind CSS, TypeScript, and interactive staging preview."
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Stage 04: Testing, Edge Deployment & Full Code Handover (Day 8–10)",
+        "description": "Execute Core Web Vitals audit, cross-browser validation, DNS/SSL launch, and transfer 100% GitHub repository ownership."
+      }
+    ]
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@type": "HowToStep",
+      "@type": "ListItem",
       "position": 1,
-      "name": "Discovery & Strategic Brief",
-      "itemListElement": {
-        "@type": "HowToDirection",
-        "text": "Define commercial objectives, target audience personas, feature requirements, and timeline constraints."
-      }
+      "name": "Home",
+      "item": "https://www.saimdev.site"
     },
     {
-      "@type": "HowToStep",
+      "@type": "ListItem",
       "position": 2,
-      "name": "Information Architecture & Wireframing",
-      "itemListElement": {
-        "@type": "HowToDirection",
-        "text": "Map information architecture, user journeys, data schemas, and high-fidelity wireframes."
+      "name": "Engineering Process",
+      "item": "https://www.saimdev.site/process"
+    }
+  ]
+};
+
+const processFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does the 4-stage website development process take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Landing pages take 3–5 business days, multi-page starter websites take 5–7 business days, and full custom web applications or online ordering systems take 7–10 business days from initial brief to live deployment."
       }
     },
     {
-      "@type": "HowToStep",
-      "position": 3,
-      "name": "Design & Next.js Full-Stack Engineering",
-      "itemListElement": {
-        "@type": "HowToDirection",
-        "text": "Develop bespoke UI components with Next.js 14/15, Tailwind CSS, TypeScript, and clean database integrations."
-      }
-    },
-    {
-      "@type": "HowToStep",
-      "position": 4,
-      "name": "Testing, Edge Deployment & Full Code Handover",
-      "itemListElement": {
-        "@type": "HowToDirection",
-        "text": "Execute Core Web Vitals audit, cross-browser validation, DNS configuration, and hand over 100% repository rights."
+      "@type": "Question",
+      "name": "Can I review and test the website before paying the final 50% balance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. During Stage 03 we deploy your website to a private staging link so you can test every page, form, and mobile interaction before approving production launch and paying the final 50% milestone."
       }
     }
   ]
@@ -69,6 +128,14 @@ export default function ProcessPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(processSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(processFaqSchema) }}
       />
 
       {/* HEADER / NAVIGATION */}

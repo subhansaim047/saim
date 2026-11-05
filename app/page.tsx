@@ -16,7 +16,7 @@ import { FooterSection } from "@/components/FooterSection";
 import { ScrollCanvasBackground } from "@/components/ScrollCanvasBackground";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development Agency UK | Bespoke Websites & Apps | Saim Dev",
+  title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
   description: "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
   alternates: {
     canonical: "https://www.saimdev.site",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Custom Web Development Agency UK | Bespoke Websites & Apps | Saim Dev",
+    title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
     description: "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
     url: "https://www.saimdev.site",
     siteName: "Saim Dev",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Web Development Agency UK | Bespoke Websites & Apps | Saim Dev",
+    title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
     description: "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
     creator: "@saimwebdev",
     images: ["https://www.saimdev.site/og-image.png"],
@@ -59,9 +59,13 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": "https://www.saimdev.site/#webpage",
   "url": "https://www.saimdev.site",
-  "name": "Custom Web Development Agency UK | Bespoke Websites & Apps | Saim Dev",
+  "name": "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
   "description": "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
   "inLanguage": "en-GB",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "h2"]
+  },
   "isPartOf": {
     "@id": "https://www.saimdev.site/#website",
   },
@@ -73,7 +77,7 @@ const webPageSchema = {
 const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://www.saimdev.site/#professionalservice",
+  "@id": "https://www.saimdev.site/#service-catalog",
   "name": "Saim Dev - Custom Web Development & Digital Engineering Studio",
   "url": "https://www.saimdev.site",
   "image": "https://www.saimdev.site/og-image.png",

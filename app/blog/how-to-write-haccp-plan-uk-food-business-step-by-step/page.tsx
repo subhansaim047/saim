@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostHaccpPlan } from '@/components/blog/BlogPostHaccpPlan';
 
 export const metadata: Metadata = {
-  title: 'How to Write a HACCP Plan UK Food Business Step-by-Step | Saim Dev',
+  title: 'How to Write a HACCP Plan for UK Food Businesses | Saim Dev',
   description: 'Step-by-step guide on how to write a HACCP plan for UK food businesses. Learn the 7 principles, CCP decision trees, critical limits, and legal requirements.',
   robots: {
     index: true,

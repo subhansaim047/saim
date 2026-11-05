@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostHygieneQuiz } from '@/components/blog/BlogPostHygieneQuiz';
 
 export const metadata: Metadata = {
-  title: 'Level 2 Food Hygiene Practice Test Questions & Answers UK | Saim Dev',
+  title: 'Level 2 Food Hygiene Practice Test & Answers UK | Saim Dev',
   description: 'Free Level 2 food hygiene practice test questions and answers for UK kitchen staff. Revise temperature limits, cross-contamination, and food safety laws.',
   robots: {
     index: true,

@@ -1,59 +1,81 @@
-# Saim Dev — Next.js Web Architecture & Takeaway Systems
+# Saim Dev — Custom Web Development, E-Commerce & UK Takeaway Systems
 
-> Saim Dev is a specialized Next.js studio based in Pakistan that builds bespoke, high-performance websites and digital takeaway systems for small businesses across the United Kingdom and Europe. All projects are delivered remotely with fixed GBP pricing, sub-second page performance, and built-in technical SEO.
+> Saim Dev is a specialized Next.js software engineering studio based in Pakistan that builds bespoke, high-performance websites, custom web applications, e-commerce stores, and commission-free digital takeaway systems for businesses across the United Kingdom, European Union, and globally. All projects are delivered remotely with transparent fixed GBP pricing, sub-second page performance, 100% code ownership, and built-in technical SEO.
 
 ## Studio Overview & Commercial Details
 
 - **Studio Name**: Saim Dev
-- **Founder & Lead Developer**: Saim (Full Stack Next.js Web Developer & Food Tech Specialist)
+- **Founder & Lead Architect**: Saim (Full Stack Next.js Web Developer & Digital Commerce Specialist)
 - **Primary Domain**: https://www.saimdev.site
 - **Full Knowledge Corpus**: https://www.saimdev.site/llms-full.txt
-- **Geographic Focus**: United Kingdom & European Union (remote service delivery)
+- **Geographic Focus**: United Kingdom, European Union, United States, Canada & Australia (remote delivery)
 - **Email**: contact@saimdev.site
 - **WhatsApp**: +92 319 6526604
-- **Fixed Pricing Model**:
-  - Landing Page Plan: £250 (Single high-converting page, 3-5 days delivery)
-  - Starter Plan: £390 (Multi-page business website, 5-7 days delivery)
-  - Business / Takeaway Plan: £790 (Full custom web app, online menu/ordering, 7-10 days delivery)
+- **Fixed Pricing Model (50/50 Milestone Protection, Zero Monthly Lock-In)**:
+  - **Landing Page Plan**: £250 (Single high-converting page, 3–5 business days delivery)
+  - **Starter Website Plan**: £390 (Multi-page bespoke business website, 5–7 business days delivery)
+  - **Business / Takeaway Plan**: £790 (Full custom platform or 0% commission online ordering system, 7–10 business days delivery)
+  - **Custom Web Apps & E-Commerce Stores**: £1,250 – £2,500 (SaaS MVPs, client portals, bespoke Shopify / headless commerce)
 
 ## Core Technologies
 
-- Next.js (App Router, Server Components)
-- React & TypeScript
-- Tailwind CSS
+- Next.js (App Router, React Server Components, Static & Edge Rendering)
+- React 18/19 & TypeScript
+- Tailwind CSS & GSAP Motion Architecture
+- Shopify, Shopify Plus & Headless E-Commerce
+- PostgreSQL, Supabase & Stripe Payment Integrations
 - Edge Cloud Hosting (Vercel, Cloudflare)
-- Structured Data (Schema.org JSON-LD)
+- Structured Data (Schema.org JSON-LD, OpenGraph, Speakable AEO)
 
 ---
 
-## Top 20 Canonical Pages & Compliance Resources
+## Canonical Pages, Services, Demos & Compliance Resources
 
-### Core Studio Pages
-1. [Saim Dev Homepage](https://www.saimdev.site/): Bespoke Next.js websites for UK and European businesses with fixed pricing from £250.
-2. [Free UK Kitchen Tools & Templates Hub](https://www.saimdev.site/tools): Free printable food safety templates, checklists, logs, and calculators for UK restaurants and takeaways.
-3. [Next.js Developer UK](https://www.saimdev.site/nextjs-developer-uk): Specialist freelance Next.js web development for UK businesses seeking 95+ PageSpeed and sub-second load times.
-4. [Takeaway Website Design UK](https://www.saimdev.site/services/takeaway-web-design): Commission-free direct ordering websites for UK takeaways & restaurants with built-in Natasha's Law allergen filters. Fixed £250.
+### Core Studio & Commercial Pages
+1. [Saim Dev Homepage](https://www.saimdev.site/): Bespoke Next.js websites, e-commerce stores, and web apps for UK and European businesses from £250.
+2. [Web Development Services Hub](https://www.saimdev.site/services): Full-stack web development, online ordering systems, e-commerce, speed optimization, and technical SEO architecture.
+   - [Custom Web Applications & SaaS MVPs](https://www.saimdev.site/services/custom-web-apps): Full-stack web software, client portals, and real-time dashboards built on Next.js and PostgreSQL.
+   - [E-Commerce & Shopify Development](https://www.saimdev.site/services/ecommerce-shopify): High-converting Shopify, WooCommerce, and headless commerce storefronts with sub-second checkout flows.
+   - [Bespoke Business Websites](https://www.saimdev.site/services/business-websites): Custom digital flagships for B2B, healthcare, legal, and professional service firms.
+   - [WordPress & Headless CMS Engineering](https://www.saimdev.site/services/wordpress-headless-cms): Lightweight custom WordPress, Sanity, and Strapi headless architectures with zero plugin bloat.
+   - [High-Converting Landing Pages & CRO](https://www.saimdev.site/services/landing-pages-cro): Conversion-engineered landing pages built for Google Ads, Meta Ads, and PPC campaigns.
+   - [Website Speed Optimization & Core Web Vitals](https://www.saimdev.site/services/website-speed-optimization): Performance remediation delivering sub-1.2s LCP, 0.00 CLS, and 95+ mobile PageSpeed scores.
+3. [Takeaway Website Design UK](https://www.saimdev.site/services/takeaway-web-design): Commission-free direct ordering websites for UK takeaways & restaurants with built-in Natasha's Law allergen filters.
    - [Takeaway Website Design London](https://www.saimdev.site/services/takeaway-web-design-london): Direct ordering websites for London restaurants and food operators across all 32 boroughs.
-   - [Takeaway Website Design Manchester](https://www.saimdev.site/services/takeaway-web-design-manchester): Bespoke takeaway websites for Greater Manchester eateries and curry houses.
+   - [Takeaway Website Design Manchester](https://www.saimdev.site/services/takeaway-web-design-manchester): Bespoke takeaway websites for Greater Manchester eateries and Curry Mile venues.
    - [Takeaway Website Design Birmingham](https://www.saimdev.site/services/takeaway-web-design-birmingham): Custom websites for Birmingham, Balti Triangle, and West Midlands takeaways.
-5. [Web Development Services](https://www.saimdev.site/services): Full-stack web development, online ordering systems, speed optimization, and technical SEO architecture.
-5. [Case Studies & Results](https://www.saimdev.site/case-studies): Real business website case studies showing sub-second speed metrics and organic conversion improvements.
-6. [Modern Tech Stack](https://www.saimdev.site/technologies): Architectural breakdown of Next.js App Router, Tailwind CSS, TypeScript, and edge infrastructure.
-7. [About Saim Dev](https://www.saimdev.site/about): Honest overview of our Pakistan-based Next.js studio serving UK and EU clients remotely.
-8. [Contact & Quotes](https://www.saimdev.site/contact): Project enquiry form and direct WhatsApp connection for fast fixed-price quotes.
-9. [Web Development & Kitchen Tech Blog](https://www.saimdev.site/blogs): In-depth guides on UK commercial kitchen hygiene, SFBB compliance, and digital web development strategy.
+4. [Next.js Developer UK](https://www.saimdev.site/nextjs-developer-uk): Specialist freelance Next.js web development for UK businesses seeking 95+ PageSpeed and sub-second load times.
+5. [Transparent Website Pricing & Packages](https://www.saimdev.site/pricing): Fixed-fee UK web development packages (£250 to £2,500) with 50/50 milestone protection and 100% code ownership.
+6. [4-Stage Engineering Process](https://www.saimdev.site/process): Transparent 4-stage delivery sprint from discovery brief and wireframing to staging approval and live deployment.
+7. [Live Interactive Demos Hub](https://www.saimdev.site/demos): Interactive production-grade demo storefronts and restaurant ordering systems engineered by Saim Dev:
+   - [HQ Leathercon Bespoke Leather E-Commerce Demo](https://www.saimdev.site/hq-leathercon/index.html): Full-scale luxury leather jackets, shoes, bags, belts & wallets storefront with live search, custom jacket builder, and WhatsApp order dispatch.
+   - [Burger Garage Interactive Demo](https://www.saimdev.site/burger-garage): Craft burger takeaway ordering demo with live cart and category navigation.
+   - [Frenchyse Fast-Casual Demo](https://www.saimdev.site/frenchyse): Modern fast-casual restaurant digital menu and ordering experience.
+   - [Anzaar Fine Dining & Takeaway Demo](https://www.saimdev.site/anzaar): Multi-category restaurant menu and direct ordering showcase.
+   - [HotBite Pizza & Grill Demo](https://www.saimdev.site/hotbite): High-converting takeaway storefront with deal builders and mobile-first UX.
+8. [Case Studies & Results](https://www.saimdev.site/case-studies): Real business website case studies showing sub-second speed metrics and organic conversion improvements.
+9. [Modern Tech Stack](https://www.saimdev.site/technologies): Architectural breakdown of Next.js App Router, Tailwind CSS, TypeScript, and edge infrastructure.
+10. [About Saim Dev](https://www.saimdev.site/about): Overview of our Next.js engineering studio serving UK, EU, and international clients remotely.
+11. [Contact & Fixed-Fee Quotes](https://www.saimdev.site/contact): Project enquiry form and direct WhatsApp connection for fast fixed-price quotes.
+12. [Web Development & Kitchen Tech Blog](https://www.saimdev.site/blogs): In-depth guides on small business web strategy, UK commercial kitchen hygiene, and SFBB compliance.
 
-### Top Compliance & Due Diligence Guides
-10. [Compliant 14-Allergen Matrix Guide](https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants): Step-by-step masterclass on auditing recipes and building an allergen matrix under Natasha's Law.
-11. [Commercial Food Cost Percentage Guide](https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator): How UK restaurants calculate food cost percentage and lock in 70%+ gross margins.
-12. [Commercial Recipe Batch Scaling Guide](https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator): How catering kitchens scale recipes from 10 to 500 portions without taste distortion.
-13. [SFBB Opening & Closing Checklists Guide](https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide): Daily hygiene routine aligned with FSA Safer Food, Better Business standards.
-14. [UK Takeaway HACCP Plan Guide](https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step): Plain-English walkthrough of 7 HACCP principles and hazard analysis for UK food businesses.
-15. [5-Star Food Hygiene Rating Checklist](https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist): Comprehensive inspection guide to pass local authority EHO audits with top marks.
-16. [Natasha's Law PPDS Food Labelling Guide](https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide): Complete walkthrough of Pre-Packed for Direct Sale (PPDS) labelling requirements.
-17. [Commercial Kitchen Food Cooling Temperature Guide](https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide): UK 90-minute cooling rule, blast chilling, and danger zone temperature limits.
+### Interactive UK Kitchen Tools & Calculators (160+ Free Templates)
+13. [Free UK Kitchen Tools & 160 Templates Hub](https://www.saimdev.site/tools): Free printable food safety templates, checklists, logs, and interactive calculators for UK restaurants and takeaways.
+14. [Natasha's Law PPDS Food Label Generator](https://www.saimdev.site/tools/ppds-label-generator): Interactive Prepacked for Direct Sale (PPDS) label generator that auto-bolds all 14 mandatory UK allergens and exports Avery L7160 A4 sticker sheets.
+15. [Food Allergen Matrix Generator](https://www.saimdev.site/tools/allergen-matrix-generator): Interactive digital allergen matrix generator covering all 14 mandatory UK allergens with print-ready A4 PDF export.
+16. [Commercial Food Cost Calculator](https://www.saimdev.site/tools/food-cost-calculator): Real-time dish ingredient cost calculator with portion cost analysis and target gross profit margin projections.
+17. [Recipe Batch Scaling Calculator](https://www.saimdev.site/tools/recipe-batch-calculator): Commercial catering recipe multiplier and divider that scales ingredient weights and volumes from 4 to 500 portions accurately.
 
-### Top Interactive Kitchen Tools & SOPs
-18. [Food Allergen Matrix Generator](https://www.saimdev.site/tools/allergen-matrix-generator): Interactive digital allergen matrix generator covering all 14 mandatory UK allergens with print-ready PDF export.
-19. [Commercial Food Cost Calculator](https://www.saimdev.site/tools/food-cost-calculator): Real-time ingredient cost calculator with portion cost analysis and target margin projections.
-20. [Recipe Batch Scaling Calculator](https://www.saimdev.site/tools/recipe-batch-calculator): Daily dual-shift cold storage temperature monitoring sheet meeting UK SFBB requirements.
+### Top Business & Compliance Guides
+18. [Why Every Small Business Needs a Website](https://www.saimdev.site/blog/why-small-business-needs-website): Commercial ROI analysis of custom websites vs social-only presence for UK local businesses.
+19. [Free Website Builders vs Custom Websites: Hidden Costs](https://www.saimdev.site/blog/free-website-for-local-business): Breakdown of platform lock-in, renewal hikes, and SEO limitations of DIY builders.
+20. [50% Off Agency Launch Offer](https://www.saimdev.site/blog/50-percent-off-agency-launch): Details on Saim Dev's fixed-fee introductory packages for UK small businesses.
+21. [Compliant 14-Allergen Matrix Guide](https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants): Step-by-step masterclass on auditing recipes and building an allergen matrix under Natasha's Law.
+22. [Commercial Food Cost Percentage Guide](https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator): How UK restaurants calculate food cost percentage and lock in 70%+ gross margins.
+23. [Commercial Recipe Batch Scaling Guide](https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator): How catering kitchens scale recipes from 10 to 500 portions without taste distortion.
+24. [SFBB Opening & Closing Checklists Guide](https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide): Daily hygiene routine aligned with FSA Safer Food, Better Business standards.
+25. [UK Takeaway HACCP Plan Guide](https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step): Plain-English walkthrough of 7 HACCP principles and hazard analysis for UK food businesses.
+26. [Level 2 Food Hygiene Practice Test & Guide](https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide): Practice questions, temperature rules, and revision guide for UK catering staff.
+27. [5-Star Food Hygiene Rating Checklist](https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist): Comprehensive inspection guide to pass local authority EHO audits with top marks.
+28. [Natasha's Law PPDS Food Labelling Guide](https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide): Complete walkthrough of Pre-Packed for Direct Sale (PPDS) labelling requirements.
+29. [Commercial Kitchen Food Cooling Temperature Guide](https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide): UK 90-minute cooling rule, blast chilling, and danger zone temperature limits.

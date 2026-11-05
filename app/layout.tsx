@@ -75,7 +75,15 @@ const organizationSchema = {
     "height": 512
   },
   "image": "https://www.saimdev.site/og-image.png",
-  "description": "Custom, high-performance Next.js websites for UK and European small businesses. Transparent fixed pricing from £250.",
+  "description": "Custom, high-performance Next.js websites, e-commerce stores, and takeaway ordering systems for UK and European businesses. Transparent fixed pricing from £250.",
+  "knowsAbout": [
+    "Next.js Web Development",
+    "Custom Web Applications & SaaS MVPs",
+    "E-Commerce & Shopify Storefront Engineering",
+    "UK Restaurant & Takeaway Direct Ordering Systems",
+    "Core Web Vitals & Website Speed Optimization",
+    "UK Food Safety, SFBB & Natasha's Law Digital Compliance Tools"
+  ],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -120,11 +128,19 @@ const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": "https://www.saimdev.site/#professionalservice",
-  "name": "Saim Dev - Next.js Web Architecture & Takeaway Systems",
+  "name": "Saim Dev - Custom Web Development & Digital Engineering Studio",
   "url": "https://www.saimdev.site",
   "image": "https://www.saimdev.site/og-image.png",
-  "priceRange": "£250 - £790",
-  "areaServed": ["GB", "EU"],
+  "priceRange": "£250 - £2500",
+  "telephone": "+923196526604",
+  "email": "contact@saimdev.site",
+  "areaServed": [
+    { "@type": "Country", "name": "United Kingdom" },
+    { "@type": "Country", "name": "United States" },
+    { "@type": "Country", "name": "Canada" },
+    { "@type": "Country", "name": "Australia" },
+    { "@type": "AdministrativeArea", "name": "European Union" }
+  ],
   "parentOrganization": {
     "@id": "https://www.saimdev.site/#organization"
   },
@@ -163,6 +179,8 @@ export default function RootLayout({
     <html lang="en-GB">
       <head>
         <link rel="preload" as="image" href="/scroll-frames/frame_000.webp" type="image/webp" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Summary Context" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Knowledge Corpus" />
         {/* Google Consent Mode v2 Default Signals (Default Denied) */}
         <script
           dangerouslySetInnerHTML={{

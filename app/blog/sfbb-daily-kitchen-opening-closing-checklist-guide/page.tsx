@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostChecklist } from '@/components/blog/BlogPostChecklist';
 
 export const metadata: Metadata = {
-  title: 'SFBB Daily Kitchen Opening & Closing Checklist Guide UK | Saim Dev',
+  title: 'SFBB Daily Kitchen Opening & Closing Checklists | Saim Dev',
   description: 'Master your SFBB daily opening and closing checklist routine. Learn the 4 Cs, temperature logging rules, and prepare for a 5-star food hygiene rating.',
   robots: {
     index: true,

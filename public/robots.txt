@@ -98,3 +98,7 @@ Disallow: /api/
 # Sitemaps
 Sitemap: https://www.saimdev.site/sitemap.xml
 Sitemap: https://www.saimdev.site/image-sitemap.xml
+
+# AI & LLM Knowledge Corpus (LLMO / GEO)
+# LLMs.txt: https://www.saimdev.site/llms.txt
+# LLMs-Full.txt: https://www.saimdev.site/llms-full.txt

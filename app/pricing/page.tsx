@@ -14,7 +14,23 @@ export const metadata: Metadata = {
     description: "Transparent fixed-price web development packages from £250. Zero monthly retainers, 100% code ownership, and 50/50 milestone protection.",
     url: "https://www.saimdev.site/pricing",
     siteName: "Saim Dev",
+    locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "https://www.saimdev.site/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Website Development Pricing & Packages UK | Saim Dev",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Development Pricing & Packages UK | Saim Dev",
+    description: "Transparent fixed-price web development packages from £250. Zero monthly retainers, 100% code ownership, and 50/50 milestone protection.",
+    creator: "@saimwebdev",
+    images: ["https://www.saimdev.site/og-image.png"],
   },
 };
 
@@ -24,6 +40,10 @@ const pricingSchema = {
   "name": "Website Development Pricing & Packages UK",
   "description": "Transparent fixed-price web development packages and custom software rates from Saim Dev.",
   "url": "https://www.saimdev.site/pricing",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "h2"]
+  },
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "GBP",
@@ -72,6 +92,26 @@ const faqSchema = {
   ]
 };
 
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.saimdev.site"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pricing",
+      "item": "https://www.saimdev.site/pricing"
+    }
+  ]
+};
+
 export default function PricingPage() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#FF4A1C] selection:text-white">
@@ -82,6 +122,14 @@ export default function PricingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* HEADER / NAVIGATION */}

@@ -3,7 +3,7 @@ import { FOOD_SAFETY_TEMPLATES } from '@/data/saim_templates';
 import pagePlanData from '@/data/page_plan.json';
 
 const BASE_URL = 'https://www.saimdev.site';
-const NOW = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+const LAST_MOD = '2026-11-05';
 
 type PagePlan = Record<string, { bucket: 'KEEP' | 'IMPROVE' | 'MERGE' | 'NOINDEX'; target_canonical_slug: string }>;
 const pagePlan: PagePlan = pagePlanData as PagePlan;
@@ -11,33 +11,41 @@ const pagePlan: PagePlan = pagePlanData as PagePlan;
 export default function sitemap(): MetadataRoute.Sitemap {
   // ─── Static core pages, tools, services, legal, and showcase demos ─────────
   const corePages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}`,                  lastModified: NOW, changeFrequency: 'weekly',  priority: 1.0 },
-    { url: `${BASE_URL}/tools`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.95 },
-    { url: `${BASE_URL}/tools/ppds-label-generator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
-    { url: `${BASE_URL}/tools/allergen-matrix-generator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
-    { url: `${BASE_URL}/tools/food-cost-calculator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
-    { url: `${BASE_URL}/tools/recipe-batch-calculator`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
-    { url: `${BASE_URL}/services/takeaway-web-design`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
-    { url: `${BASE_URL}/services/takeaway-web-design-london`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/services/takeaway-web-design-manchester`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/services/takeaway-web-design-birmingham`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/nextjs-developer-uk`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
-    { url: `${BASE_URL}/services`,         lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/technologies`,     lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/case-studies`,     lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/demos`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.85 },
-    { url: `${BASE_URL}/about`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/contact`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/blogs`,            lastModified: NOW, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/terms`,            lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/privacy`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/cookie-policy`,    lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/disclaimer`,       lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/burger-garage`,    lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/frenchyse`,        lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/anzaar`,           lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/hotbite`,          lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/thejacketmaker`,   lastModified: NOW, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/`,                 lastModified: LAST_MOD, changeFrequency: 'weekly',  priority: 1.0 },
+    { url: `${BASE_URL}/tools`,            lastModified: LAST_MOD, changeFrequency: 'weekly',  priority: 0.95 },
+    { url: `${BASE_URL}/tools/ppds-label-generator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/food-cost-calculator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/allergen-matrix-generator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/recipe-batch-calculator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/services/takeaway-web-design`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/services/takeaway-web-design-london`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/takeaway-web-design-manchester`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/takeaway-web-design-birmingham`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/nextjs-developer-uk`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/services`,         lastModified: LAST_MOD, changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${BASE_URL}/services/custom-web-apps`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/ecommerce-shopify`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/business-websites`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/wordpress-headless-cms`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/landing-pages-cro`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/website-speed-optimization`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/process`,          lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE_URL}/pricing`,          lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/technologies`,     lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/case-studies`,     lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE_URL}/demos`,            lastModified: LAST_MOD, changeFrequency: 'weekly',  priority: 0.85 },
+    { url: `${BASE_URL}/about`,            lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/contact`,          lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE_URL}/blogs`,            lastModified: LAST_MOD, changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${BASE_URL}/terms`,            lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/privacy`,          lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/cookie-policy`,    lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/disclaimer`,       lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/burger-garage`,    lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/frenchyse`,        lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/anzaar`,           lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/hotbite`,          lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/hq-leathercon/index.html`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.8 },
   ];
 
   // ─── Blog posts ────────────────────────────────────────────────────────────
@@ -57,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
     url: `${BASE_URL}/blog/${slug}`,
-    lastModified: NOW,
+    lastModified: LAST_MOD,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }));
@@ -66,7 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const templatePages: MetadataRoute.Sitemap = FOOD_SAFETY_TEMPLATES
     .map((t) => ({
       url: `${BASE_URL}/food-safety-templates/${t.slug}`,
-      lastModified: NOW,
+      lastModified: LAST_MOD,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     }));

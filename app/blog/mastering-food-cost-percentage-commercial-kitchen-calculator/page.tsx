@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostFoodCost } from '@/components/blog/BlogPostFoodCost';
 
 export const metadata: Metadata = {
-  title: 'How to Calculate Food Cost Percentage Commercial Kitchen UK | Saim Dev',
+  title: 'How to Calculate Food Cost Percentage in the UK | Saim Dev',
   description: 'Learn how to calculate food cost percentage in a commercial kitchen. Formulas, shrinkage math, target gross margins, and free online calculator.',
   robots: {
     index: true,
