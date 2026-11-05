@@ -299,12 +299,16 @@
       // Remove legacy broken mobile drawer template so theme.js doesn't overlay a blank white panel
       document.querySelectorAll('.mobile-navigation-drawer-template, .mobile-navigation-drawer').forEach(el => el.remove());
 
-      // Inject Mobile Quick-Access Category & Navigation Bar right below header so all laptop top buttons are visible on mobile
+      // Inject Mobile Quick-Access Category & Navigation Bar right below header so all laptop top buttons are visible on mobile without any right-edge cut-off
       const headerSec = document.getElementById('shopify-section-header');
-      if (headerSec && !document.getElementById('hq-mobile-cat-bar')) {
-        const catBar = document.createElement('nav');
+      let catBar = document.getElementById('hq-mobile-cat-bar');
+      if (headerSec && !catBar) {
+        catBar = document.createElement('nav');
         catBar.id = 'hq-mobile-cat-bar';
         catBar.setAttribute('aria-label', 'Mobile Quick Categories');
+        headerSec.appendChild(catBar);
+      }
+      if (catBar) {
         catBar.innerHTML = `
           <a href="/hq-leathercon/products/custom-leather-jacket-builder/index.html" class="hq-cat-pill--accent">DESIGN YOUR OWN</a>
           <a href="/hq-leathercon/pages/men-jackets/index.html">MEN</a>
@@ -314,15 +318,14 @@
           <a href="/hq-leathercon/pages/eviternity/index.html">SHOES</a>
           <a href="/hq-leathercon/pages/trucarry/index.html">BAGS</a>
           <a href="/hq-leathercon/collections/mens-winter-coats/index.html">COATS</a>
-          <a href="/hq-leathercon/collections/mens-leather-puffer-jackets/index.html">PUFFER JACKETS</a>
+          <a href="/hq-leathercon/collections/mens-leather-puffer-jackets/index.html">PUFFERS</a>
           <a href="/hq-leathercon/pages/custom-jackets/index.html">CUSTOMIZE</a>
-          <a href="/hq-leathercon/pages/our-story/index.html">BRAND</a>
-          <a href="/hq-leathercon/collections/clearance-sale/index.html" class="hq-cat-pill--sale">SALE</a>
+          <a href="/hq-leathercon/pages/our-story/index.html">OUR STORY</a>
           <a href="/hq-leathercon/pages/size-guide/index.html">SIZE GUIDE</a>
           <a href="/hq-leathercon/pages/help/index.html">HELP</a>
-          <a href="/hq-leathercon/pages/contact-us/index.html">CONTACT US</a>
+          <a href="/hq-leathercon/pages/contact-us/index.html">CONTACT</a>
+          <a href="/hq-leathercon/collections/clearance-sale/index.html" class="hq-cat-pill--sale">SALE</a>
         `;
-        headerSec.appendChild(catBar);
       }
 
       let drawerOverlay = document.getElementById('hq-mobile-drawer-overlay');
@@ -1642,9 +1645,20 @@
 
       let activeCurrencyCode = 'PKR';
 
+      function cleanRawLabel(raw) {
+        return (raw || '')
+          .replace(/\bDown\s*$/i, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+
       function compactLabelForMobile(fullText) {
-        const clean = (fullText || '').replace(/\s+/g, ' ').trim();
+        const clean = cleanRawLabel(fullText);
         if (window.innerWidth > 768) return clean;
+        const parenMatch = clean.match(/\(([^)]+)\)/);
+        if (parenMatch && parenMatch[1]) {
+          return parenMatch[1].trim();
+        }
         return clean
           .replace(/^United Arab Emirates/i, 'UAE')
           .replace(/^United Kingdom/i, 'UK')
@@ -1745,7 +1759,13 @@
         const list = disc.querySelector('.disclosure-list');
         if (!btn || !list) return;
 
-        btn.setAttribute('data-full-label', (btn.textContent || '').replace(/\s+/g, ' ').trim());
+        // Remove any <title>Down</title> inside toggle SVGs so textContent never includes "Down"
+        btn.querySelectorAll('svg title').forEach(t => t.remove());
+
+        const initFullLabel = cleanRawLabel(btn.getAttribute('data-full-label') || btn.textContent || 'Pakistan (PKR ₨)');
+        btn.setAttribute('data-full-label', initFullLabel);
+        const isHeader = !!disc.closest('.logo-area__right');
+        btn.textContent = isHeader ? compactLabelForMobile(initFullLabel) : initFullLabel;
 
         btn.addEventListener('click', function (e) {
           e.preventDefault();
