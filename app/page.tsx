@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ServicesBentoSection } from "@/components/ServicesBentoSection";
+import { LiveDemosSection } from "@/components/LiveDemosSection";
 import { ProjectScopeEstimator } from "@/components/ProjectScopeEstimator";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { ComparisonMatrix } from "@/components/ComparisonMatrix";
@@ -175,7 +176,7 @@ const faqSchema = {
       "name": "How much does a commercial website cost in the UK?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In the UK, traditional agencies charge £3,000 to £15,000+ for standard small business websites, plus £100–£500/month retainers. At Saim Dev, we offer transparent fixed milestone pricing: Starter Websites from £250–£390, Full Business Platforms from £550–£790, and Bespoke Web Applications or E-Commerce Stores from £1,200+, with 100% code ownership and zero monthly lock-in.",
+        "text": "In the UK, traditional agencies charge £3,000 to £15,000+ for standard small business websites, plus £100–£500/month retainers. At Saim Dev, we offer transparent fixed milestone pricing: Landing Pages at £250, Starter Websites at £390, Full Business Platforms at £790, and Bespoke Web Applications or E-Commerce Stores from £1,250+, with 100% code ownership and zero monthly lock-in.",
       },
     },
     {
@@ -261,6 +262,7 @@ export default function HomePage() {
         <HeroSection />
         <AboutSection />
         <ServicesBentoSection />
+        <LiveDemosSection />
         <ProjectScopeEstimator />
         <BenefitsSection />
         <ComparisonMatrix />

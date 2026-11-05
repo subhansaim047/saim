@@ -6,14 +6,12 @@ import { ArrowRight, Calculator } from "lucide-react";
 import { WordsPullUp } from "./WordsPullUp";
 
 const navItems = [
-  { label: "Our story", href: "#our-story" },
   { label: "Services", href: "#services" },
+  { label: "Live Demos", href: "#demos" },
   { label: "Estimator", href: "#estimator" },
   { label: "Compare", href: "#comparison" },
-  { label: "Tech Stack", href: "/technologies" },
-  { label: "160 Tools", href: "/tools" },
-  { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
+  { label: "160 Tools", href: "/tools" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
@@ -22,15 +20,8 @@ export const HeroSection = () => {
   const [hoveredNav, setHoveredNav] = useState<number | null>(null);
 
   return (
-    <section className="h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-transparent relative box-border overflow-hidden">
+    <section className="min-h-[100dvh] lg:h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-transparent relative box-border overflow-hidden">
       <div className="relative h-full w-full rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] overflow-hidden bg-black/10 border border-white/15 shadow-[0_20px_80px_rgba(0,0,0,0.8)]">
-
-        {/* Ambient Subtle Halftone / Radial Glow */}
-
-
-
-        {/* Grain texture */}
-
 
         {/* Top border hairline glow */}
         <div
@@ -106,7 +97,7 @@ export const HeroSection = () => {
         {/* ==============================================
             HERO BODY
         =============================================== */}
-        <div className="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-8 md:px-12 lg:px-14 pt-24 sm:pt-28 lg:pt-32 pb-14 sm:pb-16 lg:pb-20 gap-6 lg:gap-10">
+        <div className="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-8 md:px-12 lg:px-14 pt-20 sm:pt-24 lg:pt-32 pb-8 sm:pb-12 lg:pb-20 gap-6 lg:gap-10">
 
           {/* LEFT COLUMN */}
           <div className="flex flex-col justify-center gap-3.5 sm:gap-4.5 lg:gap-5 w-full lg:w-[50%] xl:w-[48%] flex-shrink-0">
@@ -128,7 +119,7 @@ export const HeroSection = () => {
 
               {/* Tech chips */}
               <div className="flex items-center gap-0 pl-1 flex-wrap">
-                {["Next.js 14+", "React", "TypeScript", "Node.js", "Shopify", "WordPress"].map((tech, i, arr) => (
+                {["Next.js 16", "React", "TypeScript", "Node.js", "Shopify", "WordPress"].map((tech, i, arr) => (
                   <span key={tech} className="flex items-center">
                     <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-white/50">
                       {tech}
@@ -212,7 +203,45 @@ export const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN: Animated Marquee Grid — Restored Original Clean Style */}
+          {/* MOBILE & TABLET PREVIEW STRIP (<1024px) */}
+          <div className="flex lg:hidden w-full overflow-hidden relative rounded-2xl pt-2">
+            <div className="absolute top-0 left-0 bottom-0 w-10 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 right-0 bottom-0 w-10 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
+            <motion.div
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ duration: 24, ease: "linear", repeat: Infinity }}
+              className="flex gap-3 w-max"
+            >
+              {[...Array(2)].map((_, loopIdx) => (
+                <div key={loopIdx} className="flex gap-3">
+                  {[
+                    { src: "/hero-shots/shot-1.webp", alt: "Fresh and Reddy Dark Web Architecture" },
+                    { src: "/hero-shots/shot-2.webp", alt: "Evora Luxury Real Estate Web Platform" },
+                    { src: "/hero-shots/shot-3.webp", alt: "GAZU High-Conversion Fashion E-Commerce" },
+                    { src: "/hero-shots/shot-4.webp", alt: "Interactive Digital SaaS Showcase" },
+                  ].map((shot) => (
+                    <a
+                      key={shot.src}
+                      href="#demos"
+                      className="relative w-36 sm:w-44 aspect-[4/5] rounded-2xl overflow-hidden bg-[#111111] border border-white/10 shadow-xl shrink-0 block"
+                    >
+                      <img
+                        src={shot.src}
+                        alt={shot.alt}
+                        className="w-full h-full object-cover opacity-90"
+                        loading="eager"
+                        width={360}
+                        height={450}
+                        decoding="async"
+                      />
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* RIGHT COLUMN: Animated Marquee Grid — Desktop */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}

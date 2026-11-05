@@ -14,8 +14,8 @@ interface MatrixRow {
 const COMPARISON_DATA: MatrixRow[] = [
   {
     dimension: "Typical Investment",
-    saimDev: "£250 – £1,200+ (Transparent & Fixed)",
-    traditionalAgency: "£5,000 – £25,000+ (Opaque Quoting)",
+    saimDev: "£250 – £1,250+ (Transparent & Fixed)",
+    traditionalAgency: "£3,000 – £15,000+ (Opaque Quoting)",
     cheapFreelancer: "£150 – £800 (Unpredictable Add-ons)",
     diyBuilders: "£20 – £60 / month forever",
   },

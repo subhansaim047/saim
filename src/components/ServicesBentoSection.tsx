@@ -43,7 +43,7 @@ const SERVICES_DATA: ServiceCard[] = [
       "Stripe subscriptions & automated billing",
       "REST & GraphQL API design with webhooks",
     ],
-    techStack: ["Next.js 14+", "React", "TypeScript", "Node.js", "PostgreSQL", "Supabase"],
+    techStack: ["Next.js 16", "React", "TypeScript", "Node.js", "PostgreSQL", "Supabase"],
     timeline: "Launch in 10–14 days",
     ctaText: "Discuss App Scope",
     ctaHref: "#contact",

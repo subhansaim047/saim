@@ -180,7 +180,7 @@ export const FeaturedToolsSection = () => {
             href="/tools"
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 hover:border-primary/50 text-white text-sm font-semibold transition-all group shadow-xl hover:shadow-primary/10"
           >
-            <span>View All 24+ Food Safety Templates &amp; Tools</span>
+            <span>Explore All 160+ Free Web Tools &amp; Calculators</span>
             <ArrowRight className="w-4 h-4 text-primary transition-transform group-hover:translate-x-1.5" />
           </Link>
         </div>

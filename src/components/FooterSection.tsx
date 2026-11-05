@@ -49,9 +49,11 @@ export const FooterSection = () => {
             <span style={{ color: '#a3a3a3', fontSize: '10px', textTransform: 'uppercase', fontWeight: 600, marginBottom: '4px', display: 'block' }}>
               {getClaim("demos-preview")}
             </span>
-            <a href="/hotbite/index.html" rel="nofollow">O&apos;Resto Street Food</a>
+            <a href="/hq-leathercon/index.html" rel="nofollow">HQ Leathercon Store</a>
+            <a href="/hotbite/index.html" rel="nofollow">HotBite Street Food</a>
             <a href="/burger-garage/index.html" rel="nofollow">Burger Garage</a>
             <a href="/frenchyse/index.html" rel="nofollow">Frenchyse Luxury</a>
+            <a href="/anzaar/index.html" rel="nofollow">Anzaar Rooftop</a>
           </nav>
 
           <nav className="site-footer__nav" aria-label="Social navigation">

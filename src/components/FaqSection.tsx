@@ -29,7 +29,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: "How much does a commercial website cost in the UK?",
         answer:
-          "In the UK, traditional agencies charge £3,000 to £15,000+ for standard small business websites, plus £100–£500/month retainers. At Saim Dev, we offer transparent fixed milestone pricing: Starter Websites from £250–£390, Full Business Platforms from £550–£790, and Bespoke Web Applications or E-Commerce Stores from £1,200+, with 100% code ownership and zero monthly lock-in.",
+          "In the UK, traditional agencies charge £3,000 to £15,000+ for standard small business websites, plus £100–£500/month retainers. At Saim Dev, we offer transparent fixed milestone pricing: Landing Pages at £250, Starter Websites at £390, Full Business Platforms at £790, and Bespoke Web Applications or E-Commerce Stores from £1,250+, with 100% code ownership and zero monthly lock-in.",
       },
       {
         question: "Do you build custom e-commerce stores and Shopify websites?",
@@ -54,7 +54,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: "How does the design and development process work?",
         answer:
-          "Our process is structured in three simple phases: (1) Discovery & Brief where we establish your brand goals, target audience, and architecture; (2) Rapid Staging Prototype where we develop interactive Next.js pages for your review; (3) Final Testing, Speed Optimization, and Live Deployment with zero downtime.",
+          "Our process is structured in four clear steps: (1) Discovery & Brief where we establish your business goals, target clients, and project scope; (2) Strategy & Architecture where we map wireframes and customer journeys; (3) Design & Development where we engineer pixel-perfect Next.js pages on a live staging preview; and (4) Launch & Support with Google Search Console indexing and 14–30 days of dedicated post-launch care.",
       },
       {
         question: "Can you redesign my existing website?",

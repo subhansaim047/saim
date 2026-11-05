@@ -1,17 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { 
   Calculator, 
-  Sparkles, 
   Clock, 
   Check, 
   ArrowRight, 
-  Layers, 
-  Zap, 
-  ShieldCheck, 
-  Code2 
 } from "lucide-react";
 
 interface ProjectTypeOption {
@@ -36,35 +30,35 @@ const PROJECT_TYPES: ProjectTypeOption[] = [
     label: "Landing Page / Single Offer",
     basePrice: 250,
     baseDays: 5,
-    description: "High-converting single page for ad campaigns, launches, or local promotions.",
+    description: "High-converting single page for ad campaigns, launches, or local service promotions.",
+  },
+  {
+    id: "starter",
+    label: "Starter Website (Up to 5 Pages)",
+    basePrice: 390,
+    baseDays: 7,
+    description: "Essential bespoke Next.js presence for local businesses with SEO, forms, and WhatsApp integration.",
   },
   {
     id: "business",
-    label: "Full Business Website",
-    basePrice: 550,
-    baseDays: 8,
-    description: "Multi-page bespoke digital flagship with CMS, local SEO, and lead forms.",
+    label: "Full Business Website (Up to 15 Pages)",
+    basePrice: 790,
+    baseDays: 10,
+    description: "Complete digital flagship with custom UI/UX, structured JSON-LD schema, blog CMS, and lead funnels.",
   },
   {
     id: "ecommerce",
     label: "E-Commerce / Storefront",
-    basePrice: 850,
-    baseDays: 10,
-    description: "Shopify or WooCommerce store with payments, catalog search, and cart optimization.",
+    basePrice: 950,
+    baseDays: 12,
+    description: "Shopify, WooCommerce, or custom Next.js store with payments, catalog search, and cart optimization.",
   },
   {
     id: "webapp",
     label: "Custom Web App / SaaS MVP",
     basePrice: 1250,
     baseDays: 14,
-    description: "Interactive full-stack web software with auth, database, and custom API logic.",
-  },
-  {
-    id: "redesign",
-    label: "Redesign & Speed Overhaul",
-    basePrice: 390,
-    baseDays: 6,
-    description: "Modernize existing slow website, eliminate bloat, and achieve 90+ Core Web Vitals.",
+    description: "Interactive full-stack web software with authentication, database, dashboards, and custom API logic.",
   },
 ];
 
@@ -79,11 +73,11 @@ const ADDON_FEATURES: FeatureOption[] = [
 
 export const ProjectScopeEstimator = () => {
   const [selectedType, setSelectedType] = useState<string>("business");
-  const [selectedFeatures, setSelectedFeatures] = useState<string[]>(["cms", "schema"]);
+  const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
   const [isFastTrack, setIsFastTrack] = useState<boolean>(false);
 
   const activeType = useMemo(
-    () => PROJECT_TYPES.find((t) => t.id === selectedType) || PROJECT_TYPES[1],
+    () => PROJECT_TYPES.find((t) => t.id === selectedType) || PROJECT_TYPES[2],
     [selectedType]
   );
 
@@ -114,9 +108,9 @@ export const ProjectScopeEstimator = () => {
 
     return {
       priceMin: totalBase,
-      priceMax: Math.round(totalBase * 1.2),
+      priceMax: Math.round(totalBase * 1.18),
       daysMin: totalDays,
-      daysMax: totalDays + 3,
+      daysMax: totalDays + 2,
     };
   }, [activeType, selectedFeatures, isFastTrack]);
 
@@ -128,7 +122,7 @@ export const ProjectScopeEstimator = () => {
 
     const text = `Hi Saim, I used your Project Scope Estimator on saimdev.site:
 - Type: ${activeType.label}
-- Features: ${selectedFeatureLabels || "Core Essentials"}
+- Features: ${selectedFeatureLabels || "Standard Plan Deliverables"}
 - Priority: ${isFastTrack ? "Fast-Track Priority Sprint" : "Standard Agile Sprint"}
 - Estimated Budget: £${calculatedEstimate.priceMin} - £${calculatedEstimate.priceMax}
 - Estimated Timeline: ${calculatedEstimate.daysMin} - ${calculatedEstimate.daysMax} days.
@@ -220,7 +214,7 @@ Can we discuss scheduling my project?`;
             <div className="rounded-3xl bg-[#121212] border border-white/10 p-6 sm:p-8 shadow-xl">
               <div className="flex items-center justify-between mb-5">
                 <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF4A1C]">
-                  Step 2 • Add Integrations &amp; Capabilities
+                  Step 2 • Optional Add-On Capabilities
                 </span>
                 <span className="text-xs text-white/70 font-mono">2 of 3</span>
               </div>
@@ -357,7 +351,7 @@ Can we discuss scheduling my project?`;
                     "Sub-second Next.js SSR/SSG edge performance",
                     "Full mobile responsiveness & Core Web Vitals pass",
                     "Structured Schema.org JSON-LD & Google Indexing",
-                    "14 to 30 days dedicated post-launch support",
+                    "7 to 30 days dedicated post-launch support",
                     "Direct senior engineer access via WhatsApp/Email",
                   ].map((inc) => (
                     <div key={inc} className="flex items-start gap-2.5 text-xs text-white/70 font-light">
