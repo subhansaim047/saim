@@ -15103,9 +15103,35 @@ a.hq-whatsapp-order-btn {
 }
 
 @media screen and (max-width: 768px) {
+  /* Show ALL 9 Categories on Mobile (Un-hide Women's Coats .featuredblock-7) */
+  #shopify-section-template--26828817039647__8ea6a01d-73ed-402c-8b4f-3f0a802626d7 .featuredblock-7 {
+    display: block !important;
+    flex-basis: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 8px 14px !important;
+    box-sizing: border-box !important;
+  }
+  #shopify-section-template--26828817039647__8ea6a01d-73ed-402c-8b4f-3f0a802626d7 .featuredblock-7 a {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+  #shopify-section-template--26828817039647__8ea6a01d-73ed-402c-8b4f-3f0a802626d7 .featuredblock-7 img {
+    width: 100% !important;
+    height: 240px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
+  }
   #shopify-section-template--26828817039647__8ea6a01d-73ed-402c-8b4f-3f0a802626d7 .featuredblock-8,
   #shopify-section-template--26828817039647__8ea6a01d-73ed-402c-8b4f-3f0a802626d7 .featuredblock-9 {
-    padding: 8px 14px !important;
+    flex-basis: 50% !important;
+    min-width: 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding: 8px 10px !important;
     box-sizing: border-box !important;
   }
   #shopify-section-template--26828817039647__8ea6a01d-73ed-402c-8b4f-3f0a802626d7 .featuredblock-8 img,
@@ -15117,6 +15143,372 @@ a.hq-whatsapp-order-btn {
     display: block !important;
     filter: brightness(0.84) !important;
   }
+}
+
+/* 9. Desktop 50/50 Split Restoration for Clearance Sale Video + 2-Column Product Grid */
+@media screen and (min-width: 990px) {
+  [class*="ai-media-product-container-"] {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    height: 800px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  [class*="ai-media-column-"] {
+    flex: 1 1 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    height: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  [class*="ai-media-product-container-"] > .hq-swipe-wrap {
+    flex: 1 1 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    height: 100% !important;
+    display: flex !important;
+  }
+  [class*="ai-product-column-"] {
+    flex: 1 1 50% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    height: 100% !important;
+    padding: 15px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+  [class*="ai-media-product-container-"] > .hq-swipe-wrap > [class*="ai-product-column-"] {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  [class*="ai-product-grid-"] {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    height: fit-content !important;
+  }
+  [class*="ai-product-card-"] {
+    width: 100% !important;
+    flex: initial !important;
+  }
+}
+
+/* 10. Fix Bespoke Promise Dark Tabs Section (Prevent Image From Overlapping / Cutting Off Text) */
+#shopify-section-template--26828817039647__tab_section_gQqzck .tab-content-container,
+.tab-content-container {
+  padding: 40px 0 !important;
+  background-color: #212121 !important;
+  color: #ffffff !important;
+  min-height: auto !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+.tab-content-container .tc-box {
+  max-width: 1380px !important;
+  margin: 0 auto !important;
+  padding: 10px 36px !important;
+  box-sizing: border-box !important;
+}
+.tab-content-container .tc-box .promise-tabs {
+  margin-left: 0 !important;
+  padding: 0 0 16px 0 !important;
+}
+.tab-content-container .tc-box .tab-content-tc {
+  padding-top: 16px !important;
+}
+.tab-content-container .tc-box .tab-content-tc .tab-pane {
+  display: none !important;
+  padding: 0 !important;
+}
+.tab-content-container .tc-box .tab-content-tc .tab-pane.active-tb {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 40px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.tab-content-container .tc-box .tab-content-tc .tab-pane .promise-text {
+  flex: 1 1 48% !important;
+  width: 48% !important;
+  max-width: 48% !important;
+  padding: 16px 0 !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+.tab-content-container .tc-box .tab-content-tc .tab-pane .promise-text p {
+  color: #ffffff !important;
+  font-size: clamp(19px, 1.9vw, 27px) !important;
+  line-height: 1.52 !important;
+  font-weight: 300 !important;
+  margin: 0 0 32px 0 !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+}
+.tab-content-container .tc-box .tab-content-tc .tab-pane .promise-text a {
+  display: inline-block !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  padding: 12px 24px !important;
+  text-decoration: none !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  transition: background 0.2s ease, color 0.2s ease !important;
+}
+.tab-content-container .tc-box .tab-content-tc .tab-pane .promise-text a:hover {
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+.tab-content-container .tc-box .tab-content-tc .tab-pane .promise-img {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  flex: 1 1 48% !important;
+  width: 48% !important;
+  max-width: 48% !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  z-index: 1 !important;
+}
+.tab-content-container .tc-box .tab-content-tc .tab-pane .promise-img img {
+  width: 100% !important;
+  max-width: 650px !important;
+  height: auto !important;
+  object-fit: cover !important;
+  border-radius: 4px !important;
+  display: block !important;
+}
+@media only screen and (max-width: 1050px) {
+  .tab-content-container .tc-box {
+    padding: 10px 20px !important;
+  }
+  .tab-content-container .tc-box .tab-content-tc .tab-pane.active-tb {
+    flex-direction: column-reverse !important;
+    gap: 24px !important;
+  }
+  .tab-content-container .tc-box .tab-content-tc .tab-pane .promise-text,
+  .tab-content-container .tc-box .tab-content-tc .tab-pane .promise-img {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .tab-content-container .tc-box .tab-content-tc .tab-pane .promise-text p {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 22px !important;
+  }
+}
+
+/* 11. Mobile Quick-Access Category & Navigation Bar (Full Button Parity with Laptop) */
+#hq-mobile-cat-bar {
+  display: none;
+}
+@media screen and (max-width: 989px) {
+  #hq-mobile-cat-bar {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    padding: 9px 12px !important;
+    background: #111111 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+  #hq-mobile-cat-bar::-webkit-scrollbar {
+    display: none !important;
+  }
+  #hq-mobile-cat-bar a,
+  #hq-mobile-cat-bar button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    color: #f8fafc !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    flex-shrink: 0 !important;
+    line-height: 1.2 !important;
+    cursor: pointer !important;
+  }
+  #hq-mobile-cat-bar a.hq-cat-pill--accent {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border-color: #ffffff !important;
+  }
+  #hq-mobile-cat-bar a.hq-cat-pill--sale {
+    background: #b91c1c !important;
+    color: #ffffff !important;
+    border-color: #dc2626 !important;
+  }
+}
+
+/* 12. Size Guide Page Fixes — Hide Broken 500px Blank Video Containers & Clean Tables */
+.vide_container,
+.how-measure .vide_container {
+  display: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.size_img_text {
+  align-items: flex-start !important;
+  gap: 28px !important;
+}
+.size_img_text .img_container img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 6px !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+.size_tables {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+@media screen and (max-width: 768px) {
+  .size_img_text {
+    flex-direction: column !important;
+  }
+  .size_img_text > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px 0 !important;
+  }
+}
+
+/* 13. Help, FAQ, Policy & Secondary Nav Bar — Fix Right-Side Cut-Off & Center Containers */
+[class*="ai-secondary-nav-"] {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+[class*="ai-secondary-nav-list-"] {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px 24px !important;
+  padding: 6px 16px !important;
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+  box-sizing: border-box !important;
+}
+[class*="ai-secondary-nav-item-"] {
+  white-space: nowrap !important;
+}
+@media screen and (max-width: 768px) {
+  [class*="ai-secondary-nav-list-"] {
+    gap: 8px 14px !important;
+    padding: 6px 12px !important;
+  }
+  [class*="ai-secondary-nav-link-"] {
+    font-size: 13px !important;
+  }
+}
+
+/* Center Policy Pages (Shipping, Refund, Privacy, Terms) with Clean Horizontal Padding */
+.shopify-policy__container {
+  max-width: 960px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 40px 24px 72px 24px !important;
+  box-sizing: border-box !important;
+}
+.shopify-policy__title {
+  text-align: left !important;
+  margin-bottom: 24px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding-bottom: 16px !important;
+}
+.shopify-policy__body .rte,
+.shopify-policy__body p,
+.shopify-policy__body li,
+.shopify-policy__body div {
+  max-width: 100% !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  line-height: 1.7 !important;
+  box-sizing: border-box !important;
+}
+
+/* Fix Help Center / FAQ Page Width, Alignment & Right-Edge Text Wrapping */
+.faq-header,
+.collapsible-tabs {
+  max-width: 960px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+.collapsible-tabs__tab,
+.cc-accordion,
+.cc-accordion-item,
+.cc-accordion-item__title,
+.cc-accordion-item__panel,
+.cc-accordion-item__content {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+.cc-accordion-item__title {
+  padding-right: 40px !important;
+  line-height: 1.45 !important;
+  text-align: left !important;
+}
+@media screen and (max-width: 768px) {
+  .shopify-policy__container,
+  .faq-header,
+  .collapsible-tabs {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* Size Guide Diagrams & Footwear SVG Override */
+.new_size_guide_main .size_img_text svg {
+  width: 100% !important;
+  max-width: 340px !important;
+  height: auto !important;
+  min-height: 200px !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+.new_size_guide_main .size_img_text img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 /* ===== END HQ CUSTOM FIXES ===== */
