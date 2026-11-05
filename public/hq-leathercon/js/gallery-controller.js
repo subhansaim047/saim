@@ -554,52 +554,243 @@
   }
 
   // ============================================================
-  // 5. PRODUCT GALLERY THUMBNAILS
+  // 5. PRODUCT GALLERY THUMBNAILS, TOUCH SWIPE & INSTANT IMAGE PRELOADER
   // ============================================================
-  function initProductGallery() {
-    const $ = window.jQuery;
-    const $slideshow = $ ? $('.product-slideshow') : null;
-    const thumbLinks = Array.from(document.querySelectorAll('.thumbnails a, .thumbnails .thumbnail'));
-
-    function highlightThumbnail(index) {
-      thumbLinks.forEach((t, i) => {
-        if (i === index) {
-          t.classList.add('thumb--active');
-          t.style.outline = '2px solid #000';
-          t.style.outlineOffset = '1px';
-        } else {
-          t.classList.remove('thumb--active');
-          t.style.outline = 'none';
-        }
-      });
+  function optimizeShopifyImageUrl(url, width) {
+    if (!url || typeof url !== 'string' || !url.includes('cdn.shopify.com')) return url;
+    try {
+      const u = new URL(url, window.location.origin);
+      u.searchParams.set('width', String(width || 800));
+      return u.toString();
+    } catch (e) {
+      return url + (url.includes('?') ? '&' : '?') + 'width=' + (width || 800);
     }
+  }
 
-    thumbLinks.forEach((link, idx) => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
+  function initProductGallery() {
+    const galleries = Array.from(document.querySelectorAll('.product-detail .gallery, .gallery--layout-carousel-beside, .product-gallery'));
+    if (!galleries.length) return;
 
-        highlightThumbnail(idx);
+    galleries.forEach(gallery => {
+      if (gallery.dataset.hqGalleryInit === '1') return;
+      gallery.dataset.hqGalleryInit = '1';
 
-        if ($ && $slideshow && $slideshow.length && $slideshow.hasClass('slick-initialized')) {
-          $slideshow.slick('slickGoTo', idx);
-        } else {
-          // Vanilla fallback
-          const mainImg = document.querySelector('.gallery--layout-carousel-beside .main-image img, .product-slideshow .slide img');
-          const thumbImg = this.querySelector('img');
-          if (mainImg && thumbImg) {
-            mainImg.src = thumbImg.src;
+      const slideshow = gallery.querySelector('.product-slideshow, .slideshow');
+      if (!slideshow) return;
+
+      // 1. Destroy any broken Slick / Owl Carousel instances so they never freeze or lock the track
+      const $ = window.jQuery;
+      if ($) {
+        try {
+          const $ss = $(slideshow);
+          if ($ss.hasClass('slick-initialized') || $ss.hasClass('slick-slider')) {
+            $ss.slick('unslick');
+          }
+        } catch (e) {}
+        try {
+          const $th = $(gallery).find('.thumbnails.owl-carousel');
+          if ($th.length && $th.data('owl.carousel')) {
+            $th.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+          }
+        } catch (e) {}
+      }
+
+      // Unwrap any leftover .slick-list / .slick-track or .owl-stage wrappers
+      slideshow.querySelectorAll('.slick-cloned').forEach(el => el.remove());
+      const slickList = slideshow.querySelector('.slick-list');
+      if (slickList) {
+        const slidesInside = Array.from(slickList.querySelectorAll('.slide'));
+        slidesInside.forEach(s => slideshow.appendChild(s));
+        slickList.remove();
+      }
+      slideshow.classList.remove('slick-initialized', 'slick-slider');
+
+      const thumbContainer = gallery.querySelector('.thumbnails');
+      if (thumbContainer) {
+        thumbContainer.classList.remove('owl-carousel', 'owl-loaded', 'owl-drag');
+        const owlStage = thumbContainer.querySelector('.owl-stage-outer');
+        if (owlStage) {
+          const items = Array.from(owlStage.querySelectorAll('a.thumbnail, .thumbnail'));
+          items.forEach(item => thumbContainer.appendChild(item));
+          owlStage.remove();
+        }
+        thumbContainer.querySelectorAll('.owl-nav, .owl-dots').forEach(el => el.remove());
+      }
+
+      const slides = Array.from(slideshow.querySelectorAll('.slide'));
+      const thumbLinks = thumbContainer ? Array.from(thumbContainer.querySelectorAll('a.thumbnail, .thumbnail')) : [];
+      if (!slides.length) return;
+
+      // 2. Optimize & Preload all gallery images immediately so switching is 0ms instant
+      slides.forEach((slide, i) => {
+        const img = slide.querySelector('img');
+        if (img) {
+          const rawSrc = img.getAttribute('data-src') || img.getAttribute('src') || '';
+          if (rawSrc) {
+            const fastMainSrc = optimizeShopifyImageUrl(rawSrc, 900);
+            img.src = fastMainSrc;
+            img.setAttribute('data-src', fastMainSrc);
+            img.removeAttribute('srcset');
+            img.removeAttribute('data-srcset');
+            img.loading = i === 0 ? 'eager' : 'eager';
+            img.decoding = 'async';
+            if (i === 0) img.setAttribute('fetchpriority', 'high');
+            img.classList.remove('lazyload');
+            img.classList.add('lazyloaded');
+            const preloadImg = new Image();
+            preloadImg.src = fastMainSrc;
           }
         }
       });
+
+      thumbLinks.forEach(thumb => {
+        const tImg = thumb.querySelector('img');
+        if (tImg) {
+          const rawThumb = tImg.getAttribute('data-src') || tImg.getAttribute('src') || thumb.getAttribute('href') || '';
+          if (rawThumb) {
+            tImg.src = optimizeShopifyImageUrl(rawThumb, 180);
+            tImg.loading = 'eager';
+            tImg.decoding = 'async';
+          }
+        }
+      });
+
+      const slideUrls = slides.map((s, i) => {
+        const im = s.querySelector('img');
+        const u = (im && (im.getAttribute('data-src') || im.getAttribute('src'))) || (thumbLinks[i] && thumbLinks[i].getAttribute('href')) || '';
+        return optimizeShopifyImageUrl(u, 900);
+      });
+
+      let currentIndex = 0;
+      const total = slides.length;
+
+      function showProductSlide(idx) {
+        if (idx < 0) idx = total - 1;
+        if (idx >= total) idx = 0;
+        currentIndex = idx;
+
+        // Also update the first slide's <img> src directly so even if any theme CSS shows slide 0, it displays the selected photo immediately!
+        const firstSlideImg = slides[0] ? slides[0].querySelector('img') : null;
+        if (firstSlideImg && slideUrls[currentIndex]) {
+          firstSlideImg.src = slideUrls[currentIndex];
+          firstSlideImg.setAttribute('data-src', slideUrls[currentIndex]);
+        }
+
+        slides.forEach((slide, i) => {
+          const isActive = i === currentIndex;
+          slide.classList.toggle('hq-slide-active', isActive);
+          slide.classList.toggle('slick-current', isActive);
+          slide.classList.toggle('slick-active', isActive);
+          slide.style.setProperty('display', isActive ? 'block' : 'none', 'important');
+          slide.style.setProperty('opacity', isActive ? '1' : '0', 'important');
+          slide.style.setProperty('visibility', isActive ? 'visible' : 'hidden', 'important');
+          slide.style.setProperty('position', 'relative', 'important');
+          slide.style.setProperty('width', '100%', 'important');
+          slide.style.setProperty('left', '0', 'important');
+          slide.style.setProperty('top', '0', 'important');
+          slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        });
+
+        thumbLinks.forEach((t, i) => {
+          const isActive = i === currentIndex;
+          t.classList.toggle('thumb--active', isActive);
+          t.classList.toggle('selected', isActive);
+          if (isActive) {
+            t.style.setProperty('border', '2px solid #111111', 'important');
+            t.style.setProperty('opacity', '1', 'important');
+            t.style.setProperty('transform', 'scale(1.03)', 'important');
+            // Smoothly scroll thumbnail strip horizontally if needed
+            if (thumbContainer && thumbContainer.scrollWidth > thumbContainer.clientWidth) {
+              const targetLeft = t.offsetLeft - (thumbContainer.clientWidth - t.clientWidth) / 2;
+              thumbContainer.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+            }
+          } else {
+            t.style.setProperty('border', '2px solid transparent', 'important');
+            t.style.setProperty('opacity', '0.68', 'important');
+            t.style.setProperty('transform', 'scale(1)', 'important');
+          }
+        });
+      }
+
+      // Initialize first image immediately
+      showProductSlide(0);
+
+      // 3. Bind click & touch on every thumbnail (capture phase so theme.js can never block it)
+      thumbLinks.forEach((link, idx) => {
+        link.style.cursor = 'pointer';
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          showProductSlide(idx);
+        }, true);
+      });
+
+      // 4. Add Prev / Next arrows on main image for easy mobile & desktop navigation
+      const mainImgWrap = gallery.querySelector('.main-image') || slideshow.parentElement;
+      if (mainImgWrap && total > 1 && !mainImgWrap.querySelector('.hq-prod-nav-btn')) {
+        mainImgWrap.style.position = 'relative';
+        const prevBtn = document.createElement('button');
+        prevBtn.type = 'button';
+        prevBtn.className = 'hq-prod-nav-btn hq-prod-nav-btn--prev';
+        prevBtn.setAttribute('aria-label', 'Previous product image');
+        prevBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+
+        const nextBtn = document.createElement('button');
+        nextBtn.type = 'button';
+        nextBtn.className = 'hq-prod-nav-btn hq-prod-nav-btn--next';
+        nextBtn.setAttribute('aria-label', 'Next product image');
+        nextBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+
+        prevBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          showProductSlide(currentIndex - 1);
+        });
+        nextBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          showProductSlide(currentIndex + 1);
+        });
+
+        mainImgWrap.appendChild(prevBtn);
+        mainImgWrap.appendChild(nextBtn);
+      }
+
+      // 5. Touch Swipe left/right on main image without blocking vertical page scroll
+      let touchStartX = 0;
+      let touchStartY = 0;
+      slideshow.addEventListener('touchstart', function (e) {
+        if (!e.touches || !e.touches.length) return;
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+
+      slideshow.addEventListener('touchend', function (e) {
+        if (!e.changedTouches || !e.changedTouches.length) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+          if (dx < 0) showProductSlide(currentIndex + 1);
+          else showProductSlide(currentIndex - 1);
+        }
+      }, { passive: true });
     });
 
-    if ($ && $slideshow && $slideshow.length) {
-      $slideshow.on('afterChange', function (event, slick, currentSlide) {
-        highlightThumbnail(currentSlide);
-      });
-      highlightThumbnail(0);
-    }
+    // Also optimize any collection/card Shopify images on the page for fast loading
+    document.querySelectorAll('img[src*="cdn.shopify.com"], img[data-src*="cdn.shopify.com"]').forEach((img, idx) => {
+      if (img.closest('.product-slideshow, .thumbnails')) return;
+      const src = img.getAttribute('src') || img.getAttribute('data-src') || '';
+      if (src && !src.includes('width=')) {
+        const fastUrl = optimizeShopifyImageUrl(src, 540);
+        img.src = fastUrl;
+        if (img.hasAttribute('data-src')) img.setAttribute('data-src', fastUrl);
+      }
+      if (idx < 6) {
+        img.loading = 'eager';
+      }
+      img.decoding = 'async';
+    });
   }
 
   // ============================================================
@@ -2205,6 +2396,23 @@
 </div>
 </div>
 </div>`;
+      }
+      if (footerSection && window.innerWidth <= 768) {
+        footerSection.querySelectorAll('.section-footer__menu-block').forEach(block => {
+          if (block.dataset.hqFooterAcc === '1') return;
+          block.dataset.hqFooterAcc = '1';
+          const title = block.querySelector('.section-footer__title');
+          const menu = block.querySelector('.section-footer__menu-block__menu');
+          if (!title || !menu) return;
+          title.style.cursor = 'pointer';
+          title.addEventListener('click', function (e) {
+            if (window.innerWidth > 768) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const isOpen = block.classList.toggle('is-open');
+            menu.style.setProperty('display', isOpen ? 'block' : 'none', 'important');
+          }, true);
+        });
       }
     } catch (e) {}
   }

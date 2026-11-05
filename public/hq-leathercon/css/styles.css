@@ -15546,4 +15546,464 @@ a.hq-whatsapp-order-btn {
   margin: 0 auto !important;
 }
 
+/* ============================================================
+   14. BUTTER-SMOOTH SCROLLING (MOBILE & DESKTOP) — ZERO DOUBLE SCROLLBARS
+   ============================================================ */
+html {
+  overflow-x: clip !important;
+  overflow-y: auto !important;
+  scroll-behavior: auto !important;
+}
+body {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior-y: none !important;
+}
+.page-container,
+.content-for-layout,
+.site-footer,
+.shopify-section,
+.product-detail,
+.main-content,
+main#content {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+
+/* ============================================================
+   15. PRODUCT DETAIL PAGE — CLEAN AIRY LUXURY LAYOUT & WORKING GALLERY
+   ============================================================ */
+/* Main product gallery slide & prev/next buttons */
+.product-detail .gallery .main-image {
+  position: relative !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  background: #f1f5f9 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.product-detail .gallery .main-image .slideshow-controls {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.product-detail .product-slideshow,
+.gallery--layout-carousel-beside .product-slideshow {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+.product-detail .product-slideshow .slide {
+  width: 100% !important;
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+.product-detail .product-slideshow .product-media,
+.product-detail .product-slideshow .product-media--image {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+.product-detail .product-slideshow .rimage-outer-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.product-detail .product-slideshow .rimage-wrapper {
+  padding-bottom: 0 !important;
+  padding-top: 100% !important;
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  background: #f1f5f9 !important;
+}
+.product-detail .product-slideshow .rimage__image,
+.product-detail .product-slideshow .slide img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+.hq-prod-nav-btn {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 20 !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: #111111 !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: background 0.18s ease, transform 0.18s ease !important;
+}
+.hq-prod-nav-btn:hover {
+  background: #111111 !important;
+  color: #ffffff !important;
+}
+.hq-prod-nav-btn--prev {
+  left: 10px !important;
+}
+.hq-prod-nav-btn--next {
+  right: 10px !important;
+}
+
+/* Desktop & Mobile Airy Product Info Column Spacing */
+.product-detail .detail.product-column-right {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+.product-detail .title-row {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  margin-top: 6px !important;
+  margin-bottom: 14px !important;
+}
+.product-detail .title-row h1.title {
+  font-size: clamp(21px, 2.2vw, 28px) !important;
+  font-weight: 700 !important;
+  line-height: 1.32 !important;
+  letter-spacing: 0.02em !important;
+  color: #0f172a !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+.product-detail .title-row .custom_delivery_date {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: #1e293b !important;
+  color: #ffffff !important;
+  padding: 6px 14px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
+  border-radius: 999px !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  width: auto !important;
+}
+.product-detail .price-container {
+  margin-top: 4px !important;
+  margin-bottom: 14px !important;
+  padding-bottom: 4px !important;
+}
+.product-detail .price-area .price {
+  display: flex !important;
+  align-items: baseline !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  font-size: 21px !important;
+  font-weight: 700 !important;
+}
+.product-detail .lightly-spaced-row {
+  margin: 12px 0 !important;
+}
+.product-detail .product-info-block {
+  font-size: 13.5px !important;
+  color: #475569 !important;
+  padding: 10px 14px !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  line-height: 1.45 !important;
+}
+.product-detail .product-form hr {
+  margin: 18px 0 !important;
+  border: 0 !important;
+  border-top: 1px solid #e2e8f0 !important;
+}
+.product-detail .product-form .input-row,
+.product-detail .product-form .buy-buttons-row {
+  margin: 18px 0 !important;
+}
+.product-detail .product-form .option-selector {
+  margin-bottom: 20px !important;
+}
+.product-detail .option-selector__btns {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-top: 12px !important;
+}
+.product-detail .option-selector__btns .opt-label {
+  margin: 0 !important;
+  padding: 10px 14px !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  border: 1px solid #cbd5e1 !important;
+  background: #ffffff !important;
+  color: #1e293b !important;
+  transition: all 0.15s ease !important;
+}
+.product-detail .option-selector__btns .opt-btn:checked + .opt-label,
+.product-detail .option-selector__btns .opt-label.opt-btn--active,
+.product-detail .option-selector__btns .opt-label.is-selected {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+}
+.product-detail .product-detail-accordion {
+  margin-top: 8px !important;
+}
+.product-detail .product-detail-accordion .cc-accordion-item {
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+.product-detail .product-detail-accordion .cc-accordion-item__title {
+  padding: 16px 36px 16px 4px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #0f172a !important;
+}
+.product-detail .product-detail-accordion .cc-accordion-item__content {
+  padding: 8px 6px 20px 6px !important;
+  line-height: 1.7 !important;
+  color: #334155 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .product-detail.container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 12px !important;
+    padding-bottom: 28px !important;
+  }
+  .gallery--layout-carousel-beside,
+  .gallery--layout-carousel-beside .gallery__inner,
+  .product-gallery,
+  .product-gallery .gallery__inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .gallery--layout-carousel-beside .main-image,
+  .product-gallery .main-image {
+    width: 100% !important;
+    max-height: none !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    order: 1 !important;
+    margin: 0 !important;
+  }
+  .gallery--layout-carousel-beside .thumbnails,
+  .product-gallery .thumbnails {
+    position: static !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 6px 2px 12px 2px !important;
+    margin: 2px 0 8px 0 !important;
+    order: 2 !important;
+  }
+  .gallery--layout-carousel-beside .thumbnails .thumbnail,
+  .product-gallery .thumbnails a.thumbnail {
+    flex: 0 0 68px !important;
+    width: 68px !important;
+    height: 68px !important;
+    min-width: 68px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    background: #f8fafc !important;
+    box-sizing: border-box !important;
+    transition: transform 0.15s ease, opacity 0.15s ease, border-color 0.15s ease !important;
+  }
+  .gallery--layout-carousel-beside .thumbnails .thumbnail img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    pointer-events: none !important;
+  }
+  .product-detail .detail.product-column-right {
+    padding: 12px 2px 24px 2px !important;
+    margin-top: 4px !important;
+  }
+  .product-detail .title-row {
+    gap: 12px !important;
+    margin-bottom: 16px !important;
+  }
+  .product-detail .title-row h1.title {
+    font-size: 21px !important;
+    line-height: 1.35 !important;
+  }
+}
+
+/* ============================================================
+   16. MOBILE FOOTER SPACING, PADDING & CLEAN ALIGNMENT
+   ============================================================ */
+@media screen and (max-width: 768px) {
+  #shopify-section-footer,
+  .section-footer {
+    padding-top: 12px !important;
+    padding-bottom: 32px !important;
+    background: #ffffff !important;
+    border-top: 1px solid #e2e8f0 !important;
+  }
+  #shopify-section-footer .section-footer__row-container,
+  .section-footer .section-footer__row-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+  #shopify-section-footer .footer__brand-block {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 28px 12px 24px 12px !important;
+    gap: 14px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    margin-bottom: 8px !important;
+  }
+  #shopify-section-footer .footer__brand-block > div {
+    text-align: center !important;
+    font-size: 13px !important;
+    line-height: 1.75 !important;
+    color: #334155 !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+  #shopify-section-footer .section-footer__row--blocks {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    margin: 0 !important;
+  }
+  #shopify-section-footer .section-footer__menu-block {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  #shopify-section-footer .section-footer__menu-block .section-footer__title {
+    padding: 16px 4px !important;
+    margin: 0 !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #0f172a !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  #shopify-section-footer .section-footer__menu-block__menu {
+    padding: 4px 8px 18px 8px !important;
+    margin: 0 !important;
+  }
+  #shopify-section-footer .section-footer__menu-block__menu li {
+    margin-bottom: 10px !important;
+  }
+  #shopify-section-footer .section-footer__menu-block__menu li a {
+    font-size: 13.5px !important;
+    color: #475569 !important;
+    line-height: 1.5 !important;
+    display: inline-block !important;
+    padding: 2px 0 !important;
+  }
+  #shopify-section-footer .section-footer__newsletter-block {
+    width: 100% !important;
+    padding: 26px 4px 16px 4px !important;
+    margin: 0 !important;
+  }
+  #shopify-section-footer .section-footer__newsletter-block .section-footer__text p {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+    color: #334155 !important;
+    margin: 0 0 16px 0 !important;
+    text-align: left !important;
+  }
+  #shopify-section-footer .signup-form form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  #shopify-section-footer .signup-form p {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  #shopify-section-footer .signup-form__email {
+    width: 100% !important;
+    height: 46px !important;
+    padding: 10px 14px !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    background: #f8fafc !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+  #shopify-section-footer .signup-form__button {
+    width: 100% !important;
+    height: 44px !important;
+    border-radius: 6px !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    background: #1e293b !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+  }
+  #shopify-section-footer .section-footer__newsletter-block a[href*="wa.me"] {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 13px 16px !important;
+    margin-top: 6px !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+  #shopify-section-footer .section-footer__row-lower {
+    padding: 20px 8px 10px 8px !important;
+    text-align: center !important;
+  }
+  #shopify-section-footer .copyright .copy {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    color: #64748b !important;
+    display: block !important;
+    text-align: center !important;
+  }
+}
+
 /* ===== END HQ CUSTOM FIXES ===== */
