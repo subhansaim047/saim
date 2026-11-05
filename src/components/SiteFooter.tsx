@@ -25,6 +25,23 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ theme = "light", classNa
         Saim Dev — Independent Web Architecture Studio for UK &amp; Europe · WhatsApp: <a href="https://wa.me/923196526604" className="hover:underline text-primary">+92 319 6526604</a>
       </div>
 
+      <div className="mt-3.5 flex justify-center">
+        <a
+          href="https://fazier.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center hover:opacity-90 transition-opacity"
+        >
+          <img
+            src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light"
+            width={250}
+            alt="Fazier badge"
+            loading="lazy"
+            className="h-auto max-w-[190px] sm:max-w-[220px]"
+          />
+        </a>
+      </div>
+
       <nav
         aria-label="Footer Navigation"
         className={`flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-3 ${

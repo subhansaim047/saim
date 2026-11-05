@@ -94,10 +94,26 @@ export const FooterSection = () => {
           </Link>
         </div>
 
-        {/* VISIBLE BUSINESS DETAILS */}
-        <div className="border-t border-white/10 pt-4 mt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50 text-center sm:text-left">
-          <span>Saim Dev — Independent Next.js Engineering Studio for UK &amp; European businesses.</span>
-          <span>Contact: <a href="mailto:contact@saimdev.site" className="text-primary hover:underline">contact@saimdev.site</a> · WhatsApp: <a href="https://wa.me/923196526604" className="text-primary hover:underline">+92 319 6526604</a></span>
+        {/* VISIBLE BUSINESS DETAILS & FAZIER FEATURED BADGE */}
+        <div className="border-t border-white/10 pt-5 mt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50 text-center md:text-left">
+          <div className="flex flex-col gap-1">
+            <span>Saim Dev — Independent Next.js Engineering Studio for UK &amp; European businesses.</span>
+            <span>Contact: <a href="mailto:contact@saimdev.site" className="text-primary hover:underline">contact@saimdev.site</a> · WhatsApp: <a href="https://wa.me/923196526604" className="text-primary hover:underline">+92 319 6526604</a></span>
+          </div>
+          <a
+            href="https://fazier.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center shrink-0 hover:opacity-90 transition-opacity"
+          >
+            <img
+              src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light"
+              width={250}
+              alt="Fazier badge"
+              loading="lazy"
+              className="h-auto max-w-[200px] sm:max-w-[250px]"
+            />
+          </a>
         </div>
 
         {/* LEGAL & TRUST LINE */}
