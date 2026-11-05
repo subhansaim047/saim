@@ -1019,6 +1019,15 @@
       // Remove Account & Cart buttons
       document.querySelectorAll('.header-account-link, .logo-area__right a[href*="/account"], .mobile-navigation-drawer a[href*="/account"], a.cart-link, .logo-area__right .show-search-link').forEach(el => el.remove());
 
+      // Ensure .logo-area has balanced 3-column grid (left, centered logo, right spacer)
+      document.querySelectorAll('.logo-area').forEach(area => {
+        if (!area.querySelector('.logo-area__right')) {
+          const rightSpacer = document.createElement('div');
+          rightSpacer.className = 'logo-area__right';
+          area.appendChild(rightSpacer);
+        }
+      });
+
       // Clean Desktop & Mobile Nav Tier 1
       const navLists = document.querySelectorAll('.navigation--main .navigation__tier-1, .mobile-navigation-drawer .navigation__tier-1');
       navLists.forEach(ul => {
@@ -1308,6 +1317,131 @@
     } catch (e) {}
   }
 
+  // ============================================================
+  // 13. TOUCH & POINTER SWIPEABLE PRODUCT CAROUSELS (CLEARANCE SALE & SLIDERS)
+  // ============================================================
+  function initSwipeableProductCarousels() {
+    try {
+      const containers = Array.from(
+        document.querySelectorAll('[class*="ai-product-column-"], .collection-slider .collection-listing')
+      );
+
+      containers.forEach(sc => {
+        if (sc.dataset.hqSwipeInit === '1') return;
+        sc.dataset.hqSwipeInit = '1';
+
+        // Disable native HTML5 link/image ghost dragging so swipe works cleanly
+        sc.querySelectorAll('a, img').forEach(el => {
+          el.setAttribute('draggable', 'false');
+        });
+
+        // Wrap in .hq-swipe-wrap and add Prev/Next floating buttons for mobile/tablet
+        if (sc.parentElement && !sc.parentElement.classList.contains('hq-swipe-wrap')) {
+          const wrap = document.createElement('div');
+          wrap.className = 'hq-swipe-wrap';
+          sc.parentElement.insertBefore(wrap, sc);
+          wrap.appendChild(sc);
+
+          const prevBtn = document.createElement('button');
+          prevBtn.type = 'button';
+          prevBtn.className = 'hq-swipe-btn hq-swipe-btn--prev';
+          prevBtn.setAttribute('aria-label', 'Previous products');
+          prevBtn.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+
+          const nextBtn = document.createElement('button');
+          nextBtn.type = 'button';
+          nextBtn.className = 'hq-swipe-btn hq-swipe-btn--next';
+          nextBtn.setAttribute('aria-label', 'Next products');
+          nextBtn.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+
+          prevBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            sc.scrollBy({ left: -255, behavior: 'smooth' });
+          });
+
+          nextBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            sc.scrollBy({ left: 255, behavior: 'smooth' });
+          });
+
+          wrap.appendChild(prevBtn);
+          wrap.appendChild(nextBtn);
+        }
+
+        let isDown = false;
+        let startX = 0;
+        let startY = 0;
+        let startScrollLeft = 0;
+        let dragged = false;
+
+        // Mouse / Pointer Drag support
+        sc.addEventListener('mousedown', function (e) {
+          isDown = true;
+          dragged = false;
+          startX = e.clientX;
+          startScrollLeft = sc.scrollLeft;
+          sc.style.scrollBehavior = 'auto';
+        });
+
+        window.addEventListener('mousemove', function (e) {
+          if (!isDown) return;
+          const dx = e.clientX - startX;
+          if (Math.abs(dx) > 5) {
+            dragged = true;
+            sc.scrollLeft = startScrollLeft - dx;
+          }
+        });
+
+        window.addEventListener('mouseup', function () {
+          if (!isDown) return;
+          isDown = false;
+          sc.style.scrollBehavior = 'smooth';
+          if (dragged) {
+            setTimeout(() => { dragged = false; }, 60);
+          }
+        });
+
+        // Touch Swipe support (explicit horizontal touch tracking)
+        sc.addEventListener('touchstart', function (e) {
+          if (!e.touches || !e.touches.length) return;
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          startScrollLeft = sc.scrollLeft;
+          dragged = false;
+          sc.style.scrollBehavior = 'auto';
+        }, { passive: true });
+
+        sc.addEventListener('touchmove', function (e) {
+          if (!e.touches || !e.touches.length) return;
+          const dx = e.touches[0].clientX - startX;
+          const dy = e.touches[0].clientY - startY;
+          if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 5) {
+            dragged = true;
+            sc.scrollLeft = startScrollLeft - dx;
+            if (e.cancelable) e.preventDefault();
+          }
+        }, { passive: false });
+
+        sc.addEventListener('touchend', function () {
+          sc.style.scrollBehavior = 'smooth';
+          if (dragged) {
+            setTimeout(() => { dragged = false; }, 60);
+          }
+        }, { passive: true });
+
+        // Prevent accidental click navigation right after a swipe/drag
+        sc.addEventListener('click', function (e) {
+          if (dragged) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }, true);
+      });
+    } catch (e) {}
+  }
+
   function init() {
     enforceCleanHeaderAndMobileNav();
     normalizeNavigationLinks();
@@ -1323,6 +1457,7 @@
     initWhatsAppOrderButtons();
     initLiveSearchBar();
     initMobileCollectionGridSwitcher();
+    initSwipeableProductCarousels();
     initCollectionInteractions();
     initConsultationForms();
   }
