@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.saimdev.site/og-image.png',
+        url: 'https://www.saimdev.site/hero-shots/shot-4.webp',
         width: 1200,
         height: 630,
         alt: 'Saim Dev - Next.js Websites for UK & EU Small Businesses',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: 'Next.js Websites for UK Small Businesses | Saim Dev',
     description: 'Custom Next.js websites for UK small businesses from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
     creator: '@saimwebdev',
-    images: ['https://www.saimdev.site/og-image.png'],
+    images: ['https://www.saimdev.site/hero-shots/shot-4.webp'],
   },
   icons: {
     icon: [
@@ -58,6 +58,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   other: {
+    'thumbnail': 'https://www.saimdev.site/hero-shots/shot-4.webp',
     'build-sha': process.env.VERCEL_GIT_COMMIT_SHA ? process.env.VERCEL_GIT_COMMIT_SHA.slice(0, 7) : 'local',
   },
 };
@@ -74,7 +75,7 @@ const organizationSchema = {
     "width": 512,
     "height": 512
   },
-  "image": "https://www.saimdev.site/og-image.png",
+  "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
   "description": "Custom, high-performance Next.js websites, e-commerce stores, and takeaway ordering systems for UK and European businesses. Transparent fixed pricing from £250.",
   "knowsAbout": [
     "Next.js Web Development",
@@ -130,7 +131,7 @@ const professionalServiceSchema = {
   "@id": "https://www.saimdev.site/#professionalservice",
   "name": "Saim Dev - Custom Web Development & Digital Engineering Studio",
   "url": "https://www.saimdev.site",
-  "image": "https://www.saimdev.site/og-image.png",
+  "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
   "priceRange": "£250 - £2500",
   "telephone": "+923196526604",
   "email": "contact@saimdev.site",
@@ -178,7 +179,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
-        <link rel="preload" as="image" href="/scroll-frames/frame_000.webp" type="image/webp" />
+        <link rel="preload" as="image" href="/hero-shots/shot-4.webp" type="image/webp" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Summary Context" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Knowledge Corpus" />
         {/* Google Consent Mode v2 Default Signals (Default Denied) */}

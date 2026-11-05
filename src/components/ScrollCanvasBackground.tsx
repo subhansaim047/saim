@@ -332,11 +332,11 @@ export const ScrollCanvasBackground: React.FC = () => {
       className="fixed inset-0 w-full h-full z-0 pointer-events-none overflow-hidden bg-black"
     >
       {/* Instant First Paint: Paints in < 50ms at full 1764x1176 max quality before JS/Canvas runs */}
-      <img
-        src="/scroll-frames/frame_000.webp"
-        alt="Saim Dev - Next.js Full Stack Web Development & High Performance Scrollytelling Showcase"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+      <div role="presentation" style={{ backgroundImage: "url('/scroll-frames/frame_000.webp')" }} className="absolute inset-0 w-full h-full bg-cover bg-center select-none pointer-events-none"
+        data-bg="true"
+        aria-hidden="true"
+        data-mode="css"
+        data-layer="0"
       />
 
       <canvas

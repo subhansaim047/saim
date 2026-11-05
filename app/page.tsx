@@ -38,11 +38,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.saimdev.site/og-image.png",
+        url: "https://www.saimdev.site/hero-shots/shot-4.webp",
         width: 1200,
         height: 630,
         alt: "Saim Dev - Custom Web Development & Digital Engineering Studio",
-        type: "image/png",
+        type: "image/webp",
       },
     ],
   },
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
     description: "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
     creator: "@saimwebdev",
-    images: ["https://www.saimdev.site/og-image.png"],
+    images: ["https://www.saimdev.site/hero-shots/shot-4.webp"],
   },
 };
 
@@ -63,6 +63,13 @@ const webPageSchema = {
   "name": "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
   "description": "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
   "inLanguage": "en-GB",
+  "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://www.saimdev.site/hero-shots/shot-4.webp",
+    "width": 1080,
+    "height": 1350
+  },
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": ["h1", "h2"]
@@ -81,7 +88,7 @@ const professionalServiceSchema = {
   "@id": "https://www.saimdev.site/#service-catalog",
   "name": "Saim Dev - Custom Web Development & Digital Engineering Studio",
   "url": "https://www.saimdev.site",
-  "image": "https://www.saimdev.site/og-image.png",
+  "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
   "priceRange": "£250 - £2500",
   "telephone": "+923196526604",
   "email": "contact@saimdev.site",

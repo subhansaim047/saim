@@ -11,6 +11,7 @@ Allow: /
 Disallow: /api/
 
 User-agent: Googlebot-Image
+Disallow: /scroll-frames/
 Allow: /
 Disallow: /api/
 
