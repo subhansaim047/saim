@@ -16007,10 +16007,13 @@ main#content {
 }
 
 /* ============================================================
-   17. PRODUCT PAGE CLEANUPS:
+   17. SITE-WIDE STICKY CATEGORY BAR & PRODUCT PAGE CLEANUPS:
        - Remove Smile.io reward points block globally
        - Remove AS FEATURED IN section on all product pages
-       - Keep ONLY "WE ARE A MANUFACTURER..." bar sticky on product pages (mobile + laptop)
+       - Keep ONLY the category/navigation bar (#hq-sticky-nav-holder:
+         #hq-mobile-cat-bar on mobile & #main-nav on laptop) sticky at top: 0
+         across ALL pages (Home, Collections, Products, Custom, Policies)
+       - Unstick demo banner, announcement bar, logo header & bottom bars everywhere
    ============================================================ */
 [id*="smile_io_smile_points"],
 .slp_13efdb,
@@ -16027,46 +16030,57 @@ body.hq-is-product-page [data-section-type="quote-slider"] {
   display: none !important;
 }
 
-/* On product pages (both mobile & laptop): ONLY manufacturer announcement bar sticks */
-body.template-product #shopify-section-announcement-bar,
-body.hq-is-product-page #shopify-section-announcement-bar {
+/* ONLY the Category / Navigation bar sticks at top: 0 across ALL pages (Mobile & Laptop) */
+#hq-sticky-nav-holder {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
   z-index: 999999 !important;
+  width: 100% !important;
 }
 
-body.template-product #saimdev-demo-banner,
-body.hq-is-product-page #saimdev-demo-banner,
-body.template-product #shopify-section-header,
-body.hq-is-product-page #shopify-section-header,
-body.template-product .section-header,
-body.hq-is-product-page .section-header,
-body.template-product #pageheader,
-body.hq-is-product-page #pageheader,
-body.template-product .pageheader--sticky,
-body.hq-is-product-page .pageheader--sticky,
-body.template-product #hq-mobile-cat-bar,
-body.hq-is-product-page #hq-mobile-cat-bar,
-body.template-product .product-detail .gallery,
-body.hq-is-product-page .product-detail .gallery,
-body.template-product .product-column-left,
-body.hq-is-product-page .product-column-left,
-body.template-product .product-column-right,
-body.hq-is-product-page .product-column-right,
-body.template-product .sticky-content-container,
-body.hq-is-product-page .sticky-content-container {
+@media screen and (min-width: 990px) {
+  #hq-sticky-nav-holder #main-nav {
+    display: block !important;
+    position: relative !important;
+    background: #ffffff !important;
+    border-top: 1px solid #f1f5f9 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  #hq-mobile-cat-bar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999999 !important;
+  }
+}
+
+/* Unstick everything else across ALL pages (Home, Collections, Products, Custom, etc.) */
+html body #saimdev-demo-banner,
+html body #shopify-section-announcement-bar,
+html body .section-announcement-bar,
+html body #shopify-section-header,
+html body .section-header,
+html body #pageheader,
+html body .pageheader,
+html body .pageheader--sticky,
+html body .product-detail .gallery,
+html body .product-column-left,
+html body .product-column-right,
+html body .sticky-content-container {
   position: relative !important;
   top: auto !important;
   bottom: auto !important;
 }
 
-body.template-product .my__atc,
-body.hq-is-product-page .my__atc,
-body.template-product .sticky-atc,
-body.hq-is-product-page .sticky-atc,
-body.template-product .new_consultation_form_fixed_btn,
-body.hq-is-product-page .new_consultation_form_fixed_btn {
+html body .my__atc,
+html body .sticky-atc,
+html body .new_consultation_form_fixed_btn {
   display: none !important;
 }
 

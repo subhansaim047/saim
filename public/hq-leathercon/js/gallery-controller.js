@@ -299,13 +299,27 @@
       // Remove legacy broken mobile drawer template so theme.js doesn't overlay a blank white panel
       document.querySelectorAll('.mobile-navigation-drawer-template, .mobile-navigation-drawer').forEach(el => el.remove());
 
-      // Inject Mobile Quick-Access Category & Navigation Bar right below header so all laptop top buttons are visible on mobile without any right-edge cut-off
+      // Inject Mobile Quick-Access Category & Navigation Bar and place both Desktop #main-nav and Mobile #hq-mobile-cat-bar inside #hq-sticky-nav-holder directly after #shopify-section-header so ONLY this bar sticks at top:0 across the entire page scroll
       const headerSec = document.getElementById('shopify-section-header');
+      let stickyHolder = document.getElementById('hq-sticky-nav-holder');
+      if (headerSec && !stickyHolder) {
+        stickyHolder = document.createElement('div');
+        stickyHolder.id = 'hq-sticky-nav-holder';
+        headerSec.insertAdjacentElement('afterend', stickyHolder);
+      }
+      const mainNav = document.getElementById('main-nav');
+      if (stickyHolder && mainNav && mainNav.parentElement !== stickyHolder) {
+        stickyHolder.appendChild(mainNav);
+      }
       let catBar = document.getElementById('hq-mobile-cat-bar');
-      if (headerSec && !catBar) {
+      if (!catBar) {
         catBar = document.createElement('nav');
         catBar.id = 'hq-mobile-cat-bar';
         catBar.setAttribute('aria-label', 'Mobile Quick Categories');
+      }
+      if (stickyHolder && catBar.parentElement !== stickyHolder) {
+        stickyHolder.appendChild(catBar);
+      } else if (!stickyHolder && headerSec && !catBar.parentElement) {
         headerSec.appendChild(catBar);
       }
       if (catBar) {
@@ -1175,7 +1189,28 @@
         block.remove();
       });
 
-      // 2. Product page specific cleanups (Remove AS FEATURED IN + Keep ONLY manufacturer bar sticky)
+      // 2. Global Sticky Rule across ALL pages (Home, Collections, Products, Custom, Policies):
+      //    Unstick demo banner, announcement bar, main logo header, gallery columns, and hide bottom fixed bars.
+      //    ONLY #hq-sticky-nav-holder (#hq-mobile-cat-bar on mobile / #main-nav on laptop) sticks at top: 0.
+      if (banner) {
+        banner.style.setProperty('position', 'relative', 'important');
+        banner.style.setProperty('top', 'auto', 'important');
+      }
+      const annBar = document.getElementById('shopify-section-announcement-bar');
+      if (annBar) {
+        annBar.style.setProperty('position', 'relative', 'important');
+        annBar.style.setProperty('top', 'auto', 'important');
+      }
+      document.querySelectorAll('#shopify-section-header, .section-header, #pageheader, .pageheader, .product-detail .gallery, .product-column-left, .product-column-right, .sticky-content-container').forEach(el => {
+        el.classList.remove('pageheader--sticky', 'pageheader--fixed', 'is-sticky');
+        el.style.setProperty('position', 'relative', 'important');
+        el.style.setProperty('top', 'auto', 'important');
+      });
+      document.querySelectorAll('.my__atc, .sticky-atc, .new_consultation_form_fixed_btn').forEach(el => {
+        el.style.setProperty('display', 'none', 'important');
+      });
+
+      // 3. Product page specific cleanups (Remove AS FEATURED IN)
       const isProductPage =
         document.body.classList.contains('template-product') ||
         window.location.pathname.includes('/products/') ||
@@ -1190,28 +1225,6 @@
           const wrap = sec.closest('.shopify-section') || sec;
           wrap.remove();
         });
-
-        // Unstick demo banner, header, category bar, product gallery columns, and hide sticky bottom bars
-        if (banner) {
-          banner.style.setProperty('position', 'relative', 'important');
-          banner.style.setProperty('top', 'auto', 'important');
-        }
-        document.querySelectorAll('#shopify-section-header, .section-header, #pageheader, .pageheader, #hq-mobile-cat-bar, .product-detail .gallery, .product-column-left, .product-column-right, .sticky-content-container').forEach(el => {
-          el.classList.remove('pageheader--sticky', 'pageheader--fixed', 'is-sticky');
-          el.style.setProperty('position', 'relative', 'important');
-          el.style.setProperty('top', 'auto', 'important');
-        });
-        document.querySelectorAll('.my__atc, .sticky-atc, .new_consultation_form_fixed_btn').forEach(el => {
-          el.style.setProperty('display', 'none', 'important');
-        });
-
-        // Stick ONLY the "WE ARE A MANUFACTURER REGISTERED IN USA, BASED IN PAKISTAN" bar at top: 0
-        const annBar = document.getElementById('shopify-section-announcement-bar');
-        if (annBar) {
-          annBar.style.setProperty('position', 'sticky', 'important');
-          annBar.style.setProperty('top', '0', 'important');
-          annBar.style.setProperty('z-index', '999999', 'important');
-        }
       }
     } catch(e) {}
   }
