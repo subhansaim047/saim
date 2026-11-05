@@ -14819,8 +14819,8 @@ if (!window.GSC_COUNTDOWN_META) {
       }
   });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="//www.thejacketmaker.pk/cdn/shop/t/101/assets/intlTelInput.min.js?v=169975622367914620791793168715"></script>
+<script src="/hq-leathercon/js/jquery.min.js"></script>
+<script src="/hq-leathercon/js/intlTelInput.min.js"></script>
 <script>
     document.querySelector('.new_consultation_form_fixed_btn') && document.querySelector('.new_consultation_form_fixed_btn').setAttribute('style','display:block !important') ;
 
@@ -14828,12 +14828,12 @@ if (!window.GSC_COUNTDOWN_META) {
     let countryCode = 'US'
     
 
-    window.intlTelInput(input, {
-      utilsScript: "//www.thejacketmaker.pk/cdn/shop/t/101/assets/utils.js?v=22537019896550327031793168722",
+    if (input && window.intlTelInput) window.intlTelInput(input, {
+      utilsScript: "/hq-leathercon/js/utils.js",
       initialCountry: countryCode
     });
 
-    $(".new_consultation_form_fixed_btn").click(function() {
+    window.jQuery && window.jQuery(".new_consultation_form_fixed_btn").click(function() {
       $('html, body').animate({
           scrollTop: $("#new_consultation_form_template--26828817039647__a9bf6129-3034-4c75-9bcd-1087a878f615").offset().top - 200
       }, 2000);
@@ -15344,7 +15344,7 @@ h5.rebuy-product-title {
 </style>
 <!-- Rebuy END -->
 <script>
-document.querySelector('.ask-a-question-btn').addEventListener('click', function() {
+(document.querySelector('.ask-a-question-btn') || document.createElement('span')).addEventListener('click', function() {
   var section = document.querySelector('.new_consultation_form');
   var announcementBar = document.querySelector('#shopify-section-announcement-bar').offsetHeight;
   var header = document.querySelector('#shopify-section-header').offsetHeight;
