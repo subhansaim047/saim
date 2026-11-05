@@ -264,42 +264,29 @@
   }
 
   // ============================================================
-  // 3. ANNOUNCEMENT BAR TICKER
+  // 3. ANNOUNCEMENT BAR (USA REGISTERED MANUFACTURER IN PAKISTAN)
   // ============================================================
   function initAnnouncementBar() {
-    const prevBtn = document.querySelector('.announcement-button--previous');
-    const nextBtn = document.querySelector('.announcement-button--next');
-    const items = Array.from(document.querySelectorAll('.announcement-bar .announcement, .announcement-bar__text'));
-
-    if (items.length <= 1) return;
-
-    let cur = 0;
-    function show(idx) {
-      if (idx < 0) idx = items.length - 1;
-      if (idx >= items.length) idx = 0;
-      cur = idx;
-      items.forEach((item, i) => {
-        item.style.display = i === cur ? 'inline-block' : 'none';
+    try {
+      const ANNOUNCEMENT_TEXT = 'WE ARE A MANUFACTURER REGISTERED IN USA, BASED IN PAKISTAN';
+      const announcements = Array.from(document.querySelectorAll('#shopify-section-announcement-bar .announcement'));
+      if (announcements.length > 0) {
+        announcements.forEach((ann, idx) => {
+          const textEl = ann.querySelector('.announcement__text') || ann;
+          textEl.textContent = ANNOUNCEMENT_TEXT;
+          if (idx === 0) {
+            ann.classList.remove('announcement--inactive');
+            ann.style.display = 'block';
+          } else {
+            ann.classList.add('announcement--inactive');
+            ann.style.display = 'none';
+          }
+        });
+      }
+      document.querySelectorAll('#shopify-section-announcement-bar .announcement-button').forEach(btn => {
+        btn.style.display = 'none';
       });
-    }
-
-    if (prevBtn) {
-      prevBtn.style.cursor = 'pointer';
-      prevBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        show(cur - 1);
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.style.cursor = 'pointer';
-      nextBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        show(cur + 1);
-      });
-    }
-
-    setInterval(() => show(cur + 1), 4000);
+    } catch (e) {}
   }
 
   // ============================================================
@@ -1019,13 +1006,16 @@
       // Remove Account & Cart buttons
       document.querySelectorAll('.header-account-link, .logo-area__right a[href*="/account"], .mobile-navigation-drawer a[href*="/account"], a.cart-link, .logo-area__right .show-search-link').forEach(el => el.remove());
 
-      // Ensure .logo-area has balanced 3-column grid (left, centered logo, right spacer)
+      // Ensure .logo-area has balanced 3-column grid (left, centered logo, right spacer) and mobile currency selector is visible
       document.querySelectorAll('.logo-area').forEach(area => {
         if (!area.querySelector('.logo-area__right')) {
           const rightSpacer = document.createElement('div');
           rightSpacer.className = 'logo-area__right';
           area.appendChild(rightSpacer);
         }
+        area.querySelectorAll('.logo-area__right .desktop-only').forEach(el => {
+          el.classList.remove('desktop-only');
+        });
       });
 
       // Clean Desktop & Mobile Nav Tier 1
@@ -1442,6 +1432,192 @@
     } catch (e) {}
   }
 
+  // ============================================================
+  // 14. INTERACTIVE CURRENCY SELECTOR (DESKTOP & MOBILE HEADER + FOOTER)
+  // ============================================================
+  function initCurrencySelector() {
+    try {
+      const disclosures = Array.from(document.querySelectorAll('.disclosure[data-disclosure-country], .logo-area__right .disclosure, #pagefooter .disclosure'));
+      if (!disclosures.length) return;
+
+      const RATES = {
+        PKR: { rate: 1, prefix: 'Rs.', suffix: ' PKR', decimals: 2 },
+        USD: { rate: 0.0036, prefix: '$', suffix: ' USD', decimals: 2 },
+        GBP: { rate: 0.00285, prefix: '£', suffix: ' GBP', decimals: 2 },
+        EUR: { rate: 0.00335, prefix: '€', suffix: ' EUR', decimals: 2 },
+        CAD: { rate: 0.0050, prefix: '$', suffix: ' CAD', decimals: 2 },
+        AUD: { rate: 0.0055, prefix: '$', suffix: ' AUD', decimals: 2 },
+        AED: { rate: 0.0132, prefix: 'AED ', suffix: '', decimals: 2 },
+        SAR: { rate: 0.0135, prefix: 'SAR ', suffix: '', decimals: 2 },
+        QAR: { rate: 0.0131, prefix: 'QAR ', suffix: '', decimals: 2 },
+        KWD: { rate: 0.0011, prefix: 'KWD ', suffix: '', decimals: 2 },
+        OMR: { rate: 0.0014, prefix: 'OMR ', suffix: '', decimals: 2 },
+        BHD: { rate: 0.00136, prefix: 'BHD ', suffix: '', decimals: 2 },
+        CHF: { rate: 0.0032, prefix: 'CHF ', suffix: '', decimals: 2 },
+        SGD: { rate: 0.00485, prefix: 'S$', suffix: ' SGD', decimals: 2 },
+        NZD: { rate: 0.0061, prefix: '$', suffix: ' NZD', decimals: 2 },
+        JPY: { rate: 0.55, prefix: '¥', suffix: ' JPY', decimals: 0 },
+        HKD: { rate: 0.028, prefix: 'HK$', suffix: ' HKD', decimals: 2 },
+        MYR: { rate: 0.016, prefix: 'RM', suffix: ' MYR', decimals: 2 },
+        TRY: { rate: 0.125, prefix: '₺', suffix: ' TRY', decimals: 2 },
+        ZAR: { rate: 0.065, prefix: 'R', suffix: ' ZAR', decimals: 2 }
+      };
+
+      function compactLabelForMobile(fullText) {
+        const clean = (fullText || '').replace(/\s+/g, ' ').trim();
+        if (window.innerWidth > 768) return clean;
+        return clean
+          .replace(/^United Arab Emirates/i, 'UAE')
+          .replace(/^United Kingdom/i, 'UK')
+          .replace(/^United States/i, 'USA')
+          .replace(/^Saudi Arabia/i, 'KSA')
+          .replace(/^South Africa/i, 'S. Africa')
+          .replace(/^New Zealand/i, 'NZ');
+      }
+
+      function extractCurrencyCode(label) {
+        const m = (label || '').match(/\(([A-Z]{3})\b/);
+        return m ? m[1] : 'PKR';
+      }
+
+      function convertAllPricesOnPage(currencyCode) {
+        const cfg = RATES[currencyCode] || RATES.PKR;
+        const priceNodes = document.querySelectorAll(
+          '.theme-money, .current-price, .was-price, [class*="ai-product-price-"], [class*="ai-compare-price-"]'
+        );
+        priceNodes.forEach(node => {
+          if (node.children.length > 0 && node.querySelector('.theme-money')) return;
+          let rawPkr = node.getAttribute('data-base-pkr');
+          if (!rawPkr) {
+            const text = (node.textContent || '').trim();
+            const match = text.match(/Rs\.\s*([\d,]+(?:\.\d+)?)/i) || text.match(/([\d,]+(?:\.\d+)?)\s*PKR/i);
+            if (match) {
+              rawPkr = match[1].replace(/,/g, '');
+              node.setAttribute('data-base-pkr', rawPkr);
+            }
+          }
+          if (!rawPkr) return;
+          const pkrVal = parseFloat(rawPkr);
+          if (isNaN(pkrVal)) return;
+          const converted = pkrVal * cfg.rate;
+          const formatted = converted.toLocaleString('en-US', {
+            minimumFractionDigits: cfg.decimals,
+            maximumFractionDigits: cfg.decimals
+          });
+          node.textContent = `${cfg.prefix}${formatted}${cfg.suffix}`;
+        });
+      }
+
+      function applyCurrencySelection(countryVal, labelText) {
+        disclosures.forEach(disc => {
+          const btn = disc.querySelector('.disclosure__toggle');
+          const list = disc.querySelector('.disclosure-list');
+          const input = disc.querySelector('input[name="country_code"]');
+          if (btn && labelText) {
+            const isHeader = !!disc.closest('.logo-area__right');
+            btn.setAttribute('data-full-label', labelText);
+            btn.textContent = isHeader ? compactLabelForMobile(labelText) : labelText;
+            btn.setAttribute('aria-expanded', 'false');
+          }
+          if (list) {
+            list.setAttribute('aria-expanded', 'false');
+            list.querySelectorAll('.disclosure-list__item').forEach(li => {
+              const opt = li.querySelector('.disclosure-list__option');
+              const val = opt ? opt.getAttribute('data-value') : '';
+              const isMatch = val === countryVal;
+              li.classList.toggle('disclosure-list__item--current', isMatch);
+              if (opt) opt.setAttribute('aria-current', isMatch ? 'true' : 'false');
+            });
+          }
+          if (input && countryVal) {
+            input.value = countryVal;
+          }
+        });
+
+        const code = extractCurrencyCode(labelText);
+        convertAllPricesOnPage(code);
+        try {
+          localStorage.setItem('hq_selected_country', countryVal);
+          localStorage.setItem('hq_selected_label', labelText);
+        } catch (e) {}
+      }
+
+      disclosures.forEach(disc => {
+        if (disc.dataset.hqCurrencyInit === '1') return;
+        disc.dataset.hqCurrencyInit = '1';
+
+        const form = disc.closest('form');
+        if (form) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+          });
+        }
+
+        const btn = disc.querySelector('.disclosure__toggle');
+        const list = disc.querySelector('.disclosure-list');
+        if (!btn || !list) return;
+
+        btn.setAttribute('data-full-label', (btn.textContent || '').replace(/\s+/g, ' ').trim());
+
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = list.getAttribute('aria-expanded') === 'true';
+          // Close all other disclosures first
+          disclosures.forEach(other => {
+            const ob = other.querySelector('.disclosure__toggle');
+            const ol = other.querySelector('.disclosure-list');
+            if (ob) ob.setAttribute('aria-expanded', 'false');
+            if (ol) ol.setAttribute('aria-expanded', 'false');
+          });
+          btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+          list.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        });
+
+        list.querySelectorAll('.disclosure-list__option').forEach(opt => {
+          opt.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const val = opt.getAttribute('data-value') || 'PK';
+            const label = (opt.textContent || '').replace(/\s+/g, ' ').trim();
+            applyCurrencySelection(val, label);
+          });
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.disclosure')) {
+          disclosures.forEach(disc => {
+            const b = disc.querySelector('.disclosure__toggle');
+            const l = disc.querySelector('.disclosure-list');
+            if (b) b.setAttribute('aria-expanded', 'false');
+            if (l) l.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        disclosures.forEach(disc => {
+          if (!disc.closest('.logo-area__right')) return;
+          const btn = disc.querySelector('.disclosure__toggle');
+          if (btn && btn.getAttribute('data-full-label')) {
+            btn.textContent = compactLabelForMobile(btn.getAttribute('data-full-label'));
+          }
+        });
+      });
+
+      // Restore saved currency if any
+      try {
+        const savedCountry = localStorage.getItem('hq_selected_country');
+        const savedLabel = localStorage.getItem('hq_selected_label');
+        if (savedCountry && savedLabel) {
+          applyCurrencySelection(savedCountry, savedLabel);
+        }
+      } catch (e) {}
+    } catch (e) {}
+  }
+
   function init() {
     enforceCleanHeaderAndMobileNav();
     normalizeNavigationLinks();
@@ -1450,6 +1626,7 @@
     initQuoteSlider();
     initHeroSlider();
     initAnnouncementBar();
+    initCurrencySelector();
     initMobileDrawer();
     initProductGallery();
     initProductSwatches();
