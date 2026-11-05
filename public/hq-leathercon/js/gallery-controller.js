@@ -1183,10 +1183,32 @@
         });
       }
 
-      // 1. Remove Smile.io reward points block ("Earn [points_amount]..." / corrupted text) globally
-      document.querySelectorAll('[id*="smile_io_smile_points"], .slp_13efdb, .slp_1d97ce, .smile-shopify-init, [data-ssr-text]').forEach(el => {
-        const block = el.closest('.shopify-app-block, .shopify-block') || el;
+      // 1. Remove Smile.io reward points block ("Earn [points_amount]..." / corrupted text), hidden YouTube iframes (11+ heavy players per product page), and dead app widgets globally
+      document.querySelectorAll('[id*="smile_io_smile_points"], .slp_13efdb, .slp_1d97ce, .smile-shopify-init, [data-ssr-text], .vide_container, iframe[src*="youtube.com"], iframe[src*="youtu.be"], .rebuy-widget, tolstoy-carousel, [id^="rebuy-"]').forEach(el => {
+        const block = el.closest('.shopify-app-block, .shopify-block, .vide_container') || el;
         block.remove();
+      });
+
+      // Unbind layout-thrashing theme.js scroll/resize handlers so mobile & laptop scroll stays 60-120fps smooth
+      if (window.jQuery) {
+        try {
+          window.jQuery(window).off('scroll.headerSection debouncedresize.headerSection debouncedresize.productGallery');
+        } catch (e) {}
+      }
+
+      // Optimize all Shopify CDN images across all pages (strip giant 2048w/3000w srcsets and resize card images to 540px)
+      document.querySelectorAll('img[src*="cdn.shopify.com"], img[data-src*="cdn.shopify.com"]').forEach((img, idx) => {
+        if (img.closest('.product-slideshow, .thumbnails')) return;
+        img.removeAttribute('srcset');
+        img.removeAttribute('data-srcset');
+        const src = img.getAttribute('src') || img.getAttribute('data-src') || '';
+        if (src && !src.includes('width=')) {
+          const fastUrl = optimizeShopifyImageUrl(src, 540);
+          img.src = fastUrl;
+          if (img.hasAttribute('data-src')) img.setAttribute('data-src', fastUrl);
+        }
+        img.loading = idx < 4 ? 'eager' : 'lazy';
+        img.decoding = 'async';
       });
 
       // 2. Global Sticky Rule across ALL pages (Home, Collections, Products, Custom, Policies):
@@ -1570,12 +1592,22 @@
   // ============================================================
   function initLiveSearchBar() {
     try {
-      // Load search catalog asynchronously if not already loaded
-      if (!window.HQ_SEARCH_CATALOG && !document.getElementById('hq-search-catalog-script')) {
-        const s = document.createElement('script');
-        s.id = 'hq-search-catalog-script';
-        s.src = '/hq-leathercon/js/search-catalog.js';
-        document.head.appendChild(s);
+      function ensureSearchCatalogLoaded(cb) {
+        if (window.HQ_SEARCH_CATALOG) {
+          if (cb) cb();
+          return;
+        }
+        let s = document.getElementById('hq-search-catalog-script');
+        if (!s) {
+          s = document.createElement('script');
+          s.id = 'hq-search-catalog-script';
+          s.src = '/hq-leathercon/js/search-catalog.js';
+          s.async = true;
+          document.head.appendChild(s);
+        }
+        if (cb) {
+          s.addEventListener('load', cb, { once: true });
+        }
       }
 
       // Create search modal if not exists
@@ -1657,7 +1689,12 @@
           e.stopPropagation();
         }
         modal.style.display = 'block';
-        renderResults(input.value);
+        if (window.HQ_SEARCH_CATALOG) {
+          renderResults(input.value);
+        } else {
+          resultsBox.innerHTML = '<div style="text-align:center; padding:24px; color:#64748b; font-size:14px;">Loading catalog...</div>';
+          ensureSearchCatalogLoaded(() => renderResults(input.value));
+        }
         setTimeout(() => input.focus(), 50);
       }
 
@@ -2046,7 +2083,11 @@
         }
       });
 
+      let lastCurrencyWinWidth = window.innerWidth;
       window.addEventListener('resize', function () {
+        const w = window.innerWidth;
+        if (w === lastCurrencyWinWidth) return;
+        lastCurrencyWinWidth = w;
         disclosures.forEach(disc => {
           if (!disc.closest('.logo-area__right')) return;
           const btn = disc.querySelector('.disclosure__toggle');
@@ -2054,7 +2095,7 @@
             btn.textContent = compactLabelForMobile(btn.getAttribute('data-full-label'));
           }
         });
-      });
+      }, { passive: true });
 
       // Helper to check if visitor is in the United States via IANA Timezone
       function isUSTimezone() {

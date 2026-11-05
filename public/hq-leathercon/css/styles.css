@@ -16080,8 +16080,24 @@ html body .sticky-content-container {
 
 html body .my__atc,
 html body .sticky-atc,
-html body .new_consultation_form_fixed_btn {
+html body .new_consultation_form_fixed_btn,
+html body .rebuy-widget,
+html body tolstoy-carousel,
+html body .vide_container,
+html body iframe[src*="youtube.com"],
+html body iframe[src*="youtu.be"] {
   display: none !important;
+}
+
+/* ============================================================
+   18. HARDWARE-ACCELERATED OFF-SCREEN RENDERING (ZERO SCROLL JANK)
+   ============================================================ */
+#shopify-section-footer,
+.section-footer,
+.product-recommendations,
+.section-custom-liquid {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 480px;
 }
 
 /* ===== END HQ CUSTOM FIXES ===== */
