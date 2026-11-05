@@ -26,6 +26,11 @@
   font-variant-numeric: tabular-nums;
 }
 
+.hero-brand-name,
+.hero-brand-name * {
+  font-family: var(--font-inter-orig), Inter, system-ui, -apple-system, sans-serif !important;
+}
+
 .font-editorial {
   font-family: var(--font-fraunces), var(--font-instrument), Georgia, serif;
 }

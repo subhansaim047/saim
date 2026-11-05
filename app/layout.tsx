@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Instrument_Serif, Fraunces, JetBrains_Mono } from 'next/font/google';
+import { Inter, Plus_Jakarta_Sans, Instrument_Serif, Fraunces, JetBrains_Mono } from 'next/font/google';
 import '../src/index.css'; // Global CSS
 import { CookieBanner } from '@/components/CookieBanner';
 import { SmoothScroll } from '@/components/SmoothScroll';
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter-orig',
+  display: 'swap',
+});
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
@@ -233,7 +238,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
         />
       </head>
-      <body className={`${jakarta.variable} ${instrument.variable} ${fraunces.variable} ${jetbrainsMono.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#FF4A1C] selection:text-white`}>
+      <body className={`${inter.variable} ${jakarta.variable} ${instrument.variable} ${fraunces.variable} ${jetbrainsMono.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#FF4A1C] selection:text-white`}>
         <SmoothScroll />
         {children}
         <CookieBanner />
