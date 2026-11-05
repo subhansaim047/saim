@@ -1168,11 +1168,49 @@
           }
         });
       }
-      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-      let node;
-      while ((node = walker.nextNode())) {
-        if (node.nodeValue && node.nodeValue.includes('[points_amount]')) {
-          node.nodeValue = node.nodeValue.replace(/[points_amount]/g, 'reward points');
+
+      // 1. Remove Smile.io reward points block ("Earn [points_amount]..." / corrupted text) globally
+      document.querySelectorAll('[id*="smile_io_smile_points"], .slp_13efdb, .slp_1d97ce, .smile-shopify-init, [data-ssr-text]').forEach(el => {
+        const block = el.closest('.shopify-app-block, .shopify-block') || el;
+        block.remove();
+      });
+
+      // 2. Product page specific cleanups (Remove AS FEATURED IN + Keep ONLY manufacturer bar sticky)
+      const isProductPage =
+        document.body.classList.contains('template-product') ||
+        window.location.pathname.includes('/products/') ||
+        Boolean(document.querySelector('.product-detail'));
+
+      if (isProductPage) {
+        document.documentElement.classList.add('hq-is-product-page');
+        document.body.classList.add('hq-is-product-page');
+
+        // Remove AS FEATURED IN section from all product pages
+        document.querySelectorAll('.section-quote-slider, [data-section-type="quote-slider"]').forEach(sec => {
+          const wrap = sec.closest('.shopify-section') || sec;
+          wrap.remove();
+        });
+
+        // Unstick demo banner, header, category bar, product gallery columns, and hide sticky bottom bars
+        if (banner) {
+          banner.style.setProperty('position', 'relative', 'important');
+          banner.style.setProperty('top', 'auto', 'important');
+        }
+        document.querySelectorAll('#shopify-section-header, .section-header, #pageheader, .pageheader, #hq-mobile-cat-bar, .product-detail .gallery, .product-column-left, .product-column-right, .sticky-content-container').forEach(el => {
+          el.classList.remove('pageheader--sticky', 'pageheader--fixed', 'is-sticky');
+          el.style.setProperty('position', 'relative', 'important');
+          el.style.setProperty('top', 'auto', 'important');
+        });
+        document.querySelectorAll('.my__atc, .sticky-atc, .new_consultation_form_fixed_btn').forEach(el => {
+          el.style.setProperty('display', 'none', 'important');
+        });
+
+        // Stick ONLY the "WE ARE A MANUFACTURER REGISTERED IN USA, BASED IN PAKISTAN" bar at top: 0
+        const annBar = document.getElementById('shopify-section-announcement-bar');
+        if (annBar) {
+          annBar.style.setProperty('position', 'sticky', 'important');
+          annBar.style.setProperty('top', '0', 'important');
+          annBar.style.setProperty('z-index', '999999', 'important');
         }
       }
     } catch(e) {}
