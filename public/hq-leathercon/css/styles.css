@@ -15181,38 +15181,50 @@ a.hq-whatsapp-order-btn {
   }
 }
 
-/* 9. Desktop 50/50 Split Restoration for Clearance Sale Video + 2-Column Product Grid */
+/* 9. Desktop 50/50 Split Restoration for Clearance Sale Video + 3x2 Product Grid (Zero Inner Scroll Trap) */
 @media screen and (min-width: 990px) {
   [class*="ai-media-product-container-"] {
     display: flex !important;
     flex-direction: row !important;
     align-items: stretch !important;
-    height: 800px !important;
+    height: auto !important;
     max-width: 100% !important;
     width: 100% !important;
+    overflow: visible !important;
   }
   [class*="ai-media-column-"] {
     flex: 1 1 50% !important;
     width: 50% !important;
     max-width: 50% !important;
-    height: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
     position: relative !important;
     overflow: hidden !important;
+  }
+  [class*="ai-media-content-"] {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
   [class*="ai-media-product-container-"] > .hq-swipe-wrap {
     flex: 1 1 50% !important;
     width: 50% !important;
     max-width: 50% !important;
-    height: 100% !important;
+    height: auto !important;
     display: flex !important;
+    overflow: visible !important;
   }
   [class*="ai-product-column-"] {
     flex: 1 1 50% !important;
     width: 50% !important;
     max-width: 50% !important;
-    height: 100% !important;
+    height: auto !important;
     padding: 15px !important;
-    overflow-y: auto !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
     overflow-x: hidden !important;
     box-sizing: border-box !important;
   }
@@ -15223,7 +15235,7 @@ a.hq-whatsapp-order-btn {
   }
   [class*="ai-product-grid-"] {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 12px !important;
     width: 100% !important;
     height: fit-content !important;
@@ -16035,7 +16047,7 @@ body.hq-is-product-page [data-section-type="quote-slider"] {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
-  z-index: 999999 !important;
+  z-index: 99900 !important;
   width: 100% !important;
 }
 
@@ -16056,7 +16068,7 @@ body.hq-is-product-page [data-section-type="quote-slider"] {
     position: -webkit-sticky !important;
     position: sticky !important;
     top: 0 !important;
-    z-index: 999999 !important;
+    z-index: 99900 !important;
   }
 }
 
@@ -16064,10 +16076,6 @@ body.hq-is-product-page [data-section-type="quote-slider"] {
 html body #saimdev-demo-banner,
 html body #shopify-section-announcement-bar,
 html body .section-announcement-bar,
-html body #shopify-section-header,
-html body .section-header,
-html body #pageheader,
-html body .pageheader,
 html body .pageheader--sticky,
 html body .product-detail .gallery,
 html body .product-column-left,
@@ -16076,6 +16084,45 @@ html body .sticky-content-container {
   position: relative !important;
   top: auto !important;
   bottom: auto !important;
+}
+
+/* Elevate Header & Currency Dropdown ABOVE #hq-sticky-nav-holder (99900) on Laptop & Mobile */
+html body #shopify-section-header,
+html body .section-header,
+html body #pageheader,
+html body .pageheader {
+  position: relative !important;
+  top: auto !important;
+  bottom: auto !important;
+  z-index: 1000500 !important;
+  overflow: visible !important;
+}
+
+.logo-area,
+.logo-area__right,
+.logo-area__right__inner,
+.logo-area__right .announcement-bar__right,
+.logo-area__right .header-disclosures,
+.logo-area__right .selectors-form,
+.logo-area__right .selectors-form__item,
+.logo-area__right .disclosure {
+  overflow: visible !important;
+  z-index: 1000600 !important;
+}
+
+.logo-area__right .disclosure-list {
+  z-index: 1000700 !important;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.logo-area__right .disclosure-list[aria-expanded="true"],
+.logo-area__right .disclosure-list.disclosure-list--visible {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: none !important;
 }
 
 html body .my__atc,
@@ -16090,14 +16137,16 @@ html body iframe[src*="youtu.be"] {
 }
 
 /* ============================================================
-   18. HARDWARE-ACCELERATED OFF-SCREEN RENDERING (ZERO SCROLL JANK)
+   18. NATIVE GPU-ACCELERATED CAROUSEL TOUCH & SCROLL STABILITY
    ============================================================ */
-#shopify-section-footer,
-.section-footer,
-.product-recommendations,
-.section-custom-liquid {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 480px;
+@media screen and (max-width: 989px) {
+  [class*="ai-product-column-"],
+  .collection-slider .collection-listing,
+  .collection-slider .product-list.carousel {
+    touch-action: pan-x pan-y !important;
+    overscroll-behavior-x: contain !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
 }
 
 /* ===== END HQ CUSTOM FIXES ===== */

@@ -1850,37 +1850,13 @@
           }
         });
 
-        // Touch Swipe support (explicit horizontal touch tracking)
-        sc.addEventListener('touchstart', function (e) {
-          if (isAiProductCol && window.innerWidth >= 990) return;
-          if (!e.touches || !e.touches.length) return;
-          startX = e.touches[0].clientX;
-          startY = e.touches[0].clientY;
-          startScrollLeft = sc.scrollLeft;
-          dragged = false;
-          sc.style.scrollBehavior = 'auto';
-        }, { passive: true });
+        // Unlock any deferred .lazyload--manual images inside carousels immediately
+        sc.querySelectorAll('.lazyload--manual').forEach(el => {
+          el.classList.remove('lazyload--manual');
+          el.classList.add('lazyload');
+        });
 
-        sc.addEventListener('touchmove', function (e) {
-          if (isAiProductCol && window.innerWidth >= 990) return;
-          if (!e.touches || !e.touches.length) return;
-          const dx = e.touches[0].clientX - startX;
-          const dy = e.touches[0].clientY - startY;
-          if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 5) {
-            dragged = true;
-            sc.scrollLeft = startScrollLeft - dx;
-            if (e.cancelable) e.preventDefault();
-          }
-        }, { passive: false });
-
-        sc.addEventListener('touchend', function () {
-          sc.style.scrollBehavior = 'smooth';
-          if (dragged) {
-            setTimeout(() => { dragged = false; }, 60);
-          }
-        }, { passive: true });
-
-        // Prevent accidental click navigation right after a swipe/drag
+        // Prevent accidental click navigation right after a mouse drag
         sc.addEventListener('click', function (e) {
           if (dragged) {
             e.preventDefault();
@@ -1896,6 +1872,35 @@
   // ============================================================
   function initCurrencySelector() {
     try {
+      // 1. Neutralize all /localization forms globally so selecting a currency can NEVER trigger a 404 POST
+      document.querySelectorAll('form[action*="localization"], form.selectors-form, form.shopify-localization-form, #localization_form, #localization_form_annbar').forEach(form => {
+        form.setAttribute('action', 'javascript:void(0);');
+        form.removeAttribute('method');
+        form.onsubmit = function (e) {
+          if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+          return false;
+        };
+        form.submit = function () {
+          return false;
+        };
+      });
+
+      // 2. Unload theme.js Disclosure jQuery instances so theme.js never submits the form or double-toggles the list
+      if (window.jQuery) {
+        try {
+          window.jQuery('.disclosure').each(function () {
+            const inst = window.jQuery(this).data('disclosure');
+            if (inst && typeof inst.unload === 'function') {
+              inst.unload();
+            }
+          });
+          window.jQuery('.disclosure, .disclosure__toggle, .disclosure-list, .disclosure-list__option, [data-disclosure-toggle], [data-disclosure-option]').off();
+        } catch (e) {}
+      }
+
       const disclosures = Array.from(document.querySelectorAll('.disclosure[data-disclosure-country], .logo-area__right .disclosure, #pagefooter .disclosure'));
       if (!disclosures.length) return;
 
@@ -1919,10 +1924,62 @@
         HKD: { rate: 0.028, prefix: 'HK$', suffix: ' HKD', decimals: 2 },
         MYR: { rate: 0.016, prefix: 'RM', suffix: ' MYR', decimals: 2 },
         TRY: { rate: 0.125, prefix: '₺', suffix: ' TRY', decimals: 2 },
-        ZAR: { rate: 0.065, prefix: 'R', suffix: ' ZAR', decimals: 2 }
+        ZAR: { rate: 0.065, prefix: 'R', suffix: ' ZAR', decimals: 2 },
+        ALL: { rate: 0.33, prefix: 'L ', suffix: ' ALL', decimals: 0 },
+        DZD: { rate: 0.48, prefix: 'DZD ', suffix: '', decimals: 0 },
+        AMD: { rate: 1.40, prefix: 'AMD ', suffix: '', decimals: 0 },
+        AZN: { rate: 0.0061, prefix: '₼', suffix: ' AZN', decimals: 2 },
+        BOB: { rate: 0.025, prefix: 'Bs.', suffix: ' BOB', decimals: 2 },
+        BAM: { rate: 0.0065, prefix: 'KM ', suffix: ' BAM', decimals: 2 },
+        BWP: { rate: 0.049, prefix: 'P', suffix: ' BWP', decimals: 2 },
+        BND: { rate: 0.00485, prefix: 'B$', suffix: ' BND', decimals: 2 },
+        KYD: { rate: 0.0030, prefix: '$', suffix: ' KYD', decimals: 2 },
+        CLP: { rate: 3.45, prefix: '$', suffix: ' CLP', decimals: 0 },
+        CNY: { rate: 0.026, prefix: '¥', suffix: ' CNY', decimals: 2 },
+        CRC: { rate: 1.85, prefix: '₡', suffix: ' CRC', decimals: 0 },
+        CZK: { rate: 0.084, prefix: 'Kč ', suffix: ' CZK', decimals: 0 },
+        DKK: { rate: 0.025, prefix: 'kr.', suffix: ' DKK', decimals: 2 },
+        DOP: { rate: 0.215, prefix: 'RD$', suffix: ' DOP', decimals: 2 },
+        EGP: { rate: 0.175, prefix: 'EGP ', suffix: '', decimals: 2 },
+        SZL: { rate: 0.065, prefix: 'E', suffix: ' SZL', decimals: 2 },
+        FKP: { rate: 0.00285, prefix: '£', suffix: ' FKP', decimals: 2 },
+        HNL: { rate: 0.089, prefix: 'L', suffix: ' HNL', decimals: 2 },
+        HUF: { rate: 1.32, prefix: 'Ft ', suffix: ' HUF', decimals: 0 },
+        ISK: { rate: 0.50, prefix: 'kr ', suffix: ' ISK', decimals: 0 },
+        IDR: { rate: 57.0, prefix: 'Rp ', suffix: ' IDR', decimals: 0 },
+        KZT: { rate: 1.75, prefix: '₸', suffix: ' KZT', decimals: 0 },
+        KES: { rate: 0.465, prefix: 'KSh ', suffix: ' KES', decimals: 0 },
+        KGS: { rate: 0.31, prefix: 'KGS ', suffix: '', decimals: 0 },
+        LBP: { rate: 322.0, prefix: 'LBP ', suffix: '', decimals: 0 },
+        MOP: { rate: 0.029, prefix: 'MOP$', suffix: ' MOP', decimals: 2 },
+        MUR: { rate: 0.165, prefix: '₨', suffix: ' MUR', decimals: 2 },
+        MXN: { rate: 0.072, prefix: '$', suffix: ' MXN', decimals: 2 },
+        MDL: { rate: 0.064, prefix: 'L ', suffix: ' MDL', decimals: 2 },
+        MNT: { rate: 12.2, prefix: '₮', suffix: ' MNT', decimals: 0 },
+        MAD: { rate: 0.036, prefix: 'MAD ', suffix: '', decimals: 2 },
+        MMK: { rate: 7.55, prefix: 'K', suffix: ' MMK', decimals: 0 },
+        NPR: { rate: 0.48, prefix: 'Rs.', suffix: ' NPR', decimals: 2 },
+        NOK: { rate: 0.039, prefix: 'kr ', suffix: ' NOK', decimals: 2 },
+        PEN: { rate: 0.0135, prefix: 'S/', suffix: ' PEN', decimals: 2 },
+        PHP: { rate: 0.21, prefix: '₱', suffix: ' PHP', decimals: 2 },
+        PLN: { rate: 0.0145, prefix: 'zł', suffix: ' PLN', decimals: 2 },
+        RON: { rate: 0.0167, prefix: 'Lei ', suffix: ' RON', decimals: 2 },
+        RSD: { rate: 0.39, prefix: 'RSD ', suffix: '', decimals: 0 },
+        KRW: { rate: 5.0, prefix: '₩', suffix: ' KRW', decimals: 0 },
+        SEK: { rate: 0.038, prefix: 'kr ', suffix: ' SEK', decimals: 2 },
+        TWD: { rate: 0.115, prefix: 'NT$', suffix: ' TWD', decimals: 0 },
+        THB: { rate: 0.122, prefix: '฿', suffix: ' THB', decimals: 2 },
+        UAH: { rate: 0.15, prefix: '₴', suffix: ' UAH', decimals: 2 },
+        UZS: { rate: 46.0, prefix: 'UZS ', suffix: '', decimals: 0 },
+        VND: { rate: 91.0, prefix: '₫', suffix: ' VND', decimals: 0 },
+        XPF: { rate: 0.40, prefix: 'Fr ', suffix: ' XPF', decimals: 0 },
+        INR: { rate: 0.30, prefix: '₹', suffix: ' INR', decimals: 0 },
+        BDT: { rate: 0.43, prefix: '৳', suffix: ' BDT', decimals: 0 },
+        BRL: { rate: 0.020, prefix: 'R$', suffix: ' BRL', decimals: 2 }
       };
 
       let activeCurrencyCode = 'PKR';
+      let activeCurrencyLabel = 'Pakistan (PKR ₨)';
 
       function cleanRawLabel(raw) {
         return (raw || '')
@@ -1952,9 +2009,21 @@
         return m ? m[1] : 'PKR';
       }
 
-      function convertAllPricesOnPage(currencyCode) {
+      function getCurrencyConfig(currencyCode, labelText) {
+        if (RATES[currencyCode]) return RATES[currencyCode];
+        const m = (labelText || '').match(/\(([A-Z]{3})\s*([^)]*)\)/);
+        if (m) {
+          const code = m[1];
+          const sym = (m[2] || '').trim() || code;
+          return { rate: 0.0036, prefix: sym + ' ', suffix: ' ' + code, decimals: 2 };
+        }
+        return RATES.PKR;
+      }
+
+      function convertAllPricesOnPage(currencyCode, labelText) {
         activeCurrencyCode = currencyCode || activeCurrencyCode || 'PKR';
-        const cfg = RATES[activeCurrencyCode] || RATES.PKR;
+        if (labelText) activeCurrencyLabel = labelText;
+        const cfg = getCurrencyConfig(activeCurrencyCode, activeCurrencyLabel);
         const priceNodes = document.querySelectorAll(
           '.theme-money, .current-price, .was-price, [class*="ai-product-price-"], [class*="ai-compare-price-"], #hq-builder-price'
         );
@@ -1982,22 +2051,39 @@
       }
 
       window.HQ_RECONVERT_PRICES = function () {
-        convertAllPricesOnPage(activeCurrencyCode);
+        convertAllPricesOnPage(activeCurrencyCode, activeCurrencyLabel);
       };
 
+      function closeAllDisclosures() {
+        disclosures.forEach(disc => {
+          const b = disc.querySelector('.disclosure__toggle');
+          const l = disc.querySelector('.disclosure-list');
+          if (b) b.setAttribute('aria-expanded', 'false');
+          if (l) {
+            l.setAttribute('aria-expanded', 'false');
+            l.classList.remove('disclosure-list--visible');
+          }
+        });
+        document.querySelectorAll('#shopify-section-header, #pageheader').forEach(el => {
+          el.classList.remove('hq-currency-open');
+        });
+      }
+
       function applyCurrencySelection(countryVal, labelText, isManualUserAction) {
+        const cleanLabel = cleanRawLabel(labelText);
         disclosures.forEach(disc => {
           const btn = disc.querySelector('.disclosure__toggle');
           const list = disc.querySelector('.disclosure-list');
           const input = disc.querySelector('input[name="country_code"]');
-          if (btn && labelText) {
+          if (btn && cleanLabel) {
             const isHeader = !!disc.closest('.logo-area__right');
-            btn.setAttribute('data-full-label', labelText);
-            btn.textContent = isHeader ? compactLabelForMobile(labelText) : labelText;
+            btn.setAttribute('data-full-label', cleanLabel);
+            btn.textContent = isHeader ? compactLabelForMobile(cleanLabel) : cleanLabel;
             btn.setAttribute('aria-expanded', 'false');
           }
           if (list) {
             list.setAttribute('aria-expanded', 'false');
+            list.classList.remove('disclosure-list--visible');
             list.querySelectorAll('.disclosure-list__item').forEach(li => {
               const opt = li.querySelector('.disclosure-list__option');
               const val = opt ? opt.getAttribute('data-value') : '';
@@ -2010,12 +2096,15 @@
             input.value = countryVal;
           }
         });
+        document.querySelectorAll('#shopify-section-header, #pageheader').forEach(el => {
+          el.classList.remove('hq-currency-open');
+        });
 
-        const code = extractCurrencyCode(labelText);
-        convertAllPricesOnPage(code);
+        const code = extractCurrencyCode(cleanLabel);
+        convertAllPricesOnPage(code, cleanLabel);
         try {
           localStorage.setItem('hq_selected_country', countryVal);
-          localStorage.setItem('hq_selected_label', labelText);
+          localStorage.setItem('hq_selected_label', cleanLabel);
           if (isManualUserAction) {
             localStorage.setItem('hq_user_manual_currency', '1');
           }
@@ -2025,14 +2114,6 @@
       disclosures.forEach(disc => {
         if (disc.dataset.hqCurrencyInit === '1') return;
         disc.dataset.hqCurrencyInit = '1';
-
-        const form = disc.closest('form');
-        if (form) {
-          form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-          });
-        }
 
         const btn = disc.querySelector('.disclosure__toggle');
         const list = disc.querySelector('.disclosure-list');
@@ -2049,37 +2130,37 @@
         btn.addEventListener('click', function (e) {
           e.preventDefault();
           e.stopPropagation();
-          const isOpen = list.getAttribute('aria-expanded') === 'true';
-          // Close all other disclosures first
-          disclosures.forEach(other => {
-            const ob = other.querySelector('.disclosure__toggle');
-            const ol = other.querySelector('.disclosure-list');
-            if (ob) ob.setAttribute('aria-expanded', 'false');
-            if (ol) ol.setAttribute('aria-expanded', 'false');
-          });
-          btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-          list.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-        });
+          e.stopImmediatePropagation();
+          const isOpen = list.getAttribute('aria-expanded') === 'true' || list.classList.contains('disclosure-list--visible');
+          closeAllDisclosures();
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            list.setAttribute('aria-expanded', 'true');
+            list.classList.add('disclosure-list--visible');
+            if (isHeader) {
+              document.querySelectorAll('#shopify-section-header, #pageheader').forEach(el => {
+                el.classList.add('hq-currency-open');
+              });
+            }
+          }
+        }, true);
 
         list.querySelectorAll('.disclosure-list__option').forEach(opt => {
+          opt.setAttribute('href', 'javascript:void(0);');
           opt.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
+            e.stopImmediatePropagation();
             const val = opt.getAttribute('data-value') || 'PK';
-            const label = (opt.textContent || '').replace(/\s+/g, ' ').trim();
+            const label = cleanRawLabel(opt.textContent || '');
             applyCurrencySelection(val, label, true);
-          });
+          }, true);
         });
       });
 
       document.addEventListener('click', function (e) {
         if (!e.target.closest('.disclosure')) {
-          disclosures.forEach(disc => {
-            const b = disc.querySelector('.disclosure__toggle');
-            const l = disc.querySelector('.disclosure-list');
-            if (b) b.setAttribute('aria-expanded', 'false');
-            if (l) l.setAttribute('aria-expanded', 'false');
-          });
+          closeAllDisclosures();
         }
       });
 
