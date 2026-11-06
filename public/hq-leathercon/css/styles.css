@@ -15134,7 +15134,7 @@ a.hq-whatsapp-order-btn {
     object-fit: cover !important;
     object-position: center !important;
     display: block !important;
-    filter: brightness(0.84) !important;
+    filter: none !important;
   }
 }
 
@@ -15177,7 +15177,7 @@ a.hq-whatsapp-order-btn {
     object-fit: cover !important;
     object-position: center !important;
     display: block !important;
-    filter: brightness(0.84) !important;
+    filter: none !important;
   }
 }
 

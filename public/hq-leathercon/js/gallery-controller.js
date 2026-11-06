@@ -568,20 +568,53 @@
   }
 
   // ============================================================
-  // 5. PRODUCT GALLERY THUMBNAILS, TOUCH SWIPE & INSTANT IMAGE PRELOADER
+  // 5. PRODUCT GALLERY THUMBNAILS, TOUCH SWIPE & MAX HD IMAGE QUALITY
   // ============================================================
   function optimizeShopifyImageUrl(url, width) {
-    if (!url || typeof url !== 'string' || !url.includes('cdn.shopify.com')) return url;
+    if (!url || typeof url !== 'string') return url;
+    let cleaned = url.replace(/\{width\}/gi, String(width || 1200));
+    if (!cleaned.includes('cdn.shopify.com')) return cleaned;
+    // Strip legacy Shopify size suffixes (_small, _medium, _compact, _large, _grande, _180x, _300x, etc.) so full HD master is served
+    cleaned = cleaned.replace(/_(?:small|medium|compact|large|grande|\d+x\d*)(?=\.(?:jpg|jpeg|png|webp))/gi, '');
     try {
-      const u = new URL(url, window.location.origin);
-      u.searchParams.set('width', String(width || 800));
+      const u = new URL(cleaned, window.location.origin);
+      if (width) {
+        u.searchParams.set('width', String(width));
+      } else {
+        u.searchParams.delete('width');
+      }
       return u.toString();
     } catch (e) {
-      return url + (url.includes('?') ? '&' : '?') + 'width=' + (width || 800);
+      return cleaned.replace(/([?&])width=\d+/i, '$1width=' + (width || 1600));
     }
   }
 
   function initProductGallery() {
+    // Upgrade all page images to maximum HD quality and unlock any deferred lazyload placeholders
+    document.querySelectorAll('img').forEach((img, idx) => {
+      if (img.closest('.product-slideshow, .thumbnails')) return;
+      const dataSrc = img.getAttribute('data-src') || '';
+      const rawSrc = img.getAttribute('src') || '';
+      const bestRaw = (dataSrc && !dataSrc.includes('data:image')) ? dataSrc : rawSrc;
+      if (bestRaw) {
+        if (bestRaw.includes('cdn.shopify.com') || bestRaw.includes('{width}')) {
+          const hdUrl = optimizeShopifyImageUrl(bestRaw, 1400);
+          if (img.src !== hdUrl) img.src = hdUrl;
+          if (img.hasAttribute('data-src')) img.setAttribute('data-src', hdUrl);
+          img.removeAttribute('srcset');
+          img.removeAttribute('data-srcset');
+        } else if (!rawSrc && dataSrc) {
+          img.src = dataSrc;
+        }
+      }
+      img.classList.remove('lazyload--manual', 'lazyload');
+      img.classList.add('lazyloaded');
+      if (idx < 8) {
+        img.loading = 'eager';
+      }
+      img.decoding = 'async';
+    });
+
     const galleries = Array.from(document.querySelectorAll('.product-detail .gallery, .gallery--layout-carousel-beside, .product-gallery'));
     if (!galleries.length) return;
 
@@ -635,24 +668,24 @@
       const thumbLinks = thumbContainer ? Array.from(thumbContainer.querySelectorAll('a.thumbnail, .thumbnail')) : [];
       if (!slides.length) return;
 
-      // 2. Optimize & Preload all gallery images immediately so switching is 0ms instant
+      // 2. Upgrade & Preload all gallery images at Max HD (1800px) so switching is 0ms instant and crystal clear
       slides.forEach((slide, i) => {
         const img = slide.querySelector('img');
         if (img) {
-          const rawSrc = img.getAttribute('data-src') || img.getAttribute('src') || '';
+          const rawSrc = (thumbLinks[i] && thumbLinks[i].getAttribute('href')) || img.getAttribute('data-src') || img.getAttribute('src') || '';
           if (rawSrc) {
-            const fastMainSrc = optimizeShopifyImageUrl(rawSrc, 900);
-            img.src = fastMainSrc;
-            img.setAttribute('data-src', fastMainSrc);
+            const hdMainSrc = optimizeShopifyImageUrl(rawSrc, 1800);
+            img.src = hdMainSrc;
+            img.setAttribute('data-src', hdMainSrc);
             img.removeAttribute('srcset');
             img.removeAttribute('data-srcset');
-            img.loading = i === 0 ? 'eager' : 'eager';
+            img.loading = 'eager';
             img.decoding = 'async';
             if (i === 0) img.setAttribute('fetchpriority', 'high');
             img.classList.remove('lazyload');
             img.classList.add('lazyloaded');
             const preloadImg = new Image();
-            preloadImg.src = fastMainSrc;
+            preloadImg.src = hdMainSrc;
           }
         }
       });
@@ -660,9 +693,11 @@
       thumbLinks.forEach(thumb => {
         const tImg = thumb.querySelector('img');
         if (tImg) {
-          const rawThumb = tImg.getAttribute('data-src') || tImg.getAttribute('src') || thumb.getAttribute('href') || '';
+          const rawThumb = thumb.getAttribute('href') || tImg.getAttribute('data-src') || tImg.getAttribute('src') || '';
           if (rawThumb) {
-            tImg.src = optimizeShopifyImageUrl(rawThumb, 180);
+            tImg.src = optimizeShopifyImageUrl(rawThumb, 480);
+            tImg.removeAttribute('srcset');
+            tImg.removeAttribute('data-srcset');
             tImg.loading = 'eager';
             tImg.decoding = 'async';
           }
@@ -671,8 +706,8 @@
 
       const slideUrls = slides.map((s, i) => {
         const im = s.querySelector('img');
-        const u = (im && (im.getAttribute('data-src') || im.getAttribute('src'))) || (thumbLinks[i] && thumbLinks[i].getAttribute('href')) || '';
-        return optimizeShopifyImageUrl(u, 900);
+        const u = (thumbLinks[i] && thumbLinks[i].getAttribute('href')) || (im && (im.getAttribute('data-src') || im.getAttribute('src'))) || '';
+        return optimizeShopifyImageUrl(u, 1800);
       });
 
       let currentIndex = 0;
@@ -789,21 +824,6 @@
           else showProductSlide(currentIndex - 1);
         }
       }, { passive: true });
-    });
-
-    // Also optimize any collection/card Shopify images on the page for fast loading
-    document.querySelectorAll('img[src*="cdn.shopify.com"], img[data-src*="cdn.shopify.com"]').forEach((img, idx) => {
-      if (img.closest('.product-slideshow, .thumbnails')) return;
-      const src = img.getAttribute('src') || img.getAttribute('data-src') || '';
-      if (src && !src.includes('width=')) {
-        const fastUrl = optimizeShopifyImageUrl(src, 540);
-        img.src = fastUrl;
-        if (img.hasAttribute('data-src')) img.setAttribute('data-src', fastUrl);
-      }
-      if (idx < 6) {
-        img.loading = 'eager';
-      }
-      img.decoding = 'async';
     });
   }
 
