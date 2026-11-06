@@ -2445,6 +2445,49 @@
   // ============================================================
   function initHelpAndPolicyPages() {
     try {
+      // Ensure all .cc-accordion-item elements (Specifications, Shipping & Returns, Care Details, Size & Fit, FAQs) always sync .is-open and panel visibility
+      document.querySelectorAll('details.cc-accordion-item').forEach(item => {
+        if (item.open) {
+          item.classList.add('is-open');
+        }
+        item.addEventListener('toggle', function () {
+          item.classList.remove('is-closing');
+          item.classList.toggle('is-open', item.open);
+          const panel = item.querySelector('.cc-accordion-item__panel');
+          if (panel) {
+            panel.style.height = 'auto';
+            panel.style.display = item.open ? 'block' : '';
+          }
+          const content = item.querySelector('.cc-accordion-item__content');
+          if (content && item.open) {
+            content.style.opacity = '1';
+            content.style.visibility = 'visible';
+            content.style.transform = 'translateY(0)';
+          }
+        });
+      });
+
+      // Wire up "View complete size chart" button inside Size & Fit accordion
+      document.querySelectorAll('.view_size_guide').forEach(btn => {
+        if (btn.dataset.hqSizeChartInit === '1') return;
+        btn.dataset.hqSizeChartInit = '1';
+        btn.addEventListener('click', function (e) {
+          const targetSel = btn.getAttribute('data-target');
+          const modal = targetSel ? document.querySelector(targetSel) : null;
+          if (modal) {
+            if (window.jQuery && typeof window.jQuery(modal).modal === 'function') {
+              window.jQuery(modal).modal('show');
+              return;
+            }
+            modal.style.display = 'block';
+            modal.classList.add('in', 'show');
+          } else {
+            e.preventDefault();
+            window.location.href = '/hq-leathercon/pages/size-guide/index.html';
+          }
+        });
+      });
+
       const searchInp = document.querySelector('.faq-search__input');
       if (searchInp && searchInp.dataset.hqFaqSearch !== '1') {
         searchInp.dataset.hqFaqSearch = '1';
@@ -2461,6 +2504,7 @@
             const match = !q || text.includes(q);
             item.style.display = match ? '' : 'none';
             if (q && match) {
+              item.open = true;
               item.classList.add('is-open');
               const panel = item.querySelector('.cc-accordion-item__panel');
               if (panel) panel.style.display = 'block';

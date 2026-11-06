@@ -15784,6 +15784,9 @@ main#content {
 .product-detail .product-detail-accordion {
   margin-top: 8px !important;
 }
+.product-detail .product-detail-accordion .cc-accordion {
+  margin-bottom: 0 !important;
+}
 .product-detail .product-detail-accordion .cc-accordion-item {
   border-bottom: 1px solid #e2e8f0 !important;
 }
@@ -15795,10 +15798,47 @@ main#content {
   text-transform: uppercase !important;
   color: #0f172a !important;
 }
+.cc-accordion-item[open] .cc-accordion-item__panel,
+.cc-accordion-item.is-open .cc-accordion-item__panel {
+  height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+}
+.js .cc-accordion-item[open] .cc-accordion-item__content,
+.js .cc-accordion-item.is-open .cc-accordion-item__content,
+.cc-accordion-item[open] .cc-accordion-item__content,
+.cc-accordion-item.is-open .cc-accordion-item__content,
 .product-detail .product-detail-accordion .cc-accordion-item__content {
   padding: 8px 6px 20px 6px !important;
   line-height: 1.7 !important;
   color: #334155 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  display: block !important;
+}
+.product-detail .product-detail-accordion .cc-accordion-item__content ul,
+.product-detail .product-detail-accordion .cc-accordion-item__content li,
+.product-detail .product-detail-accordion .cc-accordion-item__content p,
+.product-detail .product-detail-accordion .cc-accordion-item__content h4,
+.product-detail .product-detail-accordion .cc-accordion-item__content strong {
+  color: #1e293b !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.product-detail .product-detail-accordion .view_size_guide {
+  display: inline-block !important;
+  margin-top: 8px !important;
+  padding: 8px 14px !important;
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
 }
 
 @media screen and (max-width: 768px) {
