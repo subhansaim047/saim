@@ -11,7 +11,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="telephone=no" name="format-detection"/>
 <link href="//gmpg.org/xfn/11" rel="profile"/>
-<title>A&amp;K Mobile Detailing â€“ Interior &amp; Exterior Detailing</title>
+<title>A&amp;K Mobile Detailing – Interior &amp; Exterior Detailing</title>
 <style>body{--booked_button_color: #c5a48e;}
 
 
@@ -317,7 +317,7 @@ header::before, header::after, .top_panel::before, .top_panel::after,
 <link href="css/custom-theme.css?ver=6.9.7" id="perfect-scrollbar-wpc-css" media="all" property="stylesheet" rel="stylesheet" type="text/css"/>
 <link href="css/feather.css?ver=6.9.7" id="woosq-feather-css" media="all" property="stylesheet" rel="stylesheet" type="text/css"/>
 <link href="css/frontend.css?ver=4.2.9" id="woosq-frontend-css" media="all" property="stylesheet" rel="stylesheet" type="text/css"/>
-<link as="font" crossorigin="anonymous" href="fonts/tinvwl-webfont.woff2?ver=xu2uyi" id="tinvwl-webfont-font-css" media="all" property="stylesheet" rel="preload" type="font/woff2"/>
+
 <link href="css/webfont.min.css?ver=2.11.1" id="tinvwl-webfont-css" media="all" property="stylesheet" rel="stylesheet" type="text/css"/>
 <link href="css/public.min.css?ver=2.11.1" id="tinvwl-css" media="all" property="stylesheet" rel="stylesheet" type="text/css"/>
 <link href="css/all.css" id="font-awesome-official-css" media="all" property="stylesheet" rel="stylesheet" type="text/css"/>
@@ -394,7 +394,7 @@ header::before, header::after, .top_panel::before, .top_panel::after,
 <meta content="WordPress 6.9.7" name="generator"/>
 <meta content="WooCommerce 10.6.0" name="generator"/>
 <link href="https://www.saimdev.site/demos/akdetailing/pricing.html" rel="canonical"/>
-<link as="font" crossorigin="" href="fonts/advanced-popups-icons.woff" rel="preload" type="font/woff"/>
+
 <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }
 /* Remove header black border */
 header, .top_panel, .top_panel_custom, .elementor-location-header {
@@ -498,10 +498,10 @@ header::before, header::after, .top_panel::before, .top_panel::after,
 
 </style>
 <meta content="Powered by Slider Revolution 6.7.41 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." name="generator"/>
-<link href="index.htmlwp-content/uploads/2023/08/cropped-favicon-32x32.png" rel="icon" sizes="32x32"/>
-<link href="index.htmlwp-content/uploads/2023/08/cropped-favicon-192x192.png" rel="icon" sizes="192x192"/>
-<link href="index.htmlwp-content/uploads/2023/08/cropped-favicon-180x180.png" rel="apple-touch-icon"/>
-<meta content="index.htmlwp-content/uploads/2023/08/cropped-favicon-270x270.png" name="msapplication-TileImage"/>
+<link href="images/cropped-favicon-32x32.png" rel="icon" sizes="32x32"/>
+<link href="images/cropped-favicon-192x192.png" rel="icon" sizes="192x192"/>
+<link href="images/cropped-favicon-180x180.png" rel="apple-touch-icon"/>
+<meta content="images/cropped-favicon-270x270.png" name="msapplication-TileImage"/>
 <script>function setREVStartSize(e){
 			//window.requestAnimationFrame(function() {
 				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
@@ -793,48 +793,7 @@ header::before, header::after, .top_panel::before, .top_panel::after,
 }
 
 </style>
-<style id="detailx-font-google_fonts-css" media="all" type="text/css">
-/* Remove header black border */
-header, .top_panel, .top_panel_custom, .elementor-location-header {
-    border-bottom: none !important;
-    border: none !important;
-}
-.elementor-element-8c34963 {
-    border-bottom: none !important;
-}
 
-
-/* Remove Basket and Search globally */
-.sc_layouts_cart, .search_wrap, .sc_layouts_search, .sc_layouts_item_search, .sc_layouts_iconed_text_cart {
-    display: none !important;
-}
-
-/* Remove homepage header border */
-.top_panel_custom_26472 .elementor-element-e84d419,
-.top_panel .elementor-section {
-    border-bottom: none !important;
-    border: none !important;
-}
-
-
-/* Remove ANY border or shadow from all headers on all pages completely */
-header, .top_panel, .top_panel_custom, .elementor-location-header,
-.top_panel_custom_26472 .elementor-element-e84d419,
-.top_panel .elementor-section, .top_panel .elementor-container {
-    border: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-header::before, header::after, .top_panel::before, .top_panel::after,
-.elementor-element-e84d419::before, .elementor-element-e84d419::after {
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-    height: 0 !important;
-}
-
-</style>
 <link href="css/fontello.css" id="detailx-fontello-css" media="all" property="stylesheet" rel="stylesheet" type="text/css"/>
 <link href="css/style.css" id="detailx-style-css" media="all" property="stylesheet" rel="stylesheet" type="text/css"/>
 <link href="css/style.css" id="detailx-skin-default-css" media="all" property="stylesheet" rel="stylesheet" type="text/css"/>
@@ -1106,6 +1065,101 @@ header::before, header::after, .top_panel::before, .top_panel::after,
         z-index: 1 !important;
     }
     </style>
+
+
+<style id="akdetailing-master-fix">
+/* Ensure desktop & mobile navigation menu is always visible even before superfish init */
+.sc_layouts_menu_nav,
+.menu_main_nav {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+/* Ensure Elementor invisible blocks & animations render visibly */
+.elementor-invisible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+/* Ensure .slider_type_text always shows the active slide or first slide */
+.slider_type_text,
+.slider_type_text .swiper-wrapper {
+  width: 100% !important;
+  min-height: 500px !important;
+  position: relative !important;
+}
+.slider_type_text .swiper-slide {
+  width: 100% !important;
+  height: auto !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 0 !important;
+}
+.slider_type_text .swiper-slide.custom-active-slide,
+.slider_type_text:not(:has(.custom-active-slide)) .swiper-slide:first-child {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+/* Ensure left column image inside #slider-service is always visible with proper height */
+#slider-service .elementor-col-50:first-child > .elementor-widget-wrap {
+  min-height: 480px !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+#slider-service .elementor-8554 .elementor-element-3481e6e > .elementor-widget-wrap {
+  background-image: url("images/image13-copyright.jpg") !important;
+}
+#slider-service .elementor-8553 .elementor-element-a8c53cf > .elementor-widget-wrap {
+  background-image: url("images/image09-copyright.jpg") !important;
+}
+#slider-service .elementor-8552 .elementor-element-3ae51b3 > .elementor-widget-wrap {
+  background-image: url("images/image10-copyright.jpg") !important;
+}
+#slider-service .elementor-8463 .elementor-element-6db2700 > .elementor-widget-wrap {
+  background-image: url("images/image11-copyright.jpg") !important;
+}
+#slider-service .elementor-8434 .elementor-element-604ea1f > .elementor-widget-wrap {
+  background-image: url("images/image12-copyright.jpg") !important;
+}
+@media (max-width: 767px) {
+  .slider_type_text,
+  .slider_type_text .swiper-wrapper {
+    min-height: 360px !important;
+  }
+  #slider-service .elementor-col-50:first-child > .elementor-widget-wrap {
+    min-height: 280px !important;
+  }
+  /* Prevent Auto Body Shop text from overlapping car hotspot image on mobile */
+  .elementor-3997 .elementor-element.elementor-element-6ab3b63 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    padding: 24px 15px 36px !important;
+  }
+}
+/* Hide empty blog section on our-services.html */
+.elementor-3997 .elementor-element-0a24820 {
+  display: none !important;
+}
+/* Hide empty Contact Form 7 response box */
+.wpcf7-response-output:empty {
+  display: none !important;
+}
+/* Ensure service single page sidebar & content stack cleanly on mobile */
+@media (max-width: 767px) {
+  body.single-cpt_services .content_wrap > .content,
+  body.single-cpt_services .content_wrap > .sidebar {
+    width: 100% !important;
+    float: none !important;
+  }
+}
+</style>
 </head>
 <body class="wp-singular page-template-default page page-id-4051 wp-custom-logo wp-embed-responsive wp-theme-detailx theme-detailx hide_fixed_rows_enabled woocommerce-no-js tinvwl-theme-style skin_default woo_extensions_present scheme_default blog_mode_page body_style_fullscreen is_single sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-25857 header_position_default menu_side_none no_layout fixed_blocks_sticky elementor-default elementor-kit-15 elementor-page elementor-page-4051">
 <a class="skip-link detailx_skip_link skip_to_content_link" href="#content_skip_link_anchor" tabindex="0">Skip to content</a><a class="skip-link detailx_skip_link skip_to_footer_link" href="#footer_skip_link_anchor" tabindex="0">Skip to footer</a>
@@ -1518,7 +1572,7 @@ header::before, header::after, .top_panel::before, .top_panel::after,
 </div>
 <div class="sc_layouts_item elementor-element elementor-element-4368f9d3 sc_fly_static elementor-widget elementor-widget-text-editor" data-e-type="widget" data-element_type="widget" data-id="4368f9d3" data-widget_type="text-editor.default">
 <div class="elementor-widget-container">
-<p><a class="underline_anim" href="/cdn-cgi/l/email-protection#ee87808881ae8b838f8782c08d8183">contact@akmobiledetailing.com</a></p> </div>
+<p><a class="underline_anim" href="mailto:contact@akmobiledetailing.com">contact@akmobiledetailing.com</a></p> </div>
 </div>
 <div class="sc_layouts_item elementor-element elementor-element-1b3ad41f sc_fly_static elementor-widget elementor-widget-spacer" data-e-type="widget" data-element_type="widget" data-id="1b3ad41f" data-widget_type="spacer.default">
 <div class="elementor-widget-container">
@@ -1765,7 +1819,7 @@ var wc_cart_fragments_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_u
 //# sourceURL=wc-cart-fragments-js-extra
 /* ]]> */
 </script>
-<script data-wp-strategy="defer" id="wc-cart-fragments-js" src="js/cart-fragments.min.js?ver=10.6.0"></script>
+
 <script id="tinvwl-js-extra">
 /* <![CDATA[ */
 var tinvwl_add_to_wishlist = {"text_create":"Create New","text_already_in":"\"{product_name}\" already in Wishlist","simple_flow":"1","hide_zero_counter":"","i18n_make_a_selection_text":"Please select some product options before adding this product to your wishlist.","tinvwl_break_submit":"No items or actions are selected.","tinvwl_clipboard":"Copied!","allow_parent_variable":"","block_ajax_wishlists_data":"","update_wishlists_data":"","hash_key":"ti_wishlist_data_2a4cd2effe53f994e2976112708bcf55","nonce":"0cce11add7","rest_root":"index.htmlwp-json/","plugin_url":"index.htmlwp-content/plugins/ti-woocommerce-wishlist/","wc_ajax_url":"/?wc-ajax=tinvwl","stats":"","popup_timer":"6000"};
@@ -1798,7 +1852,7 @@ var TRX_ADDONS_STORAGE = {"admin_mode":"","ajax_url":"index.htmlwp-admin/admin-a
 <script defer="defer" id="superfish-js" src="js/superfish.min.js"></script>
 <script id="tweenmax-js" src="js/gsap.min.js"></script>
 <script defer="defer" id="trx_addons-woocommerce-js" src="js/woocommerce.js"></script>
-<script id="elementor-webpack-runtime-js" src="js/webpack.runtime.min.js?ver=3.35.6"></script>
+
 <script id="elementor-frontend-modules-js" src="js/frontend-modules.min.js?ver=3.35.6"></script>
 <script id="elementor-frontend-js-before">
 /* <![CDATA[ */
@@ -1806,7 +1860,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 //# sourceURL=elementor-frontend-js-before
 /* ]]> */
 </script>
-<script id="elementor-frontend-js" src="js/frontend.min.js?ver=3.35.6"></script>
+
 <script id="detailx-init-js-extra">
 /* <![CDATA[ */
 var DETAILX_STORAGE = {"ajax_url":"index.htmlwp-admin/admin-ajax.php","ajax_nonce":"e4f3b19482","home_url":"index.html","theme_url":"index.htmlwp-content/themes/detailx/","site_scheme":"scheme_default","user_logged_in":"","mobile_layout_width":"768","mobile_device":"","mobile_breakpoint_underpanels_off":"768","mobile_breakpoint_fullheight_off":"1025","menu_side_stretch":"","menu_side_icons":"1","background_video":"","use_mediaelements":"1","resize_tag_video":"","resize_tag_iframe":"1","open_full_post":"","which_block_load":"article","admin_mode":"","msg_ajax_error":"Invalid server answer!","msg_i_agree_error":"Please accept the terms of our Privacy Policy.","toggle_title":"Filter by ","msg_copied":"Copied!","alter_link_color":"#EA0A0B","mc4wp_msg_email_min":"Email address is too short (or empty)","mc4wp_msg_email_max":"Too long email address","add_to_cart_sticky":"","button_hover":"default"};
@@ -1831,20 +1885,11 @@ var _wpmejsSettings = {"pluginPath":"/wp-includes/js/mediaelement/","classPrefix
 <script defer="defer" id="wp-mediaelement-js" src="js/wp-mediaelement.min.js?ver=6.9.7"></script>
 <script defer="defer" id="detailx-skin-default-js" src="js/skin.js"></script>
 <script defer="defer" id="detailx-woocommerce-js" src="js/woocommerce.js"></script>
-<script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"index.htmlwp-includes/js/wp-emoji-release.min.js?ver=6.9.7"}}
-</script>
-<script type="module">
-/* <![CDATA[ */
-/*! This file is auto-generated */
-var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
-//# sourceURL=index.htmlwp-includes/js/wp-emoji-loader.min.js
-/* ]]> */
-</script>
+
 <script>
 				TRX_DEMO_STORAGE['tabs_layout'] = "";
 </script>
-<script async="" src="js/ctybgkiqd4jhsgdvzlgahqx3pjybdwlg.js"></script>
+
 <!-- CUSTOM COUNTER OBSERVER FIX -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -2247,6 +2292,63 @@ document.addEventListener('DOMContentLoaded', function() {
         jQuery('body').removeClass('menu_mobile_opened');
         return false;
     });
+});
+</script>
+
+
+<script id="akdetailing-interactive-fix">
+document.addEventListener('DOMContentLoaded', function() {
+  // 1. Ensure every .slider_type_text has custom pagination bullets and first slide active
+  document.querySelectorAll('.slider_type_text').forEach(function(slider) {
+    var slides = Array.from(slider.querySelectorAll('.swiper-slide'));
+    if (!slides.length) return;
+    if (!slider.querySelector('.custom-active-slide')) {
+      slides[0].classList.add('custom-active-slide');
+    }
+    var widget = slider.closest('.elementor-widget');
+    if (widget && widget.id) {
+      var controls = document.querySelector('[data-slider-id="' + widget.id + '"]');
+      if (controls) {
+        var wrap = controls.querySelector('.slider_pagination_wrap');
+        if (wrap && wrap.children.length === 0) {
+          slides.forEach(function(s, idx) {
+            var title = s.getAttribute('data-title') || ('Service ' + (idx + 1));
+            var span = document.createElement('span');
+            span.className = 'slider_pagination_bullet swiper-pagination-bullet' + (idx === 0 ? ' custom-active-bullet swiper-pagination-bullet-active' : '');
+            span.setAttribute('data-slide-number', String(idx));
+            span.textContent = title;
+            wrap.appendChild(span);
+          });
+        }
+      }
+    }
+  });
+
+  // 2. Interactive FAQ Toggle on pricing.html
+  document.querySelectorAll('.elementor-toggle-item').forEach(function(item, idx) {
+    var title = item.querySelector('.elementor-tab-title');
+    var content = item.querySelector('.elementor-tab-content');
+    if (!title || !content) return;
+    if (idx === 0) {
+      title.classList.add('elementor-active');
+      content.style.display = 'block';
+    }
+    title.style.cursor = 'pointer';
+    title.addEventListener('click', function(e) {
+      e.preventDefault();
+      var isOpen = title.classList.contains('elementor-active');
+      item.closest('.elementor-toggle').querySelectorAll('.elementor-toggle-item').forEach(function(other) {
+        var t = other.querySelector('.elementor-tab-title');
+        var c = other.querySelector('.elementor-tab-content');
+        if (t) t.classList.remove('elementor-active');
+        if (c) c.style.display = 'none';
+      });
+      if (!isOpen) {
+        title.classList.add('elementor-active');
+        content.style.display = 'block';
+      }
+    });
+  });
 });
 </script>
 </body>

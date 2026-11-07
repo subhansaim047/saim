@@ -1,7 +1,151 @@
 <!doctype html>
 <html lang="en" data-redirect-timezone="1" dir="ltr">
 <head>
+<script id="liana-console-and-image-guard">
+(function() {
+  var origWarn = console.warn;
+  var origError = console.error;
+  function shouldIgnore(args) {
+    if (!args || !args.length) return false;
+    var msg = String(args[0] || '');
+    return msg.indexOf('Caught a recoverable error') !== -1 ||
+           msg.indexOf('Minified React error #425') !== -1 ||
+           msg.indexOf('Minified React error #422') !== -1 ||
+           msg.indexOf('Minified React error #418') !== -1 ||
+           msg.indexOf('Error finding target element') !== -1 ||
+           msg.indexOf('not a valid selector') !== -1 ||
+           msg.indexOf('was preloaded using link preload') !== -1;
+  }
+  console.warn = function() {
+    if (shouldIgnore(arguments)) return;
+    return origWarn.apply(console, arguments);
+  };
+  console.error = function() {
+    if (shouldIgnore(arguments)) return;
+    return origError.apply(console, arguments);
+  };
 
+  try {
+    var origQS = Document.prototype.querySelector;
+    Document.prototype.querySelector = function(sel) {
+      if (sel === '#' || sel === '' || !sel) return null;
+      try {
+        return origQS.call(this, sel);
+      } catch(e) {
+        return null;
+      }
+    };
+  } catch(e) {}
+
+  function rewrite(url) {
+    if (!url || typeof url !== 'string') return url;
+    if (url.indexOf('framerusercontent.com/images/') !== -1) {
+      return url.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/liana/images/');
+    }
+    return url;
+  }
+
+  try {
+    var origSrc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
+    if (origSrc && origSrc.set) {
+      Object.defineProperty(HTMLImageElement.prototype, 'src', {
+        set: function(val) {
+          return origSrc.set.call(this, rewrite(val));
+        },
+        get: origSrc.get,
+        configurable: true
+      });
+    }
+
+    var origSrcset = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'srcset');
+    if (origSrcset && origSrcset.set) {
+      Object.defineProperty(HTMLImageElement.prototype, 'srcset', {
+        set: function(val) {
+          return origSrcset.set.call(this, rewrite(val));
+        },
+        get: origSrcset.get,
+        configurable: true
+      });
+    }
+
+    var origSetAttr = Element.prototype.setAttribute;
+    Element.prototype.setAttribute = function(name, val) {
+      var lower = (name || '').toLowerCase();
+      if ((lower === 'src' || lower === 'srcset') && typeof val === 'string') {
+        val = rewrite(val);
+      }
+      return origSetAttr.call(this, name, val);
+    };
+  } catch(e) {}
+})();
+</script>
+<script id="liana-title-guard">
+(function() {
+  function clean(t) {
+    if (!t) return t;
+    return t
+      .replace(/\s*[-|–—]\s*Framer\b.*$/i, '')
+      .replace(/\s*[-|–—]\s*Made in Framer/i, '');
+  }
+  if (document.title) document.title = clean(document.title);
+  try {
+    var origDesc = Object.getOwnPropertyDescriptor(Document.prototype, 'title');
+    if (origDesc && origDesc.set) {
+      Object.defineProperty(document, 'title', {
+        set: function(val) {
+          return origDesc.set.call(this, clean(val));
+        },
+        get: origDesc.get,
+        configurable: true
+      });
+    }
+  } catch(e) {}
+  document.addEventListener('DOMContentLoaded', function() {
+    document.title = clean(document.title);
+    setTimeout(function() { document.title = clean(document.title); }, 500);
+    setTimeout(function() { document.title = clean(document.title); }, 1800);
+  });
+})();
+</script>
+<script id="liana-route-guard">
+(function() {
+  window.__normalizeLianaHref = function(href) {
+    if (!href) return href;
+    var h = href.trim();
+    if (h === '#' || h.startsWith('#') || h.startsWith('javascript:')) return h;
+    if (/^mailto:/i.test(h)) return 'mailto:hello@lianahair.com';
+    if (/^tel:/i.test(h)) return 'tel:+13055550198';
+    if (/^https?:\/\//i.test(h)) {
+      if (/facebook|instagram|tiktok|twitter|twiiter|x\.com|pinterest|themencode|framer\.com/i.test(h)) return '#';
+      if (/saimdev\.site\/demos\/liana/i.test(h)) return '/demos/liana/';
+      return h;
+    }
+
+    var clean = h.replace(/^(\.\.\/|\.\/)+/, '').replace(/^\/demos\/liana\/?/, '').replace(/^\/+|\/+$/g, '');
+    if (!clean || clean === 'index.html') return '/demos/liana/';
+    if (clean === 'about' || clean.indexOf('about') === 0) return '/demos/liana/about/';
+    if (clean === 'contact' || clean.indexOf('contact') === 0) return '/demos/liana/contact/';
+    if (clean === 'services' || clean.indexOf('services') === 0) return '/demos/liana/services/';
+    if (clean.indexOf('#') === 0) return '/demos/liana/' + clean;
+    return '/demos/liana/';
+  };
+
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href) return;
+    var norm = window.__normalizeLianaHref(href);
+    if (norm === '#') {
+      e.preventDefault();
+      return;
+    }
+    if (norm && norm !== href) {
+      a.setAttribute('href', norm);
+    }
+  }, true);
+})();
+</script>
 <style id="liana-global-location-remover">
   /* Permanently hide Location card and Google Map across SPA client-side route transitions */
   .framer-zaxhun-container,
@@ -37,82 +181,7 @@
   }
 </style>
 
-<script id="liana-title-guard">
-(function() {
-  var targetTitle = "Contact & Bookings — LIANA Salon";
-  
-  function clean(t) {
-    if (!t || typeof t !== 'string') return targetTitle;
-    var res = t
-      .replace(/Salonix/gi, "LIANA").replace(/Framer/gi, "")
-      .replace(/Template/gi, '')
-      .replace(/Template/gi, '')
-      .replace(/\s+/g, ' ')
-      .trim();
-    if (res.endsWith('-') || res.endsWith('—') || res.endsWith('|')) {
-      res = res.slice(0, -1).trim();
-    }
-    if (/service/i.test(res) && !/LIANA/i.test(res)) res = 'Services — LIANA Luxury Hair & Beauty Salon';
-    else if (/about/i.test(res) && !/LIANA/i.test(res)) res = 'About Us — LIANA Luxury Hair & Beauty Salon';
-    else if (/contact/i.test(res) && !/LIANA/i.test(res)) res = 'Contact Us — LIANA Luxury Hair & Beauty Salon';
-    else if (!/LIANA/i.test(res)) res = targetTitle;
-    return res;
-  }
-
-  var _t = targetTitle;
-
-  // 1. Lock document.title
-  try {
-    Object.defineProperty(document, 'title', {
-      get: function() {
-        return _t;
-      },
-      set: function(val) {
-        _t = clean(val);
-        var el = document.querySelector('title');
-        if (el && el.textContent !== _t) el.textContent = _t;
-      },
-      configurable: true,
-      enumerable: true
-    });
-  } catch(e) {}
-
-  // 2. Head MutationObserver
-  var obs = new MutationObserver(function() {
-    var el = document.querySelector('title');
-    if (el && (/Salonix|Template/i.test(el.textContent) || el.textContent !== _t)) {
-      _t = clean(el.textContent);
-      el.textContent = _t;
-    }
-    var metas = document.querySelectorAll('meta[content*="Salonix" i], meta[content*="alonix" i]');
-    metas.forEach(function(m) {
-      m.setAttribute('content', clean(m.getAttribute('content')));
-    });
-  });
-
-  if (document.head) {
-    obs.observe(document.head, { childList: true, subtree: true, characterData: true });
-  } else {
-    document.addEventListener('DOMContentLoaded', function() {
-      if (document.head) obs.observe(document.head, { childList: true, subtree: true, characterData: true });
-    });
-  }
-
-  // 3. Persistent polling lock
-  var polls = 0;
-  var interval = setInterval(function() {
-    polls++;
-    var el = document.querySelector('title');
-    if (el && (/Salonix|Template/i.test(el.textContent) || el.textContent !== _t)) {
-      _t = clean(el.textContent);
-      el.textContent = _t;
-    }
-    if (polls > 60) clearInterval(interval);
-  }, 100);
-})();
-</script>
-
-	<meta charset="utf-8">
+<meta charset="utf-8">
 	
 	
 		<!-- Start of headStart -->
@@ -369,6 +438,32 @@
 
 
 
+<style id="liana-master-fix">
+/* Hide Framer badge & Buy Now widgets */
+#__framer-badge-container,
+#framer-badge-container,
+.__framer-badge,
+.framer-Kr9RU,
+.framer-qv1oa6-container {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Ensure appear-on-scroll elements are immediately visible */
+[data-framer-appear-id] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+iframe[src*="google.com/maps"] {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+</style>
 </head>
 <body>
 	<script async src="" data-fid="f4712a6eb2b56addb24327c337026bd501bda726a24f9fdac96acd4a47830f17" data-no-nt></script>
@@ -403,113 +498,6 @@
 
 
 
-<script id="liana-branding-patcher">
-(function() {
-  function patchTextNodes(root) {
-    var walker = document.createTreeWalker(
-      root || document.body,
-      NodeFilter.SHOW_TEXT,
-      null,
-      false
-    );
-    var node;
-    while ((node = walker.nextNode())) {
-      if (node.nodeValue && /[Ss][Aa][Ll][Oo][Nn][Ii][Xx]/.test(node.nodeValue)) {
-        node.nodeValue = node.nodeValue
-          .replace(/SALONIX/g, 'LIANA')
-          .replace(/Salonix/g, 'LIANA')
-          .replace(/salonix/g, 'liana');
-      }
-    }
-    var imgs = (root || document).querySelectorAll('[alt*="alonix"], [aria-label*="alonix"], [title*="alonix"]');
-    imgs.forEach(function(el) {
-      if (el.alt) el.alt = el.alt.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
-      if (el.ariaLabel) el.ariaLabel = el.ariaLabel.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
-      if (el.title) el.title = el.title.replace(/[Ss]alonix/g, 'LIANA').replace(/SALONIX/g, 'LIANA');
-    });
-  }
-
-  function connectGalleryInstagram() {
-    var galleryCards = document.querySelectorAll('.framer-1xjrpv6 a, .framer-1xjrpv6 .ticker-item, a[class*="framer-IEC60"], [data-framer-name="Variant 1"]');
-    galleryCards.forEach(function(card) {
-      card.style.cursor = 'pointer';
-      card.setAttribute('title', 'View on Instagram @lianahairartistry');
-      card.setAttribute('href', 'https://www.instagram.com/lianahairartistry/');
-      card.setAttribute('target', '_blank');
-      card.setAttribute('rel', 'noopener noreferrer');
-      card.onclick = function() { window.open('https://www.instagram.com/lianahairartistry/', '_blank'); };
-    });
-
-    document.querySelectorAll('button:not([aria-label])').forEach(function(btn) {
-      var name = btn.getAttribute('data-framer-name') || 'Interactive Button';
-      btn.setAttribute('aria-label', name);
-    });
-
-    document.querySelectorAll('a:not([href])').forEach(function(a) {
-      a.setAttribute('href', '/demos/liana/index.html');
-    });
-  }
-
-  function removeLocationAndMap() {
-    var locEls = document.querySelectorAll('.framer-zaxhun-container, .framer-9jj5ej-container, iframe[src*="maps"], #INpW2lhX4');
-    locEls.forEach(function(el) {
-      el.style.setProperty('display', 'none', 'important');
-      el.style.setProperty('height', '0px', 'important');
-      el.style.setProperty('min-height', '0px', 'important');
-      el.style.setProperty('visibility', 'hidden', 'important');
-    });
-    var grid = document.querySelector('.framer-huutt .framer-1ua6wtk, .framer-1ua6wtk');
-    if (grid && window.innerWidth >= 810) {
-      grid.style.setProperty('grid-template-columns', 'repeat(2, minmax(50px, 1fr))', 'important');
-    }
-  }
-
-  function init() {
-    if (document.body) {
-      patchTextNodes(document.body);
-      connectGalleryInstagram();
-      removeLocationAndMap();
-    }
-  }
-
-  var isScrolling = false;
-  var scrollTimeout;
-  window.addEventListener('scroll', function() {
-    isScrolling = true;
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(function() {
-      isScrolling = false;
-      init();
-    }, 150);
-  }, { passive: true });
-
-  var throttleTimeout = null;
-  var observer = new MutationObserver(function() {
-    if (isScrolling) return;
-    if (throttleTimeout) return;
-    throttleTimeout = setTimeout(function() {
-      init();
-      throttleTimeout = null;
-    }, 100);
-  });
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      init();
-      observer.observe(document.body, { childList: true, subtree: true, characterData: true });
-    });
-  } else {
-    init();
-    if (document.body) {
-      observer.observe(document.body, { childList: true, subtree: true, characterData: true });
-    }
-  }
-
-  var style = document.createElement('style');
-  style.textContent = '#__framer-badge-container, #framer-badge-container, .__framer-badge { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; height: 0 !important; width: 0 !important; } .framer-1xjrpv6 a, .framer-1xjrpv6 .ticker-item { cursor: pointer !important; }';
-  document.head.appendChild(style);
-})();
-</script>
 <script id="bottle-image-patch">
 (function() {
   var b1 = './images/JLhaZrelp56AZEpvoeS5QVPj7Q.png?v=liana_final';
@@ -561,6 +549,82 @@
     if (document.body) {
       observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['src', 'srcset'] });
     }
+  }
+})();
+</script>
+<script id="liana-branding-patcher">
+(function() {
+  var isPatching = false;
+
+  function patchAll(root) {
+    if (isPatching) return;
+    isPatching = true;
+    try {
+      var scope = root || document;
+      var imgs = scope.querySelectorAll('img');
+      imgs.forEach(function(el) {
+        var srcAttr = el.getAttribute('src');
+        if (srcAttr && srcAttr.indexOf('framerusercontent.com/images/') !== -1) {
+          el.setAttribute('src', srcAttr.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/liana/images/'));
+        }
+        var srcsetAttr = el.getAttribute('srcset') || el.getAttribute('srcSet');
+        if (srcsetAttr && srcsetAttr.indexOf('framerusercontent.com/images/') !== -1) {
+          el.setAttribute('srcset', srcsetAttr.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/liana/images/'));
+        }
+      });
+
+      var bgEls = scope.querySelectorAll('[style*="framerusercontent.com/images/"]');
+      bgEls.forEach(function(el) {
+        var st = el.getAttribute('style');
+        if (st && st.indexOf('framerusercontent.com/images/') !== -1) {
+          el.setAttribute('style', st.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/liana/images/'));
+        }
+      });
+
+      var links = scope.querySelectorAll('a[href]');
+      links.forEach(function(a) {
+        var hr = a.getAttribute('href');
+        if (window.__normalizeLianaHref) {
+          var norm = window.__normalizeLianaHref(hr);
+          if (norm && norm !== hr) {
+            a.setAttribute('href', norm);
+            if (norm === '#') a.removeAttribute('target');
+          }
+        }
+      });
+    } finally {
+      isPatching = false;
+    }
+  }
+
+  var throttleTimeout = null;
+  var observer = new MutationObserver(function() {
+    if (isPatching || throttleTimeout) return;
+    throttleTimeout = setTimeout(function() {
+      throttleTimeout = null;
+      if (document.body) patchAll(document.body);
+    }, 80);
+  });
+
+  function start() {
+    if (!document.body) return;
+    patchAll(document.body);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+      attributes: true,
+      attributeFilter: ['src', 'srcset', 'srcSet']
+    });
+    setTimeout(function() { patchAll(document.body); }, 300);
+    setTimeout(function() { patchAll(document.body); }, 900);
+    setTimeout(function() { patchAll(document.body); }, 1800);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
   }
 })();
 </script>

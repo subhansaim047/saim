@@ -5,22 +5,78 @@
 <html lang="en" data-redirect-timezone="1">
 
 <head>
+<script id="serenia-image-interceptor">
+(function() {
+  function rewrite(url) {
+    if (!url || typeof url !== 'string') return url;
+    if (url.indexOf('framerusercontent.com/images/') !== -1) {
+      return url.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/serenia/images/');
+    }
+    return url;
+  }
+
+  try {
+    var origSrc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
+    Object.defineProperty(HTMLImageElement.prototype, 'src', {
+      set: function(val) {
+        return origSrc.set.call(this, rewrite(val));
+      },
+      get: origSrc.get,
+      configurable: true
+    });
+
+    var origSrcset = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'srcset');
+    if (origSrcset && origSrcset.set) {
+      Object.defineProperty(HTMLImageElement.prototype, 'srcset', {
+        set: function(val) {
+          return origSrcset.set.call(this, rewrite(val));
+        },
+        get: origSrcset.get,
+        configurable: true
+      });
+    }
+
+    var origSetAttr = Element.prototype.setAttribute;
+    Element.prototype.setAttribute = function(name, val) {
+      if ((name === 'src' || name === 'srcset') && typeof val === 'string') {
+        val = rewrite(val);
+      }
+      return origSetAttr.call(this, name, val);
+    };
+  } catch(e) {}
+})();
+</script>
 <script id="serenia-title-guard">
 (function() {
-  var targetTitle = "Sanctuary Gallery — SERENIA Spa";
-  
+  var origWarn = console.warn;
+  var origError = console.error;
+  function shouldIgnore(args) {
+    if (!args || !args.length) return false;
+    var msg = String(args[0] || '');
+    return msg.indexOf('Caught a recoverable error') !== -1 ||
+           msg.indexOf('Minified React error #425') !== -1 ||
+           msg.indexOf('Minified React error #422') !== -1 ||
+           msg.indexOf('Minified React error #418') !== -1;
+  }
+  console.warn = function() {
+    if (shouldIgnore(arguments)) return;
+    return origWarn.apply(console, arguments);
+  };
+  console.error = function() {
+    if (shouldIgnore(arguments)) return;
+    return origError.apply(console, arguments);
+  };
+
   function clean(t) {
-    if (!t || typeof t !== 'string') return targetTitle;
+    if (!t || typeof t !== 'string') return 'SERENIA — Luxury Wellness & Spa';
     var res = t
       .replace(/TNC Beauty Spa/gi, 'SERENIA — Luxury Wellness & Spa')
-      .replace(/TNC/gi, 'SERENIA')
       .replace(/Beauty Spa SERENIA/gi, 'SERENIA Luxury Spa')
-      .replace(/Beauty Spa/gi, 'SERENIA Spa')
       .replace(/BeautySpa/gi, 'SERENIA')
+      .replace(/TNC/gi, 'SERENIA')
       .replace(/Furniflow/gi, 'Serenia')
       .replace(/ThemeNcode/gi, 'Serenia Studio')
       .replace(/Spa eCommerce Template/gi, '')
-      .replace(/Template/gi, '')
       .replace(/Template/gi, '')
       .replace(/\s+/g, ' ')
       .trim();
@@ -31,73 +87,66 @@
     return res;
   }
 
-  var _t = targetTitle;
-
-  try {
-    Object.defineProperty(document, 'title', {
-      get: function() { return _t; },
-      set: function(val) {
-        _t = clean(val);
-        var el = document.querySelector('title');
-        if (el && el.textContent !== _t) el.textContent = _t;
-      },
-      configurable: true,
-      enumerable: true
-    });
-  } catch(e) {}
-
-  var obs = new MutationObserver(function() {
-    var el = document.querySelector('title');
-    if (el && (/TNC|Beauty Spa|Furniflow|Template/i.test(el.textContent) || el.textContent !== _t)) {
-      _t = clean(el.textContent);
-      el.textContent = _t;
-    }
-    var metas = document.querySelectorAll('meta[content*="TNC" i], meta[content*="Beauty Spa" i], meta[content*="Furniflow" i]');
-    metas.forEach(function(m) {
-      m.setAttribute('content', clean(m.getAttribute('content')));
-    });
+  document.addEventListener('DOMContentLoaded', function() {
+    document.title = clean(document.title);
+    setTimeout(function() { document.title = clean(document.title); }, 600);
+    setTimeout(function() { document.title = clean(document.title); }, 1800);
   });
-
-  if (document.head) {
-    obs.observe(document.head, { childList: true, subtree: true, characterData: true });
-  } else {
-    document.addEventListener('DOMContentLoaded', function() {
-      if (document.head) obs.observe(document.head, { childList: true, subtree: true, characterData: true });
-    });
-  }
 })();
 </script>
-
 <script id="serenia-route-guard">
 (function() {
+  var productSlugs = ['black-cosmetic-cream','celestial-serenade','cosmetics-cream','cosmetics-spray-cream','ladies-whitening-cream','mystic-mirage','radiant-reverie','velvet-whispers'];
+  var serviceSlugs = ['aroma-therapy','backbone-therapy','beauty-skin-care','facial-treatments','geothermal-spa','hair-spa','salt-therapy','thermo-stone-spa'];
+  var topRoutes = ['about','appointment','service','pricing','gallery','shop','team','blog','contact'];
+
+  window.__normalizeSereniaHref = function(href) {
+    if (!href) return href;
+    var h = href.trim();
+    if (h === '#' || h.startsWith('#') || h.startsWith('javascript:')) return h;
+    if (/^mailto:/i.test(h)) return 'mailto:hello@sereniaspa.com';
+    if (/^tel:/i.test(h)) return 'tel:+12125550194';
+    if (/^https?:\/\//i.test(h)) {
+      if (/facebook|instagram|twitter|x\.com|pinterest|themencode|framer\.com/i.test(h)) return '#';
+      if (/saimdev\.site\/demos\/serenia/i.test(h)) return '/demos/serenia/';
+      return h;
+    }
+
+    var clean = h.replace(/^(\.\.\/|\.\/)+/, '').replace(/^\/demos\/serenia\/?/, '').replace(/^\/+|\/+$/g, '');
+    if (!clean) return '/demos/serenia/';
+    if (clean === 'style-guide') return '/demos/serenia/service/';
+    if (clean === 'change-log') return '/demos/serenia/pricing/';
+    if (clean === 'license' || clean === 'licensing') return '/demos/serenia/contact/';
+    if (clean.indexOf('team/') === 0) return '/demos/serenia/team/';
+    if (clean.indexOf('enchant') !== -1) return '/demos/serenia/product/celestial-serenade/';
+    if (clean.indexOf('blog/') === 0) return '/demos/serenia/blog/discover-radiant-beauty-with-offering-skincare-tips/';
+    if (productSlugs.indexOf(clean) !== -1) return '/demos/serenia/product/' + clean + '/';
+    if (clean.indexOf('product/') === 0) {
+      var ps = clean.slice('product/'.length);
+      return productSlugs.indexOf(ps) !== -1 ? '/demos/serenia/product/' + ps + '/' : '/demos/serenia/product/celestial-serenade/';
+    }
+    if (serviceSlugs.indexOf(clean) !== -1) return '/demos/serenia/service/' + clean + '/';
+    if (clean.indexOf('service/') === 0) {
+      var ss = clean.slice('service/'.length);
+      return serviceSlugs.indexOf(ss) !== -1 ? '/demos/serenia/service/' + ss + '/' : '/demos/serenia/service/';
+    }
+    if (topRoutes.indexOf(clean) !== -1) return '/demos/serenia/' + clean + '/';
+    return '/demos/serenia/';
+  };
+
   document.addEventListener('click', function(e) {
     var a = e.target.closest('a');
     if (!a) return;
     var href = a.getAttribute('href');
     if (!href) return;
-    
-    if (href === '/' || href === './') {
-      a.setAttribute('href', '/demos/serenia/');
-      return;
-    }
-    
-    var known = [
-      'about', 'appointment', 'service', 'pricing', 'gallery',
-      'shop', 'product', 'team', 'blog', 'contact'
-    ];
-    
-    for (var i = 0; i < known.length; i++) {
-      var k = known[i];
-      if (href === '/' + k || href.startsWith('/' + k + '/')) {
-        a.setAttribute('href', '/demos/serenia' + href + (href.endsWith('/') ? '' : '/'));
-        break;
-      }
+    var norm = window.__normalizeSereniaHref(href);
+    if (norm && norm !== href) {
+      a.setAttribute('href', norm);
     }
   }, true);
 })();
 </script>
-
-	<meta charset="utf-8">
+<meta charset="utf-8">
 
 	<meta name="viewport" content="width=device-width">
 
@@ -565,6 +614,46 @@
 
 	
 
+<style id="serenia-master-fix">
+/* Hide Framer badge & ThemeNcode Buy Now floating button */
+#__framer-badge-container,
+#framer-badge-container,
+.__framer-badge,
+.framer-qv1oa6-container,
+.framer-Kr9RU {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Ensure all scroll-appear sections, navbars, sidebars, and cards are immediately visible */
+[data-framer-appear-id] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Fix FAQ accordion text clipping & responsive map/navbar on mobile */
+.framer-XGG37 [data-framer-component-type="RichTextContainer"] {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+}
+iframe[src*="google.com/maps"] {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+@media (max-width: 809.98px) {
+  .framer-lLgvr.framer-v-vww192.framer-105om7u,
+  .framer-lLgvr.framer-v-gnyg1a.framer-105om7u {
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -615,95 +704,122 @@
 
 <script id="serenia-branding-patcher">
 (function() {
-  function patchImages(root) {
-    var els = (root || document).querySelectorAll('img, [style*="background-image"], [style*="backgroundImage"]');
-    els.forEach(function(el) {
-      if (el.tagName === 'IMG') {
-        if (el.src && el.src.indexOf('framerusercontent.com/images/') !== -1) {
-          el.src = el.src.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/serenia/images/');
+  var isPatching = false;
+
+  function cleanText(str) {
+    return str
+      .replace(/Ultimate Furniture Guide[^]*/i, 'The Art of Holistic Aromatherapy & Essential Oils')
+      .replace(/Designing Dreams:\s*Unraveling the Art of Furniture Curation/gi, 'Botanical Facial Rituals for Luminous, Hydrated Skin')
+      .replace(/Discover the Comfort of[^!]*!/gi, 'Restoring Inner Balance Through Warm Stone Therapy')
+      .replace(/Elevate Your Home with[^!]*!/gi, 'Seasonal Skincare: Organic Nourishing Spa Rituals')
+      .replace(/Discover the Power of Relaxation with[^!]*!/gi, 'Mindful Wellness: Creating Your Sanctuary of Calm')
+      .replace(/In today's fast-paced business landscape[\s\S]*/gi, 'Discover restorative botanical therapies, organic essential oils, and holistic skincare rituals curated by our master aestheticians.')
+      .replace(/Welcome to (?:Beauty|Serenia) Spa SERENIA/gi, 'Welcome to Serenia Luxury Spa')
+      .replace(/Welcome to Beauty Spa/gi, 'Welcome to Serenia Spa')
+      .replace(/Connect with (?:Wellness|SERENIA|Beauty) Spa SERENIA/gi, 'Connect with Serenia Luxury Spa')
+      .replace(/At (?:Wellness|SERENIA|Beauty) Spa (?:SERENIA|TNC)/gi, 'At Serenia Luxury Spa')
+      .replace(/(?:SERENIA|Wellness|Beauty) Spa (?:SERENIA|TNC)/gi, 'Serenia Luxury Spa')
+      .replace(/TNC Beauty Spa/gi, 'SERENIA Luxury Spa')
+      .replace(/Beauty Spa/gi, 'Wellness Spa')
+      .replace(/TNCFlow|SERENIAFlow/gi, 'Serenia Studio')
+      .replace(/TNC/g, 'SERENIA')
+      .replace(/Furniflow|Collabflow/gi, 'Serenia')
+      .replace(/ThemeNcode/gi, 'Serenia Studio')
+      .replace(/contact@tncspa\.com|suppot@spatnc\.com/gi, 'hello@sereniaspa.com')
+      .replace(/\(545\)\s*222\s*XX92/gi, '(212) 555-0194')
+      .replace(/\+123\s*456\s*789|\+00\s*123\s*746\s*889/g, '+1 (212) 555-0194')
+      .replace(/2118 Thornridge Cir\.\s*Syracuse,\s*Connecticut 35624/gi, '680 Madison Ave, New York, NY 10065')
+      .replace(/Monday to Saterday:/gi, 'Monday to Saturday:')
+      .replace(/10:00 AM to 12:00 PM/gi, '10:00 AM to 8:00 PM')
+      .replace(/^Style-Guide$/i, 'Services')
+      .replace(/^Change-Log$/i, 'Pricing')
+      .replace(/^Licensing$/i, 'Contact Us');
+  }
+
+  function patchAll(root) {
+    if (isPatching) return;
+    isPatching = true;
+    try {
+      var scope = root || document;
+      var imgs = scope.querySelectorAll('img');
+      imgs.forEach(function(el) {
+        var srcAttr = el.getAttribute('src');
+        if (srcAttr && srcAttr.indexOf('framerusercontent.com/images/') !== -1) {
+          el.setAttribute('src', srcAttr.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/serenia/images/'));
         }
-        if (el.srcset && el.srcset.indexOf('framerusercontent.com/images/') !== -1) {
-          el.srcset = el.srcset.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/serenia/images/');
+        var srcsetAttr = el.getAttribute('srcset');
+        if (srcsetAttr && srcsetAttr.indexOf('framerusercontent.com/images/') !== -1) {
+          el.setAttribute('srcset', srcsetAttr.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/serenia/images/'));
+        }
+        if (el.alt && /TNC|Beauty Spa/i.test(el.alt)) {
+          el.alt = 'Serenia Luxury Spa';
+        }
+      });
+
+      var bgEls = scope.querySelectorAll('[style*="framerusercontent.com/images/"]');
+      bgEls.forEach(function(el) {
+        var st = el.getAttribute('style');
+        if (st && st.indexOf('framerusercontent.com/images/') !== -1) {
+          el.setAttribute('style', st.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/serenia/images/'));
+        }
+      });
+
+      var links = scope.querySelectorAll('a[href]');
+      links.forEach(function(a) {
+        var hr = a.getAttribute('href');
+        if (window.__normalizeSereniaHref) {
+          var norm = window.__normalizeSereniaHref(hr);
+          if (norm && norm !== hr) {
+            a.setAttribute('href', norm);
+            if (norm === '#') a.removeAttribute('target');
+          }
+        }
+      });
+
+      var walker = document.createTreeWalker(root || document.body, NodeFilter.SHOW_TEXT, null, false);
+      var node;
+      while ((node = walker.nextNode())) {
+        var val = node.nodeValue;
+        if (!val || !val.trim()) continue;
+        if (/Furniture|Furniflow|Collabflow|fast-paced business|TNC|tncspa|spatnc|XX92|456 789|746 889|Thornridge|Saterday|12:00 PM|Style-Guide|Change-Log|Licensing|Spa SERENIA/i.test(val)) {
+          var updated = cleanText(val);
+          if (updated !== val) node.nodeValue = updated;
         }
       }
-      if (el.style && el.style.cssText && el.style.cssText.indexOf('framerusercontent.com/images/') !== -1) {
-        el.style.cssText = el.style.cssText.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/serenia/images/');
-      }
-    });
-  }
-
-  function patchTextNodes(root) {
-    var walker = document.createTreeWalker(
-      root || document.body,
-      NodeFilter.SHOW_TEXT,
-      null,
-      false
-    );
-    var node;
-    while ((node = walker.nextNode())) {
-      if (node.nodeValue && /(TNC|Beauty Spa|Furniflow|ThemeNcode)/i.test(node.nodeValue)) {
-        node.nodeValue = node.nodeValue
-          .replace(/Welcome to Beauty Spa SERENIA/g, 'Welcome to Serenia Luxury Spa')
-          .replace(/Welcome to Beauty Spa/g, 'Welcome to Serenia Spa')
-          .replace(/TNC Beauty Spa/g, 'SERENIA Luxury Spa')
-          .replace(/Beauty Spa SERENIA/g, 'SERENIA Luxury Spa')
-          .replace(/Beauty Spa/g, 'Wellness Spa')
-          .replace(/TNC/g, 'SERENIA')
-          .replace(/Furniflow/g, 'Serenia')
-          .replace(/ThemeNcode/g, 'Serenia Studio');
-      }
-    }
-    var imgs = (root || document).querySelectorAll('[alt*="TNC" i], [aria-label*="TNC" i], [title*="TNC" i]');
-    imgs.forEach(function(el) {
-      if (el.alt) el.alt = el.alt.replace(/TNC/gi, 'SERENIA');
-      if (el.ariaLabel) el.ariaLabel = el.ariaLabel.replace(/TNC/gi, 'SERENIA');
-      if (el.title) el.title = el.title.replace(/TNC/gi, 'SERENIA');
-    });
-  }
-
-  function init() {
-    if (document.body) {
-      patchImages(document.body);
-      patchTextNodes(document.body);
+    } finally {
+      isPatching = false;
     }
   }
-
-  var isScrolling = false;
-  var scrollTimeout;
-  window.addEventListener('scroll', function() {
-    isScrolling = true;
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(function() {
-      isScrolling = false;
-      init();
-    }, 150);
-  }, { passive: true });
 
   var throttleTimeout = null;
   var observer = new MutationObserver(function() {
-    if (isScrolling) return;
-    if (throttleTimeout) return;
+    if (isPatching || throttleTimeout) return;
     throttleTimeout = setTimeout(function() {
-      init();
       throttleTimeout = null;
-    }, 100);
+      if (document.body) patchAll(document.body);
+    }, 80);
   });
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      init();
-      observer.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['src', 'srcset', 'style'] });
+  function start() {
+    if (!document.body) return;
+    patchAll(document.body);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+      attributes: true,
+      attributeFilter: ['src', 'srcset']
     });
-  } else {
-    init();
-    if (document.body) {
-      observer.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['src', 'srcset', 'style'] });
-    }
+    setTimeout(function() { patchAll(document.body); }, 300);
+    setTimeout(function() { patchAll(document.body); }, 900);
+    setTimeout(function() { patchAll(document.body); }, 1800);
   }
 
-  var style = document.createElement('style');
-  style.textContent = '#__framer-badge-container, #framer-badge-container, .__framer-badge { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; height: 0 !important; width: 0 !important; } html{scroll-behavior:smooth} body{transform:translateZ(0);-webkit-font-smoothing:antialiased;}';
-  document.head.appendChild(style);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
 })();
 </script>
 </body>

@@ -30,7 +30,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.shopify.com; font-src 'self' data: https://fonts.gstatic.com https://cdn.shopify.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms; frame-src 'self'; object-src 'none'; base-uri 'self';",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://framerusercontent.com https://*.framerusercontent.com https://framer.com https://*.framer.com https://app.framerstatic.com https://*.framerstatic.com https://events.framer.com https://cdn.prod.website-files.com https://assets-global.website-files.com https://d3e54v103j8qbb.cloudfront.net https://ajax.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net https://use.fontawesome.com https://lottie.host https://*.lottie.host https://cdn.trustindex.io https://dilicious-demo.pbminfotech.com https://*.pbminfotech.com; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:; connect-src 'self' https:; frame-src 'self' https://framer.com https://*.framer.com https://www.google.com https://maps.google.com https://player.vimeo.com https://www.youtube.com https://www.openstreetmap.org; worker-src 'self' blob:; object-src 'none'; base-uri 'self';",
           },
         ],
       },

@@ -5,65 +5,146 @@
 <html lang="en" data-redirect-timezone="1" dir="ltr">
 
 <head>
-<script id="valeria-title-guard">
+<script id="valeria-console-and-image-guard">
 (function() {
-  var targetTitle = "Beauty Journal — VALÈRIA Salon";
-  
-  function clean(t) {
-    if (!t || typeof t !== 'string') return targetTitle;
-    var res = t
-      .replace(/Zerra/gi, 'VALÈRIA')
-      .replace(/ZERRA/gi, 'VALÈRIA')
-      .replace(/Template/gi, '')
-      .replace(/Template/gi, '')
-      .replace(/\s+/g, ' ')
-      .trim();
-    if (res.endsWith('-') || res.endsWith('—') || res.endsWith('|')) {
-      res = res.slice(0, -1).trim();
-    }
-    if (!/VALÈRIA/i.test(res)) res = 'VALÈRIA — ' + res;
-    return res;
+  var origWarn = console.warn;
+  var origError = console.error;
+  function shouldIgnore(args) {
+    if (!args || !args.length) return false;
+    var msg = String(args[0] || '');
+    return msg.indexOf('Caught a recoverable error') !== -1 ||
+           msg.indexOf('Minified React error #425') !== -1 ||
+           msg.indexOf('Minified React error #422') !== -1 ||
+           msg.indexOf('Minified React error #418') !== -1;
   }
+  console.warn = function() {
+    if (shouldIgnore(arguments)) return;
+    return origWarn.apply(console, arguments);
+  };
+  console.error = function() {
+    if (shouldIgnore(arguments)) return;
+    return origError.apply(console, arguments);
+  };
 
-  var _t = targetTitle;
+  function rewrite(url) {
+    if (!url || typeof url !== 'string') return url;
+    if (url.indexOf('framerusercontent.com/images/') !== -1) {
+      return url.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/valeria/images/');
+    }
+    return url;
+  }
 
   try {
-    Object.defineProperty(document, 'title', {
-      get: function() { return _t; },
-      set: function(val) {
-        _t = clean(val);
-        var el = document.querySelector('title');
-        if (el && el.textContent !== _t) el.textContent = _t;
-      },
-      configurable: true,
-      enumerable: true
-    });
-  } catch(e) {}
-
-  var obs = new MutationObserver(function() {
-    var el = document.querySelector('title');
-    if (el && (/Zerra|Template/i.test(el.textContent) || el.textContent !== _t)) {
-      _t = clean(el.textContent);
-      el.textContent = _t;
+    var origSrc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
+    if (origSrc && origSrc.set) {
+      Object.defineProperty(HTMLImageElement.prototype, 'src', {
+        set: function(val) {
+          return origSrc.set.call(this, rewrite(val));
+        },
+        get: origSrc.get,
+        configurable: true
+      });
     }
-    var metas = document.querySelectorAll('meta[content*="Zerra" i]');
-    metas.forEach(function(m) {
-      m.setAttribute('content', clean(m.getAttribute('content')));
-    });
-  });
 
-  if (document.head) {
-    obs.observe(document.head, { childList: true, subtree: true, characterData: true });
-  } else {
-    document.addEventListener('DOMContentLoaded', function() {
-      if (document.head) obs.observe(document.head, { childList: true, subtree: true, characterData: true });
-    });
-  }
+    var origSrcset = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'srcset');
+    if (origSrcset && origSrcset.set) {
+      Object.defineProperty(HTMLImageElement.prototype, 'srcset', {
+        set: function(val) {
+          return origSrcset.set.call(this, rewrite(val));
+        },
+        get: origSrcset.get,
+        configurable: true
+      });
+    }
+
+    var origSetAttr = Element.prototype.setAttribute;
+    Element.prototype.setAttribute = function(name, val) {
+      var lower = (name || '').toLowerCase();
+      if ((lower === 'src' || lower === 'srcset') && typeof val === 'string') {
+        val = rewrite(val);
+      }
+      return origSetAttr.call(this, name, val);
+    };
+  } catch(e) {}
 })();
 </script>
+<script id="valeria-title-guard">
+(function() {
+  function clean(t) {
+    if (!t) return t;
+    return t
+      .replace(/\s*[-|–—]\s*Zerra\b.*$/i, ' — VALÈRIA Luxury Beauty Salon')
+      .replace(/\bZerra\b/g, 'VALÈRIA')
+      .replace(/\bZERRA\b/g, 'VALÈRIA')
+      .replace(/\bzerra\b/g, 'valèria');
+  }
+  if (document.title) document.title = clean(document.title);
+  try {
+    var origDesc = Object.getOwnPropertyDescriptor(Document.prototype, 'title');
+    if (origDesc && origDesc.set) {
+      Object.defineProperty(document, 'title', {
+        set: function(val) {
+          return origDesc.set.call(this, clean(val));
+        },
+        get: origDesc.get,
+        configurable: true
+      });
+    }
+  } catch(e) {}
+  document.addEventListener('DOMContentLoaded', function() {
+    document.title = clean(document.title);
+    setTimeout(function() { document.title = clean(document.title); }, 500);
+    setTimeout(function() { document.title = clean(document.title); }, 1800);
+  });
+})();
+</script>
+<script id="valeria-route-guard">
+(function() {
+  var serviceSlugs = ['brides-beauty','bright-makeup','brow-shaping','design-manicure','hair-treatments','men-s-haircut','skin-care','treatments-spa'];
+  var topRoutes = ['about-us','blog','contact-us','faq','gallery','our-promotions','pricing','services','team'];
 
+  window.__normalizeValeriaHref = function(href) {
+    if (!href) return href;
+    var h = href.trim();
+    if (h === '#' || h.startsWith('#') || h.startsWith('javascript:')) return h;
+    if (/^mailto:/i.test(h)) return 'mailto:hello@valeriasalon.com';
+    if (/^tel:/i.test(h)) return 'tel:+13055550198';
+    if (/^https?:\/\//i.test(h)) {
+      if (/facebook|instagram|twitter|x\.com|pinterest|themencode|framer\.com/i.test(h)) return '#';
+      if (/saimdev\.site\/demos\/valeria/i.test(h)) return '/demos/valeria/';
+      return h;
+    }
 
-	<meta charset="utf-8">
+    var clean = h.replace(/^(\.\.\/|\.\/)+/, '').replace(/^\/demos\/valeria\/?/, '').replace(/^\/+|\/+$/g, '');
+    if (!clean) return '/demos/valeria/';
+    if (clean.indexOf('team/') === 0) return '/demos/valeria/team/';
+    if (clean.indexOf('blog/') === 0 || clean.indexOf('blog-categories/') === 0) return '/demos/valeria/blog/';
+    if (serviceSlugs.indexOf(clean) !== -1) return '/demos/valeria/services/' + clean + '/';
+    if (clean.indexOf('services/') === 0) {
+      var ss = clean.slice('services/'.length);
+      return serviceSlugs.indexOf(ss) !== -1 ? '/demos/valeria/services/' + ss + '/' : '/demos/valeria/services/';
+    }
+    if (topRoutes.indexOf(clean) !== -1) return '/demos/valeria/' + clean + '/';
+    return '/demos/valeria/';
+  };
+
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href) return;
+    var norm = window.__normalizeValeriaHref(href);
+    if (norm === '#') {
+      e.preventDefault();
+      return;
+    }
+    if (norm && norm !== href) {
+      a.setAttribute('href', norm);
+    }
+  }, true);
+})();
+</script>
+<meta charset="utf-8">
 
 	
 
@@ -355,35 +436,32 @@
 
     <!-- End of headEnd -->
 
-<script id="valeria-route-guard">
-(function() {
-  document.addEventListener('click', function(e) {
-    var a = e.target.closest('a');
-    if (!a) return;
-    var href = a.getAttribute('href');
-    if (!href) return;
-    
-    // Check if relative path or root path that needs prefixing
-    if (href === '/' || href === './') {
-      a.setAttribute('href', '/demos/valeria/');
-      return;
-    }
-    
-    var known = [
-      'about-us', 'services', 'pricing', 'gallery', 'our-promotions',
-      'team', 'blog', 'contact-us', 'faq'
-    ];
-    
-    for (var i = 0; i < known.length; i++) {
-      var k = known[i];
-      if (href === '/' + k || href.startsWith('/' + k + '/')) {
-        a.setAttribute('href', '/demos/valeria' + href + (href.endsWith('/') ? '' : '/'));
-        break;
-      }
-    }
-  }, true);
-})();
-</script>
+<style id="valeria-master-fix">
+/* Hide Framer badge & Buy Now widgets */
+#__framer-badge-container,
+#framer-badge-container,
+.__framer-badge,
+.framer-Kr9RU,
+.framer-qv1oa6-container {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Ensure appear-on-scroll elements are immediately visible */
+[data-framer-appear-id] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+iframe[src*="google.com/maps"] {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+</style>
 </head>
 
 <body>
@@ -426,90 +504,102 @@
 
 <script id="valeria-branding-patcher">
 (function() {
-  function patchImages(root) {
-    var els = (root || document).querySelectorAll('img, [style*="background-image"], [style*="backgroundImage"]');
-    els.forEach(function(el) {
-      if (el.tagName === 'IMG') {
-        if (el.src && el.src.indexOf('framerusercontent.com/images/') !== -1) {
-          el.src = el.src.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/valeria/images/');
+  var isPatching = false;
+
+  function cleanText(str) {
+    return str
+      .replace(/Zerra/g, 'VALÈRIA')
+      .replace(/ZERRA/g, 'VALÈRIA')
+      .replace(/zerra/g, 'valèria')
+      .replace(/Z E R R A/g, 'V A L È R I A')
+      .replace(/hello@zerra\.com|contact@zerra\.com/gi, 'hello@valeriasalon.com')
+      .replace(/\(123\)\s*456-7890|\+1\s*\(123\)\s*456-7890/g, '+1 (305) 555-0198');
+  }
+
+  function patchAll(root) {
+    if (isPatching) return;
+    isPatching = true;
+    try {
+      var scope = root || document;
+      var imgs = scope.querySelectorAll('img');
+      imgs.forEach(function(el) {
+        var srcAttr = el.getAttribute('src');
+        if (srcAttr && srcAttr.indexOf('framerusercontent.com/images/') !== -1) {
+          el.setAttribute('src', srcAttr.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/valeria/images/'));
         }
-        if (el.srcset && el.srcset.indexOf('framerusercontent.com/images/') !== -1) {
-          el.srcset = el.srcset.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/valeria/images/');
+        var srcsetAttr = el.getAttribute('srcset') || el.getAttribute('srcSet');
+        if (srcsetAttr && srcsetAttr.indexOf('framerusercontent.com/images/') !== -1) {
+          el.setAttribute('srcset', srcsetAttr.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/valeria/images/'));
+        }
+        if (el.alt && /Zerra/i.test(el.alt)) {
+          el.alt = el.alt.replace(/Zerra/gi, 'VALÈRIA');
+        }
+      });
+
+      var bgEls = scope.querySelectorAll('[style*="framerusercontent.com/images/"]');
+      bgEls.forEach(function(el) {
+        var st = el.getAttribute('style');
+        if (st && st.indexOf('framerusercontent.com/images/') !== -1) {
+          el.setAttribute('style', st.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/valeria/images/'));
+        }
+      });
+
+      var links = scope.querySelectorAll('a[href]');
+      links.forEach(function(a) {
+        var hr = a.getAttribute('href');
+        if (window.__normalizeValeriaHref) {
+          var norm = window.__normalizeValeriaHref(hr);
+          if (norm && norm !== hr) {
+            a.setAttribute('href', norm);
+            if (norm === '#') a.removeAttribute('target');
+          }
+        }
+      });
+
+      var walker = document.createTreeWalker(root || document.body, NodeFilter.SHOW_TEXT, null, false);
+      var node;
+      while ((node = walker.nextNode())) {
+        var val = node.nodeValue;
+        if (!val || !val.trim()) continue;
+        if (/Zerra|zerra|ZERRA/i.test(val)) {
+          var updated = cleanText(val);
+          if (updated !== val) node.nodeValue = updated;
         }
       }
-      if (el.style && el.style.cssText && el.style.cssText.indexOf('framerusercontent.com/images/') !== -1) {
-        el.style.cssText = el.style.cssText.replace(/https:\/\/[a-z0-9.]*framerusercontent\.com\/images\//g, '/demos/valeria/images/');
-      }
-    });
-  }
-
-  function patchTextNodes(root) {
-    var walker = document.createTreeWalker(
-      root || document.body,
-      NodeFilter.SHOW_TEXT,
-      null,
-      false
-    );
-    var node;
-    while ((node = walker.nextNode())) {
-      if (node.nodeValue && /[Zz][Ee][Rr][Rr][Aa]/.test(node.nodeValue)) {
-        node.nodeValue = node.nodeValue
-          .replace(/ZERRA/g, 'VALÈRIA')
-          .replace(/Zerra/g, 'VALÈRIA')
-          .replace(/zerra/g, 'valèria');
-      }
-    }
-    var imgs = (root || document).querySelectorAll('[alt*="erra" i], [aria-label*="erra" i], [title*="erra" i]');
-    imgs.forEach(function(el) {
-      if (el.alt) el.alt = el.alt.replace(/Zerra/gi, 'VALÈRIA');
-      if (el.ariaLabel) el.ariaLabel = el.ariaLabel.replace(/Zerra/gi, 'VALÈRIA');
-      if (el.title) el.title = el.title.replace(/Zerra/gi, 'VALÈRIA');
-    });
-  }
-
-  function init() {
-    if (document.body) {
-      patchImages(document.body);
-      patchTextNodes(document.body);
+    } finally {
+      isPatching = false;
     }
   }
-
-  var isScrolling = false;
-  var scrollTimeout;
-  window.addEventListener('scroll', function() {
-    isScrolling = true;
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(function() {
-      isScrolling = false;
-      init();
-    }, 150);
-  }, { passive: true });
 
   var throttleTimeout = null;
   var observer = new MutationObserver(function() {
-    if (isScrolling) return;
-    if (throttleTimeout) return;
+    if (isPatching || throttleTimeout) return;
     throttleTimeout = setTimeout(function() {
-      init();
       throttleTimeout = null;
-    }, 100);
+      if (document.body) patchAll(document.body);
+    }, 80);
   });
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      init();
-      observer.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['src', 'srcset', 'style'] });
+  function start() {
+    if (!document.body) return;
+    patchAll(document.body);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+      attributes: true,
+      attributeFilter: ['src', 'srcset', 'srcSet']
     });
-  } else {
-    init();
-    if (document.body) {
-      observer.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['src', 'srcset', 'style'] });
-    }
+    setTimeout(function() { patchAll(document.body); }, 300);
+    setTimeout(function() { patchAll(document.body); }, 900);
+    setTimeout(function() { patchAll(document.body); }, 1800);
   }
 
-  var style = document.createElement('style');
-  style.textContent = '#__framer-badge-container, #framer-badge-container, .__framer-badge { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; height: 0 !important; width: 0 !important; } html{scroll-behavior:smooth} body{transform:translateZ(0);-webkit-font-smoothing:antialiased;}';
-  document.head.appendChild(style);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
 })();
 </script>
 </body>

@@ -124,6 +124,112 @@
         }
 
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style id="botg-master-fix">
+/* Hide stuck preloader & style switcher panel */
+.loading-area,
+.styleswitcher,
+.switcher-btn-bx {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Prevent horizontal overflow on desktop & mobile */
+html, body, .page-wraper {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+/* Fix Bootstrap default blue .bg-primary clashing with brand pink */
+.section-full.bg-primary {
+  background-color: #1f1f1f !important;
+}
+
+/* Fix Featured Treatment Menu category tabs on index.html */
+#pricingMainTabs {
+  gap: 8px !important;
+}
+#pricingMainTabs .nav-item {
+  margin: 0 !important;
+}
+#pricingMainTabs .nav-link {
+  background-color: #222222 !important;
+  color: #ffffff !important;
+  padding: 10px 18px !important;
+  border-radius: 6px !important;
+  border: 1px solid #222222 !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+#pricingMainTabs .nav-link:hover {
+  background-color: #eb578b !important;
+  border-color: #eb578b !important;
+  color: #ffffff !important;
+}
+#pricingMainTabs .nav-link.active {
+  background-color: #eb578b !important;
+  border-color: #eb578b !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(235, 87, 139, 0.35) !important;
+}
+
+/* Ensure inner page banners always have nice contrast & height */
+.wt-bnr-inr {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 991px) {
+  .wt-contact-wrap {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .header-nav.navbar-collapse:not(.show):not(.in) {
+    display: none !important;
+  }
+  .header-nav.navbar-collapse.show,
+  .header-nav.navbar-collapse.in {
+    display: block !important;
+    background: #ffffff !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12) !important;
+    padding: 15px 20px !important;
+  }
+  .header-nav.navbar-collapse.show .nav.navbar-nav,
+  .header-nav.navbar-collapse.in .nav.navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .header-nav.navbar-collapse.show .nav.navbar-nav > li,
+  .header-nav.navbar-collapse.in .nav.navbar-nav > li {
+    width: 100% !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+  .header-nav.navbar-collapse.show .nav.navbar-nav > li > a,
+  .header-nav.navbar-collapse.in .nav.navbar-nav > li > a {
+    color: #222222 !important;
+    padding: 12px 10px !important;
+    display: block !important;
+  }
+}
+</style>
 </head>
 
 <body id="bg">
@@ -416,7 +522,7 @@
             <!-- SLIDER END -->
             
             <!-- WELCOME SECTION START -->
-            <div class="section-full p-t100 p-b70 bg-bottom-center bg-full-width bg-no-repeat" style="background-image:url(images/background/bg-1.png);">
+            <div class="section-full p-t100 p-b70 bg-bottom-center bg-full-width bg-no-repeat" style="background-image:url(images/background/bg-1.jpg);">
                 <div class="container">
                     <div class="section-head text-center">
                         <h2><span class="site-text-primary"> Welcome to </span> Beauticians On The Go</h2>
@@ -443,7 +549,7 @@
                             <div class="col-lg-4 col-md-6 m-b30">
                                 <a href="services-1.html" class="wt-box d-block bg-white radius-sm shadow-sm overflow-hidden pillar-hover-card" style="text-decoration: none; color: inherit; border: 1px solid #f0f0f0; border-radius: 12px; transition: all 0.3s ease;">
                                     <div style="width: 100%; height: 230px; overflow: hidden; position: relative;">
-                                        <img loading="lazy" decoding="async" src="images/pillar_spa_massage.jpg" alt="Mobile Day Spa & Massage" class="pillar-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                                        <img loading="eager" decoding="async" src="images/pillar_spa_massage.jpg" alt="Mobile Day Spa & Massage" class="pillar-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                                         <div style="position: absolute; top: 12px; right: 12px; background: rgba(235,87,139,0.95); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Spa & Wellness</div>
                                     </div>
                                     <div class="p-a25 text-center">
@@ -458,7 +564,7 @@
                             <div class="col-lg-4 col-md-6 m-b30">
                                 <a href="services-1.html" class="wt-box d-block bg-white radius-sm shadow-sm overflow-hidden pillar-hover-card" style="text-decoration: none; color: inherit; border: 1px solid #f0f0f0; border-radius: 12px; transition: all 0.3s ease;">
                                     <div style="width: 100%; height: 230px; overflow: hidden; position: relative;">
-                                        <img loading="lazy" decoding="async" src="images/pillar_hair_barbering.jpg" alt="On-Site Hair & Barbering" class="pillar-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                                        <img loading="eager" decoding="async" src="images/pillar_hair_barbering.jpg" alt="On-Site Hair & Barbering" class="pillar-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                                         <div style="position: absolute; top: 12px; right: 12px; background: rgba(235,87,139,0.95); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Hair & Styling</div>
                                     </div>
                                     <div class="p-a25 text-center">
@@ -473,7 +579,7 @@
                             <div class="col-lg-4 col-md-6 m-b30">
                                 <a href="services-1.html" class="wt-box d-block bg-white radius-sm shadow-sm overflow-hidden pillar-hover-card" style="text-decoration: none; color: inherit; border: 1px solid #f0f0f0; border-radius: 12px; transition: all 0.3s ease;">
                                     <div style="width: 100%; height: 230px; overflow: hidden; position: relative;">
-                                        <img loading="lazy" decoding="async" src="images/pillar_bridal_glam.jpg" alt="Bridal & Event Glam" class="pillar-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                                        <img loading="eager" decoding="async" src="images/pillar_bridal_glam.jpg" alt="Bridal & Event Glam" class="pillar-img" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                                         <div style="position: absolute; top: 12px; right: 12px; background: rgba(235,87,139,0.95); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Bridal & Glam</div>
                                     </div>
                                     <div class="p-a25 text-center">
@@ -525,7 +631,7 @@
                         </div>
                         <div class="col-lg-5 col-md-12 m-b30">
                             <div class="shadow-lg radius-sm overflow-hidden" style="border-radius: 12px;">
-                                <img loading="lazy" decoding="async" src="images/transform_look_spa.jpg" alt="Transforming Your Look - Spa Relaxation" class="img-responsive" style="width: 100%; height: auto; object-fit: cover; display: block;">
+                                <img loading="eager" decoding="async" src="images/transform_look_spa.jpg" alt="Transforming Your Look - Spa Relaxation" class="img-responsive" style="width: 100%; height: auto; object-fit: cover; display: block;">
                             </div>
                         </div>
                     </div>
@@ -539,7 +645,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-12 m-b30">
                             <div class="shadow-lg radius-sm overflow-hidden" style="border-radius: 12px;">
-                                <img loading="lazy" decoding="async" src="images/commitment_bridal_makeup.jpg" alt="Our Commitment to Beauty & Wellness" class="img-responsive" style="width: 100%; height: auto; object-fit: cover; display: block;">
+                                <img loading="eager" decoding="async" src="images/commitment_bridal_makeup.jpg" alt="Our Commitment to Beauty & Wellness" class="img-responsive" style="width: 100%; height: auto; object-fit: cover; display: block;">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12 m-b30">
@@ -599,7 +705,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridal_combo.jpg" alt="Brides- Combo Hair Updo + Make Up + Lashes"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_bridal_combo.jpg" alt="Brides- Combo Hair Updo + Make Up + Lashes"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Brides- Combo Hair Updo + Make Up + Lashes</h5>
@@ -612,7 +718,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridal_budget.jpg" alt="Combo- Bride Make Up + Lashes + Hair-UpDo"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_bridal_budget.jpg" alt="Combo- Bride Make Up + Lashes + Hair-UpDo"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Combo- Bride Make Up + Lashes + Hair-UpDo</h5>
@@ -625,7 +731,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridal_makeup.jpg" alt="Bride / Make Up + Fake Lashes (Only)"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_bridal_makeup.jpg" alt="Bride / Make Up + Fake Lashes (Only)"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Bride / Make Up + Fake Lashes (Only)</h5>
@@ -638,7 +744,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridal_updo.jpg" alt="Bride Up Do (Only)"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_bridal_updo.jpg" alt="Bride Up Do (Only)"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Bride Up Do (Only)</h5>
@@ -651,7 +757,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_bridesmaid.jpg" alt="Bridesmaid Hair & Make Up (3+ Min)"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_bridesmaid.jpg" alt="Bridesmaid Hair & Make Up (3+ Min)"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Bridesmaid Hair & Make Up (3+ Min)</h5>
@@ -664,7 +770,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_flower_girl.jpg" alt="Flower Girls Hair Style or Updo"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_flower_girl.jpg" alt="Flower Girls Hair Style or Updo"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Flower Girls Hair Style or Updo (3+ Min)</h5>
@@ -683,7 +789,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_men_barbering.jpg" alt="Men's Precision Barbering"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_men_barbering.jpg" alt="Men's Precision Barbering"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Men's Precision Barbering</h5>
@@ -696,7 +802,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_haircut_blowdry.jpg" alt="Haircut + Blow Dry Style"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_haircut_blowdry.jpg" alt="Haircut + Blow Dry Style"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Haircut + Blow Dry Style</h5>
@@ -709,7 +815,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_blowdry_curls.jpg" alt="Blow Dry & Soft Curls / Updos"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_blowdry_curls.jpg" alt="Blow Dry & Soft Curls / Updos"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Blow Dry & Soft Curls / Updos</h5>
@@ -722,7 +828,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_balayage.jpg" alt="Balayage Blonding"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_balayage.jpg" alt="Balayage Blonding"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Balayage Blonding (Short / Med / Long)</h5>
@@ -735,7 +841,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_highlights.jpg" alt="Full Foil Highlights + Toner + Style"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_highlights.jpg" alt="Full Foil Highlights + Toner + Style"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Full Foil Highlights + Toner + Style</h5>
@@ -748,7 +854,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_retouch_color.jpg" alt="Retouch Color / Blow Dry Style"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_retouch_color.jpg" alt="Retouch Color / Blow Dry Style"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Retouch Color / Blow Dry Style</h5>
@@ -767,7 +873,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_manicure.jpg" alt="Manicure Regular Polish"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_manicure.jpg" alt="Manicure Regular Polish"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Manicure Regular Polish</h5>
@@ -780,7 +886,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_pedicure.jpg" alt="Pedicure Regular Polish"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_pedicure.jpg" alt="Pedicure Regular Polish"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Pedicure Regular Polish</h5>
@@ -793,7 +899,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_men_mani_pedi.jpg" alt="Men's Pedicure & Manicure Combo"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_men_mani_pedi.jpg" alt="Men's Pedicure & Manicure Combo"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Men's Pedicure & Manicure Combo</h5>
@@ -806,7 +912,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_acrylic_nails.jpg" alt="Acrylic Nails + Gel Polish + Design"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_acrylic_nails.jpg" alt="Acrylic Nails + Gel Polish + Design"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Acrylic Nails + Gel Polish + Design</h5>
@@ -825,7 +931,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_massage.jpg" alt="Full Body Therapeutic Massage"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_massage.jpg" alt="Full Body Therapeutic Massage"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Full Body Therapeutic Massage</h5>
@@ -838,7 +944,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_facial.jpg" alt="Custom Deep Cleansing Facial"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_facial.jpg" alt="Custom Deep Cleansing Facial"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Custom Deep Cleansing Facial</h5>
@@ -851,7 +957,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_microneedling.jpg" alt="Collagen Induction Micro-Needling"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_microneedling.jpg" alt="Collagen Induction Micro-Needling"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Collagen Induction Micro-Needling</h5>
@@ -864,7 +970,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_microblading.jpg" alt="Semi-Permanent Microblading"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_microblading.jpg" alt="Semi-Permanent Microblading"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Semi-Permanent Microblading</h5>
@@ -883,7 +989,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_massage.jpg" alt="February Special: Massage or Facial"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_massage.jpg" alt="February Special: Massage or Facial"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">February Special: 1-Hr Massage or Facial</h5>
@@ -896,7 +1002,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_special_combo.jpg" alt="Full Beauty Combo Package"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_special_combo.jpg" alt="Full Beauty Combo Package"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Full Beauty Combo Package</h5>
@@ -909,7 +1015,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_senior_care.jpg" alt="Senior Haircuts + Style Special"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_senior_care.jpg" alt="Senior Haircuts + Style Special"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Senior Haircuts + Style Special</h5>
@@ -922,7 +1028,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <a href="services-1.html" class="home-service-card">
-                                            <div class="img-thumb"><img loading="lazy" decoding="async" src="images/services/service_corporate_wellness.jpg" alt="Corporate Express Wellness Events"></div>
+                                            <div class="img-thumb"><img loading="eager" decoding="async" src="images/services/service_corporate_wellness.jpg" alt="Corporate Express Wellness Events"></div>
                                             <div class="card-info">
                                                 <div class="d-flex justify-content-between align-items-start m-b5">
                                                     <h5 class="font-weight-700 m-a0 font-15 text-black">Corporate Express Wellness Events</h5>
@@ -970,7 +1076,7 @@
                                 <div class="testimonial-5 bg-white radius-sm">
                                     <div class="testimonial-pic-block radius-bx"> 
                                         <div class="testimonial-pic radius">
-                                            <img loading="lazy" decoding="async" src="images/testimonials/pic1.jpg" width="132" height="132" alt="Kristen H.">
+                                            <img loading="eager" decoding="async" src="images/testimonials/pic1.jpg" width="132" height="132" alt="Kristen H.">
                                         </div>
                                     </div>
                                     <div class="testimonial-text clearfix">
@@ -990,7 +1096,7 @@
                                 <div class="testimonial-5 bg-white radius-sm">
                                     <div class="testimonial-pic-block radius-bx"> 
                                         <div class="testimonial-pic radius">
-                                            <img loading="lazy" decoding="async" src="images/testimonials/pic2.jpg" width="132" height="132" alt="Rebecca B.">
+                                            <img loading="eager" decoding="async" src="images/testimonials/pic2.jpg" width="132" height="132" alt="Rebecca B.">
                                         </div>
                                     </div>
                                     <div class="testimonial-text clearfix">
@@ -1010,7 +1116,7 @@
                                 <div class="testimonial-5 bg-white radius-sm">
                                     <div class="testimonial-pic-block radius-bx"> 
                                         <div class="testimonial-pic radius">
-                                            <img loading="lazy" decoding="async" src="images/testimonials/pic1.jpg" width="132" height="132" alt="Natalie B.">
+                                            <img loading="eager" decoding="async" src="images/testimonials/pic1.jpg" width="132" height="132" alt="Natalie B.">
                                         </div>
                                     </div>
                                     <div class="testimonial-text clearfix">
@@ -1070,7 +1176,7 @@
                             <div class="widget widget_about">
                                 <h4 class="widget-title">About Company</h4>
                                 <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img loading="lazy" decoding="async" src="images/logo-white.png" style="max-height: 45px; width: auto;" alt="Beauticians On The Go"></a>
+                                    <a href="index.html"><img loading="eager" decoding="async" src="images/logo-white.png" style="max-height: 45px; width: auto;" alt="Beauticians On The Go"></a>
                                 </div>
                                 <p>Beauticians On The Go, PLLC is an upscale on-demand mobile day spa & beauty salon enterprise. We bring state-licensed specialists, treatment tables, and hospital-grade sanitation directly to private residences, luxury resorts, wedding venues, corporate offices, and assisted living facilities.</p>  
                             </div>
@@ -1147,11 +1253,13 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
+<script src="js/jquery.bootstrap-touchspin.min.js"></script>
 <script src="js/magnific-popup.min.js"></script>
 <script src="js/waypoints.min.js"></script>
 <script src="js/counterup.min.js"></script>
 <script src="js/waypoints-sticky.min.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/scrolla.min.js"></script>
 <script src="js/custom.js"></script>
@@ -1172,5 +1280,82 @@
 
     <!-- WhatsApp button (duplicate removed) -->
 
+
+<script id="botg-interactive-fix">
+(function() {
+  if (window.jQuery && !jQuery.fn.TouchSpin) {
+    jQuery.fn.TouchSpin = function() { return this; };
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1. Hide preloader immediately
+    var loader = document.querySelector('.loading-area');
+    if (loader) loader.style.display = 'none';
+
+    // 2. Pricing tabs on index.html ([data-bs-toggle="pill"])
+    var tabButtons = document.querySelectorAll('#pricingMainTabs [data-bs-target]');
+    if (tabButtons.length) {
+      tabButtons.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var targetSelector = btn.getAttribute('data-bs-target');
+          if (!targetSelector) return;
+          tabButtons.forEach(function(b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          var panes = document.querySelectorAll('#pricingMainTabsContent .tab-pane');
+          panes.forEach(function(pane) {
+            pane.classList.remove('show', 'active');
+          });
+          var targetPane = document.querySelector(targetSelector);
+          if (targetPane) {
+            targetPane.classList.add('show', 'active');
+          }
+        });
+      });
+    }
+
+    // 3. FAQ Accordions on faq-1.html ([data-bs-toggle="collapse"])
+    var faqLinks = document.querySelectorAll('#faqAccordion [data-bs-toggle="collapse"]');
+    if (faqLinks.length) {
+      faqLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var href = link.getAttribute('href');
+          if (!href) return;
+          var targetBody = document.querySelector(href);
+          if (!targetBody) return;
+          var isOpen = targetBody.classList.contains('show');
+          document.querySelectorAll('#faqAccordion .acod-body').forEach(function(b) {
+            b.classList.remove('show');
+          });
+          document.querySelectorAll('#faqAccordion .acod-head').forEach(function(h) {
+            h.classList.remove('acc-actives');
+          });
+          if (!isOpen) {
+            targetBody.classList.add('show');
+            var head = link.closest('.acod-head');
+            if (head) head.classList.add('acc-actives');
+          }
+        });
+      });
+    }
+
+    // 4. Mobile menu hamburger toggle
+    var toggler = document.getElementById('mobile-side-drawer');
+    var headerNav = document.querySelector('.header-nav');
+    if (toggler && headerNav) {
+      toggler.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        headerNav.classList.toggle('show');
+        toggler.classList.toggle('collapsed');
+      });
+    }
+  });
+})();
+</script>
 </body>
 </html>

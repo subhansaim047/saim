@@ -52,53 +52,27 @@
     w: function (e) {
       this._window.on("load", Init.l).on("scroll", Init.res);
     },
-    preloader: function () {
-      setTimeout(function () { $('#preloader').hide('slow') }, 3000);
-    },
+    preloader: function () { $('#preloader').hide(); },
     gsap: function () {
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-      if (window.innerWidth > 767) {
-        MyScroll = ScrollSmoother.create({
-          smooth: 1,
-          effects: true,
-          smoothTouch: 1,
-        });
-        MyScroll.scrollTo(0);
+      gsap.registerPlugin(ScrollTrigger);
 
-      }
-
-      // Hero Banner 1 
+      // Hero Banner 1 (smooth auto-cycling showcase without 300% scroll-pin trap)
       if ($('.hero-banner-1').length) {
-
         if (window.innerWidth > 991) {
+          gsap.set(".img-1", { scale: 1, x: '0%' });
+          gsap.set(".img-2", { scale: 0.4, x: '50%' });
+          gsap.set(".img-3", { scale: 0.4, x: '100%' });
+          gsap.set(".img-4", { scale: 0.4, x: '100%' });
 
-          gsap.set(".img-1", { scale: 1, x: '0%' })
-          gsap.set(".img-2", { scale: 0.4, x: '50%' })
-          gsap.set(".img-3", { scale: 0.4, x: '100%' })
-          gsap.set(".img-4", { scale: 0.4, x: '100%' })
-
-          const innerAnimation = gsap
-            .timeline({ defaults: { ease: "power2.inOut" } })
-
-            .to(".img-1", { scale: '0.2', x: '-135%', y: '13vw' })
-            .to(".img-2", { scale: '1', x: '0%' }, '<')
+          gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 1.5, defaults: { duration: 2.2, ease: "power2.inOut" } })
+            .to(".img-1", { scale: 0.2, x: '-135%', y: '13vw' }, "+=1.5")
+            .to(".img-2", { scale: 1, x: '0%' }, '<')
             .to(".img-3", { x: '50%' }, '<')
-
-            .to(".img-2", { scale: '0.17', x: '-119%', y: '13vw' })
-            .to(".img-3", { scale: '1', x: '0%' }, '<')
+            .to(".img-2", { scale: 0.17, x: '-119%', y: '13vw' }, "+=1.5")
+            .to(".img-3", { scale: 1, x: '0%' }, '<')
             .to(".img-4", { x: '50%' }, '<')
-
-            .to(".img-4", { scale: '1', x: '0%' })
-            .to(".img-3", { scale: '0.2', x: '-101%', y: '12.6vw' }, '<')
-
-          ScrollTrigger.create({
-            trigger: "#hero",
-            scrub: true,
-            pin: true,
-            start: "top top",
-            end: "+=300%", // Adjust this value based on your design
-            animation: innerAnimation,
-          });
+            .to(".img-4", { scale: 1, x: '0%' }, "+=1.5")
+            .to(".img-3", { scale: 0.2, x: '-101%', y: '12.6vw' }, '<');
         }
       }
       // Hero Banner 2
@@ -552,10 +526,7 @@
               },
             },
             {
-              breakpoint: 450,
-              settings: {
-                slidesToShow: 1,
-              },
+              breakpoint: 450, settings: { slidesToShow: 3 },
             },
           ],
         });

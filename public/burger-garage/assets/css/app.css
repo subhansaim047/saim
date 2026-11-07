@@ -6129,3 +6129,31 @@ footer img[src*='logo'] {
 #ui-header .ui-logo img, .footer-main a img[src*='barger-logo'] { max-height: 140px !important; width: auto !important; filter: brightness(0) invert(1) !important; }
 @media (max-width: 991px) { #ui-header .ui-logo img { max-height: 90px !important; } }
 @media (max-width: 575px) { #ui-header .ui-logo img { max-height: 70px !important; } }
+
+/* BURGER GARAGE POLISH */
+#preloader {
+  display: none !important;
+}
+footer .footer-main img[src*="barger-logo"] {
+  filter: brightness(0) invert(1) !important;
+  max-height: 64px !important;
+  width: auto !important;
+}
+.brands .brand-item img {
+  max-width: 130px !important;
+  max-height: 55px !important;
+  width: auto !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+}
+@media (max-width: 991.98px) {
+  .burger-exploding-wrapper {
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+  .badge-rotate {
+    right: 12px !important;
+    top: 0px !important;
+    width: 90px !important;
+  }
+}

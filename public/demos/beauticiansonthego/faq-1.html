@@ -48,6 +48,112 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     
  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style id="botg-master-fix">
+/* Hide stuck preloader & style switcher panel */
+.loading-area,
+.styleswitcher,
+.switcher-btn-bx {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Prevent horizontal overflow on desktop & mobile */
+html, body, .page-wraper {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+/* Fix Bootstrap default blue .bg-primary clashing with brand pink */
+.section-full.bg-primary {
+  background-color: #1f1f1f !important;
+}
+
+/* Fix Featured Treatment Menu category tabs on index.html */
+#pricingMainTabs {
+  gap: 8px !important;
+}
+#pricingMainTabs .nav-item {
+  margin: 0 !important;
+}
+#pricingMainTabs .nav-link {
+  background-color: #222222 !important;
+  color: #ffffff !important;
+  padding: 10px 18px !important;
+  border-radius: 6px !important;
+  border: 1px solid #222222 !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+#pricingMainTabs .nav-link:hover {
+  background-color: #eb578b !important;
+  border-color: #eb578b !important;
+  color: #ffffff !important;
+}
+#pricingMainTabs .nav-link.active {
+  background-color: #eb578b !important;
+  border-color: #eb578b !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(235, 87, 139, 0.35) !important;
+}
+
+/* Ensure inner page banners always have nice contrast & height */
+.wt-bnr-inr {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 991px) {
+  .wt-contact-wrap {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .header-nav.navbar-collapse:not(.show):not(.in) {
+    display: none !important;
+  }
+  .header-nav.navbar-collapse.show,
+  .header-nav.navbar-collapse.in {
+    display: block !important;
+    background: #ffffff !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12) !important;
+    padding: 15px 20px !important;
+  }
+  .header-nav.navbar-collapse.show .nav.navbar-nav,
+  .header-nav.navbar-collapse.in .nav.navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .header-nav.navbar-collapse.show .nav.navbar-nav > li,
+  .header-nav.navbar-collapse.in .nav.navbar-nav > li {
+    width: 100% !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+  .header-nav.navbar-collapse.show .nav.navbar-nav > li > a,
+  .header-nav.navbar-collapse.in .nav.navbar-nav > li > a {
+    color: #222222 !important;
+    padding: 12px 10px !important;
+    display: block !important;
+  }
+}
+</style>
 </head>
 
 <body id="bg">
@@ -118,7 +224,7 @@
         <div class="page-content">
         
             <!-- INNER PAGE BANNER -->
-            <div class="wt-bnr-inr overlay-wraper" style="background-image:url(images/banner/faq-banner.jpg);">
+            <div class="wt-bnr-inr overlay-wraper" style="background-image:url(images/banner/3.jpg);">
             	<div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
@@ -394,7 +500,7 @@
                             <div class="widget widget_about">
                                 <h4 class="widget-title">About Company</h4>
                                 <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img loading="lazy" decoding="async" src="images/logo-white.png" style="max-height: 45px; width: auto;" alt="Beauticians On The Go"></a>
+                                    <a href="index.html"><img loading="eager" decoding="async" src="images/logo-white.png" style="max-height: 45px; width: auto;" alt="Beauticians On The Go"></a>
                                 </div>
                                 <p>Beauticians On The Go, PLLC is an upscale on-demand mobile day spa & beauty salon enterprise. We bring state-licensed specialists, treatment tables, and hospital-grade sanitation directly to private residences, luxury resorts, wedding venues, corporate offices, and assisted living facilities.</p>  
                             </div>
@@ -532,26 +638,26 @@
                     
         <h6 class="switcher-title">Background Image</h6>
         <ul class="background-switcher">
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-bg/thum/bg1.jpg" rel="images/switcher/switcher-bg/large/bg1.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-bg/thum/bg2.jpg" rel="images/switcher/switcher-bg/large/bg2.jpg"  alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-bg/thum/bg3.jpg" rel="images/switcher/switcher-bg/large/bg3.jpg"  alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-bg/thum/bg4.jpg" rel="images/switcher/switcher-bg/large/bg4.jpg"  alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-bg/thum/bg1.jpg" rel="images/switcher/switcher-bg/large/bg1.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-bg/thum/bg2.jpg" rel="images/switcher/switcher-bg/large/bg2.jpg"  alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-bg/thum/bg3.jpg" rel="images/switcher/switcher-bg/large/bg3.jpg"  alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-bg/thum/bg4.jpg" rel="images/switcher/switcher-bg/large/bg4.jpg"  alt=""></li>
         </ul>
         
         <h6 class="switcher-title">Background Pattern</h6>
         <ul class="pattern-switcher">
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg1.jpg"  rel="images/switcher/switcher-patterns/large/pt1.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg2.jpg"  rel="images/switcher/switcher-patterns/large/pt2.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg3.jpg"  rel="images/switcher/switcher-patterns/large/pt3.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg4.jpg"  rel="images/switcher/switcher-patterns/large/pt4.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg5.jpg"  rel="images/switcher/switcher-patterns/large/pt5.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg6.jpg"  rel="images/switcher/switcher-patterns/large/pt6.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg7.jpg"  rel="images/switcher/switcher-patterns/large/pt7.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg8.jpg"  rel="images/switcher/switcher-patterns/large/pt8.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg9.jpg"  rel="images/switcher/switcher-patterns/large/pt9.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg10.jpg"  rel="images/switcher/switcher-patterns/large/pt10.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg11.jpg"  rel="images/switcher/switcher-patterns/large/pt11.jpg" alt=""></li>
-            <li><img loading="lazy" decoding="async" src="images/switcher/switcher-patterns/thum/bg12.jpg"  rel="images/switcher/switcher-patterns/large/pt12.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg1.jpg"  rel="images/switcher/switcher-patterns/large/pt1.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg2.jpg"  rel="images/switcher/switcher-patterns/large/pt2.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg3.jpg"  rel="images/switcher/switcher-patterns/large/pt3.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg4.jpg"  rel="images/switcher/switcher-patterns/large/pt4.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg5.jpg"  rel="images/switcher/switcher-patterns/large/pt5.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg6.jpg"  rel="images/switcher/switcher-patterns/large/pt6.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg7.jpg"  rel="images/switcher/switcher-patterns/large/pt7.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg8.jpg"  rel="images/switcher/switcher-patterns/large/pt8.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg9.jpg"  rel="images/switcher/switcher-patterns/large/pt9.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg10.jpg"  rel="images/switcher/switcher-patterns/large/pt10.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg11.jpg"  rel="images/switcher/switcher-patterns/large/pt11.jpg" alt=""></li>
+            <li><img loading="eager" decoding="async" src="images/switcher/switcher-patterns/thum/bg12.jpg"  rel="images/switcher/switcher-patterns/large/pt12.jpg" alt=""></li>
         </ul>
         
         
@@ -581,6 +687,83 @@
 
     
 
+
+<script id="botg-interactive-fix">
+(function() {
+  if (window.jQuery && !jQuery.fn.TouchSpin) {
+    jQuery.fn.TouchSpin = function() { return this; };
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1. Hide preloader immediately
+    var loader = document.querySelector('.loading-area');
+    if (loader) loader.style.display = 'none';
+
+    // 2. Pricing tabs on index.html ([data-bs-toggle="pill"])
+    var tabButtons = document.querySelectorAll('#pricingMainTabs [data-bs-target]');
+    if (tabButtons.length) {
+      tabButtons.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var targetSelector = btn.getAttribute('data-bs-target');
+          if (!targetSelector) return;
+          tabButtons.forEach(function(b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          var panes = document.querySelectorAll('#pricingMainTabsContent .tab-pane');
+          panes.forEach(function(pane) {
+            pane.classList.remove('show', 'active');
+          });
+          var targetPane = document.querySelector(targetSelector);
+          if (targetPane) {
+            targetPane.classList.add('show', 'active');
+          }
+        });
+      });
+    }
+
+    // 3. FAQ Accordions on faq-1.html ([data-bs-toggle="collapse"])
+    var faqLinks = document.querySelectorAll('#faqAccordion [data-bs-toggle="collapse"]');
+    if (faqLinks.length) {
+      faqLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var href = link.getAttribute('href');
+          if (!href) return;
+          var targetBody = document.querySelector(href);
+          if (!targetBody) return;
+          var isOpen = targetBody.classList.contains('show');
+          document.querySelectorAll('#faqAccordion .acod-body').forEach(function(b) {
+            b.classList.remove('show');
+          });
+          document.querySelectorAll('#faqAccordion .acod-head').forEach(function(h) {
+            h.classList.remove('acc-actives');
+          });
+          if (!isOpen) {
+            targetBody.classList.add('show');
+            var head = link.closest('.acod-head');
+            if (head) head.classList.add('acc-actives');
+          }
+        });
+      });
+    }
+
+    // 4. Mobile menu hamburger toggle
+    var toggler = document.getElementById('mobile-side-drawer');
+    var headerNav = document.querySelector('.header-nav');
+    if (toggler && headerNav) {
+      toggler.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        headerNav.classList.toggle('show');
+        toggler.classList.toggle('collapsed');
+      });
+    }
+  });
+})();
+</script>
 </body>
 
 </html>
