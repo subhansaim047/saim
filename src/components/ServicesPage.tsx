@@ -1,9 +1,18 @@
 "use client";
-import { SiteFooter } from "./SiteFooter";
 
+import { SiteFooter } from "./SiteFooter";
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowLeft, ArrowRight, HelpCircle, ChevronDown, CheckCircle2, Clock } from "lucide-react";
+import { 
+  ArrowRight, 
+  HelpCircle, 
+  ChevronDown, 
+  CheckCircle2, 
+  Clock, 
+  ShieldCheck, 
+  Sparkles, 
+  ExternalLink 
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ServiceDetail {
@@ -11,7 +20,8 @@ interface ServiceDetail {
   title: string;
   price?: string;
   featured?: boolean;
-  dedicatedLink?: string;
+  dedicatedLink: string;
+  badge?: string;
   description: string;
   benefits: string[];
   deliverables: string[];
@@ -20,10 +30,37 @@ interface ServiceDetail {
 
 const detailedServices: ServiceDetail[] = [
   {
+    id: "website-clone",
+    title: "Pixel-Perfect Website & Web App Clone",
+    price: "Flat $1,900 USD",
+    featured: true,
+    badge: "1:1 Exact Recreation",
+    dedicatedLink: "/services/website-clone",
+    description:
+      "Duniya ki koi bhi website ya web application clone karwayein — 18/19 ka bhi farq nahi hoga. Rebuilt from scratch in clean Next.js 15 and Tailwind CSS with sub-second speeds, smooth animations, and $0 upfront deposit.",
+    benefits: [
+      "100% 1:1 pixel-perfect visual & responsive match",
+      "Sub-second Next.js edge performance replacing legacy bloat",
+      "$0 Upfront Guarantee: We build first, you inspect, pay only if satisfied",
+      "Flat $1,900 USD pricing with zero hourly scope creep",
+      "Zero monthly charges or CMS licensing fees",
+    ],
+    deliverables: [
+      "Exact 1:1 Layout, Typography & Color Palette Match",
+      "Clean Next.js 15 & React 19 Component Architecture",
+      "Tailwind CSS Responsive Utilities for All Devices",
+      "Framer Motion Micro-Interactions & Transitions",
+      "All Assets Upgraded to Full HD Master Quality",
+      "100% GitHub Source Code Ownership",
+    ],
+    timeline: "7 – 10 Days",
+  },
+  {
     id: "takeaway-web",
     title: "Takeaway & Restaurant Web System (Commission-Free)",
     price: "Fixed £250",
     featured: true,
+    badge: "0% Commission",
     dedicatedLink: "/services/takeaway-web-design",
     description:
       "Bespoke, lightning-fast Next.js direct-ordering website designed for UK takeaways, chip shops, and restaurants. Escape 30%+ Just Eat, Deliveroo, and Uber Eats commissions with an interactive Natasha's Law allergen-filtered menu and instant WhatsApp order routing.",
@@ -46,148 +83,175 @@ const detailedServices: ServiceDetail[] = [
   },
   {
     id: "custom-web",
-    title: "Custom Small Business Website",
-    price: "From £350",
+    title: "Bespoke Next.js Website Development (WP Alternative)",
+    price: "From £450",
+    dedicatedLink: "/services/website-development",
+    badge: "No WordPress Bloat",
     description:
-      "Bespoke full-stack web architecture designed for UK & European service businesses to establish brand authority, engage local visitors, and convert organic traffic into predictable enquiries.",
+      "Hum outdated WordPress plugins ya slow PHP par kaam nahi karte. Hum custom Next.js websites engineer karte hain jo 500ms se kam mein load hoti hain, Google par top rank karti hain aur zero monthly retainers ke sath aati hain.",
     benefits: [
-      "Custom Next.js codebase built from scratch",
-      "High-conversion layout structured for local UK search",
-      "Sub-second loading times (100/100 Core Web Vitals)",
-      "Full ownership of code, assets, and hosting",
+      "Custom Next.js codebase built from scratch (no bloated themes)",
+      "Unhackable static edge architecture with sub-500ms speed",
+      "100/100 Google Core Web Vitals and built-in structured schema",
+      "$0 Upfront Guarantee: Review live staging before paying",
+      "Full ownership of code, assets, and hosting with zero retainers",
     ],
     deliverables: [
-      "Responsive React/Tailwind codebase (up to 5 pages)",
+      "Responsive React/Tailwind codebase (up to 12 pages)",
       "Content Architecture & Local SEO Copywriting",
       "Contact & Lead Capture Forms with Instant Alerts",
+      "Automated XML Sitemap, Robots.txt & Rich Schema",
       "14–30 Days Dedicated Launch Support",
     ],
     timeline: "5 – 10 Days",
   },
   {
+    id: "ecommerce-headless",
+    title: "Custom Next.js Headless eCommerce (Shopify Alternative)",
+    price: "From £750",
+    dedicatedLink: "/services/ecommerce-shopify",
+    badge: "Zero App Fees",
+    description:
+      "Hum Shopify ke slow templates ya monthly app fees ($30–$300/mo) mein aapko lock nahi karte. Hum custom Next.js eCommerce storefronts banate hain jo instant product search, frictionless checkout aur 100% custom styling ke sath aati hain.",
+    benefits: [
+      "Zero monthly Shopify app fees for filters, swatches, and currency",
+      "Sub-second product browsing that doubles mobile checkout conversions",
+      "100% bespoke design freedom aligned with luxury brand standards",
+      "Stripe, PayPal, Apple Pay, Google Pay, and Klarna ready",
+      "Complete code and customer database ownership",
+    ],
+    deliverables: [
+      "Bespoke Next.js Storefront Design & Catalog",
+      "Faceted Filtering & Variant Swatch Architecture",
+      "One-Page Mobile Checkout & Cart Drawer",
+      "Multi-Currency Dynamic Conversion",
+      "Google Shopping Rich Product Schema (JSON-LD)",
+    ],
+    timeline: "7 – 12 Days",
+  },
+  {
     id: "landing-page",
-    title: "Landing Page Development",
+    title: "High-Converting Next.js Landing Pages (CRO)",
+    price: "Fixed £250",
+    dedicatedLink: "/services/landing-pages-cro",
+    badge: "3x Higher Conversion",
     description:
-      "High-impact 1-page conversion engines designed specifically for ad campaigns, product launches, or service lead capture.",
+      "Google Ads, Meta Ads ya TikTok campaign traffic ke liye sub-second speed aur psychological conversion copywriting ke sath tayyar 1-page landing engines. Zero navigation leaks aur direct WhatsApp lead capture.",
     benefits: [
-      "Optimised for 3x higher click-through rate",
-      "Direct Instagram & CRM integration",
-      "Zero distraction, hyper-focused UX",
+      "Optimised for 3x higher ad click-to-lead conversion rate",
+      "Sub-400ms mobile load times lowering Google Ads CPC",
+      "Direct WhatsApp and lead form alerts delivered in seconds",
+      "Meta Pixel, Google Tag Manager & GA4 pre-configured",
+      "Zero monthly builder software fees (save £1,000/yr)",
     ],
     deliverables: [
-      "1-Page High Converting Layout",
-      "Mobile-First Responsive Build",
-      "Analytics & Pixel Setup",
+      "1-Page High Converting Layout with Zero Exit Distractions",
+      "Mobile-First Responsive Touch Build",
+      "Conversion Copywriting & Objection Handling Accordion",
+      "Ad Pixels & Event Tracking Verification",
+      "$0 Upfront Deposit (Pay When Happy)",
     ],
     timeline: "3 – 5 Days",
   },
   {
-    id: "ui-ux",
-    title: "UI/UX Design & Wireframing",
+    id: "redesign",
+    title: "Website Redesign & Modernization",
+    price: "From £550",
+    dedicatedLink: "/services/website-redesign",
+    badge: "Legacy Upgrade",
     description:
-      "Modern, minimalist user interface design tailored to align with your brand identity and guide visitors effortlessly to take action.",
+      "Purani, slow aur outdated websites ko ultra-fast modern Next.js flagships mein convert karein. Existing SEO rankings aur backlinks 100% mehfooz rkhte hue luxury modern aesthetic aur sub-second speed payein.",
     benefits: [
-      "Clean, luxury aesthetic",
-      "Intuitive navigation paths",
-      "Pixel-perfect responsive design tokens",
+      "100% SEO, backlink, and URL ranking preservation guarantee",
+      "Eliminate slow loading times and outdated visual branding",
+      "Migrate away from fragile WordPress/Wix to Next.js",
+      "Strict side-by-side comparison before any payment",
+      "Zero monthly agency maintenance retainers",
     ],
     deliverables: [
-      "Figma / Wireframe Mockups",
-      "Custom Colour Palette & Typography",
-      "Interactive Components Prototype",
+      "Complete UI/UX Visual Modernization",
+      "Comprehensive 301 URL Redirect Mapping",
+      "Clean Next.js Rebuild & Asset Optimization",
+      "Enhanced JSON-LD Structured Data",
+      "Zero Downtime Domain Switchover",
     ],
-    timeline: "3 – 5 Days",
+    timeline: "5 – 10 Days",
   },
   {
-    id: "seo-opt",
-    title: "SEO & Search Optimization",
+    id: "speed-optimization",
+    title: "Website Speed & Core Web Vitals Optimization",
+    price: "From £199",
+    dedicatedLink: "/services/website-speed-optimization",
+    badge: "95+ PageSpeed",
     description:
-      "Complete technical and on-page SEO setup ensuring your website ranks on Google and attracts organic local traffic.",
+      "Slow loading websites kill your Google rankings and drain ad spend. Hum LCP, INP aur CLS issues ko permanently solve karte hain. 95+ Google PageSpeed score guaranteed — pay only after verified speed boost.",
     benefits: [
-      "Higher Google search rankings",
-      "Structured Schema rich snippets",
-      "Instant indexing on Google Search Console",
+      "Sub-second mobile load times passing Core Web Vitals",
+      "Lower mobile bounce rates and higher conversion rates",
+      "Pay Only After Verified Results (Google PageSpeed verified)",
+      "Zero collateral damage: all forms, checkouts and trackers intact",
+      "One-time architectural fix with zero ongoing fees",
     ],
     deliverables: [
-      "On-page meta tags & canonicals",
-      "JSON-LD Schema Markup",
-      "XML Sitemap & Robots.txt",
+      "Complete Core Web Vitals Diagnostic & Audit",
+      "LCP Sub-Second Optimization & Critical CSS Inlining",
+      "Zero Cumulative Layout Shift (CLS = 0.00)",
+      "Image Conversion to AVIF/WebP Lossless Formats",
+      "Before & After Verified Audit Report",
     ],
     timeline: "2 – 4 Days",
   },
   {
-    id: "redesign",
-    title: "Website Redesign & Overhaul",
+    id: "seo-opt",
+    title: "Technical & Local SEO Services",
+    price: "From £299",
+    dedicatedLink: "/services/seo-services",
+    badge: "Organic Search",
     description:
-      "Modernize outdated websites into sleek, high-performing digital assets that rebuild client trust and boost conversions.",
+      "Google par organic search dominance ke liye semantic HTML5, comprehensive JSON-LD structured schema, sub-second speed aur local search architecture. No black-hat spam, zero monthly retainers.",
     benefits: [
-      "Eliminate slow loading times",
-      "Modernize outdated visual brand image",
-      "Fix mobile layout bugs",
+      "Higher Google search rankings and rich snippet display",
+      "Local SEO dominance for 'near me' Google searches",
+      "Complete JSON-LD schema (LocalBusiness, Service, FAQPage)",
+      "$0 Upfront Deposit: pay after verified schema implementation",
+      "Zero monthly agency retainer contracts",
     ],
     deliverables: [
-      "Complete UI/UX Refresh",
-      "Code Optimization & Migration",
-      "Preserved Existing SEO Rankings",
-    ],
-    timeline: "5 – 7 Days",
-  },
-  {
-    id: "ai-integrations",
-    title: "AI & Automation Integrations",
-    description:
-      "Integrate intelligent AI assistants, automated chat widgets, and lead routing workflows that operate 24/7.",
-    benefits: [
-      "Automated 24/7 lead capture",
-      "Instant Instagram lead notification",
-      "Reduced manual support burden",
-    ],
-    deliverables: [
-      "AI Assistant Chatbot Integration",
-      "Automated Email & CRM Sync",
-      "AI Search Readiness (LLMO)",
+      "Full Technical Crawl Audit & 404 Elimination",
+      "Bespoke Schema.org JSON-LD Markup",
+      "Google Business Profile & Local Citation Optimization",
+      "Dynamic XML Sitemap & Robots.txt Directives",
+      "Google Search Console Verification & Sitemap Submission",
     ],
     timeline: "3 – 5 Days",
-  },
-  {
-    id: "perf-opt",
-    title: "Performance & Speed Optimization",
-    description:
-      "Deep code optimization and caching setup to achieve 90+ Lighthouse scores and sub-second page loads.",
-    benefits: [
-      "Lower bounce rates",
-      "Pass Core Web Vitals (LCP < 2.5s)",
-      "Instant asset caching & CDN delivery",
-    ],
-    deliverables: [
-      "Image & Video Compression",
-      "Unused Code Elimination",
-      "Lighthouse 90+ Audit Report",
-    ],
-    timeline: "2 – 3 Days",
   },
 ];
 
 const serviceFaqs = [
   {
-    question: "Which plan or service is right for my business?",
+    question: "What is your $0 upfront guarantee?",
     answer:
-      "If you operate a UK takeaway, cafe, or restaurant, our £250 Fixed Price Takeaway Package is specifically tailored to eliminate 30%+ Just Eat, Deliveroo, and Uber Eats commissions with an interactive Natasha's Law allergen-filtered menu. For general UK and European small businesses, our Starter Plan begins at £250, and comprehensive multi-page custom builds range from £350 to £850.",
+      "For every service, we build the live staging website or preview first. You test it on your laptop and phone, inspect the speed, design, and forms. If you are 100% thrilled, you purchase the project. If you are not satisfied, you owe us nothing. There is zero financial risk for your business.",
   },
   {
-    question: "Does the takeaway website include Natasha's Law allergen filtering?",
+    question: "Are there any monthly charges or recurring retainers?",
     answer:
-      "Yes. Every restaurant and takeaway site we deliver includes an interactive 14-allergen filter matrix on the digital menu. Diners can filter out nuts, gluten, dairy, celery, mustard, etc. in real time, helping you maintain compliance with the Food Information Regulations 2014 and Natasha's Law.",
+      "Zero. We do not charge monthly retainers, plugin subscriptions, or maintenance locks. You pay a one-time transparent fee and receive 100% source code ownership. We set up your hosting on Vercel where standard traffic is completely free.",
   },
   {
-    question: "Are there any recurring commission fees or monthly subscriptions?",
+    question: "Why do you build in Next.js instead of WordPress or Shopify?",
     answer:
-      "None. Unlike aggregator platforms (Just Eat, Deliveroo) that take 20% to 35% of every single order, you pay a one-time fixed price from £250. Orders go directly to your WhatsApp or kitchen tablet, and you keep 100% of your customer revenue.",
+      "WordPress relies on fragile PHP plugins that slow down your website and open critical security holes. Shopify charges recurring monthly fees ($30–$300/mo) for basic apps. Next.js produces unhackable, sub-second static edge websites that pass Google Core Web Vitals with 100/100 scores and require zero monthly plugin maintenance.",
   },
   {
-    question: "Do I get full ownership of the website?",
+    question: "How does the $1,900 Website & App Clone service work?",
     answer:
-      "Yes! Upon project completion and full payment, you receive full ownership of the Next.js code, assets, and design with zero recurring agency locks or platform dependency.",
+      "Send us the link of any website or web application you want duplicated. We rebuild it 1:1 down to the pixel in clean Next.js and Tailwind CSS (18/19 ka bhi farq nahi hoga). Delivered in 7 to 10 days with a $0 upfront deposit.",
+  },
+  {
+    question: "Do I get full ownership of the code and design?",
+    answer:
+      "Yes! You receive full GitHub repository access, code ownership, and all assets upon completion. You are never locked into our agency.",
   },
 ];
 
@@ -201,10 +265,9 @@ export const ServicesPage = () => {
         fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
       }}
     >
-      
       <div className="max-w-5xl mx-auto">
         {/* Visible Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="mb-8">
+        <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
             <li>
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -216,46 +279,38 @@ export const ServicesPage = () => {
           </ol>
         </nav>
 
+        {/* TRUST BANNER */}
+        <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 mb-10 flex flex-wrap items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            <span className="font-medium text-white">Our Agency Registered in UK &amp; Based in Pakistan</span>
+          </div>
+          <div className="flex items-center gap-3 text-white/70">
+            <span className="text-[#FF4A1C] font-semibold">$0 Upfront Deposit</span>
+            <span>•</span>
+            <span className="text-white font-medium">Zero Monthly Charges</span>
+          </div>
+        </div>
+
         {/* 1. HERO */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-primary text-xs font-mono font-medium uppercase mb-4">
-            PREMIUM SERVICES
+            NEXT.JS SPECIALIZED SERVICES
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4">
-            Web Development Services UK
+            Next.js Web Engineering Services UK
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Saim Dev delivers fixed-price Next.js web development services for UK businesses starting from £250. We build bespoke online ordering platforms, responsive corporate websites, and high-conversion landing pages featuring sub-second load times, 90+ Core Web Vitals, built-in statutory compliance, and zero recurring monthly fees.
+            Saim Dev delivers fixed-price Next.js web development with sub-second speeds, 95+ Core Web Vitals, and an unbeatable <strong className="text-white font-medium">$0 Upfront Guarantee</strong>. Hum WordPress ke slow plugins ya Shopify ke monthly app charges ke bajaye custom Next.js websites aur pixel-perfect clones engineer karte hain.
           </p>
         </div>
 
-        {/* Key Architectural Standards */}
-        <div className="liquid-glass rounded-3xl p-6 sm:p-8 border border-white/10 mb-12">
-          <h2 className="text-xs font-mono uppercase tracking-widest text-primary mb-3 font-bold">
-            Key Architectural Standards
-          </h2>
-          <dl className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm text-white/80">
-            <div className="space-y-1">
-              <dt className="text-white font-semibold text-sm">What is Next.js?</dt>
-              <dd className="text-white/60 leading-relaxed font-light">
-                An open-source React framework built by Vercel that delivers hybrid static generation and server-side rendering for ultra-fast page speeds, automatic code splitting, and native search engine discoverability.
-              </dd>
-            </div>
-            <div className="space-y-1">
-              <dt className="text-white font-semibold text-sm">What are Core Web Vitals?</dt>
-              <dd className="text-white/60 leading-relaxed font-light">
-                Google’s standardized web vitals assessing real-world user page experience: Largest Contentful Paint (loading speed &lt; 2.5s), Interaction to Next Paint (interactivity &lt; 200ms), and Cumulative Layout Shift (visual stability &lt; 0.1).
-              </dd>
-            </div>
-          </dl>
-        </div>
-
         {/* 2. SERVICES LIST */}
-        <div className="space-y-10 mb-20">
+        <div className="space-y-8 mb-20">
           {detailedServices.map((service) => (
             <div
               key={service.id}
-              className="liquid-glass rounded-3xl p-8 sm:p-10 border border-white/15 hover:border-white/25 transition-all"
+              className="liquid-glass rounded-3xl p-8 sm:p-10 border border-white/15 hover:border-white/25 transition-all group"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
                 <div>
@@ -268,26 +323,24 @@ export const ServicesPage = () => {
                         {service.price}
                       </span>
                     )}
-                    {service.featured && (
+                    {service.badge && (
                       <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-mono uppercase font-bold tracking-wider">
-                        Most Popular for UK Food Businesses
+                        {service.badge}
                       </span>
                     )}
                   </div>
                   <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed max-w-2xl">
                     {service.description}
                   </p>
-                  {service.dedicatedLink && (
-                    <div className="mt-3">
-                      <Link
-                        href={service.dedicatedLink}
-                        className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-4 transition-colors"
-                      >
-                        <span>View Takeaway System Features & Live Demo Breakdown</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
-                  )}
+                  <div className="mt-4 flex flex-wrap items-center gap-4">
+                    <Link
+                      href={service.dedicatedLink}
+                      className="inline-flex items-center gap-1.5 text-xs text-[#FF4A1C] hover:text-white font-semibold underline underline-offset-4 transition-colors"
+                    >
+                      <span>Explore Full 13-Section Service Page &amp; Live Demos</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono text-primary bg-white/5 border border-white/10 px-3.5 py-2 rounded-full shrink-0 self-start md:self-auto">
                   <Clock className="w-4 h-4" />
@@ -322,78 +375,19 @@ export const ServicesPage = () => {
                   </ul>
                 </div>
               </div>
+
+              <div className="mt-6 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                <span className="text-xs text-white/50">$0 Upfront Deposit • Pay Only If Satisfied</span>
+                <Link
+                  href={service.dedicatedLink}
+                  className="bg-white hover:bg-neutral-100 text-black font-semibold text-xs px-5 py-2.5 rounded-full transition-all inline-flex items-center gap-2"
+                >
+                  <span>View Details &amp; Pricing</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
             </div>
           ))}
-        </div>
-
-        {/* CROSS-NAVIGATION CLUSTER */}
-        <div className="mb-16 liquid-glass rounded-3xl p-8 border border-white/15">
-          <h3 className="text-xl font-light text-white mb-2">Explore Related Engineering &amp; Client Work</h3>
-          <p className="text-white/60 text-xs sm:text-sm mb-6 font-light">
-            Discover our dedicated developer offerings, live interactive demos, and real performance metrics.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Link
-              href="/services/takeaway-web-design"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-amber-400/50 transition-all group"
-            >
-              <span className="text-xs font-mono text-amber-400 uppercase block mb-1">Takeaway Specialty</span>
-              <span className="text-sm font-medium text-white group-hover:text-amber-400 transition-colors flex items-center justify-between">
-                <span>Takeaway web design from £250</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link
-              href="/nextjs-developer-uk"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Freelance Engineer</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Hire a Next.js developer for your UK business</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link
-              href="/technologies"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Tech Stack</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Explore our Next.js engineering stack</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link
-              href="/case-studies"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Performance Results</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>View our website case studies</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link
-              href="/demos"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Live Systems</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Test interactive web ordering demos</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link
-              href="/contact"
-              className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group"
-            >
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Fixed Quote</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <span>Discuss your website project with Saim</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-          </div>
         </div>
 
         {/* 3. FAQ SNIPPET */}
@@ -433,29 +427,30 @@ export const ServicesPage = () => {
           </div>
         </div>
 
-        {/* 4. CTA */}
+        {/* 4. FINAL CTA */}
         <div className="text-center bg-white/5 rounded-3xl p-10 border border-white/10">
+          <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Zero Risk • 100% Satisfaction</span>
           <h3 className="text-2xl sm:text-3xl font-light text-white mb-3">
-            Ready to Select Your Custom Web Service?
+            Ready to Build Your Website With $0 Upfront?
           </h3>
           <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            Message Saim Dev on WhatsApp to receive a detailed proposal and get started immediately.
+            Message Saim Dev on WhatsApp. Details share karein, hum live preview bana kar dikhayenge. Pasand aya to khareed lena.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20starting%20a%20project%20with%20$0%20upfront"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all text-xs cursor-pointer shadow-xl"
+              className="inline-flex items-center gap-2 bg-[#FF4A1C] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#e03d12] transition-all text-xs cursor-pointer shadow-xl"
             >
-              <span>Start Your Project on WhatsApp</span>
+              <span>Start on WhatsApp ($0 Upfront)</span>
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-full transition-all text-xs cursor-pointer border border-white/15"
             >
-              <span>Discuss your website project</span>
+              <span>Discuss Your Scope</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

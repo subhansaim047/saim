@@ -94,13 +94,37 @@ export const PLANS: Plan[] = [
     featured: true,
     badge: "Most Popular in UK/EU",
   },
+  {
+    id: "clone",
+    name: "Website & App Clone",
+    prices: {
+      GBP: "£1,500",
+      EUR: "€1,750",
+      USD: "$1,900",
+    },
+    description: "1:1 pixel-perfect clone of any website or web application (18/19 ka bhi farq nahi hoga). Next.js + Tailwind.",
+    bg: "#1a1311",
+    badge: "1:1 Exact Match",
+    features: [
+      { text: "100% Exact 1:1 Pixel-Perfect Visual Match", included: true },
+      { text: "Next.js 15 & React 19 Modern Architecture", included: true },
+      { text: "Tailwind CSS Responsive Utilities", included: true },
+      { text: "Fluid 60fps Micro-Interactions (Framer Motion)", included: true },
+      { text: "All Assets Upgraded to Full HD Master Quality", included: true },
+      { text: "Contact Forms & WhatsApp Lead Routing", included: true },
+      { text: "Full GitHub Source Code Ownership", included: true },
+      { text: "$0 Upfront Deposit (Pay Only If Satisfied)", included: true },
+      { text: "Zero Monthly Charges or Licensing Fees", included: true },
+      { text: "14 Days Dedicated Post-Launch Support", included: true },
+    ],
+  },
 ];
 
 export const BUDGET_OPTIONS = [
   "Landing page (from £250)",
   "Starter (from £390)",
   "Business (from £790)",
-  "Custom or web app (quote)",
+  "Website / App Clone ($1,900)",
   "Not sure yet",
 ] as const;
 
@@ -108,12 +132,13 @@ export function getBudgetOptions(currency: Currency = "GBP"): string[] {
   const landing = PLANS.find((p) => p.id === "landing")?.prices[currency] || "£250";
   const starter = PLANS.find((p) => p.id === "starter")?.prices[currency] || "£390";
   const business = PLANS.find((p) => p.id === "business")?.prices[currency] || "£790";
+  const clone = PLANS.find((p) => p.id === "clone")?.prices[currency] || "$1,900";
 
   return [
     `Landing page (from ${landing})`,
     `Starter (from ${starter})`,
     `Business (from ${business})`,
-    "Custom or web app (quote)",
+    `Website / App Clone (${clone})`,
     "Not sure yet",
   ];
 }

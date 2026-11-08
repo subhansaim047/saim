@@ -30,7 +30,7 @@ export const AboutSection = () => {
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-8 sm:mb-10 backdrop-blur-md">
             <span className="section-dot" />
             <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
-              Web Architecture & Growth
+              UK Registered Agency • Based in Pakistan
             </span>
           </div>
 
@@ -65,7 +65,7 @@ export const AboutSection = () => {
           {/* AI-Friendly Business Description (LLMO & Search Indexing) */}
           <div className="mt-12 pt-8 border-t border-white/10 max-w-2xl mx-auto relative z-10">
             <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed">
-              Saim Dev is an independent UK full-stack digital engineering studio building bespoke business websites, Shopify & WooCommerce stores, custom Next.js SaaS web applications, and headless CMS platforms. We provide guaranteed sub-second performance, 100% source code ownership, built-in structured schema, and direct senior engineer collaboration with zero agency markups or mandatory monthly retainers.
+              Saim Dev is a specialized web engineering agency registered in the United Kingdom and based in Pakistan. We engineer bespoke business websites, custom Next.js headless eCommerce stores, pixel-perfect website clones ($1,900 flat), and high-converting landing pages. We build with a strict 100% risk-free $0 upfront model: we build the live prototype first, you inspect it, and pay only if completely satisfied. Zero monthly fees, zero WordPress bloat, and 100% source code ownership.
             </p>
           </div>
         </div>

@@ -140,13 +140,13 @@ export const HeroSection = () => {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 border border-white/20 shadow-md">
                 <span className="section-dot animate-pulse" />
                 <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/90">
-                  FULL-STACK DIGITAL STUDIO
+                  OUR AGENCY REGISTERED IN UK • BASED IN PAKISTAN
                 </span>
               </div>
 
               {/* Tech chips */}
               <div className="flex items-center gap-0 pl-1 flex-wrap">
-                {["Next.js 16", "React", "TypeScript", "Node.js", "Shopify", "WordPress"].map((tech, i, arr) => (
+                {["Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion", "Node.js"].map((tech, i, arr) => (
                   <span key={tech} className="flex items-center">
                     <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-white/50">
                       {tech}

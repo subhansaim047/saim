@@ -280,7 +280,7 @@ export const PricingSection = () => {
         </div>
 
         {/* 3 PLAN CARDS GRID */}
-        <div data-gsap-stagger className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div data-gsap-stagger className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
           {PLANS.map((p) => (
             <PricingCard key={p.name} plan={p} currency={currency} />
           ))}

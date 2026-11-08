@@ -21,15 +21,15 @@ export const FooterSection = () => {
 
           <nav className="site-footer__nav" aria-label="Page sections navigation">
             <a href="/#our-story">Our Story</a>
-            <Link href="/services">Services</Link>
+            <Link href="/services">All Services</Link>
+            <Link href="/services/website-clone" className="text-primary hover:underline font-semibold">Website Clone ($1,900)</Link>
+            <Link href="/services/website-development">Next.js Websites</Link>
+            <Link href="/services/ecommerce-shopify">Next.js eCommerce</Link>
             <Link href="/services/takeaway-web-design" className="text-primary hover:underline">Takeaway Web Design</Link>
-            <Link href="/case-studies">Case Studies</Link>
-            <Link href="/technologies">Tech Stack</Link>
-            <Link href="/nextjs-developer-uk" className="text-primary hover:underline">Next.js UK & EU</Link>
-            <Link href="/tools" className="text-primary hover:underline">Free Tools</Link>
-            <Link href="/tools/ppds-label-generator">PPDS Label Maker</Link>
-            <Link href="/tools/allergen-matrix-generator">Allergen Matrix</Link>
-            <Link href="/tools/food-cost-calculator">Food Cost Tool</Link>
+            <Link href="/services/landing-pages-cro">Landing Pages (CRO)</Link>
+            <Link href="/services/website-redesign">Website Redesign</Link>
+            <Link href="/services/website-speed-optimization">Speed & Vitals</Link>
+            <Link href="/services/seo-services">SEO Services</Link>
             <Link href="/demos">Demo Sites</Link>
           </nav>
 
@@ -99,7 +99,7 @@ export const FooterSection = () => {
         {/* VISIBLE BUSINESS DETAILS & FAZIER FEATURED BADGE */}
         <div className="border-t border-white/10 pt-5 mt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50 text-center md:text-left">
           <div className="flex flex-col gap-1">
-            <span>Saim Dev — Independent Next.js Engineering Studio for UK &amp; European businesses.</span>
+            <span>Saim Dev — Our Agency Registered in UK &amp; Based in Pakistan. $0 Upfront Deposit • Zero Monthly Charges.</span>
             <span>Contact: <a href="mailto:contact@saimdev.site" className="text-primary hover:underline">contact@saimdev.site</a> · WhatsApp: <a href="https://wa.me/923196526604" className="text-primary hover:underline">+92 319 6526604</a></span>
           </div>
           <a
