@@ -20,7 +20,7 @@ export const RhHeroSection = () => {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181818] border border-[#2c2c2c] text-[#a1a1a1] text-xs font-mono uppercase tracking-wider mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-[#b5f900] animate-pulse" />
-            <span>No account managers. No juniors. Just senior engineers who ship.</span>
+            <span>$0 UPFRONT GUARANTEE • ZERO MONTHLY FEES • 100% CODE OWNERSHIP</span>
           </motion.div>
 
           {/* Main H1 Headline */}
@@ -31,11 +31,10 @@ export const RhHeroSection = () => {
             className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-white leading-[1.08] mb-6"
             style={{ letterSpacing: "-0.04em" }}
           >
-            We design and build digital products that grow revenue for{" "}
+            Our Agency Registered in UK{" "}
             <span className="inline-block relative px-3 py-1 mx-1 rounded-2xl bg-[#181818] border border-[#3a3a3a] text-[#b5f900] text-3xl sm:text-5xl md:text-6xl font-mono font-medium tracking-normal align-middle">
-              startups
-            </span>{" "}
-            &amp; growing businesses.
+              &amp; Based in Pakistan
+            </span>
           </motion.h1>
 
           {/* Subheading */}
@@ -43,9 +42,9 @@ export const RhHeroSection = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-base sm:text-xl text-[#a1a1a1] font-light max-w-2xl leading-relaxed mb-8"
+            className="text-base sm:text-xl text-[#d4d4d4] font-light max-w-3xl leading-relaxed mb-8"
           >
-            Founder-led full-stack Next.js engineering focused on sub-second speed, 100% code ownership, and real commercial outcomes. We build your live staging preview first under our <strong className="text-white font-medium">$0 Upfront Guarantee</strong>.
+            <strong className="text-white font-medium">$0 Upfront Charges for Any Project:</strong> Share your project details with us — we build and show you the working platform first. If you love it, you buy it. If not, walk away with zero obligations. Zero monthly charges. 100% code ownership.
           </motion.p>
 
           {/* Authority Banner — UK Registered & Based in PK */}
@@ -57,15 +56,15 @@ export const RhHeroSection = () => {
           >
             <div className="flex items-center gap-2 text-white font-medium">
               <ShieldCheck className="w-4 h-4 text-[#b5f900] shrink-0" />
-              <span>Our Agency Registered in UK • Based in Pakistan</span>
+              <span>Registered in UK (London, WC2H 9JQ) • Engineering Hub in Pakistan</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-[#2c2c2c]" />
             <div className="flex items-center gap-2">
               <span className="text-[#b5f900] font-mono font-semibold">$0 Upfront Deposit</span>
-              <span>• Pay only if satisfied</span>
+              <span>• Test working prototype first</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-[#2c2c2c]" />
-            <div className="text-[#a1a1a1]">Zero monthly retainers</div>
+            <div className="text-[#a1a1a1]">Zero monthly retainers • Full source code delivered</div>
           </motion.div>
 
           {/* Dual CTAs & Social Proof */}

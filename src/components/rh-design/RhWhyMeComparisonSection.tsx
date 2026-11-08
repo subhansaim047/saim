@@ -11,7 +11,7 @@ const INDUSTRIES = [
   "Health & Aesthetics",
   "Architecture & Interior",
   "Corporate & B2B",
-  "SaaS & Web Applications"
+  "Commercial Web Platforms"
 ];
 
 export const RhWhyMeComparisonSection = () => {
