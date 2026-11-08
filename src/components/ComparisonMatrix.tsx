@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, X, Minus, Sparkles } from "lucide-react";
+import { Check, X, Minus, ShieldCheck } from "lucide-react";
 
 interface MatrixRow {
   dimension: string;
@@ -109,7 +109,7 @@ export const ComparisonMatrix = () => {
                 </th>
                 <th className="py-5 px-6 text-xs font-mono uppercase tracking-widest text-[#FF4A1C] bg-[#FF4A1C]/[0.08] border-x border-[#FF4A1C]/20 w-[28%] relative">
                   <div className="flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-[#FF4A1C]" />
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#FF4A1C]" />
                     <span className="font-bold text-white">Saim Dev</span>
                   </div>
                   <span className="text-[10px] text-white/60 lowercase font-sans font-normal block mt-0.5">

@@ -2,17 +2,15 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   ArrowRight, 
   CheckCircle2, 
   ChevronDown, 
   ShieldCheck, 
-  Clock, 
-  Sparkles, 
   Layers, 
   ExternalLink, 
-  HelpCircle, 
-  Zap, 
+  Code2, 
   Award, 
   Check, 
   X,
@@ -151,7 +149,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
       </aside>
 
       {/* TOP NAVIGATION / BREADCRUMB */}
-      <header className="sticky top-0 z-50 bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/10 px-4 sm:px-8 py-4">
+      <header className="sticky top-0 z-50 bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/10 px-4 sm:px-8 py-3.5">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-white hover:text-[#FF4A1C] transition-colors">
             <span className="w-7 h-7 rounded-lg bg-[#FF4A1C] flex items-center justify-center text-black font-extrabold text-sm">S</span>
@@ -178,7 +176,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#FF4A1C] hover:bg-[#e03d12] text-white text-xs font-semibold px-4 py-2 rounded-full transition-all flex items-center gap-1.5 shadow-[0_2px_12px_rgba(255,74,28,0.3)]"
+              className="bg-[#FF4A1C] hover:bg-[#e03d12] text-white text-xs font-semibold px-4 py-2 rounded-full transition-all flex items-center gap-1.5 shadow-[0_2px_12px_rgba(255,74,28,0.3)] active:scale-95"
             >
               <span>$0 Upfront Kickoff</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -196,34 +194,60 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
           <div className="max-w-5xl mx-auto text-center relative z-10">
             {/* Service Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/15 mb-6 text-xs font-mono tracking-wider uppercase text-white/90">
+            <motion.div 
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/15 mb-6 text-xs font-mono tracking-wider uppercase text-white/90"
+            >
               <span className="w-2 h-2 rounded-full bg-[#FF4A1C]" />
               <span>{data.badge}</span>
-            </div>
+            </motion.div>
 
             {/* H1 Headline */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+            <motion.h1 
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6"
+            >
               {data.h1}
-            </h1>
+            </motion.h1>
 
             {/* Subheading */}
-            <p className="text-base sm:text-xl text-white/75 font-light max-w-3xl mx-auto leading-relaxed mb-10">
+            <motion.p 
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-base sm:text-xl text-white/75 font-light max-w-3xl mx-auto leading-relaxed mb-10"
+            >
               {data.subheading}
-            </p>
+            </motion.p>
 
             {/* Winning Proposition Highlight Card */}
-            <div className="max-w-2xl mx-auto mb-10 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-white/[0.04] via-[#FF4A1C]/[0.08] to-white/[0.04] border border-[#FF4A1C]/30 text-left flex items-start gap-3.5 shadow-lg">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{ y: -2, borderColor: "rgba(255, 74, 28, 0.5)" }}
+              className="max-w-2xl mx-auto mb-10 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-white/[0.04] via-[#FF4A1C]/[0.08] to-white/[0.04] border border-[#FF4A1C]/30 text-left flex items-start gap-3.5 shadow-lg transition-all"
+            >
               <ShieldCheck className="w-6 h-6 text-[#FF4A1C] shrink-0 mt-0.5" />
               <div className="text-xs sm:text-sm">
                 <span className="font-semibold text-white">Our 100% Risk-Free Winning Guarantee: </span>
                 <span className="text-white/80">
-                  Kisi bhi project ke liye koi upfront payment nahi. Details share karein, hum live preview bana kar dikhayenge. Pasand aaya to khareed lena, na pasand aaye to ek rupya bhi mat dena. Aur koi monthly charges nahi — 100% code aapka.
+                  Zero upfront deposit for any project. Share your project requirements or reference links; we engineer a live staging preview first. Pay only if you are 100% thrilled with the outcome. If you are not satisfied, you owe nothing. Zero recurring monthly fees — 100% full source code ownership.
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* Dual CTAs */}
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <motion.div 
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex flex-wrap items-center justify-center gap-4"
+            >
               <a
                 href={whatsappHref}
                 target="_blank"
@@ -240,7 +264,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
               >
                 View Live Demos
               </a>
-            </div>
+            </motion.div>
 
             {/* Trust Indicators */}
             <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
@@ -281,7 +305,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {data.painPoints.map((item, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all flex flex-col justify-between">
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.45, delay: idx * 0.06 }}
+                  whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.35)", transition: { duration: 0.2 } }}
+                  className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 transition-all flex flex-col justify-between shadow-lg"
+                >
                   <div>
                     <div className="flex items-start gap-3 mb-4">
                       <div className="w-7 h-7 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center shrink-0 mt-0.5">
@@ -303,7 +335,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -326,13 +358,21 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {data.deliverables.map((deliv, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#FF4A1C]/50 transition-all group">
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.45, delay: idx * 0.05 }}
+                  whileHover={{ y: -4, borderColor: "rgba(255, 74, 28, 0.45)", backgroundColor: "rgba(255, 255, 255, 0.04)", transition: { duration: 0.2 } }}
+                  className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 transition-all group shadow-md"
+                >
                   <div className="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/15 flex items-center justify-center text-white font-mono font-bold text-sm mb-4 group-hover:bg-[#FF4A1C] group-hover:text-black transition-all">
                     0{idx + 1}
                   </div>
                   <h3 className="text-base font-semibold text-white mb-2 tracking-tight">{deliv.title}</h3>
                   <p className="text-xs sm:text-sm text-white/65 font-light leading-relaxed">{deliv.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -355,7 +395,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {data.featuresAndBenefits.map((item, idx) => (
-                <div key={idx} className="p-7 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.45, delay: idx * 0.07 }}
+                  whileHover={{ y: -4, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
+                  className="p-7 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between shadow-md transition-all"
+                >
                   <div>
                     <div className="inline-block px-3 py-1 rounded-full bg-[#FF4A1C]/10 border border-[#FF4A1C]/30 text-[#FF4A1C] text-xs font-semibold mb-4">
                       {item.feature}
@@ -363,7 +411,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
                     <h3 className="text-lg font-bold text-white mb-2">{item.benefit}</h3>
                     <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">{item.description}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -386,7 +434,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {data.industries.map((ind, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all flex flex-col justify-between">
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.45, delay: idx * 0.06 }}
+                  whileHover={{ y: -4, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
+                  className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 transition-all flex flex-col justify-between shadow-md"
+                >
                   <div>
                     <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center mb-4">
                       {getIndustryIcon(ind.industry)}
@@ -405,7 +461,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -428,7 +484,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {data.process.map((step, idx) => (
-                <div key={idx} className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 relative">
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.45, delay: idx * 0.08 }}
+                  whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.5)", transition: { duration: 0.2 } }}
+                  className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 relative shadow-md transition-all"
+                >
                   <div className="text-xs font-mono text-[#FF4A1C] mb-2 font-bold">{step.step}</div>
                   <h3 className="text-base font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-xs text-white/65 font-light leading-relaxed">{step.description}</p>
@@ -437,7 +501,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
                       {step.duration}
                     </span>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -453,33 +517,47 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
               <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
                 Why We Build With Next.js &amp; Modern Frameworks
               </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                Hum bloated WordPress plugins ya restrictive Shopify liquid templates par kaam nahi karte. Hum duniya ki har website aur eCommerce store Next.js mein banate hain jo 10x zyada fast, unhackable aur 0 monthly platform fees ke sath chalti hai.
+              <p className="text-sm sm:text-base text-white/60 mt-3 font-light max-w-3xl mx-auto">
+                We engineer every solution in modern Next.js rather than relying on bloated WordPress plugins or restrictive Shopify templates. You get sub-second global edge delivery, military-grade security, and zero recurring platform subscriptions.
               </p>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
               {data.techStack.map((tech, idx) => (
-                <div key={idx} className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-center flex flex-col items-center justify-center">
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.35, delay: idx * 0.05 }}
+                  whileHover={{ scale: 1.04, borderColor: "rgba(255, 74, 28, 0.5)", transition: { duration: 0.2 } }}
+                  className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-center flex flex-col items-center justify-center transition-all shadow-md"
+                >
                   <div className="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center mb-3">
                     <Laptop className="w-5 h-5 text-[#FF4A1C]" />
                   </div>
                   <p className="text-sm font-semibold text-white mb-1">{tech.name}</p>
                   <p className="text-[11px] text-white/50">{tech.role}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
 
             {/* WordPress / Shopify Comparison Callout */}
-            <div className="mt-10 p-6 rounded-2xl bg-white/[0.02] border border-white/10 max-w-3xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mt-10 p-6 rounded-2xl bg-white/[0.02] border border-white/10 max-w-3xl mx-auto shadow-md"
+            >
               <h3 className="text-base font-semibold text-white mb-2 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[#FF4A1C]" />
+                <Code2 className="w-4 h-4 text-[#FF4A1C]" />
                 Next.js Advantage Over WordPress &amp; Shopify
               </h3>
               <p className="text-xs sm:text-sm text-white/70 leading-relaxed font-light">
                 WordPress requires constant PHP updates, heavy caching plugins, and leaves you vulnerable to database exploits. Shopify charges monthly app fees for basic functions ($30–$300/mo). With our custom Next.js builds, you get instant edge CDN delivery, 100/100 Core Web Vitals, and <strong>zero monthly recurring platform fees</strong>.
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -500,7 +578,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {data.caseStudies.map((study, idx) => (
-                <div key={idx} className="rounded-2xl bg-white/[0.03] border border-white/10 overflow-hidden flex flex-col justify-between group hover:border-[#FF4A1C]/50 transition-all">
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.45, delay: idx * 0.08 }}
+                  whileHover={{ y: -4, borderColor: "rgba(255, 74, 28, 0.45)", transition: { duration: 0.2 } }}
+                  className="rounded-2xl bg-white/[0.03] border border-white/10 overflow-hidden flex flex-col justify-between group transition-all shadow-lg"
+                >
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs font-mono uppercase tracking-wider text-[#FF4A1C]">{study.category}</span>
@@ -533,7 +619,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
                     </a>
                     <span className="text-[11px] text-white/40">Tested 100% Responsive</span>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -556,9 +642,14 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {data.pricing.map((tier, idx) => (
-                <div
+                <motion.div
                   key={idx}
-                  className={`p-7 rounded-3xl border flex flex-col justify-between relative transition-all ${
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.45, delay: idx * 0.08 }}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                  className={`p-7 rounded-3xl border flex flex-col justify-between relative transition-all shadow-xl ${
                     tier.popular
                       ? "bg-gradient-to-b from-[#1C1310] to-[#121212] border-[#FF4A1C]/60 shadow-[0_12px_48px_rgba(255,74,28,0.15)]"
                       : "bg-white/[0.02] border-white/10 hover:border-white/20"
@@ -596,13 +687,13 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
                     rel="noopener noreferrer"
                     className={`w-full py-3 rounded-full text-xs font-semibold text-center transition-all ${
                       tier.popular
-                        ? "bg-[#FF4A1C] hover:bg-[#e03d12] text-white shadow-md"
-                        : "bg-white/10 hover:bg-white/20 text-white"
+                        ? "bg-[#FF4A1C] hover:bg-[#e03d12] text-white shadow-md active:scale-95"
+                        : "bg-white/10 hover:bg-white/20 text-white active:scale-95"
                     }`}
                   >
                     Start Project ($0 Upfront)
                   </a>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -625,13 +716,21 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {data.whyChooseUs.map((item, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.45, delay: idx * 0.06 }}
+                  whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
+                  className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 transition-all shadow-md"
+                >
                   <div className="w-8 h-8 rounded-lg bg-[#FF4A1C]/10 border border-[#FF4A1C]/30 flex items-center justify-center text-[#FF4A1C] font-mono font-bold text-xs mb-4">
                     ✓
                   </div>
                   <h3 className="text-base font-bold text-white mb-2">{item.title}</h3>
                   <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">{item.desc}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -654,7 +753,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {data.testimonials.map((t, idx) => (
-                <div key={idx} className="p-7 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.45, delay: idx * 0.08 }}
+                  whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
+                  className="p-7 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between transition-all shadow-md"
+                >
                   <p className="text-xs sm:text-sm text-white/80 font-light italic leading-relaxed mb-6">
                     &ldquo;{t.quote}&rdquo;
                   </p>
@@ -662,7 +769,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
                     <p className="text-sm font-semibold text-white">{t.client}</p>
                     <p className="text-xs text-white/50">{t.role}, {t.company}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -685,9 +792,13 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
 
             <div className="space-y-3">
               {data.faqs.map((faq, idx) => (
-                <div
+                <motion.div
                   key={idx}
-                  className="rounded-2xl bg-white/[0.03] border border-white/10 overflow-hidden transition-all"
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-20px" }}
+                  transition={{ duration: 0.35, delay: idx * 0.05 }}
+                  className="rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 overflow-hidden transition-all shadow-sm"
                 >
                   <button
                     onClick={() => toggleFaq(idx)}
@@ -701,12 +812,20 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
                       }`}
                     />
                   </button>
-                  {openFaq === idx && (
-                    <div className="px-5 pb-5 text-xs sm:text-sm text-white/75 font-light leading-relaxed border-t border-white/5 pt-3">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
+                  <AnimatePresence>
+                    {openFaq === idx && (
+                      <motion.div 
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="px-5 pb-5 text-xs sm:text-sm text-white/75 font-light leading-relaxed border-t border-white/5 pt-3"
+                      >
+                        {faq.answer}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -718,7 +837,13 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
         <section className="py-20 sm:py-28 px-4 sm:px-8 border-t border-white/10 relative overflow-hidden bg-gradient-to-b from-[#0A0A0A] to-[#141414]">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#FF4A1C]/15 rounded-full blur-[140px] pointer-events-none" />
 
-          <div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto text-center relative z-10"
+          >
             <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-3">Zero Risk • 100% Satisfaction</span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
               {data.finalCta.headline}
@@ -749,7 +874,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
             <p className="text-[11px] text-white/40 font-mono uppercase tracking-wider mt-6">
               UK REGISTERED • BASED IN PAKISTAN • PAY ONLY IF SATISFIED • ZERO MONTHLY FEES
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* RELATED SERVICES INTERNAL LINKS */}
@@ -759,14 +884,19 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
               <p className="text-xs font-mono uppercase text-white/40 tracking-wider mb-4">Explore Related Services</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {data.relatedServices.map((rel, i) => (
-                  <Link
+                  <motion.div
                     key={i}
-                    href={rel.href}
-                    className="p-4 rounded-xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all block group"
+                    whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
+                    className="rounded-xl border border-white/10 transition-all bg-white/[0.02]"
                   >
-                    <p className="text-sm font-semibold text-white group-hover:text-[#FF4A1C] transition-colors">{rel.name}</p>
-                    <p className="text-xs text-white/50 mt-1 font-light">{rel.desc}</p>
-                  </Link>
+                    <Link
+                      href={rel.href}
+                      className="p-4 block group"
+                    >
+                      <p className="text-sm font-semibold text-white group-hover:text-[#FF4A1C] transition-colors">{rel.name}</p>
+                      <p className="text-xs text-white/50 mt-1 font-light">{rel.desc}</p>
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
             </div>

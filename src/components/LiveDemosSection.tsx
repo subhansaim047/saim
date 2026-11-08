@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
 
 interface FeaturedDemo {
   id: string;
@@ -165,7 +165,7 @@ export const LiveDemosSection = () => {
 
                 {/* Top Floating Badge */}
                 <div className="absolute top-3.5 left-3.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-mono uppercase tracking-wider text-white">
-                  {demo.featured && <Sparkles className="w-3 h-3 text-[#FF4A1C]" />}
+                  {demo.featured && <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C] animate-pulse" />}
                   <span>{demo.badge}</span>
                 </div>
 

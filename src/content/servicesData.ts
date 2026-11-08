@@ -12,8 +12,8 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
     seoDescription: "Clone any website or web app down to the pixel for $1,900 flat. 100% 1:1 identical match rebuilt in clean Next.js and Tailwind CSS. $0 upfront deposit.",
     canonicalUrl: "https://www.saimdev.site/services/website-clone",
     badge: "1:1 Pixel-Perfect Recreation",
-    h1: "Duniya Ki Koi Bhi Website Ya App Clone Karwayein — 18/19 Ka Bhi Farq Nahi Hoga",
-    subheading: "Flat $1,900 mein hum kisi bhi website ya web application ka 100% pixel-perfect Next.js clone bana kar dete hain. Clean component architecture, fluid animations, aur zero difference. $0 upfront deposit.",
+    h1: "Pixel-Perfect Website & Web App Cloning — 100% 1:1 Architectural Precision",
+    subheading: "Reconstruct any website or web application down to the single pixel in clean Next.js 15 and Tailwind CSS. Silky 60fps micro-animations, ultra-responsive layouts, and zero visual discrepancy. Backed by our $0 upfront deposit guarantee.",
     painPoints: [
       {
         problem: "Duplicating a modern site usually ends up looking like a cheap, broken knockoff with displaced margins and broken fonts.",
@@ -153,7 +153,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
       }
     ],
     whyChooseUs: [
-      { title: "Zero Guesswork (18/19 Ka Bhi Farq Nahi)", desc: "We match typography, responsive breakpoints, and animations down to the exact pixel so the clone is indistinguishable from the master." },
+      { title: "Zero Visual Discrepancy", desc: "We match typography, responsive breakpoints, margins, and animations down to the exact pixel so the clone is indistinguishable from the reference." },
       { title: "No Upfront Risk", desc: "You do not pay a single dollar until the live staging preview is ready and you inspect it with your own eyes." },
       { title: "No Monthly Fees Ever", desc: "No recurring agency retainers, no CMS licenses, no hidden costs. Pay once, own 100% of the code forever." },
       { title: "UK Registered Agency", desc: "Professional accountability with an agency registered in the United Kingdom and senior engineering talent based in Pakistan." },
@@ -162,7 +162,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
     ],
     testimonials: [
       {
-        quote: "Mene aik luxury UK brand ki website ka link diya tha. Saim ne 8 din mein exact 1:1 Next.js clone bna kr dikhaya. Har hover effect aur responsive layout bilkul same tha aur speed original se 3x zyada tez thi!",
+        quote: "I sent Saim a link to a luxury UK fashion flagship. Within 8 days, he delivered an exact 1:1 Next.js build. Every hover effect, drawer, and responsive state matched perfectly — and it loaded 3x faster than the original.",
         client: "Hamza R.",
         role: "Managing Director",
         company: "E-Commerce House UK"
@@ -183,7 +183,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
     faqs: [
       {
         question: "How accurate is the clone? Will there be differences?",
-        answer: "There is zero noticeable difference (18/19 ka bhi farq nahi hoga). We inspect every CSS rule, computed dimension, font weight, color hex, and animation curve to replicate the reference site 100% down to the exact pixel."
+        answer: "There is zero noticeable difference. We inspect every CSS computed dimension, typography scale, color hex, and animation curve to replicate the reference platform 100% down to the single pixel in modern Next.js."
       },
       {
         question: "How does your $0 upfront guarantee work?",
@@ -207,7 +207,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
       }
     ],
     finalCta: {
-      headline: "Duniya Ki Kisi Bhi Website Ka 1:1 Clone Banwayein",
+      headline: "Clone Any Website or Web Application With 100% Precision",
       description: "Send us the link of the website or web app you want cloned. We will build the live preview first with $0 upfront. Pay only if you love it.",
       primaryButtonText: "Claim Your $0 Upfront Clone ($1,900 Flat)",
       whatsappText: "I want to clone a website for $1,900 with $0 upfront"
@@ -231,7 +231,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
     canonicalUrl: "https://www.saimdev.site/services/website-development",
     badge: "Next.js over WordPress",
     h1: "Bespoke Next.js Website Development Services — Fast, Scalable, Zero WordPress Bloat",
-    subheading: "Hum outdated WordPress plugins ya slow PHP par kaam nahi karte. Hum custom Next.js websites engineer karte hain jo 500ms se kam mein load hoti hain, Google par top rank karti hain aur zero monthly retainers ke sath aati hain.",
+    subheading: "We do not build with bloated WordPress plugins or outdated PHP. We engineer bespoke Next.js websites that load in under 500ms, rank high on Google, and come with zero monthly retainers or vendor lock-in.",
     painPoints: [
       {
         problem: "WordPress websites rely on 30+ fragile plugins that break on every update and create critical security vulnerabilities.",
@@ -419,8 +419,8 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
       }
     ],
     finalCta: {
-      headline: "Apna Business Website Next.js Mein Banwayein",
-      description: "Purane slow WordPress ko alvida kahein. Hum aapki website Next.js mein $0 upfront par bana kar dikhayenge. Pasand aaye to khareedna.",
+      headline: "Build Your High-Performance Business Website in Next.js",
+      description: "Say goodbye to vulnerable WordPress plugins and sluggish load times. We engineer your custom Next.js website first with a $0 upfront deposit. Pay only when you approve the live preview.",
       primaryButtonText: "Claim Your $0 Upfront Project",
       whatsappText: "I want a custom Next.js website with $0 upfront"
     },
@@ -443,7 +443,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
     canonicalUrl: "https://www.saimdev.site/services/ecommerce-shopify",
     badge: "Headless Next.js eCommerce",
     h1: "Next.js Headless eCommerce Stores — Blazing Fast Speed, Zero Shopify App Fees",
-    subheading: "Hum Shopify ke slow templates ya monthly app fees ($30–$300/mo) mein aapko lock nahi karte. Hum custom Next.js eCommerce storefronts banate hain jo instant product search, frictionless checkout aur 100% custom styling ke sath aati hain.",
+    subheading: "Escape sluggish Shopify templates and recurring monthly app fees ($30–$300/mo). We engineer custom Next.js eCommerce storefronts with instant faceted search, frictionless checkout, and bespoke luxury design freedom.",
     painPoints: [
       {
         problem: "Shopify store owners pay $100 to $400 every single month just for basic apps (filter, upsell, reviews, currency).",
@@ -631,8 +631,8 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
       }
     ],
     finalCta: {
-      headline: "Apna eCommerce Store Next.js Mein Banwayein",
-      description: "Shopify ke monthly app bills aur slow loading se nijaat payein. Hum aapka online store Next.js mein $0 upfront bana kar dikhayenge.",
+      headline: "Launch Your Custom Next.js eCommerce Storefront",
+      description: "Eliminate monthly Shopify app bills and slow loading times. We build your headless store in Next.js with a $0 upfront deposit. Pay only when you approve the live store.",
       primaryButtonText: "Claim Your $0 Upfront Store",
       whatsappText: "I want a Next.js eCommerce store with zero monthly fees"
     },
@@ -841,7 +841,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
       }
     ],
     finalCta: {
-      headline: "Just Eat Ko 30% Dena Band Karein — Apna Ordering System Banwayein",
+      headline: "Stop Paying 30% Marketplace Commissions — Own Your Web Ordering System",
       description: "Send us your menu photo today. We will build your direct-ordering website with allergen filter and WhatsApp dispatch for £250 fixed with $0 upfront.",
       primaryButtonText: "Claim Your £250 Takeaway Site ($0 Upfront)",
       whatsappText: "I want a £250 takeaway ordering site with $0 upfront"
@@ -865,7 +865,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
     canonicalUrl: "https://www.saimdev.site/services/landing-pages-cro",
     badge: "Conversion Rate Optimization (CRO)",
     h1: "High-Converting Next.js Landing Pages — Built to Convert Paid Ad Clicks into Customers",
-    subheading: "Google Ads, Meta Ads ya TikTok traffic ke liye sub-second speed aur psychological conversion copywriting ke sath tayyar landing pages. Zero distraction, instant WhatsApp lead funnels aur $0 upfront guarantee.",
+    subheading: "Engineered specifically for Google Ads, Meta Ads, and TikTok campaign traffic with sub-second speed and psychological conversion copywriting. Zero navigation leaks, direct WhatsApp lead funnels, and our $0 upfront guarantee.",
     painPoints: [
       {
         problem: "Sending paid traffic to a generic homepage with 20 navigation links distracts visitors, resulting in 90%+ bounce rates.",
@@ -1050,8 +1050,8 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
       }
     ],
     finalCta: {
-      headline: "Apna High-Converting Landing Page Banwayein",
-      description: "Ad budget zaya karna band karein. Hum aapka Next.js landing page $0 upfront par bana kar dikhayenge. Pasand aaye to khareedna.",
+      headline: "Launch a High-Converting Next.js Landing Page",
+      description: "Stop burning ad budget on slow, leaking landing pages. We build your high-converting Next.js landing engine first with $0 upfront. Pay only when you are 100% satisfied.",
       primaryButtonText: "Claim Your £250 Landing Page ($0 Upfront)",
       whatsappText: "I want a high-converting Next.js landing page for £250"
     },
@@ -1074,7 +1074,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
     canonicalUrl: "https://www.saimdev.site/services/website-redesign",
     badge: "Legacy to Next.js Upgrade",
     h1: "Website Redesign & Modernization Services — Transform Your Outdated Web Presence",
-    subheading: "Purani, slow aur outdated websites ko ultra-fast modern Next.js flagships mein convert karein. Existing SEO rankings aur backlinks 100% mehfooz rkhte hue luxury modern aesthetic aur sub-second speed payein. $0 upfront deposit.",
+    subheading: "Transform outdated, slow legacy websites into ultra-fast modern Next.js flagships. We preserve 100% of your existing Google rankings and backlink authority while elevating your brand aesthetic. $0 upfront deposit.",
     painPoints: [
       {
         problem: "Your existing website looks 7 years old, embarrassing your brand when potential clients check your credibility.",
@@ -1262,7 +1262,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
       }
     ],
     finalCta: {
-      headline: "Apni Purani Website Ko Modern Next.js Mein Upgrade Karein",
+      headline: "Modernize Your Legacy Website Into a Next.js Flagship",
       description: "Send us your current website link. We will build a modern, high-speed Next.js redesign on staging first with $0 upfront. Pay only if you love it.",
       primaryButtonText: "Claim Your $0 Upfront Redesign",
       whatsappText: "I want to redesign my website with $0 upfront"
@@ -1286,7 +1286,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
     canonicalUrl: "https://www.saimdev.site/services/website-speed-optimization",
     badge: "Sub-Second Performance",
     h1: "Website Speed Optimization & Core Web Vitals — Sub-Second Speeds Guaranteed",
-    subheading: "Slow loading websites kill your Google rankings and drain your ad budget. Hum LCP, INP aur CLS issues ko permanently solve karte hain. 95+ Google PageSpeed score guaranteed — pay only after verified speed boost. From £199.",
+    subheading: "Sluggish websites kill conversion rates and harm your Google rankings. We permanently resolve LCP, INP, and CLS bottlenecks to guarantee a 95+ Google PageSpeed score — pay only after verified performance improvement. Fixed fee from £199.",
     painPoints: [
       {
         problem: "Slow Largest Contentful Paint (LCP > 2.5s) causes Google to demote your rankings on mobile search results.",
@@ -1472,7 +1472,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
       }
     ],
     finalCta: {
-      headline: "Apni Website Ki Speed 95+ PageSpeed Par Le Jayein",
+      headline: "Accelerate Your Website to 95+ Google PageSpeed",
       description: "Send us your website URL today. We will run a free performance audit and guarantee sub-second speeds. Pay only after verified results.",
       primaryButtonText: "Claim Your Speed Boost (Pay After Verification)",
       whatsappText: "I want to optimize my website speed to 95+ PageSpeed"
@@ -1496,7 +1496,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
     canonicalUrl: "https://www.saimdev.site/services/seo-services",
     badge: "Organic Search Visibility",
     h1: "Technical & Local SEO Services — Dominate Organic Search in the UK",
-    subheading: "Google par organic search dominance ke liye semantic HTML5, comprehensive JSON-LD structured schema, sub-second speed aur local search architecture. No black-hat spam, zero monthly retainers, $0 upfront deposit.",
+    subheading: "Dominate organic search with clean semantic HTML5, comprehensive JSON-LD structured schema markup, sub-second edge speeds, and local SEO architecture. No black-hat spam, zero monthly retainers, $0 upfront deposit.",
     painPoints: [
       {
         problem: "Your website is invisible on Google for high-intent commercial keywords, while competitors capture all the leads.",
@@ -1683,7 +1683,7 @@ export const SERVICES_CATALOG: Record<string, ServicePageData> = {
       }
     ],
     finalCta: {
-      headline: "Google Par Apni Website Ki Organic Ranking Barhayein",
+      headline: "Accelerate Your Organic Google Search Visibility",
       description: "Send us your website URL today. We will audit your technical SEO and structured data with $0 upfront. Pay only after verified implementation.",
       primaryButtonText: "Claim Your Technical SEO Setup ($0 Upfront)",
       whatsappText: "I want technical & local SEO services with $0 upfront"

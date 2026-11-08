@@ -10,7 +10,7 @@ import {
   CheckCircle2, 
   Clock, 
   ShieldCheck, 
-  Sparkles, 
+  Copy, 
   ExternalLink 
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -37,9 +37,9 @@ const detailedServices: ServiceDetail[] = [
     badge: "1:1 Exact Recreation",
     dedicatedLink: "/services/website-clone",
     description:
-      "Duniya ki koi bhi website ya web application clone karwayein — 18/19 ka bhi farq nahi hoga. Rebuilt from scratch in clean Next.js 15 and Tailwind CSS with sub-second speeds, smooth animations, and $0 upfront deposit.",
+      "Exact 1:1 architectural replication of any website or web application down to the single pixel. Reconstructed from scratch in clean Next.js 15 and Tailwind CSS with sub-second speeds, 60fps micro-animations, and our $0 upfront deposit guarantee.",
     benefits: [
-      "100% 1:1 pixel-perfect visual & responsive match",
+      "100% 1:1 pixel-perfect visual, typographic & responsive match",
       "Sub-second Next.js edge performance replacing legacy bloat",
       "$0 Upfront Guarantee: We build first, you inspect, pay only if satisfied",
       "Flat $1,900 USD pricing with zero hourly scope creep",
@@ -88,7 +88,7 @@ const detailedServices: ServiceDetail[] = [
     dedicatedLink: "/services/website-development",
     badge: "No WordPress Bloat",
     description:
-      "Hum outdated WordPress plugins ya slow PHP par kaam nahi karte. Hum custom Next.js websites engineer karte hain jo 500ms se kam mein load hoti hain, Google par top rank karti hain aur zero monthly retainers ke sath aati hain.",
+      "We do not build with bloated WordPress plugins or outdated PHP. We engineer bespoke Next.js websites that load in under 500ms, rank high on Google, and come with zero monthly retainers or vendor lock-in.",
     benefits: [
       "Custom Next.js codebase built from scratch (no bloated themes)",
       "Unhackable static edge architecture with sub-500ms speed",
@@ -112,7 +112,7 @@ const detailedServices: ServiceDetail[] = [
     dedicatedLink: "/services/ecommerce-shopify",
     badge: "Zero App Fees",
     description:
-      "Hum Shopify ke slow templates ya monthly app fees ($30–$300/mo) mein aapko lock nahi karte. Hum custom Next.js eCommerce storefronts banate hain jo instant product search, frictionless checkout aur 100% custom styling ke sath aati hain.",
+      "Escape sluggish Shopify templates and recurring monthly app fees ($30–$300/mo). We engineer custom Next.js eCommerce storefronts with instant faceted search, frictionless checkout, and bespoke luxury design freedom.",
     benefits: [
       "Zero monthly Shopify app fees for filters, swatches, and currency",
       "Sub-second product browsing that doubles mobile checkout conversions",
@@ -136,7 +136,7 @@ const detailedServices: ServiceDetail[] = [
     dedicatedLink: "/services/landing-pages-cro",
     badge: "3x Higher Conversion",
     description:
-      "Google Ads, Meta Ads ya TikTok campaign traffic ke liye sub-second speed aur psychological conversion copywriting ke sath tayyar 1-page landing engines. Zero navigation leaks aur direct WhatsApp lead capture.",
+      "Engineered specifically for Google Ads, Meta Ads, and TikTok campaign traffic with sub-second speed and psychological conversion copywriting. Zero navigation leaks, direct WhatsApp lead funnels, and our $0 upfront guarantee.",
     benefits: [
       "Optimised for 3x higher ad click-to-lead conversion rate",
       "Sub-400ms mobile load times lowering Google Ads CPC",
@@ -160,7 +160,7 @@ const detailedServices: ServiceDetail[] = [
     dedicatedLink: "/services/website-redesign",
     badge: "Legacy Upgrade",
     description:
-      "Purani, slow aur outdated websites ko ultra-fast modern Next.js flagships mein convert karein. Existing SEO rankings aur backlinks 100% mehfooz rkhte hue luxury modern aesthetic aur sub-second speed payein.",
+      "Transform outdated, slow legacy websites into ultra-fast modern Next.js flagships. We preserve 100% of your existing Google rankings and backlink authority while elevating your brand aesthetic. $0 upfront deposit.",
     benefits: [
       "100% SEO, backlink, and URL ranking preservation guarantee",
       "Eliminate slow loading times and outdated visual branding",
@@ -184,7 +184,7 @@ const detailedServices: ServiceDetail[] = [
     dedicatedLink: "/services/website-speed-optimization",
     badge: "95+ PageSpeed",
     description:
-      "Slow loading websites kill your Google rankings and drain ad spend. Hum LCP, INP aur CLS issues ko permanently solve karte hain. 95+ Google PageSpeed score guaranteed — pay only after verified speed boost.",
+      "Sluggish websites kill conversion rates and harm your Google rankings. We permanently resolve LCP, INP, and CLS bottlenecks to guarantee a 95+ Google PageSpeed score — pay only after verified performance improvement.",
     benefits: [
       "Sub-second mobile load times passing Core Web Vitals",
       "Lower mobile bounce rates and higher conversion rates",
@@ -208,7 +208,7 @@ const detailedServices: ServiceDetail[] = [
     dedicatedLink: "/services/seo-services",
     badge: "Organic Search",
     description:
-      "Google par organic search dominance ke liye semantic HTML5, comprehensive JSON-LD structured schema, sub-second speed aur local search architecture. No black-hat spam, zero monthly retainers.",
+      "Dominate organic search with clean semantic HTML5, comprehensive JSON-LD structured schema markup, sub-second edge speeds, and local SEO architecture. No black-hat spam, zero monthly retainers, $0 upfront deposit.",
     benefits: [
       "Higher Google search rankings and rich snippet display",
       "Local SEO dominance for 'near me' Google searches",
@@ -246,7 +246,7 @@ const serviceFaqs = [
   {
     question: "How does the $1,900 Website & App Clone service work?",
     answer:
-      "Send us the link of any website or web application you want duplicated. We rebuild it 1:1 down to the pixel in clean Next.js and Tailwind CSS (18/19 ka bhi farq nahi hoga). Delivered in 7 to 10 days with a $0 upfront deposit.",
+      "Send us the link of any website or web application you want duplicated. We rebuild it 1:1 down to the pixel in clean Next.js and Tailwind CSS with zero visual discrepancy. Delivered in 7 to 10 days with a $0 upfront deposit.",
   },
   {
     question: "Do I get full ownership of the code and design?",
@@ -280,7 +280,7 @@ export const ServicesPage = () => {
         </nav>
 
         {/* TRUST BANNER */}
-        <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 mb-10 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 mb-10 flex flex-wrap items-center justify-between gap-3 text-xs shadow-md">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
             <span className="font-medium text-white">Our Agency Registered in UK &amp; Based in Pakistan</span>
@@ -301,21 +301,26 @@ export const ServicesPage = () => {
             Next.js Web Engineering Services UK
           </h1>
           <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Saim Dev delivers fixed-price Next.js web development with sub-second speeds, 95+ Core Web Vitals, and an unbeatable <strong className="text-white font-medium">$0 Upfront Guarantee</strong>. Hum WordPress ke slow plugins ya Shopify ke monthly app charges ke bajaye custom Next.js websites aur pixel-perfect clones engineer karte hain.
+            Saim Dev delivers fixed-price Next.js web development with sub-second speeds, 95+ Core Web Vitals, and an unbeatable <strong className="text-white font-medium">$0 Upfront Guarantee</strong>. We engineer bespoke Next.js websites, custom eCommerce flagships, and pixel-perfect clones with zero monthly retainers.
           </p>
         </div>
 
         {/* 2. SERVICES LIST */}
-        <div className="space-y-8 mb-20">
-          {detailedServices.map((service) => (
-            <div
+        <div className="space-y-6 sm:space-y-8 mb-20">
+          {detailedServices.map((service, index) => (
+            <motion.div
               key={service.id}
-              className="liquid-glass rounded-3xl p-8 sm:p-10 border border-white/15 hover:border-white/25 transition-all group"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.45, delay: index * 0.05 }}
+              whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
+              className="liquid-glass rounded-3xl p-6 sm:p-9 border border-white/15 transition-all group shadow-xl"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
                 <div>
                   <div className="flex items-center gap-3 flex-wrap mb-2">
-                    <h2 className="text-2xl sm:text-3xl font-light text-white">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-white">
                       {service.title}
                     </h2>
                     {service.price && (
@@ -348,10 +353,10 @@ export const ServicesPage = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs sm:text-sm leading-relaxed font-light">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 text-xs sm:text-sm leading-relaxed font-light">
                 {/* Benefits */}
                 <div>
-                  <h3 className="text-white font-medium text-base mb-3 text-primary">Key Benefits</h3>
+                  <h3 className="text-white font-medium text-sm sm:text-base mb-3 text-primary">Key Benefits</h3>
                   <ul className="space-y-2">
                     {service.benefits.map((b, i) => (
                       <li key={i} className="flex items-start gap-2.5 text-white/80">
@@ -364,7 +369,7 @@ export const ServicesPage = () => {
 
                 {/* Deliverables */}
                 <div>
-                  <h3 className="text-white font-medium text-base mb-3 text-primary">Deliverables</h3>
+                  <h3 className="text-white font-medium text-sm sm:text-base mb-3 text-primary">Deliverables</h3>
                   <ul className="space-y-2">
                     {service.deliverables.map((d, i) => (
                       <li key={i} className="flex items-start gap-2.5 text-white/80">
@@ -380,30 +385,30 @@ export const ServicesPage = () => {
                 <span className="text-xs text-white/50">$0 Upfront Deposit • Pay Only If Satisfied</span>
                 <Link
                   href={service.dedicatedLink}
-                  className="bg-white hover:bg-neutral-100 text-black font-semibold text-xs px-5 py-2.5 rounded-full transition-all inline-flex items-center gap-2"
+                  className="bg-white hover:bg-neutral-100 text-black font-semibold text-xs px-5 py-2.5 rounded-full transition-all inline-flex items-center gap-2 active:scale-95 shadow-md"
                 >
                   <span>View Details &amp; Pricing</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* 3. FAQ SNIPPET */}
-        <div className="mb-20 liquid-glass rounded-3xl p-8 border border-white/15">
+        <div className="mb-20 liquid-glass rounded-3xl p-6 sm:p-8 border border-white/15 shadow-xl">
           <div className="flex items-center gap-2 mb-6 text-primary">
             <HelpCircle className="w-5 h-5" />
             <h3 className="text-white font-medium text-lg">Services FAQ</h3>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-3">
             {serviceFaqs.map((faq, index) => {
               const isOpen = openFaqIndex === index;
               return (
                 <div
                   key={index}
                   onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                  className="bg-white/5 rounded-2xl border border-white/10 p-5 cursor-pointer"
+                  className="bg-white/5 rounded-2xl border border-white/10 p-5 cursor-pointer hover:border-white/20 transition-all"
                 >
                   <div className="flex items-center justify-between gap-4">
                     <h4 className="text-white text-sm font-medium">{faq.question}</h4>
@@ -428,20 +433,20 @@ export const ServicesPage = () => {
         </div>
 
         {/* 4. FINAL CTA */}
-        <div className="text-center bg-white/5 rounded-3xl p-10 border border-white/10">
+        <div className="text-center bg-white/5 rounded-3xl p-8 sm:p-10 border border-white/10 shadow-xl">
           <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Zero Risk • 100% Satisfaction</span>
           <h3 className="text-2xl sm:text-3xl font-light text-white mb-3">
             Ready to Build Your Website With $0 Upfront?
           </h3>
           <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            Message Saim Dev on WhatsApp. Details share karein, hum live preview bana kar dikhayenge. Pasand aya to khareed lena.
+            Message Saim Dev on WhatsApp. Share your project requirements or reference links; we engineer a live preview first. Pay only when you are 100% satisfied.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
               href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20starting%20a%20project%20with%20$0%20upfront"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#FF4A1C] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#e03d12] transition-all text-xs cursor-pointer shadow-xl"
+              className="inline-flex items-center gap-2 bg-[#FF4A1C] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#e03d12] transition-all text-xs cursor-pointer shadow-xl active:scale-95"
             >
               <span>Start on WhatsApp ($0 Upfront)</span>
               <ArrowRight className="w-4 h-4" />
