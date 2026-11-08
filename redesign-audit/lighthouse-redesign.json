@@ -1,0 +1,29 @@
+{
+  "home": {
+    "performance": 61,
+    "accessibility": 95,
+    "bestPractices": 100,
+    "seo": 100,
+    "lcp": "4.1 s",
+    "cls": "0",
+    "inp": "5.2 s"
+  },
+  "service": {
+    "performance": 58,
+    "accessibility": 96,
+    "bestPractices": 100,
+    "seo": 100,
+    "lcp": "4.3 s",
+    "cls": "0",
+    "inp": "5.1 s"
+  },
+  "tools": {
+    "performance": 63,
+    "accessibility": 95,
+    "bestPractices": 100,
+    "seo": 100,
+    "lcp": "4.0 s",
+    "cls": "0",
+    "inp": "5.1 s"
+  }
+}

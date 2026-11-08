@@ -3,6 +3,7 @@
 import React from "react";
 
 export type IconColor =
+  | "lime"
   | "amber"
   | "vermilion"
   | "emerald"
@@ -34,6 +35,15 @@ export const COLOR_CONFIG: Record<
     dot: string;
   }
 > = {
+  lime: {
+    glow: "from-[#b5f900]/35 to-transparent",
+    color: "text-[#b5f900]",
+    borderHover:
+      "group-hover:border-[#b5f900]/50 group-hover:shadow-[0_0_24px_rgba(181,249,0,0.25)]",
+    pillBg: "bg-[#b5f900]/10 border-[#b5f900]/25",
+    pillText: "text-[#b5f900]",
+    dot: "bg-[#b5f900] shadow-[0_0_8px_#b5f900]",
+  },
   amber: {
     glow: "from-amber-500/35 to-transparent",
     color: "text-amber-400",

@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldAlert, Calculator, Tag, ArrowUpRight } from "lucide-react";
+import { ShieldAlert, Calculator, Tag, UtensilsCrossed, ArrowUpRight } from "lucide-react";
 
 const TOOLS = [
   {
@@ -32,13 +32,22 @@ const TOOLS = [
     desc: "Generate professional Natasha's Law compliant labels with highlighted allergen ingredients ready for commercial kitchen thermal printing.",
     badge: "UK Food Standard",
     icon: Tag
+  },
+  {
+    slug: "recipe-batch-calculator",
+    href: "/tools/recipe-batch-calculator",
+    title: "Recipe Batch & Yield Calculator",
+    tagline: "Commercial Kitchen Prep",
+    desc: "Scale commercial recipes up or down by batch size or ingredient constraints with automatic yield multiplier conversion.",
+    badge: "Kitchen Utility",
+    icon: UtensilsCrossed
   }
 ];
 
 export const RhToolsSection: React.FC = () => {
   return (
-    <section id="tools" className="py-20 sm:py-28 border-t border-[#242424] bg-[#0d0d0d] relative overflow-hidden">
-      <div className="max-w-[1130px] mx-auto px-4 sm:px-6">
+    <section id="tools" className="py-20 sm:py-28 border-t border-[#27272a] bg-[#09090b] relative overflow-hidden">
+      <div className="max-w-[1180px] mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -50,7 +59,7 @@ export const RhToolsSection: React.FC = () => {
               style={{ letterSpacing: "-0.03em" }}
             >
               Free business &amp; kitchen tools. <br />
-              <span className="text-[#a1a1a1]">Built by Saim Dev for UK commercial operators.</span>
+              <span className="text-[#a1a1aa]">Built by Saim Dev for UK commercial operators.</span>
             </h2>
           </div>
           <Link
@@ -62,8 +71,8 @@ export const RhToolsSection: React.FC = () => {
           </Link>
         </div>
 
-        {/* 3-Column Tools Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* 4-Column Tools Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {TOOLS.map((t, idx) => {
             const IconComponent = t.icon;
             return (
@@ -73,30 +82,30 @@ export const RhToolsSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.08 }}
-                whileHover={{ y: -4, borderColor: "#3a3a3a" }}
-                className="p-7 rounded-3xl bg-[#141414] border border-[#242424] flex flex-col justify-between shadow-xl transition-all group"
+                whileHover={{ y: -4, borderColor: "rgba(181, 249, 0, 0.4)" }}
+                className="p-6 rounded-3xl bg-[#111113] border border-[#27272a] flex flex-col justify-between shadow-xl transition-all group hover:-translate-y-1"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-10 h-10 rounded-2xl bg-[#1c1c1c] border border-[#2e2e2e] flex items-center justify-center text-[#b5f900]">
+                    <div className="w-10 h-10 rounded-2xl bg-[#18181b] border border-[#27272a] flex items-center justify-center text-[#b5f900] group-hover:scale-105 transition-transform">
                       <IconComponent className="w-5 h-5" />
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-[#1c1c1c] border border-[#2e2e2e] text-[10px] font-mono text-[#a1a1a1] uppercase">
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#18181b] border border-[#27272a] text-[10px] font-mono text-[#a1a1aa] uppercase">
                       {t.badge}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-[#b5f900] transition-colors">
+                  <h3 className="text-base font-semibold text-white mb-1 group-hover:text-[#b5f900] transition-colors leading-snug">
                     {t.title}
                   </h3>
-                  <div className="text-xs font-mono text-[#777] mb-3">
+                  <div className="text-[11px] font-mono text-zinc-500 mb-3">
                     {t.tagline}
                   </div>
-                  <p className="text-xs text-[#a1a1a1] leading-relaxed font-light mb-6">
+                  <p className="text-xs text-[#a1a1aa] leading-relaxed font-light mb-6">
                     {t.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#222]">
+                <div className="pt-4 border-t border-[#27272a]">
                   <Link
                     href={t.href}
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#b5f900] group-hover:underline"

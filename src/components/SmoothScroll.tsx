@@ -38,7 +38,8 @@ export function SmoothScroll() {
     };
 
     // ---------- Smooth scroll (motion allowed only) ----------
-    if (!prefersReducedMotion) {
+    const isMobile = window.innerWidth < 768 || window.matchMedia("(pointer: coarse)").matches;
+    if (!prefersReducedMotion && !isMobile) {
       lenis = new Lenis({
         duration: 1.15,
         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -70,7 +71,7 @@ export function SmoothScroll() {
     onScrollProgress();
 
     // ---------- GSAP scroll-driven motion ----------
-    mm.add("(prefers-reduced-motion: no-preference)", () => {
+    mm.add("(prefers-reduced-motion: no-preference) and (min-width: 768px)", () => {
       // Section / element reveals
       gsap.utils.toArray<HTMLElement>("[data-gsap-reveal]").forEach((el) => {
         gsap.from(el, {
@@ -213,7 +214,7 @@ export function SmoothScroll() {
     >
       <div
         ref={progressRef}
-        className="h-full w-full origin-left bg-gradient-to-r from-[#FF4A1C] via-[#FF7A45] to-[#E8E4D9]"
+        className="h-full w-full origin-left bg-gradient-to-r from-[#b5f900] via-[#84cc16] to-[#fafafa]"
         style={{ transform: "scaleX(0)", willChange: "transform" }}
       />
     </div>

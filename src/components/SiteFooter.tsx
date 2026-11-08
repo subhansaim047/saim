@@ -22,7 +22,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ theme = "light", classNa
       <p>© 2026 Saim Dev. High-performance Next.js web architecture. Email: <a href="mailto:contact@saimdev.site" className="underline hover:text-primary">contact@saimdev.site</a></p>
       
       <div className={`mt-2 text-[11px] ${isDark ? "text-white/40" : "text-gray-400"}`}>
-        Saim Dev — Agency Registered in UK &amp; Based in Pakistan • $0 Upfront Deposit • Zero Monthly Charges · WhatsApp: <a href="https://wa.me/923196526604" className="hover:underline text-primary">+92 319 6526604</a>
+        Saim Dev — Agency Registered in UK &amp; Based in Pakistan • $0 Upfront Deposit • Zero Monthly Charges · WhatsApp: <a href="https://wa.me/923196526604" className="underline text-primary hover:text-white">+92 319 6526604</a>
       </div>
 
       <div className="mt-3.5 flex justify-center">

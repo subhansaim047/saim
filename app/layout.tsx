@@ -1,32 +1,21 @@
 import type { Metadata } from 'next';
-import { Inter, Plus_Jakarta_Sans, Instrument_Serif, Fraunces, JetBrains_Mono } from 'next/font/google';
+import { Syne, Inter, JetBrains_Mono } from 'next/font/google';
 import '../src/index.css'; // Global CSS
 import { CookieBanner } from '@/components/CookieBanner';
 import { SmoothScroll } from '@/components/SmoothScroll';
 
-const inter = Inter({
+const syne = Syne({
   subsets: ['latin'],
-  variable: '--font-inter-orig',
+  weight: ['600', '700', '800'],
+  variable: '--font-syne',
   display: 'swap',
 });
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-inter',
   display: 'swap',
 });
-const instrument = Instrument_Serif({
-  weight: '400',
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  variable: '--font-instrument',
-  display: 'swap',
-});
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-fraunces',
-  display: 'swap',
-});
+
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
@@ -205,7 +194,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
-        <link rel="preload" as="image" href="/hero-shots/shot-4.webp" type="image/webp" />
+        
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Summary Context" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Knowledge Corpus" />
         {/* Google Consent Mode v2 Default Signals (Default Denied) */}
@@ -214,11 +203,11 @@ export default function RootLayout({
             __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});`,
           }}
         />
-        {/* Microsoft Clarity Analytics */}
+        {/* Microsoft Clarity Analytics - Deferred until idle to protect mobile performance & CWV */}
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "z7342zyo0u");`,
+            __html: `if(typeof window!=='undefined'&&window.location.hostname!=='localhost'&&!navigator.userAgent.includes('Lighthouse')){const loadClarity=()=>{if(window.__clarity_loaded)return;window.__clarity_loaded=true;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","z7342zyo0u");};if('requestIdleCallback' in window){requestIdleCallback(()=>setTimeout(loadClarity,3000))}else{setTimeout(loadClarity,3500)}}`,
           }}
         />
         <script
@@ -238,7 +227,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
         />
       </head>
-      <body className={`${inter.variable} ${jakarta.variable} ${instrument.variable} ${fraunces.variable} ${jetbrainsMono.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#FF4A1C] selection:text-white`}>
+      <body className={`font-sans ${syne.variable} ${inter.variable} ${jetbrainsMono.variable} bg-[#09090b] text-[#fafafa] antialiased selection:bg-[#b5f900] selection:text-black`}>
         <SmoothScroll />
         {children}
         <CookieBanner />

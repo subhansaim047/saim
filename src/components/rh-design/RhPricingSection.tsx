@@ -107,8 +107,8 @@ export const RhPricingSection = () => {
   const [currency, setCurrency] = useState<Currency>("GBP");
 
   return (
-    <section id="pricing" className="py-20 sm:py-28 border-t border-[#2c2c2c] bg-[#0d0d0d] relative overflow-hidden">
-      <div className="max-w-[1130px] mx-auto px-4 sm:px-6">
+    <section id="pricing" className="py-20 sm:py-28 border-t border-[#27272a] bg-[#09090b] relative overflow-hidden">
+      <div className="max-w-[1180px] mx-auto px-4 sm:px-6">
         {/* Header with Currency Toggle */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -120,16 +120,16 @@ export const RhPricingSection = () => {
               style={{ letterSpacing: "-0.03em" }}
             >
               Transparent pricing. <br />
-              <span className="text-[#a1a1a1]">No surprises, no retainers.</span>
+              <span className="text-[#a1a1aa]">No surprises, no retainers.</span>
             </h2>
           </div>
 
           {/* Currency Pill Selector */}
-          <div className="flex items-center p-1 rounded-full bg-[#181818] border border-[#2c2c2c]">
+          <div className="flex items-center p-1 rounded-full bg-[#111113] border border-[#27272a]">
             <button
               onClick={() => setCurrency("GBP")}
               className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
-                currency === "GBP" ? "bg-white text-black font-bold shadow-md" : "text-[#a1a1a1] hover:text-white"
+                currency === "GBP" ? "bg-white text-black font-bold shadow-md" : "text-[#a1a1aa] hover:text-white"
               }`}
             >
               🇬🇧 £ GBP
@@ -137,7 +137,7 @@ export const RhPricingSection = () => {
             <button
               onClick={() => setCurrency("EUR")}
               className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
-                currency === "EUR" ? "bg-white text-black font-bold shadow-md" : "text-[#a1a1a1] hover:text-white"
+                currency === "EUR" ? "bg-white text-black font-bold shadow-md" : "text-[#a1a1aa] hover:text-white"
               }`}
             >
               🇪🇺 € EUR
@@ -145,7 +145,7 @@ export const RhPricingSection = () => {
             <button
               onClick={() => setCurrency("USD")}
               className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
-                currency === "USD" ? "bg-white text-black font-bold shadow-md" : "text-[#a1a1a1] hover:text-white"
+                currency === "USD" ? "bg-white text-black font-bold shadow-md" : "text-[#a1a1aa] hover:text-white"
               }`}
             >
               🌐 $ USD
@@ -170,8 +170,8 @@ export const RhPricingSection = () => {
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 className={`p-6 sm:p-7 rounded-3xl border flex flex-col justify-between relative transition-all shadow-xl ${
                   plan.featured
-                    ? "bg-[#181818] border-[#b5f900]/50 shadow-[0_12px_48px_rgba(181,249,0,0.1)]"
-                    : "bg-[#141414] border-[#242424] hover:border-[#3a3a3a]"
+                    ? "bg-[#18181b] border-[#b5f900]/50 shadow-[0_12px_48px_rgba(181,249,0,0.1)]"
+                    : "bg-[#111113] border-[#27272a] hover:border-[#3f3f46]"
                 }`}
               >
                 {plan.badge && (
@@ -184,7 +184,7 @@ export const RhPricingSection = () => {
                   <h3 className="text-lg font-medium tracking-tight text-white mb-1.5 mt-1">
                     {plan.name}
                   </h3>
-                  <p className="text-xs text-[#a1a1a1] font-light leading-relaxed mb-6 min-h-[36px]">
+                  <p className="text-xs text-[#a1a1aa] font-light leading-relaxed mb-6 min-h-[36px]">
                     {plan.tagline}
                   </p>
 
@@ -192,14 +192,14 @@ export const RhPricingSection = () => {
                     <div className="text-3xl sm:text-4xl font-bold font-mono text-white tracking-tight">
                       {currentPrice}
                     </div>
-                    <span className="text-[11px] font-mono text-[#a1a1a1] block mt-1">
+                    <span className="text-[11px] font-mono text-[#a1a1aa] block mt-1">
                       One-off fee • {plan.timeline}
                     </span>
                   </div>
 
-                  <ul className="space-y-3 mb-8 pt-4 border-t border-[#242424]">
+                  <ul className="space-y-3 mb-8 pt-4 border-t border-[#27272a]">
                     {plan.features.map((feat) => (
-                      <li key={feat} className="flex items-start gap-2 text-xs text-[#cbcbcb] font-light leading-snug">
+                      <li key={feat} className="flex items-start gap-2 text-xs text-[#d4d4d8] font-light leading-snug">
                         <Check className="w-3.5 h-3.5 text-[#b5f900] shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </li>
@@ -226,7 +226,7 @@ export const RhPricingSection = () => {
         </div>
 
         {/* Guarantee Callout Banner */}
-        <div className="mt-12 p-6 rounded-2xl bg-[#141414] border border-[#2c2c2c] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#cbcbcb]">
+        <div className="mt-12 p-6 rounded-2xl bg-[#111113] border border-[#27272a] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#d4d4d8]">
           <div className="flex items-center gap-3">
             <ShieldCheck className="w-6 h-6 text-[#b5f900] shrink-0" />
             <div>

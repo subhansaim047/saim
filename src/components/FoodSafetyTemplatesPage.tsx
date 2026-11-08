@@ -220,7 +220,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
           <div className="flex flex-col gap-3 max-w-4xl">
             {/* Visible Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb" className="mb-2">
-              <ol className="flex items-center gap-1.5 text-xs text-gray-500 font-medium flex-wrap">
+              <ol className="flex items-center gap-1.5 text-xs text-gray-700 font-medium flex-wrap">
                 <li>
                   <Link href="/" className="hover:text-black transition-colors">Home</Link>
                 </li>
@@ -258,7 +258,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap items-center gap-2 pt-2">
-              <span className="text-xs font-semibold text-gray-500 uppercase font-mono tracking-wider">Quick Launch Tools:</span>
+              <span className="text-xs font-semibold text-gray-700 uppercase font-mono tracking-wider">Quick Launch Tools:</span>
               <Link
                 href="/tools/allergen-matrix-generator"
                 className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
@@ -296,7 +296,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
       <section className="bg-[#F8F9FA] border-b border-[#E5E5EA] px-4 sm:px-8 py-8 no-print">
         <div className="max-w-7xl mx-auto">
           <div className="mb-6">
-            <span className="text-[11px] font-mono uppercase tracking-widest text-slate-500 font-bold block mb-1">
+            <span className="text-[11px] font-mono uppercase tracking-widest text-slate-700 font-bold block mb-1">
               Topical Safety Architecture
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-[#1D1D1F]">
@@ -312,7 +312,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-red-600 bg-red-50 border border-red-100 px-2 py-0.5 rounded-md inline-block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-red-900 bg-red-100 border border-red-200 px-2 py-0.5 rounded-md inline-block">
                     Cluster 1
                   </span>
                   <IconTile color="vermilion" size="sm">
@@ -325,13 +325,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/tools/allergen-matrix-generator" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/tools/allergen-matrix-generator" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; 14 Allergen Matrix Template
                 </Link>
-                <Link href="/tools/ppds-label-generator" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/tools/ppds-label-generator" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; PPDS Label Generator
                 </Link>
-                <Link href="/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants" className="text-slate-600 hover:text-black font-medium block truncate">
+                <Link href="/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants" className="text-slate-800 hover:text-black font-medium block truncate py-1 text-xs sm:text-sm">
                   &#128214; Guide: Creating a 14-Allergen Matrix
                 </Link>
               </div>
@@ -354,13 +354,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/food-safety-templates/haccp-plan-builder" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/haccp-plan-builder" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; HACCP Plan Builder
                 </Link>
-                <Link href="/food-safety-templates/delivery-log" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/delivery-log" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; Delivery Intake Log
                 </Link>
-                <Link href="/blog/how-to-write-haccp-plan-uk-food-business-step-by-step" className="text-slate-600 hover:text-black font-medium block truncate">
+                <Link href="/blog/how-to-write-haccp-plan-uk-food-business-step-by-step" className="text-slate-800 hover:text-black font-medium block truncate py-1 text-xs sm:text-sm">
                   &#128214; Guide: Writing a UK HACCP Plan
                 </Link>
               </div>
@@ -370,7 +370,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-md inline-block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-900 bg-blue-100 border border-blue-200 px-2 py-0.5 rounded-md inline-block">
                     Cluster 3
                   </span>
                   <IconTile color="cyan" size="sm">
@@ -383,13 +383,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/food-safety-templates/fridge-temperature-record-sheet-pdf" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/fridge-temperature-record-sheet-pdf" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; Fridge Temperature Sheet
                 </Link>
-                <Link href="/food-safety-templates/freezer-temperature-chart" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/freezer-temperature-chart" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; Freezer Temperature Chart
                 </Link>
-                <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-slate-600 hover:text-black font-medium block truncate">
+                <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-slate-800 hover:text-black font-medium block truncate py-1 text-xs sm:text-sm">
                   &#128214; Guide: 90-Minute Rapid Food Cooling
                 </Link>
               </div>
@@ -399,7 +399,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-md inline-block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 border border-emerald-200 px-2 py-0.5 rounded-md inline-block">
                     Cluster 4
                   </span>
                   <IconTile color="teal" size="sm">
@@ -412,13 +412,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/food-safety-templates/cleaning-schedule" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/cleaning-schedule" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; Daily Cleaning Schedule
                 </Link>
-                <Link href="/food-safety-templates/opening-and-closing-checklist-template" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/opening-and-closing-checklist-template" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; Opening &amp; Closing Checklist
                 </Link>
-                <Link href="/blog/sfbb-daily-kitchen-opening-closing-checklist-guide" className="text-slate-600 hover:text-black font-medium block truncate">
+                <Link href="/blog/sfbb-daily-kitchen-opening-closing-checklist-guide" className="text-slate-800 hover:text-black font-medium block truncate py-1 text-xs sm:text-sm">
                   &#128214; Guide: SFBB Daily Shift Routines
                 </Link>
               </div>
@@ -428,7 +428,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-2xs flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 border border-amber-100 px-2 py-0.5 rounded-md inline-block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-950 bg-amber-100 border border-amber-200 px-2 py-0.5 rounded-md inline-block">
                     Cluster 5
                   </span>
                   <IconTile color="emerald" size="sm">
@@ -441,13 +441,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/tools/food-cost-calculator" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/tools/food-cost-calculator" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; Food Cost Percentage Calculator
                 </Link>
-                <Link href="/tools/recipe-batch-calculator" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/tools/recipe-batch-calculator" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; Recipe Portion Scaler
                 </Link>
-                <Link href="/blog/mastering-food-cost-percentage-commercial-kitchen-calculator" className="text-slate-600 hover:text-black font-medium block truncate">
+                <Link href="/blog/mastering-food-cost-percentage-commercial-kitchen-calculator" className="text-slate-800 hover:text-black font-medium block truncate py-1 text-xs sm:text-sm">
                   &#128214; Guide: Mastering Food Cost Margins
                 </Link>
               </div>
@@ -470,13 +470,13 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                 </p>
               </div>
               <div className="space-y-1.5 pt-2 border-t border-gray-100 text-xs">
-                <Link href="/food-safety-templates/chopping-board-colour-chart" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/chopping-board-colour-chart" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; Chopping Board Colour Guide
                 </Link>
-                <Link href="/food-safety-templates/hand-washing-poster" className="text-blue-600 hover:underline font-medium block truncate">
+                <Link href="/food-safety-templates/hand-washing-poster" className="text-blue-800 hover:underline font-medium block truncate py-1 text-xs sm:text-sm">
                   &rarr; Hand Washing SOP Poster
                 </Link>
-                <Link href="/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide" className="text-slate-600 hover:text-black font-medium block truncate">
+                <Link href="/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide" className="text-slate-800 hover:text-black font-medium block truncate py-1 text-xs sm:text-sm">
                   &#128214; Guide: Level 2 Food Hygiene Practice Test
                 </Link>
               </div>
@@ -569,7 +569,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
               <div className="space-y-1.5">
                 <label htmlFor="filter-search" className="block text-xs font-bold text-gray-700">Search templates</label>
                 <div className="relative">
-                  <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                  <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-700" />
                   <input
                     id="filter-search"
                     type="text"
@@ -642,7 +642,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             </div>
 
             {/* Active Filter Chips */}
-            <div className="flex items-center justify-between text-xs text-gray-500 px-1 no-print">
+            <div className="flex items-center justify-between text-xs text-gray-700 px-1 no-print">
               <span>Showing <strong>{coreTemplates.length}</strong> food safety templates</span>
               <span className="font-mono text-[11px]">Print &amp; Save as PDF Ready</span>
             </div>
@@ -677,7 +677,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     />
 
                     {/* Preheader Badge */}
-                    <span className={`absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-wider font-mono shadow-sm ${getPillColor(template.type)}`}>
+                    <span className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-wider font-mono shadow-sm bg-black/85 text-white border border-white/20">
                       {template.preheader || template.type.toUpperCase()}
                     </span>
                   </Link>
@@ -705,7 +705,8 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                         className="w-full py-2.5 px-3 rounded-xl bg-gray-900 hover:bg-black text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer group-hover:bg-[#2e2d75]"
                       >
                         <span>{template.type === "smart_tool" || template.slug.includes("calc") || template.slug.includes("allergen") || template.slug.includes("quiz") ? "Open Interactive Tool" : "Open Template"}</span>
-                        <ExternalLink className="w-3 h-3 text-gray-400 group-hover:text-white" />
+                        <span className="sr-only"> ({template.title})</span>
+                        <ExternalLink className="w-3 h-3 text-gray-700 group-hover:text-white" />
                       </Link>
                     </div>
                   </div>
@@ -715,9 +716,9 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
             {coreTemplates.length === 0 && (
               <div className="p-12 text-center rounded-3xl bg-white border border-gray-200">
-                <Search className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                <Search className="w-8 h-8 text-gray-700 mx-auto mb-2" />
                 <h4 className="font-bold text-gray-800 text-base">No templates match your filters</h4>
-                <p className="text-xs text-gray-500 mt-1">Try selecting different filter options or clearing the search box.</p>
+                <p className="text-xs text-gray-700 mt-1">Try selecting different filter options or clearing the search box.</p>
                 <button
                   onClick={() => {
                     setSelectedType("all");
@@ -736,12 +737,12 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
               <details className="mt-10 rounded-2xl border border-gray-200 bg-gray-50/80 p-5 group no-print">
                 <summary className="flex items-center justify-between cursor-pointer text-xs sm:text-sm font-bold text-gray-700 select-none">
                   <div className="flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-gray-500" />
+                    <FileText className="w-4 h-4 text-gray-700" />
                     <span>More resources ({offAudienceTemplates.length} Specialist &amp; International Standards)</span>
                   </div>
-                  <ChevronDown className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform" />
+                  <ChevronDown className="w-4 h-4 text-gray-700 group-open:rotate-180 transition-transform" />
                 </summary>
-                <p className="text-xs text-gray-500 mt-2 mb-4 leading-relaxed">
+                <p className="text-xs text-gray-700 mt-2 mb-4 leading-relaxed">
                   Specialist industrial manufacturing checklists, US FDA reference charts, and export compliance templates for non-catering operations.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 pt-1">
@@ -756,7 +757,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                       <span className="text-xs font-semibold text-gray-900 group-hover/card:text-amber-800 line-clamp-2">
                         {template.title}
                       </span>
-                      <span className="text-[10px] text-gray-400 font-mono mt-1.5 uppercase">
+                      <span className="text-[10px] text-gray-700 font-mono mt-1.5 uppercase">
                         {template.type}
                       </span>
                     </Link>
@@ -777,7 +778,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             {/* Modal Header Bar with Full Tab Link & Close */}
             <div className="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono font-bold uppercase text-gray-500">Interactive Workspace</span>
+                <span className="text-xs font-mono font-bold uppercase text-gray-700">Interactive Workspace</span>
                 {activeInteractiveTool === "allergen" && (
                   <Link
                     href="/tools/allergen-matrix-generator"
@@ -998,26 +999,26 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   <tr className="hover:bg-gray-50/80">
                     <td className="p-3 font-semibold text-gray-900">UK 20% VAT Stripping Mode</td>
                     <td className="p-3 font-bold text-emerald-700 bg-emerald-50/50">Included (One-click)</td>
-                    <td className="p-3 text-gray-400">Generic / US focus</td>
-                    <td className="p-3 text-gray-400">Manual calculation</td>
+                    <td className="p-3 text-gray-700">Generic / US focus</td>
+                    <td className="p-3 text-gray-700">Manual calculation</td>
                   </tr>
                   <tr className="hover:bg-gray-50/80">
                     <td className="p-3 font-semibold text-gray-900">Delivery App Commission Buffer</td>
                     <td className="p-3 font-bold text-emerald-700 bg-emerald-50/50">Included (Deliveroo, Just Eat)</td>
-                    <td className="p-3 text-gray-400">Not supported</td>
-                    <td className="p-3 text-gray-400">Not supported</td>
+                    <td className="p-3 text-gray-700">Not supported</td>
+                    <td className="p-3 text-gray-700">Not supported</td>
                   </tr>
                   <tr className="hover:bg-gray-50/80">
                     <td className="p-3 font-semibold text-gray-900">14 Allergen Auto-Detector</td>
                     <td className="p-3 font-bold text-emerald-700 bg-emerald-50/50">Automated keyword scan</td>
                     <td className="p-3 text-gray-600">Manual data entry</td>
-                    <td className="p-3 text-gray-400">Manual pen entry</td>
+                    <td className="p-3 text-gray-700">Manual pen entry</td>
                   </tr>
                   <tr className="hover:bg-gray-50/80">
                     <td className="p-3 font-semibold text-gray-900">Natasha&apos;s Law PPDS Labels</td>
                     <td className="p-3 font-bold text-emerald-700 bg-emerald-50/50">Auto-scaled 1.2mm x-height</td>
                     <td className="p-3 text-gray-600">Paid add-on module</td>
-                    <td className="p-3 text-gray-400">Not supported</td>
+                    <td className="p-3 text-gray-700">Not supported</td>
                   </tr>
                   <tr className="hover:bg-gray-50/80">
                     <td className="p-3 font-semibold text-gray-900">A4 Kitchen Print / Export</td>
@@ -1077,7 +1078,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
               <h2 className="text-xl font-bold text-gray-900">
                 UK Food Safety Templates &amp; Kitchen Compliance FAQs
               </h2>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-700">
                 Authoritative compliance answers for UK commercial kitchens, takeaways, and caterers.
               </p>
             </div>
