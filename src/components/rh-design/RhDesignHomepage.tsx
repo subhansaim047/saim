@@ -3,11 +3,18 @@
 import React from "react";
 import { RhNavbar } from "./RhNavbar";
 import { RhHeroSection } from "./RhHeroSection";
+import { RhAboutSection } from "./RhAboutSection";
 import { RhWhyUsSection } from "./RhWhyUsSection";
-import { RhCaseStudiesSection } from "./RhCaseStudiesSection";
 import { RhServicesSection } from "./RhServicesSection";
+import { RhCaseStudiesSection } from "./RhCaseStudiesSection";
+import { RhEstimatorSection } from "./RhEstimatorSection";
+import { RhBenefitsSection } from "./RhBenefitsSection";
 import { RhWhyMeComparisonSection } from "./RhWhyMeComparisonSection";
+import { RhPerformanceSection } from "./RhPerformanceSection";
+import { RhTechStackSection } from "./RhTechStackSection";
+import { RhProcessSection } from "./RhProcessSection";
 import { RhPricingSection } from "./RhPricingSection";
+import { RhToolsSection } from "./RhToolsSection";
 import { RhFaqSection } from "./RhFaqSection";
 import { RhConsultationSection } from "./RhConsultationSection";
 import { RhFooter } from "./RhFooter";
@@ -22,29 +29,50 @@ export const RhDesignHomepage: React.FC = () => {
         {/* 01. Hero Section */}
         <RhHeroSection />
 
-        {/* 02. Why Us & Statistics */}
+        {/* 02. About Saim Dev Studio (UK Registered & PK Engineering Hub) */}
+        <RhAboutSection />
+
+        {/* 03. Why Us & Statistics (100%, £0 Upfront, <380ms, 15+ Demos) */}
         <RhWhyUsSection />
 
-        {/* 03. Case Studies & Live Deployments */}
-        <RhCaseStudiesSection />
-
-        {/* 04. Services Architecture */}
+        {/* 04. Services Bento Grid ($1,900 Clone, Headless eCommerce, Takeaway £250, etc.) */}
         <RhServicesSection />
 
-        {/* 05. Why Me / Advantage Comparison */}
+        {/* 05. Flagship Live Demos & Production Deployments */}
+        <RhCaseStudiesSection />
+
+        {/* 06. Interactive Project Scope Estimator */}
+        <RhEstimatorSection />
+
+        {/* 07. Architectural Advantage (Why Next.js Decimates WordPress & Shopify) */}
+        <RhBenefitsSection />
+
+        {/* 08. Comparison Matrix (Saim Dev Direct vs Bloated Agency vs Cheap Freelancers) */}
         <RhWhyMeComparisonSection />
 
-        {/* 06. Transparent Pricing Packages */}
+        {/* 09. Performance & 100/100 Core Web Vitals */}
+        <RhPerformanceSection />
+
+        {/* 10. Modern Production Technology Stack */}
+        <RhTechStackSection />
+
+        {/* 11. How We Work (The $0 Upfront Sprint) */}
+        <RhProcessSection />
+
+        {/* 12. Transparent Fixed Pricing Packages */}
         <RhPricingSection />
 
-        {/* 07. FAQ Accordion (DNA Matched) */}
+        {/* 13. Free Kitchen & Commercial Tools */}
+        <RhToolsSection />
+
+        {/* 14. Frequently Asked Questions Accordion */}
         <RhFaqSection />
 
-        {/* 08. Let's Talk / Consultation CTA */}
+        {/* 15. Final Consultation Kickoff CTA */}
         <RhConsultationSection />
       </main>
 
-      {/* 09. Minimalist Studio Footer */}
+      {/* 16. Studio Footer */}
       <RhFooter />
     </div>
   );
