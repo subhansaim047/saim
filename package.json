@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
-    "@types/three": "^0.187.0",
     "cheerio": "^1.2.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.42.2",
@@ -26,7 +25,6 @@
     "react-dom": "^19.2.7",
     "sharp": "^0.35.4",
     "tailwind-merge": "^3.6.0",
-    "three": "^0.187.0",
     "website-scraper": "^6.0.0"
   },
   "devDependencies": {

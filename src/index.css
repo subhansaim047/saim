@@ -28,20 +28,16 @@
 
 .hero-brand-name,
 .hero-brand-name * {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif !important;
-}
-
-.font-display {
-  font-family: var(--font-syne), var(--font-inter), sans-serif;
+  font-family: var(--font-inter-orig), Inter, system-ui, -apple-system, sans-serif !important;
 }
 
 .font-editorial {
-  font-family: Georgia, serif;
+  font-family: var(--font-fraunces), var(--font-instrument), Georgia, serif;
 }
 
 /* Accessibility Focus Ring */
 *:focus-visible {
-  outline: 2px solid #b5f900;
+  outline: 2px solid #FF4A1C;
   outline-offset: 3px;
 }
 

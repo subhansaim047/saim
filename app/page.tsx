@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
-import { RhDesignHomepage } from "@/components/rh-design/RhDesignHomepage";
+import { HeroSection } from "@/components/HeroSection";
+import { AboutSection } from "@/components/AboutSection";
+import { ServicesBentoSection } from "@/components/ServicesBentoSection";
+import { LiveDemosSection } from "@/components/LiveDemosSection";
+import { ProjectScopeEstimator } from "@/components/ProjectScopeEstimator";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { ComparisonMatrix } from "@/components/ComparisonMatrix";
+import { ProcessSection } from "@/components/ProcessSection";
+import { PerformanceSection } from "@/components/PerformanceSection";
+import { TechStackSection } from "@/components/TechStackSection";
+import { FeaturedToolsSection } from "@/components/FeaturedToolsSection";
+import { PricingSection } from "@/components/PricingSection";
+import { FaqSection } from "@/components/FaqSection";
+import { ContactSection } from "@/components/ContactSection";
+import { FooterSection } from "@/components/FooterSection";
+import { ScrollCanvasBackground } from "@/components/ScrollCanvasBackground";
 
 export const metadata: Metadata = {
   title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
@@ -232,7 +247,7 @@ const faqSchema = {
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen bg-[#f4f5f6]">
+    <div className="relative min-h-screen bg-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
@@ -246,7 +261,27 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <RhDesignHomepage />
+      {/* Scroll-Driven Video Background Canvas (Fixed, z-0) */}
+      <ScrollCanvasBackground />
+
+      {/* Main Website Content (Floating Glass over Canvas, z-10) */}
+      <main className="relative z-10 min-h-screen overflow-x-clip bg-transparent">
+        <HeroSection />
+        <AboutSection />
+        <ServicesBentoSection />
+        <LiveDemosSection />
+        <ProjectScopeEstimator />
+        <BenefitsSection />
+        <ComparisonMatrix />
+        <PerformanceSection />
+        <TechStackSection />
+        <ProcessSection />
+        <PricingSection />
+        <FeaturedToolsSection />
+        <FaqSection />
+        <ContactSection />
+        <FooterSection />
+      </main>
     </div>
   );
 }

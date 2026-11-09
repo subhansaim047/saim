@@ -60,7 +60,6 @@ const FEATURED_TOOLS: FeaturedTool[] = [
 ];
 
 const DOT_COLORS: Record<IconColor, string> = {
-  lime: "bg-[#b5f900] shadow-[0_0_8px_#b5f900]",
   amber: "bg-amber-400 shadow-[0_0_8px_#f59e0b]",
   vermilion: "bg-[#FF4A1C] shadow-[0_0_8px_#FF4A1C]",
   emerald: "bg-emerald-400 shadow-[0_0_8px_#10b981]",

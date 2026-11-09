@@ -1,218 +1,242 @@
 "use client";
 
 import React, { useState } from "react";
-import { Check, ArrowUpRight, ShieldCheck, Globe, Smartphone, Layers, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { Check, ArrowUpRight, ShieldCheck } from "lucide-react";
 
 type Currency = "GBP" | "EUR" | "USD";
 
-const SPRINT_TIERS = [
+interface PricePlan {
+  id: string;
+  name: string;
+  badge?: string;
+  featured?: boolean;
+  tagline: string;
+  prices: {
+    GBP: string;
+    EUR: string;
+    USD: string;
+  };
+  timeline: string;
+  features: string[];
+}
+
+const PLANS: PricePlan[] = [
   {
-    id: "landing",
-    name: "Takeaway / CRO",
-    prices: { GBP: "£250", EUR: "€295", USD: "$320" },
-    timeline: "3–5 days",
-    desc: "1-Page sub-400ms conversion engine with WhatsApp dispatch."
+    id: "landing-takeaway",
+    name: "Takeaway / CRO Landing Page",
+    tagline: "High-converting single-page engine or takeaway ordering system.",
+    prices: {
+      GBP: "£250",
+      EUR: "€295",
+      USD: "$320"
+    },
+    timeline: "3 – 5 Days Delivery",
+    features: [
+      "1-Page High-Converting Next.js Engine",
+      "Interactive Natasha's Law Allergen Matrix (Takeaway)",
+      "Instant WhatsApp Kitchen Order / Lead Dispatch",
+      "Sub-400ms Static Load Speed",
+      "$0 Upfront Deposit • Pay When Happy",
+      "100% Full Source Code Ownership"
+    ]
   },
   {
-    id: "business",
-    name: "Bespoke Website",
-    prices: { GBP: "£450", EUR: "€530", USD: "$580" },
-    timeline: "5–8 days",
-    desc: "Up to 8 custom Next.js 16 pages replacing bloated WordPress."
+    id: "business-website",
+    name: "Bespoke Business Website",
+    badge: "Most Popular",
+    featured: true,
+    tagline: "Modern Next.js web architecture engineered to replace WordPress.",
+    prices: {
+      GBP: "£450",
+      EUR: "€530",
+      USD: "$580"
+    },
+    timeline: "5 – 10 Days Delivery",
+    features: [
+      "Up to 10 Custom Next.js Pages",
+      "Zero WordPress Plugins or Security Bloat",
+      "100/100 Core Web Vitals Pass Guaranteed",
+      "Full On-Page SEO & Structured JSON-LD Schema",
+      "High-Intent Lead Capture & WhatsApp Alerts",
+      "$0 Upfront Deposit • 14 Days Warranty"
+    ]
   },
   {
-    id: "ecommerce",
-    name: "Headless Store",
-    prices: { GBP: "£750", EUR: "€880", USD: "$980" },
-    timeline: "7–12 days",
-    desc: "Sub-second product catalog with zero monthly app fees."
+    id: "headless-ecommerce",
+    name: "Custom Headless eCommerce",
+    tagline: "Escape monthly Shopify app fees with bespoke Next.js store.",
+    prices: {
+      GBP: "£750",
+      EUR: "€880",
+      USD: "$980"
+    },
+    timeline: "7 – 12 Days Delivery",
+    features: [
+      "Zero Monthly Shopify App Subscription Bills",
+      "Instant Sub-Second Faceted Filtering & Search",
+      "One-Page Cart Drawer & Stripe/PayPal Checkout",
+      "Multi-Currency Dynamic Conversion",
+      "Google Shopping Rich Product Data Schema",
+      "$0 Upfront Deposit • 30 Days Dedicated Support"
+    ]
+  },
+  {
+    id: "website-clone",
+    name: "Pixel-Perfect 1:1 Clone",
+    badge: "Specialized Service",
+    tagline: "Exact 1:1 recreation of any website or web application down to the single pixel.",
+    prices: {
+      GBP: "£1,490",
+      EUR: "€1,750",
+      USD: "$1,900"
+    },
+    timeline: "7 – 10 Days Delivery",
+    features: [
+      "100% 1:1 Visual, Typographic & Layout Match",
+      "Clean Next.js 15 & React 19 Component Tree",
+      "Framer Motion 60fps Micro-Interactions",
+      "All Assets Upgraded to Retina Master HD",
+      "Full GitHub Source Code Handover",
+      "$0 Upfront Deposit (Pay Only If Thrilled)"
+    ]
   }
 ];
 
-export const RhPricingSection: React.FC = () => {
+export const RhPricingSection = () => {
   const [currency, setCurrency] = useState<Currency>("GBP");
-  const [selectedSprint, setSelectedSprint] = useState<number>(1); // Default to Bespoke Website
 
   return (
-    <section id="pricing" className="py-24 sm:py-32 bg-[#f4f5f6] text-[#09090b] border-t border-black/5 relative overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        {/* Header - rh.design exact pricing typography */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+    <section id="pricing" className="py-20 sm:py-28 border-t border-[#2c2c2c] bg-[#0d0d0d] relative overflow-hidden">
+      <div className="max-w-[1130px] mx-auto px-4 sm:px-6">
+        {/* Header with Currency Toggle */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
-            <div className="text-xs font-mono uppercase tracking-[0.25em] text-gray-500 mb-3 font-semibold">
-              P R I C I N G
+            <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#b5f900] mb-3">
+              PRICING
             </div>
             <h2
-              className="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#09090b] max-w-2xl leading-[1.12]"
-              style={{ letterSpacing: "-0.035em" }}
+              className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-[1.15]"
+              style={{ letterSpacing: "-0.03em" }}
             >
-              Transparent pricing{" "}
-              <span className="text-[#9ca3af]">No surprises.</span>
+              Transparent pricing. <br />
+              <span className="text-[#a1a1a1]">No surprises, no retainers.</span>
             </h2>
           </div>
 
-          {/* Currency Toggle */}
-          <div className="inline-flex items-center p-1 rounded-full bg-white border border-black/10 shadow-xs">
-            {(["GBP", "EUR", "USD"] as Currency[]).map((curr) => (
-              <button
-                key={curr}
-                type="button"
-                onClick={() => setCurrency(curr)}
-                className={`px-4 py-1.5 rounded-full text-xs font-mono font-semibold transition-all cursor-pointer ${
-                  currency === curr
-                    ? "bg-[#09090b] text-white shadow-sm"
-                    : "text-gray-500 hover:text-black"
-                }`}
-              >
-                {curr === "GBP" ? "£ GBP" : curr === "EUR" ? "€ EUR" : "$ USD"}
-              </button>
-            ))}
+          {/* Currency Pill Selector */}
+          <div className="flex items-center p-1 rounded-full bg-[#181818] border border-[#2c2c2c]">
+            <button
+              onClick={() => setCurrency("GBP")}
+              className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
+                currency === "GBP" ? "bg-white text-black font-bold shadow-md" : "text-[#a1a1a1] hover:text-white"
+              }`}
+            >
+              🇬🇧 £ GBP
+            </button>
+            <button
+              onClick={() => setCurrency("EUR")}
+              className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
+                currency === "EUR" ? "bg-white text-black font-bold shadow-md" : "text-[#a1a1a1] hover:text-white"
+              }`}
+            >
+              🇪🇺 € EUR
+            </button>
+            <button
+              onClick={() => setCurrency("USD")}
+              className={`px-4 py-1.5 rounded-full text-xs font-mono transition-all ${
+                currency === "USD" ? "bg-white text-black font-bold shadow-md" : "text-[#a1a1a1] hover:text-white"
+              }`}
+            >
+              🌐 $ USD
+            </button>
           </div>
         </div>
 
-        {/* Two-Tone Pricing Cards - rh.design exact side-by-side black & white cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          {/* Card 1: Obsidian Dark Card (Fixed-Scope Sprint) */}
-          <div className="rounded-3xl bg-[#09090b] text-white p-8 sm:p-12 border border-white/10 flex flex-col justify-between shadow-xl relative overflow-hidden">
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-4">
-                <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white">
-                  Fixed-Scope Sprint
-                </h3>
-                <span className="px-3 py-1 rounded-full bg-[#b5f900] text-black text-[11px] font-mono font-bold">
-                  $0 Upfront Guarantee
-                </span>
-              </div>
+        {/* 4-Card Pricing Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {PLANS.map((plan, idx) => {
+            const currentPrice = plan.prices[currency];
+            const whatsappText = `Hi Saim, I'd like to get started with ${plan.name} (${currentPrice}) with the $0 upfront deposit offer.`;
+            const waHref = `https://wa.me/923196526604?text=${encodeURIComponent(whatsappText)}`;
 
-              <p className="text-sm text-gray-400 font-light mb-8">
-                One senior digital engineering team. Design and build in one. Zero handoff.
-              </p>
-
-              {/* Sprint Tier Selector Switch */}
-              <div className="grid grid-cols-3 gap-2 p-1 rounded-2xl bg-white/5 border border-white/10 mb-8">
-                {SPRINT_TIERS.map((tier, idx) => (
-                  <button
-                    key={tier.id}
-                    type="button"
-                    onClick={() => setSelectedSprint(idx)}
-                    className={`py-2 px-2 text-center rounded-xl text-xs font-mono transition-all cursor-pointer ${
-                      selectedSprint === idx
-                        ? "bg-[#b5f900] text-black font-bold shadow-sm"
-                        : "text-gray-400 hover:text-white"
-                    }`}
-                  >
-                    {tier.name}
-                  </button>
-                ))}
-              </div>
-
-              {/* Price Display */}
-              <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-5xl sm:text-6xl font-medium tracking-tight font-mono text-white">
-                  {SPRINT_TIERS[selectedSprint].prices[currency]}
-                </span>
-                <span className="text-sm text-gray-400 font-mono">
-                  fixed • {SPRINT_TIERS[selectedSprint].timeline}
-                </span>
-              </div>
-
-              {/* Feature Checklist */}
-              <div className="flex flex-col gap-3.5 mb-10 pt-6 border-t border-white/10">
-                <div className="flex items-center gap-3 text-sm text-gray-200">
-                  <Check className="w-4 h-4 text-[#b5f900] shrink-0 stroke-[2.5]" />
-                  <span><strong>$0 Upfront Deposit:</strong> Pay only when 100% satisfied</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-gray-200">
-                  <Check className="w-4 h-4 text-[#b5f900] shrink-0 stroke-[2.5]" />
-                  <span>Bespoke Next.js 16 App Router architecture</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-gray-200">
-                  <Check className="w-4 h-4 text-[#b5f900] shrink-0 stroke-[2.5]" />
-                  <span>Sub-400ms speed guaranteed (100/100 Core Web Vitals)</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-gray-200">
-                  <Check className="w-4 h-4 text-[#b5f900] shrink-0 stroke-[2.5]" />
-                  <span>Full source code ownership (GitHub transfer)</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-gray-200">
-                  <Check className="w-4 h-4 text-[#b5f900] shrink-0 stroke-[2.5]" />
-                  <span>Zero monthly retainers or platform fees</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <a
-                href={`https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20the%20${SPRINT_TIERS[selectedSprint].name}%20sprint%20with%20the%20$0%20upfront%20offer`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-4 rounded-full bg-[#b5f900] hover:bg-white text-black font-semibold text-sm transition-all text-center flex items-center justify-center gap-2 shadow-lg active:scale-95"
+            return (
+              <motion.div
+                key={plan.id}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.45, delay: idx * 0.06 }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                className={`p-6 sm:p-7 rounded-3xl border flex flex-col justify-between relative transition-all shadow-xl ${
+                  plan.featured
+                    ? "bg-[#181818] border-[#b5f900]/50 shadow-[0_12px_48px_rgba(181,249,0,0.1)]"
+                    : "bg-[#141414] border-[#242424] hover:border-[#3a3a3a]"
+                }`}
               >
-                <span>Start With $0 Upfront Deposit</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
+                {plan.badge && (
+                  <div className="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-[#b5f900] text-black text-[10px] font-mono font-bold uppercase tracking-wider">
+                    {plan.badge}
+                  </div>
+                )}
+
+                <div>
+                  <h3 className="text-lg font-medium tracking-tight text-white mb-1.5 mt-1">
+                    {plan.name}
+                  </h3>
+                  <p className="text-xs text-[#a1a1a1] font-light leading-relaxed mb-6 min-h-[36px]">
+                    {plan.tagline}
+                  </p>
+
+                  <div className="mb-6">
+                    <div className="text-3xl sm:text-4xl font-bold font-mono text-white tracking-tight">
+                      {currentPrice}
+                    </div>
+                    <span className="text-[11px] font-mono text-[#a1a1a1] block mt-1">
+                      One-off fee • {plan.timeline}
+                    </span>
+                  </div>
+
+                  <ul className="space-y-3 mb-8 pt-4 border-t border-[#242424]">
+                    {plan.features.map((feat) => (
+                      <li key={feat} className="flex items-start gap-2 text-xs text-[#cbcbcb] font-light leading-snug">
+                        <Check className="w-3.5 h-3.5 text-[#b5f900] shrink-0 mt-0.5" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <a
+                  href={waHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-full py-3 rounded-full text-xs font-semibold text-center transition-all inline-flex items-center justify-center gap-1.5 active:scale-95 ${
+                    plan.featured
+                      ? "bg-[#b5f900] hover:bg-[#a6e600] text-black shadow-lg"
+                      : "bg-white hover:bg-neutral-100 text-black shadow-md"
+                  }`}
+                >
+                  <span>Start ($0 Upfront)</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Guarantee Callout Banner */}
+        <div className="mt-12 p-6 rounded-2xl bg-[#141414] border border-[#2c2c2c] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#cbcbcb]">
+          <div className="flex items-center gap-3">
+            <ShieldCheck className="w-6 h-6 text-[#b5f900] shrink-0" />
+            <div>
+              <span className="font-semibold text-white">Our 100% Risk-Free Winning Guarantee: </span>
+              <span>We engineer your live preview first. Inspect it on your devices. Pay only if you are 100% delighted. Zero monthly retainers.</span>
             </div>
           </div>
-
-          {/* Card 2: Clean White Card (1:1 Pixel-Perfect Clone) */}
-          <div className="rounded-3xl bg-white text-[#09090b] p-8 sm:p-12 border border-black/10 flex flex-col justify-between shadow-xl relative overflow-hidden">
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-4">
-                <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#09090b]">
-                  1:1 Website Clone
-                </h3>
-                <span className="px-3 py-1 rounded-full bg-black/5 text-gray-700 text-[11px] font-mono font-medium">
-                  Shopify &bull; Webflow &bull; WP
-                </span>
-              </div>
-
-              <p className="text-sm text-gray-600 font-light mb-8">
-                Exact pixel-perfect reconstruction of any existing website or store into clean Next.js 16.
-              </p>
-
-              {/* Price Display */}
-              <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-5xl sm:text-6xl font-medium tracking-tight font-mono text-[#09090b]">
-                  {currency === "GBP" ? "£1,450" : currency === "EUR" ? "€1,690" : "$1,900"}
-                </span>
-                <span className="text-sm text-gray-500 font-mono">
-                  flat fee &bull; starts from
-                </span>
-              </div>
-
-              {/* Feature Checklist with Minimal Icons */}
-              <div className="flex flex-col gap-4 mb-10 pt-6 border-t border-black/10">
-                <div className="flex items-center gap-3 text-sm text-gray-700">
-                  <Globe className="w-4 h-4 text-gray-500 shrink-0" />
-                  <span>100% 1:1 layout, responsive typography, and animation match</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-gray-700">
-                  <Layers className="w-4 h-4 text-gray-500 shrink-0" />
-                  <span>Zero monthly Shopify app fees ($30&ndash;$300/mo saved)</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-gray-700">
-                  <Smartphone className="w-4 h-4 text-gray-500 shrink-0" />
-                  <span>Sub-second mobile speed ranking higher on Google</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-gray-700">
-                  <ShieldCheck className="w-4 h-4 text-gray-500 shrink-0" />
-                  <span>Complete source code delivered with clean documentation</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <a
-                href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20get%20a%201:1%20website%20clone%20quote"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-4 rounded-full bg-[#09090b] hover:bg-black text-white font-medium text-sm transition-all text-center flex items-center justify-center gap-2 shadow-md active:scale-95"
-              >
-                <span>Book a Free Consultation</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
+          <span className="font-mono text-[#b5f900] shrink-0 font-bold uppercase text-[11px]">
+            Zero Financial Risk
+          </span>
         </div>
       </div>
     </section>

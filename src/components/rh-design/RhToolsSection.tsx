@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldAlert, Calculator, Tag, UtensilsCrossed, ArrowUpRight } from "lucide-react";
+import { ShieldAlert, Calculator, Tag, ArrowUpRight } from "lucide-react";
 
 const TOOLS = [
   {
@@ -32,47 +32,38 @@ const TOOLS = [
     desc: "Generate professional Natasha's Law compliant labels with highlighted allergen ingredients ready for commercial kitchen thermal printing.",
     badge: "UK Food Standard",
     icon: Tag
-  },
-  {
-    slug: "recipe-batch-calculator",
-    href: "/tools/recipe-batch-calculator",
-    title: "Recipe Batch & Yield Calculator",
-    tagline: "Commercial Kitchen Prep",
-    desc: "Scale commercial recipes up or down by batch size or ingredient constraints with automatic yield multiplier conversion.",
-    badge: "Kitchen Utility",
-    icon: UtensilsCrossed
   }
 ];
 
 export const RhToolsSection: React.FC = () => {
   return (
-    <section id="tools" className="py-24 sm:py-32 border-t border-black/5 bg-[#f4f5f6] text-[#09090b] relative overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        {/* Header - rh.design dual-tone style */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 sm:mb-20">
+    <section id="tools" className="py-20 sm:py-28 border-t border-[#242424] bg-[#0d0d0d] relative overflow-hidden">
+      <div className="max-w-[1130px] mx-auto px-4 sm:px-6">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
-            <div className="text-xs font-mono uppercase tracking-[0.25em] text-gray-500 mb-3 font-semibold">
-              F R E E &nbsp; U T I L I T I E S
+            <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#b5f900] mb-3">
+              FREE UTILITIES
             </div>
             <h2
-              className="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#09090b] max-w-3xl leading-[1.12]"
-              style={{ letterSpacing: "-0.035em" }}
+              className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-[1.15]"
+              style={{ letterSpacing: "-0.03em" }}
             >
-              Free business &amp; kitchen tools{" "}
-              <span className="text-[#9ca3af]">Built for UK commercial operators.</span>
+              Free business &amp; kitchen tools. <br />
+              <span className="text-[#a1a1a1]">Built by Saim Dev for UK commercial operators.</span>
             </h2>
           </div>
           <Link
             href="/tools"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-black/10 hover:border-black/30 text-xs font-medium text-[#09090b] shadow-2xs transition-all active:scale-95"
+            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#b5f900] hover:underline"
           >
             <span>View All Kitchen Tools</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
+            <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
 
-        {/* 4-Column Tools Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 3-Column Tools Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {TOOLS.map((t, idx) => {
             const IconComponent = t.icon;
             return (
@@ -82,32 +73,33 @@ export const RhToolsSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.08 }}
-                className="p-7 rounded-3xl bg-white border border-black/5 flex flex-col justify-between shadow-xs hover:shadow-md transition-all group hover:-translate-y-1"
+                whileHover={{ y: -4, borderColor: "#3a3a3a" }}
+                className="p-7 rounded-3xl bg-[#141414] border border-[#242424] flex flex-col justify-between shadow-xl transition-all group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-10 h-10 rounded-2xl bg-[#09090b] flex items-center justify-center text-[#b5f900] shadow-2xs group-hover:scale-105 transition-transform">
-                      <IconComponent className="w-5 h-5 stroke-[2]" />
+                    <div className="w-10 h-10 rounded-2xl bg-[#1c1c1c] border border-[#2e2e2e] flex items-center justify-center text-[#b5f900]">
+                      <IconComponent className="w-5 h-5" />
                     </div>
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#f4f5f6] border border-black/5 text-[10px] font-mono text-gray-600 font-semibold uppercase">
+                    <span className="px-3 py-1 rounded-full bg-[#1c1c1c] border border-[#2e2e2e] text-[10px] font-mono text-[#a1a1a1] uppercase">
                       {t.badge}
                     </span>
                   </div>
-                  <h3 className="text-base font-semibold text-[#09090b] mb-1 leading-snug">
+                  <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-[#b5f900] transition-colors">
                     {t.title}
                   </h3>
-                  <div className="text-[11px] font-mono text-gray-500 mb-3">
+                  <div className="text-xs font-mono text-[#777] mb-3">
                     {t.tagline}
                   </div>
-                  <p className="text-xs text-gray-600 leading-relaxed font-light mb-6">
+                  <p className="text-xs text-[#a1a1a1] leading-relaxed font-light mb-6">
                     {t.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-black/5">
+                <div className="pt-4 border-t border-[#222]">
                   <Link
                     href={t.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#09090b] group-hover:text-black group-hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#b5f900] group-hover:underline"
                   >
                     <span>Launch Free Tool</span>
                     <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

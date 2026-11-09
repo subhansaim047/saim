@@ -1,87 +1,79 @@
 "use client";
 
 import React from "react";
-import { Zap, ShieldCheck, DollarSign, Layers } from "lucide-react";
+import { motion } from "framer-motion";
 
-const PILLARS = [
+const STATS = [
   {
-    icon: Zap,
-    metric: "<400ms",
-    title: "Sub-Second Next.js Speed",
-    desc: "100/100 Core Web Vitals. Static edge generation eliminating bloated WordPress database calls."
+    number: "100%",
+    label: "Exact 1:1 Precision Guarantee",
+    desc: "Every typography scale, responsive margin, and interaction mirrored without deviation."
   },
   {
-    icon: DollarSign,
-    metric: "$0 / £0",
-    title: "Upfront Deposit",
-    desc: "We build and show you the working platform first. If you love it, you buy it; if not, walk away risk-free."
+    number: "£0 / $0",
+    label: "Upfront Deposit",
+    desc: "We build and deploy the live staging preview first. Pay only if you are 100% satisfied."
   },
   {
-    icon: ShieldCheck,
-    metric: "100%",
-    title: "Direct Senior Engineering",
-    desc: "Direct communication with digital architect Saim. No junior trainees or bloated agency layers."
+    number: "<400ms",
+    label: "Next.js Static Edge Speed",
+    desc: "100/100 Core Web Vitals passing Google's strictest ranking benchmarks."
   },
   {
-    icon: Layers,
-    metric: "Zero",
-    title: "Monthly Agency Retainers",
-    desc: "100% source code ownership. Deploy to Vercel, Netlify, or your cloud with zero hostage retainers."
+    number: "15+",
+    label: "Interactive Live Production Demos",
+    desc: "Tested across actual iPhone, Android, and 4K viewports with zero broken links."
   }
 ];
 
-export const RhWhyUsSection: React.FC = () => {
+export const RhWhyUsSection = () => {
   return (
-    <section id="why-us" className="py-20 sm:py-28 bg-[#f4f5f6] text-[#09090b] border-t border-black/5">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-        {/* Eyebrow & Dual-tone Headline - rh.design exact signature rhythm */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 sm:mb-20">
+    <section id="why-us" className="py-20 sm:py-28 border-t border-[#2c2c2c] bg-[#0d0d0d] relative overflow-hidden">
+      <div className="max-w-[1130px] mx-auto px-4 sm:px-6">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20">
           <div>
-            <div className="text-xs font-mono uppercase tracking-[0.25em] text-gray-500 mb-4 font-semibold">
-              W H Y &nbsp; U S
+            <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#b5f900] mb-3">
+              WHY US
             </div>
             <h2
-              className="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#09090b] max-w-3xl leading-[1.12]"
-              style={{ letterSpacing: "-0.035em" }}
+              className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white max-w-2xl leading-[1.15]"
+              style={{ letterSpacing: "-0.03em" }}
             >
-              Founder-led design &amp; build focused on speed, growth{" "}
-              <span className="text-[#9ca3af]">and real results.</span>
+              Founder-led engineering focused on speed, growth{" "}
+              <span className="text-[#a1a1a1]">and commercial results.</span>
             </h2>
           </div>
-          <p className="text-sm text-gray-600 max-w-sm font-normal leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#a1a1a1] max-w-sm font-light leading-relaxed">
             Direct collaboration with senior engineers. No junior trainees, no bloated agency account managers, and zero recurring retainers.
           </p>
         </div>
 
-        {/* 4 Pillars Bento Grid */}
+        {/* 4-Stat Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {PILLARS.map((p) => {
-            const Icon = p.icon;
-            return (
-              <div
-                key={p.title}
-                className="rounded-3xl bg-white p-7 border border-black/5 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="w-10 h-10 rounded-2xl bg-gray-100 flex items-center justify-center text-[#09090b] group-hover:bg-[#b5f900] transition-colors">
-                      <Icon className="w-5 h-5 stroke-[2]" />
-                    </div>
-                    <span className="text-xs font-mono font-bold text-gray-500 uppercase tracking-wider">
-                      {p.metric}
-                    </span>
-                  </div>
-
-                  <h3 className="text-lg font-semibold text-[#09090b] mb-2.5 tracking-tight">
-                    {p.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-light">
-                    {p.desc}
-                  </p>
+          {STATS.map((stat, idx) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.45, delay: idx * 0.08 }}
+              whileHover={{ y: -4, borderColor: "#3a3a3a", transition: { duration: 0.2 } }}
+              className="p-6 sm:p-7 rounded-3xl bg-[#141414] border border-[#242424] flex flex-col justify-between shadow-xl transition-all"
+            >
+              <div className="mb-6">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold text-white tracking-tight mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm font-medium text-[#b5f900]">
+                  {stat.label}
                 </div>
               </div>
-            );
-          })}
+              <p className="text-xs text-[#a1a1a1] font-light leading-relaxed">
+                {stat.desc}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
