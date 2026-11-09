@@ -14339,22 +14339,3 @@ figcaption {
 
 /* Hide webflow badge globally */
 .w-webflow-badge { display: none !important; }
-
-/* Pricing tab position fix */
-.pricing-tab {
-  position: relative;
-}
-.pricing-tab .pricing-menu-image-hover {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.pricing-tab:hover .pricing-menu-image-hover,
-.pricing-tab.w--current .pricing-menu-image-hover {
-  opacity: 1;
-}
-.pricing-tab.w--current .pricing-menu-image {
-  opacity: 0;
-}
