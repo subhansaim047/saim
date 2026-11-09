@@ -227,7 +227,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
         />
       </head>
-      <body className={`font-sans ${syne.variable} ${inter.variable} ${jetbrainsMono.variable} bg-[#09090b] text-[#fafafa] antialiased selection:bg-[#b5f900] selection:text-black`}>
+      <body className={`font-sans ${syne.variable} ${inter.variable} ${jetbrainsMono.variable} bg-[#f4f5f6] text-[#09090b] antialiased selection:bg-[#b5f900] selection:text-black`}>
         <SmoothScroll />
         {children}
         <CookieBanner />

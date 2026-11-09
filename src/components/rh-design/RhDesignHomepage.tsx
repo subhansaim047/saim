@@ -4,14 +4,10 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { RhNavbar } from "./RhNavbar";
 import { RhHeroSection } from "./RhHeroSection";
-import { RhAboutSection } from "./RhAboutSection";
 import { RhWhyUsSection } from "./RhWhyUsSection";
-import { RhServicesSection } from "./RhServicesSection";
 import { RhCaseStudiesSection } from "./RhCaseStudiesSection";
-import { RhBenefitsSection } from "./RhBenefitsSection";
-import { RhPerformanceSection } from "./RhPerformanceSection";
-import { RhTechStackSection } from "./RhTechStackSection";
-import { RhProcessSection } from "./RhProcessSection";
+import { RhServicesSection } from "./RhServicesSection";
+import { RhAboutSection } from "./RhAboutSection";
 import { RhToolsSection } from "./RhToolsSection";
 import { RhFaqSection } from "./RhFaqSection";
 import { RhConsultationSection } from "./RhConsultationSection";
@@ -33,58 +29,46 @@ const RhPricingSection = dynamic(
 
 export const RhDesignHomepage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#09090b] text-[#fafafa] selection:bg-[#b5f900] selection:text-black font-sans antialiased">
+    <div className="min-h-screen bg-[#f4f5f6] text-[#09090b] selection:bg-[#b5f900] selection:text-black font-sans antialiased">
       {/* Top Floating Navbar */}
       <RhNavbar />
 
       <main>
-        {/* 01. Hero Section (Ultra-Fast Initial Paint) */}
+        {/* 01. Hero Section (Light Canvas #f4f5f6) */}
         <RhHeroSection />
 
-        {/* 02. About Saim Dev Studio */}
-        <RhAboutSection />
-
-        {/* 03. Why Us Proof Metrics */}
+        {/* 02. Why Us Proof Metrics (Light Canvas #f4f5f6) */}
         <RhWhyUsSection />
 
-        {/* 04. Services Bento Grid */}
-        <RhServicesSection />
-
-        {/* 05. Flagship Live Demos */}
+        {/* 03. Flagship Live Demos / Success Stories (Deep Obsidian #050505) */}
         <RhCaseStudiesSection />
 
-        {/* 06. Interactive Project Scope Estimator (Code-Split) */}
+        {/* 04. Services Bento Grid (Deep Obsidian #08080a) */}
+        <RhServicesSection />
+
+        {/* 05. Interactive Project Scope Estimator (Deep Obsidian #050505) */}
         <RhEstimatorSection />
 
-        {/* 07. Architectural Advantage */}
-        <RhBenefitsSection />
-
-        {/* 08. Comparison Matrix (Code-Split) */}
+        {/* 06. Comparison Matrix (Deep Obsidian #08080a) */}
         <RhWhyMeComparisonSection />
 
-        {/* 09. Performance & 100/100 Core Web Vitals */}
-        <RhPerformanceSection />
-
-        {/* 10. Technology Stack */}
-        <RhTechStackSection />
-
-        {/* 11. Sprint Process */}
-        <RhProcessSection />
-
-        {/* 12. Transparent Fixed Pricing (Code-Split) */}
+        {/* 07. Transparent Fixed Pricing (Light Canvas #f4f5f6) */}
         <RhPricingSection />
 
-        {/* 13. Kitchen Tools Utilities */}
+        {/* 08. About Saim Dev Founder (Pure White Canvas #ffffff) */}
+        <RhAboutSection />
+
+        {/* 09. Kitchen & Business Tools Utilities (Light Canvas #f4f5f6) */}
         <RhToolsSection />
 
-        {/* 14. Frequently Asked Questions */}
+        {/* 10. Frequently Asked Questions (Pure White Canvas #ffffff) */}
         <RhFaqSection />
 
-        {/* 15. Final Consultation Kickoff CTA */}
+        {/* 11. Final Consultation Kickoff CTA (Deep Obsidian #050505) */}
         <RhConsultationSection />
       </main>
 
-      {/* 16. Studio Footer */}
+      {/* 12. Studio Footer (Deep Obsidian #050505) */}
       <RhFooter />
     </div>
   );

@@ -6,26 +6,26 @@ import { ArrowUpRight, ShieldCheck, Mail, MessageCircle, MapPin } from "lucide-r
 
 export const RhFooter = () => {
   return (
-    <footer className="py-16 border-t border-[#27272a] bg-[#09090b] text-white">
-      <div className="max-w-[1180px] mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#27272a]">
+    <footer className="py-20 border-t border-white/10 bg-[#050505] text-[#fafafa]">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           {/* Col 1 & 2: Brand Info & Legal Entity */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-4 group">
-              <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-black font-extrabold text-sm tracking-tighter group-hover:scale-105 transition-transform">
-                S
+              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black font-semibold text-xs tracking-tighter group-hover:scale-105 transition-transform">
+                SD
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-semibold text-base tracking-tight">
                   Saim Dev Studio
                 </span>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#a1a1aa]">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400">
                   Web Engineering Agency
                 </span>
               </div>
             </Link>
 
-            <p className="text-xs text-[#a1a1aa] font-light max-w-sm leading-relaxed mb-6">
+            <p className="text-xs text-zinc-400 font-light max-w-sm leading-relaxed mb-6">
               Bespoke Next.js web applications, headless eCommerce flagships, and 1:1 pixel-perfect platforms. Registered in London, UK with our dedicated engineering hub in Pakistan.
             </p>
 

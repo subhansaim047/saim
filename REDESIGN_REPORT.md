@@ -148,3 +148,30 @@ git checkout pre-redesign
 ```
 
 All baseline assets, previous homepage implementations, and historical commit logs remain permanently preserved in the Git tree under tag `pre-redesign`.
+
+---
+
+## 7. 1:1 Aesthetic Reconstruction (rh.design Reference Integration)
+
+Following user directive referencing `https://www.rh.design/`, the entire visual layout, typography, section rhythm, and micro-interactions were reconstructed to match `rh.design`'s award-winning editorial language:
+
+1. **Section Rhythm & Contrast Pacing:**
+   - **Hero (`RhHeroSection`):** Clean off-white light canvas (`#f4f5f6`), lowercase eyebrow `"No account managers. No juniors. Just senior engineers who ship."`, display H1 with embedded inline Next.js 16 app preview capsule, black pill CTA button, and Contra 5/5 verified badge.
+   - **Why Us (`RhWhyUsSection`):** Off-white canvas, spaced uppercase eyebrow `W H Y   U S`, dual-tone headline `"Founder-led design & build focused on speed, growth and real results."`, 4-pillar bento grid.
+   - **Case Studies (`RhCaseStudiesSection`):** High-contrast transition into deep obsidian (`#050505`), Hyper-Lime (`#b5f900`) uppercase eyebrow, title `"Our success stories"`, 6 flagship live demo cards with interactive hover transforms linking to active demos in `public/`.
+   - **Services (`RhServicesSection`):** Deep obsidian (`#08080a`), dual-tone headline `"Built by senior engineers Better than bloated agencies."`, interactive service selector tabs + deliverables deep-dive.
+   - **Estimator (`RhEstimatorSection`):** Deep obsidian (`#050505`), border-white/10, live interactive price calculator.
+   - **Comparison Matrix (`RhWhyMeComparisonSection`):** Deep obsidian (`#08080a`), industry ticker, 3-column studio advantage comparison.
+   - **Pricing (`RhPricingSection`):** Clean off-white canvas (`#f4f5f6`), eyebrow `P R I C I N G`, headline `"Transparent pricing No surprises."`, GBP/EUR/USD currency switcher, and two-tone bento cards (Obsidian Sprint card with Hyper-Lime button + Clean White 1:1 Clone card with black button).
+   - **About Founder (`RhAboutSection`):** Pure white canvas (`#ffffff`), eyebrow `A B O U T   T H E   F O U N D E R`, headline `"Hi, I’m Saim Nice to meet you."`, 4-bento authority cards (Covent Garden UK registration, Pakistan engineering hub, $0 upfront sprint, direct WhatsApp connection).
+   - **Tools Hub (`RhToolsSection`):** Off-white canvas (`#f4f5f6`), clean white cards with hyper-lime icons and badges.
+   - **FAQ (`RhFaqSection`):** Pure white canvas (`#ffffff`), dual-tone headline `"Frequently asked questions Everything you need to know."`, clean accordion.
+   - **Consultation Banner (`RhConsultationSection`):** Deep obsidian (`#050505`), signature headline `"Designed to ship. Let's build your platform with $0 upfront."`, Hyper-Lime CTA button.
+   - **Footer (`RhFooter`):** Deep obsidian (`#050505`), circular `SD` monogram, Covent Garden registration, 6 service links, 4 tool links, legal policies.
+
+2. **Verification Gates Passed:**
+   - `npx tsc --noEmit`: 0 errors.
+   - `npm test` (`scripts/run_all_guards.mjs`): 11/11 CI Quality Guards passed (100% green).
+   - `npm run build`: 215/215 static routes compiled cleanly with Turbopack.
+   - Viewport Audits: Zero horizontal overflow on Desktop (1440px), Tablet (768px), and Mobile (375px).
+

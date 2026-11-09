@@ -44,26 +44,27 @@ export const RhFaqSection = () => {
   };
 
   return (
-    <section id="faq" className="py-20 sm:py-28 border-t border-[#2c2c2c] bg-[#0d0d0d] relative overflow-hidden">
-      <div className="max-w-[850px] mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#b5f900] mb-3">
-            CLARIFICATIONS
+    <section id="faq" className="py-24 sm:py-32 border-t border-black/5 bg-white text-[#09090b] relative overflow-hidden">
+      <div className="max-w-[920px] mx-auto px-4 sm:px-6">
+        {/* Header - rh.design exact dual-tone headline */}
+        <div className="text-center mb-16 sm:mb-20">
+          <div className="text-xs font-mono uppercase tracking-[0.25em] text-gray-500 mb-3 font-semibold">
+            F A Q
           </div>
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4"
-            style={{ letterSpacing: "-0.03em" }}
+            className="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#09090b] leading-[1.12] mb-4"
+            style={{ letterSpacing: "-0.035em" }}
           >
-            Frequently asked questions.
+            Frequently asked questions{" "}
+            <span className="text-[#9ca3af]">Everything you need to know.</span>
           </h2>
-          <p className="text-xs sm:text-sm text-[#a1a1a1] font-light leading-relaxed max-w-lg mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed max-w-xl mx-auto">
             Everything you need to know about our engineering process, guarantee, and handover.
           </p>
         </div>
 
         {/* Accordion List */}
-        <div className="space-y-3">
+        <div className="space-y-3.5">
           {FAQS.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
@@ -73,7 +74,7 @@ export const RhFaqSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-20px" }}
                 transition={{ duration: 0.35, delay: idx * 0.04 }}
-                className="rounded-2xl bg-[#141414] border border-[#242424] hover:border-[#3a3a3a] overflow-hidden transition-all shadow-md"
+                className="rounded-2xl bg-[#f4f5f6] border border-black/5 hover:border-black/15 overflow-hidden transition-all shadow-2xs"
               >
                 <button
                   type="button"
@@ -81,13 +82,17 @@ export const RhFaqSection = () => {
                   className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 transition-colors cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm sm:text-base font-medium text-white tracking-tight">
+                  <span className="text-sm sm:text-base font-semibold text-[#09090b] tracking-tight">
                     {faq.question}
                   </span>
-                  <div className={`w-8 h-8 rounded-full bg-[#1e1e1e] border border-[#2c2c2c] flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                    isOpen ? "rotate-180 bg-[#b5f900] text-black" : "text-[#a1a1a1]"
-                  }`}>
-                    <ChevronDown className="w-4 h-4" />
+                  <div
+                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 shadow-2xs ${
+                      isOpen
+                        ? "rotate-180 bg-[#09090b] text-[#b5f900]"
+                        : "bg-white text-gray-600 border border-black/10"
+                    }`}
+                  >
+                    <ChevronDown className="w-4 h-4 stroke-[2]" />
                   </div>
                 </button>
 
@@ -98,7 +103,7 @@ export const RhFaqSection = () => {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                      className="px-5 sm:px-6 pb-6 text-xs sm:text-sm text-[#a1a1a1] font-light leading-relaxed border-t border-[#1e1e1e] pt-4"
+                      className="px-5 sm:px-6 pb-6 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed border-t border-black/5 pt-4"
                     >
                       {faq.answer}
                     </motion.div>

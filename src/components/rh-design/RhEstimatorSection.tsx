@@ -62,24 +62,24 @@ export const RhEstimatorSection: React.FC = () => {
   const current = PROJECT_TYPES.find(p => p.id === selectedId) || PROJECT_TYPES[1];
 
   return (
-    <section id="estimator" className="py-20 sm:py-28 border-t border-[#242424] bg-[#0d0d0d] relative overflow-hidden">
-      <div className="max-w-[1130px] mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+    <section id="estimator" className="py-24 sm:py-32 border-t border-white/10 bg-[#050505] text-[#fafafa] relative overflow-hidden">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        {/* Header - rh.design dual-tone style */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 sm:mb-20">
           <div>
-            <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#b5f900] mb-3">
-              PROJECT SCOPE ESTIMATOR
+            <div className="text-xs font-mono uppercase tracking-[0.25em] text-[#b5f900] mb-3 font-semibold">
+              P R O J E C T &nbsp; E S T I M A T O R
             </div>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-[1.15]"
-              style={{ letterSpacing: "-0.03em" }}
+              className="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white max-w-3xl leading-[1.12]"
+              style={{ letterSpacing: "-0.035em" }}
             >
-              Calculate your project investment. <br />
-              <span className="text-[#a1a1a1]">100% transparent. $0 upfront.</span>
+              Calculate your project investment{" "}
+              <span className="text-gray-400">100% transparent. $0 upfront.</span>
             </h2>
           </div>
-          <p className="text-xs sm:text-sm text-[#a1a1a1] max-w-sm font-light leading-relaxed">
-            Select your platform type to see guaranteed fixed delivery milestones. No hidden fees or compounding monthly subscriptions.
+          <p className="text-sm text-gray-400 max-w-sm font-normal leading-relaxed">
+            Select your platform architecture to see guaranteed fixed delivery milestones. No hidden fees or compounding monthly subscriptions.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export const RhEstimatorSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left Column: Project Type Selector (7 cols) */}
           <div className="lg:col-span-7 flex flex-col gap-4">
-            <div className="text-xs font-mono uppercase tracking-wider text-[#8e8e8e] mb-1">
+            <div className="text-xs font-mono uppercase tracking-wider text-gray-400 mb-1">
               Select Platform Architecture:
             </div>
             {PROJECT_TYPES.map((type) => {
@@ -96,16 +96,16 @@ export const RhEstimatorSection: React.FC = () => {
                 <div
                   key={type.id}
                   onClick={() => setSelectedId(type.id)}
-                  className={`p-5 sm:p-6 rounded-2xl cursor-pointer border transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${
+                  className={`p-6 rounded-2xl cursor-pointer border transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${
                     isSelected
-                      ? "bg-[#161616] border-[#b5f900] shadow-[0_0_24px_rgba(181,249,0,0.12)]"
-                      : "bg-[#121212] border-[#242424] hover:border-[#383838]"
+                      ? "bg-[#141418] border-[#b5f900] shadow-[0_0_24px_rgba(181,249,0,0.12)]"
+                      : "bg-[#0c0c0e] border-white/10 hover:border-white/20"
                   }`}
                 >
                   <div className="flex items-start gap-4">
                     <div
                       className={`w-5 h-5 rounded-full border mt-0.5 flex items-center justify-center shrink-0 transition-colors ${
-                        isSelected ? "border-[#b5f900] bg-[#b5f900]" : "border-[#444] bg-transparent"
+                        isSelected ? "border-[#b5f900] bg-[#b5f900]" : "border-zinc-600 bg-transparent"
                       }`}
                     >
                       {isSelected && <div className="w-2 h-2 rounded-full bg-black" />}
@@ -114,7 +114,7 @@ export const RhEstimatorSection: React.FC = () => {
                       <div className="text-base font-semibold text-white mb-1">
                         {type.name}
                       </div>
-                      <p className="text-xs text-[#a1a1a1] leading-relaxed max-w-md">
+                      <p className="text-xs text-gray-400 leading-relaxed max-w-md font-light">
                         {type.description}
                       </p>
                     </div>
@@ -123,7 +123,7 @@ export const RhEstimatorSection: React.FC = () => {
                     <div className="text-xl font-bold font-mono text-white">
                       {type.currency}{type.price.toLocaleString()}
                     </div>
-                    <div className="text-[11px] font-mono text-[#a1a1a1]">
+                    <div className="text-[11px] font-mono text-gray-400">
                       {type.days}
                     </div>
                   </div>
@@ -133,33 +133,33 @@ export const RhEstimatorSection: React.FC = () => {
           </div>
 
           {/* Right Column: Calculated Quote Breakdown (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between p-7 sm:p-8 rounded-3xl bg-[#141414] border-2 border-[#b5f900]/40 shadow-[0_12px_48px_rgba(181,249,0,0.08)] relative">
+          <div className="lg:col-span-5 flex flex-col justify-between p-7 sm:p-8 rounded-3xl bg-[#0c0c0e] border border-white/15 shadow-2xl relative">
             <div className="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-[#b5f900] text-black text-[10px] font-mono font-bold uppercase tracking-wider">
               $0 Upfront Guarantee
             </div>
 
             <div>
-              <div className="text-xs font-mono uppercase tracking-wider text-[#a1a1a1] mb-2">
+              <div className="text-xs font-mono uppercase tracking-wider text-gray-400 mb-2">
                 Guaranteed Fixed Investment:
               </div>
               <div className="flex items-baseline gap-2 mb-3">
                 <span className="text-4xl sm:text-5xl font-mono font-bold text-white tracking-tight">
                   {current.currency}{current.price.toLocaleString()}
                 </span>
-                <span className="text-xs font-mono text-[#b5f900] uppercase">
+                <span className="text-xs font-mono text-[#b5f900] uppercase font-semibold">
                   Fixed Rate
                 </span>
               </div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1c1c1c] border border-[#2e2e2e] text-xs font-mono text-[#cbcbcb] mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#16161b] border border-white/10 text-xs font-mono text-zinc-300 mb-6">
                 <Clock className="w-3.5 h-3.5 text-[#b5f900]" />
                 <span>Estimated Delivery: {current.days}</span>
               </div>
 
-              <div className="pt-4 border-t border-[#242424] mb-6">
-                <div className="text-xs font-mono uppercase tracking-wider text-[#8e8e8e] mb-3">
+              <div className="pt-4 border-t border-white/10 mb-6">
+                <div className="text-xs font-mono uppercase tracking-wider text-gray-400 mb-3">
                   Included In Every Build:
                 </div>
-                <ul className="space-y-2.5 text-xs text-white">
+                <ul className="space-y-2.5 text-xs text-zinc-200">
                   {INCLUDED_FEATURES.map((feat, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <Check className="w-3.5 h-3.5 text-[#b5f900] shrink-0 mt-0.5" />
@@ -170,7 +170,7 @@ export const RhEstimatorSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-6 border-t border-[#242424]">
+            <div className="pt-6 border-t border-white/10">
               <a
                 href={`https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20the%20${encodeURIComponent(current.name)}%20(${current.currency}${current.price})%20with%20the%20$0%20upfront%20offer`}
                 target="_blank"
@@ -180,7 +180,7 @@ export const RhEstimatorSection: React.FC = () => {
                 <span>Start on WhatsApp ($0 Upfront)</span>
                 <ArrowUpRight className="w-4 h-4 text-black" />
               </a>
-              <p className="text-[11px] text-center text-[#777] font-mono mt-3">
+              <p className="text-[11px] text-center text-zinc-500 font-mono mt-3">
                 Pay only after you review and approve the live staging build.
               </p>
             </div>

@@ -46,28 +46,28 @@ const TOOLS = [
 
 export const RhToolsSection: React.FC = () => {
   return (
-    <section id="tools" className="py-20 sm:py-28 border-t border-[#27272a] bg-[#09090b] relative overflow-hidden">
-      <div className="max-w-[1180px] mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+    <section id="tools" className="py-24 sm:py-32 border-t border-black/5 bg-[#f4f5f6] text-[#09090b] relative overflow-hidden">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        {/* Header - rh.design dual-tone style */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 sm:mb-20">
           <div>
-            <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#b5f900] mb-3">
-              FREE UTILITIES
+            <div className="text-xs font-mono uppercase tracking-[0.25em] text-gray-500 mb-3 font-semibold">
+              F R E E &nbsp; U T I L I T I E S
             </div>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-[1.15]"
-              style={{ letterSpacing: "-0.03em" }}
+              className="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#09090b] max-w-3xl leading-[1.12]"
+              style={{ letterSpacing: "-0.035em" }}
             >
-              Free business &amp; kitchen tools. <br />
-              <span className="text-[#a1a1aa]">Built by Saim Dev for UK commercial operators.</span>
+              Free business &amp; kitchen tools{" "}
+              <span className="text-[#9ca3af]">Built for UK commercial operators.</span>
             </h2>
           </div>
           <Link
             href="/tools"
-            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#b5f900] hover:underline"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-black/10 hover:border-black/30 text-xs font-medium text-[#09090b] shadow-2xs transition-all active:scale-95"
           >
             <span>View All Kitchen Tools</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
@@ -82,33 +82,32 @@ export const RhToolsSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.08 }}
-                whileHover={{ y: -4, borderColor: "rgba(181, 249, 0, 0.4)" }}
-                className="p-6 rounded-3xl bg-[#111113] border border-[#27272a] flex flex-col justify-between shadow-xl transition-all group hover:-translate-y-1"
+                className="p-7 rounded-3xl bg-white border border-black/5 flex flex-col justify-between shadow-xs hover:shadow-md transition-all group hover:-translate-y-1"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-10 h-10 rounded-2xl bg-[#18181b] border border-[#27272a] flex items-center justify-center text-[#b5f900] group-hover:scale-105 transition-transform">
-                      <IconComponent className="w-5 h-5" />
+                    <div className="w-10 h-10 rounded-2xl bg-[#09090b] flex items-center justify-center text-[#b5f900] shadow-2xs group-hover:scale-105 transition-transform">
+                      <IconComponent className="w-5 h-5 stroke-[2]" />
                     </div>
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#18181b] border border-[#27272a] text-[10px] font-mono text-[#a1a1aa] uppercase">
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#f4f5f6] border border-black/5 text-[10px] font-mono text-gray-600 font-semibold uppercase">
                       {t.badge}
                     </span>
                   </div>
-                  <h3 className="text-base font-semibold text-white mb-1 group-hover:text-[#b5f900] transition-colors leading-snug">
+                  <h3 className="text-base font-semibold text-[#09090b] mb-1 leading-snug">
                     {t.title}
                   </h3>
-                  <div className="text-[11px] font-mono text-zinc-500 mb-3">
+                  <div className="text-[11px] font-mono text-gray-500 mb-3">
                     {t.tagline}
                   </div>
-                  <p className="text-xs text-[#a1a1aa] leading-relaxed font-light mb-6">
+                  <p className="text-xs text-gray-600 leading-relaxed font-light mb-6">
                     {t.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#27272a]">
+                <div className="pt-4 border-t border-black/5">
                   <Link
                     href={t.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#b5f900] group-hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#09090b] group-hover:text-black group-hover:underline"
                   >
                     <span>Launch Free Tool</span>
                     <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

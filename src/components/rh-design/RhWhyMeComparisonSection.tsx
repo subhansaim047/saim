@@ -16,32 +16,32 @@ const INDUSTRIES = [
 
 export const RhWhyMeComparisonSection = () => {
   return (
-    <section className="py-20 sm:py-28 border-t border-[#2c2c2c] bg-[#0d0d0d] relative overflow-hidden">
-      <div className="max-w-[1130px] mx-auto px-4 sm:px-6">
+    <section className="py-24 sm:py-32 border-t border-white/10 bg-[#08080a] text-[#fafafa] relative overflow-hidden">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="mb-14 max-w-3xl">
-          <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#b5f900] mb-3">
-            THE STUDIO ADVANTAGE
+          <div className="text-xs font-mono uppercase tracking-[0.25em] text-[#b5f900] mb-3 font-semibold">
+            T H E &nbsp; S T U D I O &nbsp; A D V A N T A G E
           </div>
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-[1.15] mb-4"
-            style={{ letterSpacing: "-0.03em" }}
+            className="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-[1.12] mb-4"
+            style={{ letterSpacing: "-0.035em" }}
           >
-            Built by senior engineers.{" "}
-            <span className="text-[#a1a1a1]">Better than bloated agencies.</span>
+            Built by senior engineers{" "}
+            <span className="text-gray-400">Better than bloated agencies.</span>
           </h2>
-          <p className="text-xs sm:text-sm text-[#a1a1a1] font-light leading-relaxed">
+          <p className="text-sm text-gray-400 font-light leading-relaxed max-w-xl">
             Eliminating agency bloat, junior handoffs, and billing markups. You get direct access to modern full-stack engineering with zero financial risk.
           </p>
         </div>
 
         {/* Industry Scrolling Ticker - rh.design style */}
-        <div className="mb-12 overflow-hidden py-3 border-y border-[#242424] relative">
+        <div className="mb-14 overflow-hidden py-3 border-y border-white/10 relative">
           <div className="flex gap-4 w-max animate-marquee">
             {[...INDUSTRIES, ...INDUSTRIES].map((ind, i) => (
               <div
                 key={i}
-                className="px-4 py-1.5 rounded-full bg-[#141414] border border-[#2c2c2c] text-xs font-mono text-[#cbcbcb] flex items-center gap-2 whitespace-nowrap"
+                className="px-4 py-1.5 rounded-full bg-[#121216] border border-white/10 text-xs font-mono text-zinc-300 flex items-center gap-2 whitespace-nowrap"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#b5f900]" />
                 <span>{ind}</span>
@@ -57,7 +57,7 @@ export const RhWhyMeComparisonSection = () => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-7 sm:p-8 rounded-3xl bg-[#141414] border-2 border-[#b5f900]/40 flex flex-col justify-between shadow-[0_12px_48px_rgba(181,249,0,0.08)] relative"
+            className="p-7 sm:p-8 rounded-3xl bg-[#121216] border-2 border-[#b5f900]/40 flex flex-col justify-between shadow-[0_12px_48px_rgba(181,249,0,0.08)] relative"
           >
             <div className="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-[#b5f900] text-black text-[10px] font-mono font-bold uppercase tracking-wider">
               Direct Senior Studio
@@ -68,7 +68,7 @@ export const RhWhyMeComparisonSection = () => {
                 <ShieldCheck className="w-5 h-5 text-[#b5f900]" />
                 <span>Saim Dev</span>
               </div>
-              <p className="text-xs text-[#a1a1a1] mb-6 font-light">
+              <p className="text-xs text-gray-400 mb-6 font-light">
                 UK Registered Agency • Senior Full-Stack Engineering
               </p>
 
@@ -96,7 +96,7 @@ export const RhWhyMeComparisonSection = () => {
               </ul>
             </div>
 
-            <div className="pt-4 border-t border-[#242424] text-[11px] font-mono text-[#b5f900]">
+            <div className="pt-4 border-t border-white/10 text-[11px] font-mono text-[#b5f900]">
               Fixed rates from £250 • Flat $1,900 Clone
             </div>
           </motion.div>
@@ -107,17 +107,17 @@ export const RhWhyMeComparisonSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-7 sm:p-8 rounded-3xl bg-[#121212] border border-[#242424] flex flex-col justify-between"
+            className="p-7 sm:p-8 rounded-3xl bg-[#0c0c0e] border border-white/10 flex flex-col justify-between"
           >
             <div>
               <div className="text-white font-medium text-lg mb-1">
                 Traditional Agencies
               </div>
-              <p className="text-xs text-[#a1a1a1] mb-6 font-light">
+              <p className="text-xs text-gray-400 mb-6 font-light">
                 High Overhead • Multiple Hand-off Layers
               </p>
 
-              <ul className="space-y-3.5 mb-8 text-xs sm:text-[13px] text-[#8e8e8e]">
+              <ul className="space-y-3.5 mb-8 text-xs sm:text-[13px] text-zinc-400 font-light">
                 <li className="flex items-start gap-2.5">
                   <X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
                   <span>50% deposit required upfront before work begins</span>
@@ -141,7 +141,7 @@ export const RhWhyMeComparisonSection = () => {
               </ul>
             </div>
 
-            <div className="pt-4 border-t border-[#242424] text-[11px] font-mono text-[#8e8e8e]">
+            <div className="pt-4 border-t border-white/10 text-[11px] font-mono text-zinc-500">
               Costs £4,000 – £15,000+
             </div>
           </motion.div>
@@ -152,17 +152,17 @@ export const RhWhyMeComparisonSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-7 sm:p-8 rounded-3xl bg-[#121212] border border-[#242424] flex flex-col justify-between"
+            className="p-7 sm:p-8 rounded-3xl bg-[#0c0c0e] border border-white/10 flex flex-col justify-between"
           >
             <div>
               <div className="text-white font-medium text-lg mb-1">
                 DIY Builders &amp; Low-Cost Gigs
               </div>
-              <p className="text-xs text-[#a1a1a1] mb-6 font-light">
+              <p className="text-xs text-gray-400 mb-6 font-light">
                 Shopify / Wix / Fiverr Templates
               </p>
 
-              <ul className="space-y-3.5 mb-8 text-xs sm:text-[13px] text-[#8e8e8e]">
+              <ul className="space-y-3.5 mb-8 text-xs sm:text-[13px] text-zinc-400 font-light">
                 <li className="flex items-start gap-2.5">
                   <X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
                   <span>Continuous monthly app and subscription bills</span>
@@ -186,7 +186,7 @@ export const RhWhyMeComparisonSection = () => {
               </ul>
             </div>
 
-            <div className="pt-4 border-t border-[#242424] text-[11px] font-mono text-[#8e8e8e]">
+            <div className="pt-4 border-t border-white/10 text-[11px] font-mono text-zinc-500">
               Compounding monthly subscription costs
             </div>
           </motion.div>

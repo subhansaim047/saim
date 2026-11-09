@@ -232,7 +232,7 @@ const faqSchema = {
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen bg-[#09090b]">
+    <div className="relative min-h-screen bg-[#f4f5f6]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
