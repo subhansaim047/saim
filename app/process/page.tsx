@@ -5,7 +5,7 @@ import { SiteFooter } from "../../src/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Web Development Process & Delivery Workflow | Saim Dev",
-  description: "Our transparent 4-stage website engineering workflow: discovery, technical architecture, Next.js development, and zero-downtime deployment with 100% code handover.",
+  description: "Our transparent 4-stage engineering workflow: discovery, technical architecture, Next.js development, and deployment with 100% code ownership.",
   alternates: {
     canonical: "https://www.saimdev.site/process",
   },

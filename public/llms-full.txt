@@ -29,7 +29,7 @@
 ## 2. Core Web Development & Digital Engineering Services
 
 - **Services Hub**: https://www.saimdev.site/services
-- **Custom Web Applications & SaaS MVPs**: https://www.saimdev.site/services/custom-web-apps
+- **Custom Web Applications & SaaS MVPs**: https://www.saimdev.site/services/website-clone
   Full-stack web applications, authenticated client portals, booking engines, and real-time dashboards built on Next.js App Router, TypeScript, Node.js, and PostgreSQL/Supabase.
 - **E-Commerce & Shopify Storefronts**: https://www.saimdev.site/services/ecommerce-shopify
   Bespoke Shopify themes, headless commerce, faceted product search, custom product builders, and WhatsApp/Stripe checkout flows.

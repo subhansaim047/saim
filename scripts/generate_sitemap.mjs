@@ -146,7 +146,6 @@ const staticPages = [
   { url: "https://www.saimdev.site/services/ecommerce-development", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services/website-redesign", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services/seo-services", priority: "0.9", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/services/custom-web-apps", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services/ecommerce-shopify", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services/business-websites", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services/wordpress-headless-cms", priority: "0.9", changefreq: "weekly" },

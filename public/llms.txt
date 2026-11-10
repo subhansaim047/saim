@@ -34,7 +34,7 @@
 ### Core Studio & Commercial Pages
 1. [Saim Dev Homepage](https://www.saimdev.site/): Bespoke Next.js websites, e-commerce stores, and web apps for UK and European businesses from £250.
 2. [Web Development Services Hub](https://www.saimdev.site/services): Full-stack web development, online ordering systems, e-commerce, speed optimization, and technical SEO architecture.
-   - [Custom Web Applications & SaaS MVPs](https://www.saimdev.site/services/custom-web-apps): Full-stack web software, client portals, and real-time dashboards built on Next.js and PostgreSQL.
+   - [Custom Web Applications & SaaS MVPs](https://www.saimdev.site/services/website-clone): Full-stack web software, client portals, and real-time dashboards built on Next.js and PostgreSQL.
    - [E-Commerce & Shopify Development](https://www.saimdev.site/services/ecommerce-shopify): High-converting Shopify, WooCommerce, and headless commerce storefronts with sub-second checkout flows.
    - [Bespoke Business Websites](https://www.saimdev.site/services/business-websites): Custom digital flagships for B2B, healthcare, legal, and professional service firms.
    - [WordPress & Headless CMS Engineering](https://www.saimdev.site/services/wordpress-headless-cms): Lightweight custom WordPress, Sanity, and Strapi headless architectures with zero plugin bloat.

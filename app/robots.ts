@@ -13,7 +13,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot-Image',
         allow: '/',
-        disallow: disallowPaths,
+        disallow: ['/scroll-frames/', ...disallowPaths],
       },
       {
         userAgent: [

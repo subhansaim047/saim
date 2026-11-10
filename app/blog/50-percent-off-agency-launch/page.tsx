@@ -3,7 +3,7 @@ import { BlogPost3Page } from '@/components/BlogPost3Page';
 
 export const metadata: Metadata = {
   title: 'Fixed Price Bespoke Website Design Package UK | Saim Dev',
-  description: 'Explore our fixed-price bespoke Next.js website design package for UK small businesses. Learn what is included, how transparent agile pricing works, and our launch offer.',
+  description: 'Fixed-price Next.js website packages for UK small businesses. Learn what is included, how transparent pricing works, and our agency launch offer.',
   robots: {
     index: true,
     follow: true,

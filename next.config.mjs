@@ -76,6 +76,11 @@ const nextConfig = {
         destination: '/tools',
         permanent: true,
       },
+      {
+        source: '/services/custom-web-apps',
+        destination: '/services/website-clone',
+        permanent: true,
+      },
       // 2. Cooling historical aliases consolidation
       {
         source: '/food-safety-templates/two-stage-cooling-method',

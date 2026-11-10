@@ -9,7 +9,7 @@ import { ToolsSiloNav } from "@/components/tools/ToolsSiloNav";
 
 export const metadata: Metadata = {
   title: "14 Allergen Matrix Generator UK | Allergy Chart | Saim Dev",
-  description: "Create a statutory 14 allergen matrix chart for your UK restaurant or takeaway. Free interactive allergen table generator with printable A4 kitchen poster export.",
+  description: "Create a statutory 14 allergen matrix chart for your UK restaurant. Free interactive allergen table generator with printable A4 kitchen poster export.",
   robots: {
     index: true,
     follow: true,

@@ -95,6 +95,10 @@ const organizationSchema = {
   "@id": "https://www.saimdev.site/#organization",
   "name": "Saim Dev",
   "url": "https://www.saimdev.site",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "h2", "p"]
+  },
   "logo": {
     "@type": "ImageObject",
     "url": "https://www.saimdev.site/saim-dev-logo.png",
@@ -162,10 +166,7 @@ const professionalServiceSchema = {
   "telephone": "+923196526604",
   "email": "contact@saimdev.site",
   "areaServed": [
-    { "@type": "Country", "name": "United Kingdom" },
-    { "@type": "Country", "name": "United States" },
-    { "@type": "Country", "name": "Canada" },
-    { "@type": "Country", "name": "Australia" },
+    { "@type": "Country", "name": "United Kingdom", "identifier": "GB" },
     { "@type": "AdministrativeArea", "name": "European Union" }
   ],
   "parentOrganization": {

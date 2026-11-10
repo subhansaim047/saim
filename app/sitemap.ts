@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services/takeaway-web-design-birmingham`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/nextjs-developer-uk`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/services`,         lastModified: LAST_MOD, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/services/custom-web-apps`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/services/website-clone`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/services/ecommerce-shopify`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/services/business-websites`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/services/wordpress-headless-cms`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },

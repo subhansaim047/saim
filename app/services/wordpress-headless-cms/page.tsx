@@ -8,7 +8,7 @@ const { serviceSchema, breadcrumbSchema, faqSchema } = generateServiceSchemas(da
 
 export const metadata: Metadata = {
   title: "Why We Replace WordPress With Next.js | Saim Dev",
-  description: "Looking for WordPress development? We build modern Next.js alternatives that load in under 500ms, eliminate all plugin security vulnerabilities, and require $0 monthly retainers.",
+  description: "Next.js alternatives to WordPress that load in under 500ms, eliminate plugin vulnerabilities, and require £0 monthly maintenance retainers.",
   alternates: {
     canonical: "https://www.saimdev.site/services/website-development",
   },

@@ -16,14 +16,16 @@ export function generateServiceSchemas(data: ServicePageData) {
       }
     },
     "areaServed": [
-      { "@type": "Country", "name": "United Kingdom" },
-      { "@type": "Country", "name": "United States" },
-      { "@type": "Country", "name": "Pakistan" },
+      { "@type": "Country", "name": "United Kingdom", "identifier": "GB" },
       { "@type": "AdministrativeArea", "name": "European Union" }
     ],
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "p"]
+    },
     "offers": {
       "@type": "AggregateOffer",
-      "priceCurrency": "USD",
+      "priceCurrency": data.pricing[0]?.price.includes("£") ? "GBP" : "USD",
       "lowPrice": data.pricing[0]?.price.replace(/[^0-9]/g, "") || "250",
       "offerCount": data.pricing.length
     }

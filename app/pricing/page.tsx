@@ -5,7 +5,7 @@ import { SiteFooter } from "../../src/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Website Development Pricing & Packages UK | Saim Dev",
-  description: "Transparent fixed-price web development packages from £250. Zero monthly retainers, 100% code ownership, UK CAP Code compliant terms, and 50/50 milestone safety.",
+  description: "Transparent fixed-price web development packages from £250. Zero monthly retainers, 100% code ownership, and 50/50 milestone payment protection.",
   alternates: {
     canonical: "https://www.saimdev.site/pricing",
   },
@@ -122,10 +122,6 @@ export default function PricingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
@@ -329,7 +325,7 @@ export default function PricingPage() {
             </p>
           </div>
           <Link
-            href="/services/custom-web-apps"
+            href="/services/website-clone"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-black font-semibold text-xs font-mono uppercase tracking-wider hover:bg-neutral-200 transition-all shrink-0"
           >
             <span>Explore Custom Web Apps</span>
