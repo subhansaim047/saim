@@ -179,7 +179,7 @@ export const HeroSection = () => {
             />
 
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold tracking-tight text-white leading-tight mt-1 mb-2">
-              Custom Web Development &amp; Digital Engineering Studio
+              Custom Web Development Agency UK &amp; Digital Engineering Studio
             </h1>
 
             {/* Sub-headline + description + CTA */}
@@ -198,7 +198,7 @@ export const HeroSection = () => {
                   </span>
                 </h2>
                 <p className="text-white/50 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-1.5">
-                  SUB-SECOND SPEED • 100% CODE OWNERSHIP • ZERO MONTHLY RETAINERS
+                  CUSTOM WEB DEVELOPMENT AGENCY UK • SUB-SECOND SPEED • 100% CODE OWNERSHIP • ZERO MONTHLY RETAINERS
                 </p>
               </div>
 
@@ -257,7 +257,8 @@ export const HeroSection = () => {
                         src={shot.src}
                         alt={shot.alt}
                         className="w-full h-full object-cover opacity-90"
-                        loading="eager"
+                        loading={loopIdx === 0 && shot.src.includes('shot-4') ? "eager" : "lazy"}
+                        fetchPriority={loopIdx === 0 && shot.src.includes('shot-4') ? "high" : "low"}
                         width={360}
                         height={450}
                         decoding="async"
@@ -294,7 +295,7 @@ export const HeroSection = () => {
                         <img src="/hero-shots/shot-4.webp" alt="Saim Dev - Custom Web Development & Next.js Websites for UK Small Businesses" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" width={1080} height={1350} decoding="async" />
                       </div>
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/hero-shots/shot-2.webp" alt="Evora Luxury Real Estate Web Platform" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" width={1080} height={1350} decoding="async" />
+                        <img src="/hero-shots/shot-2.webp" alt="Evora Luxury Real Estate Web Platform" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="lazy" width={1080} height={1350} decoding="async" />
                       </div>
                     </div>
                   ))}
@@ -311,10 +312,10 @@ export const HeroSection = () => {
                   {[...Array(2)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-4 w-full">
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/hero-shots/shot-3.webp" alt="GAZU High-Conversion Fashion E-Commerce" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" width={1080} height={1350} decoding="async" />
+                        <img src="/hero-shots/shot-3.webp" alt="GAZU High-Conversion Fashion E-Commerce" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="lazy" width={1080} height={1350} decoding="async" />
                       </div>
                       <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111111] border border-white/5 shadow-2xl">
-                        <img src="/hero-shots/shot-1.webp" alt="Fresh and Reddy Dark Web Architecture" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="eager" fetchPriority="high" width={1080} height={1350} decoding="async" />
+                        <img src="/hero-shots/shot-1.webp" alt="Fresh and Reddy Dark Web Architecture" className="absolute inset-0 w-full h-full object-cover opacity-90" loading="lazy" width={1080} height={1350} decoding="async" />
                       </div>
                     </div>
                   ))}

@@ -1,3 +1,18 @@
+const siteNavigationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  "name": "Main Navigation",
+  "hasPart": [
+    { "@type": "WebPage", "name": "Services", "url": "https://www.saimdev.site/#services" },
+    { "@type": "WebPage", "name": "Tools", "url": "https://www.saimdev.site/tools" },
+    { "@type": "WebPage", "name": "Demos", "url": "https://www.saimdev.site/demos" },
+    { "@type": "WebPage", "name": "Pricing", "url": "https://www.saimdev.site/pricing" },
+    { "@type": "WebPage", "name": "Case Studies", "url": "https://www.saimdev.site/case-studies" },
+    { "@type": "WebPage", "name": "About", "url": "https://www.saimdev.site/about" },
+    { "@type": "WebPage", "name": "Contact", "url": "https://www.saimdev.site/contact" }
+  ]
+};
+
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
@@ -51,6 +66,7 @@ export const metadata: Metadata = {
     title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
     description: "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
     creator: "@saimwebdev",
+    site: "@saimwebdev",
     images: ["https://www.saimdev.site/hero-shots/shot-4.webp"],
   },
 };
@@ -61,6 +77,14 @@ const webPageSchema = {
   "@id": "https://www.saimdev.site/#webpage",
   "url": "https://www.saimdev.site",
   "name": "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
+  "datePublished": "2024-07-19",
+  "dateModified": "2026-11-10",
+  "author": {
+    "@id": "https://www.saimdev.site/#person"
+  },
+  "creator": {
+    "@id": "https://www.saimdev.site/#person"
+  },
   "description": "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
   "inLanguage": "en-GB",
   "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
@@ -254,7 +278,7 @@ export default function HomePage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationSchema) }}
       />
       <script
         type="application/ld+json"
@@ -265,7 +289,7 @@ export default function HomePage() {
       <ScrollCanvasBackground />
 
       {/* Main Website Content (Floating Glass over Canvas, z-10) */}
-      <main className="relative z-10 min-h-screen overflow-x-clip bg-transparent">
+      <main id="main-content" className="relative z-10 min-h-screen overflow-x-clip bg-transparent">
         <HeroSection />
         <AboutSection />
         <ServicesBentoSection />

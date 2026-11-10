@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Plus_Jakarta_Sans, Instrument_Serif, Fraunces, JetBrains_Mono } from 'next/font/google';
+import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import '../src/index.css'; // Global CSS
 import { CookieBanner } from '@/components/CookieBanner';
 import { SmoothScroll } from '@/components/SmoothScroll';
@@ -11,20 +11,8 @@ const inter = Inter({
 });
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '600', '700'],
   variable: '--font-inter',
-  display: 'swap',
-});
-const instrument = Instrument_Serif({
-  weight: '400',
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  variable: '--font-instrument',
-  display: 'swap',
-});
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-fraunces',
   display: 'swap',
 });
 const jetbrainsMono = JetBrains_Mono({
@@ -69,6 +57,7 @@ export const metadata: Metadata = {
     title: 'Next.js Websites for UK Small Businesses | Saim Dev',
     description: 'Custom Next.js websites for UK small businesses from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
     creator: '@saimwebdev',
+    site: '@saimwebdev',
     images: ['https://www.saimdev.site/hero-shots/shot-4.webp'],
   },
   icons: {
@@ -215,11 +204,18 @@ export default function RootLayout({
             __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});`,
           }}
         />
-        {/* Microsoft Clarity Analytics */}
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="author" content="Saim Dev" />
+        <meta name="date" content="2026-11-10" />
+        <meta name="revised" content="Tuesday, November 10, 2026" />
+        <meta property="article:modified_time" content="2026-11-10T15:00:00Z" />
+        <meta name="image" content="https://www.saimdev.site/hero-shots/shot-4.webp" />
+        <meta name="og:image" content="https://www.saimdev.site/hero-shots/shot-4.webp" />
+        <link rel="image_src" href="https://www.saimdev.site/hero-shots/shot-4.webp" />
+        {/* Microsoft Clarity Analytics (Deferred to idle to preserve 100 mobile PageSpeed) */}
         <script
-          type="text/javascript"
           dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "z7342zyo0u");`,
+            __html: `window.addEventListener('load',function(){var loadClarity=function(){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","z7342zyo0u");};if(window.requestIdleCallback){requestIdleCallback(loadClarity,{timeout:3000})}else{setTimeout(loadClarity,1500)}});`,
           }}
         />
         <script
@@ -239,7 +235,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
         />
       </head>
-      <body className={`${inter.variable} ${jakarta.variable} ${instrument.variable} ${fraunces.variable} ${jetbrainsMono.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#FF4A1C] selection:text-white`}>
+      <body className={`${inter.variable} ${jakarta.variable} ${jetbrainsMono.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#FF4A1C] selection:text-white`}>
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:font-semibold focus:rounded-md focus:shadow-lg">
+          Skip to main content
+        </a>
         <SmoothScroll />
         {children}
         <CookieBanner />
