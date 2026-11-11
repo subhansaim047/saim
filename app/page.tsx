@@ -33,7 +33,7 @@ import { ScrollCanvasBackground } from "@/components/ScrollCanvasBackground";
 
 export const metadata: Metadata = {
   title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
-  description: "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
+  description: "UK web development agency building fixed-price Next.js websites, Shopify stores and web apps from £250. SEO-ready, no monthly lock-in.",
   alternates: {
     canonical: "https://www.saimdev.site",
     languages: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
-    description: "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
+    description: "UK web development agency building fixed-price Next.js websites, Shopify stores and web apps from £250. SEO-ready, no monthly lock-in.",
     url: "https://www.saimdev.site",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
-    description: "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
+    description: "UK web development agency building fixed-price Next.js websites, Shopify stores and web apps from £250. SEO-ready, no monthly lock-in.",
     creator: "@saimwebdev",
     site: "@saimwebdev",
     images: ["https://www.saimdev.site/hero-shots/shot-4.webp"],
@@ -85,7 +85,7 @@ const webPageSchema = {
   "creator": {
     "@id": "https://www.saimdev.site/#person"
   },
-  "description": "Bespoke web development agency in the UK engineering custom business websites, Shopify stores, and Next.js web applications with sub-second performance.",
+  "description": "UK web development agency building fixed-price Next.js websites, Shopify stores and web apps from £250. SEO-ready, no monthly lock-in.",
   "inLanguage": "en-GB",
   "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
   "primaryImageOfPage": {

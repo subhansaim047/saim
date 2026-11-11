@@ -11,7 +11,7 @@ export const ScrollCanvasBackground: React.FC = () => {
       {/* Single High-Resolution 1764x1176 Background Image on both Laptop & Mobile — Zero CPU/Canvas Overhead */}
       <img
         src="/scroll-frames/frame_000.webp"
-        alt=""
+        alt="Dark abstract gradient background of the Saim Dev web development studio"
         decoding="sync"
         fetchPriority="high"
         className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none transform-gpu"
