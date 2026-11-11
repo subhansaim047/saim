@@ -6,6 +6,7 @@ import { BUDGET_OPTIONS } from "../../content/plans";
 import { getClaim } from "../lib/claims";
 import ownerFacts from "../../content/owner-facts.json";
 import { cn } from "../lib/utils";
+import { StudioHoursAndMapCard } from "./StudioHoursAndMapCard";
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -279,6 +280,8 @@ export const ContactSection = () => {
               </form>
             )}
           </div>
+
+          <StudioHoursAndMapCard />
         </div>
       </div>
     </section>

@@ -78,7 +78,7 @@ const webPageSchema = {
   "url": "https://www.saimdev.site",
   "name": "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
   "datePublished": "2024-07-19",
-  "dateModified": "2026-11-10",
+  "dateModified": "2026-11-11",
   "author": {
     "@id": "https://www.saimdev.site/#person"
   },

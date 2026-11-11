@@ -158,6 +158,22 @@ const professionalServiceSchema = {
     { "@type": "Country", "name": "United Kingdom", "identifier": "GB" },
     { "@type": "AdministrativeArea", "name": "European Union" }
   ],
+  "hasMap": "https://maps.google.com/maps?q=United+Kingdom",
+  "openingHours": ["Mo-Fr 09:00-18:00", "Sa 10:00-16:00"],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "10:00",
+      "closes": "16:00"
+    }
+  ],
   "parentOrganization": {
     "@id": "https://www.saimdev.site/#organization"
   },
@@ -206,9 +222,9 @@ export default function RootLayout({
         />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="author" content="Saim Dev" />
-        <meta name="date" content="2026-11-10" />
-        <meta name="revised" content="Tuesday, November 10, 2026" />
-        <meta property="article:modified_time" content="2026-11-10T15:00:00Z" />
+        <meta name="date" content="2026-11-11" />
+        <meta name="revised" content="Wednesday, November 11, 2026" />
+        <meta property="article:modified_time" content="2026-11-11T15:30:00Z" />
         <meta name="image" content="https://www.saimdev.site/hero-shots/shot-4.webp" />
         <meta name="og:image" content="https://www.saimdev.site/hero-shots/shot-4.webp" />
         <link rel="image_src" href="https://www.saimdev.site/hero-shots/shot-4.webp" />

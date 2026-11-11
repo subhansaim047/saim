@@ -101,6 +101,7 @@ export const FooterSection = () => {
           <div className="flex flex-col gap-1">
             <span>Saim Dev — Our Agency Registered in UK &amp; Based in Pakistan. $0 Upfront Deposit • Zero Monthly Charges.</span>
             <span>Contact: <a href="mailto:contact@saimdev.site" className="text-primary hover:underline">contact@saimdev.site</a> · WhatsApp: <a href="https://wa.me/923196526604" className="text-primary hover:underline">+92 319 6526604</a></span>
+            <span>Business Hours: Mon–Fri 09:00–18:00 GMT · Sat 10:00–16:00 GMT (Remote UK &amp; EU Support)</span>
           </div>
           <a
             href="https://fazier.com"

@@ -17,6 +17,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { cn } from "../lib/utils";
+import { StudioHoursAndMapCard } from "./StudioHoursAndMapCard";
 
 export const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -333,6 +334,8 @@ export const ContactPage = () => {
               </form>
             )}
           </div>
+
+          <StudioHoursAndMapCard />
         </div>
 
         {/* CONTEXTUAL NAVIGATION */}
