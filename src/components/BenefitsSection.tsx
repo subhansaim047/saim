@@ -1,6 +1,7 @@
 "use client";
 
 import { TrendingUp, ShieldCheck } from "lucide-react";
+import { LazyAutoplayVideo } from "./LazyAutoplayVideo";
 
 export const BenefitsSection = () => {
   return (
@@ -68,28 +69,17 @@ export const BenefitsSection = () => {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#FF4A1C]/[0.04] rounded-full blur-3xl pointer-events-none" />
 
               <div className="relative w-full overflow-hidden h-[54%] sm:h-[56%] flex items-center justify-center bg-black pt-3 sm:pt-4">
-                <video
-                  ref={(el) => {
-                    if (el) {
-                      el.muted = true;
-                      el.defaultMuted = true;
-                      el.play().catch(() => {});
-                    }
-                  }}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="none"
+                <LazyAutoplayVideo
                   poster="/videos/benefits-poster.webp"
                   className="w-full h-full object-contain block"
-                >
-                  <source src="/videos/benefits-speed-animation.mp4" type="video/mp4" />
-                  <source
-                    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260421_072701_f6a01abb-eb30-4559-9d6e-774362defbc3.mp4"
-                    type="video/mp4"
-                  />
-                </video>
+                  sources={[
+                    { src: "/videos/benefits-speed-animation.mp4", type: "video/mp4" },
+                    {
+                      src: "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260421_072701_f6a01abb-eb30-4559-9d6e-774362defbc3.mp4",
+                      type: "video/mp4",
+                    },
+                  ]}
+                />
                 <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-[#121212]" />
               </div>
 
