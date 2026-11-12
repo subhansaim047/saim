@@ -1,6 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import { ViewportMount } from "./reactdrops/ViewportMount";
+
+const LazyFanGallery = dynamic(
+  () => import("./reactdrops/fan-gallery/fan-gallery").then((m) => m.FanGallery),
+  { ssr: false }
+);
 import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
 
@@ -87,6 +94,11 @@ const FEATURED_DEMOS: FeaturedDemo[] = [
 ];
 
 export const LiveDemosSection = () => {
+  const fanItems = FEATURED_DEMOS.map((demo) => ({
+    src: demo.previewImage,
+    alt: `${demo.title} – Interactive Web Design Demo by Saim Dev`,
+    href: demo.demoUrl,
+  }));
   return (
     <section
       id="demos"
@@ -128,6 +140,40 @@ export const LiveDemosSection = () => {
               <ArrowRight className="w-4 h-4 text-[#FF4A1C] transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
+        </div>
+
+        {/* Interactive Spring Portfolio Deck */}
+        <div className="saim-fan-deck mb-12 sm:mb-16 rounded-3xl bg-[#101012]/90 border border-white/10 pt-5 pb-3 px-3 sm:px-6 overflow-hidden relative shadow-[0_24px_80px_rgba(0,0,0,0.65)]">
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-1 px-2">
+            <div className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-white/70">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C]" />
+              <span>Interactive Portfolio Deck • Hover or Click Any Card</span>
+            </div>
+            <span className="text-[11px] font-mono text-white/45 hidden sm:inline">
+              6 Live Production Builds
+            </span>
+          </div>
+          <ViewportMount
+            rootMargin="450px 0px"
+            className="min-h-[210px] sm:min-h-[285px]"
+          >
+            <LazyFanGallery
+              items={fanItems}
+              entrance="stack"
+              trigger="scroll"
+              viewportStart={85}
+              once={true}
+              cardWidth={210}
+              aspectRatio={1.2}
+              spacing={0.62}
+              curve={0.13}
+              tilt={12}
+              lift={38}
+              spread={0.22}
+              radius={16}
+              ariaLabel="Interactive portfolio preview cards linking to live industry demos"
+            />
+          </ViewportMount>
         </div>
 
         {/* 6-Card Showcase Grid */}

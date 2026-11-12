@@ -1,5 +1,8 @@
 "use client";
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
+import type { LiquidGlassOrbState } from "./reactdrops/liquid-glass-orb/liquid-glass-orb";
+import { ViewportMount } from "./reactdrops/ViewportMount";
 import { motion } from "framer-motion";
 import { MessageSquare, ArrowRight, CheckCircle2, Clock, ShieldCheck, Mail, ChevronDown } from "lucide-react";
 import { BUDGET_OPTIONS } from "../../content/plans";
@@ -7,6 +10,36 @@ import { getClaim } from "../lib/claims";
 import ownerFacts from "../../content/owner-facts.json";
 import { cn } from "../lib/utils";
 import { StudioHoursAndMapCard } from "./StudioHoursAndMapCard";
+
+const submitBriefLabel = (
+  <>
+    <span className="text-sm font-semibold tracking-tight text-white">Submit Brief via WhatsApp</span>
+    <span className="btn-arrow bg-white text-black">
+      <svg viewBox="0 0 17 15" className="w-3.5 h-3.5 fill-current" aria-hidden="true">
+        <path d="M16.56 8.555L10.56 14.555C10.26 14.855 9.88 14.995 9.5 14.995C9.12 14.995 8.74 14.855 8.44 14.555C7.86 13.975 7.86 13.015 8.44 12.435L11.88 8.995H1.5C0.68 8.995 0 8.315 0 7.495C0 6.675 0.68 5.995 1.5 5.995H11.88L8.44 2.555C7.86 1.975 7.86 1.015 8.44 0.435C9.02 -0.145 9.98 -0.145 10.56 0.435L16.56 6.435C17.14 7.015 17.14 7.975 16.56 8.555Z" />
+      </svg>
+    </span>
+  </>
+);
+
+const SubmitBriefFallback = () => (
+  <button
+    type="submit"
+    className="sybiosme-action-btn w-full bg-[#FF4A1C] hover:bg-[#e03f15] text-white shadow-xl py-3.5 pl-6 pr-2.5 mt-2"
+  >
+    {submitBriefLabel}
+  </button>
+);
+
+const LazyLiquidGlassOrb = dynamic(
+  () => import("./reactdrops/liquid-glass-orb/liquid-glass-orb").then((m) => m.LiquidGlassOrb),
+  { ssr: false }
+);
+
+const LazyChromaticButton = dynamic(
+  () => import("./reactdrops/chromatic-button/chromatic-button").then((m) => m.ChromaticButton),
+  { ssr: false, loading: () => <SubmitBriefFallback /> }
+);
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +52,7 @@ export const ContactSection = () => {
   });
 
   const [formOpen, setFormOpen] = useState(true);
+  const [orbState, setOrbState] = useState<LiquidGlassOrbState>("idle");
 
   const projectTypes = [
     "Custom Business Website",
@@ -70,8 +104,25 @@ export const ContactSection = () => {
           {/* Heading Row */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-white/10 relative z-10">
             <div>
-              {/* Plate Avatar & Availability Pill */}
-              <div className="flex items-center gap-3 mb-5">
+              {/* Plate Avatar, Liquid Glass Orb & Availability Pill */}
+              <div className="flex flex-wrap items-center gap-3 mb-5">
+                <ViewportMount
+                  rootMargin="450px 0px"
+                  minHeight={44}
+                  className="w-11 h-11 rounded-full shrink-0 overflow-hidden flex items-center justify-center bg-[#FF4A1C]/15 border border-[#FF4A1C]/30 shadow-[0_0_24px_rgba(255,74,28,0.28)]"
+                >
+                  <LazyLiquidGlassOrb
+                    preset="coral"
+                    baseColor="#FF4A1C"
+                    colorA="#590d02"
+                    colorB="#ffd2c4"
+                    colorC="#ff8d6b"
+                    size={44}
+                    state={orbState}
+                    animateEntrance={true}
+                    aria-hidden={true}
+                  />
+                </ViewportMount>
                 <div className="flex -space-x-2">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#1a1a1a] to-[#333] border-2 border-[#121212] flex items-center justify-center text-xs font-semibold text-white shadow-md">
                     SD
@@ -152,7 +203,12 @@ export const ContactSection = () => {
             </div>
 
             {formOpen && (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6 pt-2">
+              <form
+                onSubmit={handleSubmit}
+                onFocusCapture={() => setOrbState("listening")}
+                onBlurCapture={() => setOrbState("idle")}
+                className="flex flex-col gap-6 pt-2"
+              >
                 {/* Row 1: Name & Contact */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="flex flex-col gap-2">
@@ -261,18 +317,32 @@ export const ContactSection = () => {
                   />
                 </div>
 
-                {/* Submit Action Button */}
-                <button
-                  type="submit"
-                  className="sybiosme-action-btn w-full bg-[#FF4A1C] hover:bg-[#e03f15] text-white shadow-xl py-3.5 pl-6 pr-2.5 mt-2"
+                {/* Submit Action Button (ReactDrops ChromaticButton with zero-CLS fallback) */}
+                <ViewportMount
+                  rootMargin="450px 0px"
+                  minHeight={58}
+                  fallback={<SubmitBriefFallback />}
+                  className="mt-2"
                 >
-                  <span className="text-sm font-semibold tracking-tight">Submit Brief via WhatsApp</span>
-                  <div className="btn-arrow bg-white text-black">
-                    <svg viewBox="0 0 17 15" className="w-3.5 h-3.5 fill-current" aria-hidden="true">
-                      <path d="M16.56 8.555L10.56 14.555C10.26 14.855 9.88 14.995 9.5 14.995C9.12 14.995 8.74 14.855 8.44 14.555C7.86 13.975 7.86 13.015 8.44 12.435L11.88 8.995H1.5C0.68 8.995 0 8.315 0 7.495C0 6.675 0.68 5.995 1.5 5.995H11.88L8.44 2.555C7.86 1.975 7.86 1.015 8.44 0.435C9.02 -0.145 9.98 -0.145 10.56 0.435L16.56 6.435C17.14 7.015 17.14 7.975 16.56 8.555Z" />
-                    </svg>
-                  </div>
-                </button>
+                  <LazyChromaticButton
+                    type="submit"
+                    color="#FF4A1C"
+                    color2="#ff7a45"
+                    color3="#9e1e04"
+                    colorMode="gradient-3"
+                    hoverEffect="spotlight"
+                    entrance="none"
+                    borderRadius={50}
+                    intensity={1.35}
+                    grain={0.08}
+                    speed={1}
+                    onMouseEnter={() => setOrbState("speaking")}
+                    onMouseLeave={() => setOrbState("idle")}
+                    className="saim-chromatic-submit shadow-xl"
+                  >
+                    {submitBriefLabel}
+                  </LazyChromaticButton>
+                </ViewportMount>
 
                 <p className="text-center text-[11px] text-white/50">
                   🔒 {getClaim("end-to-end-encrypted")}

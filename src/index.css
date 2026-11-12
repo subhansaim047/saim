@@ -286,7 +286,8 @@ html.lenis, html.lenis body {
   transform: translateY(0) scale(0.98);
 }
 
-.sybiosme-action-btn .btn-arrow {
+.sybiosme-action-btn .btn-arrow,
+.chromatic-button.saim-chromatic-submit .btn-arrow {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 9999px;
@@ -300,7 +301,8 @@ html.lenis, html.lenis body {
   flex-shrink: 0;
 }
 
-.sybiosme-action-btn:hover .btn-arrow {
+.sybiosme-action-btn:hover .btn-arrow,
+.chromatic-button.saim-chromatic-submit:hover .btn-arrow {
   transform: translateX(3px) translateY(-1px) scale(1.08);
 }
 
@@ -573,6 +575,37 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:hover,
 input[type="range"].sybiosme-slider::-moz-range-thumb:active {
   transform: scale(1.18);
   box-shadow: 0 0 24px rgba(255, 74, 28, 0.95), 0 4px 14px rgba(0, 0, 0, 0.7);
+}
+
+/* ReactDrops Studio Polish Hooks */
+.saim-fan-deck .fan-gallery {
+  padding: 18px 0 12px;
+}
+
+.saim-fan-deck .fan-gallery-card {
+  background: #141418;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.72);
+}
+
+.saim-fan-deck .fan-gallery-card:hover,
+.saim-fan-deck .fan-gallery-card:focus-visible {
+  border-color: rgba(255, 74, 28, 0.65);
+}
+
+.chromatic-button.saim-chromatic-submit {
+  width: 100%;
+  height: 58px;
+  min-height: 58px;
+  padding: 0 10px 0 24px;
+  justify-items: stretch;
+  font-family: inherit;
+}
+
+.chromatic-button.saim-chromatic-submit .chromatic-button-content {
+  width: 100%;
+  justify-content: space-between;
+  font-weight: 600;
 }
 
 /* Reduced Motion Accessibility Safeguard */

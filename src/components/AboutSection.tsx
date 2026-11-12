@@ -1,5 +1,12 @@
 "use client";
+import dynamic from "next/dynamic";
 import { WordsPullUpMultiStyle } from "./WordsPullUpMultiStyle";
+import { ViewportMount } from "./reactdrops/ViewportMount";
+
+const LazyTopographicFlow = dynamic(
+  () => import("./reactdrops/topographic-flow/topographic-flow").then((m) => m.TopographicFlow),
+  { ssr: false }
+);
 
 const aboutSegments = [
   { text: "We are digital product architects,", className: "font-normal text-white" },
@@ -22,12 +29,41 @@ export const AboutSection = () => {
       {/* Double-Bezel Concentric Squircle Frame */}
       <div className="relative z-10 max-w-6xl mx-auto rounded-[2.5rem] bg-white/[0.02] border border-white/10 p-2 sm:p-3 shadow-[0_24px_80px_rgba(0,0,0,0.8)]">
         <div className="rounded-[calc(2.5rem-0.75rem)] bg-[#121212] p-8 sm:p-14 md:p-16 lg:p-20 text-center border border-white/5 relative overflow-hidden">
+          {/* Interactive Topographic Architectural Contour Field */}
+          <div aria-hidden="true" className="absolute inset-0 z-0">
+            <ViewportMount rootMargin="450px 0px" className="w-full h-full">
+              <LazyTopographicFlow
+                preset="graphite"
+                backgroundColor="#121212"
+                backgroundImage="none"
+                lineColor="#2f2f35"
+                accentColor="#FF4A1C"
+                lineStyle="mixed"
+                scale={240}
+                density={7}
+                speed={0.28}
+                distortion={0.42}
+                lineWidth={0.85}
+                opacity={0.72}
+                hover={0.55}
+                hoverEffect="rings"
+                hoverRadius={180}
+                grain={0.1}
+                className="!h-full !w-full"
+              />
+            </ViewportMount>
+          </div>
+          {/* Radial vignette scrim preserving editorial typography legibility */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_center,rgba(18,18,18,0.88)_0%,rgba(18,18,18,0.52)_58%,transparent_100%)] pointer-events-none"
+          />
           
           {/* Subtle Ambient Radial Highlight */}
           <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#FF4A1C]/[0.06] rounded-full blur-[100px] pointer-events-none" />
 
           {/* Sybiosme Eyebrow Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-8 sm:mb-10 backdrop-blur-md">
+          <div className="relative z-10 inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-8 sm:mb-10 backdrop-blur-md pointer-events-none">
             <span className="section-dot" />
             <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
               UK Registered Agency • Based in Pakistan
