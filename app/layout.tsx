@@ -1,35 +1,37 @@
 import type { Metadata } from 'next';
-import { Inter, Plus_Jakarta_Sans, JetBrains_Mono, Syne, Bricolage_Grotesque } from 'next/font/google';
+import localFont from 'next/font/local';
 import '../src/index.css'; // Global CSS
 import { CookieBanner } from '@/components/CookieBanner';
 import { SmoothScroll } from '@/components/SmoothScroll';
 
-const inter = Inter({
-  subsets: ['latin'],
+const inter = localFont({
+  src: '../src/fonts/inter-latin.woff2',
+  weight: '400 700',
   variable: '--font-inter-orig',
   display: 'swap',
 });
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+const jakarta = localFont({
+  src: '../src/fonts/plus-jakarta-sans-latin.woff2',
+  weight: '400 700',
   variable: '--font-inter',
   display: 'swap',
 });
-const bricolage = Bricolage_Grotesque({
-  subsets: ['latin'],
-  weight: ['600', '700', '800'],
+const bricolage = localFont({
+  src: '../src/fonts/bricolage-grotesque-latin.woff2',
+  weight: '600 800',
   variable: '--font-heading',
   display: 'swap',
 });
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+const jetbrainsMono = localFont({
+  src: '../src/fonts/jetbrains-mono-latin.woff2',
+  weight: '400 600',
+  adjustFontFallback: false,
   variable: '--font-mono',
   display: 'swap',
 });
-const syne = Syne({
-  subsets: ['latin'],
-  weight: ['700', '800'],
+const syne = localFont({
+  src: '../src/fonts/syne-latin.woff2',
+  weight: '700 800',
   variable: '--font-display',
   display: 'swap',
 });
