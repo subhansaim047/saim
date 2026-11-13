@@ -8,8 +8,7 @@ const LazyFanGallery = dynamic(
   () => import("./reactdrops/fan-gallery/fan-gallery").then((m) => m.FanGallery),
   { ssr: false }
 );
-import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 interface FeaturedDemo {
   id: string;
@@ -102,13 +101,13 @@ export const LiveDemosSection = () => {
   return (
     <section
       id="demos"
-      className="relative w-full bg-white py-20 sm:py-28 md:py-36 border-t border-black/[0.06] overflow-hidden"
+      className="relative w-full bg-white py-10 sm:py-14 md:py-16 border-t border-black/[0.06] overflow-hidden"
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 sm:mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-3">
               <span className="section-dot animate-pulse" />
               <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/75">
                 Interactive Work Showcase
@@ -116,14 +115,14 @@ export const LiveDemosSection = () => {
             </div>
 
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#111115] mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-[#111115] mb-3"
               style={{ letterSpacing: "-0.04em" }}
             >
               Test our live websites. <br />
               <span className="text-black/45">Built for every industry.</span>
             </h2>
 
-            <p className="text-sm sm:text-base md:text-lg text-black/65 leading-relaxed font-light">
+            <p className="text-sm sm:text-base text-black/65 leading-relaxed font-light">
               Don&apos;t just look at static screenshots. Click into our live, interactive production demos across e-commerce, hospitality, automotive, architecture, and wellness.
             </p>
           </div>
@@ -139,8 +138,8 @@ export const LiveDemosSection = () => {
           </div>
         </div>
 
-        {/* Interactive Spring Portfolio Deck */}
-        <div className="saim-fan-deck mb-12 sm:mb-16 rounded-3xl bg-[#FAFAFA] border border-black/[0.08] pt-5 pb-3 px-3 sm:px-6 overflow-hidden relative shadow-[0_18px_50px_-24px_rgba(17,17,21,0.12)]">
+        {/* Interactive Spring Portfolio Deck + Compact Quick-Launch Bar */}
+        <div className="saim-fan-deck rounded-3xl bg-[#FAFAFA] border border-black/[0.08] pt-5 pb-5 px-3 sm:px-6 overflow-hidden relative shadow-[0_18px_50px_-24px_rgba(17,17,21,0.12)]">
           <div className="flex flex-wrap items-center justify-between gap-3 mb-1 px-2">
             <div className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-black/70">
               <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C]" />
@@ -151,130 +150,51 @@ export const LiveDemosSection = () => {
             </span>
           </div>
           <ViewportMount
-            rootMargin="0px 0px"
-            className="min-h-[210px] sm:min-h-[285px]"
+            rootMargin="300px 0px"
+            className="min-h-[215px] sm:min-h-[275px]"
           >
             <LazyFanGallery
               items={fanItems}
               entrance="stack"
-              trigger="scroll"
-              viewportStart={85}
+              trigger="auto"
               once={true}
               cardWidth={210}
-              aspectRatio={1.2}
-              spacing={0.62}
-              curve={0.13}
-              tilt={12}
-              lift={38}
-              spread={0.22}
+              aspectRatio={1.22}
+              spacing={0.82}
+              curve={0.12}
+              tilt={11}
+              lift={32}
+              spread={0.28}
               radius={16}
               ariaLabel="Interactive portfolio preview cards linking to live industry demos"
             />
           </ViewportMount>
-        </div>
 
-        {/* 6-Card Showcase Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {FEATURED_DEMOS.map((demo, index) => (
-            <motion.article
-              key={demo.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              className={`group relative flex flex-col justify-between rounded-3xl bg-white border overflow-hidden transition-all duration-300 hover:-translate-y-1.5 ${
-                demo.featured
-                  ? "border-[#FF4A1C]/45 hover:border-[#FF4A1C] shadow-[0_16px_48px_-20px_rgba(255,74,28,0.20)]"
-                  : "border-black/[0.08] hover:border-black/20 shadow-[0_14px_40px_-24px_rgba(17,17,21,0.12)]"
-              }`}
-            >
-              {/* Preview Image Header */}
-              <a
-                href={demo.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative aspect-[16/10] w-full overflow-hidden bg-[#F4F4F6] block border-b border-black/[0.06]"
-              >
-                <img
-                  src={demo.previewImage}
-                  alt={`${demo.title} – Interactive Web Design Demo by Saim Dev`}
-                  width={800}
-                  height={500}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-
-                {/* Top Floating Badge */}
-                <div className="absolute top-3.5 left-3.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-black/[0.08] text-[10px] font-mono uppercase tracking-wider text-[#111115] shadow-sm">
-                  {demo.featured && <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C] animate-pulse" />}
-                  <span>{demo.badge}</span>
-                </div>
-
-                {/* Live Launch Pill on Hover */}
-                <div className="absolute bottom-3.5 right-3.5 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#FF4A1C] text-white text-xs font-semibold shadow-lg transition-transform duration-300 group-hover:scale-105">
-                  <span>Live Preview</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </div>
-              </a>
-
-              {/* Card Body */}
-              <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
-                <div>
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-[#D9380E] block mb-1.5">
-                    {demo.category}
-                  </span>
-                  <h3
-                    className="text-[#111115] text-xl font-medium tracking-tight mb-2.5 group-hover:text-[#FF4A1C] transition-colors"
-                    style={{ letterSpacing: "-0.02em" }}
-                  >
-                    <a href={demo.demoUrl} target="_blank" rel="noopener noreferrer">
-                      {demo.title}
-                    </a>
-                  </h3>
-                  <p className="text-xs sm:text-sm text-black/65 font-light leading-relaxed mb-5">
-                    {demo.description}
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-black/[0.06]">
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {demo.highlights.map((item) => (
-                      <span
-                        key={item}
-                        className="inline-flex items-center gap-1 text-[10px] font-mono text-black/75 bg-[#FAFAFA] border border-black/[0.08] px-2.5 py-1 rounded-full"
-                      >
-                        <CheckCircle2 className="w-3 h-3 text-[#FF4A1C] shrink-0" />
-                        <span>{item}</span>
-                      </span>
-                    ))}
-                  </div>
-
-                  <a
-                    href={demo.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-[#FAFAFA] hover:bg-[#FF4A1C] text-[#111115] hover:text-white text-xs font-medium tracking-tight border border-black/[0.08] hover:border-transparent transition-all duration-300 group/btn"
-                  >
-                    <span>Launch Interactive Site</span>
-                    <ExternalLink className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
-                  </a>
-                </div>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-
-        {/* Bottom CTA Strip */}
-        <div className="mt-12 sm:mt-16 text-center">
-          <Link
-            href="/demos"
-            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#111115] hover:bg-[#FF4A1C] text-white text-sm font-semibold transition-all group shadow-[0_12px_30px_-10px_rgba(17,17,21,0.35)]"
-          >
-            <span>Browse All 14+ Live Industry Website Demos</span>
-            <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
-          </Link>
+          <div className="mt-2 pt-4 border-t border-black/[0.06] flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 px-1">
+            {FEATURED_DEMOS.map((demo) => {
+              const [brand, niche] = demo.title.split(" – ");
+              return (
+                <a
+                  key={demo.id}
+                  href={demo.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/pill inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white hover:bg-[#FF4A1C] border border-black/[0.08] hover:border-transparent text-xs font-medium text-[#111115] hover:text-white transition-all duration-200 shadow-xs"
+                >
+                  {demo.featured && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C] group-hover/pill:bg-white shrink-0" />
+                  )}
+                  <span className="font-semibold tracking-tight">{brand}</span>
+                  {niche && (
+                    <span className="text-[11px] font-normal text-black/55 group-hover/pill:text-white/85 hidden sm:inline">
+                      · {niche}
+                    </span>
+                  )}
+                  <ExternalLink className="w-3 h-3 text-black/45 group-hover/pill:text-white shrink-0 transition-transform duration-200 group-hover/pill:translate-x-0.5" />
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

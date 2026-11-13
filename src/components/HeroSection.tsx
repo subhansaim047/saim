@@ -1,10 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Calculator } from "lucide-react";
-import { ViewportMount } from "./reactdrops/ViewportMount";
 import {
   SoapBubbleMaterial,
   SoapBubbleSurface,
@@ -55,51 +53,6 @@ function HeroTypewriter() {
   );
 }
 
-const LazyRefractedText = dynamic(
-  () => import("./reactdrops/refracted-text/refracted-text").then((m) => m.RefractedText),
-  {
-    ssr: false,
-    loading: () => (
-      <div
-        aria-hidden="true"
-        className="select-none uppercase whitespace-nowrap leading-[1.05] tracking-[-0.02em]"
-        style={{
-          color: "#111115",
-          fontSize: "clamp(36px, 4.9vw, 72px)",
-          fontFamily: "var(--font-inter-orig), Inter, system-ui, -apple-system, sans-serif",
-          fontWeight: 900,
-        }}
-      >
-        SAIM DEV
-      </div>
-    ),
-  }
-);
-
-const LazyChromaticSurface = dynamic(
-  () => import("./reactdrops/chromatic-button/chromatic-surface").then((m) => m.ChromaticSurface),
-  { ssr: false }
-);
-
-const LazyFractalGlass = dynamic(
-  () => import("./reactdrops/fractal-glass/fractal-glass").then((m) => m.FractalGlass),
-  {
-    ssr: false,
-    loading: () => (
-      <img
-        src="/hero-shots/shot-3.webp"
-        alt="GAZU High-Conversion Fashion E-Commerce"
-        className="w-full h-full object-cover opacity-90"
-        loading="eager"
-        fetchPriority="high"
-        width={1080}
-        height={1350}
-        decoding="async"
-      />
-    ),
-  }
-);
-
 const navItems = [
   { label: "Services", href: "#services" },
   { label: "Live Demos", href: "#demos" },
@@ -115,9 +68,7 @@ export const HeroSection = () => {
   const [hoveredNav, setHoveredNav] = useState<number | null>(null);
   const [activeHref, setActiveHref] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
-  const [ctaGlowActive, setCtaGlowActive] = useState(false);
   const [bubbleCtaActive, setBubbleCtaActive] = useState(false);
-  const [glassCardActive, setGlassCardActive] = useState(false);
 
   // Scroll-spy: highlight the nav item for the section currently in view
   useEffect(() => {
@@ -342,32 +293,15 @@ export const HeroSection = () => {
                 </div>
               </motion.div>
 
-              {/* Optical Refracted Glass Wordmark */}
-              <div className="w-full max-w-full overflow-hidden min-h-[44px] sm:min-h-[60px] lg:min-h-[78px]">
-                <span className="sr-only">Saim Dev</span>
-                <ViewportMount eager unmountWhenFar rootMargin="400px 0px" className="w-full max-w-full">
-                  <LazyRefractedText
-                    text="SAIM DEV"
-                    theme="light"
-                    topColor="#111115"
-                    bottomColor="#3f3f46"
-                    beamColor="#FF4A1C"
-                    spectrumWarmColor="#FF4A1C"
-                    spectrumMiddleColor="#27272a"
-                    spectrumCoolColor="#64748b"
-                    intensity={1.08}
-                    dispersion={0.75}
-                    colorIntensity={0.8}
-                    reveal={true}
-                    stagger={0.055}
-                    liftDuration={0.48}
-                    cursorMovesBeam={true}
-                    fontSize="clamp(36px, 4.9vw, 72px)"
-                    extraBold={1.8}
-                    cornerRounding={0}
-                    className="saim-refracted-hero select-none"
-                  />
-                </ViewportMount>
+              {/* Bold Wide Architectural Brand Display Wordmark */}
+              <div className="w-full max-w-full overflow-hidden py-0.5">
+                <div
+                  className="saim-brand-display uppercase font-extrabold text-[clamp(38px,5.4vw,84px)] leading-[0.9] tracking-[-0.03em] whitespace-nowrap select-none"
+                  style={{ fontWeight: 800 }}
+                >
+                  <span className="text-[#111115]">SAIM </span>
+                  <span className="text-[#FF4A1C]">DEV</span>
+                </div>
               </div>
 
               <h1 className="text-[24px] sm:text-2xl md:text-3xl font-bold tracking-tight text-[#111115] leading-[1.2]">
@@ -379,7 +313,7 @@ export const HeroSection = () => {
                 <HeroTypewriter />
               </div>
 
-              {/* Sub-headline + USPs + Chromatic / Bubble CTAs */}
+              {/* Sub-headline + USPs + Vermilion / Bubble CTAs */}
               <motion.div
                 initial={false}
                 animate={{ y: 0, opacity: 1 }}
@@ -396,7 +330,7 @@ export const HeroSection = () => {
                   </p>
                 </div>
 
-                {/* Chromatic Primary CTA + Bubble Secondary CTAs */}
+                {/* Pure Vermilion Primary CTA + Bubble Secondary CTAs */}
                 <div
                   onPointerEnter={() => setBubbleCtaActive(true)}
                   onFocus={() => setBubbleCtaActive(true)}
@@ -406,26 +340,8 @@ export const HeroSection = () => {
                     href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20starting%20a%20website%20project"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onPointerEnter={() => setCtaGlowActive(true)}
-                    onFocus={() => setCtaGlowActive(true)}
-                    className="chromatic-button saim-hero-chromatic rounded-full bg-[radial-gradient(125%_160%_at_18%_20%,#ff8a5b_0%,#FF4A1C_48%,#e0360a_100%)] shadow-[0_12px_36px_rgba(255,74,28,0.28)]"
+                    className="chromatic-button saim-hero-chromatic rounded-full"
                   >
-                    {ctaGlowActive && (
-                      <div className="absolute inset-0 pointer-events-none">
-                        <LazyChromaticSurface
-                          color="#FF4A1C"
-                          color2="#ff8a5b"
-                          color3="#e0360a"
-                          colorMode="gradient-3"
-                          hoverEffect="spotlight"
-                          borderRadius={50}
-                          speed={0.85}
-                          feather={18}
-                          intensity={1.5}
-                          grain={0.055}
-                        />
-                      </div>
-                    )}
                     <span className="chromatic-button-content text-xs sm:text-sm font-semibold text-white">
                       <span>Start on WhatsApp</span>
                       <ArrowRight className="w-4 h-4" />
@@ -456,15 +372,11 @@ export const HeroSection = () => {
               </motion.div>
             </div>
 
-            {/* Mobile Showcase Strip (< lg): Compact Horizontal Infinite Scroll */}
+            {/* Mobile Showcase Strip (< lg): Smooth Continuous Horizontal Scroll */}
             <div className="lg:hidden w-full overflow-hidden relative mt-2 -mx-2 px-2 pointer-events-auto">
-              <motion.div
-                animate={{ x: ["0%", "-50%"] }}
-                transition={{ duration: 24, ease: "linear", repeat: Infinity }}
-                className="flex gap-3 w-max"
-              >
+              <div className="saim-marquee-left flex w-max">
                 {[...Array(2)].map((_, loopIdx) => (
-                  <div key={loopIdx} className="flex gap-3">
+                  <div key={loopIdx} className="flex gap-3 pr-3">
                     {[
                       {
                         src: "/hero-shots/shot-4.webp",
@@ -484,7 +396,7 @@ export const HeroSection = () => {
                       },
                     ].map((shot) => (
                       <a
-                        key={shot.src}
+                        key={`${loopIdx}-${shot.src}`}
                         href="#demos"
                         className="relative w-36 sm:w-44 aspect-[4/5] rounded-2xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_12px_28px_-14px_rgba(17,17,21,0.18)] shrink-0 block"
                       >
@@ -504,30 +416,21 @@ export const HeroSection = () => {
                     ))}
                   </div>
                 ))}
-              </motion.div>
+              </div>
             </div>
 
-            {/* RIGHT COLUMN: Animated Marquee Grid with Interactive Fractal Glass Card — Desktop */}
-            <motion.div
-              initial={false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden lg:flex w-full lg:w-[49%] xl:w-[50%] h-[580px] xl:h-[75vh] relative overflow-hidden rounded-2xl flex-shrink-0 pointer-events-auto"
-            >
+            {/* RIGHT COLUMN: Twin Counter-Scrolling Vertical Marquee Grid — Desktop */}
+            <div className="hidden lg:flex w-full lg:w-[49%] xl:w-[50%] h-[580px] xl:h-[75vh] relative overflow-hidden rounded-2xl flex-shrink-0 pointer-events-auto">
               {/* Fade Masks */}
               <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent z-20 pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none" />
 
               <div className="flex gap-4 w-full h-full relative z-10 pt-6">
-                {/* Column 1 - Scrolling UP (shot-4 kept pure eager for instant LCP) */}
-                <div className="w-1/2 h-full flex flex-col relative">
-                  <motion.div
-                    animate={{ y: ["0%", "-50%"] }}
-                    transition={{ duration: 25, ease: "linear", repeat: Infinity }}
-                    className="flex flex-col gap-4 w-full"
-                  >
+                {/* Column 1 — Continuous Upward Scroll */}
+                <div className="w-1/2 h-full overflow-hidden relative">
+                  <div className="saim-marquee-up flex flex-col w-full">
                     {[...Array(2)].map((_, i) => (
-                      <div key={i} className="flex flex-col gap-4 w-full">
+                      <div key={i} className="flex flex-col gap-4 pb-4 w-full">
                         <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_18px_40px_-20px_rgba(17,17,21,0.18)]">
                           <img
                             src="/hero-shots/shot-4.webp"
@@ -553,56 +456,43 @@ export const HeroSection = () => {
                         </div>
                       </div>
                     ))}
-                  </motion.div>
+                  </div>
                 </div>
 
-                {/* Column 2 - Anchored Interactive Optical FractalGlass Stack */}
-                <div className="w-1/2 h-full flex flex-col gap-4 relative pt-12">
-                  <div
-                    onPointerEnter={() => setGlassCardActive(true)}
-                    onFocus={() => setGlassCardActive(true)}
-                    className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_18px_40px_-20px_rgba(17,17,21,0.18)] shrink-0"
-                  >
-                    {glassCardActive ? (
-                      <LazyFractalGlass
-                        src="/hero-shots/shot-3.webp"
-                        alt="GAZU High-Conversion Fashion E-Commerce"
-                        animateEntrance={false}
-                        hoverPreset="glass-on-hover"
-                        stripes={26}
-                        distortion={0.38}
-                        dispersion={0.35}
-                        caustics={0.22}
-                        hoverRadius={0.44}
-                        className="saim-fractal-card"
-                      />
-                    ) : (
-                      <img
-                        src="/hero-shots/shot-3.webp"
-                        alt="GAZU High-Conversion Fashion E-Commerce"
-                        className="w-full h-full object-cover"
-                        loading="eager"
-                        fetchPriority="high"
-                        width={1080}
-                        height={1350}
-                        decoding="async"
-                      />
-                    )}
-                  </div>
-                  <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_18px_40px_-20px_rgba(17,17,21,0.18)] shrink-0">
-                    <img
-                      src="/hero-shots/shot-1.webp"
-                      alt="Fresh and Reddy Dark Web Architecture"
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                      width={1080}
-                      height={1350}
-                      decoding="async"
-                    />
+                {/* Column 2 — Continuous Downward Scroll */}
+                <div className="w-1/2 h-full overflow-hidden relative pt-12">
+                  <div className="saim-marquee-down flex flex-col w-full">
+                    {[...Array(2)].map((_, i) => (
+                      <div key={i} className="flex flex-col gap-4 pb-4 w-full">
+                        <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_18px_40px_-20px_rgba(17,17,21,0.18)]">
+                          <img
+                            src="/hero-shots/shot-3.webp"
+                            alt="GAZU High-Conversion Fashion E-Commerce"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            loading={i === 0 ? "eager" : "lazy"}
+                            fetchPriority={i === 0 ? "high" : "low"}
+                            width={1080}
+                            height={1350}
+                            decoding="async"
+                          />
+                        </div>
+                        <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_18px_40px_-20px_rgba(17,17,21,0.18)]">
+                          <img
+                            src="/hero-shots/shot-1.webp"
+                            alt="Fresh and Reddy Dark Web Architecture"
+                            className="absolute inset-0 w-full h-full object-cover"
+                            loading="lazy"
+                            width={1080}
+                            height={1350}
+                            decoding="async"
+                          />
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Bottom border hairline highlight */}

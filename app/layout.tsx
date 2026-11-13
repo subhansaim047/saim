@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
+import { Inter, Plus_Jakarta_Sans, JetBrains_Mono, Syne } from 'next/font/google';
 import '../src/index.css'; // Global CSS
 import { CookieBanner } from '@/components/CookieBanner';
 import { SmoothScroll } from '@/components/SmoothScroll';
@@ -19,6 +19,12 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-mono',
+  display: 'swap',
+});
+const syne = Syne({
+  subsets: ['latin'],
+  weight: ['800'],
+  variable: '--font-display',
   display: 'swap',
 });
 
@@ -251,7 +257,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
         />
       </head>
-      <body className={`${inter.variable} ${jakarta.variable} ${jetbrainsMono.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#FF4A1C] selection:text-white`}>
+      <body className={`${inter.variable} ${jakarta.variable} ${jetbrainsMono.variable} ${syne.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#FF4A1C] selection:text-white`}>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:font-semibold focus:rounded-md focus:shadow-lg">
           Skip to main content
         </a>

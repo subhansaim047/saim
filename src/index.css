@@ -623,6 +623,53 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
   font-weight: 600;
 }
 
+.saim-brand-display,
+.saim-brand-display * {
+  font-family: var(--font-display), var(--font-inter-orig), Inter, system-ui, -apple-system, sans-serif !important;
+}
+
+@keyframes saim-marquee-up {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes saim-marquee-down {
+  from {
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes saim-marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.saim-marquee-up {
+  animation: saim-marquee-up 25s linear infinite;
+  will-change: transform;
+}
+
+.saim-marquee-down {
+  animation: saim-marquee-down 30s linear infinite;
+  will-change: transform;
+}
+
+.saim-marquee-left {
+  animation: saim-marquee-left 24s linear infinite;
+  will-change: transform;
+}
+
 /* Front-page ReactDrops Scoped Overrides */
 .saim-refracted-hero {
   max-width: 100%;
@@ -672,6 +719,17 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
   min-height: 48px;
   padding: 0 22px;
   font-family: inherit;
+  --chromatic-button-color: #FF4A1C;
+  background: radial-gradient(125% 160% at 18% 20%, #ff8a5b 0%, #FF4A1C 48%, #e0360a 100%) !important;
+  box-shadow: 0 12px 34px -8px rgba(255, 74, 28, 0.38) !important;
+  transition: transform 220ms var(--ease-out-expo), filter 220ms ease, box-shadow 220ms ease;
+}
+
+.chromatic-button.saim-hero-chromatic:hover,
+.chromatic-button.saim-hero-chromatic:focus-visible {
+  background: radial-gradient(125% 160% at 72% 18%, #ff986e 0%, #FF4A1C 45%, #d63208 100%) !important;
+  box-shadow: 0 16px 40px -8px rgba(255, 74, 28, 0.5) !important;
+  transform: translateY(-1px);
 }
 
 .chromatic-button.saim-hero-chromatic .chromatic-surface {
@@ -679,9 +737,11 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 }
 
 .saim-home-light .chromatic-button.saim-hero-chromatic:has([data-renderer='webgl']),
-.saim-home-light .chromatic-button.saim-chromatic-submit:has([data-renderer='webgl']) {
-  background: radial-gradient(125% 160% at 18% 20%, #ff8a5b 0%, #FF4A1C 48%, #e0360a 100%);
-  box-shadow: 0 12px 34px -8px rgba(255, 74, 28, 0.35);
+.saim-home-light .chromatic-button.saim-chromatic-submit:has([data-renderer='webgl']),
+.saim-home-light .chromatic-button.saim-chromatic-submit {
+  --chromatic-button-color: #FF4A1C;
+  background: radial-gradient(125% 160% at 18% 20%, #ff8a5b 0%, #FF4A1C 48%, #e0360a 100%) !important;
+  box-shadow: 0 12px 34px -8px rgba(255, 74, 28, 0.35) !important;
 }
 
 .chromatic-button.saim-hero-chromatic .chromatic-button-content {
@@ -796,6 +856,15 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
   background: #fafafa;
   border-color: rgba(17, 17, 21, 0.08);
   box-shadow: 0 18px 50px -24px rgba(17, 17, 21, 0.12);
+}
+
+.saim-home-light .saim-fan-deck .fan-gallery {
+  padding: 16px 0 8px !important;
+}
+
+.saim-home-light .saim-fan-deck .fan-gallery-card {
+  box-shadow: 0 8px 20px -10px rgba(17, 17, 21, 0.14), 0 1px 4px rgba(17, 17, 21, 0.07) !important;
+  border: 1px solid rgba(17, 17, 21, 0.08);
 }
 
 /* Reduced Motion Accessibility Safeguard */
