@@ -225,7 +225,6 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className="dark" data-theme="dark" style={{ colorScheme: "dark" }}>
       <head>
-        <link rel="preload" as="image" href="/hero-shots/shot-4.webp" type="image/webp" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Summary Context" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Knowledge Corpus" />
         {/* Google Consent Mode v2 Default Signals (Default Denied) */}
