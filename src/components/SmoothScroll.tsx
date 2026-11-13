@@ -28,25 +28,28 @@ export function SmoothScroll() {
     let lenis: Lenis | null = null;
     let tickerFn: ((time: number) => void) | null = null;
 
+    const easeInOutCubic = (t: number) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
     const scrollToTarget = (target: HTMLElement) => {
       if (lenis) {
-        lenis.scrollTo(target, { offset: -85, duration: 1.2 });
+        lenis.scrollTo(target, { offset: -85, duration: 1.15, easing: easeInOutCubic });
       } else {
         const top = target.getBoundingClientRect().top + window.scrollY - 85;
-        window.scrollTo({ top, behavior: "auto" });
+        window.scrollTo({ top, behavior: "smooth" });
       }
     };
 
     // ---------- Smooth scroll (motion allowed only) ----------
     if (!prefersReducedMotion) {
+      ScrollTrigger.config({ ignoreMobileResize: true });
       lenis = new Lenis({
-        duration: 1.15,
-        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        lerp: 0.075,
         orientation: "vertical",
         gestureOrientation: "vertical",
         smoothWheel: true,
-        wheelMultiplier: 1.0,
-        touchMultiplier: 1.2,
+        wheelMultiplier: 0.95,
+        touchMultiplier: 1.1,
         infinite: false,
       });
       lenisRef.current = lenis;
@@ -71,31 +74,120 @@ export function SmoothScroll() {
 
     // ---------- GSAP scroll-driven motion ----------
     mm.add("(prefers-reduced-motion: no-preference)", () => {
-      // Section / element reveals
-      gsap.utils.toArray<HTMLElement>("[data-gsap-reveal]").forEach((el) => {
-        gsap.from(el, {
-          y: 40,
-          opacity: 0,
-          duration: 1,
-          ease: "power3.out",
-          clearProps: "transform,opacity",
-          scrollTrigger: { trigger: el, start: "top 88%", once: true },
-        });
-      });
+      const cleanups: Array<() => void> = [];
+      const revealed = new WeakSet<HTMLElement>();
+      const trackedContainers = new Set<HTMLElement>();
 
-      // Staggered cascades (container with data-gsap-stagger, children animate)
-      gsap.utils.toArray<HTMLElement>("[data-gsap-stagger]").forEach((container) => {
-        const items = Array.from(container.children) as HTMLElement[];
-        if (!items.length) return;
-        gsap.from(items, {
-          y: 48,
-          opacity: 0,
-          duration: 0.9,
+      const getTargets = (node: HTMLElement): HTMLElement[] =>
+        node.hasAttribute("data-gsap-stagger")
+          ? (Array.from(node.children) as HTMLElement[])
+          : [node];
+
+      const revealNode = (node: HTMLElement, instant = false) => {
+        if (revealed.has(node)) return;
+        revealed.add(node);
+        trackedContainers.delete(node);
+        const targets = getTargets(node);
+        if (!targets.length) return;
+        if (instant) {
+          gsap.set(targets, { y: 0, opacity: 1, clearProps: "transform,opacity" });
+          return;
+        }
+        gsap.to(targets, {
+          y: 0,
+          opacity: 1,
+          duration: 0.44,
           ease: "power3.out",
-          stagger: 0.09,
+          stagger: targets.length > 1 ? 0.035 : 0,
+          overwrite: "auto",
           clearProps: "transform,opacity",
-          scrollTrigger: { trigger: container, start: "top 85%", once: true },
         });
+      };
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const node = entry.target as HTMLElement;
+            revealObserver.unobserve(node);
+            revealNode(node, false);
+          });
+        },
+        { rootMargin: "140px 0px 90px 0px", threshold: 0.01 }
+      );
+
+      const sweepVisibleReveals = () => {
+        const thresholdY = window.innerHeight + 140;
+        trackedContainers.forEach((node) => {
+          const rect = node.getBoundingClientRect();
+          if (rect.height === 0 && rect.width === 0) return;
+          if (rect.bottom < -40) {
+            revealObserver.unobserve(node);
+            revealNode(node, true);
+          } else if (rect.top <= thresholdY) {
+            revealObserver.unobserve(node);
+            revealNode(node, false);
+          }
+        });
+      };
+
+      const registerReveals = (root: ParentNode = document) => {
+        const thresholdY = window.innerHeight + 140;
+        root.querySelectorAll<HTMLElement>("[data-gsap-reveal], [data-gsap-stagger]").forEach((node) => {
+          if (revealed.has(node) || trackedContainers.has(node)) return;
+          const targets = getTargets(node);
+          if (!targets.length) return;
+          const rect = node.getBoundingClientRect();
+          if (rect.top <= thresholdY) {
+            revealed.add(node);
+            gsap.set(targets, { y: 0, opacity: 1, clearProps: "transform,opacity" });
+            return;
+          }
+          trackedContainers.add(node);
+          gsap.set(targets, { y: 24, opacity: 0 });
+          revealObserver.observe(node);
+        });
+      };
+
+      registerReveals(document);
+
+      let refreshTimer: number | undefined;
+      const scheduleRefresh = () => {
+        sweepVisibleReveals();
+        if (refreshTimer) window.clearTimeout(refreshTimer);
+        refreshTimer = window.setTimeout(() => {
+          registerReveals(document);
+          sweepVisibleReveals();
+          ScrollTrigger.refresh();
+        }, 120);
+      };
+
+      const mutationObserver = new MutationObserver(() => {
+        registerReveals(document);
+        sweepVisibleReveals();
+      });
+      if (document.body) {
+        mutationObserver.observe(document.body, { childList: true, subtree: true });
+      }
+
+      const resizeObserver = new ResizeObserver(scheduleRefresh);
+      if (document.body) {
+        resizeObserver.observe(document.body);
+      }
+
+      window.addEventListener("scroll", sweepVisibleReveals, { passive: true });
+      if (lenis) {
+        lenis.on("scroll", sweepVisibleReveals);
+      }
+
+      cleanups.push(() => {
+        revealObserver.disconnect();
+        mutationObserver.disconnect();
+        resizeObserver.disconnect();
+        window.removeEventListener("scroll", sweepVisibleReveals);
+        if (lenis) lenis.off("scroll", sweepVisibleReveals);
+        if (refreshTimer) window.clearTimeout(refreshTimer);
+        trackedContainers.forEach((node) => revealNode(node, true));
       });
 
       // Parallax
@@ -118,7 +210,6 @@ export function SmoothScroll() {
       });
 
       // Magnetic buttons (desktop pointers only)
-      const cleanups: Array<() => void> = [];
       if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         gsap.utils.toArray<HTMLElement>("[data-magnetic]").forEach((el) => {
           const xTo = gsap.quickTo(el, "x", { duration: 0.5, ease: "power3.out" });
@@ -142,7 +233,11 @@ export function SmoothScroll() {
       }
 
       // Refresh after layout settles (images/fonts)
-      const refresh = () => ScrollTrigger.refresh();
+      const refresh = () => {
+        registerReveals(document);
+        sweepVisibleReveals();
+        ScrollTrigger.refresh();
+      };
       window.addEventListener("load", refresh);
       const t = window.setTimeout(refresh, 600);
 
@@ -213,7 +308,7 @@ export function SmoothScroll() {
     >
       <div
         ref={progressRef}
-        className="h-full w-full origin-left bg-gradient-to-r from-[#FF4A1C] via-[#FF7A45] to-[#E8E4D9]"
+        className="h-full w-full origin-left bg-gradient-to-r from-[#FF4A1C] via-[#FF7A45] to-[#FFB08E]"
         style={{ transform: "scaleX(0)", willChange: "transform" }}
       />
     </div>

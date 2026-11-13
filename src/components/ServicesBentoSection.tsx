@@ -149,18 +149,15 @@ export const ServicesBentoSection = () => {
       surface="bubble-liquid"
       environment="studio"
       liquidLens={false}
-      iridescence={1.45}
-      clearCenter={0.62}
+      iridescence={1.2}
+      clearCenter={0.78}
       filmScale={5}
-      bevel={12}
-      tint="rgba(16, 16, 22, 0.44)"
-      soapColor="rgba(255, 74, 28, 0.1)"
-      wobble={0.38}
+      bevel={10}
+      tint="rgba(255, 255, 255, 0.72)"
+      soapColor="rgba(255, 74, 28, 0.08)"
+      wobble={0.35}
     >
-      <section id="services" className="relative w-full bg-transparent py-16 sm:py-24 md:py-28 border-t border-white/[0.06] overflow-hidden">
-        {/* Background Ambient Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.025] rounded-full blur-[160px] pointer-events-none z-0" />
-
+      <section id="services" className="relative w-full bg-white py-16 sm:py-24 md:py-28 border-t border-black/[0.06] overflow-hidden">
         <div className="max-w-[1340px] mx-auto px-4 sm:px-6 md:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
@@ -168,23 +165,23 @@ export const ServicesBentoSection = () => {
               as="div"
               interactive={0.2}
               radius={9999}
-              className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1.5 mb-4"
+              className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1.5 mb-4 border border-black/[0.08] bg-[#FAFAFA]"
             >
               <span className="section-dot" />
-              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/90">
+              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/80">
                 Full-Stack Digital Engineering
               </span>
             </SoapBubbleSurface>
 
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-[#111115] mb-4"
             style={{ letterSpacing: "-0.035em" }}
           >
             Web development services <br />
-            <span className="text-white/65">engineered for commercial growth.</span>
+            <span className="text-black/45">engineered for commercial growth.</span>
           </h2>
 
-          <p className="text-xs sm:text-sm md:text-base text-white/60 leading-relaxed font-light max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-base text-black/65 leading-relaxed font-light max-w-2xl mx-auto">
             From bespoke corporate websites and high-volume e-commerce stores to exact 1:1 pixel-perfect platforms and performance overhauls. 100% source code ownership. Zero monthly retainers.
           </p>
         </div>
@@ -204,40 +201,33 @@ export const ServicesBentoSection = () => {
               >
                 <Link
                   href={service.ctaHref}
-                  className={`group relative flex flex-col justify-between h-full rounded-2xl bg-[#121212] border p-5 sm:p-6 transition-all duration-300 shadow-xl cursor-pointer hover:-translate-y-1 block ${
+                  className={`group relative flex flex-col justify-between h-full rounded-2xl border p-5 sm:p-6 transition-all duration-300 cursor-pointer hover:-translate-y-1 block ${
                     service.featured
-                      ? "border-[#FF4A1C]/50 hover:border-[#FF4A1C] shadow-[0_8px_36px_rgba(255,74,28,0.12)]"
-                      : "border-white/10 hover:border-white/25 hover:bg-[#151515]"
+                      ? "bg-[#FFF8F6] border-[#FF4A1C]/45 hover:border-[#FF4A1C] shadow-[0_14px_40px_-18px_rgba(255,74,28,0.20)]"
+                      : "bg-[#FAFAFA] hover:bg-white border-black/[0.08] hover:border-black/20 shadow-[0_10px_30px_-18px_rgba(17,17,21,0.08)]"
                   }`}
                 >
-                  {/* Subtle Ambient Accent Glow */}
-                  <div
-                    className={`absolute -top-16 -right-16 w-36 h-36 rounded-full blur-2xl pointer-events-none transition-transform duration-500 group-hover:scale-125 ${
-                      service.featured ? "bg-[#FF4A1C]/15" : "bg-white/[0.02]"
-                    }`}
-                  />
-
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div>
                       {/* Top Header: Badge + Timeline */}
                       <div className="flex items-center justify-between gap-2 mb-4">
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/[0.05] border border-white/10 text-white/80 text-[10px] font-mono uppercase tracking-wider">
+                        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-black/[0.08] text-[#111115]/80 text-[10px] font-mono uppercase tracking-wider">
                           {service.featured && <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C] animate-pulse" />}
                           <span>{service.badge}</span>
                         </div>
-                        <span className="text-[10px] font-mono text-white/50 tracking-wide">
+                        <span className="text-[10px] font-mono text-black/50 tracking-wide">
                           {service.timeline}
                         </span>
                       </div>
 
                       {/* Icon + Title */}
                       <div className="flex items-start gap-3.5 mb-3">
-                        <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-primary group-hover:scale-105 group-hover:bg-[#FF4A1C]/15 group-hover:border-[#FF4A1C]/40 transition-all duration-300 shrink-0 mt-0.5">
+                        <div className="w-10 h-10 rounded-xl bg-white border border-black/[0.08] flex items-center justify-center group-hover:scale-105 group-hover:bg-[#FF4A1C]/10 group-hover:border-[#FF4A1C]/40 transition-all duration-300 shrink-0 mt-0.5 shadow-sm">
                           <Icon className="w-5 h-5 text-[#FF4A1C]" />
                         </div>
                         <div>
                           <h3
-                            className="text-white text-base sm:text-lg font-medium tracking-tight leading-snug group-hover:text-white transition-colors"
+                            className="text-[#111115] text-base sm:text-lg font-medium tracking-tight leading-snug"
                             style={{ letterSpacing: "-0.02em" }}
                           >
                             {service.title}
@@ -245,14 +235,14 @@ export const ServicesBentoSection = () => {
                         </div>
                       </div>
 
-                      <p className="text-xs text-white/60 font-light leading-relaxed mb-4 line-clamp-3">
+                      <p className="text-xs text-black/65 font-light leading-relaxed mb-4 line-clamp-3">
                         {service.description}
                       </p>
 
                       {/* Key Deliverables — Compact */}
-                      <div className="space-y-1.5 mb-5 pt-3 border-t border-white/5">
+                      <div className="space-y-1.5 mb-5 pt-3 border-t border-black/[0.06]">
                         {service.deliverables.map((item) => (
-                          <div key={item} className="flex items-start gap-2 text-[11px] sm:text-xs text-white/70 font-light">
+                          <div key={item} className="flex items-start gap-2 text-[11px] sm:text-xs text-black/75 font-light">
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#FF4A1C] shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </div>
@@ -261,12 +251,12 @@ export const ServicesBentoSection = () => {
                     </div>
 
                     {/* Bottom: Tech Stack Chips & Action Link Bar */}
-                    <div className="pt-3 border-t border-white/10 mt-auto">
+                    <div className="pt-3 border-t border-black/[0.08] mt-auto">
                       <div className="flex flex-wrap gap-1 mb-3.5">
                         {service.techStack.map((tech) => (
                           <span
                             key={tech}
-                            className="text-[9px] font-mono text-white/65 bg-white/[0.03] border border-white/5 px-2 py-0.5 rounded-md"
+                            className="text-[9px] font-mono text-black/65 bg-white border border-black/[0.08] px-2 py-0.5 rounded-md"
                           >
                             {tech}
                           </span>
@@ -274,7 +264,7 @@ export const ServicesBentoSection = () => {
                       </div>
 
                       {/* Interactive Action Row */}
-                      <div className="inline-flex items-center justify-between w-full px-3.5 py-2 rounded-xl bg-white/[0.04] group-hover:bg-[#FF4A1C] group-hover:text-white text-white/80 text-xs font-medium tracking-tight border border-white/10 group-hover:border-transparent transition-all duration-300">
+                      <div className="inline-flex items-center justify-between w-full px-3.5 py-2 rounded-xl bg-white group-hover:bg-[#FF4A1C] group-hover:text-white text-[#111115] text-xs font-medium tracking-tight border border-black/[0.10] group-hover:border-transparent transition-all duration-300">
                         <span>{service.ctaText}</span>
                         <div className="flex items-center gap-1">
                           <span className="text-[10px] font-mono opacity-0 group-hover:opacity-100 transition-opacity">View Details</span>
@@ -290,12 +280,12 @@ export const ServicesBentoSection = () => {
         </div>
 
         {/* Bottom Callout Banner */}
-        <div className="mt-12 sm:mt-16 p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-white/[0.02] via-white/[0.04] to-white/[0.02] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-5 shadow-lg">
+        <div className="mt-12 sm:mt-16 p-5 sm:p-7 rounded-2xl bg-[#FAFAFA] border border-black/[0.08] flex flex-col md:flex-row items-center justify-between gap-5 shadow-sm">
           <div className="flex flex-col gap-1 text-center md:text-left">
-            <span className="text-white text-sm sm:text-base font-medium tracking-tight">
+            <span className="text-[#111115] text-sm sm:text-base font-medium tracking-tight">
               Need a custom architecture or technical consultation?
             </span>
-            <span className="text-white/55 text-xs font-light">
+            <span className="text-black/60 text-xs font-light">
               Speak directly with our senior full-stack architect — zero sales pitches, zero account manager markups.
             </span>
           </div>
@@ -304,20 +294,20 @@ export const ServicesBentoSection = () => {
             href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20custom%20web%20project%20architecture"
             target="_blank"
             rel="noopener noreferrer"
-            className="chromatic-button saim-hero-chromatic rounded-full shadow-[0_10px_30px_rgba(255,74,28,0.22)] shrink-0"
+            className="chromatic-button saim-hero-chromatic rounded-full bg-[radial-gradient(125%_160%_at_18%_20%,#ff8a5b_0%,#FF4A1C_48%,#e0360a_100%)] shadow-[0_10px_30px_rgba(255,74,28,0.24)] shrink-0"
           >
             <ViewportMount unmountWhenFar rootMargin="0px 0px" className="absolute inset-0 pointer-events-none">
               <LazyChromaticSurface
                 color="#FF4A1C"
-                color2="#ff8252"
-                color3="#8c1802"
+                color2="#ff8a5b"
+                color3="#e0360a"
                 colorMode="gradient-3"
                 hoverEffect="spotlight"
                 borderRadius={50}
                 speed={0.85}
-                feather={92}
-                intensity={1.32}
-                grain={0.075}
+                feather={18}
+                intensity={1.45}
+                grain={0.055}
               />
             </ViewportMount>
             <span className="chromatic-button-content text-xs sm:text-sm font-semibold text-white">

@@ -22,8 +22,8 @@ const processSteps = [
       "We map your website architecture, page layout wireframes, and high-converting customer journeys.",
     glow: "from-sky-500/35 to-transparent",
     iconHover: "group-hover:rotate-90 group-hover:scale-115",
-    color: "text-sky-400",
-    borderHover: "group-hover:border-sky-400/50 group-hover:shadow-[0_0_24px_rgba(56,189,248,0.25)]",
+    color: "text-sky-600",
+    borderHover: "group-hover:border-sky-400/50 group-hover:shadow-[0_0_24px_rgba(56,189,248,0.20)]",
   },
   {
     step: "03",
@@ -33,8 +33,8 @@ const processSteps = [
       "We engineer pixel-perfect designs with clean, sub-second Next.js code and mobile accessibility.",
     glow: "from-emerald-500/35 to-transparent",
     iconHover: "group-hover:scale-125",
-    color: "text-emerald-400",
-    borderHover: "group-hover:border-emerald-400/50 group-hover:shadow-[0_0_24px_rgba(52,211,153,0.25)]",
+    color: "text-emerald-600",
+    borderHover: "group-hover:border-emerald-400/50 group-hover:shadow-[0_0_24px_rgba(52,211,153,0.20)]",
   },
   {
     step: "04",
@@ -44,38 +44,35 @@ const processSteps = [
       "We test cross-browser speed, submit sitemaps to Google, deploy to edge servers, and provide 14–30 days of direct support.",
     glow: "from-purple-500/35 to-transparent",
     iconHover: "group-hover:-translate-y-1.5 group-hover:translate-x-1.5 group-hover:scale-115",
-    color: "text-purple-400",
-    borderHover: "group-hover:border-purple-400/50 group-hover:shadow-[0_0_24px_rgba(192,132,252,0.25)]",
+    color: "text-purple-600",
+    borderHover: "group-hover:border-purple-400/50 group-hover:shadow-[0_0_24px_rgba(192,132,252,0.20)]",
   },
 ];
 
 export const ProcessSection = () => {
   return (
-    <section id="process" className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden">
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.025] rounded-full blur-[160px] pointer-events-none z-0" />
-
+    <section id="process" className="relative w-full bg-white py-20 sm:py-28 md:py-36 border-t border-black/[0.06] overflow-hidden">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 md:px-8 relative z-10">
         
         {/* HEADER */}
         <div className="text-center max-w-xl mx-auto mb-16 sm:mb-20">
           <FadeUp>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-4">
               <span className="section-dot" />
-              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
+              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/75">
                 Workflow Roadmap
               </span>
             </div>
           </FadeUp>
 
           <FadeUp delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4" style={{ letterSpacing: "-0.04em" }}>
-              Our Process <span className="text-white/40">In 4 Steps.</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-[#111115] mb-4" style={{ letterSpacing: "-0.04em" }}>
+              Our Process <span className="text-black/45">In 4 Steps.</span>
             </h2>
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <p className="text-sm sm:text-base text-white/65 leading-relaxed font-light">
+            <p className="text-sm sm:text-base text-black/65 leading-relaxed font-light">
               A simple, structured 4-step roadmap to take your website from initial idea to live revenue engine.
             </p>
           </FadeUp>
@@ -87,19 +84,13 @@ export const ProcessSection = () => {
             const Icon = item.icon;
             return (
               <FadeUp key={item.step} delay={0.1 * index}>
-                <div className="bento-card-sybiosme p-7 sm:p-8 flex flex-col justify-between h-full group relative overflow-hidden shadow-xl">
-                  {/* Subtle Ambient Hover Glow */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF4A1C]/[0.05] rounded-full blur-2xl group-hover:bg-[#FF4A1C]/[0.12] transition-all duration-500 pointer-events-none" />
-
+                <div className="bento-card-sybiosme p-7 sm:p-8 flex flex-col justify-between h-full group relative overflow-hidden">
                   <div>
                     <div className="flex items-center justify-between mb-8">
                       {/* Animated Icon Container */}
                       <div className="relative shrink-0">
                         <div
-                          className={`absolute -inset-1.5 rounded-2xl bg-gradient-to-br ${item.glow} opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 pointer-events-none`}
-                        />
-                        <div
-                          className={`relative w-12 h-12 rounded-2xl bg-[#111113] border border-white/10 ${item.borderHover} flex items-center justify-center transition-all duration-300 shadow-md`}
+                          className={`relative w-12 h-12 rounded-2xl bg-[#FAFAFA] border border-black/[0.08] ${item.borderHover} flex items-center justify-center transition-all duration-300 shadow-sm`}
                         >
                           <Icon
                             className={`w-5 h-5 ${item.color} transition-all duration-500 ease-out ${item.iconHover}`}
@@ -107,16 +98,16 @@ export const ProcessSection = () => {
                         </div>
                       </div>
 
-                      <span className="text-[11px] font-mono font-bold tracking-wider text-white/90 bg-white/[0.06] border border-white/10 px-3 py-1 rounded-full group-hover:border-white/25 transition-colors">
+                      <span className="text-[11px] font-mono font-bold tracking-wider text-[#111115]/80 bg-[#FAFAFA] border border-black/[0.08] px-3 py-1 rounded-full group-hover:border-black/20 transition-colors">
                         {item.step}
                       </span>
                     </div>
 
-                    <p className="text-white text-lg sm:text-xl font-medium mb-3 group-hover:text-white transition-colors">
+                    <p className="text-[#111115] text-lg sm:text-xl font-medium mb-3 transition-colors">
                       {item.title}
                     </p>
 
-                    <p className="text-white/65 text-xs sm:text-sm leading-relaxed font-light">
+                    <p className="text-black/65 text-xs sm:text-sm leading-relaxed font-light">
                       {item.description}
                     </p>
                   </div>

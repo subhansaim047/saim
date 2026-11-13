@@ -5,20 +5,20 @@ import { LazyAutoplayVideo } from "./LazyAutoplayVideo";
 
 export const BenefitsSection = () => {
   return (
-    <section id="benefits" className="w-full bg-transparent border-t border-white/[0.06] relative overflow-hidden">
+    <section id="benefits" className="w-full bg-white border-t border-black/[0.06] relative overflow-hidden">
       <div className="w-full max-w-[1400px] mx-auto">
-        <div className="relative w-full bg-transparent px-4 sm:px-6 md:px-10 py-16 sm:py-24">
+        <div className="relative w-full bg-white px-4 sm:px-6 md:px-10 py-16 sm:py-24">
           
           {/* Eyebrow & Section Heading matching Pricing Section */}
           <div className="text-center max-w-xl mx-auto mb-12 sm:mb-20">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-4">
               <span className="section-dot" />
-              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
+              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/75">
                 Core Advantages
               </span>
             </div>
             <h2
-              className="text-white text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-center"
+              className="text-[#111115] text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-center"
               style={{ letterSpacing: "-0.04em" }}
             >
               Key Benefits
@@ -29,17 +29,13 @@ export const BenefitsSection = () => {
           <div data-gsap-stagger className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             
             {/* Card 1: Text Card (Left) */}
-            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-2xl border border-white/10 hover:border-[#FF4A1C]/40 transition-all duration-300">
-              {/* Subtle Ambient Brand Glow matching Pricing Section */}
-              <div className="absolute top-0 left-0 w-56 h-56 bg-[#FF4A1C]/[0.06] rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
-              
+            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#FAFAFA] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-[0_14px_40px_-24px_rgba(17,17,21,0.12)] border border-black/[0.08] hover:border-[#FF4A1C]/45 transition-all duration-300">
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div>
                   {/* Icon Container matching Pricing Section styling & Brand Orange */}
                   <div className="mb-6">
                     <div className="relative inline-flex items-center justify-center">
-                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#FF4A1C]/30 to-transparent opacity-60 group-hover:opacity-100 blur-md transition-all duration-500 pointer-events-none" />
-                      <div className="relative w-12 h-12 rounded-2xl bg-[#161616] border border-white/10 group-hover:border-[#FF4A1C]/50 flex items-center justify-center transition-all duration-300 shadow-lg">
+                      <div className="relative w-12 h-12 rounded-2xl bg-white border border-black/[0.08] group-hover:border-[#FF4A1C]/50 flex items-center justify-center transition-all duration-300 shadow-sm">
                         <TrendingUp className="w-5 h-5 text-[#FF4A1C] group-hover:scale-110 transition-transform duration-300" />
                       </div>
                     </div>
@@ -47,7 +43,7 @@ export const BenefitsSection = () => {
 
                   {/* Title matching Pricing Section typography */}
                   <h3
-                    className="text-white text-xl sm:text-2xl font-medium tracking-tight leading-tight"
+                    className="text-[#111115] text-xl sm:text-2xl font-medium tracking-tight leading-tight"
                     style={{ letterSpacing: "-0.03em" }}
                   >
                     Business Growth &amp;
@@ -57,21 +53,18 @@ export const BenefitsSection = () => {
                 </div>
 
                 {/* Description matching Pricing Section font style */}
-                <p className="text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[280px]">
+                <p className="text-[13px] sm:text-[14px] leading-relaxed text-black/65 font-light max-w-[280px]">
                   High-converting websites engineered to turn visitors into leads and bookings with 24/7 online presence, fast loading speed, and modern custom design.
                 </p>
               </div>
             </div>
 
             {/* Card 2: Video Card (Center) */}
-            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden flex flex-col shadow-2xl border border-white/10 hover:border-[#FF4A1C]/40 transition-all duration-300 group">
-              {/* Subtle Ambient Brand Glow matching Pricing Section */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#FF4A1C]/[0.04] rounded-full blur-3xl pointer-events-none" />
-
-              <div className="relative w-full overflow-hidden h-[54%] sm:h-[56%] flex items-center justify-center bg-black pt-3 sm:pt-4">
+            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#FAFAFA] overflow-hidden flex flex-col shadow-[0_14px_40px_-24px_rgba(17,17,21,0.12)] border border-black/[0.08] hover:border-[#FF4A1C]/45 transition-all duration-300 group">
+              <div className="relative mx-4 mt-4 sm:mx-5 sm:mt-5 rounded-xl overflow-hidden h-[50%] sm:h-[52%] flex items-center justify-center bg-[#F1F2F4] border border-black/[0.08]">
                 <LazyAutoplayVideo
                   poster="/videos/benefits-poster.webp"
-                  className="w-full h-full object-contain block"
+                  className="w-full h-full object-cover block"
                   sources={[
                     { src: "/videos/benefits-speed-animation.mp4", type: "video/mp4" },
                     {
@@ -80,43 +73,38 @@ export const BenefitsSection = () => {
                     },
                   ]}
                 />
-                <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-[#121212]" />
               </div>
 
-              <div className="relative z-10 flex-1 flex flex-col justify-center p-6 sm:p-8 pt-2">
+              <div className="relative z-10 flex-1 flex flex-col justify-center p-6 sm:p-8 pt-4">
                 <h3
-                  className="text-white text-xl sm:text-2xl font-medium tracking-tight leading-tight text-left"
+                  className="text-[#111115] text-xl sm:text-2xl font-medium tracking-tight leading-tight text-left"
                   style={{ letterSpacing: "-0.03em" }}
                 >
                   Performance, Speed &amp;
                   <br />
                   SEO Optimization
                 </h3>
-                <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
+                <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-black/65 font-light max-w-[320px]">
                   Sub-second Next.js architecture, optimised Core Web Vitals, and structured schema markup engineered to rank on Google.
                 </p>
               </div>
             </div>
 
             {/* Card 3: Text Card (Right) */}
-            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#121212] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-2xl border border-white/10 hover:border-[#FF4A1C]/40 transition-all duration-300">
-              {/* Subtle Ambient Brand Glow matching Pricing Section */}
-              <div className="absolute top-0 right-0 w-56 h-56 bg-[#FF4A1C]/[0.06] rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
-
+            <div className="relative h-[380px] sm:h-[460px] rounded-2xl bg-[#FAFAFA] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-[0_14px_40px_-24px_rgba(17,17,21,0.12)] border border-black/[0.08] hover:border-[#FF4A1C]/45 transition-all duration-300">
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div>
                   {/* Icon Container matching Pricing Section styling & Brand Orange */}
                   <div className="mb-6">
                     <div className="relative inline-flex items-center justify-center">
-                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#FF4A1C]/30 to-transparent opacity-60 group-hover:opacity-100 blur-md transition-all duration-500 pointer-events-none" />
-                      <div className="relative w-12 h-12 rounded-2xl bg-[#161616] border border-white/10 group-hover:border-[#FF4A1C]/50 flex items-center justify-center transition-all duration-300 shadow-lg">
+                      <div className="relative w-12 h-12 rounded-2xl bg-white border border-black/[0.08] group-hover:border-[#FF4A1C]/50 flex items-center justify-center transition-all duration-300 shadow-sm">
                         <ShieldCheck className="w-5 h-5 text-[#FF4A1C] group-hover:scale-110 transition-transform duration-300" />
                       </div>
                     </div>
                   </div>
 
                   <h3
-                    className="text-white text-xl sm:text-2xl font-medium tracking-tight leading-tight"
+                    className="text-[#111115] text-xl sm:text-2xl font-medium tracking-tight leading-tight"
                     style={{ letterSpacing: "-0.03em" }}
                   >
                     Marketing Integration &amp;
@@ -125,7 +113,7 @@ export const BenefitsSection = () => {
                   </h3>
                 </div>
 
-                <p className="text-[13px] sm:text-[14px] leading-relaxed text-white/70 font-light max-w-[320px]">
+                <p className="text-[13px] sm:text-[14px] leading-relaxed text-black/65 font-light max-w-[320px]">
                   Complete Google indexing, local SEO, SSL security, Instagram and social integration, with clean, scalable code built for reliable business growth.
                 </p>
               </div>

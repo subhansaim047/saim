@@ -144,34 +144,31 @@ export const FaqSection = () => {
   return (
     <section
       id="faq"
-      className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full bg-white py-20 sm:py-28 md:py-36 border-t border-black/[0.06] overflow-hidden"
     >
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[550px] h-[550px] bg-[#FF4A1C]/[0.025] rounded-full blur-[160px] pointer-events-none z-0" />
-
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 md:px-8 relative z-10">
         {/* HEADER — Sybiosme Step Indicator & Dual-Tone Title */}
         <div className="text-center max-w-xl mx-auto mb-16 sm:mb-20">
           <FadeUp>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-4">
               <span className="section-dot" />
-              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
-                FAQ <span className="text-white/40">Knowledge Base</span>
+              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/75">
+                FAQ <span className="text-black/45">Knowledge Base</span>
               </span>
             </div>
           </FadeUp>
 
           <FadeUp delay={0.1}>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#111115] mb-4"
               style={{ letterSpacing: "-0.04em" }}
             >
-              Your questions. <span className="text-white/40">Our answers.</span>
+              Your questions. <span className="text-black/45">Our answers.</span>
             </h2>
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <p className="text-sm sm:text-base text-white/65 leading-relaxed font-light">
+            <p className="text-sm sm:text-base text-black/65 leading-relaxed font-light">
               Everything you need to know about delivery timelines, hosting, code ownership, and Google indexation.
             </p>
           </FadeUp>
@@ -181,12 +178,12 @@ export const FaqSection = () => {
         <div className="max-w-4xl mx-auto space-y-6">
           {faqGroups.map((group, gIdx) => (
             <FadeUp key={group.category} delay={0.07 * gIdx}>
-              <div className="rounded-[2.25rem] bg-[#121212] border border-white/10 p-6 sm:p-9 shadow-xl hover:border-white/15 transition-colors">
-                <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF4A1C] block mb-5">
+              <div className="rounded-[2.25rem] bg-[#FAFAFA] border border-black/[0.08] p-6 sm:p-9 shadow-[0_14px_40px_-24px_rgba(17,17,21,0.10)] hover:border-black/[0.15] transition-colors">
+                <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#D9380E] block mb-5">
                   {group.category}
                 </span>
 
-                <div className="divide-y divide-white/5">
+                <div className="divide-y divide-black/[0.06]">
                   {group.items.map((item, idx) => (
                     <details
                       key={item.question}
@@ -194,7 +191,7 @@ export const FaqSection = () => {
                       open={gIdx === 0 && idx === 0}
                     >
                       <summary className="w-full text-left flex items-center justify-between gap-4 cursor-pointer select-none list-none focus:outline-none">
-                        <span className="text-white text-base sm:text-lg font-medium leading-snug group-hover:text-white/90 transition-colors">
+                        <span className="text-[#111115] text-base sm:text-lg font-medium leading-snug group-hover:text-black transition-colors">
                           {item.question}
                         </span>
                         <div className="sybiosme-disclosure-icon">
@@ -202,7 +199,7 @@ export const FaqSection = () => {
                         </div>
                       </summary>
 
-                      <div className="pt-3.5 pb-2 text-white/70 text-xs sm:text-sm leading-relaxed font-light">
+                      <div className="pt-3.5 pb-2 text-black/70 text-xs sm:text-sm leading-relaxed font-light">
                         {item.answer}
                       </div>
                     </details>

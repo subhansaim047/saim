@@ -50,10 +50,10 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
   return (
     <article
       className={cn(
-        "relative flex h-full flex-col justify-between rounded-[2.25rem] bg-[#121212] border p-2.5 sm:p-3 transition-all duration-300 shadow-2xl group",
+        "relative flex h-full flex-col justify-between rounded-[2.25rem] bg-white border p-2.5 sm:p-3 transition-all duration-300 group",
         plan.featured
-          ? "border-[#FF4A1C]/50 hover:border-[#FF4A1C] shadow-[0_12px_48px_rgba(255,74,28,0.12)]"
-          : "border-white/10 hover:border-white/20"
+          ? "border-[#FF4A1C]/50 hover:border-[#FF4A1C] shadow-[0_18px_50px_-20px_rgba(255,74,28,0.22)]"
+          : "border-black/[0.08] hover:border-black/20 shadow-[0_14px_40px_-24px_rgba(17,17,21,0.10)]"
       )}
     >
       {/* Featured Pill Badge */}
@@ -64,40 +64,35 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
         </div>
       )}
 
-      {/* Top Tile — Sybiosme Mesh Tile */}
+      {/* Top Tile — Crisp Studio Editorial Tile */}
       <div
         className={cn(
           "relative overflow-hidden rounded-[1.75rem] p-7 sm:p-8 flex flex-col justify-between min-h-[220px] sm:min-h-[240px] border",
           plan.featured
-            ? "bg-gradient-to-br from-[#241712] via-[#1a1210] to-[#12100f] border-[#FF4A1C]/35"
+            ? "bg-gradient-to-br from-[#FFF4EF] via-[#FFEBE3] to-[#FFF9F7] border-[#FF4A1C]/25"
             : plan.id === "starter"
-            ? "bg-gradient-to-br from-[#1b1c20] via-[#131417] to-[#0e0f12] border-white/10"
-            : "bg-gradient-to-br from-[#1d1d1d] via-[#151515] to-[#101010] border-white/5"
+            ? "bg-gradient-to-br from-[#F7F7FA] via-[#F2F3F6] to-[#FAFAFA] border-black/[0.06]"
+            : "bg-gradient-to-br from-[#FAFAFA] via-[#F4F4F6] to-[#FFFFFF] border-black/[0.06]"
         )}
       >
-        {/* Subtle Ambient Radial Glow */}
-        {plan.featured && (
-          <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#FF4A1C]/20 rounded-full blur-3xl pointer-events-none" />
-        )}
-
         <div className="relative z-10">
           <div className="flex items-center justify-between mb-2">
-            <p className="text-2xl sm:text-3xl font-medium tracking-tight text-white">
+            <p className="text-2xl sm:text-3xl font-medium tracking-tight text-[#111115]">
               {plan.name}
             </p>
             {plan.featured && <span className="section-dot" />}
           </div>
-          <p className="text-xs sm:text-sm text-white/60 font-light leading-relaxed min-h-[40px]">
+          <p className="text-xs sm:text-sm text-black/65 font-light leading-relaxed min-h-[40px]">
             {plan.description}
           </p>
         </div>
 
         {/* Price Row */}
         <div className="relative z-10 mt-6 flex items-baseline gap-2">
-          <span className="text-4xl sm:text-5xl font-medium tracking-tight text-white leading-none">
+          <span className="text-4xl sm:text-5xl font-medium tracking-tight text-[#111115] leading-none">
             {price}
           </span>
-          <span className="text-xs text-white/50 uppercase font-mono tracking-wider">
+          <span className="text-xs text-black/50 uppercase font-mono tracking-wider">
             / one-off
           </span>
         </div>
@@ -106,7 +101,7 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
       {/* Plan Details & Included Features */}
       <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
         <div>
-          <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-white/50 block mb-4">
+          <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-black/50 block mb-4">
             Included:
           </span>
 
@@ -116,7 +111,7 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
                 key={f.text}
                 className={cn(
                   "flex items-start gap-3 text-xs sm:text-sm font-light leading-relaxed transition-all duration-300",
-                  f.included ? "text-white/85" : "text-white/35"
+                  f.included ? "text-[#111115]/85" : "text-black/35"
                 )}
               >
                 <span className="mt-0.5">
@@ -131,7 +126,7 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
             <button
               type="button"
               onClick={() => setExpanded(!expanded)}
-              className="mt-4 flex items-center justify-center gap-1.5 text-xs text-white/70 hover:text-white font-medium transition-colors cursor-pointer py-2.5 w-full border-t border-white/10"
+              className="mt-4 flex items-center justify-center gap-1.5 text-xs text-black/65 hover:text-[#111115] font-medium transition-colors cursor-pointer py-2.5 w-full border-t border-black/[0.08]"
             >
               <span>
                 {expanded ? "Show Less" : `View More (+${remainingCount} features)`}
@@ -146,27 +141,27 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
         </div>
 
         {/* CTA Button — Chromatic WebGL Primary / Sybiosme Action Button */}
-        <div className="mt-8 pt-4 border-t border-white/5">
+        <div className="mt-8 pt-4 border-t border-black/[0.06]">
           {plan.featured ? (
             <a
               href={orderUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Order on WhatsApp"
-              className="chromatic-button saim-hero-chromatic w-full rounded-full shadow-[0_12px_36px_rgba(255,74,28,0.28)]"
+              className="chromatic-button saim-hero-chromatic w-full rounded-full bg-[radial-gradient(125%_160%_at_18%_20%,#ff8a5b_0%,#FF4A1C_48%,#e0360a_100%)] shadow-[0_12px_36px_rgba(255,74,28,0.28)]"
             >
               <ViewportMount unmountWhenFar rootMargin="0px 0px" className="absolute inset-0 pointer-events-none">
                 <LazyChromaticSurface
                   color="#FF4A1C"
-                  color2="#ff8252"
-                  color3="#8c1802"
+                  color2="#ff8a5b"
+                  color3="#e0360a"
                   colorMode="gradient-3"
                   hoverEffect="spotlight"
                   borderRadius={50}
                   speed={0.85}
-                  feather={92}
-                  intensity={1.35}
-                  grain={0.075}
+                  feather={18}
+                  intensity={1.45}
+                  grain={0.055}
                 />
               </ViewportMount>
               <span className="chromatic-button-content w-full justify-between px-1 text-sm font-semibold text-white">
@@ -184,7 +179,7 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Get Started — ${plan.name}`}
-              className="sybiosme-action-btn w-full bg-white/[0.06] hover:bg-white/15 text-white border border-white/10 hover:border-white/20"
+              className="sybiosme-action-btn w-full bg-[#F4F4F6] hover:bg-[#111115] text-[#111115] hover:text-white border border-black/[0.10] hover:border-[#111115]"
             >
               <span className="text-sm font-medium tracking-tight">
                 {`Get Started — ${plan.name}`}
@@ -214,21 +209,18 @@ export const PricingSection = () => {
       surface="bubble-liquid"
       environment="studio"
       liquidLens={false}
-      iridescence={1.45}
-      clearCenter={0.62}
+      iridescence={1.2}
+      clearCenter={0.78}
       filmScale={5}
-      bevel={12}
-      tint="rgba(16, 16, 22, 0.44)"
-      soapColor="rgba(255, 74, 28, 0.1)"
-      wobble={0.4}
+      bevel={10}
+      tint="rgba(255, 255, 255, 0.72)"
+      soapColor="rgba(255, 74, 28, 0.08)"
+      wobble={0.35}
     >
       <section
         id="pricing"
-        className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden"
+        className="relative w-full bg-white py-20 sm:py-28 md:py-36 border-t border-black/[0.06] overflow-hidden"
       >
-        {/* Background Ambient Glow */}
-        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#FF4A1C]/[0.03] rounded-full blur-[160px] pointer-events-none z-0" />
-
         <div className="mx-auto max-w-[1300px] px-4 sm:px-6 md:px-8 relative z-10">
           {/* HEADER — Sybiosme Step Indicator & Title */}
           <div className="mb-14 flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -238,22 +230,22 @@ export const PricingSection = () => {
                   as="div"
                   interactive={0.2}
                   radius={9999}
-                  className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1.5 mb-4"
+                  className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1.5 mb-4 border border-black/[0.08] bg-[#FAFAFA]"
                 >
                   <span className="section-dot" />
-                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/90">
+                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/80">
                     Transparent Fixed Packages
                   </span>
                 </SoapBubbleSurface>
               </FadeUp>
             <FadeUp delay={0.1}>
               <h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.08] text-white"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.08] text-[#111115]"
                 style={{ letterSpacing: "-0.04em" }}
               >
-                Choose. <span className="text-white/70">Your plan.</span>
+                Choose. <span className="text-black/45">Your plan.</span>
               </h2>
-              <p className="mt-3.5 text-sm sm:text-base text-white/65 font-light leading-relaxed">
+              <p className="mt-3.5 text-sm sm:text-base text-black/65 font-light leading-relaxed">
                 No monthly retainers. No hidden fees. 100% custom Next.js engineering.
               </p>
             </FadeUp>
@@ -262,14 +254,14 @@ export const PricingSection = () => {
           {/* CURRENCY TOGGLE — Sybiosme Pill Island */}
           <FadeUp delay={0.2}>
             <div className="flex flex-col sm:items-end gap-2 w-full sm:w-auto">
-              <span className="text-[11px] font-mono text-white/50 uppercase tracking-wider">
+              <span className="text-[11px] font-mono text-black/55 uppercase tracking-wider">
                 Select Currency:
               </span>
               <SoapBubbleSurface
                 as="div"
                 interactive={0.22}
                 radius={9999}
-                className="saim-bubble-nav inline-flex p-1.5 shadow-lg max-w-full overflow-x-auto scrollbar-hide"
+                className="saim-bubble-nav inline-flex p-1.5 shadow-sm border border-black/[0.09] bg-[#FAFAFA] max-w-full overflow-x-auto scrollbar-hide"
               >
                 <button
                   type="button"
@@ -277,8 +269,8 @@ export const PricingSection = () => {
                   className={cn(
                     "px-3 sm:px-4 py-1.5 text-[11px] sm:text-xs font-medium rounded-full transition-all cursor-pointer whitespace-nowrap",
                     currency === "GBP"
-                      ? "bg-white text-black shadow-md font-semibold"
-                      : "text-white/80 hover:text-white"
+                      ? "bg-[#111115] text-white shadow-sm font-semibold"
+                      : "text-black/70 hover:text-[#111115]"
                   )}
                 >
                   £ GBP · UK
@@ -289,8 +281,8 @@ export const PricingSection = () => {
                   className={cn(
                     "px-3 sm:px-4 py-1.5 text-[11px] sm:text-xs font-medium rounded-full transition-all cursor-pointer whitespace-nowrap",
                     currency === "EUR"
-                      ? "bg-white text-black shadow-md font-semibold"
-                      : "text-white/80 hover:text-white"
+                      ? "bg-[#111115] text-white shadow-sm font-semibold"
+                      : "text-black/70 hover:text-[#111115]"
                   )}
                 >
                   € EUR · EU
@@ -301,8 +293,8 @@ export const PricingSection = () => {
                   className={cn(
                     "px-3 sm:px-4 py-1.5 text-[11px] sm:text-xs font-medium rounded-full transition-all cursor-pointer whitespace-nowrap",
                     currency === "USD"
-                      ? "bg-white text-black shadow-md font-semibold"
-                      : "text-white/80 hover:text-white"
+                      ? "bg-[#111115] text-white shadow-sm font-semibold"
+                      : "text-black/70 hover:text-[#111115]"
                   )}
                 >
                   $ USD · Global
@@ -313,7 +305,7 @@ export const PricingSection = () => {
         </div>
 
         {/* TRUST BANNER — Sybiosme Squircle Strip */}
-        <div className="mb-14 grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 sm:p-5 rounded-[1.75rem] bg-[#121212] border border-white/10 text-xs text-white/80 shadow-xl">
+        <div className="mb-14 grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 sm:p-5 rounded-[1.75rem] bg-[#FAFAFA] border border-black/[0.08] text-xs text-[#111115]/85 shadow-sm">
           <div className="flex items-center gap-2.5">
             <ShieldCheck className="w-4 h-4 text-[#FF4A1C] flex-shrink-0" />
             <span>UK &amp; EU Invoicing Ready</span>
@@ -340,34 +332,34 @@ export const PricingSection = () => {
         </div>
 
         {/* PAYMENT TERMS & PEACE OF MIND — Sybiosme Double-Bezel Frame */}
-        <div className="mt-14 max-w-6xl mx-auto rounded-[2rem] bg-[#121212] border border-white/10 p-7 sm:p-10 shadow-2xl">
+        <div className="mt-14 max-w-6xl mx-auto rounded-[2rem] bg-[#FAFAFA] border border-black/[0.08] p-7 sm:p-10 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col gap-2.5">
-              <div className="flex items-center gap-2 text-white font-medium text-sm">
+              <div className="flex items-center gap-2 text-[#111115] font-medium text-sm">
                 <ShieldCheck className="w-4 h-4 text-[#FF4A1C] flex-shrink-0" />
                 <span>50/50 Milestone Protection</span>
               </div>
-              <p className="text-white/60 text-xs sm:text-[13px] leading-relaxed font-light">
+              <p className="text-black/65 text-xs sm:text-[13px] leading-relaxed font-light">
                 50% deposit to initiate architecture &amp; design. The remaining 50% is only payable after full private staging preview and your final approval prior to live deployment.
               </p>
             </div>
 
             <div className="flex flex-col gap-2.5">
-              <div className="flex items-center gap-2 text-white font-medium text-sm">
+              <div className="flex items-center gap-2 text-[#111115] font-medium text-sm">
                 <Check className="w-4 h-4 text-[#FF4A1C] flex-shrink-0" />
                 <span>UK &amp; EU Invoicing &amp; Rails</span>
               </div>
-              <p className="text-white/60 text-xs sm:text-[13px] leading-relaxed font-light">
+              <p className="text-black/65 text-xs sm:text-[13px] leading-relaxed font-light">
                 Itemised commercial invoices. Payments processed seamlessly via Stripe Secure Card, Wise Multi-Currency, UK Faster Payments, and SEPA Bank Wire.
               </p>
             </div>
 
             <div className="flex flex-col gap-2.5">
-              <div className="flex items-center gap-2 text-white font-medium text-sm">
+              <div className="flex items-center gap-2 text-[#111115] font-medium text-sm">
                 <BadgeCheck className="w-4 h-4 text-[#FF4A1C] flex-shrink-0" />
                 <span>Dedicated Revision Support</span>
               </div>
-              <p className="text-white/60 text-xs sm:text-[13px] leading-relaxed font-light">
+              <p className="text-black/65 text-xs sm:text-[13px] leading-relaxed font-light">
                 We iterate on staging with you until you approve performance, UX, and conversion flow. Zero monthly retainers or hidden lock-ins.
               </p>
             </div>

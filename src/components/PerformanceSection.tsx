@@ -1,49 +1,9 @@
 "use client";
-import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import { ViewportMount } from "./reactdrops/ViewportMount";
-
-const LazyTopographicTerrain = dynamic(
-  () => import("./reactdrops/topographic-terrain/topographic-terrain").then((m) => m.TopographicTerrain),
-  { ssr: false }
-);
 
 export const PerformanceSection = () => {
   return (
-    <section id="performance" className="bg-transparent text-white px-4 sm:px-8 md:px-14 lg:px-20 py-20 sm:py-28 md:py-36 overflow-hidden border-t border-white/[0.06] relative">
-      {/* Interactive 3D Terraced Architectural Terrain Backdrop */}
-      <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-auto">
-        <ViewportMount unmountWhenFar rootMargin="0px 0px" className="w-full h-full">
-          <LazyTopographicTerrain
-            preset="slate"
-            animateEntrance={false}
-            backgroundColor="#060609"
-            surfaceColor="#0e0e13"
-            shadowColor="#c93610"
-            backgroundImage="none"
-            lineColor="#484856"
-            accentColor="#FF4A1C"
-            scale={210}
-            density={7}
-            speed={0.4}
-            distortion={1.2}
-            lineWidth={0.9}
-            elevation={125}
-            cameraTilt={32}
-            opacity={0.78}
-            grain={0.14}
-            hover={0.48}
-            className="!h-full !w-full"
-          />
-        </ViewportMount>
-      </div>
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_center,rgba(5,5,7,0.45)_0%,rgba(5,5,7,0.88)_100%)] pointer-events-none"
-      />
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#FF4A1C]/[0.03] rounded-full blur-[150px] pointer-events-none z-[1]" />
-
+    <section id="performance" className="bg-white text-[#111115] px-4 sm:px-8 md:px-14 lg:px-20 py-20 sm:py-28 md:py-36 overflow-hidden border-t border-black/[0.06] relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start relative z-10">
 
         {/* LEFT: Heading & Eyebrow */}
@@ -55,19 +15,19 @@ export const PerformanceSection = () => {
           className="flex flex-col items-start"
         >
           {/* Sybiosme Eyebrow Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-6 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-6">
             <span className="section-dot" />
-            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
+            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/75">
               Benchmark Engine
             </span>
           </div>
 
           <h2
-            className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white leading-[1.08]"
+            className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-[#111115] leading-[1.08]"
             style={{ maxWidth: "14ch", letterSpacing: "-0.04em" }}
           >
             Performance <br />
-            <span className="text-white/40">as a key to success.</span>
+            <span className="text-black/45">as a key to success.</span>
           </h2>
         </motion.div>
 
@@ -79,15 +39,15 @@ export const PerformanceSection = () => {
           transition={{ duration: 0.7, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col gap-8 w-full"
         >
-          <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
+          <p className="text-black/70 text-sm sm:text-base leading-relaxed font-light">
             Fast page speeds directly increase user session length, raise enquiry conversion rates,
             and boost Google search visibility. We engineer lightweight Next.js code, modern AVIF
             image compression, and edge cloud caching to give your UK business a distinct competitive
             advantage across desktop and mobile devices.
           </p>
 
-          {/* 4K Vector Chart Component — Restored Original Clean Container */}
-          <div className="relative w-full bg-black/25 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+          {/* 4K Vector Chart Component — Crisp Studio White Container */}
+          <div className="relative w-full bg-[#FAFAFA] rounded-2xl p-4 sm:p-6 border border-black/[0.08] shadow-[0_14px_40px_-20px_rgba(17,17,21,0.12)]">
             {/* SVG Chart Area */}
             <div className="relative w-full aspect-[16/9]">
               <svg
@@ -107,7 +67,7 @@ export const PerformanceSection = () => {
                     <text
                       x="0"
                       y={grid.y + 4}
-                      fill="rgba(255,255,255,0.3)"
+                      fill="rgba(17,17,21,0.45)"
                       fontSize="11"
                       fontFamily="monospace"
                     >
@@ -118,7 +78,7 @@ export const PerformanceSection = () => {
                       y1={grid.y}
                       x2="690"
                       y2={grid.y}
-                      stroke="rgba(255,255,255,0.07)"
+                      stroke="rgba(17,17,21,0.08)"
                       strokeWidth="1"
                     />
                   </g>
@@ -130,11 +90,11 @@ export const PerformanceSection = () => {
                   y1="20"
                   x2="330"
                   y2="350"
-                  stroke="rgba(255,255,255,0.15)"
+                  stroke="rgba(17,17,21,0.18)"
                   strokeWidth="1.5"
                 />
 
-                {/* Top Purple Line Path */}
+                {/* Top Accent Line Path */}
                 <path
                   d="M 50 300 L 90 250 L 135 250 L 175 230 L 215 250 L 255 210 L 295 140 L 330 115 L 375 115 L 415 80 L 460 80 L 515 20 L 690 20"
                   fill="none"
@@ -144,27 +104,27 @@ export const PerformanceSection = () => {
                   strokeLinejoin="round"
                 />
 
-                {/* Bottom Cyan Line Path */}
+                {/* Bottom Blue Line Path */}
                 <path
                   d="M 50 320 L 90 300 L 135 300 L 175 285 L 215 270 L 255 285 L 295 270 L 330 250 L 375 210 L 415 240 L 460 205 L 515 240 L 565 190 L 610 190 L 650 150 L 690 150"
                   fill="none"
-                  stroke="#38bdf8"
+                  stroke="#0284c7"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
 
                 {/* Data Points on Vertical Line */}
-                <circle cx="330" cy="115" r="5" fill="#FF4A1C" stroke="#121212" strokeWidth="2" />
-                <circle cx="330" cy="115" r="8" fill="none" stroke="#FF4A1C" strokeOpacity="0.4" strokeWidth="2" />
+                <circle cx="330" cy="115" r="5" fill="#FF4A1C" stroke="#ffffff" strokeWidth="2" />
+                <circle cx="330" cy="115" r="8" fill="none" stroke="#FF4A1C" strokeOpacity="0.35" strokeWidth="2" />
 
-                <circle cx="330" cy="250" r="5" fill="#38bdf8" stroke="#121212" strokeWidth="2" />
-                <circle cx="330" cy="250" r="8" fill="none" stroke="#38bdf8" strokeOpacity="0.4" strokeWidth="2" />
+                <circle cx="330" cy="250" r="5" fill="#0284c7" stroke="#ffffff" strokeWidth="2" />
+                <circle cx="330" cy="250" r="8" fill="none" stroke="#0284c7" strokeOpacity="0.35" strokeWidth="2" />
               </svg>
 
               {/* Core Web Vitals Benchmark Box */}
               <div
-                className="absolute bg-black/60 border border-white/20 rounded-xl px-3.5 py-2.5 shadow-2xl flex flex-col gap-2 pointer-events-none backdrop-blur-xl"
+                className="absolute bg-white/95 border border-black/[0.10] rounded-xl px-3.5 py-2.5 shadow-[0_12px_32px_rgba(17,17,21,0.12)] flex flex-col gap-2 pointer-events-none"
                 style={{
                   top: "16%",
                   left: "48%",
@@ -174,10 +134,10 @@ export const PerformanceSection = () => {
               >
                 {/* LCP Row */}
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[11px] text-white/50 font-medium">Largest Contentful Paint</span>
+                  <span className="text-[11px] text-black/60 font-medium">Largest Contentful Paint</span>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-bold text-white">&lt; 0.8s</span>
-                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#064e3b] text-[#34d399]">
+                    <span className="text-xs font-bold text-[#111115]">&lt; 0.8s</span>
+                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
                       Good
                     </span>
                   </div>
@@ -185,10 +145,10 @@ export const PerformanceSection = () => {
 
                 {/* CLS Row */}
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[11px] text-white/50 font-medium">Cumulative Layout Shift</span>
+                  <span className="text-[11px] text-black/60 font-medium">Cumulative Layout Shift</span>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-bold text-white">0.01</span>
-                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#064e3b] text-[#34d399]">
+                    <span className="text-xs font-bold text-[#111115]">0.01</span>
+                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
                       Good
                     </span>
                   </div>
@@ -197,9 +157,9 @@ export const PerformanceSection = () => {
             </div>
 
             {/* Context Benchmark Caption */}
-            <div className="mt-2 pt-3 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-white/50">
+            <div className="mt-2 pt-3 border-t border-black/[0.07] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-black/55">
               <span className="font-mono">Technical Core Web Vitals target benchmarks for Next.js production builds</span>
-              <span className="text-white/80 font-medium">Optimised Core Web Vitals</span>
+              <span className="text-[#111115] font-medium">Optimised Core Web Vitals</span>
             </div>
           </div>
         </motion.div>

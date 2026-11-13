@@ -72,88 +72,85 @@ const COMPARISON_DATA: MatrixRow[] = [
 
 export const ComparisonMatrix = () => {
   return (
-    <section id="comparison" className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden">
-      {/* Ambient Radial Accent */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.025] rounded-full blur-[170px] pointer-events-none z-0" />
-
+    <section id="comparison" className="relative w-full bg-white py-20 sm:py-28 md:py-36 border-t border-black/[0.06] overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-4">
             <span className="section-dot" />
-            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
+            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/75">
               The Market Landscape
             </span>
           </div>
 
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#111115] mb-4"
             style={{ letterSpacing: "-0.04em" }}
           >
             How Saim Dev compares. <br />
-            <span className="text-white/40">Engineered for quality, speed, and honesty.</span>
+            <span className="text-black/45">Engineered for quality, speed, and honesty.</span>
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg text-white/75 leading-relaxed font-light">
+          <p className="text-sm sm:text-base md:text-lg text-black/65 leading-relaxed font-light">
             Comparing typical industry service models against our direct senior engineering studio. Factual, transparent, and based on standard UK market surveys.
           </p>
         </div>
 
         {/* Responsive Table Wrapper */}
-        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent rounded-3xl border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.8)] bg-[#121212]/95 backdrop-blur-xl">
+        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-black/15 scrollbar-track-transparent rounded-3xl border border-black/[0.08] shadow-[0_18px_50px_-24px_rgba(17,17,21,0.12)] bg-white">
           <table className="w-full text-left border-collapse min-w-[850px]">
             <thead>
-              <tr className="border-b border-white/10 bg-white/[0.02]">
-                <th className="py-5 px-6 text-xs font-mono uppercase tracking-widest text-white/50 w-[24%]">
+              <tr className="border-b border-black/[0.08] bg-[#FAFAFA]">
+                <th className="py-5 px-6 text-xs font-mono uppercase tracking-widest text-black/55 w-[24%]">
                   Dimension
                 </th>
-                <th className="py-5 px-6 text-xs font-mono uppercase tracking-widest text-[#FF4A1C] bg-[#FF4A1C]/[0.08] border-x border-[#FF4A1C]/20 w-[28%] relative">
+                <th className="py-5 px-6 text-xs font-mono uppercase tracking-widest text-[#D9380E] bg-[#FFF5F2] border-x border-[#FF4A1C]/20 w-[28%] relative">
                   <div className="flex items-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#FF4A1C]" />
-                    <span className="font-bold text-white">Saim Dev</span>
+                    <span className="font-bold text-[#111115]">Saim Dev</span>
                   </div>
-                  <span className="text-[10px] text-white/60 lowercase font-sans font-normal block mt-0.5">
+                  <span className="text-[10px] text-black/55 lowercase font-sans font-normal block mt-0.5">
                     Direct senior studio
                   </span>
                 </th>
-                <th className="py-5 px-6 text-xs font-mono uppercase tracking-widest text-white/50 w-[24%]">
+                <th className="py-5 px-6 text-xs font-mono uppercase tracking-widest text-black/55 w-[24%]">
                   Traditional Agency
-                  <span className="text-[10px] text-white/40 lowercase font-sans font-normal block mt-0.5">
+                  <span className="text-[10px] text-black/45 lowercase font-sans font-normal block mt-0.5">
                     High overhead
                   </span>
                 </th>
-                <th className="py-5 px-6 text-xs font-mono uppercase tracking-widest text-white/50 w-[24%]">
+                <th className="py-5 px-6 text-xs font-mono uppercase tracking-widest text-black/55 w-[24%]">
                   DIY Builders
-                  <span className="text-[10px] text-white/40 lowercase font-sans font-normal block mt-0.5">
+                  <span className="text-[10px] text-black/45 lowercase font-sans font-normal block mt-0.5">
                     Wix, Squarespace
                   </span>
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5 text-xs sm:text-sm font-light">
+            <tbody className="divide-y divide-black/[0.06] text-xs sm:text-sm font-light">
               {COMPARISON_DATA.map((row) => (
-                <tr key={row.dimension} className="hover:bg-white/[0.015] transition-colors">
-                  <td className="py-4.5 px-6 font-medium text-white/90">
+                <tr key={row.dimension} className="hover:bg-black/[0.015] transition-colors">
+                  <td className="py-4.5 px-6 font-medium text-[#111115]">
                     {row.dimension}
                   </td>
                   {/* Saim Dev Highlighted Cell */}
-                  <td className="py-4.5 px-6 font-medium text-white bg-[#FF4A1C]/[0.04] border-x border-[#FF4A1C]/20">
+                  <td className="py-4.5 px-6 font-medium text-[#111115] bg-[#FFF8F6] border-x border-[#FF4A1C]/15">
                     <div className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-[#FF4A1C] shrink-0 mt-0.5 stroke-[2.5]" />
                       <span>{row.saimDev}</span>
                     </div>
                   </td>
                   {/* Traditional Agency */}
-                  <td className="py-4.5 px-6 text-white/60">
+                  <td className="py-4.5 px-6 text-black/65">
                     <div className="flex items-start gap-2">
-                      <Minus className="w-4 h-4 text-white/30 shrink-0 mt-0.5" />
+                      <Minus className="w-4 h-4 text-black/35 shrink-0 mt-0.5" />
                       <span>{row.traditionalAgency}</span>
                     </div>
                   </td>
                   {/* DIY Builders */}
-                  <td className="py-4.5 px-6 text-white/50">
+                  <td className="py-4.5 px-6 text-black/60">
                     <div className="flex items-start gap-2">
-                      <X className="w-4 h-4 text-red-400/60 shrink-0 mt-0.5" />
+                      <X className="w-4 h-4 text-red-600/70 shrink-0 mt-0.5" />
                       <span>{row.diyBuilders}</span>
                     </div>
                   </td>
@@ -164,8 +161,8 @@ export const ComparisonMatrix = () => {
         </div>
 
         {/* Sourced Market Evidence & Legal Footnotes */}
-        <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-xs text-white/70 leading-relaxed font-light">
-          <p className="font-medium text-white/90 mb-2">Sources &amp; Comparative Advertising Methodology (UK CAP Code Compliance):</p>
+        <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-[#FAFAFA] border border-black/[0.08] text-xs text-black/65 leading-relaxed font-light">
+          <p className="font-medium text-[#111115] mb-2">Sources &amp; Comparative Advertising Methodology (UK CAP Code Compliance):</p>
           <ul className="space-y-1.5 list-disc list-inside">
             <li><strong>Traditional Agency Pricing &amp; Timelines:</strong> Based on published UK market surveys by Clutch UK and DesignRush reporting average bespoke website build costs of £3,000–£10,000+ for small-to-mid businesses with 8–16 week waterfall delivery cycles.</li>
             <li><strong>DIY Platform Costs:</strong> Reflect standard published commercial tiers of major SaaS website builders (e.g., Wix, Squarespace) ranging from £15–£40/month plus ongoing payment gateway and app store subscription fees.</li>

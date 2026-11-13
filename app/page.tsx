@@ -29,7 +29,7 @@ import { PricingSection } from "@/components/PricingSection";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { FooterSection } from "@/components/FooterSection";
-import { ScrollCanvasBackground } from "@/components/ScrollCanvasBackground";
+
 
 export const metadata: Metadata = {
   title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
@@ -271,7 +271,7 @@ const faqSchema = {
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen bg-black">
+    <div className="saim-home-light relative min-h-screen bg-white text-[#111115]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
@@ -286,10 +286,10 @@ export default function HomePage() {
       />
 
       {/* Scroll-Driven Video Background Canvas (Fixed, z-0) */}
-      <ScrollCanvasBackground />
+      {/* Crisp Studio White Editorial Surface */}
 
       {/* Main Website Content (Floating Glass over Canvas, z-10) */}
-      <main id="main-content" className="relative z-10 min-h-screen overflow-x-clip bg-transparent">
+      <main id="main-content" className="relative z-10 min-h-screen overflow-x-clip bg-white">
         <HeroSection />
         <AboutSection />
         <ServicesBentoSection />
