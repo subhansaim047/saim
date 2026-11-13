@@ -45,10 +45,18 @@ function HeroTypewriter() {
   }, [phraseIndex, charCount, deleting]);
 
   return (
-    <div className="saim-fluid-typing relative overflow-hidden rounded-2xl border border-[#020612]/10 bg-[#F8FAFF] px-4 py-3.5 text-sm sm:text-base font-medium text-[#020612] shadow-[0_8px_24px_-12px_rgba(2,6,18,0.08)]">
-      <span className="font-medium text-[#020612]/70">Engineering </span>
-      <span className="text-[#1D4ED8] font-bold">{TYPING_PHRASES[phraseIndex].slice(0, charCount)}</span>
-      <span aria-hidden="true" className="ml-0.5 inline-block h-[1em] w-[2px] align-[-0.12em] bg-[#2F6CE1] animate-pulse" />
+    <div className="saim-fluid-typing flex items-center gap-2.5 text-base sm:text-[17px] font-medium text-[#020612]/70 py-0.5">
+      <span className="h-2 w-2 rounded-full bg-[#2F6CE1] shrink-0" />
+      <span>
+        Engineering{" "}
+        <span className="text-[#1D4ED8] font-bold">
+          {TYPING_PHRASES[phraseIndex].slice(0, charCount)}
+        </span>
+        <span
+          aria-hidden="true"
+          className="ml-0.5 inline-block h-[1.05em] w-[2px] align-[-0.14em] bg-[#2F6CE1] animate-pulse"
+        />
+      </span>
     </div>
   );
 }
@@ -247,66 +255,46 @@ export const HeroSection = () => {
           {/* ==============================================
               HERO BODY
           =============================================== */}
-          <div className="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-8 md:px-12 lg:px-14 pt-20 sm:pt-24 lg:pt-28 pb-8 sm:pb-12 lg:pb-16 gap-6 lg:gap-10 pointer-events-none">
+          <div className="relative z-10 h-full flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between px-4 sm:px-8 md:px-12 lg:px-14 pt-16 sm:pt-20 lg:pt-[74px] pb-8 sm:pb-10 lg:pb-12 gap-8 lg:gap-12 pointer-events-none">
             {/* LEFT COLUMN */}
-            <div className="flex flex-col justify-center gap-3.5 sm:gap-4 w-full lg:w-[50%] xl:w-[49%] flex-shrink-0 pointer-events-auto">
-              {/* Status Badge & Stack Strip */}
+            <div className="flex flex-col justify-start gap-5 sm:gap-6 lg:gap-7 w-full lg:w-[49%] xl:w-[48%] flex-shrink-0 pointer-events-auto lg:pt-2">
+              {/* Top Agency Status Pill */}
               <motion.div
                 initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.14, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col gap-2.5 self-start max-w-full"
+                className="self-start max-w-full"
               >
                 <SoapBubbleSurface
                   as="div"
                   surface="liquid-glass"
                   interactive={0.22}
                   radius={9999}
-                  className="saim-bubble-pill inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 max-w-full border border-[#2F6CE1]/20 bg-[#EFF5FF]"
+                  className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 max-w-full border border-[#2F6CE1]/20 bg-[#EFF5FF]"
                 >
                   <span className="section-dot animate-pulse shrink-0" />
-                  <span className="text-[9.5px] sm:text-[11px] font-mono font-semibold tracking-[0.12em] sm:tracking-[0.16em] uppercase text-[#020612] whitespace-normal sm:whitespace-nowrap leading-snug">
+                  <span className="text-[10px] sm:text-[11px] font-mono font-semibold tracking-[0.12em] sm:tracking-[0.16em] uppercase text-[#020612] whitespace-normal sm:whitespace-nowrap leading-snug">
                     UK REGISTERED AGENCY • GLOBAL STUDIO
                   </span>
                 </SoapBubbleSurface>
-
-                <div className="flex items-center gap-0 pl-1 flex-wrap">
-                  {[
-                    "Next.js 15",
-                    "React 19",
-                    "TypeScript",
-                    "Tailwind CSS",
-                    "WebGL Shaders",
-                    "Node.js",
-                  ].map((tech, i, arr) => (
-                    <span key={tech} className="flex items-center">
-                      <span className="font-mono text-[10px] sm:text-[11px] font-medium uppercase tracking-wider text-[#020612]/60">
-                        {tech}
-                      </span>
-                      {i < arr.length - 1 && (
-                        <span className="text-[#2F6CE1]/50 mx-2 text-[8px]">&#x2022;</span>
-                      )}
-                    </span>
-                  ))}
-                </div>
               </motion.div>
 
-              {/* Bold Wide Architectural Brand Display Wordmark */}
-              <div className="w-full max-w-full overflow-hidden py-0.5">
+              {/* Bold Geometric Studio Brand Wordmark (Outfit Black 900) */}
+              <div className="w-full max-w-full py-0.5">
                 <div
-                  className="saim-brand-display uppercase font-extrabold text-[clamp(38px,5.4vw,84px)] leading-[0.9] tracking-[-0.03em] whitespace-nowrap select-none"
-                  style={{ fontWeight: 800 }}
+                  className="saim-brand-display uppercase font-black text-[clamp(44px,5.6vw,84px)] leading-[0.94] tracking-[-0.04em] whitespace-nowrap select-none"
+                  style={{ fontWeight: 900 }}
                 >
                   <span className="text-[#020612]">SAIM </span>
                   <span className="text-[#2F6CE1]">DEV</span>
                 </div>
               </div>
 
-              <h1 className="font-heading text-[24px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-[#020612] leading-[1.18]">
+              <h1 className="font-heading text-[24px] sm:text-[28px] md:text-[32px] font-extrabold tracking-[-0.025em] text-[#020612] leading-[1.22] max-w-[30ch]">
                 Custom Web Development Agency UK &amp; Digital Engineering Studio
               </h1>
 
-              {/* Interactive Liquid Typing Showcase Bar */}
+              {/* Airy Interactive Typewriter Line */}
               <div className="w-full max-w-xl">
                 <HeroTypewriter />
               </div>
@@ -316,15 +304,15 @@ export const HeroSection = () => {
                 initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col gap-3.5 pt-0.5"
+                className="flex flex-col gap-5 sm:gap-6 pt-1"
               >
-                <div className="border-l-[3px] border-[#2F6CE1] pl-4 sm:pl-5 py-1">
+                <div className="border-l-[3px] border-[#2F6CE1] pl-4 sm:pl-5 py-1 space-y-2">
                   <h2 className="font-heading text-[#020612] text-base sm:text-lg md:text-xl font-bold tracking-tight">
                     Bespoke Websites, E-Commerce{" "}
                     <span className="text-[#020612]/60 font-semibold">&amp; Custom Web Apps</span>
                   </h2>
-                  <p className="text-[#020612]/65 text-[10px] sm:text-xs font-mono font-medium tracking-wider uppercase mt-1">
-                    SUB-SECOND SPEED • 100% CODE OWNERSHIP • ZERO MONTHLY RETAINERS
+                  <p className="text-[#020612]/60 text-xs sm:text-[13px] font-medium tracking-wide">
+                    Sub-second speed · 100% code ownership · Zero monthly retainers
                   </p>
                 </div>
 
@@ -332,7 +320,7 @@ export const HeroSection = () => {
                 <div
                   onPointerEnter={() => setBubbleCtaActive(true)}
                   onFocus={() => setBubbleCtaActive(true)}
-                  className="flex flex-wrap items-center gap-3 pt-1"
+                  className="flex flex-wrap items-center gap-3.5 pt-1"
                 >
                   <ReactDropButton
                     variant="primary"
@@ -360,6 +348,27 @@ export const HeroSection = () => {
                   >
                     <span>Live Demos</span>
                   </ReactDropButton>
+                </div>
+
+                {/* Spacious Tech Capability Strip */}
+                <div className="flex items-center gap-x-1 gap-y-1.5 flex-wrap pt-4 border-t border-[#020612]/8">
+                  {[
+                    "Next.js 15",
+                    "React 19",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "WebGL Shaders",
+                    "Node.js",
+                  ].map((tech, i, arr) => (
+                    <span key={tech} className="flex items-center">
+                      <span className="font-mono text-[10px] sm:text-[11px] font-medium uppercase tracking-wider text-[#020612]/55">
+                        {tech}
+                      </span>
+                      {i < arr.length - 1 && (
+                        <span className="text-[#2F6CE1]/45 mx-2 text-[8px]">&#x2022;</span>
+                      )}
+                    </span>
+                  ))}
                 </div>
               </motion.div>
             </div>
@@ -418,12 +427,12 @@ export const HeroSection = () => {
               </div>
 
               {/* RIGHT COLUMN: Twin Counter-Scrolling Vertical Marquee Grid — Desktop */}
-              <div className="hidden lg:flex w-full lg:w-[49%] xl:w-[50%] h-[580px] xl:h-[75vh] relative overflow-hidden rounded-2xl flex-shrink-0 pointer-events-auto">
+              <div className="hidden lg:flex w-full lg:w-[49%] xl:w-[50%] h-[600px] xl:h-[min(78vh,680px)] relative overflow-hidden rounded-2xl flex-shrink-0 pointer-events-auto">
                 {/* Fade Masks */}
-                <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent z-20 pointer-events-none" />
+                <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white to-transparent z-20 pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none" />
 
-                <div className="flex gap-4 w-full h-full relative z-10 pt-6">
+                <div className="flex gap-4 w-full h-full relative z-10 pt-1">
                   {/* Column 1 — Continuous Upward Scroll */}
                   <div className="w-1/2 h-full overflow-hidden relative">
                     <motion.div

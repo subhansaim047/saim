@@ -629,7 +629,7 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 
 .saim-brand-display,
 .saim-brand-display * {
-  font-family: var(--font-display), var(--font-inter-orig), Inter, system-ui, -apple-system, sans-serif !important;
+  font-family: var(--font-display), 'Outfit', var(--font-heading), sans-serif !important;
 }
 
 @keyframes saim-marquee-up {

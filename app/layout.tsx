@@ -29,9 +29,9 @@ const jetbrainsMono = localFont({
   variable: '--font-mono',
   display: 'swap',
 });
-const syne = localFont({
-  src: '../src/fonts/syne-latin.woff2',
-  weight: '700 800',
+const outfit = localFont({
+  src: '../src/fonts/outfit-latin.woff2',
+  weight: '700 900',
   variable: '--font-display',
   display: 'swap',
 });
@@ -265,7 +265,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
         />
       </head>
-      <body className={`${inter.variable} ${jakarta.variable} ${bricolage.variable} ${jetbrainsMono.variable} ${syne.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#2F6CE1] selection:text-white`}>
+      <body className={`${inter.variable} ${jakarta.variable} ${bricolage.variable} ${jetbrainsMono.variable} ${outfit.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#2F6CE1] selection:text-white`}>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:font-semibold focus:rounded-md focus:shadow-lg">
           Skip to main content
         </a>
