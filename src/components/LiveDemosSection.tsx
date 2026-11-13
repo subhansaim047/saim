@@ -1,8 +1,9 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import { ViewportMount } from "./reactdrops/ViewportMount";
+import { SoapBubbleMaterial, SoapBubbleSurface } from "./reactdrops/soap-bubble";
+import { ReactDropButton, LOGO_MATERIAL_DEFAULTS } from "./ReactDropButton";
 
 const LazyFanGallery = dynamic(
   () => import("./reactdrops/fan-gallery/fan-gallery").then((m) => m.FanGallery),
@@ -99,104 +100,122 @@ export const LiveDemosSection = () => {
     href: demo.demoUrl,
   }));
   return (
-    <section
-      id="demos"
-      className="relative w-full bg-white py-10 sm:py-14 md:py-16 border-t border-black/[0.06] overflow-hidden"
-    >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 relative z-10">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-3">
-              <span className="section-dot animate-pulse" />
-              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/75">
-                Interactive Work Showcase
+    <SoapBubbleMaterial {...LOGO_MATERIAL_DEFAULTS}>
+      <section
+        id="demos"
+        className="relative w-full bg-white py-10 sm:py-14 md:py-16 border-t border-[#020612]/[0.07] overflow-hidden"
+      >
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 relative z-10">
+          {/* Section Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">
+            <div className="max-w-2xl">
+              <SoapBubbleSurface
+                as="div"
+                interactive={0.2}
+                radius={9999}
+                className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFF5FF] border border-[#2F6CE1]/20 mb-3"
+              >
+                <span className="section-dot animate-pulse" />
+                <span className="text-[11px] font-mono font-semibold tracking-[0.2em] uppercase text-[#020612]">
+                  Interactive Work Showcase
+                </span>
+              </SoapBubbleSurface>
+
+              <h2
+                className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#020612] mb-3"
+                style={{ letterSpacing: "-0.03em" }}
+              >
+                Test our live websites. <br />
+                <span className="text-[#2F6CE1]">Built for every industry.</span>
+              </h2>
+
+              <p className="text-sm sm:text-base text-[#020612]/70 leading-relaxed font-normal">
+                Don&apos;t just look at static screenshots. Click into our live, interactive production demos across e-commerce, hospitality, automotive, architecture, and wellness.
+              </p>
+            </div>
+
+            <div className="shrink-0">
+              <ReactDropButton
+                variant="primary"
+                href="/demos"
+                className="h-[46px]"
+                innerClassName="px-5 text-xs sm:text-sm font-bold text-white gap-2.5 group"
+              >
+                <span>Explore All 14+ Live Demos</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </ReactDropButton>
+            </div>
+          </div>
+
+          {/* Interactive Spring Portfolio Deck + Compact ReactDrops Quick-Launch Bar */}
+          <div className="saim-fan-deck rounded-3xl bg-[#F8FAFC] border border-[#020612]/[0.08] pt-5 pb-5 px-3 sm:px-6 overflow-hidden relative shadow-[0_18px_50px_-24px_rgba(2,6,18,0.12)]">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-1 px-2">
+              <div className="inline-flex items-center gap-2 text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-[#020612]/75">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2F6CE1]" />
+                <span>Interactive Portfolio Deck • Hover or Click Any Card</span>
+              </div>
+              <span className="text-[11px] font-mono font-medium text-[#020612]/50 hidden sm:inline">
+                6 Live Production Builds
               </span>
             </div>
-
-            <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-[#111115] mb-3"
-              style={{ letterSpacing: "-0.04em" }}
+            <ViewportMount
+              rootMargin="300px 0px"
+              className="min-h-[215px] sm:min-h-[275px]"
             >
-              Test our live websites. <br />
-              <span className="text-black/45">Built for every industry.</span>
-            </h2>
+              <LazyFanGallery
+                items={fanItems}
+                entrance="stack"
+                trigger="auto"
+                once={true}
+                cardWidth={210}
+                aspectRatio={1.22}
+                spacing={0.82}
+                curve={0.12}
+                tilt={11}
+                lift={32}
+                spread={0.28}
+                radius={16}
+                ariaLabel="Interactive portfolio preview cards linking to live industry demos"
+              />
+            </ViewportMount>
 
-            <p className="text-sm sm:text-base text-black/65 leading-relaxed font-light">
-              Don&apos;t just look at static screenshots. Click into our live, interactive production demos across e-commerce, hospitality, automotive, architecture, and wellness.
-            </p>
-          </div>
-
-          <div className="shrink-0">
-            <Link
-              href="/demos"
-              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-[#FAFAFA] hover:bg-black/[0.06] border border-black/[0.10] text-[#111115] text-xs sm:text-sm font-medium tracking-tight transition-all group"
-            >
-              <span>Explore All 14+ Live Demos</span>
-              <ArrowRight className="w-4 h-4 text-[#FF4A1C] transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Interactive Spring Portfolio Deck + Compact Quick-Launch Bar */}
-        <div className="saim-fan-deck rounded-3xl bg-[#FAFAFA] border border-black/[0.08] pt-5 pb-5 px-3 sm:px-6 overflow-hidden relative shadow-[0_18px_50px_-24px_rgba(17,17,21,0.12)]">
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-1 px-2">
-            <div className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-black/70">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C]" />
-              <span>Interactive Portfolio Deck • Hover or Click Any Card</span>
+            <div className="mt-2 pt-4 border-t border-[#020612]/[0.07] flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 px-1">
+              {FEATURED_DEMOS.map((demo) => {
+                const [brand, niche] = demo.title.split(" – ");
+                return (
+                  <ReactDropButton
+                    key={demo.id}
+                    variant={demo.featured ? "dark" : "glass"}
+                    href={demo.demoUrl}
+                    external
+                    className="h-[38px]"
+                    innerClassName="px-4 gap-1.5 text-xs group/pill"
+                  >
+                    {demo.featured && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#2F6CE1] shrink-0" />
+                    )}
+                    <span className="font-bold tracking-tight">{brand}</span>
+                    {niche && (
+                      <span
+                        className={`text-[11px] font-normal hidden sm:inline ${
+                          demo.featured ? "text-white/75" : "text-[#020612]/60"
+                        }`}
+                      >
+                        · {niche}
+                      </span>
+                    )}
+                    <ExternalLink
+                      className={`w-3 h-3 shrink-0 transition-transform duration-200 group-hover/pill:translate-x-0.5 ${
+                        demo.featured ? "text-white/75" : "text-[#2F6CE1]"
+                      }`}
+                    />
+                  </ReactDropButton>
+                );
+              })}
             </div>
-            <span className="text-[11px] font-mono text-black/45 hidden sm:inline">
-              6 Live Production Builds
-            </span>
-          </div>
-          <ViewportMount
-            rootMargin="300px 0px"
-            className="min-h-[215px] sm:min-h-[275px]"
-          >
-            <LazyFanGallery
-              items={fanItems}
-              entrance="stack"
-              trigger="auto"
-              once={true}
-              cardWidth={210}
-              aspectRatio={1.22}
-              spacing={0.82}
-              curve={0.12}
-              tilt={11}
-              lift={32}
-              spread={0.28}
-              radius={16}
-              ariaLabel="Interactive portfolio preview cards linking to live industry demos"
-            />
-          </ViewportMount>
-
-          <div className="mt-2 pt-4 border-t border-black/[0.06] flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 px-1">
-            {FEATURED_DEMOS.map((demo) => {
-              const [brand, niche] = demo.title.split(" – ");
-              return (
-                <a
-                  key={demo.id}
-                  href={demo.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group/pill inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white hover:bg-[#FF4A1C] border border-black/[0.08] hover:border-transparent text-xs font-medium text-[#111115] hover:text-white transition-all duration-200 shadow-xs"
-                >
-                  {demo.featured && (
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C] group-hover/pill:bg-white shrink-0" />
-                  )}
-                  <span className="font-semibold tracking-tight">{brand}</span>
-                  {niche && (
-                    <span className="text-[11px] font-normal text-black/55 group-hover/pill:text-white/85 hidden sm:inline">
-                      · {niche}
-                    </span>
-                  )}
-                  <ExternalLink className="w-3 h-3 text-black/45 group-hover/pill:text-white shrink-0 transition-transform duration-200 group-hover/pill:translate-x-0.5" />
-                </a>
-              );
-            })}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </SoapBubbleMaterial>
   );
 };

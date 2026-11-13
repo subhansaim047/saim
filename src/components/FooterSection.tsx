@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { IconX, IconQuora, IconContra, IconInstagram, IconTikTok, IconThreads } from "./SocialIcons";
 import { getClaim } from "../lib/claims";
+import { FazierBadge } from "./FazierBadge";
 
 export const FooterSection = () => {
   return (
@@ -22,13 +23,13 @@ export const FooterSection = () => {
           <nav className="site-footer__nav" aria-label="Page sections navigation">
             <a href="/#our-story">Our Story</a>
             <Link href="/services">All Services</Link>
-            <Link href="/services/website-clone" className="text-primary hover:underline font-semibold">Website Clone ($1,900)</Link>
+            <Link href="/services/website-clone" className="text-[#5B92F5] hover:underline font-semibold">Website Clone ($1,900)</Link>
             <Link href="/services/website-development">Next.js Websites</Link>
             <Link href="/services/ecommerce-shopify">Next.js eCommerce</Link>
-            <Link href="/services/takeaway-web-design" className="text-primary hover:underline">Takeaway Web Design</Link>
+            <Link href="/services/takeaway-web-design" className="text-[#5B92F5] hover:underline">Takeaway Web Design</Link>
             <Link href="/services/landing-pages-cro">Landing Pages (CRO)</Link>
             <Link href="/services/website-redesign">Website Redesign</Link>
-            <Link href="/services/website-speed-optimization">Speed & Vitals</Link>
+            <Link href="/services/website-speed-optimization">Speed &amp; Vitals</Link>
             <Link href="/services/seo-services">SEO Services</Link>
             <Link href="/demos">Demo Sites</Link>
           </nav>
@@ -40,7 +41,7 @@ export const FooterSection = () => {
             <a href="/#faq">FAQ &amp; Help</a>
             <Link href="/blogs">Blogs</Link>
             <a href="/#contact">Get in Touch</a>
-            <a href="mailto:contact@saimdev.site" className="text-primary hover:underline">
+            <a href="mailto:contact@saimdev.site" className="text-[#5B92F5] hover:underline">
               contact@saimdev.site
             </a>
           </nav>
@@ -100,23 +101,10 @@ export const FooterSection = () => {
         <div className="border-t border-white/10 pt-5 mt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50 text-center md:text-left">
           <div className="flex flex-col gap-1">
             <span>Saim Dev — Our Agency Registered in UK &amp; Based in Pakistan. $0 Upfront Deposit • Zero Monthly Charges.</span>
-            <span>Contact: <a href="mailto:contact@saimdev.site" className="text-primary hover:underline">contact@saimdev.site</a> · WhatsApp: <a href="https://wa.me/923196526604" className="text-primary hover:underline">+92 319 6526604</a></span>
+            <span>Contact: <a href="mailto:contact@saimdev.site" className="text-[#5B92F5] hover:underline">contact@saimdev.site</a> · WhatsApp: <a href="https://wa.me/923196526604" className="text-[#5B92F5] hover:underline">+92 319 6526604</a></span>
             <span>Business Hours: Mon–Fri 09:00–18:00 GMT · Sat 10:00–16:00 GMT (Remote UK &amp; EU Support)</span>
           </div>
-          <a
-            href="https://fazier.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center shrink-0 hover:opacity-90 transition-opacity"
-          >
-            <img
-              src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light"
-              width={250}
-              alt="Fazier badge"
-              loading="lazy"
-              className="h-auto max-w-[200px] sm:max-w-[250px]"
-            />
-          </a>
+          <FazierBadge className="shrink-0" />
         </div>
 
         {/* LEGAL & TRUST LINE */}

@@ -144,46 +144,46 @@ export const FaqSection = () => {
   return (
     <section
       id="faq"
-      className="relative w-full bg-white py-20 sm:py-28 md:py-36 border-t border-black/[0.06] overflow-hidden"
+      className="relative w-full bg-white py-20 sm:py-28 md:py-36 border-t border-[#020612]/[0.07] overflow-hidden"
     >
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 md:px-8 relative z-10">
-        {/* HEADER — Sybiosme Step Indicator & Dual-Tone Title */}
+        {/* HEADER */}
         <div className="text-center max-w-xl mx-auto mb-16 sm:mb-20">
           <FadeUp>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/[0.03] border border-black/[0.08] mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFF5FF] border border-[#2F6CE1]/20 mb-4">
               <span className="section-dot" />
-              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/75">
-                FAQ <span className="text-black/45">Knowledge Base</span>
+              <span className="text-[11px] font-mono font-semibold tracking-[0.2em] uppercase text-[#020612]">
+                FAQ <span className="text-[#1D4ED8]">Knowledge Base</span>
               </span>
             </div>
           </FadeUp>
 
           <FadeUp delay={0.1}>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#111115] mb-4"
-              style={{ letterSpacing: "-0.04em" }}
+              className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#020612] mb-4"
+              style={{ letterSpacing: "-0.03em" }}
             >
-              Your questions. <span className="text-black/45">Our answers.</span>
+              Your questions. <span className="text-[#2F6CE1]">Our answers.</span>
             </h2>
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <p className="text-sm sm:text-base text-black/65 leading-relaxed font-light">
+            <p className="text-sm sm:text-base text-[#020612]/70 leading-relaxed font-normal">
               Everything you need to know about delivery timelines, hosting, code ownership, and Google indexation.
             </p>
           </FadeUp>
         </div>
 
-        {/* ACCORDION FAQ GROUPS — Sybiosme Categorized Panels */}
+        {/* ACCORDION FAQ GROUPS */}
         <div className="max-w-4xl mx-auto space-y-6">
           {faqGroups.map((group, gIdx) => (
             <FadeUp key={group.category} delay={0.07 * gIdx}>
-              <div className="rounded-[2.25rem] bg-[#FAFAFA] border border-black/[0.08] p-6 sm:p-9 shadow-[0_14px_40px_-24px_rgba(17,17,21,0.10)] hover:border-black/[0.15] transition-colors">
-                <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#D9380E] block mb-5">
+              <div className="rounded-[2.25rem] bg-[#F8FAFC] border border-[#020612]/[0.08] p-6 sm:p-9 shadow-[0_14px_40px_-24px_rgba(2,6,18,0.10)] hover:border-[#2F6CE1]/30 transition-colors">
+                <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#1D4ED8] block mb-5">
                   {group.category}
                 </span>
 
-                <div className="divide-y divide-black/[0.06]">
+                <div className="divide-y divide-[#020612]/[0.07]">
                   {group.items.map((item, idx) => (
                     <details
                       key={item.question}
@@ -191,7 +191,7 @@ export const FaqSection = () => {
                       open={gIdx === 0 && idx === 0}
                     >
                       <summary className="w-full text-left flex items-center justify-between gap-4 cursor-pointer select-none list-none focus:outline-none">
-                        <span className="text-[#111115] text-base sm:text-lg font-medium leading-snug group-hover:text-black transition-colors">
+                        <span className="font-heading text-[#020612] text-base sm:text-lg font-bold leading-snug group-hover:text-[#1D4ED8] transition-colors">
                           {item.question}
                         </span>
                         <div className="sybiosme-disclosure-icon">
@@ -199,7 +199,7 @@ export const FaqSection = () => {
                         </div>
                       </summary>
 
-                      <div className="pt-3.5 pb-2 text-black/70 text-xs sm:text-sm leading-relaxed font-light">
+                      <div className="pt-3.5 pb-2 text-[#020612]/75 text-xs sm:text-sm leading-relaxed font-normal">
                         {item.answer}
                       </div>
                     </details>

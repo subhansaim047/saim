@@ -96,9 +96,9 @@ export function SmoothScroll() {
         gsap.to(targets, {
           y: 0,
           opacity: 1,
-          duration: 0.44,
+          duration: 0.3,
           ease: "power3.out",
-          stagger: targets.length > 1 ? 0.035 : 0,
+          stagger: targets.length > 1 ? 0.03 : 0,
           overwrite: "auto",
           clearProps: "transform,opacity",
         });
@@ -113,11 +113,11 @@ export function SmoothScroll() {
             revealNode(node, false);
           });
         },
-        { rootMargin: "140px 0px 90px 0px", threshold: 0.01 }
+        { rootMargin: "280px 0px 200px 0px", threshold: 0.01 }
       );
 
       const sweepVisibleReveals = () => {
-        const thresholdY = window.innerHeight + 140;
+        const thresholdY = window.innerHeight + 280;
         trackedContainers.forEach((node) => {
           const rect = node.getBoundingClientRect();
           if (rect.height === 0 && rect.width === 0) return;
@@ -132,7 +132,7 @@ export function SmoothScroll() {
       };
 
       const registerReveals = (root: ParentNode = document) => {
-        const thresholdY = window.innerHeight + 140;
+        const thresholdY = window.innerHeight + 280;
         root.querySelectorAll<HTMLElement>("[data-gsap-reveal], [data-gsap-stagger]").forEach((node) => {
           if (revealed.has(node) || trackedContainers.has(node)) return;
           const targets = getTargets(node);
@@ -308,7 +308,7 @@ export function SmoothScroll() {
     >
       <div
         ref={progressRef}
-        className="h-full w-full origin-left bg-gradient-to-r from-[#FF4A1C] via-[#FF7A45] to-[#FFB08E]"
+        className="h-full w-full origin-left bg-gradient-to-r from-[#2F6CE1] via-[#5B92F5] to-[#1D4ED8]"
         style={{ transform: "scaleX(0)", willChange: "transform" }}
       />
     </div>

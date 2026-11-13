@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import { ArrowRight, Calculator } from "lucide-react";
 import {
   SoapBubbleMaterial,
   SoapBubbleSurface,
-  SoapBubbleButton,
 } from "./reactdrops/soap-bubble";
+import { ReactDropButton, LOGO_MATERIAL_DEFAULTS } from "./ReactDropButton";
 
 const TYPING_PHRASES = [
   "bespoke Next.js flagships.",
@@ -45,10 +45,10 @@ function HeroTypewriter() {
   }, [phraseIndex, charCount, deleting]);
 
   return (
-    <div className="saim-fluid-typing relative overflow-hidden rounded-2xl border border-black/[0.09] bg-[#FAFAFA] px-4 py-3.5 text-sm sm:text-base font-medium text-[#111115] shadow-[0_8px_24px_-12px_rgba(17,17,21,0.08)]">
-      <span>Engineering </span>
-      <span className="text-[#D9380E] font-semibold">{TYPING_PHRASES[phraseIndex].slice(0, charCount)}</span>
-      <span aria-hidden="true" className="ml-0.5 inline-block h-[1em] w-[2px] align-[-0.12em] bg-[#FF4A1C] animate-pulse" />
+    <div className="saim-fluid-typing relative overflow-hidden rounded-2xl border border-[#020612]/10 bg-[#F8FAFF] px-4 py-3.5 text-sm sm:text-base font-medium text-[#020612] shadow-[0_8px_24px_-12px_rgba(2,6,18,0.08)]">
+      <span className="font-medium text-[#020612]/70">Engineering </span>
+      <span className="text-[#1D4ED8] font-bold">{TYPING_PHRASES[phraseIndex].slice(0, charCount)}</span>
+      <span aria-hidden="true" className="ml-0.5 inline-block h-[1em] w-[2px] align-[-0.12em] bg-[#2F6CE1] animate-pulse" />
     </div>
   );
 }
@@ -120,16 +120,14 @@ export const HeroSection = () => {
 
   return (
     <SoapBubbleMaterial
+      {...LOGO_MATERIAL_DEFAULTS}
       surface={bubbleCtaActive ? "bubble-liquid" : "liquid-glass"}
-      environment="studio"
-      liquidLens={false}
-      iridescence={1.25}
-      clearCenter={0.78}
-      filmScale={5.2}
+      iridescence={0.34}
+      oilOpacity={0.2}
       bevel={12}
-      tint="rgba(255, 255, 255, 0.72)"
-      soapColor="rgba(255, 74, 28, 0.08)"
-      wobble={0.38}
+      tint="rgba(255, 255, 255, 0.86)"
+      soapColor="rgba(47, 108, 225, 0.14)"
+      wobble={0.36}
     >
       {/* ==============================================
           NAVBAR — Iridescent Liquid Bubble Pill Island
@@ -146,7 +144,7 @@ export const HeroSection = () => {
           surface="liquid-glass"
           interactive={0.18}
           radius={9999}
-          className="flex sm:hidden saim-bubble-nav items-center justify-start gap-1 p-1.5 max-w-[94vw] overflow-hidden border border-black/[0.09] bg-white/88 backdrop-blur-md shadow-[0_8px_24px_-10px_rgba(17,17,21,0.12)]"
+          className="flex sm:hidden saim-bubble-nav items-center justify-start gap-1 p-1.5 max-w-[94vw] overflow-hidden border border-[#020612]/10 bg-white/92 backdrop-blur-md shadow-[0_8px_24px_-10px_rgba(2,6,18,0.12)]"
         >
           <span className="section-dot ml-2 mr-0.5 animate-pulse shrink-0" />
           <div
@@ -161,7 +159,7 @@ export const HeroSection = () => {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-[10.5px] font-medium tracking-tight text-[#111115]/85 hover:text-[#111115] bg-black/[0.04] hover:bg-black/[0.09] px-2.5 py-1 rounded-full whitespace-nowrap transition-all shrink-0"
+                  className="text-[10.5px] font-semibold tracking-tight text-[#020612]/85 hover:text-[#1D4ED8] bg-[#EFF5FF] hover:bg-[#DBEAFE] px-2.5 py-1 rounded-full whitespace-nowrap transition-all shrink-0"
                 >
                   {item.label}
                 </Link>
@@ -169,7 +167,7 @@ export const HeroSection = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-[10.5px] font-medium tracking-tight text-[#111115]/85 hover:text-[#111115] bg-black/[0.04] hover:bg-black/[0.09] px-2.5 py-1 rounded-full whitespace-nowrap transition-all shrink-0"
+                  className="text-[10.5px] font-semibold tracking-tight text-[#020612]/85 hover:text-[#1D4ED8] bg-[#EFF5FF] hover:bg-[#DBEAFE] px-2.5 py-1 rounded-full whitespace-nowrap transition-all shrink-0"
                 >
                   {item.label}
                 </a>
@@ -184,11 +182,11 @@ export const HeroSection = () => {
           surface="liquid-glass"
           interactive={0.25}
           radius={9999}
-          className="hidden sm:flex saim-bubble-nav px-4 py-1.5 items-center justify-center gap-1 border border-black/[0.10] bg-white/88 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(17,17,21,0.12)]"
+          className="hidden sm:flex saim-bubble-nav px-4 py-1.5 items-center justify-center gap-1 border border-[#020612]/10 bg-white/92 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(2,6,18,0.14)]"
         >
           <div className="flex items-center gap-1.5 mr-2 pl-1.5">
             <span className="section-dot animate-pulse" />
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/55">
+            <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-[#020612]/60">
               UK/EU
             </span>
           </div>
@@ -199,14 +197,14 @@ export const HeroSection = () => {
                 href={item.href}
                 onMouseEnter={() => setHoveredNav(index)}
                 onMouseLeave={() => setHoveredNav(null)}
-                className="text-xs lg:text-[13px] font-medium tracking-tight transition-all duration-200 whitespace-nowrap cursor-pointer px-3 py-1.5 rounded-full hover:bg-black/[0.05]"
+                className="text-xs lg:text-[13px] font-semibold tracking-tight transition-all duration-200 whitespace-nowrap cursor-pointer px-3 py-1.5 rounded-full hover:bg-[#EFF5FF]"
                 style={{
                   color:
                     hoveredNav === index || activeHref === item.href
-                      ? "#111115"
-                      : "rgba(17, 17, 21, 0.72)",
+                      ? "#1D4ED8"
+                      : "#020612",
                   background:
-                    activeHref === item.href ? "rgba(255, 74, 28, 0.14)" : undefined,
+                    activeHref === item.href ? "rgba(47, 108, 225, 0.14)" : undefined,
                 }}
               >
                 {item.label}
@@ -217,14 +215,14 @@ export const HeroSection = () => {
                 href={item.href}
                 onMouseEnter={() => setHoveredNav(index)}
                 onMouseLeave={() => setHoveredNav(null)}
-                className="text-xs lg:text-[13px] font-medium tracking-tight transition-all duration-200 whitespace-nowrap cursor-pointer px-3 py-1.5 rounded-full hover:bg-black/[0.05]"
+                className="text-xs lg:text-[13px] font-semibold tracking-tight transition-all duration-200 whitespace-nowrap cursor-pointer px-3 py-1.5 rounded-full hover:bg-[#EFF5FF]"
                 style={{
                   color:
                     hoveredNav === index || activeHref === item.href
-                      ? "#111115"
-                      : "rgba(17, 17, 21, 0.72)",
+                      ? "#1D4ED8"
+                      : "#020612",
                   background:
-                    activeHref === item.href ? "rgba(255, 74, 28, 0.14)" : undefined,
+                    activeHref === item.href ? "rgba(47, 108, 225, 0.14)" : undefined,
                 }}
               >
                 {item.label}
@@ -235,14 +233,14 @@ export const HeroSection = () => {
       </nav>
 
       <section className="min-h-[100dvh] lg:min-h-[100dvh] w-full p-2 sm:p-4 md:p-6 bg-white relative box-border overflow-hidden">
-        <div className="relative h-full w-full rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] overflow-hidden bg-white border border-black/[0.08] shadow-[0_24px_70px_-30px_rgba(17,17,21,0.12)]">
+        <div className="relative h-full w-full rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] overflow-hidden bg-white border border-[#020612]/10 shadow-[0_24px_70px_-30px_rgba(2,6,18,0.12)]">
           {/* Top border hairline highlight */}
           <div
             className="absolute top-0 left-0 right-0 z-10 pointer-events-none"
             style={{
               height: "1px",
               background:
-                "linear-gradient(90deg, transparent, rgba(255,74,28,0.35) 30%, rgba(17,17,21,0.08) 70%, transparent)",
+                "linear-gradient(90deg, transparent, rgba(47,108,225,0.45) 30%, rgba(2,6,18,0.10) 70%, transparent)",
             }}
           />
 
@@ -264,10 +262,10 @@ export const HeroSection = () => {
                   surface="liquid-glass"
                   interactive={0.22}
                   radius={9999}
-                  className="saim-bubble-pill inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 max-w-full border border-black/[0.08] bg-[#FAFAFA]"
+                  className="saim-bubble-pill inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 max-w-full border border-[#2F6CE1]/20 bg-[#EFF5FF]"
                 >
                   <span className="section-dot animate-pulse shrink-0" />
-                  <span className="text-[9.5px] sm:text-[11px] font-mono tracking-[0.12em] sm:tracking-[0.16em] uppercase text-[#111115] whitespace-normal sm:whitespace-nowrap leading-snug">
+                  <span className="text-[9.5px] sm:text-[11px] font-mono font-semibold tracking-[0.12em] sm:tracking-[0.16em] uppercase text-[#020612] whitespace-normal sm:whitespace-nowrap leading-snug">
                     UK REGISTERED AGENCY • GLOBAL STUDIO
                   </span>
                 </SoapBubbleSurface>
@@ -282,11 +280,11 @@ export const HeroSection = () => {
                     "Node.js",
                   ].map((tech, i, arr) => (
                     <span key={tech} className="flex items-center">
-                      <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-black/55">
+                      <span className="font-mono text-[10px] sm:text-[11px] font-medium uppercase tracking-wider text-[#020612]/60">
                         {tech}
                       </span>
                       {i < arr.length - 1 && (
-                        <span className="text-black/25 mx-2 text-[8px]">&#x2022;</span>
+                        <span className="text-[#2F6CE1]/50 mx-2 text-[8px]">&#x2022;</span>
                       )}
                     </span>
                   ))}
@@ -299,12 +297,12 @@ export const HeroSection = () => {
                   className="saim-brand-display uppercase font-extrabold text-[clamp(38px,5.4vw,84px)] leading-[0.9] tracking-[-0.03em] whitespace-nowrap select-none"
                   style={{ fontWeight: 800 }}
                 >
-                  <span className="text-[#111115]">SAIM </span>
-                  <span className="text-[#FF4A1C]">DEV</span>
+                  <span className="text-[#020612]">SAIM </span>
+                  <span className="text-[#2F6CE1]">DEV</span>
                 </div>
               </div>
 
-              <h1 className="text-[24px] sm:text-2xl md:text-3xl font-bold tracking-tight text-[#111115] leading-[1.2]">
+              <h1 className="font-heading text-[24px] sm:text-2xl md:text-3xl font-extrabold tracking-tight text-[#020612] leading-[1.18]">
                 Custom Web Development Agency UK &amp; Digital Engineering Studio
               </h1>
 
@@ -313,186 +311,197 @@ export const HeroSection = () => {
                 <HeroTypewriter />
               </div>
 
-              {/* Sub-headline + USPs + Vermilion / Bubble CTAs */}
+              {/* Sub-headline + USPs + ReactDrops Royal Blue / Glass / Obsidian CTAs */}
               <motion.div
                 initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col gap-3.5 pt-0.5"
               >
-                <div className="border-l-2 border-[#FF4A1C] pl-4 sm:pl-5 py-1">
-                  <h2 className="text-[#111115] text-base sm:text-lg md:text-xl font-medium tracking-tight">
+                <div className="border-l-[3px] border-[#2F6CE1] pl-4 sm:pl-5 py-1">
+                  <h2 className="font-heading text-[#020612] text-base sm:text-lg md:text-xl font-bold tracking-tight">
                     Bespoke Websites, E-Commerce{" "}
-                    <span className="text-black/55">&amp; Custom Web Apps</span>
+                    <span className="text-[#020612]/60 font-semibold">&amp; Custom Web Apps</span>
                   </h2>
-                  <p className="text-black/60 text-[10px] sm:text-xs font-mono tracking-wider uppercase mt-1">
+                  <p className="text-[#020612]/65 text-[10px] sm:text-xs font-mono font-medium tracking-wider uppercase mt-1">
                     SUB-SECOND SPEED • 100% CODE OWNERSHIP • ZERO MONTHLY RETAINERS
                   </p>
                 </div>
 
-                {/* Pure Vermilion Primary CTA + Bubble Secondary CTAs */}
+                {/* ReactDrops Liquid-Bubble Action Row */}
                 <div
                   onPointerEnter={() => setBubbleCtaActive(true)}
                   onFocus={() => setBubbleCtaActive(true)}
-                  className="flex flex-wrap items-center gap-3 pt-1 [&_.saim-bubble-btn]:border [&_.saim-bubble-btn]:border-black/[0.12] [&_.saim-bubble-btn]:bg-[linear-gradient(135deg,rgba(255,255,255,0.96)_0%,rgba(255,74,28,0.08)_50%,rgba(17,17,21,0.04)_100%)] [&_.saim-bubble-btn]:shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_8px_22px_-8px_rgba(17,17,21,0.14)] [&_.saim-bubble-btn]:text-[#111115]"
+                  className="flex flex-wrap items-center gap-3 pt-1"
                 >
-                  <a
+                  <ReactDropButton
+                    variant="primary"
                     href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20starting%20a%20website%20project"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="chromatic-button saim-hero-chromatic rounded-full"
+                    className="h-[48px] min-w-[196px]"
+                    innerClassName="px-6 text-xs sm:text-sm font-bold text-white gap-2"
                   >
-                    <span className="chromatic-button-content text-xs sm:text-sm font-semibold text-white">
-                      <span>Start on WhatsApp</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </a>
+                    <span>Start on WhatsApp</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </ReactDropButton>
 
-                  <SoapBubbleButton
-                    type="button"
+                  <ReactDropButton
+                    variant="glass"
                     onClick={() => scrollToSection("estimator")}
-                    iridescence={1.85}
-                    wobble={0.55}
-                    className="saim-bubble-btn !text-xs sm:!text-sm"
+                    className="h-[48px] px-5 !text-xs sm:!text-sm font-bold"
                   >
-                    <Calculator className="w-3.5 h-3.5 text-[#FF4A1C]" />
+                    <Calculator className="w-4 h-4 text-[#2F6CE1]" />
                     <span>Estimate Project Cost</span>
-                  </SoapBubbleButton>
+                  </ReactDropButton>
 
-                  <SoapBubbleButton
-                    type="button"
+                  <ReactDropButton
+                    variant="dark"
                     onClick={() => scrollToSection("demos")}
-                    iridescence={1.6}
-                    wobble={0.48}
-                    className="saim-bubble-btn !text-xs sm:!text-sm hidden sm:inline-flex"
+                    className="h-[48px] px-5 !text-xs sm:!text-sm font-bold hidden sm:inline-flex"
                   >
                     <span>Live Demos</span>
-                  </SoapBubbleButton>
+                  </ReactDropButton>
                 </div>
               </motion.div>
             </div>
 
-            {/* Mobile Showcase Strip (< lg): Smooth Continuous Horizontal Scroll */}
-            <div className="lg:hidden w-full overflow-hidden relative mt-2 -mx-2 px-2 pointer-events-auto">
-              <div className="saim-marquee-left flex w-max">
-                {[...Array(2)].map((_, loopIdx) => (
-                  <div key={loopIdx} className="flex gap-3 pr-3">
-                    {[
-                      {
-                        src: "/hero-shots/shot-4.webp",
-                        alt: "Saim Dev - Custom Web Development & Next.js Websites for UK Small Businesses",
-                      },
-                      {
-                        src: "/hero-shots/shot-1.webp",
-                        alt: "Fresh and Reddy Dark Web Architecture",
-                      },
-                      {
-                        src: "/hero-shots/shot-2.webp",
-                        alt: "Evora Luxury Real Estate Web Platform",
-                      },
-                      {
-                        src: "/hero-shots/shot-3.webp",
-                        alt: "GAZU High-Conversion Fashion E-Commerce",
-                      },
-                    ].map((shot) => (
-                      <a
-                        key={`${loopIdx}-${shot.src}`}
-                        href="#demos"
-                        className="relative w-36 sm:w-44 aspect-[4/5] rounded-2xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_12px_28px_-14px_rgba(17,17,21,0.18)] shrink-0 block"
-                      >
-                        <img
-                          src={shot.src}
-                          alt={shot.alt}
-                          className="w-full h-full object-cover"
-                          loading={loopIdx === 0 && shot.src.includes("shot-4") ? "eager" : "lazy"}
-                          fetchPriority={
-                            loopIdx === 0 && shot.src.includes("shot-4") ? "high" : "low"
-                          }
-                          width={360}
-                          height={450}
-                          decoding="async"
-                        />
-                      </a>
-                    ))}
-                  </div>
-                ))}
+            {/* Mobile Showcase Strip (< lg): Continuous GPU Framer Motion Loop */}
+            <MotionConfig reducedMotion="never">
+              <div className="lg:hidden w-full overflow-hidden relative mt-2 -mx-2 px-2 pointer-events-auto">
+                <motion.div
+                  data-hero-marquee="left"
+                  className="flex w-max will-change-transform"
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{ repeat: Infinity, ease: "linear", duration: 18 }}
+                >
+                  {[...Array(2)].map((_, loopIdx) => (
+                    <div key={loopIdx} className="flex gap-3 pr-3">
+                      {[
+                        {
+                          src: "/hero-shots/shot-4.webp",
+                          alt: "Saim Dev - Custom Web Development & Next.js Websites for UK Small Businesses",
+                        },
+                        {
+                          src: "/hero-shots/shot-1.webp",
+                          alt: "Fresh and Reddy Dark Web Architecture",
+                        },
+                        {
+                          src: "/hero-shots/shot-2.webp",
+                          alt: "Evora Luxury Real Estate Web Platform",
+                        },
+                        {
+                          src: "/hero-shots/shot-3.webp",
+                          alt: "GAZU High-Conversion Fashion E-Commerce",
+                        },
+                      ].map((shot) => (
+                        <a
+                          key={`${loopIdx}-${shot.src}`}
+                          href="#demos"
+                          className="relative w-36 sm:w-44 aspect-[4/5] rounded-2xl overflow-hidden bg-[#F8FAFC] border border-[#020612]/10 shadow-[0_12px_28px_-14px_rgba(2,6,18,0.16)] shrink-0 block"
+                        >
+                          <img
+                            src={shot.src}
+                            alt={shot.alt}
+                            className="w-full h-full object-cover"
+                            loading={loopIdx === 0 && shot.src.includes("shot-4") ? "eager" : "lazy"}
+                            fetchPriority={
+                              loopIdx === 0 && shot.src.includes("shot-4") ? "high" : "low"
+                            }
+                            width={360}
+                            height={450}
+                            decoding="async"
+                          />
+                        </a>
+                      ))}
+                    </div>
+                  ))}
+                </motion.div>
               </div>
-            </div>
 
-            {/* RIGHT COLUMN: Twin Counter-Scrolling Vertical Marquee Grid — Desktop */}
-            <div className="hidden lg:flex w-full lg:w-[49%] xl:w-[50%] h-[580px] xl:h-[75vh] relative overflow-hidden rounded-2xl flex-shrink-0 pointer-events-auto">
-              {/* Fade Masks */}
-              <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent z-20 pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none" />
+              {/* RIGHT COLUMN: Twin Counter-Scrolling Vertical Marquee Grid — Desktop */}
+              <div className="hidden lg:flex w-full lg:w-[49%] xl:w-[50%] h-[580px] xl:h-[75vh] relative overflow-hidden rounded-2xl flex-shrink-0 pointer-events-auto">
+                {/* Fade Masks */}
+                <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent z-20 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none" />
 
-              <div className="flex gap-4 w-full h-full relative z-10 pt-6">
-                {/* Column 1 — Continuous Upward Scroll */}
-                <div className="w-1/2 h-full overflow-hidden relative">
-                  <div className="saim-marquee-up flex flex-col w-full">
-                    {[...Array(2)].map((_, i) => (
-                      <div key={i} className="flex flex-col gap-4 pb-4 w-full">
-                        <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_18px_40px_-20px_rgba(17,17,21,0.18)]">
-                          <img
-                            src="/hero-shots/shot-4.webp"
-                            alt="Saim Dev - Custom Web Development & Next.js Websites for UK Small Businesses"
-                            className="absolute inset-0 w-full h-full object-cover"
-                            loading={i === 0 ? "eager" : "lazy"}
-                            fetchPriority={i === 0 ? "high" : "low"}
-                            width={1080}
-                            height={1350}
-                            decoding="async"
-                          />
+                <div className="flex gap-4 w-full h-full relative z-10 pt-6">
+                  {/* Column 1 — Continuous Upward Scroll */}
+                  <div className="w-1/2 h-full overflow-hidden relative">
+                    <motion.div
+                      data-hero-marquee="up"
+                      className="flex flex-col w-full will-change-transform"
+                      animate={{ y: ["0%", "-50%"] }}
+                      transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
+                    >
+                      {[...Array(2)].map((_, i) => (
+                        <div key={i} className="flex flex-col gap-4 pb-4 w-full">
+                          <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F8FAFC] border border-[#020612]/10 shadow-[0_18px_40px_-20px_rgba(2,6,18,0.16)]">
+                            <img
+                              src="/hero-shots/shot-4.webp"
+                              alt="Saim Dev - Custom Web Development & Next.js Websites for UK Small Businesses"
+                              className="absolute inset-0 w-full h-full object-cover"
+                              loading="eager"
+                              fetchPriority={i === 0 ? "high" : "low"}
+                              width={1080}
+                              height={1350}
+                              decoding="async"
+                            />
+                          </div>
+                          <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F8FAFC] border border-[#020612]/10 shadow-[0_18px_40px_-20px_rgba(2,6,18,0.16)]">
+                            <img
+                              src="/hero-shots/shot-2.webp"
+                              alt="Evora Luxury Real Estate Web Platform"
+                              className="absolute inset-0 w-full h-full object-cover"
+                              loading="eager"
+                              width={1080}
+                              height={1350}
+                              decoding="async"
+                            />
+                          </div>
                         </div>
-                        <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_18px_40px_-20px_rgba(17,17,21,0.18)]">
-                          <img
-                            src="/hero-shots/shot-2.webp"
-                            alt="Evora Luxury Real Estate Web Platform"
-                            className="absolute inset-0 w-full h-full object-cover"
-                            loading="lazy"
-                            width={1080}
-                            height={1350}
-                            decoding="async"
-                          />
+                      ))}
+                    </motion.div>
+                  </div>
+
+                  {/* Column 2 — Continuous Downward Scroll */}
+                  <div className="w-1/2 h-full overflow-hidden relative pt-12">
+                    <motion.div
+                      data-hero-marquee="down"
+                      className="flex flex-col w-full will-change-transform"
+                      animate={{ y: ["-50%", "0%"] }}
+                      transition={{ repeat: Infinity, ease: "linear", duration: 24 }}
+                    >
+                      {[...Array(2)].map((_, i) => (
+                        <div key={i} className="flex flex-col gap-4 pb-4 w-full">
+                          <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F8FAFC] border border-[#020612]/10 shadow-[0_18px_40px_-20px_rgba(2,6,18,0.16)]">
+                            <img
+                              src="/hero-shots/shot-3.webp"
+                              alt="GAZU High-Conversion Fashion E-Commerce"
+                              className="absolute inset-0 w-full h-full object-cover"
+                              loading="eager"
+                              fetchPriority={i === 0 ? "high" : "low"}
+                              width={1080}
+                              height={1350}
+                              decoding="async"
+                            />
+                          </div>
+                          <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F8FAFC] border border-[#020612]/10 shadow-[0_18px_40px_-20px_rgba(2,6,18,0.16)]">
+                            <img
+                              src="/hero-shots/shot-1.webp"
+                              alt="Fresh and Reddy Dark Web Architecture"
+                              className="absolute inset-0 w-full h-full object-cover"
+                              loading="eager"
+                              width={1080}
+                              height={1350}
+                              decoding="async"
+                            />
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </motion.div>
                   </div>
                 </div>
-
-                {/* Column 2 — Continuous Downward Scroll */}
-                <div className="w-1/2 h-full overflow-hidden relative pt-12">
-                  <div className="saim-marquee-down flex flex-col w-full">
-                    {[...Array(2)].map((_, i) => (
-                      <div key={i} className="flex flex-col gap-4 pb-4 w-full">
-                        <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_18px_40px_-20px_rgba(17,17,21,0.18)]">
-                          <img
-                            src="/hero-shots/shot-3.webp"
-                            alt="GAZU High-Conversion Fashion E-Commerce"
-                            className="absolute inset-0 w-full h-full object-cover"
-                            loading={i === 0 ? "eager" : "lazy"}
-                            fetchPriority={i === 0 ? "high" : "low"}
-                            width={1080}
-                            height={1350}
-                            decoding="async"
-                          />
-                        </div>
-                        <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#F4F4F6] border border-black/[0.08] shadow-[0_18px_40px_-20px_rgba(17,17,21,0.18)]">
-                          <img
-                            src="/hero-shots/shot-1.webp"
-                            alt="Fresh and Reddy Dark Web Architecture"
-                            className="absolute inset-0 w-full h-full object-cover"
-                            loading="lazy"
-                            width={1080}
-                            height={1350}
-                            decoding="async"
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
-            </div>
+            </MotionConfig>
           </div>
 
           {/* Bottom border hairline highlight */}
@@ -501,7 +510,7 @@ export const HeroSection = () => {
             style={{
               height: "1px",
               background:
-                "linear-gradient(90deg, transparent, rgba(17,17,21,0.08) 50%, transparent)",
+                "linear-gradient(90deg, transparent, rgba(2,6,18,0.08) 50%, transparent)",
             }}
           />
         </div>

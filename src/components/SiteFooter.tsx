@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { FazierBadge } from "./FazierBadge";
 
 interface SiteFooterProps {
   theme?: "dark" | "light";
@@ -26,20 +27,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({ theme = "light", classNa
       </div>
 
       <div className="mt-3.5 flex justify-center">
-        <a
-          href="https://fazier.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center hover:opacity-90 transition-opacity"
-        >
-          <img
-            src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light"
-            width={250}
-            alt="Fazier badge"
-            loading="lazy"
-            className="h-auto max-w-[190px] sm:max-w-[220px]"
-          />
-        </a>
+        <FazierBadge />
       </div>
 
       <nav

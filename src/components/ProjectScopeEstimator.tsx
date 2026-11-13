@@ -9,8 +9,10 @@ import {
 } from "lucide-react";
 import {
   SoapBubbleMaterial,
+  SoapBubbleSurface,
   SoapBubbleToggle,
 } from "./reactdrops/soap-bubble";
+import { ReactDropButton, LOGO_MATERIAL_DEFAULTS, LOGO_BUBBLE_PALETTE } from "./ReactDropButton";
 
 interface ProjectTypeOption {
   id: string;
@@ -137,43 +139,32 @@ Can we discuss scheduling my project?`;
   }, [activeType, selectedFeatures, isFastTrack, calculatedEstimate]);
 
   return (
-    <SoapBubbleMaterial
-      surface="bubble-liquid"
-      environment="studio"
-      liquidLens={false}
-      iridescence={1.2}
-      clearCenter={0.78}
-      filmScale={5}
-      bevel={10}
-      tint="rgba(255, 255, 255, 0.72)"
-      soapColor="rgba(255, 74, 28, 0.08)"
-      wobble={0.35}
-    >
+    <SoapBubbleMaterial {...LOGO_MATERIAL_DEFAULTS}>
       <section
         id="estimator"
-        className="relative w-full bg-white py-8 sm:py-10 md:py-11 border-t border-black/[0.06] overflow-hidden"
+        className="relative w-full bg-white py-8 sm:py-10 md:py-11 border-t border-[#020612]/[0.07] overflow-hidden"
       >
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-10 relative z-10">
           {/* Compact Single-Screen Header */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-2 mb-4 sm:mb-5">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-0.5 mb-1.5 rounded-full border border-black/[0.08] bg-[#FAFAFA]">
+              <div className="inline-flex items-center gap-2 px-3 py-0.5 mb-1.5 rounded-full border border-[#2F6CE1]/20 bg-[#EFF5FF]">
                 <span className="section-dot" />
-                <span className="text-[10px] font-mono tracking-[0.18em] uppercase text-black/75">
+                <span className="text-[10px] font-mono font-semibold tracking-[0.18em] uppercase text-[#020612]">
                   Instant Scope &amp; Pricing Calculator
                 </span>
               </div>
 
               <h2
-                className="text-2xl sm:text-3xl md:text-[34px] leading-tight font-medium tracking-tight text-[#111115]"
-                style={{ letterSpacing: "-0.035em" }}
+                className="font-heading text-2xl sm:text-3xl md:text-[34px] leading-tight font-extrabold tracking-tight text-[#020612]"
+                style={{ letterSpacing: "-0.03em" }}
               >
                 Estimate your project.{" "}
-                <span className="text-black/45">Zero hidden costs.</span>
+                <span className="text-[#2F6CE1]">Zero hidden costs.</span>
               </h2>
             </div>
 
-            <p className="text-xs sm:text-sm text-black/60 leading-relaxed font-light max-w-md">
+            <p className="text-xs sm:text-sm text-[#020612]/65 leading-relaxed font-normal max-w-md">
               Select your architecture, integrations, and delivery speed to see an instant fixed-price quote and turnaround.
             </p>
           </div>
@@ -181,14 +172,14 @@ Can we discuss scheduling my project?`;
           {/* Single-Screen Two-Column Dashboard */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
             {/* LEFT 7 COLS: All 3 Controls in One Clean Deck */}
-            <div className="lg:col-span-7 rounded-2xl bg-[#FAFAFA] border border-black/[0.08] p-4 flex flex-col justify-between gap-3 shadow-xs">
+            <div className="lg:col-span-7 rounded-2xl bg-[#F8FAFC] border border-[#020612]/[0.08] p-4 flex flex-col justify-between gap-3 shadow-xs">
               {/* 1. Architecture Type */}
               <div>
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-[#D9380E]">
+                  <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.18em] text-[#1D4ED8]">
                     1 · Architecture Type
                   </span>
-                  <span className="text-[11px] text-black/50 font-mono">Required</span>
+                  <span className="text-[11px] text-[#020612]/55 font-mono">Required</span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -196,40 +187,57 @@ Can we discuss scheduling my project?`;
                     const isSelected = selectedType === pt.id;
                     const isFullSpan = idx === PROJECT_TYPES.length - 1;
                     return (
-                      <button
+                      <SoapBubbleSurface
+                        as="button"
                         key={pt.id}
                         type="button"
+                        {...LOGO_BUBBLE_PALETTE}
+                        surface="bubble"
+                        interactive={true}
+                        radius={12}
+                        iridescence={0.28}
+                        oilOpacity={0.18}
+                        clearCenter={0.86}
+                        tint={isSelected ? "rgba(47, 108, 225, 0.16)" : "rgba(255, 255, 255, 0.92)"}
+                        soapColor="rgba(47, 108, 225, 0.18)"
+                        wobble={0.26}
                         title={pt.description}
                         onClick={() => setSelectedType(pt.id)}
-                        className={`text-left px-3 py-2.5 rounded-xl border transition-all duration-150 flex ${
-                          isFullSpan
-                            ? "sm:col-span-2 flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4"
-                            : "flex-col justify-between"
-                        } cursor-pointer ${
+                        className={`text-left px-3 py-2.5 rounded-xl border transition-all duration-150 w-full cursor-pointer ${
+                          isFullSpan ? "sm:col-span-2" : ""
+                        } ${
                           isSelected
-                            ? "bg-[#FFF5F2] border-[#FF4A1C] shadow-[0_6px_18px_-10px_rgba(255,74,28,0.28)]"
-                            : "bg-white border-black/[0.08] hover:border-black/20"
+                            ? "!bg-[#EFF5FF] !border-[#2F6CE1] shadow-[0_6px_18px_-10px_rgba(47,108,225,0.34)]"
+                            : "saim-reactdrop-glass"
                         }`}
                       >
-                        <div className="flex items-center justify-between gap-2 min-w-0">
-                          <span className="text-xs sm:text-sm font-medium tracking-tight text-[#111115] truncate">
-                            {pt.label}
-                          </span>
-                          {isSelected && (
-                            <span className="w-4 h-4 rounded-full bg-[#FF4A1C] flex items-center justify-center shrink-0">
-                              <Check className="w-2.5 h-2.5 text-white stroke-[3]" />
-                            </span>
-                          )}
-                        </div>
                         <div
-                          className={`flex items-center justify-between gap-3 text-[11px] font-mono text-black/60 ${
-                            isFullSpan ? "sm:shrink-0 pt-1 sm:pt-0 border-t sm:border-t-0 border-black/[0.06]" : "mt-1.5 pt-1 border-t border-black/[0.06]"
+                          className={`relative z-[2] w-full flex ${
+                            isFullSpan
+                              ? "flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5 sm:gap-4"
+                              : "flex-col justify-between gap-1.5"
                           }`}
                         >
-                          <span>From £{pt.basePrice}</span>
-                          <span>~{pt.baseDays} days</span>
+                          <div className="flex items-center justify-between gap-2 min-w-0 w-full">
+                            <span className="text-xs sm:text-[13px] font-bold tracking-tight text-[#020612] leading-snug">
+                              {pt.label}
+                            </span>
+                            {isSelected && (
+                              <span className="w-4 h-4 rounded-full bg-[#2F6CE1] flex items-center justify-center shrink-0">
+                                <Check className="w-2.5 h-2.5 text-white stroke-[3]" />
+                              </span>
+                            )}
+                          </div>
+                          <div
+                            className={`flex items-center justify-between gap-3 text-[11px] font-mono text-[#020612]/65 w-full ${
+                              isFullSpan ? "sm:w-auto sm:shrink-0 pt-1 sm:pt-0 border-t sm:border-t-0 border-[#020612]/[0.07]" : "pt-1 border-t border-[#020612]/[0.07]"
+                            }`}
+                          >
+                            <span>From £{pt.basePrice}</span>
+                            <span>~{pt.baseDays} days</span>
+                          </div>
                         </div>
-                      </button>
+                      </SoapBubbleSurface>
                     );
                   })}
                 </div>
@@ -238,10 +246,10 @@ Can we discuss scheduling my project?`;
               {/* 2. Optional Add-On Capabilities */}
               <div>
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-[#D9380E]">
+                  <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.18em] text-[#1D4ED8]">
                     2 · Add-On Capabilities
                   </span>
-                  <span className="text-[11px] text-black/50 font-mono">
+                  <span className="text-[11px] text-[#020612]/55 font-mono">
                     {selectedFeatures.length} selected
                   </span>
                 </div>
@@ -250,51 +258,58 @@ Can we discuss scheduling my project?`;
                   {ADDON_FEATURES.map((feat) => {
                     const isChecked = selectedFeatures.includes(feat.id);
                     return (
-                      <button
+                      <SoapBubbleSurface
+                        as="button"
                         key={feat.id}
                         type="button"
+                        surface="bubble"
+                        interactive={true}
+                        radius={12}
+                        tint={isChecked ? "rgba(47, 108, 225, 0.16)" : "rgba(255, 255, 255, 0.9)"}
+                        soapColor="rgba(47, 108, 225, 0.22)"
+                        wobble={0.26}
                         onClick={() => toggleFeature(feat.id)}
-                        className={`text-left px-3 py-1.5 rounded-xl border transition-all duration-150 flex items-center justify-between gap-2 cursor-pointer ${
+                        className={`text-left px-3 py-2 rounded-xl border transition-all duration-150 flex items-center justify-between gap-2 cursor-pointer ${
                           isChecked
-                            ? "bg-[#FFF5F2] border-[#FF4A1C]/60 text-[#111115]"
-                            : "bg-white border-black/[0.08] text-black/75 hover:border-black/20 hover:text-[#111115]"
+                            ? "!bg-[#EFF5FF] !border-[#2F6CE1] text-[#020612]"
+                            : "saim-reactdrop-glass"
                         }`}
                       >
-                        <div className="flex items-center gap-2 min-w-0">
+                        <div className="relative z-[2] flex items-center gap-2 min-w-0">
                           <span
                             className={`w-4 h-4 rounded border flex items-center justify-center shrink-0 transition-colors ${
                               isChecked
-                                ? "bg-[#FF4A1C] border-[#FF4A1C]"
-                                : "border-black/20 bg-[#FAFAFA]"
+                                ? "bg-[#2F6CE1] border-[#2F6CE1]"
+                                : "border-[#020612]/25 bg-[#F8FAFC]"
                             }`}
                           >
                             {isChecked && <Check className="w-3 h-3 text-white stroke-[3]" />}
                           </span>
-                          <span className="text-xs font-medium tracking-tight truncate">
+                          <span className="text-xs font-semibold tracking-tight truncate">
                             {feat.label}
                           </span>
                         </div>
-                        <span className="text-[11px] font-mono text-black/60 shrink-0">
+                        <span className="relative z-[2] text-[11px] font-mono text-[#020612]/65 shrink-0">
                           +£{feat.price}
                         </span>
-                      </button>
+                      </SoapBubbleSurface>
                     );
                   })}
                 </div>
               </div>
 
               {/* 3. Priority Sprint Speed */}
-              <div className="px-3.5 py-2 rounded-xl bg-white border border-black/[0.08] flex items-center justify-between gap-3">
+              <div className="px-3.5 py-2 rounded-xl bg-white border border-[#020612]/[0.08] flex items-center justify-between gap-3">
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
-                    <span className="text-[11px] font-mono uppercase tracking-[0.16em] text-[#D9380E]">
+                    <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.16em] text-[#1D4ED8]">
                       3 · Speed
                     </span>
-                    <span className="text-[#111115] text-xs sm:text-sm font-medium tracking-tight truncate">
+                    <span className="text-[#020612] text-xs sm:text-sm font-bold tracking-tight truncate">
                       Fast-Track Priority Sprint
                     </span>
                   </div>
-                  <span className="text-black/55 text-[11px] font-light block truncate">
+                  <span className="text-[#020612]/60 text-[11px] font-normal block truncate">
                     Priority engineering queue with 35% faster turnaround (+15%).
                   </span>
                 </div>
@@ -302,7 +317,7 @@ Can we discuss scheduling my project?`;
                 <SoapBubbleToggle
                   checked={isFastTrack}
                   onCheckedChange={setIsFastTrack}
-                  color="#FF4A1C"
+                  color="#2F6CE1"
                   scale={0.94}
                   aria-label="Toggle fast-track priority sprint"
                 />
@@ -310,55 +325,55 @@ Can we discuss scheduling my project?`;
             </div>
 
             {/* RIGHT 5 COLS: Live Summary & Instant Booking */}
-            <div className="lg:col-span-5 rounded-2xl bg-white border border-black/[0.10] p-4 shadow-[0_20px_50px_-24px_rgba(17,17,21,0.12)] flex flex-col justify-between gap-3">
+            <div className="lg:col-span-5 rounded-2xl bg-white border border-[#020612]/10 p-4 shadow-[0_20px_50px_-24px_rgba(2,6,18,0.12)] flex flex-col justify-between gap-3">
               <div>
-                <div className="flex items-center justify-between pb-3 border-b border-black/[0.08]">
+                <div className="flex items-center justify-between pb-3 border-b border-[#020612]/[0.08]">
                   <div className="flex items-center gap-2">
-                    <Calculator className="w-4 h-4 text-[#FF4A1C]" />
-                    <span className="text-xs font-mono uppercase tracking-widest text-black/80">
+                    <Calculator className="w-4 h-4 text-[#2F6CE1]" />
+                    <span className="text-xs font-mono font-semibold uppercase tracking-widest text-[#020612]">
                       Scope Calculation
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+                  <span className="text-[11px] font-mono font-semibold text-[#1D4ED8] bg-[#EFF5FF] border border-[#2F6CE1]/25 px-2.5 py-0.5 rounded-full">
                     Fixed-Price Guaranteed
                   </span>
                 </div>
 
                 {/* Estimated Price */}
                 <div className="pt-3.5">
-                  <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-black/55 block mb-0.5">
+                  <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.18em] text-[#020612]/60 block mb-0.5">
                     Estimated Investment
                   </span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111115]">
+                    <span className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#020612]">
                       £{calculatedEstimate.priceMin}
                     </span>
-                    <span className="text-black/55 text-lg font-light">
+                    <span className="text-[#020612]/55 text-lg font-medium">
                       — £{calculatedEstimate.priceMax}
                     </span>
                   </div>
-                  <span className="text-[11px] text-black/55 font-light block mt-0.5">
+                  <span className="text-[11px] text-[#020612]/60 font-normal block mt-0.5">
                     Transparent milestone fee. 50% deposit, 50% on launch approval.
                   </span>
                 </div>
 
                 {/* Turnaround Strip */}
-                <div className="mt-3 flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl bg-[#FAFAFA] border border-black/[0.06]">
+                <div className="mt-3 flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl bg-[#F8FAFC] border border-[#020612]/[0.07]">
                   <div className="flex items-center gap-2.5">
-                    <Clock className="w-4 h-4 text-[#FF4A1C] shrink-0" />
-                    <span className="text-[11px] text-black/60 font-mono uppercase tracking-wider">
+                    <Clock className="w-4 h-4 text-[#2F6CE1] shrink-0" />
+                    <span className="text-[11px] text-[#020612]/65 font-mono uppercase tracking-wider">
                       Turnaround
                     </span>
                   </div>
-                  <span className="text-[#111115] text-xs sm:text-sm font-medium tracking-tight">
+                  <span className="text-[#020612] text-xs sm:text-sm font-bold tracking-tight">
                     {calculatedEstimate.daysMin} to {calculatedEstimate.daysMax} Business Days
                   </span>
                 </div>
               </div>
 
               {/* Compact 2-Col Included Deliverables */}
-              <div className="pt-2 border-t border-black/[0.06]">
-                <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-black/55 block mb-2">
+              <div className="pt-2 border-t border-[#020612]/[0.07]">
+                <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.18em] text-[#020612]/60 block mb-2">
                   Included with Every Build
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-1.5">
@@ -370,35 +385,36 @@ Can we discuss scheduling my project?`;
                     "7–30 Days Post-Launch Care",
                     "Direct Engineer WhatsApp",
                   ].map((inc) => (
-                    <div key={inc} className="flex items-center gap-1.5 text-[11px] text-black/75 font-light">
-                      <Check className="w-3 h-3 text-[#FF4A1C] shrink-0" />
+                    <div key={inc} className="flex items-center gap-1.5 text-[11px] text-[#020612]/80 font-normal">
+                      <Check className="w-3 h-3 text-[#2F6CE1] shrink-0" />
                       <span className="truncate">{inc}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Pure Vermilion CTA Actions */}
-              <div className="pt-3 border-t border-black/[0.08] flex flex-col gap-2">
-                <a
+              {/* ReactDrops Royal Blue + Obsidian Actions */}
+              <div className="pt-3 border-t border-[#020612]/[0.08] flex flex-col gap-2">
+                <ReactDropButton
+                  variant="primary"
                   href={`https://wa.me/923196526604?text=${whatsAppMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="chromatic-button saim-hero-chromatic w-full rounded-xl bg-[radial-gradient(125%_160%_at_18%_20%,#ff8a5b_0%,#FF4A1C_48%,#e0360a_100%)] shadow-[0_8px_24px_rgba(255,74,28,0.28)]"
-                  style={{ borderRadius: "0.75rem" }}
+                  radius={12}
+                  className="w-full h-[46px] !rounded-xl"
+                  innerClassName="px-5 text-sm font-bold text-white gap-2"
                 >
-                  <span className="chromatic-button-content text-sm font-semibold text-white">
-                    <span>Lock In This Scope on WhatsApp</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                </a>
+                  <span>Lock In This Scope on WhatsApp</span>
+                  <ArrowRight className="w-4 h-4" />
+                </ReactDropButton>
 
-                <a
+                <ReactDropButton
+                  variant="dark"
                   href="#contact"
-                  className="w-full py-2.5 px-5 rounded-xl bg-[#FAFAFA] hover:bg-black/[0.06] text-[#111115] font-medium text-xs tracking-tight flex items-center justify-center border border-black/[0.09] transition-colors"
+                  radius={12}
+                  className="w-full h-[42px] !rounded-xl"
+                  innerClassName="px-5 text-xs font-semibold text-white"
                 >
-                  Submit Scope via Web Inquiry Form
-                </a>
+                  <span>Submit Scope via Web Inquiry Form</span>
+                </ReactDropButton>
               </div>
             </div>
           </div>

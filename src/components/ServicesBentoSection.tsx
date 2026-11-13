@@ -1,15 +1,9 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ViewportMount } from "./reactdrops/ViewportMount";
 import { SoapBubbleMaterial, SoapBubbleSurface } from "./reactdrops/soap-bubble";
-
-const LazyChromaticSurface = dynamic(
-  () => import("./reactdrops/chromatic-button/chromatic-surface").then((m) => m.ChromaticSurface),
-  { ssr: false }
-);
+import { ReactDropButton, LOGO_MATERIAL_DEFAULTS, LOGO_BUBBLE_PALETTE } from "./ReactDropButton";
 import { 
   ShoppingBag, 
   Building2, 
@@ -19,7 +13,6 @@ import {
   ArrowRight, 
   CheckCircle2, 
   Copy,
-  ArrowUpRight
 } from "lucide-react";
 
 interface ServiceCard {
@@ -145,19 +138,8 @@ const SERVICES_DATA: ServiceCard[] = [
 
 export const ServicesBentoSection = () => {
   return (
-    <SoapBubbleMaterial
-      surface="bubble-liquid"
-      environment="studio"
-      liquidLens={false}
-      iridescence={1.2}
-      clearCenter={0.78}
-      filmScale={5}
-      bevel={10}
-      tint="rgba(255, 255, 255, 0.72)"
-      soapColor="rgba(255, 74, 28, 0.08)"
-      wobble={0.35}
-    >
-      <section id="services" className="relative w-full bg-white py-16 sm:py-24 md:py-28 border-t border-black/[0.06] overflow-hidden">
+    <SoapBubbleMaterial {...LOGO_MATERIAL_DEFAULTS}>
+      <section id="services" className="relative w-full bg-white py-16 sm:py-24 md:py-28 border-t border-[#020612]/[0.07] overflow-hidden">
         <div className="max-w-[1340px] mx-auto px-4 sm:px-6 md:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
@@ -165,23 +147,23 @@ export const ServicesBentoSection = () => {
               as="div"
               interactive={0.2}
               radius={9999}
-              className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1.5 mb-4 border border-black/[0.08] bg-[#FAFAFA]"
+              className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1.5 mb-4 border border-[#2F6CE1]/20 bg-[#EFF5FF]"
             >
               <span className="section-dot" />
-              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-black/80">
+              <span className="text-[11px] font-mono font-semibold tracking-[0.2em] uppercase text-[#020612]">
                 Full-Stack Digital Engineering
               </span>
             </SoapBubbleSurface>
 
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-[#111115] mb-4"
-            style={{ letterSpacing: "-0.035em" }}
+            className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#020612] mb-4"
+            style={{ letterSpacing: "-0.03em" }}
           >
             Web development services <br />
-            <span className="text-black/45">engineered for commercial growth.</span>
+            <span className="text-[#2F6CE1]">engineered for commercial growth.</span>
           </h2>
 
-          <p className="text-xs sm:text-sm md:text-base text-black/65 leading-relaxed font-light max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-base text-[#020612]/70 leading-relaxed font-normal max-w-2xl mx-auto">
             From bespoke corporate websites and high-volume e-commerce stores to exact 1:1 pixel-perfect platforms and performance overhauls. 100% source code ownership. Zero monthly retainers.
           </p>
         </div>
@@ -203,31 +185,31 @@ export const ServicesBentoSection = () => {
                   href={service.ctaHref}
                   className={`group relative flex flex-col justify-between h-full rounded-2xl border p-5 sm:p-6 transition-all duration-300 cursor-pointer hover:-translate-y-1 block ${
                     service.featured
-                      ? "bg-[#FFF8F6] border-[#FF4A1C]/45 hover:border-[#FF4A1C] shadow-[0_14px_40px_-18px_rgba(255,74,28,0.20)]"
-                      : "bg-[#FAFAFA] hover:bg-white border-black/[0.08] hover:border-black/20 shadow-[0_10px_30px_-18px_rgba(17,17,21,0.08)]"
+                      ? "bg-[#EFF5FF] border-[#2F6CE1]/45 hover:border-[#2F6CE1] shadow-[0_14px_40px_-18px_rgba(47,108,225,0.22)]"
+                      : "bg-[#F8FAFC] hover:bg-white border-[#020612]/[0.08] hover:border-[#2F6CE1]/35 shadow-[0_10px_30px_-18px_rgba(2,6,18,0.08)]"
                   }`}
                 >
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div>
                       {/* Top Header: Badge + Timeline */}
                       <div className="flex items-center justify-between gap-2 mb-4">
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-black/[0.08] text-[#111115]/80 text-[10px] font-mono uppercase tracking-wider">
-                          {service.featured && <span className="w-1.5 h-1.5 rounded-full bg-[#FF4A1C] animate-pulse" />}
+                        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-[#020612]/[0.08] text-[#020612]/85 text-[10px] font-mono font-semibold uppercase tracking-wider">
+                          {service.featured && <span className="w-1.5 h-1.5 rounded-full bg-[#2F6CE1] animate-pulse" />}
                           <span>{service.badge}</span>
                         </div>
-                        <span className="text-[10px] font-mono text-black/50 tracking-wide">
+                        <span className="text-[10px] font-mono font-medium text-[#020612]/55 tracking-wide">
                           {service.timeline}
                         </span>
                       </div>
 
                       {/* Icon + Title */}
                       <div className="flex items-start gap-3.5 mb-3">
-                        <div className="w-10 h-10 rounded-xl bg-white border border-black/[0.08] flex items-center justify-center group-hover:scale-105 group-hover:bg-[#FF4A1C]/10 group-hover:border-[#FF4A1C]/40 transition-all duration-300 shrink-0 mt-0.5 shadow-sm">
-                          <Icon className="w-5 h-5 text-[#FF4A1C]" />
+                        <div className="w-10 h-10 rounded-xl bg-white border border-[#020612]/[0.08] flex items-center justify-center group-hover:scale-105 group-hover:bg-[#EFF5FF] group-hover:border-[#2F6CE1]/45 transition-all duration-300 shrink-0 mt-0.5 shadow-sm">
+                          <Icon className="w-5 h-5 text-[#2F6CE1]" />
                         </div>
                         <div>
                           <h3
-                            className="text-[#111115] text-base sm:text-lg font-medium tracking-tight leading-snug"
+                            className="font-heading text-[#020612] text-base sm:text-lg font-bold tracking-tight leading-snug"
                             style={{ letterSpacing: "-0.02em" }}
                           >
                             {service.title}
@@ -235,42 +217,55 @@ export const ServicesBentoSection = () => {
                         </div>
                       </div>
 
-                      <p className="text-xs text-black/65 font-light leading-relaxed mb-4 line-clamp-3">
+                      <p className="text-xs sm:text-[13px] text-[#020612]/70 font-normal leading-relaxed mb-4 line-clamp-3">
                         {service.description}
                       </p>
 
                       {/* Key Deliverables — Compact */}
-                      <div className="space-y-1.5 mb-5 pt-3 border-t border-black/[0.06]">
+                      <div className="space-y-1.5 mb-5 pt-3 border-t border-[#020612]/[0.07]">
                         {service.deliverables.map((item) => (
-                          <div key={item} className="flex items-start gap-2 text-[11px] sm:text-xs text-black/75 font-light">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#FF4A1C] shrink-0 mt-0.5" />
+                          <div key={item} className="flex items-start gap-2 text-[11px] sm:text-xs text-[#020612]/80 font-normal">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#2F6CE1] shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    {/* Bottom: Tech Stack Chips & Action Link Bar */}
-                    <div className="pt-3 border-t border-black/[0.08] mt-auto">
+                    {/* Bottom: Tech Stack Chips & ReactDrops Action Bar */}
+                    <div className="pt-3 border-t border-[#020612]/[0.08] mt-auto">
                       <div className="flex flex-wrap gap-1 mb-3.5">
                         {service.techStack.map((tech) => (
                           <span
                             key={tech}
-                            className="text-[9px] font-mono text-black/65 bg-white border border-black/[0.08] px-2 py-0.5 rounded-md"
+                            className="text-[9px] font-mono font-medium text-[#020612]/70 bg-white border border-[#020612]/[0.08] px-2 py-0.5 rounded-md"
                           >
                             {tech}
                           </span>
                         ))}
                       </div>
 
-                      {/* Interactive Action Row */}
-                      <div className="inline-flex items-center justify-between w-full px-3.5 py-2 rounded-xl bg-white group-hover:bg-[#FF4A1C] group-hover:text-white text-[#111115] text-xs font-medium tracking-tight border border-black/[0.10] group-hover:border-transparent transition-all duration-300">
-                        <span>{service.ctaText}</span>
-                        <div className="flex items-center gap-1">
+                      {/* ReactDrops Interactive Liquid Action Row */}
+                      <SoapBubbleSurface
+                        as="div"
+                        {...LOGO_BUBBLE_PALETTE}
+                        surface="bubble"
+                        interactive={true}
+                        radius={12}
+                        tint="rgba(47, 108, 225, 0.10)"
+                        soapColor="rgba(47, 108, 225, 0.18)"
+                        iridescence={0.28}
+                        oilOpacity={0.18}
+                        clearCenter={0.86}
+                        wobble={0.30}
+                        className="saim-reactdrop-glass inline-flex items-center justify-between w-full px-3.5 py-2.5 rounded-xl text-xs font-bold tracking-tight transition-all duration-300 group-hover:!bg-[#2F6CE1] group-hover:!text-white group-hover:!border-[#2F6CE1]"
+                      >
+                        <span className="relative z-[2]">{service.ctaText}</span>
+                        <div className="relative z-[2] flex items-center gap-1">
                           <span className="text-[10px] font-mono opacity-0 group-hover:opacity-100 transition-opacity">View Details</span>
                           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                         </div>
-                      </div>
+                      </SoapBubbleSurface>
                     </div>
                   </div>
                 </Link>
@@ -280,41 +275,25 @@ export const ServicesBentoSection = () => {
         </div>
 
         {/* Bottom Callout Banner */}
-        <div className="mt-12 sm:mt-16 p-5 sm:p-7 rounded-2xl bg-[#FAFAFA] border border-black/[0.08] flex flex-col md:flex-row items-center justify-between gap-5 shadow-sm">
+        <div className="mt-12 sm:mt-16 p-5 sm:p-7 rounded-2xl bg-[#F8FAFC] border border-[#020612]/[0.08] flex flex-col md:flex-row items-center justify-between gap-5 shadow-sm">
           <div className="flex flex-col gap-1 text-center md:text-left">
-            <span className="text-[#111115] text-sm sm:text-base font-medium tracking-tight">
+            <span className="font-heading text-[#020612] text-base sm:text-lg font-bold tracking-tight">
               Need a custom architecture or technical consultation?
             </span>
-            <span className="text-black/60 text-xs font-light">
+            <span className="text-[#020612]/65 text-xs sm:text-sm font-normal">
               Speak directly with our senior full-stack architect — zero sales pitches, zero account manager markups.
             </span>
           </div>
 
-          <a
+          <ReactDropButton
+            variant="primary"
             href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20custom%20web%20project%20architecture"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="chromatic-button saim-hero-chromatic rounded-full bg-[radial-gradient(125%_160%_at_18%_20%,#ff8a5b_0%,#FF4A1C_48%,#e0360a_100%)] shadow-[0_10px_30px_rgba(255,74,28,0.24)] shrink-0"
+            className="h-[48px] shrink-0"
+            innerClassName="px-6 text-xs sm:text-sm font-bold text-white gap-2"
           >
-            <ViewportMount unmountWhenFar rootMargin="0px 0px" className="absolute inset-0 pointer-events-none">
-              <LazyChromaticSurface
-                color="#FF4A1C"
-                color2="#ff8a5b"
-                color3="#e0360a"
-                colorMode="gradient-3"
-                hoverEffect="spotlight"
-                borderRadius={50}
-                speed={0.85}
-                feather={18}
-                intensity={1.45}
-                grain={0.055}
-              />
-            </ViewportMount>
-            <span className="chromatic-button-content text-xs sm:text-sm font-semibold text-white">
-              <span>Direct WhatsApp Consultation</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </span>
-          </a>
+            <span>Direct WhatsApp Consultation</span>
+            <ArrowRight className="w-4 h-4" />
+          </ReactDropButton>
         </div>
       </div>
     </section>

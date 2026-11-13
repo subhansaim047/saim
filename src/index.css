@@ -140,11 +140,15 @@ body:has(.saim-home-light) {
 }
 
 html:has(.saim-home-light)::-webkit-scrollbar-track {
-  background: #f4f4f6;
+  background: #f4f6fb;
 }
 
 html:has(.saim-home-light)::-webkit-scrollbar-thumb {
   background: #cbd5e1;
+}
+
+html:has(.saim-home-light)::-webkit-scrollbar-thumb:hover {
+  background: #2F6CE1;
 }
 
 /* Lenis smooth scrolling rules */
@@ -782,80 +786,207 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 }
 
 /* ============================================================================
-   HOMEPAGE CRISP STUDIO WHITE OVERRIDES (.saim-home-light)
+   HOMEPAGE LOGO PALETTE (BLUE #2F6CE1 · OBSIDIAN #020612 · WHITE #FFFFFF)
+   AND STANDOUT TYPOGRAPHY OVERRIDES (.saim-home-light)
    Scoped strictly to the homepage so subpages keep their existing tokens.
    ============================================================================ */
 
+.saim-home-light {
+  --accent-vermilion: #2F6CE1;
+  --color-primary: #2F6CE1;
+  --saim-blue: #2F6CE1;
+  --saim-blue-hover: #1E4EC4;
+  --saim-blue-dark: #1D4ED8;
+  --saim-blue-sky: #5B92F5;
+  --saim-blue-soft: #EFF5FF;
+  --saim-obsidian: #020612;
+  font-family: var(--font-inter), 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: #020612;
+}
+
+.saim-home-light ::selection {
+  background: #2F6CE1;
+  color: #ffffff;
+}
+
+.saim-home-light h1:not(.saim-brand-display),
+.saim-home-light h2,
+.saim-home-light .font-heading {
+  font-family: var(--font-heading), 'Bricolage Grotesque', var(--font-inter), sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.028em;
+}
+
+.saim-home-light h3,
+.saim-home-light h4 {
+  font-family: var(--font-heading), 'Bricolage Grotesque', var(--font-inter), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.saim-home-light p {
+  font-family: var(--font-inter), 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+.saim-home-light p.font-light {
+  font-weight: 400;
+}
+
+.saim-home-light .section-dot {
+  background-color: #2F6CE1;
+  box-shadow: 0 0 8px rgba(47, 108, 225, 0.55);
+}
+
 .saim-home-light .text-dual-tone {
-  color: rgba(17, 17, 21, 0.48);
+  color: rgba(2, 6, 18, 0.54);
 }
 
 .saim-home-light .bento-card-sybiosme {
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
-  border: 1px solid rgba(17, 17, 21, 0.08);
+  background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+  border: 1px solid rgba(2, 6, 18, 0.09);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 14px 36px -18px rgba(17, 17, 21, 0.10);
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 14px 36px -18px rgba(2, 6, 18, 0.10);
 }
 
 .saim-home-light .bento-card-sybiosme:hover {
-  border-color: rgba(17, 17, 21, 0.18);
+  border-color: rgba(47, 108, 225, 0.28);
   transform: translateY(-3px);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 1),
-    0 0 0 4px rgba(255, 74, 28, 0.06),
-    0 22px 48px -16px rgba(17, 17, 21, 0.14);
+    0 0 0 4px rgba(47, 108, 225, 0.08),
+    0 22px 48px -16px rgba(47, 108, 225, 0.14);
 }
 
 .saim-home-light .sybiosme-disclosure-icon {
-  background: #f4f4f6;
-  border: 1px solid rgba(17, 17, 21, 0.12);
-  color: rgba(17, 17, 21, 0.72);
+  background: #f4f7fc;
+  border: 1px solid rgba(2, 6, 18, 0.12);
+  color: rgba(2, 6, 18, 0.72);
 }
 
 .saim-home-light details[open] .sybiosme-disclosure-icon {
-  background: rgba(255, 74, 28, 0.12);
-  border-color: rgba(255, 74, 28, 0.42);
-  color: #FF4A1C;
-  box-shadow: 0 0 14px rgba(255, 74, 28, 0.15);
+  background: rgba(47, 108, 225, 0.12);
+  border-color: rgba(47, 108, 225, 0.42);
+  color: #2F6CE1;
+  box-shadow: 0 0 14px rgba(47, 108, 225, 0.18);
 }
 
 .saim-home-light .saim-fluid-typing {
-  --fluid-typing-palette-dark: #111115;
+  --fluid-typing-palette-dark: #020612;
 }
 
 .saim-home-light .saim-fluid-typing .fluid-typing-copy {
-  color: #111115;
+  color: #020612;
+  font-family: var(--font-heading), 'Bricolage Grotesque', var(--font-inter), sans-serif;
+  font-weight: 700;
 }
 
 .saim-home-light .saim-fluid-typing .fluid-typing-fixed {
-  color: rgba(17, 17, 21, 0.62);
+  color: rgba(2, 6, 18, 0.68);
+  font-family: var(--font-inter), 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
 }
 
+.saim-home-light .saim-fluid-typing .fluid-typing-caret {
+  background: #2F6CE1;
+}
+
+/* ReactDrops Button Variants on Homepage (Royal Blue / Obsidian / Frosted Bubble) */
 .saim-home-light .soap-bubble-surface.saim-bubble-nav:not([data-soap-bubble-ready]),
 .saim-home-light .soap-bubble-surface.saim-bubble-btn:not([data-soap-bubble-ready]) {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(17, 17, 21, 0.12);
-  box-shadow: 0 8px 24px -10px rgba(17, 17, 21, 0.12);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(2, 6, 18, 0.12);
+  box-shadow: 0 8px 24px -10px rgba(2, 6, 18, 0.12);
 }
 
 .saim-home-light .soap-bubble-button.saim-bubble-btn {
-  color: #111115;
+  color: #020612;
+  font-weight: 600;
 }
 
 .saim-home-light .soap-bubble-surface.saim-bubble-pill:not([data-soap-bubble-ready]) {
-  background: #f4f4f6;
-  border: 1px solid rgba(17, 17, 21, 0.12);
+  background: #f4f7fc;
+  border: 1px solid rgba(2, 6, 18, 0.12);
+}
+
+.saim-home-light .soap-bubble-surface.saim-reactdrop-primary,
+.saim-home-light .soap-bubble-button.saim-reactdrop-primary {
+  background: linear-gradient(135deg, #2F6CE1 0%, #1E4EC4 100%) !important;
+  border: 1px solid rgba(91, 146, 245, 0.55) !important;
+  color: #ffffff !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 12px 30px -10px rgba(47, 108, 225, 0.45) !important;
+}
+
+.saim-home-light .soap-bubble-surface.saim-reactdrop-primary:hover,
+.saim-home-light .soap-bubble-button.saim-reactdrop-primary:hover {
+  background: linear-gradient(135deg, #3B7AF0 0%, #1D4ED8 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 16px 36px -8px rgba(47, 108, 225, 0.58) !important;
+  transform: translateY(-1px);
+}
+
+.saim-home-light .soap-bubble-surface.saim-reactdrop-dark,
+.saim-home-light .soap-bubble-button.saim-reactdrop-dark {
+  background: linear-gradient(135deg, #0a1228 0%, #020612 100%) !important;
+  border: 1px solid rgba(2, 6, 18, 0.85) !important;
+  color: #ffffff !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 10px 26px -10px rgba(2, 6, 18, 0.38) !important;
+}
+
+.saim-home-light .soap-bubble-surface.saim-reactdrop-dark:hover,
+.saim-home-light .soap-bubble-button.saim-reactdrop-dark:hover {
+  background: linear-gradient(135deg, #1E4EC4 0%, #020612 100%) !important;
+  border-color: rgba(47, 108, 225, 0.6) !important;
+  transform: translateY(-1px);
+}
+
+.saim-home-light .soap-bubble-surface.saim-reactdrop-glass,
+.saim-home-light .soap-bubble-button.saim-reactdrop-glass {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(2, 6, 18, 0.13) !important;
+  color: #020612 !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 6px 20px -10px rgba(2, 6, 18, 0.14) !important;
+}
+
+.saim-home-light .soap-bubble-surface.saim-reactdrop-glass:hover,
+.saim-home-light .soap-bubble-button.saim-reactdrop-glass:hover {
+  background: #EFF5FF !important;
+  border-color: rgba(47, 108, 225, 0.45) !important;
+  color: #1D4ED8 !important;
+  transform: translateY(-1px);
+}
+
+/* Override any legacy chromatic classes inside homepage to strictly Royal Blue */
+.saim-home-light .chromatic-button.saim-hero-chromatic:has([data-renderer='webgl']),
+.saim-home-light .chromatic-button.saim-chromatic-submit:has([data-renderer='webgl']),
+.saim-home-light .chromatic-button.saim-hero-chromatic,
+.saim-home-light .chromatic-button.saim-chromatic-submit {
+  --chromatic-button-color: #2F6CE1;
+  background: radial-gradient(125% 160% at 18% 20%, #5B92F5 0%, #2F6CE1 48%, #1E4EC4 100%) !important;
+  box-shadow: 0 12px 34px -8px rgba(47, 108, 225, 0.38) !important;
+}
+
+.saim-home-light .chromatic-button.saim-hero-chromatic:hover,
+.saim-home-light .chromatic-button.saim-chromatic-submit:hover {
+  background: radial-gradient(125% 160% at 72% 18%, #6aa0ff 0%, #2F6CE1 45%, #1D4ED8 100%) !important;
+  box-shadow: 0 16px 40px -8px rgba(47, 108, 225, 0.5) !important;
 }
 
 .saim-home-light .saim-fractal-card {
-  background: #f4f4f6;
+  background: #f4f7fc;
 }
 
 .saim-home-light .saim-fan-deck {
-  background: #fafafa;
-  border-color: rgba(17, 17, 21, 0.08);
-  box-shadow: 0 18px 50px -24px rgba(17, 17, 21, 0.12);
+  background: #f8faff;
+  border-color: rgba(2, 6, 18, 0.08);
+  box-shadow: 0 18px 50px -24px rgba(2, 6, 18, 0.12);
 }
 
 .saim-home-light .saim-fan-deck .fan-gallery {
@@ -863,8 +994,50 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 }
 
 .saim-home-light .saim-fan-deck .fan-gallery-card {
-  box-shadow: 0 8px 20px -10px rgba(17, 17, 21, 0.14), 0 1px 4px rgba(17, 17, 21, 0.07) !important;
-  border: 1px solid rgba(17, 17, 21, 0.08);
+  box-shadow: 0 8px 20px -10px rgba(2, 6, 18, 0.14), 0 1px 4px rgba(2, 6, 18, 0.07) !important;
+  border: 1px solid rgba(2, 6, 18, 0.08);
+}
+
+.saim-home-light .saim-fan-deck .fan-gallery-card:hover,
+.saim-home-light .saim-fan-deck .fan-gallery-card:focus-visible {
+  border-color: rgba(47, 108, 225, 0.65);
+}
+
+.saim-home-light input[type="range"].sybiosme-slider::-webkit-slider-thumb {
+  background: #2F6CE1;
+  box-shadow: 0 0 16px rgba(47, 108, 225, 0.6), 0 2px 8px rgba(2, 6, 18, 0.35);
+}
+
+.saim-home-light input[type="range"].sybiosme-slider::-webkit-slider-thumb:hover,
+.saim-home-light input[type="range"].sybiosme-slider::-webkit-slider-thumb:active {
+  box-shadow: 0 0 22px rgba(47, 108, 225, 0.85), 0 4px 12px rgba(2, 6, 18, 0.45);
+}
+
+.saim-home-light input[type="range"].sybiosme-slider::-moz-range-thumb {
+  background: #2F6CE1;
+  box-shadow: 0 0 16px rgba(47, 108, 225, 0.6), 0 2px 8px rgba(2, 6, 18, 0.35);
+}
+
+/* Homepage Footer in Logo Obsidian #020612 · Royal Blue #2F6CE1 · White #FFFFFF */
+.saim-home-light .site-footer,
+.saim-home-light .footer-dots {
+  background-color: #020612;
+}
+
+.saim-home-light .footer-dots__line {
+  background-image:
+    radial-gradient(circle, rgb(47 108 225 / 0.85) 1.6px, transparent 2.2px),
+    radial-gradient(circle, rgb(255 255 255 / 0.38) 1px, transparent 1.5px),
+    radial-gradient(circle, rgb(91 146 245 / 0.55) 1.3px, transparent 1.9px);
+}
+
+.saim-home-light .site-footer__heading {
+  font-family: var(--font-heading), 'Bricolage Grotesque', var(--font-inter), sans-serif;
+  font-weight: 700;
+}
+
+.saim-home-light .site-footer__nav a:hover {
+  color: #5B92F5;
 }
 
 /* Reduced Motion Accessibility Safeguard */
