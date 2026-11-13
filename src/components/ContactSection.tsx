@@ -107,7 +107,8 @@ export const ContactSection = () => {
               {/* Plate Avatar, Liquid Glass Orb & Availability Pill */}
               <div className="flex flex-wrap items-center gap-3 mb-5">
                 <ViewportMount
-                  rootMargin="450px 0px"
+                  unmountWhenFar
+                  rootMargin="0px 0px"
                   minHeight={44}
                   className="w-11 h-11 rounded-full shrink-0 overflow-hidden flex items-center justify-center bg-[#FF4A1C]/15 border border-[#FF4A1C]/30 shadow-[0_0_24px_rgba(255,74,28,0.28)]"
                 >
@@ -319,7 +320,8 @@ export const ContactSection = () => {
 
                 {/* Submit Action Button (ReactDrops ChromaticButton with zero-CLS fallback) */}
                 <ViewportMount
-                  rootMargin="450px 0px"
+                  unmountWhenFar
+                  rootMargin="0px 0px"
                   minHeight={58}
                   fallback={<SubmitBriefFallback />}
                   className="mt-2"

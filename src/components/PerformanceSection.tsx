@@ -1,11 +1,48 @@
 "use client";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+import { ViewportMount } from "./reactdrops/ViewportMount";
+
+const LazyTopographicTerrain = dynamic(
+  () => import("./reactdrops/topographic-terrain/topographic-terrain").then((m) => m.TopographicTerrain),
+  { ssr: false }
+);
 
 export const PerformanceSection = () => {
   return (
     <section id="performance" className="bg-transparent text-white px-4 sm:px-8 md:px-14 lg:px-20 py-20 sm:py-28 md:py-36 overflow-hidden border-t border-white/[0.06] relative">
+      {/* Interactive 3D Terraced Architectural Terrain Backdrop */}
+      <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-auto">
+        <ViewportMount unmountWhenFar rootMargin="0px 0px" className="w-full h-full">
+          <LazyTopographicTerrain
+            preset="slate"
+            animateEntrance={false}
+            backgroundColor="#060609"
+            surfaceColor="#0e0e13"
+            shadowColor="#c93610"
+            backgroundImage="none"
+            lineColor="#484856"
+            accentColor="#FF4A1C"
+            scale={210}
+            density={7}
+            speed={0.4}
+            distortion={1.2}
+            lineWidth={0.9}
+            elevation={125}
+            cameraTilt={32}
+            opacity={0.78}
+            grain={0.14}
+            hover={0.48}
+            className="!h-full !w-full"
+          />
+        </ViewportMount>
+      </div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_center,rgba(5,5,7,0.45)_0%,rgba(5,5,7,0.88)_100%)] pointer-events-none"
+      />
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#FF4A1C]/[0.03] rounded-full blur-[150px] pointer-events-none z-0" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#FF4A1C]/[0.03] rounded-full blur-[150px] pointer-events-none z-[1]" />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start relative z-10">
 

@@ -81,12 +81,12 @@ export const CookieBanner: React.FC = () => {
               <X className="w-4 h-4" />
             </button>
           </div>
-          <p className="text-xs text-white/70 leading-relaxed mb-4">
-            We use essential local storage to remember your privacy preference and persist interactive kitchen tool edits on your device. Non-essential cookies and analytics comply with Google Consent Mode v2 and UK GDPR. Learn more in our{" "}
+          <p className="text-[11px] text-white/70 leading-snug mb-3">
+            We use essential storage for site preferences. Optional analytics comply with Google Consent Mode v2 &amp; UK GDPR.{" "}
             <Link href="/cookie-policy" className="underline text-primary hover:text-white transition-colors">
               Cookie Policy
             </Link>{" "}
-            and{" "}
+            ·{" "}
             <Link href="/privacy" className="underline text-primary hover:text-white transition-colors">
               Privacy Policy
             </Link>

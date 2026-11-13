@@ -1,12 +1,24 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { 
-  Calculator, 
-  Clock, 
-  Check, 
-  ArrowRight, 
+import dynamic from "next/dynamic";
+import {
+  Calculator,
+  Clock,
+  Check,
+  ArrowRight,
 } from "lucide-react";
+import { ViewportMount } from "./reactdrops/ViewportMount";
+import {
+  SoapBubbleMaterial,
+  SoapBubbleSurface,
+  SoapBubbleToggle,
+} from "./reactdrops/soap-bubble";
+
+const LazyChromaticSurface = dynamic(
+  () => import("./reactdrops/chromatic-button/chromatic-surface").then((m) => m.ChromaticSurface),
+  { ssr: false }
+);
 
 interface ProjectTypeOption {
   id: string;
@@ -133,19 +145,36 @@ Can we discuss scheduling my project?`;
   }, [activeType, selectedFeatures, isFastTrack, calculatedEstimate]);
 
   return (
-    <section id="estimator" className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden">
-      {/* Ambient Radial Accent */}
-      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.025] rounded-full blur-[170px] pointer-events-none z-0" />
+    <SoapBubbleMaterial
+      surface="bubble-liquid"
+      environment="studio"
+      liquidLens={false}
+      iridescence={1.45}
+      clearCenter={0.62}
+      filmScale={5}
+      bevel={12}
+      tint="rgba(16, 16, 22, 0.44)"
+      soapColor="rgba(255, 74, 28, 0.1)"
+      wobble={0.4}
+    >
+      <section id="estimator" className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden">
+        {/* Ambient Radial Accent */}
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.025] rounded-full blur-[170px] pointer-events-none z-0" />
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 relative z-10">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
-            <span className="section-dot" />
-            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
-              Instant Scope &amp; Pricing Calculator
-            </span>
-          </div>
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 relative z-10">
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+            <SoapBubbleSurface
+              as="div"
+              interactive={0.2}
+              radius={9999}
+              className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1.5 mb-4"
+            >
+              <span className="section-dot" />
+              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/90">
+                Instant Scope &amp; Pricing Calculator
+              </span>
+            </SoapBubbleSurface>
 
           <h2
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-4"
@@ -270,22 +299,13 @@ Can we discuss scheduling my project?`;
                 </span>
               </div>
 
-              <button
-                type="button"
-                role="switch"
-                aria-checked={isFastTrack}
+              <SoapBubbleToggle
+                checked={isFastTrack}
+                onCheckedChange={setIsFastTrack}
+                color="#FF4A1C"
+                scale={1.08}
                 aria-label="Toggle fast-track priority sprint"
-                onClick={() => setIsFastTrack((prev) => !prev)}
-                className={`relative inline-flex h-7 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#FF4A1C] ${
-                  isFastTrack ? "bg-[#FF4A1C]" : "bg-white/20"
-                }`}
-              >
-                <span
-                  className={`pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out ${
-                    isFastTrack ? "translate-x-7" : "translate-x-0"
-                  }`}
-                />
-              </button>
+              />
             </div>
           </div>
 
@@ -367,10 +387,27 @@ Can we discuss scheduling my project?`;
                     href={`https://wa.me/923196526604?text=${whatsAppMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3.5 px-6 rounded-2xl bg-[#FF4A1C] hover:bg-[#FF4A1C]/90 text-white font-medium text-sm tracking-tight flex items-center justify-center gap-2 shadow-[0_4px_24px_rgba(255,74,28,0.25)] transition-all active:scale-[0.98]"
+                    className="chromatic-button saim-hero-chromatic w-full rounded-2xl shadow-[0_8px_28px_rgba(255,74,28,0.28)]"
+                    style={{ borderRadius: "1rem" }}
                   >
-                    <span>Lock In This Scope on WhatsApp</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ViewportMount unmountWhenFar rootMargin="0px 0px" className="absolute inset-0 pointer-events-none">
+                      <LazyChromaticSurface
+                        color="#FF4A1C"
+                        color2="#ff8252"
+                        color3="#8c1802"
+                        colorMode="gradient-3"
+                        hoverEffect="spotlight"
+                        borderRadius={34}
+                        speed={0.85}
+                        feather={92}
+                        intensity={1.32}
+                        grain={0.075}
+                      />
+                    </ViewportMount>
+                    <span className="chromatic-button-content text-sm font-semibold text-white">
+                      <span>Lock In This Scope on WhatsApp</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
                   </a>
 
                   <a
@@ -386,5 +423,6 @@ Can we discuss scheduling my project?`;
         </div>
       </div>
     </section>
+    </SoapBubbleMaterial>
   );
 };

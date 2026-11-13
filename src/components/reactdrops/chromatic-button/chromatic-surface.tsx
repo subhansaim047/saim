@@ -100,6 +100,7 @@ non-waivable. No other permissions are granted by implication.
 import { useEffect, useRef } from 'react';
 import { chromaticFragmentShader, chromaticVertexShader } from './chromatic-shaders';
 import { chromaticField, chromaticFieldSize } from './chromatic-field';
+import './chromatic-button.css';
 
 export const chromaticColorModes = ['fixed', 'gradient-2', 'gradient-3', 'spectrum'] as const;
 export type ChromaticColorMode = (typeof chromaticColorModes)[number];
@@ -208,7 +209,8 @@ export function ChromaticSurface({
 
   useEffect(() => {
     const canvas = canvasRef.current!;
-    const button = canvas.parentElement instanceof HTMLButtonElement ? canvas.parentElement : null;
+    const button: HTMLElement | null = canvas.closest('button, a') as HTMLElement | null;
+    const isDisabled = () => button instanceof HTMLButtonElement && button.disabled;
     const gl = canvas.getContext('webgl', {
       alpha: true,
       premultipliedAlpha: true,
@@ -358,7 +360,7 @@ export function ChromaticSurface({
         finite(s.gap, 0, 0, Math.max(0, Math.min(width / gridX, height / gridY) - 4)),
       );
       gl.uniform1f(uniforms.time, elapsed);
-      gl.uniform1f(uniforms.hover, button?.disabled || s.hoverEffect === 'none' ? 0 : hover);
+      gl.uniform1f(uniforms.hover, isDisabled() || s.hoverEffect === 'none' ? 0 : hover);
       gl.uniform1f(uniforms.hoverEffect, Math.max(0, chromaticHoverEffects.indexOf(s.hoverEffect)));
       gl.uniform2f(uniforms.hoverPosition, ...hoverPosition);
       gl.uniform1f(uniforms.phase, finite(s.phase, 0, -1000, 1000));
@@ -405,12 +407,12 @@ export function ChromaticSurface({
     const syncHover = () => {
       hoverTarget =
         button &&
-        !button.disabled &&
+        !isDisabled() &&
         settings.current.hoverEffect !== 'none' &&
         (pointerOver || keyboardFocus)
           ? 1
           : 0;
-      if (motion.matches || settings.current.hoverEffect === 'none' || button?.disabled)
+      if (motion.matches || settings.current.hoverEffect === 'none' || isDisabled())
         hover = hoverTarget;
     };
     const wakeHover = () => {
@@ -442,7 +444,7 @@ export function ChromaticSurface({
     const onMove = (event: PointerEvent) => {
       if (
         !button ||
-        button.disabled ||
+        isDisabled() ||
         event.pointerType === 'touch' ||
         settings.current.hoverEffect !== 'spotlight'
       )

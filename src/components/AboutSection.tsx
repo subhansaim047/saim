@@ -31,7 +31,7 @@ export const AboutSection = () => {
         <div className="rounded-[calc(2.5rem-0.75rem)] bg-[#121212] p-8 sm:p-14 md:p-16 lg:p-20 text-center border border-white/5 relative overflow-hidden">
           {/* Interactive Topographic Architectural Contour Field */}
           <div aria-hidden="true" className="absolute inset-0 z-0">
-            <ViewportMount rootMargin="450px 0px" className="w-full h-full">
+            <ViewportMount unmountWhenFar rootMargin="0px 0px" className="w-full h-full">
               <LazyTopographicFlow
                 preset="graphite"
                 backgroundColor="#121212"

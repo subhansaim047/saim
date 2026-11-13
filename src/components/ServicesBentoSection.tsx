@@ -1,7 +1,15 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ViewportMount } from "./reactdrops/ViewportMount";
+import { SoapBubbleMaterial, SoapBubbleSurface } from "./reactdrops/soap-bubble";
+
+const LazyChromaticSurface = dynamic(
+  () => import("./reactdrops/chromatic-button/chromatic-surface").then((m) => m.ChromaticSurface),
+  { ssr: false }
+);
 import { 
   ShoppingBag, 
   Building2, 
@@ -137,19 +145,36 @@ const SERVICES_DATA: ServiceCard[] = [
 
 export const ServicesBentoSection = () => {
   return (
-    <section id="services" className="relative w-full bg-transparent py-16 sm:py-24 md:py-28 border-t border-white/[0.06] overflow-hidden">
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.025] rounded-full blur-[160px] pointer-events-none z-0" />
+    <SoapBubbleMaterial
+      surface="bubble-liquid"
+      environment="studio"
+      liquidLens={false}
+      iridescence={1.45}
+      clearCenter={0.62}
+      filmScale={5}
+      bevel={12}
+      tint="rgba(16, 16, 22, 0.44)"
+      soapColor="rgba(255, 74, 28, 0.1)"
+      wobble={0.38}
+    >
+      <section id="services" className="relative w-full bg-transparent py-16 sm:py-24 md:py-28 border-t border-white/[0.06] overflow-hidden">
+        {/* Background Ambient Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#FF4A1C]/[0.025] rounded-full blur-[160px] pointer-events-none z-0" />
 
-      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 md:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
-            <span className="section-dot" />
-            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
-              Full-Stack Digital Engineering
-            </span>
-          </div>
+        <div className="max-w-[1340px] mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <SoapBubbleSurface
+              as="div"
+              interactive={0.2}
+              radius={9999}
+              className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1.5 mb-4"
+            >
+              <span className="section-dot" />
+              <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/90">
+                Full-Stack Digital Engineering
+              </span>
+            </SoapBubbleSurface>
 
           <h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-white mb-4"
@@ -279,13 +304,30 @@ export const ServicesBentoSection = () => {
             href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20custom%20web%20project%20architecture"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-neutral-100 text-black font-semibold text-xs sm:text-sm tracking-tight shadow-[0_4px_20px_rgba(255,255,255,0.12)] transition-all shrink-0 active:scale-95"
+            className="chromatic-button saim-hero-chromatic rounded-full shadow-[0_10px_30px_rgba(255,74,28,0.22)] shrink-0"
           >
-            <span>Direct WhatsApp Consultation</span>
-            <ArrowRight className="w-3.5 h-3.5 text-black" />
+            <ViewportMount unmountWhenFar rootMargin="0px 0px" className="absolute inset-0 pointer-events-none">
+              <LazyChromaticSurface
+                color="#FF4A1C"
+                color2="#ff8252"
+                color3="#8c1802"
+                colorMode="gradient-3"
+                hoverEffect="spotlight"
+                borderRadius={50}
+                speed={0.85}
+                feather={92}
+                intensity={1.32}
+                grain={0.075}
+              />
+            </ViewportMount>
+            <span className="chromatic-button-content text-xs sm:text-sm font-semibold text-white">
+              <span>Direct WhatsApp Consultation</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </span>
           </a>
         </div>
       </div>
     </section>
+    </SoapBubbleMaterial>
   );
 };

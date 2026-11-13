@@ -1,9 +1,17 @@
 "use client";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { ChevronUp, ChevronDown, ShieldCheck, Flame, Check, BadgeCheck } from "lucide-react";
 import { FadeUp } from "./FadeUp";
 import { cn } from "../lib/utils";
 import { PLANS, type Currency, type Plan } from "../../content/plans";
+import { ViewportMount } from "./reactdrops/ViewportMount";
+import { SoapBubbleMaterial, SoapBubbleSurface } from "./reactdrops/soap-bubble";
+
+const LazyChromaticSurface = dynamic(
+  () => import("./reactdrops/chromatic-button/chromatic-surface").then((m) => m.ChromaticSurface),
+  { ssr: false }
+);
 
 const SybiosmeCheckIcon = () => (
   <svg
@@ -137,38 +145,61 @@ const PricingCard = ({ plan, currency }: { plan: Plan; currency: Currency }) => 
           )}
         </div>
 
-        {/* CTA Button — Sybiosme Magnetic Action Button */}
+        {/* CTA Button — Chromatic WebGL Primary / Sybiosme Action Button */}
         <div className="mt-8 pt-4 border-t border-white/5">
-          <a
-            href={orderUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={plan.featured ? "Order on WhatsApp" : `Get Started — ${plan.name}`}
-            className={cn(
-              "sybiosme-action-btn w-full",
-              plan.featured
-                ? "bg-white hover:bg-neutral-100 text-black shadow-xl"
-                : "bg-white/[0.06] hover:bg-white/15 text-white border border-white/10 hover:border-white/20"
-            )}
-          >
-            <span className="text-sm font-medium tracking-tight">
-              {plan.featured ? "Order on WhatsApp" : `Get Started — ${plan.name}`}
-            </span>
-            <div
-              className={cn(
-                "btn-arrow",
-                plan.featured ? "bg-black text-white" : "bg-[#FF4A1C] text-white"
-              )}
+          {plan.featured ? (
+            <a
+              href={orderUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Order on WhatsApp"
+              className="chromatic-button saim-hero-chromatic w-full rounded-full shadow-[0_12px_36px_rgba(255,74,28,0.28)]"
             >
-              <svg
-                viewBox="0 0 17 15"
-                className="w-3.5 h-3.5 fill-current"
-                aria-hidden="true"
-              >
-                <path d="M16.56 8.555L10.56 14.555C10.26 14.855 9.88 14.995 9.5 14.995C9.12 14.995 8.74 14.855 8.44 14.555C7.86 13.975 7.86 13.015 8.44 12.435L11.88 8.995H1.5C0.68 8.995 0 8.315 0 7.495C0 6.675 0.68 5.995 1.5 5.995H11.88L8.44 2.555C7.86 1.975 7.86 1.015 8.44 0.435C9.02 -0.145 9.98 -0.145 10.56 0.435L16.56 6.435C17.14 7.015 17.14 7.975 16.56 8.555Z" />
-              </svg>
-            </div>
-          </a>
+              <ViewportMount unmountWhenFar rootMargin="0px 0px" className="absolute inset-0 pointer-events-none">
+                <LazyChromaticSurface
+                  color="#FF4A1C"
+                  color2="#ff8252"
+                  color3="#8c1802"
+                  colorMode="gradient-3"
+                  hoverEffect="spotlight"
+                  borderRadius={50}
+                  speed={0.85}
+                  feather={92}
+                  intensity={1.35}
+                  grain={0.075}
+                />
+              </ViewportMount>
+              <span className="chromatic-button-content w-full justify-between px-1 text-sm font-semibold text-white">
+                <span>Order on WhatsApp</span>
+                <span className="btn-arrow bg-white text-black">
+                  <svg viewBox="0 0 17 15" className="w-3.5 h-3.5 fill-current" aria-hidden="true">
+                    <path d="M16.56 8.555L10.56 14.555C10.26 14.855 9.88 14.995 9.5 14.995C9.12 14.995 8.74 14.855 8.44 14.555C7.86 13.975 7.86 13.015 8.44 12.435L11.88 8.995H1.5C0.68 8.995 0 8.315 0 7.495C0 6.675 0.68 5.995 1.5 5.995H11.88L8.44 2.555C7.86 1.975 7.86 1.015 8.44 0.435C9.02 -0.145 9.98 -0.145 10.56 0.435L16.56 6.435C17.14 7.015 17.14 7.975 16.56 8.555Z" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+          ) : (
+            <a
+              href={orderUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Get Started — ${plan.name}`}
+              className="sybiosme-action-btn w-full bg-white/[0.06] hover:bg-white/15 text-white border border-white/10 hover:border-white/20"
+            >
+              <span className="text-sm font-medium tracking-tight">
+                {`Get Started — ${plan.name}`}
+              </span>
+              <div className="btn-arrow bg-[#FF4A1C] text-white">
+                <svg
+                  viewBox="0 0 17 15"
+                  className="w-3.5 h-3.5 fill-current"
+                  aria-hidden="true"
+                >
+                  <path d="M16.56 8.555L10.56 14.555C10.26 14.855 9.88 14.995 9.5 14.995C9.12 14.995 8.74 14.855 8.44 14.555C7.86 13.975 7.86 13.015 8.44 12.435L11.88 8.995H1.5C0.68 8.995 0 8.315 0 7.495C0 6.675 0.68 5.995 1.5 5.995H11.88L8.44 2.555C7.86 1.975 7.86 1.015 8.44 0.435C9.02 -0.145 9.98 -0.145 10.56 0.435L16.56 6.435C17.14 7.015 17.14 7.975 16.56 8.555Z" />
+                </svg>
+              </div>
+            </a>
+          )}
         </div>
       </div>
     </article>
@@ -179,25 +210,42 @@ export const PricingSection = () => {
   const [currency, setCurrency] = useState<Currency>("GBP");
 
   return (
-    <section
-      id="pricing"
-      className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden"
+    <SoapBubbleMaterial
+      surface="bubble-liquid"
+      environment="studio"
+      liquidLens={false}
+      iridescence={1.45}
+      clearCenter={0.62}
+      filmScale={5}
+      bevel={12}
+      tint="rgba(16, 16, 22, 0.44)"
+      soapColor="rgba(255, 74, 28, 0.1)"
+      wobble={0.4}
     >
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#FF4A1C]/[0.03] rounded-full blur-[160px] pointer-events-none z-0" />
+      <section
+        id="pricing"
+        className="relative w-full bg-transparent py-20 sm:py-28 md:py-36 border-t border-white/[0.06] overflow-hidden"
+      >
+        {/* Background Ambient Glow */}
+        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#FF4A1C]/[0.03] rounded-full blur-[160px] pointer-events-none z-0" />
 
-      <div className="mx-auto max-w-[1300px] px-4 sm:px-6 md:px-8 relative z-10">
-        {/* HEADER — Sybiosme Step Indicator & Title */}
-        <div className="mb-14 flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-2xl">
-            <FadeUp>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-4 backdrop-blur-md">
-                <span className="section-dot" />
-                <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
-                  Transparent Fixed Packages
-                </span>
-              </div>
-            </FadeUp>
+        <div className="mx-auto max-w-[1300px] px-4 sm:px-6 md:px-8 relative z-10">
+          {/* HEADER — Sybiosme Step Indicator & Title */}
+          <div className="mb-14 flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <FadeUp>
+                <SoapBubbleSurface
+                  as="div"
+                  interactive={0.2}
+                  radius={9999}
+                  className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1.5 mb-4"
+                >
+                  <span className="section-dot" />
+                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/90">
+                    Transparent Fixed Packages
+                  </span>
+                </SoapBubbleSurface>
+              </FadeUp>
             <FadeUp delay={0.1}>
               <h2
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.08] text-white"
@@ -217,44 +265,49 @@ export const PricingSection = () => {
               <span className="text-[11px] font-mono text-white/50 uppercase tracking-wider">
                 Select Currency:
               </span>
-              <div className="inline-flex p-1.5 bg-[#141414] border border-white/10 rounded-full backdrop-blur-md shadow-lg">
+              <SoapBubbleSurface
+                as="div"
+                interactive={0.22}
+                radius={9999}
+                className="saim-bubble-nav inline-flex p-1.5 shadow-lg max-w-full overflow-x-auto scrollbar-hide"
+              >
                 <button
                   type="button"
                   onClick={() => setCurrency("GBP")}
                   className={cn(
-                    "px-4 py-1.5 text-xs font-medium rounded-full transition-all cursor-pointer",
+                    "px-3 sm:px-4 py-1.5 text-[11px] sm:text-xs font-medium rounded-full transition-all cursor-pointer whitespace-nowrap",
                     currency === "GBP"
                       ? "bg-white text-black shadow-md font-semibold"
-                      : "text-white/60 hover:text-white"
+                      : "text-white/80 hover:text-white"
                   )}
                 >
-                  🇬🇧 £ GBP (UK)
+                  £ GBP · UK
                 </button>
                 <button
                   type="button"
                   onClick={() => setCurrency("EUR")}
                   className={cn(
-                    "px-4 py-1.5 text-xs font-medium rounded-full transition-all cursor-pointer",
+                    "px-3 sm:px-4 py-1.5 text-[11px] sm:text-xs font-medium rounded-full transition-all cursor-pointer whitespace-nowrap",
                     currency === "EUR"
                       ? "bg-white text-black shadow-md font-semibold"
-                      : "text-white/60 hover:text-white"
+                      : "text-white/80 hover:text-white"
                   )}
                 >
-                  🇪🇺 € EUR (Europe)
+                  € EUR · EU
                 </button>
                 <button
                   type="button"
                   onClick={() => setCurrency("USD")}
                   className={cn(
-                    "px-4 py-1.5 text-xs font-medium rounded-full transition-all cursor-pointer",
+                    "px-3 sm:px-4 py-1.5 text-[11px] sm:text-xs font-medium rounded-full transition-all cursor-pointer whitespace-nowrap",
                     currency === "USD"
                       ? "bg-white text-black shadow-md font-semibold"
-                      : "text-white/60 hover:text-white"
+                      : "text-white/80 hover:text-white"
                   )}
                 >
-                  🌐 $ USD (Global)
+                  $ USD · Global
                 </button>
-              </div>
+              </SoapBubbleSurface>
             </div>
           </FadeUp>
         </div>
@@ -322,5 +375,6 @@ export const PricingSection = () => {
         </div>
       </div>
     </section>
+    </SoapBubbleMaterial>
   );
 };

@@ -154,7 +154,7 @@ export const LiveDemosSection = () => {
             </span>
           </div>
           <ViewportMount
-            rootMargin="450px 0px"
+            rootMargin="0px 0px"
             className="min-h-[210px] sm:min-h-[285px]"
           >
             <LazyFanGallery
