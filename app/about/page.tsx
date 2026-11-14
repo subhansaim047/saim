@@ -1,7 +1,13 @@
 import { SiteFooter } from "@/components/SiteFooter";
+import { RhHeader } from "@/components/rh/RhHeader";
+import {
+  RhHeroPinned,
+  RhProblemSolutionDeck,
+  RhSystemRows,
+} from "@/components/rh/RhModernSections";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ShieldCheck, Code2, Rocket, Globe, UserCheck, MapPin, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Code2, Rocket, Globe, UserCheck, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: 'About Saim Dev | Remote Next.js Studio for UK & EU',
@@ -95,47 +101,26 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutBreadcrumbSchema) }}
       />
-    <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-xs">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
-            <img src="/saim-dev-logo.jpg" alt="Saim Dev - Studio Logo" width={36} height={36} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-          </div>
-          <span className="font-bold text-[#1D1D1F] text-base tracking-tight">Saim Dev</span>
-        </Link>
-        <Link
-          href="/contact"
-          className="text-xs font-bold text-gray-700 hover:text-black bg-gray-100 hover:bg-gray-200 px-3.5 py-1.5 rounded-full transition-colors"
-        >
-          Contact Us
-        </Link>
-      </header>
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+      <RhHeader theme="dark" />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-8 py-12 sm:py-16 space-y-12">
-        <div className="space-y-4">
-          {/* Visible Breadcrumb Navigation */}
-          <nav aria-label="Breadcrumb" className="no-print mb-2">
-            <ol className="flex items-center gap-1.5 text-xs text-gray-500 font-medium flex-wrap">
-              <li>
-                <Link href="/" className="hover:text-black transition-colors">Home</Link>
-              </li>
-              <li aria-hidden="true" className="text-gray-300">/</li>
-              <li className="text-gray-900 font-semibold" aria-current="page">
-                About Saim Dev
-              </li>
-            </ol>
-          </nav>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[11px] font-semibold text-amber-900">
-            <MapPin className="w-3.5 h-3.5 text-amber-700" />
-            <span>Pakistan-Based Studio • Serving UK &amp; EU Remotely</span>
-          </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1D1D1F]">
-            About Saim Dev
-          </h1>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
-            Saim Dev is an independent Next.js web development studio serving UK and European businesses remotely. We engineer sub-second websites, conversion-focused landing pages, and commission-free takeaway ordering systems starting from £250. Clients receive direct founder-led communication, full code ownership on GitHub, and zero monthly retainers.
-          </p>
-        </div>
+      <RhHeroPinned
+        badge="Pakistan-Based Studio · Serving UK & EU Remotely"
+        title={
+          <>
+            About Saim Dev{" "}
+            <span className="text-[#939393]">Engineering Studio</span>
+          </>
+        }
+        subtitle="Saim Dev is an independent Next.js web development studio serving UK and European businesses remotely. We engineer sub-second websites, custom e-commerce storefronts, and commission-free takeaway ordering systems from £250—with direct founder-led communication, full GitHub code ownership, and zero monthly retainers."
+        primaryCta={{ label: "Start a Project ($0 Upfront)", href: "/contact" }}
+        secondaryCta={{ label: "Inspect Live Case Studies", href: "/case-studies" }}
+        videoType="cube"
+        stripLabel="Direct founder engineering · UK & EU"
+      />
+
+      <div className="bg-[#F5F5F7] text-[#0D0D0D]">
+        <main className="max-w-[1168px] mx-auto px-5 py-16 sm:py-24 space-y-10">
 
         {/* Studio Identity Card */}
         <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xs space-y-5">
@@ -308,8 +293,51 @@ export default function AboutPage() {
           </Link>
         </section>
       </main>
+      </div>
 
-      <SiteFooter />
+      <RhProblemSolutionDeck
+        overline="WHY INDEPENDENT NEXT.JS ENGINEERING WINS"
+        titleBefore="Direct senior craft without"
+        titleStrike="agency overhead"
+        titleOwned="or retainers."
+        subtitle="Traditional agencies charge £3,000–£15,000+ to fund account managers and slow CMS themes. Working directly with Saim Dev delivers 99+ PageSpeed, full code IP, and fixed pricing from £250."
+        solutionTitle="Founder-Built Code You Own Forever"
+        solutionDesc="Every line of React, Next.js, and Tailwind CSS is authored cleanly, tested on a live staging link first ($0 upfront), and transferred straight to your GitHub."
+      />
+
+      <RhSystemRows
+        overline="STUDIO PRINCIPLES"
+        title="How we operate"
+        titleMuted="with UK & EU founders"
+        rows={[
+          {
+            num: "01",
+            title: "Direct 1-on-1 Engineer Access",
+            description:
+              "Communicate straight with Saim on WhatsApp and Loom aligned with UK business hours—zero middlemen.",
+            tags: ["Direct WhatsApp", "< 2h Reply"],
+            href: "/contact",
+          },
+          {
+            num: "02",
+            title: "100% GitHub Source Ownership",
+            description:
+              "Complete repository, production Next.js source, and cloud hosting handed directly to your team.",
+            tags: ["Zero Lock-In", "Clean TypeScript"],
+            href: "/technologies",
+          },
+          {
+            num: "03",
+            title: "Verified Client Case Studies",
+            description:
+              "Real before-and-after metrics turning 4.8s WordPress sites into 0.6s sub-second revenue engines.",
+            tags: ["+185% Leads", "99/100 CWV"],
+            href: "/case-studies",
+          },
+        ]}
+      />
+
+      <SiteFooter theme="dark" />
     </div>
     </>
   );

@@ -1,19 +1,16 @@
 "use client";
 
 import { SiteFooter } from "./SiteFooter";
+import { RhHeader } from "./rh/RhHeader";
+import {
+  RhHeroPinned,
+  RhProblemSolutionDeck,
+  RhProcessCarousel,
+  RhSystemRows,
+} from "./rh/RhModernSections";
 import Link from "next/link";
 import { useState } from "react";
-import { 
-  ArrowRight, 
-  HelpCircle, 
-  ChevronDown, 
-  CheckCircle2, 
-  Clock, 
-  ShieldCheck, 
-  Copy, 
-  ExternalLink 
-} from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Clock } from "lucide-react";
 
 interface ServiceDetail {
   id: string;
@@ -257,210 +254,369 @@ const serviceFaqs = [
 
 export const ServicesPage = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [expandedServiceId, setExpandedServiceId] = useState<string | null>(
+    detailedServices[0]?.id ?? null
+  );
 
   return (
-    <div
-      className="min-h-screen bg-black text-white px-4 sm:px-6 md:px-12 py-12 select-none"
-      style={{
-        fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
-      }}
-    >
-      <div className="max-w-5xl mx-auto">
-        {/* Visible Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="mb-6">
-          <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
-            <li>
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li className="text-primary font-semibold" aria-current="page">
-              Services
-            </li>
-          </ol>
-        </nav>
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+      <RhHeader theme="dark" />
 
-        {/* TRUST BANNER */}
-        <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 mb-10 flex flex-wrap items-center justify-between gap-3 text-xs shadow-md">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span className="font-medium text-white">Our Agency Registered in UK &amp; Based in Pakistan</span>
-          </div>
-          <div className="flex items-center gap-3 text-white/70">
-            <span className="text-[#FF4A1C] font-semibold">$0 Upfront Deposit</span>
-            <span>•</span>
-            <span className="text-white font-medium">Zero Monthly Charges</span>
-          </div>
-        </div>
+      {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Wireframe Video + Laser-Draw Strip + Curtain Parallax) */}
+      <RhHeroPinned
+        badge="Next.js & Full-Stack Engineering Studio"
+        title={
+          <>
+            Next.js Web Engineering{" "}
+            <span className="text-[#939393]">Services UK</span>
+          </>
+        }
+        subtitle="Fixed-price Next.js web engineering with sub-second speeds, 95+ Core Web Vitals, and our $0 Upfront Prototype Guarantee. Custom websites, Shopify headless builds, and web apps with 100% source code ownership and zero monthly retainers."
+        primaryCta={{ label: "Start your project ($0 Upfront)", href: "/contact" }}
+        secondaryCta={{ label: "Project Cost Calculator", href: "/overview" }}
+        videoType="cube"
+        stripLabel="Engineered for speed & ownership"
+      />
 
-        {/* 1. HERO */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-primary text-xs font-mono font-medium uppercase mb-4">
-            NEXT.JS SPECIALIZED SERVICES
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4">
-            Next.js Web Engineering Services UK
-          </h1>
-          <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Saim Dev delivers fixed-price Next.js web development with sub-second speeds, 95+ Core Web Vitals, and an unbeatable <strong className="text-white font-medium">$0 Upfront Guarantee</strong>. We engineer bespoke Next.js websites, custom eCommerce flagships, and pixel-perfect clones with zero monthly retainers.
-          </p>
-        </div>
+      {/* 2. SCROLLYTELLING BOTTLENECK DECK + GROWING RETENTION BAR CHART */}
+      <RhProblemSolutionDeck
+        overline="WHY TEAMS SWITCH TO SAIM DEV"
+        titleBefore="Websites that convert instead of leaving visitors"
+        titleStrike="waiting"
+        titleOwned="converted."
+        subtitle="Slow templates, monthly agency retainers, and marketplace commissions quietly tax every visitor you earn. We replace bloated stacks with custom React & Next.js edge code you own outright."
+        solutionTitle="One Fixed Fee. Sub-Second Edge Performance. Full Repo Ownership."
+        solutionDesc="We build your live staging prototype before you spend a penny. Test responsiveness, speed, and booking flows across devices—then unlock 100% of the GitHub code upon approval."
+      />
 
-        {/* 2. SERVICES LIST */}
-        <div className="space-y-6 sm:space-y-8 mb-20">
-          {detailedServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.45, delay: index * 0.05 }}
-              whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
-              className="liquid-glass rounded-3xl p-6 sm:p-9 border border-white/15 transition-all group shadow-xl"
+      {/* 3. INTERACTIVE SVG LINE-DRAW SERVICE CAPABILITIES MATRIX */}
+      <RhSystemRows
+        overline="ENGINEERING CAPABILITIES"
+        title="What we engineer"
+        titleMuted="for ambitious brands"
+        subtitle="Hover any row to trace its architecture system or click through to explore deliverables, benchmarks, and fixed pricing."
+        rows={detailedServices.map((svc, idx) => ({
+          num: String(idx + 1).padStart(2, "0"),
+          title: svc.title,
+          description: svc.description,
+          tags: [svc.price || "Custom Fixed", `Timeline ${svc.timeline}`, svc.badge || "Fixed Scope"],
+          href: svc.dedicatedLink,
+        }))}
+      />
+
+      {/* 4. EXPANDABLE FULL SCOPE BREAKDOWN + UK REGIONAL HUBS */}
+      <section className="bg-[#F5F5F7] text-[#0D0D0D] py-20 sm:py-24 border-t border-[#E6E6E6]">
+        <div className="max-w-[1168px] mx-auto px-5">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <div className="text-[11px] font-mono-tech uppercase tracking-[0.3em] text-[#595959] mb-3">
+                DETAILED DELIVERABLES INSPECTOR
+              </div>
+              <h2 className="text-[clamp(30px,4vw,46px)] font-medium leading-[1.08] tracking-[-0.03em]">
+                <span className="text-[#0D0D0D]">Inspect every deliverable </span>
+                <span className="text-[#939393]">before kickoff</span>
+              </h2>
+            </div>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-2 text-[15px] font-medium text-[#0D0D0D] hover:opacity-70 transition-opacity"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
-                <div>
-                  <div className="flex items-center gap-3 flex-wrap mb-2">
-                    <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-white">
-                      {service.title}
-                    </h2>
-                    {service.price && (
-                      <span className="px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 font-mono text-xs font-bold">
-                        {service.price}
-                      </span>
-                    )}
-                    {service.badge && (
-                      <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-mono uppercase font-bold tracking-wider">
-                        {service.badge}
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed max-w-2xl">
-                    {service.description}
-                  </p>
-                  <div className="mt-4 flex flex-wrap items-center gap-4">
-                    <Link
-                      href={service.dedicatedLink}
-                      className="inline-flex items-center gap-1.5 text-xs text-[#FF4A1C] hover:text-white font-semibold underline underline-offset-4 transition-colors"
-                    >
-                      <span>Explore Full 13-Section Service Page &amp; Live Demos</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 text-xs font-mono text-primary bg-white/5 border border-white/10 px-3.5 py-2 rounded-full shrink-0 self-start md:self-auto">
-                  <Clock className="w-4 h-4" />
-                  <span>Timeline: {service.timeline}</span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 text-xs sm:text-sm leading-relaxed font-light">
-                {/* Benefits */}
-                <div>
-                  <h3 className="text-white font-medium text-sm sm:text-base mb-3 text-primary">Key Benefits</h3>
-                  <ul className="space-y-2">
-                    {service.benefits.map((b, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-white/80">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Deliverables */}
-                <div>
-                  <h3 className="text-white font-medium text-sm sm:text-base mb-3 text-primary">Deliverables</h3>
-                  <ul className="space-y-2">
-                    {service.deliverables.map((d, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-white/80">
-                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <span>{d}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                <span className="text-xs text-white/50">$0 Upfront Deposit • Pay Only If Satisfied</span>
-                <Link
-                  href={service.dedicatedLink}
-                  className="bg-white hover:bg-neutral-100 text-black font-semibold text-xs px-5 py-2.5 rounded-full transition-all inline-flex items-center gap-2 active:scale-95 shadow-md"
-                >
-                  <span>View Details &amp; Pricing</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* 3. FAQ SNIPPET */}
-        <div className="mb-20 liquid-glass rounded-3xl p-6 sm:p-8 border border-white/15 shadow-xl">
-          <div className="flex items-center gap-2 mb-6 text-primary">
-            <HelpCircle className="w-5 h-5" />
-            <h3 className="text-white font-medium text-lg">Services FAQ</h3>
+              <span>Compare fixed packages</span>
+              <span>→</span>
+            </Link>
           </div>
-          <div className="space-y-3">
+
+          <div className="space-y-4">
+            {detailedServices.map((service, index) => {
+              const isExpanded = expandedServiceId === service.id;
+              return (
+                <div
+                  key={service.id}
+                  className="rh-edge-orbit-card bg-white border border-[#E6E6E6] hover:border-[#0D0D0D] transition-colors"
+                >
+                  <div className="p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 flex-wrap mb-2">
+                        <span className="text-[12px] font-mono-tech text-[#939393]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <h3 className="text-[20px] sm:text-[24px] font-medium tracking-[-0.025em] text-[#0D0D0D]">
+                          <Link
+                            href={service.dedicatedLink}
+                            className="hover:underline underline-offset-4"
+                          >
+                            {service.title}
+                          </Link>
+                        </h3>
+                        {service.price && (
+                          <span className="px-3 py-1 bg-[#0D0D0D] text-[#BAFF00] text-[12px] font-mono-tech font-medium">
+                            {service.price}
+                          </span>
+                        )}
+                        {service.badge && (
+                          <span className="px-3 py-1 bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-mono-tech font-medium uppercase tracking-wider">
+                            {service.badge}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-[#595959] text-[15px] leading-[1.55] max-w-3xl">
+                        {service.description}
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-3 shrink-0 self-start md:self-center">
+                      <span className="inline-flex items-center gap-1.5 text-[12px] font-mono-tech text-[#595959] bg-[#F5F5F7] border border-[#E6E6E6] px-3.5 py-2">
+                        <Clock className="w-3.5 h-3.5" />
+                        {service.timeline}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setExpandedServiceId(isExpanded ? null : service.id)
+                        }
+                        className="px-4 py-2 border border-[#0D0D0D] text-[13px] font-medium hover:bg-[#0D0D0D] hover:text-[#BAFF00] transition-colors"
+                      >
+                        {isExpanded ? "Hide Scope −" : "View Scope +"}
+                      </button>
+                    </div>
+                  </div>
+
+                  {isExpanded && (
+                    <div className="px-6 sm:px-8 pb-8 pt-6 border-t border-[#E6E6E6] bg-[#FAFAFA]">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[14px] leading-[1.6]">
+                        <div>
+                          <h4 className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#939393] mb-3">
+                            Key Commercial Benefits
+                          </h4>
+                          <ul className="space-y-2.5">
+                            {service.benefits.map((b, i) => (
+                              <li key={i} className="flex items-start gap-2.5 text-[#202020]">
+                                <span className="w-5 h-5 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center text-[11px] font-bold shrink-0 mt-0.5">
+                                  ✓
+                                </span>
+                                <span>{b}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h4 className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#939393] mb-3">
+                            Included Deliverables
+                          </h4>
+                          <ul className="space-y-2.5">
+                            {service.deliverables.map((d, i) => (
+                              <li key={i} className="flex items-start gap-2.5 text-[#202020]">
+                                <span className="w-5 h-5 rounded-full bg-[#0D0D0D] text-white flex items-center justify-center text-[11px] shrink-0 mt-0.5">
+                                  ✓
+                                </span>
+                                <span>{d}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="mt-7 pt-5 border-t border-[#E6E6E6] flex flex-wrap items-center justify-between gap-4">
+                        <div className="flex flex-wrap items-center gap-4 text-[13px] text-[#595959]">
+                          <span>$0 Upfront Prototype Guarantee</span>
+                          <span>•</span>
+                          <Link
+                            href="/overview"
+                            className="text-[#0D0D0D] underline underline-offset-4 hover:opacity-70"
+                          >
+                            View more details &amp; estimate cost
+                          </Link>
+                        </div>
+
+                        <Link
+                          href={service.dedicatedLink}
+                          className="inline-flex items-center gap-2.5 bg-[#0D0D0D] hover:bg-[#202020] text-white text-[14px] font-medium px-6 py-3 rounded-full transition-colors"
+                        >
+                          <span>Explore Full Service Page</span>
+                          <span className="w-6 h-6 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center text-[12px]">
+                            ↗
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* UK Regional & Specialist Hubs Bar */}
+          <div className="mt-14 bg-[#0D0D0D] text-white p-8 sm:p-10 border border-[#202020]">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+              <div>
+                <div className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] mb-2">
+                  UK Regional &amp; Specialist Engineering Hubs
+                </div>
+                <h3 className="text-[24px] sm:text-[30px] font-medium tracking-[-0.02em]">
+                  Dedicated UK City &amp; Framework Pages
+                </h3>
+              </div>
+              <Link
+                href="/demos"
+                className="inline-flex items-center gap-2 text-[14px] text-[#CBCBCB] hover:text-white"
+              >
+                <span>Inspect Live Interactive Demos</span>
+                <span className="text-[#BAFF00]">↗</span>
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                {
+                  title: "Next.js Developer UK",
+                  sub: "Bespoke React & App Router",
+                  href: "/nextjs-developer-uk",
+                },
+                {
+                  title: "Takeaway Websites London",
+                  sub: "All 32 London Boroughs",
+                  href: "/services/takeaway-web-design-london",
+                },
+                {
+                  title: "Takeaway Websites Manchester",
+                  sub: "Greater Manchester & North West",
+                  href: "/services/takeaway-web-design-manchester",
+                },
+                {
+                  title: "Takeaway Websites Birmingham",
+                  sub: "West Midlands Direct Ordering",
+                  href: "/services/takeaway-web-design-birmingham",
+                },
+              ].map((hub) => (
+                <Link
+                  key={hub.href}
+                  href={hub.href}
+                  className="rh-edge-orbit-card is-lime p-5 bg-[#161616] border border-[#262626] hover:border-[#BAFF00] transition-colors flex flex-col justify-between gap-3 group"
+                >
+                  <div>
+                    <div className="text-[16px] font-medium text-white group-hover:text-[#BAFF00] transition-colors">
+                      {hub.title}
+                    </div>
+                    <div className="text-[13px] text-[#939393] mt-1">{hub.sub}</div>
+                  </div>
+                  <span className="text-[12px] text-[#CBCBCB] inline-flex items-center gap-1">
+                    Explore Hub <span>→</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. DARK HORIZONTAL DRAG PROCESS CAROUSEL + PULSING CONIC CIRCLE DIVIDER */}
+      <RhProcessCarousel
+        title="How we build it in days,"
+        titleMuted="not months"
+        stages={[
+          {
+            stage: "STAGE 01",
+            duration: "Day 1",
+            title: "Brief, Audit & Zero-Risk Blueprint",
+            description:
+              "Share your goals or reference links. We lock the fixed price, sitemap, and Core Web Vitals targets before writing a single line.",
+            deliverables: [
+              "Confirmed Fixed Price (From £250)",
+              "Competitor Speed & UX Benchmark",
+              "Zero Upfront Deposit Required",
+            ],
+          },
+          {
+            stage: "STAGE 02",
+            duration: "Days 2 – 4",
+            title: "Live Interactive Staging Prototype",
+            description:
+              "Instead of static Figma PDFs, we ship a real Next.js staging URL you can tap, scroll, and test on your own phone.",
+            deliverables: [
+              "Working Next.js 16 Preview URL",
+              "Desktop & Mobile Motion Choreography",
+              "Real-Time WhatsApp & Lead Routing",
+            ],
+          },
+          {
+            stage: "STAGE 03",
+            duration: "Days 5 – 7",
+            title: "Hardening, SEO & Edge Optimisation",
+            description:
+              "Full TypeScript verification, JSON-LD schema markup, AVIF media pipelines, and 95+ Lighthouse performance sign-off.",
+            deliverables: [
+              "Schema.org Structured Data",
+              "99+ PageSpeed Optimization",
+              "Cross-Device QA Verification",
+            ],
+          },
+          {
+            stage: "STAGE 04",
+            duration: "Launch Day",
+            title: "Production Deploy & 100% GitHub Handover",
+            description:
+              "Only once you approve every screen do you complete payment and receive the entire source repository and Vercel setup.",
+            deliverables: [
+              "100% GitHub Source Ownership",
+              "Domain, SSL & Edge CDN Cutover",
+              "Zero Monthly Retainers",
+            ],
+          },
+        ]}
+      />
+
+      {/* 3. DARK FAQ ACCORDION (rh.design style) */}
+      <section className="bg-[#0D0D0D] text-white py-20 sm:py-28 border-t border-[#202020]">
+        <div className="max-w-[1168px] mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-5">
+            <div className="text-[12px] uppercase tracking-[0.88px] text-[#939393] mb-3">
+              Common Questions
+            </div>
+            <h2 className="text-[clamp(32px,4vw,48px)] font-medium leading-[1.1] tracking-[-0.03em]">
+              <span className="text-white">Services &amp; Delivery </span>
+              <span className="text-[#939393]">FAQ</span>
+            </h2>
+            <p className="mt-4 text-[15px] text-[#939393] leading-relaxed">
+              Have a specific technical brief? Reach out directly on WhatsApp or
+              book a discovery call with zero upfront commitment.
+            </p>
+          </div>
+
+          <div className="lg:col-span-7 divide-y divide-[#202020] border-t border-b border-[#202020]">
             {serviceFaqs.map((faq, index) => {
               const isOpen = openFaqIndex === index;
               return (
-                <div
-                  key={index}
-                  onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                  className="bg-white/5 rounded-2xl border border-white/10 p-5 cursor-pointer hover:border-white/20 transition-all"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <h4 className="text-white text-sm font-medium">{faq.question}</h4>
-                    <ChevronDown className={`w-4 h-4 text-white/60 transition-transform ${isOpen ? "rotate-180 text-primary" : ""}`} />
-                  </div>
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.p
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="text-white/60 text-xs mt-3 font-light leading-relaxed border-t border-white/5 pt-3"
-                      >
-                        {faq.answer}
-                      </motion.p>
-                    )}
-                  </AnimatePresence>
+                <div key={index} className="py-6">
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaqIndex(isOpen ? null : index)}
+                    className="w-full flex items-center justify-between gap-4 text-left cursor-pointer"
+                  >
+                    <span className="text-[18px] font-medium text-white">
+                      {faq.question}
+                    </span>
+                    <span
+                      className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                        isOpen
+                          ? "bg-[#BAFF00] border-[#BAFF00] text-[#0D0D0D]"
+                          : "border-[#2A2A2A] text-white"
+                      }`}
+                    >
+                      {isOpen ? "−" : "+"}
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <p className="mt-4 text-[15px] text-[#939393] leading-[1.65] pr-8">
+                      {faq.answer}
+                    </p>
+                  )}
                 </div>
               );
             })}
           </div>
         </div>
+      </section>
 
-        {/* 4. FINAL CTA */}
-        <div className="text-center bg-white/5 rounded-3xl p-8 sm:p-10 border border-white/10 shadow-xl">
-          <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Zero Risk • 100% Satisfaction</span>
-          <h3 className="text-2xl sm:text-3xl font-light text-white mb-3">
-            Ready to Build Your Website With $0 Upfront?
-          </h3>
-          <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            Message Saim Dev on WhatsApp. Share your project requirements or reference links; we engineer a live preview first. Pay only when you are 100% satisfied.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20starting%20a%20project%20with%20$0%20upfront"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#FF4A1C] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#e03d12] transition-all text-xs cursor-pointer shadow-xl active:scale-95"
-            >
-              <span>Start on WhatsApp ($0 Upfront)</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-full transition-all text-xs cursor-pointer border border-white/15"
-            >
-              <span>Discuss Your Scope</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-        </div>
-      </div>
       <SiteFooter theme="dark" />
     </div>
   );

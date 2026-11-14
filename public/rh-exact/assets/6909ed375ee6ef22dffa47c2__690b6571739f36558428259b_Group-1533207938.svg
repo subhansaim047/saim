@@ -1,0 +1,8 @@
+<svg width="20" height="304" viewBox="0 0 20 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.0001 10C20.0001 15.5228 15.523 20 10.0001 20V20C4.47727 20 0.000112888 15.5228 0.000113371 10V10C0.000113854 4.47715 4.47727 1.77312e-06 10.0001 2.25594e-06V2.25594e-06C15.523 2.73877e-06 20.0001 4.47715 20.0001 10V10Z" fill="#B5F900"/>
+<rect x="20.0001" y="304" width="20" height="20" rx="10" transform="rotate(-180 20.0001 304)" fill="black"/>
+<path d="M14.0001 270L10.0001 274L6.00005 270" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.0001 269L10.0001 183" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="0.01 4"/>
+<path d="M14.0001 34L10.0001 30L6.00005 34" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.0001 35L10.0001 120" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="0.01 4"/>
+</svg>

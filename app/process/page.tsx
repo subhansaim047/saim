@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ChevronRight, PhoneCall, Compass, Code2, Rocket, CheckCircle2, ShieldCheck, Clock, FileCheck, GitBranch, RefreshCw } from "lucide-react";
+import { ArrowRight, PhoneCall, Compass, Code2, Rocket, CheckCircle2, ShieldCheck, GitBranch, RefreshCw } from "lucide-react";
 import { SiteFooter } from "../../src/components/SiteFooter";
+import { RhHeader } from "../../src/components/rh/RhHeader";
+import {
+  RhHeroPinned,
+  RhProcessCarousel,
+  RhSystemRows,
+} from "../../src/components/rh/RhModernSections";
 
 export const metadata: Metadata = {
   title: "Web Development Process & Delivery Workflow | Saim Dev",
@@ -124,7 +130,7 @@ const processFaqSchema = {
 
 export default function ProcessPage() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-[#FF4A1C] selection:text-white">
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(processSchema) }}
@@ -138,86 +144,115 @@ export default function ProcessPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(processFaqSchema) }}
       />
 
-      {/* HEADER / NAVIGATION */}
-      <header className="border-b border-white/10 bg-black/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#FF4A1C] group-hover:scale-125 transition-transform" />
-            <span className="font-bold text-white tracking-tight text-lg">Saim Dev</span>
-          </Link>
+      <RhHeader theme="dark" />
 
-          <nav className="flex items-center gap-4 text-xs font-mono uppercase tracking-wider">
-            <Link href="/" className="text-white/70 hover:text-white transition-colors">Home</Link>
-            <span className="text-white/20">/</span>
-            <Link href="/services" className="text-white/70 hover:text-white transition-colors">Services</Link>
-            <span className="text-white/20">/</span>
-            <Link href="/pricing" className="text-white/70 hover:text-white transition-colors">Pricing</Link>
-            <span className="text-white/20">/</span>
-            <Link href="/tools" className="text-white/70 hover:text-white transition-colors">160 Tools</Link>
-          </nav>
-        </div>
-      </header>
+      <RhHeroPinned
+        badge="Proven Delivery Methodology · 4-Stage Sprint"
+        title={
+          <>
+            How We Build &amp; Deploy{" "}
+            <span className="text-[#939393]">Your Website</span>
+          </>
+        }
+        subtitle="No missed deadlines, no surprise invoices, and no bloated agency middlemen. A transparent 4-stage Next.js engineering sprint with direct engineer communication from brief to production launch in 5–12 days."
+        primaryCta={{ label: "Schedule Initial Brief", href: "/contact" }}
+        secondaryCta={{ label: "View Transparent Pricing", href: "/pricing" }}
+        videoType="cube"
+        stripLabel="5–12 Day Sprint · 50/50 Milestone Protection"
+      />
 
-      {/* BREADCRUMBS */}
-      <div className="border-b border-white/5 bg-white/[0.01]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-2 text-xs text-white/70 font-mono">
-          <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          <ChevronRight className="w-3.5 h-3.5 text-white/30" />
-          <span className="text-white font-medium">Engineering Process</span>
-        </div>
-      </div>
+      <RhProcessCarousel
+        title="Interactive 4-Stage"
+        titleMuted="Engineering Workflow"
+        stages={[
+          {
+            stage: "STAGE 01",
+            duration: "Day 1–2",
+            title: "Discovery & Strategic Brief",
+            description:
+              "We audit competitors, target audience flows, Stripe/WhatsApp integrations, and lock your exact delivery date and fixed quote.",
+            deliverables: [
+              "Competitor & Core Web Vitals gap review",
+              "Exact page inventory & scope lock",
+              "Third-party API & CRM mapping",
+            ],
+          },
+          {
+            stage: "STAGE 02",
+            duration: "Day 2–4",
+            title: "Strategy & Information Architecture",
+            description:
+              "Conversion wireframes, semantic HTML5 structure, Schema.org JSON-LD planning, and mobile-first responsive tokens.",
+            deliverables: [
+              "Conversion-focused wireframes",
+              "Typography & Swiss design system",
+              "Schema.org structured data map",
+            ],
+          },
+          {
+            stage: "STAGE 03",
+            duration: "Day 4–8",
+            title: "Design & Next.js Full-Stack Engineering",
+            description:
+              "We build your production Next.js App Router codebase and deploy to a private interactive staging URL for live testing.",
+            deliverables: [
+              "Semantic Next.js 16 + Tailwind CSS code",
+              "Private staging URL for real device testing",
+              "WhatsApp API & form webhook integration",
+            ],
+          },
+          {
+            stage: "STAGE 04",
+            duration: "Day 8–10",
+            title: "Testing, Launch & Complete Handover",
+            description:
+              "Cross-browser QA, Core Web Vitals verification (95+), DNS/SSL cutover, Google Search Console indexing, and GitHub IP transfer.",
+            deliverables: [
+              "99+ Lighthouse performance check",
+              "Custom domain, SSL & CDN cache",
+              "100% GitHub repo + 30d warranty",
+            ],
+          },
+        ]}
+      />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        {/* HERO */}
-        <section className="max-w-4xl mx-auto text-center mb-20 sm:mb-28">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 mb-6 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-[#FF4A1C] animate-pulse" />
-            <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80">
-              Proven Delivery Methodology
-            </span>
-          </div>
+      <RhSystemRows
+        overline="MILESTONE BREAKDOWN"
+        title="Detailed sprint gates"
+        titleMuted="& quality checks"
+        rows={[
+          {
+            num: "01",
+            title: "Stage 01 — Discovery & Strategic Brief (Day 1–2)",
+            description:
+              "Define commercial objectives, target audience personas, feature requirements, and fixed delivery schedule.",
+            tags: ["Fixed Quote", "Zero Surprises"],
+          },
+          {
+            num: "02",
+            title: "Stage 02 — Information Architecture (Day 2–4)",
+            description:
+              "Map information architecture, user journeys, Schema.org JSON-LD data structures, and conversion wireframes.",
+            tags: ["Wireframes", "JSON-LD Schema"],
+          },
+          {
+            num: "03",
+            title: "Stage 03 — Next.js Full-Stack Engineering (Day 4–8)",
+            description:
+              "Develop bespoke UI components with Next.js App Router, Tailwind CSS, TypeScript, and interactive staging preview.",
+            tags: ["Next.js 16", "Live Staging URL"],
+          },
+          {
+            num: "04",
+            title: "Stage 04 — Edge Deployment & Handover (Day 8–10)",
+            description:
+              "Execute Core Web Vitals audit, cross-browser validation, DNS/SSL launch, and transfer 100% GitHub repository ownership.",
+            tags: ["GitHub Ownership", "30d Warranty"],
+          },
+        ]}
+      />
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white mb-6 leading-[1.08]" style={{ letterSpacing: "-0.04em" }}>
-            How We Build &amp; Deploy Your Website
-          </h1>
-
-          <p className="text-base sm:text-xl text-white/70 leading-relaxed font-light mb-8 max-w-3xl mx-auto">
-            No missed deadlines, no surprise invoices, and no bloated agency middlemen. A transparent 4-stage engineering sprint with direct engineer communication from brief to production launch.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-white/75 mb-10">
-            <span className="px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/10 flex items-center gap-2">
-              <Clock className="w-3.5 h-3.5 text-[#FF4A1C]" />
-              <span>5–12 Day Delivery</span>
-            </span>
-            <span className="px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/10 flex items-center gap-2">
-              <FileCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Fixed-Price Quote</span>
-            </span>
-            <span className="px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/10 flex items-center gap-2">
-              <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
-              <span>50/50 Milestones</span>
-            </span>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20project%20timeline%20and%20process."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF4A1C] hover:bg-[#FF4A1C]/90 text-white font-semibold text-sm tracking-tight shadow-[0_4px_24px_rgba(255,74,28,0.3)] transition-all active:scale-95"
-            >
-              <span>Schedule Initial Brief</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/[0.06] hover:bg-white/15 border border-white/15 text-white font-medium text-sm tracking-tight transition-colors"
-            >
-              <span>View Transparent Pricing</span>
-            </Link>
-          </div>
-        </section>
+      <main className="max-w-[1168px] mx-auto px-5 py-16 sm:py-20">
 
         {/* 4 STAGES DEEP DIVE */}
         <section className="space-y-12 mb-24 max-w-5xl mx-auto">

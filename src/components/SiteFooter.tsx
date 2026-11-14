@@ -1,89 +1,455 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { FazierBadge } from "./FazierBadge";
 
-interface SiteFooterProps {
-  theme?: "dark" | "light";
-  className?: string;
-}
+export function SiteFooter(props?: { theme?: "dark" | "light"; className?: string }) {
+  const [copied, setCopied] = useState(false);
 
-export const SiteFooter: React.FC<SiteFooterProps> = ({ theme = "light", className = "" }) => {
-  const isDark = theme === "dark";
+  const handleCopyEmail = () => {
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      navigator.clipboard.writeText("contact@saimdev.site");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2600);
+    }
+  };
 
   return (
     <footer
-      className={`border-t py-8 px-4 sm:px-8 text-center text-xs no-print ${
-        isDark
-          ? "border-white/10 bg-black text-white/60"
-          : "border-[#E5E5EA] bg-white text-gray-500"
-      } ${className}`}
+      className={`rh-page relative bg-[#0D0D0D] text-white overflow-hidden border-t border-[#202020] ${props?.className ?? ""}`}
+      style={{
+        backgroundImage: "url(/rh-exact/footer/map-3072.webp)",
+        backgroundPosition: "50% 0",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
     >
-      <p>© 2026 Saim Dev. High-performance Next.js web architecture. Email: <a href="mailto:contact@saimdev.site" className="underline hover:text-primary">contact@saimdev.site</a></p>
-      
-      <div className={`mt-2 text-[11px] ${isDark ? "text-white/40" : "text-gray-400"}`}>
-        Saim Dev — Agency Registered in UK &amp; Based in Pakistan • $0 Upfront Deposit • Zero Monthly Charges · WhatsApp: <a href="https://wa.me/923196526604" className="hover:underline text-primary">+92 319 6526604</a> · Business Hours: Mon–Fri 09:00–18:00 GMT, Sat 10:00–16:00 GMT
-      </div>
+      <div className="max-w-[1168px] mx-auto px-5 pt-24 pb-12 sm:pt-32 sm:pb-16">
+        {/* Top CTA Block (Exact rh.design Footer Hero) */}
+        <div className="flex flex-col items-center text-center pb-20 sm:pb-28 border-b border-white/[0.1]">
+          <h2 className="text-[clamp(38px,5.4vw,72px)] font-medium leading-[1.08] tracking-[-0.035em] max-w-[780px]">
+            <span className="text-white">Let’s build something </span>
+            <span className="text-[#939393]">great together</span>
+          </h2>
 
-      <div className="mt-3.5 flex justify-center">
-        <FazierBadge />
-      </div>
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-6">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-4 focus:outline-none"
+            >
+              <span className="text-[18px] font-medium text-white relative pb-1">
+                Start your project
+                <span className="absolute left-0 bottom-0 h-[1px] w-full bg-white origin-right scale-x-100 transition-transform duration-300 group-hover:scale-x-0" />
+              </span>
+              <span className="w-12 h-12 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center relative overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
+                <svg
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  className="w-3.5 h-3.5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-5 group-hover:-translate-y-5"
+                >
+                  <path
+                    d="M1.5 12.5L12.5 1.5M12.5 1.5H3.5M12.5 1.5V10.5"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <svg
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  className="w-3.5 h-3.5 absolute -translate-x-5 translate-y-5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0"
+                >
+                  <path
+                    d="M1.5 12.5L12.5 1.5M12.5 1.5H3.5M12.5 1.5V10.5"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </Link>
 
-      <nav
-        aria-label="Footer Navigation"
-        className={`flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-3 ${
-          isDark ? "text-white/70" : "text-gray-600"
-        }`}
-      >
-        <Link href="/" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Home</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/services" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Services</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/services/takeaway-web-design" className={isDark ? "hover:text-white transition-colors py-1 px-1 text-amber-400" : "hover:text-black transition-colors py-1 px-1 text-amber-700 font-semibold"}>Takeaway Websites</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/nextjs-developer-uk" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Next.js UK</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/case-studies" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Case Studies</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/technologies" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Tech Stack</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/blogs" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Blog Guides</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/tools/ppds-label-generator" className={isDark ? "hover:text-white transition-colors py-1 px-1 text-amber-300" : "hover:text-black transition-colors py-1 px-1 text-amber-800"}>PPDS Label Maker</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/tools/allergen-matrix-generator" className={isDark ? "hover:text-white transition-colors py-1 px-1 text-orange-300" : "hover:text-black transition-colors py-1 px-1 text-orange-800"}>Allergen Matrix</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/tools/food-cost-calculator" className={isDark ? "hover:text-white transition-colors py-1 px-1 text-emerald-300" : "hover:text-black transition-colors py-1 px-1 text-emerald-800"}>Food Cost Tool</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/tools" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Free Tools</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/demos" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Demos</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/about" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>About</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/contact" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Contact</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/privacy" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Privacy Policy</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/cookie-policy" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Cookie Policy</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/disclaimer" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Disclaimer</Link>
-        <span aria-hidden="true">·</span>
-        <Link href="/terms" className={isDark ? "hover:text-white transition-colors py-1 px-1" : "hover:text-black transition-colors py-1 px-1"}>Terms</Link>
-        <span aria-hidden="true">·</span>
-        <button
-          type="button"
-          onClick={() => {
-            if (typeof window !== "undefined") {
-              window.dispatchEvent(new CustomEvent("open_cookie_settings"));
-            }
-          }}
-          className={isDark ? "hover:text-white transition-colors py-1 px-1 cursor-pointer" : "hover:text-black transition-colors py-1 px-1 cursor-pointer"}
-        >
-          Cookie Settings
-        </button>
-      </nav>
+            <Link
+              href="/overview"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/15 bg-white/[0.04] hover:bg-white/[0.1] hover:border-[#BAFF00]/50 text-[14px] text-[#CBCBCB] hover:text-white transition-all"
+            >
+              <span>View Full Studio Overview &amp; Cost Calculator</span>
+              <span className="text-[#BAFF00]">↗</span>
+            </Link>
+          </div>
+
+          {/* Copy Email Pill */}
+          <div className="mt-10 flex flex-col items-center gap-2">
+            <span className="text-[14px] text-[#939393]">
+              Or reach out directly at
+            </span>
+            <button
+              type="button"
+              onClick={handleCopyEmail}
+              className="group inline-flex items-center gap-2.5 text-[clamp(20px,2.5vw,28px)] font-medium text-white hover:text-[#BAFF00] transition-colors cursor-pointer"
+            >
+              <span>contact@saimdev.site</span>
+              <span className="w-8 h-8 rounded-full border border-white/15 bg-white/[0.05] group-hover:border-[#BAFF00] flex items-center justify-center">
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  className="w-3.5 h-3.5 text-current"
+                >
+                  <rect
+                    x="5.5"
+                    y="5.5"
+                    width="8"
+                    height="8"
+                    rx="1.5"
+                    stroke="currentColor"
+                    strokeWidth="1.3"
+                  />
+                  <path
+                    d="M10.5 5.5V3.5C10.5 2.67157 9.82843 2 9 2H3.5C2.67157 2 2 2.67157 2 3.5V9C2 9.82843 2.67157 10.5 3.5 10.5H5.5"
+                    stroke="currentColor"
+                    strokeWidth="1.3"
+                  />
+                </svg>
+              </span>
+            </button>
+            {copied && (
+              <span className="mt-1 px-3.5 py-1 rounded-full bg-[#BAFF00] text-[#0D0D0D] text-[12px] font-medium">
+                E-mail copied to clipboard
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* Middle Multi-Column Directory */}
+        <div className="py-16 grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-white/[0.08]">
+          {/* Brand Column */}
+          <div className="md:col-span-4 space-y-5">
+            <Link href="/" className="inline-flex items-center gap-3.5 group">
+              <span className="w-12 h-12 rounded-full overflow-hidden border border-white/20 bg-white flex items-center justify-center">
+                <img
+                  src="/saim-dev-logo.png"
+                  alt="Saim Dev"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover"
+                />
+              </span>
+              <div>
+                <span className="block text-[18px] font-medium text-white tracking-[-0.02em]">
+                  Saim Dev
+                </span>
+                <span className="block text-[12px] text-[#939393]">
+                  Custom Web Development Studio
+                </span>
+              </div>
+            </Link>
+            <p className="text-[14px] text-[#939393] leading-relaxed max-w-sm">
+              Senior-led Next.js 15, React 19, Shopify, and bespoke web
+              application engineering for ambitious UK, European, and global
+              brands. Fixed pricing, sub-second speed, and 100% source code
+              ownership.
+            </p>
+            <div className="pt-1 flex items-center gap-3">
+              <a
+                href="https://wa.me/923196526604"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[13px] px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-[#BAFF00] hover:text-[#0D0D0D] text-white transition-colors"
+              >
+                WhatsApp Studio ↗
+              </a>
+              <a
+                href="https://x.com/saimwebdev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[13px] px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/15 text-[#CBCBCB] hover:text-white transition-colors"
+              >
+                X / Twitter ↗
+              </a>
+            </div>
+          </div>
+
+          {/* Navigation Column */}
+          <div className="md:col-span-2 space-y-3">
+            <div className="text-[12px] uppercase tracking-[0.88px] text-[#939393]">
+              Navigation
+            </div>
+            <ul className="space-y-2.5 text-[15px] text-[#CBCBCB]">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/demos"
+                  className="hover:text-white transition-colors"
+                >
+                  Live Demos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/case-studies"
+                  className="hover:text-white transition-colors"
+                >
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pricing"
+                  className="hover:text-white transition-colors"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/overview"
+                  className="hover:text-[#BAFF00] text-white transition-colors"
+                >
+                  Studio Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/process"
+                  className="hover:text-white transition-colors"
+                >
+                  4-Stage Process
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/technologies"
+                  className="hover:text-white transition-colors"
+                >
+                  Tech Stack
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-white transition-colors"
+                >
+                  About Saim
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services Column */}
+          <div className="md:col-span-3 space-y-3">
+            <div className="text-[12px] uppercase tracking-[0.88px] text-[#939393]">
+              Services
+            </div>
+            <ul className="space-y-2.5 text-[15px] text-[#CBCBCB]">
+              <li>
+                <Link
+                  href="/services"
+                  className="text-white hover:text-[#BAFF00] transition-colors"
+                >
+                  All 13 Services →
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/website-development"
+                  className="hover:text-white transition-colors"
+                >
+                  Custom Website Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/business-websites"
+                  className="hover:text-white transition-colors"
+                >
+                  Business Websites
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/ecommerce-development"
+                  className="hover:text-white transition-colors"
+                >
+                  E-Commerce Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/ecommerce-shopify"
+                  className="hover:text-white transition-colors"
+                >
+                  Shopify Store Builds
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/custom-web-apps"
+                  className="hover:text-white transition-colors"
+                >
+                  Custom Web Applications
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/landing-pages-cro"
+                  className="hover:text-white transition-colors"
+                >
+                  Landing Pages &amp; CRO
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/website-redesign"
+                  className="hover:text-white transition-colors"
+                >
+                  Website Redesign
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/website-clone"
+                  className="hover:text-white transition-colors"
+                >
+                  1:1 Website Clone
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/seo-services"
+                  className="hover:text-white transition-colors"
+                >
+                  Technical SEO &amp; Speed
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* UK Hubs, Tools & Resources Column */}
+          <div className="md:col-span-3 space-y-3">
+            <div className="text-[12px] uppercase tracking-[0.88px] text-[#939393]">
+              UK Hubs &amp; Free Tools
+            </div>
+            <ul className="space-y-2.5 text-[15px] text-[#CBCBCB]">
+              <li>
+                <Link
+                  href="/nextjs-developer-uk"
+                  className="hover:text-white transition-colors"
+                >
+                  Next.js Developer UK
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/takeaway-web-design"
+                  className="hover:text-white transition-colors"
+                >
+                  Takeaway Web Design UK
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/takeaway-web-design-london"
+                  className="hover:text-white transition-colors"
+                >
+                  Takeaway Websites London
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/takeaway-web-design-manchester"
+                  className="hover:text-white transition-colors"
+                >
+                  Takeaway Websites Manchester
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/takeaway-web-design-birmingham"
+                  className="hover:text-white transition-colors"
+                >
+                  Takeaway Websites Birmingham
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blogs"
+                  className="hover:text-white transition-colors"
+                >
+                  Engineering &amp; UK Hospitality Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools"
+                  className="hover:text-white transition-colors"
+                >
+                  160+ Free UK Kitchen Tools
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/food-safety-templates"
+                  className="hover:text-white transition-colors"
+                >
+                  Food Safety Templates Hub
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Legal & Copyright Bar */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-[#939393]">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
+            <span>© {new Date().getFullYear()} Saim Dev. All rights reserved.</span>
+            <FazierBadge />
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-5">
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <Link
+              href="/cookie-policy"
+              className="hover:text-white transition-colors"
+            >
+              Cookie Policy
+            </Link>
+            <Link
+              href="/disclaimer"
+              className="hover:text-white transition-colors"
+            >
+              Disclaimer
+            </Link>
+            <Link href="/terms" className="hover:text-white transition-colors">
+              Terms of Service
+            </Link>
+            <button
+              type="button"
+              onClick={() =>
+                window.dispatchEvent(new CustomEvent("open_cookie_settings"))
+              }
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Cookie Settings
+            </button>
+          </div>
+        </div>
+      </div>
     </footer>
   );
-};
+}

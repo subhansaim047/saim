@@ -16,7 +16,13 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
+import { RhHeader } from "@/components/rh/RhHeader";
 import { CommissionSavingsCalculator } from "@/components/CommissionSavingsCalculator";
+import {
+  RhHeroPinned,
+  RhProcessCarousel,
+  RhSystemRows,
+} from "@/components/rh/RhModernSections";
 
 export const metadata: Metadata = {
   title: "Takeaway Website Design London | Online Ordering | Saim Dev",
@@ -155,7 +161,7 @@ export default function LondonTakeawayWebDesignPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-amber-400 selection:text-black">
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -170,91 +176,34 @@ export default function LondonTakeawayWebDesignPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Header */}
-      <header className="sticky top-0 z-40 bg-black/90 backdrop-blur-md border-b border-white/10 px-4 sm:px-8 py-3.5 flex items-center justify-between">
-        <Link
-          href="/services/takeaway-web-design"
-          className="flex items-center gap-2 text-xs font-medium text-white/70 hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>UK Takeaway Service</span>
-        </Link>
-        <div className="flex items-center gap-3">
-          <Link
-            href="/tools"
-            className="text-xs text-white/60 hover:text-white transition-colors hidden sm:inline-block"
-          >
-            Free Kitchen Tools
-          </Link>
-          <a
-            href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20London%20takeaway%20website"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-4 py-2 rounded-full inline-flex items-center gap-1.5 transition-all shadow"
-          >
-            <span>London Enquiries</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </a>
-        </div>
-      </header>
+      <RhHeader theme="dark" />
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-16">
-        {/* Visible Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
-          <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
-            <li>
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li>
-              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li>
-              <Link href="/services/takeaway-web-design" className="hover:text-white transition-colors">Takeaway Web Design</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li className="text-amber-400 font-semibold" aria-current="page">
-              London
-            </li>
-          </ol>
-        </nav>
+      <RhHeroPinned
+        badge="London Restaurant & Takeaway Tech · 0% Commission"
+        title={
+          <>
+            Takeaway Website Design{" "}
+            <span className="text-[#939393]">London</span>
+          </>
+        }
+        subtitle="Saim Dev engineers direct Next.js takeaway ordering websites for London restaurants, dark kitchens, and cafes starting from £250 fixed price. Bypass 30%+ Just Eat and Deliveroo commissions with Natasha's Law 14-allergen filters across all 32 London boroughs."
+        primaryCta={{
+          label: "Build London Takeaway Site (£250)",
+          href: "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20London%20takeaway%20website",
+        }}
+        secondaryCta={{
+          label: "Interactive Allergen Demo",
+          href: "/tools/allergen-matrix-generator",
+        }}
+        videoType="mobile"
+        stripLabel="London Boroughs · Commission-Free Ordering"
+      />
 
-        {/* HERO SECTION */}
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-amber-300 text-xs font-mono font-bold uppercase">
-            <MapPin className="w-3.5 h-3.5" />
-            <span>London Restaurant &amp; Takeaway Tech</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            Takeaway Website Design London
-          </h1>
-
-          <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-light">
-            Saim Dev designs custom takeaway ordering websites for London restaurants, cafes, and dark kitchens starting from £250. Our sub-second Next.js platforms eliminate 30%+ Just Eat and Deliveroo commissions, routing customer orders directly to WhatsApp or online checkout with integrated Natasha&apos;s Law allergen filters across all 32 London boroughs.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20London%20takeaway%20website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all shadow-xl hover:scale-105 cursor-pointer"
-            >
-              <span>Build London Takeaway Site (£250 Fixed)</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              href="/tools/allergen-matrix-generator"
-              className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all border border-white/15"
-            >
-              <span>Interactive Allergen Demo</span>
-            </Link>
-          </div>
+      <main className="max-w-[1168px] mx-auto px-5 py-16 sm:py-20 space-y-16">
+        <div className="max-w-5xl mx-auto">
 
           {/* Social Proof Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10 text-left">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
             <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
               <div className="text-2xl font-extrabold text-amber-400 font-mono">0%</div>
               <div className="text-xs text-white/70 font-medium">Commission Fees</div>
@@ -481,6 +430,75 @@ export default function LondonTakeawayWebDesignPage() {
           </div>
         </div>
       </main>
+
+      <RhSystemRows
+        overline="LONDON TAKEAWAY STACK"
+        title="Own your margin"
+        titleMuted="across all 32 boroughs."
+        subtitle="Built specifically for London independents, multi-branch burger kitchens, and dark kitchens bypassing 30% delivery app cuts."
+        rows={[
+          {
+            num: "01",
+            title: "Natasha's Law 14-Allergen Filter",
+            description: "Interactive allergen filtering across every menu category so diners inspect ingredients safely before ordering.",
+            tags: ["14 Allergens", "FSA Compliant", "Instant Search"],
+            href: "/tools/allergen-matrix-generator",
+          },
+          {
+            num: "02",
+            title: "Direct WhatsApp & Stripe Checkout",
+            description: "Orders route straight to your kitchen printer or WhatsApp Business dashboard with 0% aggregator commission.",
+            tags: ["0% Commission", "Stripe UK", "Postcode Zones"],
+          },
+          {
+            num: "03",
+            title: "Sub-Second Borough Local SEO",
+            description: "Schema-backed menu indexing engineered to capture direct 'near me' food searches across London.",
+            tags: ["LocalBusiness JSON-LD", "99+ Speed", "Mobile First"],
+          },
+        ]}
+      />
+
+      <RhProcessCarousel
+        overline="LAUNCH SPRINT"
+        title="Commission-free menu live"
+        titleMuted="in 3–5 days."
+        stages={[
+          {
+            stage: "01",
+            duration: "Day 1",
+            title: "Menu & Allergen Audit",
+            description: "We ingest your PDF menu, add-ons, meal deals, and Natasha's Law allergen data with zero manual work.",
+            deliverables: ["Full Menu JSON", "Allergen Matrix", "London Zone Map"],
+          },
+          {
+            stage: "02",
+            duration: "Days 2–3",
+            title: "Branded Storefront Build",
+            description: "High-contrast dark editorial UI tailored to smartphones where 85%+ of London takeaway orders happen.",
+            deliverables: ["Mobile Cart UX", "Upsell Flows", "Staging Link"],
+          },
+          {
+            stage: "03",
+            duration: "Day 4",
+            title: "Order Routing & QR Assets",
+            description: "Test WhatsApp order payloads, delivery radius rules, and generate table/flyer QR menus to convert app customers.",
+            deliverables: ["Print QR Flyering", "WhatsApp Test", "Speed QA"],
+          },
+          {
+            stage: "04",
+            duration: "Day 5",
+            title: "Live Go-Live (£250 Fixed)",
+            description: "Deploy on your own .co.uk domain with 100% ownership and zero ongoing software cuts per order.",
+            deliverables: ["Custom Domain", "0% Per Order", "Code Handoff"],
+          },
+        ]}
+        quote="Switching repeat Friday night orders off aggregator apps to our direct Saim Dev menu saved over £1,400 in commissions during the first month alone."
+        author="Tariq Mahmood"
+        role="Founder, Spice Quarter Kitchen London"
+        ctaHref="/contact"
+        ctaLabel="Launch London Menu"
+      />
 
       <SiteFooter theme="dark" />
     </div>

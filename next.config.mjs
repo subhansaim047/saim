@@ -158,6 +158,15 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: '/', destination: '/rh-exact/index.html' },
+        { source: '/preview-rh', destination: '/rh-exact/index.html' },
+        { source: '/preview-rh/', destination: '/rh-exact/index.html' },
+      ],
+    };
+  },
 };
 
 export default nextConfig;

@@ -1,0 +1,1326 @@
+<!DOCTYPE html><html lang="en" data-wf-domain="www.rh.design" data-wf-page="6ac562e9b75b41eed4985abd" data-wf-site="6909ed375ee6ef22dffa47c2"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Squire: Mobile App Design for Barbershops | rh.design</title><meta name="description" content="How rh.design led the design of SQUIRE Commander, the iOS and Android app barbers use to run bookings, payments and their whole shop."><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"What did rh.design design for SQUIRE?","acceptedAnswer":{"@type":"Answer","text":"SQUIRE Commander for barbers on iOS and Android, the customer booking flow, an iPad version with a full calendar and point of sale, and the design system of 600+ components behind all of it."}},{"@type":"Question","name":"How long did the collaboration last?","acceptedAnswer":{"@type":"Answer","text":"From 2020 to 2025. I led the design team the whole time, working directly with SQUIRE’s leadership and engineering."}},{"@type":"Question","name":"How did you decide what to fix first?","acceptedAnswer":{"@type":"Answer","text":"Through discovery: interviews, analytics and usability testing showed where booking and checkout slowed people down, so those flows were redesigned first. More than 80 wireframes came before any UI."}},{"@type":"Question","name":"What came out of it?","acceptedAnswer":{"@type":"Answer","text":"SQUIRE Commander is rated 4.8 in the stores from 39K ratings and has 50K+ downloads. Stripe featured the app in its official commercial."}}]}</script><link rel="canonical" href="https://www.rh.design/case-studies/squire"><link rel="alternate" hreflang="en" href="https://www.rh.design/case-studies/squire"><link rel="alternate" hreflang="cs-CZ" href="https://www.rh.design/cz/pripadove-studie/squire"><link rel="alternate" hreflang="x-default" href="https://www.rh.design/case-studies/squire"><meta property="og:type" content="website"><meta property="og:title" content="Squire: Mobile App Design for Barbershops | rh.design"><meta property="og:description" content="How rh.design led the design of SQUIRE Commander, the iOS and Android app barbers use to run bookings, payments and their whole shop."><meta property="og:image" content="https://www.rh.design/case-studies/og-squire.jpg"><meta name="twitter:image" content="https://www.rh.design/case-studies/og-squire.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Squire: Mobile App Design for Barbershops | rh.design"><meta name="twitter:description" content="How rh.design led the design of SQUIRE Commander, the iOS and Android app barbers use to run bookings, payments and their whole shop."><link href="/assets/css/en-case-studies-squire.css?v=031ef2ab" rel="stylesheet" type="text/css"/><style>@font-face{font-family:Geist;font-style:normal;font-weight:300 900;font-display:swap;src:url(/vendor/fonts/geist-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}@font-face{font-family:Geist;font-style:normal;font-weight:300 900;font-display:swap;src:url(/vendor/fonts/geist-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}</style><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="/assets/6909ed375ee6ef22dffa47c2__6965f8b630a9e5bc560372aa_rh-favi.png" rel="shortcut icon" type="image/x-icon"/><link href="/assets/6909ed375ee6ef22dffa47c2__6965f8df5b7fc2873a676a96_app-icon.svg" rel="apple-touch-icon"/><!-- 1. Google Consent Mode default (denied) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'granted',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+</script>
+<!-- 2. Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PQ28B3JZ');</script><link rel="stylesheet" href="/_astro/BookCall.ODSHaQ4l.css"><link rel="stylesheet" href="/_astro/Base.0MHSBaZ2.css"></head><body class><div class="page-wrapper"><div data-w-id="8247694a-8575-f682-c0e0-822a0d46e894" data-animation="over-right" data-collapse="none" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav"><div class="container-1130"><div class="wrapper-navbar"><nav role="navigation" class="nav-menu w-nav-menu"><div class="div-block-10"><a href="/" class="link-home-1 w-inline-block"><img src="/assets/6909ed375ee6ef22dffa47c2__6909fa5dc96a1b02338dec9f_rh-logo-(1).svg" loading="lazy" alt="rh.design" class="img-48-white"/><img src="/assets/6909ed375ee6ef22dffa47c2__690caadadb0d78716f3ab898_256.avif" loading="lazy" alt="rh.design" class="img-48-black"/></a><div class="g-48-copy"><a data-w-id="fd1a9c29-b9bf-2c81-bc8a-a9a204f1a3d8" href="/contact" class="btn-book btn-nav w-inline-block"><div class="wrapper-under"><div class="button-base-medium">Get in touch</div><div class="under-line-dark"></div></div><div class="circle-yellow"><img src="/assets/6909ed375ee6ef22dffa47c2__690a02c7dd0940ff80841fa5_arrow-up-right.svg" loading="lazy" alt="" class="icon-16x16"/></div></a></div></div></nav><div class="menu-button w-nav-button"><div class="div-block-27"><div class="line-top"></div><div class="line-middle"></div><div class="line-bottom"></div></div></div></div></div><div class="code-embed-2 w-embed w-script"><script defer src="/vendor/gsap.min.js"></script>
+<script defer src="/vendor/ScrollTrigger.min.js"></script>
+<style>
+/* Initial states */
+.navbar {
+  position: fixed;
+  top: 80px;
+  transition: top 0.4s ease;
+}
+.navbar.scrolled {
+  top: 20px;
+}
+/* Mobile: fixed 20px top */
+@media (max-width: 920px) {
+  .navbar {
+    top: 20px;
+  }
+  .navbar.scrolled {
+    top: 20px;
+  }
+}
+.img-48-white {
+  opacity: 0;
+}
+.img-48-black {
+  opacity: 1;
+}
+.link-nav {
+  color: #0D0D0D;
+}
+.under-line-dark {
+  background-color: #0D0D0D;
+}
+.btn-book.btn-nav {
+  color: #0D0D0D;
+}
+/* Dark mode states */
+.navbar.dark-mode .img-48-white {
+  opacity: 1;
+}
+.navbar.dark-mode .img-48-black {
+  opacity: 0;
+}
+.navbar.dark-mode .link-nav {
+  color: #ffffff;
+}
+.navbar.dark-mode .under-line-dark {
+  background-color: #ffffff;
+}
+.navbar.dark-mode .btn-book.btn-nav {
+  color: #ffffff;
+}
+/* Smooth transitions */
+.img-48-white,
+.img-48-black {
+  transition: opacity 0.3s ease;
+}
+.btn-book.btn-nav {
+  transition: color 0.3s ease;
+}
+.under-line-dark {
+  transition: background-color 0.3s ease;
+}
+</style>
+<script>
+// ---- FIX: страховка на случай, если этот <style> физически подключается
+// в Footer (после того как Webflow уже успел отрисовать .navbar своими
+// дефолтными стилями). В таком случае наш CSS-переход "top 0.4s ease"
+// срабатывает не как первичное применение стиля, а как ОБЫЧНОЕ изменение
+// уже отрисованного элемента — и браузер честно его анимирует, отсюда
+// видимый выезд сверху вниз при загрузке.
+// Отслеживаем появление .navbar в DOM максимально рано и сразу глушим
+// transition, пока элемент ещё не покрашен с анимацией.
+(function () {
+  function killTransition(el) {
+    if (!el || el.__transitionKilled) return;
+    el.__transitionKilled = true;
+    el.style.setProperty('transition', 'none', 'important');
+    void el.offsetHeight;
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        el.style.removeProperty('transition');
+      });
+    });
+  }
+
+  var existing = document.querySelector('.navbar');
+  if (existing) { killTransition(existing); return; }
+
+  var observer = new MutationObserver(function () {
+    var el = document.querySelector('.navbar');
+    if (el) {
+      killTransition(el);
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('.navbar');
+  // Dark sections: legacy class list + any element opted in via data-nav="dark" (used by new service pages)
+  const darkSections = document.querySelectorAll('.section-case, .section-services, .section-founder, .section-parallax, .section-footer, [data-nav="dark"]');
+  
+  let lastScrollY = window.scrollY;
+  
+  function checkNavbarPosition() {
+    const currentScrollY = window.scrollY;
+    const navbarRect = navbar.getBoundingClientRect();
+    const navbarCenter = navbarRect.top + (navbarRect.height / 2);
+    
+    // Перевірка скролу для зміни top (тільки для десктопу)
+    if (window.innerWidth > 920) {
+      if (currentScrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+    
+    let isInDarkSection = false;
+    
+    darkSections.forEach(section => {
+      const sectionRect = section.getBoundingClientRect();
+      
+      // Перевіряємо чи центр навбару знаходиться в межах секції
+      if (navbarCenter >= sectionRect.top && navbarCenter <= sectionRect.bottom) {
+        isInDarkSection = true;
+      }
+    });
+    
+    // Додаємо або видаляємо клас dark-mode
+    if (isInDarkSection) {
+      navbar.classList.add('dark-mode');
+    } else {
+      navbar.classList.remove('dark-mode');
+    }
+    
+    lastScrollY = currentScrollY;
+  }
+  
+  // Початкова перевірка — без анімації, щоб при завантаженні сторінки
+  // navbar одразу стояв на потрібній позиції, не "виїжджаючи".
+  // Далі transition повертається, і скрол лишається плавним.
+  navbar.style.setProperty('transition', 'none', 'important');
+  checkNavbarPosition();
+  void navbar.offsetHeight;
+  navbar.style.removeProperty('transition');
+  
+  // Перевірка при скролі
+  window.addEventListener('scroll', checkNavbarPosition);
+});
+</script></div><div class="w-embed w-script"><!-- Site extras loader: navigation menu (Case Studies, Services dropdown, About, Contact), Footer v2 link hover,
+     the Selected Work fade-in and the two-line homepage headline layout. Everything (styles, EN and CZ markup,
+     scripts) is the asset rh-site-extras-v5.json, generated from the Astro site by site/tools/webflow-nav-embed.py.
+     To update: upload a new file and change the URL below.
+     Menu variants for preview: add ?nav=pill or ?nav=bar to the address. Backup: backups/nav-menu-loader-embed.html.
+     Rollback: delete this embed. -->
+</div></div><div class="main-wrapper"><div data-nav="dark" class="hero-pin-pd"><div class="hero-pin-inner-pd"><section class="section-hero-cs"><div class="container-hero-cs"><h1 class="h1-cs">Leading design for SQUIRE, the $750M operating system for barbershops</h1><div class="tags-cs"><div class="tag-cs">Mobile app</div><div class="tag-cs">iOS &amp; Android</div><div class="tag-cs">Design system</div></div><div class="facts-cs"><div class="fact-cs"><div class="fact-label-cs">Client</div><div class="fact-value-cs">Squire Technologies Inc.</div></div><div class="fact-cs"><div class="fact-label-cs">Country</div><div class="fact-value-cs">United States</div></div><div class="fact-cs"><div class="fact-label-cs">Industry</div><div class="fact-value-cs">Barbershops</div></div><div class="fact-cs"><div class="fact-label-cs">Years</div><div class="fact-value-cs">2020 - 2025</div></div></div></div><img src="/assets/6909ed375ee6ef22dffa47c2__6ac6935f518510b11eb5966c_cs-squire-hero-bg.webp" loading="lazy" alt="SQUIRE Commander app home screen on an iPhone" class="img-hero-cs"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ac6935fef654fbdecf1f86c_cs-squire-hero-phone.webp" loading="lazy" alt="SQUIRE Commander app home screen on an iPhone" class="phone-hero-cs"/></section></div><div class="w-embed w-script"><!-- Hero + footer parallax for case study pages. Same as on Product Design / Mobile App Design,
+     plus a second layer: the phone (.phone-hero-cs) rises faster than the pinned hero, so it reads as a separate object.
+     Desktop only. Rollback: delete this embed (page then scrolls normally). -->
+<style>
+:where(.hero-pin-pd) ~ * { position: relative; z-index: 1; }
+.hero-pin-pd ~ .section-footer-pd { z-index: 0; }
+</style>
+<script>
+(function () {
+  var pin = document.querySelector('.hero-pin-pd');
+  var inner = pin && pin.querySelector('.hero-pin-inner-pd');
+  if (!inner) return;
+  var phone = inner.querySelector('.phone-hero-cs');
+  var footer = null; // comes later in the page than this embed, so it is looked up in measure()
+
+  var SPEED = 0.08; // share of scroll speed the pinned hero keeps
+  var PHONE = 0.22; // extra share for the phone, on top of SPEED (phone moves at 30% of scroll speed)
+  var desktop = window.matchMedia('(min-width: 992px) and (hover: hover) and (pointer: fine)');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var doc = document.documentElement;
+  var H = 0, OFF = 0, FH = 0, on = false;
+
+  function measure() {
+    H = pin.offsetHeight;
+    OFF = H - window.innerHeight;
+    if (OFF < 0) OFF = 0;
+    if (!footer) footer = document.querySelector('.section-footer-pd');
+    FH = footer ? footer.offsetHeight : 0;
+  }
+
+  // Runs straight from the scroll event (no rAF): a one-frame delay would show as jitter,
+  // because the blocks are being held almost still against the page scroll.
+  function apply() {
+    if (!on) return;
+    var s = window.scrollY;
+
+    var y = s < 0 ? 0 : s > H ? H : s;
+    // A hero taller than the screen scrolls normally until its bottom edge reaches the bottom
+    // of the screen (so the phone is fully shown first), and only then is held.
+    var p = y - OFF;
+    if (p < 0) p = 0;
+    inner.style.transform = 'translate3d(0,' + (p * (1 - SPEED)).toFixed(2) + 'px,0)';
+    if (phone) phone.style.transform = 'translate3d(0,' + (-y * PHONE).toFixed(2) + 'px,0)';
+
+    if (footer) {
+      // Distance left to the end of the page, capped at the footer's height.
+      var r = doc.scrollHeight - window.innerHeight - s;
+      r = r < 0 ? 0 : r > FH ? FH : r;
+      footer.style.transform = r ? 'translate3d(0,' + (-r * (1 - SPEED)).toFixed(2) + 'px,0)' : '';
+    }
+  }
+
+  function sync() {
+    var want = desktop.matches && !reduce.matches;
+    if (want) {
+      on = true;
+      measure();
+      inner.style.willChange = 'transform';
+      if (phone) phone.style.willChange = 'transform';
+      apply();
+    } else if (on) {
+      on = false;
+      inner.style.transform = '';
+      inner.style.willChange = '';
+      if (phone) { phone.style.transform = ''; phone.style.willChange = ''; }
+      if (footer) footer.style.transform = '';
+    }
+  }
+
+  window.addEventListener('scroll', apply, { passive: true });
+  window.addEventListener('resize', sync);
+  document.addEventListener('DOMContentLoaded', sync);
+  window.addEventListener('load', sync);
+  if (desktop.addEventListener) {
+    desktop.addEventListener('change', sync);
+    reduce.addEventListener('change', sync);
+  }
+  sync();
+})();
+</script></div></div><section class="section-overview-cs"><div class="container-cs"><div class="row-split-cs"><div class="overline-pd">Overview</div><div class="col-main-cs"><div class="stats-cs"><div class="stat-cs"><div class="stat-num-cs">$750M</div><div class="stat-label-cs">Company valuation</div></div><div class="stat-cs"><div class="stat-num-cs">600+</div><div class="stat-label-cs">Design system components</div></div><div class="stat-cs"><div class="stat-num-cs">80+</div><div class="stat-label-cs">Wireframes before any UI</div></div></div><h2 class="h3-cs">Key highlights</h2><div class="highlights-cs"><div class="highlight-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab80bdc600b3481320ffd5b_pd-icon-check-dark.svg" loading="lazy" alt="" class="icon-check-cs"/><div class="text-16-cs">Owned the end-to-end design of SQUIRE Commander for iOS and Android.</div></div><div class="highlight-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab80bdc600b3481320ffd5b_pd-icon-check-dark.svg" loading="lazy" alt="" class="icon-check-cs"/><div class="text-16-cs">Led and managed the design team, working directly with leadership and engineering.</div></div><div class="highlight-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab80bdc600b3481320ffd5b_pd-icon-check-dark.svg" loading="lazy" alt="" class="icon-check-cs"/><div class="text-16-cs">Ran discovery through interviews, analytics and usability testing to find friction in booking and checkout.</div></div><div class="highlight-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab80bdc600b3481320ffd5b_pd-icon-check-dark.svg" loading="lazy" alt="" class="icon-check-cs"/><div class="text-16-cs">Built a design system of 600+ components that keeps every screen consistent.</div></div><div class="highlight-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab80bdc600b3481320ffd5b_pd-icon-check-dark.svg" loading="lazy" alt="" class="icon-check-cs"/><div class="text-16-cs">Shaped the visual system behind the look and feel of the whole app.</div></div><div class="highlight-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab80bdc600b3481320ffd5b_pd-icon-check-dark.svg" loading="lazy" alt="" class="icon-check-cs"/><div class="text-16-cs">Extended the product to iPad with a full calendar and point of sale.</div></div></div></div></div></div></section><section class="section-cs"><div class="container-cs"><div class="overline-pd">The product</div><h2 class="h2-cs">One app that runs the whole barbershop</h2></div><div class="gallery-cs"><div class="row-2-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562a86d8c0b589eca00ae_cs-squire-g1a.webp" loading="lazy" alt="SQUIRE brand campaign with the line Hustle Smarter" class="tile-cs"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562a86d8c0b589eca00e5_cs-squire-g1b.webp" loading="lazy" alt="Calendar screen with a date range picker" class="tile-cs"/></div><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562a801e51389729035ca_cs-squire-g1c.webp" loading="lazy" alt="Three calendar views of the SQUIRE app" class="tile-calendar-cs"/><div class="caption-cs">The calendar in day, 3-day and schedule views</div></div></section><section class="section-cs"><div class="container-cs"><div class="row-split-cs"><div class="overline-pd">The challenge</div><div class="col-main-cs"><h2 class="h3-text-cs">A barber&#x27;s day runs on bookings, payments and repeat clients. One app had to handle all of it.</h2><p class="body-cs">SQUIRE is the operating system for modern barbershops. It helps barbers run their entire business, from bookings and payments to inventory and marketing. SQUIRE Commander puts all of that into a single app that a barber uses between two clients, often with one hand.</p><p class="body-cs">I owned the design of the iOS and Android apps for barbers and their customers, and led the design team working with leadership and engineering. As part of the discovery team, I used interviews, analytics and usability testing to find where booking and checkout were slowing people down, then redesigned those flows first.</p></div></div></div></section><section class="section-before-dark-cs"><div class="gallery-cs"><div class="row-2b-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562a9111cd65def2b3b4e_cs-squire-g2a.webp" loading="lazy" alt="SQUIRE banner with the line Hustle Smarter at a trade show" class="tile-narrow-cs"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562a9aa66da0485246620_cs-squire-g2b.webp" loading="lazy" alt="Appointment cards with charge, modify and rebook actions" class="tile-mid-cs"/></div><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562a99bf94256589862b8_cs-squire-g2c.webp" loading="lazy" alt="Home screen of the SQUIRE app with sales, schedule and client widgets" class="tile-home-cs"/><div class="row-2-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562aa111cd65def2b3c0f_cs-squire-g2d.webp" loading="lazy" alt="Appointment detail with a charge button" class="tile-cs"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562aa4fb654d401aab54b_cs-squire-g2e.webp" loading="lazy" alt="Client acquisition widget showing new clients" class="tile-cs"/></div><div class="caption-cs">A home screen each barber can customize, with sales, schedule and clients at a glance</div></div></section><section data-nav="dark" class="section-quote-cs"><div class="container-1130"><div class="testi-process-pd"><div class="testi-head-pd"><div class="overline-pd lime-pd">Testimonial</div><p class="quote-process-pd">“Robin demonstrated exceptional design skills and a strong work ethic, contributing significantly to our team&#x27;s success. Robin&#x27;s creativity and attention to detail were invaluable, and I highly recommend Robin for any future endeavors.”</p></div><div class="testi-foot-pd"><div class="author-card-pd"><div class="author-avatar-pd"><img src="/assets/6909ed375ee6ef22dffa47c2__6abcb1bf71fa012e78b9a44b_troy-payne.webp" loading="lazy" alt="Troy Payne" class="author-img-pd"/></div><div class="author-text-pd"><div class="body-base-medium">Troy Payne</div><div class="body-base-book author-role-pd">CTO of Squire Technologies</div></div></div><img src="/assets/6909ed375ee6ef22dffa47c2__6ab80c9aceb091fbb0a7ac5a_pd-logo-squire-white.svg" loading="lazy" alt="Squire" class="logo-testi-pd"/></div></div></div><div class="w-embed w-script"><!-- Testimonial text reveal (case study). The quote starts fully hidden and is uncovered through a noise map:
+     a soft random cloud pattern decides which places light up first, and the lit area spreads until the whole
+     quote is visible. Done with a CSS mask drawn on a small canvas, so the text itself is untouched.
+     Runs once, a new pattern on every page load. Off for prefers-reduced-motion; without JS the quote is simply visible.
+     Rollback: delete this embed. Source: backups/case-study-quote-reveal-embed.html -->
+<script>
+(function () {
+  var q = null; // the reveal is switched off, the quote is static for now (Robin 2026-10-12)
+  if (!q || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.CSS || !(CSS.supports('mask-image', 'none') || CSS.supports('-webkit-mask-image', 'none'))) return;
+
+  var DURATION = 2800; // ms for the whole reveal
+  var CELL = 110;      // px, size of the big noise shapes (smaller = finer grain)
+  var SOFT = 0.22;     // softness of the edge between hidden and visible (0 = hard, 0.5 = very blurry)
+  var RES = 220;       // mask canvas width in px; it is stretched over the text, which also blurs it
+
+  function setMask(v) { q.style.webkitMaskImage = v; q.style.maskImage = v; }
+  q.style.webkitMaskSize = q.style.maskSize = '100% 100%';
+  q.style.webkitMaskRepeat = q.style.maskRepeat = 'no-repeat';
+  setMask('linear-gradient(transparent, transparent)'); // hidden until it starts
+
+  function grid(w, h) { var g = []; for (var i = 0; i < w * h; i++) g.push(Math.random()); return g; }
+  function fade(t) { return t * t * (3 - 2 * t); }
+  // Smooth value noise sampled at (x, y) in grid units.
+  function sample(g, gw, gh, x, y) {
+    var x0 = Math.floor(x), y0 = Math.floor(y);
+    var x1 = Math.min(x0 + 1, gw - 1), y1 = Math.min(y0 + 1, gh - 1);
+    var fx = fade(x - x0), fy = fade(y - y0);
+    var a = g[y0 * gw + x0], b = g[y0 * gw + x1], c = g[y1 * gw + x0], d = g[y1 * gw + x1];
+    return (a + (b - a) * fx) * (1 - fy) + (c + (d - c) * fx) * fy;
+  }
+
+  function run() {
+    var w = q.offsetWidth, h = q.offsetHeight;
+    var cw = RES, ch = Math.max(24, Math.round(RES * h / w));
+    var gw = Math.max(3, Math.round(w / CELL) + 1), gh = Math.max(3, Math.round(h / CELL) + 1);
+    var g1 = grid(gw, gh), g2 = grid(gw * 2, gh * 2), g3 = grid(gw * 4, gh * 4);
+
+    // Noise map: three octaves, then stretched to the full 0..1 range.
+    var n = new Float32Array(cw * ch), min = 1, max = 0, i, x, y;
+    for (y = 0; y < ch; y++) for (x = 0; x < cw; x++) {
+      var u = x / (cw - 1), v = y / (ch - 1);
+      var val = sample(g1, gw, gh, u * (gw - 1), v * (gh - 1)) * 0.6 +
+                sample(g2, gw * 2, gh * 2, u * (gw * 2 - 1), v * (gh * 2 - 1)) * 0.28 +
+                sample(g3, gw * 4, gh * 4, u * (gw * 4 - 1), v * (gh * 4 - 1)) * 0.12;
+      n[y * cw + x] = val;
+      if (val < min) min = val;
+      if (val > max) max = val;
+    }
+    for (i = 0; i < n.length; i++) n[i] = (n[i] - min) / (max - min);
+
+    var cv = document.createElement('canvas');
+    cv.width = cw; cv.height = ch;
+    var ctx = cv.getContext('2d');
+    var img = ctx.createImageData(cw, ch);
+    var t0 = performance.now();
+
+    function frame(now) {
+      var p = (now - t0) / DURATION;
+      if (p >= 1) { setMask(''); return; }
+      // Threshold sweeps from below the darkest value to above the brightest one.
+      var th = p * (1 + SOFT) - SOFT;
+      for (var k = 0; k < n.length; k++) {
+        var a = (th - n[k]) / SOFT + 1;
+        a = a < 0 ? 0 : a > 1 ? 1 : a;
+        img.data[k * 4 + 3] = a * a * (3 - 2 * a) * 255;
+      }
+      ctx.putImageData(img, 0, 0);
+      setMask('url(' + cv.toDataURL('image/png') + ')');
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    if (!entries[0].isIntersecting) return;
+    io.disconnect();
+    run();
+  }, { threshold: 0.9, rootMargin: '0px 0px -22% 0px' });
+  // The section is one screen tall with the quote in its middle: start only once the quote has climbed
+  // into the upper part of the screen (the section then fills most of it), so the reveal is not missed.
+  io.observe(q);
+})();
+</script></div></section><section class="section-between-cs"><div class="container-cs"><div class="overline-pd">Payments</div><h2 class="h2-cs">Getting paid is part of the same flow</h2></div><div class="gallery-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562aa0739e714588d43bf_cs-squire-g3a.webp" loading="lazy" alt="Bank account, card and earnings overview widgets" class="tile-wide-cs"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562aac37d968189bffd70_cs-squire-g3b.webp" loading="lazy" alt="Shop calendar with all barbers side by side" class="tile-wide-cs"/><div class="row-2-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562aa36b3dfc8860d9855_cs-squire-g3c.webp" loading="lazy" alt="Checkout screen with the order total" class="tile-cs"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562abe236645ed70337b6_cs-squire-g3d.webp" loading="lazy" alt="Shop location card with sales and rating" class="tile-cs"/></div><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562ab408f6f01d1f1742f_cs-squire-g3e.webp" loading="lazy" alt="Shop calendar with the order details panel open" class="tile-wide-cs"/><div class="caption-cs">Checkout, order details and earnings for the barber and for the whole shop</div></div></section><section data-nav="dark" class="section-video-cs"><div class="container-cs"><div class="overline-pd lime-pd">Video</div><h2 class="h2-video-cs">Booking a cut takes a few taps <span class="span-line-cs">Add-ons and checkout included</span></h2></div><div class="video-wrap-cs"><div class="w-embed w-script"><!-- Case study video: muted loop, plays only while it is on screen. -->
+<video class="video-cs" muted loop playsinline preload="metadata" poster="/assets/6909ed375ee6ef22dffa47c2__6ac562ece236645ed70358a5_cs-squire-video-poster.webp" style="display:block;width:100%;height:auto;aspect-ratio:2/1;background:#000">
+  <source src="/assets/6909ed375ee6ef22dffa47c2__6ac562ece236645ed70358db_cs-squire-stripe.mp4" type="video/mp4">
+</video>
+<script>
+(function () {
+  var v = document.currentScript.previousElementSibling;
+  if (!v || !('IntersectionObserver' in window)) { if (v) v.autoplay = true; return; }
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else v.pause();
+    });
+  }, { threshold: 0.25 }).observe(v);
+})();
+</script></div></div><div class="caption-cs">The customer booking flow: pick a service, add extras, review the order</div></section><section class="section-after-dark-cs"><div class="gallery-cs"><div class="row-2-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562ab408f6f01d1f17443_cs-squire-g4a.webp" loading="lazy" alt="SQUIRE event badges" class="tile-cs"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562ac408f6f01d1f17457_cs-squire-g4b.webp" loading="lazy" alt="Barber profile in the customer app" class="tile-cs"/></div><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562acf6e65b45f595ded0_cs-squire-g4c.webp" loading="lazy" alt="Welcome screen for finding a barbershop nearby" class="tile-welcome-cs"/><div class="row-2-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562acaa66da048524680a_cs-squire-g4d.webp" loading="lazy" alt="Screen for choosing a professional" class="tile-cs"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562ad9e48b709317fef7d_cs-squire-g4e.webp" loading="lazy" alt="Screen for choosing a shop location" class="tile-cs"/></div><div class="caption-cs">The customer side: find a shop, choose a barber, book a time</div></div></section><section class="section-cs"><div class="container-cs"><div class="row-results-cs"><div class="col-results-cs"><div class="overline-pd">Results</div><h2 class="h2-results-cs">Rated 4.8 by the barbers who use it every day.</h2><p class="body-results-cs">SQUIRE Commander became the tool barbers keep open through the whole working day, with bookings, checkout and payouts in one place. The same design system carries the product across iPhone, Android and iPad.</p><p class="body-results-cs">Stripe featured the app in its official commercial as an example of modern product design and payments working together.</p><div class="faq-cs"><h3 class="faq-cs-h">Questions about this project</h3><details class="cell-questions faq-cs-item"><summary class="faq-cs-q"><div class="title-large">What did rh.design design for SQUIRE?</div><span class="faq-cs-plus" aria-hidden="true"></span></summary><p class="desctiption faq-cs-a">SQUIRE Commander for barbers on iOS and Android, the customer booking flow, an iPad version with a full calendar and point of sale, and the design system of 600+ components behind all of it.</p></details><details class="cell-questions faq-cs-item"><summary class="faq-cs-q"><div class="title-large">How long did the collaboration last?</div><span class="faq-cs-plus" aria-hidden="true"></span></summary><p class="desctiption faq-cs-a">From 2020 to 2025. I led the design team the whole time, working directly with SQUIRE’s leadership and engineering.</p></details><details class="cell-questions faq-cs-item"><summary class="faq-cs-q"><div class="title-large">How did you decide what to fix first?</div><span class="faq-cs-plus" aria-hidden="true"></span></summary><p class="desctiption faq-cs-a">Through discovery: interviews, analytics and usability testing showed where booking and checkout slowed people down, so those flows were redesigned first. More than 80 wireframes came before any UI.</p></details><details class="cell-questions faq-cs-item"><summary class="faq-cs-q"><div class="title-large">What came out of it?</div><span class="faq-cs-plus" aria-hidden="true"></span></summary><p class="desctiption faq-cs-a">SQUIRE Commander is rated 4.8 in the stores from 39K ratings and has 50K+ downloads. Stripe featured the app in its official commercial.</p></details></div></div><div class="stats-col-cs"><div class="stat-row-cs"><div class="stat-big-cs">50K+</div><div class="stat-label-cs">App downloads</div></div><div class="stat-row-cs"><div class="stat-big-cs">4.8</div><div class="stat-label-cs">Store rating</div></div><div class="stat-row-cs"><div class="stat-big-cs">39K</div><div class="stat-label-cs">Ratings in the stores</div></div></div></div></div></section><section class="section-ipad-cs section-ipad-sq-cs"><img src="/assets/6909ed375ee6ef22dffa47c2__6ac562ad054f76bbe6b8f01c_cs-squire-ipad.webp" loading="lazy" alt="SQUIRE shop calendar on an iPad held in two hands" class="img-ipad-cs"/></section><section data-nav="dark" class="section-cta-pd"><div class="container-1130"><div class="head-process-pd"><div class="overline-pd lime-pd">Schedule a call</div><h2 class="heading-cta-pd"><span class="span-light-pd">That was one product.</span><br/>Yours could be next.</h2></div><div class="row-cta-pd"><div class="widget-cta-pd"><div class="bc is-raised is-compact" data-source="case-studies/squire" data-plan data-t="{&quot;loc&quot;:&quot;en-GB&quot;,&quot;cont&quot;:&quot;Continue&quot;,&quot;book&quot;:&quot;Book&quot;,&quot;none&quot;:&quot;No free times this week.&quot;,&quot;taken&quot;:&quot;That time was just taken. Please pick another one.&quot;,&quot;error&quot;:&quot;Something went wrong. Please try again, or write to robin@rh.design.&quot;,&quot;sent&quot;:&quot;Email sent to &quot;,&quot;zone&quot;:&quot;en&quot;,&quot;what&quot;:&quot;Intro call with Robin Holesinsky (rh.design)&quot;,&quot;note&quot;:&quot;Intro call – rh.design&quot;}" lang="en"><div class="bc-main"><div class="bc-side"><div class="bc-host"><img src="/pricing/robin.webp" alt="" width="56" height="56"><div><span>Intro call with</span><b>Robin Holesinsky</b></div></div><ul class="bc-meta"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2" stroke-linecap="round"></path></svg>30 minutes</li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"></rect><path d="m16 10 5-3v10l-5-3" stroke-linejoin="round"></path></svg>Google Meet</li></ul><p class="title-large bc-title">Enter your details to book a call</p><div class="bc-who" hidden><span class="bc-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="bc-who-text" data-b="who"></span><button type="button" class="bc-edit">Edit</button></div><form class="bc-lead" novalidate><label class="bc-field"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6" stroke-linecap="round"></path></svg><input class="bc-input" name="email" type="email" autocomplete="email" placeholder="Email *" aria-label="Email" required></label><label class="bc-field"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-3.9 3.6-7 8-7s8 3.1 8 7" stroke-linecap="round"></path></svg><input class="bc-input" name="name" type="text" autocomplete="name" placeholder="Name *" aria-label="Name" required></label><div class="bc-qs" hidden><fieldset class="bc-q"><legend>What is your budget? *</legend><div class="bc-tiles"><label class="bc-tile"><input type="radio" name="budget" value="$4,000 – $8,000"><span>$4,000 – $8,000</span></label><label class="bc-tile"><input type="radio" name="budget" value="$8,000 – $15,000"><span>$8,000 – $15,000</span></label><label class="bc-tile"><input type="radio" name="budget" value="$15,000 – $25,000"><span>$15,000 – $25,000</span></label><label class="bc-tile"><input type="radio" name="budget" value="$25,000+"><span>$25,000+</span></label></div></fieldset><label class="bc-q"><span class="bc-q-label">How did you find me?</span><span class="bc-select"><select class="bc-input" name="found"><option value="">Select</option><option value="Dribbble">Dribbble</option><option value="LinkedIn">LinkedIn</option><option value="X (Twitter)">X (Twitter)</option><option value="Google">Google</option><option value="Someone referred me">Someone referred me</option><option value="Something else">Something else</option></select><svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></label><label class="bc-q"><span class="bc-q-label">What do you need help with? *</span><textarea class="bc-input bc-text" name="help" rows="3" placeholder="A few lines about the project"></textarea></label></div><input class="bc-hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="bc-consent">By entering your information, you consent to it being saved under our <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p><p class="bc-err" hidden>Please fill in your email, name, budget and what you need help with.</p><button type="submit" class="bc-btn"><span class="bc-roll"><i>Continue</i><i aria-hidden="true">Continue</i></span></button></form></div><div class="bc-cal is-locked"><div class="bc-cal-head"><p class="title-large bc-month" data-b="month"></p><div class="bc-nav"><button type="button" data-cal="-1" aria-label="Previous week"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><button type="button" data-cal="1" aria-label="Next week"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="m6 3 5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div></div><div class="bc-days-view"><div class="bc-days" role="listbox" aria-label="Day"></div></div><div class="bc-tzrow"><label class="bc-tz"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg><span class="bc-tz-label" data-b="tzlabel" aria-hidden="true"></span><select data-b="tzsel" aria-label="Time zone"></select><svg class="bc-tz-chev" viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></label><div class="bc-hours" role="group" aria-label="Clock"><button type="button" data-h="12">12h</button><button type="button" data-h="24">24h</button></div></div><div class="bc-slots-wrap"><div class="bc-slots" role="listbox" aria-label="Time" data-lenis-prevent></div></div><!-- slides up from the bottom once a time is picked --><div class="bc-float" aria-hidden="true"><p class="bc-err bc-book-err" hidden></p><button type="button" class="bc-btn bc-book" tabindex="-1"><span class="bc-roll"><i data-b="booklabel"></i><i aria-hidden="true" data-b="booklabel2"></i></span><span class="bc-busy" aria-hidden="true"><span class="bc-spin"></span>Booking your call…</span></button></div><button type="button" class="bc-lock" aria-label="Fill out the form before choosing your time"></button><p class="bc-hint">Fill out the form to choose your time.</p></div></div><div class="bc-done" hidden><span class="bc-done-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><p class="bc-done-title">Your meeting is confirmed.</p><p class="bc-done-mail"><b data-b="mailto"></b>Check your inbox for an email with all the details.</p><div class="bc-done-card"><div class="bc-done-who"><div><span>Your meeting is scheduled with:</span><b>Robin Holesinsky</b></div><img src="/pricing/robin.webp" alt="" width="56" height="56" loading="lazy"></div><div class="bc-done-row"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2" stroke-linecap="round"></path></svg>Time</span><b><span data-b="donedate"></span><span data-b="donetime"></span></b></div><div class="bc-done-row"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><circle cx="12" cy="12" r="8"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke-linecap="round"></path></svg>Where</span><b class="bc-done-meet"><svg viewBox="0 0 24 20" width="26" height="22" aria-hidden="true"><path d="M0 4.5 4.5 0H16v6l-4 3-4-3V0z" fill="#ea4335"></path><path d="M0 4.5h8V15H2a2 2 0 0 1-2-2z" fill="#4285f4"></path><path d="M8 4.5 16 9.6V18a2 2 0 0 1-2 2H4.5L8 15z" fill="#0f9d58" opacity=".95"></path><path d="M8 15h8v5H4.5z" fill="#188038"></path><path d="m16 6 6-4.5v17L16 14z" fill="#00ac47"></path><path d="M16 0v6l-8 3.5V0z" fill="#ffba00"></path></svg>Google Meet</b></div><div class="bc-done-row"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><circle cx="16" cy="8" r="3.5"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.2c.3-.1.7-.2 1-.2 3.3 0 6 2.7 6 6" stroke-linecap="round"></path></svg>Guest</span><b data-b="guest"></b></div></div><p class="bc-done-add">Add to calendar</p><div class="bc-done-cal"><a data-b="gcal" target="_blank" rel="noopener" aria-label="Add to Google Calendar"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z" fill="#4285f4"></path><path d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z" fill="#34a853"></path><path d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1a10 10 0 0 0 0 9.2z" fill="#fbbc05"></path><path d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.4L6.4 10C7.2 7.7 9.4 6 12 6z" fill="#ea4335"></path></svg></a><a data-b="ocal" target="_blank" rel="noopener" aria-label="Add to Outlook"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M9 4h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H9z" fill="#28a8ea"></path><path d="m9 9 6.5 4L22 9v8a1 1 0 0 1-1 1H9z" fill="#0078d4"></path><path d="M2 6.5 13 5v14L2 17.5z" fill="#0364b8"></path><ellipse cx="7.5" cy="12" rx="2.6" ry="3.2" fill="none" stroke="#fff" stroke-width="1.5"></ellipse></svg></a><a data-b="ics" download="intro-call-rh-design.ics" aria-label="Download calendar file"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5 12 18l2.5-2.5"></path></svg></a></div></div></div><script>
+  (function () {
+    var force = new URLSearchParams(location.search).get('booking');
+    document.querySelectorAll('.bc').forEach(function (root) {
+      if (root.__bc) return; root.__bc = true;
+      // ?booking=dark, ?booking=light or ?booking=white shows another colour variant, for comparing
+      if (force === 'dark' || force === 'light' || force === 'white') {
+        root.classList.toggle('is-light', force !== 'dark'); root.classList.toggle('is-white', force === 'white');
+      }
+      var q = function (k) { return root.querySelector('[data-b="' + k + '"]'); };
+      var main = root.querySelector('.bc-main'), done = root.querySelector('.bc-done');
+      var leadForm = root.querySelector('.bc-lead'), cal = root.querySelector('.bc-cal'), bookBtn = root.querySelector('.bc-book');
+      var source = root.dataset.source || 'contact';
+      var T = JSON.parse(root.dataset.t || '{}'), LOC = T.loc || 'en-GB';
+      // Czech names of the time zones in the list (English uses the city part of the zone id)
+      var CS_ZONES = { 'Pacific/Honolulu': 'Honolulu', 'America/Los_Angeles': 'Los Angeles', 'America/Denver': 'Denver', 'America/Chicago': 'Chicago',
+        'America/New_York': 'New York', 'America/Sao_Paulo': 'São Paulo', 'Europe/London': 'Londýn', 'Europe/Prague': 'Praha', 'Europe/Helsinki': 'Helsinky',
+        'Asia/Dubai': 'Dubaj', 'Asia/Kolkata': 'Kalkata', 'Asia/Singapore': 'Singapur', 'Asia/Tokyo': 'Tokio', 'Australia/Sydney': 'Sydney', 'Pacific/Auckland': 'Auckland' };
+      // Czech day and month names come lower case ("po", "říjen 2026"); in the calendar they start with a capital
+      var cap = function (x) { return x.charAt(0).toUpperCase() + x.slice(1); };
+      var zoneCity = function (z) { return z === 'UTC' ? 'UTC' : (T.zone === 'cs' && CS_ZONES[z]) || z.split('/').pop().replace(/_/g, ' '); };
+      // "Prague time (22:31)" / "Praha (22:31)"; in the confirmation "(Prague time)" / "(čas: Praha)"
+      var zoneLabel = function (z, time) { return T.zone === 'cs' ? zoneCity(z) + ' (' + time + ')' : (z === 'UTC' ? 'UTC' : zoneCity(z) + ' time') + ' (' + time + ')'; };
+      var zoneNote = function (z) { return T.zone === 'cs' ? '(čas: ' + zoneCity(z) + ')' : '(' + (z === 'UTC' ? 'UTC' : zoneCity(z) + ' time') + ')'; };
+      var planNow = function () { return root.dataset.plan || ''; };
+      var lead = null, sentLead = '';
+      var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC', h12 = /^America\//.test(tz);
+      var fmtT, fmtDate;
+      var fmtMonth = new Intl.DateTimeFormat(LOC, { month: 'long', year: 'numeric', timeZone: 'UTC' });
+      var fmtWd = new Intl.DateTimeFormat(LOC, { weekday: 'short', timeZone: 'UTC' });
+      var fmtShort = new Intl.DateTimeFormat(LOC, LOC === 'cs-CZ' ? { weekday: 'short', day: 'numeric', month: 'numeric', timeZone: 'UTC' } : { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
+      function ymdIn(t, zone) {
+        var p = new Intl.DateTimeFormat('en-US', { timeZone: zone, year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(t)
+          .reduce(function (o, x) { o[x.type] = +x.value; return o; }, {});
+        return Date.UTC(p.year, p.month - 1, p.day);
+      }
+      function setFormats() {
+        fmtT = new Intl.DateTimeFormat('en-US', { hour: h12 ? 'numeric' : '2-digit', minute: '2-digit', hour12: h12, timeZone: tz });
+        fmtDate = new Intl.DateTimeFormat(LOC, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: tz });
+      }
+      setFormats();
+      var ZONES = ['Pacific/Honolulu', 'America/Los_Angeles', 'America/Denver', 'America/Chicago', 'America/New_York', 'America/Sao_Paulo', 'UTC', 'Europe/London',
+        'Europe/Prague', 'Europe/Helsinki', 'Asia/Dubai', 'Asia/Kolkata', 'Asia/Singapore', 'Asia/Tokyo', 'Australia/Sydney', 'Pacific/Auckland'];
+      if (ZONES.indexOf(tz) < 0) ZONES.unshift(tz);
+      var tzSel = q('tzsel');
+      function tzOptions() {
+        var now = new Date();
+        tzSel.innerHTML = ZONES.map(function (z) {
+          var t = new Intl.DateTimeFormat('en-US', { hour: h12 ? 'numeric' : '2-digit', minute: '2-digit', hour12: h12, timeZone: z }).format(now);
+          return '<option value="' + z + '"' + (z === tz ? ' selected' : '') + '>' + zoneLabel(z, t) + '</option>';
+        }).join('');
+        q('tzlabel').textContent = tzSel.options[tzSel.selectedIndex].text;
+      }
+      function prague(y, m, d, h, min) {
+        var guess = Date.UTC(y, m, d, h, min);
+        var p = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Prague', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' })
+          .formatToParts(new Date(guess)).reduce(function (o, x) { o[x.type] = +x.value; return o; }, {});
+        return new Date(guess - (Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute) - guess));
+      }
+      var todayP = (function () { var p = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Prague', year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(new Date()).reduce(function (o, x) { o[x.type] = +x.value; return o; }, {}); return { y: p.year, m: p.month - 1, d: p.day }; })();
+      var AHEAD = 14 * 864e5, busyList = [], demo = true, loaded = 0, cache = {};
+      function loadBusy(cb) {
+        if (Date.now() - loaded < 60e3) { cb && cb(); return; }
+        fetch('/api/availability', { headers: { accept: 'application/json' } }).then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); })
+          .then(function (x) {
+            demo = x.s === 503 || !x.j.configured;
+            if (x.s === 200) { busyList = x.j.busy || []; loaded = Date.now(); cache = {}; }
+            cb && cb();
+          }).catch(function () { cb && cb(); });
+      }
+      function slotsFor(day) {
+        var key = tz + day.getTime();
+        if (cache[key]) return cache[key];
+        // the earliest call is the next day in Prague, the latest 14 days ahead
+        var out = [], soon = prague(todayP.y, todayP.m, todayP.d + 1, 0, 0).getTime(), last = Date.now() + AHEAD;
+        for (var k = -1; k <= 1; k++) {
+          var pd = new Date(day.getTime() + k * 864e5);
+          if (pd.getUTCDay() === 0 || pd.getUTCDay() === 6) continue;
+          for (var m = 9 * 60; m < 19 * 60; m += 30) {
+            var t = prague(pd.getUTCFullYear(), pd.getUTCMonth(), pd.getUTCDate(), Math.floor(m / 60), m % 60);
+            var a = t.getTime(), z = a + 30 * 60e3;
+            if (a > soon && a <= last && ymdIn(t, tz) === day.getTime() && !busyList.some(function (b) { return b.start < z && b.end > a; })) out.push(t);
+          }
+        }
+        out.sort(function (a, b) { return a - b; });
+        return (cache[key] = out);
+      }
+      var monday = function (d) { return new Date(d.getTime() - ((d.getUTCDay() + 6) % 7) * 864e5); };
+      var week0, week = 0, maxWeek = 2, day = null, slot = null;
+      function hasFree(w) { for (var i = 0; i < 7; i++) { if (slotsFor(new Date(week0.getTime() + (w * 7 + i) * 864e5)).length) return true; } return false; }
+      // month calendar (/contact, as in iClosed): a month grid, the times of the chosen day beside it
+      // the month grid on desktop; on phones /contact falls back to the short row of days
+      var phoneMQ = window.matchMedia('(max-width: 767px)');
+      var MONTH = cal.classList.contains('is-month') && !phoneMQ.matches, mY = 0, mM = 0, mOff = 0, maxM = 0;
+      if (cal.classList.contains('is-month')) phoneMQ.addEventListener('change', function () {
+        MONTH = !phoneMQ.matches; resetWeeks(); renderDays();
+      });
+      var fmtDayName = new Intl.DateTimeFormat(LOC, { weekday: 'long', day: 'numeric', timeZone: 'UTC' });
+      function firstFreeFrom(d0, d1) { for (var t = d0; t <= d1; t += 864e5) { var d = new Date(t); if (slotsFor(d).length) return d; } return null; }
+      function resetMonths() {
+        var today = new Date(ymdIn(new Date(), tz)), last = new Date(ymdIn(new Date(Date.now() + AHEAD), tz));
+        mY = today.getUTCFullYear(); mM = today.getUTCMonth();
+        maxM = (last.getUTCFullYear() - mY) * 12 + last.getUTCMonth() - mM;
+        var f = firstFreeFrom(today.getTime(), last.getTime());
+        mOff = f ? (f.getUTCFullYear() - mY) * 12 + f.getUTCMonth() - mM : 0;
+      }
+      function renderMonth() {
+        var first = new Date(Date.UTC(mY, mM + mOff, 1)), next = new Date(Date.UTC(mY, mM + mOff + 1, 1));
+        q('month').textContent = cap(fmtMonth.format(first));
+        root.querySelector('[data-cal="-1"]').disabled = mOff <= 0;
+        root.querySelector('[data-cal="1"]').disabled = mOff >= maxM;
+        var grid = root.querySelector('.bc-mgrid'), pick = null, keep = null;
+        grid.innerHTML = '';
+        for (var i = 0; i < (first.getUTCDay() + 6) % 7; i++) grid.appendChild(document.createElement('span'));
+        for (var t = first.getTime(); t < next.getTime(); t += 864e5) {
+          var d = new Date(t), b = document.createElement('button');
+          b.type = 'button'; b.className = 'bc-mday'; b.textContent = d.getUTCDate(); b.__d = d;
+          b.disabled = !slotsFor(d).length;
+          b.setAttribute('aria-label', fmtDate.format(new Date(t + 12 * 36e5)));
+          b.addEventListener('click', function () { pickDay(this); });
+          grid.appendChild(b);
+          if (!b.disabled && !pick) pick = b;
+          if (day && t === day.getTime() && !b.disabled) keep = b;
+        }
+        pickDay(keep || pick);
+      }
+      function resetWeeks() {
+        if (MONTH) { resetMonths(); return; }
+        week0 = monday(new Date(ymdIn(new Date(), tz)));
+        maxWeek = Math.floor((ymdIn(new Date(Date.now() + AHEAD), tz) - week0.getTime()) / (7 * 864e5));
+        week = 0; while (week < maxWeek && !hasFree(week)) week++;
+      }
+      var sliding = false;
+      function slide(dir, swap) {
+        var view = root.querySelector('.bc-days-view'), grid = view.querySelector('.bc-days:not(.is-ghost)');
+        if (sliding || !grid.animate || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { swap(); return; }
+        sliding = true;
+        var ghost = grid.cloneNode(true);
+        ghost.classList.add('is-ghost'); ghost.removeAttribute('role'); ghost.setAttribute('aria-hidden', 'true');
+        view.appendChild(ghost);
+        swap();
+        var dist = 'calc(' + (dir * 100) + '% + ' + (dir * 12) + 'px)', back = 'calc(' + (-dir * 100) + '% - ' + (dir * 12) + 'px)';
+        var o = { duration: 520, easing: 'cubic-bezier(0.65, 0, 0.35, 1)' };
+        ghost.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(' + back + ')' }], o).onfinish = function () { ghost.remove(); sliding = false; };
+        grid.animate([{ transform: 'translateX(' + dist + ')' }, { transform: 'translateX(0)' }], o);
+      }
+      function renderDays(browse) {
+        if (MONTH) { renderMonth(); return; }
+        var start = new Date(week0.getTime() + week * 7 * 864e5);
+        q('month').textContent = cap(fmtMonth.format(new Date(start.getTime() + 3 * 864e5)));
+        var earlier = false; for (var w = 0; w < week; w++) if (hasFree(w)) earlier = true;
+        root.querySelector('[data-cal="-1"]').disabled = !earlier;
+        root.querySelector('[data-cal="1"]').disabled = week >= maxWeek;
+        var wrap = root.querySelector('.bc-days:not(.is-ghost)'), first = null;
+        wrap.innerHTML = '';
+        for (var i = 0; i < 7; i++) {
+          var d = new Date(start.getTime() + i * 864e5);
+          var b = document.createElement('button');
+          b.type = 'button'; b.className = 'bc-day'; b.setAttribute('role', 'option');
+          b.innerHTML = '<span>' + cap(fmtWd.format(d)) + '</span><b>' + d.getUTCDate() + '</b>';
+          b.disabled = !slotsFor(d).length;
+          b.setAttribute('aria-selected', 'false');
+          b.__d = d;
+          b.addEventListener('click', function () { pickDay(this); });
+          wrap.appendChild(b);
+          if (!b.disabled && !first) first = b;
+        }
+        var keep = day && [].filter.call(wrap.children, function (b) { return b.__d.getTime() === day.getTime() && !b.disabled; })[0];
+        if (browse && day) { mark(); return; }
+        pickDay(keep || first);
+      }
+      function mark() {
+        [].forEach.call(root.querySelectorAll('.bc-days:not(.is-ghost) .bc-day, .bc-mgrid .bc-mday'), function (x) { x.setAttribute('aria-selected', day && x.__d.getTime() === day.getTime() ? 'true' : 'false'); });
+      }
+      function pickDay(b) {
+        day = b ? b.__d : null; slot = null; mark(); renderSlots();
+        var dn = q('dayname'); if (dn) dn.textContent = day ? cap(fmtDayName.format(day)) : '';
+      }
+      var slotList = root.querySelector('.bc-slots');
+      function fade() { slotList.parentNode.classList.toggle('is-end', slotList.scrollTop + slotList.clientHeight >= slotList.scrollHeight - 2); }
+      slotList.addEventListener('scroll', fade, { passive: true });
+      function bookLabel() {
+        var on = !!(slot && lead), fl = root.querySelector('.bc-float');
+        if (slot) setLabel(bookBtn, T.book + ' ' + fmtShort.format(new Date(ymdIn(slot, tz))) + ', ' + fmtT.format(slot));
+        fl.classList.toggle('is-on', on); cal.classList.toggle('has-float', on); fl.setAttribute('aria-hidden', on ? 'false' : 'true'); bookBtn.tabIndex = on ? 0 : -1;
+        if (!on) root.querySelector('.bc-book-err').hidden = true;
+      }
+      function renderSlots() {
+        slotList.innerHTML = '';
+        if (!day) { var em = document.createElement('p'); em.className = 'bc-empty'; em.textContent = T.none; slotList.appendChild(em); }
+        else slotsFor(day).forEach(function (t) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.className = 'bc-slot'; b.setAttribute('role', 'option'); b.setAttribute('aria-selected', slot && slot.getTime() === t.getTime() ? 'true' : 'false');
+          b.textContent = fmtT.format(t);
+          b.addEventListener('click', function () {
+            slot = t;
+            [].forEach.call(slotList.children, function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+            bookLabel();
+          });
+          slotList.appendChild(b);
+        });
+        slotList.scrollTop = 0; fade(); bookLabel();
+      }
+      function hoursButtons() { root.querySelectorAll('[data-h]').forEach(function (b) { b.setAttribute('aria-pressed', (b.dataset.h === '12') === h12 ? 'true' : 'false'); }); }
+      tzSel.addEventListener('change', function () { tz = tzSel.value; setFormats(); tzOptions(); day = null; slot = null; resetWeeks(); renderDays(); });
+      root.querySelectorAll('[data-h]').forEach(function (b) {
+        b.addEventListener('click', function () { h12 = b.dataset.h === '12'; setFormats(); tzOptions(); hoursButtons(); renderSlots(); });
+      });
+      root.querySelectorAll('[data-cal]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var dir = +b.dataset.cal;
+          if (MONTH) { var m2 = Math.max(0, Math.min(maxM, mOff + dir)); if (m2 !== mOff) { mOff = m2; renderMonth(); } return; }
+          var to = Math.max(0, Math.min(maxWeek, week + dir));
+          if (to === week) return;
+          slide(dir, function () { week = to; renderDays(true); });
+        });
+      });
+
+      // details first; sent as a lead right away (Slack + CRM), then the times unlock
+      // The form: email and name; the questions (full mode) open below them as soon as the name gets typed in; one
+      // Continue checks it all. The lead goes out as soon as a valid email and a name are in (when the person leaves
+      // the field), so it is kept even if they never press Continue; the answers follow on Continue.
+      // After Continue the email and name fold into the row above, the answers stay in view and the times unlock.
+      var qsBox = root.querySelector('.bc-qs'), answered = false, sentAnswers = '';
+      function showWho() {
+        var w = q('who'); w.innerHTML = ''; var b = document.createElement('b'); b.textContent = lead.name; w.appendChild(b); w.appendChild(document.createTextNode(' · ' + lead.email));
+      }
+      function unlock(on) {
+        var before = root.offsetHeight;
+        cal.classList.toggle('is-locked', !on);
+        leadForm.classList.toggle('is-done', on); root.querySelector('.bc-who').hidden = !on;
+        // while the times are picked, the details and answers step back (only Edit stays live) (Robin 2026-10-18);
+        // wherever the questions are asked (/contact, case studies, service pages), not on /pricing
+        if (qsBox) { root.classList.toggle('is-picking', on); leadForm.inert = on; }
+        // the panel keeps its length when the fields fold away: a scrolling list of times takes the room (Robin 2026-10-17)
+        slotList.style.height = '';
+        if (on && !phoneMQ.matches && !root.classList.contains('is-fill') && !root.classList.contains('is-compact') && getComputedStyle(slotList).overflowY === 'auto') {
+          var d = before - root.offsetHeight;
+          if (d > 0) slotList.style.height = (slotList.offsetHeight + d) + 'px';
+        }
+        if (on) showWho();
+        bookLabel();
+      }
+      function post(extra) {
+        if (demo) return;
+        fetch('/api/lead', { method: 'POST', headers: { 'content-type': 'application/json' }, keepalive: true,
+          body: JSON.stringify(Object.assign({ name: lead.name, email: lead.email, plan: planNow(), source: source, tz: tz, website: lead.website }, extra)) }).catch(function () {});
+      }
+      var found = function (f) {
+        var sel = f.querySelector('select[name="found"]');
+        return sel ? sel.value : [].map.call(f.querySelectorAll('input[name="found"]:checked'), function (x) { return x.value; }).join(', ');
+      };
+      var foundSel = leadForm.querySelector('select[name="found"]');
+      if (foundSel) { var tone = function () { foundSel.classList.toggle('is-empty', !foundSel.value); }; tone(); foundSel.addEventListener('change', tone); }
+      var validEmail = function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); };
+      function sendLead() {
+        var f = leadForm, name = f.elements.name.value.trim(), email = f.elements.email.value.trim();
+        if (name.length < 2 || !validEmail(email)) return false;
+        lead = Object.assign(lead || {}, { name: name, email: email, website: f.elements.website.value });
+        var key = [name, email.toLowerCase(), planNow()].join('|');
+        if (key !== sentLead) { sentLead = key; post({}); }
+        return true;
+      }
+      // the questions open with the first character of the email
+      // the rest of the form opens with the first character of the name (Robin 2026-10-18)
+      if (qsBox) leadForm.elements.name.addEventListener('input', function () { if (this.value.trim()) qsBox.hidden = false; });
+      ['email', 'name'].forEach(function (n) { leadForm.elements[n].addEventListener('change', sendLead); });
+      function glideToTimes() {
+        // phones only: glide on to the times (not on desktop, even where the panel is stacked; Robin 2026-10-17)
+        if (!window.matchMedia('(max-width: 767px)').matches) return;
+        var y = cal.getBoundingClientRect().top + window.scrollY - 90;
+        if (window.lenis && window.lenis.scrollTo) window.lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+      function readAnswers() {
+        var f = leadForm, bEl = f.querySelector('input[name="budget"]:checked');
+        lead.budget = bEl ? bEl.value : ''; lead.help = f.elements.help ? f.elements.help.value.trim() : ''; lead.found = found(f);
+      }
+      leadForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var f = leadForm, name = f.elements.name, email = f.elements.email;
+        var okName = name.value.trim().length > 1, okEmail = validEmail(email.value);
+        name.setAttribute('aria-invalid', okName ? 'false' : 'true'); email.setAttribute('aria-invalid', okEmail ? 'false' : 'true');
+        var budgetIn = f.querySelector('input[name="budget"]'), budgetBox = budgetIn && budgetIn.closest('.bc-q');
+        var okBudget = !budgetIn || !!f.querySelector('input[name="budget"]:checked'), okHelp = !f.elements.help || f.elements.help.value.trim().length > 1;
+        if (budgetBox) budgetBox.setAttribute('aria-invalid', okBudget ? 'false' : 'true');
+        if (f.elements.help) f.elements.help.setAttribute('aria-invalid', okHelp ? 'false' : 'true');
+        if (qsBox) qsBox.hidden = false;
+        var ok = okName && okEmail && okBudget && okHelp;
+        f.querySelector('.bc-err').hidden = ok;
+        if (!ok) { (!okEmail ? email : !okName ? name : !okBudget ? budgetIn : f.elements.help).focus(); return; }
+        sendLead(); readAnswers();
+        var key = [lead.email.toLowerCase(), lead.budget, lead.help, lead.found].join('|');
+        if ((lead.budget || lead.help || lead.found) && key !== sentAnswers) {
+          sentAnswers = key; post({ stage: 'answers', budget: lead.budget, help: lead.help, found: lead.found });
+        }
+        answered = true; unlock(true); glideToTimes();
+      });
+      root.querySelector('.bc-edit').addEventListener('click', function () {
+        answered = false; unlock(false);
+        setTimeout(function () { leadForm.elements.email.focus({ preventScroll: true }); }, 50);
+      });
+      root.querySelector('.bc-lock').addEventListener('click', function () {
+        var h = root.querySelector('.bc-hint');
+        h.classList.remove('is-nudge'); h.offsetWidth; h.classList.add('is-nudge');
+        var f = leadForm.elements, empty = !f.email.value.trim() ? f.email : !f.name.value.trim() ? f.name : f.email;
+        empty.focus({ preventScroll: true });
+      });
+
+      // the site's button hover: each label copy split into letters, rolling up with a 15ms cascade
+      var canHover = window.matchMedia('(hover: hover) and (pointer: fine)'), reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+      function setLabel(btn, text) {
+        btn.querySelectorAll('.bc-roll i').forEach(function (c) {
+          c.textContent = '';
+          text.split('').forEach(function (ch) {
+            var sp = document.createElement('span');
+            sp.textContent = ch === ' ' ? '\u00a0' : ch;
+            sp.style.display = 'inline-block'; sp.style.position = 'relative';
+            c.appendChild(sp);
+          });
+        });
+        btn.__letters = btn.querySelectorAll('.bc-roll i span');
+        if (window.gsap) window.gsap.set(btn.__letters, { y: btn.matches(':hover') ? '-100%' : '0%' });
+      }
+      function rollOn(btn) {
+        // GSAP may load after this script, so it is looked up at hover time
+        var go = function (y, d) {
+          btn.classList.toggle('no-gsap', !window.gsap);
+          if (!window.gsap || !canHover.matches || reduced.matches || !btn.__letters) return;
+          var per = btn.__letters.length / 2;
+          window.gsap.to(btn.__letters, { y: y, duration: d, ease: 'power2.out', stagger: function (i) { return (i % per) * 0.015; }, overwrite: true });
+        };
+        btn.addEventListener('mouseenter', function () { go('-100%', 0.3); });
+        btn.addEventListener('mouseleave', function () { go('0%', 0.2); });
+      }
+      // every button of the widget gets the site's hover (Robin 2026-10-18: the step-two Continue had none);
+      // Book takes its label when a time is picked
+      root.querySelectorAll('.bc-btn').forEach(function (btn) { if (btn !== bookBtn) setLabel(btn, T.cont); rollOn(btn); });
+
+      var GENERIC = T.error;
+      bookBtn.addEventListener('click', function () {
+        if (!slot || !lead) return;
+        readAnswers();
+        var err = root.querySelector('.bc-book-err');
+        err.hidden = true;
+        if (demo) { finish(); return; }
+        bookBtn.classList.add('is-busy'); bookBtn.setAttribute('aria-busy', 'true'); cal.style.pointerEvents = 'none';
+        fetch('/api/book', { method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ start: slot.toISOString(), name: lead.name, email: lead.email, note: lead.help, plan: planNow(), source: source, tz: tz, website: lead.website,
+            budget: lead.budget, found: lead.found }) })
+          .then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); })
+          .then(function (x) {
+            bookBtn.classList.remove('is-busy'); bookBtn.removeAttribute('aria-busy'); cal.style.pointerEvents = '';
+            if (x.s === 200 && x.j.ok) { finish(); return; }
+            if (x.s === 409 || (x.j && x.j.error === 'time')) {
+              loaded = 0; err.textContent = T.taken; err.hidden = false;
+              loadBusy(function () { slot = null; renderDays(); });
+              return;
+            }
+            err.textContent = GENERIC; err.hidden = false;
+          })
+          .catch(function () { bookBtn.classList.remove('is-busy'); bookBtn.removeAttribute('aria-busy'); cal.style.pointerEvents = ''; err.textContent = GENERIC; err.hidden = false; });
+      });
+      function finish() {
+        var end = new Date(slot.getTime() + 30 * 60e3);
+        q('mailto').textContent = T.sent + lead.email + '.';
+        q('donedate').textContent = fmtDate.format(slot);
+        q('donetime').textContent = fmtT.format(slot) + ' – ' + fmtT.format(end) + ' ' + zoneNote(tz);
+        q('guest').textContent = lead.email;
+        var z = function (t) { return t.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); };
+        var what = T.what, where = 'Google Meet', note = T.note;
+        q('gcal').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(what) + '&dates=' + z(slot) + '/' + z(end) +
+          '&details=' + encodeURIComponent(note) + '&location=' + encodeURIComponent(where);
+        q('ocal').href = 'https://outlook.live.com/calendar/0/action/compose?subject=' + encodeURIComponent(what) + '&startdt=' + slot.toISOString() + '&enddt=' + end.toISOString() +
+          '&body=' + encodeURIComponent(note) + '&location=' + encodeURIComponent(where);
+        var ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//rh.design//booking//EN', 'BEGIN:VEVENT', 'UID:' + Date.now() + '@rh.design', 'DTSTAMP:' + z(new Date()),
+          'DTSTART:' + z(slot), 'DTEND:' + z(end), 'SUMMARY:' + what, 'DESCRIPTION:' + note, 'LOCATION:' + where, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+        q('ics').href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+        loaded = 0;
+        // keep the panel's height so the page below does not jump
+        root.style.minHeight = root.offsetHeight + 'px';
+        main.hidden = true; done.hidden = false;
+        // phones: the panel shrinks to the confirmation and the page glides to it, so nobody is left looking at an
+        // empty panel far below it (Robin 2026-10-18); not on /pricing, whose card handles itself
+        if (phoneMQ.matches && !root.classList.contains('is-fill')) {
+          root.style.minHeight = ''; root.style.height = ''; root.classList.remove('is-picking');
+          var y = root.getBoundingClientRect().top + window.scrollY - 90;
+          if (window.lenis && window.lenis.scrollTo) window.lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+        root.dispatchEvent(new CustomEvent('bc:done'));
+      }
+
+      // the /pricing card opens and closes the booking; reset() starts it over (details kept)
+      root.__bc = {
+        reset: function () {
+          root.style.minHeight = ''; main.hidden = false; done.hidden = true;
+          slot = null; day = null; resetWeeks(); renderDays();
+          unlock(!!lead && answered);
+          loadBusy(function () { var w = week; resetWeeks(); week = Math.max(week, Math.min(w, maxWeek)); renderDays(); });
+        },
+      };
+      tzOptions(); hoursButtons(); resetWeeks(); renderDays();
+      loadBusy(function () { var w = week; resetWeeks(); week = Math.max(week, Math.min(w, maxWeek)); renderDays(); });
+    });
+  })();
+</script></div><div class="photo-cta-pd"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab80bd9baf9ef05ac49a745_pd-cta-glow.svg" loading="lazy" alt="" class="glow-cta-pd"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ab80bda77606d0bcf96b152_pd-cta-robin.webp" loading="lazy" alt="Robin Holesinsky" class="robin-cta-pd"/><div class="fade-cta-pd"></div><div class="name-cta-pd"><h5 class="name-title-cta-pd">Robin Holesinsky</h5><div class="body-base-book text-color-939393">You talk to me directly, not an account manager.</div></div></div></div></div><div class="marquee-cta-pd"><div data-pd-marquee="1" class="track-marquee-pd"><div class="set-marquee-pd"><img src="/assets/6909ed375ee6ef22dffa47c2__695e3023469624c8b06a2d41_squire.svg" loading="lazy" alt="Squire" class="logo-marquee-pd"/><img src="/assets/6909ed375ee6ef22dffa47c2__695e5242239c827559916e41_reap.svg" loading="lazy" alt="Reap" class="logo-marquee-pd"/><img src="/assets/6909ed375ee6ef22dffa47c2__695e52d5de919b17a54bf0a5_nue.svg" loading="lazy" alt="Nue" class="logo-marquee-pd"/><img src="/assets/6909ed375ee6ef22dffa47c2__6ab6e3c6e73b95aeaf4870f5_elumity-white.svg" loading="lazy" alt="Elumity" class="logo-marquee-pd"/><img src="/assets/6909ed375ee6ef22dffa47c2__695e52d586e84cb7d686599a_gumroad.svg" loading="lazy" alt="Gumroad" class="logo-marquee-pd"/><img src="/assets/6909ed375ee6ef22dffa47c2__695fb50f295b5067fd241eb0_iron.svg" loading="lazy" alt="Iron" class="logo-marquee-pd"/><img src="/assets/6909ed375ee6ef22dffa47c2__695fb50f939391cb52814897_bohemian-research.svg" loading="lazy" alt="Bohemian Research" class="logo-marquee-pd"/><img src="/assets/6909ed375ee6ef22dffa47c2__695e52d5afea096f8e885a31_vannin.svg" loading="lazy" alt="Vannin" class="logo-marquee-pd"/></div></div></div><div class="w-embed w-script"><style>
+@keyframes pdMarquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(var(--pd-shift,-50%),0,0)}}
+.track-marquee-pd{display:flex;width:max-content;animation:pdMarquee var(--pd-dur,40s) linear infinite;will-change:transform}
+.logo-marquee-pd{height:auto;filter:brightness(0) invert(1)}
+.logo-marquee-pd[src*="elumity-white"]{filter:none}
+.logo-marquee-pd[src*="_squire"]{width:60.5px;height:29.7px}
+.logo-marquee-pd[src*="_reap"]{width:92px;height:33px}
+.logo-marquee-pd[src*="_nue"]{width:56.1px;height:33px}
+.logo-marquee-pd[src*="elumity"]{width:88px;height:33px}
+.logo-marquee-pd[src*="_gumroad"]{width:88px;height:29px}
+.logo-marquee-pd[src*="_iron"]{width:68.2px;height:16.5px}
+.logo-marquee-pd[src*="_bohemian"]{width:92.4px;height:20.9px}
+.logo-marquee-pd[src*="_vannin"]{width:92px;height:28px}
+@media (prefers-reduced-motion:reduce){.track-marquee-pd{animation:none}}
+</style>
+<script>
+(function(){
+function build(track){
+  var set=track.querySelector('.set-marquee-pd');if(!set)return;
+  [].slice.call(track.querySelectorAll('.set-marquee-pd')).slice(1).forEach(function(n){n.remove();});
+  track.querySelectorAll('img').forEach(function(i){i.removeAttribute('srcset');i.removeAttribute('sizes');i.loading='eager';});
+  var w=set.getBoundingClientRect().width;if(!w)return;
+  var need=Math.ceil(window.innerWidth/w)+1;
+  for(var k=0;k<need;k++){var c=set.cloneNode(true);c.setAttribute('aria-hidden','true');track.appendChild(c);}
+  track.style.setProperty('--pd-shift',(-w)+'px');
+  track.style.setProperty('--pd-dur',Math.max(20,w/60)+'s');
+}
+function boot(){
+  document.querySelectorAll('[data-pd-marquee]').forEach(function(t){
+    var imgs=t.querySelectorAll('img'),left=imgs.length;
+    function go(){build(t);}
+    imgs.forEach(function(i){if(i.complete)left--;else i.addEventListener('load',function(){if(--left===0)go();});});
+    go();var tm;window.addEventListener('resize',function(){clearTimeout(tm);tm=setTimeout(go,200);});
+  });
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+</script></div></section><section class="section-next-cs"><div class="container-cs"><div class="overline-pd">Case studies</div><h2 class="h2-next-cs">Next project</h2></div><div class="grid-next-cs"><a href="https://contra.com/p/b3sovLFr-leap-crypto-trading-app-design?r=rh_design" target="_blank" rel="noopener" class="card-next-cs w-inline-block"><div class="thumb-next-cs"><img src="/case-studies/leap.webp" loading="lazy" alt="LEAP crypto trading app" class="tile-next-cs"/></div><div class="title-next-cs">LEAP: a crypto trading app, designed end to end</div><div class="tags-cs"><div class="tag-light-cs">Mobile app</div><div class="tag-light-cs">Crypto</div><div class="tag-light-cs">Product design</div></div></a><a href="/case-studies/bohemian-research" class="card-next-cs w-inline-block"><div class="thumb-next-cs"><img src="/case-studies/bohemian.webp" loading="lazy" alt="Bohemian Research apps" class="tile-next-cs"/></div><div class="title-next-cs">Bohemian Research: one brand, one website and three apps for a global research panel</div><div class="tags-cs"><div class="tag-light-cs">Branding</div><div class="tag-light-cs">Website</div><div class="tag-light-cs">Mobile apps</div></div></a></div><div class="w-embed"><!-- Next project cards: the image zooms in slowly inside its frame while the card is hovered.
+     Mouse devices only. Rollback: delete this embed. -->
+<style>
+.card-next-cs .tile-next-cs { transition: transform .9s cubic-bezier(0.16, 1, 0.3, 1); will-change: transform; }
+@media (hover: hover) and (pointer: fine) {
+  .card-next-cs:hover .tile-next-cs { transform: scale(1.06); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-next-cs .tile-next-cs { transition: none; }
+  .card-next-cs:hover .tile-next-cs { transform: none; }
+}
+</style></div></section><footer data-nav="dark" class="section-footer-pd"><div class="box-footer-pd"><div class="top-footer-pd"><div class="talk-footer-pd"><div class="talk-title-pd">Let’s talk</div><div class="email-row-pd"><a href="mailto:robin@rh.design" class="email-link-pd">robin@rh.design</a><a href="#" aria-label="Copy email" data-copy-email="robin@rh.design" class="copy-btn-pd w-inline-block"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab81ba8df00b2e3886ac286_pd-ft-copy.svg" loading="lazy" alt="Copy the email address" class="icon-copy-pd"/></a></div></div><a data-w-id="fd1a9c29-b9bf-2c81-bc8a-a9a204f1a3d8" href="/contact" class="btn-book btn-nav w-inline-block"><div class="wrapper-under"><div class="button-base-medium">Book a call with me</div><div class="under-line-dark"></div></div><div class="circle-yellow"><img src="/assets/6909ed375ee6ef22dffa47c2__690a02c7dd0940ff80841fa5_arrow-up-right.svg" loading="lazy" alt="" class="icon-16x16"/></div></a></div><div class="bottom-footer-pd"><div class="mid-footer-pd"><div class="brand-footer-pd"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab81ba8e5d9f17124012b73_pd-ft-rhlogo.svg" loading="lazy" alt="rh.design" class="logo-footer-pd"/><p class="body-base-book address-footer-pd">Rough s.r.o.<br/>Pernerova 727/40a<br/>186 00 Prague 8</p></div><div class="cols-footer-pd"><div class="col-footer-pd"><div class="col-head-footer-pd">Company</div><div class="col-links-footer-pd"><a href="/contact" class="link-footer-pd">Contact Us</a><a href="/privacy" class="link-footer-pd">Privacy Policy</a></div></div><div class="col-footer-pd"><div class="col-head-footer-pd">Services</div><div class="col-links-footer-pd"><a href="/services/product-design" class="link-footer-pd">Product Design</a><a href="#" class="link-footer-pd">Branding</a><a href="#" class="link-footer-pd">Webdesign</a></div></div><div class="col-footer-pd"><div class="col-head-footer-pd">Case Studies</div><div class="col-links-footer-pd"><a href="/recent-work" class="link-footer-pd">Squire Technologies</a><a href="/recent-work" class="link-footer-pd">Bohemian Research</a></div></div></div></div><div class="legal-footer-pd"><div class="copy-footer-pd">© 2026 Rough s.r.o. All rights reserved</div><div class="socials-footer-pd"><a href="https://x.com/rholesinsky" aria-label="X" class="social-footer-pd w-inline-block"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab81ba9286be234b3bae6de_pd-ft-x.svg" loading="lazy" alt="X" class="icon-20-pd"/></a><a href="https://dribbble.com/rholesinsky" aria-label="Dribbble" class="social-footer-pd w-inline-block"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab81ba860e95da32d4d57b6_pd-ft-dribbble.svg" loading="lazy" alt="Dribbble" class="icon-20-pd"/></a><a href="https://www.linkedin.com/in/rholesinsky/" aria-label="LinkedIn" class="social-footer-pd w-inline-block"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab81ba8d1e1e27f9ce01131_pd-ft-linkedin.svg" loading="lazy" alt="LinkedIn" class="icon-20-pd"/></a><a href="https://contra.com/rh_design/work?r=rh_design" aria-label="Contra" target="_blank" rel="noopener" class="social-footer-pd w-inline-block"><img src="/footer/contra.svg" loading="lazy" alt="Contra" class="icon-20-pd"/></a></div></div><div data-copy-toast="1" class="toast-footer-pd"><img src="/assets/6909ed375ee6ef22dffa47c2__6ab81ba835b7f14765c090d6_pd-ft-check.svg" loading="lazy" alt="" class="icon-20-pd"/><div class="toast-text-footer-pd">Email copied</div></div></div></div><div class="w-embed w-script"><style>.email-row-pd:hover .copy-btn-pd,.copy-btn-pd:focus-visible{opacity:1}.copy-btn-pd{cursor:pointer}.toast-footer-pd.is-on{opacity:1;transform:translate(-50%,0)}@media (hover:none){.copy-btn-pd{opacity:1}}
+/* Social icons: white icon turns black on the yellow hover background (same as the homepage footer) */
+.social-footer-pd .icon-20-pd{transition:filter .3s}.social-footer-pd:hover .icon-20-pd{filter:invert(1)}</style>
+<script>
+(function(){
+function boot(){
+  var btn=document.querySelector('[data-copy-email]'),toast=document.querySelector('[data-copy-toast]');if(!btn)return;
+  var tm;
+  function show(){if(!toast)return;toast.classList.add('is-on');clearTimeout(tm);tm=setTimeout(function(){toast.classList.remove('is-on');},2200);}
+  function fallback(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(a);}
+  btn.addEventListener('click',function(e){e.preventDefault();var t=btn.getAttribute('data-copy-email');if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(show,function(){fallback(t);show();});}else{fallback(t);show();}});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+</script></div></footer></div></div><script src="/assets/js__jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript"></script><script src="/assets/6909ed375ee6ef22dffa47c2__js__webflow.schunk.f2efb3c5440a81cf.js" type="text/javascript"></script><script src="/assets/6909ed375ee6ef22dffa47c2__js__webflow.schunk.bb3486f8d85dae62.js" type="text/javascript"></script><script src="/assets/6909ed375ee6ef22dffa47c2__js__webflow.abb8ae6a.9a0c1abddbaeb953.js" type="text/javascript"></script><script>
+document.addEventListener('DOMContentLoaded', function () {
+  var canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  document.querySelectorAll('.button').forEach(function (button) {
+    var innerText = button.querySelector('.inner-text-btn');
+    if (!innerText) return; // buttons without the roll markup are skipped, not fatal
+
+    // Split each label copy into letters (unchanged behaviour)
+    innerText.querySelectorAll('div').forEach(function (div) {
+      var text = div.textContent;
+      div.innerHTML = '';
+      text.split('').forEach(function (ch) {
+        var span = document.createElement('span');
+        span.textContent = ch === ' ' ? ' ' : ch;
+        span.style.display = 'inline-block';
+        span.style.position = 'relative';
+        div.appendChild(span);
+      });
+    });
+
+    var letters = innerText.querySelectorAll('span');
+    var perDiv = letters.length / 2;
+    // Same 15ms-per-letter cascade, both label copies in sync
+    var cascade = function (i) { return (i % perDiv) * 0.015; };
+
+    // overwrite:true kills the in-flight tween immediately, so the roll retargets from the current position
+    button.addEventListener('mouseenter', function () {
+      if (!canHover.matches || reduce.matches) return;
+      gsap.to(letters, { y: '-100%', duration: 0.3, ease: 'power2.out', stagger: cascade, overwrite: true });
+    });
+    button.addEventListener('mouseleave', function () {
+      if (!canHover.matches || reduce.matches) return;
+      gsap.to(letters, { y: '0%', duration: 0.2, ease: 'power2.out', stagger: cascade, overwrite: true });
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/vendor/lenis.css">
+<script src="/vendor/lenis.min.js"></script>
+<script>
+let lenis = new Lenis({
+  lerp: 0.2,
+  wheelMultiplier: 1.0,
+  gestureOrientation: "vertical",
+  normalizeWheel: false,
+  smoothTouch: false,
+});
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+$("[data-lenis-start]").on("click", function () {
+  lenis.start();
+});
+$("[data-lenis-stop]").on("click", function () {
+  lenis.stop();
+});
+$("[data-lenis-toggle]").on("click", function () {
+  $(this).toggleClass("stop-scroll");
+  if ($(this).hasClass("stop-scroll")) {
+    lenis.stop();
+  } else {
+    lenis.start();
+  }
+});
+</script><template id="nav-menu-tpl"><div class="nav-blur" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="nav-backdrop" aria-hidden="true"></div><div class="nav-links"><div class="nav-item"><a class="nav-link" href="/case-studies"><span class="nav-label">Case Studies</span></a></div><div class="nav-item"><button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true"><span class="nav-label">Services</span><svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><div class="nav-mega"><div class="nav-mega-bg"></div><i class="nav-mega-line is-h"></i><i class="nav-mega-line is-v is-l"></i><i class="nav-mega-line is-v is-r"></i><i class="nav-mega-line is-v is-in is-c1"></i><i class="nav-mega-line is-v is-in is-c2"></i><div class="nav-mega-rh" aria-hidden="true"></div><div class="nav-mega-cols"><div class="nav-mega-col"><div class="nav-mega-label" style="--d:0.35s">What we build</div><div class="nav-mega-build" style="--d:0.42s"><a href="/services/product-design"><span><i>Product Design</i><i aria-hidden="true">Product Design</i></span></a><a href="/services/mobile-app-design"><span><i>Mobile Design</i><i aria-hidden="true">Mobile Design</i></span></a></div></div><div class="nav-mega-col"><div class="nav-mega-label" style="--d:0.45s">Capabilities</div><div class="nav-mega-caps" style="--d:0.52s"><ul><li class="is-title">Product</li><li>UX audits</li><li>Design systems</li><li>Prototyping &amp; user testing</li></ul><ul><li class="is-title">Websites</li><li>Landing &amp; marketing sites</li><li>Webflow &amp; Framer</li></ul><ul><li class="is-title">Branding</li><li>Brand identity</li><li>Logo &amp; visual language</li><li>Brand guidelines</li></ul><ul><li class="is-title">Development</li><li>React front-end</li><li>Web apps &amp; dashboards</li></ul></div></div><a class="nav-mega-card" href="/case-studies/squire"><img class="nav-mega-ipad" src="/nav/squire-ipad.webp" alt="" width="816" height="920" loading="lazy" decoding="async"><img class="nav-mega-logo" src="/nav/squire-logo.svg" alt="Squire" width="69" height="24" style="--d:0.55s"><span style="--d:0.62s"><svg viewBox="0 0 11.2 11.2" fill="none" aria-hidden="true"><path d="M3.42 8.2 8.56 3.07M3.26 2.76h5.6v5.6" stroke="currentColor" stroke-width="1.19" stroke-linecap="square" stroke-linejoin="round"></path></svg><b><i>Read Case Study</i><i aria-hidden="true">Read Case Study</i></b></span></a></div></div></div><div class="nav-item"><a class="nav-link" href="/pricing"><span class="nav-label">Pricing</span></a></div><div class="nav-item"><a class="nav-link" href="/#why-us"><span class="nav-label">About</span></a></div></div><button type="button" class="nav-burger" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menu"><span></span></button><div class="nav-mobile" id="nav-mobile" data-lenis-prevent aria-hidden="true"><div class="nav-m-top"><a class="nav-m-logo" href="/" aria-label="rh.design"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><defs><clipPath id="nav-lg-clip"><circle cx="24" cy="24" r="20.44"></circle></clipPath></defs><path class="nav-lg-ring" pathLength="1" d="M24 0.947266C36.7313 0.947266 47.0527 11.2687 47.0527 24C47.0527 36.7313 36.7313 47.0527 24 47.0527H23.999C21.5236 47.0554 19.0649 46.6588 16.7178 45.8789L16.25 45.7178C7.32924 42.535 0.947266 34.0115 0.947266 24C0.947266 11.2687 11.2687 0.947266 24 0.947266Z" stroke="white" stroke-width="1.89474"></path><rect class="nav-lg-disc" x="3.55664" y="3.55469" width="40.8889" height="40.8889" rx="20.4444" fill="white"></rect><g clip-path="url(#nav-lg-clip)"><g class="nav-lg-pen" fill="none" stroke="black" stroke-width="2"><path class="nav-lg-s1" pathLength="1" d="M15.19 10.8V44"></path><path class="nav-lg-s2" pathLength="1" d="M15.19 11.76H20.3C24.1 11.76 25.46 12.7 25.46 16.1V19.3C25.46 22.6 23.7 23.87 20.2 23.87H15.19"></path><path class="nav-lg-s3" pathLength="1" d="M21.9 24.6L26.15 37.45"></path><path class="nav-lg-s4" pathLength="1" d="M19.64 23.87H32.82"></path><path class="nav-lg-s5" pathLength="1" d="M32.82 4V37.47"></path></g><g class="nav-lg-rh"><path d="M31.8229 4V22.2196C31.8231 22.4079 31.7499 22.5883 31.6194 22.7215C31.4889 22.8546 31.3118 22.9293 31.1273 22.9291L29.8965 22.9212V24.8127L31.1273 24.8218C31.5114 24.8218 31.8229 25.1396 31.8229 25.5315V36.7637C31.8233 37.1555 32.1345 37.473 32.5184 37.4735H33.1307C33.5149 37.4735 33.8263 37.1557 33.8263 36.7637V4H31.8229Z" fill="black"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M19.6426 22.9219H30.0804V24.8131H19.6426L19.6426 22.9219Z" fill="black"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M20.8332 24.8244L25.0051 37.0209C25.086 37.2571 25.3063 37.4156 25.554 37.4158H26.5079C26.696 37.4158 26.8725 37.3239 26.9815 37.1692C27.0905 37.0145 27.1186 36.8161 27.0568 36.6368L22.9921 24.8235C24.8008 24.3387 25.8609 22.9187 26.2892 21.2598C26.4341 20.7078 26.5241 20.3228 26.5241 19.5965V15.7204C26.5241 11.9951 24.3869 10.8066 20.3932 10.8066H14.7581C14.437 10.8066 14.1768 11.0692 14.1768 11.3932V43.9294H16.2105L16.2357 25.4073C16.2377 25.0848 16.4974 24.8244 16.817 24.8244H20.8332ZM24.4061 16.4111V18.9515C24.4061 22.0694 23.1615 22.9247 20.1874 22.9311H16.7679C16.6134 22.9311 16.4652 22.869 16.3562 22.7586C16.2471 22.6482 16.186 22.4986 16.1865 22.3427L16.2126 13.2996C16.2141 12.9762 16.4743 12.7148 16.7948 12.7148H20.2432C23.22 12.7148 24.4061 13.256 24.4061 16.4111Z" fill="black"></path></g></g></svg></a><button type="button" class="nav-m-close" aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button></div><div class="nav-m-main"><div class="nav-m-links"><button type="button" class="nav-m-link" data-fold aria-expanded="false" style="--i:0">Case Studies<svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><div class="nav-m-fold"><div><a href="/case-studies/squire">Squire</a><a href="/case-studies/bohemian-research">Bohemian Research</a></div></div><button type="button" class="nav-m-link" data-fold aria-expanded="false" style="--i:1">Services<svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><div class="nav-m-fold"><div><a href="/services/product-design">Product Design</a><a href="/services/mobile-app-design">Mobile Design</a></div></div><a class="nav-m-link" href="/pricing" style="--i:2">Pricing</a><a class="nav-m-link" href="/#why-us" style="--i:3">About</a></div><div class="nav-m-rule" style="--i:4"></div><div class="nav-m-social" style="--i:5"><a href="https://x.com/rholesinsky" target="_blank" rel="noopener">X</a><a href="https://dribbble.com/rholesinsky" target="_blank" rel="noopener">Dribbble</a><a href="https://www.linkedin.com/in/rholesinsky/" target="_blank" rel="noopener">LinkedIn</a><a href="https://contra.com/rh_design/work?r=rh_design" target="_blank" rel="noopener">Contra</a></div></div><a class="nav-m-cta" href="/contact"><span>Get in touch</span><i><svg viewBox="0 0 11.2 11.2" fill="none" aria-hidden="true"><path d="M3.42 8.2 8.56 3.07M3.26 2.76h5.6v5.6" stroke="currentColor" stroke-width="1.19" stroke-linecap="square" stroke-linejoin="round"></path></svg></i></a></div></template><script>(function(){const NAV_VARIANT = "bar";
+
+  (function () {
+    if (window.__rhNavMenu) return; // the same menu may also arrive as an embed copied from Webflow
+    window.__rhNavMenu = true;
+    // Which variant to show: ?nav=pill|bar in the address wins and is remembered for this tab.
+    var variant = NAV_VARIANT;
+    try {
+      var asked = new URLSearchParams(location.search).get('nav');
+      if (asked === 'pill' || asked === 'bar') sessionStorage.setItem('navVariant', asked);
+      variant = sessionStorage.getItem('navVariant') || variant;
+    } catch (e) {}
+    document.documentElement.setAttribute('data-nav', variant);
+
+    var nav = document.querySelector('.navbar');
+    var row = nav && nav.querySelector('.div-block-10');
+    var cta = row && row.querySelector('.g-48-copy');
+    var tpl = document.getElementById('nav-menu-tpl');
+    if (!row || !cta || !tpl) return;
+    var frag = tpl.content.cloneNode(true);
+    row.insertBefore(frag.querySelector('.nav-links'), cta);
+    row.appendChild(frag.querySelector('.nav-burger'));
+    document.body.appendChild(frag.querySelector('.nav-mobile')); // full-screen panel, kept out of the bar so nothing clips it
+    nav.insertBefore(frag.querySelector('.nav-backdrop'), nav.firstChild);
+    nav.insertBefore(frag.querySelector('.nav-blur'), nav.firstChild);
+
+    // Desktop dropdowns: open on hover and on click (keyboard, touch); Escape or a click elsewhere closes them.
+    var items = [].slice.call(row.querySelectorAll('.nav-item')).filter(function (el) { return el.querySelector('.nav-drop, .nav-mega'); });
+    // Mega panel (Services): the RH logo is the phone menu's animated one, copied once; the bar's bottom edge
+    // sets --mega-row (where the line runs) and the logo sits exactly over the bar's logo.
+    var homeLogo = row.querySelector('.link-home-1');
+    function prepMega(item) {
+      var mega = item.querySelector('.nav-mega');
+      if (!mega) return false;
+      var rh = mega.querySelector('.nav-mega-rh'), src = document.querySelector('#nav-menu-tpl') && document.getElementById('nav-mobile');
+      if (rh && !rh.firstChild && src) { var svg = src.querySelector('.nav-m-logo svg'); if (svg) rh.appendChild(svg.cloneNode(true)); }
+      // the bar never moves vertically (Robin 2026-10-16); the panel is full-screen wide from the window's top edge
+      var rr = row.getBoundingClientRect();
+      mega.style.setProperty('--mega-row', Math.round(rr.bottom + 20) + 'px'); // line 20px under the bar
+      // content edges: the 1128px container centred in the panel, its columns padded 40px
+      var pw = document.documentElement.clientWidth, cw = Math.min(1128, pw - 40), pad = parseFloat(getComputedStyle(mega.querySelector('.nav-mega-col')).paddingLeft) || 40, cl = (pw - cw) / 2, inL = cl + pad, inR = cl + cw - pad;
+      // only the logo and the contact button slide in to those edges; the links in the middle stay put
+      var ctaEl = row.querySelector('.g-48-copy');
+      // (measured without their current slide, which may be mid-way)
+      var restX = function (el) { var t = getComputedStyle(el).transform; return t && t !== 'none' ? new DOMMatrixReadOnly(t).m41 : 0; };
+      if (homeLogo) nav.style.setProperty('--mega-dl', Math.round(inL - (homeLogo.getBoundingClientRect().left - restX(homeLogo))) + 'px');
+      if (ctaEl) nav.style.setProperty('--mega-dr', Math.round(inR - (ctaEl.getBoundingClientRect().right - restX(ctaEl))) + 'px');
+      if (rh && homeLogo) { var lr = homeLogo.getBoundingClientRect(); rh.style.left = inL + 'px'; rh.style.top = lr.top + 'px'; rh.style.width = lr.width + 'px'; rh.style.height = lr.height + 'px'; }
+      return true;
+    }
+    function set(item, open) {
+      var mega = open && prepMega(item);
+      item.classList.toggle('is-open', open);
+      item.querySelector('button').setAttribute('aria-expanded', open ? 'true' : 'false');
+      nav.classList.toggle('is-drop-open', items.some(function (i) { return i.classList.contains('is-open'); }));
+      var wasMega = nav.classList.contains('is-mega-open');
+      nav.classList.toggle('is-mega-open', items.some(function (i) { return i.classList.contains('is-open') && i.querySelector('.nav-mega'); }));
+      var isMega = nav.classList.contains('is-mega-open');
+      if (isMega && !wasMega) frozen = nav.classList.contains('scrolled');
+      if (!isMega && wasMega) { frozen = null; nav.classList.toggle('scrolled', window.innerWidth > 920 && window.scrollY > 50); }
+    }
+    // While the big panel is open the bar keeps the state it opened in: the pages' scroll script would otherwise
+    // switch it to its scrolled position (higher up) and the panel would jump. Closing hands it back.
+    var frozen = null;
+    new MutationObserver(function () {
+      if (frozen !== null && nav.classList.contains('scrolled') !== frozen) nav.classList.toggle('scrolled', frozen);
+    }).observe(nav, { attributes: true, attributeFilter: ['class'] });
+    function closeAll(except) { items.forEach(function (i) { if (i !== except) set(i, false); }); }
+    items.forEach(function (item) {
+      var timer = null;
+      item.addEventListener('mouseenter', function () { clearTimeout(timer); closeAll(item); set(item, true); });
+      // the big panel stays open while the pointer is anywhere on the bar or the panel (e.g. on the way to
+      // Get in touch); the small dropdowns close when it leaves their item
+      var zone = item.querySelector('.nav-mega') ? row : item;
+      zone.addEventListener('mouseleave', function () { timer = setTimeout(function () { set(item, false); }, 180); });
+      if (zone !== item) zone.addEventListener('mouseenter', function () { clearTimeout(timer); });
+      item.querySelector('button').addEventListener('click', function () {
+        var open = !item.classList.contains('is-open'); closeAll(item); set(item, open);
+      });
+      item.addEventListener('focusout', function (e) { if (!item.contains(e.relatedTarget)) set(item, false); });
+    });
+
+    // Mobile panel: full-screen; Services unfolds downwards.
+    var burger = row.querySelector('.nav-burger'), panel = document.getElementById('nav-mobile');
+    var slot = panel.querySelector('.nav-m-logo');
+    var closeBtn = panel.querySelector('.nav-m-close'), barLogo = row.querySelector('.link-home-1');
+    // Put the panel's logo and close button exactly over the bar's logo and menu button, so nothing jumps.
+    function place(el, from) {
+      if (!el || !from) return;
+      var r = from.getBoundingClientRect();
+      if (!r.width) return;
+      el.style.top = r.top + 'px'; el.style.left = r.left + 'px'; el.style.right = 'auto';
+      el.style.width = r.width + 'px'; el.style.height = r.height + 'px';
+    }
+    function fold(btn, open) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.nextElementSibling.classList.toggle('is-open', open);
+    }
+    function setMenu(open) {
+      if (open) {
+        place(closeBtn, burger); place(slot, barLogo);
+        // the links and the contact button share the bar's left and right edges
+        var edge = barLogo && barLogo.getBoundingClientRect().left;
+        if (edge > 0) panel.style.setProperty('--nav-m-x', Math.round(edge) + 'px');
+      }
+      nav.classList.toggle('is-menu-open', open);
+      panel.classList.toggle('is-open', open);
+      panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+      if (!open) [].forEach.call(panel.querySelectorAll('[data-fold]'), function (b) { fold(b, false); });
+    }
+    burger.addEventListener('click', function (e) { e.stopPropagation(); setMenu(!panel.classList.contains('is-open')); });
+    panel.addEventListener('click', function (e) {
+      if (e.target.closest('.nav-m-close')) setMenu(false);
+      else if (e.target.closest('[data-fold]')) { var b = e.target.closest('[data-fold]'); fold(b, b.getAttribute('aria-expanded') !== 'true'); }
+      else if (e.target.closest('a')) setMenu(false);
+    });
+
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeAll(); setMenu(false); } });
+    document.addEventListener('click', function (e) { if (!row.contains(e.target) && !panel.contains(e.target)) { closeAll(); setMenu(false); } });
+    window.addEventListener('resize', function () { if (window.innerWidth > 920 && panel.classList.contains('is-open')) setMenu(false); });
+  })();
+})();</script><script>
+  (function () {
+    if (window.__rhWorkReveal) return;
+    window.__rhWorkReveal = true;
+    var items = [].slice.call(document.querySelectorAll('.item-work-pd'));
+    if (!items.length || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Projects the visitor has already scrolled past (page reloaded further down) are shown straight away.
+    items.forEach(function (el) { if (el.getBoundingClientRect().top < 0) el.classList.add('is-in'); });
+    document.documentElement.classList.add('work-reveal');
+    // A project whose image has not loaded yet is only a thin strip, so several would "enter" the screen at once.
+    // Such a project waits for its image and is then judged again at its real size.
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target, img = el.querySelector('img');
+        if (img && !img.complete) {
+          if (!el.__waiting) {
+            el.__waiting = true;
+            var again = function () { el.__waiting = false; io.unobserve(el); io.observe(el); };
+            img.addEventListener('load', again, { once: true });
+            img.addEventListener('error', again, { once: true });
+          }
+          return;
+        }
+        el.classList.add('is-in');
+        io.unobserve(el);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { if (!el.classList.contains('is-in')) io.observe(el); });
+  })();
+</script><script>
+  (function () {
+    if (window.__rhFooterReveal) return;
+    window.__rhFooterReveal = true;
+    function boot() {
+      var footer = document.querySelector('.section-footer-pd');
+      // pages with their own reveal script are left alone
+      if (!footer || document.querySelector('.hero-pin-pd, .csi')) return;
+      var over = footer.previousElementSibling;
+      while (over && /^(SCRIPT|STYLE|TEMPLATE)$/.test(over.tagName)) over = over.previousElementSibling;
+      if (!over) return;
+      // the covering section needs a solid background, or the footer would show through it. It gets the colour the
+      // visitor actually sees there: the body colour with every see-through layer above it (Recent work has a 25%
+      // grey wrapper over white), so there is no step in colour under the heading.
+      var bg = getComputedStyle(over).backgroundColor;
+      if (!bg || bg === 'transparent' || /rgba\(.*,\s*0\)$/.test(bg)) {
+        var rgba = function (s) { var m = s.match(/[\d.]+/g) || []; return [+m[0] || 0, +m[1] || 0, +m[2] || 0, m.length > 3 ? +m[3] : 1]; };
+        var layers = [], el = over.parentElement;
+        while (el && el !== document.body) { layers.unshift(rgba(getComputedStyle(el).backgroundColor)); el = el.parentElement; }
+        var c = rgba(getComputedStyle(document.body).backgroundColor);
+        if (c[3] < 1) c = [255, 255, 255, 1];
+        layers.forEach(function (l) { for (var k = 0; k < 3; k++) c[k] = c[k] * (1 - l[3]) + l[k] * l[3]; });
+        over.style.backgroundColor = 'rgb(' + c.slice(0, 3).map(Math.round).join(',') + ')';
+      }
+      over.classList.add('footer-reveal-over');
+      footer.classList.add('footer-reveal');
+
+      var SPEED = 0.08;
+      var desktop = window.matchMedia('(min-width: 992px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var doc = document.documentElement, FH = 0, on = false;
+      function apply() {
+        if (!on) return;
+        var r = doc.scrollHeight - window.innerHeight - window.scrollY;
+        r = r < 0 ? 0 : r > FH ? FH : r;
+        footer.style.transform = r ? 'translate3d(0,' + (-r * (1 - SPEED)).toFixed(2) + 'px,0)' : '';
+      }
+      function sync() {
+        var want = desktop.matches && !reduce.matches;
+        if (want) { on = true; FH = footer.offsetHeight; apply(); }
+        else if (on) { on = false; footer.style.transform = ''; }
+      }
+      window.addEventListener('scroll', apply, { passive: true });
+      window.addEventListener('resize', sync);
+      window.addEventListener('load', sync);
+      if (desktop.addEventListener) { desktop.addEventListener('change', sync); reduce.addEventListener('change', sync); }
+      sync();
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  })();
+</script><script>
+  (function () {
+    var vids = document.querySelectorAll('video[data-inview-play]');
+    if (!vids.length) return;
+    if (!('IntersectionObserver' in window)) { vids.forEach(function (v) { v.play().catch(function () {}); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) e.target.play().catch(function () {}); else e.target.pause();
+      });
+    }, { rootMargin: '200px 0px', threshold: 0.01 });
+    vids.forEach(function (v) { io.observe(v); });
+  })();
+</script><script>
+  (function () {
+    var box = document.querySelector('[data-chat]');
+    if (!box) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var bubble = box.querySelector('.chat-bubble'), text = box.querySelector('.chat-text');
+    var TYPING = 1300, timers = [];
+    function clear() { timers.forEach(clearTimeout); timers = []; }
+    function reset() {
+      clear();
+      box.classList.remove('is-in', 'is-msg');
+      box.classList.add('is-armed');
+      bubble.style.width = '';
+    }
+    function play() {
+      reset();
+      var cs = getComputedStyle(bubble); // text plus the bubble's side padding and border
+      var full = Math.ceil(text.offsetWidth + parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight) + 2);
+      timers.push(setTimeout(function () { box.classList.add('is-in'); }, 80));
+      timers.push(setTimeout(function () {
+        bubble.style.width = full + 'px';
+        box.classList.add('is-msg');
+      }, 80 + TYPING));
+    }
+    reset();
+    var area = box.closest('.g-32-center') || box.parentNode;
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      // with a mouse: only while the pointer is over the portrait and heading
+      area.addEventListener('mouseenter', play);
+      area.addEventListener('mouseleave', reset);
+    } else {
+      // touch screens have no hover: a tap on the portrait or heading plays it, a tap elsewhere hides it again
+      area.addEventListener('click', function (e) { e.stopPropagation(); play(); });
+      document.addEventListener('click', reset);
+    }
+  })();
+</script><script>
+  (function () {
+    var chips = document.querySelectorAll('.tlm-chip-mad, .tl-chip-mad');
+    if (!chips.length) return;
+    chips.forEach(function (chip) {
+      if (!chip.querySelector('.tl-info-mad')) return;
+      chip.setAttribute('tabindex', '0');
+      chip.addEventListener('click', function () {
+        var open = chip.classList.contains('is-open');
+        chips.forEach(function (c) { c.classList.remove('is-open'); });
+        if (!open) chip.classList.add('is-open');
+      });
+    });
+  })();
+</script><script>
+  (function () {
+    function boot() {
+      var cs = document.documentElement.lang === 'cs';
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // ---- 1. Squire card: lime cursor + link to the case study
+      var phone = document.querySelector('.card-proof-pd.is-phone-pd');
+      if (phone && !phone.__rh) {
+        phone.__rh = true;
+        var href = cs ? '/cz/pripadove-studie/squire' : '/case-studies/squire';
+        phone.setAttribute('role', 'link'); phone.setAttribute('tabindex', '0');
+        phone.setAttribute('aria-label', cs ? 'Případová studie Squire' : 'Squire case study');
+        var cur = document.createElement('div');
+        cur.className = 'proof-cursor-pd'; cur.setAttribute('aria-hidden', 'true');
+        cur.innerHTML = '<span></span><img alt="" src="/assets/6909ed375ee6ef22dffa47c2__6ab80bdb875181062419f2d6_pd-icon-arrow-up-right-dark.svg">';
+        cur.firstChild.textContent = cs ? 'Případová studie' : 'See Case Study';
+        phone.appendChild(cur);
+        var fine = window.matchMedia('(hover: hover) and (pointer: fine)');
+        var place = function (e, instant) {
+          var r = phone.getBoundingClientRect();
+          if (instant) { cur.style.transition = 'none'; void cur.offsetWidth; }
+          cur.style.translate = (e.clientX - r.left - 75) + 'px ' + (e.clientY - r.top - 75) + 'px';
+          if (instant) { void cur.offsetWidth; cur.style.transition = ''; }
+        };
+        phone.addEventListener('mouseenter', function (e) { if (!fine.matches) return; place(e, true); cur.classList.add('is-on'); });
+        phone.addEventListener('mousemove', function (e) { if (fine.matches) place(e); });
+        phone.addEventListener('mouseleave', function () { cur.classList.remove('is-on'); });
+        phone.addEventListener('click', function () { window.location.href = href; });
+        phone.addEventListener('keydown', function (e) { if (e.key === 'Enter') window.location.href = href; });
+      }
+
+      // ---- 2. testimonial card: rotation
+      var card = document.querySelector('.card-proof-pd.is-quote-pd');
+      var data = [].slice.call(document.querySelectorAll('.data-testi-pd .d-testi-pd'));
+      if (!card || card.__rh || data.length < 2) return;
+      card.__rh = true;
+      var pick = function (el, sel) { var x = el.querySelector(sel); return x ? x.textContent.trim() : ''; };
+      var src = function (el, sel) { var x = el.querySelector(sel); return x ? (x.getAttribute('src') || '') : ''; };
+      var q = cs ? ['„', '“'] : ['“', '”'];
+      var slides = data.map(function (d) {
+        return { quote: q[0] + pick(d, '.d-quote-pd') + q[1], name: pick(d, '.d-name-pd'), role: pick(d, '.d-role-pd'),
+                 photo: src(d, '.d-photo-pd'), logo: src(d, '.d-logo-pd'), logoAlt: (d.querySelector('.d-logo-pd') || {}).alt || '' };
+      });
+      slides.forEach(function (s) { [s.photo, s.logo].forEach(function (u) { if (u) { var i = new Image(); i.src = u; } }); });
+
+      var logo = card.querySelector('.proof-logo-pd');
+      var quote = card.querySelector('.proof-quote-pd');
+      var author = card.querySelector('.proof-author-pd');
+      var photo = card.querySelector('.author-img-pd');
+      var nameEl = card.querySelector('.author-text-pd .body-base-medium');
+      var roleEl = card.querySelector('.author-text-pd .text-color-939393');
+      var oldDots = card.querySelector('.proof-dots-pd');
+      if (!logo || !quote || !author || !photo || !nameEl || !roleEl) return;
+      [logo, quote, author].forEach(function (el) { el.classList.add('proof-rot-pd'); });
+      logo.classList.add('is-rot-pd');
+      logo.removeAttribute('srcset'); photo.removeAttribute('srcset'); photo.removeAttribute('sizes');
+
+      var dots = document.createElement('div');
+      dots.className = 'proof-dots-rot-pd';
+      slides.forEach(function (s, k) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', (cs ? 'Reference ' : 'Testimonial ') + (k + 1) + ': ' + s.name);
+        b.addEventListener('click', function () { go(k); restart(); });
+        dots.appendChild(b);
+      });
+      if (oldDots) oldDots.replaceWith(dots); else card.insertBefore(dots, card.firstChild);
+
+      function fill(s) {
+        logo.src = s.logo; logo.alt = s.logoAlt;
+        quote.textContent = s.quote;
+        photo.src = s.photo; photo.alt = s.name;
+        nameEl.textContent = s.name; roleEl.textContent = s.role;
+      }
+      function mark(k) { [].forEach.call(dots.children, function (b, j) { b.setAttribute('aria-current', j === k ? 'true' : 'false'); }); }
+
+      // the card keeps the height it needs for the longest quote; logo, quote and author sit at its bottom
+      // (margin-top: auto on the logo), so the spare room is between the dots and the logo
+      function lock() {
+        card.style.minHeight = '';
+        var keep = quote.textContent, max = 0;
+        slides.forEach(function (s) { quote.textContent = s.quote; max = Math.max(max, card.offsetHeight); });
+        quote.textContent = keep;
+        card.style.minHeight = max + 'px';
+      }
+
+      var i = 0, busy = false;
+      fill(slides[0]); mark(0); lock();
+      function go(k) {
+        if (k === i || busy) return;
+        i = k; mark(k);
+        var parts = [logo, quote, author];
+        if (reduce) { fill(slides[k]); return; }
+        busy = true;
+        parts.forEach(function (el, j) { el.style.transitionDelay = (j * 40) + 'ms'; el.classList.add('is-out'); });
+        setTimeout(function () {
+          fill(slides[k]);
+          parts.forEach(function (el) { el.style.transitionDelay = ''; el.classList.remove('is-out'); el.classList.add('is-pre'); });
+          void card.offsetWidth;
+          parts.forEach(function (el, j) { el.style.transitionDelay = (j * 80) + 'ms'; el.classList.remove('is-pre'); });
+          setTimeout(function () { parts.forEach(function (el) { el.style.transitionDelay = ''; }); busy = false; }, 900);
+        }, 450);
+      }
+
+      // auto-rotation: every 6 s while the card is on screen, the tab is visible and nobody is hovering it
+      var INTERVAL = 6000, timer = null, hover = false, inView = false;
+      function stop() { clearInterval(timer); timer = null; }
+      function restart() { stop(); if (!reduce && inView && !hover && !document.hidden) timer = setInterval(function () { go((i + 1) % slides.length); }, INTERVAL); }
+      card.addEventListener('mouseenter', function () { hover = true; restart(); });
+      card.addEventListener('mouseleave', function () { hover = false; restart(); });
+      card.addEventListener('focusin', function () { hover = true; restart(); });
+      card.addEventListener('focusout', function () { hover = false; restart(); });
+      document.addEventListener('visibilitychange', restart);
+      if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { inView = es[0].isIntersecting; restart(); }, { threshold: .3 }).observe(card);
+      var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(lock, 150); });
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(lock);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  })();
+</script><script>
+  (function () {
+    function boot() {
+      document.querySelectorAll('.section-pricing-new').forEach(function (sec) {
+        if (sec.__roll) return;
+        var rows = [sec.querySelector('.div-1-pricing'), sec.querySelector('.div-2-pricing')];
+        var btns = [sec.querySelector('.monthly'), sec.querySelector('._3-monthly')];
+        if (!rows[0] || !rows[1] || !btns[0] || !btns[1]) return;
+        sec.__roll = true;
+        var num = function (row) { return row.querySelector('.number-l'); };
+        var texts = rows.map(function (r) { return num(r).textContent.trim(); });
+        // only rows whose numbers have the same shape ($5,995 / $5,395) roll; anything else just swaps as before
+        var shape = function (t) { return t.replace(/\d/g, '0'); };
+        if (shape(texts[0]) !== shape(texts[1])) return;
+        var current = 0;
+        function build(el, from) {
+          var html = '', k = 0, digits = from.replace(/\D/g, '');
+          for (var c = 0; c < from.length; c++) {
+            if (/\d/.test(from[c])) {
+              html += '<span class="pr-odo-d"><span style="transform:translateY(' + (-digits[k] * 10) + '%)"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span></span>';
+              k++;
+            } else html += '<span>' + from[c] + '</span>';
+          }
+          el.innerHTML = '<span class="pr-odo" aria-hidden="true">' + html + '</span>';
+        }
+        function roll(to) {
+          if (to === current) return;
+          var el = num(rows[to]), from = texts[current], target = texts[to].replace(/\D/g, '');
+          current = to;
+          el.setAttribute('aria-label', texts[to]);
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = texts[to]; return; }
+          build(el, from);
+          el.offsetWidth;
+          [].forEach.call(el.querySelectorAll('.pr-odo-d > span'), function (strip, n) {
+            strip.style.setProperty('--od', (n * 0.06).toFixed(2) + 's');
+            strip.style.transform = 'translateY(' + (-target[n] * 10) + '%)';
+          });
+        }
+        // after the block's own handler has swapped the rows
+        btns.forEach(function (b, k) { b.addEventListener('click', function () { setTimeout(function () { roll(k); }, 0); }); });
+      });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  })();
+</script></body></html>

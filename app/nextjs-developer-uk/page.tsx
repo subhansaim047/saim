@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock, ShieldCheck, Zap, HelpCircle, Code2 } from "lucide-react";
 import { FooterSection } from "@/components/FooterSection";
+import { RhHeader } from "@/components/rh/RhHeader";
+import {
+  RhHeroPinned,
+  RhProcessCarousel,
+  RhSystemRows,
+} from "@/components/rh/RhModernSections";
 
 export const metadata: Metadata = {
   title: 'Freelance Next.js Developer UK | Fast Websites | Saim Dev',
@@ -109,92 +115,33 @@ export default function NextJsDeveloperUkPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ukBreadcrumbSchema) }}
       />
-      <div className="min-h-screen bg-black text-[#E1E0CC] selection:bg-primary selection:text-black">
-        {/* TOP BAR / NAVIGATION */}
-        <header className="border-b border-white/10 bg-black/90 backdrop-blur sticky top-0 z-40">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2.5 font-bold text-white text-lg tracking-tight">
-              <span className="w-8 h-8 rounded-full overflow-hidden border border-white/20">
-                <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer" width={36} height={36} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-              </span>
-              <span>Saim Dev <span className="text-xs font-mono text-primary font-normal">UK</span></span>
-            </Link>
+      <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+        <RhHeader theme="dark" />
 
-            <div className="flex items-center gap-3">
-              <Link
-                href="/#pricing"
-                className="text-xs sm:text-sm font-medium text-white/70 hover:text-white transition-colors"
-              >
-                Pricing
-              </Link>
-              <a
-                href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20a%20UK%20business%20looking%20for%20a%20Next.js%20developer"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-primary text-black text-xs sm:text-sm font-semibold px-4 py-2 rounded-full hover:brightness-110 transition-all flex items-center gap-1.5 shadow-md"
-              >
-                <span>WhatsApp</span>
-              </a>
-            </div>
-          </div>
-        </header>
+        {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
+        <RhHeroPinned
+          badge="UK & European Next.js Engineering Specialist"
+          title={
+            <>
+              High-Performance Next.js Web Development{" "}
+              <span className="text-[#939393]">for UK Businesses.</span>
+            </>
+          }
+          subtitle="Saim Dev provides specialist freelance Next.js web development for UK businesses from £250. Sub-second React platforms engineered for 95+ Core Web Vitals, local Google visibility, and 100% source code ownership with zero agency retainers."
+          primaryCta={{
+            label: "Start on WhatsApp (+92 319 6526604)",
+            href: "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Next.js%20website%20for%20my%20UK%20business",
+          }}
+          secondaryCta={{ label: "View Website Case Studies", href: "/case-studies" }}
+          videoType="cube"
+          stripLabel="Fixed GBP Pricing · Zero Agency Retainers"
+        />
 
-        {/* HERO */}
-        <section className="relative px-4 sm:px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 max-w-5xl mx-auto text-center">
-          {/* Visible Breadcrumb Navigation */}
-          <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
-            <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
-              <li>
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              </li>
-              <li aria-hidden="true" className="text-white/30">/</li>
-              <li>
-                <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-              </li>
-              <li aria-hidden="true" className="text-white/30">/</li>
-              <li className="text-primary font-semibold" aria-current="page">
-                Next.js Developer UK
-              </li>
-            </ol>
-          </nav>
-
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-mono font-medium mb-6">
-            <Zap className="w-3.5 h-3.5 animate-pulse" />
-            <span>UK & EUROPEAN WEB ARCHITECTURE SPECIALIST</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-white leading-[1.08] mb-6">
-            High-Performance <span className="text-primary italic font-serif">Next.js</span> Web Development for UK Businesses.
-          </h1>
-
-          <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mb-10">
-            Saim Dev provides specialist freelance Next.js web development for UK businesses from £250. We build custom, sub-second web applications engineered for 90+ Core Web Vitals, top Google search visibility, and maximum conversions without the high agency retainers or WordPress plugin bloat.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Next.js%20website%20for%20my%20UK%20business"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-primary text-black font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full hover:brightness-110 active:scale-95 transition-all flex items-center gap-2 shadow-xl cursor-pointer"
-            >
-              <span>Start on WhatsApp (+92 319 6526604)</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              href="/case-studies"
-              className="border border-white/20 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full transition-all flex items-center gap-2 cursor-pointer"
-            >
-              <span>View our website case studies</span>
-              <ArrowRight className="w-4 h-4 text-primary" />
-            </Link>
-          </div>
-
-          {/* TRUST STATS */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-left">
+        {/* TRUST STATS BAR */}
+        <section className="px-5 py-14 max-w-[1168px] mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-[#141414] border border-white/10 text-left">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-0.5">90+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-[#BAFF00] mb-0.5">90+</div>
               <div className="text-xs text-white/60">Google Core Web Vitals</div>
             </div>
             <div>
@@ -463,6 +410,74 @@ export default function NextJsDeveloperUkPage() {
             </div>
           </div>
         </section>
+
+        <RhSystemRows
+          overline="UK NEXT.JS ARCHITECTURE"
+          title="Engineered for UK scale."
+          titleMuted="Zero WordPress bloat."
+          subtitle="Every UK deployment ships with App Router edge rendering, strict TypeScript safety, and 100% repository ownership."
+          rows={[
+            {
+              num: "01",
+              title: "Edge SSR & <0.8s LCP",
+              description: "Server components and Vercel edge caching built to clear Google Core Web Vitals across 4G mobile networks nationwide.",
+              tags: ["Next.js 15", "Edge SSR", "LCP < 0.8s"],
+            },
+            {
+              num: "02",
+              title: "Technical UK SEO & Schema",
+              description: "Automated JSON-LD LocalBusiness, Service, and FAQPage schemas with canonical en-GB hreflang tags.",
+              tags: ["JSON-LD", "en-GB SEO", "OpenGraph"],
+            },
+            {
+              num: "03",
+              title: "100% Code Ownership",
+              description: "Zero proprietary page builders or agency lock-in retainers. Full GitHub handoff and production Vercel pipeline.",
+              tags: ["TypeScript", "Clean Git", "Zero Lock-in"],
+            },
+          ]}
+        />
+
+        <RhProcessCarousel
+          overline="UK DELIVERY SPRINT"
+          title="Live across the UK"
+          titleMuted="in 5–10 days."
+          stages={[
+            {
+              stage: "01",
+              duration: "Day 1",
+              title: "Scope & UK Market Audit",
+              description: "Lock deliverables, UK keyword clusters, competitor benchmarks, and fixed GBP quote with zero surprise fees.",
+              deliverables: ["Fixed GBP Quote", "SEO Blueprint", "UX Wireframe"],
+            },
+            {
+              stage: "02",
+              duration: "Days 2–4",
+              title: "Next.js & Tailwind Build",
+              description: "Custom React architecture, motion polish, and mobile-first responsive templates streamed to a live preview URL.",
+              deliverables: ["App Router", "Staging URL", "Design Tokens"],
+            },
+            {
+              stage: "03",
+              duration: "Days 5–7",
+              title: "Schema, QA & Speed Hardening",
+              description: "Lighthouse 99+ tuning, structured data validation, and cross-browser device verification.",
+              deliverables: ["Core Web Vitals", "JSON-LD QA", "Accessibility"],
+            },
+            {
+              stage: "04",
+              duration: "Launch",
+              title: "Production & Git Handoff",
+              description: "DNS switchover, SSL provisioning, and full source-code transfer directly to your organisation.",
+              deliverables: ["GitHub Repo", "Zero Retainer", "Post-Launch Support"],
+            },
+          ]}
+          quote="Saim Dev rebuilt our slow agency WordPress site into a sub-second Next.js platform in seven days — our UK organic enquiries doubled within six weeks."
+          author="James Thornton"
+          role="Operations Director, UK Trade Services"
+          ctaHref="/contact"
+          ctaLabel="Start UK Sprint"
+        />
 
         {/* BOTTOM CTA BANNER */}
         <section className="py-16 sm:py-20 border-t border-white/10 bg-black text-center px-4">

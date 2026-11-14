@@ -16,7 +16,13 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
+import { RhHeader } from "@/components/rh/RhHeader";
 import { CommissionSavingsCalculator } from "@/components/CommissionSavingsCalculator";
+import {
+  RhHeroPinned,
+  RhProcessCarousel,
+  RhSystemRows,
+} from "@/components/rh/RhModernSections";
 
 export const metadata: Metadata = {
   title: "Takeaway Website Design Birmingham | Direct Ordering | Saim Dev",
@@ -155,7 +161,7 @@ export default function BirminghamTakeawayWebDesignPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-amber-400 selection:text-black">
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -170,91 +176,34 @@ export default function BirminghamTakeawayWebDesignPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Header */}
-      <header className="sticky top-0 z-40 bg-black/90 backdrop-blur-md border-b border-white/10 px-4 sm:px-8 py-3.5 flex items-center justify-between">
-        <Link
-          href="/services/takeaway-web-design"
-          className="flex items-center gap-2 text-xs font-medium text-white/70 hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>UK Takeaway Service</span>
-        </Link>
-        <div className="flex items-center gap-3">
-          <Link
-            href="/tools"
-            className="text-xs text-white/60 hover:text-white transition-colors hidden sm:inline-block"
-          >
-            Free Kitchen Tools
-          </Link>
-          <a
-            href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20Birmingham%20takeaway%20website"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-4 py-2 rounded-full inline-flex items-center gap-1.5 transition-all shadow"
-          >
-            <span>Birmingham Enquiries</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </a>
-        </div>
-      </header>
+      <RhHeader theme="dark" />
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-16">
-        {/* Visible Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
-          <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
-            <li>
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li>
-              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li>
-              <Link href="/services/takeaway-web-design" className="hover:text-white transition-colors">Takeaway Web Design</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li className="text-amber-400 font-semibold" aria-current="page">
-              Birmingham
-            </li>
-          </ol>
-        </nav>
+      <RhHeroPinned
+        badge="Birmingham & West Midlands Food Tech · 0% Commission"
+        title={
+          <>
+            Takeaway Website Design{" "}
+            <span className="text-[#939393]">Birmingham</span>
+          </>
+        }
+        subtitle="Saim Dev builds bespoke Next.js takeaway ordering websites for Birmingham and West Midlands restaurants, Balti houses, and burger bars starting from £250 fixed price. Bypass 30%+ Just Eat commissions with Natasha's Law 14-allergen menus across Birmingham, Solihull, and Wolverhampton."
+        primaryCta={{
+          label: "Build Birmingham Site (£250)",
+          href: "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Birmingham%20takeaway%20website",
+        }}
+        secondaryCta={{
+          label: "Interactive Allergen Demo",
+          href: "/tools/allergen-matrix-generator",
+        }}
+        videoType="mobile"
+        stripLabel="West Midlands · Commission-Free Ordering"
+      />
 
-        {/* HERO SECTION */}
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-amber-300 text-xs font-mono font-bold uppercase">
-            <MapPin className="w-3.5 h-3.5" />
-            <span>Birmingham &amp; West Midlands Food Tech</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            Takeaway Website Design Birmingham
-          </h1>
-
-          <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-light">
-            Saim Dev builds bespoke Next.js takeaway ordering websites for Birmingham and West Midlands restaurants, Balti houses, and burger bars starting from £250. Our lightweight systems bypass 30%+ Just Eat commissions, routing customer orders directly to WhatsApp or online checkout with integrated Natasha&apos;s Law 14-allergen menus across Birmingham, Solihull, and Wolverhampton.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Birmingham%20takeaway%20website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all shadow-xl hover:scale-105 cursor-pointer"
-            >
-              <span>Build Birmingham Site (£250 Fixed)</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              href="/tools/allergen-matrix-generator"
-              className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all border border-white/15"
-            >
-              <span>Interactive Allergen Demo</span>
-            </Link>
-          </div>
+      <main className="max-w-[1168px] mx-auto px-5 py-16 sm:py-20 space-y-16">
+        <div className="max-w-5xl mx-auto">
 
           {/* Social Proof Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10 text-left">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
             <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
               <div className="text-2xl font-extrabold text-amber-400 font-mono">0%</div>
               <div className="text-xs text-white/70 font-medium">Commission Fees</div>
@@ -481,6 +430,75 @@ export default function BirminghamTakeawayWebDesignPage() {
           </div>
         </div>
       </main>
+
+      <RhSystemRows
+        overline="WEST MIDLANDS STACK"
+        title="Commission-free ordering"
+        titleMuted="for Birmingham kitchens."
+        subtitle="Built for Birmingham Balti houses, burger kitchens, and multi-site restaurants across Solihull, Sutton Coldfield, and Wolverhampton."
+        rows={[
+          {
+            num: "01",
+            title: "Natasha's Law 14-Allergen Filter",
+            description: "Interactive allergen filtering across every menu category so diners inspect ingredients safely before ordering.",
+            tags: ["14 Allergens", "FSA Compliant", "Instant Search"],
+            href: "/tools/allergen-matrix-generator",
+          },
+          {
+            num: "02",
+            title: "Direct WhatsApp & Stripe Checkout",
+            description: "Stop handing 30%+ per basket to delivery portals. Direct orders arrive cleanly in your kitchen with full customer data.",
+            tags: ["0% Commission", "Stripe UK", "B-Postcode Zones"],
+          },
+          {
+            num: "03",
+            title: "Birmingham Local SEO & Schema",
+            description: "Structured LocalBusiness and Menu schemas engineered to capture direct high-intent searches across the Midlands.",
+            tags: ["LocalBusiness JSON-LD", "99+ Speed", "Mobile First"],
+          },
+        ]}
+      />
+
+      <RhProcessCarousel
+        overline="LAUNCH SPRINT"
+        title="Commission-free menu live"
+        titleMuted="in 3–5 days."
+        stages={[
+          {
+            stage: "01",
+            duration: "Day 1",
+            title: "Menu & Allergen Audit",
+            description: "We digitize your dishes, sides, meal combos, and full 14-allergen matrix with zero manual data entry.",
+            deliverables: ["Full Menu JSON", "Allergen Matrix", "B-Postcode Map"],
+          },
+          {
+            stage: "02",
+            duration: "Days 2–3",
+            title: "Mobile Storefront Build",
+            description: "Fast mobile-first UX built to handle weekend dinner rushes smoothly with instant category filtering.",
+            deliverables: ["Mobile Cart UX", "Upsell Logic", "Staging Link"],
+          },
+          {
+            stage: "03",
+            duration: "Day 4",
+            title: "Bag-Flyer QR & Testing",
+            description: "End-to-end order routing verification plus print-ready QR packaging inserts to convert portal diners direct.",
+            deliverables: ["Print QR Assets", "WhatsApp Test", "Speed QA"],
+          },
+          {
+            stage: "04",
+            duration: "Day 5",
+            title: "Live Go-Live (£250 Fixed)",
+            description: "Deploy on your own domain with 100% ownership and zero recurring fees per order.",
+            deliverables: ["Custom Domain", "0% Per Order", "Code Handoff"],
+          },
+        ]}
+        quote="Our Birmingham direct takeaway orders grew every weekend once customers could scan the QR code and reorder straight from their phone with zero app surcharge."
+        author="Faisal Akhtar"
+        role="Director, Midlands Smokehouse"
+        ctaHref="/contact"
+        ctaLabel="Launch Birmingham Menu"
+      />
 
       <SiteFooter theme="dark" />
     </div>

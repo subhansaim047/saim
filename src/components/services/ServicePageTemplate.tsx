@@ -2,29 +2,55 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  ChevronDown, 
-  ShieldCheck, 
-  Layers, 
-  ExternalLink, 
-  Code2, 
-  Award, 
-  Check, 
+import {
+  ArrowRight,
+  CheckCircle2,
+  ExternalLink,
+  Code2,
+  Check,
   X,
-  Smartphone,
-  Search,
-  Lock,
   Building,
   Utensils,
   Stethoscope,
   Scissors,
   Briefcase,
-  Laptop
+  Laptop,
 } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
+import { RhHeader } from "@/components/rh/RhHeader";
+import {
+  RhBentoWorkGrid,
+  RhHeroPinned,
+  RhOdometerNumber,
+  RhProblemSolutionDeck,
+  RhProcessCarousel,
+  RhSystemRows,
+} from "@/components/rh/RhModernSections";
+
+const MOBILE_VIDEO_SLUGS = new Set([
+  "ui-ux-design",
+  "website-redesign",
+  "landing-page-design",
+  "web-application-development",
+  "react-development",
+  "custom-web-apps",
+  "landing-pages-cro",
+  "takeaway-web-design",
+  "website-clone",
+  "ecommerce-shopify",
+]);
+
+function splitPriceForOdometer(raw: string): {
+  prefix: string;
+  amount: number | null;
+  suffix: string;
+} {
+  const m = raw.match(/^(.*?)(\d[\d,]*)(.*)$/);
+  if (!m) return { prefix: "", amount: null, suffix: raw };
+  const num = Number(m[2].replace(/,/g, ""));
+  if (!Number.isFinite(num)) return { prefix: "", amount: null, suffix: raw };
+  return { prefix: m[1], amount: num, suffix: m[3] };
+}
 
 export interface ServiceDeliverable {
   title: string;
@@ -113,16 +139,40 @@ export interface ServicePageData {
 
 const getIndustryIcon = (name: string) => {
   const lower = name.toLowerCase();
-  if (lower.includes("restaurant") || lower.includes("takeaway") || lower.includes("food")) return <Utensils className="w-5 h-5 text-[#FF4A1C]" />;
-  if (lower.includes("health") || lower.includes("clinic") || lower.includes("doctor")) return <Stethoscope className="w-5 h-5 text-[#FF4A1C]" />;
-  if (lower.includes("beauty") || lower.includes("salon") || lower.includes("spa")) return <Scissors className="w-5 h-5 text-[#FF4A1C]" />;
-  if (lower.includes("architecture") || lower.includes("construction") || lower.includes("estate")) return <Building className="w-5 h-5 text-[#FF4A1C]" />;
-  if (lower.includes("corporate") || lower.includes("b2b")) return <Briefcase className="w-5 h-5 text-[#FF4A1C]" />;
-  return <Laptop className="w-5 h-5 text-[#FF4A1C]" />;
+  if (
+    lower.includes("restaurant") ||
+    lower.includes("takeaway") ||
+    lower.includes("food")
+  )
+    return <Utensils className="w-5 h-5 text-[#0D0D0D]" />;
+  if (
+    lower.includes("health") ||
+    lower.includes("clinic") ||
+    lower.includes("doctor")
+  )
+    return <Stethoscope className="w-5 h-5 text-[#0D0D0D]" />;
+  if (
+    lower.includes("beauty") ||
+    lower.includes("salon") ||
+    lower.includes("spa")
+  )
+    return <Scissors className="w-5 h-5 text-[#0D0D0D]" />;
+  if (
+    lower.includes("architecture") ||
+    lower.includes("construction") ||
+    lower.includes("estate")
+  )
+    return <Building className="w-5 h-5 text-[#0D0D0D]" />;
+  if (lower.includes("corporate") || lower.includes("b2b"))
+    return <Briefcase className="w-5 h-5 text-[#0D0D0D]" />;
+  return <Laptop className="w-5 h-5 text-[#0D0D0D]" />;
 };
 
-export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data }) => {
+export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
+  data,
+}) => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [currencyMode, setCurrencyMode] = useState<"native" | "USD" | "GBP">("native");
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -132,547 +182,391 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
     `Hi Saim, I'm interested in ${data.serviceName} (${data.finalCta.whatsappText}) with the $0 upfront offer.`
   )}`;
 
+  const videoType = MOBILE_VIDEO_SLUGS.has(data.slug) ? "mobile" : "cube";
+
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-white selection:bg-[#FF4A1C] selection:text-white relative">
-      {/* GLOBAL TRUST BAR */}
-      <aside aria-label="Announcement" className="w-full bg-[#141414] border-b border-white/10 py-2.5 px-4 text-center text-xs text-white/70">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-6">
-          <span className="inline-flex items-center gap-1.5 font-medium text-white">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            Our Agency Registered in UK &amp; Based in Pakistan
-          </span>
-          <span className="hidden sm:inline text-white/30">•</span>
-          <span className="text-[#FF4A1C] font-medium">$0 Upfront Deposit (Pay Only If 100% Satisfied)</span>
-          <span className="hidden sm:inline text-white/30">•</span>
-          <span>Zero Monthly Charges</span>
-        </div>
-      </aside>
-
-      {/* TOP NAVIGATION / BREADCRUMB */}
-      <header className="sticky top-0 z-50 bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/10 px-4 sm:px-8 py-3.5">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-white hover:text-[#FF4A1C] transition-colors">
-            <span className="w-7 h-7 rounded-lg bg-[#FF4A1C] flex items-center justify-center text-black font-extrabold text-sm">S</span>
-            <span>Saim Dev</span>
-          </Link>
-
-          {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="hidden md:flex items-center gap-2 text-xs text-white/50">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            <span>/</span>
-            <span className="text-white font-medium">{data.serviceName}</span>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <Link
-              href="/services"
-              className="text-xs text-white/70 hover:text-white px-3 py-1.5 rounded-full border border-white/15 hover:border-white/30 transition-all"
-            >
-              All Services
-            </Link>
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#FF4A1C] hover:bg-[#e03d12] text-white text-xs font-semibold px-4 py-2 rounded-full transition-all flex items-center gap-1.5 shadow-[0_2px_12px_rgba(255,74,28,0.3)] active:scale-95"
-            >
-              <span>$0 Upfront Kickoff</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
-        </div>
-      </header>
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] relative">
+      <RhHeader theme="dark" />
 
       <main>
         {/* ==============================================================
-            01 — HERO SECTION
+            01 — EXACT rh.design PAGE-OPEN HERO (3D Video + Laser-Draw Strip)
         =============================================================== */}
-        <section className="relative pt-12 sm:pt-20 pb-16 sm:pb-24 px-4 sm:px-8 overflow-hidden">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FF4A1C]/10 rounded-full blur-[140px] pointer-events-none" />
+        <RhHeroPinned
+          badge={data.badge}
+          title={data.h1}
+          subtitle={data.subheading}
+          primaryCta={{
+            label: "Get a Free Consultation ($0 Upfront)",
+            href: "/contact",
+          }}
+          secondaryCta={{
+            label: "View Live Demos",
+            href: "#case-studies",
+          }}
+          videoType={videoType}
+          stripLabel={`${data.serviceName} · Verified Proof`}
+        />
 
-          <div className="max-w-5xl mx-auto text-center relative z-10">
-            {/* Service Badge */}
-            <motion.div 
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/15 mb-6 text-xs font-mono tracking-wider uppercase text-white/90"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#FF4A1C]" />
-              <span>{data.badge}</span>
-            </motion.div>
+        {/* ==============================================================
+            02 — SCROLLYTELLING BOTTLENECK DECK + GROWING RETENTION CHART
+        =============================================================== */}
+        <RhProblemSolutionDeck
+          overline="01 / PROBLEM VS SOLUTION"
+          titleBefore={`Why Your Business Needs`}
+          titleStrike="legacy bloat"
+          titleOwned={`${data.serviceName}.`}
+          subtitle="Outdated templates and fragile CMS builds throttle conversions and lock your revenue into monthly retainers. Explore how custom Next.js engineering resolves every bottleneck."
+          cards={data.painPoints.slice(0, 4).map((p, idx) => ({
+            source: `Bottleneck #${idx + 1}`,
+            time: "Audited",
+            title: p.problem,
+            detail: p.solution,
+            severity: idx % 2 === 0 ? "critical" : "warning",
+          }))}
+          solutionTitle={`The Saim Dev ${data.serviceName} Architecture`}
+          solutionDesc={
+            data.painPoints[0]?.solution ||
+            "Clean, modular Next.js & Tailwind CSS code built around your brand—delivered live before you spend a penny."
+          }
+        />
 
-            {/* H1 Headline */}
-            <motion.h1 
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6"
-            >
-              {data.h1}
-            </motion.h1>
+        {/* ==============================================================
+            03 — INTERACTIVE SVG LINE-DRAW DELIVERABLES SYSTEM
+        =============================================================== */}
+        <RhSystemRows
+          overline="02 / SCOPE OF WORK"
+          title="What Is Included in Our"
+          titleMuted={data.serviceName}
+          subtitle="Hover any architectural row to inspect the geometric wireframe overlay and deliverable breakdown."
+          rows={data.deliverables.map((deliv, idx) => ({
+            num: String(idx + 1).padStart(2, "0"),
+            title: deliv.title,
+            description: deliv.description,
+            tags: [data.serviceName, "$0 Upfront Guarantee", "100% Owned"],
+          }))}
+        />
 
-            {/* Subheading */}
-            <motion.p 
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base sm:text-xl text-white/75 font-light max-w-3xl mx-auto leading-relaxed mb-10"
-            >
-              {data.subheading}
-            </motion.p>
-
-            {/* Winning Proposition Highlight Card */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              whileHover={{ y: -2, borderColor: "rgba(255, 74, 28, 0.5)" }}
-              className="max-w-2xl mx-auto mb-10 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-white/[0.04] via-[#FF4A1C]/[0.08] to-white/[0.04] border border-[#FF4A1C]/30 text-left flex items-start gap-3.5 shadow-lg transition-all"
-            >
-              <ShieldCheck className="w-6 h-6 text-[#FF4A1C] shrink-0 mt-0.5" />
-              <div className="text-xs sm:text-sm">
-                <span className="font-semibold text-white">Our 100% Risk-Free Winning Guarantee: </span>
-                <span className="text-white/80">
-                  Zero upfront deposit for any project. Share your project requirements or reference links; we engineer a live staging preview first. Pay only if you are 100% thrilled with the outcome. If you are not satisfied, you owe nothing. Zero recurring monthly fees — 100% full source code ownership.
+        {/* ==============================================================
+            04 — FEATURES & BENEFITS + 05 — INDUSTRY APPLICATIONS (Light #F5F5F7)
+        =============================================================== */}
+        <section className="py-20 sm:py-28 px-5 bg-[#F5F5F7] text-[#0D0D0D]">
+          <div className="max-w-[1168px] mx-auto space-y-24">
+            {/* Features & Benefits */}
+            <div>
+              <div className="max-w-3xl mb-14">
+                <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
+                  03 / Value Proposition
                 </span>
+                <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  What Makes Our Solution{" "}
+                  <span className="text-[#939393]">Different?</span>
+                </h2>
               </div>
-            </motion.div>
 
-            {/* Dual CTAs */}
-            <motion.div 
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-wrap items-center justify-center gap-4"
-            >
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white hover:bg-neutral-100 text-black font-semibold text-sm sm:text-base px-7 py-3.5 rounded-full flex items-center gap-3 transition-all duration-300 shadow-[0_4px_24px_rgba(255,255,255,0.2)] active:scale-95"
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {data.featuresAndBenefits.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="p-8 rounded-3xl bg-white border border-[#E6E6E6] flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="inline-block px-3.5 py-1 rounded-full bg-[#0D0D0D] text-[#BAFF00] text-[12px] font-medium mb-5">
+                        {item.feature}
+                      </div>
+                      <h3 className="text-[20px] font-medium text-[#0D0D0D] mb-2.5 tracking-[-0.015em]">
+                        {item.benefit}
+                      </h3>
+                      <p className="text-[15px] text-[#595959] leading-[1.6]">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Industry Applications */}
+            <div>
+              <div className="max-w-3xl mb-14">
+                <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
+                  04 / Market Fit
+                </span>
+                <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  Who Is This Service{" "}
+                  <span className="text-[#939393]">Engineered For?</span>
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {data.industries.map((ind, idx) => (
+                  <div
+                    key={idx}
+                    className="p-7 rounded-3xl bg-white border border-[#E6E6E6] flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="w-11 h-11 rounded-2xl bg-[#BAFF00] flex items-center justify-center mb-5">
+                        {getIndustryIcon(ind.industry)}
+                      </div>
+                      <h3 className="text-[19px] font-medium text-[#0D0D0D] mb-2">
+                        {ind.industry}
+                      </h3>
+                      <p className="text-[14px] text-[#595959] leading-[1.6] mb-4">
+                        {ind.description}
+                      </p>
+                    </div>
+                    {ind.demoUrl && (
+                      <a
+                        href={ind.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#0D0D0D] hover:opacity-70 pt-4 border-t border-[#E6E6E6]"
+                      >
+                        <span>Explore Live Demo ({ind.exampleProject})</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ==============================================================
+            06 — DARK HORIZONTAL DRAG PROCESS CAROUSEL + CONIC DIVIDER
+        =============================================================== */}
+        <RhProcessCarousel
+          overline="05 / DELIVERY WORKFLOW"
+          title="Our Risk-Free"
+          titleMuted="Engineering Process"
+          stagesSummaryCount={String(data.process.length)}
+          stagesSummaryTitle="Stages"
+          stagesSummaryText={`Fixed scope & zero upfront deposit for ${data.serviceName}.`}
+          stages={data.process.map((step, idx) => ({
+            stage: `STAGE 0${idx + 1}`,
+            duration: step.duration || "Rapid Sprint",
+            title: step.title,
+            description: step.description,
+            deliverables: [
+              data.deliverables[idx]?.title || "Production Next.js Component",
+              "$0 Upfront Staging Link",
+            ],
+          }))}
+          quote={
+            data.testimonials[0]?.quote ||
+            "Clean Next.js engineering delivered ahead of schedule with zero monthly retainers."
+          }
+          author={data.testimonials[0]?.client || "UK Business Director"}
+          role={`${data.testimonials[0]?.role || "Founder"}, ${
+            data.testimonials[0]?.company || "Verified Client"
+          }`}
+          ctaLabel={data.finalCta.primaryButtonText}
+          ctaHref="/contact"
+        />
+
+        {/* 07 — TECH STACK BAR */}
+        <section
+          data-nav="dark"
+          className="py-16 px-5 bg-[#0D0D0D] text-white border-t border-[#202020]"
+        >
+          <div className="max-w-[1168px] mx-auto">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+              <div>
+                <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-2.5">
+                  06 / MODERN STACK
+                </span>
+                <h2 className="text-[clamp(26px,3.2vw,38px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  Built With Next.js &amp;{" "}
+                  <span className="text-[#939393]">Edge Infrastructure</span>
+                </h2>
+              </div>
+              <Link
+                href="/technologies"
+                className="text-[14px] text-[#CBCBCB] hover:text-[#BAFF00] transition-colors"
               >
-                <span>Get a Free Consultation ($0 Upfront)</span>
-                <ArrowRight className="w-4 h-4 text-black" />
-              </a>
-
-              <a
-                href="#case-studies"
-                className="bg-white/[0.06] hover:bg-white/15 border border-white/15 text-white font-medium text-sm sm:text-base px-6 py-3.5 rounded-full transition-all"
-              >
-                View Live Demos
-              </a>
-            </motion.div>
-
-            {/* Trust Indicators */}
-            <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-              <div>
-                <p className="text-lg sm:text-2xl font-bold font-mono text-white">UK Reg.</p>
-                <p className="text-[11px] text-white/50 uppercase tracking-wider mt-0.5">Agency in UK &amp; PK</p>
-              </div>
-              <div>
-                <p className="text-lg sm:text-2xl font-bold font-mono text-[#FF4A1C]">£0 / $0</p>
-                <p className="text-[11px] text-white/50 uppercase tracking-wider mt-0.5">Upfront Deposit</p>
-              </div>
-              <div>
-                <p className="text-lg sm:text-2xl font-bold font-mono text-white">&lt;500ms</p>
-                <p className="text-[11px] text-white/50 uppercase tracking-wider mt-0.5">Next.js Speed</p>
-              </div>
-              <div>
-                <p className="text-lg sm:text-2xl font-bold font-mono text-emerald-400">0 / mo</p>
-                <p className="text-[11px] text-white/50 uppercase tracking-wider mt-0.5">Zero Monthly Lock-In</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ==============================================================
-            02 — PROBLEM & SOLUTION
-        =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10 bg-[#0E0E0E]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Problem vs Solution</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                Why Your Business Needs Professional {data.serviceName}
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                Outdated templates and bloated systems kill your growth. Here is what is broken today and how our custom Next.js engineering fixes it permanently.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-              {data.painPoints.map((item, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.45, delay: idx * 0.06 }}
-                  whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.35)", transition: { duration: 0.2 } }}
-                  className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 transition-all flex flex-col justify-between shadow-lg"
-                >
-                  <div>
-                    <div className="flex items-start gap-3 mb-4">
-                      <div className="w-7 h-7 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center shrink-0 mt-0.5">
-                        <X className="w-4 h-4 text-red-400" />
-                      </div>
-                      <div>
-                        <p className="text-xs font-mono uppercase tracking-wider text-red-400 mb-1">Outdated Problem #{idx + 1}</p>
-                        <p className="text-sm sm:text-base font-semibold text-white/90">{item.problem}</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3 pt-4 border-t border-white/10">
-                      <div className="w-7 h-7 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0 mt-0.5">
-                        <Check className="w-4 h-4 text-emerald-400" />
-                      </div>
-                      <div>
-                        <p className="text-xs font-mono uppercase tracking-wider text-emerald-400 mb-1">SaimDev Next.js Solution</p>
-                        <p className="text-sm sm:text-base text-white/80 font-light leading-relaxed">{item.solution}</p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==============================================================
-            03 — SERVICE OVERVIEW (What Is Included)
-        =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Scope of Work</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                What Is Included in Our {data.serviceName}?
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                Complete clarity on every deliverable. No vague agency promises, no hidden extras.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {data.deliverables.map((deliv, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.45, delay: idx * 0.05 }}
-                  whileHover={{ y: -4, borderColor: "rgba(255, 74, 28, 0.45)", backgroundColor: "rgba(255, 255, 255, 0.04)", transition: { duration: 0.2 } }}
-                  className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 transition-all group shadow-md"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/15 flex items-center justify-center text-white font-mono font-bold text-sm mb-4 group-hover:bg-[#FF4A1C] group-hover:text-black transition-all">
-                    0{idx + 1}
-                  </div>
-                  <h3 className="text-base font-semibold text-white mb-2 tracking-tight">{deliv.title}</h3>
-                  <p className="text-xs sm:text-sm text-white/65 font-light leading-relaxed">{deliv.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==============================================================
-            04 — FEATURES & BENEFITS
-        =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10 bg-[#0E0E0E]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Value Proposition</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                What Makes Our Solution Different?
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                Every technical feature directly produces tangible business and revenue outcomes.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {data.featuresAndBenefits.map((item, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.45, delay: idx * 0.07 }}
-                  whileHover={{ y: -4, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
-                  className="p-7 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between shadow-md transition-all"
-                >
-                  <div>
-                    <div className="inline-block px-3 py-1 rounded-full bg-[#FF4A1C]/10 border border-[#FF4A1C]/30 text-[#FF4A1C] text-xs font-semibold mb-4">
-                      {item.feature}
-                    </div>
-                    <h3 className="text-lg font-bold text-white mb-2">{item.benefit}</h3>
-                    <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">{item.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==============================================================
-            05 — INDUSTRY APPLICATIONS
-        =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Market Fit</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                Who Is This Service For?
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                Specialized architectures customized for diverse vertical commercial sectors.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {data.industries.map((ind, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.45, delay: idx * 0.06 }}
-                  whileHover={{ y: -4, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
-                  className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 transition-all flex flex-col justify-between shadow-md"
-                >
-                  <div>
-                    <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center mb-4">
-                      {getIndustryIcon(ind.industry)}
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{ind.industry}</h3>
-                    <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed mb-4">{ind.description}</p>
-                  </div>
-                  {ind.demoUrl && (
-                    <a
-                      href={ind.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-medium text-[#FF4A1C] hover:underline pt-2 border-t border-white/10"
-                    >
-                      <span>Explore Live Demo ({ind.exampleProject})</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==============================================================
-            06 — OUR PROCESS
-        =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10 bg-[#0E0E0E]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">How We Work</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                Our 5-Step Risk-Free Engineering Process
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                From initial scope to live deployment — built first with $0 upfront commitment.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-              {data.process.map((step, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.45, delay: idx * 0.08 }}
-                  whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.5)", transition: { duration: 0.2 } }}
-                  className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 relative shadow-md transition-all"
-                >
-                  <div className="text-xs font-mono text-[#FF4A1C] mb-2 font-bold">{step.step}</div>
-                  <h3 className="text-base font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-xs text-white/65 font-light leading-relaxed">{step.description}</p>
-                  {step.duration && (
-                    <span className="mt-4 inline-block text-[10px] font-mono text-white/40 uppercase tracking-wider">
-                      {step.duration}
-                    </span>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==============================================================
-            07 — TECHNOLOGY STACK (No WordPress, No Shopify)
-        =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Technologies We Use</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                Why We Build With Next.js &amp; Modern Frameworks
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light max-w-3xl mx-auto">
-                We engineer every solution in modern Next.js rather than relying on bloated WordPress plugins or restrictive Shopify templates. You get sub-second global edge delivery, military-grade security, and zero recurring platform subscriptions.
-              </p>
+                Inspect full technology architecture →
+              </Link>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
               {data.techStack.map((tech, idx) => (
-                <motion.div 
+                <div
                   key={idx}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.35, delay: idx * 0.05 }}
-                  whileHover={{ scale: 1.04, borderColor: "rgba(255, 74, 28, 0.5)", transition: { duration: 0.2 } }}
-                  className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-center flex flex-col items-center justify-center transition-all shadow-md"
+                  className="rh-edge-orbit-card is-lime p-5 bg-[#161616] border border-[#242424] text-center flex flex-col items-center justify-center"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center mb-3">
-                    <Laptop className="w-5 h-5 text-[#FF4A1C]" />
-                  </div>
-                  <p className="text-sm font-semibold text-white mb-1">{tech.name}</p>
-                  <p className="text-[11px] text-white/50">{tech.role}</p>
-                </motion.div>
+                  <Code2 className="w-5 h-5 text-[#BAFF00] mb-2.5" />
+                  <p className="text-[15px] font-medium text-white">{tech.name}</p>
+                  <p className="text-[12px] text-[#939393] mt-0.5">{tech.role}</p>
+                </div>
               ))}
             </div>
-
-            {/* WordPress / Shopify Comparison Callout */}
-            <motion.div 
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="mt-10 p-6 rounded-2xl bg-white/[0.02] border border-white/10 max-w-3xl mx-auto shadow-md"
-            >
-              <h3 className="text-base font-semibold text-white mb-2 flex items-center gap-2">
-                <Code2 className="w-4 h-4 text-[#FF4A1C]" />
-                Next.js Advantage Over WordPress &amp; Shopify
-              </h3>
-              <p className="text-xs sm:text-sm text-white/70 leading-relaxed font-light">
-                WordPress requires constant PHP updates, heavy caching plugins, and leaves you vulnerable to database exploits. Shopify charges monthly app fees for basic functions ($30–$300/mo). With our custom Next.js builds, you get instant edge CDN delivery, 100/100 Core Web Vitals, and <strong>zero monthly recurring platform fees</strong>.
-              </p>
-            </motion.div>
           </div>
         </section>
 
         {/* ==============================================================
-            08 — PORTFOLIO / CASE STUDIES (Live Demos)
+            08 — PROOF BENTO + FLOATING LIME CURSOR DEPLOYMENTS
         =============================================================== */}
-        <section id="case-studies" className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10 bg-[#0E0E0E]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Live Proof &amp; Demos</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                Our Recent Work &amp; Live Deployments
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                Inspect actual live production demo sites engineered by our studio. Click any project to test real responsiveness and performance.
-              </p>
-            </div>
+        <div id="case-studies">
+          <RhBentoWorkGrid
+            overline="07 / SHIPPED WORK & LIVE DEMOS"
+            title="Recent Deployments"
+            titleMuted="& Live Proof"
+            quotes={data.testimonials.map((t) => ({
+              quote: t.quote,
+              author: t.client,
+              role: t.role,
+              company: t.company,
+            }))}
+            items={data.caseStudies.map((study, idx) => ({
+              id: `cs-${idx}-${study.title}`,
+              title: study.title,
+              category: study.category,
+              metric: study.metrics,
+              description: study.description,
+              href: study.demoUrl,
+              external: study.demoUrl.startsWith("/") || study.demoUrl.startsWith("http"),
+              tags: study.tech,
+            }))}
+            cursorLabel="Open Live Demo"
+          />
+        </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {data.caseStudies.map((study, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.45, delay: idx * 0.08 }}
-                  whileHover={{ y: -4, borderColor: "rgba(255, 74, 28, 0.45)", transition: { duration: 0.2 } }}
-                  className="rounded-2xl bg-white/[0.03] border border-white/10 overflow-hidden flex flex-col justify-between group transition-all shadow-lg"
-                >
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-xs font-mono uppercase tracking-wider text-[#FF4A1C]">{study.category}</span>
-                      {study.metrics && (
-                        <span className="text-[11px] font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/30">
-                          {study.metrics}
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
-                    <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed mb-4">{study.description}</p>
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {study.tech.map((t, i) => (
-                        <span key={i} className="text-[10px] font-mono bg-white/[0.06] text-white/60 px-2 py-0.5 rounded">
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+        {/* ==============================================================
+            09 — PRICING / INVESTMENT (Odometer Digit-Roll rh.design style)
+        =============================================================== */}
+        <section className="py-20 sm:py-28 px-5 bg-[#F5F5F7] text-[#0D0D0D]">
+          <div className="max-w-[1168px] mx-auto">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+              <div>
+                <span className="text-[11px] font-mono-tech uppercase tracking-[0.3em] text-[#595959] block mb-3">
+                  08 / TRANSPARENT FIXED PRICING
+                </span>
+                <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  {data.serviceName}{" "}
+                  <span className="text-[#939393]">Packages</span>
+                </h2>
+              </div>
 
-                  <div className="p-4 bg-white/[0.02] border-t border-white/10 flex items-center justify-between">
-                    <a
-                      href={study.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-semibold text-white hover:text-[#FF4A1C] flex items-center gap-1.5 transition-colors"
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="inline-flex items-center p-1 bg-white border border-[#E6E6E6]">
+                  {(
+                    [
+                      { key: "native", label: "Studio Listed" },
+                      { key: "GBP", label: "GBP (£)" },
+                      { key: "USD", label: "USD ($)" },
+                    ] as const
+                  ).map((opt) => (
+                    <button
+                      key={opt.key}
+                      type="button"
+                      onClick={() => setCurrencyMode(opt.key)}
+                      className={`px-3 py-1.5 text-[12px] font-mono-tech transition-colors ${
+                        currencyMode === opt.key
+                          ? "bg-[#0D0D0D] text-[#BAFF00]"
+                          : "text-[#595959] hover:text-[#0D0D0D]"
+                      }`}
                     >
-                      <span>Open Live Demo</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                    <span className="text-[11px] text-white/40">Tested 100% Responsive</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
 
-        {/* ==============================================================
-            09 — PRICING / INVESTMENT (Zero Upfront & No Monthly)
-        =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Transparent Investment</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                {data.serviceName} Packages
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                Transparent one-time pricing. 100% source code ownership. Zero recurring monthly lock-in.
-              </p>
+                <Link
+                  href="/pricing"
+                  className="text-[14px] font-medium text-[#0D0D0D] underline underline-offset-4"
+                >
+                  Compare all studio packages →
+                </Link>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {data.pricing.map((tier, idx) => (
-                <motion.div
+              {data.pricing.map((tier, idx) => {
+                const parsed = splitPriceForOdometer(tier.price);
+                let displayPrefix = parsed.prefix;
+                let displayAmount = parsed.amount;
+
+                if (displayAmount !== null && currencyMode !== "native") {
+                  const hasPound = tier.price.includes("£");
+                  const hasDollar = tier.price.includes("$");
+                  if (currencyMode === "USD") {
+                    displayPrefix = displayPrefix.replace("£", "$");
+                    if (hasPound) displayAmount = Math.round(displayAmount * 1.27);
+                  } else if (currencyMode === "GBP") {
+                    displayPrefix = displayPrefix.replace("$", "£");
+                    if (hasDollar) displayAmount = Math.round(displayAmount * 0.79);
+                  }
+                }
+
+                return (
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.45, delay: idx * 0.08 }}
-                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                  className={`p-7 rounded-3xl border flex flex-col justify-between relative transition-all shadow-xl ${
+                  className={`rh-edge-orbit-card ${
+                    tier.popular ? "is-lime" : ""
+                  } p-8 border flex flex-col justify-between relative ${
                     tier.popular
-                      ? "bg-gradient-to-b from-[#1C1310] to-[#121212] border-[#FF4A1C]/60 shadow-[0_12px_48px_rgba(255,74,28,0.15)]"
-                      : "bg-white/[0.02] border-white/10 hover:border-white/20"
+                      ? "bg-[#0D0D0D] text-white border-[#0D0D0D]"
+                      : "bg-white text-[#0D0D0D] border-[#E6E6E6]"
                   }`}
                 >
                   {tier.badge && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF4A1C] text-white text-[11px] font-semibold px-3 py-0.5 rounded-full uppercase tracking-wider">
+                    <div className="bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-mono-tech font-medium px-3 py-1 self-start mb-4 uppercase tracking-wider">
                       {tier.badge}
                     </div>
                   )}
 
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{tier.name}</h3>
-                    <p className="text-xs text-white/60 mb-6 font-light">{tier.description}</p>
-                    <div className="mb-6">
-                      <span className="text-3xl sm:text-4xl font-extrabold text-white">{tier.price}</span>
-                      <span className="text-xs text-white/40 block mt-1">One-time payment • $0 upfront deposit</span>
+                    <h3 className="text-[22px] font-medium mb-2">
+                      {tier.name}
+                    </h3>
+                    <p
+                      className={`text-[14px] mb-6 ${
+                        tier.popular ? "text-[#939393]" : "text-[#595959]"
+                      }`}
+                    >
+                      {tier.description}
+                    </p>
+                    <div className="mb-7 pb-6 border-b border-current/10">
+                      <span className="text-[36px] md:text-[42px] font-medium tracking-[-0.03em] leading-none block">
+                        {displayAmount !== null ? (
+                          <RhOdometerNumber
+                            prefix={displayPrefix}
+                            value={displayAmount}
+                            suffix={
+                              currencyMode === "USD"
+                                ? parsed.suffix.replace("GBP", "USD")
+                                : currencyMode === "GBP"
+                                  ? parsed.suffix.replace("USD", "GBP")
+                                  : parsed.suffix
+                            }
+                          />
+                        ) : (
+                          tier.price
+                        )}
+                      </span>
+                      <span
+                        className={`text-[12px] block mt-2 ${
+                          tier.popular ? "text-[#939393]" : "text-[#595959]"
+                        }`}
+                      >
+                        One-time fixed price • $0 upfront deposit
+                      </span>
                     </div>
 
                     <ul className="space-y-3 mb-8">
                       {tier.features.map((feat, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-white/80">
-                          <CheckCircle2 className="w-4 h-4 text-[#FF4A1C] shrink-0 mt-0.5" />
+                        <li
+                          key={i}
+                          className="flex items-start gap-2.5 text-[14px]"
+                        >
+                          <CheckCircle2
+                            className={`w-4 h-4 shrink-0 mt-0.5 ${
+                              tier.popular
+                                ? "text-[#BAFF00]"
+                                : "text-[#0D0D0D]"
+                            }`}
+                          />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -685,226 +579,206 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({ data 
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full py-3 rounded-full text-xs font-semibold text-center transition-all ${
+                    className={`w-full py-3.5 px-6 rounded-full text-[14px] font-medium text-center transition-colors ${
                       tier.popular
-                        ? "bg-[#FF4A1C] hover:bg-[#e03d12] text-white shadow-md active:scale-95"
-                        : "bg-white/10 hover:bg-white/20 text-white active:scale-95"
+                        ? "bg-[#BAFF00] text-[#0D0D0D] hover:bg-[#c8ff33]"
+                        : "bg-[#0D0D0D] text-white hover:bg-[#242424]"
                     }`}
                   >
                     Start Project ($0 Upfront)
                   </a>
-                </motion.div>
-              ))}
+                </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* ==============================================================
-            10 — WHY CHOOSE US
+            10 — WHY CHOOSE US & 11 — TESTIMONIALS (Dark #0D0D0D)
         =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10 bg-[#0E0E0E]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Our Advantage</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                Why Businesses Choose SaimDev
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                What sets our digital architecture apart from traditional freelancers and bloated agencies.
-              </p>
-            </div>
+        <section className="py-20 sm:py-28 px-5 bg-[#0D0D0D] text-white border-t border-[#202020]">
+          <div className="max-w-[1168px] mx-auto space-y-24">
+            {/* Why Choose Us */}
+            <div>
+              <div className="max-w-3xl mb-14">
+                <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-3">
+                  09 / Studio Advantage
+                </span>
+                <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  Why Businesses Choose{" "}
+                  <span className="text-[#939393]">Saim Dev</span>
+                </h2>
+              </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {data.whyChooseUs.map((item, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.45, delay: idx * 0.06 }}
-                  whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
-                  className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 transition-all shadow-md"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-[#FF4A1C]/10 border border-[#FF4A1C]/30 flex items-center justify-center text-[#FF4A1C] font-mono font-bold text-xs mb-4">
-                    ✓
-                  </div>
-                  <h3 className="text-base font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==============================================================
-            11 — TESTIMONIALS & TRUST
-        =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">Client Feedback</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                What Our Clients Say
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                Real feedback from business owners who upgraded their digital presence.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {data.testimonials.map((t, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.45, delay: idx * 0.08 }}
-                  whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
-                  className="p-7 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between transition-all shadow-md"
-                >
-                  <p className="text-xs sm:text-sm text-white/80 font-light italic leading-relaxed mb-6">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div className="pt-4 border-t border-white/10">
-                    <p className="text-sm font-semibold text-white">{t.client}</p>
-                    <p className="text-xs text-white/50">{t.role}, {t.company}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==============================================================
-            12 — FAQS (Interactive Accordion)
-        =============================================================== */}
-        <section className="py-16 sm:py-24 px-4 sm:px-8 border-t border-white/10 bg-[#0E0E0E]">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-14">
-              <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-2">FAQ &amp; Clarifications</span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-sm sm:text-base text-white/60 mt-3 font-light">
-                Everything you need to know about our {data.serviceName} process, pricing, and guarantee.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              {data.faqs.map((faq, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-20px" }}
-                  transition={{ duration: 0.35, delay: idx * 0.05 }}
-                  className="rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 overflow-hidden transition-all shadow-sm"
-                >
-                  <button
-                    onClick={() => toggleFaq(idx)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors"
-                    aria-expanded={openFaq === idx}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {data.whyChooseUs.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="p-7 rounded-3xl bg-[#161616] border border-[#242424]"
                   >
-                    <span className="text-sm sm:text-base font-semibold text-white">{faq.question}</span>
-                    <ChevronDown
-                      className={`w-4 h-4 text-white/60 shrink-0 transition-transform duration-200 ${
-                        openFaq === idx ? "rotate-180 text-[#FF4A1C]" : ""
-                      }`}
-                    />
-                  </button>
-                  <AnimatePresence>
-                    {openFaq === idx && (
-                      <motion.div 
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="px-5 pb-5 text-xs sm:text-sm text-white/75 font-light leading-relaxed border-t border-white/5 pt-3"
-                      >
-                        {faq.answer}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==============================================================
-            13 — FINAL CONVERSION CTA
-        =============================================================== */}
-        <section className="py-20 sm:py-28 px-4 sm:px-8 border-t border-white/10 relative overflow-hidden bg-gradient-to-b from-[#0A0A0A] to-[#141414]">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#FF4A1C]/15 rounded-full blur-[140px] pointer-events-none" />
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-4xl mx-auto text-center relative z-10"
-          >
-            <span className="text-[#FF4A1C] text-xs font-mono uppercase tracking-widest block mb-3">Zero Risk • 100% Satisfaction</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-              {data.finalCta.headline}
-            </h2>
-            <p className="text-sm sm:text-lg text-white/70 max-w-2xl mx-auto font-light leading-relaxed mb-8">
-              {data.finalCta.description}
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#FF4A1C] hover:bg-[#e03d12] text-white font-bold text-sm sm:text-base px-8 py-4 rounded-full flex items-center gap-3 transition-all duration-300 shadow-[0_4px_24px_rgba(255,74,28,0.4)] active:scale-95"
-              >
-                <span>{data.finalCta.primaryButtonText}</span>
-                <ArrowRight className="w-4 h-4 text-white" />
-              </a>
-
-              <Link
-                href="/services"
-                className="bg-white/10 hover:bg-white/15 border border-white/15 text-white font-medium text-sm sm:text-base px-6 py-4 rounded-full transition-all"
-              >
-                Compare Other Services
-              </Link>
-            </div>
-
-            <p className="text-[11px] text-white/40 font-mono uppercase tracking-wider mt-6">
-              UK REGISTERED • BASED IN PAKISTAN • PAY ONLY IF SATISFIED • ZERO MONTHLY FEES
-            </p>
-          </motion.div>
-        </section>
-
-        {/* RELATED SERVICES INTERNAL LINKS */}
-        {data.relatedServices && data.relatedServices.length > 0 && (
-          <section className="py-12 px-4 sm:px-8 border-t border-white/10 bg-[#0A0A0A]">
-            <div className="max-w-6xl mx-auto">
-              <p className="text-xs font-mono uppercase text-white/40 tracking-wider mb-4">Explore Related Services</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {data.relatedServices.map((rel, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ y: -3, borderColor: "rgba(255, 74, 28, 0.4)", transition: { duration: 0.2 } }}
-                    className="rounded-xl border border-white/10 transition-all bg-white/[0.02]"
-                  >
-                    <Link
-                      href={rel.href}
-                      className="p-4 block group"
-                    >
-                      <p className="text-sm font-semibold text-white group-hover:text-[#FF4A1C] transition-colors">{rel.name}</p>
-                      <p className="text-xs text-white/50 mt-1 font-light">{rel.desc}</p>
-                    </Link>
-                  </motion.div>
+                    <div className="w-8 h-8 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-bold text-[13px] mb-4">
+                      ✓
+                    </div>
+                    <h3 className="text-[18px] font-medium text-white mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-[14px] text-[#939393] leading-[1.6]">
+                      {item.desc}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
-          </section>
-        )}
+
+            {/* Testimonials */}
+            <div>
+              <div className="max-w-3xl mb-14">
+                <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-3">
+                  10 / Client Feedback
+                </span>
+                <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  What Our Clients{" "}
+                  <span className="text-[#939393]">Say</span>
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {data.testimonials.map((t, idx) => (
+                  <div
+                    key={idx}
+                    className="p-8 rounded-3xl bg-[#161616] border border-[#242424] flex flex-col justify-between"
+                  >
+                    <p className="text-[15px] text-[#CBCBCB] leading-[1.65] mb-6">
+                      &ldquo;{t.quote}&rdquo;
+                    </p>
+                    <div className="pt-4 border-t border-[#242424]">
+                      <p className="text-[15px] font-medium text-white">
+                        {t.client}
+                      </p>
+                      <p className="text-[13px] text-[#939393]">
+                        {t.role}, {t.company}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ==============================================================
+            12 — FAQS & 13 — RELATED SERVICES (Light #F5F5F7)
+        =============================================================== */}
+        <section className="py-20 sm:py-28 px-5 bg-[#F5F5F7] text-[#0D0D0D]">
+          <div className="max-w-[1168px] mx-auto space-y-20">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+              <div className="lg:col-span-5">
+                <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
+                  11 / Clarifications
+                </span>
+                <h2 className="text-[clamp(30px,4vw,46px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  Frequently Asked{" "}
+                  <span className="text-[#939393]">Questions</span>
+                </h2>
+                <p className="mt-4 text-[15px] text-[#595959] leading-[1.6]">
+                  Everything you need to know about our {data.serviceName}{" "}
+                  process, fixed pricing, and $0 upfront guarantee.
+                </p>
+              </div>
+
+              <div className="lg:col-span-7 divide-y divide-[#E6E6E6] border-t border-b border-[#E6E6E6]">
+                {data.faqs.map((faq, idx) => (
+                  <div key={idx} className="py-6">
+                    <button
+                      type="button"
+                      onClick={() => toggleFaq(idx)}
+                      aria-expanded={openFaq === idx}
+                      className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
+                    >
+                      <span className="text-[18px] font-medium text-[#0D0D0D]">
+                        {faq.question}
+                      </span>
+                      <span
+                        className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                          openFaq === idx
+                            ? "bg-[#0D0D0D] border-[#0D0D0D] text-[#BAFF00]"
+                            : "border-[#CCCCCC] text-[#0D0D0D]"
+                        }`}
+                      >
+                        {openFaq === idx ? "−" : "+"}
+                      </span>
+                    </button>
+                    {openFaq === idx && (
+                      <div className="mt-3 text-[15px] text-[#595959] leading-[1.65] pr-8">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Final Conversion Banner inside Service Page */}
+            <div className="rounded-3xl bg-[#0D0D0D] text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+              <div className="max-w-2xl">
+                <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-2">
+                  Zero Risk • 100% Satisfaction
+                </span>
+                <h2 className="text-[clamp(26px,3.4vw,40px)] font-medium tracking-[-0.025em] leading-[1.15]">
+                  {data.finalCta.headline}
+                </h2>
+                <p className="text-[15px] text-[#939393] mt-3 leading-[1.6]">
+                  {data.finalCta.description}
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-4 shrink-0">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-[#BAFF00] text-[#0D0D0D] font-medium text-[15px] px-7 py-4 rounded-full hover:bg-[#c8ff33] transition-colors"
+                >
+                  <span>{data.finalCta.primaryButtonText}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <Link
+                  href="/services"
+                  className="px-6 py-4 rounded-full border border-[#2A2A2A] text-white hover:border-white text-[14px] transition-colors"
+                >
+                  Compare Services
+                </Link>
+              </div>
+            </div>
+
+            {/* Related Services */}
+            {data.relatedServices && data.relatedServices.length > 0 && (
+              <div>
+                <p className="text-[12px] uppercase tracking-[0.88px] text-[#595959] mb-5">
+                  Explore Related Services
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                  {data.relatedServices.map((rel, i) => (
+                    <Link
+                      key={i}
+                      href={rel.href}
+                      className="p-6 rounded-2xl bg-white border border-[#E6E6E6] hover:border-[#0D0D0D] transition-colors block group"
+                    >
+                      <p className="text-[17px] font-medium text-[#0D0D0D] group-hover:underline">
+                        {rel.name}
+                      </p>
+                      <p className="text-[14px] text-[#595959] mt-1.5 leading-[1.5]">
+                        {rel.desc}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
       </main>
 
-      {/* FOOTER */}
       <SiteFooter theme="dark" />
     </div>
   );

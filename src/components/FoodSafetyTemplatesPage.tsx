@@ -1,5 +1,6 @@
 "use client";
 import { SiteFooter } from "./SiteFooter";
+import { RhHeader } from "./rh/RhHeader";
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
@@ -179,24 +180,24 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
       `}</style>
 
       {/* ── TOP HEADER / NAVBAR ── */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between no-print shadow-sm">
+      <div className="no-print rh-page">
+        <RhHeader theme="dark" />
+      </div>
+      <div className="bg-[#0D0D0D] border-b border-white/10 px-4 sm:px-8 py-3 flex items-center justify-between no-print rh-page">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
-              <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={40} height={40} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-            </div>
-            <span className="font-bold text-[#1D1D1F] text-base tracking-tight">Saim Dev</span>
+            <span className="font-medium text-white text-sm tracking-tight">Saim Dev</span>
           </Link>
-          <span className="text-gray-300">/</span>
-          <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full">
-            Food Safety Templates Hub
+          <span className="text-white/25">/</span>
+          <span className="text-[11px] font-mono uppercase tracking-wider text-[#BAFF00] bg-white/[0.06] border border-white/10 px-3 py-1 rounded-full">
+            Food Safety Templates Hub (160 Free Tools)
           </span>
         </div>
 
         <div className="flex items-center gap-3">
           <Link
             href="/tools/allergen-matrix-generator"
-            className="hidden sm:flex items-center gap-1.5 text-xs font-bold bg-[#E8F5E9] text-[#2E7D32] hover:bg-[#C8E6C9] px-3.5 py-1.5 rounded-full transition-colors"
+            className="hidden sm:flex items-center gap-1.5 text-xs font-medium bg-white/[0.06] text-[#BAFF00] hover:bg-white/[0.12] border border-white/10 px-3.5 py-1.5 rounded-full transition-colors"
           >
             <ShieldCheck className="w-4 h-4" />
             <span>Interactive Allergen Matrix</span>
@@ -206,50 +207,50 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20using%20the%20Food%20Safety%20Templates%20Hub"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#1D1D1F] hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5 transition-all shadow"
+            className="bg-[#BAFF00] hover:bg-[#c8ff33] text-[#0D0D0D] text-xs font-semibold px-4 py-2 rounded-full flex items-center gap-1.5 transition-all"
           >
             <span>WhatsApp Saim</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
-      </header>
+      </div>
 
       {/* ── HERO BANNER ── */}
-      <section className="bg-white border-b border-[#E5E5EA] px-4 sm:px-8 py-10 sm:py-14 no-print">
+      <section className="bg-[#0D0D0D] text-white border-b border-white/10 px-4 sm:px-8 py-12 sm:py-16 no-print rh-page">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col gap-3 max-w-4xl">
             {/* Visible Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb" className="mb-2">
-              <ol className="flex items-center gap-1.5 text-xs text-gray-500 font-medium flex-wrap">
+              <ol className="flex items-center gap-1.5 text-xs text-white/50 font-mono flex-wrap">
                 <li>
-                  <Link href="/" className="hover:text-black transition-colors">Home</Link>
+                  <Link href="/" className="hover:text-white transition-colors">Home</Link>
                 </li>
-                <li aria-hidden="true" className="text-gray-300">/</li>
-                <li className="text-gray-900 font-semibold" aria-current="page">
+                <li aria-hidden="true" className="text-white/25">/</li>
+                <li className="text-[#BAFF00]" aria-current="page">
                   Free Food Safety Tools &amp; Templates
                 </li>
               </ol>
             </nav>
 
-            <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-wider uppercase text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full w-fit">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+            <div className="inline-flex items-center gap-2 text-[11px] font-mono tracking-wider uppercase text-white/80 bg-white/[0.05] border border-white/10 px-3.5 py-1.5 rounded-full w-fit">
+              <span className="w-2 h-2 rounded-full bg-[#BAFF00] inline-block"></span>
               <span>UK Food Safety &amp; Kitchen Management</span>
-              <span className="text-slate-300">•</span>
+              <span className="text-white/30">•</span>
               <span>Free Printable Logs &amp; Interactive Tools</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1D1D1F] leading-[1.1]">
+            <h1 className="text-3xl sm:text-5xl font-medium tracking-[-0.03em] text-white leading-[1.08]">
               Free Food Safety Templates UK: Kitchen Checklists, Logs &amp; Allergen Matrices
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl mt-1">
+            <p className="text-base sm:text-lg text-white/65 leading-relaxed max-w-3xl mt-1">
           Download free food safety templates for UK commercial kitchens. Access instant kitchen checklists, temperature logs, allergen matrices, and interactive compliance tools built specifically for independent UK takeaways, restaurants, and caterers.
         </p>
 
             {/* ── 40-50 WORD DIRECT ANSWER BOX FOR AEO & AI EXTRACTION ── */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/80 border border-amber-200/90 text-xs sm:text-sm text-neutral-900 leading-relaxed space-y-1.5 mt-2">
-              <div className="font-bold text-amber-950 flex items-center gap-1.5 uppercase font-mono text-[11px] tracking-wide">
-                <ShieldCheck className="w-4 h-4 text-amber-700" />
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.04] border border-[#BAFF00]/30 text-xs sm:text-sm text-white/85 leading-relaxed space-y-1.5 mt-2">
+              <div className="font-semibold text-[#BAFF00] flex items-center gap-1.5 uppercase font-mono text-[11px] tracking-wide">
+                <ShieldCheck className="w-4 h-4 text-[#BAFF00]" />
                 <span>Direct Compliance Summary</span>
               </div>
               <p>
@@ -258,31 +259,31 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap items-center gap-2 pt-2">
-              <span className="text-xs font-semibold text-gray-500 uppercase font-mono tracking-wider">Quick Launch Tools:</span>
+              <span className="text-xs font-semibold text-white/50 uppercase font-mono tracking-wider">Quick Launch Tools:</span>
               <Link
                 href="/tools/allergen-matrix-generator"
-                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
+                className="text-xs font-medium text-white hover:text-[#0D0D0D] bg-white/[0.06] hover:bg-[#BAFF00] px-3.5 py-1.5 rounded-full border border-white/15 hover:border-[#BAFF00] flex items-center gap-1.5 transition-all"
               >
                 <ShieldAlert className="w-4 h-4 shrink-0" />
                 <span>Allergen Matrix</span>
               </Link>
               <Link
                 href="/tools/food-cost-calculator"
-                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
+                className="text-xs font-medium text-white hover:text-[#0D0D0D] bg-white/[0.06] hover:bg-[#BAFF00] px-3.5 py-1.5 rounded-full border border-white/15 hover:border-[#BAFF00] flex items-center gap-1.5 transition-all"
               >
                 <Calculator className="w-4 h-4 shrink-0" />
                 <span>Interactive Food Cost Calculator</span>
               </Link>
               <Link
                 href="/tools/recipe-batch-calculator"
-                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
+                className="text-xs font-medium text-white hover:text-[#0D0D0D] bg-white/[0.06] hover:bg-[#BAFF00] px-3.5 py-1.5 rounded-full border border-white/15 hover:border-[#BAFF00] flex items-center gap-1.5 transition-all"
               >
                 <ChefHat className="w-4 h-4 shrink-0" />
                 <span>Recipe Scaler</span>
               </Link>
               <Link
                 href="/tools/ppds-label-generator"
-                className="text-xs font-medium text-gray-700 hover:text-black bg-white hover:bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 flex items-center gap-1.5 transition-all shadow-2xs"
+                className="text-xs font-medium text-white hover:text-[#0D0D0D] bg-white/[0.06] hover:bg-[#BAFF00] px-3.5 py-1.5 rounded-full border border-white/15 hover:border-[#BAFF00] flex items-center gap-1.5 transition-all"
               >
                 <Tag className="w-4 h-4 shrink-0" />
                 <span>PPDS Label Generator</span>

@@ -5,6 +5,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft, ArrowRight, X } from "lucide-react";
 import { FooterSection } from "./FooterSection";
+import { RhHeader } from "./rh/RhHeader";
+import {
+  RhHeroPinned,
+  RhProcessCarousel,
+  RhSystemRows,
+} from "./rh/RhModernSections";
 
 interface DemoItem {
   id: string;
@@ -249,89 +255,85 @@ interface DemosPageProps {
   onBack?: () => void;
 }
 
-export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
-  const router = useRouter();
+export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
   const [selectedDemo, setSelectedDemo] = useState<DemoItem | null>(null);
   const [viewportMode, setViewportMode] = useState<"desktop" | "tablet" | "mobile">("desktop");
+  const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  const handleBack = () => { if (onBack) { onBack(); } else { router.push("/"); } };
+  const categories = ["All", "E-Commerce", "Restaurant", "Corporate", "Portfolio"];
+  const filteredDemos =
+    activeCategory === "All"
+      ? demos
+      : demos.filter(
+          (d) =>
+            d.category.toLowerCase().includes(activeCategory.toLowerCase()) ||
+            d.tags.some((t) => t.toLowerCase().includes(activeCategory.toLowerCase()))
+        );
 
   return (
-    <main className="min-h-screen bg-black text-[#E1E0CC] selection:bg-primary selection:text-black flex flex-col justify-between">
-      
-      {/* Background Glow */}
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-primary/10 via-primary/5 to-transparent blur-[120px] pointer-events-none z-0" />
+    <main className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] flex flex-col justify-between">
+      <RhHeader theme="dark" />
 
-      {/* Header Navigation Bar */}
-      <nav className="sticky top-0 z-40 backdrop-blur-md bg-black/80 border-b border-white/10 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group cursor-pointer">
-            <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors">
-              <img
-                src="/saim-dev-logo.jpg"
-                alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist"
-                width={40}
-                height={40}
-                loading="eager"
-                decoding="async"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="font-semibold text-lg text-white tracking-tight">Saim Dev</span>
-          </Link>
+      {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Mobile WebM + Laser-Draw Strip) */}
+      <RhHeroPinned
+        badge="9 Shipped Production Builds"
+        title={
+          <>
+            Restaurant Website Demos{" "}
+            <span className="text-[#939393]">&amp; Live Projects</span>
+          </>
+        }
+        subtitle="Explore interactive restaurant website demos, bespoke e-commerce storefronts, and production Next.js applications built by Saim Dev. Test live ordering flows, GSAP scroll choreography, sub-second mobile speed, and Natasha's Law allergen filters."
+        primaryCta={{ label: "Request Custom Demo ($0 Upfront)", href: "/contact" }}
+        secondaryCta={{ label: "Browse Interactive Grid", href: "#live-demos-grid" }}
+        videoType="mobile"
+        stripLabel="Shipped architectures · Tap to inspect"
+      />
 
-          <div className="flex items-center gap-6">
-            <Link href="/" className="text-sm text-[#E1E0CC]/70 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer font-medium"><ArrowLeft className="w-4 h-4" /> Back to Home</Link>
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-primary hover:bg-white text-black font-semibold text-sm px-5 py-2 rounded-full transition-all shadow-lg"
-            >
-              Get Custom Site
-            </a>
+      {/* 2. INTERACTIVE PORTFOLIO SHOWCASE */}
+      <div
+        id="live-demos-grid"
+        className="relative z-10 py-16 sm:py-24 px-5 max-w-[1168px] mx-auto flex-1 w-full bg-[#0D0D0D]"
+      >
+        {/* Filter Header Bar */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 mb-12 border-b border-[#202020]">
+          <div>
+            <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-2.5">
+              FILTER LIVE ARCHITECTURES
+            </span>
+            <h2 className="text-[clamp(28px,3.6vw,44px)] font-medium tracking-[-0.03em] leading-[1.1]">
+              Interactive Showcase{" "}
+              <span className="text-[#939393]">({filteredDemos.length})</span>
+            </h2>
           </div>
-        </div>
-      </nav>
 
-      {/* Main Content */}
-      <div className="relative z-10 py-16 px-4 sm:px-8 max-w-7xl mx-auto flex-1 w-full">
-        <div className="text-center mb-14">
-          
-          {/* Visible Breadcrumb Navigation */}
-          <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
-            <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
-              <li>
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              </li>
-              <li aria-hidden="true" className="text-white/30">/</li>
-              <li>
-                <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-              </li>
-              <li aria-hidden="true" className="text-white/30">/</li>
-              <li className="text-primary font-semibold" aria-current="page">
-                Live Demos
-              </li>
-            </ol>
-          </nav>
-
-          <h1 className="text-3xl sm:text-6xl font-bold tracking-tight text-white max-w-4xl mx-auto">
-            Restaurant Website Demos &amp; Live Projects
-          </h1>
-          <p className="mt-4 text-sm sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Explore interactive restaurant website demos and production web applications built by Saim Dev. Test real-time ordering workflows, GSAP scroll animations, sub-second mobile speeds, and built-in Natasha&apos;s Law allergen filtering across our live UK client showcases.
-          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                type="button"
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 rounded-full text-[13px] font-medium transition-colors cursor-pointer ${
+                  activeCategory === cat
+                    ? "bg-[#BAFF00] text-[#0D0D0D]"
+                    : "bg-[#161616] text-[#939393] hover:text-white border border-[#262626]"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Demos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {demos.map((demo) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {filteredDemos.map((demo) => (
             <div
               key={demo.id}
-              className="group bg-[#0E0E0E] rounded-2xl border border-white/15 overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-2xl flex flex-col"
+              className="rh-edge-orbit-card is-lime group bg-[#141414] rounded-3xl border border-[#222222] overflow-hidden hover:border-[#BAFF00] transition-all duration-300 flex flex-col"
             >
               {/* Thumbnail */}
-              <div className="relative aspect-video overflow-hidden bg-black/60 border-b border-white/10">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#0A0A0A] border-b border-[#222222]">
                 <img
                   src={demo.previewImage}
                   alt={`${demo.title} - Modern bespoke web design & engineering showcase`}
@@ -339,23 +341,25 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                   height={675}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
                 {demo.badge && (
-                  <span className={`absolute top-3 left-3 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-lg ${
-                    demo.badge.includes('In Working') 
-                      ? 'bg-orange-500 text-white' 
-                      : 'bg-primary text-black'
-                  }`}>
+                  <span
+                    className={`absolute top-4 left-4 font-medium text-[11px] uppercase tracking-wider px-3 py-1 rounded-full ${
+                      demo.badge.includes("In Working")
+                        ? "bg-white text-[#0D0D0D]"
+                        : "bg-[#BAFF00] text-[#0D0D0D]"
+                    }`}
+                  >
                     {demo.badge}
                   </span>
                 )}
 
-                <div className="absolute bottom-3 right-3 flex items-center gap-2">
+                <div className="absolute bottom-3.5 right-3.5 flex items-center gap-2">
                   <button
                     onClick={() => setSelectedDemo(demo)}
-                    className="bg-black/80 backdrop-blur-md hover:bg-white hover:text-black text-white p-2.5 rounded-xl border border-white/20 transition-all shadow-lg cursor-pointer"
+                    className="bg-[#0D0D0D]/85 backdrop-blur-md hover:bg-white hover:text-[#0D0D0D] text-white p-2.5 rounded-full border border-white/20 transition-all cursor-pointer"
                     title="Interactive Modal Preview"
                   >
                     <Eye className="w-4 h-4" />
@@ -365,7 +369,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Open ${demo.title} interactive demo`}
-                    className="bg-primary hover:bg-white text-black p-2.5 rounded-xl transition-all shadow-lg cursor-pointer"
+                    className="bg-[#BAFF00] hover:bg-white text-[#0D0D0D] p-2.5 rounded-full transition-all cursor-pointer"
                     title={`Open ${demo.title} Demo`}
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -374,41 +378,47 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
               </div>
 
               {/* Details */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
+              <div className="p-7 flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-white/50 text-xs font-mono uppercase tracking-wider">
+                  <span className="text-[#939393] text-[11px] uppercase tracking-[0.88px]">
                     {demo.category}
                   </span>
-                  <h3 className="text-xl font-bold text-white mt-1 group-hover:text-primary transition-colors">
+                  <h3 className="text-[21px] font-medium text-white mt-1.5 tracking-[-0.02em] group-hover:text-[#BAFF00] transition-colors">
                     {demo.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-white/70 mt-2 leading-relaxed">
+                  <p className="text-[14px] text-[#939393] mt-2 leading-[1.6]">
                     {demo.description}
                   </p>
 
                   <div className="mt-4 space-y-2">
                     {demo.features.map((feat, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-white/80">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                      <div
+                        key={idx}
+                        className="flex items-center gap-2 text-[13px] text-[#CBCBCB]"
+                      >
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#BAFF00] flex-shrink-0" />
                         <span>{feat}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/10">
+                <div className="mt-6 pt-5 border-t border-[#222222]">
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {demo.tags.map((t) => (
-                      <span key={t} className="bg-white/5 border border-white/10 text-[10px] text-white/60 px-2 py-0.5 rounded">
+                      <span
+                        key={t}
+                        className="bg-[#0D0D0D] border border-[#262626] text-[11px] text-[#939393] px-2.5 py-0.5 rounded-full"
+                      >
                         {t}
                       </span>
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-2.5">
                     <button
                       onClick={() => setSelectedDemo(demo)}
-                      className="w-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold py-2.5 px-3 rounded-xl border border-white/10 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                      className="w-full bg-[#1E1E1E] hover:bg-[#282828] text-white text-[13px] font-medium py-2.5 px-3 rounded-full border border-[#2C2C2C] transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                     >
                       <Eye className="w-3.5 h-3.5" /> Interactive
                     </button>
@@ -417,7 +427,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`View live site for ${demo.title}`}
-                      className="w-full bg-primary hover:bg-white text-black text-xs font-bold py-2.5 px-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-1 cursor-pointer"
+                      className="w-full bg-[#BAFF00] hover:bg-white text-[#0D0D0D] text-[13px] font-medium py-2.5 px-3 rounded-full transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                     >
                       <span>Live Site</span>
                       <span className="sr-only"> ({demo.id})</span>
@@ -429,37 +439,192 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
             </div>
           ))}
         </div>
+
+        {/* Contextual Cluster Navigation */}
+        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-[#141414] border border-[#222222]">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+            <div>
+              <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-2">
+                $0 Upfront Prototype Guarantee
+              </span>
+              <h2 className="text-[clamp(26px,3.4vw,40px)] font-medium text-white tracking-[-0.025em]">
+                Ready for a Custom Website or Ordering System?
+              </h2>
+            </div>
+            <Link
+              href="/overview"
+              className="text-[14px] text-[#BAFF00] hover:underline"
+            >
+              Calculate your exact project cost →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                label: "Fixed-Price Plans",
+                title: "Web Development Services",
+                href: "/services",
+              },
+              {
+                label: "0% Commission System",
+                title: "Takeaway Website Design",
+                href: "/services/takeaway-web-design",
+              },
+              {
+                label: "Speed Benchmarks",
+                title: "Website Case Studies",
+                href: "/case-studies",
+              },
+              {
+                label: "Direct Consultation",
+                title: "Discuss Your Project",
+                href: "/contact",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="p-5 rounded-2xl bg-[#1A1A1A] border border-[#282828] hover:border-[#BAFF00] transition-colors group block"
+              >
+                <span className="text-[11px] uppercase tracking-[0.88px] text-[#939393] block mb-1.5">
+                  {item.label}
+                </span>
+                <span className="text-[15px] font-medium text-white group-hover:text-[#BAFF00] flex items-center justify-between">
+                  <span>{item.title}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* 3. INTERACTIVE SVG LINE-DRAW ARCHITECTURE STANDARDS */}
+      <RhSystemRows
+        overline="HOW WE ENGINEER DEMOS"
+        title="Built for production speed,"
+        titleMuted="not static mockups"
+        subtitle="Every demo runs on clean, modular Next.js, Tailwind CSS, and GSAP choreography you own 100%."
+        rows={[
+          {
+            num: "01",
+            title: "Sub-0.8s Next.js Page Delivery",
+            description:
+              "Every interactive layout loads instantaneously on 4G mobile networks with 99+ Core Web Vitals.",
+            tags: ["Next.js 16", "AVIF / WebP", "Zero Bloat"],
+            href: "/case-studies",
+          },
+          {
+            num: "02",
+            title: "0% Commission Ordering Flows",
+            description:
+              "Restaurant and takeaway builds connect directly to WhatsApp & table ordering with Natasha's Law 14-allergen filtering.",
+            tags: ["Takeaway UK", "Natasha's Law", "Direct Checkout"],
+            href: "/services/takeaway-web-design",
+          },
+          {
+            num: "03",
+            title: "1:1 Custom Architecture Cloning",
+            description:
+              "Point us to any flagship SaaS, luxury retail, or hospitality site—we rebuild it pixel-for-pixel in clean React code.",
+            tags: ["Flat $1,900", "7–10 Days", "$0 Upfront"],
+            href: "/services/website-clone",
+          },
+        ]}
+      />
+
+      {/* 4. DARK HORIZONTAL DRAG PROCESS CAROUSEL */}
+      <RhProcessCarousel
+        title="From reference demo to live business,"
+        titleMuted="with zero upfront risk"
+        stages={[
+          {
+            stage: "STAGE 01",
+            duration: "Day 1",
+            title: "Select Reference & Custom Brief",
+            description:
+              "Pick any live demo style above or send your own inspiration URLs along with your brand assets.",
+            deliverables: [
+              "Confirmed Fixed Price (From £250)",
+              "Custom Copy & Menu Mapping",
+            ],
+          },
+          {
+            stage: "STAGE 02",
+            duration: "Days 2 – 4",
+            title: "Live Branded Staging Build",
+            description:
+              "We build your customized version live on our preview link so you test it on mobile & desktop before paying.",
+            deliverables: [
+              "Interactive Private Preview URL",
+              "Real-Time WhatsApp & Lead Testing",
+            ],
+          },
+          {
+            stage: "STAGE 03",
+            duration: "Days 5 – 6",
+            title: "SEO, Schema & Core Web Vitals",
+            description:
+              "We configure LocalBusiness schema, metadata, OpenGraph assets, and verify 95+ Lighthouse scores.",
+            deliverables: ["Structured JSON-LD", "Sub-Second Edge Cache"],
+          },
+          {
+            stage: "STAGE 04",
+            duration: "Launch",
+            title: "Domain Cutover & GitHub Handover",
+            description:
+              "Pay only upon satisfaction and receive full GitHub repo ownership with zero monthly retainers.",
+            deliverables: ["100% Source Code", "Zero Monthly Fees"],
+          },
+        ]}
+      />
 
       {/* Modal */}
       {selectedDemo && (
-        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col justify-between p-3 sm:p-6">
-          <div className="flex items-center justify-between pb-3 border-b border-white/15">
+        <div className="fixed inset-0 z-[250] bg-[#0D0D0D]/95 backdrop-blur-xl flex flex-col justify-between p-3 sm:p-6">
+          <div className="flex items-center justify-between pb-3 border-b border-[#242424]">
             <div className="flex items-center gap-3">
-              <span className="text-white font-bold text-sm sm:text-base">{selectedDemo.title}</span>
-              <span className="hidden sm:inline bg-primary/20 border border-primary/40 text-primary text-xs px-2.5 py-0.5 rounded-full font-mono">
+              <span className="text-white font-medium text-sm sm:text-base">
+                {selectedDemo.title}
+              </span>
+              <span className="hidden sm:inline bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-medium px-2.5 py-0.5 rounded-full">
                 Live Interactive Preview
               </span>
             </div>
 
-            <div className="flex items-center gap-2 bg-white/10 p-1 rounded-xl border border-white/15">
+            <div className="flex items-center gap-2 bg-[#181818] p-1 rounded-full border border-[#282828]">
               <button
                 onClick={() => setViewportMode("desktop")}
-                className={'p-1.5 rounded-lg text-xs flex items-center gap-1 transition-colors ' + (viewportMode === "desktop" ? "bg-primary text-black font-bold" : "text-white/70 hover:text-white")}
+                className={
+                  "px-3 py-1.5 rounded-full text-xs flex items-center gap-1 transition-colors " +
+                  (viewportMode === "desktop"
+                    ? "bg-[#BAFF00] text-[#0D0D0D] font-medium"
+                    : "text-[#939393] hover:text-white")
+                }
               >
                 <Monitor className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Desktop</span>
               </button>
               <button
                 onClick={() => setViewportMode("tablet")}
-                className={'p-1.5 rounded-lg text-xs flex items-center gap-1 transition-colors ' + (viewportMode === "tablet" ? "bg-primary text-black font-bold" : "text-white/70 hover:text-white")}
+                className={
+                  "px-3 py-1.5 rounded-full text-xs flex items-center gap-1 transition-colors " +
+                  (viewportMode === "tablet"
+                    ? "bg-[#BAFF00] text-[#0D0D0D] font-medium"
+                    : "text-[#939393] hover:text-white")
+                }
               >
                 <Tablet className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Tablet</span>
               </button>
               <button
                 onClick={() => setViewportMode("mobile")}
-                className={'p-1.5 rounded-lg text-xs flex items-center gap-1 transition-colors ' + (viewportMode === "mobile" ? "bg-primary text-black font-bold" : "text-white/70 hover:text-white")}
+                className={
+                  "px-3 py-1.5 rounded-full text-xs flex items-center gap-1 transition-colors " +
+                  (viewportMode === "mobile"
+                    ? "bg-[#BAFF00] text-[#0D0D0D] font-medium"
+                    : "text-[#939393] hover:text-white")
+                }
               >
                 <Smartphone className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Mobile</span>
@@ -471,17 +636,29 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
                 href={selectedDemo.demoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="hidden sm:flex items-center gap-1 text-xs text-primary hover:underline font-semibold"
+                className="hidden sm:flex items-center gap-1 text-xs text-[#BAFF00] hover:underline font-medium"
               >
                 Fullscreen <ExternalLink className="w-3.5 h-3.5" />
               </a>
-              <button onClick={() => setSelectedDemo(null)} className="bg-white/10 hover:bg-white/20 text-white p-2 rounded-xl transition-colors cursor-pointer"><X className="w-5 h-5" /></button>
+              <button
+                onClick={() => setSelectedDemo(null)}
+                className="bg-[#181818] hover:bg-[#242424] text-white p-2 rounded-full transition-colors cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
             </div>
           </div>
 
           <div className="flex-1 my-3 flex items-center justify-center overflow-hidden">
             <div
-              className={'transition-all duration-300 bg-white rounded-xl overflow-hidden shadow-2xl border border-white/20 h-full ' + (viewportMode === "desktop" ? "w-full" : viewportMode === "tablet" ? "w-[768px] max-w-full" : "w-[390px] max-w-full")}
+              className={
+                "transition-all duration-300 bg-white rounded-2xl overflow-hidden shadow-2xl border border-white/20 h-full " +
+                (viewportMode === "desktop"
+                  ? "w-full"
+                  : viewportMode === "tablet"
+                  ? "w-[768px] max-w-full"
+                  : "w-[390px] max-w-full")
+              }
             >
               <iframe
                 src={selectedDemo.demoUrl}
@@ -492,56 +669,6 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack }) => {
           </div>
         </div>
       )}
-
-      {/* CONTEXTUAL CLUSTER NAVIGATION */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="p-8 sm:p-10 rounded-3xl bg-white/[0.02] border border-white/10 text-center">
-          <h2 className="text-2xl sm:text-3xl font-light text-white mb-3">
-            Ready for a Custom Website or Ordering System?
-          </h2>
-          <p className="text-white/60 text-xs sm:text-sm max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-            These interactive demos showcase real Next.js performance. We build bespoke digital ordering platforms and high-converting websites from £250.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
-            <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Fixed-Price Plans</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <Link href="/services" className="after:absolute after:inset-0 focus:outline-none">
-                  Web Development Services
-                </Link>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </div>
-            <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
-              <span className="text-xs font-mono text-primary uppercase block mb-1">0% Commission System</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <Link href="/services/takeaway-web-design" className="after:absolute after:inset-0 focus:outline-none">
-                  Takeaway Website Design
-                </Link>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </div>
-            <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Speed Benchmarks</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <Link href="/case-studies" className="after:absolute after:inset-0 focus:outline-none">
-                  Website Case Studies
-                </Link>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </div>
-            <div className="relative p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Direct Consultation</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <Link href="/contact" className="after:absolute after:inset-0 focus:outline-none">
-                  Discuss Your Project
-                </Link>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <FooterSection />
     </main>

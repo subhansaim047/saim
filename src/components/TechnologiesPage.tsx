@@ -1,47 +1,78 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Code2, Zap, Search, Bot, Cpu, ArrowRight } from "lucide-react";
+import { Code2, Zap, Search, ArrowRight, Bot, Cpu } from "lucide-react";
+import { RhHeader } from "./rh/RhHeader";
+import { SiteFooter } from "./SiteFooter";
+import {
+  RhHeroPinned,
+  RhProblemSolutionDeck,
+  RhSystemRows,
+} from "./rh/RhModernSections";
 
 export const TechnologiesPage = () => {
   return (
-    <div
-      className="min-h-screen bg-black text-white px-4 sm:px-6 md:px-12 py-12 select-none"
-      style={{
-        fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif',
-      }}
-    >
-      
-      <div className="max-w-6xl mx-auto">
-        {/* Visible Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
-            <li>
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li>
-              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li className="text-primary font-semibold" aria-current="page">
-              Technologies &amp; Expertise
-            </li>
-          </ol>
-        </nav>
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+      <RhHeader theme="dark" />
 
-        {/* 1. HERO */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-primary text-xs font-mono font-medium uppercase mb-4">
-            ENGINEERING STACK
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4">
-            Next.js Tech Stack &amp; Web Engineering
-          </h1>
-          <p className="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Saim Dev leverages a modern Next.js tech stack combining React 19, TypeScript, Tailwind CSS, and Vercel edge deployment. We engineer sub-second web applications for UK businesses, delivering 90+ Core Web Vitals, enterprise security, and seamless API integrations with zero maintenance overhead.
-          </p>
-        </div>
+      {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
+      <RhHeroPinned
+        badge="Engineering Stack · Next.js 16 & React 19"
+        title={
+          <>
+            Next.js Tech Stack{" "}
+            <span className="text-[#939393]">&amp; Web Engineering</span>
+          </>
+        }
+        subtitle="Saim Dev combines Next.js 16 App Router, React 19, strict TypeScript, Tailwind CSS, and Cloudflare/Vercel edge infrastructure to ship sub-second UK web applications with 99+ Core Web Vitals and zero maintenance overhead."
+        primaryCta={{ label: "Build With This Stack", href: "/contact" }}
+        secondaryCta={{ label: "See Speed Case Studies", href: "/case-studies" }}
+        videoType="cube"
+        stripLabel="Zero plugin bloat · Edge native"
+      />
+
+      <RhProblemSolutionDeck
+        overline="STACK BENCHMARKS"
+        titleBefore="Why clean Next.js edge code beats"
+        titleStrike="heavy plugins"
+        titleOwned="every time."
+        subtitle="Legacy WordPress and bloated page builders ship megabytes of render-blocking scripts. Our modern App Router architecture keeps bundles tiny and response times under 100ms."
+        solutionTitle="Sub-Second LCP, Zero Cumulative Layout Shift, 100 SEO"
+        solutionDesc="Engineered from first principles with React Server Components, edge image optimisation, and built-in Schema.org JSON-LD."
+      />
+
+      <RhSystemRows
+        overline="CORE INFRASTRUCTURE"
+        title="Production stack"
+        titleMuted="& edge guarantees"
+        rows={[
+          {
+            num: "01",
+            title: "Next.js 16 & React 19 App Router",
+            description:
+              "Server Components, hybrid SSR/SSG rendering, and instant route prefetching for effortless page transitions.",
+            tags: ["Next.js", "React 19", "Edge Routing"],
+            href: "/nextjs-developer-uk",
+          },
+          {
+            num: "02",
+            title: "Strict TypeScript & Tailwind CSS",
+            description:
+              "Zero runtime type surprises and purged atomic CSS bundles that keep total page weight minimal.",
+            tags: ["TypeScript", "Tailwind CSS", "Zero Bloat"],
+          },
+          {
+            num: "03",
+            title: "Core Web Vitals & Technical SEO",
+            description:
+              "Guaranteed 90+ Lighthouse scores, automated sitemaps, canonical hygiene, and full Schema.org structured data.",
+            tags: ["LCP < 0.8s", "CLS 0.00", "JSON-LD"],
+            href: "/case-studies",
+          },
+        ]}
+      />
+
+      <div className="max-w-[1168px] mx-auto px-5 py-20 sm:py-24">
 
         {/* 2. FRONTEND */}
         <div className="mb-16">
@@ -292,6 +323,7 @@ export const TechnologiesPage = () => {
           </div>
         </div>
       </div>
+      <SiteFooter theme="dark" />
     </div>
   );
 };

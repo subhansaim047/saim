@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { SiteFooter } from "./SiteFooter";
+import { RhHeader } from "./rh/RhHeader";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -178,36 +179,12 @@ export const BlogsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#0a0a0a]">
-      {/* ── Top Navigation Bar ── */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#f0f0f0] px-4 sm:px-8 py-3.5 flex items-center justify-between">
-        <button
-          onClick={() => router.push("/")}
-          className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black transition-colors cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Home
-        </button>
-        <button
-          onClick={() => router.push("/")}
-          className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left"
-          title="Go to Homepage"
-        >
-          <img
-            src="/saim-dev-logo.jpg"
-            alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist"
-            width={28}
-            height={28}
-            loading="lazy"
-            decoding="async"
-            className="w-7 h-7 rounded-full object-cover border border-gray-200"
-          />
-          <span className="text-sm font-semibold text-black">Saim Dev</span>
-        </button>
-      </header>
-
-      {/* ── Behind the Lens Photography Blog Section ── */}
-      <BehindTheLensBlog onViewAllClick={scrollToAllGuides} />
+    <div className="rh-page min-h-screen bg-[#F5F5F7] text-[#0D0D0D] selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+      <RhHeader theme="light" />
+      <div className="pt-[88px]">
+        {/* ── Behind the Lens Photography Blog Section ── */}
+        <BehindTheLensBlog onViewAllClick={scrollToAllGuides} />
+      </div>
 
       {/* ── Additional Web & Operational Guides Directory ── */}
       <section id="all-posts" className="bg-[#fcfcfc] border-t border-[#f0f0f0] px-4 sm:px-8 py-20">

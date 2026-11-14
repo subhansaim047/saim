@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('/rh-exact/assets/6909ed375ee6ef22dffa47c2__fonts__6ac933ab44d2653b2d190c00-suisse-intl-book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('/rh-exact/assets/6909ed375ee6ef22dffa47c2__695f8faaaf46961123410ee7_SuisseIntl-Medium.woff2') format('woff2');
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Intl Book';
+  src: url('/rh-exact/assets/6909ed375ee6ef22dffa47c2__fonts__6ac933ab44d2653b2d190c00-suisse-intl-book.woff2') format('woff2');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --hero-max-width: 1820px;
   --surface-void: #050505;
@@ -15,10 +39,52 @@
   --border-hairline-hover: rgba(255, 255, 255, 0.20);
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+  --rh-black: #0D0D0D;
+  --rh-surface-dark: #161616;
+  --rh-border-dark: #202020;
+  --rh-light: #F5F5F7;
+  --rh-border-light: #E6E6E6;
+  --rh-lime: #BAFF00;
+  --rh-muted: #939393;
+  --rh-muted-light: #595959;
 }
 
 * {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: 'Suisse Intl', var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+.rh-page,
+.rh-page *:not(.font-mono-tech):not(code):not(pre) {
+  font-family: 'Suisse Intl', var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* rh.design signature text-roll hover effect */
+.rh-roll-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1.2;
+  vertical-align: bottom;
+}
+.rh-roll-wrap > span {
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.rh-roll-wrap > span + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(105%);
+}
+.group:hover .rh-roll-wrap > span:first-child,
+a:hover > .rh-roll-wrap > span:first-child,
+button:hover > .rh-roll-wrap > span:first-child {
+  transform: translateY(-105%);
+}
+.group:hover .rh-roll-wrap > span + span,
+a:hover > .rh-roll-wrap > span + span,
+button:hover > .rh-roll-wrap > span + span {
+  transform: translateY(0%);
 }
 
 .font-mono-tech {
@@ -1038,6 +1104,690 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 
 .saim-home-light .site-footer__nav a:hover {
   color: #5B92F5;
+}
+
+/* ============================================================================
+   rh.design Inner-Page Entrance Animations, Interactive SVG Lines, Carousel,
+   Retention Bar Chart, Odometer Pricing, and Conic Edge Orbit Glow
+   ============================================================================ */
+:root {
+  --_color---0d0d0d: #0d0d0d;
+  --_color---color: #ffffff;
+  --_color---b5f900: #baff00;
+  --_color---939393: #939393;
+  --_color---595959: #595959;
+  --_color---808080: #808080;
+  --_color---e6e6e6: #e6e6e6;
+  --_color---f2f2f2: #f2f2f2;
+  --_color---202020: #202020;
+  --_color---414141: #414141;
+  --_color---cbcbcb: #cbcbcb;
+  --_color---000000: #000000;
+  --_typography---suisse: 'Suisse Intl', var(--font-inter), system-ui, sans-serif;
+  --_typography---suisse-book: 'Suisse Intl Book', 'Suisse Intl', var(--font-inter), system-ui, sans-serif;
+  --_typography---geist: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@property --strip-glow {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --edge-a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* 1. Hero Curtain Pin & Immediate Page-Open Entrance */
+.hero-pin-pd {
+  z-index: 0;
+  background-color: #0d0d0d;
+  position: relative;
+  overflow: clip;
+}
+
+.hero-pin-pd + * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-pin-inner-pd {
+  position: relative;
+  background-color: #0d0d0d;
+  will-change: transform;
+}
+
+@keyframes rh-hero-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes rh-hero-video-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.94) translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.rh-hero-enter-badge {
+  animation: rh-hero-rise 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+
+.rh-hero-enter-title {
+  animation: rh-hero-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.rh-hero-enter-sub {
+  animation: rh-hero-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.rh-hero-enter-cta {
+  animation: rh-hero-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.rh-hero-enter-video {
+  animation: rh-hero-video-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both;
+}
+
+/* Robin pill button with vertical lime sweep */
+.rh-btn-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s;
+}
+
+.rh-btn-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #baff00;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.rh-btn-pill:hover::before {
+  transform: scaleY(1);
+}
+
+.rh-btn-pill > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2. Laser-Draw 5-Cell Hero Strip (.strip-logos-pd) */
+.strip-logos-pd {
+  background-color: #0d0d0d;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  align-items: center;
+  min-height: 112px;
+  padding-left: clamp(20px, 5.5vw, 80px);
+  display: flex;
+  position: relative;
+}
+
+.strip-logos-pd::before,
+.strip-logos-pd::after {
+  content: "";
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, calc(var(--strip-glow) * 0.45))) no-repeat, #ffffff1a;
+  clip-path: inset(0 100% 0 0);
+  height: 1px;
+  animation: strip-draw-x 1.2s cubic-bezier(0.65, 0, 0.35, 1) var(--d) forwards,
+             strip-run-x 1.2s cubic-bezier(0.65, 0, 0.35, 1) var(--d) both,
+             strip-glow 1.2s linear var(--d) both;
+  background-size: 220px 100%, auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.strip-logos-pd::before {
+  --d: 0.2s;
+  top: -1px;
+}
+
+.strip-logos-pd::after {
+  --d: 0.75s;
+  bottom: -1px;
+}
+
+.strip-label-pd {
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: clamp(24px, 6vw, 112px);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+  color: #939393;
+}
+
+.strip-grid-pd {
+  flex: 1;
+  min-width: 0;
+  height: 112px;
+  display: flex;
+}
+
+.strip-cell-pd {
+  position: relative;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  padding: 0 14px;
+}
+
+.strip-cell-pd::before {
+  content: "";
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, calc(var(--strip-glow) * 0.45))) no-repeat, #333333;
+  clip-path: inset(0 0 100%);
+  --d: calc(0.45s + var(--slot, 0) * 0.1s);
+  width: 1px;
+  animation: strip-draw-y 0.8s cubic-bezier(0.65, 0, 0.35, 1) var(--d) forwards,
+             strip-run-y 0.8s cubic-bezier(0.65, 0, 0.35, 1) var(--d) both,
+             strip-glow 0.8s linear var(--d) both;
+  background-size: 100% 60px, auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+}
+
+@keyframes strip-draw-x {
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes strip-draw-y {
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes strip-run-x {
+  0% {
+    background-position: -220px 0, 0 0;
+  }
+  to {
+    background-position: calc(100% + 220px) 0, 0 0;
+  }
+}
+
+@keyframes strip-run-y {
+  0% {
+    background-position: 0 -60px, 0 0;
+  }
+  to {
+    background-position: 0 calc(100% + 60px), 0 0;
+  }
+}
+
+@keyframes strip-glow {
+  0%, 70% {
+    --strip-glow: 1;
+  }
+  to {
+    --strip-glow: 0;
+  }
+}
+
+@keyframes logo-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.strip-cell-pd .logo-strip-pd {
+  animation: 0.75s cubic-bezier(0.33, 1, 0.68, 1) backwards logo-enter;
+  animation-delay: calc(0.3s + var(--slot, 0) * 0.1s);
+  transition: opacity 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.strip-cell-pd .logo-strip-pd.lswap-out {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-22px) scale(0.94);
+}
+
+.strip-cell-pd .logo-strip-pd.lswap-in {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
+
+.strip-cell-pd.has-info-pd {
+  cursor: pointer;
+  transition: background-color 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.strip-cell-pd.has-info-pd::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  background: #baff00;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.strip-cell-pd.is-open-pd {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.strip-cell-pd.is-open-pd .logo-strip-pd {
+  opacity: 0 !important;
+}
+
+.strip-cta-pd {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+.strip-cell-pd.is-open-pd .strip-cta-pd {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.3s linear 0.05s, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+}
+
+.strip-card-pd {
+  position: absolute;
+  z-index: 20;
+  left: -1px;
+  right: 0;
+  bottom: calc(100% + 8px);
+  min-width: 240px;
+  min-height: 210px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  background: #ffffff;
+  color: #0d0d0d;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.25s cubic-bezier(0.55, 0, 1, 0.45);
+}
+
+.strip-cell-pd.is-open-pd .strip-card-pd {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.strip-card-body-pd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 12px;
+  transform: translateY(14px);
+  opacity: 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.strip-cell-pd.is-open-pd .strip-card-body-pd {
+  transform: none;
+  opacity: 1;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.08s, opacity 0.35s linear 0.08s;
+}
+
+@media (max-width: 991px) {
+  .strip-logos-pd {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 16px;
+  }
+  .strip-label-pd {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  .strip-grid-pd {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .strip-cell-pd {
+    min-width: 50%;
+    height: 84px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .strip-card-pd {
+    display: none;
+  }
+}
+
+/* 3. Interactive SVG Line-Draw Architectural System Rows (.row-system-pd) */
+.list-system-pd {
+  border-top: 1px solid #e6e6e6;
+}
+
+.list-system-pd:hover .row-system-pd:not(:hover) {
+  opacity: 0.35;
+}
+
+.row-system-pd {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #e6e6e6;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.row-system-pd:hover {
+  background-color: #f2f2f2;
+}
+
+.lines-system-pd {
+  pointer-events: none;
+  z-index: 0;
+  width: 755px;
+  max-width: none;
+  height: 444px;
+  position: absolute;
+  top: -195px;
+  left: -140px;
+  overflow: visible;
+}
+
+.lines-system-pd * {
+  fill: none;
+  stroke-width: 1px;
+}
+
+.lines-system-pd .l > :nth-child(-n + 2) {
+  --len: 187;
+}
+
+.lines-system-pd .l > :nth-child(3) {
+  --len: 354;
+}
+
+.lines-system-pd .l > :nth-child(4) {
+  --len: 153;
+}
+
+.lines-system-pd .l * {
+  stroke: #d4d4d4;
+  stroke-dasharray: var(--len, 240) var(--len, 240);
+  stroke-dashoffset: var(--len, 240);
+  opacity: 0;
+  transition: opacity 0.25s, stroke-dashoffset 0s linear 0.25s;
+}
+
+.lines-system-pd .l circle {
+  --len: 1400;
+}
+
+.row-system-pd:hover .lines-system-pd .l * {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  transition: opacity 0.1s linear calc(var(--i, 0) * 80ms),
+              stroke-dashoffset 0.9s cubic-bezier(0.65, 0, 0.35, 1) calc(var(--i, 0) * 80ms);
+}
+
+/* 4. Dark Horizontal Process Carousel + Pulsing Conic Divider */
+.section-process-pd {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.divider-process-pd {
+  background-color: #202020;
+  height: 1px;
+  position: relative;
+}
+
+.divider-process-pd::after {
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.16) 70%, rgba(186, 255, 0, 0.45), rgba(255, 255, 255, 0)) -280px 0 / 280px 100% no-repeat;
+  animation: 11s cubic-bezier(0.45, 0, 0.55, 1) 1s infinite pd-line-pulse;
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes pd-line-pulse {
+  0% {
+    background-position: -280px 0;
+  }
+  70%,
+  to {
+    background-position: calc(100% + 280px) 0;
+  }
+}
+
+.circle-process-pd {
+  border: 1px solid #202020;
+  pointer-events: none;
+  border-radius: 50%;
+  width: 760px;
+  height: 760px;
+  position: absolute;
+  top: -380px;
+  left: -420px;
+}
+
+.circle-process-pd::after {
+  content: "";
+  pointer-events: none;
+  background: conic-gradient(from 0deg, transparent 0deg 260deg, rgba(255, 255, 255, 0.25) 315deg, rgba(186, 255, 0, 0.55) 345deg, transparent 360deg);
+  border-radius: 50%;
+  animation: 18s linear infinite pd-circle-pulse;
+  position: absolute;
+  inset: -1px;
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 1px), #000 calc(100% - 1px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 1px), #000 calc(100% - 1px));
+}
+
+@keyframes pd-circle-pulse {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 5. Scroll-Triggered Benchmark Bar Chart (.chart-retention-mad) */
+.chart-retention-mad.is-pre-mad .bar-mad {
+  clip-path: inset(100% 0 0 0);
+}
+
+.chart-retention-mad.is-pre-mad .bar-label-mad,
+.chart-retention-mad.is-pre-mad .bar-num-mad {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.chart-retention-mad .bar-mad {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.chart-retention-mad .bar-label-mad,
+.chart-retention-mad .bar-num-mad {
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 6. Odometer Digit Roll (.pr-odo) */
+.pr-odo {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.16em;
+}
+
+.pr-odo-d {
+  vertical-align: top;
+  height: 1.16em;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.pr-odo-d > span {
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) var(--od, 0s);
+  flex-direction: column;
+  display: flex;
+}
+
+.pr-odo-d > span > i {
+  text-align: center;
+  height: 1.16em;
+  line-height: 1.16em;
+  font-style: normal;
+  display: block;
+}
+
+@keyframes pr-save-in {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 7. Conic Edge Orbit Glow & Floating Lime Cursor */
+.rh-edge-orbit-card {
+  position: relative;
+}
+
+.rh-edge-orbit-card::after {
+  --edge-c: 255, 255, 255;
+  content: "";
+  z-index: 6;
+  pointer-events: none;
+  opacity: 0;
+  background: conic-gradient(
+    from var(--edge-a),
+    transparent 0deg 250deg,
+    rgba(var(--edge-c), 0.07) 280deg,
+    rgba(var(--edge-c), 0.3) 312deg,
+    rgba(var(--edge-c), 0.65) 330deg,
+    rgba(var(--edge-c), 0.15) 344deg,
+    transparent 360deg
+  );
+  padding: 1.5px;
+  transition: opacity 0.6s;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+
+.rh-edge-orbit-card.is-lime::after {
+  --edge-c: 186, 255, 0;
+}
+
+@media (hover: hover) {
+  .rh-edge-orbit-card:hover::after {
+    opacity: 1;
+    animation: 8s linear infinite edge-orbit;
+  }
+}
+
+@keyframes edge-orbit {
+  to {
+    --edge-a: 360deg;
+  }
+}
+
+.proof-cursor-pd {
+  z-index: 25;
+  background-color: #baff00;
+  color: #0d0d0d;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 9999px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 6px;
+  width: 136px;
+  height: 136px;
+  transition: translate 0.28s cubic-bezier(0.2, 0.7, 0.3, 1),
+              scale 0.2s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  scale: 0.55;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+}
+
+.proof-cursor-pd.is-on {
+  opacity: 1;
+  scale: 1;
+}
+
+@keyframes phone-bob-mad {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.phone-bob-mad {
+  animation: phone-bob-mad 5.5s ease-in-out infinite;
 }
 
 /* Reduced Motion Accessibility Safeguard */

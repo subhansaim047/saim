@@ -16,7 +16,13 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
+import { RhHeader } from "@/components/rh/RhHeader";
 import { CommissionSavingsCalculator } from "@/components/CommissionSavingsCalculator";
+import {
+  RhHeroPinned,
+  RhProcessCarousel,
+  RhSystemRows,
+} from "@/components/rh/RhModernSections";
 
 export const metadata: Metadata = {
   title: "Takeaway Website Design Manchester | Direct Ordering | Saim Dev",
@@ -155,7 +161,7 @@ export default function ManchesterTakeawayWebDesignPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-amber-400 selection:text-black">
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -170,91 +176,34 @@ export default function ManchesterTakeawayWebDesignPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Header */}
-      <header className="sticky top-0 z-40 bg-black/90 backdrop-blur-md border-b border-white/10 px-4 sm:px-8 py-3.5 flex items-center justify-between">
-        <Link
-          href="/services/takeaway-web-design"
-          className="flex items-center gap-2 text-xs font-medium text-white/70 hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>UK Takeaway Service</span>
-        </Link>
-        <div className="flex items-center gap-3">
-          <Link
-            href="/tools"
-            className="text-xs text-white/60 hover:text-white transition-colors hidden sm:inline-block"
-          >
-            Free Kitchen Tools
-          </Link>
-          <a
-            href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20Manchester%20takeaway%20website"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-4 py-2 rounded-full inline-flex items-center gap-1.5 transition-all shadow"
-          >
-            <span>Manchester Enquiries</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </a>
-        </div>
-      </header>
+      <RhHeader theme="dark" />
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-16">
-        {/* Visible Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
-          <ol className="flex items-center gap-1.5 text-xs text-white/60 font-medium flex-wrap">
-            <li>
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li>
-              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li>
-              <Link href="/services/takeaway-web-design" className="hover:text-white transition-colors">Takeaway Web Design</Link>
-            </li>
-            <li aria-hidden="true" className="text-white/30">/</li>
-            <li className="text-amber-400 font-semibold" aria-current="page">
-              Manchester
-            </li>
-          </ol>
-        </nav>
+      <RhHeroPinned
+        badge="Manchester Food & Takeaway Solutions · 0% Commission"
+        title={
+          <>
+            Takeaway Website Design{" "}
+            <span className="text-[#939393]">Manchester</span>
+          </>
+        }
+        subtitle="Saim Dev crafts direct Next.js ordering websites for Greater Manchester takeaways, curry houses, and pizzerias starting from £250 fixed price. Eliminate 30%+ aggregator commissions with Natasha's Law 14-allergen filters across Manchester, Salford, and Stockport."
+        primaryCta={{
+          label: "Build Manchester Site (£250)",
+          href: "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Manchester%20takeaway%20website",
+        }}
+        secondaryCta={{
+          label: "Interactive Allergen Demo",
+          href: "/tools/allergen-matrix-generator",
+        }}
+        videoType="mobile"
+        stripLabel="Greater Manchester · Commission-Free Ordering"
+      />
 
-        {/* HERO SECTION */}
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-amber-300 text-xs font-mono font-bold uppercase">
-            <MapPin className="w-3.5 h-3.5" />
-            <span>Manchester Food &amp; Takeaway Solutions</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            Takeaway Website Design Manchester
-          </h1>
-
-          <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-light">
-            Saim Dev crafts custom Next.js direct ordering websites for Greater Manchester takeaways, curry houses, and pizzerias starting from £250. Our high-performance platforms eliminate 30%+ Just Eat commissions, routing customer orders directly to WhatsApp or online checkout with integrated Natasha&apos;s Law 14-allergen filtering across Manchester, Salford, and Stockport.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Manchester%20takeaway%20website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all shadow-xl hover:scale-105 cursor-pointer"
-            >
-              <span>Build Manchester Takeaway Site (£250 Fixed)</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              href="/tools/allergen-matrix-generator"
-              className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all border border-white/15"
-            >
-              <span>Interactive Allergen Demo</span>
-            </Link>
-          </div>
+      <main className="max-w-[1168px] mx-auto px-5 py-16 sm:py-20 space-y-16">
+        <div className="max-w-5xl mx-auto">
 
           {/* Social Proof Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10 text-left">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
             <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
               <div className="text-2xl font-extrabold text-amber-400 font-mono">0%</div>
               <div className="text-xs text-white/70 font-medium">Commission Fees</div>
@@ -481,6 +430,75 @@ export default function ManchesterTakeawayWebDesignPage() {
           </div>
         </div>
       </main>
+
+      <RhSystemRows
+        overline="MANCHESTER TAKEAWAY STACK"
+        title="Commission-free ordering"
+        titleMuted="for Greater Manchester."
+        subtitle="Built for Manchester curry houses, smash burger kitchens, and late-night takeaways across Salford, Stockport, Trafford, and Curry Mile."
+        rows={[
+          {
+            num: "01",
+            title: "Natasha's Law 14-Allergen Filter",
+            description: "Interactive allergen filtering across every menu category so diners inspect ingredients safely before ordering.",
+            tags: ["14 Allergens", "FSA Compliant", "Instant Search"],
+            href: "/tools/allergen-matrix-generator",
+          },
+          {
+            num: "02",
+            title: "Direct WhatsApp & Stripe Checkout",
+            description: "Zero 30%+ portal deductions. Direct digital orders route straight to your counter with clean itemized modifiers.",
+            tags: ["0% Commission", "Stripe UK", "Postcode Zones"],
+          },
+          {
+            num: "03",
+            title: "Greater Manchester Local SEO",
+            description: "Schema-backed menu indexing built to rank directly across Manchester postcodes for high-margin repeat customers.",
+            tags: ["LocalBusiness JSON-LD", "99+ Speed", "Mobile First"],
+          },
+        ]}
+      />
+
+      <RhProcessCarousel
+        overline="LAUNCH SPRINT"
+        title="Commission-free menu live"
+        titleMuted="in 3–5 days."
+        stages={[
+          {
+            stage: "01",
+            duration: "Day 1",
+            title: "Menu & Allergen Audit",
+            description: "We digitize your full menu, spice options, combos, and Natasha's Law 14-allergen matrix cleanly.",
+            deliverables: ["Full Menu JSON", "Allergen Matrix", "M Postcode Zones"],
+          },
+          {
+            stage: "02",
+            duration: "Days 2–3",
+            title: "Mobile Ordering Build",
+            description: "Fast one-thumb checkout flow designed for peak Friday and matchday order spikes across Manchester.",
+            deliverables: ["Mobile Cart UX", "Meal Deal Logic", "Staging Link"],
+          },
+          {
+            stage: "03",
+            duration: "Day 4",
+            title: "Bag-Flyer QR & Testing",
+            description: "Order flow testing plus print-ready QR discount flyers to move regular delivery app buyers direct.",
+            deliverables: ["Print QR Assets", "WhatsApp Test", "Speed QA"],
+          },
+          {
+            stage: "04",
+            duration: "Day 5",
+            title: "Live Go-Live (£250 Fixed)",
+            description: "Launch on your own domain with 100% source ownership and zero ongoing commission per order.",
+            deliverables: ["Custom Domain", "0% Per Order", "Code Handoff"],
+          },
+        ]}
+        quote="Moving our Rusholme takeaway regulars onto our direct Saim Dev ordering site stopped thousands in third-party app fees every quarter."
+        author="Imran Qureshi"
+        role="Owner, Khyber Grill Manchester"
+        ctaHref="/contact"
+        ctaLabel="Launch Manchester Menu"
+      />
 
       <SiteFooter theme="dark" />
     </div>
