@@ -270,3 +270,121 @@
 .button .inner-text-btn > div {
   white-space: nowrap !important;
 }
+
+/* Clickable homepage service rows (#services) preserving Webflow IX2 + hover preview layers */
+.saim-service-link {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.saim-service-link .line-yellow,
+.saim-service-link .wrapper-line,
+.saim-service-link .title-display,
+.saim-service-link .title-display-000,
+.saim-service-link .text-block {
+  cursor: pointer !important;
+}
+
+.saim-service-link:focus-visible {
+  outline: 2px solid #b5f900;
+  outline-offset: -2px;
+}
+
+.saim-service-link .wrapper-line {
+  align-items: center;
+  gap: 16px;
+}
+
+.saim-service-arrow {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background-color: rgba(13, 13, 13, 0.88);
+  border: 1px solid rgba(181, 249, 0, 0.35);
+  color: #b5f900;
+  transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.24s ease, border-color 0.24s ease;
+}
+
+.saim-service-arrow svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .saim-service-link:hover .saim-service-arrow,
+  .saim-service-link:focus-visible .saim-service-arrow {
+    background-color: #0d0d0d;
+    border-color: rgba(13, 13, 13, 0.55);
+    color: #b5f900;
+    transform: scale(1.06);
+  }
+
+  .saim-service-link:hover .saim-service-arrow svg,
+  .saim-service-link:focus-visible .saim-service-arrow svg {
+    transform: translate3d(2px, -2px, 0);
+  }
+}
+
+.saim-service-link:active .saim-service-arrow {
+  transform: scale(0.95);
+  transition-duration: 0.1s;
+}
+
+@media screen and (max-width: 991px) {
+  .saim-service-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .saim-service-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .saim-service-link .wrapper-line {
+    gap: 10px;
+  }
+
+  .saim-service-link .anim-div {
+    height: 40px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .saim-service-link .title-display,
+  .saim-service-link .title-display-000 {
+    font-size: clamp(19px, 5.5vw, 34px);
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+  }
+
+  .saim-service-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .saim-service-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .saim-service-arrow,
+  .saim-service-arrow svg {
+    transition: none;
+  }
+}
