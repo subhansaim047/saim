@@ -11,7 +11,23 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   async headers() {
+    const immutableStatic = [
+      { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+    ];
     return [
+      { source: '/rh-exact/assets/:path*', headers: immutableStatic },
+      { source: '/rh-exact/vendor/:path*', headers: immutableStatic },
+      { source: '/rh-exact/nav/:path*', headers: immutableStatic },
+      { source: '/rh-exact/footer/:path*', headers: immutableStatic },
+      { source: '/rh-exact/pd/:path*', headers: immutableStatic },
+      { source: '/rh-exact/case-studies/:path*', headers: immutableStatic },
+      { source: '/rh-exact/_astro/:path*', headers: immutableStatic },
+      { source: '/demos/previews/:path*', headers: immutableStatic },
+      { source: '/templates/:path*', headers: immutableStatic },
+      { source: '/images/:path*', headers: immutableStatic },
+      { source: '/hero-shots/:path*', headers: immutableStatic },
+      { source: '/saim-dev-logo.png', headers: immutableStatic },
+      { source: '/saim-dev-logo.jpg', headers: immutableStatic },
       {
         source: '/(.*)',
         headers: [

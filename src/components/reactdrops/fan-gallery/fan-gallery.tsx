@@ -316,7 +316,7 @@ export const FanGallery = forwardRef<FanGalleryHandle, FanGalleryProps>(function
             },
           };
           const image = (
-            <img src={item.src} alt={item.alt} draggable={false} loading="lazy" decoding="async" />
+            <img src={item.src} alt={item.alt} draggable={false} decoding="async" />
           );
           return item.href ? (
             <a key={i} {...props} href={item.href}>

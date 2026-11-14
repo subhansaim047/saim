@@ -31,7 +31,7 @@ const demos: DemoItem[] = [
     category: "E-Commerce / Shopify",
     description: "A bespoke luxury leather e-commerce storefront featuring 1,500+ interactive pages, multi-collection lookbooks, flagship product detail pages, custom jacket builders, and responsive mobile architecture.",
     demoUrl: "/hq-leathercon/index.html",
-    previewImage: "/demos/previews/hq-leathercon-ecommerce-storefront.png",
+    previewImage: "/demos/previews/hq-leathercon-ecommerce-storefront.webp",
     tags: ["E-Commerce", "Shopify", "Interactive Storefront", "Full Catalog"],
     features: [
       "Complete Enterprise Storefront Architecture",
@@ -327,7 +327,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
 
         {/* Demos Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-          {filteredDemos.map((demo) => (
+          {filteredDemos.map((demo, idx) => (
             <div
               key={demo.id}
               className="rh-edge-orbit-card is-lime group bg-[#141414] rounded-3xl border border-[#222222] overflow-hidden hover:border-[#BAFF00] transition-all duration-300 flex flex-col"
@@ -339,7 +339,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
                   alt={`${demo.title} - Modern bespoke web design & engineering showcase`}
                   width={1200}
                   height={675}
-                  loading="lazy"
+                  loading={idx < 6 ? "eager" : "lazy"}
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
                 />

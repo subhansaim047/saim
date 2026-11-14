@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Clock, MapPin, ExternalLink } from "lucide-react";
 import { getClaim } from "../lib/claims";
 
@@ -11,10 +11,11 @@ const OPENING_HOURS_ROWS = [
 ];
 
 /**
- * Displays verified studio working hours (UK GMT) alongside a lazy-loaded
- * remote United Kingdom service coverage Google Map embed.
+ * Displays verified studio working hours (UK GMT) alongside a zero-overhead
+ * click-to-load interactive UK service coverage map facade.
  */
 export const StudioHoursAndMapCard: React.FC = () => {
+  const [mapLoaded, setMapLoaded] = useState(false);
   const replyNote =
     getClaim("reply-speed") || "Replies on WhatsApp and email during working hours.";
 
@@ -73,16 +74,41 @@ export const StudioHoursAndMapCard: React.FC = () => {
           UK Registered Agency • Based in Pakistan. Serving businesses across London, Manchester, Birmingham, Edinburgh &amp; Europe 100% remotely.
         </p>
 
-        <div className="overflow-hidden rounded-xl border border-[#020612]/[0.08] bg-[#F8FAFC]">
-          <iframe
-            title="Saim Dev Remote Service Coverage Map - United Kingdom"
-            src="https://maps.google.com/maps?q=United+Kingdom&t=&z=4&ie=UTF8&iwloc=&output=embed"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            width={600}
-            height={180}
-            className="w-full h-40 sm:h-44 border-0 opacity-95 hover:opacity-100 transition-opacity duration-300"
-          />
+        <div className="overflow-hidden rounded-xl border border-[#020612]/[0.08] bg-[#0D0D0D] relative h-40 sm:h-44 flex items-center justify-center">
+          {mapLoaded ? (
+            <iframe
+              title="Saim Dev Remote Service Coverage Map - United Kingdom"
+              src="https://maps.google.com/maps?q=United+Kingdom&t=&z=4&ie=UTF8&iwloc=&output=embed"
+              referrerPolicy="no-referrer-when-downgrade"
+              width={600}
+              height={180}
+              className="w-full h-full border-0"
+            />
+          ) : (
+            <div
+              className="w-full h-full flex flex-col items-center justify-center gap-2.5 px-4 text-center relative"
+              style={{
+                backgroundImage: "url(/rh-exact/footer/map-2304.webp)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="absolute inset-0 bg-[#0D0D0D]/60" aria-hidden="true" />
+              <div className="relative z-10 flex flex-col items-center gap-2">
+                <span className="text-[11px] font-mono uppercase tracking-[0.16em] text-[#BAFF00]">
+                  UK · London · Manchester · Birmingham · EU
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setMapLoaded(true)}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-[#0D0D0D] hover:bg-[#BAFF00] text-xs font-semibold transition-colors cursor-pointer shadow-sm"
+                >
+                  <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
+                  <span>Load Interactive Map</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="flex justify-end">

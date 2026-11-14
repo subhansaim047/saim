@@ -62,7 +62,7 @@ const caseStudiesData: CaseStudy[] = [
       role: "Lead Dentist & Practice Director",
     },
     previewImage:
-      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
+      "/demos/previews/serenia-luxury-wellness-spa.webp",
   },
   {
     id: "speedtech-auto",
@@ -87,7 +87,7 @@ const caseStudiesData: CaseStudy[] = [
       role: "Operations Manager, SpeedTech Auto",
     },
     previewImage:
-      "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80",
+      "/demos/previews/detailx-car-detailing-auto-repair.webp",
   },
   {
     id: "velvet-salon",
@@ -112,7 +112,7 @@ const caseStudiesData: CaseStudy[] = [
       role: "Creative Founder, Velvet Hair Studio",
     },
     previewImage:
-      "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80",
+      "/demos/previews/studio-dbrickell-luxury-beauty-spa.webp",
   },
 ];
 
@@ -302,7 +302,6 @@ export const CaseStudiesPage = () => {
                           alt={`${study.clientName} Case Study - ${study.headline}`}
                           width={1200}
                           height={675}
-                          loading="lazy"
                           decoding="async"
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />

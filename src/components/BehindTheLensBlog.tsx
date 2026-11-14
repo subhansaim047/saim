@@ -41,7 +41,6 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
         <img
           src={displayImage}
           alt={title}
-          loading="lazy"
           decoding="async"
           className="btl-tool-img btl-tool-ambient-motion"
         />

@@ -68,7 +68,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
       >
         <div className="max-w-[1168px] mx-auto px-5 h-[96px] flex items-center justify-between relative z-[102]">
           {/* Left: Saim Dev Real PNG Logo */}
-          <Link
+          <a
             href="/"
             className="inline-flex items-center gap-3 group focus:outline-none"
             aria-label="Saim Dev Home"
@@ -88,7 +88,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                 className="w-full h-full object-cover rounded-full"
               />
             </span>
-          </Link>
+          </a>
 
           {/* Center: 4 Exact Nav Links between c1 & c2 */}
           <nav
@@ -279,6 +279,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                 </div>
                 <div className="mt-5 flex flex-col gap-6">
                   <Link
+                    prefetch={false}
                     href="/services/website-development"
                     className="group text-white hover:text-[#BAFF00] text-[clamp(30px,2.6vw,40px)] font-medium leading-[1.16] tracking-[-1.6px] whitespace-nowrap transition-colors"
                   >
@@ -288,6 +289,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                     </span>
                   </Link>
                   <Link
+                    prefetch={false}
                     href="/services/ecommerce-development"
                     className="group text-white hover:text-[#BAFF00] text-[clamp(30px,2.6vw,40px)] font-medium leading-[1.16] tracking-[-1.6px] whitespace-nowrap transition-colors"
                   >
@@ -301,6 +303,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
 
               <div className="pt-8 border-t border-[#202020] flex flex-col gap-2.5">
                 <Link
+                  prefetch={false}
                   href="/services"
                   className="text-[14px] text-[#939393] hover:text-white transition-colors inline-flex items-center gap-1.5"
                 >
@@ -308,6 +311,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   <span aria-hidden="true">→</span>
                 </Link>
                 <Link
+                  prefetch={false}
                   href="/overview"
                   className="text-[14px] text-[#BAFF00] hover:underline transition-colors inline-flex items-center gap-1.5"
                 >
@@ -329,6 +333,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/business-websites"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -337,6 +342,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/landing-pages-cro"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -345,6 +351,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/website-clone"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -359,6 +366,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/ecommerce-shopify"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -367,6 +375,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/wordpress-headless-cms"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -375,6 +384,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/takeaway-web-design"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -389,6 +399,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/custom-web-apps"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -397,6 +408,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/website-redesign"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -405,6 +417,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/nextjs-developer-uk"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -419,6 +432,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/seo-services"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -427,6 +441,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/services/website-speed-optimization"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -435,6 +450,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   </li>
                   <li>
                     <Link
+                      prefetch={false}
                       href="/tools"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
@@ -447,6 +463,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
 
             {/* Column 3: Featured Squire iPad Showcase Card */}
             <Link
+              prefetch={false}
               href="/demos"
               className="group relative overflow-hidden p-10 flex flex-col justify-between items-start isolate bg-[#0D0D0D]"
             >
@@ -493,7 +510,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
         }`}
       >
         <div className="flex items-center justify-between h-12">
-          <Link
+          <a
             href="/"
             onClick={() => setMobileOpen(false)}
             className="w-12 h-12 rounded-full overflow-hidden border border-white/20 bg-white flex items-center justify-center"
@@ -503,7 +520,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
               alt="Saim Dev"
               className="w-full h-full object-cover"
             />
-          </Link>
+          </a>
           <button
             type="button"
             aria-label="Close Menu"
@@ -523,6 +540,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
 
         <div className="my-8 flex-1 overflow-y-auto flex flex-col gap-3">
           <Link
+            prefetch={false}
             href="/demos"
             onClick={() => setMobileOpen(false)}
             className="text-[30px] font-medium tracking-[-0.8px] py-1.5 text-white"
@@ -556,6 +574,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             {mobileServicesOpen && (
               <div className="pl-3 py-2 flex flex-col gap-2 border-l border-white/15 mt-1">
                 <Link
+                  prefetch={false}
                   href="/services"
                   onClick={() => setMobileOpen(false)}
                   className="text-[18px] text-[#BAFF00]"
@@ -563,6 +582,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   All 13 Services Hub
                 </Link>
                 <Link
+                  prefetch={false}
                   href="/services/website-development"
                   onClick={() => setMobileOpen(false)}
                   className="text-[18px] text-[#B3B3B3]"
@@ -570,6 +590,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   Web Design &amp; Next.js
                 </Link>
                 <Link
+                  prefetch={false}
                   href="/services/ecommerce-development"
                   onClick={() => setMobileOpen(false)}
                   className="text-[18px] text-[#B3B3B3]"
@@ -577,6 +598,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   E-Commerce &amp; Shopify
                 </Link>
                 <Link
+                  prefetch={false}
                   href="/services/custom-web-apps"
                   onClick={() => setMobileOpen(false)}
                   className="text-[18px] text-[#B3B3B3]"
@@ -584,6 +606,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   Custom Web Apps
                 </Link>
                 <Link
+                  prefetch={false}
                   href="/services/takeaway-web-design"
                   onClick={() => setMobileOpen(false)}
                   className="text-[18px] text-[#B3B3B3]"
@@ -591,6 +614,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   Takeaway Web Design
                 </Link>
                 <Link
+                  prefetch={false}
                   href="/services/seo-services"
                   onClick={() => setMobileOpen(false)}
                   className="text-[18px] text-[#B3B3B3]"
@@ -602,6 +626,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
           </div>
 
           <Link
+            prefetch={false}
             href="/case-studies"
             onClick={() => setMobileOpen(false)}
             className="text-[30px] font-medium tracking-[-0.8px] py-1.5 text-white"
@@ -609,6 +634,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             Case Studies
           </Link>
           <Link
+            prefetch={false}
             href="/pricing"
             onClick={() => setMobileOpen(false)}
             className="text-[30px] font-medium tracking-[-0.8px] py-1.5 text-white"
@@ -616,6 +642,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             Pricing
           </Link>
           <Link
+            prefetch={false}
             href="/overview"
             onClick={() => setMobileOpen(false)}
             className="text-[30px] font-medium tracking-[-0.8px] py-1.5 text-white"
@@ -623,6 +650,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             Cost Estimator
           </Link>
           <Link
+            prefetch={false}
             href="/about"
             onClick={() => setMobileOpen(false)}
             className="text-[30px] font-medium tracking-[-0.8px] py-1.5 text-white"
@@ -630,6 +658,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             About
           </Link>
           <Link
+            prefetch={false}
             href="/blogs"
             onClick={() => setMobileOpen(false)}
             className="text-[30px] font-medium tracking-[-0.8px] py-1.5 text-white"
@@ -637,6 +666,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             Insights &amp; Blog
           </Link>
           <Link
+            prefetch={false}
             href="/tools"
             onClick={() => setMobileOpen(false)}
             className="text-[30px] font-medium tracking-[-0.8px] py-1.5 text-white"
@@ -653,6 +683,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             contact@saimdev.site
           </a>
           <Link
+            prefetch={false}
             href="/contact"
             onClick={() => setMobileOpen(false)}
             className="inline-flex items-center gap-3 text-white font-medium text-[17px]"

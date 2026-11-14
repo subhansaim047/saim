@@ -230,7 +230,7 @@ export const BlogsPage = () => {
                 transition={{ duration: 0.35, delay: i * 0.04 }}
                 className="group relative flex flex-col rounded-2xl border border-[#ececec] bg-white p-6 hover:border-gray-300 hover:shadow-lg transition-all duration-300 overflow-hidden"
               >
-                <Link href={blog.url} className="absolute inset-0 z-10" aria-label={blog.title}>
+                <Link href={blog.url} prefetch={false} className="absolute inset-0 z-10" aria-label={blog.title}>
                   <span className="sr-only">{blog.title}</span>
                 </Link>
 

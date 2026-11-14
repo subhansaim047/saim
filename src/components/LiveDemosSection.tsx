@@ -32,7 +32,7 @@ const FEATURED_DEMOS: FeaturedDemo[] = [
     description:
       "Bespoke luxury leather e-commerce storefront featuring 1,500+ interactive pages, multi-collection filtering, instant search, and WhatsApp order checkout.",
     demoUrl: "/hq-leathercon/index.html",
-    previewImage: "/demos/previews/hq-leathercon-ecommerce-storefront.png",
+    previewImage: "/demos/previews/hq-leathercon-ecommerce-storefront.webp",
     highlights: ["1,500+ Product Pages", "Live Search & Filtering", "Mobile-First UX"],
     featured: true,
   },

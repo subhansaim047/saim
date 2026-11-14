@@ -307,6 +307,10 @@ export function RhHeroPinned({
     videoType === "mobile"
       ? "/rh-exact/pd/hero-mobile-apps.webm"
       : "/rh-exact/pd/hero-cube.mp4";
+  const videoPoster =
+    videoType === "mobile"
+      ? "/rh-exact/pd/hero-mobile-apps-poster.webp"
+      : "/rh-exact/pd/hero-cube-poster.webp";
   const videoBlend = videoType === "mobile" ? "lighten" : "screen";
 
   return (
@@ -384,7 +388,8 @@ export function RhHeroPinned({
                     muted
                     loop
                     playsInline
-                    preload="auto"
+                    preload="metadata"
+                    poster={videoPoster}
                     aria-label="Animated 3D engineering wireframe"
                   >
                     <source

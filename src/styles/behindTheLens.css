@@ -4,13 +4,13 @@
    smooth camera viewfinder corner brackets, custom hover interactions & responsive grids.
    ============================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
+/* Using self-hosted local font variables from layout.tsx instead of render-blocking external Google Fonts CSS */
 
 .behind-the-lens-root {
   background-color: #ffffff;
   color: #0a0a0a;
   min-height: 100vh;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter), 'Suisse Intl', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

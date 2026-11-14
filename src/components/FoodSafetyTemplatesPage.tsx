@@ -658,6 +658,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   {/* Card Image Container with Color-Coded Background */}
                   <Link
                     href={`/food-safety-templates/${getCanonicalTemplateSlug(template.slug)}`}
+                    prefetch={false}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Preview ${template.title}`}
@@ -669,7 +670,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                       width={300}
                       height={424}
                       className="max-h-full max-w-full object-contain drop-shadow-sm"
-                      loading={idx < 12 ? "eager" : "lazy"}
+                      loading={idx < 24 ? "eager" : "lazy"}
                       decoding="async"
                       onError={(e) => {
                         // Fallback if SVG fails
@@ -687,6 +688,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between gap-3">
                     <Link
                       href={`/food-safety-templates/${getCanonicalTemplateSlug(template.slug)}`}
+                      prefetch={false}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline"
@@ -700,6 +702,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                     <div className="pt-2 border-t border-gray-100 flex items-center">
                       <Link
                         href={`/food-safety-templates/${getCanonicalTemplateSlug(template.slug)}`}
+                        prefetch={false}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`Open ${template.title}`}

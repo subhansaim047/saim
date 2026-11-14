@@ -127,7 +127,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
         <div className="py-16 grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-white/[0.08]">
           {/* Brand Column */}
           <div className="md:col-span-4 space-y-5">
-            <Link href="/" className="inline-flex items-center gap-3.5 group">
+            <a href="/" className="inline-flex items-center gap-3.5 group">
               <span className="w-12 h-12 rounded-full overflow-hidden border border-white/20 bg-white flex items-center justify-center">
                 <img
                   src="/saim-dev-logo.png"
@@ -145,7 +145,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
                   Custom Web Development Studio
                 </span>
               </div>
-            </Link>
+            </a>
             <p className="text-[14px] text-[#939393] leading-relaxed max-w-sm">
               Senior-led Next.js 15, React 19, Shopify, and bespoke web
               application engineering for ambitious UK, European, and global
@@ -179,13 +179,14 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
             </div>
             <ul className="space-y-2.5 text-[15px] text-[#CBCBCB]">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">
+                <a href="/" className="hover:text-white transition-colors">
                   Home
-                </Link>
+                </a>
               </li>
               <li>
                 <Link
                   href="/demos"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Live Demos
@@ -194,6 +195,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/case-studies"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Case Studies
@@ -202,6 +204,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/pricing"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Pricing
@@ -210,6 +213,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/overview"
+                  prefetch={false}
                   className="hover:text-[#BAFF00] text-white transition-colors"
                 >
                   Studio Overview
@@ -218,6 +222,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/process"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   4-Stage Process
@@ -226,6 +231,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/technologies"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Tech Stack
@@ -234,6 +240,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/about"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   About Saim
@@ -242,6 +249,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/contact"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Contact
@@ -259,6 +267,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services"
+                  prefetch={false}
                   className="text-white hover:text-[#BAFF00] transition-colors"
                 >
                   All 13 Services →
@@ -267,6 +276,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/website-development"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Custom Website Development
@@ -275,6 +285,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/business-websites"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Business Websites
@@ -283,6 +294,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/ecommerce-development"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   E-Commerce Development
@@ -291,6 +303,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/ecommerce-shopify"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Shopify Store Builds
@@ -299,6 +312,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/custom-web-apps"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Custom Web Applications
@@ -307,6 +321,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/landing-pages-cro"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Landing Pages &amp; CRO
@@ -315,6 +330,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/website-redesign"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Website Redesign
@@ -323,6 +339,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/website-clone"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   1:1 Website Clone
@@ -331,6 +348,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/seo-services"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Technical SEO &amp; Speed
@@ -348,6 +366,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/nextjs-developer-uk"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Next.js Developer UK
@@ -356,6 +375,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/takeaway-web-design"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Takeaway Web Design UK
@@ -364,6 +384,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/takeaway-web-design-london"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Takeaway Websites London
@@ -372,6 +393,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/takeaway-web-design-manchester"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Takeaway Websites Manchester
@@ -380,6 +402,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/services/takeaway-web-design-birmingham"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Takeaway Websites Birmingham
@@ -388,6 +411,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/blogs"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Engineering &amp; UK Hospitality Blog
@@ -396,6 +420,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/tools"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   160+ Free UK Kitchen Tools
@@ -404,6 +429,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <li>
                 <Link
                   href="/food-safety-templates"
+                  prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Food Safety Templates Hub
@@ -420,22 +446,24 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
             <FazierBadge />
           </div>
           <div className="flex flex-wrap items-center justify-center gap-5">
-            <Link href="/privacy" className="hover:text-white transition-colors">
+            <Link href="/privacy" prefetch={false} className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
             <Link
               href="/cookie-policy"
+              prefetch={false}
               className="hover:text-white transition-colors"
             >
               Cookie Policy
             </Link>
             <Link
               href="/disclaimer"
+              prefetch={false}
               className="hover:text-white transition-colors"
             >
               Disclaimer
             </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
+            <Link href="/terms" prefetch={false} className="hover:text-white transition-colors">
               Terms of Service
             </Link>
             <button

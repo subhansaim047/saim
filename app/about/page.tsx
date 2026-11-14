@@ -153,7 +153,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-100">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-2xl overflow-hidden border border-gray-300 shadow-sm shrink-0">
-                <img src="/saim-dev-logo.jpg" alt="Saim Dev - Founder & Next.js Engineer" width={120} height={120} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                <img src="/saim-dev-logo.jpg" alt="Saim Dev - Founder & Next.js Engineer" width={120} height={120} decoding="async" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h2 className="text-xl font-bold text-gray-900">Saim Dev</h2>
