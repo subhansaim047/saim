@@ -185,7 +185,11 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
   const videoType = MOBILE_VIDEO_SLUGS.has(data.slug) ? "mobile" : "cube";
 
   return (
-    <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] relative">
+    <div
+      className={`rh-page min-h-screen ${
+        videoType === "mobile" ? "bg-[#0D0D0D]" : "bg-black"
+      } text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] relative`}
+    >
       <RhHeader theme="dark" />
 
       <main>

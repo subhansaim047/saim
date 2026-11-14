@@ -311,19 +311,30 @@ export function RhHeroPinned({
     videoType === "mobile"
       ? "/rh-exact/pd/hero-mobile-apps-poster.webp"
       : "/rh-exact/pd/hero-cube-poster.webp";
-  const videoBlend = videoType === "mobile" ? "lighten" : "screen";
+  const isMobileVideo = videoType === "mobile";
+  const heroBg = isMobileVideo ? "#0D0D0D" : "#000000";
+  const heroBgClass = isMobileVideo ? "bg-[#0D0D0D]" : "bg-black";
 
   return (
-    <div ref={pinRef} data-nav="dark" className="hero-pin-pd bg-black text-white">
-      <div ref={innerRef} className="hero-pin-inner-pd bg-black">
+    <div
+      ref={pinRef}
+      data-nav="dark"
+      className={`hero-pin-pd ${heroBgClass} text-white`}
+      style={{ backgroundColor: heroBg }}
+    >
+      <div
+        ref={innerRef}
+        className={`hero-pin-inner-pd ${heroBgClass}`}
+        style={{ backgroundColor: heroBg }}
+      >
         <section className="relative pt-[132px] md:pt-[156px] pb-12 md:pb-16">
-          {videoType === "mobile" && (
+          {isMobileVideo && (
             <div
               aria-hidden="true"
               className="pointer-events-none absolute -bottom-24 -left-24 w-[520px] h-[520px] rounded-full opacity-20 blur-[120px]"
               style={{
                 background:
-                  "radial-gradient(circle, rgba(186,255,0,0.22) 0%, rgba(0,0,0,0) 70%)",
+                  "radial-gradient(circle, rgba(186,255,0,0.22) 0%, rgba(13,13,13,0) 70%)",
               }}
             />
           )}
@@ -370,24 +381,17 @@ export function RhHeroPinned({
 
               {/* Right 3D Wireframe Video Column */}
               <div
-                className="rh-hero-enter-video relative flex items-center justify-center bg-black"
-                style={{ mixBlendMode: videoBlend }}
+                className={`rh-hero-enter-video relative flex items-center justify-center ${heroBgClass}`}
+                style={{
+                  backgroundColor: heroBg,
+                  mixBlendMode: isMobileVideo ? "lighten" : "screen",
+                }}
               >
-                <div
-                  className="w-full max-w-[490px] aspect-square relative flex items-center justify-center"
-                  style={
-                    videoType === "mobile"
-                      ? {
-                          WebkitMaskImage: "radial-gradient(closest-side, black 72%, transparent 100%)",
-                          maskImage: "radial-gradient(closest-side, black 72%, transparent 100%)",
-                        }
-                      : undefined
-                  }
-                >
+                <div className="w-full max-w-[490px] aspect-square relative flex items-center justify-center">
                   <video
                     key={videoSrc}
                     className={`hero-cube-video w-full h-auto block select-none pointer-events-none ${
-                      videoType === "mobile" ? "brightness-95 contrast-110" : "contrast-110"
+                      isMobileVideo ? "" : "contrast-110"
                     }`}
                     autoPlay
                     muted
@@ -399,7 +403,7 @@ export function RhHeroPinned({
                   >
                     <source
                       src={videoSrc}
-                      type={videoType === "mobile" ? "video/webm" : "video/mp4"}
+                      type={isMobileVideo ? "video/webm" : "video/mp4"}
                     />
                   </video>
                 </div>
@@ -409,7 +413,7 @@ export function RhHeroPinned({
         </section>
 
         {/* Bottom 5-Cell Laser-Draw Strip (.strip-logos-pd) */}
-        <div className="strip-logos-pd">
+        <div className="strip-logos-pd" style={{ backgroundColor: heroBg }}>
           <div className="strip-label-pd">{stripLabel}</div>
           <div className="strip-grid-pd">
             {cellIndices.map((poolIdx, slotIdx) => {
