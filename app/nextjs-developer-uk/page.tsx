@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Clock, ShieldCheck, Zap, HelpCircle, Code2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, ShieldCheck, Zap, X } from "lucide-react";
 import { FooterSection } from "@/components/FooterSection";
 import { RhHeader } from "@/components/rh/RhHeader";
 import {
   RhHeroPinned,
   RhProcessCarousel,
   RhSystemRows,
+  RhOdometerNumber,
 } from "@/components/rh/RhModernSections";
 
 export const metadata: Metadata = {
@@ -115,10 +116,10 @@ export default function NextJsDeveloperUkPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ukBreadcrumbSchema) }}
       />
-      <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+      <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
         <RhHeader theme="dark" />
 
-        {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
+        {/* 1. PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
         <RhHeroPinned
           badge="UK & European Next.js Engineering Specialist"
           title={
@@ -137,275 +138,328 @@ export default function NextJsDeveloperUkPage() {
           stripLabel="Fixed GBP Pricing · Zero Agency Retainers"
         />
 
-        {/* TRUST STATS BAR */}
-        <section className="px-5 py-14 max-w-[1168px] mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-[#141414] border border-white/10 text-left">
-            <div>
-              <div className="text-2xl sm:text-3xl font-bold text-[#BAFF00] mb-0.5">90+</div>
-              <div className="text-xs text-white/60">Google Core Web Vitals</div>
-            </div>
-            <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-0.5">&lt;0.8s</div>
-              <div className="text-xs text-white/60">Sub-Second Load Time</div>
-            </div>
-            <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-0.5">5-10 Days</div>
-              <div className="text-xs text-white/60">Rapid Sprint Turnaround</div>
-            </div>
-            <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-0.5">£390+</div>
-              <div className="text-xs text-white/60">Fixed GBP Pricing (No Retainers)</div>
-            </div>
-          </div>
-        </section>
-
-        {/* KEY TECHNICAL DEFINITIONS */}
-        <section className="px-4 sm:px-6 max-w-5xl mx-auto mb-16">
-          <div className="p-6 sm:p-8 rounded-3xl bg-white/[0.03] border border-white/10">
-            <h2 className="text-xs font-mono uppercase tracking-widest text-primary mb-4 font-bold">
-              Core Technical Concepts
-            </h2>
-            <dl className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm text-white/80">
-              <div className="space-y-1.5">
-                <dt className="text-white font-semibold text-sm">What is Next.js?</dt>
-                <dd className="text-white/60 leading-relaxed font-light">
-                  Next.js is a full-stack React web framework designed by Vercel. It combines server-side rendering (SSR), static site generation (SSG), and edge middleware to deliver fast, secure, and search-optimised websites for modern businesses.
-                </dd>
+        {/* TRUST STATS & TECHNICAL DEFINITIONS (Dark #000000) */}
+        <section className="relative z-10 bg-black px-5 py-16 sm:py-20 border-t border-[#202020]">
+          <div className="max-w-[1168px] mx-auto space-y-10">
+            <div data-gsap-stagger="" className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="p-6 bg-[#111111] border border-[#222222]">
+                <div className="text-[32px] sm:text-[40px] font-medium tracking-[-0.04em] text-[#BAFF00] font-mono-tech leading-none mb-2">
+                  90+
+                </div>
+                <div className="text-[12px] text-[#939393]">Google Core Web Vitals</div>
               </div>
-              <div className="space-y-1.5">
-                <dt className="text-white font-semibold text-sm">What are Core Web Vitals?</dt>
-                <dd className="text-white/60 leading-relaxed font-light">
-                  Core Web Vitals are Google’s standardized metrics measuring real-world web page performance, primarily Largest Contentful Paint (loading speed &lt; 2.5s), Interaction to Next Paint (responsiveness &lt; 200ms), and Cumulative Layout Shift (visual stability &lt; 0.1).
-                </dd>
+              <div className="p-6 bg-[#111111] border border-[#222222]">
+                <div className="text-[32px] sm:text-[40px] font-medium tracking-[-0.04em] text-white font-mono-tech leading-none mb-2">
+                  &lt;0.8s
+                </div>
+                <div className="text-[12px] text-[#939393]">Sub-Second Load Time</div>
               </div>
-            </dl>
-          </div>
-        </section>
+              <div className="p-6 bg-[#111111] border border-[#222222]">
+                <div className="text-[32px] sm:text-[40px] font-medium tracking-[-0.04em] text-white font-mono-tech leading-none mb-2">
+                  5–10d
+                </div>
+                <div className="text-[12px] text-[#939393]">Rapid Sprint Turnaround</div>
+              </div>
+              <div className="p-6 bg-[#111111] border border-[#222222]">
+                <div className="text-[32px] sm:text-[40px] font-medium tracking-[-0.04em] text-white font-mono-tech leading-none mb-2">
+                  £390+
+                </div>
+                <div className="text-[12px] text-[#939393]">Fixed GBP Pricing</div>
+              </div>
+            </div>
 
-        {/* WHY UK BUSINESSES CHOOSE SAIM DEV VS UK AGENCIES */}
-        <section className="py-16 sm:py-24 border-t border-white/10 bg-black">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <div className="text-center max-w-2xl mx-auto mb-14">
-              <span className="text-xs font-mono uppercase text-primary tracking-wider mb-2 block">
-                Agile Engineering vs Bloated Agencies
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-normal text-white">
-                Why Pay £3,000–£5,000+ to Slow UK Agencies?
+            <div data-gsap-reveal="" className="p-8 bg-[#111111] border border-[#222222]">
+              <h2 className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] mb-5">
+                Core Technical Concepts
               </h2>
+              <dl className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[14px]">
+                <div className="space-y-2">
+                  <dt className="text-white font-medium text-[17px]">What is Next.js?</dt>
+                  <dd className="text-[#939393] leading-[1.6]">
+                    Next.js is a full-stack React web framework designed by Vercel. It combines server-side rendering (SSR), static site generation (SSG), and edge middleware to deliver fast, secure, and search-optimised websites for modern businesses.
+                  </dd>
+                </div>
+                <div className="space-y-2">
+                  <dt className="text-white font-medium text-[17px]">What are Core Web Vitals?</dt>
+                  <dd className="text-[#939393] leading-[1.6]">
+                    Core Web Vitals are Google’s standardized metrics measuring real-world web page performance, primarily Largest Contentful Paint (&lt; 2.5s), Interaction to Next Paint (&lt; 200ms), and Cumulative Layout Shift (&lt; 0.1).
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        {/* UK AGENCY VS SAIM DEV (#F5F5F7 Light Architectural Contrast Band) */}
+        <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-20 sm:py-28 px-5 border-t border-[#E6E6E6]">
+          <div className="max-w-[1168px] mx-auto space-y-20">
+            <div>
+              <div data-gsap-reveal="" className="max-w-[740px] mb-14">
+                <div className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#595959] mb-4">
+                  AGILE ENGINEERING VS TRADITIONAL AGENCIES
+                </div>
+                <h2 className="text-[34px] sm:text-[48px] font-medium tracking-[-0.04em] leading-[1.06] text-[#0D0D0D]">
+                  Why Pay £3,000–£5,000+ to{" "}
+                  <span className="text-[#939393]">Slow UK Agencies?</span>
+                </h2>
+              </div>
+
+              <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white border border-[#E6E6E6] p-8 flex flex-col justify-between gap-6">
+                  <div>
+                    <div className="text-[11px] font-mono-tech uppercase tracking-wider text-[#595959] mb-2">
+                      TYPICAL LEGACY AGENCY
+                    </div>
+                    <h3 className="text-[24px] font-medium tracking-[-0.03em] text-[#0D0D0D] mb-6">
+                      Traditional UK Digital Agencies
+                    </h3>
+                    <ul className="space-y-4 text-[14px] text-[#595959]">
+                      <li className="flex items-start gap-3">
+                        <X className="w-4 h-4 text-[#939393] shrink-0 mt-1" />
+                        <span><strong className="text-[#0D0D0D]">£3,000 – £8,000+</strong> upfront quotes tied to monthly maintenance retainers.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <X className="w-4 h-4 text-[#939393] shrink-0 mt-1" />
+                        <span>Heavy WordPress themes with 40+ plugins failing Google Core Web Vitals.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <X className="w-4 h-4 text-[#939393] shrink-0 mt-1" />
+                        <span>6 to 12 weeks average turnaround with account-manager bottlenecks.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <X className="w-4 h-4 text-[#939393] shrink-0 mt-1" />
+                        <span>Fragile database dependencies and constant plugin security patches.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="rh-edge-orbit-card is-lime bg-[#0D0D0D] text-white border border-[#202020] p-8 flex flex-col justify-between gap-6">
+                  <div>
+                    <div className="inline-flex items-center gap-2 text-[11px] font-mono-tech uppercase tracking-wider text-[#BAFF00] mb-2">
+                      <Zap className="w-3.5 h-3.5" />
+                      <span>DIRECT NEXT.JS 16 SPECIALIST</span>
+                    </div>
+                    <h3 className="text-[24px] font-medium tracking-[-0.03em] text-white mb-6">
+                      Saim Dev Architecture
+                    </h3>
+                    <ul className="space-y-4 text-[14px] text-white/85">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-1" />
+                        <span><strong className="text-white">Fixed pricing from £250 / £390</strong> with zero monthly agency retainers.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-1" />
+                        <span>Pure Next.js 16 + React 19 code loading in under 1 second globally.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-1" />
+                        <span>Live staging prototype delivered in <strong className="text-white">5 to 10 days</strong>.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-1" />
+                        <span>Edge-cached serverless delivery with full GitHub repository ownership.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Traditional Agency */}
-              <div className="p-7 rounded-2xl border border-red-500/20 bg-red-950/10 flex flex-col gap-4">
-                <h3 className="text-lg font-bold text-red-400 flex items-center gap-2">
-                  <span>Traditional UK Digital Agencies</span>
+            {/* UK TRANSPARENT PRICING IN GBP */}
+            <div>
+              <div data-gsap-reveal="" className="max-w-[720px] mb-12">
+                <div className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#595959] mb-3">
+                  UK &amp; EUROPE PACKAGES
+                </div>
+                <h2 className="text-[34px] sm:text-[48px] font-medium tracking-[-0.04em] leading-[1.06] text-[#0D0D0D] mb-3">
+                  Transparent GBP Pricing
+                </h2>
+                <p className="text-[15px] text-[#595959]">
+                  Fixed one-time investment. Invoicing ready for UK Ltd &amp; European VAT registered entities.
+                </p>
+              </div>
+
+              <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="rh-edge-orbit-card bg-white border border-[#E6E6E6] p-8 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#595959]">
+                      Single Offer
+                    </span>
+                    <h3 className="text-[22px] font-medium tracking-[-0.02em] text-[#0D0D0D] mt-1 mb-3">
+                      Landing Page
+                    </h3>
+                    <div className="text-[40px] font-medium tracking-[-0.04em] text-[#0D0D0D] font-mono-tech leading-none mb-4">
+                      <RhOdometerNumber value="£250" />{" "}
+                      <span className="text-[12px] font-normal text-[#595959]">one-time</span>
+                    </div>
+                    <p className="text-[13px] text-[#595959] mb-6 leading-[1.55]">
+                      Ideal for Google Ads campaigns, London service promotions, and product launches.
+                    </p>
+                    <ul className="space-y-2.5 text-[13px] text-[#333333] mb-8">
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> 1 High-Converting Page</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> WhatsApp &amp; Call Integration</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> Sub-Second Loading Speed</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> 3–5 Days Turnaround</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Landing%20Page%20package%20(£250)"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full text-center py-3 rounded-full border border-[#0D0D0D] text-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-[#BAFF00] transition-colors text-[13px] font-medium"
+                  >
+                    Order on WhatsApp
+                  </a>
+                </div>
+
+                <div className="rh-edge-orbit-card bg-white border border-[#E6E6E6] p-8 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#595959]">
+                      Standard Business
+                    </span>
+                    <h3 className="text-[22px] font-medium tracking-[-0.02em] text-[#0D0D0D] mt-1 mb-3">
+                      Starter Plan
+                    </h3>
+                    <div className="text-[40px] font-medium tracking-[-0.04em] text-[#0D0D0D] font-mono-tech leading-none mb-4">
+                      <RhOdometerNumber value="£390" />{" "}
+                      <span className="text-[12px] font-normal text-[#595959]">one-time</span>
+                    </div>
+                    <p className="text-[13px] text-[#595959] mb-6 leading-[1.55]">
+                      Complete 5-page digital presence for UK clinics, tradesmen, consultants, and boutiques.
+                    </p>
+                    <ul className="space-y-2.5 text-[13px] text-[#333333] mb-8">
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> Up to 5 Custom Pages</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> Local UK SEO &amp; Schema Markup</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> GDPR Cookie Banner Included</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> 5–7 Days Turnaround</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Starter%20Plan%20(£390)"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full text-center py-3 rounded-full border border-[#0D0D0D] text-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-[#BAFF00] transition-colors text-[13px] font-medium"
+                  >
+                    Order on WhatsApp
+                  </a>
+                </div>
+
+                <div className="rh-edge-orbit-card is-lime bg-[#0D0D0D] text-white border border-[#202020] p-8 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#BAFF00]">
+                        Full Scale
+                      </span>
+                      <span className="bg-[#BAFF00] text-[#0D0D0D] text-[10px] font-mono-tech font-semibold px-2.5 py-0.5 uppercase">
+                        Best Value UK
+                      </span>
+                    </div>
+                    <h3 className="text-[22px] font-medium tracking-[-0.02em] text-white mt-1 mb-3">
+                      Business Plan
+                    </h3>
+                    <div className="text-[40px] font-medium tracking-[-0.04em] text-[#BAFF00] font-mono-tech leading-none mb-4">
+                      <RhOdometerNumber value="£790" />{" "}
+                      <span className="text-[12px] font-normal text-[#939393]">one-time</span>
+                    </div>
+                    <p className="text-[13px] text-[#939393] mb-6 leading-[1.55]">
+                      Dominant 15-page web platform with blog system, analytics, and lead capture funnels.
+                    </p>
+                    <ul className="space-y-2.5 text-[13px] text-white/85 mb-8">
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0" /> Up to 15 Pages &amp; Blog System</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0" /> Optimised Core Web Vitals</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0" /> Full Analytics &amp; Search Console</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0" /> 30 Days Priority Support</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Business%20Plan%20(£790)"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full text-center py-3 rounded-full bg-[#BAFF00] text-[#0D0D0D] hover:brightness-95 transition-all text-[13px] font-semibold"
+                  >
+                    Order on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* CONTEXTUAL NAVIGATION */}
+            <div
+              data-gsap-reveal=""
+              className="p-8 bg-white border border-[#E6E6E6] flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+            >
+              <div>
+                <h3 className="text-[20px] font-medium tracking-[-0.02em] text-[#0D0D0D] mb-1">
+                  Looking for packaged solutions or custom scopes?
                 </h3>
-                <ul className="space-y-3 text-sm text-white/70">
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-400 font-bold">✕</span>
-                    <span><strong>£3,000 – £8,000+</strong> standard upfront quotes with monthly maintenance retainers.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-400 font-bold">✕</span>
-                    <span>Heavy, slow WordPress themes with 40+ plugins that fail Google Core Web Vitals.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-400 font-bold">✕</span>
-                    <span>6 to 12 weeks average timeline with endless bureaucratic meetings.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-400 font-bold">✕</span>
-                    <span>Vulnerable to security breaches, database hacks, and plugin updates breaking the site.</span>
-                  </li>
-                </ul>
+                <p className="text-[14px] text-[#595959]">
+                  Compare transparent deliverables, case study metrics, or get a direct project estimate.
+                </p>
               </div>
-
-              {/* Saim Dev */}
-              <div className="p-7 rounded-2xl border border-primary/40 bg-primary/[0.04] flex flex-col gap-4 shadow-xl">
-                <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                  <Zap className="w-5 h-5 text-primary" />
-                  <span>Saim Dev (Next.js 16 Specialist)</span>
-                </h3>
-                <ul className="space-y-3 text-sm text-white/85">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    <span><strong>Transparent fixed pricing from £390</strong> with zero recurring monthly lock-ins.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Pure Next.js 16 + React 19 architecture loading in under 1 second.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Live production deployment delivered in <strong>5 to 10 days</strong>.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Serverless, unhackable static delivery with free global CDN and SSL.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* UK TRANSPARENT PRICING IN GBP */}
-        <section className="py-16 sm:py-24 border-t border-white/10 bg-black">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <div className="text-center max-w-xl mx-auto mb-12">
-              <span className="text-xs font-mono uppercase text-primary tracking-wider mb-2 block">
-                UK & Europe Packages
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-normal text-white mb-3">
-                Transparent GBP Pricing
-              </h2>
-              <p className="text-white/60 text-sm">
-                Fixed one-time investment. Invoicing ready for UK Ltd & European VAT registered entities.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Starter */}
-              <div className="p-6 rounded-2xl border border-white/10 bg-[#0f0f0f] flex flex-col justify-between">
-                <div>
-                  <span className="text-xs uppercase font-mono text-white/60">Single Offer</span>
-                  <h3 className="text-xl font-bold text-white mt-1 mb-2">Landing Page</h3>
-                  <div className="text-3xl font-bold text-white mb-4">£250 <span className="text-xs font-normal text-white/50">one-time</span></div>
-                  <p className="text-xs text-white/60 mb-6">Ideal for Google Ads campaigns, London service promotions, and new product launches.</p>
-                  <ul className="space-y-2 text-xs text-white/80 mb-6">
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 1 High-Converting Page</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> WhatsApp & Call Integration</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Sub-Second Loading Speed</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 3–5 Days Turnaround</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Landing%20Page%20package%20(£250)"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full text-center py-2.5 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold"
+              <div className="flex flex-wrap items-center gap-3 shrink-0">
+                <Link
+                  href="/services"
+                  className="text-[13px] font-medium px-5 py-2.5 rounded-full border border-[#0D0D0D] text-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-white transition-colors"
                 >
-                  Order on WhatsApp
-                </a>
-              </div>
-
-              {/* Business Starter */}
-              <div className="p-6 rounded-2xl border border-white/10 bg-[#161616] flex flex-col justify-between">
-                <div>
-                  <span className="text-xs uppercase font-mono text-primary font-bold">Standard Business</span>
-                  <h3 className="text-xl font-bold text-white mt-1 mb-2">Starter Plan</h3>
-                  <div className="text-3xl font-bold text-white mb-4">£390 <span className="text-xs font-normal text-white/50">one-time</span></div>
-                  <p className="text-xs text-white/60 mb-6">Complete 5-page digital presence for UK clinics, tradesmen, consultants, and boutiques.</p>
-                  <ul className="space-y-2 text-xs text-white/80 mb-6">
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Up to 5 Custom Pages</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Local UK SEO & Schema Markup</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> GDPR Cookie Banner Included</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 5–7 Days Turnaround</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Starter%20Plan%20(£390)"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full text-center py-2.5 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all text-xs font-semibold"
+                  Explore our web development services
+                </Link>
+                <Link
+                  href="/contact"
+                  className="text-[13px] font-medium px-5 py-2.5 rounded-full bg-[#BAFF00] text-[#0D0D0D] hover:brightness-95 transition-all inline-flex items-center gap-1.5"
                 >
-                  Order on WhatsApp
-                </a>
-              </div>
-
-              {/* Full Growth */}
-              <div className="p-6 rounded-2xl border border-primary/40 bg-[#202020] flex flex-col justify-between relative shadow-2xl">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-black text-[10px] font-bold px-3 py-0.5 rounded-full uppercase">
-                  Best Value in UK
-                </div>
-                <div>
-                  <span className="text-xs uppercase font-mono text-primary">Full Scale</span>
-                  <h3 className="text-xl font-bold text-white mt-1 mb-2">Business Plan</h3>
-                  <div className="text-3xl font-bold text-white mb-4">£790 <span className="text-xs font-normal text-white/50">one-time</span></div>
-                  <p className="text-xs text-white/60 mb-6">Dominant 15-page web platform with blog system, analytics, and lead capture funnels.</p>
-                  <ul className="space-y-2 text-xs text-white/80 mb-6">
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Up to 15 Pages & Blog System</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Optimised Core Web Vitals Guaranteed</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Full Analytics & Search Console</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-primary" /> 30 Days Priority Support</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Business%20Plan%20(£790)"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full text-center py-2.5 rounded-full bg-primary text-black hover:brightness-110 transition-all text-xs font-bold shadow-md"
-                >
-                  Order on WhatsApp
-                </a>
+                  <span>Discuss your website project</span>
+                  <ShieldCheck className="w-4 h-4" />
+                </Link>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* CONTEXTUAL NAVIGATION */}
-        <section className="py-12 px-4 sm:px-6 max-w-5xl mx-auto border-t border-white/10">
-          <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-lg font-medium text-white mb-1">Looking for packaged solutions or custom scopes?</h3>
-              <p className="text-xs sm:text-sm text-white/60">Compare transparent deliverables, case study metrics, or get a direct project estimate.</p>
-            </div>
-            <div className="flex flex-wrap items-center gap-3 shrink-0">
-              <Link
-                href="/services"
-                className="text-xs font-semibold px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-              >
-                Explore our web development services
-              </Link>
-              <Link
-                href="/contact"
-                className="text-xs font-semibold px-4 py-2.5 rounded-full bg-primary text-black hover:brightness-110 transition-colors"
-              >
-                Discuss your website project
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* UK FAQ */}
-        <section className="py-16 sm:py-24 border-t border-white/10 bg-black">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-12">
-              <span className="text-xs font-mono uppercase text-primary tracking-wider mb-2 block">
-                UK Business Questions
-              </span>
-              <h2 className="text-3xl font-normal text-white">
-                Frequently Asked Questions
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              <div className="p-5 rounded-xl border border-white/10 bg-white/[0.02]">
-                <h3 className="font-semibold text-white text-base mb-2">Why choose Next.js over WordPress for a UK business?</h3>
-                <p className="text-sm text-white/70 leading-relaxed">
-                  Traditional WordPress sites suffer from plugin bloat and slow server response times (often 3–5 seconds), which hurts conversions and UK search engine rankings. Next.js serves pre-rendered static content instantly across global edge servers with 95+ PageSpeed scores.
-                </p>
+            {/* UK FAQ ACCORDION */}
+            <div className="border-t border-[#E6E6E6] pt-16">
+              <div data-gsap-reveal="" className="max-w-[720px] mb-10">
+                <span className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#595959] block mb-3">
+                  UK BUSINESS QUESTIONS
+                </span>
+                <h2 className="text-[32px] sm:text-[42px] font-medium tracking-[-0.04em] leading-[1.08] text-[#0D0D0D]">
+                  Frequently Asked Questions
+                </h2>
               </div>
 
-              <div className="p-5 rounded-xl border border-white/10 bg-white/[0.02]">
-                <h3 className="font-semibold text-white text-base mb-2">How does pricing and invoicing work for UK & European clients?</h3>
-                <p className="text-sm text-white/70 leading-relaxed">
-                  All projects feature transparent, fixed pricing in GBP (£) or EUR (€) with zero hidden fees. We provide compliant invoices formatted for UK Ltd and European reverse-charge VAT accounting.
-                </p>
-              </div>
-
-              <div className="p-5 rounded-xl border border-white/10 bg-white/[0.02]">
-                <h3 className="font-semibold text-white text-base mb-2">Are your websites fully Privacy-conscious?</h3>
-                <p className="text-sm text-white/70 leading-relaxed">
-                  Yes. Every website is built with strict adherence to UK GDPR and EU data protection standards, including privacy-friendly cookie consent banners, SSL encryption, and zero unauthorized third-party trackers.
-                </p>
-              </div>
-
-              <div className="p-5 rounded-xl border border-white/10 bg-white/[0.02]">
-                <h3 className="font-semibold text-white text-base mb-2">What is the typical project delivery timeline?</h3>
-                <p className="text-sm text-white/70 leading-relaxed">
-                  Starter business sites are delivered in 5–7 working days. Full multi-page business websites take 7–10 working days from project kickoff to live production deployment.
-                </p>
+              <div data-gsap-stagger="" className="space-y-3">
+                {[
+                  {
+                    q: "Why choose Next.js over WordPress for a UK business?",
+                    a: "Traditional WordPress sites suffer from plugin bloat and slow server response times (often 3–5 seconds), which hurts conversions and UK search engine rankings. Next.js serves pre-rendered static content instantly across global edge servers with 95+ PageSpeed scores.",
+                  },
+                  {
+                    q: "How does pricing and invoicing work for UK & European clients?",
+                    a: "All projects feature transparent, fixed pricing in GBP (£) or EUR (€) with zero hidden fees. We provide compliant invoices formatted for UK Ltd and European reverse-charge VAT accounting.",
+                  },
+                  {
+                    q: "Are your websites fully Privacy-conscious?",
+                    a: "Yes. Every website is built with strict adherence to UK GDPR and EU data protection standards, including privacy-friendly cookie consent banners, SSL encryption, and zero unauthorized third-party trackers.",
+                  },
+                  {
+                    q: "What is the typical project delivery timeline?",
+                    a: "Starter business sites are delivered in 5–7 working days. Full multi-page business websites take 7–10 working days from project kickoff to live production deployment.",
+                  },
+                ].map((item, idx) => (
+                  <details
+                    key={item.q}
+                    open={idx === 0}
+                    className="group bg-white border border-[#E6E6E6] hover:border-[#0D0D0D] transition-colors px-6 py-5"
+                  >
+                    <summary className="flex items-center justify-between gap-4 cursor-pointer list-none select-none">
+                      <span className="text-[16px] font-medium text-[#0D0D0D]">{item.q}</span>
+                      <span className="w-8 h-8 rounded-full border border-[#E6E6E6] flex items-center justify-center text-[#0D0D0D] group-open:bg-[#0D0D0D] group-open:text-[#BAFF00] transition-colors shrink-0">
+                        +
+                      </span>
+                    </summary>
+                    <p className="pt-3 text-[14px] text-[#595959] leading-[1.6] max-w-3xl">
+                      {item.a}
+                    </p>
+                  </details>
+                ))}
               </div>
             </div>
           </div>
@@ -480,28 +534,28 @@ export default function NextJsDeveloperUkPage() {
         />
 
         {/* BOTTOM CTA BANNER */}
-        <section className="py-16 sm:py-20 border-t border-white/10 bg-black text-center px-4">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-normal text-white mb-4">
+        <section className="py-20 sm:py-24 border-t border-[#202020] bg-black text-center px-4">
+          <div data-gsap-reveal="" className="max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-5xl font-medium tracking-[-0.04em] leading-[1.06] text-white mb-4">
               Ready to Upgrade Your UK Digital Presence?
             </h2>
-            <p className="text-white/60 text-sm mb-8">
+            <p className="text-[#939393] text-[15px] mb-9">
               Discuss your project directly on WhatsApp. No sales pitch, just honest technical advice.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <a
                 href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20Next.js%20website%20for%20my%20UK%20business"
                 target="_blank"
                 rel="noreferrer"
-                className="bg-primary text-black font-semibold text-sm px-6 py-3 rounded-full hover:brightness-110 transition-all shadow-xl"
+                className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] font-medium text-[14px] px-7 py-3.5 transition-all"
               >
                 Chat on WhatsApp (+92 319 6526604)
               </a>
               <Link
                 href="/contact"
-                className="bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3 rounded-full transition-all border border-white/15"
+                className="inline-flex items-center px-7 py-3.5 rounded-full border border-[#333333] text-white hover:border-[#BAFF00] hover:text-[#BAFF00] font-medium text-[14px] transition-colors"
               >
-                Discuss your website project via enquiry form
+                Submit Project Enquiry
               </Link>
             </div>
           </div>

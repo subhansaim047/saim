@@ -1,7 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { Code2, Zap, Search, ArrowRight, Bot, Cpu } from "lucide-react";
+import {
+  Code2,
+  Zap,
+  Search,
+  ArrowRight,
+  ArrowUpRight,
+  Bot,
+  Cpu,
+  Layers,
+  FileCode2,
+  Palette,
+} from "lucide-react";
 import { RhHeader } from "./rh/RhHeader";
 import { SiteFooter } from "./SiteFooter";
 import {
@@ -12,10 +23,10 @@ import {
 
 export const TechnologiesPage = () => {
   return (
-    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+    <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
-      {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
+      {/* 1. PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
       <RhHeroPinned
         badge="Engineering Stack · Next.js 16 & React 19"
         title={
@@ -72,257 +83,306 @@ export const TechnologiesPage = () => {
         ]}
       />
 
-      <div className="max-w-[1168px] mx-auto px-5 py-20 sm:py-24">
-
-        {/* 2. FRONTEND */}
-        <div className="mb-16">
-          <div className="flex items-center gap-2.5 mb-6 text-primary">
-            <Code2 className="w-6 h-6" />
-            <h2 className="text-2xl font-light text-white">Frontend Frameworks</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <span className="text-2xl mb-3 block">⚛️</span>
-              <h3 className="text-white font-medium text-lg mb-1">React 18</h3>
-              <p className="text-white/60 text-xs font-light leading-relaxed">
-                Component-driven web UI with concurrent rendering and instant state updates.
-              </p>
-            </div>
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10 flex flex-col justify-between">
-              <div>
-                <span className="text-2xl mb-3 block">▲</span>
-                <h3 className="text-white font-medium text-lg mb-1">Next.js</h3>
-                <p className="text-white/60 text-xs font-light leading-relaxed mb-2">
-                  Server-side rendering, static site generation, and optimal edge routing.
-                </p>
-                <dl className="pt-2 border-t border-white/10 text-xs">
-                  <dt className="text-primary font-mono text-[11px] uppercase tracking-wider font-bold mb-0.5">What is Next.js?</dt>
-                  <dd className="text-white/60 leading-relaxed font-light">
-                    Next.js is an open-source React framework developed by Vercel that combines server-side rendering, static site generation, and edge routing to build ultra-fast, search-optimised web applications.
-                  </dd>
-                </dl>
+      {/* 2. ARCHITECTURAL FRONTEND & PERFORMANCE MATRIX (Dark #000000) */}
+      <section className="relative z-10 bg-black text-white py-20 sm:py-28 px-5 border-t border-[#202020]">
+        <div className="max-w-[1168px] mx-auto space-y-20">
+          {/* Frontend Frameworks */}
+          <div>
+            <div data-gsap-reveal="" className="max-w-[760px] mb-12">
+              <div className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#939393] mb-3">
+                01 / RUNTIME &amp; UI LAYER
               </div>
-              <Link
-                href="/nextjs-developer-uk"
-                className="text-xs text-primary hover:underline font-medium inline-flex items-center gap-1 mt-3"
-              >
-                <span>Hire Next.js Developer UK</span>
-                <ArrowRight className="w-3 h-3" />
-              </Link>
+              <h2 className="text-[32px] sm:text-[44px] font-medium tracking-[-0.04em] leading-[1.08] text-white">
+                Frontend Frameworks{" "}
+                <span className="text-[#939393]">&amp; Type Safety</span>
+              </h2>
             </div>
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <span className="text-2xl mb-3 block">📘</span>
-              <h3 className="text-white font-medium text-lg mb-1">TypeScript</h3>
-              <p className="text-white/60 text-xs font-light leading-relaxed">
-                Strict type safety ensuring zero runtime exceptions and bulletproof code quality.
-              </p>
-            </div>
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <span className="text-2xl mb-3 block">🎨</span>
-              <h3 className="text-white font-medium text-lg mb-1">Tailwind CSS</h3>
-              <p className="text-white/60 text-xs font-light leading-relaxed">
-                Utility-first, responsive design tokens with zero unused CSS footprint.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        {/* 3. PERFORMANCE */}
-        <div className="mb-16">
-          <div className="flex items-center gap-2.5 mb-6 text-primary">
-            <Zap className="w-6 h-6" />
-            <h2 className="text-2xl font-light text-white">Performance Engineering</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="liquid-glass rounded-2xl p-7 border border-white/10">
-              <h3 className="text-white font-medium text-lg mb-2">Core Web Vitals Optimisation</h3>
-              <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed mb-3">
-                Sub-second LCP (Largest Contentful Paint &lt; 2.5s), minimal CLS (&lt; 0.1), and rapid INP (&lt; 200ms) for high Google search rankings.
-              </p>
-              <dl className="mb-4 p-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs">
-                <dt className="text-primary font-mono text-[11px] uppercase tracking-wider font-bold mb-1">What are Core Web Vitals?</dt>
-                <dd className="text-white/60 leading-relaxed font-light">
-                  Core Web Vitals are a standardized set of real-world user experience metrics defined by Google that evaluate loading speed (LCP), interactivity responsiveness (INP), and visual stability (CLS).
-                </dd>
-              </dl>
-              <div className="flex items-center gap-3 text-xs font-mono text-emerald-400 mb-3">
-                <span className="bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">LCP &lt; 2.5s</span>
-                <span className="bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">CLS &lt; 0.1</span>
-                <span className="bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">INP &lt; 200ms</span>
+            <div data-gsap-stagger="" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <div className="rh-edge-orbit-card bg-[#111111] border border-[#222222] p-7 flex flex-col justify-between min-h-[240px]">
+                <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/10 text-[#BAFF00] flex items-center justify-center mb-6">
+                  <Code2 className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-[20px] font-medium tracking-[-0.02em] text-white mb-2">
+                    React 19
+                  </h3>
+                  <p className="text-[13px] text-[#939393] leading-[1.6]">
+                    Component-driven web UI with Server Components, concurrent rendering, and instant transitions.
+                  </p>
+                </div>
               </div>
-              <Link
-                href="/case-studies"
-                className="text-xs text-emerald-400 hover:underline font-medium inline-flex items-center gap-1"
-              >
-                <span>View our website case studies for verified load times</span>
-                <ArrowRight className="w-3 h-3" />
-              </Link>
-            </div>
-            <div className="liquid-glass rounded-2xl p-7 border border-white/10">
-              <h3 className="text-white font-medium text-lg mb-2">Lighthouse Score Guarantee</h3>
-              <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed mb-4">
-                Guaranteed 90+ Lighthouse benchmark scores across Performance, Accessibility, Best Practices, and 100 SEO score.
-              </p>
-              <div className="flex items-center gap-3 text-xs font-mono text-emerald-400">
-                <span className="bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">Perf 90+</span>
-                <span className="bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">SEO 100</span>
+
+              <div className="rh-edge-orbit-card is-lime bg-[#111111] border border-[#2A2A2A] p-7 flex flex-col justify-between min-h-[240px]">
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-10 h-10 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center">
+                      <Layers className="w-5 h-5" />
+                    </div>
+                    <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#BAFF00]">
+                      CORE ENGINE
+                    </span>
+                  </div>
+                  <h3 className="text-[20px] font-medium tracking-[-0.02em] text-white mb-2">
+                    Next.js
+                  </h3>
+                  <p className="text-[13px] text-[#939393] leading-[1.6] mb-3">
+                    Server-side rendering, static generation, and optimal edge routing.
+                  </p>
+                  <dl className="pt-3 border-t border-white/10 text-xs">
+                    <dt className="text-[#BAFF00] font-mono-tech text-[10px] uppercase tracking-wider mb-1">
+                      What is Next.js?
+                    </dt>
+                    <dd className="text-[#939393] leading-relaxed">
+                      An open-source React framework built for sub-second SSR, static caching, and high-ranking SEO apps.
+                    </dd>
+                  </dl>
+                </div>
+                <Link
+                  href="/nextjs-developer-uk"
+                  className="text-xs text-[#BAFF00] hover:underline font-medium inline-flex items-center gap-1.5 mt-4"
+                >
+                  <span>Hire Next.js Developer UK</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+
+              <div className="rh-edge-orbit-card bg-[#111111] border border-[#222222] p-7 flex flex-col justify-between min-h-[240px]">
+                <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/10 text-[#BAFF00] flex items-center justify-center mb-6">
+                  <FileCode2 className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-[20px] font-medium tracking-[-0.02em] text-white mb-2">
+                    TypeScript
+                  </h3>
+                  <p className="text-[13px] text-[#939393] leading-[1.6]">
+                    Strict type safety eliminating runtime exceptions and making client handoffs clean and maintainable.
+                  </p>
+                </div>
+              </div>
+
+              <div className="rh-edge-orbit-card bg-[#111111] border border-[#222222] p-7 flex flex-col justify-between min-h-[240px]">
+                <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/10 text-[#BAFF00] flex items-center justify-center mb-6">
+                  <Palette className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-[20px] font-medium tracking-[-0.02em] text-white mb-2">
+                    Tailwind CSS
+                  </h3>
+                  <p className="text-[13px] text-[#939393] leading-[1.6]">
+                    Utility-first architecture with purged atomic stylesheets for minimal CSS bundle overhead.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* 4. SEO & GEO */}
-        <div className="mb-16">
-          <div className="flex items-center gap-2.5 mb-6 text-primary">
-            <Search className="w-6 h-6" />
-            <h2 className="text-2xl font-light text-white">SEO, GEO & Search Indexing</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <h3 className="text-white font-medium mb-1">Technical SEO</h3>
-              <p className="text-white/60 text-xs font-light">Meta tags, canonicals, and clean semantic HTML hierarchy.</p>
+          {/* Performance Engineering */}
+          <div>
+            <div data-gsap-reveal="" className="max-w-[760px] mb-12">
+              <div className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#939393] mb-3">
+                02 / SPEED &amp; CORE WEB VITALS
+              </div>
+              <h2 className="text-[32px] sm:text-[44px] font-medium tracking-[-0.04em] leading-[1.08] text-white">
+                Performance Engineering{" "}
+                <span className="text-[#939393]">Guarantees</span>
+              </h2>
             </div>
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <h3 className="text-white font-medium mb-1">Structured Data</h3>
-              <p className="text-white/60 text-xs font-light">JSON-LD Organization, Person, Service, and FAQ schemas.</p>
-            </div>
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <h3 className="text-white font-medium mb-1">Sitemap & Robots</h3>
-              <p className="text-white/60 text-xs font-light">Automated XML sitemap and search engine crawler instructions.</p>
-            </div>
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <h3 className="text-white font-medium mb-1">AI Search (LLMO)</h3>
-              <p className="text-white/60 text-xs font-light">Optimised text blocks for ChatGPT, Claude, and Perplexity indexing.</p>
+
+            <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="rh-edge-orbit-card bg-[#111111] border border-[#222222] p-8 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="w-10 h-10 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center">
+                      <Zap className="w-5 h-5" />
+                    </span>
+                    <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#BAFF00]">
+                      LCP &lt; 0.8S TARGET
+                    </span>
+                  </div>
+                  <h3 className="text-[24px] font-medium tracking-[-0.03em] text-white mb-3">
+                    Core Web Vitals Optimisation
+                  </h3>
+                  <p className="text-[14px] text-[#939393] leading-[1.6] mb-5">
+                    Sub-second LCP (&lt; 2.5s), zero layout shift (CLS &lt; 0.1), and rapid INP (&lt; 200ms) for higher UK Google rankings.
+                  </p>
+                  <dl className="mb-5 p-4 bg-black/60 border border-white/10 text-xs">
+                    <dt className="text-[#BAFF00] font-mono-tech text-[10px] uppercase tracking-wider mb-1">
+                      What are Core Web Vitals?
+                    </dt>
+                    <dd className="text-[#939393] leading-relaxed">
+                      Core Web Vitals are standardized real-world UX metrics defined by Google evaluating loading speed (LCP), interactivity responsiveness (INP), and visual stability (CLS).
+                    </dd>
+                  </dl>
+                </div>
+
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/10">
+                  <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono-tech text-[#BAFF00]">
+                    <span className="bg-white/[0.05] px-2.5 py-1 border border-white/10">LCP &lt; 2.5s</span>
+                    <span className="bg-white/[0.05] px-2.5 py-1 border border-white/10">CLS &lt; 0.1</span>
+                    <span className="bg-white/[0.05] px-2.5 py-1 border border-white/10">INP &lt; 200ms</span>
+                  </div>
+                  <Link
+                    href="/case-studies"
+                    className="text-xs text-[#BAFF00] hover:underline font-medium inline-flex items-center gap-1"
+                  >
+                    <span>Inspect Case Studies</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="rh-edge-orbit-card bg-[#111111] border border-[#222222] p-8 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="w-10 h-10 rounded-full bg-white/[0.08] text-[#BAFF00] flex items-center justify-center">
+                      <Cpu className="w-5 h-5" />
+                    </span>
+                    <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#939393]">
+                      LIGHTHOUSE AUDIT
+                    </span>
+                  </div>
+                  <h3 className="text-[24px] font-medium tracking-[-0.03em] text-white mb-3">
+                    95+ Lighthouse Score Architecture
+                  </h3>
+                  <p className="text-[14px] text-[#939393] leading-[1.6] mb-6">
+                    Every staging build is audited against Lighthouse Performance, Accessibility, Best Practices, and Technical SEO prior to final handover.
+                  </p>
+                </div>
+                <div className="flex flex-wrap items-center gap-3 text-[12px] font-mono-tech pt-4 border-t border-white/10">
+                  <span className="px-3 py-1.5 bg-[#BAFF00] text-[#0D0D0D] font-semibold">Perf 95+</span>
+                  <span className="px-3 py-1.5 bg-white/[0.06] border border-white/15 text-white">SEO 100</span>
+                  <span className="px-3 py-1.5 bg-white/[0.06] border border-white/15 text-white">Clean Git</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* 5. AI INTEGRATIONS */}
-        <div className="mb-16">
-          <div className="flex items-center gap-2.5 mb-6 text-primary">
-            <Bot className="w-6 h-6" />
-            <h2 className="text-2xl font-light text-white">AI & Automation Integrations</h2>
+      {/* 3. SEO, GEO & AI AUTOMATION (#F5F5F7 Light Contrast Band) */}
+      <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-20 sm:py-28 px-5 border-t border-[#E6E6E6]">
+        <div className="max-w-[1168px] mx-auto space-y-20">
+          {/* SEO & GEO */}
+          <div>
+            <div data-gsap-reveal="" className="max-w-[760px] mb-12">
+              <div className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#595959] mb-3">
+                03 / DISCOVERY &amp; STRUCTURED SEARCH
+              </div>
+              <h2 className="text-[32px] sm:text-[44px] font-medium tracking-[-0.04em] leading-[1.08] text-[#0D0D0D]">
+                SEO, GEO &amp; AI Search Indexing
+              </h2>
+            </div>
+
+            <div data-gsap-stagger="" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                {
+                  icon: Search,
+                  title: "Technical SEO",
+                  desc: "Clean semantic HTML, self-referencing canonicals, OpenGraph cards, and metadata discipline.",
+                },
+                {
+                  icon: Code2,
+                  title: "Structured Schema",
+                  desc: "Validated JSON-LD Organization, Service, FAQPage, and BreadcrumbList graphs on key routes.",
+                },
+                {
+                  icon: Layers,
+                  title: "Sitemap & Robots",
+                  desc: "Automated XML sitemap generation and zero accidental crawl blocks across production URLs.",
+                },
+                {
+                  icon: Bot,
+                  title: "AI Search (LLMO)",
+                  desc: "Answer-first semantic markup engineered for ChatGPT, Perplexity, and Google AI Overviews.",
+                },
+              ].map((card) => {
+                const Icon = card.icon;
+                return (
+                  <div
+                    key={card.title}
+                    className="rh-edge-orbit-card bg-white border border-[#E6E6E6] p-7 hover:border-[#0D0D0D] transition-colors flex flex-col justify-between min-h-[210px]"
+                  >
+                    <Icon className="w-5 h-5 text-[#0D0D0D] mb-6" />
+                    <div>
+                      <h3 className="text-[19px] font-medium tracking-[-0.02em] text-[#0D0D0D] mb-2">
+                        {card.title}
+                      </h3>
+                      <p className="text-[13px] text-[#595959] leading-[1.6]">{card.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <h3 className="text-white font-medium text-lg mb-2">Smart Chatbots</h3>
-              <p className="text-white/60 text-xs font-light leading-relaxed">
-                24/7 client support AI assistants that answer enquiries and qualify leads automatically.
+
+          {/* Contextual Cluster Links */}
+          <div>
+            <div data-gsap-reveal="" className="mb-10">
+              <h2 className="text-[26px] sm:text-[34px] font-medium tracking-[-0.03em] text-[#0D0D0D] mb-2">
+                Explore Web Architecture &amp; Client Solutions
+              </h2>
+              <p className="text-[15px] text-[#595959]">
+                Inspect how this engineering stack powers real commercial builds and UK growth platforms.
               </p>
             </div>
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <h3 className="text-white font-medium text-lg mb-2">Lead Workflows</h3>
-              <p className="text-white/60 text-xs font-light leading-relaxed">
-                Automated CRM syncing, instant email notifications, and Instagram lead routing.
-              </p>
-            </div>
-            <div className="liquid-glass rounded-2xl p-6 border border-white/10">
-              <h3 className="text-white font-medium text-lg mb-2">AI Search Readiness</h3>
-              <p className="text-white/60 text-xs font-light leading-relaxed">
-                Structured content layers formatted for AI recommendation engines.
-              </p>
+            <div data-gsap-stagger="" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { k: "Fixed-Price Plans", label: "Web Development Services", href: "/services" },
+                { k: "Specialist UK Build", label: "Next.js Web Development", href: "/nextjs-developer-uk" },
+                { k: "Client Proof", label: "Website Case Studies", href: "/case-studies" },
+                { k: "Direct Briefing", label: "Discuss Your Project", href: "/contact" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rh-edge-orbit-card group bg-white border border-[#E6E6E6] hover:border-[#0D0D0D] p-6 flex flex-col justify-between min-h-[120px] transition-colors"
+                >
+                  <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#595959]">
+                    {item.k}
+                  </span>
+                  <div className="flex items-center justify-between gap-2 text-[16px] font-medium text-[#0D0D0D] mt-4">
+                    <span>{item.label}</span>
+                    <ArrowUpRight className="w-4 h-4 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
+      </section>
 
-        {/* 6. DEVELOPMENT PROCESS */}
-        <div className="mb-20 liquid-glass rounded-3xl p-8 sm:p-10 border border-white/15">
-          <div className="flex items-center gap-2.5 mb-6 text-primary">
-            <Cpu className="w-6 h-6" />
-            <h2 className="text-2xl font-light text-white">Development Process & Standards</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-white/70 font-light">
-            <div>
-              <span className="text-primary font-mono text-sm block mb-1">01. Clean Codebase</span>
-              Reusable TypeScript components with zero bloat and strict linting.
-            </div>
-            <div>
-              <span className="text-primary font-mono text-sm block mb-1">02. Automated Builds</span>
-              Instant CI/CD production pipelines via Vite & Vercel deployment.
-            </div>
-            <div>
-              <span className="text-primary font-mono text-sm block mb-1">03. Security Hardening</span>
-              SSL certificates, headers protection, and safe form handling.
-            </div>
-          </div>
-        </div>
-
-        {/* CONTEXTUAL INTERNAL LINKS CLUSTER */}
-        <div className="mb-16 liquid-glass rounded-3xl p-8 border border-white/15">
-          <h2 className="text-xl sm:text-2xl font-light text-white mb-2">
-            Explore Web Architecture &amp; Client Solutions
-          </h2>
-          <p className="text-white/60 text-xs sm:text-sm mb-6 font-light">
-            Discover how we apply modern engineering to build high-converting platforms for UK small businesses.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="relative p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Fixed-Price Plans</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <Link href="/services" className="after:absolute after:inset-0 focus:outline-none">
-                  Web Development Services
-                </Link>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </div>
-            <div className="relative p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Specialist UK Freelancer</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <Link href="/nextjs-developer-uk" className="after:absolute after:inset-0 focus:outline-none">
-                  Next.js Web Development
-                </Link>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </div>
-            <div className="relative p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Client Proof</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <Link href="/case-studies" className="after:absolute after:inset-0 focus:outline-none">
-                  Website Case Studies
-                </Link>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </div>
-            <div className="relative p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-all group">
-              <span className="text-xs font-mono text-primary uppercase block mb-1">Direct Consultation</span>
-              <span className="text-sm font-medium text-white group-hover:text-primary transition-colors flex items-center justify-between">
-                <Link href="/contact" className="after:absolute after:inset-0 focus:outline-none">
-                  Discuss Your Project
-                </Link>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* 7. CTA */}
-        <div className="text-center bg-white/5 rounded-3xl p-10 border border-white/10">
-          <h3 className="text-2xl font-light text-white mb-3">
-            Want Modern Tech Architecture for Your Business?
+      {/* 4. CTA BANNER */}
+      <section className="bg-black text-white py-20 sm:py-24 px-5 border-t border-[#202020]">
+        <div data-gsap-reveal="" className="max-w-[760px] mx-auto text-center">
+          <h3 className="text-[32px] sm:text-[46px] font-medium tracking-[-0.04em] leading-[1.08] text-white mb-4">
+            Want Modern Tech Architecture{" "}
+            <span className="text-[#939393]">for Your Business?</span>
           </h3>
-          <p className="text-white/60 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
-            Let's build a fast, secure, and AI-ready platform that sets you apart from competitors.
+          <p className="text-[16px] text-[#939393] max-w-[540px] mx-auto mb-9 leading-[1.6]">
+            Let us build a sub-second, zero-bloat Next.js platform engineered to outrank slow legacy competitors.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
               href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary text-black font-semibold px-8 py-3.5 rounded-full hover:bg-white transition-all text-xs cursor-pointer shadow-xl"
+              className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] px-8 py-4 text-[15px] font-medium tracking-[-0.02em] inline-flex items-center gap-2"
             >
               <span>Start Your Project on WhatsApp</span>
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-full transition-all text-xs cursor-pointer border border-white/15"
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-[#333333] text-white hover:border-[#BAFF00] hover:text-[#BAFF00] text-[15px] font-medium tracking-[-0.02em] transition-colors"
             >
               <span>Discuss Your Project</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
-      </div>
+      </section>
+
       <SiteFooter theme="dark" />
     </div>
   );

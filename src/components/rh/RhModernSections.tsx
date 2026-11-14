@@ -314,20 +314,19 @@ export function RhHeroPinned({
   const videoBlend = videoType === "mobile" ? "lighten" : "screen";
 
   return (
-    <div ref={pinRef} data-nav="dark" className="hero-pin-pd bg-[#0D0D0D] text-white">
-      <div ref={innerRef} className="hero-pin-inner-pd bg-[#0D0D0D]">
+    <div ref={pinRef} data-nav="dark" className="hero-pin-pd bg-black text-white">
+      <div ref={innerRef} className="hero-pin-inner-pd bg-black">
         <section className="relative pt-[132px] md:pt-[156px] pb-12 md:pb-16">
-          {/* Ambient radial subtle highlight matching rh.design hero depth */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -top-24 right-[-10%] w-[640px] h-[640px] rounded-full opacity-25 blur-[130px]"
-            style={{
-              background:
-                videoType === "mobile"
-                  ? "radial-gradient(circle, rgba(186,255,0,0.22) 0%, rgba(13,13,13,0) 70%)"
-                  : "radial-gradient(circle, rgba(255,255,255,0.16) 0%, rgba(13,13,13,0) 70%)",
-            }}
-          />
+          {videoType === "mobile" && (
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-24 -left-24 w-[520px] h-[520px] rounded-full opacity-20 blur-[120px]"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(186,255,0,0.22) 0%, rgba(0,0,0,0) 70%)",
+              }}
+            />
+          )}
 
           <div className="max-w-[1168px] mx-auto px-5 relative z-10">
             <div className="grid lg:grid-cols-[1.12fr_0.88fr] gap-10 lg:gap-16 items-center">
@@ -371,19 +370,25 @@ export function RhHeroPinned({
 
               {/* Right 3D Wireframe Video Column */}
               <div
-                className="rh-hero-enter-video relative flex items-center justify-center"
+                className="rh-hero-enter-video relative flex items-center justify-center bg-black"
                 style={{ mixBlendMode: videoBlend }}
               >
                 <div
                   className="w-full max-w-[490px] aspect-square relative flex items-center justify-center"
-                  style={{
-                    WebkitMaskImage: "radial-gradient(closest-side, black 72%, transparent 100%)",
-                    maskImage: "radial-gradient(closest-side, black 72%, transparent 100%)",
-                  }}
+                  style={
+                    videoType === "mobile"
+                      ? {
+                          WebkitMaskImage: "radial-gradient(closest-side, black 72%, transparent 100%)",
+                          maskImage: "radial-gradient(closest-side, black 72%, transparent 100%)",
+                        }
+                      : undefined
+                  }
                 >
                   <video
                     key={videoSrc}
-                    className="hero-cube-video w-full h-auto block select-none pointer-events-none"
+                    className={`hero-cube-video w-full h-auto block select-none pointer-events-none ${
+                      videoType === "mobile" ? "brightness-95 contrast-110" : "contrast-110"
+                    }`}
                     autoPlay
                     muted
                     loop
@@ -543,7 +548,7 @@ export function RhProblemSolutionDeck({
     <section className="relative z-10 bg-white text-[#0D0D0D] py-20 md:py-28 border-b border-[#E6E6E6]">
       <div className="max-w-[1168px] mx-auto px-5">
         {/* Top split heading with struck-through problem & lime-backed solution */}
-        <div className="max-w-[820px] mb-14 md:mb-20">
+        <div data-gsap-reveal="" className="max-w-[820px] mb-14 md:mb-20">
           <div className="text-[11px] font-mono-tech tracking-[0.35em] uppercase text-[#595959] mb-5">
             {overline}
           </div>
@@ -566,7 +571,7 @@ export function RhProblemSolutionDeck({
         </div>
 
         {/* Two-column interactive deck + animated bar chart */}
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        <div data-gsap-stagger="" className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           {/* Left: Interactive Bottleneck Notification Stack + Dark Solution Card */}
           <div className="lg:col-span-6 flex flex-col justify-between gap-6">
             <div className="space-y-3">
@@ -729,7 +734,7 @@ export function RhSystemRows({
   return (
     <section className="relative z-10 bg-white text-[#0D0D0D] py-20 md:py-28">
       <div className="max-w-[1168px] mx-auto px-5">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 md:mb-16">
+        <div data-gsap-reveal="" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 md:mb-16">
           <div className="max-w-[700px]">
             <div className="text-[11px] font-mono-tech tracking-[0.35em] uppercase text-[#595959] mb-4">
               {overline}
@@ -743,7 +748,7 @@ export function RhSystemRows({
           )}
         </div>
 
-        <div className="list-system-pd">
+        <div data-gsap-stagger="" className="list-system-pd">
           {rows.map((row) => {
             const inner = (
               <div className="row-system-pd py-9 md:py-11 px-5 md:px-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-10">
@@ -1079,7 +1084,7 @@ export function RhBentoWorkGrid({
   return (
     <section className="relative z-10 bg-white text-[#0D0D0D] py-20 md:py-28 border-t border-[#E6E6E6]">
       <div className="max-w-[1168px] mx-auto px-5">
-        <div className="max-w-[760px] mb-12 md:mb-16">
+        <div data-gsap-reveal="" className="max-w-[760px] mb-12 md:mb-16">
           <div className="text-[11px] font-mono-tech tracking-[0.35em] uppercase text-[#595959] mb-4">
             {overline}
           </div>
@@ -1089,7 +1094,7 @@ export function RhBentoWorkGrid({
         </div>
 
         {/* 3-Column Proof Bento Row */}
-        <div className="grid md:grid-cols-3 gap-4 mb-6">
+        <div data-gsap-stagger="" className="grid md:grid-cols-3 gap-4 mb-6">
           <div className="p-8 bg-[#FAFAFA] border border-[#E6E6E6] flex flex-col justify-between min-h-[240px]">
             <div className="text-[56px] md:text-[68px] font-medium tracking-[-0.05em] leading-none text-[#0D0D0D] font-mono-tech">
               {proofStat}
@@ -1145,6 +1150,7 @@ export function RhBentoWorkGrid({
 
         {/* 2-Half + 1-Full Repeating Showcase Grid with Floating #BAFF00 Cursor */}
         <div
+          data-gsap-stagger=""
           className="grid md:grid-cols-2 gap-4"
           onMouseMove={(e) => setCursor((c) => ({ ...c, x: e.clientX, y: e.clientY }))}
           onMouseLeave={() => setCursor((c) => ({ ...c, on: false }))}

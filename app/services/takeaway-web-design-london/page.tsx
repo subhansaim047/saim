@@ -1,23 +1,7 @@
 import { Metadata } from "next";
-import Link from "next/link";
-import {
-  ArrowLeft,
-  ArrowRight,
-  CheckCircle2,
-  ShieldCheck,
-  Zap,
-  Percent,
-  Smartphone,
-  MapPin,
-  HelpCircle,
-  Clock,
-  Check,
-  Star,
-  UtensilsCrossed,
-} from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RhHeader } from "@/components/rh/RhHeader";
-import { CommissionSavingsCalculator } from "@/components/CommissionSavingsCalculator";
+import { RhTakeawayCityBody } from "@/components/rh/RhTakeawayCityBody";
 import {
   RhHeroPinned,
   RhProcessCarousel,
@@ -161,7 +145,7 @@ export default function LondonTakeawayWebDesignPage() {
   };
 
   return (
-    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+    <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -199,237 +183,74 @@ export default function LondonTakeawayWebDesignPage() {
         stripLabel="London Boroughs · Commission-Free Ordering"
       />
 
-      <main className="max-w-[1168px] mx-auto px-5 py-16 sm:py-20 space-y-16">
-        <div className="max-w-5xl mx-auto">
-
-          {/* Social Proof Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-2xl font-extrabold text-amber-400 font-mono">0%</div>
-              <div className="text-xs text-white/70 font-medium">Commission Fees</div>
-              <div className="text-[11px] text-white/50">Zero cuts to portals</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-2xl font-extrabold text-amber-400 font-mono">32 Boroughs</div>
-              <div className="text-xs text-white/70 font-medium">London Coverage</div>
-              <div className="text-[11px] text-white/50">All London regions</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-2xl font-extrabold text-amber-400 font-mono">14 Allergens</div>
-              <div className="text-xs text-white/70 font-medium">Interactive Filter</div>
-              <div className="text-[11px] text-white/50">Natasha&apos;s Law Compliant</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-2xl font-extrabold text-amber-400 font-mono">3–5 Days</div>
-              <div className="text-xs text-white/70 font-medium">Turnaround Time</div>
-              <div className="text-[11px] text-white/50">Swift deployment</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Direct Answer Box (AEO) */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-neutral-900/60 border border-white/10">
-          <dl className="space-y-2 text-xs sm:text-sm text-white/80">
-            <dt className="text-amber-400 font-mono text-xs uppercase tracking-wider font-bold">
-              Direct Answer: How Does It Work for London Food Businesses?
-            </dt>
-            <dd className="text-white/70 leading-relaxed font-light">
-              Saim Dev builds commission-free takeaway websites for London restaurants and food businesses starting from £250. Each site includes an online ordering menu, statutory 14-allergen filtering aligned with Natasha&apos;s Law, instant WhatsApp kitchen dispatch, and full Google local SEO setup — helping London takeaways recover 20% to 34% commission fees previously lost to third-party delivery aggregators.
-            </dd>
-          </dl>
-        </div>
-
-        {/* Commission Calculator */}
-        <CommissionSavingsCalculator />
-
-        {/* London Market Realities */}
-        <div className="space-y-6">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase text-amber-400 font-bold tracking-widest">
-              Capital City Dining Landscape
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">
-              Why London Takeaways Must Own Their Customer Data
-            </h2>
-            <p className="text-xs sm:text-sm text-white/70 font-light">
-              London is home to more than 18,000 food establishments. Relying entirely on delivery aggregators means losing your brand identity, paying thousands in commissions every month, and never owning your customer relationships.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-            <div className="p-6 rounded-3xl bg-neutral-900 border border-white/10 space-y-3">
-              <Percent className="w-6 h-6 text-amber-400" />
-              <h3 className="text-lg font-bold text-white">Reclaim Monthly Profit</h3>
-              <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                If your London kitchen does £10,000 per month via delivery apps, you forfeit up to £3,400 every single month. A direct website pays for itself in less than two weeks.
-              </p>
-            </div>
-            <div className="p-6 rounded-3xl bg-neutral-900 border border-white/10 space-y-3">
-              <ShieldCheck className="w-6 h-6 text-amber-400" />
-              <h3 className="text-lg font-bold text-white">London Allergen Compliance</h3>
-              <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                London Environmental Health Officers (EHOs) rigorously audit food businesses for accurate allergen declarations. Our digital menus highlight all 14 statutory allergens clearly.
-              </p>
-            </div>
-            <div className="p-6 rounded-3xl bg-neutral-900 border border-white/10 space-y-3">
-              <Zap className="w-6 h-6 text-amber-400" />
-              <h3 className="text-lg font-bold text-white">Sub-Second Mobile Ordering</h3>
-              <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                Londoners expect immediate mobile responses. Built with Next.js, our menus load in under 800 milliseconds, ensuring zero drop-off on busy 4G and 5G mobile networks.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* London Coverage Areas */}
-        <div className="p-8 rounded-3xl bg-neutral-900/40 border border-white/10 space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-amber-400 font-bold tracking-widest">
-              Hyper-Local Coverage
-            </span>
-            <h2 className="text-2xl font-bold text-white">
-              Serving All London Boroughs &amp; Neighbourhoods
-            </h2>
-            <p className="text-xs sm:text-sm text-white/70 font-light">
-              Whether you manage a fish and chip shop in East London, an artisan bakery in South London, or a high-volume pizza takeaway in West London:
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-white/80">
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Central London &amp; Soho</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Camden &amp; Islington</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Hackney &amp; Shoreditch</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Tower Hamlets &amp; Bow</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Brixton &amp; Lambeth</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Southwark &amp; Bermondsey</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Wandsworth &amp; Battersea</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Ealing &amp; Acton</div>
-          </div>
-        </div>
-
-        {/* Free Kitchen Tools Cross Link */}
-        <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <h3 className="text-white text-sm font-semibold mb-1">Looking for statutory kitchen compliance tools?</h3>
-            <p className="text-xs text-white/60">Explore our free statutory allergen matrix, food cost calculators, and SFBB records.</p>
-          </div>
-          <Link
-            href="/tools"
-            className="text-xs font-semibold px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors flex-shrink-0"
-          >
-            Explore Free Kitchen Tools
-          </Link>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="space-y-6">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase text-amber-400 font-bold tracking-widest">
-              London FAQs
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-3">
-            {londonFaqs.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-neutral-900 border border-white/10 px-6 py-4 cursor-pointer hover:border-white/20 transition-colors"
-              >
-                <summary className="flex items-center justify-between gap-4 list-none select-none focus:outline-none">
-                  <span className="text-white text-sm font-semibold">{faq.q}</span>
-                  <span className="text-amber-400 text-lg font-light flex-shrink-0">+</span>
-                </summary>
-                <p className="pt-3 pb-1 text-white/70 text-xs sm:text-sm leading-relaxed font-light">
-                  {faq.a}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-
-        {/* REGIONAL SIBLING & NATIONAL SILO HUBS */}
-        <div className="rounded-3xl p-8 bg-white/[0.03] border border-white/10 space-y-6">
-          <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-            <MapPin className="w-5 h-5 text-amber-400" />
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-white">
-                UK Regional &amp; National Takeaway Web Design Network
-              </h2>
-              <p className="text-xs text-white/60">
-                Explore our national takeaway web development architecture or discover sister regional ordering hubs.
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link
-              href="/services/takeaway-web-design"
-              className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.07] transition-all group"
-            >
-              <span className="text-[11px] font-mono uppercase text-amber-400 block mb-1">National Pillar</span>
-              <span className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors block mb-1">
-                UK Takeaway Web Design (Main Hub)
-              </span>
-              <p className="text-xs text-white/60 leading-relaxed font-light">
-                National £250 fixed-price takeaway ordering package with interactive 14-allergen menus and zero commission fees.
-              </p>
-            </Link>
-            <Link
-              href="/services/takeaway-web-design-manchester"
-              className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.07] transition-all group"
-            >
-              <span className="text-[11px] font-mono uppercase text-amber-400 block mb-1">Regional Sibling</span>
-              <span className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors block mb-1">
-                Manchester Takeaway Web Design
-              </span>
-              <p className="text-xs text-white/60 leading-relaxed font-light">
-                High-speed digital menus and direct ordering engineered for Curry Mile, Rusholme, and Greater Manchester takeaways.
-              </p>
-            </Link>
-            <Link
-              href="/services/takeaway-web-design-birmingham"
-              className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.07] transition-all group"
-            >
-              <span className="text-[11px] font-mono uppercase text-amber-400 block mb-1">Regional Sibling</span>
-              <span className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors block mb-1">
-                Birmingham Takeaway Web Design
-              </span>
-              <p className="text-xs text-white/60 leading-relaxed font-light">
-                Fast WhatsApp dispatch and allergen filtration for Balti Triangle, Digbeth, and West Midlands restaurants.
-              </p>
-            </Link>
-          </div>
-        </div>
-
-        {/* BOTTOM CTA */}
-        <div className="text-center p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-neutral-900 to-black border border-white/10 space-y-6">
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-            Ready to Launch Your London Takeaway Website?
-          </h2>
-          <p className="text-xs sm:text-sm text-white/70 max-w-xl mx-auto font-light">
-            Contact us today on WhatsApp. Fixed £250 setup, no recurring commissions, and your digital menu live within 3–5 days.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20get%20started%20with%20a%20London%20takeaway%20website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full inline-flex items-center gap-2 transition-all shadow-xl"
-            >
-              <span>Chat on WhatsApp (+92 319 6526604)</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              href="/contact"
-              className="bg-white/10 hover:bg-white/15 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full transition-all border border-white/15"
-            >
-              Submit Project Enquiry
-            </Link>
-          </div>
-        </div>
-      </main>
+      <RhTakeawayCityBody
+        stats={[
+          { value: "0%", label: "Commission Fees", detail: "Zero cuts to portals" },
+          { value: "32 Boroughs", label: "London Coverage", detail: "All London regions" },
+          { value: "14 Allergens", label: "Interactive Filter", detail: "Natasha's Law Compliant" },
+          { value: "3–5 Days", label: "Turnaround Time", detail: "Swift deployment" },
+        ]}
+        aeoQuestion="Direct Answer: How Does It Work for London Food Businesses?"
+        aeoAnswer="Saim Dev builds commission-free takeaway websites for London restaurants and food businesses starting from £250. Each site includes an online ordering menu, statutory 14-allergen filtering aligned with Natasha's Law, instant WhatsApp kitchen dispatch, and full Google local SEO setup — helping London takeaways recover 20% to 34% commission fees previously lost to third-party delivery aggregators."
+        marketEyebrow="Capital City Dining Landscape"
+        marketHeading="Why London Takeaways Must Own Their Customer Data"
+        marketSubtitle="London is home to more than 18,000 food establishments. Relying entirely on delivery aggregators means losing your brand identity, paying thousands in commissions every month, and never owning your customer relationships."
+        marketCards={[
+          {
+            icon: "percent",
+            title: "Reclaim Monthly Profit",
+            description: "If your London kitchen does £10,000 per month via delivery apps, you forfeit up to £3,400 every single month. A direct website pays for itself in less than two weeks.",
+          },
+          {
+            icon: "shield",
+            title: "London Allergen Compliance",
+            description: "London Environmental Health Officers (EHOs) rigorously audit food businesses for accurate allergen declarations. Our digital menus highlight all 14 statutory allergens clearly.",
+          },
+          {
+            icon: "zap",
+            title: "Sub-Second Mobile Ordering",
+            description: "Londoners expect immediate mobile responses. Built with Next.js, our menus load in under 800 milliseconds, ensuring zero drop-off on busy 4G and 5G mobile networks.",
+          },
+        ]}
+        coverageEyebrow="Hyper-Local Coverage"
+        coverageHeading="Serving All London Boroughs & Neighbourhoods"
+        coverageSubtitle="Whether you manage a fish and chip shop in East London, an artisan bakery in South London, or a high-volume pizza takeaway in West London:"
+        coverageAreas={[
+          "Central London & Soho",
+          "Camden & Islington",
+          "Hackney & Shoreditch",
+          "Tower Hamlets & Bow",
+          "Brixton & Lambeth",
+          "Southwark & Bermondsey",
+          "Wandsworth & Battersea",
+          "Ealing & Acton",
+        ]}
+        faqEyebrow="London FAQs"
+        faqs={londonFaqs}
+        siblings={[
+          {
+            href: "/services/takeaway-web-design",
+            tag: "National Pillar",
+            title: "UK Takeaway Web Design (Main Hub)",
+            description: "National £250 fixed-price takeaway ordering package with interactive 14-allergen menus and zero commission fees.",
+          },
+          {
+            href: "/services/takeaway-web-design-manchester",
+            tag: "Regional Sibling",
+            title: "Manchester Takeaway Web Design",
+            description: "High-speed digital menus and direct ordering engineered for Curry Mile, Rusholme, and Greater Manchester takeaways.",
+          },
+          {
+            href: "/services/takeaway-web-design-birmingham",
+            tag: "Regional Sibling",
+            title: "Birmingham Takeaway Web Design",
+            description: "Fast WhatsApp dispatch and allergen filtration for Balti Triangle, Digbeth, and West Midlands restaurants.",
+          },
+        ]}
+        ctaHeading="Ready to Launch Your London Takeaway Website?"
+        ctaSubtitle="Contact us today on WhatsApp. Fixed £250 setup, no recurring commissions, and your digital menu live within 3–5 days."
+        whatsappHref="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20get%20started%20with%20a%20London%20takeaway%20website"
+      />
 
       <RhSystemRows
         overline="LONDON TAKEAWAY STACK"

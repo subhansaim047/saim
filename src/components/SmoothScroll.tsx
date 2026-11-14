@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,7 +11,8 @@ gsap.registerPlugin(ScrollTrigger);
 /**
  * Global motion engine:
  *  - Lenis smooth scroll driven by the GSAP ticker and synced with ScrollTrigger
- *  - Scroll progress bar
+ *  - Route-aware scroll unlock + ScrollTrigger teardown so navigation never leaves scroll stuck
+ *  - Scroll progress bar (RH lime accent)
  *  - Declarative scroll animations via data attributes:
  *      [data-gsap-reveal]   fade/slide-up reveal
  *      [data-gsap-stagger]  children cascade reveal (container attribute)
@@ -19,10 +21,20 @@ gsap.registerPlugin(ScrollTrigger);
  *  - All motion is gated by prefers-reduced-motion via gsap.matchMedia()
  */
 export function SmoothScroll() {
+  const pathname = usePathname();
   const lenisRef = useRef<Lenis | null>(null);
   const progressRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    // Always clear any stale modal/drawer scroll locks on mount or route change
+    document.documentElement.classList.remove("lenis-stopped");
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const mm = gsap.matchMedia();
     let lenis: Lenis | null = null;
@@ -33,27 +45,28 @@ export function SmoothScroll() {
 
     const scrollToTarget = (target: HTMLElement) => {
       if (lenis) {
-        lenis.scrollTo(target, { offset: -85, duration: 1.15, easing: easeInOutCubic });
+        lenis.scrollTo(target, { offset: -85, duration: 1.0, easing: easeInOutCubic });
       } else {
         const top = target.getBoundingClientRect().top + window.scrollY - 85;
-        window.scrollTo({ top, behavior: "smooth" });
+        window.scrollTo({ top, behavior: "auto" });
       }
     };
 
-    // ---------- Smooth scroll (motion allowed only) ----------
+    // ---------- Smooth scroll (desktop wheel only; touch stays native) ----------
     if (!prefersReducedMotion) {
       ScrollTrigger.config({ ignoreMobileResize: true });
       lenis = new Lenis({
-        lerp: 0.075,
+        lerp: 0.14,
         orientation: "vertical",
         gestureOrientation: "vertical",
         smoothWheel: true,
-        wheelMultiplier: 0.95,
-        touchMultiplier: 1.1,
+        wheelMultiplier: 1.0,
+        touchMultiplier: 1.0,
         infinite: false,
       });
       lenisRef.current = lenis;
       (window as any).__lenis = lenis;
+      lenis.start();
 
       lenis.on("scroll", ScrollTrigger.update);
       tickerFn = (time: number) => lenis!.raf(time * 1000);
@@ -96,9 +109,9 @@ export function SmoothScroll() {
         gsap.to(targets, {
           y: 0,
           opacity: 1,
-          duration: 0.3,
+          duration: 0.36,
           ease: "power3.out",
-          stagger: targets.length > 1 ? 0.03 : 0,
+          stagger: targets.length > 1 ? 0.04 : 0,
           overwrite: "auto",
           clearProps: "transform,opacity",
         });
@@ -113,11 +126,11 @@ export function SmoothScroll() {
             revealNode(node, false);
           });
         },
-        { rootMargin: "280px 0px 200px 0px", threshold: 0.01 }
+        { rootMargin: "260px 0px 180px 0px", threshold: 0.01 }
       );
 
       const sweepVisibleReveals = () => {
-        const thresholdY = window.innerHeight + 280;
+        const thresholdY = window.innerHeight + 260;
         trackedContainers.forEach((node) => {
           const rect = node.getBoundingClientRect();
           if (rect.height === 0 && rect.width === 0) return;
@@ -132,7 +145,7 @@ export function SmoothScroll() {
       };
 
       const registerReveals = (root: ParentNode = document) => {
-        const thresholdY = window.innerHeight + 280;
+        const thresholdY = window.innerHeight + 260;
         root.querySelectorAll<HTMLElement>("[data-gsap-reveal], [data-gsap-stagger]").forEach((node) => {
           if (revealed.has(node) || trackedContainers.has(node)) return;
           const targets = getTargets(node);
@@ -144,22 +157,23 @@ export function SmoothScroll() {
             return;
           }
           trackedContainers.add(node);
-          gsap.set(targets, { y: 24, opacity: 0 });
+          gsap.set(targets, { y: 22, opacity: 0 });
           revealObserver.observe(node);
         });
       };
 
       registerReveals(document);
 
-      let refreshTimer: number | undefined;
-      const scheduleRefresh = () => {
+      let resizeTimer: number | undefined;
+      const scheduleLenisResize = () => {
         sweepVisibleReveals();
-        if (refreshTimer) window.clearTimeout(refreshTimer);
-        refreshTimer = window.setTimeout(() => {
+        if (resizeTimer) window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(() => {
           registerReveals(document);
           sweepVisibleReveals();
-          ScrollTrigger.refresh();
-        }, 120);
+          lenis?.resize();
+          onScrollProgress();
+        }, 160);
       };
 
       const mutationObserver = new MutationObserver(() => {
@@ -170,12 +184,22 @@ export function SmoothScroll() {
         mutationObserver.observe(document.body, { childList: true, subtree: true });
       }
 
-      const resizeObserver = new ResizeObserver(scheduleRefresh);
+      const resizeObserver = new ResizeObserver(scheduleLenisResize);
       if (document.body) {
         resizeObserver.observe(document.body);
       }
 
+      let lastWidth = window.innerWidth;
+      const onWindowResize = () => {
+        if (window.innerWidth !== lastWidth) {
+          lastWidth = window.innerWidth;
+          ScrollTrigger.refresh();
+        }
+        lenis?.resize();
+      };
+
       window.addEventListener("scroll", sweepVisibleReveals, { passive: true });
+      window.addEventListener("resize", onWindowResize, { passive: true });
       if (lenis) {
         lenis.on("scroll", sweepVisibleReveals);
       }
@@ -185,8 +209,9 @@ export function SmoothScroll() {
         mutationObserver.disconnect();
         resizeObserver.disconnect();
         window.removeEventListener("scroll", sweepVisibleReveals);
+        window.removeEventListener("resize", onWindowResize);
         if (lenis) lenis.off("scroll", sweepVisibleReveals);
-        if (refreshTimer) window.clearTimeout(refreshTimer);
+        if (resizeTimer) window.clearTimeout(resizeTimer);
         trackedContainers.forEach((node) => revealNode(node, true));
       });
 
@@ -212,12 +237,12 @@ export function SmoothScroll() {
       // Magnetic buttons (desktop pointers only)
       if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         gsap.utils.toArray<HTMLElement>("[data-magnetic]").forEach((el) => {
-          const xTo = gsap.quickTo(el, "x", { duration: 0.5, ease: "power3.out" });
-          const yTo = gsap.quickTo(el, "y", { duration: 0.5, ease: "power3.out" });
+          const xTo = gsap.quickTo(el, "x", { duration: 0.45, ease: "power3.out" });
+          const yTo = gsap.quickTo(el, "y", { duration: 0.45, ease: "power3.out" });
           const move = (e: MouseEvent) => {
             const r = el.getBoundingClientRect();
-            xTo((e.clientX - (r.left + r.width / 2)) * 0.22);
-            yTo((e.clientY - (r.top + r.height / 2)) * 0.22);
+            xTo((e.clientX - (r.left + r.width / 2)) * 0.2);
+            yTo((e.clientY - (r.top + r.height / 2)) * 0.2);
           };
           const leave = () => {
             xTo(0);
@@ -232,19 +257,27 @@ export function SmoothScroll() {
         });
       }
 
-      // Refresh after layout settles (images/fonts)
+      // Refresh once after initial settle
       const refresh = () => {
         registerReveals(document);
         sweepVisibleReveals();
+        lenis?.resize();
         ScrollTrigger.refresh();
+        onScrollProgress();
       };
       window.addEventListener("load", refresh);
-      const t = window.setTimeout(refresh, 600);
+      const t1 = window.setTimeout(refresh, 350);
+      const t2 = window.setTimeout(() => {
+        registerReveals(document);
+        sweepVisibleReveals();
+        lenis?.resize();
+      }, 950);
 
       return () => {
         cleanups.forEach((fn) => fn());
         window.removeEventListener("load", refresh);
-        window.clearTimeout(t);
+        window.clearTimeout(t1);
+        window.clearTimeout(t2);
       };
     });
 
@@ -287,7 +320,7 @@ export function SmoothScroll() {
         } catch {
           // safe fallback
         }
-      }, 350);
+      }, 300);
     }
 
     return () => {
@@ -295,11 +328,15 @@ export function SmoothScroll() {
       document.removeEventListener("click", handleAnchorClick, { capture: true });
       window.removeEventListener("scroll", onScrollProgress);
       mm.revert();
+      ScrollTrigger.getAll().forEach((st) => st.kill());
       if (tickerFn) gsap.ticker.remove(tickerFn);
       lenis?.destroy();
       (window as any).__lenis = null;
+      document.documentElement.classList.remove("lenis-stopped");
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <div
@@ -308,7 +345,7 @@ export function SmoothScroll() {
     >
       <div
         ref={progressRef}
-        className="h-full w-full origin-left bg-gradient-to-r from-[#2F6CE1] via-[#5B92F5] to-[#1D4ED8]"
+        className="h-full w-full origin-left bg-gradient-to-r from-[#BAFF00] via-[#D4FF4D] to-[#BAFF00]"
         style={{ transform: "scaleX(0)", willChange: "transform" }}
       />
     </div>

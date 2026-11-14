@@ -13,164 +13,40 @@
 .slick-track {
 		display: flex;
 }
-</style><link rel="stylesheet" href="/rh-exact/_astro/BookCall.ODSHaQ4l.css"><link rel="stylesheet" href="/rh-exact/_astro/Base.0MHSBaZ2.css"><link rel="stylesheet" href="/rh-exact/saim-theme.css?v=1"></head><body class="body"><div class="loader" style="pointer-events:none"><div class="lottie-loader-wrapper"><div class="saim-loader-badge" aria-label="Saim Dev loading"><div class="saim-loader-logo-wrap"><img src="/saim-dev-logo.png" alt="Saim Dev" class="saim-loader-logo-img"></div><span class="saim-loader-wordmark">SAIM DEV</span></div></div><div class="js-loader w-embed w-script"><script>
+</style><link rel="stylesheet" href="/rh-exact/_astro/BookCall.ODSHaQ4l.css"><link rel="stylesheet" href="/rh-exact/_astro/Base.0MHSBaZ2.css"><link rel="stylesheet" href="/rh-exact/saim-theme.css?v=1"></head><body class="body"><script>
 (function () {
-  var loader = document.querySelector('.loader');
-  if (!loader) return;
+  window.__loaderAnimationComplete = true;
+  window.dispatchEvent(new CustomEvent('loaderAnimationComplete'));
 
-  var SECTION_HERO_SELECTOR   = '.section-hero';
-  var H1_SELECTOR             = SECTION_HERO_SELECTOR + ' .rel-hero .h1-hero';
-  var LOTTIE_WRAPPER_SELECTOR = SECTION_HERO_SELECTOR + ' .absolute-lottie .lottie-wrapper';
-
-  var EASE = 'ease';
-  var DESIGN_MOVE_X = 144;
-
-  window.__loaderAnimationComplete = false;
-
-  function notifyLoaderComplete() {
-    if (window.__loaderAnimationComplete) return;
-    window.__loaderAnimationComplete = true;
-    window.dispatchEvent(new CustomEvent('loaderAnimationComplete'));
-  }
-
-  function findDesignH1(allH1) {
+  function runHeroIntro() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var allH1 = document.querySelectorAll('.section-hero .rel-hero .h1-hero');
+    var h1Design = null;
     for (var i = 0; i < allH1.length; i++) {
-      var txt = (allH1[i].textContent || '').trim().toLowerCase();
-      if (txt === 'brands' || txt === 'design' || txt === 'startups') return allH1[i];
+      var t = (allH1[i].textContent || '').trim().toLowerCase();
+      if (t === 'brands' || t === 'design' || t === 'startups') { h1Design = allH1[i]; break; }
     }
-    for (var j = allH1.length - 1; j >= 0; j--) {
-      if (allH1[j].offsetParent !== null) return allH1[j];
+    var lottie = document.querySelector('.section-hero .absolute-lottie .lottie-wrapper');
+    if (h1Design && h1Design.animate) {
+      h1Design.animate(
+        [{ transform: 'translateX(-28px)' }, { transform: 'translateX(0)' }],
+        { duration: 520, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'both' }
+      );
     }
-    return allH1[allH1.length - 1] || null;
-  }
-
-  var h1DesignEl = null;
-  function hideDesignH1Early() {
-    if (h1DesignEl) return h1DesignEl;
-    var allH1 = document.querySelectorAll(H1_SELECTOR);
-    if (!allH1.length) return null;
-    var el = findDesignH1(allH1);
-    if (el) {
-      el.style.setProperty('transition', 'none', 'important');
-      el.style.setProperty('opacity', '1', 'important');
-      el.style.setProperty('transform', 'translateX(-' + DESIGN_MOVE_X + 'px)', 'important');
-      void el.offsetHeight;
-      h1DesignEl = el;
+    if (lottie && lottie.animate) {
+      lottie.animate(
+        [{ opacity: 0.35, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }],
+        { duration: 640, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'both' }
+      );
     }
-    return el;
-  }
-  hideDesignH1Early();
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', hideDesignH1Early);
-  }
-
-  var styleTag = document.createElement('style');
-  styleTag.textContent =
-    LOTTIE_WRAPPER_SELECTOR + ' { opacity: 0 !important; transform: translateY(100px) !important; }';
-  document.head.appendChild(styleTag);
-
-  function animate(el, transitionCSS, delayMs, finalStyles) {
-    if (!el) return;
-    setTimeout(function () {
-      el.style.setProperty('transition', transitionCSS, 'important');
-      void el.offsetHeight;
-      for (var prop in finalStyles) {
-        el.style.setProperty(prop, finalStyles[prop], 'important');
-      }
-    }, delayMs);
-  }
-
-  function clearTransformAfter(el, afterMs) {
-    if (!el) return;
-    setTimeout(function () {
-      el.style.setProperty('transform', 'none', 'important');
-    }, afterMs);
-  }
-
-  function playHeroAnimation() {
-    var h1Design = hideDesignH1Early() || h1DesignEl;
-    var lottieWrapper = document.querySelector(LOTTIE_WRAPPER_SELECTOR);
-
-    setTimeout(function () {
-      if (h1Design) {
-        animate(h1Design, 'transform 0.6s ' + EASE, 0, { transform: 'translateX(0)' });
-        clearTransformAfter(h1Design, 650);
-      }
-      if (lottieWrapper) {
-        animate(lottieWrapper, 'opacity 0.8s ' + EASE + ', transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1)', 0,
-          { opacity: '1', transform: 'translateY(0)' });
-        clearTransformAfter(lottieWrapper, 1250);
-      }
-    }, 50);
-
-    notifyLoaderComplete();
-  }
-
-  function whenReady(cb) {
-    var called = false;
-    function go() {
-      if (called) return;
-      called = true;
-      cb();
-    }
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(go);
-      setTimeout(go, 120);
-    } else {
-      setTimeout(go, 80);
-    }
-  }
-
-  if (sessionStorage.getItem('loaderShown')) {
-    loader.style.display = 'none';
-    function startHeroWhenReady() {
-      whenReady(function () {
-        requestAnimationFrame(function () {
-          requestAnimationFrame(playHeroAnimation);
-        });
-      });
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', startHeroWhenReady, { once: true });
-    } else {
-      startHeroWhenReady();
-    }
-    return;
-  }
-
-  loader.style.willChange = 'transform';
-  var hidden = false;
-  function hide() {
-    if (hidden) return;
-    hidden = true;
-    sessionStorage.setItem('loaderShown', '1');
-    notifyLoaderComplete();
-    var h = loader.getBoundingClientRect().height || window.innerHeight;
-    loader.style.transition = 'transform 0.35s cubic-bezier(0.76, 0, 0.24, 1)';
-    loader.style.transform = 'translateY(-' + h + 'px)';
-    loader.addEventListener('transitionend', function () {
-      loader.style.display = 'none';
-      playHeroAnimation();
-    }, { once: true });
-    setTimeout(function () {
-      if (loader.style.display !== 'none') {
-        loader.style.display = 'none';
-        playHeroAnimation();
-      }
-    }, 420);
-  }
-
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function scheduleHide() {
-    setTimeout(hide, reduceMotion ? 30 : 120);
   }
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', scheduleHide, { once: true });
+    document.addEventListener('DOMContentLoaded', runHeroIntro, { once: true });
   } else {
-    scheduleHide();
+    runHeroIntro();
   }
 })();
-</script></div></div><div class="mouse-wrapper"><div style="opacity:0;-webkit-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="mouse"><div class="button-base-book">Drag me</div></div></div><div class="mouse-wrapper-project"><div data-w-id="9f3b054b-897c-4885-7680-3a9e27fc2a6c" style="opacity:0;-webkit-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="mouse-project"><div class="button-base-book">See more</div><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a02c7dd0940ff80841fa5_arrow-up-right.svg" alt="" class="icon-20"></div></div><div class="page-wrapper"><div data-w-id="8247694a-8575-f682-c0e0-822a0d46e894" data-animation="over-right" data-collapse="none" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav"><div class="container-1130"><div class="wrapper-navbar"><nav role="navigation" class="nav-menu w-nav-menu"><div class="div-block-10"><a href="/" aria-current="page" class="link-home-1 w-inline-block w--current"><img decoding="async" src="/saim-dev-logo.png" alt="Saim Dev" class="img-48-white"><img decoding="async" src="/saim-dev-logo.png" alt="Saim Dev" class="img-48-black"></a><div class="g-48-copy"><a data-w-id="fd1a9c29-b9bf-2c81-bc8a-a9a204f1a3d8" href="/contact" class="btn-book btn-nav w-inline-block"><div class="wrapper-under"><div class="button-base-medium">Get in touch</div><div class="under-line-dark"></div></div><div class="circle-yellow"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a02c7dd0940ff80841fa5_arrow-up-right.svg" alt="" class="icon-16x16"></div></a></div></div></nav><div class="menu-button w-nav-button"><div class="div-block-27"><div class="line-top"></div><div class="line-middle"></div><div class="line-bottom"></div></div></div></div></div><div class="code-embed-2 w-embed w-script"><script defer="" src="/rh-exact/vendor/gsap.min.js"></script>
+</script><div class="mouse-wrapper"><div style="opacity:0;-webkit-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="mouse"><div class="button-base-book">Drag me</div></div></div><div class="mouse-wrapper-project"><div data-w-id="9f3b054b-897c-4885-7680-3a9e27fc2a6c" style="opacity:0;-webkit-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="mouse-project"><div class="button-base-book">See more</div><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a02c7dd0940ff80841fa5_arrow-up-right.svg" alt="" class="icon-20"></div></div><div class="page-wrapper"><div data-w-id="8247694a-8575-f682-c0e0-822a0d46e894" data-animation="over-right" data-collapse="none" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav"><div class="container-1130"><div class="wrapper-navbar"><nav role="navigation" class="nav-menu w-nav-menu"><div class="div-block-10"><a href="/" aria-current="page" class="link-home-1 w-inline-block w--current"><img decoding="async" src="/saim-dev-logo.png" alt="Saim Dev" class="img-48-white"><img decoding="async" src="/saim-dev-logo.png" alt="Saim Dev" class="img-48-black"></a><div class="g-48-copy"><a data-w-id="fd1a9c29-b9bf-2c81-bc8a-a9a204f1a3d8" href="/contact" class="btn-book btn-nav w-inline-block"><div class="wrapper-under"><div class="button-base-medium">Get in touch</div><div class="under-line-dark"></div></div><div class="circle-yellow"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a02c7dd0940ff80841fa5_arrow-up-right.svg" alt="" class="icon-16x16"></div></a></div></div></nav><div class="menu-button w-nav-button"><div class="div-block-27"><div class="line-top"></div><div class="line-middle"></div><div class="line-bottom"></div></div></div></div></div><div class="code-embed-2 w-embed w-script"><script defer="" src="/rh-exact/vendor/gsap.min.js"></script>
 <script defer="" src="/rh-exact/vendor/ScrollTrigger.min.js"></script>
 <style>
 /* Initial states */
@@ -273,7 +149,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const navbar = document.querySelector('.navbar');
   // Dark sections: legacy class list + any element opted in via data-nav="dark" (used by new service pages)
-  const darkSections = document.querySelectorAll('.section-case, .section-services, .section-founder, .section-parallax, .section-footer, [data-nav="dark"]');
+  const darkSections = document.querySelectorAll('.section-case, .section-services, .section-founder, .section-footer, [data-nav="dark"]');
   
   let lastScrollY = window.scrollY;
   
@@ -435,7 +311,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         init() {
-            this.createLoadingOverlay();
+            if (!window.__loaderAnimationComplete) {
+                this.createLoadingOverlay();
+                this.waitForLoaderThenReveal();
+            }
+            if (this.wrapper) this.wrapper.style.touchAction = 'pan-y';
             this.setupVideoObserver();
             this.observeSlideVideos(this.slides);
             this.cloneSlides();
@@ -444,8 +324,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.addEventListeners();
             this.setupVisibilityObserver();
             this.startAutoScroll();
-
-            this.waitForLoaderThenReveal();
 
             window.addEventListener('resize', () => this.handleResize());
             document.addEventListener('visibilitychange', () => this.handlePageVisibility());
@@ -599,9 +477,10 @@ document.addEventListener('DOMContentLoaded', function() {
             window.addEventListener('mousemove', (e) => this.drag(e));
             window.addEventListener('mouseup', () => this.dragEnd());
 
-            this.wrapper.addEventListener('touchstart', (e) => this.dragStart(e), { passive: false });
+            this.wrapper.addEventListener('touchstart', (e) => this.dragStart(e), { passive: true });
             window.addEventListener('touchmove', (e) => this.drag(e), { passive: false });
-            window.addEventListener('touchend', () => this.dragEnd());
+            window.addEventListener('touchend', () => this.dragEnd(), { passive: true });
+            window.addEventListener('touchcancel', () => this.dragEnd(), { passive: true });
 
             this.wrapper.addEventListener('contextmenu', (e) => e.preventDefault());
         }
@@ -650,22 +529,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
         dragStart(e) {
             this.isDragging = true;
-            this.wrapper.classList.add('grabbing', 'dragging');
+            this.touchAxis = e.type.includes('mouse') ? 'x' : null;
             this.startX = this.getPositionX(e);
+            this.startY = e.touches && e.touches[0] ? e.touches[0].clientY : 0;
             this.lastX = this.startX;
             this.lastTime = Date.now();
             this.velocity = 0;
 
-            this.cancelMomentum();
-            this.cancelAutoScroll();
-
-            e.preventDefault();
+            if (e.type.includes('mouse')) {
+                this.wrapper.classList.add('grabbing', 'dragging');
+                this.cancelMomentum();
+                this.cancelAutoScroll();
+                if (e.cancelable) e.preventDefault();
+            }
         }
 
         drag(e) {
             if (!this.isDragging) return;
 
-            e.preventDefault();
+            if (e.touches && e.touches[0]) {
+                if (this.touchAxis === null) {
+                    const dx = Math.abs(e.touches[0].clientX - this.startX);
+                    const dy = Math.abs(e.touches[0].clientY - this.startY);
+                    if (dy > dx && dy > 4) {
+                        this.isDragging = false;
+                        this.touchAxis = 'y';
+                        return;
+                    }
+                    if (dx <= 6) return;
+                    this.touchAxis = 'x';
+                    this.wrapper.classList.add('dragging');
+                    this.cancelMomentum();
+                    this.cancelAutoScroll();
+                }
+                if (this.touchAxis !== 'x') return;
+            }
+
+            if (e.cancelable) e.preventDefault();
 
             const currentPosition = this.getPositionX(e);
             const currentTime = Date.now();
@@ -684,9 +584,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         dragEnd() {
-            if (!this.isDragging) return;
+            if (!this.isDragging) {
+                this.touchAxis = null;
+                return;
+            }
 
             this.isDragging = false;
+            this.touchAxis = null;
             this.wrapper.classList.remove('grabbing', 'dragging');
             this.prevTranslate = this.currentTranslate;
 
@@ -733,7 +637,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         getPositionX(e) {
-            return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+            if (e.type.includes('mouse')) return e.pageX;
+            const pt = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]);
+            return pt ? pt.clientX : (typeof e.clientX === 'number' ? e.clientX : this.lastX);
         }
 
         setSliderPosition() {
@@ -2238,7 +2144,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-</script></div></section><section class="section-parallax"><div class="w-layout-blockcontainer container-1540 none-padding w-container"><div class="div-info"><div data-w-id="d4f8e7a4-ae21-973c-a8c4-25d9154bf90a" class="g-32-center"><img decoding="async" src="/saim-dev-logo.png" alt="Saim Dev" class="img-author"><div class="div-block-34"><h2 class="m-32 max-w-3">From idea to live<span class="span-b3 span-line-b3">Engineered to convert</span></h2></div><div class="chat-cta" data-chat=""><div class="chat-bubble"><span class="chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="chat-text">We’re accepting <br class="chat-br">new clients</span></div></div></div><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:20px;"><a data-w-id="b8477b34-41a1-8670-cf32-55c11adaaa51" href="/contact" class="btn-book w-inline-block"><div><div class="text-block-3">Start your project</div><div style="width:0%" class="under-line"></div></div><div class="circle-yellow"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a02c7dd0940ff80841fa5_arrow-up-right.svg" alt="" class="icon-16x16"></div></a><a href="/overview" class="button padding-29 border saim-more-btn w-inline-block"><div class="overflow"><div class="inner-text-btn"><div>View more details &amp; estimator</div><div>View more details &amp; estimator</div></div></div></a></div></div><div data-w-id="44161fe8-8378-635f-1276-06a2d5e9711c" class="wrapper-parallax"><div class="block-img-1"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a07949809da610b2b0a3e_Frame-1533208667.webp" sizes="100vw" srcset="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a07949809da610b2b0a3e_Frame-1533208667-p-500.webp 500w, /rh-exact/assets/6909ed375ee6ef22dffa47c2__690a07949809da610b2b0a3e_Frame-1533208667-p-800.webp 800w, /rh-exact/assets/6909ed375ee6ef22dffa47c2__690a07949809da610b2b0a3e_Frame-1533208667.webp 843w" alt="Saim Dev showcase" class="image-1"></div><div class="block-img-2"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a079467530e3112fe04a4_Frame-1533208668.webp" sizes="100vw" srcset="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a079467530e3112fe04a4_Frame-1533208668-p-500.webp 500w, /rh-exact/assets/6909ed375ee6ef22dffa47c2__690a079467530e3112fe04a4_Frame-1533208668.webp 540w" alt="Saim Dev showcase" class="img-2"></div><div class="block-img-3"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794a5be96c06263e732_1.webp" sizes="100vw" srcset="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794a5be96c06263e732_1-p-500.webp 500w, /rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794a5be96c06263e732_1.webp 684w" alt="Saim Dev showcase" class="img-3"></div><div class="block-img-4"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794428237572bf9ad16_Frame-1533208670.webp" sizes="100vw" srcset="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794428237572bf9ad16_Frame-1533208670-p-500.webp 500w, /rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794428237572bf9ad16_Frame-1533208670.webp 698w" alt="Saim Dev showcase" class="img-4"></div><div class="block-img-5"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794b2efda7a59b15485_Frame-1533208677.webp" sizes="100vw" srcset="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794b2efda7a59b15485_Frame-1533208677-p-500.webp 500w, /rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794b2efda7a59b15485_Frame-1533208677-p-800.webp 800w, /rh-exact/assets/6909ed375ee6ef22dffa47c2__690a0794b2efda7a59b15485_Frame-1533208677.webp 825w" alt="Saim Dev showcase" class="img-5"></div></div></div></section><footer data-nav="dark" class="section-footer-pd"><div class="box-footer-pd"><div class="top-footer-pd"><div class="talk-footer-pd"><div class="talk-title-pd">Let’s talk</div><div class="email-row-pd"><a href="mailto:contact@saimdev.site" class="email-link-pd">contact@saimdev.site</a><a href="#" aria-label="Copy email" data-copy-email="contact@saimdev.site" class="copy-btn-pd w-inline-block"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba8df00b2e3886ac286_pd-ft-copy.svg" alt="Copy the email address" class="icon-copy-pd"></a></div></div><a data-w-id="fd1a9c29-b9bf-2c81-bc8a-a9a204f1a3d8" href="/contact" class="btn-book btn-nav w-inline-block"><div class="wrapper-under"><div class="button-base-medium">Start your project</div><div class="under-line-dark"></div></div><div class="circle-yellow"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a02c7dd0940ff80841fa5_arrow-up-right.svg" alt="" class="icon-16x16"></div></a></div><div class="bottom-footer-pd"><div class="mid-footer-pd"><div class="brand-footer-pd"><img decoding="async" src="/saim-dev-logo.png" alt="Saim Dev" class="logo-footer-pd"><p class="body-base-book address-footer-pd">Saim Dev Studio<br>Custom Web Development<br>UK, EU &amp; Global</p></div><div class="cols-footer-pd"><div class="col-footer-pd"><div class="col-head-footer-pd">Studio &amp; Details</div><div class="col-links-footer-pd"><a href="/overview" class="link-footer-pd">View More Details &amp; Specs</a><a href="/overview#estimator" class="link-footer-pd">Project Cost Estimator</a><a href="/about" class="link-footer-pd">About Saim Dev</a><a href="/contact" class="link-footer-pd">Contact Us</a><a href="/privacy" class="link-footer-pd">Privacy Policy</a></div></div><div class="col-footer-pd"><div class="col-head-footer-pd">Services</div><div class="col-links-footer-pd"><a href="/services/website-development" class="link-footer-pd">Next.js Websites</a><a href="/services/ecommerce-development" class="link-footer-pd">Headless E-Commerce</a><a href="/services/takeaway-web-design" class="link-footer-pd">Takeaway Systems</a><a href="/services/custom-web-apps" class="link-footer-pd">Custom Web Apps</a><a href="/tools" class="link-footer-pd">160+ Free UK Tools</a></div></div><div class="col-footer-pd"><div class="col-head-footer-pd">Live Demos</div><div class="col-links-footer-pd"><a href="/hq-leathercon/index.html" class="link-footer-pd">HQ Leathercon Store</a><a href="/hotbite/index.html" class="link-footer-pd">HotBite Ordering</a><a href="/demos/akdetailing/index.html" class="link-footer-pd">DetailX Auto Shop</a><a href="/demos/serenia/index.html" class="link-footer-pd">SERENIA Wellness Spa</a><a href="/demos" class="link-footer-pd">All 15+ Live Demos</a></div></div></div></div><div class="legal-footer-pd"><div class="copy-footer-pd">© 2026 Saim Dev. All rights reserved</div><div class="socials-footer-pd"><a href="https://x.com/saimwebdev" aria-label="X" class="social-footer-pd w-inline-block"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba9286be234b3bae6de_pd-ft-x.svg" alt="X" class="icon-20-pd"></a><a href="/demos" aria-label="Dribbble" class="social-footer-pd w-inline-block"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba860e95da32d4d57b6_pd-ft-dribbble.svg" alt="Dribbble" class="icon-20-pd"></a><a href="https://wa.me/923196526604" aria-label="LinkedIn" class="social-footer-pd w-inline-block"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba8d1e1e27f9ce01131_pd-ft-linkedin.svg" alt="LinkedIn" class="icon-20-pd"></a><a href="/overview" aria-label="Contra" target="_blank" rel="noopener" class="social-footer-pd w-inline-block"><img decoding="async" src="/rh-exact/footer/contra.svg" alt="Contra" class="icon-20-pd"></a></div></div><div data-copy-toast="1" class="toast-footer-pd"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba835b7f14765c090d6_pd-ft-check.svg" alt="" class="icon-20-pd"><div class="toast-text-footer-pd">Email copied</div></div></div></div><div class="w-embed w-script"><style>.email-row-pd:hover .copy-btn-pd,.copy-btn-pd:focus-visible{opacity:1}.copy-btn-pd{cursor:pointer}.toast-footer-pd.is-on{opacity:1;transform:translate(-50%,0)}@media (hover:none){.copy-btn-pd{opacity:1}}
+</script></div></section><footer data-nav="dark" class="section-footer-pd"><div class="box-footer-pd"><div class="top-footer-pd"><div class="talk-footer-pd"><div class="talk-title-pd">Let’s talk</div><div class="email-row-pd"><a href="mailto:contact@saimdev.site" class="email-link-pd">contact@saimdev.site</a><a href="#" aria-label="Copy email" data-copy-email="contact@saimdev.site" class="copy-btn-pd w-inline-block"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba8df00b2e3886ac286_pd-ft-copy.svg" alt="Copy the email address" class="icon-copy-pd"></a></div></div><a data-w-id="fd1a9c29-b9bf-2c81-bc8a-a9a204f1a3d8" href="/contact" class="btn-book btn-nav w-inline-block"><div class="wrapper-under"><div class="button-base-medium">Start your project</div><div class="under-line-dark"></div></div><div class="circle-yellow"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__690a02c7dd0940ff80841fa5_arrow-up-right.svg" alt="" class="icon-16x16"></div></a></div><div class="bottom-footer-pd"><div class="mid-footer-pd"><div class="brand-footer-pd"><img decoding="async" src="/saim-dev-logo.png" alt="Saim Dev" class="logo-footer-pd"><p class="body-base-book address-footer-pd">Saim Dev Studio<br>Custom Web Development<br>UK, EU &amp; Global</p></div><div class="cols-footer-pd"><div class="col-footer-pd"><div class="col-head-footer-pd">Studio &amp; Details</div><div class="col-links-footer-pd"><a href="/overview" class="link-footer-pd">View More Details &amp; Specs</a><a href="/overview#estimator" class="link-footer-pd">Project Cost Estimator</a><a href="/about" class="link-footer-pd">About Saim Dev</a><a href="/contact" class="link-footer-pd">Contact Us</a><a href="/privacy" class="link-footer-pd">Privacy Policy</a></div></div><div class="col-footer-pd"><div class="col-head-footer-pd">Services</div><div class="col-links-footer-pd"><a href="/services/website-development" class="link-footer-pd">Next.js Websites</a><a href="/services/ecommerce-development" class="link-footer-pd">Headless E-Commerce</a><a href="/services/takeaway-web-design" class="link-footer-pd">Takeaway Systems</a><a href="/services/custom-web-apps" class="link-footer-pd">Custom Web Apps</a><a href="/tools" class="link-footer-pd">160+ Free UK Tools</a></div></div><div class="col-footer-pd"><div class="col-head-footer-pd">Live Demos</div><div class="col-links-footer-pd"><a href="/hq-leathercon/index.html" class="link-footer-pd">HQ Leathercon Store</a><a href="/hotbite/index.html" class="link-footer-pd">HotBite Ordering</a><a href="/demos/akdetailing/index.html" class="link-footer-pd">DetailX Auto Shop</a><a href="/demos/serenia/index.html" class="link-footer-pd">SERENIA Wellness Spa</a><a href="/demos" class="link-footer-pd">All 15+ Live Demos</a></div></div></div></div><div class="legal-footer-pd"><div class="copy-footer-pd">© 2026 Saim Dev. All rights reserved</div><div class="socials-footer-pd"><a href="https://x.com/saimwebdev" aria-label="X" class="social-footer-pd w-inline-block"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba9286be234b3bae6de_pd-ft-x.svg" alt="X" class="icon-20-pd"></a><a href="/demos" aria-label="Dribbble" class="social-footer-pd w-inline-block"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba860e95da32d4d57b6_pd-ft-dribbble.svg" alt="Dribbble" class="icon-20-pd"></a><a href="https://wa.me/923196526604" aria-label="LinkedIn" class="social-footer-pd w-inline-block"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba8d1e1e27f9ce01131_pd-ft-linkedin.svg" alt="LinkedIn" class="icon-20-pd"></a><a href="/overview" aria-label="Contra" target="_blank" rel="noopener" class="social-footer-pd w-inline-block"><img decoding="async" src="/rh-exact/footer/contra.svg" alt="Contra" class="icon-20-pd"></a></div></div><div data-copy-toast="1" class="toast-footer-pd"><img decoding="async" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab81ba835b7f14765c090d6_pd-ft-check.svg" alt="" class="icon-20-pd"><div class="toast-text-footer-pd">Email copied</div></div></div></div><div class="w-embed w-script"><style>.email-row-pd:hover .copy-btn-pd,.copy-btn-pd:focus-visible{opacity:1}.copy-btn-pd{cursor:pointer}.toast-footer-pd.is-on{opacity:1;transform:translate(-50%,0)}@media (hover:none){.copy-btn-pd{opacity:1}}
 /* Social icons: white icon turns black on the yellow hover background (same as the homepage footer) */
 .social-footer-pd .icon-20-pd{transition:filter .3s}.social-footer-pd:hover .icon-20-pd{filter:invert(1)}</style>
 <script>
@@ -2296,13 +2202,22 @@ document.addEventListener('DOMContentLoaded', function () {
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   if (typeof Lenis === 'undefined') return;
+  document.documentElement.classList.remove('lenis-stopped');
+  document.documentElement.style.overflow = '';
+  document.body.style.overflow = '';
   let lenis = new Lenis({
-    lerp: 0.2,
+    lerp: 0.14,
     wheelMultiplier: 1.0,
     gestureOrientation: "vertical",
-    normalizeWheel: false,
+    smoothWheel: true,
     smoothTouch: false,
   });
+  window.__saimLenis = lenis;
+  window.addEventListener('load', function () {
+    document.documentElement.classList.remove('lenis-stopped');
+    lenis.resize();
+  });
+  setTimeout(function () { lenis.resize(); }, 450);
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
@@ -2644,42 +2559,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }, { rootMargin: '200px 0px', threshold: 0.01 });
     vids.forEach(function (v) { io.observe(v); });
-  })();
-</script><script>
-  (function () {
-    var box = document.querySelector('[data-chat]');
-    if (!box) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var bubble = box.querySelector('.chat-bubble'), text = box.querySelector('.chat-text');
-    var TYPING = 1300, timers = [];
-    function clear() { timers.forEach(clearTimeout); timers = []; }
-    function reset() {
-      clear();
-      box.classList.remove('is-in', 'is-msg');
-      box.classList.add('is-armed');
-      bubble.style.width = '';
-    }
-    function play() {
-      reset();
-      var cs = getComputedStyle(bubble); // text plus the bubble's side padding and border
-      var full = Math.ceil(text.offsetWidth + parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight) + 2);
-      timers.push(setTimeout(function () { box.classList.add('is-in'); }, 80));
-      timers.push(setTimeout(function () {
-        bubble.style.width = full + 'px';
-        box.classList.add('is-msg');
-      }, 80 + TYPING));
-    }
-    reset();
-    var area = box.closest('.g-32-center') || box.parentNode;
-    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      // with a mouse: only while the pointer is over the portrait and heading
-      area.addEventListener('mouseenter', play);
-      area.addEventListener('mouseleave', reset);
-    } else {
-      // touch screens have no hover: a tap on the portrait or heading plays it, a tap elsewhere hides it again
-      area.addEventListener('click', function (e) { e.stopPropagation(); play(); });
-      document.addEventListener('click', reset);
-    }
   })();
 </script><script>
   (function () {

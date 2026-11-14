@@ -39,7 +39,7 @@
   --border-hairline-hover: rgba(255, 255, 255, 0.20);
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
-  --rh-black: #0D0D0D;
+  --rh-black: #000000;
   --rh-surface-dark: #161616;
   --rh-border-dark: #202020;
   --rh-light: #F5F5F7;
@@ -103,7 +103,7 @@ button:hover > .rh-roll-wrap > span + span {
 
 /* Accessibility Focus Ring */
 *:focus-visible {
-  outline: 2px solid #FF4A1C;
+  outline: 2px solid #BAFF00;
   outline-offset: 3px;
 }
 
@@ -184,16 +184,16 @@ button:hover > .rh-roll-wrap > span + span {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* Smooth scrolling & background */
+/* Smooth scrolling & background (auto avoids fighting Lenis RAF smooth wheel) */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   scroll-padding-top: 5.5rem;
-  background-color: #050505 !important;
+  background-color: #000000 !important;
   color: #E8E4D9;
 }
 
 body {
-  background-color: #050505 !important;
+  background-color: #000000 !important;
   color: #E8E4D9;
   overflow-x: clip;
 }
@@ -249,7 +249,7 @@ html.lenis, html.lenis body {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF4A1C;
+  background: #BAFF00;
 }
 
 /* ============================================================================
@@ -261,8 +261,8 @@ html.lenis, html.lenis body {
   width: 6px;
   height: 6px;
   border-radius: 9999px;
-  background-color: #FF4A1C;
-  box-shadow: 0 0 12px rgba(255, 74, 28, 0.85);
+  background-color: #BAFF00;
+  box-shadow: 0 0 12px rgba(186, 255, 0, 0.75);
 }
 
 .text-dual-tone {
@@ -303,7 +303,7 @@ html.lenis, html.lenis body {
   transform: translateY(-3px);
   box-shadow:
     inset 0 1px 1px rgba(255, 255, 255, 0.20),
-    0 0 0 5px rgba(255, 74, 28, 0.05),
+    0 0 0 5px rgba(186, 255, 0, 0.06),
     0 28px 65px -12px rgba(0, 0, 0, 0.85);
 }
 
@@ -410,10 +410,10 @@ html.lenis, html.lenis body {
   transition: transform 0.35s var(--ease-out-expo);
 }
 details[open] .sybiosme-disclosure-icon {
-  background: rgba(255, 74, 28, 0.16);
-  border-color: rgba(255, 74, 28, 0.42);
-  color: #FF4A1C;
-  box-shadow: 0 0 18px rgba(255, 74, 28, 0.25);
+  background: rgba(186, 255, 0, 0.16);
+  border-color: rgba(186, 255, 0, 0.45);
+  color: #BAFF00;
+  box-shadow: 0 0 18px rgba(186, 255, 0, 0.22);
 }
 details[open] .sybiosme-disclosure-icon svg {
   transform: rotate(180deg);
@@ -634,32 +634,32 @@ input[type="range"].sybiosme-slider::-webkit-slider-thumb {
   width: 24px;
   height: 24px;
   border-radius: 9999px;
-  background: #FF4A1C;
-  border: 3px solid #ffffff;
-  box-shadow: 0 0 16px rgba(255, 74, 28, 0.7), 0 2px 8px rgba(0, 0, 0, 0.6);
+  background: #BAFF00;
+  border: 3px solid #000000;
+  box-shadow: 0 0 16px rgba(186, 255, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.6);
   transition: transform 0.2s var(--ease-out-expo), box-shadow 0.2s ease;
 }
 
 input[type="range"].sybiosme-slider::-webkit-slider-thumb:hover,
 input[type="range"].sybiosme-slider::-webkit-slider-thumb:active {
   transform: scale(1.18);
-  box-shadow: 0 0 24px rgba(255, 74, 28, 0.95), 0 4px 14px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 24px rgba(186, 255, 0, 0.85), 0 4px 14px rgba(0, 0, 0, 0.7);
 }
 
 input[type="range"].sybiosme-slider::-moz-range-thumb {
   width: 24px;
   height: 24px;
   border-radius: 9999px;
-  background: #FF4A1C;
-  border: 3px solid #ffffff;
-  box-shadow: 0 0 16px rgba(255, 74, 28, 0.7), 0 2px 8px rgba(0, 0, 0, 0.6);
+  background: #BAFF00;
+  border: 3px solid #000000;
+  box-shadow: 0 0 16px rgba(186, 255, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.6);
   transition: transform 0.2s var(--ease-out-expo), box-shadow 0.2s ease;
 }
 
 input[type="range"].sybiosme-slider::-moz-range-thumb:hover,
 input[type="range"].sybiosme-slider::-moz-range-thumb:active {
   transform: scale(1.18);
-  box-shadow: 0 0 24px rgba(255, 74, 28, 0.95), 0 4px 14px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 24px rgba(186, 255, 0, 0.85), 0 4px 14px rgba(0, 0, 0, 0.7);
 }
 
 /* ReactDrops Studio Polish Hooks */
@@ -1143,7 +1143,7 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 /* 1. Hero Curtain Pin & Immediate Page-Open Entrance */
 .hero-pin-pd {
   z-index: 0;
-  background-color: #0d0d0d;
+  background-color: #000000;
   position: relative;
   overflow: clip;
 }
@@ -1155,7 +1155,7 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 
 .hero-pin-inner-pd {
   position: relative;
-  background-color: #0d0d0d;
+  background-color: #000000;
   will-change: transform;
 }
 
@@ -1237,7 +1237,7 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 
 /* 2. Laser-Draw 5-Cell Hero Strip (.strip-logos-pd) */
 .strip-logos-pd {
-  background-color: #0d0d0d;
+  background-color: #000000;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   align-items: center;
@@ -1577,7 +1577,7 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 
 /* 4. Dark Horizontal Process Carousel + Pulsing Conic Divider */
 .section-process-pd {
-  background-color: #0d0d0d;
+  background-color: #000000;
   color: #ffffff;
   position: relative;
   overflow: hidden;

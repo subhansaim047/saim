@@ -185,7 +185,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
   const videoType = MOBILE_VIDEO_SLUGS.has(data.slug) ? "mobile" : "cube";
 
   return (
-    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] relative">
+    <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] relative">
       <RhHeader theme="dark" />
 
       <main>
@@ -254,7 +254,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
           <div className="max-w-[1168px] mx-auto space-y-24">
             {/* Features & Benefits */}
             <div>
-              <div className="max-w-3xl mb-14">
+              <div data-gsap-reveal="" className="max-w-3xl mb-14">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
                   03 / Value Proposition
                 </span>
@@ -264,7 +264,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {data.featuresAndBenefits.map((item, idx) => (
                   <div
                     key={idx}
@@ -720,7 +720,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             </div>
 
             {/* Final Conversion Banner inside Service Page */}
-            <div className="rounded-3xl bg-[#0D0D0D] text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div className="rounded-3xl bg-black border border-[#222222] text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8" data-gsap-reveal="">
               <div className="max-w-2xl">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-2">
                   Zero Risk • 100% Satisfaction
@@ -757,12 +757,12 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                 <p className="text-[12px] uppercase tracking-[0.88px] text-[#595959] mb-5">
                   Explore Related Services
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                <div data-gsap-stagger="" className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                   {data.relatedServices.map((rel, i) => (
                     <Link
                       key={i}
                       href={rel.href}
-                      className="p-6 rounded-2xl bg-white border border-[#E6E6E6] hover:border-[#0D0D0D] transition-colors block group"
+                      className="rh-edge-orbit-card p-6 rounded-2xl bg-white border border-[#E6E6E6] hover:border-[#0D0D0D] transition-colors block group"
                     >
                       <p className="text-[17px] font-medium text-[#0D0D0D] group-hover:underline">
                         {rel.name}

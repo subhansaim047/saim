@@ -1,23 +1,7 @@
 import { Metadata } from "next";
-import Link from "next/link";
-import {
-  ArrowLeft,
-  ArrowRight,
-  CheckCircle2,
-  ShieldCheck,
-  Zap,
-  Percent,
-  Smartphone,
-  MapPin,
-  HelpCircle,
-  Clock,
-  Check,
-  Star,
-  UtensilsCrossed,
-} from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RhHeader } from "@/components/rh/RhHeader";
-import { CommissionSavingsCalculator } from "@/components/CommissionSavingsCalculator";
+import { RhTakeawayCityBody } from "@/components/rh/RhTakeawayCityBody";
 import {
   RhHeroPinned,
   RhProcessCarousel,
@@ -161,7 +145,7 @@ export default function ManchesterTakeawayWebDesignPage() {
   };
 
   return (
-    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+    <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -198,238 +182,74 @@ export default function ManchesterTakeawayWebDesignPage() {
         videoType="mobile"
         stripLabel="Greater Manchester · Commission-Free Ordering"
       />
-
-      <main className="max-w-[1168px] mx-auto px-5 py-16 sm:py-20 space-y-16">
-        <div className="max-w-5xl mx-auto">
-
-          {/* Social Proof Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-2xl font-extrabold text-amber-400 font-mono">0%</div>
-              <div className="text-xs text-white/70 font-medium">Commission Fees</div>
-              <div className="text-[11px] text-white/50">Keep 100% of order totals</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-2xl font-extrabold text-amber-400 font-mono">10 Boroughs</div>
-              <div className="text-xs text-white/70 font-medium">Manchester Coverage</div>
-              <div className="text-[11px] text-white/50">Across Greater Manchester</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-2xl font-extrabold text-amber-400 font-mono">14 Allergens</div>
-              <div className="text-xs text-white/70 font-medium">Interactive Filter</div>
-              <div className="text-[11px] text-white/50">Natasha&apos;s Law Compliant</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-2xl font-extrabold text-amber-400 font-mono">3–5 Days</div>
-              <div className="text-xs text-white/70 font-medium">Turnaround Time</div>
-              <div className="text-[11px] text-white/50">Rapid launch</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Direct Answer Box (AEO) */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-neutral-900/60 border border-white/10">
-          <dl className="space-y-2 text-xs sm:text-sm text-white/80">
-            <dt className="text-amber-400 font-mono text-xs uppercase tracking-wider font-bold">
-              Direct Answer: How Does Direct Ordering Benefit Manchester Food Operators?
-            </dt>
-            <dd className="text-white/70 leading-relaxed font-light">
-              Saim Dev provides custom, commission-free takeaway website design for Manchester eateries from £250. Rather than paying 20% to 34% commissions to third-party aggregator portals, your Manchester customers order directly via a sub-second Next.js menu with live 14-allergen filtering aligned with Natasha&apos;s Law, receiving orders straight to your kitchen WhatsApp or tablet.
-            </dd>
-          </dl>
-        </div>
-
-        {/* Commission Calculator */}
-        <CommissionSavingsCalculator />
-
-        {/* Manchester Market Context */}
-        <div className="space-y-6">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase text-amber-400 font-bold tracking-widest">
-              Northern Powerhouse Food Sector
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">
-              Why Manchester Restaurants Are Moving Away From Food Apps
-            </h2>
-            <p className="text-xs sm:text-sm text-white/70 font-light">
-              From the Curry Mile in Rusholme to bustling burger bars in the Northern Quarter and Ancoats, independent Manchester takeaways are protecting their margins by taking direct orders.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-            <div className="p-6 rounded-3xl bg-neutral-900 border border-white/10 space-y-3">
-              <Percent className="w-6 h-6 text-amber-400" />
-              <h3 className="text-lg font-bold text-white">Protect Hard-Earned Profit</h3>
-              <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                Paying thousands of pounds every month to delivery apps drains working capital. A custom £250 website lets you keep every pound paid by your local customers.
-              </p>
-            </div>
-            <div className="p-6 rounded-3xl bg-neutral-900 border border-white/10 space-y-3">
-              <ShieldCheck className="w-6 h-6 text-amber-400" />
-              <h3 className="text-lg font-bold text-white">Natasha&apos;s Law Safeguards</h3>
-              <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                UK legislation requires unambiguous allergen declarations. Our digital menus clearly highlight and filter all 14 statutory allergens for customer peace of mind.
-              </p>
-            </div>
-            <div className="p-6 rounded-3xl bg-neutral-900 border border-white/10 space-y-3">
-              <Zap className="w-6 h-6 text-amber-400" />
-              <h3 className="text-lg font-bold text-white">Blazing Edge Performance</h3>
-              <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
-                Pre-rendered on global edge networks, our Next.js pages load in under 800ms, making mobile ordering effortless for customers throughout Manchester.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Manchester Coverage Areas */}
-        <div className="p-8 rounded-3xl bg-neutral-900/40 border border-white/10 space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-amber-400 font-bold tracking-widest">
-              Regional Coverage
-            </span>
-            <h2 className="text-2xl font-bold text-white">
-              Supporting Kitchens Across Greater Manchester
-            </h2>
-            <p className="text-xs sm:text-sm text-white/70 font-light">
-              We deliver bespoke websites for takeaways, chip shops, and bakeries across all Greater Manchester districts:
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-white/80">
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Manchester City Centre</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Northern Quarter &amp; Ancoats</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Rusholme (Curry Mile)</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Didsbury &amp; Chorlton</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Salford &amp; MediaCity</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Trafford &amp; Altrincham</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Stockport &amp; Cheadle</div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5">Bolton, Bury &amp; Rochdale</div>
-          </div>
-        </div>
-
-        {/* Free Kitchen Tools Cross Link */}
-        <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <h3 className="text-white text-sm font-semibold mb-1">Looking for statutory kitchen compliance tools?</h3>
-            <p className="text-xs text-white/60">Explore our free statutory allergen matrix, food cost calculators, and SFBB records.</p>
-          </div>
-          <Link
-            href="/tools"
-            className="text-xs font-semibold px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors flex-shrink-0"
-          >
-            Explore Free Kitchen Tools
-          </Link>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="space-y-6">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase text-amber-400 font-bold tracking-widest">
-              Manchester FAQs
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-3">
-            {manchesterFaqs.map((faq, i) => (
-              <details
-                key={i}
-                className="group rounded-2xl bg-neutral-900 border border-white/10 px-6 py-4 cursor-pointer hover:border-white/20 transition-colors"
-              >
-                <summary className="flex items-center justify-between gap-4 list-none select-none focus:outline-none">
-                  <span className="text-white text-sm font-semibold">{faq.q}</span>
-                  <span className="text-amber-400 text-lg font-light flex-shrink-0">+</span>
-                </summary>
-                <p className="pt-3 pb-1 text-white/70 text-xs sm:text-sm leading-relaxed font-light">
-                  {faq.a}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-
-        {/* REGIONAL SIBLING & NATIONAL SILO HUBS */}
-        <div className="rounded-3xl p-8 bg-white/[0.03] border border-white/10 space-y-6">
-          <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-            <MapPin className="w-5 h-5 text-amber-400" />
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-white">
-                UK Regional &amp; National Takeaway Web Design Network
-              </h2>
-              <p className="text-xs text-white/60">
-                Explore our national takeaway web development architecture or discover sister regional ordering hubs.
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link
-              href="/services/takeaway-web-design"
-              className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.07] transition-all group"
-            >
-              <span className="text-[11px] font-mono uppercase text-amber-400 block mb-1">National Pillar</span>
-              <span className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors block mb-1">
-                UK Takeaway Web Design (Main Hub)
-              </span>
-              <p className="text-xs text-white/60 leading-relaxed font-light">
-                National £250 fixed-price takeaway ordering package with interactive 14-allergen menus and zero commission fees.
-              </p>
-            </Link>
-            <Link
-              href="/services/takeaway-web-design-london"
-              className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.07] transition-all group"
-            >
-              <span className="text-[11px] font-mono uppercase text-amber-400 block mb-1">Regional Sibling</span>
-              <span className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors block mb-1">
-                London Takeaway Web Design
-              </span>
-              <p className="text-xs text-white/60 leading-relaxed font-light">
-                Zero-commission online ordering and Natasha&apos;s Law digital menus covering all 32 London boroughs.
-              </p>
-            </Link>
-            <Link
-              href="/services/takeaway-web-design-birmingham"
-              className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.07] transition-all group"
-            >
-              <span className="text-[11px] font-mono uppercase text-amber-400 block mb-1">Regional Sibling</span>
-              <span className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors block mb-1">
-                Birmingham Takeaway Web Design
-              </span>
-              <p className="text-xs text-white/60 leading-relaxed font-light">
-                Fast WhatsApp dispatch and allergen filtration for Balti Triangle, Digbeth, and West Midlands restaurants.
-              </p>
-            </Link>
-          </div>
-        </div>
-
-        {/* BOTTOM CTA */}
-        <div className="text-center p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-neutral-900 to-black border border-white/10 space-y-6">
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-            Ready to Launch Your Manchester Takeaway Website?
-          </h2>
-          <p className="text-xs sm:text-sm text-white/70 max-w-xl mx-auto font-light">
-            Contact us today on WhatsApp. Fixed £250 setup, zero ongoing commissions, and your digital menu live within 3–5 days.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20get%20started%20with%20a%20Manchester%20takeaway%20website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full inline-flex items-center gap-2 transition-all shadow-xl"
-            >
-              <span>Chat on WhatsApp (+92 319 6526604)</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              href="/contact"
-              className="bg-white/10 hover:bg-white/15 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full transition-all border border-white/15"
-            >
-              Submit Project Enquiry
-            </Link>
-          </div>
-        </div>
-      </main>
+      <RhTakeawayCityBody
+        stats={[
+          { value: "0%", label: "Commission Fees", detail: "Keep 100% of order totals" },
+          { value: "10 Boroughs", label: "Manchester Coverage", detail: "Across Greater Manchester" },
+          { value: "14 Allergens", label: "Interactive Filter", detail: "Natasha's Law Compliant" },
+          { value: "3–5 Days", label: "Turnaround Time", detail: "Rapid launch" },
+        ]}
+        aeoQuestion="Direct Answer: How Does Direct Ordering Benefit Manchester Food Operators?"
+        aeoAnswer="Saim Dev provides custom, commission-free takeaway website design for Manchester eateries from £250. Rather than paying 20% to 34% commissions to third-party aggregator portals, your Manchester customers order directly via a sub-second Next.js menu with live 14-allergen filtering aligned with Natasha's Law, receiving orders straight to your kitchen WhatsApp or tablet."
+        marketEyebrow="Northern Powerhouse Food Sector"
+        marketHeading="Why Manchester Restaurants Are Moving Away From Food Apps"
+        marketSubtitle="From the Curry Mile in Rusholme to bustling burger bars in the Northern Quarter and Ancoats, independent Manchester takeaways are protecting their margins by taking direct orders."
+        marketCards={[
+          {
+            icon: "percent",
+            title: "Protect Hard-Earned Profit",
+            description: "Paying thousands of pounds every month to delivery apps drains working capital. A custom £250 website lets you keep every pound paid by your local customers.",
+          },
+          {
+            icon: "shield",
+            title: "Natasha's Law Safeguards",
+            description: "UK legislation requires unambiguous allergen declarations. Our digital menus clearly highlight and filter all 14 statutory allergens for customer peace of mind.",
+          },
+          {
+            icon: "zap",
+            title: "Blazing Edge Performance",
+            description: "Pre-rendered on global edge networks, our Next.js pages load in under 800ms, making mobile ordering effortless for customers throughout Manchester.",
+          },
+        ]}
+        coverageEyebrow="Regional Coverage"
+        coverageHeading="Supporting Kitchens Across Greater Manchester"
+        coverageSubtitle="We deliver bespoke websites for takeaways, chip shops, and bakeries across all Greater Manchester districts:"
+        coverageAreas={[
+          "Manchester City Centre",
+          "Northern Quarter & Ancoats",
+          "Rusholme (Curry Mile)",
+          "Didsbury & Chorlton",
+          "Salford & MediaCity",
+          "Trafford & Altrincham",
+          "Stockport & Cheadle",
+          "Bolton, Bury & Rochdale",
+        ]}
+        faqEyebrow="Manchester FAQs"
+        faqs={manchesterFaqs}
+        siblings={[
+          {
+            href: "/services/takeaway-web-design",
+            tag: "National Pillar",
+            title: "UK Takeaway Web Design (Main Hub)",
+            description: "National £250 fixed-price takeaway ordering package with interactive 14-allergen menus and zero commission fees.",
+          },
+          {
+            href: "/services/takeaway-web-design-london",
+            tag: "Regional Sibling",
+            title: "London Takeaway Web Design",
+            description: "Zero-commission online ordering and Natasha's Law digital menus covering all 32 London boroughs.",
+          },
+          {
+            href: "/services/takeaway-web-design-birmingham",
+            tag: "Regional Sibling",
+            title: "Birmingham Takeaway Web Design",
+            description: "Fast WhatsApp dispatch and allergen filtration for Balti Triangle, Digbeth, and West Midlands restaurants.",
+          },
+        ]}
+        ctaHeading="Ready to Launch Your Manchester Takeaway Website?"
+        ctaSubtitle="Contact us today on WhatsApp. Fixed £250 setup, zero ongoing commissions, and your digital menu live within 3–5 days."
+        whatsappHref="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20get%20started%20with%20a%20Manchester%20takeaway%20website"
+      />
 
       <RhSystemRows
         overline="MANCHESTER TAKEAWAY STACK"

@@ -61,7 +61,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
         className={`rh-page fixed top-0 left-0 right-0 z-[100] transition-colors duration-300 ${
           scrolled && !megaOpen
             ? isDark
-              ? "bg-[#0D0D0D]/85 backdrop-blur-xl border-b border-white/[0.08]"
+              ? "bg-black/90 backdrop-blur-xl border-b border-white/[0.08]"
               : "bg-[#F5F5F7]/85 backdrop-blur-xl border-b border-black/[0.07]"
             : "bg-transparent"
         }`}
@@ -262,7 +262,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
         <div
           onMouseEnter={openMega}
           onMouseLeave={scheduleCloseMega}
-          className={`hidden min-[921px]:block fixed top-0 left-0 right-0 z-[101] bg-[#0D0D0D] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden ${
+          className={`hidden min-[921px]:block fixed top-0 left-0 right-0 z-[101] bg-black transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden ${
             megaOpen
               ? "opacity-100 visible pointer-events-auto [clip-path:inset(0_0_0%_0)]"
               : "opacity-0 invisible pointer-events-none [clip-path:inset(0_0_100%_0)]"
@@ -465,7 +465,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             <Link
               prefetch={false}
               href="/demos"
-              className="group relative overflow-hidden p-10 flex flex-col justify-between items-start isolate bg-[#0D0D0D]"
+              className="group relative overflow-hidden p-10 flex flex-col justify-between items-start isolate bg-black"
             >
               <img
                 src="/rh-exact/nav/squire-logo.svg"
@@ -505,7 +505,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
 
       {/* Mobile Full-Screen Drawer */}
       <div
-        className={`rh-page min-[921px]:hidden fixed inset-0 z-[200] bg-[#0D0D0D] text-white p-5 flex flex-col justify-between transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] ${
+        className={`rh-page min-[921px]:hidden fixed inset-0 z-[200] bg-black text-white p-5 flex flex-col justify-between transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] ${
           mobileOpen ? "translate-x-0" : "translate-x-full pointer-events-none"
         }`}
       >

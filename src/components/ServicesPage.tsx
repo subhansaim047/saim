@@ -259,7 +259,7 @@ export const ServicesPage = () => {
   );
 
   return (
-    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+    <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Wireframe Video + Laser-Draw Strip + Curtain Parallax) */}
@@ -566,7 +566,7 @@ export const ServicesPage = () => {
       />
 
       {/* 3. DARK FAQ ACCORDION (rh.design style) */}
-      <section className="bg-[#0D0D0D] text-white py-20 sm:py-28 border-t border-[#202020]">
+      <section className="bg-black text-white py-20 sm:py-28 border-t border-[#1D1D1D]">
         <div className="max-w-[1168px] mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="text-[12px] uppercase tracking-[0.88px] text-[#939393] mb-3">

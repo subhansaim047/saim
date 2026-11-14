@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, PhoneCall, Compass, Code2, Rocket, CheckCircle2, ShieldCheck, GitBranch, RefreshCw } from "lucide-react";
+import { ArrowRight, ShieldCheck, GitBranch, RefreshCw } from "lucide-react";
 import { SiteFooter } from "../../src/components/SiteFooter";
 import { RhHeader } from "../../src/components/rh/RhHeader";
 import {
@@ -130,7 +130,7 @@ const processFaqSchema = {
 
 export default function ProcessPage() {
   return (
-    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+    <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(processSchema) }}
@@ -252,139 +252,111 @@ export default function ProcessPage() {
         ]}
       />
 
-      <main className="max-w-[1168px] mx-auto px-5 py-16 sm:py-20">
+      {/* ARCHITECTURAL COMMERCIAL SAFEGUARDS (#F5F5F7 Light Contrast Band) */}
+      <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-20 sm:py-28 px-5 border-t border-[#E6E6E6]">
+        <div className="max-w-[1168px] mx-auto">
+          <div data-gsap-reveal="" className="max-w-[740px] mb-14">
+            <div className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#595959] mb-4">
+              CLIENT PROTECTION &amp; OWNERSHIP
+            </div>
+            <h2 className="text-[34px] sm:text-[48px] font-medium tracking-[-0.04em] leading-[1.06] text-[#0D0D0D]">
+              Built with zero risk{" "}
+              <span className="text-[#939393]">and full code independence.</span>
+            </h2>
+          </div>
 
-        {/* 4 STAGES DEEP DIVE */}
-        <section className="space-y-12 mb-24 max-w-5xl mx-auto">
-          {[
-            {
-              num: "01",
-              title: "Discovery & Strategic Brief",
-              timeline: "Day 1–2",
-              icon: PhoneCall,
-              color: "text-[#FF4A1C]",
-              desc: "We review your target market, competitors, branding requirements, key integrations (Stripe, WhatsApp, Calendly, CRMs), and conversion goals. We agree on an exact written specification and delivery date with a 50% milestone deposit.",
-              checkpoints: [
-                "Business objectives & competitor gap review",
-                "Exact page inventory & copy requirements",
-                "Technical stack & third-party API requirements",
-                "Signed scope confirmation with fixed delivery date"
-              ]
-            },
-            {
-              num: "02",
-              title: "Strategy & Information Architecture",
-              timeline: "Day 2–4",
-              icon: Compass,
-              color: "text-sky-400",
-              desc: "We establish the information architecture, UX wireframes, navigation flow, and visual moodboards. You review and approve the wireframe structure before any production code is written.",
-              checkpoints: [
-                "Conversion-focused wireframes & section layouts",
-                "Typography scale & brand design tokens",
-                "Schema.org JSON-LD structured data planning",
-                "Mobile-first responsive layout validation"
-              ]
-            },
-            {
-              num: "03",
-              title: "Design & Next.js Full-Stack Engineering",
-              timeline: "Day 4–8",
-              icon: Code2,
-              color: "text-emerald-400",
-              desc: "We build your bespoke website using Next.js 14/15 App Router, TypeScript, and Tailwind CSS. We host the build on a private staging link where you can test interactions, forms, and speeds in real time.",
-              checkpoints: [
-                "Semantic, clean, zero-bloat code architecture",
-                "Fast interactive components & micro-animations",
-                "Private password-protected staging URL for client testing",
-                "Form validation, WhatsApp lead routing & CRM webhooks"
-              ]
-            },
-            {
-              num: "04",
-              title: "Testing, Launch & Complete Handover",
-              timeline: "Day 8–10",
-              icon: Rocket,
-              color: "text-purple-400",
-              desc: "We execute full cross-browser testing, verify Core Web Vitals on mobile and desktop, configure your custom domain with SSL, submit sitemaps to Google Search Console, and hand over 100% of the repository.",
-              checkpoints: [
-                "Lighthouse Core Web Vitals audit & optimisation",
-                "DNS record pointing, SSL encryption & CDN edge caching",
-                "Google Search Console sitemap indexing request",
-                "100% GitHub code handover + 14–30 days post-launch warranty"
-              ]
-            }
-          ].map((stage) => {
-            const Icon = stage.icon;
-            return (
-              <div key={stage.num} className="p-8 sm:p-10 rounded-3xl bg-[#121212] border border-white/10 shadow-2xl relative overflow-hidden">
-                <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/10 flex items-center justify-center shrink-0">
-                      <Icon className={`w-6 h-6 ${stage.color}`} />
-                    </div>
-                    <div>
-                      <span className="text-xs font-mono text-[#FF4A1C] uppercase tracking-widest block">Stage {stage.num}</span>
-                      <h2 className="text-xl sm:text-2xl font-medium text-white tracking-tight">{stage.title}</h2>
-                    </div>
-                  </div>
-                  <span className="px-3 py-1 rounded-full bg-white/[0.05] border border-white/10 text-xs font-mono text-white/70 self-start">
-                    {stage.timeline}
-                  </span>
-                </div>
-
-                <p className="text-sm text-white/70 font-light leading-relaxed mb-6 max-w-3xl">
-                  {stage.desc}
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-6 border-t border-white/5">
-                  {stage.checkpoints.map((cp) => (
-                    <div key={cp} className="flex items-start gap-2.5 text-xs text-white/75">
-                      <CheckCircle2 className="w-4 h-4 text-[#FF4A1C] shrink-0 mt-0.5" />
-                      <span>{cp}</span>
-                    </div>
-                  ))}
-                </div>
+          <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rh-edge-orbit-card bg-white border border-[#E6E6E6] p-8 flex flex-col justify-between min-h-[250px] transition-colors hover:border-[#0D0D0D]">
+              <div className="flex items-center justify-between mb-6">
+                <span className="w-11 h-11 rounded-full bg-[#0D0D0D] text-[#BAFF00] flex items-center justify-center">
+                  <ShieldCheck className="w-5 h-5" />
+                </span>
+                <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#595959]">
+                  01 / MILESTONES
+                </span>
               </div>
-            );
-          })}
-        </section>
+              <div>
+                <h3 className="text-[22px] font-medium tracking-[-0.03em] text-[#0D0D0D] mb-2">
+                  50/50 Milestone Safety
+                </h3>
+                <p className="text-[14px] text-[#595959] leading-[1.6]">
+                  50% deposit to begin architecture; final 50% only after you test your private staging prototype and approve production launch.
+                </p>
+              </div>
+            </div>
 
-        {/* BOTTOM GUARANTEES */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 max-w-5xl mx-auto">
-          <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-            <ShieldCheck className="w-6 h-6 text-[#FF4A1C] mb-3" />
-            <h3 className="text-base font-medium text-white mb-1.5">50/50 Milestone Safety</h3>
-            <p className="text-xs text-white/60 font-light leading-relaxed">50% deposit to begin architecture, 50% only when staging is approved and ready for live deployment.</p>
-          </div>
-          <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-            <GitBranch className="w-6 h-6 text-emerald-400 mb-3" />
-            <h3 className="text-base font-medium text-white mb-1.5">100% Code Ownership</h3>
-            <p className="text-xs text-white/60 font-light leading-relaxed">Full GitHub repository rights transferred upon final payment. No vendor lock-in or licensing fees.</p>
-          </div>
-          <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-            <RefreshCw className="w-6 h-6 text-sky-400 mb-3" />
-            <h3 className="text-base font-medium text-white mb-1.5">Post-Launch Warranty</h3>
-            <p className="text-xs text-white/60 font-light leading-relaxed">14 to 30 days of direct developer bug-fix support to ensure your live website runs flawlessly.</p>
-          </div>
-        </section>
+            <div className="rh-edge-orbit-card is-lime bg-[#0D0D0D] text-white border border-[#202020] p-8 flex flex-col justify-between min-h-[250px]">
+              <div className="flex items-center justify-between mb-6">
+                <span className="w-11 h-11 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center">
+                  <GitBranch className="w-5 h-5" />
+                </span>
+                <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#BAFF00]">
+                  02 / OWNERSHIP
+                </span>
+              </div>
+              <div>
+                <h3 className="text-[22px] font-medium tracking-[-0.03em] text-white mb-2">
+                  100% Code Ownership
+                </h3>
+                <p className="text-[14px] text-[#B3B3B3] leading-[1.6]">
+                  Full GitHub repository rights, deployment pipeline, and source files transferred cleanly upon final sign-off. Zero agency lock-in.
+                </p>
+              </div>
+            </div>
 
-        {/* BOTTOM CTA */}
-        <section className="text-center py-12 border-t border-white/10">
-          <h2 className="text-2xl sm:text-3xl font-medium text-white mb-4">Have a project ready to launch?</h2>
-          <p className="text-xs sm:text-sm text-white/70 mb-8 max-w-lg mx-auto font-light">
-            Connect directly with senior engineer Saim on WhatsApp to review your requirements.
+            <div className="rh-edge-orbit-card bg-white border border-[#E6E6E6] p-8 flex flex-col justify-between min-h-[250px] transition-colors hover:border-[#0D0D0D]">
+              <div className="flex items-center justify-between mb-6">
+                <span className="w-11 h-11 rounded-full bg-[#0D0D0D] text-[#BAFF00] flex items-center justify-center">
+                  <RefreshCw className="w-5 h-5" />
+                </span>
+                <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#595959]">
+                  03 / WARRANTY
+                </span>
+              </div>
+              <div>
+                <h3 className="text-[22px] font-medium tracking-[-0.03em] text-[#0D0D0D] mb-2">
+                  Post-Launch Warranty
+                </h3>
+                <p className="text-[14px] text-[#595959] leading-[1.6]">
+                  14 to 30 days of direct senior engineering support after go-live to guarantee zero regressions across traffic spikes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BOTTOM ARCHITECTURAL CTA */}
+      <section className="bg-black text-white py-20 sm:py-24 px-5 border-t border-[#202020]">
+        <div data-gsap-reveal="" className="max-w-[760px] mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#BAFF00] mb-6">
+            DIRECT SENIOR ENGINEER
+          </div>
+          <h2 className="text-[32px] sm:text-[48px] font-medium tracking-[-0.04em] leading-[1.08] text-white mb-4">
+            Have a project ready to launch?
+          </h2>
+          <p className="text-[16px] text-[#939393] mb-9 max-w-[540px] mx-auto leading-[1.6]">
+            Connect directly with senior engineer Saim on WhatsApp or send your brief to lock a fixed timeline and start Stage 01.
           </p>
-          <a
-            href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20project."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-neutral-100 text-black font-semibold text-sm tracking-tight transition-all active:scale-95"
-          >
-            <span>Message on WhatsApp (+92 319 6526604)</span>
-            <ArrowRight className="w-4 h-4 text-black" />
-          </a>
-        </section>
-      </main>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] px-8 py-4 text-[15px] font-medium tracking-[-0.02em] inline-flex items-center gap-2"
+            >
+              <span>Message on WhatsApp (+92 319 6526604)</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-[#333333] text-white hover:border-[#BAFF00] hover:text-[#BAFF00] text-[15px] font-medium tracking-[-0.02em] transition-colors"
+            >
+              <span>Submit Brief Online</span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <SiteFooter theme="dark" />
     </div>

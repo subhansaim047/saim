@@ -9,11 +9,11 @@ import ownerFacts from '../../content/owner-facts.json';
 
 export const PrivacyPolicy: React.FC = () => {
   return (
-    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+    <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
       {/* rh.design/privacy Dark Hero */}
-      <section className="bg-[#0D0D0D] text-white pt-16 pb-16 sm:pt-20 sm:pb-20 px-4 sm:px-8 border-b border-white/10">
+      <section className="bg-black text-white pt-32 pb-16 sm:pt-36 sm:pb-20 px-4 sm:px-8 border-b border-white/10">
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-wider text-[#BAFF00] bg-white/[0.05] px-3.5 py-1.5 rounded-full border border-white/10 mb-6">
             <Shield className="w-3.5 h-3.5" />

@@ -101,7 +101,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutBreadcrumbSchema) }}
       />
-    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
+    <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
       <RhHeroPinned
@@ -119,181 +119,194 @@ export default function AboutPage() {
         stripLabel="Direct founder engineering · UK & EU"
       />
 
-      <div className="bg-[#F5F5F7] text-[#0D0D0D]">
-        <main className="max-w-[1168px] mx-auto px-5 py-16 sm:py-24 space-y-10">
-
-        {/* Studio Identity Card */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xs space-y-5">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-black text-white flex items-center justify-center font-bold">
-              SD
-            </div>
-            <div>
-              <h2 className="text-xl font-bold text-gray-900">Transparent Remote Partnership</h2>
-              <p className="text-xs text-gray-500 font-mono">Founder-Led Engineering • Clear Fixed Milestone Pricing</p>
-            </div>
-          </div>
-          <p className="text-sm text-gray-700 leading-relaxed">
-            By operating remotely from Pakistan with direct communication via WhatsApp and Google Meet, we offer independent UK and European business owners senior-level Next.js craftsmanship at clear, fixed prices (from £250). There are no middle managers, no hidden agency overheads, and no monthly lock-in contracts.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-gray-50 border border-gray-100 text-xs text-gray-700">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-              <span>Direct WhatsApp &amp; Loom updates aligned with UK business hours.</span>
-            </div>
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-gray-50 border border-gray-100 text-xs text-gray-700">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-              <span>Full source code ownership on GitHub with zero platform dependency.</span>
-            </div>
-          </div>
-        </section>
-
-        {/* Founder & Lead Architect Profile */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xs space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-100">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl overflow-hidden border border-gray-300 shadow-sm shrink-0">
-                <img src="/saim-dev-logo.jpg" alt="Saim Dev - Founder & Next.js Engineer" width={120} height={120} decoding="async" className="w-full h-full object-cover" />
-              </div>
+      {/* ARCHITECTURAL STUDIO PROFILE (#F5F5F7 Contrast Band) */}
+      <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-20 sm:py-28 px-5 border-b border-[#E6E6E6]">
+        <div className="max-w-[1168px] mx-auto space-y-12">
+          {/* Founder & Remote Partnership Bento */}
+          <div data-gsap-stagger="" className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            <div className="lg:col-span-7 rh-edge-orbit-card bg-white border border-[#E6E6E6] p-8 sm:p-10 flex flex-col justify-between gap-8">
               <div>
-                <h2 className="text-xl font-bold text-gray-900">Saim Dev</h2>
-                <p className="text-xs text-amber-700 font-mono font-semibold">Founder &amp; Lead Next.js Architect</p>
-                <p className="text-[11px] text-gray-500 mt-0.5">Specialist Full-Stack Web Developer serving UK &amp; European clients</p>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#E6E6E6]">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border border-black/15 bg-white shrink-0">
+                      <img
+                        src="/saim-dev-logo.jpg"
+                        alt="Saim Dev - Founder & Next.js Engineer"
+                        width={120}
+                        height={120}
+                        decoding="async"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h2 className="text-[24px] font-medium tracking-[-0.03em] text-[#0D0D0D]">
+                        Saim Dev
+                      </h2>
+                      <p className="text-[12px] font-mono-tech uppercase tracking-wider text-[#595959]">
+                        Founder &amp; Lead Next.js Architect
+                      </p>
+                    </div>
+                  </div>
+                  <span className="inline-flex items-center gap-2 text-[11px] font-mono-tech uppercase tracking-wider bg-[#0D0D0D] text-[#BAFF00] px-3.5 py-1.5 self-start sm:self-center">
+                    <UserCheck className="w-3.5 h-3.5" />
+                    <span>Direct 1-on-1 Access</span>
+                  </span>
+                </div>
+
+                <p className="text-[15px] text-[#333333] leading-[1.65] mt-6">
+                  As the founder of Saim Dev, I personally architect, write, and deploy every client website and food safety tool. With a sharp focus on Next.js Server Components, lightweight React UI, and technical SEO, I help UK and EU business owners launch digital systems that load in under 1 second and convert traffic without bloated monthly retainers.
+                </p>
+              </div>
+
+              {/* Verified Social & Professional Profiles (sameAs links) */}
+              <div className="pt-6 border-t border-[#E6E6E6]">
+                <span className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#595959] block mb-3">
+                  Verified Profiles &amp; Channels
+                </span>
+                <div className="flex flex-wrap gap-2 text-xs">
+                  {[
+                    { label: "GitHub: subhansaim047", href: "https://github.com/subhansaim047" },
+                    { label: "Contra: SAIMDEVELOPER", href: "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER" },
+                    { label: "X: @saimwebdev", href: "https://x.com/saimwebdev" },
+                    { label: "Instagram: @saim_agency", href: "https://www.instagram.com/saim_agency/" },
+                    { label: "Quora: Saim Agency", href: "https://saimswebagency.quora.com/" },
+                    { label: "TikTok: @saimdev.site", href: "https://www.tiktok.com/@saimdev.site" },
+                    {
+                      label: "Threads: @saimdev.site",
+                      href: "https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog",
+                    },
+                  ].map((ch) => (
+                    <a
+                      key={ch.label}
+                      href={ch.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 bg-[#F5F5F7] border border-[#E6E6E6] text-[#0D0D0D] font-medium hover:bg-[#0D0D0D] hover:text-[#BAFF00] hover:border-[#0D0D0D] transition-colors"
+                    >
+                      {ch.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-xl w-fit">
-              <UserCheck className="w-4 h-4 text-emerald-600" />
-              <span>Direct 1-on-1 Communication</span>
-            </div>
-          </div>
-          <p className="text-sm text-gray-700 leading-relaxed">
-            As the founder of Saim Dev, I personally architect, write, and deploy every client website and food safety tool. With a sharp focus on Next.js Server Components, lightweight React UI, and technical SEO, I help independent business owners build digital systems that load in under 1 second, look agency-grade, and convert visitors into loyal customers.
-          </p>
-          
-          {/* Verified Social & Professional Profiles (sameAs links) */}
-          <div className="pt-2">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-gray-500 font-bold block mb-3">
-              Verified Profiles &amp; Social Channels (sameAs)
-            </span>
-            <div className="flex flex-wrap gap-2 text-xs">
-              <a
-                href="https://github.com/subhansaim047"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-800 font-medium hover:bg-black hover:text-white hover:border-black transition-colors"
-              >
-                GitHub: subhansaim047
-              </a>
-              <a
-                href="https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-800 font-medium hover:bg-black hover:text-white hover:border-black transition-colors"
-              >
-                Contra: SAIMDEVELOPER
-              </a>
-              <a
-                href="https://x.com/saimwebdev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-800 font-medium hover:bg-black hover:text-white hover:border-black transition-colors"
-              >
-                X: @saimwebdev
-              </a>
-              <a
-                href="https://www.instagram.com/saim_agency/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-800 font-medium hover:bg-black hover:text-white hover:border-black transition-colors"
-              >
-                Instagram: @saim_agency
-              </a>
-              <a
-                href="https://saimswebagency.quora.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-800 font-medium hover:bg-black hover:text-white hover:border-black transition-colors"
-              >
-                Quora: Saim Agency
-              </a>
-              <a
-                href="https://www.tiktok.com/@saimdev.site"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-800 font-medium hover:bg-black hover:text-white hover:border-black transition-colors"
-              >
-                TikTok: @saimdev.site
-              </a>
-              <a
-                href="https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-200 text-gray-800 font-medium hover:bg-black hover:text-white hover:border-black transition-colors"
-              >
-                Threads: @saimdev.site
-              </a>
-            </div>
-          </div>
-        </section>
 
-        {/* Engineering Philosophy */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xs space-y-6">
-          <h2 className="text-2xl font-bold text-[#1D1D1F]">Our Approach to Web Engineering</h2>
-          <p className="text-sm text-gray-700 leading-relaxed">
-            We believe commercial websites should be fast, accessible, and straightforward. Rather than using slow, bloated page builders, we write clean Next.js and React code that achieves top-tier Core Web Vitals, rapid sub-second page loads, and intuitive mobile interfaces.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-            <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
-              <Code2 className="w-5 h-5 text-indigo-600" />
-              <h3 className="font-bold text-sm text-gray-900">Modern Architecture</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">Next.js 16 App Router, React 19, TypeScript, and Tailwind CSS.</p>
-            </div>
-            <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
-              <Rocket className="w-5 h-5 text-amber-600" />
-              <h3 className="font-bold text-sm text-gray-900">Sub-Second Speed</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">Engineered for instant loading on 4G/5G mobile devices with zero clutter.</p>
-            </div>
-            <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 space-y-2">
-              <Globe className="w-5 h-5 text-emerald-600" />
-              <h3 className="font-bold text-sm text-gray-900">UK Hospitality Focus</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">Tailored solutions for UK takeaways, restaurants, and local services.</p>
+            <div className="lg:col-span-5 rh-edge-orbit-card is-lime bg-[#0D0D0D] text-white border border-[#202020] p-8 sm:p-10 flex flex-col justify-between gap-8">
+              <div>
+                <span className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#BAFF00] block mb-4">
+                  TRANSPARENT REMOTE PARTNERSHIP
+                </span>
+                <h3 className="text-[26px] font-medium tracking-[-0.03em] leading-[1.15] text-white mb-4">
+                  Senior-level execution with fixed milestone pricing.
+                </h3>
+                <p className="text-[14px] text-[#939393] leading-[1.6] mb-6">
+                  Operating remotely with direct communication via WhatsApp and Google Meet keeps studio overhead near zero—delivering enterprise Next.js quality from £250.
+                </p>
+                <div className="space-y-3 text-[13px] text-white/85">
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-0.5" />
+                    <span>Direct WhatsApp &amp; Loom updates aligned with UK business hours.</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-0.5" />
+                    <span>Full GitHub repository ownership with zero platform lock-in.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-white/10">
+                <span className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#939393] block mb-2">
+                  FREE INDUSTRY UTILITIES
+                </span>
+                <p className="text-[13px] text-[#B3B3B3] leading-[1.55] mb-4">
+                  Free browser-based kitchen tools &amp; printable allergen matrices aligned with UK FSA guidance.
+                </p>
+                <Link
+                  href="/tools"
+                  className="inline-flex items-center gap-2 text-xs font-medium bg-[#BAFF00] text-[#0D0D0D] px-4 py-2.5 rounded-full hover:brightness-95 transition-all"
+                >
+                  <span>Explore Kitchen Tools Hub</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
             </div>
           </div>
-        </section>
 
-        {/* Food Safety Tools & Free Resources */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xs space-y-4">
-          <h2 className="text-2xl font-bold text-[#1D1D1F]">Food Safety Tools &amp; Resources</h2>
-          <p className="text-sm text-gray-700 leading-relaxed">
-            Alongside bespoke client development, we provide free kitchen management tools and printable templates—including our interactive allergen matrix and kitchen checklists. These tools are completely free to use, run client-side in your browser, and help UK food businesses organize daily records in alignment with UK Food Standards Agency (FSA) guidance.
-          </p>
-          <div className="pt-2">
+          {/* Engineering Approach 3-Col */}
+          <div>
+            <div data-gsap-reveal="" className="max-w-[720px] mb-10">
+              <div className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#595959] mb-3">
+                ENGINEERING PHILOSOPHY
+              </div>
+              <h2 className="text-[32px] sm:text-[42px] font-medium tracking-[-0.04em] leading-[1.08] text-[#0D0D0D]">
+                Our Approach to Web Engineering
+              </h2>
+            </div>
+
+            <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                {
+                  icon: Code2,
+                  title: "Modern Architecture",
+                  desc: "Next.js 16 App Router, React 19, TypeScript, and Tailwind CSS with zero legacy CMS bloat.",
+                },
+                {
+                  icon: Rocket,
+                  title: "Sub-Second Speed",
+                  desc: "Engineered for instant loading on 4G/5G mobile networks with 95+ Core Web Vitals.",
+                },
+                {
+                  icon: Globe,
+                  title: "UK Hospitality Focus",
+                  desc: "Tailored digital systems for UK takeaways, restaurants, and local commercial brands.",
+                },
+              ].map((pillar) => {
+                const Icon = pillar.icon;
+                return (
+                  <div
+                    key={pillar.title}
+                    className="rh-edge-orbit-card bg-white border border-[#E6E6E6] p-8 hover:border-[#0D0D0D] transition-colors flex flex-col justify-between min-h-[210px]"
+                  >
+                    <span className="w-10 h-10 rounded-full bg-[#0D0D0D] text-[#BAFF00] flex items-center justify-center mb-6">
+                      <Icon className="w-5 h-5" />
+                    </span>
+                    <div>
+                      <h3 className="text-[20px] font-medium tracking-[-0.02em] text-[#0D0D0D] mb-2">
+                        {pillar.title}
+                      </h3>
+                      <p className="text-[14px] text-[#595959] leading-[1.6]">{pillar.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Architectural Dark CTA Bar */}
+          <div
+            data-gsap-reveal=""
+            className="p-8 sm:p-10 bg-black text-white border border-[#202020] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+          >
+            <div>
+              <div className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#BAFF00] mb-2">
+                FIXED QUOTES WITHIN 24 HOURS
+              </div>
+              <p className="text-[22px] sm:text-[26px] font-medium tracking-[-0.03em] text-white mb-1">
+                Have a project in mind?
+              </p>
+              <p className="text-[14px] text-[#939393]">
+                Discuss your requirements directly with Saim and start with a $0 upfront interactive prototype.
+              </p>
+            </div>
             <Link
-              href="/tools"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-black bg-amber-100 hover:bg-amber-200 px-4 py-2 rounded-xl transition-colors"
+              href="/contact"
+              className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] px-7 py-3.5 text-[14px] font-medium tracking-[-0.02em] inline-flex items-center gap-2 shrink-0"
             >
-              <span>Explore Kitchen Tools Hub</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <span>Start a Project</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-        </section>
-
-        {/* Contact CTA */}
-        <section className="p-6 sm:p-8 rounded-3xl bg-amber-50/70 border border-amber-200 text-xs text-amber-950 leading-relaxed flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div>
-            <p className="font-bold text-sm text-amber-950 mb-1">Have a project in mind?</p>
-            <p className="text-amber-800">Discuss your requirements directly with Saim. Fixed quotes delivered within 24 hours.</p>
-          </div>
-          <Link
-            href="/contact"
-            className="bg-black hover:bg-gray-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl inline-flex items-center gap-1.5 transition-all shadow shrink-0"
-          >
-            <span>Start a Project</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
-        </section>
-      </main>
-      </div>
+        </div>
+      </section>
 
       <RhProblemSolutionDeck
         overline="WHY INDEPENDENT NEXT.JS ENGINEERING WINS"

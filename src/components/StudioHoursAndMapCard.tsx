@@ -22,16 +22,16 @@ export const StudioHoursAndMapCard: React.FC = () => {
   return (
     <div className="pt-8 mt-8 border-t border-[#020612]/[0.08] grid grid-cols-1 lg:grid-cols-2 gap-6 relative z-10">
       {/* Left: Business Hours */}
-      <div className="rounded-2xl bg-white border border-[#020612]/[0.08] p-5 sm:p-6 flex flex-col justify-between gap-4">
+      <div className="rh-edge-orbit-card rounded-2xl bg-white border border-[#E6E6E6] p-5 sm:p-6 flex flex-col justify-between gap-4">
         <div>
           <div className="flex items-center justify-between gap-2 mb-4">
             <div className="flex items-center gap-2.5">
-              <Clock className="w-4 h-4 text-[#2F6CE1] flex-shrink-0" aria-hidden="true" />
-              <h3 className="font-heading text-sm font-bold tracking-tight text-[#020612]">
+              <Clock className="w-4 h-4 text-[#0D0D0D] flex-shrink-0" aria-hidden="true" />
+              <h3 className="font-heading text-sm font-bold tracking-tight text-[#0D0D0D]">
                 Business Hours
               </h3>
             </div>
-            <span className="shrink-0 whitespace-nowrap text-[10px] font-mono font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#EFF5FF] border border-[#2F6CE1]/25 text-[#1D4ED8]">
+            <span className="shrink-0 whitespace-nowrap text-[10px] font-mono font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#0D0D0D] text-[#BAFF00]">
               UK GMT / BST
             </span>
           </div>
@@ -57,15 +57,15 @@ export const StudioHoursAndMapCard: React.FC = () => {
       </div>
 
       {/* Right: Remote Service Coverage Map */}
-      <div className="rounded-2xl bg-white border border-[#020612]/[0.08] p-5 sm:p-6 flex flex-col justify-between gap-3">
+      <div className="rh-edge-orbit-card rounded-2xl bg-white border border-[#E6E6E6] p-5 sm:p-6 flex flex-col justify-between gap-3">
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-2.5">
-            <MapPin className="w-4 h-4 text-[#2F6CE1] flex-shrink-0" aria-hidden="true" />
-            <h3 className="font-heading text-sm font-bold tracking-tight text-[#020612]">
+            <MapPin className="w-4 h-4 text-[#0D0D0D] flex-shrink-0" aria-hidden="true" />
+            <h3 className="font-heading text-sm font-bold tracking-tight text-[#0D0D0D]">
               Service Coverage Map
             </h3>
           </div>
-          <span className="shrink-0 whitespace-nowrap text-[10px] font-mono font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#EFF5FF] border border-[#2F6CE1]/25 text-[#1D4ED8]">
+          <span className="shrink-0 whitespace-nowrap text-[10px] font-mono font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#0D0D0D] text-[#BAFF00]">
             Remote UK &amp; EU
           </span>
         </div>
@@ -116,7 +116,7 @@ export const StudioHoursAndMapCard: React.FC = () => {
             href="https://maps.google.com/?q=United+Kingdom"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#1D4ED8] hover:text-[#020612] transition-colors"
+            className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#0D0D0D] hover:underline transition-colors"
           >
             <span>View UK coverage area on Google Maps</span>
             <ExternalLink className="w-3 h-3" aria-hidden="true" />
