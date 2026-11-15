@@ -214,9 +214,9 @@ export const HandWashingPosterTool: React.FC<HandWashingPosterToolProps> = () =>
           <div className="inline-block px-3 py-1 rounded-full bg-cyan-100 text-cyan-900 text-xs font-black uppercase tracking-widest print:bg-gray-200 print:text-black">
             Official EHO Hygiene Standard
           </div>
-          <h1 className="text-2xl sm:text-3xl font-black text-gray-950 uppercase tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-gray-950 uppercase tracking-tight">
             How to Wash Your Hands in a Commercial Kitchen
-          </h1>
+          </h2>
           <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto print:text-black font-medium">
             Wash hands for at least 20 seconds. Use dedicated handwash basins only—never use food prep or potwash sinks.
           </p>

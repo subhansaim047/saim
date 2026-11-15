@@ -62,6 +62,7 @@ export const BlogPost3Page = () => {
       </header>
 
       {/* ── Hero Article Header ── */}
+      <main>
       <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-16 pb-10">
                 {/* Visible Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6">
@@ -369,6 +370,7 @@ export const BlogPost3Page = () => {
           </Link>
         </div>
       </div>
+      </main>
     </div>
   );
 };

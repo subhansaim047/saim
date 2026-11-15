@@ -119,6 +119,7 @@ export default function NextJsDeveloperUkPage() {
       <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
         <RhHeader theme="dark" />
 
+        <main>
         {/* 1. PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
         <RhHeroPinned
           badge="UK & European Next.js Engineering Specialist"
@@ -136,6 +137,36 @@ export default function NextJsDeveloperUkPage() {
           secondaryCta={{ label: "View Website Case Studies", href: "/case-studies" }}
           videoType="cube"
           stripLabel="Fixed GBP Pricing · Zero Agency Retainers"
+          stripItems={[
+            {
+              label: "01. UK GBP Packages",
+              tag: "From £250",
+              tagValue: "No VAT Lock-In",
+              summary: "Fixed GBP quotes (£250 landing, £390 starter, £790 business) with 50/50 milestones.",
+              href: "/pricing",
+            },
+            {
+              label: "02. Edge Speed",
+              tag: "CWV Target",
+              tagValue: "95+ Target",
+              summary: "Next.js 16 App Router and CDN caching built to clear Google LCP & INP on 4G.",
+              href: "/services/website-speed-optimization",
+            },
+            {
+              label: "03. UK Local SEO",
+              tag: "Structured Data",
+              tagValue: "JSON-LD Ready",
+              summary: "Semantic HTML5, en-GB regional metadata, and full schema graphs out of the box.",
+              href: "/services/seo-services",
+            },
+            {
+              label: "04. Repo Ownership",
+              tag: "Code Handoff",
+              tagValue: "100% Yours",
+              summary: "Complete GitHub repository transfer with zero proprietary CMS or monthly retainers.",
+              href: "/process",
+            },
+          ]}
         />
 
         {/* TRUST STATS & TECHNICAL DEFINITIONS (Dark #000000) */}
@@ -475,7 +506,7 @@ export default function NextJsDeveloperUkPage() {
               num: "01",
               title: "Edge SSR & <0.8s LCP",
               description: "Server components and Vercel edge caching built to clear Google Core Web Vitals across 4G mobile networks nationwide.",
-              tags: ["Next.js 15", "Edge SSR", "LCP < 0.8s"],
+              tags: ["Next.js 16", "Edge SSR", "LCP < 0.8s"],
             },
             {
               num: "02",
@@ -515,7 +546,7 @@ export default function NextJsDeveloperUkPage() {
               stage: "03",
               duration: "Days 5–7",
               title: "Schema, QA & Speed Hardening",
-              description: "Lighthouse 99+ tuning, structured data validation, and cross-browser device verification.",
+              description: "Core Web Vitals tuning, structured data validation, and cross-browser device verification.",
               deliverables: ["Core Web Vitals", "JSON-LD QA", "Accessibility"],
             },
             {
@@ -526,9 +557,9 @@ export default function NextJsDeveloperUkPage() {
               deliverables: ["GitHub Repo", "Zero Retainer", "Post-Launch Support"],
             },
           ]}
-          quote="Saim Dev rebuilt our slow agency WordPress site into a sub-second Next.js platform in seven days — our UK organic enquiries doubled within six weeks."
-          author="James Thornton"
-          role="Operations Director, UK Trade Services"
+          quote="Target engagement benchmark: migrate a legacy agency WordPress build into clean Next.js 16 App Router with fixed GBP scope and zero monthly lock-in."
+          author="Saim Dev UK Build Standard"
+          role="Reference Architecture · United Kingdom & Europe"
           ctaHref="/contact"
           ctaLabel="Start UK Sprint"
         />
@@ -560,6 +591,7 @@ export default function NextJsDeveloperUkPage() {
             </div>
           </div>
         </section>
+        </main>
 
         <FooterSection />
       </div>

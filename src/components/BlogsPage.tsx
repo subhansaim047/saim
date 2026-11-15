@@ -181,6 +181,7 @@ export const BlogsPage = () => {
   return (
     <div className="rh-page min-h-screen bg-[#F5F5F7] text-[#0D0D0D] selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="light" />
+      <main>
       <div className="pt-[88px]">
         {/* ── Behind the Lens Photography Blog Section ── */}
         <BehindTheLensBlog onViewAllClick={scrollToAllGuides} />
@@ -272,6 +273,7 @@ export const BlogsPage = () => {
           </div>
         </div>
       </section>
+      </main>
 
       {/* ── Clean Light Footer ── */}
       <SiteFooter theme="light" />

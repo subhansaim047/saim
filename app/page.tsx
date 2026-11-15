@@ -32,8 +32,8 @@ import { FooterSection } from "@/components/FooterSection";
 
 
 export const metadata: Metadata = {
-  title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
-  description: "UK web development agency building fixed-price Next.js websites, Shopify stores and web apps from £250. SEO-ready, no monthly lock-in.",
+  title: "Custom Next.js Web Agency UK | Fixed Price | Saim Dev",
+  description: "Remote Next.js engineering studio serving UK & EU brands. Bespoke websites, headless Shopify & 0% commission takeaway ordering from £250 fixed price.",
   alternates: {
     canonical: "https://www.saimdev.site",
     languages: {
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
-    description: "UK web development agency building fixed-price Next.js websites, Shopify stores and web apps from £250. SEO-ready, no monthly lock-in.",
+    title: "Custom Next.js Web Agency UK | Fixed Price | Saim Dev",
+    description: "Remote Next.js engineering studio serving UK & EU brands. Bespoke websites, headless Shopify & 0% commission takeaway ordering from £250 fixed price.",
     url: "https://www.saimdev.site",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -63,8 +63,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
-    description: "UK web development agency building fixed-price Next.js websites, Shopify stores and web apps from £250. SEO-ready, no monthly lock-in.",
+    title: "Custom Next.js Web Agency UK | Fixed Price | Saim Dev",
+    description: "Remote Next.js engineering studio serving UK & EU brands. Bespoke websites, headless Shopify & 0% commission takeaway ordering from £250 fixed price.",
     creator: "@saimwebdev",
     site: "@saimwebdev",
     images: ["https://www.saimdev.site/hero-shots/shot-4.webp"],
@@ -76,16 +76,16 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": "https://www.saimdev.site/#webpage",
   "url": "https://www.saimdev.site",
-  "name": "Custom Web Development Agency UK | Next.js & Apps | Saim Dev",
+  "name": "Custom Next.js Web Agency UK | Fixed Price | Saim Dev",
   "datePublished": "2024-07-19",
-  "dateModified": "2026-11-11",
+  "dateModified": "2026-11-15",
   "author": {
     "@id": "https://www.saimdev.site/#person"
   },
   "creator": {
     "@id": "https://www.saimdev.site/#person"
   },
-  "description": "UK web development agency building fixed-price Next.js websites, Shopify stores and web apps from £250. SEO-ready, no monthly lock-in.",
+  "description": "Remote Next.js engineering studio serving UK & EU brands. Bespoke websites, headless Shopify & 0% commission takeaway ordering from £250 fixed price.",
   "inLanguage": "en-GB",
   "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
   "primaryImageOfPage": {

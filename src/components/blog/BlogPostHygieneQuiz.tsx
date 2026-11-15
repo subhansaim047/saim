@@ -74,6 +74,7 @@ export const BlogPostHygieneQuiz: React.FC = () => {
       </header>
 
       {/* ── Hero / Article Header ── */}
+      <main>
       <article className="max-w-4xl mx-auto px-4 sm:px-6 pt-16 pb-24">
         <header className="mb-12 border-b border-white/10 pb-10">
                   {/* Visible Breadcrumb Navigation */}
@@ -355,6 +356,7 @@ export const BlogPostHygieneQuiz: React.FC = () => {
           </div>
         </div>
       </article>
+      </main>
     </div>
   );
 };

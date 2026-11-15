@@ -474,9 +474,9 @@ export function FoodCoolingPosterTool({ templateId }: { templateId?: string }) {
               <span className="inline-block px-3 py-1 rounded bg-sky-400 text-slate-950 font-mono font-black text-xs uppercase tracking-wider mb-2">
                 FSA CRITICAL CONTROL POINT (CCP 2 - RAPID CHILL)
               </span>
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-950 uppercase tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 uppercase tracking-tight">
                 Commercial Kitchen Food Cooling Rules &amp; 90-Minute Limit
-              </h1>
+              </h2>
               <p className="text-xs sm:text-sm font-semibold text-slate-700 mt-1">
                 Mandatory Cooling Timelines, Spore Prevention &amp; Corrective Action Protocol
               </p>

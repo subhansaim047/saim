@@ -28,8 +28,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-1",
     "imgUrl": "/templates/posters/template-1.webp",
     "targetUrl": "/food-safety-templates/freezer-temperature-chart",
-    "desc": "Kitchen wall poster for freezer temperature chart. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-1.webp"
+    "desc": "A commercial freezer temperature chart is a daily monitoring record used by UK food businesses to verify sub-zero food storage remains at or below -18°C.",
+    "thumbUrl": "/templates/thumbs/template-1.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-4",
@@ -41,8 +43,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-4",
     "imgUrl": "/templates/posters/template-4.webp",
     "targetUrl": "/food-safety-templates/basic-food-preparation-rules",
-    "desc": "Kitchen wall poster for safe food prep. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-4.webp"
+    "desc": "Basic food preparation rules establish the mandatory personal hygiene, cross-contamination barriers, and temperature thresholds required in UK...",
+    "thumbUrl": "/templates/thumbs/template-4.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-5",
@@ -55,7 +59,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/charts/template-5.webp",
     "targetUrl": "/food-safety-templates/food-allergen-chart",
     "desc": "Build and print a UK allergen chart for your takeaway in minutes. Covers all 14 allergens, a customer filter and PDF print. Free, no sign-up.",
-    "thumbUrl": "/templates/thumbs/template-5.webp"
+    "thumbUrl": "/templates/thumbs/template-5.webp",
+    "catSlug": "allergen-management",
+    "category": "Allergen Management"
   },
   {
     "id": "template-6",
@@ -67,8 +73,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Recipe_resize_tool.svg",
     "targetUrl": "/food-safety-templates/recipe-calculator",
-    "desc": "Interactive smart calculator and digital generator for recipe calculator. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Recipe_resize_tool.svg"
+    "desc": "An interactive recipe calculator enables commercial kitchens and catering businesses to scale ingredient batch sizes, calculate portion yields, and...",
+    "thumbUrl": "/templates/svg/Recipe_resize_tool.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-7",
@@ -80,8 +88,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Consumer_advisory.svg",
     "targetUrl": "/food-safety-templates/consumer-advisory",
-    "desc": "Interactive smart calculator and digital generator for consumer advisory. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Consumer_advisory.svg"
+    "desc": "A commercial consumer advisory notice informs restaurant diners and takeaway customers of the health risks associated with consuming raw, undercooked...",
+    "thumbUrl": "/templates/svg/Consumer_advisory.svg",
+    "catSlug": "allergen-management",
+    "category": "Allergen Management"
   },
   {
     "id": "template-8",
@@ -93,8 +103,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Allergy_warning.svg",
     "targetUrl": "/food-safety-templates/food-allergy-warning",
-    "desc": "Interactive smart calculator and digital generator for food allergy warning. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Allergy_warning.svg"
+    "desc": "A food allergy warning sign and customer notice provides UK hospitality premises with statutory front-of-house and digital signage advising diners of...",
+    "thumbUrl": "/templates/svg/Allergy_warning.svg",
+    "catSlug": "allergen-management",
+    "category": "Allergen Management"
   },
   {
     "id": "template-9",
@@ -106,8 +118,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Quiz.svg",
     "targetUrl": "/food-safety-templates/food-safety-quiz",
-    "desc": "Interactive smart calculator and digital generator for food safety quiz. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Quiz.svg"
+    "desc": "The UK Food Safety Level 2 hygiene practice exam tests commercial kitchen and catering personnel on critical statutory food handling, core thermal...",
+    "thumbUrl": "/templates/svg/Quiz.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-10",
@@ -119,8 +133,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-10",
     "imgUrl": "/templates/svg/brc_audit.svg",
     "targetUrl": "/food-safety-templates/brc-audit",
-    "desc": "Kitchen checklist for brc audit checklist. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/brc_audit.svg"
+    "desc": "A BRCGS Food Safety Audit Checklist prepares food manufacturers, packaging facilities, and commercial processors for Global Standard for Food Safety...",
+    "thumbUrl": "/templates/svg/brc_audit.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-11",
@@ -132,8 +148,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-11",
     "imgUrl": "/templates/svg/kosher.svg",
     "targetUrl": "/food-safety-templates/kosher-certification",
-    "desc": "Kitchen checklist for kosher. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/kosher.svg"
+    "desc": "A Kosher Kitchen Certification SOP ensures strict adherence to Jewish dietary laws (Kashrut) across commercial food production, catering, and...",
+    "thumbUrl": "/templates/svg/kosher.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-12",
@@ -145,8 +163,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-12",
     "imgUrl": "/templates/charts/template-12.webp",
     "targetUrl": "/food-safety-templates/turkey-pasteurization-chart",
-    "desc": "Critical food temperature and safety chart for turkey pasteurization chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-12.webp"
+    "desc": "Turkey pasteurisation requires achieving a 7D (7-log / 99.99999%) reduction in Salmonella enterica.",
+    "thumbUrl": "/templates/thumbs/template-12.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-13",
@@ -159,7 +179,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Temp_log.svg",
     "targetUrl": "/food-safety-templates/fridge-temperature-record-sheet-pdf",
     "desc": "Record-keeping log for temperature sheet. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Temp_log.svg"
+    "thumbUrl": "/templates/svg/Temp_log.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-14",
@@ -171,8 +193,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-14",
     "imgUrl": "/templates/charts/template-14.webp",
     "targetUrl": "/food-safety-templates/waste-management-plan",
-    "desc": "Critical food temperature and safety chart for waste management plan. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-14.webp"
+    "desc": "A commercial kitchen waste management plan establishes strict segregation of food waste, Category 3 Animal By-Products (ABP), dry mixed recycling, and...",
+    "thumbUrl": "/templates/thumbs/template-14.webp",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-15",
@@ -184,8 +208,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Waste_control_plan.svg",
     "targetUrl": "/food-safety-templates/waste-management-schedule",
-    "desc": "Interactive smart calculator and digital generator for waste management schedule. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Waste_control_plan.svg"
+    "desc": "A commercial kitchen waste management schedule establishes statutory waste segregation, storage, and disposal procedures for UK food premises under the...",
+    "thumbUrl": "/templates/svg/Waste_control_plan.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-16",
@@ -197,8 +223,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-16",
     "imgUrl": "/templates/charts/template-16.webp",
     "targetUrl": "/food-safety-templates/haccp-flow-chart-template",
-    "desc": "Critical food temperature and safety chart for flow chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-16.webp"
+    "desc": "A HACCP flow chart is a linear process diagram mapping every operational stage in food preparation—from goods delivery receipt and storage to prep...",
+    "thumbUrl": "/templates/thumbs/template-16.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-17",
@@ -210,34 +238,40 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Flow_chart_sample.svg",
     "targetUrl": "/food-safety-templates/food-flow-chart",
-    "desc": "Interactive smart calculator and digital generator for food flow chart. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Flow_chart_sample.svg"
+    "desc": "A HACCP food flow chart is an operational process diagram that maps the sequential journey of food through a catering establishment—from purchasing and...",
+    "thumbUrl": "/templates/svg/Flow_chart_sample.svg",
+    "catSlug": "haccp-compliance",
+    "category": "HACCP & Compliance"
   },
   {
     "id": "template-18",
     "slug": "haccp-plan-builder",
     "type": "chart",
     "preheader": "CHART",
-    "title": "HACCP Plan Template",
+    "title": "Interactive HACCP Plan Builder",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-18",
     "imgUrl": "/templates/charts/template-18.webp",
     "targetUrl": "/food-safety-templates/haccp-plan-builder",
-    "desc": "Critical food temperature and safety chart for haccp plan template. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-18.webp"
+    "desc": "Build bespoke process-step hazard analyses, assign severity-likelihood matrices, and generate downloadable UK takeaway HACCP worksheets.",
+    "thumbUrl": "/templates/thumbs/template-18.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-19",
     "slug": "food-safety-plan",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Food Safety Plan",
+    "title": "Food Safety Management Plan (SFBB)",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/HACCP_Plan_Example.svg",
     "targetUrl": "/food-safety-templates/food-safety-plan",
-    "desc": "Interactive smart calculator and digital generator for food safety plan. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/HACCP_Plan_Example.svg"
+    "desc": "Document premises-wide prerequisite hygiene controls, supervisor verification diaries, and catering SFBB compliance systems.",
+    "thumbUrl": "/templates/svg/HACCP_Plan_Example.svg",
+    "catSlug": "haccp-compliance",
+    "category": "HACCP & Compliance"
   },
   {
     "id": "template-20",
@@ -249,8 +283,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-20",
     "imgUrl": "/templates/charts/template-20.webp",
     "targetUrl": "/food-safety-templates/product-specification-sheet",
-    "desc": "Critical food temperature and safety chart for product specification sheet. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-20.webp"
+    "desc": "A food product specification sheet is a mandatory technical document establishing legal compliance, ingredient declarations, QUID percentages, and the...",
+    "thumbUrl": "/templates/thumbs/template-20.webp",
+    "catSlug": "sop-templates",
+    "category": "Standard Operating Procedures (SOP)"
   },
   {
     "id": "template-21",
@@ -262,8 +298,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Product_specification.svg",
     "targetUrl": "/food-safety-templates/product-specification-template",
-    "desc": "Interactive smart calculator and digital generator for product specification template. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Product_specification.svg"
+    "desc": "A commercial food product specification template defines the technical, legal, and safety standards for manufactured food items and catering preparations.",
+    "thumbUrl": "/templates/svg/Product_specification.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-22",
@@ -275,8 +313,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-22",
     "imgUrl": "/templates/charts/template-22.webp",
     "targetUrl": "/food-safety-templates/walk-in-cooler-food-storage-chart",
-    "desc": "Critical food temperature and safety chart for walk-in-cooler food storage chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-22.webp"
+    "desc": "A walk-in cooler food storage chart illustrates the correct vertical shelving hierarchy for commercial refrigerators to prevent bacterial...",
+    "thumbUrl": "/templates/thumbs/template-22.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-23",
@@ -289,7 +329,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Cleaning_schedule.svg",
     "targetUrl": "/food-safety-templates/cleaning-schedule",
     "desc": "Record-keeping log for cleaning schedule. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Cleaning_schedule.svg"
+    "thumbUrl": "/templates/svg/Cleaning_schedule.svg",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-24",
@@ -302,7 +344,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Cleaning_schedule.svg",
     "targetUrl": "/food-safety-templates/cleaning-checklist-template",
     "desc": "Comprehensive daily kitchen cleaning schedule covering food prep surfaces, floors, and equipment.",
-    "thumbUrl": "/templates/svg/Cleaning_schedule.svg"
+    "thumbUrl": "/templates/svg/Cleaning_schedule.svg",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-25",
@@ -314,21 +358,25 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-25",
     "imgUrl": "/templates/svg/Restaurant-cleaning.svg",
     "targetUrl": "/food-safety-templates/restaurant-cleaning-checklist",
-    "desc": "Kitchen checklist for restaurant cleaning checklist. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Restaurant-cleaning.svg"
+    "desc": "A restaurant cleaning checklist provides a daily shift-by-shift breakdown of essential sanitation tasks for front-of-house dining rooms and...",
+    "thumbUrl": "/templates/svg/Restaurant-cleaning.svg",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-26",
     "slug": "cleaning-restaurant",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Full Restaurant Deep Cleaning Plan",
+    "title": "Full Restaurant Deep Cleaning Schedule",
     "activity": "restaurant,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Restaurant-cleaning.svg",
     "targetUrl": "/food-safety-templates/cleaning-restaurant",
-    "desc": "Scheduled deep-cleaning checklist for back-of-house kitchen equipment, extraction hoods, and refrigeration.",
-    "thumbUrl": "/templates/svg/Restaurant-cleaning.svg"
+    "desc": "Plan zone-by-zone venue deep-cleaning schedules across cooklines, extraction hoods, chillers, and FOH dining spaces with COSHH frequencies.",
+    "thumbUrl": "/templates/svg/Restaurant-cleaning.svg",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-27",
@@ -341,7 +389,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Food_traceability.svg",
     "targetUrl": "/food-safety-templates/food-traceability",
     "desc": "Record-keeping log for food traceability. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Food_traceability.svg"
+    "thumbUrl": "/templates/svg/Food_traceability.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-28",
@@ -354,7 +404,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Food_recall.svg",
     "targetUrl": "/food-safety-templates/food-recall",
     "desc": "Record-keeping log for food recall. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Food_recall.svg"
+    "thumbUrl": "/templates/svg/Food_recall.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-29",
@@ -367,7 +419,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Pest_control_plan.svg",
     "targetUrl": "/food-safety-templates/pest-control-checklist",
     "desc": "Comprehensive daily and weekly commercial kitchen pest control checklist. Record bait station checks, proofing inspection, and pest contractor visits.",
-    "thumbUrl": "/templates/svg/Pest_control_plan.svg"
+    "thumbUrl": "/templates/svg/Pest_control_plan.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-30",
@@ -380,7 +434,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Pest_control_plan.svg",
     "targetUrl": "/food-safety-templates/pest-control-inspection-checklist",
     "desc": "Daily kitchen inspection log for recording pest monitoring checks, fly screen integrity, and waste area hygiene in food premises.",
-    "thumbUrl": "/templates/svg/Pest_control_plan.svg"
+    "thumbUrl": "/templates/svg/Pest_control_plan.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-31",
@@ -393,7 +449,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/charts/template-31.webp",
     "targetUrl": "/food-safety-templates/pest-management-plan",
     "desc": "Kitchen wall chart and integrated pest management plan outlining prevention procedures, contractor frequency, and emergency response.",
-    "thumbUrl": "/templates/thumbs/template-31.webp"
+    "thumbUrl": "/templates/thumbs/template-31.webp",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-32",
@@ -406,7 +464,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Pest_control_plan.svg",
     "targetUrl": "/food-safety-templates/pest-control-template",
     "desc": "Actionable kitchen pest prevention plan and checklist for food business supervisors and Environmental Health inspection readiness.",
-    "thumbUrl": "/templates/svg/Pest_control_plan.svg"
+    "thumbUrl": "/templates/svg/Pest_control_plan.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-33",
@@ -419,7 +479,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/charts/template-33.webp",
     "targetUrl": "/food-safety-templates/allergy-matrix",
     "desc": "Free printable allergy matrix template for UK commercial kitchens. Record and display declared allergens across all menu items and recipes.",
-    "thumbUrl": "/templates/thumbs/template-33.webp"
+    "thumbUrl": "/templates/thumbs/template-33.webp",
+    "catSlug": "allergen-management",
+    "category": "Allergen Management"
   },
   {
     "id": "template-34",
@@ -432,7 +494,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Bars_pubs_opening.svg",
     "targetUrl": "/food-safety-templates/bar-opening-closing-checklist",
     "desc": "Daily hygiene, ice machine, glassware sanitisation, and draught line checklist for bars and pubs.",
-    "thumbUrl": "/templates/svg/Bars_pubs_opening.svg"
+    "thumbUrl": "/templates/svg/Bars_pubs_opening.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-35",
@@ -445,7 +509,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Bars_pubs_opening.svg",
     "targetUrl": "/food-safety-templates/bar-opening-checklist",
     "desc": "Interactive digital bar opening and closing verification tool for hospitality managers.",
-    "thumbUrl": "/templates/svg/Bars_pubs_opening.svg"
+    "thumbUrl": "/templates/svg/Bars_pubs_opening.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-36",
@@ -458,7 +524,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Restaurant_opening.svg",
     "targetUrl": "/food-safety-templates/restaurant-opening-checklist",
     "desc": "Step-by-step morning checklist covering prep refrigeration, sanitising stations, and ventilation checks.",
-    "thumbUrl": "/templates/svg/Restaurant_opening.svg"
+    "thumbUrl": "/templates/svg/Restaurant_opening.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-37",
@@ -471,7 +539,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Restaurant_opening.svg",
     "targetUrl": "/food-safety-templates/restaurant-checklist",
     "desc": "Interactive digital tool for monitoring restaurant front-of-house setup, table readiness, and staff briefing.",
-    "thumbUrl": "/templates/svg/Restaurant_opening.svg"
+    "thumbUrl": "/templates/svg/Restaurant_opening.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-38",
@@ -484,7 +554,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Retail-store-daily-checklist.svg",
     "targetUrl": "/food-safety-templates/printable-retail-store-daily-checklist",
     "desc": "Daily display chiller temperature checks, date code rotation, and stock hygiene checklist for retail food stores.",
-    "thumbUrl": "/templates/svg/Retail-store-daily-checklist.svg"
+    "thumbUrl": "/templates/svg/Retail-store-daily-checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-39",
@@ -497,7 +569,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Retail-store-daily-checklist.svg",
     "targetUrl": "/food-safety-templates/retail-store-daily-checklist",
     "desc": "Interactive digital inspection checklist for retail food premises and deli counters.",
-    "thumbUrl": "/templates/svg/Retail-store-daily-checklist.svg"
+    "thumbUrl": "/templates/svg/Retail-store-daily-checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-40",
@@ -510,7 +584,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Opening_closing_checklist.svg",
     "targetUrl": "/food-safety-templates/opening-and-closing-checklist-template",
     "desc": "Daily opening and closing sign-off checklist for kitchen supervisors and hygiene managers.",
-    "thumbUrl": "/templates/svg/Opening_closing_checklist.svg"
+    "thumbUrl": "/templates/svg/Opening_closing_checklist.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-41",
@@ -523,7 +599,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Opening_closing_checklist.svg",
     "targetUrl": "/food-safety-templates/kitchen-opening-and-closing-checklist",
     "desc": "Interactive digital checklist for opening and closing procedures with real-time status tracking.",
-    "thumbUrl": "/templates/svg/Opening_closing_checklist.svg"
+    "thumbUrl": "/templates/svg/Opening_closing_checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-42",
@@ -535,8 +613,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-42",
     "imgUrl": "/templates/svg/Health_inspection_checklist.svg",
     "targetUrl": "/food-safety-templates/health-inspection-checklist",
-    "desc": "Kitchen checklist for health inspection checklist. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Health_inspection_checklist.svg"
+    "desc": "A commercial health inspection checklist is a structured self-audit tool used by UK catering managers and head chefs to prepare for unannounced...",
+    "thumbUrl": "/templates/svg/Health_inspection_checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-43",
@@ -548,8 +628,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Health_inspection_checklist.svg",
     "targetUrl": "/food-safety-templates/restaurant-health-inspection-checklist",
-    "desc": "Interactive smart calculator and digital generator for restaurant health inspection checklist. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Health_inspection_checklist.svg"
+    "desc": "A restaurant health inspection checklist is a comprehensive pre-audit tool designed to help UK food businesses prepare for local council Environmental...",
+    "thumbUrl": "/templates/svg/Health_inspection_checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-44",
@@ -561,8 +643,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-44",
     "imgUrl": "/templates/svg/Restaurant_equipment_list.svg",
     "targetUrl": "/food-safety-templates/restaurant-equipment-list",
-    "desc": "Kitchen checklist for restaurant equipment list. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Restaurant_equipment_list.svg"
+    "desc": "A restaurant equipment list details all commercial machinery, cooking appliances, refrigeration assets, warewashing equipment, and smallwares required...",
+    "thumbUrl": "/templates/svg/Restaurant_equipment_list.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-45",
@@ -574,8 +658,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Restaurant_equipment_list.svg",
     "targetUrl": "/food-safety-templates/kitchen-utensils-list",
-    "desc": "Interactive smart calculator and digital generator for kitchen utensils list. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Restaurant_equipment_list.svg"
+    "desc": "A commercial kitchen utensils list is a master inventory and par-level specification tool used by executive chefs and catering operators to audit...",
+    "thumbUrl": "/templates/svg/Restaurant_equipment_list.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-46",
@@ -587,8 +673,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-46",
     "imgUrl": "/templates/posters/template-46.webp",
     "targetUrl": "/food-safety-templates/fridge-layout-poster",
-    "desc": "Kitchen wall poster for fridge layout food safety poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-46.webp"
+    "desc": "A commercial fridge layout poster provides a visual food safety hierarchy for organizing walk-in cold rooms and reach-in refrigerators.",
+    "thumbUrl": "/templates/thumbs/template-46.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-47",
@@ -600,8 +688,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-47",
     "imgUrl": "/templates/charts/template-47.webp",
     "targetUrl": "/food-safety-templates/meat-cooking-chart",
-    "desc": "Critical food temperature and safety chart for meat cooking chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-47.webp"
+    "desc": "A commercial meat cooking temperature chart specifies statutory core temperatures, oven settings, and probe protocols across all protein categories.",
+    "thumbUrl": "/templates/thumbs/template-47.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-48",
@@ -614,7 +704,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Cooking_temp_log.svg",
     "targetUrl": "/food-safety-templates/cooking-log-template",
     "desc": "Record-keeping log for cooking log. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Cooking_temp_log.svg"
+    "thumbUrl": "/templates/svg/Cooking_temp_log.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-49",
@@ -626,8 +718,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-49",
     "imgUrl": "/templates/charts/template-49.webp",
     "targetUrl": "/food-safety-templates/steak-cooking-chart",
-    "desc": "Critical food temperature and safety chart for steak doneness chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-49.webp"
+    "desc": "A commercial steak cooking chart outlines precise internal core temperatures and searing protocols across 6 stages of doneness: Blue (45°C), Rare...",
+    "thumbUrl": "/templates/thumbs/template-49.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-50",
@@ -639,8 +733,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-50",
     "imgUrl": "/templates/charts/template-50.webp",
     "targetUrl": "/food-safety-templates/ham-cooking-temperature-chart",
-    "desc": "Critical food temperature and safety chart for ham cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-50.webp"
+    "desc": "A commercial ham and gammon cooking temperature chart defines the safe roasting times and thermal core temperature limits required for pork joints in...",
+    "thumbUrl": "/templates/thumbs/template-50.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-51",
@@ -652,8 +748,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-51",
     "imgUrl": "/templates/posters/template-51.webp",
     "targetUrl": "/food-safety-templates/hand-washing-poster",
-    "desc": "Kitchen wall poster for hand washing poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-51.webp"
+    "desc": "A kitchen handwashing procedure poster provides visual step-by-step guidance on proper hand hygiene technique, water temperature, soap lathering, and...",
+    "thumbUrl": "/templates/thumbs/template-51.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-52",
@@ -665,8 +763,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-52",
     "imgUrl": "/templates/posters/template-52.webp",
     "targetUrl": "/food-safety-templates/when-should-you-wash-your-hands",
-    "desc": "Kitchen wall poster for when should you wash hands poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-52.webp"
+    "desc": "Under UK Food Safety Regulation (EC) No 852/2004 and FSA guidelines, commercial food handlers must wash their hands frequently and thoroughly with warm...",
+    "thumbUrl": "/templates/thumbs/template-52.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-53",
@@ -678,8 +778,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-53",
     "imgUrl": "/templates/charts/template-53.webp",
     "targetUrl": "/food-safety-templates/venison-cooking-temperature-chart",
-    "desc": "Critical food temperature and safety chart for venison cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-53.webp"
+    "desc": "A commercial venison cooking temperature chart specifies the safe roasting times and thermal core limits for wild and farmed deer cuts in UK catering.",
+    "thumbUrl": "/templates/thumbs/template-53.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-54",
@@ -691,8 +793,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-54",
     "imgUrl": "/templates/posters/template-54.webp",
     "targetUrl": "/food-safety-templates/food-temperatures-poster",
-    "desc": "Kitchen wall poster for food safety temperatures poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-54.webp"
+    "desc": "A food safety temperatures poster is an essential commercial kitchen reference chart displaying UK statutory critical limits: cooking core (≥75°C for...",
+    "thumbUrl": "/templates/thumbs/template-54.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-55",
@@ -704,8 +808,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-55",
     "imgUrl": "/templates/charts/template-55.webp",
     "targetUrl": "/food-safety-templates/chicken-temperature-chart",
-    "desc": "Critical food temperature and safety chart for chicken cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-55.webp"
+    "desc": "A commercial chicken cooking temperature chart establishes the mandatory core thermal lethality standards for poultry in UK commercial kitchens.",
+    "thumbUrl": "/templates/thumbs/template-55.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-56",
@@ -717,8 +823,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-56",
     "imgUrl": "/templates/svg/Opening_restaurant_checklist.svg",
     "targetUrl": "/food-safety-templates/opening-a-restaurant-checklist",
-    "desc": "Kitchen checklist for opening a restaurant. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Opening_restaurant_checklist.svg"
+    "desc": "An opening a restaurant checklist guides entrepreneurs through the pre-launch stages of launching a food and beverage business.",
+    "thumbUrl": "/templates/svg/Opening_restaurant_checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-57",
@@ -730,8 +838,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Opening_restaurant_checklist.svg",
     "targetUrl": "/food-safety-templates/starting-a-food-business-checklist",
-    "desc": "Interactive smart calculator and digital generator for starting a food business checklist. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Opening_restaurant_checklist.svg"
+    "desc": "A starting a food business checklist is an end-to-end statutory compliance roadmap guiding UK catering entrepreneurs through legal council registration...",
+    "thumbUrl": "/templates/svg/Opening_restaurant_checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-58",
@@ -743,8 +853,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-58",
     "imgUrl": "/templates/charts/template-58.webp",
     "targetUrl": "/food-safety-templates/duck-cooking-temperature-chart",
-    "desc": "Critical food temperature and safety chart for duck cooking temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-58.webp"
+    "desc": "A commercial duck cooking temperature chart defines the professional core probing and cooking parameters for duck carcasses, confit legs, and seared...",
+    "thumbUrl": "/templates/thumbs/template-58.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-59",
@@ -756,8 +868,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-59",
     "imgUrl": "/templates/charts/template-59.webp",
     "targetUrl": "/food-safety-templates/beef-temperature-chart",
-    "desc": "Critical food temperature and safety chart for beef temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-59.webp"
+    "desc": "A commercial beef cooking temperature chart details the core thermal standards for beef cuts, differentiating between intact whole muscle roasts and...",
+    "thumbUrl": "/templates/thumbs/template-59.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-60",
@@ -769,8 +883,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-60",
     "imgUrl": "/templates/charts/template-60.webp",
     "targetUrl": "/food-safety-templates/turkey-cooking-chart",
-    "desc": "Critical food temperature and safety chart for turkey cooking chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-60.webp"
+    "desc": "A commercial turkey cooking chart specifies roasting times per kilogram, oven heat profiles, and internal core probe limits for whole birds and turkey...",
+    "thumbUrl": "/templates/thumbs/template-60.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-61",
@@ -782,8 +898,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-61",
     "imgUrl": "/templates/charts/template-61.webp",
     "targetUrl": "/food-safety-templates/lamb-temperature-chart",
-    "desc": "Critical food temperature and safety chart for lamb temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-61.webp"
+    "desc": "A commercial lamb cooking temperature chart provides catering teams with precise roasting times, rest durations, and safe core temperatures for bone-in...",
+    "thumbUrl": "/templates/thumbs/template-61.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-62",
@@ -795,8 +913,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-62",
     "imgUrl": "/templates/charts/template-62.webp",
     "targetUrl": "/food-safety-templates/fish-temperature-chart",
-    "desc": "Critical food temperature and safety chart for fish temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-62.webp"
+    "desc": "A commercial fish cooking temperature chart and seafood safety guide details statutory core temperatures, parasite freezing controls, and flaking...",
+    "thumbUrl": "/templates/thumbs/template-62.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-63",
@@ -809,7 +929,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Thermometer_calib_log.svg",
     "targetUrl": "/food-safety-templates/thermometer-calibration-log",
     "desc": "Record-keeping log for thermometer calibration. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Thermometer_calib_log.svg"
+    "thumbUrl": "/templates/svg/Thermometer_calib_log.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-64",
@@ -821,8 +943,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-64",
     "imgUrl": "/templates/posters/template-64.webp",
     "targetUrl": "/food-safety-templates/how-do-you-calibrate-a-thermometer",
-    "desc": "Kitchen wall poster for how do you calibrate a thermometer poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-64.webp"
+    "desc": "Calibrating a food thermometer verifies that temperature probes provide accurate readings to guarantee microbiological food safety.",
+    "thumbUrl": "/templates/thumbs/template-64.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-65",
@@ -834,21 +958,25 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-65",
     "imgUrl": "/templates/svg/HACCP-audit-checklist.svg",
     "targetUrl": "/food-safety-templates/haccp-audit-checklist-template",
-    "desc": "Kitchen checklist for haccp audit checklist template. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/HACCP-audit-checklist.svg"
+    "desc": "A HACCP audit checklist template provides hospitality operators and food safety managers with a structured verification framework to evaluate kitchen...",
+    "thumbUrl": "/templates/svg/HACCP-audit-checklist.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-66",
     "slug": "haccp-audit",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "HACCP Audit Checklist",
+    "title": "Commercial HACCP Verification Audit",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/HACCP-audit-checklist.svg",
     "targetUrl": "/food-safety-templates/haccp-audit",
-    "desc": "Interactive smart calculator and digital generator for haccp audit checklist. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/HACCP-audit-checklist.svg"
+    "desc": "Audit active HACCP documentation, probe calibration certificates, and corrective action records during internal kitchen reviews.",
+    "thumbUrl": "/templates/svg/HACCP-audit-checklist.svg",
+    "catSlug": "haccp-compliance",
+    "category": "HACCP & Compliance"
   },
   {
     "id": "template-67",
@@ -860,8 +988,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-67",
     "imgUrl": "/templates/posters/template-67.webp",
     "targetUrl": "/food-safety-templates/danger-zone-for-food",
-    "desc": "Kitchen wall poster for temperature danger zone chart. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-67.webp"
+    "desc": "The temperature danger zone for food is the critical range between 8°C and 63°C (46°F to 145°F) where pathogenic food poisoning bacteria such as...",
+    "thumbUrl": "/templates/thumbs/template-67.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-68",
@@ -873,8 +1003,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-68",
     "imgUrl": "/templates/posters/template-68.webp",
     "targetUrl": "/food-safety-templates/kitchen-safety-poster",
-    "desc": "Kitchen wall poster for kitchen safety poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-68.webp"
+    "desc": "A commercial kitchen safety poster outlines vital occupational hazard rules, knife handling protocols, burn prevention, slip/trip precautions, and...",
+    "thumbUrl": "/templates/thumbs/template-68.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-69",
@@ -886,8 +1018,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-69",
     "imgUrl": "/templates/posters/template-69.webp",
     "targetUrl": "/food-safety-templates/food-safety-and-sanitation",
-    "desc": "Kitchen wall poster for food safety and sanitation poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-69.webp"
+    "desc": "Commercial food safety and sanitation ensures that kitchen surfaces, preparation equipment, utensils, and food contact zones are systematically cleaned...",
+    "thumbUrl": "/templates/thumbs/template-69.webp",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-70",
@@ -899,8 +1033,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-70",
     "imgUrl": "/templates/posters/template-70.webp",
     "targetUrl": "/food-safety-templates/big-6-foodborne-illnesses",
-    "desc": "Kitchen wall poster for big 6 foodborne illnesses. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-70.webp"
+    "desc": "The 'Big 6' foodborne illnesses refer to the six most highly infectious, easily transmissible foodborne pathogens recognized by food safety authorities...",
+    "thumbUrl": "/templates/thumbs/template-70.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-71",
@@ -912,8 +1048,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-71",
     "imgUrl": "/templates/posters/template-71.webp",
     "targetUrl": "/food-safety-templates/fridge-temperature-chart",
-    "desc": "Kitchen wall poster for fridge temperature chart. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-71.webp"
+    "desc": "A commercial fridge temperature chart is an operational monitoring guide and daily audit log used in UK food businesses to ensure cold storage units...",
+    "thumbUrl": "/templates/thumbs/template-71.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-75",
@@ -925,21 +1063,25 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-75",
     "imgUrl": "/templates/charts/template-75.webp",
     "targetUrl": "/food-safety-templates/food-temperature-chart",
-    "desc": "Critical food temperature and safety chart for food temperature. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-75.webp"
+    "desc": "A master food temperature chart details the comprehensive UK statutory and best-practice temperature scale for commercial catering.",
+    "thumbUrl": "/templates/thumbs/template-75.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-76",
     "slug": "haccp-risk-assessment",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Define Critical Control Point With HACCP Matrix",
+    "title": "HACCP Hazard & Risk Matrix Tool",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Define_critical_control_point.svg",
     "targetUrl": "/food-safety-templates/haccp-risk-assessment",
-    "desc": "Interactive smart calculator and digital generator for define critical control point with haccp matrix. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Define_critical_control_point.svg"
+    "desc": "Evaluate biological, chemical, physical, and allergenic hazards step by step using severity and likelihood scoring matrices.",
+    "thumbUrl": "/templates/svg/Define_critical_control_point.svg",
+    "catSlug": "haccp-compliance",
+    "category": "HACCP & Compliance"
   },
   {
     "id": "template-77",
@@ -951,8 +1093,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-77",
     "imgUrl": "/templates/charts/template-77.webp",
     "targetUrl": "/food-safety-templates/proper-food-storage-chart",
-    "desc": "Critical food temperature and safety chart for proper food storage chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-77.webp"
+    "desc": "A commercial food storage chart establishes strict vertical refrigeration hierarchy based on minimum cooking temperatures to prevent liquid drip...",
+    "thumbUrl": "/templates/thumbs/template-77.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-78",
@@ -964,8 +1108,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-78",
     "imgUrl": "/templates/charts/template-78.webp",
     "targetUrl": "/food-safety-templates/sanitation-standard-operating-procedures",
-    "desc": "Critical food temperature and safety chart for ssop template. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-78.webp"
+    "desc": "Sanitation Standard Operating Procedures (SSOP) are detailed written protocols specifying how food equipment, prep stations, and facilities must be...",
+    "thumbUrl": "/templates/thumbs/template-78.webp",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-79",
@@ -977,21 +1123,25 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/SSOP_folder.svg",
     "targetUrl": "/food-safety-templates/ssop",
-    "desc": "Interactive smart calculator and digital generator for ssop. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/SSOP_folder.svg"
+    "desc": "A Sanitation Standard Operating Procedure (SSOP) is a mandatory written protocol defining specific operational and pre-operational cleaning routines in...",
+    "thumbUrl": "/templates/svg/SSOP_folder.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-80",
     "slug": "what-are-the-critical-control-points-for-food-safety",
     "type": "chart",
     "preheader": "CHART",
-    "title": "Define Critical Control Point With Decision Tree",
+    "title": "CCP Codex Decision Tree Guide",
     "activity": "restaurant,retail,producer,wholesale,healthcare",
     "pdfUrl": "/api/download?id=template-80",
     "imgUrl": "/templates/charts/template-80.webp",
     "targetUrl": "/food-safety-templates/what-are-the-critical-control-points-for-food-safety",
-    "desc": "Critical food temperature and safety chart for define critical control point with decision tree. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-80.webp"
+    "desc": "Visual 4-question Codex Alimentarius decision tree reference to separate true Critical Control Points from prerequisite programs.",
+    "thumbUrl": "/templates/thumbs/template-80.webp",
+    "catSlug": "haccp-compliance",
+    "category": "HACCP & Compliance"
   },
   {
     "id": "template-81",
@@ -1003,8 +1153,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-81",
     "imgUrl": "/templates/posters/template-81.webp",
     "targetUrl": "/food-safety-templates/burger-temp-chart",
-    "desc": "Kitchen wall poster for burger temperature chart. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-81.webp"
+    "desc": "A commercial burger cooking temperature chart specifies the critical time and temperature standards required to eliminate Shiga toxin-producing E. coli...",
+    "thumbUrl": "/templates/thumbs/template-81.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-82",
@@ -1016,8 +1168,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-82",
     "imgUrl": "/templates/posters/template-82.webp",
     "targetUrl": "/food-safety-templates/hot-holding-temperature",
-    "desc": "Kitchen wall poster for hot holding temperature chart. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-82.webp"
+    "desc": "In UK commercial catering, the statutory minimum hot holding temperature is 63°C (145°F) under Schedule 4 of the Food Safety and Hygiene (England)...",
+    "thumbUrl": "/templates/thumbs/template-82.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-83",
@@ -1029,8 +1183,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-83",
     "imgUrl": "/templates/posters/template-83.webp",
     "targetUrl": "/food-safety-templates/what-is-the-minimum-hot-holding-temperature-for-fried-chicken",
-    "desc": "Kitchen wall poster for hot holding temperature for fried chicken. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-83.webp"
+    "desc": "The statutory minimum hot holding temperature for fried chicken in the UK is 63°C (145°F) under the Food Safety and Hygiene Regulations 2013.",
+    "thumbUrl": "/templates/thumbs/template-83.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-84",
@@ -1043,7 +1199,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Hot_holding_pizza.svg",
     "targetUrl": "/food-safety-templates/what-is-the-minimum-hot-holding-temperature-requirement-for-pizza",
     "desc": "Record-keeping log for pizza hot holding. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Hot_holding_pizza.svg"
+    "thumbUrl": "/templates/svg/Hot_holding_pizza.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-85",
@@ -1055,8 +1213,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-85",
     "imgUrl": "/templates/svg/EHO_checklist.svg",
     "targetUrl": "/food-safety-templates/eho-checklist",
-    "desc": "Kitchen checklist for eho food hygiene inspection checklist. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/EHO_checklist.svg"
+    "desc": "An EHO inspection checklist is a structured compliance audit tool used by UK restaurants and takeaways to prepare for unannounced local authority food...",
+    "thumbUrl": "/templates/svg/EHO_checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-86",
@@ -1068,8 +1228,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-86",
     "imgUrl": "/templates/posters/template-86.webp",
     "targetUrl": "/food-safety-templates/what-is-the-minimum-hot-holding-temperature-for-hot-dog",
-    "desc": "Kitchen wall poster for hot dog. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-86.webp"
+    "desc": "Under Schedule 4 of the Food Safety and Hygiene (England) Regulations 2013, cooked hot dogs must be maintained at a minimum hot-holding temperature of...",
+    "thumbUrl": "/templates/thumbs/template-86.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-87",
@@ -1081,8 +1243,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-87",
     "imgUrl": "/templates/posters/template-87.webp",
     "targetUrl": "/food-safety-templates/fridge-organization-chart",
-    "desc": "Kitchen wall poster for fridge organization. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-87.webp"
+    "desc": "A commercial kitchen fridge organisation chart establishes a 5-tier vertical hierarchy based on required minimum cooking temperatures.",
+    "thumbUrl": "/templates/thumbs/template-87.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-88",
@@ -1094,8 +1258,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-88",
     "imgUrl": "/templates/posters/template-88.webp",
     "targetUrl": "/food-safety-templates/cleaning-a-meat-slicer-poster",
-    "desc": "Kitchen wall poster for cleaning a meat slicer. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-88.webp"
+    "desc": "Cleaning a commercial meat slicer requires a strict mechanical and chemical protocol: electrical lockout, setting blade gauge past zero, donning EN 388...",
+    "thumbUrl": "/templates/thumbs/template-88.webp",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-89",
@@ -1107,8 +1273,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-89",
     "imgUrl": "/templates/posters/template-89.webp",
     "targetUrl": "/food-safety-templates/allergen-poster",
-    "desc": "Kitchen wall poster for food allergen poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-89.webp"
+    "desc": "The 14 food allergens kitchen poster is an official UK food safety reference detailing the 14 statutory allergens mandated under Food Information...",
+    "thumbUrl": "/templates/thumbs/template-89.webp",
+    "catSlug": "allergen-management",
+    "category": "Allergen Management"
   },
   {
     "id": "template-90",
@@ -1120,8 +1288,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-90",
     "imgUrl": "/templates/posters/template-90.webp",
     "targetUrl": "/food-safety-templates/how-to-use-a-meat-thermometer",
-    "desc": "Kitchen wall poster for how to use a meat thermometer. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-90.webp"
+    "desc": "To use a digital meat thermometer, first disinfect the stainless steel sensor probe using a BS EN 1276 alcohol wipe.",
+    "thumbUrl": "/templates/thumbs/template-90.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-91",
@@ -1133,8 +1303,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-91",
     "imgUrl": "/templates/posters/template-91.webp",
     "targetUrl": "/food-safety-templates/how-to-use-a-food-thermometer",
-    "desc": "Kitchen wall poster for how to use a food thermometer. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-91.webp"
+    "desc": "Operating a commercial food thermometer requires disinfecting the probe with a BS EN 1276 wipe, submerging the sensor stem at least 50mm into liquids...",
+    "thumbUrl": "/templates/thumbs/template-91.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-92",
@@ -1146,8 +1318,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-92",
     "imgUrl": "/templates/posters/template-92.webp",
     "targetUrl": "/food-safety-templates/food-sanitation-rules",
-    "desc": "Kitchen wall poster for food sanitation rules poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-92.webp"
+    "desc": "Commercial food sanitation rules mandate a strict two-stage cleaning procedure: detergent washing to remove physical grease, followed by a BS EN 1276...",
+    "thumbUrl": "/templates/thumbs/template-92.webp",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-93",
@@ -1160,7 +1334,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/posters/template-93.webp",
     "targetUrl": "/food-safety-templates/food-cooling-poster",
     "desc": "UK FSA-recommended food cooling procedures and two-stage chilling guidelines. Clear visual reference for rapid chilling within 90 minutes and ice-bath methods.",
-    "thumbUrl": "/templates/thumbs/template-93.webp"
+    "thumbUrl": "/templates/thumbs/template-93.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-94",
@@ -1172,8 +1348,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-94",
     "imgUrl": "/templates/posters/template-94.webp",
     "targetUrl": "/food-safety-templates/cold-food-storage-rules",
-    "desc": "Kitchen wall poster for cold food storage rules. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-94.webp"
+    "desc": "Under Schedule 4 of the Food Safety and Hygiene (England) Regulations 2013, cold food storage in commercial kitchens must be maintained at or below...",
+    "thumbUrl": "/templates/thumbs/template-94.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-95",
@@ -1186,7 +1364,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Receiving_temp_log.svg",
     "targetUrl": "/food-safety-templates/receiving-log",
     "desc": "Record-keeping log for receiving temperature. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Receiving_temp_log.svg"
+    "thumbUrl": "/templates/svg/Receiving_temp_log.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-96",
@@ -1198,8 +1378,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-96",
     "imgUrl": "/templates/posters/template-96.webp",
     "targetUrl": "/food-safety-templates/food-receiving-procedure",
-    "desc": "Kitchen wall poster for food receiving procedure. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-96.webp"
+    "desc": "A commercial food receiving procedure verifies that incoming food deliveries meet statutory safety criteria before acceptance.",
+    "thumbUrl": "/templates/thumbs/template-96.webp",
+    "catSlug": "sop-templates",
+    "category": "Standard Operating Procedures (SOP)"
   },
   {
     "id": "template-97",
@@ -1211,21 +1393,25 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-97",
     "imgUrl": "/templates/svg/Cleaning_schedule.svg",
     "targetUrl": "/food-safety-templates/deep-cleaning-checklist",
-    "desc": "Kitchen checklist for deep cleaning checklist. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Cleaning_schedule.svg"
+    "desc": "A commercial kitchen deep cleaning checklist organizes high-intensity sanitation rotas for restaurant cooking lines, extraction systems, refrigeration...",
+    "thumbUrl": "/templates/svg/Cleaning_schedule.svg",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-98",
     "slug": "restaurant-deep-cleaning-checklist",
     "type": "smart_tool",
     "preheader": "SMART TOOL",
-    "title": "Restaurant Deep Cleaning",
+    "title": "Kitchen Deep Clean Sign-Off Checklist",
     "activity": "restaurant,healthcare",
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Cleaning_schedule.svg",
     "targetUrl": "/food-safety-templates/restaurant-deep-cleaning-checklist",
-    "desc": "Interactive smart calculator and digital generator for restaurant deep cleaning. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Cleaning_schedule.svg"
+    "desc": "Weekly and monthly kitchen strip-down verification checklist for commercial fryers, baffle filters, floor drains, and supervisor sign-off.",
+    "thumbUrl": "/templates/svg/Cleaning_schedule.svg",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-99",
@@ -1238,7 +1424,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/charts/template-99.webp",
     "targetUrl": "/food-safety-templates/vacuum-sealed-food-shelf-life-chart",
     "desc": "Food safety storage chart for vacuum-sealed foods. Reference guide for refrigeration and freezer shelf life.",
-    "thumbUrl": "/templates/thumbs/template-99.webp"
+    "thumbUrl": "/templates/thumbs/template-99.webp",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-100",
@@ -1251,7 +1439,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/charts/template-100.webp",
     "targetUrl": "/food-safety-templates/calculating-food-cost",
     "desc": "Essential food costing formulas, gross margin targets, and portion control benchmarks for commercial kitchens.",
-    "thumbUrl": "/templates/thumbs/template-100.webp"
+    "thumbUrl": "/templates/thumbs/template-100.webp",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-101",
@@ -1263,8 +1453,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Food_cost_calc.svg",
     "targetUrl": "/food-safety-templates/food-cost-calculator",
-    "desc": "Interactive smart calculator and digital generator for food cost calculator. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Food_cost_calc.svg"
+    "desc": "The commercial kitchen food cost calculator enables restaurant and takeaway managers to calculate food cost percentages, gross profit margins, and menu...",
+    "thumbUrl": "/templates/svg/Food_cost_calc.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-102",
@@ -1276,8 +1468,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-102",
     "imgUrl": "/templates/svg/GMP_audit.svg",
     "targetUrl": "/food-safety-templates/gmp-audit-checklist",
-    "desc": "Kitchen checklist for gmp audit checklist - template. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/GMP_audit.svg"
+    "desc": "A Good Manufacturing Practice (GMP) audit checklist verifies that a food processing facility adheres to foundational hygiene, environmental, and...",
+    "thumbUrl": "/templates/svg/GMP_audit.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-103",
@@ -1289,8 +1483,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/GMP_audit.svg",
     "targetUrl": "/food-safety-templates/food-production-gmp-audit-checklist",
-    "desc": "Interactive smart calculator and digital generator for gmp audit checklist - smart tool. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/GMP_audit.svg"
+    "desc": "A food production GMP audit checklist is an operational quality assurance audit tool used by food manufacturers, dark kitchens, and catering facilities...",
+    "thumbUrl": "/templates/svg/GMP_audit.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-104",
@@ -1302,8 +1498,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-104",
     "imgUrl": "/templates/svg/gfsi_cert.svg",
     "targetUrl": "/food-safety-templates/gfsi-audit-checklist",
-    "desc": "Kitchen checklist for how to get gfsi certified?. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/gfsi_cert.svg"
+    "desc": "A GFSI audit checklist prepares food manufacturers and processors for third-party audits benchmarked by the Global Food Safety Initiative (GFSI), such...",
+    "thumbUrl": "/templates/svg/gfsi_cert.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-105",
@@ -1315,8 +1513,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-105",
     "imgUrl": "/templates/svg/ISO_22000_cert.svg",
     "targetUrl": "/food-safety-templates/get-iso-22000-certified",
-    "desc": "Kitchen checklist for how to get iso 22000 certified?. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/ISO_22000_cert.svg"
+    "desc": "Getting ISO 22000 certified involves implementing a globally recognized Food Safety Management System (FSMS) based on ISO 22000:2018.",
+    "thumbUrl": "/templates/svg/ISO_22000_cert.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-106",
@@ -1329,7 +1529,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/charts/template-106.webp",
     "targetUrl": "/food-safety-templates/fsma-food-traceability-list",
     "desc": "Statutory one-step-forward, one-step-back food traceability documentation requirements under General Food Law (Regulation EC 178/2002) for UK food premises.",
-    "thumbUrl": "/templates/thumbs/template-106.webp"
+    "thumbUrl": "/templates/thumbs/template-106.webp",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-107",
@@ -1342,7 +1544,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Approved_suppliers_list.svg",
     "targetUrl": "/food-safety-templates/approved-supplier-list",
     "desc": "Record-keeping log for approved supplier list. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Approved_suppliers_list.svg"
+    "thumbUrl": "/templates/svg/Approved_suppliers_list.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-108",
@@ -1354,8 +1558,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-108",
     "imgUrl": "/templates/svg/SQF_audit_checklist.svg",
     "targetUrl": "/food-safety-templates/sqf-audit-checklist",
-    "desc": "Kitchen checklist for sqf internal audit checklist | download free template. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/SQF_audit_checklist.svg"
+    "desc": "An SQF audit checklist benchmarks food manufacturing and packaging operations against the Safe Quality Food (SQF) Code Edition 9.",
+    "thumbUrl": "/templates/svg/SQF_audit_checklist.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-109",
@@ -1367,8 +1573,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-109",
     "imgUrl": "/templates/svg/ISO_22000_Internal_Audit_Checklist.svg",
     "targetUrl": "/food-safety-templates/iso-22000-internal-audit-checklist",
-    "desc": "Kitchen checklist for iso 22000 internal audit checklist. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/ISO_22000_Internal_Audit_Checklist.svg"
+    "desc": "An ISO 22000 internal audit checklist enables food businesses to systematically verify compliance with Clauses 4 through 10 of ISO 22000:2018.",
+    "thumbUrl": "/templates/svg/ISO_22000_Internal_Audit_Checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-110",
@@ -1381,7 +1589,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/FSMA_Compliance_Audit_Checklist.svg",
     "targetUrl": "/food-safety-templates/fsma-compliance-checklist",
     "desc": "Statutory due diligence record-keeping checklist under the Food Safety Act 1990 and Food Information Regulations for UK commercial caterers.",
-    "thumbUrl": "/templates/svg/FSMA_Compliance_Audit_Checklist.svg"
+    "thumbUrl": "/templates/svg/FSMA_Compliance_Audit_Checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-111",
@@ -1393,8 +1603,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-111",
     "imgUrl": "/templates/svg/fssc.svg",
     "targetUrl": "/food-safety-templates/fssc-certification-checklist",
-    "desc": "Kitchen checklist for how to get fssc 22000 certified?. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/fssc.svg"
+    "desc": "An FSSC certification checklist audits food processing, packaging, and manufacturing facilities against the FSSC 22000 Version 6 scheme benchmarked by...",
+    "thumbUrl": "/templates/svg/fssc.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-113",
@@ -1407,7 +1619,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Ingredient_traceability.svg",
     "targetUrl": "/food-safety-templates/ingredient-traceability",
     "desc": "Record-keeping log for ingredient traceability. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Ingredient_traceability.svg"
+    "thumbUrl": "/templates/svg/Ingredient_traceability.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-114",
@@ -1420,7 +1634,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Delivery_log.svg",
     "targetUrl": "/food-safety-templates/delivery-log",
     "desc": "Record-keeping log for delivery log. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Delivery_log.svg"
+    "thumbUrl": "/templates/svg/Delivery_log.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-115",
@@ -1433,7 +1649,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Production_sheet.svg",
     "targetUrl": "/food-safety-templates/food-production-sheet",
     "desc": "Record-keeping log for production sheet. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Production_sheet.svg"
+    "thumbUrl": "/templates/svg/Production_sheet.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-116",
@@ -1446,7 +1664,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Dispatch_sheet.svg",
     "targetUrl": "/food-safety-templates/dispatch-log",
     "desc": "Record-keeping log for dispatch log. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Dispatch_sheet.svg"
+    "thumbUrl": "/templates/svg/Dispatch_sheet.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-117",
@@ -1458,8 +1678,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-117",
     "imgUrl": "/templates/charts/template-117.webp",
     "targetUrl": "/food-safety-templates/food-expiration-dates-guidelines-chart",
-    "desc": "Critical food temperature and safety chart for food expiration dates guidelines. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-117.webp"
+    "desc": "A food expiration dates guidelines chart clarifies statutory 'Use-By' dates (strict food safety indicators beyond which consumption is illegal and...",
+    "thumbUrl": "/templates/thumbs/template-117.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-118",
@@ -1471,8 +1693,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-118",
     "imgUrl": "/templates/charts/template-118.webp",
     "targetUrl": "/food-safety-templates/canned-food-expiration-dates-chart",
-    "desc": "Critical food temperature and safety chart for canned food expiration dates. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-118.webp"
+    "desc": "A commercial canned food expiration chart details safe ambient storage times: 12 to 18 months for high-acid canned goods (tomatoes, pineapple) and 2 to...",
+    "thumbUrl": "/templates/thumbs/template-118.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-119",
@@ -1484,8 +1708,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Hazard_Analysis.svg",
     "targetUrl": "/food-safety-templates/hazard-analysis-template",
-    "desc": "Interactive smart calculator and digital generator for hazard analysis example. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Hazard_Analysis.svg"
+    "desc": "A HACCP hazard analysis template is a structured food safety risk assessment tool implementing HACCP Principle 1.",
+    "thumbUrl": "/templates/svg/Hazard_Analysis.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-120",
@@ -1497,8 +1723,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-120",
     "imgUrl": "/templates/posters/template-120.webp",
     "targetUrl": "/food-safety-templates/reheating-food-temperature-guide",
-    "desc": "Kitchen wall poster for food reheating poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-120.webp"
+    "desc": "A commercial food reheating temperature guide illustrates the legal core temperature thresholds and standard operating procedures for reheating...",
+    "thumbUrl": "/templates/thumbs/template-120.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-121",
@@ -1510,8 +1738,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-121",
     "imgUrl": "/templates/posters/template-121.webp",
     "targetUrl": "/food-safety-templates/three-sink-method",
-    "desc": "Kitchen wall poster for three sink method poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-121.webp"
+    "desc": "The three-sink method is the statutory commercial warewashing procedure for manual cleaning of pots, pans, and utensils.",
+    "thumbUrl": "/templates/thumbs/template-121.webp",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-122",
@@ -1523,8 +1753,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-122",
     "imgUrl": "/templates/posters/template-122.webp",
     "targetUrl": "/food-safety-templates/proper-method-for-cleaning-dirty-utensils",
-    "desc": "Kitchen wall poster for cleaning and sanitizing dirty utensils. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-122.webp"
+    "desc": "The proper commercial method for cleaning dirty utensils follows a 6-stage protocol: pre-scraping gross food soils, washing in Sink 1 with detergent at...",
+    "thumbUrl": "/templates/thumbs/template-122.webp",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-123",
@@ -1536,8 +1768,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-123",
     "imgUrl": "/templates/posters/template-123.webp",
     "targetUrl": "/food-safety-templates/five-food-safety-rules",
-    "desc": "Kitchen wall poster for 5 food safety rules. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-123.webp"
+    "desc": "The five essential food safety rules summarize the core hygiene principles established by the World Health Organization and UK Food Standards Agency...",
+    "thumbUrl": "/templates/thumbs/template-123.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-124",
@@ -1549,8 +1783,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-124",
     "imgUrl": "/templates/posters/template-124.webp",
     "targetUrl": "/food-safety-templates/cold-holding-food",
-    "desc": "Kitchen wall poster for max. temp. and rules for cold holding food. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-124.webp"
+    "desc": "Under Schedule 4 of the Food Safety and Hygiene (England) Regulations 2013, cold-holding food must be maintained at or below 8.0°C continuously, with...",
+    "thumbUrl": "/templates/thumbs/template-124.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-125",
@@ -1562,8 +1798,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-125",
     "imgUrl": "/templates/posters/template-125.webp",
     "targetUrl": "/food-safety-templates/sell-by-date",
-    "desc": "Kitchen wall poster for sell-by, use-by, expiration dates. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-125.webp"
+    "desc": "In the UK under Regulation (EU) No 1169/2011, 'Use-By' dates are statutory food safety boundaries indicating when high-risk foods become hazardous to...",
+    "thumbUrl": "/templates/thumbs/template-125.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-126",
@@ -1575,8 +1813,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-126",
     "imgUrl": "/templates/charts/template-126.webp",
     "targetUrl": "/food-safety-templates/how-long-to-keep-leftovers-chart",
-    "desc": "Critical food temperature and safety chart for how long to keep the leftovers. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-126.webp"
+    "desc": "A commercial leftovers chart enforces the UK statutory 2-day catering rule: batch-cooked foods, sauces, roasted meats, and stews must be cooled to...",
+    "thumbUrl": "/templates/thumbs/template-126.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-127",
@@ -1588,8 +1828,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-127",
     "imgUrl": "/templates/posters/template-127.webp",
     "targetUrl": "/food-safety-templates/fat-tom-poster",
-    "desc": "Kitchen wall poster for fattom. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-127.webp"
+    "desc": "FAT TOM is a foundational food microbiology acronym representing the six environmental conditions required for bacterial growth: Food (rich nutrients)...",
+    "thumbUrl": "/templates/thumbs/template-127.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-128",
@@ -1601,8 +1843,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-128",
     "imgUrl": "/templates/charts/template-128.webp",
     "targetUrl": "/food-safety-templates/how-long-does-butter-last-poster",
-    "desc": "Critical food temperature and safety chart for how long does butter last?. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-128.webp"
+    "desc": "A commercial butter storage poster establishes shelf-life guidelines: salted butter lasts 1 to 2 days at ambient room temperature in covered crocks, 3...",
+    "thumbUrl": "/templates/thumbs/template-128.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-129",
@@ -1615,7 +1859,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/posters/template-129.webp",
     "targetUrl": "/food-safety-templates/cutting-board-color-chart",
     "desc": "FSA-recommended colour coding for commercial kitchen chopping boards: Red (Raw Meat), Blue (Raw Fish), Yellow (Cooked Meat), Green (Salad & Fruit), Brown (Vegetables), White (Dairy & Bakery).",
-    "thumbUrl": "/templates/thumbs/template-129.webp"
+    "thumbUrl": "/templates/thumbs/template-129.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-130",
@@ -1627,8 +1873,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-130",
     "imgUrl": "/templates/posters/template-130.webp",
     "targetUrl": "/food-safety-templates/chopping-board-colour-chart",
-    "desc": "Kitchen wall poster for uk chopping board colour chart. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-130.webp"
+    "desc": "A UK colour-coded chopping board chart establishes standard culinary colour assignments to prevent cross-contamination between raw proteins, cooked...",
+    "thumbUrl": "/templates/thumbs/template-130.webp",
+    "catSlug": "posters-guidelines",
+    "category": "Posters & Guidelines"
   },
   {
     "id": "template-131",
@@ -1640,8 +1888,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-131",
     "imgUrl": "/templates/svg/Natashas_law.svg",
     "targetUrl": "/food-safety-templates/natashas-law",
-    "desc": "Kitchen checklist for natasha's law. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Natashas_law.svg"
+    "desc": "A Natasha's Law compliance checklist ensures UK food businesses adhere to the Food Information (Amendment) (England) Regulations 2020.",
+    "thumbUrl": "/templates/svg/Natashas_law.svg",
+    "catSlug": "allergen-management",
+    "category": "Allergen Management"
   },
   {
     "id": "template-132",
@@ -1653,8 +1903,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "",
     "imgUrl": "/templates/svg/Recipe_creator_tool.svg",
     "targetUrl": "/food-safety-templates/recipe-card-generator",
-    "desc": "Interactive smart calculator and digital generator for recipe generator. Streamlines food safety operations with zero manual calculation errors.",
-    "thumbUrl": "/templates/svg/Recipe_creator_tool.svg"
+    "desc": "A commercial recipe card generator is an interactive culinary kitchen tool used by executive chefs, restaurant owners, and caterers to standardize dish...",
+    "thumbUrl": "/templates/svg/Recipe_creator_tool.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-133",
@@ -1666,8 +1918,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-133",
     "imgUrl": "/templates/posters/template-133.webp",
     "targetUrl": "/food-safety-templates/defrosting-foods",
-    "desc": "Kitchen wall poster for food defrosting. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-133.webp"
+    "desc": "Commercial food defrosting must be conducted under controlled conditions to prevent food entering the 8°C-63°C danger zone.",
+    "thumbUrl": "/templates/thumbs/template-133.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-134",
@@ -1679,8 +1933,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-134",
     "imgUrl": "/templates/posters/template-134.webp",
     "targetUrl": "/food-safety-templates/boiling-water-thermometer-calibration",
-    "desc": "Kitchen wall poster for thermometer calibration boiling point method. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-134.webp"
+    "desc": "The boiling point thermometer calibration method verifies digital probe accuracy in a rolling boil of clean water.",
+    "thumbUrl": "/templates/thumbs/template-134.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-135",
@@ -1692,8 +1948,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-135",
     "imgUrl": "/templates/svg/non-gmo.svg",
     "targetUrl": "/food-safety-templates/non-gmo",
-    "desc": "Kitchen checklist for how to get the non-gmo certification?. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/non-gmo.svg"
+    "desc": "A Non-GMO food audit checklist establishes identity preservation, traceability, and testing protocols across agricultural and food processing supply...",
+    "thumbUrl": "/templates/svg/non-gmo.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-136",
@@ -1706,7 +1964,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Amazon_reqs.png",
     "targetUrl": "/food-safety-templates/amazon-seller-and-product-requirements",
     "desc": "Mandatory labelling, allergen declaration, and courier temperature maintenance guidelines for UK online food businesses and distance selling.",
-    "thumbUrl": "/templates/svg/Amazon_reqs.png"
+    "thumbUrl": "/templates/svg/Amazon_reqs.png",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-137",
@@ -1718,8 +1978,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-137",
     "imgUrl": "/templates/charts/template-137.webp",
     "targetUrl": "/food-safety-templates/milk-pasteurization-temperature-time-chart",
-    "desc": "Critical food temperature and safety chart for milk pasteurization chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-137.webp"
+    "desc": "A milk pasteurisation chart outlines statutory thermal processing profiles: High-Temperature Short-Time (HTST: 72°C for 15 seconds), Low-Temperature...",
+    "thumbUrl": "/templates/thumbs/template-137.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-138",
@@ -1731,8 +1993,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-138",
     "imgUrl": "/templates/charts/template-138.webp",
     "targetUrl": "/food-safety-templates/pork-temperature-chart",
-    "desc": "Critical food temperature and safety chart for pork temperature chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-138.webp"
+    "desc": "A commercial pork cooking temperature chart outlines statutory thermal lethality thresholds, resting times, and cut guidelines for pork and swine...",
+    "thumbUrl": "/templates/thumbs/template-138.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-139",
@@ -1744,8 +2008,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-139",
     "imgUrl": "/templates/charts/template-139.webp",
     "targetUrl": "/food-safety-templates/freeze-drying-time-chart",
-    "desc": "Critical food temperature and safety chart for freeze drying time chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-139.webp"
+    "desc": "Freeze drying requires between 20 and 48 hours per batch depending on food water and sugar density.",
+    "thumbUrl": "/templates/thumbs/template-139.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-140",
@@ -1757,8 +2023,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-140",
     "imgUrl": "/templates/charts/template-140.webp",
     "targetUrl": "/food-safety-templates/juice-pasteurization-temperature-time-chart",
-    "desc": "Critical food temperature and safety chart for juice-pasteurization-chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-140.webp"
+    "desc": "Juice pasteurisation requires achieving a certified 5-log (99.999%) reduction of target bacterial pathogens including Escherichia coli O157:H7...",
+    "thumbUrl": "/templates/thumbs/template-140.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-141",
@@ -1770,8 +2038,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-141",
     "imgUrl": "/templates/charts/template-141.webp",
     "targetUrl": "/food-safety-templates/meat-pasteurization-chart",
-    "desc": "Critical food temperature and safety chart for meat-pasteurization-chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-141.webp"
+    "desc": "Meat pasteurisation achieves a 6.5-log or 7-log reduction of Salmonella, Listeria monocytogenes, and STEC E. coli by holding core temperatures at lower...",
+    "thumbUrl": "/templates/thumbs/template-141.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-142",
@@ -1783,8 +2053,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-142",
     "imgUrl": "/templates/charts/template-142.webp",
     "targetUrl": "/food-safety-templates/poultry-pasteurization-chart",
-    "desc": "Critical food temperature and safety chart for poultry pasteurization chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-142.webp"
+    "desc": "Poultry pasteurisation requires achieving a 7-log (99.99999%) reduction of Salmonella enterica and Campylobacter.",
+    "thumbUrl": "/templates/thumbs/template-142.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-143",
@@ -1796,8 +2068,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-143",
     "imgUrl": "/templates/charts/template-143.webp",
     "targetUrl": "/food-safety-templates/chicken-pasteurization-chart",
-    "desc": "Critical food temperature and safety chart for chicken pasteurization chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-143.webp"
+    "desc": "Chicken pasteurisation achieves complete eradication of Salmonella and Campylobacter by combining precise core temperatures with validated holding times.",
+    "thumbUrl": "/templates/thumbs/template-143.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-144",
@@ -1810,7 +2084,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Hot-holding-food.svg",
     "targetUrl": "/food-safety-templates/hot-holding-food-temperature-log",
     "desc": "Record-keeping log for hot holding food log. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Hot-holding-food.svg"
+    "thumbUrl": "/templates/svg/Hot-holding-food.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-145",
@@ -1822,8 +2098,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-145",
     "imgUrl": "/templates/charts/template-145.webp",
     "targetUrl": "/food-safety-templates/freezer-organization-chart",
-    "desc": "Critical food temperature and safety chart for freezer organization chart. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-145.webp"
+    "desc": "Commercial freezer organization prevents cross-contamination, preserves cold airflow, and minimizes food waste using vertical shelf zones.",
+    "thumbUrl": "/templates/thumbs/template-145.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-146",
@@ -1835,8 +2113,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-146",
     "imgUrl": "/templates/posters/template-146.webp",
     "targetUrl": "/food-safety-templates/prevent-freezer-burn",
-    "desc": "Kitchen wall poster for prevent freezer burn poster. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-146.webp"
+    "desc": "Freezer burn occurs when moisture sublimates from frozen food surfaces, leaving dry, oxidized, discoloured patches.",
+    "thumbUrl": "/templates/thumbs/template-146.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-149",
@@ -1849,7 +2129,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/EcoSure_inspection_checklist.svg",
     "targetUrl": "/food-safety-templates/ecosure-inspection-checklist",
     "desc": "Comprehensive external inspection audit preparation checklist for commercial hospitality kitchens, restaurants, and food manufacturing units.",
-    "thumbUrl": "/templates/svg/EcoSure_inspection_checklist.svg"
+    "thumbUrl": "/templates/svg/EcoSure_inspection_checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-150",
@@ -1861,8 +2143,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-150",
     "imgUrl": "/templates/charts/template-150.webp",
     "targetUrl": "/food-safety-templates/5-whys-root-cause-analysis-template",
-    "desc": "Critical food temperature and safety chart for 5 whys root cause analysis. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-150.webp"
+    "desc": "The 5 Whys Root Cause Analysis template enables food businesses to systematically investigate Critical Control Point (CCP) failures, foreign body...",
+    "thumbUrl": "/templates/thumbs/template-150.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-151",
@@ -1875,7 +2159,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/svg/Corrective_action_plan.svg",
     "targetUrl": "/food-safety-templates/corrective-action-plan-template",
     "desc": "Record-keeping log for corrective action plan. Designed to help kitchen teams record daily checks and maintain documentation.",
-    "thumbUrl": "/templates/svg/Corrective_action_plan.svg"
+    "thumbUrl": "/templates/svg/Corrective_action_plan.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-152",
@@ -1887,8 +2173,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-152",
     "imgUrl": "/templates/svg/Fire_inspection_checklist.svg",
     "targetUrl": "/food-safety-templates/restaurant-fire-inspection-checklist",
-    "desc": "Kitchen checklist for restaurant fire inspection checklist. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Fire_inspection_checklist.svg"
+    "desc": "A restaurant fire inspection checklist audits commercial kitchens and dining premises for compliance with the Regulatory Reform (Fire Safety) Order...",
+    "thumbUrl": "/templates/svg/Fire_inspection_checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-153",
@@ -1900,8 +2188,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-153",
     "imgUrl": "/templates/svg/Restausatnt_maintenance_checklist.svg",
     "targetUrl": "/food-safety-templates/restaurant-maintenance-checklist",
-    "desc": "Kitchen checklist for restaurant maintenance checklist. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Restausatnt_maintenance_checklist.svg"
+    "desc": "A restaurant maintenance checklist organizes preventative upkeep schedules for commercial kitchen equipment, refrigeration systems, HVAC ventilation...",
+    "thumbUrl": "/templates/svg/Restausatnt_maintenance_checklist.svg",
+    "catSlug": "checklists-audits",
+    "category": "Checklists & Audits"
   },
   {
     "id": "template-154",
@@ -1913,8 +2203,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-154",
     "imgUrl": "/templates/posters/template-154.webp",
     "targetUrl": "/food-safety-templates/restaurant-hood-cleaning",
-    "desc": "Kitchen wall poster for restaurant hood cleaning. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-154.webp"
+    "desc": "Commercial restaurant hood cleaning requires daily degreasing of baffle filters and drip channels, weekly canopy interior scrubdowns, and...",
+    "thumbUrl": "/templates/thumbs/template-154.webp",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-155",
@@ -1926,8 +2218,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-155",
     "imgUrl": "/templates/posters/template-155.webp",
     "targetUrl": "/food-safety-templates/grease-trap-cleaning",
-    "desc": "Kitchen wall poster for grease trap cleaning guide. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-155.webp"
+    "desc": "Commercial grease trap cleaning involves allowing kitchen wastewater to cool so fats, oils, and grease (FOG) solidify, skimming the top crust, pumping...",
+    "thumbUrl": "/templates/thumbs/template-155.webp",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-156",
@@ -1939,8 +2233,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-156",
     "imgUrl": "/templates/svg/Restaurant_bathroom_cleaning_checklist.svg",
     "targetUrl": "/food-safety-templates/restroom-cleaning-checklist-log",
-    "desc": "Kitchen checklist for restroom cleaning checklist. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Restaurant_bathroom_cleaning_checklist.svg"
+    "desc": "A commercial restroom cleaning checklist and washroom inspection log ensures restaurant and hospitality facilities maintain exceptional hygiene...",
+    "thumbUrl": "/templates/svg/Restaurant_bathroom_cleaning_checklist.svg",
+    "catSlug": "cleaning-sanitation",
+    "category": "Cleaning & Sanitation"
   },
   {
     "id": "template-157",
@@ -1952,8 +2248,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-157",
     "imgUrl": "/templates/svg/Restaurant_inventory_template.svg",
     "targetUrl": "/food-safety-templates/restaurant-inventory-template",
-    "desc": "Kitchen checklist for restaurant inventory template. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Restaurant_inventory_template.svg"
+    "desc": "A restaurant inventory template provides a systematic spreadsheet and digital count sheet for auditing food, beverage, and cleaning stock across...",
+    "thumbUrl": "/templates/svg/Restaurant_inventory_template.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-158",
@@ -1965,8 +2263,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-158",
     "imgUrl": "/templates/svg/Restaurant_schedule_template.svg",
     "targetUrl": "/food-safety-templates/restaurant-schedule-template",
-    "desc": "Kitchen checklist for restaurant schedule template. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Restaurant_schedule_template.svg"
+    "desc": "A restaurant schedule template organizes front-of-house (FOH) and back-of-house (BOH) staff rotas across weekly shifts.",
+    "thumbUrl": "/templates/svg/Restaurant_schedule_template.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-159",
@@ -1978,8 +2278,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-159",
     "imgUrl": "/templates/svg/Kitchen_prep_list_template.svg",
     "targetUrl": "/food-safety-templates/kitchen-prep-list-template",
-    "desc": "Kitchen checklist for kitchen prep list template. Helps supervisors and team members organise daily checks and documentation.",
-    "thumbUrl": "/templates/svg/Kitchen_prep_list_template.svg"
+    "desc": "A daily kitchen prep list template organizes culinary mise en place, inventory batch requirements, station par levels, and chef task assignments.",
+    "thumbUrl": "/templates/svg/Kitchen_prep_list_template.svg",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-160",
@@ -1991,8 +2293,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-160",
     "imgUrl": "/templates/posters/template-160.webp",
     "targetUrl": "/food-safety-templates/restaurant-steps-of-service",
-    "desc": "Kitchen wall poster for restaurant steps of service. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-160.webp"
+    "desc": "Restaurant steps of service define the standardized front-of-house operational sequence from initial guest greeting within 60 seconds, allergen...",
+    "thumbUrl": "/templates/thumbs/template-160.webp",
+    "catSlug": "sop-templates",
+    "category": "Standard Operating Procedures (SOP)"
   },
   {
     "id": "template-161",
@@ -2004,8 +2308,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-161",
     "imgUrl": "/templates/posters/template-161.webp",
     "targetUrl": "/food-safety-templates/restaurant-food-safety-procedures",
-    "desc": "Kitchen wall poster for restaurant food safety procedures. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-161.webp"
+    "desc": "Commercial restaurant food safety procedures establish standardized protocols across the '4 Cs' of food hygiene: Cleaning (two-stage disinfection)...",
+    "thumbUrl": "/templates/thumbs/template-161.webp",
+    "catSlug": "sop-templates",
+    "category": "Standard Operating Procedures (SOP)"
   },
   {
     "id": "template-162",
@@ -2017,8 +2323,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-162",
     "imgUrl": "/templates/posters/template-162.webp",
     "targetUrl": "/food-safety-templates/restaurant-manager-responsibilities",
-    "desc": "Kitchen wall poster for restaurant manager responsibilities. Designed as a visual reference for food handlers. Printable format.",
-    "thumbUrl": "/templates/thumbs/template-162.webp"
+    "desc": "A commercial restaurant manager bears statutory legal responsibility for food business operator (FBO) compliance under the Food Safety Act 1990 and...",
+    "thumbUrl": "/templates/thumbs/template-162.webp",
+    "catSlug": "sop-templates",
+    "category": "Standard Operating Procedures (SOP)"
   },
   {
     "id": "template-166",
@@ -2030,8 +2338,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-166",
     "imgUrl": "/templates/charts/template-166.webp",
     "targetUrl": "/food-safety-templates/restaurant-sop",
-    "desc": "Critical food temperature and safety chart for restaurant sop template. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-166.webp"
+    "desc": "A restaurant Standard Operating Procedure (SOP) standardises daily operations across front-of-house service, kitchen prep, and food hygiene compliance.",
+    "thumbUrl": "/templates/thumbs/template-166.webp",
+    "catSlug": "temperature-logs",
+    "category": "Temperature Logs"
   },
   {
     "id": "template-167",
@@ -2043,8 +2353,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-167",
     "imgUrl": "/templates/charts/template-167.webp",
     "targetUrl": "/food-safety-templates/standard-operating-procedure-in-food-industry",
-    "desc": "Critical food temperature and safety chart for sops in the food industry. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-167.webp"
+    "desc": "Food industry Standard Operating Procedures (SOPs and SSOPs) establish uniform manufacturing, sanitation, and quality control protocols across...",
+    "thumbUrl": "/templates/thumbs/template-167.webp",
+    "catSlug": "sop-templates",
+    "category": "Standard Operating Procedures (SOP)"
   },
   {
     "id": "template-168",
@@ -2057,7 +2369,9 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "imgUrl": "/templates/charts/template-168.webp",
     "targetUrl": "/food-safety-templates/pest-control-sop",
     "desc": "Standard operating procedure (SOP) documentation for food business pest prevention, exclusion barriers, and contracted technician reporting.",
-    "thumbUrl": "/templates/thumbs/template-168.webp"
+    "thumbUrl": "/templates/thumbs/template-168.webp",
+    "catSlug": "sop-templates",
+    "category": "Standard Operating Procedures (SOP)"
   },
   {
     "id": "template-169",
@@ -2069,8 +2383,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-169",
     "imgUrl": "/templates/charts/template-169.webp",
     "targetUrl": "/food-safety-templates/allergen-control-sop",
-    "desc": "Critical food temperature and safety chart for allergen control sop. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-169.webp"
+    "desc": "A commercial allergen control Standard Operating Procedure (SOP) establishes systematic cross-contact prevention protocols for UK hospitality venues...",
+    "thumbUrl": "/templates/thumbs/template-169.webp",
+    "catSlug": "allergen-management",
+    "category": "Allergen Management"
   },
   {
     "id": "template-170",
@@ -2082,8 +2398,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-170",
     "imgUrl": "/templates/charts/template-170.webp",
     "targetUrl": "/food-safety-templates/waste-management-plan-sop",
-    "desc": "Critical food temperature and safety chart for waste management plan sop. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-170.webp"
+    "desc": "A commercial kitchen Waste Management Plan SOP governs source-segregation across food biowaste, recyclables, cooking oil, and general refuse.",
+    "thumbUrl": "/templates/thumbs/template-170.webp",
+    "catSlug": "sop-templates",
+    "category": "Standard Operating Procedures (SOP)"
   },
   {
     "id": "template-171",
@@ -2095,8 +2413,10 @@ export const FOOD_SAFETY_TEMPLATES: FoodSafetyTemplate[] = [
     "pdfUrl": "/api/download?id=template-171",
     "imgUrl": "/templates/charts/template-171.webp",
     "targetUrl": "/food-safety-templates/kitchen-sop",
-    "desc": "Critical food temperature and safety chart for kitchen sop. Clear visual reference guide for chefs and food preparation handlers.",
-    "thumbUrl": "/templates/thumbs/template-171.webp"
+    "desc": "A commercial Kitchen Standard Operating Procedure (SOP) standardises morning prep line-checks, cross-contamination controls, cooking temperature...",
+    "thumbUrl": "/templates/thumbs/template-171.webp",
+    "catSlug": "sop-templates",
+    "category": "Standard Operating Procedures (SOP)"
   }
 ];
 

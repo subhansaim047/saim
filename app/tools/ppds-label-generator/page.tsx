@@ -8,7 +8,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { ToolsSiloNav } from "@/components/tools/ToolsSiloNav";
 
 export const metadata: Metadata = {
-  title: "PPDS Label Generator UK | Natasha's Law Labels | Saim Dev",
+  title: "PPDS Label Generator UK | Free Compliance | Saim Dev",
   description: "Generate compliant Natasha's Law PPDS food labels online. Automatically bold all 14 UK allergens, set use-by dates, and print free A4 sticker sheets.",
   robots: {
     index: true,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "PPDS Label Generator UK | Natasha's Law Labels | Saim Dev",
+    title: "PPDS Label Generator UK | Free Compliance | Saim Dev",
     description: "Generate compliant Natasha's Law PPDS food labels online. Automatically bold all 14 UK allergens, set use-by dates, and print free A4 sticker sheets.",
     url: "https://www.saimdev.site/tools/ppds-label-generator",
     siteName: "Saim Dev",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@saimwebdev",
-    title: "PPDS Label Generator UK | Natasha's Law Labels | Saim Dev",
+    title: "PPDS Label Generator UK | Free Compliance | Saim Dev",
     description: "Generate compliant Natasha's Law PPDS food labels online. Automatically bold all 14 UK allergens, set use-by dates, and print free A4 sticker sheets.",
     images: ["https://www.saimdev.site/og-image.png"],
   },

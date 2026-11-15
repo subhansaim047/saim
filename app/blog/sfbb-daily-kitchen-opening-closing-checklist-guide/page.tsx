@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostChecklist } from '@/components/blog/BlogPostChecklist';
 
 export const metadata: Metadata = {
-  title: 'SFBB Daily Kitchen Opening & Closing Checklists | Saim Dev',
+  title: 'SFBB Kitchen Opening Closing Checklists | Saim Dev',
   description: 'Master your SFBB daily opening and closing checklist routine. Learn the 4 Cs, temperature logging rules, and prepare for a 5-star food hygiene rating.',
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'SFBB Daily Kitchen Opening & Closing Checklist Guide UK | Saim Dev',
+    title: 'SFBB Kitchen Opening Closing Checklists | Saim Dev',
     description: 'Master your SFBB daily opening and closing checklist routine. Learn the 4 Cs, temperature logging rules, and prepare for a 5-star food hygiene rating.',
     url: 'https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide',
     siteName: 'Saim Dev',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'SFBB Daily Kitchen Opening & Closing Checklist Guide UK | Saim Dev',
+    title: 'SFBB Kitchen Opening Closing Checklists | Saim Dev',
     description: 'Master your SFBB daily opening and closing checklist routine. Learn the 4 Cs, temperature logging rules, and prepare for a 5-star food hygiene rating.',
     images: ['https://www.saimdev.site/og-image.png']
   }

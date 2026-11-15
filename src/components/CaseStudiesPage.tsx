@@ -3,12 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import {
-  ArrowLeft,
   ArrowRight,
-  TrendingUp,
   Zap,
-  Star,
-  CheckCircle2,
   ExternalLink,
   ShieldCheck,
 } from "lucide-react";
@@ -24,92 +20,85 @@ import {
 interface CaseStudy {
   id: string;
   category: "healthcare" | "automotive" | "beauty";
-  clientName: string;
+  archetypeName: string;
   industryTag: string;
   headline: string;
   metricBadge: string;
   metricHighlight: string;
   problemText: string;
   solutionText: string;
-  designText: string;
   beforeStats: { loadTime: string; score: number; bounceRate: string };
   afterStats: { loadTime: string; score: number; bounceRate: string };
-  testimonial: { quote: string; author: string; role: string };
+  architectureNote: { summary: string; focus: string; deliverables: string };
   previewImage: string;
 }
 
 const caseStudiesData: CaseStudy[] = [
   {
-    id: "apex-dental",
+    id: "dental-clinic-architecture",
     category: "healthcare",
-    clientName: "Apex Dental Care",
-    industryTag: "Healthcare · Dental Practice",
-    headline: "Transforming a 4.8-Second Legacy Site into a Sub-Second Patient Lead Engine",
-    metricBadge: "+185% Patient Bookings",
-    metricHighlight: "+185% Online Appointments in 30 Days",
+    archetypeName: "Private Dental & Aesthetics Archetype",
+    industryTag: "Healthcare · Reference Architecture",
+    headline: "Replacing 4.8s WordPress Clinic Themes with Sub-Second Appointment Routing",
+    metricBadge: "Target <0.8s Mobile LCP",
+    metricHighlight: "Direct Appointment & WhatsApp Triage Architecture",
     problemText:
-      "Apex Dental was losing over 60% of mobile visitors due to a slow WordPress template that loaded in 4.8 seconds and lacked instant online booking options.",
+      "Multi-plugin clinic websites commonly block first paint with bloated scheduling iframes and oversized gallery bitmaps, driving high mobile drop-off before treatment enquiry forms load.",
     solutionText:
-      "Engineered a bespoke React + Tailwind web platform featuring click-to-book WhatsApp integration, MedicalBusiness JSON-LD schema, and local SEO maps optimisation.",
-    designText:
-      "Clean, medical-grade dark luxury aesthetic with high-contrast typography, trust badges, and frictionless appointment CTA buttons.",
-    beforeStats: { loadTime: "4.8s", score: 38, bounceRate: "68%" },
-    afterStats: { loadTime: "0.6s", score: 99, bounceRate: "18%" },
-    testimonial: {
-      quote:
-        "Saim Dev rebuilt our entire web presence in less than 7 days. Our new patient bookings nearly tripled within the first month!",
-      author: "Dr. Marcus Vance",
-      role: "Lead Dentist & Practice Director",
+      "Engineered a lean Next.js App Router layout featuring lightweight appointment routing, MedicalBusiness JSON-LD schema, and optimised WebP treatment cards.",
+    beforeStats: { loadTime: "4.8s typ.", score: 38, bounceRate: "65%+" },
+    afterStats: { loadTime: "<0.8s", score: 95, bounceRate: "<25%" },
+    architectureNote: {
+      summary:
+        "Illustrative reference benchmark comparing legacy CMS clinic builds against static-first Next.js 16 architecture with deferred interactive booking widgets.",
+      focus: "Core Web Vitals & Local Pack Schema",
+      deliverables: "Treatment Service Tree · JSON-LD · WhatsApp Intake",
     },
     previewImage:
       "/demos/previews/serenia-luxury-wellness-spa.webp",
   },
   {
-    id: "speedtech-auto",
+    id: "automotive-recovery-architecture",
     category: "automotive",
-    clientName: "SpeedTech Automotive",
-    industryTag: "Automotive · Repair & Performance",
-    headline: "Mobile-First Emergency Service Platform Driving 2.2x Revenue Growth",
-    metricBadge: "+220% Emergency Calls",
-    metricHighlight: "2.2x Increase in Weekly Towing & Repair Requests",
+    archetypeName: "Detailing & Roadside Service Archetype",
+    industryTag: "Automotive · Reference Architecture",
+    headline: "Mobile-First Emergency & Detailing Flow Built for Instant 4G Tap Actions",
+    metricBadge: "0.00 CLS Target",
+    metricHighlight: "Single-Tap Call & WhatsApp Dispatch Interface",
     problemText:
-      "Drivers stuck on the road needed immediate click-to-call service, but SpeedTech's previous website was unreadable on mobile phones and failed to rank locally.",
+      "Drivers searching on mobile networks face unusable carousels, buried phone numbers, and heavy uncached background scripts that delay urgent service calls.",
     solutionText:
-      "Crafted a high-contrast mobile-first platform featuring instant emergency call triggers, SMS location sharing, and Google Local Pack SEO.",
-    designText:
-      "Bold automotive visual design with high-visibility CTA buttons, dynamic service cards, and real-time repair status tracking.",
-    beforeStats: { loadTime: "5.2s", score: 31, bounceRate: "74%" },
-    afterStats: { loadTime: "0.5s", score: 100, bounceRate: "14%" },
-    testimonial: {
-      quote:
-        "Our phone hasn't stopped ringing since the new site went live. The instant WhatsApp location sharing alone saved us hours of back-and-forth.",
-      author: "James Miller",
-      role: "Operations Manager, SpeedTech Auto",
+      "Designed a high-contrast mobile-first architecture with immediate sticky call/WhatsApp actions, compressed vehicle imagery, and local UK service schema.",
+    beforeStats: { loadTime: "5.2s typ.", score: 31, bounceRate: "70%+" },
+    afterStats: { loadTime: "<0.7s", score: 96, bounceRate: "<22%" },
+    architectureNote: {
+      summary:
+        "Illustrative performance model contrasting heavy automotive builder themes with clean Tailwind CSS and zero third-party script bloat on mobile data.",
+      focus: "Mobile INP & Immediate Lead Triggers",
+      deliverables: "Tap-to-Call Sticky Bar · Service Filters · Local SEO",
     },
     previewImage:
       "/demos/previews/detailx-car-detailing-auto-repair.webp",
   },
   {
-    id: "velvet-salon",
+    id: "editorial-salon-architecture",
     category: "beauty",
-    clientName: "Velvet Hair Studio & Spa",
-    industryTag: "Beauty & Wellness · Luxury Salon",
-    headline: "Editorial Brand Elevation & Direct Instagram Appointment Engine",
-    metricBadge: "Fully Booked 3 Weeks Ahead",
-    metricHighlight: "Fully Booked Out 3 Weeks in Advance",
+    archetypeName: "Luxury Salon & Studio Concept",
+    industryTag: "Beauty & Wellness · Reference Architecture",
+    headline: "Editorial Visual Elevations Without Sacrificing LCP Speed or Accessibility",
+    metricBadge: "Target 95+ CWV",
+    metricHighlight: "Motion-Synchronised Lookbook & Package Tier Selector",
     problemText:
-      "An outdated site failed to convey the salon's premium luxury pricing, resulting in low enquiry conversion and price pushback from prospective clients.",
+      "Beauty and studio websites frequently trade away Lighthouse performance by shipping uncompressed hero videos and blocking animation bundles.",
     solutionText:
-      "Designed a minimalist editorial web experience with smooth Framer Motion interactions, high-definition portfolio galleries, and frictionless appointment flows.",
-    designText:
-      "Monochrome high-fashion aesthetic featuring fluid typography, soft micro-animations, and instant service package selection.",
-    beforeStats: { loadTime: "3.9s", score: 45, bounceRate: "59%" },
-    afterStats: { loadTime: "0.4s", score: 100, bounceRate: "12%" },
-    testimonial: {
-      quote:
-        "The website looks like a high-end fashion magazine. Clients regularly compliment our online booking experience before they even walk through the door.",
-      author: "Sophia Laurent",
-      role: "Creative Founder, Velvet Hair Studio",
+      "Structured a monochrome editorial showcase using GPU-composited transitions, explicit image dimensions to eliminate layout shift, and direct booking CTAs.",
+    beforeStats: { loadTime: "3.9s typ.", score: 45, bounceRate: "58%+" },
+    afterStats: { loadTime: "<0.7s", score: 96, bounceRate: "<20%" },
+    architectureNote: {
+      summary:
+        "Illustrative editorial build blueprint demonstrating how luxury aesthetic presentation and strict Core Web Vitals budgets coexist cleanly.",
+      focus: "GPU Motion & Zero Layout Shift",
+      deliverables: "Lookbook Gallery · Service Matrix · Staging Preview",
     },
     previewImage:
       "/demos/previews/studio-dbrickell-luxury-beauty-spa.webp",
@@ -128,38 +117,74 @@ export const CaseStudiesPage = () => {
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
+      <main>
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
       <RhHeroPinned
-        badge="Proven Client Results"
+        badge="Reference Architecture Case Studies"
         title={
           <>
-            Next.js Website Case Studies{" "}
-            <span className="text-[#939393]">&amp; Results</span>
+            Next.js Architecture Case Studies{" "}
+            <span className="text-[#939393]">&amp; Benchmarks</span>
           </>
         }
-        subtitle="Explore verified Next.js website case studies and real client speed benchmarks from Saim Dev. We engineer sub-second web platforms for UK and European businesses that slash bounce rates, win local search packs, and multiply customer bookings."
-        primaryCta={{ label: "Request Similar Build ($0 Upfront)", href: "/contact" }}
-        secondaryCta={{ label: "Inspect Results Below", href: "#case-study-reports" }}
+        subtitle="Explore illustrative Next.js architecture case studies and performance engineering models from Saim Dev. Compare legacy WordPress bottlenecks against clean edge-delivered storefronts and booking flows built for UK and European markets."
+        primaryCta={{ label: "Request Similar Build", href: "/contact" }}
+        secondaryCta={{ label: "Inspect Benchmarks Below", href: "#case-study-reports" }}
         videoType="cube"
-        stripLabel="Verified metrics · Tap to explore"
+        stripLabel="Reference benchmarks · Tap to explore"
+        stripItems={[
+          {
+            label: "01. Healthcare Build",
+            tag: "Booking UX",
+            tagValue: "Target <0.8s",
+            summary: "Dental and aesthetics archetype eliminating slow third-party scheduling scripts.",
+            href: "#case-study-reports",
+          },
+          {
+            label: "02. Automotive Mobile",
+            tag: "4G Priority",
+            tagValue: "0.00 CLS Target",
+            summary: "High-contrast emergency & detailing UX with sticky single-tap lead dispatch.",
+            href: "#case-study-reports",
+          },
+          {
+            label: "03. Luxury Editorial",
+            tag: "Visual Brand",
+            tagValue: "Target 95+ CWV",
+            summary: "Lookbook presentation built with GPU transitions and clean WebP pipelines.",
+            href: "/demos",
+          },
+          {
+            label: "04. Milestone Delivery",
+            tag: "Terms",
+            tagValue: "50 / 50 Split",
+            summary: "Fixed GBP/USD quotes with live staging review and complete GitHub transfer.",
+            href: "/pricing",
+          },
+        ]}
       />
 
       {/* 2. INTERACTIVE PROBLEM DECK & GROWING BEFORE/AFTER BENCHMARK CHART */}
       <RhProblemSolutionDeck
-        overline="BEFORE & AFTER PERFORMANCE BENCHMARKS"
+        overline="ARCHITECTURE PERFORMANCE BENCHMARKS"
         titleBefore="Turning 4.8s legacy drag into"
         titleStrike="bounced traffic"
-        titleOwned="0.6s revenue engines."
-        subtitle="Across healthcare, emergency automotive, and luxury aesthetics, migrating from WordPress and template builders to Saim Dev Next.js delivers immediate Core Web Vitals dominance."
+        titleOwned="sub-second user journeys."
+        subtitle="Comparing typical bloated CMS setups against clean Next.js 16 edge architecture across healthcare, automotive services, and luxury studio storefronts."
         cards={caseStudiesData.map((c) => ({
-          source: c.clientName,
+          source: c.archetypeName,
           time: c.metricBadge,
-          title: `${c.beforeStats.loadTime} Legacy Load → ${c.afterStats.loadTime} Next.js Edge`,
+          title: `${c.beforeStats.loadTime} Legacy Avg → ${c.afterStats.loadTime} Next.js Target`,
           detail: c.problemText,
           severity: "critical",
         }))}
-        solutionTitle="Consistent 99–100/100 Mobile PageSpeed Across Every Client"
-        solutionDesc="Clean server-rendered React & Tailwind components, AVIF media pipelines, and JSON-LD structured schema—built first on staging so you inspect live performance before paying."
+        solutionTitle="Engineered for 95+ Mobile Core Web Vitals Targets Across Sectors"
+        solutionDesc="Clean server-rendered React & Tailwind components, WebP/AVIF media pipelines, and JSON-LD structured schema—reviewed on a live Vercel staging link with full GitHub ownership."
+        bars={[
+          { value: "31–45", label: "Legacy Theme", heightPx: 140 },
+          { value: "62", label: "Typical Builder", heightPx: 215 },
+          { value: "95+", label: "Saim Dev Target", heightPx: 335, isHighlight: true },
+        ]}
       />
 
       <div
@@ -170,19 +195,19 @@ export const CaseStudiesPage = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 mb-12 border-b border-[#202020]">
           <div>
             <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-2.5">
-              DETAILED AUDIT REPORTS
+              REFERENCE BLUEPRINTS
             </span>
             <h2 className="text-[clamp(28px,3.6vw,46px)] font-medium tracking-[-0.03em] leading-[1.1]">
-              Client Transformations{" "}
+              Architecture Case Studies{" "}
               <span className="text-[#939393]">({filteredStudies.length})</span>
             </h2>
           </div>
 
           <div className="flex items-center flex-wrap gap-2">
             {[
-              { id: "all", label: "All Projects" },
+              { id: "all", label: "All Blueprints" },
               { id: "healthcare", label: "Healthcare & Dental" },
-              { id: "automotive", label: "Automotive & Towing" },
+              { id: "automotive", label: "Automotive & Detailing" },
               { id: "beauty", label: "Beauty & Luxury Salon" },
             ].map((tab) => (
               <button
@@ -219,7 +244,7 @@ export const CaseStudiesPage = () => {
                       {study.industryTag}
                     </span>
                     <span className="text-[14px] text-[#939393]">
-                      {study.clientName}
+                      {study.archetypeName}
                     </span>
                   </div>
                   <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#BAFF00] text-[#0D0D0D] text-[12px] font-medium">
@@ -239,14 +264,14 @@ export const CaseStudiesPage = () => {
                     <div className="space-y-4 text-[14px] leading-[1.6] mb-6">
                       <div className="bg-[#0D0D0D] rounded-2xl p-5 border border-[#222222]">
                         <span className="text-[#939393] text-[11px] block mb-1 uppercase tracking-[0.88px]">
-                          01 / The Bottleneck
+                          01 / Legacy Bottleneck Pattern
                         </span>
                         <p className="text-[#CBCBCB]">{study.problemText}</p>
                       </div>
 
                       <div className="bg-[#0D0D0D] rounded-2xl p-5 border border-[#222222]">
                         <span className="text-[#BAFF00] text-[11px] block mb-1 uppercase tracking-[0.88px]">
-                          02 / Saim Dev Next.js Solution
+                          02 / Saim Dev Next.js Architecture
                         </span>
                         <p className="text-[#CBCBCB]">{study.solutionText}</p>
                       </div>
@@ -255,37 +280,37 @@ export const CaseStudiesPage = () => {
                     {/* Speed Comparison Bar */}
                     <div className="bg-[#0D0D0D] rounded-2xl p-5 border border-[#222222]">
                       <span className="text-[11px] text-[#939393] uppercase tracking-[0.88px] block mb-3">
-                        Performance Gains (Before vs After)
+                        Architecture Target (Typical Legacy vs Next.js 16)
                       </span>
                       <div className="grid grid-cols-2 gap-4 text-center">
                         <div className="p-4 bg-[#161616] border border-[#262626] rounded-2xl">
                           <span className="text-[11px] text-[#939393] block uppercase tracking-wider">
-                            Legacy Site
+                            Legacy CMS Benchmark
                           </span>
                           <div className="text-[24px] font-medium text-white mt-1">
                             {study.beforeStats.loadTime}
                           </div>
                           <span className="text-[12px] text-[#939393]">
-                            Score: {study.beforeStats.score}/100
+                            Typical Score: ~{study.beforeStats.score}/100
                           </span>
                         </div>
 
                         <div className="p-4 bg-[#161616] border border-[#BAFF00]/40 rounded-2xl">
                           <span className="text-[11px] text-[#BAFF00] block uppercase tracking-wider">
-                            Saim Dev Platform
+                            Next.js 16 Target
                           </span>
                           <div className="text-[24px] font-medium text-[#BAFF00] mt-1">
                             {study.afterStats.loadTime}
                           </div>
                           <span className="text-[12px] text-white">
-                            Score: {study.afterStats.score}/100 ⚡
+                            CWV Target: {study.afterStats.score}+/100
                           </span>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Right Column: Visual Mockup Canvas & Testimonial */}
+                  {/* Right Column: Visual Mockup Canvas & Architecture Spec */}
                   <div className="lg:col-span-5 flex flex-col justify-between h-full">
                     <div className="bg-[#0D0D0D] rounded-2xl border border-[#262626] overflow-hidden mb-6">
                       <div className="bg-[#181818] px-4 py-2.5 flex items-center gap-2 border-b border-[#262626]">
@@ -293,13 +318,13 @@ export const CaseStudiesPage = () => {
                         <div className="w-2.5 h-2.5 rounded-full bg-[#3A3A3A]" />
                         <div className="w-2.5 h-2.5 rounded-full bg-[#BAFF00]" />
                         <span className="text-[11px] font-mono text-[#939393] ml-2">
-                          https://{study.id}.com
+                          preview/{study.id}
                         </span>
                       </div>
                       <div className="relative h-56 sm:h-64 overflow-hidden group">
                         <img
                           src={study.previewImage}
-                          alt={`${study.clientName} Case Study - ${study.headline}`}
+                          alt={`${study.archetypeName} Preview - ${study.headline}`}
                           width={1200}
                           height={675}
                           decoding="async"
@@ -314,22 +339,20 @@ export const CaseStudiesPage = () => {
                       </div>
                     </div>
 
-                    {/* Client Testimonial Quote */}
+                    {/* Architecture Verification Card */}
                     <div className="bg-[#0D0D0D] rounded-2xl p-6 border border-[#222222] relative">
-                      <div className="flex items-center gap-1 text-[#BAFF00] mb-3">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-3.5 h-3.5 fill-[#BAFF00]" />
-                        ))}
-                      </div>
+                      <span className="text-[10px] font-mono-tech uppercase tracking-[0.2em] text-[#BAFF00] block mb-2">
+                        ENGINEERING BLUEPRINT NOTE
+                      </span>
                       <p className="text-[#CBCBCB] text-[14px] leading-[1.6] mb-4">
-                        &ldquo;{study.testimonial.quote}&rdquo;
+                        {study.architectureNote.summary}
                       </p>
                       <div className="text-[13px]">
                         <span className="text-white font-medium block">
-                          {study.testimonial.author}
+                          {study.architectureNote.focus}
                         </span>
                         <span className="text-[#939393]">
-                          {study.testimonial.role}
+                          {study.architectureNote.deliverables}
                         </span>
                       </div>
                     </div>
@@ -340,14 +363,14 @@ export const CaseStudiesPage = () => {
                 <div className="pt-6 border-t border-[#222222] flex flex-wrap items-center justify-between gap-4">
                   <span className="text-[13px] text-[#CBCBCB] flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-[#BAFF00]" />
-                    Verified Project Results • 100% Code Handover
+                    Reference Blueprint • 100% GitHub Code Handoff
                   </span>
                   <div className="flex items-center gap-5">
                     <Link
                       href="/demos"
                       className="text-[13px] text-[#939393] hover:text-white transition-colors"
                     >
-                      Inspect 9 Live Demos →
+                      Inspect 9 Reference Demos →
                     </Link>
                     <a
                       href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
@@ -402,21 +425,22 @@ export const CaseStudiesPage = () => {
       </div>
 
       <RhSystemRows
-        overline="MEASURED OUTCOMES"
-        title="Consistent metrics across"
-        titleMuted="every shipped platform"
+        overline="ARCHITECTURE TARGETS"
+        title="Consistent engineering standards across"
+        titleMuted="every build archetype"
         rows={caseStudiesData.map((study, idx) => ({
           num: String(idx + 1).padStart(2, "0"),
-          title: `${study.clientName} — ${study.metricBadge}`,
+          title: `${study.archetypeName} — ${study.metricBadge}`,
           description: study.solutionText,
           tags: [
-            `Before ${study.beforeStats.loadTime}`,
-            `After ${study.afterStats.loadTime}`,
-            `PageSpeed ${study.afterStats.score}/100`,
+            `Legacy ${study.beforeStats.loadTime}`,
+            `Target ${study.afterStats.loadTime}`,
+            `CWV Target ${study.afterStats.score}+/100`,
           ],
           href: "/contact",
         }))}
       />
+      </main>
 
       <SiteFooter theme="dark" />
     </div>

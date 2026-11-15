@@ -147,7 +147,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               </div>
             </a>
             <p className="text-[14px] text-[#939393] leading-relaxed max-w-sm">
-              Senior-led Next.js 15, React 19, Shopify, and bespoke web
+              Senior-led Next.js 16, React 19, Shopify, and bespoke web
               application engineering for ambitious UK, European, and global
               brands. Fixed pricing, sub-second speed, and 100% source code
               ownership.

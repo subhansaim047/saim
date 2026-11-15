@@ -2823,7 +2823,7 @@ export const DigitalChecklistTool: React.FC<{ templateTitle: string; templateId?
   };
 
   return (
-    <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm space-y-8 printable-doc">
+    <div className="bg-white rounded-3xl p-4 sm:p-10 border border-gray-200 shadow-sm space-y-8 printable-doc w-full max-w-full min-w-0 overflow-hidden">
       {/* Print Page Setup (Portrait for Kitchen Checklists) */}
       <style jsx global>{`
         @media print {

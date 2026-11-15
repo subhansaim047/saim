@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostHygieneQuiz } from '@/components/blog/BlogPostHygieneQuiz';
 
 export const metadata: Metadata = {
-  title: 'Level 2 Food Hygiene Practice Test & Answers UK | Saim Dev',
+  title: 'Level 2 Food Hygiene Test and Answers UK | Saim Dev',
   description: 'Free Level 2 food hygiene practice test questions and answers for UK kitchen staff. Revise temperature limits, cross-contamination, and food safety laws.',
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Level 2 Food Hygiene Practice Test Questions & Answers UK | Saim Dev',
+    title: 'Level 2 Food Hygiene Test and Answers UK | Saim Dev',
     description: 'Free Level 2 food hygiene practice test questions and answers for UK kitchen staff. Revise temperature limits, cross-contamination, and food safety laws.',
     url: 'https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide',
     siteName: 'Saim Dev',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'Level 2 Food Hygiene Practice Test Questions & Answers UK | Saim Dev',
+    title: 'Level 2 Food Hygiene Test and Answers UK | Saim Dev',
     description: 'Free Level 2 food hygiene practice test questions and answers for UK kitchen staff. Revise temperature limits, cross-contamination, and food safety laws.',
     images: ['https://www.saimdev.site/og-image.png']
   }

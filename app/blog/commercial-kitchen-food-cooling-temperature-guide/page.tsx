@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostCoolingGuide } from '@/components/blog/BlogPostCoolingGuide';
 
 export const metadata: Metadata = {
-  title: 'Commercial Kitchen Food Cooling Temperature Rules UK | Saim Dev',
+  title: 'Commercial Kitchen Cooling Temp Rules UK | Saim Dev',
   description: 'Complete UK guide to commercial kitchen food cooling temperature rules. Learn the 90-minute FSA guideline, danger zone limits, and safe cooling methods.',
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Commercial Kitchen Food Cooling Temperature Rules UK | Saim Dev',
+    title: 'Commercial Kitchen Cooling Temp Rules UK | Saim Dev',
     description: 'Complete UK guide to commercial kitchen food cooling temperature rules. Learn the 90-minute FSA guideline, danger zone limits, and safe cooling methods.',
     url: 'https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide',
     siteName: 'Saim Dev',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'Commercial Kitchen Food Cooling Temperature Rules UK | Saim Dev',
+    title: 'Commercial Kitchen Cooling Temp Rules UK | Saim Dev',
     description: 'Complete UK guide to commercial kitchen food cooling temperature rules. Learn the 90-minute FSA guideline, danger zone limits, and safe cooling methods.',
     images: ['https://www.saimdev.site/og-image.png']
   }

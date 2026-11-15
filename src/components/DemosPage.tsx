@@ -271,12 +271,13 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
         );
 
   return (
-    <main className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] flex flex-col justify-between">
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] flex flex-col justify-between">
       <RhHeader theme="dark" />
 
+      <main className="flex-1">
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Mobile WebM + Laser-Draw Strip) */}
       <RhHeroPinned
-        badge="9 Shipped Production Builds"
+        badge="9 Reference Production Builds"
         title={
           <>
             Restaurant Website Demos{" "}
@@ -284,10 +285,40 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
           </>
         }
         subtitle="Explore interactive restaurant website demos, bespoke e-commerce storefronts, and production Next.js applications built by Saim Dev. Test live ordering flows, GSAP scroll choreography, sub-second mobile speed, and Natasha's Law allergen filters."
-        primaryCta={{ label: "Request Custom Demo ($0 Upfront)", href: "/contact" }}
+        primaryCta={{ label: "Request Custom Concept", href: "/contact" }}
         secondaryCta={{ label: "Browse Interactive Grid", href: "#live-demos-grid" }}
         videoType="mobile"
         stripLabel="Shipped architectures · Tap to inspect"
+        stripItems={[
+          {
+            label: "01. Takeaway Demos",
+            tag: "0% Commission",
+            tagValue: "Allergen Menu",
+            summary: "Direct UK ordering builds with live Natasha's Law 14-allergen filtering and WhatsApp dispatch.",
+            href: "/services/takeaway-web-design",
+          },
+          {
+            label: "02. Headless Storefronts",
+            tag: "E-Commerce",
+            tagValue: "App Router",
+            summary: "Custom catalogue, variant selection, and Stripe/Shopify headless checkout prototypes.",
+            href: "/services/ecommerce-development",
+          },
+          {
+            label: "03. Luxury Service Sites",
+            tag: "Motion UI",
+            tagValue: "Target 95+ CWV",
+            summary: "High-contrast automotive, wellness, and studio sites engineered with GSAP choreography.",
+            href: "/services/website-development",
+          },
+          {
+            label: "04. 1:1 Code Rebuilds",
+            tag: "Custom Build",
+            tagValue: "Full Git Repo",
+            summary: "Pixel-accurate Next.js 16 & Tailwind reconstructions with complete GitHub ownership.",
+            href: "/services/website-clone",
+          },
+        ]}
       />
 
       {/* 2. INTERACTIVE PORTFOLIO SHOWCASE */}
@@ -445,7 +476,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
             <div>
               <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-2">
-                $0 Upfront Prototype Guarantee
+                Free Concept Preview Available
               </span>
               <h2 className="text-[clamp(26px,3.4vw,40px)] font-medium text-white tracking-[-0.025em]">
                 Ready for a Custom Website or Ordering System?
@@ -527,7 +558,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
             title: "1:1 Custom Architecture Cloning",
             description:
               "Point us to any flagship SaaS, luxury retail, or hospitality site—we rebuild it pixel-for-pixel in clean React code.",
-            tags: ["Flat $1,900", "7–10 Days", "$0 Upfront"],
+            tags: ["Flat $1,900", "7–10 Days", "50/50 Milestones"],
             href: "/services/website-clone",
           },
         ]}
@@ -670,8 +701,9 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
         </div>
       )}
 
+      </main>
       <FooterSection />
-    </main>
+    </div>
   );
 };
 

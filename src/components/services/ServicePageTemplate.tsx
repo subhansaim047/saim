@@ -25,6 +25,8 @@ import {
   RhProblemSolutionDeck,
   RhProcessCarousel,
   RhSystemRows,
+  type RetentionBar,
+  type StripProofItem,
 } from "@/components/rh/RhModernSections";
 
 const MOBILE_VIDEO_SLUGS = new Set([
@@ -117,17 +119,91 @@ export interface ServicePageData {
   badge: string;
   h1: string;
   subheading: string;
+  stripLabel?: string;
+  stripItems?: StripProofItem[];
+  primaryCtaText?: string;
+  secondaryCtaText?: string;
   painPoints: { problem: string; solution: string }[];
+  problemSection?: {
+    overline?: string;
+    titleBefore: string;
+    titleStrike: string;
+    titleOwned: string;
+    subtitle: string;
+    solutionTag?: string;
+    solutionTitle: string;
+    solutionDesc: string;
+    solutionMetrics?: { value: string; label: string }[];
+    chartTitle?: string;
+    chartBadge?: string;
+    chartYAxis?: string;
+    chartXAxis?: string;
+    chartCaption?: string;
+    bars?: RetentionBar[];
+  };
   deliverables: ServiceDeliverable[];
+  deliverablesMeta?: {
+    overline?: string;
+    title: string;
+    titleMuted: string;
+    subtitle: string;
+    rowTags?: string[];
+  };
   featuresAndBenefits: FeatureBenefit[];
   industries: IndustryApplication[];
   process: ProcessStep[];
   techStack: { name: string; role: string }[];
   caseStudies: CaseStudy[];
+  competitorComparison?: {
+    overline?: string;
+    title: string;
+    titleMuted: string;
+    subtitle: string;
+    columns: [string, string, string];
+    rows: { criteria: string; saim: string; alternative: string }[];
+  };
+  engineeringChecklist?: {
+    title: string;
+    subtitle?: string;
+    items: string[];
+  };
   pricing: PricingTier[];
   whyChooseUs: { title: string; desc: string }[];
   testimonials: TestimonialItem[];
   faqs: FaqItem[];
+  sectionHeadings?: {
+    valueOverline?: string;
+    valueTitle?: string;
+    valueMuted?: string;
+    marketOverline?: string;
+    marketTitle?: string;
+    marketMuted?: string;
+    processOverline?: string;
+    processTitle?: string;
+    processMuted?: string;
+    processSummary?: string;
+    processStageTag?: string;
+    stackOverline?: string;
+    stackTitle?: string;
+    stackMuted?: string;
+    proofOverline?: string;
+    proofTitle?: string;
+    proofMuted?: string;
+    pricingOverline?: string;
+    pricingTitle?: string;
+    pricingMuted?: string;
+    pricingNote?: string;
+    pricingButtonText?: string;
+    advantageOverline?: string;
+    advantageTitle?: string;
+    advantageMuted?: string;
+    feedbackOverline?: string;
+    feedbackTitle?: string;
+    feedbackMuted?: string;
+    faqOverline?: string;
+    faqIntro?: string;
+    bannerTag?: string;
+  };
   finalCta: {
     headline: string;
     description: string;
@@ -178,8 +254,9 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const h = data.sectionHeadings;
   const whatsappHref = `https://wa.me/923196526604?text=${encodeURIComponent(
-    `Hi Saim, I'm interested in ${data.serviceName} (${data.finalCta.whatsappText}) with the $0 upfront offer.`
+    `Hi Saim, I'd like to discuss ${data.serviceName} (${data.finalCta.whatsappText}).`
   )}`;
 
   const videoType = MOBILE_VIDEO_SLUGS.has(data.slug) ? "mobile" : "cube";
@@ -201,53 +278,75 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
           title={data.h1}
           subtitle={data.subheading}
           primaryCta={{
-            label: "Get a Free Consultation ($0 Upfront)",
+            label: data.primaryCtaText || "Request Fixed Quote",
             href: "/contact",
           }}
           secondaryCta={{
-            label: "View Live Demos",
+            label: data.secondaryCtaText || "Explore Live Demos",
             href: "#case-studies",
           }}
           videoType={videoType}
-          stripLabel={`${data.serviceName} · Verified Proof`}
+          stripLabel={data.stripLabel || `${data.serviceName} · Specs`}
+          stripItems={data.stripItems}
         />
 
         {/* ==============================================================
             02 — SCROLLYTELLING BOTTLENECK DECK + GROWING RETENTION CHART
         =============================================================== */}
         <RhProblemSolutionDeck
-          overline="01 / PROBLEM VS SOLUTION"
-          titleBefore={`Why Your Business Needs`}
-          titleStrike="legacy bloat"
-          titleOwned={`${data.serviceName}.`}
-          subtitle="Outdated templates and fragile CMS builds throttle conversions and lock your revenue into monthly retainers. Explore how custom Next.js engineering resolves every bottleneck."
+          overline={data.problemSection?.overline || `01 / ${data.mainKeyword.toUpperCase()} AUDIT`}
+          titleBefore={data.problemSection?.titleBefore || "Replacing"}
+          titleStrike={data.problemSection?.titleStrike || "legacy friction"}
+          titleOwned={data.problemSection?.titleOwned || `for ${data.serviceName}.`}
+          subtitle={
+            data.problemSection?.subtitle ||
+            `How custom Next.js engineering resolves common commercial and technical blockers for ${data.serviceName}.`
+          }
           cards={data.painPoints.slice(0, 4).map((p, idx) => ({
-            source: `Bottleneck #${idx + 1}`,
-            time: "Audited",
+            source: `Challenge #${idx + 1}`,
+            time: "Technical Audit",
             title: p.problem,
             detail: p.solution,
             severity: idx % 2 === 0 ? "critical" : "warning",
           }))}
-          solutionTitle={`The Saim Dev ${data.serviceName} Architecture`}
-          solutionDesc={
-            data.painPoints[0]?.solution ||
-            "Clean, modular Next.js & Tailwind CSS code built around your brand—delivered live before you spend a penny."
+          solutionTag={data.problemSection?.solutionTag}
+          solutionTitle={
+            data.problemSection?.solutionTitle || `Dedicated ${data.serviceName} Blueprint`
           }
+          solutionDesc={
+            data.problemSection?.solutionDesc ||
+            data.painPoints[0]?.solution ||
+            `Clean, modular React 19 and Next.js 16 architecture engineered around your scope with full repository handover.`
+          }
+          solutionMetrics={data.problemSection?.solutionMetrics}
+          chartTitle={data.problemSection?.chartTitle}
+          chartBadge={data.problemSection?.chartBadge}
+          chartYAxis={data.problemSection?.chartYAxis}
+          chartXAxis={data.problemSection?.chartXAxis}
+          chartCaption={data.problemSection?.chartCaption}
+          bars={data.problemSection?.bars}
         />
 
         {/* ==============================================================
             03 — INTERACTIVE SVG LINE-DRAW DELIVERABLES SYSTEM
         =============================================================== */}
         <RhSystemRows
-          overline="02 / SCOPE OF WORK"
-          title="What Is Included in Our"
-          titleMuted={data.serviceName}
-          subtitle="Hover any architectural row to inspect the geometric wireframe overlay and deliverable breakdown."
+          overline={data.deliverablesMeta?.overline || "02 / SCOPE OF WORK"}
+          title={data.deliverablesMeta?.title || "Core Deliverables for"}
+          titleMuted={data.deliverablesMeta?.titleMuted || data.serviceName}
+          subtitle={
+            data.deliverablesMeta?.subtitle ||
+            "Select any deliverable layer below to inspect included architecture, tooling, and handover standards."
+          }
           rows={data.deliverables.map((deliv, idx) => ({
             num: String(idx + 1).padStart(2, "0"),
             title: deliv.title,
             description: deliv.description,
-            tags: [data.serviceName, "$0 Upfront Guarantee", "100% Owned"],
+            tags: data.deliverablesMeta?.rowTags || [
+              data.mainKeyword,
+              "Fixed Scope",
+              "Repo Ownership",
+            ],
           }))}
         />
 
@@ -260,11 +359,11 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             <div>
               <div data-gsap-reveal="" className="max-w-3xl mb-14">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
-                  03 / Value Proposition
+                  {h?.valueOverline || "03 / Commercial Outcomes"}
                 </span>
                 <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  What Makes Our Solution{" "}
-                  <span className="text-[#939393]">Different?</span>
+                  {h?.valueTitle || "Engineering Standards for"}{" "}
+                  <span className="text-[#939393]">{h?.valueMuted || data.serviceName}</span>
                 </h2>
               </div>
 
@@ -294,11 +393,11 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             <div>
               <div className="max-w-3xl mb-14">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
-                  04 / Market Fit
+                  {h?.marketOverline || "04 / Sector Applications"}
                 </span>
                 <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  Who Is This Service{" "}
-                  <span className="text-[#939393]">Engineered For?</span>
+                  {h?.marketTitle || "Industries Built With"}{" "}
+                  <span className="text-[#939393]">{h?.marketMuted || data.serviceName}</span>
                 </h2>
               </div>
 
@@ -341,12 +440,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             06 — DARK HORIZONTAL DRAG PROCESS CAROUSEL + CONIC DIVIDER
         =============================================================== */}
         <RhProcessCarousel
-          overline="05 / DELIVERY WORKFLOW"
-          title="Our Risk-Free"
-          titleMuted="Engineering Process"
+          overline={h?.processOverline || "05 / DELIVERY WORKFLOW"}
+          title={h?.processTitle || "Milestone-Led"}
+          titleMuted={h?.processMuted || "Engineering Timeline"}
           stagesSummaryCount={String(data.process.length)}
           stagesSummaryTitle="Stages"
-          stagesSummaryText={`Fixed scope & zero upfront deposit for ${data.serviceName}.`}
+          stagesSummaryText={
+            h?.processSummary ||
+            `Written scope and 50/50 milestone delivery for ${data.serviceName}.`
+          }
           stages={data.process.map((step, idx) => ({
             stage: `STAGE 0${idx + 1}`,
             duration: step.duration || "Rapid Sprint",
@@ -354,16 +456,16 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             description: step.description,
             deliverables: [
               data.deliverables[idx]?.title || "Production Next.js Component",
-              "$0 Upfront Staging Link",
+              h?.processStageTag || "Staging Review Link",
             ],
           }))}
           quote={
             data.testimonials[0]?.quote ||
-            "Clean Next.js engineering delivered ahead of schedule with zero monthly retainers."
+            "Clean Next.js 16 architecture built around a fixed milestone schedule with full repository handover."
           }
-          author={data.testimonials[0]?.client || "UK Business Director"}
-          role={`${data.testimonials[0]?.role || "Founder"}, ${
-            data.testimonials[0]?.company || "Verified Client"
+          author={data.testimonials[0]?.client || "Architecture Benchmark"}
+          role={`${data.testimonials[0]?.role || "Target Pattern"}, ${
+            data.testimonials[0]?.company || "Reference Spec"
           }`}
           ctaLabel={data.finalCta.primaryButtonText}
           ctaHref="/contact"
@@ -378,11 +480,13 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
               <div>
                 <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-2.5">
-                  06 / MODERN STACK
+                  {h?.stackOverline || "06 / TECHNICAL STACK"}
                 </span>
                 <h2 className="text-[clamp(26px,3.2vw,38px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  Built With Next.js &amp;{" "}
-                  <span className="text-[#939393]">Edge Infrastructure</span>
+                  {h?.stackTitle || "Production Tooling for"}{" "}
+                  <span className="text-[#939393]">
+                    {h?.stackMuted || data.serviceName}
+                  </span>
                 </h2>
               </div>
               <Link
@@ -413,9 +517,9 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
         =============================================================== */}
         <div id="case-studies">
           <RhBentoWorkGrid
-            overline="07 / SHIPPED WORK & LIVE DEMOS"
-            title="Recent Deployments"
-            titleMuted="& Live Proof"
+            overline={h?.proofOverline || "07 / INTERACTIVE REFERENCE DEMOS"}
+            title={h?.proofTitle || "Live Concept Builds"}
+            titleMuted={h?.proofMuted || `& ${data.mainKeyword}`}
             quotes={data.testimonials.map((t) => ({
               quote: t.quote,
               author: t.client,
@@ -432,9 +536,97 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
               external: study.demoUrl.startsWith("/") || study.demoUrl.startsWith("http"),
               tags: study.tech,
             }))}
-            cursorLabel="Open Live Demo"
+            cursorLabel="Open Interactive Demo"
           />
         </div>
+
+        {/* ==============================================================
+            08B — COMPETITOR COMPARISON & TECHNICAL AUDIT CHECKLIST
+        =============================================================== */}
+        {(data.competitorComparison || data.engineeringChecklist) && (
+          <section
+            id="architecture-comparison"
+            className="py-20 sm:py-24 px-5 bg-[#0D0D0D] text-white border-t border-[#202020]"
+          >
+            <div className="max-w-[1168px] mx-auto space-y-14">
+              {data.competitorComparison && (
+                <div>
+                  <div className="max-w-3xl mb-10">
+                    <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-3">
+                      {data.competitorComparison.overline || "ARCHITECTURE DECISION MATRIX"}
+                    </span>
+                    <h2 className="text-[clamp(28px,3.8vw,44px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                      {data.competitorComparison.title}{" "}
+                      <span className="text-[#939393]">
+                        {data.competitorComparison.titleMuted}
+                      </span>
+                    </h2>
+                    <p className="text-[15px] text-[#939393] mt-3 leading-[1.6]">
+                      {data.competitorComparison.subtitle}
+                    </p>
+                  </div>
+
+                  <div className="overflow-x-auto rounded-2xl border border-[#242424] bg-[#141414]">
+                    <table className="w-full text-left border-collapse text-[14px]">
+                      <thead>
+                        <tr className="border-b border-[#242424] bg-[#191919]">
+                          <th className="py-4 px-5 font-medium text-[#CBCBCB]">
+                            {data.competitorComparison.columns[0]}
+                          </th>
+                          <th className="py-4 px-5 font-medium text-[#BAFF00]">
+                            {data.competitorComparison.columns[1]}
+                          </th>
+                          <th className="py-4 px-5 font-medium text-[#939393]">
+                            {data.competitorComparison.columns[2]}
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-[#202020]">
+                        {data.competitorComparison.rows.map((row, idx) => (
+                          <tr key={idx} className="hover:bg-[#181818] transition-colors">
+                            <td className="py-4 px-5 font-medium text-white">
+                              {row.criteria}
+                            </td>
+                            <td className="py-4 px-5 text-[#E5E5E5]">{row.saim}</td>
+                            <td className="py-4 px-5 text-[#939393]">
+                              {row.alternative}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+              {data.engineeringChecklist && (
+                <div className="p-8 sm:p-10 rounded-3xl bg-[#161616] border border-[#242424]">
+                  <div className="max-w-3xl mb-6">
+                    <h3 className="text-[22px] sm:text-[26px] font-medium tracking-[-0.02em] text-white">
+                      {data.engineeringChecklist.title}
+                    </h3>
+                    {data.engineeringChecklist.subtitle && (
+                      <p className="text-[14px] text-[#939393] mt-2 leading-[1.6]">
+                        {data.engineeringChecklist.subtitle}
+                      </p>
+                    )}
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                    {data.engineeringChecklist.items.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start gap-2.5 text-[14px] text-[#CBCBCB] leading-[1.55]"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
 
         {/* ==============================================================
             09 — PRICING / INVESTMENT (Odometer Digit-Roll rh.design style)
@@ -444,11 +636,11 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
               <div>
                 <span className="text-[11px] font-mono-tech uppercase tracking-[0.3em] text-[#595959] block mb-3">
-                  08 / TRANSPARENT FIXED PRICING
+                  {h?.pricingOverline || "08 / TRANSPARENT FIXED PRICING"}
                 </span>
                 <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  {data.serviceName}{" "}
-                  <span className="text-[#939393]">Packages</span>
+                  {h?.pricingTitle || data.serviceName}{" "}
+                  <span className="text-[#939393]">{h?.pricingMuted || "Packages"}</span>
                 </h2>
               </div>
 
@@ -554,7 +746,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                           tier.popular ? "text-[#939393]" : "text-[#595959]"
                         }`}
                       >
-                        One-time fixed price • $0 upfront deposit
+                        {h?.pricingNote || "Fixed quote • 50/50 milestone terms"}
                       </span>
                     </div>
 
@@ -579,7 +771,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
 
                   <a
                     href={`https://wa.me/923196526604?text=${encodeURIComponent(
-                      `Hi Saim, I'd like to get started with ${tier.name} (${tier.price}) for ${data.serviceName} with $0 upfront.`
+                      `Hi Saim, I'd like to enquire about the ${tier.name} (${tier.price}) package for ${data.serviceName}.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -589,7 +781,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                         : "bg-[#0D0D0D] text-white hover:bg-[#242424]"
                     }`}
                   >
-                    Start Project ($0 Upfront)
+                    {h?.pricingButtonText || "Request Fixed Quote"}
                   </a>
                 </div>
                 );
@@ -607,11 +799,11 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             <div>
               <div className="max-w-3xl mb-14">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-3">
-                  09 / Studio Advantage
+                  {h?.advantageOverline || "09 / Engineering Commitments"}
                 </span>
                 <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  Why Businesses Choose{" "}
-                  <span className="text-[#939393]">Saim Dev</span>
+                  {h?.advantageTitle || "Built Around Ownership &"}{" "}
+                  <span className="text-[#939393]">{h?.advantageMuted || "Code Quality"}</span>
                 </h2>
               </div>
 
@@ -635,15 +827,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
               </div>
             </div>
 
-            {/* Testimonials */}
+            {/* Reference Scenarios */}
             <div>
               <div className="max-w-3xl mb-14">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-3">
-                  10 / Client Feedback
+                  {h?.feedbackOverline || "10 / Target Reference Scenarios"}
                 </span>
                 <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  What Our Clients{" "}
-                  <span className="text-[#939393]">Say</span>
+                  {h?.feedbackTitle || "Architecture Profiles for"}{" "}
+                  <span className="text-[#939393]">{h?.feedbackMuted || data.serviceName}</span>
                 </h2>
               </div>
 
@@ -654,14 +846,14 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                     className="p-8 rounded-3xl bg-[#161616] border border-[#242424] flex flex-col justify-between"
                   >
                     <p className="text-[15px] text-[#CBCBCB] leading-[1.65] mb-6">
-                      &ldquo;{t.quote}&rdquo;
+                      {t.quote}
                     </p>
                     <div className="pt-4 border-t border-[#242424]">
                       <p className="text-[15px] font-medium text-white">
                         {t.client}
                       </p>
                       <p className="text-[13px] text-[#939393]">
-                        {t.role}, {t.company}
+                        {t.role} · {t.company}
                       </p>
                     </div>
                   </div>
@@ -679,15 +871,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
               <div className="lg:col-span-5">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
-                  11 / Clarifications
+                  {h?.faqOverline || "11 / Technical FAQ"}
                 </span>
                 <h2 className="text-[clamp(30px,4vw,46px)] font-medium tracking-[-0.03em] leading-[1.1]">
                   Frequently Asked{" "}
                   <span className="text-[#939393]">Questions</span>
                 </h2>
                 <p className="mt-4 text-[15px] text-[#595959] leading-[1.6]">
-                  Everything you need to know about our {data.serviceName}{" "}
-                  process, fixed pricing, and $0 upfront guarantee.
+                  {h?.faqIntro ||
+                    `Answers covering scope, turnaround, source ownership, and milestone payments for ${data.serviceName}.`}
                 </p>
               </div>
 
@@ -713,11 +905,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                         {openFaq === idx ? "−" : "+"}
                       </span>
                     </button>
-                    {openFaq === idx && (
-                      <div className="mt-3 text-[15px] text-[#595959] leading-[1.65] pr-8">
-                        {faq.answer}
-                      </div>
-                    )}
+                    <div
+                      className={
+                        openFaq === idx
+                          ? "mt-3 text-[15px] text-[#595959] leading-[1.65] pr-8"
+                          : "hidden"
+                      }
+                    >
+                      {faq.answer}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -727,7 +923,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             <div className="rounded-3xl bg-black border border-[#222222] text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8" data-gsap-reveal="">
               <div className="max-w-2xl">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-2">
-                  Zero Risk • 100% Satisfaction
+                  {h?.bannerTag || "Fixed Quote • 50/50 Milestones • Full Code Handover"}
                 </span>
                 <h2 className="text-[clamp(26px,3.4vw,40px)] font-medium tracking-[-0.025em] leading-[1.15]">
                   {data.finalCta.headline}

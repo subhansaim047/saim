@@ -203,9 +203,9 @@ export function ProductSpecificationTool({
             <div className="inline-block px-2.5 py-0.5 rounded bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest mb-1">
               Finished Product Technical Dossier
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
               PRODUCT SPECIFICATION
-            </h1>
+            </h2>
             <p className="text-xs font-semibold text-slate-600">
               Regulation (EU) No 1169/2011 &bull; Natasha's Law (FIR 2021) &bull; BRCGS Food Safety Issue 9
             </p>

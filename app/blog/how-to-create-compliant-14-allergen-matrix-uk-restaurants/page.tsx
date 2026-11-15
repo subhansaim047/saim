@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostAllergenMatrix } from '@/components/blog/BlogPostAllergenMatrix';
 
 export const metadata: Metadata = {
-  title: 'How to Create a 14-Allergen Matrix for Restaurants UK | Saim Dev',
+  title: '14-Allergen Matrix Guide for Restaurants | Saim Dev',
   description: 'Step-by-step guide on how to create a 14 allergen matrix for restaurants and takeaways in the UK under Natasha\'s Law and Food Information Regulations.',
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'How to Create a 14-Allergen Matrix for Restaurants UK | Saim Dev',
+    title: '14-Allergen Matrix Guide for Restaurants | Saim Dev',
     description: 'Step-by-step guide on how to create a 14 allergen matrix for restaurants and takeaways in the UK under Natasha\'s Law and Food Information Regulations.',
     url: 'https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants',
     siteName: 'Saim Dev',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'How to Create a 14-Allergen Matrix for Restaurants UK | Saim Dev',
+    title: '14-Allergen Matrix Guide for Restaurants | Saim Dev',
     description: 'Step-by-step guide on how to create a 14 allergen matrix for restaurants and takeaways in the UK under Natasha\'s Law and Food Information Regulations.',
     images: ['https://www.saimdev.site/og-image.png']
   }

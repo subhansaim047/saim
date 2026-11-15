@@ -34,17 +34,17 @@ const detailedServices: ServiceDetail[] = [
     badge: "1:1 Exact Recreation",
     dedicatedLink: "/services/website-clone",
     description:
-      "Exact 1:1 architectural replication of any website or web application down to the single pixel. Reconstructed from scratch in clean Next.js 15 and Tailwind CSS with sub-second speeds, 60fps micro-animations, and our $0 upfront deposit guarantee.",
+      "Exact 1:1 architectural replication of any website or web application down to the single pixel. Reconstructed from scratch in clean Next.js 16 and Tailwind CSS with sub-second speeds, 60fps micro-animations, and milestone protection.",
     benefits: [
       "100% 1:1 pixel-perfect visual, typographic & responsive match",
       "Sub-second Next.js edge performance replacing legacy bloat",
-      "$0 Upfront Guarantee: We build first, you inspect, pay only if satisfied",
+      "Free concept preview option + 50/50 milestone protection",
       "Flat $1,900 USD pricing with zero hourly scope creep",
       "Zero monthly charges or CMS licensing fees",
     ],
     deliverables: [
       "Exact 1:1 Layout, Typography & Color Palette Match",
-      "Clean Next.js 15 & React 19 Component Architecture",
+      "Clean Next.js 16 & React 19 Component Architecture",
       "Tailwind CSS Responsive Utilities for All Devices",
       "Framer Motion Micro-Interactions & Transitions",
       "All Assets Upgraded to Full HD Master Quality",
@@ -63,9 +63,9 @@ const detailedServices: ServiceDetail[] = [
       "Bespoke, lightning-fast Next.js direct-ordering website designed for UK takeaways, chip shops, and restaurants. Escape 30%+ Just Eat, Deliveroo, and Uber Eats commissions with an interactive Natasha's Law allergen-filtered menu and instant WhatsApp order routing.",
     benefits: [
       "Zero monthly commission fees (keep 100% of order revenue)",
-      "Interactive 14-allergen filter compliant with Natasha's Law",
-      "Direct WhatsApp and SMS checkout routing with zero friction",
-      "Sub-second load times on 4G/5G mobile devices (100/100 Core Web Vitals)",
+      "Interactive 14-allergen filter supporting Natasha's Law preparation",
+      "Direct WhatsApp and table checkout routing with zero third-party fees",
+      "Sub-second mobile load targets (engineered for 95+ Core Web Vitals)",
       "Google Maps & Local UK SEO setup for 'takeaway near me' searches",
     ],
     deliverables: [
@@ -88,9 +88,9 @@ const detailedServices: ServiceDetail[] = [
       "We do not build with bloated WordPress plugins or outdated PHP. We engineer bespoke Next.js websites that load in under 500ms, rank high on Google, and come with zero monthly retainers or vendor lock-in.",
     benefits: [
       "Custom Next.js codebase built from scratch (no bloated themes)",
-      "Unhackable static edge architecture with sub-500ms speed",
-      "100/100 Google Core Web Vitals and built-in structured schema",
-      "$0 Upfront Guarantee: Review live staging before paying",
+      "Unhackable static edge architecture with sub-second speed targets",
+      "Engineered for 95+ Google Core Web Vitals and built-in structured schema",
+      "50/50 Milestone Protection + Free Concept Preview option",
       "Full ownership of code, assets, and hosting with zero retainers",
     ],
     deliverables: [
@@ -133,20 +133,20 @@ const detailedServices: ServiceDetail[] = [
     dedicatedLink: "/services/landing-pages-cro",
     badge: "3x Higher Conversion",
     description:
-      "Engineered specifically for Google Ads, Meta Ads, and TikTok campaign traffic with sub-second speed and psychological conversion copywriting. Zero navigation leaks, direct WhatsApp lead funnels, and our $0 upfront guarantee.",
+      "Engineered specifically for Google Ads, Meta Ads, and TikTok campaign traffic with fast mobile paint speeds and clear conversion copywriting. Zero navigation leaks, direct WhatsApp lead funnels, and 50/50 milestones.",
     benefits: [
-      "Optimised for 3x higher ad click-to-lead conversion rate",
-      "Sub-400ms mobile load times lowering Google Ads CPC",
-      "Direct WhatsApp and lead form alerts delivered in seconds",
-      "Meta Pixel, Google Tag Manager & GA4 pre-configured",
-      "Zero monthly builder software fees (save £1,000/yr)",
+      "Focused single-goal layout built to lift click-to-lead conversion",
+      "Fast mobile load speeds supporting stronger Google Ads quality scores",
+      "Direct WhatsApp and lead form alerts delivered cleanly",
+      "Meta Pixel, Google Tag Manager & GA4 ready",
+      "Zero monthly builder software fees",
     ],
     deliverables: [
       "1-Page High Converting Layout with Zero Exit Distractions",
       "Mobile-First Responsive Touch Build",
       "Conversion Copywriting & Objection Handling Accordion",
       "Ad Pixels & Event Tracking Verification",
-      "$0 Upfront Deposit (Pay When Happy)",
+      "50/50 Milestone Plan (Free Concept Option)",
     ],
     timeline: "3 – 5 Days",
   },
@@ -157,7 +157,7 @@ const detailedServices: ServiceDetail[] = [
     dedicatedLink: "/services/website-redesign",
     badge: "Legacy Upgrade",
     description:
-      "Transform outdated, slow legacy websites into ultra-fast modern Next.js flagships. We preserve 100% of your existing Google rankings and backlink authority while elevating your brand aesthetic. $0 upfront deposit.",
+      "Transform outdated, slow legacy websites into ultra-fast modern Next.js flagships. We map all existing URLs with 301 redirects while elevating your brand aesthetic with clear milestone staging.",
     benefits: [
       "100% SEO, backlink, and URL ranking preservation guarantee",
       "Eliminate slow loading times and outdated visual branding",
@@ -205,12 +205,12 @@ const detailedServices: ServiceDetail[] = [
     dedicatedLink: "/services/seo-services",
     badge: "Organic Search",
     description:
-      "Dominate organic search with clean semantic HTML5, comprehensive JSON-LD structured schema markup, sub-second edge speeds, and local SEO architecture. No black-hat spam, zero monthly retainers, $0 upfront deposit.",
+      "Dominate organic search with clean semantic HTML5, comprehensive JSON-LD structured schema markup, sub-second edge speeds, and local SEO architecture. No black-hat spam, zero monthly retainers, milestone sign-off.",
     benefits: [
-      "Higher Google search rankings and rich snippet display",
-      "Local SEO dominance for 'near me' Google searches",
+      "Higher Google search visibility and rich snippet structure",
+      "Local SEO targeting for 'near me' commercial queries",
       "Complete JSON-LD schema (LocalBusiness, Service, FAQPage)",
-      "$0 Upfront Deposit: pay after verified schema implementation",
+      "Transparent 50/50 milestone invoicing with QA checklist",
       "Zero monthly agency retainer contracts",
     ],
     deliverables: [
@@ -226,29 +226,29 @@ const detailedServices: ServiceDetail[] = [
 
 const serviceFaqs = [
   {
-    question: "What is your $0 upfront guarantee?",
+    question: "How do milestones and the Free Concept Option work?",
     answer:
-      "For every service, we build the live staging website or preview first. You test it on your laptop and phone, inspect the speed, design, and forms. If you are 100% thrilled, you purchase the project. If you are not satisfied, you owe us nothing. There is zero financial risk for your business.",
+      "Standard builds operate on transparent 50/50 milestones: 50% deposit upon scope agreement and 50% after you approve the live interactive Vercel staging build before launch. Need reassurance first? Ask for a focused Free Concept Preview before full build commitment.",
   },
   {
     question: "Are there any monthly charges or recurring retainers?",
     answer:
-      "Zero. We do not charge monthly retainers, plugin subscriptions, or maintenance locks. You pay a one-time transparent fee and receive 100% source code ownership. We set up your hosting on Vercel where standard traffic is completely free.",
+      "Zero. We do not charge monthly retainers, plugin subscriptions, or maintenance locks. You pay a one-time transparent fee and receive 100% source code ownership. We set up your hosting on Vercel where standard hobby/low-traffic hosting starts free.",
   },
   {
     question: "Why do you build in Next.js instead of WordPress or Shopify?",
     answer:
-      "WordPress relies on fragile PHP plugins that slow down your website and open critical security holes. Shopify charges recurring monthly fees ($30–$300/mo) for basic apps. Next.js produces unhackable, sub-second static edge websites that pass Google Core Web Vitals with 100/100 scores and require zero monthly plugin maintenance.",
+      "WordPress relies on fragile PHP plugins that slow down your website and open critical security holes. Shopify app stacks often add recurring monthly fees ($30–$300/mo). Next.js produces fast static/edge websites engineered to pass Google Core Web Vitals with zero monthly plugin maintenance.",
   },
   {
     question: "How does the $1,900 Website & App Clone service work?",
     answer:
-      "Send us the link of any website or web application you want duplicated. We rebuild it 1:1 down to the pixel in clean Next.js and Tailwind CSS with zero visual discrepancy. Delivered in 7 to 10 days with a $0 upfront deposit.",
+      "Send us the link of any website or web application you want duplicated. We rebuild it 1:1 down to the pixel in clean Next.js 16 and Tailwind CSS with zero visual discrepancy, delivered in 7 to 10 days on 50/50 milestone terms.",
   },
   {
     question: "Do I get full ownership of the code and design?",
     answer:
-      "Yes! You receive full GitHub repository access, code ownership, and all assets upon completion. You are never locked into our agency.",
+      "Yes! You receive full GitHub repository access, code ownership, and all assets upon completion. You are never locked into our studio.",
   },
 ];
 
@@ -262,20 +262,51 @@ export const ServicesPage = () => {
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
+      <main>
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Wireframe Video + Laser-Draw Strip + Curtain Parallax) */}
       <RhHeroPinned
-        badge="Next.js & Full-Stack Engineering Studio"
+        badge="Next.js 16 & Full-Stack Engineering Studio"
         title={
           <>
             Next.js Web Engineering{" "}
             <span className="text-[#939393]">Services UK</span>
           </>
         }
-        subtitle="Fixed-price Next.js web engineering with sub-second speeds, 95+ Core Web Vitals, and our $0 Upfront Prototype Guarantee. Custom websites, Shopify headless builds, and web apps with 100% source code ownership and zero monthly retainers."
-        primaryCta={{ label: "Start your project ($0 Upfront)", href: "/contact" }}
+        subtitle="Fixed-price Next.js 16 web engineering targeting sub-second speeds and 95+ Core Web Vitals. Custom business sites, headless e-commerce, takeaway systems, and 1:1 rebuilds with 100% source code ownership and zero monthly retainers."
+        primaryCta={{ label: "Start your project", href: "/contact" }}
         secondaryCta={{ label: "Project Cost Calculator", href: "/overview" }}
         videoType="cube"
         stripLabel="Engineered for speed & ownership"
+        stripItems={[
+          {
+            label: "01. 12 Service Pillars",
+            tag: "Full Catalog",
+            tagValue: "£199 – £1,900",
+            summary: "Dedicated scope pages covering Next.js websites, takeaways, headless Shopify, CRO, and SEO.",
+            href: "/pricing",
+          },
+          {
+            label: "02. Zero Retainers",
+            tag: "Cost Model",
+            tagValue: "£0 / mo Fee",
+            summary: "One-off fixed investment with full GitHub repository handoff and zero agency lock-in.",
+            href: "/process",
+          },
+          {
+            label: "03. Target 95+ CWV",
+            tag: "Performance",
+            tagValue: "Edge SSR",
+            summary: "App Router architecture and optimised media built to beat bloated WordPress templates.",
+            href: "/services/website-speed-optimization",
+          },
+          {
+            label: "04. Milestone Terms",
+            tag: "Protection",
+            tagValue: "Free Concept",
+            summary: "50/50 milestone schedule plus optional free concept preview before committing full build.",
+            href: "/contact",
+          },
+        ]}
       />
 
       {/* 2. SCROLLYTELLING BOTTLENECK DECK + GROWING RETENTION BAR CHART */}
@@ -285,8 +316,36 @@ export const ServicesPage = () => {
         titleStrike="waiting"
         titleOwned="converted."
         subtitle="Slow templates, monthly agency retainers, and marketplace commissions quietly tax every visitor you earn. We replace bloated stacks with custom React & Next.js edge code you own outright."
-        solutionTitle="One Fixed Fee. Sub-Second Edge Performance. Full Repo Ownership."
-        solutionDesc="We build your live staging prototype before you spend a penny. Test responsiveness, speed, and booking flows across devices—then unlock 100% of the GitHub code upon approval."
+        cards={[
+          {
+            source: "Aggregator Fees",
+            time: "Per Order",
+            title: "Third-party platforms taking 25–35% margin",
+            detail: "Takeaways and hospitality brands lose repeat profit every night they lack direct commission-free ordering.",
+            severity: "critical",
+          },
+          {
+            source: "Template Decay",
+            time: "Ongoing",
+            title: "Plugin conflicts breaking mobile checkout",
+            detail: "Stacked Shopify apps and WordPress builders inflate JavaScript blocking main-thread responsiveness.",
+            severity: "warning",
+          },
+          {
+            source: "Agency Lock-In",
+            time: "Quarterly",
+            title: "Mandatory £500+/mo support contracts",
+            detail: "Many UK agencies hold source code and DNS access hostage behind recurring maintenance tiers.",
+            severity: "critical",
+          },
+        ]}
+        solutionTitle="One Fixed Fee. Sub-Second Edge Targets. Full Repo Ownership."
+        solutionDesc="Agree a clear written specification before launch. Test every responsive breakpoint on a live Vercel staging URL—and own 100% of the GitHub code upon completion."
+        bars={[
+          { value: "44", label: "Plugin Theme", heightPx: 145 },
+          { value: "68", label: "Agency Retainer", heightPx: 225 },
+          { value: "95+", label: "Saim Dev Target", heightPx: 335, isHighlight: true },
+        ]}
       />
 
       {/* 3. INTERACTIVE SVG LINE-DRAW SERVICE CAPABILITIES MATRIX */}
@@ -419,7 +478,7 @@ export const ServicesPage = () => {
 
                       <div className="mt-7 pt-5 border-t border-[#E6E6E6] flex flex-wrap items-center justify-between gap-4">
                         <div className="flex flex-wrap items-center gap-4 text-[13px] text-[#595959]">
-                          <span>$0 Upfront Prototype Guarantee</span>
+                          <span>50/50 Milestones · Free Concept Option</span>
                           <span>•</span>
                           <Link
                             href="/overview"
@@ -517,13 +576,13 @@ export const ServicesPage = () => {
           {
             stage: "STAGE 01",
             duration: "Day 1",
-            title: "Brief, Audit & Zero-Risk Blueprint",
+            title: "Brief, Audit & Fixed Scope Lock",
             description:
               "Share your goals or reference links. We lock the fixed price, sitemap, and Core Web Vitals targets before writing a single line.",
             deliverables: [
               "Confirmed Fixed Price (From £250)",
               "Competitor Speed & UX Benchmark",
-              "Zero Upfront Deposit Required",
+              "50/50 Milestone Protection",
             ],
           },
           {
@@ -578,7 +637,7 @@ export const ServicesPage = () => {
             </h2>
             <p className="mt-4 text-[15px] text-[#939393] leading-relaxed">
               Have a specific technical brief? Reach out directly on WhatsApp or
-              book a discovery call with zero upfront commitment.
+              request a fixed quote and optional free concept preview.
             </p>
           </div>
 
@@ -605,17 +664,22 @@ export const ServicesPage = () => {
                       {isOpen ? "−" : "+"}
                     </span>
                   </button>
-                  {isOpen && (
-                    <p className="mt-4 text-[15px] text-[#939393] leading-[1.65] pr-8">
-                      {faq.answer}
-                    </p>
-                  )}
+                  <p
+                    className={
+                      isOpen
+                        ? "mt-4 text-[15px] text-[#939393] leading-[1.65] pr-8"
+                        : "hidden"
+                    }
+                  >
+                    {faq.answer}
+                  </p>
                 </div>
               );
             })}
           </div>
         </div>
       </section>
+      </main>
 
       <SiteFooter theme="dark" />
     </div>

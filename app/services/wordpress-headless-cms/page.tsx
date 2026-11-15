@@ -3,19 +3,19 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { SERVICES_CATALOG } from "@/content/servicesData";
 import { generateServiceSchemas } from "@/lib/serviceSchema";
 
-const data = SERVICES_CATALOG["website-development"];
+const data = SERVICES_CATALOG["wordpress-headless-cms"];
 const { serviceSchema, breadcrumbSchema, faqSchema } = generateServiceSchemas(data);
 
 export const metadata: Metadata = {
-  title: "Why We Replace WordPress With Next.js | Saim Dev",
-  description: "Next.js alternatives to WordPress that load in under 500ms, eliminate plugin vulnerabilities, and require £0 monthly maintenance retainers.",
+  title: data.seoTitle,
+  description: data.seoDescription,
   alternates: {
-    canonical: "https://www.saimdev.site/services/website-development",
+    canonical: data.canonicalUrl,
   },
   openGraph: {
-    title: "Why We Replace WordPress With Next.js | Saim Dev",
-    description: "Looking for WordPress development? We build modern Next.js alternatives that load in under 500ms, eliminate all plugin security vulnerabilities, and require $0 monthly retainers.",
-    url: "https://www.saimdev.site/services/website-development",
+    title: data.seoTitle,
+    description: data.seoDescription,
+    url: data.canonicalUrl,
     siteName: "Saim Dev",
     locale: "en_GB",
     type: "website",
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
         url: "https://www.saimdev.site/hero-shots/shot-4.webp",
         width: 1200,
         height: 630,
-        alt: "Next.js WordPress Replacement Services - Saim Dev",
+        alt: "WordPress to Next.js Migration and Headless CMS - Saim Dev",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Why We Replace WordPress With Next.js | Saim Dev",
-    description: "Looking for WordPress development? We build modern Next.js alternatives that load in under 500ms, eliminate all plugin security vulnerabilities, and require $0 monthly retainers.",
+    title: data.seoTitle,
+    description: data.seoDescription,
     creator: "@saimwebdev",
     images: ["https://www.saimdev.site/hero-shots/shot-4.webp"],
   },

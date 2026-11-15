@@ -447,9 +447,9 @@ export function FoodTraceabilityLogTool({ templateId }: { templateId?: string })
               <span className="inline-block px-3 py-1 rounded bg-slate-900 text-white font-mono font-black text-xs uppercase tracking-wider mb-2">
                 FSA STATUTORY INTAKE VERIFICATION
               </span>
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-950 uppercase tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 uppercase tracking-tight">
                 Goods Inwards &amp; Food Traceability Record
-              </h1>
+              </h2>
               <p className="text-xs sm:text-sm font-semibold text-slate-700 mt-1">
                 One-Step-Back Supplier Auditing Under Regulation (EC) No 178/2002 Article 18
               </p>

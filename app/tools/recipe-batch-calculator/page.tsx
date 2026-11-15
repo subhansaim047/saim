@@ -8,7 +8,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { ToolsSiloNav } from "@/components/tools/ToolsSiloNav";
 
 export const metadata: Metadata = {
-  title: "Recipe Scaler & Batch Calculator UK | Free Tool | Saim Dev",
+  title: "Recipe Batch Calculator UK | Scaling Tool | Saim Dev",
   description: "Free commercial recipe scaler and batch calculator for UK catering and kitchens. Rescale ingredient quantities, calculate yields, and print prep sheets.",
   robots: {
     index: true,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Recipe Scaler & Batch Calculator UK | Free Tool | Saim Dev",
+    title: "Recipe Batch Calculator UK | Scaling Tool | Saim Dev",
     description: "Free commercial recipe scaler and batch calculator for UK catering and kitchens. Rescale ingredient quantities, calculate yields, and print prep sheets.",
     url: "https://www.saimdev.site/tools/recipe-batch-calculator",
     siteName: "Saim Dev",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@saimwebdev",
-    title: "Recipe Scaler & Batch Calculator UK | Free Tool | Saim Dev",
+    title: "Recipe Batch Calculator UK | Scaling Tool | Saim Dev",
     description: "Free commercial recipe scaler and batch calculator for UK catering and kitchens. Rescale ingredient quantities, calculate yields, and print prep sheets.",
     images: ["https://www.saimdev.site/og-image.png"],
   },

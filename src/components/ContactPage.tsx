@@ -66,9 +66,10 @@ export const ContactPage = () => {
     <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
+      <main>
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Video + Laser-Draw Strip) */}
       <RhHeroPinned
-        badge="1 of 3 Slots Open This Week · $0 Upfront Prototype"
+        badge="1 of 3 Weekly Build Slots Open · Free Concept Preview"
         title={
           <>
             <span className="text-[#939393]">Ready to dive in?</span>
@@ -76,14 +77,44 @@ export const ContactPage = () => {
             Start your project today
           </>
         }
-        subtitle="Message Saim Dev on WhatsApp or submit your brief below. We respond within 2 hours and build an interactive staging prototype first with zero upfront commitment."
+        subtitle="Message Saim Dev on WhatsApp or submit your brief below. We respond within studio working hours and outline your fixed GBP/EUR/USD quote with milestone protection and a free concept option."
         primaryCta={{ label: "Jump to Project Brief Form", href: "#project-brief-form" }}
         secondaryCta={{
           label: "WhatsApp Direct (+92 319 6526604)",
           href: "https://wa.me/923196526604",
         }}
         videoType="mobile"
-        stripLabel="Direct engineering · Replies < 2 hrs"
+        stripLabel="Direct engineering · Replies within working hours"
+        stripItems={[
+          {
+            label: "01. WhatsApp Direct",
+            tag: "Live Chat",
+            tagValue: "+92 319 6526604",
+            summary: "Speak directly with senior developer Saim — zero agency gatekeepers or sales scripts.",
+            href: "https://wa.me/923196526604",
+          },
+          {
+            label: "02. Fixed Scope Lock",
+            tag: "Milestones",
+            tagValue: "50 / 50 Split",
+            summary: "Agree deliverables, page inventory, and target launch window before work commences.",
+            href: "/pricing",
+          },
+          {
+            label: "03. Concept Option",
+            tag: "Preview",
+            tagValue: "Free Concept",
+            summary: "Request a focused concept preview or live staging demo on selected project scopes.",
+            href: "/demos",
+          },
+          {
+            label: "04. Full Repo Handoff",
+            tag: "Ownership",
+            tagValue: "GitHub Transfer",
+            summary: "Receive complete Next.js 16 source ownership with zero monthly retainer lock-in.",
+            href: "/process",
+          },
+        ]}
       />
 
       <div
@@ -169,9 +200,9 @@ export const ContactPage = () => {
             </div>
 
             <div className="mt-8 pt-6 border-t border-[#222222] flex flex-wrap items-center justify-between gap-2 text-[12px] text-[#939393]">
-              <span>$0 Upfront Deposit</span>
+              <span>Free Concept Option</span>
               <span>•</span>
-              <span>100% Source Code</span>
+              <span>50/50 Milestones</span>
               <span>•</span>
               <span>Zero Monthly Retainers</span>
             </div>
@@ -339,7 +370,7 @@ export const ContactPage = () => {
                   className="w-full bg-[#0D0D0D] hover:bg-[#222222] text-white rounded-full py-4 px-7 flex items-center justify-between transition-colors cursor-pointer"
                 >
                   <span className="text-[15px] font-medium">
-                    Submit Project Enquiry via WhatsApp ($0 Upfront)
+                    Submit Project Enquiry via WhatsApp
                   </span>
                   <span className="w-9 h-9 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-bold">
                     ↗
@@ -470,14 +501,15 @@ export const ContactPage = () => {
           },
           {
             num: "03",
-            title: "$0 Upfront Live Staging Prototype",
+            title: "Interactive Live Staging Review",
             description:
-              "Inspect your live Next.js preview URL across desktop and mobile before approving production deployment.",
-            tags: ["Zero Upfront Risk", "99+ PageSpeed"],
+              "Inspect your Next.js preview URL across desktop and mobile before approving production deployment.",
+            tags: ["50/50 Milestones", "Target 95+ CWV"],
             href: "/demos",
           },
         ]}
       />
+      </main>
 
       <SiteFooter theme="dark" />
     </div>

@@ -3,19 +3,19 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { SERVICES_CATALOG } from "@/content/servicesData";
 import { generateServiceSchemas } from "@/lib/serviceSchema";
 
-const data = SERVICES_CATALOG["website-development"];
+const data = SERVICES_CATALOG["business-websites"];
 const { serviceSchema, breadcrumbSchema, faqSchema } = generateServiceSchemas(data);
 
 export const metadata: Metadata = {
   title: data.seoTitle,
   description: data.seoDescription,
   alternates: {
-    canonical: "https://www.saimdev.site/services/business-websites",
+    canonical: data.canonicalUrl,
   },
   openGraph: {
     title: data.seoTitle,
     description: data.seoDescription,
-    url: "https://www.saimdev.site/services/business-websites",
+    url: data.canonicalUrl,
     siteName: "Saim Dev",
     locale: "en_GB",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "https://www.saimdev.site/hero-shots/shot-4.webp",
         width: 1200,
         height: 630,
-        alt: "Bespoke Next.js Website Development Services UK - Saim Dev",
+        alt: "UK Small & Medium Business Website Design - Saim Dev",
       },
     ],
   },

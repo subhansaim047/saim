@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPost2Page } from '@/components/BlogPost2Page';
 
 export const metadata: Metadata = {
-  title: 'Free Website for Small Business: Pros & Hidden Costs | Saim Dev',
+  title: 'Free Small Business Websites: Real Costs | Saim Dev',
   description: 'Compare free website builders with bespoke starter websites for UK small businesses. Learn the real pros, cons, hidden fees, and SEO trade-offs.',
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Free Website for Small Business: Pros, Cons & Hidden Costs | Saim Dev',
+    title: 'Free Small Business Websites: Real Costs | Saim Dev',
     description: 'Compare free website builders with bespoke starter websites for UK small businesses. Learn the real pros, cons, hidden fees, and SEO trade-offs.',
     url: 'https://www.saimdev.site/blog/free-website-for-local-business',
     siteName: 'Saim Dev',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'Free Website for Small Business: Pros, Cons & Hidden Costs | Saim Dev',
+    title: 'Free Small Business Websites: Real Costs | Saim Dev',
     description: 'Compare free website builders with bespoke starter websites for UK small businesses. Learn the real pros, cons, hidden fees, and SEO trade-offs.',
     images: ['https://www.saimdev.site/og-image.png']
   }

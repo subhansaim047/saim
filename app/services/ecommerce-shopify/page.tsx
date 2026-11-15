@@ -3,19 +3,19 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { SERVICES_CATALOG } from "@/content/servicesData";
 import { generateServiceSchemas } from "@/lib/serviceSchema";
 
-const data = SERVICES_CATALOG["ecommerce-development"];
+const data = SERVICES_CATALOG["ecommerce-shopify"];
 const { serviceSchema, breadcrumbSchema, faqSchema } = generateServiceSchemas(data);
 
 export const metadata: Metadata = {
   title: data.seoTitle,
   description: data.seoDescription,
   alternates: {
-    canonical: "https://www.saimdev.site/services/ecommerce-shopify",
+    canonical: data.canonicalUrl,
   },
   openGraph: {
     title: data.seoTitle,
     description: data.seoDescription,
-    url: "https://www.saimdev.site/services/ecommerce-shopify",
+    url: data.canonicalUrl,
     siteName: "Saim Dev",
     locale: "en_GB",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "https://www.saimdev.site/hero-shots/shot-4.webp",
         width: 1200,
         height: 630,
-        alt: "Custom Next.js Headless eCommerce Development - Saim Dev",
+        alt: "Headless Shopify Storefront API and Next.js Development - Saim Dev",
       },
     ],
   },

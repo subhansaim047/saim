@@ -502,9 +502,9 @@ export function SafeFoodPrepRulesTool({ templateId }: { templateId?: string }) {
               <span className="inline-block px-3 py-1 rounded bg-amber-400 text-slate-950 font-mono font-black text-xs uppercase tracking-wider mb-2">
                 COMMERCIAL KITCHEN FOOD SAFETY STANDARD
               </span>
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-950 uppercase tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 uppercase tracking-tight">
                 {activeStation.name}
-              </h1>
+              </h2>
               <p className="text-xs sm:text-sm font-semibold text-slate-700 mt-1">
                 Mandatory Operational Hygiene, Temperature Limits &amp; Cross-Contamination Barriers
               </p>

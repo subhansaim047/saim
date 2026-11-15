@@ -40,23 +40,54 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
+      <main>
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Wireframe Video + Laser-Draw Strip) */}
       <RhHeroPinned
-        badge="Clear Fixed Investment · $0 Upfront Prototype"
+        badge="Clear Fixed Investment · 50/50 Milestones"
         title={
           <>
             Transparent pricing.{" "}
             <span className="text-[#939393]">Zero monthly lock-in.</span>
           </>
         }
-        subtitle="Fixed-fee website engineering for UK and international businesses. 100% source code ownership, zero mandatory agency retainers, and safe milestone invoicing only after you test your interactive staging prototype."
-        primaryCta={{ label: "Start Project ($0 Upfront)", href: "/contact" }}
+        subtitle="Fixed-fee website engineering for UK and international businesses. 100% source code ownership, zero mandatory agency retainers, and milestone protection with a free concept option before production starts."
+        primaryCta={{ label: "Start Your Project", href: "/contact" }}
         secondaryCta={{
           label: "Open Interactive Cost Calculator",
           href: "/overview",
         }}
         videoType="cube"
         stripLabel="Transparent fixed fees · Zero retainers"
+        stripItems={[
+          {
+            label: "01. Fixed GBP / USD Fees",
+            tag: "One-Time",
+            tagValue: "£250 / £390+",
+            summary: "Published tier rates with zero hidden agency hourly overages or surprise add-ons.",
+            href: "/pricing",
+          },
+          {
+            label: "02. Zero Monthly Retainers",
+            tag: "Hosting",
+            tagValue: "£0 / mo Fee",
+            summary: "Deploy to your own Vercel/Cloudflare account with zero ongoing Saim Dev retainer.",
+            href: "/services/website-development",
+          },
+          {
+            label: "03. Milestone Split",
+            tag: "50 / 50 Terms",
+            tagValue: "Free Concept",
+            summary: "50% deposit upon scope lock, 50% on final staging sign-off; free concept option available.",
+            href: "/process",
+          },
+          {
+            label: "04. Source Code Ownership",
+            tag: "Handoff",
+            tagValue: "GitHub Repo",
+            summary: "Clean TypeScript & Next.js 16 repository transferred to your account on launch.",
+            href: "/overview",
+          },
+        ]}
       />
 
       {/* 2. LIGHT PRICING BOARD WITH ODOMETER DIGIT-ROLL (.pr-odo) */}
@@ -184,7 +215,7 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
                   </Link>
                   <a
                     href={`https://wa.me/923196526604?text=${encodeURIComponent(
-                      `Hi Saim, I'd like to start the Landing Page / Takeaway plan (${pLanding.prefix}${pLanding.amount}, ${speedMode}) with $0 upfront.`
+                      `Hi Saim, I'd like to discuss the Landing Page / Takeaway plan (${pLanding.prefix}${pLanding.amount}, ${speedMode}).`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -258,7 +289,7 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
                   </Link>
                   <a
                     href={`https://wa.me/923196526604?text=${encodeURIComponent(
-                      `Hi Saim, I'd like to start the Starter Multi-Page Plan (${pStarter.prefix}${pStarter.amount}, ${speedMode}) with $0 upfront.`
+                      `Hi Saim, I'd like to discuss the Starter Multi-Page Plan (${pStarter.prefix}${pStarter.amount}, ${speedMode}).`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -288,7 +319,7 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
                     Recommended Flagship
                   </span>
                   <span className="text-[12px] font-mono-tech text-[#939393]">
-                    $0 Upfront Prototype Guarantee
+                    50/50 Milestones · Free Concept Option
                   </span>
                 </div>
 
@@ -349,14 +380,14 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
               <div className="relative z-10 space-y-4">
                 <a
                   href={`https://wa.me/923196526604?text=${encodeURIComponent(
-                    `Hi Saim, I'd like to start the Flagship Business Plan (${pFlagship.prefix}${pFlagship.amount}) with $0 upfront prototype.`
+                    `Hi Saim, I'd like to discuss the Flagship Business Plan (${pFlagship.prefix}${pFlagship.amount}).`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rh-btn-pill w-full py-4 px-7 bg-white text-[#0D0D0D] font-medium text-[16px] text-center"
                 >
                   <span className="inline-flex items-center gap-2.5">
-                    <span>Start Project ($0 Upfront Prototype)</span>
+                    <span>Start Flagship Project</span>
                     <ArrowRight className="w-4 h-4" />
                   </span>
                 </a>
@@ -435,10 +466,10 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
           },
           {
             num: "02",
-            title: "$0 Upfront Staging Guarantee",
+            title: "Live Staging & Free Concept Option",
             description:
-              "We build and host your live interactive staging URL first so you verify every breakpoint and speed score before committing.",
-            tags: ["Preview First", "Zero Risk"],
+              "Review your interactive Next.js staging build across desktop and mobile before approving production deployment.",
+            tags: ["Preview Staging", "50/50 Milestones"],
           },
           {
             num: "03",
@@ -473,9 +504,9 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
           {
             stage: "STAGE 02",
             duration: "Days 2 – 5",
-            title: "Interactive Staging Preview ($0 Down)",
+            title: "Interactive Staging Build & Review",
             description:
-              "Review your bespoke Next.js staging build live on mobile and desktop before final invoice approval.",
+              "Review your bespoke Next.js staging build live on mobile and desktop before final milestone sign-off.",
             deliverables: ["Private Staging URL", "Live Speed Audit"],
           },
           {
@@ -536,17 +567,22 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
                       <Plus className="w-4 h-4" />
                     </span>
                   </button>
-                  {isOpen && (
-                    <p className="mt-3 text-[15px] text-[#595959] leading-[1.65] pr-8">
-                      {item.acceptedAnswer.text}
-                    </p>
-                  )}
+                  <p
+                    className={
+                      isOpen
+                        ? "mt-3 text-[15px] text-[#595959] leading-[1.65] pr-8"
+                        : "hidden"
+                    }
+                  >
+                    {item.acceptedAnswer.text}
+                  </p>
                 </div>
               );
             })}
           </div>
         </div>
       </section>
+      </main>
 
       <SiteFooter theme="dark" />
     </div>

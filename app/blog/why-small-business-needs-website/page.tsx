@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPost1Page } from '@/components/BlogPost1Page';
 
 export const metadata: Metadata = {
-  title: 'Why UK Small Businesses Need a Professional Website | Saim Dev',
+  title: 'Why Small Businesses Need a Website UK | Saim Dev',
   description: 'Discover why small businesses need a website in the UK to turn local searches into paying customers, build trust, and avoid monthly platform subscription fees.',
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Why UK Small Businesses Need a Professional Website | Saim Dev',
+    title: 'Why Small Businesses Need a Website UK | Saim Dev',
     description: 'Discover why small businesses need a website in the UK to turn local searches into paying customers, build trust, and avoid monthly platform subscription fees.',
     url: 'https://www.saimdev.site/blog/why-small-business-needs-website',
     siteName: 'Saim Dev',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'Why UK Small Businesses Need a Professional Website | Saim Dev',
+    title: 'Why Small Businesses Need a Website UK | Saim Dev',
     description: 'Discover why small businesses need a website in the UK to turn local searches into paying customers, build trust, and avoid monthly platform subscription fees.',
     images: ['https://www.saimdev.site/og-image.png']
   }

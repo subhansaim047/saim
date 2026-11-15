@@ -227,9 +227,9 @@ export function ConsumerAdvisoryNoticeTool({
           <div className="inline-block px-3 py-1 rounded-full bg-slate-900 text-white text-[11px] font-black uppercase tracking-widest mb-1">
             Important Food Safety Information
           </div>
-          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight uppercase">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight uppercase">
             CONSUMER ADVISORY NOTICE
-          </h1>
+          </h2>
           <p className="text-xs font-bold text-slate-600 tracking-wider">
             {establishmentName} &bull; Food Safety Act 1990 Due Diligence Compliance
           </p>

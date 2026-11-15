@@ -329,9 +329,9 @@ export function FoodFlowChartTool({
             <div className="inline-block px-2.5 py-0.5 rounded bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest mb-1">
               HACCP System Process Flow Diagram
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
               MASTER FOOD FLOW CHART
-            </h1>
+            </h2>
             <p className="text-xs font-semibold text-slate-600">
               Regulation (EC) No 852/2004 Article 5 &bull; Safer Food, Better Business (SFBB) Due Diligence
             </p>

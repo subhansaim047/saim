@@ -12,6 +12,7 @@ export const PrivacyPolicy: React.FC = () => {
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
+      <main>
       {/* rh.design/privacy Dark Hero */}
       <section className="bg-black text-white pt-32 pb-16 sm:pt-36 sm:pb-20 px-4 sm:px-8 border-b border-white/10">
         <div className="max-w-4xl mx-auto">
@@ -177,6 +178,7 @@ export const PrivacyPolicy: React.FC = () => {
           </section>
         </div>
       </section>
+      </main>
 
       <SiteFooter theme="dark" />
     </div>

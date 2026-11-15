@@ -146,6 +146,7 @@ export default function ProcessPage() {
 
       <RhHeader theme="dark" />
 
+      <main>
       <RhHeroPinned
         badge="Proven Delivery Methodology · 4-Stage Sprint"
         title={
@@ -159,6 +160,36 @@ export default function ProcessPage() {
         secondaryCta={{ label: "View Transparent Pricing", href: "/pricing" }}
         videoType="cube"
         stripLabel="5–12 Day Sprint · 50/50 Milestone Protection"
+        stripItems={[
+          {
+            label: "01. Scope Lock",
+            tag: "Day 1",
+            tagValue: "Written Spec",
+            summary: "Fixed GBP/EUR/USD quote, route inventory, and target launch window agreed before build begins.",
+            href: "#process-stages",
+          },
+          {
+            label: "02. Staging Build",
+            tag: "Days 2–6",
+            tagValue: "Live Preview",
+            summary: "Direct URL on Vercel staging showing responsive breakpoints, forms, and interactive flows.",
+            href: "/demos",
+          },
+          {
+            label: "03. CWV & Schema QA",
+            tag: "Days 7–10",
+            tagValue: "Target 95+ CWV",
+            summary: "Core Web Vitals tuning, canonicals, JSON-LD validation, and desktop/mobile browser checks.",
+            href: "/services/website-speed-optimization",
+          },
+          {
+            label: "04. Repo Handoff",
+            tag: "Launch",
+            tagValue: "100% Ownership",
+            summary: "Production DNS cutover, clean GitHub source transfer, and post-launch support window.",
+            href: "/pricing",
+          },
+        ]}
       />
 
       <RhProcessCarousel
@@ -357,6 +388,7 @@ export default function ProcessPage() {
           </div>
         </div>
       </section>
+      </main>
 
       <SiteFooter theme="dark" />
     </div>

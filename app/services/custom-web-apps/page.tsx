@@ -3,19 +3,19 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import { SERVICES_CATALOG } from "@/content/servicesData";
 import { generateServiceSchemas } from "@/lib/serviceSchema";
 
-const data = SERVICES_CATALOG["website-clone"];
+const data = SERVICES_CATALOG["custom-web-apps"];
 const { serviceSchema, breadcrumbSchema, faqSchema } = generateServiceSchemas(data);
 
 export const metadata: Metadata = {
   title: data.seoTitle,
   description: data.seoDescription,
   alternates: {
-    canonical: "https://www.saimdev.site/services/website-clone",
+    canonical: data.canonicalUrl,
   },
   openGraph: {
     title: data.seoTitle,
     description: data.seoDescription,
-    url: "https://www.saimdev.site/services/website-clone",
+    url: data.canonicalUrl,
     siteName: "Saim Dev",
     locale: "en_GB",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "https://www.saimdev.site/hero-shots/shot-4.webp",
         width: 1200,
         height: 630,
-        alt: "Pixel-Perfect Website & App Cloning Services - Saim Dev",
+        alt: "Custom Web Applications and SaaS MVPs UK - Saim Dev",
       },
     ],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CustomWebAppsRedirectPage() {
+export default function CustomWebAppsPage() {
   return (
     <>
       <script

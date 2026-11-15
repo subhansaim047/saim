@@ -54,6 +54,7 @@ export interface RhProblemSolutionProps {
   solutionDesc: string;
   solutionMetrics?: { value: string; label: string }[];
   chartTitle?: string;
+  chartBadge?: string;
   chartYAxis?: string;
   chartXAxis?: string;
   chartCaption?: string;
@@ -139,45 +140,45 @@ export interface RhBentoWorkGridProps {
 export const DEFAULT_SAIM_STRIP_ITEMS: StripProofItem[] = [
   {
     label: "Next.js 16 SSR",
-    tag: "PageSpeed",
-    tagValue: "99 / 100",
+    tag: "Target Score",
+    tagValue: "95+ CWV",
     summary: "Sub-second edge-rendered React & Next.js builds with zero plugin bloat.",
     href: "/case-studies",
   },
   {
-    label: "Apex Dental",
-    tag: "Bookings",
-    tagValue: "+185%",
-    summary: "Rebuilt a 4.8s legacy WordPress site into a 0.6s patient booking engine.",
-    href: "/case-studies",
+    label: "Clean Architecture",
+    tag: "Stack",
+    tagValue: "TypeScript",
+    summary: "Strictly typed App Router components built without bloated page-builder themes.",
+    href: "/technologies",
   },
   {
-    label: "HQ Leathercon",
-    tag: "Scale",
-    tagValue: "1,500+ Pages",
-    summary: "Bespoke luxury leather e-commerce architecture with custom jacket builder.",
+    label: "Interactive Demos",
+    tag: "Preview",
+    tagValue: "Free Concept",
+    summary: "Explore live interactive demo builds before committing to a milestone scope.",
     href: "/demos",
   },
   {
-    label: "SpeedTech Auto",
-    tag: "Lead Velocity",
-    tagValue: "2.2x Revenue",
-    summary: "Mobile-first emergency recovery site achieving 100/100 performance score.",
-    href: "/case-studies",
+    label: "Direct Booking UX",
+    tag: "Integration",
+    tagValue: "WhatsApp + Cal",
+    summary: "Mobile-first enquiry flows routed straight to your calendar or WhatsApp inbox.",
+    href: "/contact",
   },
   {
     label: "0% Commission",
     tag: "Direct Orders",
     tagValue: "£250 Fixed",
-    summary: "Commission-free takeaway & restaurant menus with Natasha's Law filters.",
+    summary: "Commission-free takeaway & restaurant menus with allergen filter patterns.",
     href: "/services/takeaway-web-design",
   },
   {
-    label: "Lumina Aesthetics",
-    tag: "Conversion",
-    tagValue: "+240% Leads",
-    summary: "Editorial Harley Street clinic flagship with seamless WhatsApp consults.",
-    href: "/case-studies",
+    label: "50/50 Milestones",
+    tag: "Billing",
+    tagValue: "Fixed Quote",
+    summary: "Written scope agreed upfront: 50% deposit to start, 50% only on staging approval.",
+    href: "/pricing",
   },
   {
     label: "100% IP Owned",
@@ -187,11 +188,11 @@ export const DEFAULT_SAIM_STRIP_ITEMS: StripProofItem[] = [
     href: "/pricing",
   },
   {
-    label: "TypeScript Strict",
-    tag: "LCP Time",
-    tagValue: "0.6s Avg",
-    summary: "Production-hardened App Router architecture engineered for UK & global scale.",
-    href: "/technologies",
+    label: "Technical SEO",
+    tag: "Schema",
+    tagValue: "JSON-LD",
+    summary: "Semantic HTML5 landmarks, clean metadata, and structured data from day one.",
+    href: "/services/seo-services",
   },
 ];
 
@@ -514,14 +515,15 @@ export function RhProblemSolutionDeck({
   solutionTitle,
   solutionDesc,
   solutionMetrics = [
-    { value: "99+", label: "PageSpeed Score" },
-    { value: "0.6s", label: "Sub-Second LCP" },
+    { value: "95+", label: "Target CWV" },
+    { value: "<1s", label: "Target LCP" },
     { value: "£0", label: "Monthly Retainer" },
   ],
-  chartTitle = "Performance & Speed Retention Benchmark",
+  chartTitle = "Architecture Speed & Retention Benchmark",
+  chartBadge = "Architecture Model",
   chartYAxis = "Lighthouse Score",
   chartXAxis = "Architecture Tier",
-  chartCaption = "Custom Next.js 16 edge engineering eliminates bloat and retains mobile visitors from first tap.",
+  chartCaption = "Custom Next.js 16 edge engineering eliminates bloat and keeps mobile journeys fast from first tap.",
   bars = [
     { value: "38", label: "Legacy Theme", heightPx: 140 },
     { value: "61", label: "No-Code Builder", heightPx: 220 },
@@ -660,7 +662,7 @@ export function RhProblemSolutionDeck({
                   {chartTitle}
                 </h3>
                 <span className="text-[11px] font-mono-tech uppercase tracking-wider px-2.5 py-1 bg-[#E6E6E6] text-[#0D0D0D] rounded-sm">
-                  Verified Audit
+                  {chartBadge}
                 </span>
               </div>
               <p className="text-[14px] text-[#595959] leading-[1.55] mb-8">{chartCaption}</p>
@@ -830,9 +832,9 @@ export function RhProcessCarousel({
   stagesSummaryTitle = "Stages",
   stagesSummaryText = "Fixed scope & milestones agreed before engineering starts.",
   stages,
-  quote = "Saim Dev shipped in days what our previous agency quoted three months for — cleaner architecture, 99 PageSpeed, zero monthly retainers.",
-  author = "Dr. Marcus Vance",
-  role = "Practice Director, Apex Dental Care",
+  quote = "Every build is delivered to agreed scope with clean TypeScript source, mobile verification, and direct GitHub ownership — no recurring agency lock-in.",
+  author = "Saim Dev Engineering Standard",
+  role = "Direct-to-Founder Delivery Model",
   ctaLabel = "Start a Project",
   ctaHref = "/contact",
 }: RhProcessCarouselProps) {
@@ -1040,34 +1042,34 @@ export function RhProcessCarousel({
 
 const DEFAULT_QUOTES: ProofQuoteItem[] = [
   {
-    quote: "Our new patient bookings nearly tripled within the first 30 days of launch.",
-    author: "Dr. Marcus Vance",
-    role: "Practice Director",
-    company: "Apex Dental Care",
+    quote: "Fixed milestone pricing agreed before build starts, with a free live prototype preview option before full production commitment.",
+    author: "Milestone Protection",
+    role: "Scope & Delivery Standard",
+    company: "Saim Dev",
   },
   {
-    quote: "Zero commission bleed and a 0.5s mobile load time changed our nightly takeaway margin.",
-    author: "James Miller",
-    role: "Operations Lead",
-    company: "SpeedTech & Partners",
+    quote: "100% clean React, Next.js 16, and TypeScript handed directly into your own repository with zero proprietary page-builder lock-in.",
+    author: "Full Source Ownership",
+    role: "Zero Lock-In Standard",
+    company: "Saim Dev",
   },
   {
-    quote: "Clean React & Next.js code handed straight into our GitHub repo — zero agency lock-in.",
-    author: "Elena Rostova",
-    role: "Clinic Founder",
-    company: "Lumina Aesthetics",
+    quote: "Bespoke hospitality and takeaway ordering flows engineered with direct WhatsApp routing and 0% per-order platform commission.",
+    author: "Commission-Free Ordering",
+    role: "UK & EU Hospitality Builds",
+    company: "Saim Dev",
   },
 ];
 
 export function RhBentoWorkGrid({
-  overline = "VERIFIED OUTCOMES",
+  overline = "ENGINEERING BENCHMARKS",
   title,
   titleMuted,
-  proofStat = "99+",
-  proofLabel = "Average Lighthouse Score across deployed Next.js builds",
+  proofStat = "<0.8s",
+  proofLabel = "Target First Contentful Paint across edge-cached Next.js 16 builds",
   quotes = DEFAULT_QUOTES,
-  highlightMetric = "+185%",
-  highlightTitle = "Online Conversion Uplift in 30 Days",
+  highlightMetric = "100%",
+  highlightTitle = "Full GitHub Source Code Ownership",
   highlightHref = "/case-studies",
   cursorLabel = "Inspect Project",
   items,

@@ -26,6 +26,7 @@ export const TechnologiesPage = () => {
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
+      <main>
       {/* 1. PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
       <RhHeroPinned
         badge="Engineering Stack · Next.js 16 & React 19"
@@ -35,11 +36,41 @@ export const TechnologiesPage = () => {
             <span className="text-[#939393]">&amp; Web Engineering</span>
           </>
         }
-        subtitle="Saim Dev combines Next.js 16 App Router, React 19, strict TypeScript, Tailwind CSS, and Cloudflare/Vercel edge infrastructure to ship sub-second UK web applications with 99+ Core Web Vitals and zero maintenance overhead."
+        subtitle="Saim Dev combines Next.js 16 App Router, React 19, strict TypeScript, Tailwind CSS, and Cloudflare/Vercel edge infrastructure to ship sub-second UK web applications with 95+ Core Web Vitals targets and zero maintenance overhead."
         primaryCta={{ label: "Build With This Stack", href: "/contact" }}
-        secondaryCta={{ label: "See Speed Case Studies", href: "/case-studies" }}
+        secondaryCta={{ label: "See Architecture Benchmarks", href: "/case-studies" }}
         videoType="cube"
         stripLabel="Zero plugin bloat · Edge native"
+        stripItems={[
+          {
+            label: "01. React 19 SSR",
+            tag: "App Router",
+            tagValue: "Next.js 16",
+            summary: "Server-first rendering keeps heavy JavaScript off client phones for crisp TBT & INP.",
+            href: "/nextjs-developer-uk",
+          },
+          {
+            label: "02. Zero Theme Bloat",
+            tag: "Tailwind + TS",
+            tagValue: "Purged CSS",
+            summary: "Strict TypeScript modules and compiled CSS utilities eliminate unused third-party scripts.",
+            href: "/services/website-development",
+          },
+          {
+            label: "03. Edge Media",
+            tag: "WebP / AVIF",
+            tagValue: "Target <1s LCP",
+            summary: "Explicit intrinsic sizing and modern image formats prevent CLS and slow hero paint.",
+            href: "/services/website-speed-optimization",
+          },
+          {
+            label: "04. Structured Graph",
+            tag: "Technical SEO",
+            tagValue: "JSON-LD Ready",
+            summary: "Typed Service, Organization, FAQ, and Breadcrumb schema shipped natively in route code.",
+            href: "/services/seo-services",
+          },
+        ]}
       />
 
       <RhProblemSolutionDeck
@@ -47,9 +78,37 @@ export const TechnologiesPage = () => {
         titleBefore="Why clean Next.js edge code beats"
         titleStrike="heavy plugins"
         titleOwned="every time."
-        subtitle="Legacy WordPress and bloated page builders ship megabytes of render-blocking scripts. Our modern App Router architecture keeps bundles tiny and response times under 100ms."
-        solutionTitle="Sub-Second LCP, Zero Cumulative Layout Shift, 100 SEO"
+        subtitle="Legacy WordPress and bloated page builders ship megabytes of render-blocking scripts. Our modern App Router architecture keeps bundles tiny and response times fast."
+        cards={[
+          {
+            source: "Legacy Plugin Stack",
+            time: "Render Block",
+            title: "35+ PHP plugins stalling Time to First Byte",
+            detail: "Every database query and third-party stylesheet queues before your first heading paints on 4G.",
+            severity: "critical",
+          },
+          {
+            source: "Maintenance Tax",
+            time: "Recurring",
+            title: "Frequent security patches and broken theme updates",
+            detail: "Coupled template builders demand monthly maintenance fees just to keep checkout forms alive.",
+            severity: "warning",
+          },
+          {
+            source: "Runtime Bloat",
+            time: "Client JS",
+            title: "Over-hydrated client scripts triggering sluggish taps",
+            detail: "Heavy DOM nesting elevates Interaction to Next Paint (INP) and drops mobile ad quality scores.",
+            severity: "critical",
+          },
+        ]}
+        solutionTitle="Sub-Second LCP Targets, Zero Layout Shift, Semantic HTML"
         solutionDesc="Engineered from first principles with React Server Components, edge image optimisation, and built-in Schema.org JSON-LD."
+        bars={[
+          { value: "42", label: "Legacy Theme", heightPx: 140 },
+          { value: "66", label: "Page Builder", heightPx: 215 },
+          { value: "95+", label: "Next.js 16 Target", heightPx: 330, isHighlight: true },
+        ]}
       />
 
       <RhSystemRows
@@ -382,6 +441,7 @@ export const TechnologiesPage = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <SiteFooter theme="dark" />
     </div>

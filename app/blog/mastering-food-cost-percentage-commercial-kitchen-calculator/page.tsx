@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BlogPostFoodCost } from '@/components/blog/BlogPostFoodCost';
 
 export const metadata: Metadata = {
-  title: 'How to Calculate Food Cost Percentage in the UK | Saim Dev',
+  title: 'Calculate Food Cost Percentage UK Kitchens | Saim Dev',
   description: 'Learn how to calculate food cost percentage in a commercial kitchen. Formulas, shrinkage math, target gross margins, and free online calculator.',
   robots: {
     index: true,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'How to Calculate Food Cost Percentage Commercial Kitchen UK | Saim Dev',
+    title: 'Calculate Food Cost Percentage UK Kitchens | Saim Dev',
     description: 'Learn how to calculate food cost percentage in a commercial kitchen. Formulas, shrinkage math, target gross margins, and free online calculator.',
     url: 'https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator',
     siteName: 'Saim Dev',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@saimwebdev',
-    title: 'How to Calculate Food Cost Percentage Commercial Kitchen UK | Saim Dev',
+    title: 'Calculate Food Cost Percentage UK Kitchens | Saim Dev',
     description: 'Learn how to calculate food cost percentage in a commercial kitchen. Formulas, shrinkage math, target gross margins, and free online calculator.',
     images: ['https://www.saimdev.site/og-image.png']
   }

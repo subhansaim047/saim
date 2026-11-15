@@ -245,9 +245,9 @@ export function WalkInCoolerStorageChartTool({ templateId }: { templateId?: stri
               <span className="inline-block px-3 py-1 rounded bg-rose-500 text-white font-mono font-black text-xs uppercase tracking-wider mb-2">
                 CRITICAL CROSS-CONTAMINATION BARRIER
               </span>
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-950 uppercase tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 uppercase tracking-tight">
                 Walk-In Cooler Shelf Storage Hierarchy
-              </h1>
+              </h2>
               <p className="text-xs sm:text-sm font-semibold text-slate-700 mt-1">
                 Mandatory Vertical Storage Order: Top (Ready-to-Eat) to Bottom (Raw Biohazards)
               </p>

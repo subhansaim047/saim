@@ -50,6 +50,12 @@ import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { DigitalChecklistTool } from "./tools/DigitalChecklistTool";
 import { FoodSafetyDisclaimer } from "./FoodSafetyDisclaimer";
 import { TOOL_DEEP_CONTENT } from "@/data/tool_deep_content";
+import {
+  getTemplateDomain,
+  getBlogCalloutMeta,
+  DOMAIN_GUIDANCE,
+  selectRelatedTemplates,
+} from "@/data/template_domain_guidance";
 
 interface Props {
   template: FoodSafetyTemplate;
@@ -311,52 +317,28 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
       template.slug.includes("brc") ||
       template.slug.includes("kosher"));
 
-  // Related templates: only link to indexed KEEP and IMPROVE pages (no NOINDEX or duplicates)
+  const domain = getTemplateDomain(template);
+  const domainConfig = DOMAIN_GUIDANCE[domain];
+  const blogMeta = getBlogCalloutMeta(activeRelatedBlog.slug);
+
+  // Related templates: honour curated relatedTools first, then deterministic same-domain fill (keeps indexed KEEP/IMPROVE links only)
   const isIndexableSlug = (slug: string) => {
     const bucket = (pagePlanData as any)[slug]?.bucket;
     return bucket === "KEEP" || bucket === "IMPROVE";
   };
 
-  const related = isAllergenTool
-    ? FOOD_SAFETY_TEMPLATES.filter(
-        (t) =>
-          t.id !== template.id &&
-          isIndexableSlug(t.slug) &&
-          (t.slug.includes("allergen") ||
-            t.slug.includes("allergy") ||
-            t.title.toLowerCase().includes("allergen") ||
-            t.title.toLowerCase().includes("allergy"))
-      ).slice(0, 4)
-    : FOOD_SAFETY_TEMPLATES.filter(
-        (t) => t.id !== template.id && isIndexableSlug(t.slug)
-      ).slice(0, 4);
+  const related = selectRelatedTemplates(
+    template,
+    FOOD_SAFETY_TEMPLATES,
+    deepContent?.relatedTools,
+    isIndexableSlug
+  );
 
-  const activeFaqs = deepContent?.faqs || [
-    {
-      q: `Is the ${template.title} suitable for UK Environmental Health Officer (EHO) inspections?`,
-      a: `Yes. This template and digital logging workflow are developed in line with UK Food Standards Agency (FSA) Safer Food, Better Business (SFBB) standards and HACCP Article 5 of Regulation (EC) No 852/2004. When maintained with genuine operating data and supervisor sign-offs, it fulfills statutory record-keeping and due diligence requirements under the Food Safety Act 1990.`
-    },
-    {
-      q: "How frequently should kitchen staff complete and sign off this record?",
-      a: "Critical checks (such as fridge, chiller, and hot-holding temperatures) must be completed at least twice daily—once during morning prep before opening, and once during evening service. Daily opening, closing, and hygiene checklists must be completed throughout each shift, with a designated supervisor or Head Chef signing off the log before premises shutdown."
-    },
-    {
-      q: "What is the recommended corrective action if a critical limit is breached?",
-      a: "Immediate containment is mandatory. For cold storage exceeding 8°C, probe the internal core temperature: if food has remained between 8°C and 63°C for under 4 hours, rapidly chill or cook it immediately; otherwise, safely discard it. For hot holding dropping below 63°C, reheat above 75°C (allowed once only) or serve within 2 hours, or condemn. Always record the issue, affected batch, and corrective action taken directly on the log."
-    },
-    {
-      q: "How long must commercial kitchens retain completed safety records?",
-      a: "Under UK due diligence legal defense (Section 21 of the Food Safety Act 1990), completed temperature sheets, cleaning logs, and monitoring records should be archived for a minimum of 6 to 12 months, or at least 3 months after the shelf-life of products served. Having organized monthly binders or digital PDF exports ready is vital for unannounced council audits."
-    },
-    {
-      q: "Can I customize, edit, and print this sheet without watermarks?",
-      a: "Yes. You can enter your establishment name, manager sign-off, and inspection date directly into the input fields above. Then click 'Print / Save as PDF' to generate an optimized, clean A4 layout. All web buttons, navigation links, and screen-only elements are automatically excluded from the printed output."
-    }
-  ];
+  const activeFaqs = deepContent?.faqs || domainConfig.fallbackFaqs(template.title);
   const faqs = activeFaqs;
 
   return (
-    <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
+    <div className="min-h-screen overflow-x-clip bg-[#FBFBFA] text-[#1D1D1F] font-sans">
       {/* ── PRINT STYLES ── */}
       <style jsx global>{`
         @media print {
@@ -419,36 +401,14 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         </nav>
 
         {/* Contextual Regulatory Definition */}
-        {isHaccpTool && (
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-xs sm:text-sm text-slate-700 no-print">
-            <dl className="space-y-1">
-              <dt className="font-bold text-slate-900 text-xs sm:text-sm">What is HACCP?</dt>
-              <dd className="leading-relaxed text-slate-600">
-                Hazard Analysis and Critical Control Point (HACCP) is a systematic, preventative food safety management system that identifies, evaluates, and controls biological, chemical, physical, and allergenic hazards at specific operational stages called Critical Control Points (CCPs).
-              </dd>
-            </dl>
-          </div>
-        )}
-        {isAllergenTool && (
-          <div className="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-5 text-xs sm:text-sm text-slate-700 no-print">
-            <dl className="space-y-1">
-              <dt className="font-bold text-amber-950 text-xs sm:text-sm">What are the 14 statutory allergens?</dt>
-              <dd className="leading-relaxed text-slate-600">
-                Under UK food law (Regulation (EU) No 1169/2011 retained in UK law and the Food Information Regulations 2014), food businesses must declare by law the presence of 14 major allergens: celery, cereals containing gluten, crustaceans, eggs, fish, lupin, milk, molluscs, mustard, tree nuts, peanuts, sesame seeds, soya, and sulphur dioxide (sulphites).
-              </dd>
-            </dl>
-          </div>
-        )}
-        {isChecklistOrLog && (
-          <div className="bg-blue-50/60 border border-blue-200/70 rounded-2xl p-5 text-xs sm:text-sm text-slate-700 no-print">
-            <dl className="space-y-1">
-              <dt className="font-bold text-blue-950 text-xs sm:text-sm">What is SFBB (Safer Food, Better Business)?</dt>
-              <dd className="leading-relaxed text-slate-600">
-                Safer Food, Better Business (SFBB) is a practical food safety management pack developed by the UK Food Standards Agency (FSA). It helps small catering and retail businesses comply with food hygiene regulations through documented procedures across cooking, cleaning, chilling, cross-contamination, and daily opening/closing checks.
-              </dd>
-            </dl>
-          </div>
-        )}
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-xs sm:text-sm text-slate-700 no-print">
+          <dl className="space-y-1">
+            <dt className="font-bold text-slate-900 text-xs sm:text-sm">{domainConfig.definitionTerm}</dt>
+            <dd className="leading-relaxed text-slate-600">
+              {domainConfig.definitionBody}
+            </dd>
+          </dl>
+        </div>
 
         {/* Editorial Trust & Verification Meta Bar */}
         <div className="bg-white rounded-2xl border border-gray-200 p-4 shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs no-print">
@@ -460,12 +420,12 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             <span className="text-gray-300 hidden sm:inline" aria-hidden="true">•</span>
             <div className="inline-flex items-center gap-1.5 font-medium">
               <Clock className="w-3.5 h-3.5 text-amber-700" />
-              <span>Last Reviewed: <strong className="text-gray-900 font-semibold">27 October 2026</strong></span>
+              <span>{domainConfig.sourcesReviewedLabel}</span>
             </div>
           </div>
           <div className="inline-flex items-center gap-1.5 text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full text-[11px] font-semibold">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-            <span>Aligned with UK Food Standards Agency (FSA) Guidance</span>
+            <span>{domainConfig.badgeLabel}</span>
           </div>
         </div>
 
@@ -493,18 +453,16 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
               <ToolIconRenderer slug={template.slug} size="sm" />
               <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full w-fit">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-              <span>{isAllergenTool ? "Covers the 14 UK/EU allergens" : "Resource • Printable & Digital"}</span>
+              <span>{domainConfig.badgeLabel}</span>
               </div>
             </div>
 
             <h1 className="text-2xl sm:text-4xl font-extrabold text-[#1D1D1F] leading-tight">
-              {(CORE_PAGES_METADATA[template.slug]?.title || (isAllergenTool ? "Free UK Takeaway Allergen Chart Generator (14 Allergens)" : template.title)).replace(/\s*\|\s*Saim Dev$/i, "")}
+              {(CORE_PAGES_METADATA[template.slug]?.title || template.title).replace(/\s*\|\s*Saim Dev$/i, "")}
             </h1>
 
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              {CORE_PAGES_METADATA[template.slug]?.desc || (isAllergenTool
-                ? "Build and print a UK allergen chart for your takeaway in minutes. Covers all 14 allergens, a customer filter and PDF print. Free, no sign-up."
-                : template.desc)}
+              {CORE_PAGES_METADATA[template.slug]?.desc || template.desc}
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -686,35 +644,36 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
               />
             </div>
 
-            {/* Temperature Table Reference */}
+            {/* Quick Operational Reference */}
             <div className="pt-4 border-t border-gray-100 space-y-3">
               <div className="flex items-center gap-2">
-                <Thermometer className="w-5 h-5 text-red-500" />
+                {domain === "temperature" ? (
+                  <Thermometer className="w-5 h-5 text-red-500" />
+                ) : (
+                  <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                )}
                 <h3 className="text-sm font-bold text-gray-900 uppercase font-mono tracking-wider">
-                  UK &amp; EU Food Safety Temperature Reference Limits
+                  {domainConfig.quickHeading}
                 </h3>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-                <div className="p-3.5 rounded-xl bg-blue-50 border border-blue-200">
-                  <span className="font-mono text-[10px] uppercase font-bold text-blue-700">Commercial Freezing</span>
-                  <div className="text-xl font-black text-blue-950 mt-1">&le; -18&deg;C</div>
-                  <p className="text-[10px] text-blue-800 mt-1">Stops bacterial growth</p>
-                </div>
-                <div className="p-3.5 rounded-xl bg-cyan-50 border border-cyan-200">
-                  <span className="font-mono text-[10px] uppercase font-bold text-cyan-700">Chilled Cold Holding</span>
-                  <div className="text-xl font-black text-cyan-950 mt-1">1&deg;C to 4&deg;C</div>
-                  <p className="text-[10px] text-cyan-800 mt-1">Legal maximum 8&deg;C</p>
-                </div>
-                <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200">
-                  <span className="font-mono text-[10px] uppercase font-bold text-amber-700">Hot Holding Display</span>
-                  <div className="text-xl font-black text-amber-950 mt-1">&ge; 63&deg;C</div>
-                  <p className="text-[10px] text-amber-800 mt-1">Max 2 hrs if below 63&deg;C</p>
-                </div>
-                <div className="p-3.5 rounded-xl bg-red-50 border border-red-200">
-                  <span className="font-mono text-[10px] uppercase font-bold text-red-700">Safe Cooking Core</span>
-                  <div className="text-xl font-black text-red-950 mt-1">&ge; 75&deg;C (30s)</div>
-                  <p className="text-[10px] text-red-800 mt-1">Destroys pathogens</p>
-                </div>
+                {domainConfig.quickCards.map((card, i) => {
+                  const toneClasses =
+                    card.tone === "blue"
+                      ? { wrap: "bg-blue-50 border-blue-200", k: "text-blue-700", v: "text-blue-950", p: "text-blue-800" }
+                      : card.tone === "cyan"
+                      ? { wrap: "bg-cyan-50 border-cyan-200", k: "text-cyan-700", v: "text-cyan-950", p: "text-cyan-800" }
+                      : card.tone === "amber"
+                      ? { wrap: "bg-amber-50 border-amber-200", k: "text-amber-700", v: "text-amber-950", p: "text-amber-800" }
+                      : { wrap: "bg-red-50 border-red-200", k: "text-red-700", v: "text-red-950", p: "text-red-800" };
+                  return (
+                    <div key={i} className={`p-3.5 rounded-xl border ${toneClasses.wrap}`}>
+                      <span className={`font-mono text-[10px] uppercase font-bold ${toneClasses.k}`}>{card.label}</span>
+                      <div className={`text-lg sm:text-xl font-black mt-1 ${toneClasses.v}`}>{card.value}</div>
+                      <p className={`text-[10px] mt-1 ${toneClasses.p}`}>{card.note}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -733,13 +692,13 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <div className="border-b border-gray-100 pb-5">
             <div className="inline-flex items-center gap-2 text-xs font-bold text-amber-900 bg-amber-50 border border-amber-200/80 px-3 py-1 rounded-full mb-3">
               <BookOpen className="w-3.5 h-3.5 text-amber-700" />
-              <span>Standard Operating Guidance (SOP)</span>
+              <span>{domainConfig.badgeLabel}</span>
             </div>
             <h2 className="text-2xl font-bold text-[#1D1D1F]">
               How to Implement the {template.title} in Your Commercial Kitchen
             </h2>
             <p className="text-xs sm:text-sm text-gray-600 mt-1.5 leading-relaxed">
-              Practical due diligence procedures, regulatory compliance steps, and EHO audit verification guidelines for UK hospitality businesses.
+              {domainConfig.sopSubtitle}
             </p>
           </div>
 
@@ -748,29 +707,39 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
             <div className="bg-gray-50/80 rounded-2xl p-5 border border-gray-200/80 space-y-3">
               <div className="flex items-center gap-2 text-sm font-bold text-gray-900">
                 <FileText className="w-4 h-4 text-blue-600" />
-                <h3>UK Statutory Due Diligence Framework</h3>
+                <h3>{domainConfig.leftCardTitle}</h3>
               </div>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Under Section 21 of the <strong>Food Safety Act 1990</strong>, a food business operator has a defense of due diligence if they prove that all reasonable precautions were taken and all due diligence was exercised to prevent food safety offenses.
-              </p>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Documented logs like the <strong>{template.title}</strong> provide contemporaneous proof of monitoring required by <strong>Regulation (EC) No 852/2004</strong> (retained UK law). Local council Environmental Health Officers (EHO) evaluate these records when scoring the <em>"Confidence in Management"</em> category of the Food Hygiene Rating Scheme (FHRS).
-              </p>
+              {domainConfig.leftCardParagraphs(template.title).map((para, i) => (
+                <p key={i} className="text-xs text-gray-600 leading-relaxed">
+                  {para}
+                </p>
+              ))}
             </div>
 
             <div className="bg-gray-50/80 rounded-2xl p-5 border border-gray-200/80 space-y-3">
               <div className="flex items-center gap-2 text-sm font-bold text-gray-900">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <h3>Official FSA Record-Keeping Guidance &amp; Due Diligence</h3>
+                <h3>{domainConfig.rightCardTitle}</h3>
               </div>
               <p className="text-xs text-gray-600 leading-relaxed">
-                Under UK Food Standards Agency (FSA) <em>Safer Food, Better Business (SFBB)</em> standards and Article 5 of Regulation (EC) No 852/2004, food business operators are required to maintain contemporaneous, accurate operational records.
+                {domainConfig.rightCardIntro}
               </p>
               <ul className="text-xs text-gray-600 space-y-1.5 list-disc list-inside">
-                <li><strong>Contemporaneous logging:</strong> Kitchen logs must reflect actual checks performed during opening, active service, and closing rather than retrospective estimates.</li>
-                <li><strong>Corrective action logs:</strong> Whenever a critical limit is breached, document the specific corrective measure taken (e.g. food discarded, chilled, or reheated) with staff initials.</li>
-                <li><strong>Statutory due diligence defense:</strong> Retaining completed daily sheets for a minimum of 6 to 12 months supports the statutory defense under Section 21 of the Food Safety Act 1990. Official guidance is available at <a href="https://www.food.gov.uk" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-emerald-700 hover:text-black">food.gov.uk</a>.</li>
+                {domainConfig.rightCardBullets.map((bullet, i) => (
+                  <li key={i}>{bullet}</li>
+                ))}
               </ul>
+              {domainConfig.rightCardLink && (
+                domainConfig.rightCardLink.href.startsWith("/") ? (
+                  <Link href={domainConfig.rightCardLink.href} className="inline-flex items-center gap-1 text-xs underline font-semibold text-emerald-700 hover:text-black">
+                    {domainConfig.rightCardLink.label}
+                  </Link>
+                ) : (
+                  <a href={domainConfig.rightCardLink.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs underline font-semibold text-emerald-700 hover:text-black">
+                    {domainConfig.rightCardLink.label}
+                  </a>
+                )
+              )}
             </div>
           </div>
 
@@ -800,10 +769,16 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <div className="bg-amber-50/60 rounded-2xl p-4 border border-amber-200/70 text-xs text-amber-900 space-y-1">
             <span className="font-bold">Official Guidance Reference:</span>
             <p className="text-[11px] text-amber-800 leading-relaxed">
-              Procedures align with UK Food Standards Agency (FSA) <em>Safer Food, Better Business (SFBB)</em> catering guidance and the Food Information Regulations 2014. Review official advice at{" "}
-              <a href="https://www.food.gov.uk" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-black">
-                food.gov.uk
-              </a>.
+              {domainConfig.referenceText}{" "}
+              {domainConfig.referenceLink.href.startsWith("/") ? (
+                <Link href={domainConfig.referenceLink.href} className="underline font-semibold hover:text-black">
+                  {domainConfig.referenceLink.label}
+                </Link>
+              ) : (
+                <a href={domainConfig.referenceLink.href} target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-black">
+                  {domainConfig.referenceLink.label}
+                </a>
+              )}.
             </p>
           </div>
         </div>
@@ -861,59 +836,46 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           </div>
         </div>
 
-        {/* Verified Statutory Sources & Last Reviewed Date (E-E-A-T) */}
+        {/* Verified Statutory Standards & Source Register */}
         <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 text-xs text-slate-700 space-y-3 no-print">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-2.5">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span className="font-extrabold text-slate-900 uppercase tracking-wide">
-                Verified Statutory Standards &amp; Source Register
+                Statutory References · {domainConfig.badgeLabel}
               </span>
             </div>
             <span className="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-md border border-slate-200">
-              Last reviewed: 02 November 2026
+              {domainConfig.sourcesReviewedLabel}
             </span>
           </div>
           <p className="text-[11px] text-slate-600 leading-relaxed">
-            All temperatures, microbial lethality pairs, and critical limits on this page have been verified against primary statutory documents issued by the UK Food Standards Agency (FSA), Food Standards Scotland (FSS), Regulation (EC) No 852/2004, and US FDA/USDA guidelines.
+            {domainConfig.sourcesSummary}
           </p>
           <div className="flex flex-wrap gap-2 text-[11px] pt-1">
-            <a
-              href="https://www.food.gov.uk/business-guidance/cooking-your-food"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition"
-            >
-              <ExternalLink className="w-3 h-3 text-slate-400" />
-              FSA Safe Methods (UK)
-            </a>
-            <a
-              href="https://www.legislation.gov.uk/ssi/2006/3/schedule/4/made"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition"
-            >
-              <ExternalLink className="w-3 h-3 text-slate-400" />
-              FSS Schedule 4 (82°C Rule)
-            </a>
-            <a
-              href="https://www.legislation.gov.uk/uksi/2019/706/made"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition"
-            >
-              <ExternalLink className="w-3 h-3 text-slate-400" />
-              Natasha's Law (PPDS)
-            </a>
-            <a
-              href="https://www.fda.gov"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition"
-            >
-              <ExternalLink className="w-3 h-3 text-slate-400" />
-              FDA / USDA FSIS Guidelines
-            </a>
+            {domainConfig.sourcesLinks.map((src, i) =>
+              src.href.startsWith("/") ? (
+                <Link
+                  key={i}
+                  href={src.href}
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition"
+                >
+                  <ArrowRight className="w-3 h-3 text-slate-400" />
+                  {src.label}
+                </Link>
+              ) : (
+                <a
+                  key={i}
+                  href={src.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition"
+                >
+                  <ExternalLink className="w-3 h-3 text-slate-400" />
+                  {src.label}
+                </a>
+              )
+            )}
           </div>
         </div>
 
@@ -927,13 +889,13 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           <div className="bg-gradient-to-r from-blue-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md no-print">
             <div className="space-y-1 max-w-xl">
               <span className="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-bold block">
-                Recommended UK Hospitality Inspection Guide
+                {blogMeta.eyebrow}
               </span>
               <h4 className="text-base sm:text-lg font-bold">
                 {activeRelatedBlog.title}
               </h4>
               <p className="text-xs text-blue-200 leading-relaxed">
-                Read our in-depth guidance on UK Food Standards Agency inspection procedures, staff training, and compliance routines.
+                {blogMeta.summary}
               </p>
             </div>
             <Link
@@ -950,15 +912,13 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
         {related.length > 0 && (
           <div className="space-y-4 related-section no-print">
             <h3 className="text-lg font-bold text-[#1D1D1F]">
-              Related {isAllergenTool ? "Allergen" : (template.preheader || "Food Safety")} Resources
+              Related {template.category || template.preheader || "Food Safety"} Resources
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {related.map(item => (
                 <Link
                   key={item.id}
                   href={`/food-safety-templates/${item.slug}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="bg-white rounded-2xl p-4 border border-gray-200 hover:border-gray-400 transition-colors flex flex-col justify-between shadow-sm group"
                 >
                   <div className="aspect-[4/3] rounded-xl bg-gray-50 p-2 flex items-center justify-center mb-2">
@@ -982,23 +942,23 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
           </Link>
         </div>
 
-        {/* Conversion Banner: High-Impact Takeaway Commercial Bridge */}
+        {/* Conversion Banner: Context-Matched Commercial Bridge */}
         <div className="rounded-3xl bg-neutral-950 text-white p-8 sm:p-10 space-y-4 shadow-2xl conversion-banner no-print border border-neutral-800">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-amber-400 font-mono text-xs uppercase tracking-widest font-bold">
-                  Bespoke Takeaway Web Development · Fixed £250
+                  {domainConfig.bannerEyebrow}
                 </span>
                 <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] px-2 py-0.5 rounded-full font-mono uppercase">
-                  Zero Commission
+                  {domainConfig.bannerTag}
                 </span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight">
-                Stop losing 30%+ order revenue to Just Eat & Deliveroo
+                {domainConfig.bannerHeadline}
               </h3>
               <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light">
-                We build sub-second Next.js direct ordering websites for UK takeaways and restaurants. Features interactive Natasha's Law 14-allergen menu filtering, WhatsApp & kitchen SMS order dispatch, and Google Maps local SEO—starting from a one-time fixed fee of £250 with zero monthly cuts.
+                {domainConfig.bannerCopy}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
@@ -1013,7 +973,6 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                         detail: { location: "template_footer", target: "whatsapp" }
                       })
                     );
-                    console.log("CTA Click Event:", { location: "template_footer", target: "whatsapp" });
                   }
                 }}
                 className="bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all shadow-lg hover:scale-105"
@@ -1022,10 +981,10 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
               <Link
-                href="/services/takeaway-web-design"
+                href={domainConfig.bannerPrimaryHref}
                 className="bg-white/10 hover:bg-white/20 text-white font-medium text-xs px-5 py-3.5 rounded-full inline-flex items-center justify-center gap-1.5 transition-all border border-white/15"
               >
-                <span>takeaway website with allergen filter</span>
+                <span>{domainConfig.bannerPrimaryLabel}</span>
               </Link>
             </div>
           </div>

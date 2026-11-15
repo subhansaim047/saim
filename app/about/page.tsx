@@ -104,20 +104,58 @@ export default function AboutPage() {
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />
 
-      <RhHeroPinned
-        badge="Pakistan-Based Studio · Serving UK & EU Remotely"
-        title={
-          <>
-            About Saim Dev{" "}
-            <span className="text-[#939393]">Engineering Studio</span>
-          </>
-        }
-        subtitle="Saim Dev is an independent Next.js web development studio serving UK and European businesses remotely. We engineer sub-second websites, custom e-commerce storefronts, and commission-free takeaway ordering systems from £250—with direct founder-led communication, full GitHub code ownership, and zero monthly retainers."
-        primaryCta={{ label: "Start a Project ($0 Upfront)", href: "/contact" }}
-        secondaryCta={{ label: "Inspect Live Case Studies", href: "/case-studies" }}
-        videoType="cube"
-        stripLabel="Direct founder engineering · UK & EU"
-      />
+      <main>
+        <RhHeroPinned
+          badge="UK & European Next.js Studio · Direct Engineering"
+          title={
+            <>
+              About Saim Dev{" "}
+              <span className="text-[#939393]">Engineering Studio</span>
+            </>
+          }
+          subtitle="Saim Dev is an independent Next.js 16 web engineering studio serving UK and European businesses remotely. Direct engineer-led builds from £250 fixed pricing, Free Concept Preview options, full GitHub source handover, and zero agency retainers."
+          primaryCta={{ label: "Start a Project", href: "/contact" }}
+          secondaryCta={{ label: "Explore Studio Demos", href: "/demos" }}
+          videoType="cube"
+          stripLabel="Direct founder engineering · UK & EU"
+          stripItems={[
+            {
+              label: "Direct Lead Engineer",
+              tag: "Access",
+              tagValue: "1-on-1 Build",
+              summary: "Communicate directly with the engineer scoping and writing every TypeScript component.",
+              href: "/contact",
+            },
+            {
+              label: "Fixed GBP Scopes",
+              tag: "Transparency",
+              tagValue: "£250–£1,500",
+              summary: "Written project deliverables with 50/50 milestone terms agreed upfront.",
+              href: "/pricing",
+            },
+            {
+              label: "GitHub IP Handover",
+              tag: "Ownership",
+              tagValue: "100% Owned",
+              summary: "Deploy cleanly to your own cloud account with zero recurring maintenance lock-in.",
+              href: "/technologies",
+            },
+            {
+              label: "Interactive Demo Hub",
+              tag: "Verification",
+              tagValue: "Live Previews",
+              summary: "Inspect responsive speed across retail, dental, legal, and UK takeaway concepts.",
+              href: "/demos",
+            },
+            {
+              label: "160+ Free UK Tools",
+              tag: "Community",
+              tagValue: "Compliance Suite",
+              summary: "Open-access UK allergen matrix, PPDS label PDF maker, and SFBB safety templates.",
+              href: "/tools",
+            },
+          ]}
+        />
 
       {/* ARCHITECTURAL STUDIO PROFILE (#F5F5F7 Contrast Band) */}
       <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-20 sm:py-28 px-5 border-b border-[#E6E6E6]">
@@ -294,7 +332,7 @@ export default function AboutPage() {
                 Have a project in mind?
               </p>
               <p className="text-[14px] text-[#939393]">
-                Discuss your requirements directly with Saim and start with a $0 upfront interactive prototype.
+                Discuss your requirements directly with Saim and request a Free Concept Preview or fixed milestone spec.
               </p>
             </div>
             <Link
@@ -313,9 +351,10 @@ export default function AboutPage() {
         titleBefore="Direct senior craft without"
         titleStrike="agency overhead"
         titleOwned="or retainers."
-        subtitle="Traditional agencies charge £3,000–£15,000+ to fund account managers and slow CMS themes. Working directly with Saim Dev delivers 99+ PageSpeed, full code IP, and fixed pricing from £250."
+        subtitle="Traditional agencies charge £3,000–£15,000+ to fund account managers and slow CMS themes. Working directly with Saim Dev delivers target 95+ Core Web Vitals, full code IP, and fixed pricing from £250."
         solutionTitle="Founder-Built Code You Own Forever"
-        solutionDesc="Every line of React, Next.js, and Tailwind CSS is authored cleanly, tested on a live staging link first ($0 upfront), and transferred straight to your GitHub."
+        solutionDesc="Every line of React, Next.js 16, and Tailwind CSS is authored cleanly, verified on a live staging link under 50/50 milestones, and transferred straight to your GitHub."
+        chartBadge="Studio Model"
       />
 
       <RhSystemRows
@@ -328,27 +367,28 @@ export default function AboutPage() {
             title: "Direct 1-on-1 Engineer Access",
             description:
               "Communicate straight with Saim on WhatsApp and Loom aligned with UK business hours—zero middlemen.",
-            tags: ["Direct WhatsApp", "< 2h Reply"],
+            tags: ["Direct WhatsApp", "UK Business Hours"],
             href: "/contact",
           },
           {
             num: "02",
             title: "100% GitHub Source Ownership",
             description:
-              "Complete repository, production Next.js source, and cloud hosting handed directly to your team.",
+              "Complete repository, production Next.js 16 source, and cloud hosting handed directly to your team.",
             tags: ["Zero Lock-In", "Clean TypeScript"],
             href: "/technologies",
           },
           {
             num: "03",
-            title: "Verified Client Case Studies",
+            title: "Reference Architectures & Interactive Demos",
             description:
-              "Real before-and-after metrics turning 4.8s WordPress sites into 0.6s sub-second revenue engines.",
-            tags: ["+185% Leads", "99/100 CWV"],
+              "Explore live interactive demonstrations replacing slow page builders with sub-second static & SSR routing.",
+            tags: ["Live Concepts", "Target CWV 95+"],
             href: "/case-studies",
           },
         ]}
       />
+      </main>
 
       <SiteFooter theme="dark" />
     </div>

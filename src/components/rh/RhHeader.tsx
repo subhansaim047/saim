@@ -504,9 +504,11 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
       </header>
 
       {/* Mobile Full-Screen Drawer */}
-      <div
+      <aside
+        aria-label="Mobile Navigation"
+        aria-hidden={!mobileOpen}
         className={`rh-page min-[921px]:hidden fixed inset-0 z-[200] bg-black text-white p-5 flex flex-col justify-between transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] ${
-          mobileOpen ? "translate-x-0" : "translate-x-full pointer-events-none"
+          mobileOpen ? "translate-x-0 visible" : "translate-x-full pointer-events-none invisible"
         }`}
       >
         <div className="flex items-center justify-between h-12">
@@ -538,7 +540,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
           </button>
         </div>
 
-        <div className="my-8 flex-1 overflow-y-auto flex flex-col gap-3">
+        <nav aria-label="Mobile Menu" className="my-8 flex-1 overflow-y-auto flex flex-col gap-3">
           <Link
             prefetch={false}
             href="/demos"
@@ -673,7 +675,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
           >
             Free UK Tools
           </Link>
-        </div>
+        </nav>
 
         <div className="pt-5 border-t border-white/15 flex items-center justify-between">
           <a
@@ -694,7 +696,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             </span>
           </Link>
         </div>
-      </div>
+      </aside>
     </>
   );
 }

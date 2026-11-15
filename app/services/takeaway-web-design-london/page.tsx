@@ -9,8 +9,9 @@ import {
 } from "@/components/rh/RhModernSections";
 
 export const metadata: Metadata = {
-  title: "Takeaway Website Design London | Online Ordering | Saim Dev",
-  description: "Custom Next.js takeaway ordering websites for London restaurants from £250. Cut Just Eat commissions with Natasha's Law allergen filters & WhatsApp ordering.",
+  title: "Takeaway Website Design London | Direct Site | Saim Dev",
+  description:
+    "Direct takeaway ordering websites for London kitchens from £250 fixed. Cut Just Eat & Deliveroo commissions with 14-allergen filters across all 32 boroughs.",
   robots: {
     index: true,
     follow: true,
@@ -22,8 +23,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Takeaway Website Design London | Online Ordering | Saim Dev",
-    description: "Custom Next.js takeaway ordering websites for London restaurants from £250. Cut Just Eat commissions with Natasha's Law allergen filters & WhatsApp ordering.",
+    title: "Takeaway Website Design London | Direct Site | Saim Dev",
+    description:
+      "Direct takeaway ordering websites for London kitchens from £250 fixed. Cut Just Eat & Deliveroo commissions with 14-allergen filters across all 32 boroughs.",
     url: "https://www.saimdev.site/services/takeaway-web-design-london",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -41,28 +43,29 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@saimwebdev",
-    title: "Takeaway Website Design London | Online Ordering | Saim Dev",
-    description: "Custom Next.js takeaway ordering websites for London restaurants from £250. Cut Just Eat commissions with Natasha's Law allergen filters & WhatsApp ordering.",
+    title: "Takeaway Website Design London | Direct Site | Saim Dev",
+    description:
+      "Direct takeaway ordering websites for London kitchens from £250 fixed. Cut Just Eat & Deliveroo commissions with 14-allergen filters across all 32 boroughs.",
     images: ["https://www.saimdev.site/og-services.png"],
   },
 };
 
 const londonFaqs = [
   {
-    q: "How does a direct ordering website save money for London takeaways?",
-    a: "London food businesses face some of the highest overheads in the UK. Aggregator platforms like Just Eat, Deliveroo, and Uber Eats take between 20% and 34% of every order. With a custom Next.js website from Saim Dev starting at £250 fixed price, London takeaways take orders directly via WhatsApp or digital checkout, eliminating aggregator commissions entirely.",
+    q: "Why do London Zone 1–6 takeaways struggle most with aggregator app fees?",
+    a: "Between high commercial business rates, London Living Wage staffing, and ULEZ/moped rider logistics, London independents often run tighter net margins than regional kitchens. Giving away 22%–34% on repeat local regulars shrinks room for profit — switching regular collections and short-radius deliveries onto a direct £250 site protects cashflow.",
   },
   {
-    q: "Do your London restaurant websites support Natasha's Law allergen filters?",
-    a: "Yes. Every menu features an interactive 14-allergen filter matrix built specifically to meet the Food Information Regulations 2014 and Natasha's Law guidance. London diners can instantly filter dishes for allergens such as gluten, nuts, dairy, celery, or shellfish before placing their order.",
+    q: "How do London takeaways handle tight borough delivery zones without long cross-river drops?",
+    a: "Instead of wide chaotic courier pins across Thames bridges, we configure postcode-prefix fencing and minimum basket tiers per Zone (e.g., E1/E2/E8 or SW11/SW4) paired with clear collection incentives for commuter pick-ups.",
   },
   {
-    q: "Which areas and boroughs of London do you support?",
-    a: "We work remotely with food operators across all 32 London boroughs, including Westminster, Camden, Hackney, Islington, Tower Hamlets, Southwark, Lambeth, Wandsworth, Croydon, Ealing, and Greenwich, as well as Greater London.",
+    q: "Are Natasha's Law 14-allergen warnings formatted for London Borough EHO inspections?",
+    a: "Yes — London boroughs such as Camden, Westminster, Hackney, and Tower Hamlets scrutinise online menu allergen traceability closely during Food Hygiene Rating inspections. Our menus flag all 14 statutory allergens beside items and include mandatory order-note prompts.",
   },
   {
-    q: "How quickly can a London takeaway website be launched?",
-    a: "Most London takeaway websites launch within 3 to 5 business days once your menu, pricing, and branding materials are received. We configure domain routing, Google local search optimization, and direct WhatsApp kitchen routing.",
+    q: "Can a London dark kitchen run multiple virtual brands off clear direct links?",
+    a: "Yes — single operators in Battersea, Park Royal, Bermondsey, or Mile End shipping out of dark units frequently use clean branded menu sites paired with flyer QRs to convert aggregator discovery into profitable repeat business.",
   },
 ];
 
@@ -72,49 +75,35 @@ export default function LondonTakeawayWebDesignPage() {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `${canonicalUrl}#breadcrumb`,
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.saimdev.site/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://www.saimdev.site/services",
-      },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.saimdev.site/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://www.saimdev.site/services" },
       {
         "@type": "ListItem",
         position: 3,
         name: "Takeaway Web Design",
         item: "https://www.saimdev.site/services/takeaway-web-design",
       },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: "London",
-        item: canonicalUrl,
-      },
+      { "@type": "ListItem", position: 4, name: "London", item: canonicalUrl },
     ],
   };
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": `${canonicalUrl}#service`,
     name: "Takeaway Website Design London - Saim Dev",
-    description: "Custom Next.js takeaway ordering websites for London restaurants from £250. Cut Just Eat commissions with Natasha's Law allergen filters & WhatsApp ordering.",
+    description:
+      "Direct takeaway ordering websites for London kitchens from £250 fixed. Cut Just Eat & Deliveroo commissions with 14-allergen filters across all 32 boroughs.",
     url: canonicalUrl,
     priceRange: "£250",
-    areaServed: {
-      "@type": "City",
-      name: "London",
-    },
+    areaServed: { "@type": "City", name: "London" },
     provider: {
-      "@type": "Person",
+      "@type": "Organization",
+      "@id": "https://www.saimdev.site/#organization",
       name: "Saim Dev",
-      url: "https://www.saimdev.site/about",
+      url: "https://www.saimdev.site",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -122,10 +111,11 @@ export default function LondonTakeawayWebDesignPage() {
       itemListElement: [
         {
           "@type": "Offer",
-          name: "London Takeaway Direct Ordering System",
+          name: "London Direct Takeaway Ordering System",
           price: "250",
           priceCurrency: "GBP",
-          description: "Fixed-price £250 Next.js ordering platform with zero commission cuts, 14-allergen menu filtering, and direct kitchen dispatch.",
+          description:
+            "Fixed-price £250 Next.js ordering site with zero platform commission, 14-allergen dish filters, and postcode radius zoning.",
         },
       ],
     },
@@ -137,16 +127,12 @@ export default function LondonTakeawayWebDesignPage() {
     mainEntity: londonFaqs.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: f.a,
-      },
+      acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
 
   return (
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
-      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -162,164 +148,237 @@ export default function LondonTakeawayWebDesignPage() {
 
       <RhHeader theme="dark" />
 
-      <RhHeroPinned
-        badge="London Restaurant & Takeaway Tech · 0% Commission"
-        title={
-          <>
-            Takeaway Website Design{" "}
-            <span className="text-[#939393]">London</span>
-          </>
-        }
-        subtitle="Saim Dev engineers direct Next.js takeaway ordering websites for London restaurants, dark kitchens, and cafes starting from £250 fixed price. Bypass 30%+ Just Eat and Deliveroo commissions with Natasha's Law 14-allergen filters across all 32 London boroughs."
-        primaryCta={{
-          label: "Build London Takeaway Site (£250)",
-          href: "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20London%20takeaway%20website",
-        }}
-        secondaryCta={{
-          label: "Interactive Allergen Demo",
-          href: "/tools/allergen-matrix-generator",
-        }}
-        videoType="mobile"
-        stripLabel="London Boroughs · Commission-Free Ordering"
-      />
-
-      <RhTakeawayCityBody
-        stats={[
-          { value: "0%", label: "Commission Fees", detail: "Zero cuts to portals" },
-          { value: "32 Boroughs", label: "London Coverage", detail: "All London regions" },
-          { value: "14 Allergens", label: "Interactive Filter", detail: "Natasha's Law Compliant" },
-          { value: "3–5 Days", label: "Turnaround Time", detail: "Swift deployment" },
-        ]}
-        aeoQuestion="Direct Answer: How Does It Work for London Food Businesses?"
-        aeoAnswer="Saim Dev builds commission-free takeaway websites for London restaurants and food businesses starting from £250. Each site includes an online ordering menu, statutory 14-allergen filtering aligned with Natasha's Law, instant WhatsApp kitchen dispatch, and full Google local SEO setup — helping London takeaways recover 20% to 34% commission fees previously lost to third-party delivery aggregators."
-        marketEyebrow="Capital City Dining Landscape"
-        marketHeading="Why London Takeaways Must Own Their Customer Data"
-        marketSubtitle="London is home to more than 18,000 food establishments. Relying entirely on delivery aggregators means losing your brand identity, paying thousands in commissions every month, and never owning your customer relationships."
-        marketCards={[
-          {
-            icon: "percent",
-            title: "Reclaim Monthly Profit",
-            description: "If your London kitchen does £10,000 per month via delivery apps, you forfeit up to £3,400 every single month. A direct website pays for itself in less than two weeks.",
-          },
-          {
-            icon: "shield",
-            title: "London Allergen Compliance",
-            description: "London Environmental Health Officers (EHOs) rigorously audit food businesses for accurate allergen declarations. Our digital menus highlight all 14 statutory allergens clearly.",
-          },
-          {
-            icon: "zap",
-            title: "Sub-Second Mobile Ordering",
-            description: "Londoners expect immediate mobile responses. Built with Next.js, our menus load in under 800 milliseconds, ensuring zero drop-off on busy 4G and 5G mobile networks.",
-          },
-        ]}
-        coverageEyebrow="Hyper-Local Coverage"
-        coverageHeading="Serving All London Boroughs & Neighbourhoods"
-        coverageSubtitle="Whether you manage a fish and chip shop in East London, an artisan bakery in South London, or a high-volume pizza takeaway in West London:"
-        coverageAreas={[
-          "Central London & Soho",
-          "Camden & Islington",
-          "Hackney & Shoreditch",
-          "Tower Hamlets & Bow",
-          "Brixton & Lambeth",
-          "Southwark & Bermondsey",
-          "Wandsworth & Battersea",
-          "Ealing & Acton",
-        ]}
-        faqEyebrow="London FAQs"
-        faqs={londonFaqs}
-        siblings={[
-          {
-            href: "/services/takeaway-web-design",
-            tag: "National Pillar",
-            title: "UK Takeaway Web Design (Main Hub)",
-            description: "National £250 fixed-price takeaway ordering package with interactive 14-allergen menus and zero commission fees.",
-          },
-          {
-            href: "/services/takeaway-web-design-manchester",
-            tag: "Regional Sibling",
-            title: "Manchester Takeaway Web Design",
-            description: "High-speed digital menus and direct ordering engineered for Curry Mile, Rusholme, and Greater Manchester takeaways.",
-          },
-          {
-            href: "/services/takeaway-web-design-birmingham",
-            tag: "Regional Sibling",
-            title: "Birmingham Takeaway Web Design",
-            description: "Fast WhatsApp dispatch and allergen filtration for Balti Triangle, Digbeth, and West Midlands restaurants.",
-          },
-        ]}
-        ctaHeading="Ready to Launch Your London Takeaway Website?"
-        ctaSubtitle="Contact us today on WhatsApp. Fixed £250 setup, no recurring commissions, and your digital menu live within 3–5 days."
-        whatsappHref="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20get%20started%20with%20a%20London%20takeaway%20website"
-      />
-
-      <RhSystemRows
-        overline="LONDON TAKEAWAY STACK"
-        title="Own your margin"
-        titleMuted="across all 32 boroughs."
-        subtitle="Built specifically for London independents, multi-branch burger kitchens, and dark kitchens bypassing 30% delivery app cuts."
-        rows={[
-          {
-            num: "01",
-            title: "Natasha's Law 14-Allergen Filter",
-            description: "Interactive allergen filtering across every menu category so diners inspect ingredients safely before ordering.",
-            tags: ["14 Allergens", "FSA Compliant", "Instant Search"],
+      <main>
+        <RhHeroPinned
+          badge="Greater London Hospitality Tech · Zones 1–6"
+          title={
+            <>
+              Takeaway Website Design{" "}
+              <span className="text-[#939393]">London</span>
+            </>
+          }
+          subtitle="Direct Next.js 16 ordering websites for London takeaways, dark kitchens, and high-street restaurants from £250 fixed. Keep repeat neighbourhood orders off 30% courier apps across all 32 boroughs."
+          primaryCta={{
+            label: "Scope London Menu (£250)",
+            href: "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20London%20takeaway%20website",
+          }}
+          secondaryCta={{
+            label: "Try 14-Allergen Matrix",
             href: "/tools/allergen-matrix-generator",
-          },
-          {
-            num: "02",
-            title: "Direct WhatsApp & Stripe Checkout",
-            description: "Orders route straight to your kitchen printer or WhatsApp Business dashboard with 0% aggregator commission.",
-            tags: ["0% Commission", "Stripe UK", "Postcode Zones"],
-          },
-          {
-            num: "03",
-            title: "Sub-Second Borough Local SEO",
-            description: "Schema-backed menu indexing engineered to capture direct 'near me' food searches across London.",
-            tags: ["LocalBusiness JSON-LD", "99+ Speed", "Mobile First"],
-          },
-        ]}
-      />
+          }}
+          videoType="mobile"
+          stripLabel="London Borough Ordering Specs"
+          stripItems={[
+            {
+              label: "Zone 1–6 Postcodes",
+              tag: "Dispatch",
+              tagValue: "Borough Fencing",
+              summary: "Restrict own-driver runs to profitable postcodes and steer bridges to Click & Collect.",
+              href: "/services/takeaway-web-design",
+            },
+            {
+              label: "Commuter Pre-Order",
+              tag: "Peak Window",
+              tagValue: "17:30–20:00",
+              summary: "Capture station-walk home collections in Brixton, Clapham, Shoreditch & Stratford.",
+              href: "/hotbite/index.html",
+            },
+            {
+              label: "Borough EHO Ready",
+              tag: "FSA Hygiene",
+              tagValue: "14 Allergens",
+              summary: "Clear dish-level allergen tags aligned with strict London borough environmental inspections.",
+              href: "/tools/allergen-matrix-generator",
+            },
+            {
+              label: "Fixed £250 Setup",
+              tag: "Margins",
+              tagValue: "£0 App Fee",
+              summary: "Replace £3,000+ annual portal commissions with owned domain direct ordering.",
+              href: "/pricing",
+            },
+            {
+              label: "Dark Kitchen Ready",
+              tag: "QR Packaging",
+              tagValue: "Bag Flyers",
+              summary: "Turn Deliveroo/Uber first-timers in Bermondsey & Bow into commission-free regulars.",
+              href: "/contact",
+            },
+          ]}
+        />
 
-      <RhProcessCarousel
-        overline="LAUNCH SPRINT"
-        title="Commission-free menu live"
-        titleMuted="in 3–5 days."
-        stages={[
-          {
-            stage: "01",
-            duration: "Day 1",
-            title: "Menu & Allergen Audit",
-            description: "We ingest your PDF menu, add-ons, meal deals, and Natasha's Law allergen data with zero manual work.",
-            deliverables: ["Full Menu JSON", "Allergen Matrix", "London Zone Map"],
-          },
-          {
-            stage: "02",
-            duration: "Days 2–3",
-            title: "Branded Storefront Build",
-            description: "High-contrast dark editorial UI tailored to smartphones where 85%+ of London takeaway orders happen.",
-            deliverables: ["Mobile Cart UX", "Upsell Flows", "Staging Link"],
-          },
-          {
-            stage: "03",
-            duration: "Day 4",
-            title: "Order Routing & QR Assets",
-            description: "Test WhatsApp order payloads, delivery radius rules, and generate table/flyer QR menus to convert app customers.",
-            deliverables: ["Print QR Flyering", "WhatsApp Test", "Speed QA"],
-          },
-          {
-            stage: "04",
-            duration: "Day 5",
-            title: "Live Go-Live (£250 Fixed)",
-            description: "Deploy on your own .co.uk domain with 100% ownership and zero ongoing software cuts per order.",
-            deliverables: ["Custom Domain", "0% Per Order", "Code Handoff"],
-          },
-        ]}
-        quote="Switching repeat Friday night orders off aggregator apps to our direct Saim Dev menu saved over £1,400 in commissions during the first month alone."
-        author="Tariq Mahmood"
-        role="Founder, Spice Quarter Kitchen London"
-        ctaHref="/contact"
-        ctaLabel="Launch London Menu"
-      />
+        <RhTakeawayCityBody
+          stats={[
+            { value: "£250", label: "Fixed Launch Fee", detail: "Zero per-order commission" },
+            { value: "Zones 1–6", label: "London Postcode UI", detail: "E, SE, SW, N, W, NW prefixes" },
+            { value: "14 FSA", label: "Allergen Tagging", detail: "Natasha's Law matrix UX" },
+            { value: "4–5 Days", label: "Menu Turnaround", detail: "Paper flyer to live cart" },
+          ]}
+          aeoQuestion="How do independent London kitchens shift repeat orders off Deliveroo and Uber Eats?"
+          aeoAnswer="Smart London takeaways remain discoverable on aggregators for cold first-time traffic, then tuck a bold 'Direct Exclusive: 10% Off + Free Side at OurOwnSite.co.uk' QR flyer inside every sealed delivery bag. Regular flats in Hackney, Greenwich, Ealing, or Kensington scan once and reorder directly with zero 28–34% aggregator cuts."
+          marketEyebrow="London Unit Economics"
+          marketHeading="Protecting Capital-City Kitchens From High Portal Fees"
+          marketSubtitle="High London rents, evening congestion overhead, and rising ingredient wholesale prices mean giving third-party marketplaces a third of repeat orders drains net margin fast."
+          marketCards={[
+            {
+              icon: "percent",
+              title: "Stop Subsidising Repeat Riders",
+              description: "When a local flat two streets away reorders via an app, you forfeit 25%–34% unnecessarily. Own-brand collection and local direct drops preserve nearly full basket profit.",
+            },
+            {
+              icon: "shield",
+              title: "Pass Strict Borough Allergen Checks",
+              description: "Councils across Camden, Islington, Lambeth, and Westminster expect unambiguous online allergen disclosures. Every dish card pairs cleanly with dietary toggles.",
+            },
+            {
+              icon: "zap",
+              title: "Built for Undergrounds & Busy Streets",
+              description: "Londoners browse menus walking off the Tube or bus. Next.js 16 static caching opens full photography menus in a fraction of a second even on patchy signal.",
+            },
+          ]}
+          localBenchmark={{
+            eyebrow: "LONDON OPERATIONAL BENCHMARK",
+            heading: "Tailoring Digital Ordering Around London Borough Logistics",
+            intro: "How London direct-ordering stores differ from generic provincial restaurant templates:",
+            rows: [
+              {
+                topic: "Borough Postcode & River Rules",
+                detail: "Pre-set minimum basket levels inside close NW/E/SW zones while gently steering cross-river or outer postcodes toward discounted collection slots.",
+              },
+              {
+                topic: "Commuter Click & Collect Slots",
+                detail: "Highlight express 15-minute collection discounts for office workers heading home past Tube & Overground high streets.",
+              },
+              {
+                topic: "Dark Kitchen Flyer Conversion",
+                detail: "Custom high-contrast QR packaging cards supplied at handover to move delivery-unit regulars off marketplaces legally.",
+              },
+              {
+                topic: "London LocalBusiness Schema",
+                detail: "Clean London areaServed city & postcode entities linking your menu route cleanly alongside Google Business Profile.",
+              },
+            ],
+          }}
+          coverageEyebrow="All 32 London Boroughs"
+          coverageHeading="Postcode Zoning Across North, East, South & West London"
+          coverageSubtitle="Remote setup covering every inner and outer Greater London dining strip — from Soho & Shoreditch to Tooting, Stratford, & Hounslow:"
+          coverageAreas={[
+            "Soho, Bloomsbury & W1",
+            "Hackney, Dalston & E8",
+            "Tower Hamlets, Bow & E3",
+            "Islington & Camden NW1",
+            "Bermondsey & Peckham SE",
+            "Brixton & Clapham SW",
+            "Ealing, Acton & W3",
+            "Stratford, Barking & IG/E",
+          ]}
+          toolsHeading="Free Statutory Tools for London Food Operators"
+          toolsDescription="Download PPDS pre-packed direct sale label makers, allergen charts, and GP% menu pricing tools trusted ahead of council checks."
+          toolsCtaLabel="Open Kitchen Compliance Suite"
+          faqEyebrow="London Operator Questions"
+          faqHeading="London Takeaway Website FAQ"
+          faqs={londonFaqs}
+          networkHeading="Explore UK Takeaway Web Hubs"
+          networkSubtitle="View our national takeaway architecture hub alongside regional ordering strategies across England."
+          siblings={[
+            {
+              href: "/services/takeaway-web-design",
+              tag: "National Hub",
+              title: "UK Takeaway Web Design",
+              description: "National commission-free menu packages (£250 / £390 Stripe / £450 Multi-Branch).",
+            },
+            {
+              href: "/services/takeaway-web-design-birmingham",
+              tag: "West Midlands",
+              title: "Birmingham Takeaway Web Design",
+              description: "Direct ordering tuned for Balti Triangle curry houses, Digbeth, & B-postcodes.",
+            },
+            {
+              href: "/services/takeaway-web-design-manchester",
+              tag: "North West",
+              title: "Manchester Takeaway Web Design",
+              description: "Late-night Rusholme, Northern Quarter, and Greater Manchester online ordering.",
+            },
+          ]}
+          ctaHeading="Keep Your London Kitchen Margin at Home"
+          ctaSubtitle="Send your flyer photo on WhatsApp for a crisp mobile concept layout, £250 fixed quote, and 4-day turnaround."
+          whatsappHref="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20launch%20a%20direct%20London%20takeaway%20website"
+        />
+
+        <RhSystemRows
+          overline="LONDON MENU ARCHITECTURE"
+          title="Built to convert"
+          titleMuted="first-time app diners into site regulars."
+          subtitle="Structured around fast high-street takeaway collections, meal-deal combos, and clean postcode dispatch."
+          rows={[
+            {
+              num: "01",
+              title: "Click & Collect Commuter Promos",
+              description: "Show automated 10% collection perks above delivery prices so local pedestrians skip delivery delays cleanly.",
+              tags: ["Zone 1–6", "Express Pickup", "High Margin"],
+              href: "/hotbite/index.html",
+            },
+            {
+              num: "02",
+              title: "14-Allergen Menu Search Filter",
+              description: "Interactive allergen matrix tagging nuts, gluten, dairy, sesame, and mustard cleanly beside dishes.",
+              tags: ["Borough EHO", "FSA Guidance", "Clean Matrix"],
+              href: "/tools/allergen-matrix-generator",
+            },
+            {
+              num: "03",
+              title: "Stripe Apple Pay & WhatsApp Docket",
+              description: "Accept cards directly via Stripe (£390 tier) or dispatch formatted cash-on-delivery tickets cleanly (£250).",
+              tags: ["0% App Commission", "Direct Receipts", "Own Domain"],
+              href: "/pricing",
+            },
+          ]}
+        />
+
+        <RhProcessCarousel
+          overline="LONDON LAUNCH SPRINT"
+          title="From paper flyer"
+          titleMuted="to weekend direct trading."
+          stagesSummaryCount="4"
+          stagesSummaryTitle="Sprints"
+          stagesSummaryText="Zero manual menu entry — snap photos of your London leaflet and we digitise the rest."
+          stages={[
+            {
+              stage: "01",
+              duration: "Day 1",
+              title: "Leaflet Capture & Postcode Plan",
+              description: "Review London delivery zones, collection timings, spicy modifiers, and mandatory allergen details.",
+              deliverables: ["Borough Matrix", "Full Dish JSON", "Fixed Scope"],
+            },
+            {
+              stage: "02",
+              duration: "Days 2–3",
+              title: "Tube-Speed Mobile Ordering UI",
+              description: "Build crisp dark menu layout with instant +/- basket drawers optimised for iOS & Android.",
+              deliverables: ["Thumb Navigation", "Combo Modifiers", "Staging Preview"],
+            },
+            {
+              stage: "03",
+              duration: "Day 4",
+              title: "A6 Flyer QR Code & Docket Tests",
+              description: "Export high-resolution print QR bag-stuffer graphics and verify live test tickets cleanly.",
+              deliverables: ["Print QR Vector", "Ticket Format", "Mobile Trace"],
+            },
+            {
+              stage: "04",
+              duration: "Day 5",
+              title: "Domain Cutover & Maps Integration",
+              description: "Wire your Google Business Profile Order Direct link onto your new London domain.",
+              deliverables: [".co.uk Routing", "GBP Order Link", "Repo Ownership"],
+            },
+          ]}
+          quote="Reference London Scenario: Moving just 35 weekly borough repeat orders from 30% apps onto an owned QR website saves over £1,100 a month on typical £28 baskets."
+          author="London Direct-Order Model"
+          role="Zone 2 Takeaway Blueprint"
+          ctaHref="/contact"
+          ctaLabel="Start London Build"
+        />
+      </main>
 
       <SiteFooter theme="dark" />
     </div>

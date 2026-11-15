@@ -414,9 +414,9 @@ export function MasterFoodTemperatureChartTool({
             <div className="inline-block px-2.5 py-0.5 rounded bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest mb-1">
               Official Commercial Kitchen Safety Notice
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
               MASTER FOOD TEMPERATURE CHART
-            </h1>
+            </h2>
             <p className="text-xs font-semibold text-slate-600">
               Food Safety Act 1990 &bull; Food Hygiene Regulations &bull; SFBB HACCP Standard
             </p>

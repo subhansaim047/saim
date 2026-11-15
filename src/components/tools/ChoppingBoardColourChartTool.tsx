@@ -230,9 +230,9 @@ export const ChoppingBoardColourChartTool: React.FC<{ templateId?: string }> = (
           <div className="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-900 text-xs font-black uppercase tracking-widest print:bg-gray-200 print:text-black">
             Official EHO Food Hygiene Reference
           </div>
-          <h1 className="text-2xl sm:text-3xl font-black text-gray-950 uppercase tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-gray-950 uppercase tracking-tight">
             UK Chopping Board Colour Coding Chart
-          </h1>
+          </h2>
           <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto print:text-black font-medium">
             Strict board segregation prevents cross-contamination. Always wash and sanitise boards through a commercial dishwasher operating at &ge;82&deg;C rinse.
           </p>

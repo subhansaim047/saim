@@ -52,8 +52,8 @@ const QUICK_JUMP_LINKS = [
 
 const OVERVIEW_FAQS = [
   {
-    q: "How does the $0 upfront guarantee work?",
-    a: "For every new project we design and engineer the interactive staging build first. You test speed, layout, forms, and mobile responsiveness on a private staging URL before paying the final launch invoice.",
+    q: "How do the Free Concept Preview and 50/50 milestone terms work?",
+    a: "For qualifying businesses we can prepare a non-binding Free Concept Preview before committing. Production projects operate on clear 50/50 milestones under a fixed written scope: 50% deposit to start full engineering and 50% once you approve the completed live staging build.",
   },
   {
     q: "Are there any monthly agency retainers or hidden hosting fees?",
@@ -78,42 +78,79 @@ export default function StudioOverviewPage() {
     <div className="rh-page min-h-screen flex flex-col bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] overflow-x-hidden">
       <RhHeader theme="dark" />
 
-      <RhHeroPinned
-        badge="Detailed Engineering Specs & Scope Calculator"
-        title={
-          <>
-            Full Studio Overview{" "}
-            <span className="text-[#939393]">&amp; Cost Estimator</span>
-          </>
-        }
-        subtitle="Complete technical specifications, interactive project scope cost estimator, architecture comparisons, and full deliverables for every Saim Dev service."
-        primaryCta={{ label: "Estimate Project Scope", href: "#estimator" }}
-        secondaryCta={{ label: "Back to Minimal Homepage", href: "/" }}
-        videoType="cube"
-        stripLabel="Full Architecture · Fixed-Price Engineering"
-      />
-
-      {/* Sticky Quick-Jump Directory Strip */}
-      <div className="bg-black border-b border-[#1D1D1D] py-4 px-5">
-        <div className="max-w-[1168px] mx-auto">
-          <nav
-            aria-label="Detailed sections navigation"
-            className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar"
-          >
-            {QUICK_JUMP_LINKS.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] font-mono-tech bg-[#0D0D0D] hover:bg-[#BAFF00] hover:text-[#0D0D0D] text-[#D1D1D6] border border-[#222222] transition-colors whitespace-nowrap"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </div>
-
       <main className="flex-grow">
+        <RhHeroPinned
+          badge="Detailed Engineering Specs & Scope Calculator"
+          title={
+            <>
+              Full Studio Overview{" "}
+              <span className="text-[#939393]">&amp; Cost Estimator</span>
+            </>
+          }
+          subtitle="Complete technical specifications, interactive project scope cost estimator, architecture comparisons, and full deliverables for every Saim Dev service."
+          primaryCta={{ label: "Estimate Project Scope", href: "#estimator" }}
+          secondaryCta={{ label: "Back to Homepage", href: "/" }}
+          videoType="cube"
+          stripLabel="Full Architecture · Fixed-Price Engineering"
+          stripItems={[
+            {
+              label: "Live Cost Estimator",
+              tag: "Budgeting",
+              tagValue: "£199–£3,200",
+              summary: "Calculate instant written quote ranges across brochure sites, takeaways, apps, and speed sprints.",
+              href: "#estimator",
+            },
+            {
+              label: "50/50 Milestone Billing",
+              tag: "Transparency",
+              tagValue: "Written Scope",
+              summary: "Fixed GBP quotes agreed upfront with staging inspection prior to final milestone completion.",
+              href: "/pricing",
+            },
+            {
+              label: "12 Dedicated Services",
+              tag: "Catalog",
+              tagValue: "Specialised",
+              summary: "From headless Shopify and WordPress migration to commission-free UK takeaway ordering.",
+              href: "/services",
+            },
+            {
+              label: "3 UK Regional Hubs",
+              tag: "Local SEO",
+              tagValue: "LDN / BHX / MAN",
+              summary: "Dedicated hospitality strategies covering London, Birmingham, and Manchester operators.",
+              href: "/services/takeaway-web-design",
+            },
+            {
+              label: "160+ Kitchen Tools",
+              tag: "Open Utility",
+              tagValue: "UK Food Safety",
+              summary: "Live client-side tools covering 14-allergen filters, PPDS labels, GP%, and SFBB templates.",
+              href: "/tools",
+            },
+          ]}
+        />
+
+        {/* Sticky Quick-Jump Directory Strip */}
+        <div className="bg-black border-b border-[#1D1D1D] py-4 px-5">
+          <div className="max-w-[1168px] mx-auto">
+            <nav
+              aria-label="Detailed sections navigation"
+              className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar"
+            >
+              {QUICK_JUMP_LINKS.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] font-mono-tech bg-[#0D0D0D] hover:bg-[#BAFF00] hover:text-[#0D0D0D] text-[#D1D1D6] border border-[#222222] transition-colors whitespace-nowrap"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </div>
+
         {/* 1. Interactive Scope Estimator */}
         <div className="scroll-mt-24">
           <ProjectScopeEstimator />
@@ -181,7 +218,7 @@ export default function StudioOverviewPage() {
         <div id="demos" className="scroll-mt-24">
           <RhBentoWorkGrid
             overline="LIVE DEMOS & PRODUCTION SYSTEMS"
-            title="Verified client results"
+            title="Architecture blueprints"
             titleMuted="& interactive showcases."
             items={[
               {
@@ -192,17 +229,17 @@ export default function StudioOverviewPage() {
                   "Interactive 14-allergen filtering menu with WhatsApp kitchen dispatch eliminating 30%+ portal cuts.",
                 href: "/demos",
                 metric: "0% portal cut",
-                tags: ["Next.js", "WhatsApp", "Natasha's Law"],
+                tags: ["Next.js 16", "WhatsApp", "Natasha's Law"],
               },
               {
                 id: "uk-cases",
-                category: "UK CASE STUDIES",
+                category: "REFERENCE ARCHITECTURES",
                 title: "Next.js Conversion Rebuilds",
                 description:
-                  "Verified traffic, Core Web Vitals, and patient/lead conversion jumps across UK dental & service sites.",
+                  "Reference conversion blueprints demonstrating sub-second SSR speed, structured metadata, and lead routing.",
                 href: "/case-studies",
-                metric: "+185% leads",
-                tags: ["Case Study", "99+ CWV", "Schema"],
+                metric: "Target 95+ CWV",
+                tags: ["Reference Spec", "95+ Target CWV", "Schema"],
               },
               {
                 id: "food-safety-tools",
@@ -375,9 +412,9 @@ export default function StudioOverviewPage() {
                 deliverables: ["GitHub Ownership", "Vercel DNS Cutover", "Post-Launch Support"],
               },
             ]}
-            quote="Our live staging build ran faster than we thought possible, and receiving 100% of our GitHub codebase meant zero lock-in."
-            author="Dr. Marcus Vance"
-            role="Practice Director, Apex Dental Care"
+            quote="Staging previews run on Vercel edge URLs so every stakeholder tests real mobile responsiveness and form routing before clean GitHub code transfer."
+            author="Saim Dev Delivery Standard"
+            role="Milestone QA & Repo Ownership"
             ctaHref="/process"
             ctaLabel="Read Full Process Specs"
           />
@@ -649,10 +686,10 @@ export default function StudioOverviewPage() {
                   DIRECT ENGINEER CONTACT
                 </span>
                 <h2 className="font-display-rh text-2xl sm:text-4xl font-semibold tracking-tight text-white">
-                  Ready to inspect your live staging build with $0 upfront?
+                  Ready to inspect your live staging scope or Free Concept Preview?
                 </h2>
                 <p className="text-xs sm:text-sm text-[#A1A1AA] font-light leading-relaxed">
-                  Message Saim directly on WhatsApp or submit a technical brief via the dedicated contact page. Fixed quotes issued within 2 hours.
+                  Message Saim directly on WhatsApp or submit a technical brief via the dedicated contact page for a clear fixed quote.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3 shrink-0">

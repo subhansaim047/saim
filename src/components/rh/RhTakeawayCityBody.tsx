@@ -26,6 +26,11 @@ export interface TakeawaySiblingLink {
   description: string;
 }
 
+export interface TakeawayCityLocalRow {
+  topic: string;
+  detail: string;
+}
+
 export interface RhTakeawayCityBodyProps {
   stats: TakeawayCityStat[];
   aeoQuestion: string;
@@ -34,13 +39,24 @@ export interface RhTakeawayCityBodyProps {
   marketHeading: string;
   marketSubtitle: string;
   marketCards: TakeawayCityMarketCard[];
+  localBenchmark?: {
+    eyebrow: string;
+    heading: string;
+    intro: string;
+    rows: TakeawayCityLocalRow[];
+  };
   coverageEyebrow: string;
   coverageHeading: string;
   coverageSubtitle: string;
   coverageAreas: string[];
+  toolsHeading?: string;
+  toolsDescription?: string;
+  toolsCtaLabel?: string;
   faqEyebrow: string;
   faqHeading?: string;
   faqs: TakeawayCityFaq[];
+  networkHeading?: string;
+  networkSubtitle?: string;
   siblings: TakeawaySiblingLink[];
   ctaHeading: string;
   ctaSubtitle: string;
@@ -66,20 +82,26 @@ export function RhTakeawayCityBody({
   marketHeading,
   marketSubtitle,
   marketCards,
+  localBenchmark,
   coverageEyebrow,
   coverageHeading,
   coverageSubtitle,
   coverageAreas,
+  toolsHeading = "Commission-Free Menu Compliance & Cost Utilities",
+  toolsDescription = "Explore our free 14-allergen matrix generator, GP% food cost calculator, and EHO checklist templates.",
+  toolsCtaLabel = "Open Free Kitchen Tools",
   faqEyebrow,
   faqHeading = "Frequently Asked Questions",
   faqs,
+  networkHeading = "UK Regional & National Takeaway Web Design Network",
+  networkSubtitle = "Explore our national takeaway ordering service hub or neighbouring city ordering guides.",
   siblings,
   ctaHeading,
   ctaSubtitle,
   whatsappHref,
 }: RhTakeawayCityBodyProps) {
   return (
-    <main>
+    <div className="saim-city-body">
       {/* Band 1: Dark #000000 KPI Row, AEO Direct Answer & Calculator */}
       <section className="relative z-10 bg-black text-white border-t border-[#1D1D1D] py-16 md:py-24">
         <div className="max-w-[1168px] mx-auto px-5 space-y-12 md:space-y-14">
@@ -200,23 +222,57 @@ export function RhTakeawayCityBody({
             </div>
           </div>
 
+          {localBenchmark && (
+            <div
+              data-gsap-reveal=""
+              className="rounded-3xl border border-[#E6E6E6] bg-white p-6 sm:p-9 space-y-6"
+            >
+              <div className="space-y-2 max-w-3xl">
+                <div className="text-[11px] font-mono-tech uppercase tracking-[0.14em] text-[#666666] font-semibold">
+                  {localBenchmark.eyebrow}
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#0D0D0D]">
+                  {localBenchmark.heading}
+                </h2>
+                <p className="text-xs sm:text-sm text-[#555555] font-light leading-relaxed">
+                  {localBenchmark.intro}
+                </p>
+              </div>
+              <div className="divide-y divide-[#EBEBEB] border-t border-b border-[#EBEBEB]">
+                {localBenchmark.rows.map((r) => (
+                  <div
+                    key={r.topic}
+                    className="py-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-6 items-start"
+                  >
+                    <div className="md:col-span-4 text-xs sm:text-sm font-semibold text-[#0D0D0D]">
+                      {r.topic}
+                    </div>
+                    <div className="md:col-span-8 text-xs sm:text-sm text-[#555555] leading-relaxed font-light">
+                      {r.detail}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div
             data-gsap-reveal=""
             className="rounded-3xl border border-[#222222] bg-[#0D0D0D] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-white"
           >
             <div>
               <h3 className="text-white text-base font-semibold mb-1">
-                Looking for statutory kitchen compliance tools?
+                {toolsHeading}
               </h3>
               <p className="text-xs sm:text-sm text-[#A1A1AA] font-light">
-                Explore our free statutory allergen matrix, food cost calculators, and SFBB records.
+                {toolsDescription}
               </p>
             </div>
             <Link
               href="/tools"
               className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] text-xs font-semibold px-5 py-2.5 inline-flex items-center gap-2 flex-shrink-0 hover:bg-white transition-colors"
             >
-              <span>Explore Free Kitchen Tools</span>
+              <span>{toolsCtaLabel}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -266,10 +322,10 @@ export function RhTakeawayCityBody({
               </div>
               <div>
                 <h2 className="text-xl sm:text-2xl font-semibold text-white">
-                  UK Regional &amp; National Takeaway Web Design Network
+                  {networkHeading}
                 </h2>
                 <p className="text-xs sm:text-sm text-[#8E8E93] font-light">
-                  Explore our national takeaway web development architecture or discover sister regional ordering hubs.
+                  {networkSubtitle}
                 </p>
               </div>
             </div>
@@ -328,6 +384,6 @@ export function RhTakeawayCityBody({
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
