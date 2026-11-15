@@ -183,12 +183,72 @@
   line-height: 1;
 }
 
-/* 4. Hero Dual CTA Row & Section "View More Details" Buttons */
+/* 4. Floating Navbar Glass Pill + Hero Dual CTA Hierarchy + Section More Buttons */
+.navbar .wrapper-navbar {
+  transition:
+    background-color 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    backdrop-filter 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    padding 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid transparent;
+}
+
+.navbar.scrolled:not(.dark-mode) .wrapper-navbar {
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-color: rgba(13, 13, 13, 0.08);
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.14);
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.navbar.scrolled.dark-mode .wrapper-navbar {
+  background-color: rgba(13, 13, 13, 0.86);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.6);
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
 .saim-hero-btn-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
+}
+
+.saim-hero-btn-row > a.button:not(.saim-more-btn) {
+  background-color: #0D0D0D !important;
+  color: #ffffff !important;
+  border: 1px solid #0D0D0D !important;
+  box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  transition: background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease, color 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease !important;
+}
+
+.saim-hero-btn-row > a.button:not(.saim-more-btn):hover {
+  background-color: #BAFF00 !important;
+  border-color: #BAFF00 !important;
+  color: #0D0D0D !important;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px -10px rgba(186, 255, 0, 0.45);
+}
+
+.saim-hero-btn-row > a.button.saim-more-btn {
+  background-color: rgba(13, 13, 13, 0.04) !important;
+  color: #0D0D0D !important;
+  border: 1px solid rgba(13, 13, 13, 0.18) !important;
+  transition: background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease, color 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.saim-hero-btn-row > a.button.saim-more-btn:hover {
+  background-color: #0D0D0D !important;
+  border-color: #0D0D0D !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
 }
 
 .saim-hero-outline-btn {

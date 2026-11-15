@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Plus } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Plus } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RhHeader } from "@/components/rh/RhHeader";
 import {
@@ -107,47 +108,66 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
 
             <div className="flex flex-wrap items-center gap-3">
               {/* Currency Switcher */}
-              <div className="inline-flex items-center p-1 bg-white border border-[#E6E6E6]">
-                {(["GBP", "USD"] as const).map((c) => (
-                  <button
-                    key={c}
-                    type="button"
-                    onClick={() => setCurrency(c)}
-                    className={`px-4 py-2 text-[12px] font-mono-tech transition-colors ${
-                      currency === c
-                        ? "bg-[#0D0D0D] text-[#BAFF00]"
-                        : "text-[#595959] hover:text-[#0D0D0D]"
-                    }`}
-                  >
-                    {c === "GBP" ? "GBP (£)" : "USD ($)"}
-                  </button>
-                ))}
+              <div className="inline-flex items-center p-1 rounded-full bg-white border border-[#E6E6E6] shadow-sm">
+                {(["GBP", "USD"] as const).map((c) => {
+                  const active = currency === c;
+                  return (
+                    <button
+                      key={c}
+                      type="button"
+                      onClick={() => setCurrency(c)}
+                      className={`relative px-4 py-2 rounded-full text-[12px] font-mono-tech transition-colors cursor-pointer ${
+                        active ? "text-[#BAFF00]" : "text-[#595959] hover:text-[#0D0D0D]"
+                      }`}
+                    >
+                      {active && (
+                        <motion.span
+                          layoutId="pricingCurrencyPill"
+                          transition={{ type: "spring", stiffness: 450, damping: 32 }}
+                          className="absolute inset-0 rounded-full bg-[#0D0D0D]"
+                        />
+                      )}
+                      <span className="relative z-10">{c === "GBP" ? "GBP (£)" : "USD ($)"}</span>
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Delivery Speed Switcher */}
-              <div className="inline-flex items-center p-1 bg-white border border-[#E6E6E6]">
-                <button
-                  type="button"
-                  onClick={() => setSpeedMode("standard")}
-                  className={`px-4 py-2 text-[12px] font-mono-tech transition-colors ${
-                    speedMode === "standard"
-                      ? "bg-[#0D0D0D] text-white"
-                      : "text-[#595959] hover:text-[#0D0D0D]"
-                  }`}
-                >
-                  Standard Delivery
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setSpeedMode("rush")}
-                  className={`px-4 py-2 text-[12px] font-mono-tech transition-colors inline-flex items-center gap-1.5 ${
-                    speedMode === "rush"
-                      ? "bg-[#BAFF00] text-[#0D0D0D] font-medium"
-                      : "text-[#595959] hover:text-[#0D0D0D]"
-                  }`}
-                >
-                  <span>Express Priority (2x Speed)</span>
-                </button>
+              <div className="inline-flex items-center p-1 rounded-full bg-white border border-[#E6E6E6] shadow-sm">
+                {(
+                  [
+                    { id: "standard", label: "Standard Delivery" },
+                    { id: "rush", label: "Express Priority (2x Speed)" },
+                  ] as const
+                ).map((mode) => {
+                  const active = speedMode === mode.id;
+                  return (
+                    <button
+                      key={mode.id}
+                      type="button"
+                      onClick={() => setSpeedMode(mode.id)}
+                      className={`relative px-4 py-2 rounded-full text-[12px] font-mono-tech transition-colors cursor-pointer ${
+                        active
+                          ? mode.id === "rush"
+                            ? "text-[#0D0D0D] font-medium"
+                            : "text-white"
+                          : "text-[#595959] hover:text-[#0D0D0D]"
+                      }`}
+                    >
+                      {active && (
+                        <motion.span
+                          layoutId="pricingSpeedPill"
+                          transition={{ type: "spring", stiffness: 450, damping: 32 }}
+                          className={`absolute inset-0 rounded-full ${
+                            mode.id === "rush" ? "bg-[#BAFF00]" : "bg-[#0D0D0D]"
+                          }`}
+                        />
+                      )}
+                      <span className="relative z-10">{mode.label}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -157,13 +177,13 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
             {/* Left Column: Landing (£250) + Starter (£390) */}
             <div className="lg:col-span-6 flex flex-col gap-6">
               {/* Card 1 */}
-              <div className="rh-edge-orbit-card p-8 sm:p-10 bg-white border border-[#E6E6E6] flex flex-col justify-between">
+              <div className="rh-edge-orbit-card rounded-3xl p-8 sm:p-10 bg-white border border-[#E6E6E6] flex flex-col justify-between shadow-[0_14px_34px_-24px_rgba(13,13,13,0.18)]">
                 <div>
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                     <span className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#595959]">
                       Campaign &amp; Local Ordering
                     </span>
-                    <span className="px-3 py-1 bg-[#F5F5F7] border border-[#E6E6E6] text-[12px] font-mono-tech text-[#0D0D0D]">
+                    <span className="px-3 py-1 rounded-full bg-[#F5F5F7] border border-[#E6E6E6] text-[12px] font-mono-tech text-[#0D0D0D] tabular-nums">
                       {speedMode === "rush" ? "72 Hours Delivery" : "5–7 Days Delivery"}
                     </span>
                   </div>
@@ -231,13 +251,13 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
               </div>
 
               {/* Card 2 */}
-              <div className="rh-edge-orbit-card p-8 sm:p-10 bg-white border border-[#E6E6E6] flex flex-col justify-between">
+              <div className="rh-edge-orbit-card rounded-3xl p-8 sm:p-10 bg-white border border-[#E6E6E6] flex flex-col justify-between shadow-[0_14px_34px_-24px_rgba(13,13,13,0.18)]">
                 <div>
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                     <span className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#0D0D0D] font-medium">
                       Most Popular For Local Businesses
                     </span>
-                    <span className="px-3 py-1 bg-[#BAFF00] text-[#0D0D0D] text-[12px] font-mono-tech font-medium">
+                    <span className="px-3 py-1 rounded-full bg-[#BAFF00] text-[#0D0D0D] text-[12px] font-mono-tech font-medium tabular-nums">
                       {speedMode === "rush" ? "4 Days Delivery" : "7 Days Delivery"}
                     </span>
                   </div>
@@ -306,112 +326,115 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
             </div>
 
             {/* Right Column: Dark #0D0D0D Flagship Card */}
-            <div className="lg:col-span-6 rh-edge-orbit-card is-lime p-8 sm:p-12 bg-[#0D0D0D] text-white border border-[#202020] flex flex-col justify-between relative overflow-hidden">
-              <img
-                src="/rh-exact/pd/pd-case-glow.svg"
-                alt=""
-                aria-hidden="true"
-                className="pointer-events-none absolute -top-12 -right-12 w-72 h-72 opacity-60"
-              />
-              <div className="relative z-10">
-                <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-                  <span className="px-3.5 py-1 bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-mono-tech font-medium uppercase tracking-wider">
-                    Recommended Flagship
-                  </span>
-                  <span className="text-[12px] font-mono-tech text-[#939393]">
-                    50/50 Milestones · Free Concept Option
-                  </span>
-                </div>
-
-                <h3 className="text-[32px] sm:text-[38px] font-medium text-white tracking-[-0.03em] leading-[1.1]">
-                  Business Flagship &amp; Custom E-Commerce
-                </h3>
-                <p className="text-[16px] text-[#939393] mt-3 leading-[1.6]">
-                  Bespoke Next.js architecture engineered for competitive UK &amp; global markets,
-                  high lead volumes, GSAP motion choreography, or custom headless storefronts.
-                </p>
-
-                {/* Two Odometer Price Display inside Dark Card */}
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 bg-[#161616] border border-[#262626]">
-                  <div>
-                    <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#939393] block">
-                      Business Flagship (Up to 15 Pages)
+            <div className="lg:col-span-6 rh-bezel-shell-light flex flex-col">
+              <div className="rh-bezel-core rh-edge-orbit-card is-lime p-8 sm:p-12 text-white flex-1 flex flex-col justify-between relative overflow-hidden">
+                <img
+                  src="/rh-exact/pd/pd-case-glow.svg"
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -top-12 -right-12 w-72 h-72 opacity-60"
+                />
+                <div className="relative z-10">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+                    <span className="px-3.5 py-1 rounded-full bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-mono-tech font-medium uppercase tracking-wider">
+                      Recommended Flagship
                     </span>
-                    <div className="mt-1.5 flex items-baseline gap-2">
-                      <span className="text-[40px] font-medium text-white tracking-[-0.03em]">
-                        <RhOdometerNumber prefix={pFlagship.prefix} value={pFlagship.amount} />
+                    <span className="text-[12px] font-mono-tech text-[#939393]">
+                      50/50 Milestones · Free Concept Option
+                    </span>
+                  </div>
+
+                  <h3 className="text-[32px] sm:text-[38px] font-medium text-white tracking-[-0.03em] leading-[1.1]">
+                    Business Flagship &amp; Custom E-Commerce
+                  </h3>
+                  <p className="text-[16px] text-[#939393] mt-3 leading-[1.6]">
+                    Bespoke Next.js architecture engineered for competitive UK &amp; global markets,
+                    high lead volumes, GSAP motion choreography, or custom headless storefronts.
+                  </p>
+
+                  {/* Two Odometer Price Display inside Dark Card */}
+                  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#0D0D0D] border border-white/[0.08]">
+                    <div>
+                      <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#939393] block">
+                        Business Flagship (Up to 15 Pages)
                       </span>
-                      <span className="text-[12px] font-mono-tech text-[#BAFF00]">Fixed</span>
+                      <div className="mt-1.5 flex items-baseline gap-2">
+                        <span className="text-[40px] font-medium text-white tracking-[-0.03em] tabular-nums">
+                          <RhOdometerNumber prefix={pFlagship.prefix} value={pFlagship.amount} />
+                        </span>
+                        <span className="text-[12px] font-mono-tech text-[#BAFF00]">Fixed</span>
+                      </div>
+                    </div>
+                    <div className="sm:border-l sm:border-[#262626] sm:pl-5">
+                      <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#939393] block">
+                        Custom E-Commerce / Web App
+                      </span>
+                      <div className="mt-1.5 flex items-baseline gap-2">
+                        <span className="text-[40px] font-medium text-[#BAFF00] tracking-[-0.03em] tabular-nums">
+                          <RhOdometerNumber prefix={pApp.prefix} value={pApp.amount} />
+                        </span>
+                        <span className="text-[12px] font-mono-tech text-[#939393]">From</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="sm:border-l sm:border-[#262626] sm:pl-5">
-                    <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#939393] block">
-                      Custom E-Commerce / Web App
-                    </span>
-                    <div className="mt-1.5 flex items-baseline gap-2">
-                      <span className="text-[40px] font-medium text-[#BAFF00] tracking-[-0.03em]">
-                        <RhOdometerNumber prefix={pApp.prefix} value={pApp.amount} />
-                      </span>
-                      <span className="text-[12px] font-mono-tech text-[#939393]">From</span>
-                    </div>
+
+                  <div className="mt-8 space-y-3.5 pt-6 border-t border-[#222222] mb-10">
+                    {[
+                      "Up to 15 custom pages & bespoke interactive sections",
+                      "Senior Next.js 16, React 19, GSAP & Tailwind engineering",
+                      "Comprehensive technical SEO architecture & silo linking",
+                      "Shopify Plus, Stripe checkout, or custom ordering flows",
+                      "CRM, WhatsApp API & automated email notifications",
+                      "100% GitHub repository & full source code ownership",
+                      speedMode === "rush"
+                        ? "Priority 5–7 business days rush delivery + 30d support"
+                        : "10–14 business days delivery + 30 days priority support",
+                    ].map((feat) => (
+                      <div key={feat} className="flex items-center gap-3 text-[15px] text-[#CBCBCB]">
+                        <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0" />
+                        <span>{feat}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <div className="mt-8 space-y-3.5 pt-6 border-t border-[#222222] mb-10">
-                  {[
-                    "Up to 15 custom pages & bespoke interactive sections",
-                    "Senior Next.js 16, React 19, GSAP & Tailwind engineering",
-                    "Comprehensive technical SEO architecture & silo linking",
-                    "Shopify Plus, Stripe checkout, or custom ordering flows",
-                    "CRM, WhatsApp API & automated email notifications",
-                    "100% GitHub repository & full source code ownership",
-                    speedMode === "rush"
-                      ? "Priority 5–7 business days rush delivery + 30d support"
-                      : "10–14 business days delivery + 30 days priority support",
-                  ].map((feat) => (
-                    <div key={feat} className="flex items-center gap-3 text-[15px] text-[#CBCBCB]">
-                      <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="relative z-10 space-y-4">
-                <a
-                  href={`https://wa.me/923196526604?text=${encodeURIComponent(
-                    `Hi Saim, I'd like to discuss the Flagship Business Plan (${pFlagship.prefix}${pFlagship.amount}).`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rh-btn-pill w-full py-4 px-7 bg-white text-[#0D0D0D] font-medium text-[16px] text-center"
-                >
-                  <span className="inline-flex items-center gap-2.5">
+                <div className="relative z-10 space-y-4">
+                  <a
+                    href={`https://wa.me/923196526604?text=${encodeURIComponent(
+                      `Hi Saim, I'd like to discuss the Flagship Business Plan (${pFlagship.prefix}${pFlagship.amount}).`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group w-full rounded-full py-2.5 pl-6 pr-2.5 bg-white hover:bg-[#BAFF00] text-[#0D0D0D] font-medium text-[15px] flex items-center justify-between transition-colors duration-300"
+                  >
                     <span>Start Flagship Project</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                </a>
+                    <span className="w-9 h-9 rounded-full bg-[#0D0D0D] text-[#BAFF00] flex items-center justify-center relative overflow-hidden isolate transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
+                      <ArrowUpRight className="w-4 h-4 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-7 group-hover:-translate-y-7" />
+                      <ArrowUpRight className="w-4 h-4 absolute -translate-x-7 translate-y-7 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0" />
+                    </span>
+                  </a>
 
-                <div className="flex flex-wrap items-center justify-between gap-2 text-[13px] text-[#939393] pt-2">
-                  <Link
-                    href="/services/ecommerce-development"
-                    className="hover:text-white underline underline-offset-4"
-                  >
-                    Explore E-Commerce builds
-                  </Link>
-                  <Link
-                    href="/services/custom-web-apps"
-                    className="hover:text-white underline underline-offset-4"
-                  >
-                    Explore Custom Web Apps
-                  </Link>
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-[13px] text-[#939393] pt-2">
+                    <Link
+                      href="/services/ecommerce-development"
+                      className="hover:text-white underline underline-offset-4"
+                    >
+                      Explore E-Commerce builds
+                    </Link>
+                    <Link
+                      href="/services/custom-web-apps"
+                      className="hover:text-white underline underline-offset-4"
+                    >
+                      Explore Custom Web Apps
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Bespoke Software & 1:1 Reference Rebuilds Callout */}
-          <div className="rh-edge-orbit-card p-8 sm:p-12 bg-white border border-[#E6E6E6] flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div className="rh-edge-orbit-card rounded-3xl p-8 sm:p-12 bg-white border border-[#E6E6E6] flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-[0_14px_34px_-24px_rgba(13,13,13,0.18)]">
             <div className="max-w-2xl">
               <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#595959] block mb-2">
                 Bespoke Software &amp; 1:1 Reference Rebuilds

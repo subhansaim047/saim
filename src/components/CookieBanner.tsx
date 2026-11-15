@@ -61,33 +61,33 @@ export const CookieBanner: React.FC = () => {
     <div
       role="region"
       aria-label="Cookie and Privacy Consent"
-      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 max-w-md w-full bg-[#111113]/95 backdrop-blur-xl border border-white/15 rounded-2xl p-5 shadow-2xl text-[#E1E0CC] transition-all animate-in fade-in slide-in-from-bottom-4 duration-300"
+      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 max-w-md w-full bg-[#0D0D0D]/95 backdrop-blur-xl border border-white/12 rounded-2xl p-5 shadow-[0_24px_60px_rgba(0,0,0,0.65)] text-[#D4D4D8] transition-all animate-in fade-in slide-in-from-bottom-4 duration-300"
     >
-      <div className="flex items-start gap-3">
-        <div className="p-2 rounded-xl bg-primary/10 border border-primary/20 text-primary flex-shrink-0 mt-0.5">
-          <Cookie className="w-5 h-5" />
+      <div className="flex items-start gap-3.5">
+        <div className="p-2.5 rounded-xl bg-[#BAFF00]/10 border border-[#BAFF00]/25 text-[#BAFF00] flex-shrink-0 mt-0.5">
+          <Cookie className="w-4 h-4" />
         </div>
         <div className="flex-1">
           <div className="flex items-center justify-between mb-1">
-            <p className="text-sm font-semibold text-white flex items-center gap-1.5">
+            <p className="text-sm font-semibold text-white flex items-center gap-1.5 tracking-tight">
               <span>Privacy &amp; Cookie Consent</span>
-              <ShieldCheck className="w-3.5 h-3.5 text-primary" />
+              <ShieldCheck className="w-3.5 h-3.5 text-[#BAFF00]" />
             </p>
             <button
               onClick={() => handleConsent("essential")}
               aria-label="Close cookie banner"
-              className="text-white/40 hover:text-white transition-colors cursor-pointer"
+              className="w-6 h-6 rounded-full flex items-center justify-center text-white/45 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
             >
-              <X className="w-4 h-4" />
+              <X className="w-3.5 h-3.5" />
             </button>
           </div>
-          <p className="text-[11px] text-white/70 leading-snug mb-3">
+          <p className="text-[11.5px] text-white/70 leading-relaxed mb-3.5">
             We use essential storage for site preferences. Optional analytics comply with Google Consent Mode v2 &amp; UK GDPR.{" "}
-            <Link href="/cookie-policy" className="underline text-primary hover:text-white transition-colors">
+            <Link href="/cookie-policy" className="underline decoration-[#BAFF00]/60 text-[#BAFF00] hover:text-white transition-colors">
               Cookie Policy
             </Link>{" "}
             ·{" "}
-            <Link href="/privacy" className="underline text-primary hover:text-white transition-colors">
+            <Link href="/privacy" className="underline decoration-[#BAFF00]/60 text-[#BAFF00] hover:text-white transition-colors">
               Privacy Policy
             </Link>
             .
@@ -95,13 +95,13 @@ export const CookieBanner: React.FC = () => {
           <div className="flex items-center gap-2.5">
             <button
               onClick={() => handleConsent("accepted")}
-              className="flex-1 bg-primary text-black font-semibold text-xs py-2 px-3.5 rounded-full hover:brightness-110 active:scale-95 transition-all text-center cursor-pointer shadow-md"
+              className="flex-1 bg-[#BAFF00] text-[#0D0D0D] font-semibold text-xs py-2.5 px-4 rounded-full hover:bg-[#c8ff33] active:scale-[0.98] transition-all text-center cursor-pointer shadow-[0_8px_20px_-6px_rgba(186,255,0,0.45)]"
             >
               Accept All
             </button>
             <button
               onClick={() => handleConsent("essential")}
-              className="flex-1 bg-white/10 hover:bg-white/15 border border-white/15 text-white font-medium text-xs py-2 px-3.5 rounded-full active:scale-95 transition-all text-center cursor-pointer"
+              className="flex-1 bg-white/[0.06] hover:bg-white/[0.12] border border-white/15 text-white font-medium text-xs py-2.5 px-4 rounded-full active:scale-[0.98] transition-all text-center cursor-pointer"
             >
               Essential Only
             </button>

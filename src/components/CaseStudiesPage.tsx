@@ -203,25 +203,33 @@ export const CaseStudiesPage = () => {
             </h2>
           </div>
 
-          <div className="flex items-center flex-wrap gap-2">
+          <div className="inline-flex items-center flex-wrap gap-1.5 p-1.5 rounded-full bg-[#141414] border border-[#242424]">
             {[
               { id: "all", label: "All Blueprints" },
               { id: "healthcare", label: "Healthcare & Dental" },
               { id: "automotive", label: "Automotive & Detailing" },
               { id: "beauty", label: "Beauty & Luxury Salon" },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveCategory(tab.id)}
-                className={`px-4 py-2 rounded-full text-[13px] font-medium transition-colors cursor-pointer ${
-                  activeCategory === tab.id
-                    ? "bg-[#BAFF00] text-[#0D0D0D]"
-                    : "bg-[#161616] text-[#939393] hover:text-white border border-[#262626]"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+            ].map((tab) => {
+              const active = activeCategory === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveCategory(tab.id)}
+                  className={`relative px-4 py-2 rounded-full text-[13px] font-medium transition-colors cursor-pointer ${
+                    active ? "text-[#0D0D0D]" : "text-[#939393] hover:text-white"
+                  }`}
+                >
+                  {active && (
+                    <motion.span
+                      layoutId="caseStudiesCategoryTab"
+                      transition={{ type: "spring", stiffness: 420, damping: 32 }}
+                      className="absolute inset-0 rounded-full bg-[#BAFF00]"
+                    />
+                  )}
+                  <span className="relative z-10">{tab.label}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -234,9 +242,10 @@ export const CaseStudiesPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
-                className="rh-edge-orbit-card is-lime bg-[#141414] rounded-3xl p-7 sm:p-10 border border-[#222222] hover:border-[#BAFF00] transition-colors relative overflow-hidden"
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                className="rh-bezel-shell"
               >
+                <div className="rh-bezel-core rh-edge-orbit-card is-lime p-7 sm:p-10 hover:border-[#BAFF00]/70 transition-colors relative overflow-hidden">
                 {/* Header Tag Bar */}
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-[#222222]">
                   <div className="flex items-center gap-3">
@@ -279,32 +288,58 @@ export const CaseStudiesPage = () => {
 
                     {/* Speed Comparison Bar */}
                     <div className="bg-[#0D0D0D] rounded-2xl p-5 border border-[#222222]">
-                      <span className="text-[11px] text-[#939393] uppercase tracking-[0.88px] block mb-3">
+                      <span className="text-[11px] font-mono-tech text-[#939393] uppercase tracking-[0.88px] block mb-4">
                         Architecture Target (Typical Legacy vs Next.js 16)
                       </span>
-                      <div className="grid grid-cols-2 gap-4 text-center">
+                      <div className="space-y-4">
                         <div className="p-4 bg-[#161616] border border-[#262626] rounded-2xl">
-                          <span className="text-[11px] text-[#939393] block uppercase tracking-wider">
-                            Legacy CMS Benchmark
-                          </span>
-                          <div className="text-[24px] font-medium text-white mt-1">
-                            {study.beforeStats.loadTime}
+                          <div className="flex items-center justify-between gap-2 mb-2">
+                            <span className="text-[11px] font-mono-tech text-[#939393] uppercase tracking-wider">
+                              Legacy CMS Benchmark
+                            </span>
+                            <span className="text-[12px] font-mono-tech text-[#939393] tabular-nums">
+                              ~{study.beforeStats.score}/100 CWV
+                            </span>
                           </div>
-                          <span className="text-[12px] text-[#939393]">
-                            Typical Score: ~{study.beforeStats.score}/100
-                          </span>
+                          <div className="flex items-center gap-3">
+                            <div className="flex-1 h-2 rounded-full bg-white/[0.06] overflow-hidden">
+                              <motion.div
+                                initial={{ scaleX: 0 }}
+                                whileInView={{ scaleX: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                                className="h-full w-[88%] origin-left rounded-full bg-red-500/60"
+                              />
+                            </div>
+                            <span className="text-[18px] font-medium text-white tabular-nums shrink-0">
+                              {study.beforeStats.loadTime}
+                            </span>
+                          </div>
                         </div>
 
                         <div className="p-4 bg-[#161616] border border-[#BAFF00]/40 rounded-2xl">
-                          <span className="text-[11px] text-[#BAFF00] block uppercase tracking-wider">
-                            Next.js 16 Target
-                          </span>
-                          <div className="text-[24px] font-medium text-[#BAFF00] mt-1">
-                            {study.afterStats.loadTime}
+                          <div className="flex items-center justify-between gap-2 mb-2">
+                            <span className="text-[11px] font-mono-tech text-[#BAFF00] uppercase tracking-wider">
+                              Next.js 16 Target
+                            </span>
+                            <span className="text-[12px] font-mono-tech text-white tabular-nums">
+                              {study.afterStats.score}+/100 CWV Target
+                            </span>
                           </div>
-                          <span className="text-[12px] text-white">
-                            CWV Target: {study.afterStats.score}+/100
-                          </span>
+                          <div className="flex items-center gap-3">
+                            <div className="flex-1 h-2 rounded-full bg-white/[0.06] overflow-hidden">
+                              <motion.div
+                                initial={{ scaleX: 0 }}
+                                whileInView={{ scaleX: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+                                className="h-full w-[16%] origin-left rounded-full bg-[#BAFF00] shadow-[0_0_16px_rgba(186,255,0,0.45)]"
+                              />
+                            </div>
+                            <span className="text-[18px] font-medium text-[#BAFF00] tabular-nums shrink-0">
+                              {study.afterStats.loadTime}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -382,6 +417,7 @@ export const CaseStudiesPage = () => {
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
+                </div>
                 </div>
               </motion.div>
             ))}

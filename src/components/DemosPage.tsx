@@ -2,7 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft, ArrowRight, X } from "lucide-react";
 import { FooterSection } from "./FooterSection";
 import { RhHeader } from "./rh/RhHeader";
@@ -260,6 +261,15 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
   const [viewportMode, setViewportMode] = useState<"desktop" | "tablet" | "mobile">("desktop");
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
+  useEffect(() => {
+    if (!selectedDemo) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedDemo(null);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [selectedDemo]);
+
   const categories = ["All", "E-Commerce", "Restaurant", "Corporate", "Portfolio"];
   const filteredDemos =
     activeCategory === "All"
@@ -338,138 +348,167 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
             </h2>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full text-[13px] font-medium transition-colors cursor-pointer ${
-                  activeCategory === cat
-                    ? "bg-[#BAFF00] text-[#0D0D0D]"
-                    : "bg-[#161616] text-[#939393] hover:text-white border border-[#262626]"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="inline-flex flex-wrap items-center gap-1.5 p-1.5 rounded-full bg-[#141414] border border-[#242424]">
+            {categories.map((cat) => {
+              const active = activeCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => setActiveCategory(cat)}
+                  className={`relative px-4 py-2 rounded-full text-[13px] font-medium transition-colors cursor-pointer ${
+                    active ? "text-[#0D0D0D]" : "text-[#939393] hover:text-white"
+                  }`}
+                >
+                  {active && (
+                    <motion.span
+                      layoutId="demosCategoryPill"
+                      transition={{ type: "spring", stiffness: 420, damping: 32 }}
+                      className="absolute inset-0 rounded-full bg-[#BAFF00]"
+                    />
+                  )}
+                  <span className="relative z-10">{cat}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
         {/* Demos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {filteredDemos.map((demo, idx) => (
-            <div
+            <motion.div
+              layout
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: Math.min(idx * 0.04, 0.2), ease: [0.22, 1, 0.36, 1] }}
               key={demo.id}
-              className="rh-edge-orbit-card is-lime group bg-[#141414] rounded-3xl border border-[#222222] overflow-hidden hover:border-[#BAFF00] transition-all duration-300 flex flex-col"
+              className="rh-bezel-shell group"
             >
-              {/* Thumbnail */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-[#0A0A0A] border-b border-[#222222]">
-                <img
-                  src={demo.previewImage}
-                  alt={`${demo.title} - Modern bespoke web design & engineering showcase`}
-                  width={1200}
-                  height={675}
-                  loading={idx < 6 ? "eager" : "lazy"}
-                  decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
-                {demo.badge && (
-                  <span
-                    className={`absolute top-4 left-4 font-medium text-[11px] uppercase tracking-wider px-3 py-1 rounded-full ${
-                      demo.badge.includes("In Working")
-                        ? "bg-white text-[#0D0D0D]"
-                        : "bg-[#BAFF00] text-[#0D0D0D]"
-                    }`}
-                  >
-                    {demo.badge}
-                  </span>
-                )}
-
-                <div className="absolute bottom-3.5 right-3.5 flex items-center gap-2">
-                  <button
-                    onClick={() => setSelectedDemo(demo)}
-                    className="bg-[#0D0D0D]/85 backdrop-blur-md hover:bg-white hover:text-[#0D0D0D] text-white p-2.5 rounded-full border border-white/20 transition-all cursor-pointer"
-                    title="Interactive Modal Preview"
-                  >
-                    <Eye className="w-4 h-4" />
-                  </button>
-                  <a
-                    href={demo.demoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Open ${demo.title} interactive demo`}
-                    className="bg-[#BAFF00] hover:bg-white text-[#0D0D0D] p-2.5 rounded-full transition-all cursor-pointer"
-                    title={`Open ${demo.title} Demo`}
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Details */}
-              <div className="p-7 flex-1 flex flex-col justify-between">
-                <div>
-                  <span className="text-[#939393] text-[11px] uppercase tracking-[0.88px]">
-                    {demo.category}
-                  </span>
-                  <h3 className="text-[21px] font-medium text-white mt-1.5 tracking-[-0.02em] group-hover:text-[#BAFF00] transition-colors">
-                    {demo.title}
-                  </h3>
-                  <p className="text-[14px] text-[#939393] mt-2 leading-[1.6]">
-                    {demo.description}
-                  </p>
-
-                  <div className="mt-4 space-y-2">
-                    {demo.features.map((feat, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center gap-2 text-[13px] text-[#CBCBCB]"
-                      >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#BAFF00] flex-shrink-0" />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
+              <div className="rh-bezel-core rh-edge-orbit-card is-lime overflow-hidden hover:border-[#BAFF00]/70 transition-colors duration-300 flex flex-col h-full">
+                {/* Browser Chrome Header */}
+                <div className="px-4 py-2.5 bg-[#101012] border-b border-white/[0.07] flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    <span className="w-2 h-2 rounded-full bg-white/15" />
+                    <span className="w-2 h-2 rounded-full bg-white/15" />
+                    <span className="w-2 h-2 rounded-full bg-[#BAFF00]/80" />
                   </div>
+                  <div className="flex-1 min-w-0 text-center">
+                    <span className="inline-block max-w-full truncate text-[10.5px] font-mono-tech text-[#8E8E93] bg-white/[0.04] border border-white/[0.06] px-2.5 py-0.5 rounded-full">
+                      saimdev.site{demo.demoUrl.replace("/index.html", "")}
+                    </span>
+                  </div>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#BAFF00] shrink-0" title="Live interactive demo" />
                 </div>
 
-                <div className="mt-6 pt-5 border-t border-[#222222]">
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {demo.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="bg-[#0D0D0D] border border-[#262626] text-[11px] text-[#939393] px-2.5 py-0.5 rounded-full"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                {/* Thumbnail */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#0A0A0A] border-b border-white/[0.07]">
+                  <img
+                    src={demo.previewImage}
+                    alt={`${demo.title} - Modern bespoke web design & engineering showcase`}
+                    width={1200}
+                    height={675}
+                    loading={idx < 6 ? "eager" : "lazy"}
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
+                  {demo.badge && (
+                    <span
+                      className={`absolute top-3.5 left-3.5 font-medium text-[10.5px] uppercase tracking-wider px-3 py-1 rounded-full shadow-md ${
+                        demo.badge.includes("In Working")
+                          ? "bg-white text-[#0D0D0D]"
+                          : "bg-[#BAFF00] text-[#0D0D0D]"
+                      }`}
+                    >
+                      {demo.badge}
+                    </span>
+                  )}
 
-                  <div className="grid grid-cols-2 gap-2.5">
+                  <div className="absolute bottom-3.5 right-3.5 flex items-center gap-2">
                     <button
                       onClick={() => setSelectedDemo(demo)}
-                      className="w-full bg-[#1E1E1E] hover:bg-[#282828] text-white text-[13px] font-medium py-2.5 px-3 rounded-full border border-[#2C2C2C] transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                      className="bg-[#0D0D0D]/85 backdrop-blur-md hover:bg-white hover:text-[#0D0D0D] text-white p-2.5 rounded-full border border-white/20 transition-all cursor-pointer"
+                      title="Interactive Modal Preview"
                     >
-                      <Eye className="w-3.5 h-3.5" /> Interactive
+                      <Eye className="w-4 h-4" />
                     </button>
                     <a
                       href={demo.demoUrl}
                       target="_blank"
                       rel="noreferrer"
-                      aria-label={`View live site for ${demo.title}`}
-                      className="w-full bg-[#BAFF00] hover:bg-white text-[#0D0D0D] text-[13px] font-medium py-2.5 px-3 rounded-full transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                      aria-label={`Open ${demo.title} interactive demo`}
+                      className="bg-[#BAFF00] hover:bg-white text-[#0D0D0D] p-2.5 rounded-full transition-all cursor-pointer"
+                      title={`Open ${demo.title} Demo`}
                     >
-                      <span>Live Site</span>
-                      <span className="sr-only"> ({demo.id})</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
+                      <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
+
+                {/* Details */}
+                <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[#939393] text-[11px] font-mono-tech uppercase tracking-[0.14em]">
+                      {demo.category}
+                    </span>
+                    <h3 className="text-[20px] sm:text-[21px] font-medium text-white mt-1.5 tracking-[-0.02em] group-hover:text-[#BAFF00] transition-colors">
+                      {demo.title}
+                    </h3>
+                    <p className="text-[14px] text-[#939393] mt-2 leading-[1.6]">
+                      {demo.description}
+                    </p>
+
+                    <div className="mt-4 space-y-2">
+                      {demo.features.map((feat, fIdx) => (
+                        <div
+                          key={fIdx}
+                          className="flex items-center gap-2 text-[13px] text-[#CBCBCB]"
+                        >
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#BAFF00] flex-shrink-0" />
+                          <span>{feat}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-6 pt-5 border-t border-white/[0.08]">
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {demo.tags.map((t) => (
+                        <span
+                          key={t}
+                          className="bg-[#0D0D0D] border border-white/[0.08] text-[11px] font-mono-tech text-[#939393] px-2.5 py-0.5 rounded-full"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2.5">
+                      <button
+                        onClick={() => setSelectedDemo(demo)}
+                        className="w-full bg-white/[0.06] hover:bg-white/[0.12] text-white text-[13px] font-medium py-2.5 px-3 rounded-full border border-white/10 transition-colors flex items-center justify-center gap-1.5 cursor-pointer active:scale-[0.98]"
+                      >
+                        <Eye className="w-3.5 h-3.5" /> Interactive
+                      </button>
+                      <a
+                        href={demo.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View live site for ${demo.title}`}
+                        className="w-full bg-[#BAFF00] hover:bg-white text-[#0D0D0D] text-[13px] font-medium py-2.5 px-3 rounded-full transition-colors flex items-center justify-center gap-1.5 cursor-pointer active:scale-[0.98]"
+                      >
+                        <span>Live Site</span>
+                        <span className="sr-only"> ({demo.id})</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Contextual Cluster Navigation */}
         <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-[#141414] border border-[#222222]">
@@ -611,95 +650,100 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
       />
 
       {/* Modal */}
-      {selectedDemo && (
-        <div className="fixed inset-0 z-[250] bg-[#0D0D0D]/95 backdrop-blur-xl flex flex-col justify-between p-3 sm:p-6">
-          <div className="flex items-center justify-between pb-3 border-b border-[#242424]">
-            <div className="flex items-center gap-3">
-              <span className="text-white font-medium text-sm sm:text-base">
-                {selectedDemo.title}
-              </span>
-              <span className="hidden sm:inline bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-medium px-2.5 py-0.5 rounded-full">
-                Live Interactive Preview
-              </span>
+      <AnimatePresence>
+        {selectedDemo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[250] bg-[#0D0D0D]/95 backdrop-blur-xl flex flex-col justify-between p-3 sm:p-6"
+          >
+            <div className="flex items-center justify-between pb-3 border-b border-[#242424]">
+              <div className="flex items-center gap-3 min-w-0">
+                <span className="text-white font-medium text-sm sm:text-base truncate">
+                  {selectedDemo.title}
+                </span>
+                <span className="hidden sm:inline shrink-0 bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-medium px-2.5 py-0.5 rounded-full">
+                  Live Interactive Preview
+                </span>
+              </div>
+
+              <div className="flex items-center gap-1.5 bg-[#181818] p-1 rounded-full border border-[#282828]">
+                {(
+                  [
+                    { id: "desktop", label: "Desktop", Icon: Monitor },
+                    { id: "tablet", label: "Tablet", Icon: Tablet },
+                    { id: "mobile", label: "Mobile", Icon: Smartphone },
+                  ] as const
+                ).map(({ id, label, Icon }) => {
+                  const active = viewportMode === id;
+                  return (
+                    <button
+                      key={id}
+                      onClick={() => setViewportMode(id)}
+                      className={
+                        "relative px-3 py-1.5 rounded-full text-xs flex items-center gap-1 transition-colors cursor-pointer " +
+                        (active ? "text-[#0D0D0D] font-medium" : "text-[#939393] hover:text-white")
+                      }
+                    >
+                      {active && (
+                        <motion.span
+                          layoutId="demoModalViewport"
+                          transition={{ type: "spring", stiffness: 450, damping: 32 }}
+                          className="absolute inset-0 rounded-full bg-[#BAFF00]"
+                        />
+                      )}
+                      <Icon className="w-3.5 h-3.5 relative z-10" />
+                      <span className="hidden sm:inline relative z-10">{label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="flex items-center gap-3 shrink-0">
+                <a
+                  href={selectedDemo.demoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hidden sm:flex items-center gap-1 text-xs text-[#BAFF00] hover:underline font-medium"
+                >
+                  Fullscreen <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <button
+                  onClick={() => setSelectedDemo(null)}
+                  aria-label="Close modal (Esc)"
+                  className="bg-[#181818] hover:bg-[#242424] text-white p-2 rounded-full border border-white/10 transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
-            <div className="flex items-center gap-2 bg-[#181818] p-1 rounded-full border border-[#282828]">
-              <button
-                onClick={() => setViewportMode("desktop")}
+            <div className="flex-1 my-3 flex items-center justify-center overflow-hidden">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                 className={
-                  "px-3 py-1.5 rounded-full text-xs flex items-center gap-1 transition-colors " +
+                  "transition-[width] duration-300 bg-white rounded-2xl overflow-hidden shadow-2xl border border-white/20 h-full " +
                   (viewportMode === "desktop"
-                    ? "bg-[#BAFF00] text-[#0D0D0D] font-medium"
-                    : "text-[#939393] hover:text-white")
+                    ? "w-full"
+                    : viewportMode === "tablet"
+                    ? "w-[768px] max-w-full"
+                    : "w-[390px] max-w-full")
                 }
               >
-                <Monitor className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Desktop</span>
-              </button>
-              <button
-                onClick={() => setViewportMode("tablet")}
-                className={
-                  "px-3 py-1.5 rounded-full text-xs flex items-center gap-1 transition-colors " +
-                  (viewportMode === "tablet"
-                    ? "bg-[#BAFF00] text-[#0D0D0D] font-medium"
-                    : "text-[#939393] hover:text-white")
-                }
-              >
-                <Tablet className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Tablet</span>
-              </button>
-              <button
-                onClick={() => setViewportMode("mobile")}
-                className={
-                  "px-3 py-1.5 rounded-full text-xs flex items-center gap-1 transition-colors " +
-                  (viewportMode === "mobile"
-                    ? "bg-[#BAFF00] text-[#0D0D0D] font-medium"
-                    : "text-[#939393] hover:text-white")
-                }
-              >
-                <Smartphone className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Mobile</span>
-              </button>
+                <iframe
+                  src={selectedDemo.demoUrl}
+                  title={selectedDemo.title}
+                  className="w-full h-full border-none"
+                />
+              </motion.div>
             </div>
-
-            <div className="flex items-center gap-3">
-              <a
-                href={selectedDemo.demoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="hidden sm:flex items-center gap-1 text-xs text-[#BAFF00] hover:underline font-medium"
-              >
-                Fullscreen <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-              <button
-                onClick={() => setSelectedDemo(null)}
-                className="bg-[#181818] hover:bg-[#242424] text-white p-2 rounded-full transition-colors cursor-pointer"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
-          <div className="flex-1 my-3 flex items-center justify-center overflow-hidden">
-            <div
-              className={
-                "transition-all duration-300 bg-white rounded-2xl overflow-hidden shadow-2xl border border-white/20 h-full " +
-                (viewportMode === "desktop"
-                  ? "w-full"
-                  : viewportMode === "tablet"
-                  ? "w-[768px] max-w-full"
-                  : "w-[390px] max-w-full")
-              }
-            >
-              <iframe
-                src={selectedDemo.demoUrl}
-                title={selectedDemo.title}
-                className="w-full h-full border-none"
-              />
-            </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       </main>
       <FooterSection />

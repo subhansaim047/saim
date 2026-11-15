@@ -42,11 +42,11 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
                 Start your project
                 <span className="absolute left-0 bottom-0 h-[1px] w-full bg-white origin-right scale-x-100 transition-transform duration-300 group-hover:scale-x-0" />
               </span>
-              <span className="w-12 h-12 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center relative overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
+              <span className="w-12 h-12 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center relative overflow-hidden isolate transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
                 <svg
                   viewBox="0 0 14 14"
                   fill="none"
-                  className="w-3.5 h-3.5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-5 group-hover:-translate-y-5"
+                  className="w-3.5 h-3.5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-8 group-hover:-translate-y-8"
                 >
                   <path
                     d="M1.5 12.5L12.5 1.5M12.5 1.5H3.5M12.5 1.5V10.5"
@@ -59,7 +59,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
                 <svg
                   viewBox="0 0 14 14"
                   fill="none"
-                  className="w-3.5 h-3.5 absolute -translate-x-5 translate-y-5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0"
+                  className="w-3.5 h-3.5 absolute -translate-x-8 translate-y-8 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0"
                 >
                   <path
                     d="M1.5 12.5L12.5 1.5M12.5 1.5H3.5M12.5 1.5V10.5"

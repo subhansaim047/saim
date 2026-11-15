@@ -10,6 +10,7 @@ import {
 } from "./rh/RhModernSections";
 import Link from "next/link";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Clock } from "lucide-react";
 
 interface ServiceDetail {
@@ -391,12 +392,12 @@ export const ServicesPage = () => {
               return (
                 <div
                   key={service.id}
-                  className="rh-edge-orbit-card bg-white border border-[#E6E6E6] hover:border-[#0D0D0D] transition-colors"
+                  className="rh-edge-orbit-card rounded-3xl bg-white border border-[#E6E6E6] hover:border-[#0D0D0D] transition-colors overflow-hidden shadow-[0_12px_32px_-24px_rgba(13,13,13,0.18)]"
                 >
                   <div className="p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 flex-wrap mb-2">
-                        <span className="text-[12px] font-mono-tech text-[#939393]">
+                        <span className="text-[12px] font-mono-tech text-[#939393] tabular-nums">
                           {String(index + 1).padStart(2, "0")}
                         </span>
                         <h3 className="text-[20px] sm:text-[24px] font-medium tracking-[-0.025em] text-[#0D0D0D]">
@@ -408,12 +409,12 @@ export const ServicesPage = () => {
                           </Link>
                         </h3>
                         {service.price && (
-                          <span className="px-3 py-1 bg-[#0D0D0D] text-[#BAFF00] text-[12px] font-mono-tech font-medium">
+                          <span className="px-3 py-1 rounded-full bg-[#0D0D0D] text-[#BAFF00] text-[12px] font-mono-tech font-medium tabular-nums">
                             {service.price}
                           </span>
                         )}
                         {service.badge && (
-                          <span className="px-3 py-1 bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-mono-tech font-medium uppercase tracking-wider">
+                          <span className="px-3 py-1 rounded-full bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-mono-tech font-medium uppercase tracking-wider">
                             {service.badge}
                           </span>
                         )}
@@ -424,82 +425,97 @@ export const ServicesPage = () => {
                     </div>
 
                     <div className="flex items-center gap-3 shrink-0 self-start md:self-center">
-                      <span className="inline-flex items-center gap-1.5 text-[12px] font-mono-tech text-[#595959] bg-[#F5F5F7] border border-[#E6E6E6] px-3.5 py-2">
+                      <span className="inline-flex items-center gap-1.5 text-[12px] font-mono-tech text-[#595959] bg-[#F5F5F7] border border-[#E6E6E6] px-3.5 py-2 rounded-full tabular-nums">
                         <Clock className="w-3.5 h-3.5" />
                         {service.timeline}
                       </span>
                       <button
                         type="button"
+                        aria-expanded={isExpanded}
                         onClick={() =>
                           setExpandedServiceId(isExpanded ? null : service.id)
                         }
-                        className="px-4 py-2 border border-[#0D0D0D] text-[13px] font-medium hover:bg-[#0D0D0D] hover:text-[#BAFF00] transition-colors"
+                        className={`px-4 py-2 rounded-full border text-[13px] font-medium transition-colors cursor-pointer ${
+                          isExpanded
+                            ? "bg-[#0D0D0D] border-[#0D0D0D] text-[#BAFF00]"
+                            : "border-[#0D0D0D] text-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-[#BAFF00]"
+                        }`}
                       >
                         {isExpanded ? "Hide Scope −" : "View Scope +"}
                       </button>
                     </div>
                   </div>
 
-                  {isExpanded && (
-                    <div className="px-6 sm:px-8 pb-8 pt-6 border-t border-[#E6E6E6] bg-[#FAFAFA]">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[14px] leading-[1.6]">
-                        <div>
-                          <h4 className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#939393] mb-3">
-                            Key Commercial Benefits
-                          </h4>
-                          <ul className="space-y-2.5">
-                            {service.benefits.map((b, i) => (
-                              <li key={i} className="flex items-start gap-2.5 text-[#202020]">
-                                <span className="w-5 h-5 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center text-[11px] font-bold shrink-0 mt-0.5">
-                                  ✓
-                                </span>
-                                <span>{b}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                  <AnimatePresence initial={false}>
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-6 sm:px-8 pb-8 pt-6 border-t border-[#E6E6E6] bg-[#FAFAFA]">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[14px] leading-[1.6]">
+                            <div>
+                              <h4 className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#939393] mb-3">
+                                Key Commercial Benefits
+                              </h4>
+                              <ul className="space-y-2.5">
+                                {service.benefits.map((b, i) => (
+                                  <li key={i} className="flex items-start gap-2.5 text-[#202020]">
+                                    <span className="w-5 h-5 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center text-[11px] font-bold shrink-0 mt-0.5">
+                                      ✓
+                                    </span>
+                                    <span>{b}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
 
-                        <div>
-                          <h4 className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#939393] mb-3">
-                            Included Deliverables
-                          </h4>
-                          <ul className="space-y-2.5">
-                            {service.deliverables.map((d, i) => (
-                              <li key={i} className="flex items-start gap-2.5 text-[#202020]">
-                                <span className="w-5 h-5 rounded-full bg-[#0D0D0D] text-white flex items-center justify-center text-[11px] shrink-0 mt-0.5">
-                                  ✓
-                                </span>
-                                <span>{d}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
+                            <div>
+                              <h4 className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#939393] mb-3">
+                                Included Deliverables
+                              </h4>
+                              <ul className="space-y-2.5">
+                                {service.deliverables.map((d, i) => (
+                                  <li key={i} className="flex items-start gap-2.5 text-[#202020]">
+                                    <span className="w-5 h-5 rounded-full bg-[#0D0D0D] text-white flex items-center justify-center text-[11px] shrink-0 mt-0.5">
+                                      ✓
+                                    </span>
+                                    <span>{d}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
 
-                      <div className="mt-7 pt-5 border-t border-[#E6E6E6] flex flex-wrap items-center justify-between gap-4">
-                        <div className="flex flex-wrap items-center gap-4 text-[13px] text-[#595959]">
-                          <span>50/50 Milestones · Free Concept Option</span>
-                          <span>•</span>
-                          <Link
-                            href="/overview"
-                            className="text-[#0D0D0D] underline underline-offset-4 hover:opacity-70"
-                          >
-                            View more details &amp; estimate cost
-                          </Link>
-                        </div>
+                          <div className="mt-7 pt-5 border-t border-[#E6E6E6] flex flex-wrap items-center justify-between gap-4">
+                            <div className="flex flex-wrap items-center gap-4 text-[13px] text-[#595959]">
+                              <span>50/50 Milestones · Free Concept Option</span>
+                              <span>•</span>
+                              <Link
+                                href="/overview"
+                                className="text-[#0D0D0D] underline underline-offset-4 hover:opacity-70"
+                              >
+                                View more details &amp; estimate cost
+                              </Link>
+                            </div>
 
-                        <Link
-                          href={service.dedicatedLink}
-                          className="inline-flex items-center gap-2.5 bg-[#0D0D0D] hover:bg-[#202020] text-white text-[14px] font-medium px-6 py-3 rounded-full transition-colors"
-                        >
-                          <span>Explore Full Service Page</span>
-                          <span className="w-6 h-6 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center text-[12px]">
-                            ↗
-                          </span>
-                        </Link>
-                      </div>
-                    </div>
-                  )}
+                            <Link
+                              href={service.dedicatedLink}
+                              className="group inline-flex items-center gap-3 bg-[#0D0D0D] hover:bg-[#1f1f1f] text-white text-[14px] font-medium pl-6 pr-2.5 py-2.5 rounded-full transition-colors"
+                            >
+                              <span>Explore Full Service Page</span>
+                              <span className="w-7 h-7 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center text-[12px] transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
+                                ↗
+                              </span>
+                            </Link>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               );
             })}

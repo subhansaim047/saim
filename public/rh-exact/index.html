@@ -158,13 +158,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarRect = navbar.getBoundingClientRect();
     const navbarCenter = navbarRect.top + (navbarRect.height / 2);
     
-    // Перевірка скролу для зміни top (тільки для десктопу)
-    if (window.innerWidth > 920) {
-      if (currentScrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+    // Toggle scrolled frosted glass state on both desktop and mobile viewports
+    if (currentScrollY > 24) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
     }
     
     let isInDarkSection = false;

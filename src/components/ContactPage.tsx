@@ -367,12 +367,12 @@ export const ContactPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#0D0D0D] hover:bg-[#222222] text-white rounded-full py-4 px-7 flex items-center justify-between transition-colors cursor-pointer"
+                  className="group w-full bg-[#0D0D0D] hover:bg-[#1a1a1c] text-white rounded-full py-2.5 pl-7 pr-2.5 flex items-center justify-between transition-colors cursor-pointer active:scale-[0.99]"
                 >
                   <span className="text-[15px] font-medium">
                     Submit Project Enquiry via WhatsApp
                   </span>
-                  <span className="w-9 h-9 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-bold">
+                  <span className="w-10 h-10 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-bold transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
                     ↗
                   </span>
                 </button>

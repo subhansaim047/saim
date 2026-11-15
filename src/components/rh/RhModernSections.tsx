@@ -212,6 +212,7 @@ export function RhHeroPinned({
 }: RhHeroPinnedProps) {
   const pinRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
+  const spotlightRef = useRef<HTMLDivElement>(null);
 
   const pool = stripItems.length >= 5 ? stripItems : DEFAULT_SAIM_STRIP_ITEMS;
 
@@ -316,6 +317,16 @@ export function RhHeroPinned({
   const heroBg = isMobileVideo ? "#0D0D0D" : "#000000";
   const heroBgClass = isMobileVideo ? "bg-[#0D0D0D]" : "bg-black";
 
+  const handleHeroPointerMove = (e: React.PointerEvent<HTMLElement>) => {
+    const el = spotlightRef.current;
+    if (!el) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (((e.clientX - rect.left) / rect.width) * 100).toFixed(1);
+    const y = (((e.clientY - rect.top) / rect.height) * 100).toFixed(1);
+    el.style.setProperty("--mx", `${x}%`);
+    el.style.setProperty("--my", `${y}%`);
+  };
+
   return (
     <div
       ref={pinRef}
@@ -328,7 +339,32 @@ export function RhHeroPinned({
         className={`hero-pin-inner-pd ${heroBgClass}`}
         style={{ backgroundColor: heroBg }}
       >
-        <section className="relative pt-[132px] md:pt-[156px] pb-12 md:pb-16">
+        <section
+          onPointerMove={handleHeroPointerMove}
+          className="relative pt-[132px] md:pt-[156px] pb-12 md:pb-16 overflow-hidden"
+        >
+          {/* Architectural grid & spotlight confined behind left copy column so 3D video blend stays pure */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none hidden lg:block absolute inset-y-0 left-0 w-[60%] rh-blueprint-grid opacity-70"
+            style={{
+              WebkitMaskImage:
+                "radial-gradient(ellipse 75% 70% at 32% 48%, #000 18%, transparent 74%)",
+              maskImage:
+                "radial-gradient(ellipse 75% 70% at 32% 48%, #000 18%, transparent 74%)",
+            }}
+          />
+          <div
+            ref={spotlightRef}
+            aria-hidden="true"
+            className="pointer-events-none hidden lg:block absolute inset-y-0 left-0 w-[62%] rh-spotlight-hero opacity-85 transition-opacity duration-500"
+            style={{
+              WebkitMaskImage:
+                "radial-gradient(ellipse 80% 75% at 30% 45%, #000 10%, transparent 75%)",
+              maskImage:
+                "radial-gradient(ellipse 80% 75% at 30% 45%, #000 10%, transparent 75%)",
+            }}
+          />
           {isMobileVideo && (
             <div
               aria-hidden="true"
@@ -344,7 +380,7 @@ export function RhHeroPinned({
             <div className="grid lg:grid-cols-[1.12fr_0.88fr] gap-10 lg:gap-16 items-center">
               {/* Left Copy Column */}
               <div className="flex flex-col gap-7">
-                <div className="rh-hero-enter-badge inline-flex items-center gap-2.5 self-start px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10">
+                <div className="rh-hero-enter-badge inline-flex items-center gap-2.5 self-start px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                   <span className="w-2 h-2 rounded-full bg-[#BAFF00] animate-pulse" />
                   <span className="text-[11px] font-mono-tech tracking-[0.2em] uppercase text-[#BAFF00]">
                     {badge}
@@ -359,20 +395,21 @@ export function RhHeroPinned({
                   {subtitle}
                 </p>
 
-                <div className="rh-hero-enter-cta flex flex-wrap items-center gap-4 pt-1">
+                <div className="rh-hero-enter-cta flex flex-wrap items-center gap-3.5 pt-1">
                   <Link
                     href={primaryCta.href}
-                    className="rh-btn-pill bg-white text-[#0D0D0D] px-7 py-3.5 text-[15px] font-medium tracking-[-0.02em]"
+                    className="group inline-flex items-center gap-3.5 rounded-full bg-white text-[#0D0D0D] pl-6 pr-2 py-2 text-[15px] font-medium tracking-[-0.02em] shadow-[0_14px_34px_-12px_rgba(255,255,255,0.28)] hover:bg-[#BAFF00] transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]"
                   >
-                    <span className="inline-flex items-center gap-2">
-                      {primaryCta.label}
-                      <ArrowRight className="w-4 h-4" />
+                    <span>{primaryCta.label}</span>
+                    <span className="w-9 h-9 rounded-full bg-[#0D0D0D] text-[#BAFF00] flex items-center justify-center relative overflow-hidden isolate transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
+                      <ArrowUpRight className="w-4 h-4 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-7 group-hover:-translate-y-7" />
+                      <ArrowUpRight className="w-4 h-4 absolute -translate-x-7 translate-y-7 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0" />
                     </span>
                   </Link>
                   {secondaryCta && (
                     <Link
                       href={secondaryCta.href}
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-[#333333] text-white hover:border-[#BAFF00] hover:text-[#BAFF00] text-[15px] font-medium tracking-[-0.02em] transition-colors"
+                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/[0.03] border border-white/15 text-white hover:border-[#BAFF00] hover:text-[#BAFF00] text-[15px] font-medium tracking-[-0.02em] transition-colors duration-250 active:scale-[0.98]"
                     >
                       {secondaryCta.label}
                     </Link>
@@ -589,10 +626,10 @@ export function RhProblemSolutionDeck({
                     type="button"
                     onClick={() => setActiveCard(i)}
                     onMouseEnter={() => setActiveCard(i)}
-                    className={`w-full text-left p-5 border transition-all duration-300 ${
+                    className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${
                       isSelected
-                        ? "bg-[#F5F5F7] border-[#0D0D0D] translate-x-1 shadow-[0_12px_30px_rgba(13,13,13,0.08)]"
-                        : "bg-white border-[#E6E6E6] opacity-75 hover:opacity-100"
+                        ? "bg-[#F5F5F7] border-[#0D0D0D] translate-x-1 shadow-[0_14px_32px_-12px_rgba(13,13,13,0.12)]"
+                        : "bg-white border-[#E6E6E6] opacity-80 hover:opacity-100 hover:border-[#CBCBCB]"
                     }`}
                   >
                     <div className="flex items-center justify-between gap-2 mb-2">
@@ -622,7 +659,7 @@ export function RhProblemSolutionDeck({
             </div>
 
             {/* Dark Resolution Card with rh.design pd-case-glow.svg */}
-            <div className="relative overflow-hidden bg-[#0D0D0D] text-white p-7 md:p-8 border border-[#202020]">
+            <div className="relative overflow-hidden rounded-3xl bg-[#0D0D0D] text-white p-7 md:p-8 border border-[#222222] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)]">
               <img
                 src="/rh-exact/pd/pd-case-glow.svg"
                 alt=""
@@ -655,68 +692,70 @@ export function RhProblemSolutionDeck({
           </div>
 
           {/* Right: Animated Scroll-Triggered Benchmark Bar Chart (.chart-retention-mad) */}
-          <div className="lg:col-span-6 bg-[#FAFAFA] border border-[#E6E6E6] p-7 md:p-10 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-2">
-                <h3 className="text-[20px] font-medium tracking-[-0.02em] text-[#0D0D0D]">
-                  {chartTitle}
-                </h3>
-                <span className="text-[11px] font-mono-tech uppercase tracking-wider px-2.5 py-1 bg-[#E6E6E6] text-[#0D0D0D] rounded-sm">
-                  {chartBadge}
-                </span>
-              </div>
-              <p className="text-[14px] text-[#595959] leading-[1.55] mb-8">{chartCaption}</p>
-            </div>
-
-            <div
-              ref={chartRef}
-              className={`chart-retention-mad relative pt-8 pb-10 pl-10 pr-2 border-l border-b border-dashed border-[#CBCBCB] ${
-                chartInView ? "" : "is-pre-mad"
-              }`}
-              style={{ width: "100%", height: "auto" }}
-            >
-              {/* Y-Axis Label */}
-              <div className="absolute left-[-28px] top-1/2 -translate-y-1/2 -rotate-90 text-[11px] font-mono-tech uppercase tracking-widest text-[#939393] whitespace-nowrap">
-                {chartYAxis}
+          <div className="lg:col-span-6 rh-bezel-shell-light flex flex-col">
+            <div className="rh-bezel-core-light p-7 md:p-10 flex-1 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-4 mb-2">
+                  <h3 className="text-[20px] font-medium tracking-[-0.02em] text-[#0D0D0D]">
+                    {chartTitle}
+                  </h3>
+                  <span className="text-[11px] font-mono-tech uppercase tracking-wider px-2.5 py-1 bg-[#F5F5F7] border border-[#E6E6E6] text-[#0D0D0D] rounded-full">
+                    {chartBadge}
+                  </span>
+                </div>
+                <p className="text-[14px] text-[#595959] leading-[1.55] mb-8">{chartCaption}</p>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 items-end h-[360px]">
-                {bars.map((bar, idx) => (
-                  <div key={bar.label} className="flex flex-col items-center justify-end h-full">
-                    <div
-                      className={`bar-num-mad text-[26px] md:text-[32px] font-medium tracking-[-0.03em] mb-3 font-mono-tech ${
-                        bar.isHighlight ? "text-[#0D0D0D]" : "text-[#939393]"
-                      }`}
-                      style={{ transitionDelay: `${500 + idx * 220}ms` }}
-                    >
-                      {bar.value}
-                    </div>
-                    <div
-                      className={`bar-mad w-full flex items-end justify-center pb-4 transition-all ${
-                        bar.isHighlight
-                          ? "bg-[#0D0D0D] text-[#BAFF00] border border-[#0D0D0D]"
-                          : "bg-[#E6E6E6] text-[#0D0D0D]"
-                      }`}
-                      style={{
-                        height: `${bar.heightPx}px`,
-                        transitionDelay: `${idx * 220}ms`,
-                      }}
-                    >
-                      <span
-                        className={`bar-label-mad text-[12px] md:text-[13px] font-medium px-2 text-center ${
-                          bar.isHighlight ? "text-[#BAFF00]" : "text-[#0D0D0D]"
+              <div
+                ref={chartRef}
+                className={`chart-retention-mad relative pt-8 pb-10 pl-10 pr-2 border-l border-b border-dashed border-[#CBCBCB] ${
+                  chartInView ? "" : "is-pre-mad"
+                }`}
+                style={{ width: "100%", height: "auto" }}
+              >
+                {/* Y-Axis Label */}
+                <div className="absolute left-[-28px] top-1/2 -translate-y-1/2 -rotate-90 text-[11px] font-mono-tech uppercase tracking-widest text-[#939393] whitespace-nowrap">
+                  {chartYAxis}
+                </div>
+
+                <div className="grid grid-cols-3 gap-4 items-end h-[360px]">
+                  {bars.map((bar, idx) => (
+                    <div key={bar.label} className="flex flex-col items-center justify-end h-full">
+                      <div
+                        className={`bar-num-mad text-[26px] md:text-[32px] font-medium tracking-[-0.03em] mb-3 font-mono-tech tabular-nums ${
+                          bar.isHighlight ? "text-[#0D0D0D]" : "text-[#939393]"
                         }`}
                         style={{ transitionDelay: `${500 + idx * 220}ms` }}
                       >
-                        {bar.label}
-                      </span>
+                        {bar.value}
+                      </div>
+                      <div
+                        className={`bar-mad w-full rounded-t-2xl flex items-end justify-center pb-4 transition-all ${
+                          bar.isHighlight
+                            ? "bg-[#0D0D0D] text-[#BAFF00] border border-[#0D0D0D] shadow-[0_-8px_30px_-8px_rgba(186,255,0,0.28)]"
+                            : "bg-[#E6E6E6] text-[#0D0D0D]"
+                        }`}
+                        style={{
+                          height: `${bar.heightPx}px`,
+                          transitionDelay: `${idx * 220}ms`,
+                        }}
+                      >
+                        <span
+                          className={`bar-label-mad text-[12px] md:text-[13px] font-medium px-2 text-center ${
+                            bar.isHighlight ? "text-[#BAFF00]" : "text-[#0D0D0D]"
+                          }`}
+                          style={{ transitionDelay: `${500 + idx * 220}ms` }}
+                        >
+                          {bar.label}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
 
-              <div className="mt-4 text-center text-[11px] font-mono-tech uppercase tracking-widest text-[#939393]">
-                {chartXAxis}
+                <div className="mt-4 text-center text-[11px] font-mono-tech uppercase tracking-widest text-[#939393]">
+                  {chartXAxis}
+                </div>
               </div>
             </div>
           </div>
@@ -918,9 +957,9 @@ export function RhProcessCarousel({
       >
         <div className="flex gap-5 px-5 lg:pl-[max(20px,calc((100vw-1168px)/2+20px))] pr-10 min-w-max">
           {/* Lime Summary Card (matching .card-stages-pd on rh.design) */}
-          <div className="w-[300px] sm:w-[340px] shrink-0 bg-[#BAFF00] text-[#0D0D0D] p-8 md:p-10 flex flex-col justify-between min-h-[390px]">
+          <div className="w-[300px] sm:w-[340px] shrink-0 rounded-3xl bg-[#BAFF00] text-[#0D0D0D] p-8 md:p-10 flex flex-col justify-between min-h-[390px] shadow-[0_24px_60px_-20px_rgba(186,255,0,0.28)]">
             <div>
-              <div className="text-[72px] font-medium tracking-[-0.05em] leading-none">
+              <div className="text-[72px] font-medium tracking-[-0.05em] leading-none tabular-nums">
                 {stagesSummaryCount}
               </div>
               <h3 className="text-[32px] font-medium tracking-[-0.03em] mt-2">
@@ -936,14 +975,14 @@ export function RhProcessCarousel({
           {stages.map((s) => (
             <div
               key={s.stage + s.title}
-              className="rh-edge-orbit-card w-[320px] sm:w-[380px] shrink-0 bg-[#141414] border border-[#242424] p-8 flex flex-col justify-between min-h-[390px]"
+              className="rh-edge-orbit-card w-[320px] sm:w-[380px] shrink-0 rounded-3xl bg-[#141414] border border-[#242424] p-8 flex flex-col justify-between min-h-[390px] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-6">
                   <span className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#BAFF00]">
                     {s.stage}
                   </span>
-                  <span className="text-[12px] font-mono-tech text-[#939393] px-2.5 py-0.5 border border-[#2B2B2B]">
+                  <span className="text-[12px] font-mono-tech text-[#939393] px-2.5 py-0.5 rounded-full border border-[#2B2B2B] tabular-nums">
                     {s.duration}
                   </span>
                 </div>
@@ -974,13 +1013,12 @@ export function RhProcessCarousel({
       {/* Custom Floating "Drag me" Cursor (desktop mouse only) */}
       <div
         aria-hidden="true"
-        className={`hidden lg:flex fixed z-40 pointer-events-none w-[96px] h-[96px] rounded-full bg-[#BAFF00] text-[#0D0D0D] items-center justify-center text-[13px] font-medium tracking-[-0.02em] transition-transform duration-150 ${
+        className={`hidden lg:flex fixed top-0 left-0 z-40 pointer-events-none w-[96px] h-[96px] rounded-full bg-[#BAFF00] text-[#0D0D0D] items-center justify-center text-[13px] font-medium tracking-[-0.02em] transition-[opacity,scale] duration-150 ${
           cursorPos.active ? "opacity-100 scale-100" : "opacity-0 scale-50"
         } ${cursorPos.dragging ? "scale-90" : ""}`}
         style={{
-          left: `${cursorPos.x}px`,
-          top: `${cursorPos.y}px`,
-          transform: "translate(-50%, -50%)",
+          transform: `translate3d(${cursorPos.x}px, ${cursorPos.y}px, 0) translate(-50%, -50%)`,
+          willChange: "transform",
         }}
       >
         Drag me
@@ -998,8 +1036,8 @@ export function RhProcessCarousel({
             <p className="text-[26px] sm:text-[34px] md:text-[40px] font-medium tracking-[-0.03em] leading-[1.15] text-white">
               “{quote}”
             </p>
-            <div className="mt-8 inline-flex items-center gap-4 border border-[#414141] px-5 py-3">
-              <div className="w-10 h-10 bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-medium text-[15px]">
+            <div className="mt-8 inline-flex items-center gap-4 rounded-2xl border border-[#343434] bg-white/[0.03] px-5 py-3">
+              <div className="w-10 h-10 rounded-xl bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-medium text-[15px]">
                 {author
                   .split(" ")
                   .slice(0, 2)
@@ -1101,14 +1139,14 @@ export function RhBentoWorkGrid({
 
         {/* 3-Column Proof Bento Row */}
         <div data-gsap-stagger="" className="grid md:grid-cols-3 gap-4 mb-6">
-          <div className="p-8 bg-[#FAFAFA] border border-[#E6E6E6] flex flex-col justify-between min-h-[240px]">
-            <div className="text-[56px] md:text-[68px] font-medium tracking-[-0.05em] leading-none text-[#0D0D0D] font-mono-tech">
+          <div className="p-8 rounded-3xl bg-[#FAFAFA] border border-[#E6E6E6] flex flex-col justify-between min-h-[240px]">
+            <div className="text-[56px] md:text-[68px] font-medium tracking-[-0.05em] leading-none text-[#0D0D0D] font-mono-tech tabular-nums">
               {proofStat}
             </div>
             <p className="text-[15px] text-[#595959] leading-[1.5] mt-6">{proofLabel}</p>
           </div>
 
-          <div className="p-8 bg-[#FAFAFA] border border-[#E6E6E6] flex flex-col justify-between min-h-[240px]">
+          <div className="p-8 rounded-3xl bg-[#FAFAFA] border border-[#E6E6E6] flex flex-col justify-between min-h-[240px]">
             <p className="text-[18px] font-medium tracking-[-0.02em] leading-[1.45] text-[#0D0D0D]">
               “{currentQuote.quote}”
             </p>
@@ -1126,8 +1164,8 @@ export function RhBentoWorkGrid({
                     type="button"
                     aria-label={`Show quote ${idx + 1}`}
                     onClick={() => setQuoteIdx(idx)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      idx === quoteIdx ? "bg-[#0D0D0D]" : "bg-[#D4D4D4]"
+                    className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                      idx === quoteIdx ? "w-5 bg-[#0D0D0D]" : "w-2 bg-[#D4D4D4] hover:bg-[#939393]"
                     }`}
                   />
                 ))}
@@ -1137,7 +1175,7 @@ export function RhBentoWorkGrid({
 
           <Link
             href={highlightHref}
-            className="rh-edge-orbit-card is-lime p-8 bg-[#0D0D0D] text-white border border-[#202020] flex flex-col justify-between min-h-[240px] group"
+            className="rh-edge-orbit-card is-lime rounded-3xl p-8 bg-[#0D0D0D] text-white border border-[#202020] flex flex-col justify-between min-h-[240px] group"
           >
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#BAFF00]">
@@ -1146,7 +1184,7 @@ export function RhBentoWorkGrid({
               <ArrowUpRight className="w-5 h-5 text-[#BAFF00] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
             <div>
-              <div className="text-[44px] font-medium tracking-[-0.04em] text-[#BAFF00] leading-none font-mono-tech">
+              <div className="text-[44px] font-medium tracking-[-0.04em] text-[#BAFF00] leading-none font-mono-tech tabular-nums">
                 {highlightMetric}
               </div>
               <div className="text-[16px] text-white/90 mt-2">{highlightTitle}</div>
@@ -1174,7 +1212,7 @@ export function RhBentoWorkGrid({
                 {...cardProps}
                 onMouseEnter={() => setCursor((c) => ({ ...c, on: true }))}
                 onMouseLeave={() => setCursor((c) => ({ ...c, on: false }))}
-                className={`rh-edge-orbit-card group relative overflow-hidden border border-[#E6E6E6] bg-[#FAFAFA] hover:border-[#0D0D0D] transition-colors flex flex-col justify-between ${
+                className={`rh-edge-orbit-card group relative overflow-hidden rounded-3xl border border-[#E6E6E6] bg-[#FAFAFA] hover:border-[#0D0D0D] transition-colors flex flex-col justify-between ${
                   isFullWidth ? "md:col-span-2 min-h-[340px]" : "min-h-[320px]"
                 }`}
               >

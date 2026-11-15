@@ -14,6 +14,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const progressBarRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -23,7 +24,13 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 24);
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      if (progressBarRef.current) {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? Math.min(1, Math.max(0, y / docHeight)) : 0;
+        progressBarRef.current.style.transform = `scaleX(${progress.toFixed(4)})`;
+      }
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -54,6 +61,10 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
   };
 
   const isDark = theme === "dark" || megaOpen;
+  const isDemosActive = Boolean(pathname?.startsWith("/demos"));
+  const isServicesActive = Boolean(pathname?.startsWith("/services"));
+  const isPricingActive = Boolean(pathname?.startsWith("/pricing"));
+  const isAboutActive = Boolean(pathname?.startsWith("/about"));
 
   return (
     <>
@@ -66,6 +77,20 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             : "bg-transparent"
         }`}
       >
+        <div
+          aria-hidden="true"
+          className="absolute top-0 left-0 right-0 h-[2px] overflow-hidden pointer-events-none z-[103]"
+        >
+          <div
+            ref={progressBarRef}
+            className="h-full w-full origin-left bg-[#BAFF00] transition-opacity duration-300"
+            style={{
+              transform: "scaleX(0)",
+              opacity: scrolled && !megaOpen ? 0.9 : 0,
+              willChange: "transform",
+            }}
+          />
+        </div>
         <div className="max-w-[1168px] mx-auto px-5 h-[96px] flex items-center justify-between relative z-[102]">
           {/* Left: Saim Dev Real PNG Logo */}
           <a
@@ -92,20 +117,30 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
 
           {/* Center: 4 Exact Nav Links between c1 & c2 */}
           <nav
-            className="hidden min-[921px]:flex items-center gap-2"
+            className="hidden min-[921px]:flex items-center gap-1.5"
             aria-label="Primary Navigation"
           >
             <Link
               href="/demos"
-              className={`px-3 py-2.5 text-[15px] leading-none rounded-full transition-colors duration-200 relative group ${
-                isDark
-                  ? "text-[#B3B3B3] hover:text-white"
-                  : "text-[#595959] hover:text-[#0D0D0D]"
+              aria-current={isDemosActive ? "page" : undefined}
+              className={`px-3.5 py-2 text-[14.5px] leading-none rounded-full transition-colors duration-200 relative group inline-flex items-center gap-1.5 ${
+                isDemosActive
+                  ? isDark
+                    ? "text-white font-medium bg-white/[0.08] border border-white/10"
+                    : "text-[#0D0D0D] font-medium bg-black/[0.06] border border-black/10"
+                  : isDark
+                  ? "text-[#B3B3B3] hover:text-white border border-transparent"
+                  : "text-[#595959] hover:text-[#0D0D0D] border border-transparent"
               }`}
             >
+              {isDemosActive && (
+                <span className="w-1.5 h-1.5 rounded-full bg-[#BAFF00] shrink-0" />
+              )}
               <span className="relative">
                 Live Demos
-                <span className="absolute left-0 -bottom-[5px] h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full" />
+                {!isDemosActive && (
+                  <span className="absolute left-0 -bottom-[5px] h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full" />
+                )}
               </span>
             </Link>
 
@@ -118,14 +153,19 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                 type="button"
                 aria-expanded={megaOpen}
                 onClick={() => setMegaOpen((v) => !v)}
-                className={`px-3 py-2.5 text-[15px] leading-none rounded-full inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer ${
-                  megaOpen
-                    ? "text-white"
+                className={`px-3.5 py-2 text-[14.5px] leading-none rounded-full inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer border ${
+                  megaOpen || isServicesActive
+                    ? isDark
+                      ? "text-white font-medium bg-white/[0.08] border-white/10"
+                      : "text-[#0D0D0D] font-medium bg-black/[0.06] border-black/10"
                     : isDark
-                    ? "text-[#B3B3B3] hover:text-white"
-                    : "text-[#595959] hover:text-[#0D0D0D]"
+                    ? "text-[#B3B3B3] hover:text-white border-transparent"
+                    : "text-[#595959] hover:text-[#0D0D0D] border-transparent"
                 }`}
               >
+                {isServicesActive && !megaOpen && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#BAFF00] shrink-0" />
+                )}
                 <span className="relative">
                   Services
                   <span
@@ -155,29 +195,49 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
 
             <Link
               href="/pricing"
-              className={`px-3 py-2.5 text-[15px] leading-none rounded-full transition-colors duration-200 relative group ${
-                isDark
-                  ? "text-[#B3B3B3] hover:text-white"
-                  : "text-[#595959] hover:text-[#0D0D0D]"
+              aria-current={isPricingActive ? "page" : undefined}
+              className={`px-3.5 py-2 text-[14.5px] leading-none rounded-full transition-colors duration-200 relative group inline-flex items-center gap-1.5 ${
+                isPricingActive
+                  ? isDark
+                    ? "text-white font-medium bg-white/[0.08] border border-white/10"
+                    : "text-[#0D0D0D] font-medium bg-black/[0.06] border border-black/10"
+                  : isDark
+                  ? "text-[#B3B3B3] hover:text-white border border-transparent"
+                  : "text-[#595959] hover:text-[#0D0D0D] border border-transparent"
               }`}
             >
+              {isPricingActive && (
+                <span className="w-1.5 h-1.5 rounded-full bg-[#BAFF00] shrink-0" />
+              )}
               <span className="relative">
                 Pricing
-                <span className="absolute left-0 -bottom-[5px] h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full" />
+                {!isPricingActive && (
+                  <span className="absolute left-0 -bottom-[5px] h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full" />
+                )}
               </span>
             </Link>
 
             <Link
               href="/about"
-              className={`px-3 py-2.5 text-[15px] leading-none rounded-full transition-colors duration-200 relative group ${
-                isDark
-                  ? "text-[#B3B3B3] hover:text-white"
-                  : "text-[#595959] hover:text-[#0D0D0D]"
+              aria-current={isAboutActive ? "page" : undefined}
+              className={`px-3.5 py-2 text-[14.5px] leading-none rounded-full transition-colors duration-200 relative group inline-flex items-center gap-1.5 ${
+                isAboutActive
+                  ? isDark
+                    ? "text-white font-medium bg-white/[0.08] border border-white/10"
+                    : "text-[#0D0D0D] font-medium bg-black/[0.06] border border-black/10"
+                  : isDark
+                  ? "text-[#B3B3B3] hover:text-white border border-transparent"
+                  : "text-[#595959] hover:text-[#0D0D0D] border border-transparent"
               }`}
             >
+              {isAboutActive && (
+                <span className="w-1.5 h-1.5 rounded-full bg-[#BAFF00] shrink-0" />
+              )}
               <span className="relative">
                 About
-                <span className="absolute left-0 -bottom-[5px] h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full" />
+                {!isAboutActive && (
+                  <span className="absolute left-0 -bottom-[5px] h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full" />
+                )}
               </span>
             </Link>
           </nav>
@@ -200,11 +260,11 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   }`}
                 />
               </span>
-              <span className="w-12 h-12 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center relative overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
+              <span className="w-12 h-12 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center relative overflow-hidden isolate transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
                 <svg
                   viewBox="0 0 14 14"
                   fill="none"
-                  className="w-3.5 h-3.5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-5 group-hover:-translate-y-5"
+                  className="w-3.5 h-3.5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-8 group-hover:-translate-y-8"
                 >
                   <path
                     d="M1.5 12.5L12.5 1.5M12.5 1.5H3.5M12.5 1.5V10.5"
@@ -217,7 +277,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                 <svg
                   viewBox="0 0 14 14"
                   fill="none"
-                  className="w-3.5 h-3.5 absolute -translate-x-5 translate-y-5 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0"
+                  className="w-3.5 h-3.5 absolute -translate-x-8 translate-y-8 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0"
                 >
                   <path
                     d="M1.5 12.5L12.5 1.5M12.5 1.5H3.5M12.5 1.5V10.5"
