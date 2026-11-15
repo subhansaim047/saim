@@ -73,6 +73,124 @@ const OVERVIEW_FAQS = [
   },
 ];
 
+const OVERVIEW_STACK_COMPARISON = [
+  {
+    metric: "Edge & Mobile Rendering",
+    saim: "Static / SSR at Edge + Zero Plugin Bloat",
+    wordpress: "PHP + MySQL per request + 20+ plugins",
+    wix: "Closed runtime with shared script payloads",
+    agency: "Varying stacks; slow change cycles",
+  },
+  {
+    metric: "Security Surface",
+    saim: "Immutable static/edge build; strict CSP headers",
+    wordpress: "Frequent third-party plugin & wp-admin patches",
+    wix: "Vendor managed; zero infrastructure control",
+    agency: "Extra monthly maintenance retainer billed",
+  },
+  {
+    metric: "Source Code Ownership",
+    saim: "100% GitHub repository + Vercel/custom host",
+    wordpress: "Entangled theme shortcodes & DB locks",
+    wix: "Zero code export; platform lock-in",
+    agency: "Often tied to proprietary agency hosting",
+  },
+  {
+    metric: "Typical 2-Year Total Cost",
+    saim: "£250–£1,490 fixed + £0 mandatory retainer",
+    wordpress: "£1,500–£4,000+ build, plugins & security care",
+    wix: "£600–£1,200+ recurring SaaS + app add-ons",
+    agency: "£6,000–£22,000+ project & monthly retainers",
+  },
+];
+
+const ALL_ENGINEERING_DIRECTORY = [
+  {
+    category: "Core Engineering",
+    title: "Bespoke Next.js Websites",
+    desc: "Server-rendered React 19 & TypeScript business platforms from £790 with sub-second routing and full source ownership.",
+    href: "/services/website-development",
+  },
+  {
+    category: "Full-Stack Software",
+    title: "Custom Web Apps & SaaS MVPs",
+    desc: "Authenticated client portals, PostgreSQL/Supabase dashboards, and Stripe billing applications built to scale.",
+    href: "/services/custom-web-apps",
+  },
+  {
+    category: "Hospitality UK",
+    title: "0% Commission Takeaway Ordering",
+    desc: "Direct mobile ordering sites with postcode delivery zones, live meal modifiers, and EPOS readiness from £250.",
+    href: "/services/takeaway-web-design",
+  },
+  {
+    category: "Headless Commerce",
+    title: "Headless Shopify & Liquid Rescue",
+    desc: "Replace heavy Shopify apps costing £150+/mo with fast Next.js Storefront API filtering and custom bundles.",
+    href: "/services/ecommerce-shopify",
+  },
+  {
+    category: "Bespoke Retail",
+    title: "Custom Stripe eCommerce Stores",
+    desc: "Bespoke catalog architecture, UK/EU VAT calculations, and instant variant switching built without Shopify overhead.",
+    href: "/services/ecommerce-development",
+  },
+  {
+    category: "Zero-Risk Migration",
+    title: "WordPress to Next.js & Headless CMS",
+    desc: "Eliminate plugin CVEs and PHP TTFB bottlenecks while migrating Sanity, Strapi, or WPGraphQL with 301 SEO safety.",
+    href: "/services/wordpress-headless-cms",
+  },
+  {
+    category: "SMB Growth",
+    title: "Small Business Websites UK",
+    desc: "3–5 page lead-generation websites for UK trades, clinics, and consultancies with local Schema from £390.",
+    href: "/services/business-websites",
+  },
+  {
+    category: "Clean Rebuild",
+    title: "1:1 Reference Website Clones",
+    desc: "Pixel-accurate Next.js 16 rebuilds from your Figma file or reference layout, refactored for your brand and SEO.",
+    href: "/services/website-clone",
+  },
+  {
+    category: "Paid Media CRO",
+    title: "High-Converting Landing Pages",
+    desc: "Google & Meta Ads message-matched landing pages engineered for instant LCP load and higher Quality Score from £250.",
+    href: "/services/landing-pages-cro",
+  },
+  {
+    category: "Brand Upgrade",
+    title: "Website Redesign & SEO Migration",
+    desc: "Modernise outdated websites with full URL mapping, 301 redirect verification, and refreshed visual authority.",
+    href: "/services/website-redesign",
+  },
+  {
+    category: "Performance Audit",
+    title: "Core Web Vitals Speed Optimization",
+    desc: "Targeted LCP, INP, and CLS remediation—script deferrals, font subsetting, image pipelines, and caching from £199.",
+    href: "/services/website-speed-optimization",
+  },
+  {
+    category: "Organic Growth",
+    title: "Technical & Local SEO Engineering",
+    desc: "Crawl architecture, entity JSON-LD graphs, internal link sculpting, and local UK service schema audits from £299.",
+    href: "/services/seo-services",
+  },
+];
+
+const REGIONAL_AND_TOOL_HUBS = [
+  { href: "/nextjs-developer-uk", label: "Next.js Developer UK" },
+  { href: "/services/takeaway-web-design-london", label: "Takeaway Web Design London" },
+  { href: "/services/takeaway-web-design-manchester", label: "Takeaway Web Design Manchester" },
+  { href: "/services/takeaway-web-design-birmingham", label: "Takeaway Web Design Birmingham" },
+  { href: "/tools", label: "160+ Free UK Kitchen Tools" },
+  { href: "/tools/ppds-label-generator", label: "PPDS Label Generator" },
+  { href: "/tools/allergen-matrix-generator", label: "14 Allergen Matrix" },
+  { href: "/tools/food-cost-calculator", label: "Food Cost GP% Calculator" },
+  { href: "/blogs", label: "UK Engineering & Hospitality Guides" },
+];
+
 export default function StudioOverviewPage() {
   return (
     <div className="rh-page min-h-screen flex flex-col bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] overflow-x-hidden">
@@ -168,15 +286,65 @@ export default function StudioOverviewPage() {
             solutionTitle="Built once. Owned 100% by your business."
             solutionDesc="From £250 direct takeaway menus to multi-page UK service flagships and bespoke SaaS web apps, every line of code compiles down to instant static & edge routes."
           />
+
+          <section className="bg-[#F5F5F7] text-[#0D0D0D] py-16 md:py-20 border-b border-[#E6E6E6]">
+            <div className="max-w-[1168px] mx-auto px-5">
+              <div className="max-w-2xl mb-8 space-y-2">
+                <div className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#595959]">
+                  STACK ARCHITECTURE COMPARISON
+                </div>
+                <h2 className="font-display-rh text-2xl sm:text-4xl font-semibold tracking-tight text-[#0D0D0D]">
+                  Next.js 16 Custom Engineering{" "}
+                  <span className="text-[#767676]">vs Legacy Stack Alternatives</span>
+                </h2>
+                <p className="text-sm text-[#595959] leading-relaxed">
+                  Why UK businesses migrate away from plugin-heavy WordPress builds, SaaS site builders, and high-retainer agencies.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[#E6E6E6] bg-white overflow-hidden">
+                <div className="w-full overflow-x-auto">
+                  <table className="w-full min-w-[680px] border-collapse text-left text-xs sm:text-sm">
+                    <thead>
+                      <tr className="border-b border-[#E6E6E6] bg-[#FAFAFA]">
+                        <th className="py-3.5 px-4 font-semibold text-[#0D0D0D]">Evaluation Metric</th>
+                        <th className="py-3.5 px-4 font-semibold text-[#0D0D0D] bg-[#BAFF00]/25">
+                          Saim Dev (Next.js 16)
+                        </th>
+                        <th className="py-3.5 px-4 font-semibold text-[#595959]">WordPress + Elementor</th>
+                        <th className="py-3.5 px-4 font-semibold text-[#595959]">Wix / Squarespace</th>
+                        <th className="py-3.5 px-4 font-semibold text-[#595959]">Traditional UK Agency</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-[#EFEFEF]">
+                      {OVERVIEW_STACK_COMPARISON.map((row) => (
+                        <tr key={row.metric}>
+                          <td className="py-3.5 px-4 font-medium text-[#0D0D0D] align-top">
+                            {row.metric}
+                          </td>
+                          <td className="py-3.5 px-4 font-medium text-[#0D0D0D] bg-[#BAFF00]/10 align-top">
+                            {row.saim}
+                          </td>
+                          <td className="py-3.5 px-4 text-[#595959] align-top">{row.wordpress}</td>
+                          <td className="py-3.5 px-4 text-[#595959] align-top">{row.wix}</td>
+                          <td className="py-3.5 px-4 text-[#595959] align-top">{row.agency}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
-        {/* 3. Interactive Deliverables Matrix (White RH Rows Band) */}
-        <div id="services" className="scroll-mt-24 border-t border-[#E6E6E6]">
+        {/* 3. Interactive Deliverables Matrix + Complete 12-Service Directory */}
+        <div id="services" className="scroll-mt-24">
           <RhSystemRows
-            overline="FULL SERVICE BREAKDOWN"
-            title="Every architecture deliverable"
+            overline="CORE DELIVERABLES BREAKDOWN"
+            title="Key architecture tracks"
             titleMuted="at fixed transparent pricing."
-            subtitle="Select any engineering track below to inspect full page scope, schema deliverables, and live staging timelines."
+            subtitle="Inspect flagship delivery scopes above or explore every specialised engineering track in our complete 12-service directory below."
             rows={[
               {
                 num: "01",
@@ -188,30 +356,89 @@ export default function StudioOverviewPage() {
               },
               {
                 num: "02",
-                title: "Custom Next.js Company Flagship (£450)",
+                title: "Custom Next.js Company Flagship (£790)",
                 description:
-                  "Replace bloated WordPress & Wix sites with hand-coded responsive TypeScript systems achieving 99+ Lighthouse performance and full source ownership.",
-                tags: ["No Retainers", "99+ Speed", "Schema.org SEO"],
+                  "Replace bloated WordPress & Wix sites with hand-coded responsive TypeScript systems achieving 95+ Core Web Vitals targets and full source ownership.",
+                tags: ["No Retainers", "95+ Speed", "Schema.org SEO"],
                 href: "/services/website-development",
               },
               {
                 num: "03",
-                title: "Headless eCommerce & Custom Web Apps (£750–£1,250)",
+                title: "Headless Shopify & Custom Web Apps (£1,490)",
                 description:
-                  "Bespoke Stripe storefronts, booking portals, and internal dashboards engineered without recurring Shopify app charges or per-seat SaaS tax.",
-                tags: ["Stripe API", "Zero App Fees", "Full IP Rights"],
+                  "Bespoke Stripe storefronts, Shopify Storefront API builds, booking portals, and internal dashboards engineered without recurring app tax.",
+                tags: ["Stripe & Shopify", "Zero App Bloat", "Full IP Rights"],
                 href: "/services/custom-web-apps",
               },
               {
                 num: "04",
-                title: "SEO Redesign & Core Web Vitals Rescue (£199–£299)",
+                title: "WordPress Migration, CRO & Speed Sprints (£199–£299)",
                 description:
-                  "Upgrade ageing websites without losing rankings via strict 301 redirect mapping, AVIF asset compression, and verified sub-second LCP scores.",
+                  "Upgrade ageing WordPress or slow sites via 301 redirect safety, paid ads landing pages, AVIF compression, and verified sub-second LCP.",
                 tags: ["301 Map Safe", "Sub-0.8s LCP", "CRO Focus"],
-                href: "/services/website-redesign",
+                href: "/services/wordpress-headless-cms",
               },
             ]}
           />
+
+          <section className="bg-[#0D0D0D] text-white py-16 md:py-24 border-y border-[#1F1F1F]">
+            <div className="max-w-[1168px] mx-auto px-5 space-y-12">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div className="max-w-2xl space-y-3">
+                  <div className="text-[11px] font-mono-tech uppercase tracking-[0.22em] text-[#BAFF00]">
+                    COMPLETE 12-SERVICE ENGINEERING DIRECTORY
+                  </div>
+                  <h2 className="font-display-rh text-3xl sm:text-4xl font-semibold tracking-tight text-white">
+                    Every digital capability{" "}
+                    <span className="text-[#939393]">under one technical roof.</span>
+                  </h2>
+                </div>
+                <p className="text-sm text-[#A1A1AA] max-w-md leading-relaxed">
+                  Including specialised migrations, paid-ads CRO landing pages, speed audits, and UK regional hubs not expanded on the homepage.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {ALL_ENGINEERING_DIRECTORY.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="rh-edge-orbit-card is-lime rounded-2xl border border-[#242428] bg-[#141416] p-6 flex flex-col justify-between gap-3 hover:border-[#BAFF00] transition-colors group"
+                  >
+                    <div className="space-y-2.5">
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="text-[11px] font-mono-tech uppercase tracking-[0.12em] text-[#BAFF00]">
+                          {item.category}
+                        </span>
+                        <ArrowRight className="w-4 h-4 text-[#939393] group-hover:text-[#BAFF00] transition-colors" />
+                      </div>
+                      <h3 className="text-lg font-medium tracking-tight text-white">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+              <div className="pt-4 border-t border-[#1F1F23] flex flex-wrap items-center gap-2.5">
+                <span className="text-[11px] font-mono-tech uppercase tracking-[0.14em] text-[#939393] mr-2">
+                  Regional &amp; Resource Hubs:
+                </span>
+                {REGIONAL_AND_TOOL_HUBS.map((hub) => (
+                  <Link
+                    key={hub.href}
+                    href={hub.href}
+                    className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs border border-[#2A2A30] bg-[#141416] text-[#E4E4E7] hover:border-[#BAFF00] hover:text-[#BAFF00] transition-colors"
+                  >
+                    {hub.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
 
         {/* 4. Live Showcase & Proof Grid (Dark Bento Band) */}
