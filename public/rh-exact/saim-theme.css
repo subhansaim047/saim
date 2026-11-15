@@ -583,3 +583,71 @@
     white-space: normal;
   }
 }
+
+/* Accessibility skip-to-content pill (visible only on keyboard focus) */
+.saim-skip-link {
+  position: fixed;
+  top: -120px;
+  left: 16px;
+  z-index: 99999;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #b5f900;
+  color: #0d0d0d;
+  font-family: var(--_typography---suisse);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: top 0.16s ease;
+}
+
+.saim-skip-link:focus,
+.saim-skip-link:focus-visible {
+  top: 16px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Single-text hover roll inside mega menu (eliminates duplicate HTML link labels) */
+.nav-mega-build a span[data-roll]::after,
+.nav-mega-card span b[data-roll]::after {
+  content: attr(data-roll);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  font-style: normal;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+.nav-mega-build a:hover span[data-roll]::after,
+.nav-mega-build a:focus-visible span[data-roll]::after,
+.nav-mega-card:hover span b[data-roll]::after,
+.nav-mega-card:focus-visible span b[data-roll]::after {
+  transform: translateY(0);
+}
+
+/* Footer freshness & standards attribution */
+.saim-footer-eeat {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #9e9e9e;
+}
+
+.saim-footer-eeat a {
+  color: #d4d4d4;
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 212, 212, 0.35);
+  text-underline-offset: 2px;
+}
+
+.saim-footer-eeat a:hover {
+  color: #b5f900;
+  text-decoration-color: #b5f900;
+}
