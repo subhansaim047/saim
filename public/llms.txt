@@ -65,23 +65,12 @@
 11. [Contact & Fixed-Fee Quotes](https://www.saimdev.site/contact): Project enquiry form and direct WhatsApp connection for fast fixed-price quotes.
 12. [Web Development & Kitchen Tech Blog](https://www.saimdev.site/blogs): In-depth guides on small business web strategy, UK commercial kitchen hygiene, and SFBB compliance.
 
-### Interactive UK Kitchen Tools & Calculators (160+ Free Templates)
-13. [Free UK Kitchen Tools & 160 Templates Hub](https://www.saimdev.site/tools): Free printable food safety templates, checklists, logs, and interactive calculators for UK restaurants and takeaways.
-14. [Natasha's Law PPDS Food Label Generator](https://www.saimdev.site/tools/ppds-label-generator): Interactive Prepacked for Direct Sale (PPDS) label generator that auto-bolds all 14 mandatory UK allergens and exports Avery L7160 A4 sticker sheets.
-15. [Food Allergen Matrix Generator](https://www.saimdev.site/tools/allergen-matrix-generator): Interactive digital allergen matrix generator covering all 14 mandatory UK allergens with print-ready A4 PDF export.
-16. [Commercial Food Cost Calculator](https://www.saimdev.site/tools/food-cost-calculator): Real-time dish ingredient cost calculator with portion cost analysis and target gross profit margin projections.
-17. [Recipe Batch Scaling Calculator](https://www.saimdev.site/tools/recipe-batch-calculator): Commercial catering recipe multiplier and divider that scales ingredient weights and volumes from 4 to 500 portions accurately.
+### Interactive ROI Utility & Kept UK Compliance Guides
+13. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings when switching repeat delivery orders onto a 0% commission direct site.
 
 ### Top Business & Compliance Guides
-18. [Why Every Small Business Needs a Website](https://www.saimdev.site/blog/why-small-business-needs-website): Commercial ROI analysis of custom websites vs social-only presence for UK local businesses.
-19. [Free Website Builders vs Custom Websites: Hidden Costs](https://www.saimdev.site/blog/free-website-for-local-business): Breakdown of platform lock-in, renewal hikes, and SEO limitations of DIY builders.
-20. [50% Off Agency Launch Offer](https://www.saimdev.site/blog/50-percent-off-agency-launch): Details on Saim Dev's fixed-fee introductory packages for UK small businesses.
-21. [Compliant 14-Allergen Matrix Guide](https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants): Step-by-step masterclass on auditing recipes and building an allergen matrix under Natasha's Law.
-22. [Commercial Food Cost Percentage Guide](https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator): How UK restaurants calculate food cost percentage and lock in 70%+ gross margins.
-23. [Commercial Recipe Batch Scaling Guide](https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator): How catering kitchens scale recipes from 10 to 500 portions without taste distortion.
-24. [SFBB Opening & Closing Checklists Guide](https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide): Daily hygiene routine aligned with FSA Safer Food, Better Business standards.
-25. [UK Takeaway HACCP Plan Guide](https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step): Plain-English walkthrough of 7 HACCP principles and hazard analysis for UK food businesses.
-26. [Level 2 Food Hygiene Practice Test & Guide](https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide): Practice questions, temperature rules, and revision guide for UK catering staff.
-27. [5-Star Food Hygiene Rating Checklist](https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist): Comprehensive inspection guide to pass local authority EHO audits with top marks.
-28. [Natasha's Law PPDS Food Labelling Guide](https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide): Complete walkthrough of Pre-Packed for Direct Sale (PPDS) labelling requirements.
-29. [Commercial Kitchen Food Cooling Temperature Guide](https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide): UK 90-minute cooling rule, blast chilling, and danger zone temperature limits.
+14. [Why Every Small Business Needs a Website](https://www.saimdev.site/blog/why-small-business-needs-website): Commercial ROI analysis of custom websites vs social-only presence for UK & US local businesses.
+15. [Free Website Builders vs Custom Websites: Hidden Costs](https://www.saimdev.site/blog/free-website-for-local-business): Breakdown of platform lock-in, renewal hikes, and SEO limitations of DIY builders.
+16. [50% Off Agency Launch Offer](https://www.saimdev.site/blog/50-percent-off-agency-launch): Details on Saim Dev's fixed-fee introductory packages for small businesses.
+17. [5-Star Food Hygiene Rating Checklist](https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist): Comprehensive UK EHO inspection preparation checklist covering food handling, cleanliness, and SFBB management records.
+18. [Natasha's Law PPDS Food Labelling Guide](https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide): Complete walkthrough of Prepacked for Direct Sale (PPDS) ingredient lists, compound ingredients, and 14-allergen highlighting rules.

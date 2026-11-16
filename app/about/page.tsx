@@ -148,11 +148,11 @@ export default function AboutPage() {
               href: "/demos",
             },
             {
-              label: "160+ Free UK Tools",
-              tag: "Community",
-              tagValue: "Compliance Suite",
-              summary: "Open-access UK allergen matrix, PPDS label PDF maker, and SFBB safety templates.",
-              href: "/tools",
+              label: "Commission Calculator",
+              tag: "ROI Tool",
+              tagValue: "0% Fee Audit",
+              summary: "Calculate exact monthly delivery-app commission savings vs a £250 direct ordering website.",
+              href: "/tools/commission-savings-calculator",
             },
           ]}
         />
@@ -253,16 +253,16 @@ export default function AboutPage() {
 
               <div className="pt-6 border-t border-white/10">
                 <span className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#939393] block mb-2">
-                  FREE INDUSTRY UTILITIES
+                  FREE HOSPITALITY ROI UTILITY
                 </span>
                 <p className="text-[13px] text-[#B3B3B3] leading-[1.55] mb-4">
-                  Free browser-based kitchen tools &amp; printable allergen matrices aligned with UK FSA guidance.
+                  Calculate exact delivery-app savings and inspect our 5-star UK Food Hygiene &amp; Natasha&apos;s Law compliance guides.
                 </p>
                 <Link
-                  href="/tools"
+                  href="/tools/commission-savings-calculator"
                   className="inline-flex items-center gap-2 text-xs font-medium bg-[#BAFF00] text-[#0D0D0D] px-4 py-2.5 rounded-full hover:brightness-95 transition-all"
                 >
-                  <span>Explore Kitchen Tools Hub</span>
+                  <span>Run Commission Calculator</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

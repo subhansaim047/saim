@@ -511,10 +511,10 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   <li>
                     <Link
                       prefetch={false}
-                      href="/tools"
+                      href="/tools/commission-savings-calculator"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
-                      160+ Free UK Tools
+                      Commission Calculator
                     </Link>
                   </li>
                 </ul>
@@ -729,11 +729,11 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
           </Link>
           <Link
             prefetch={false}
-            href="/tools"
+            href="/tools/commission-savings-calculator"
             onClick={() => setMobileOpen(false)}
             className="text-[30px] font-medium tracking-[-0.8px] py-1.5 text-white"
           >
-            Free UK Tools
+            Commission Calculator
           </Link>
         </nav>
 

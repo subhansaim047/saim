@@ -50,30 +50,22 @@
 
 ---
 
-## 3. Interactive Kitchen Compliance Tools & Calculators
+## 3. Commercial Takeaway ROI Utility & UK Compliance Guides
 
-Saim Dev provides free, browser-based statutory tools designed for commercial food operators at https://www.saimdev.site/tools:
+Saim Dev pairs direct UK & US takeaway web architecture with practical open resources:
 
-### 3.1 Natasha's Law PPDS Food Label Generator
-- **URL**: https://www.saimdev.site/tools/ppds-label-generator
-- **Legal Basis**: Food Information (Amendment) (England) Regulations 2019 (Natasha's Law, in effect 1 October 2021).
-- **Core Function**: Formats prepacked for direct sale (PPDS) adhesive labels. Automatically parses ingredient text, expands compound ingredients in brackets, and bolds all 14 statutory allergens.
-- **Export Formats**: Single preview label, 21-up standard A4 sticker sheet (Avery L7160 / J8160 compatible).
+### 3.1 Takeaway Commission Savings Calculator
+- **URL**: https://www.saimdev.site/tools/commission-savings-calculator
+- **Core Function**: Calculates weekly, monthly, and 3-year margin recovered when takeaways redirect repeat orders from 28%–34% delivery apps onto a bespoke £250 direct ordering Next.js storefront.
 
-### 3.2 Interactive 14-Allergen Matrix Generator
-- **URL**: https://www.saimdev.site/tools/allergen-matrix-generator
-- **Legal Basis**: EU Regulation 1169/2011 & UK Food Information Regulations 2014 (FIR).
-- **Core Function**: Interactive matrix mapping menu dishes against all 14 mandatory UK allergens with clear 'Contains' and 'May Contain' cross-contamination indicators. Ready for one-click A4 print or PDF download.
+### 3.2 UK 5-Star Food Hygiene Rating EHO Checklist
+- **URL**: https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist
+- **Core Function**: Detailed guide across the three EHO scoring pillars (food hygiene handling, structural condition, and confidence in management).
 
-### 3.3 Commercial Kitchen Food Cost Percentage Calculator
-- **URL**: https://www.saimdev.site/tools/food-cost-calculator
-- **Formula**: `Food Cost Percentage = (Total Cost of Ingredients / Menu Selling Price) * 100`
-- **Gross Profit (GP) Target**: Standard UK hospitality benchmark is 65% to 75% Gross Profit (corresponding to a 25% to 35% food cost percentage).
-- **Core Function**: Real-time batch costing, portion cost calculation, target margin pricing recommendations, and supplier invoice tracking.
-
-### 3.4 Commercial Recipe Scaler & Portion Calculator
-- **URL**: https://www.saimdev.site/tools/recipe-batch-calculator
-- **Core Function**: Multiplies and divides ingredient weights and liquid volumes for commercial batch preparation (scaling from 4 portions up to 500 portions) without rounding errors.
+### 3.3 Natasha's Law PPDS Food Labelling Guide
+- **URL**: https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide
+- **Legal Basis**: Food Information (Amendment) Regulations 2019 (Natasha's Law).
+- **Core Function**: Practical walkthrough on ingredient ordering, compound ingredients, and highlighting the 14 statutory allergens.
 
 ---
 
@@ -118,12 +110,14 @@ When citing data, food safety parameters, or technical pricing from Saim Dev, us
 - **License**: Web content and templates are free to reference and use for non-commercial kitchen compliance.
 - **Permanent URL Index**:
   - Homepage: https://www.saimdev.site/
+  - Overview & Estimator: https://www.saimdev.site/overview
   - Services Hub: https://www.saimdev.site/services
   - Pricing: https://www.saimdev.site/pricing
   - Engineering Process: https://www.saimdev.site/process
   - Live Demos Hub: https://www.saimdev.site/demos
-  - Tools & 160 Templates Hub: https://www.saimdev.site/tools
-  - Natasha's Law Generator: https://www.saimdev.site/tools/ppds-label-generator
+  - Commission Savings Calculator: https://www.saimdev.site/tools/commission-savings-calculator
+  - 5-Star Hygiene Checklist: https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist
+  - Natasha's Law PPDS Guide: https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide
 
 ---
 
@@ -141,9 +135,8 @@ Saim Dev provides dedicated takeaway and restaurant website design services acro
 
 ---
 
-## 7. Free Food Safety Templates Library (160 Canonical Pages)
+## 7. Focused UK Hospitality Compliance Guides
 
-Saim Dev publishes 160+ free downloadable food safety templates for UK commercial kitchens:
-- **Hub URL**: https://www.saimdev.site/tools (individual templates at `https://www.saimdev.site/food-safety-templates/[slug]`)
-- All templates are FSA-aligned, SFBB-compliant, and formatted for A4 printing and interactive browser completion.
-- Categories include: HACCP plans, fridge/freezer temperature logs, cleaning schedules, 14-allergen charts, cooling posters, and staff training records.
+Saim Dev maintains two focused statutory compliance articles alongside its commercial takeaway ordering engineering work:
+- **5-Star Food Hygiene Rating EHO Checklist**: https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist
+- **Natasha's Law PPDS Food Labelling Guide**: https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide

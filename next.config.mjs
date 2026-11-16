@@ -134,58 +134,70 @@ const nextConfig = {
         destination: '/hq-leathercon/:path*',
         permanent: true,
       },
-      // 1. Hub Canonicalization
+      // Consolidated Redirects: Removed 160 Templates, Food-Safety Calculators & Legacy Posts -> Kept Guides / ROI Calculator
       {
-        source: '/food-safety-templates',
-        destination: '/tools',
-        permanent: true,
-      },
-      // 2. Cooling historical aliases consolidation
-      {
-        source: '/food-safety-templates/two-stage-cooling-method',
-        destination: '/food-safety-templates/food-cooling-poster',
+        source: '/tools',
+        destination: '/tools/commission-savings-calculator',
         permanent: true,
       },
       {
-        source: '/food-safety-templates/cooling-food-methods-poster',
-        destination: '/food-safety-templates/food-cooling-poster',
+        source: '/tools/food-cost-calculator',
+        destination: '/tools/commission-savings-calculator',
         permanent: true,
       },
       {
-        source: '/food-safety-templates/cooling-food-methods',
-        destination: '/food-safety-templates/food-cooling-poster',
+        source: '/tools/recipe-batch-calculator',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
         permanent: true,
       },
       {
-        source: '/food-safety-templates/two-stage-cooling',
-        destination: '/food-safety-templates/food-cooling-poster',
-        permanent: true,
-      },
-      // 3. MERGE near-duplicate pages consolidation
-      // 4. Hub Cluster link alias fallbacks & missing variants
-      {
-        source: '/food-safety-templates/fridge-temperature-log',
-        destination: '/food-safety-templates/fridge-temperature-record-sheet-pdf',
+        source: '/tools/ppds-label-generator',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
         permanent: true,
       },
       {
-        source: '/food-safety-templates/freezer-temperature-log',
-        destination: '/food-safety-templates/freezer-temperature-chart',
+        source: '/tools/allergen-matrix-generator',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
         permanent: true,
       },
       {
-        source: '/food-safety-templates/opening-closing-checklist',
-        destination: '/food-safety-templates/opening-and-closing-checklist-template',
+        source: '/tools/food-allergen-chart',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
         permanent: true,
       },
       {
-        source: '/food-safety-templates/chopping-board-guide',
-        destination: '/food-safety-templates/chopping-board-colour-chart',
+        source: '/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
         permanent: true,
       },
       {
-        source: '/food-safety-templates/handwashing-poster',
-        destination: '/food-safety-templates/hand-washing-poster',
+        source: '/blog/commercial-kitchen-food-cooling-temperature-guide',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+        permanent: true,
+      },
+      {
+        source: '/blog/mastering-food-cost-percentage-commercial-kitchen-calculator',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-scale-recipes-commercial-catering-batch-calculator',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+        permanent: true,
+      },
+      {
+        source: '/blog/sfbb-daily-kitchen-opening-closing-checklist-guide',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-write-haccp-plan-uk-food-business-step-by-step',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+        permanent: true,
+      },
+      {
+        source: '/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
         permanent: true,
       },
       {
@@ -193,14 +205,45 @@ const nextConfig = {
         destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
         permanent: true,
       },
+      // Allergen & Natasha template slugs -> Kept Natasha's Law PPDS Guide (before catch-all)
       {
-        source: '/tools/food-allergen-chart',
-        destination: '/food-safety-templates/food-allergen-chart',
+        source: '/food-safety-templates/natashas-law',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
         permanent: true,
       },
       {
-        source: '/food-safety-templates/delivery-intake-log',
-        destination: '/food-safety-templates/delivery-log',
+        source: '/food-safety-templates/food-allergen-chart',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/allergy-matrix',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/allergen-poster',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/allergen-control-sop',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/food-allergy-warning',
+        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/:path*',
+        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
         permanent: true,
       },
     ];

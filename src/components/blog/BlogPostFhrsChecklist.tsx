@@ -110,10 +110,10 @@ export const BlogPostFhrsChecklist: React.FC = () => {
           <span>Back to Articles</span>
         </Link>
         <Link
-          href="/tools"
+          href="/blog/natashas-law-ppds-food-labelling-guide"
           className="text-xs bg-primary/10 border border-primary/20 text-primary px-3 py-1.5 rounded-full font-mono hover:bg-primary/20 transition-all"
         >
-          Explore Free Kitchen Tools
+          Natasha&apos;s Law PPDS Guide
         </Link>
       </header>
 
@@ -185,7 +185,7 @@ export const BlogPostFhrsChecklist: React.FC = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary font-bold">•</span>
-                <span><strong>Free Daily Checklists:</strong> Use our free digital templates for <Link href="/food-safety-templates/daily-cleaning-schedule" className="text-primary underline font-medium">Daily Cleaning Schedules</Link> and <Link href="/food-safety-templates/fridge-temperature-record-sheet-pdf" className="text-primary underline font-medium">Fridge Temperature Logs</Link>.</span>
+                <span><strong>Compliance &amp; Online Ordering:</strong> Combine EHO readiness with our <Link href="/blog/natashas-law-ppds-food-labelling-guide" className="text-primary underline font-medium">Natasha&apos;s Law PPDS Labelling Guide</Link> and <Link href="/services/takeaway-web-design" className="text-primary underline font-medium">0% Commission Takeaway Websites</Link>.</span>
               </li>
             </ul>
           </div>
@@ -606,77 +606,53 @@ export const BlogPostFhrsChecklist: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
               <Link
-                href="/tools/ppds-label-generator"
+                href="/blog/natashas-law-ppds-food-labelling-guide"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-amber-400/40 transition-all flex items-center justify-between group"
               >
                 <div>
-                  <div className="text-[10px] font-mono text-amber-400 font-bold uppercase">Interactive Tool</div>
-                  <span className="text-xs font-semibold text-white group-hover:text-amber-300 transition-colors">PPDS Label Maker</span>
+                  <div className="text-[10px] font-mono text-amber-400 font-bold uppercase">Compliance Guide</div>
+                  <span className="text-xs font-semibold text-white group-hover:text-amber-300 transition-colors">Natasha&apos;s Law PPDS Guide</span>
                 </div>
                 <ArrowRight className="w-4 h-4 text-amber-400 shrink-0" />
               </Link>
 
               <Link
-                href="/tools/allergen-matrix-generator"
-                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-orange-400/40 transition-all flex items-center justify-between group"
-              >
-                <div>
-                  <div className="text-[10px] font-mono text-orange-400 font-bold uppercase">Interactive Tool</div>
-                  <span className="text-xs font-semibold text-white group-hover:text-orange-300 transition-colors">14 Allergen Matrix</span>
-                </div>
-                <ArrowRight className="w-4 h-4 text-orange-400 shrink-0" />
-              </Link>
-
-              <Link
-                href="/tools/food-cost-calculator"
+                href="/tools/commission-savings-calculator"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-emerald-400/40 transition-all flex items-center justify-between group"
               >
                 <div>
-                  <div className="text-[10px] font-mono text-emerald-400 font-bold uppercase">Interactive Tool</div>
-                  <span className="text-xs font-semibold text-white group-hover:text-emerald-300 transition-colors">Food Cost Calculator</span>
+                  <div className="text-[10px] font-mono text-emerald-400 font-bold uppercase">ROI Utility</div>
+                  <span className="text-xs font-semibold text-white group-hover:text-emerald-300 transition-colors">Commission Savings Audit</span>
                 </div>
                 <ArrowRight className="w-4 h-4 text-emerald-400 shrink-0" />
               </Link>
 
               <Link
-                href="/food-safety-templates/opening-and-closing-checklist-template"
+                href="/services/takeaway-web-design"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
-                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">Opening &amp; Closing Checklist</span>
-                <ArrowRight className="w-4 h-4 text-primary shrink-0" />
-              </Link>
-
-              <Link
-                href="/food-safety-templates/fridge-temperature-record-sheet-pdf"
-                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
-              >
-                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">Fridge Temperature Sheet</span>
-                <ArrowRight className="w-4 h-4 text-primary shrink-0" />
-              </Link>
-
-              <Link
-                href="/food-safety-templates/haccp-plan-builder"
-                className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
-              >
-                <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">HACCP Plan Builder</span>
+                <div>
+                  <div className="text-[10px] font-mono text-primary font-bold uppercase">Direct Ordering</div>
+                  <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">0% Commission Takeaway Site</span>
+                </div>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
             </div>
 
             <div className="pt-2 flex flex-wrap gap-3">
               <Link
-                href="/tools"
+                href="/tools/commission-savings-calculator"
                 className="inline-flex items-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs px-4 py-2 rounded-full transition-all"
               >
-                <span>Return to All Kitchen Tools</span>
+                <span>Open Commission Savings Calculator</span>
               </Link>
               <Link
                 href="/blogs"
                 className="inline-flex items-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs px-4 py-2 rounded-full transition-all"
               >
-                <span>All Food Safety Blog Guides</span>
+                <span>All Knowledge Articles</span>
               </Link>
             </div>
           </section>

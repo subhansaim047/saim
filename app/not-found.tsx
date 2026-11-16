@@ -64,7 +64,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="/tools"
+              href="/tools/commission-savings-calculator"
               className="p-4 rounded-xl bg-white/[0.04] border border-white/10 hover:border-primary/40 hover:bg-white/[0.07] transition-all group"
             >
               <div className="flex items-center gap-3">
@@ -73,9 +73,9 @@ export default function NotFound() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-white group-hover:text-primary transition-colors">
-                    Free Kitchen Tools
+                    Commission Calculator
                   </div>
-                  <div className="text-xs text-white/50">Allergens, costs &amp; recipes</div>
+                  <div className="text-xs text-white/50">Takeaway savings ROI audit</div>
                 </div>
               </div>
             </Link>

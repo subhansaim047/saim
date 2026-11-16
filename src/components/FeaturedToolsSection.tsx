@@ -27,37 +27,37 @@ interface FeaturedTool {
 
 const FEATURED_TOOLS: FeaturedTool[] = [
   {
-    slug: "ppds-label-generator",
-    href: "/tools/ppds-label-generator",
-    title: "Natasha's Law PPDS Label Maker",
-    tag: "PPDS Food Labelling",
-    desc: "Interactive food label generator with automated 14-allergen bolding, expiry dating, and A4 sticker sheet printing.",
-    icon: Tag,
+    slug: "commission-savings-calculator",
+    href: "/tools/commission-savings-calculator",
+    title: "Takeaway Commission Calculator",
+    tag: "Margin & ROI Utility",
+    desc: "Model how much profit your kitchen retains each year by shifting repeat orders onto a 0% commission direct site.",
+    icon: Calculator,
     color: "blue",
     glowColor: "from-[#2F6CE1]/15",
-    highlights: ["Auto 14-Allergen Bolding", "1.2mm x-Height Font Scale", "A4 Sheet Sticker Print"],
+    highlights: ["Just Eat / Deliveroo Math", "3-Year Cash Recovery", "£250 Direct Payback"],
   },
   {
-    slug: "allergen-matrix-generator",
-    href: "/tools/allergen-matrix-generator",
-    title: "14 Food Allergen Matrix & Chart",
-    tag: "Allergen Management",
-    desc: "Interactive allergen lookup matrix and print-ready PDF export with automated ingredient scanning and takeaway presets.",
+    slug: "uk-food-hygiene-rating-scheme-5-star-checklist",
+    href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+    title: "5-Star Food Hygiene Checklist",
+    tag: "UK EHO Compliance Guide",
+    desc: "Practical UK inspection checklist covering food hygiene handling, premises condition, and management scoring.",
     icon: ShieldAlert,
     color: "indigo",
     glowColor: "from-[#1E4EC4]/15",
-    highlights: ["Auto-Scan 14 Allergens", "Instant UK Cuisine Presets", "CSV & A4 PDF Export"],
+    highlights: ["3 EHO Scoring Pillars", "0–5 Rating Breakdown", "UK Kitchen Readiness"],
   },
   {
-    slug: "food-cost-calculator",
-    href: "/tools/food-cost-calculator",
-    title: "Commercial Food Cost Calculator",
-    tag: "Kitchen Economics",
-    desc: "Real-time portion cost calculator featuring UK 20% VAT stripping and Just Eat / Deliveroo commission buffers.",
-    icon: Calculator,
+    slug: "natashas-law-ppds-food-labelling-guide",
+    href: "/blog/natashas-law-ppds-food-labelling-guide",
+    title: "Natasha's Law PPDS Labelling Guide",
+    tag: "UK Food Labelling Law",
+    desc: "Step-by-step walkthrough on Prepacked for Direct Sale ingredients, 14-allergen bolding, and compliance.",
+    icon: Tag,
     color: "sky",
     glowColor: "from-[#5B92F5]/15",
-    highlights: ["UK 20% VAT Stripping", "Deliveroo / Just Eat Buffer", "70%+ Margin Protection"],
+    highlights: ["14 Allergen Rules", "Compound Ingredients", "Packaging Compliance"],
   },
 ];
 
@@ -89,27 +89,27 @@ export const FeaturedToolsSection = () => {
                 className="saim-bubble-pill inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFF5FF] border border-[#2F6CE1]/25 text-[#1D4ED8] text-xs font-mono font-semibold uppercase tracking-widest mb-4"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2F6CE1] animate-pulse" />
-                <span>160 Live Tools • Engineering Capability Proof</span>
+                <span>Live Utilities • Engineering Capability Proof</span>
               </SoapBubbleSurface>
               <h2
                 className="font-heading text-[#020612] text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4"
                 style={{ letterSpacing: "-0.03em" }}
               >
-                160+ Production Web Tools &amp; <span className="text-[#2F6CE1]">Interactive Applications</span>
+                Production Web Tools &amp; <span className="text-[#2F6CE1]">UK Compliance Guides</span>
               </h2>
               <p className="text-[#020612]/70 text-sm sm:text-base leading-relaxed font-normal">
-                We don&apos;t just build marketing pages — we engineer complex, high-performance web software. Browse our library of 160 active calculators, automated business systems, and compliance tools running live on saimdev.site.
+                We don&apos;t just build marketing pages — we engineer interactive calculators and practical compliance guides designed to protect margins and speed for UK &amp; US hospitality businesses.
               </p>
             </div>
 
             <div className="shrink-0 hidden md:block">
               <ReactDropButton
                 variant="glass"
-                href="/tools"
+                href="/tools/commission-savings-calculator"
                 className="h-[44px]"
                 innerClassName="px-5 text-xs font-mono font-bold gap-2 group"
               >
-                <span>Explore All Tools &amp; Templates</span>
+                <span>Open Commission Calculator</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#2F6CE1] transition-transform group-hover:translate-x-1" />
               </ReactDropButton>
             </div>
@@ -198,11 +198,11 @@ export const FeaturedToolsSection = () => {
           <div className="mt-12 sm:mt-14 text-center">
             <ReactDropButton
               variant="primary"
-              href="/tools"
+              href="/tools/commission-savings-calculator"
               className="h-[54px]"
               innerClassName="px-8 text-sm font-bold text-white gap-2.5 group"
             >
-              <span>Explore All 160+ Free Web Tools &amp; Calculators</span>
+              <span>Launch Commission Savings Calculator</span>
               <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1.5" />
             </ReactDropButton>
           </div>

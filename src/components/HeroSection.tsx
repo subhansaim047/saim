@@ -67,7 +67,7 @@ const navItems = [
   { label: "Estimator", href: "#estimator" },
   { label: "Compare", href: "#comparison" },
   { label: "Pricing", href: "#pricing" },
-  { label: "160 Tools", href: "/tools" },
+  { label: "Calculator", href: "/tools/commission-savings-calculator" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];

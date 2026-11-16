@@ -1483,8 +1483,8 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
         label: "Live Client Tools",
         tag: "Proof",
         tagValue: "Interactive UI",
-        summary: "Inspect our live allergen matrix, PPDS label PDF generator, and cost calculators right on site.",
-        href: "/tools",
+        summary: "Inspect our interactive takeaway commission calculator and project scope estimator right on site.",
+        href: "/tools/commission-savings-calculator",
       },
       {
         label: "Auth & RBAC Security",
@@ -1508,11 +1508,11 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
         href: "/pricing",
       },
       {
-        label: "PDF & Data Exports",
+        label: "Interactive Calculators",
         tag: "Workflow",
-        tagValue: "Client-Side / API",
-        summary: "Generate crisp branded labels, invoices, CSVs, and compliance reports straight in browser.",
-        href: "/tools/ppds-label-generator",
+        tagValue: "Client-Side / ROI",
+        summary: "Build custom ROI estimators, quote calculators, invoices, and instant browser tools.",
+        href: "/overview",
       },
     ],
     painPoints: [
@@ -1665,9 +1665,9 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
     industries: [
       {
         industry: "SaaS & Micro-Tool Startups",
-        description: "Subscription utilities, industry compliance calculators, and niche workflow apps.",
-        exampleProject: "PPDS Label Web App",
-        demoUrl: "/tools/ppds-label-generator",
+        description: "Subscription utilities, industry ROI calculators, and niche workflow apps.",
+        exampleProject: "Commission Savings App",
+        demoUrl: "/tools/commission-savings-calculator",
       },
       {
         industry: "B2B Client & Project Portals",
@@ -1676,10 +1676,10 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
         demoUrl: "/demos/studio-dbrickell/index.html",
       },
       {
-        industry: "Hospitality Margin & Compliance Tools",
-        description: "Costing, allergen matrices, and batch scaling tools built cleanly for UK kitchens.",
-        exampleProject: "Recipe Batch Calculator",
-        demoUrl: "/tools/recipe-batch-calculator",
+        industry: "Hospitality Margin Tools",
+        description: "Commission savings and scope estimator utilities built cleanly for UK & US brands.",
+        exampleProject: "Takeaway ROI Calculator",
+        demoUrl: "/tools/commission-savings-calculator",
       },
       {
         industry: "Custom Product Configurators",
@@ -1694,10 +1694,10 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
         demoUrl: "/services/takeaway-web-design-london",
       },
       {
-        industry: "Compliance & Template Marketplaces",
-        description: "Searchable high-volume interactive libraries with printable downloads and category filtering.",
-        exampleProject: "160+ Template Library",
-        demoUrl: "/tools",
+        industry: "Knowledge & Editorial Hubs",
+        description: "Searchable guide libraries paired cleanly with interactive lead calculators.",
+        exampleProject: "UK Guides & Insights",
+        demoUrl: "/blogs",
       },
     ],
     process: [
@@ -1736,20 +1736,20 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
     ],
     caseStudies: [
       {
-        title: "Natasha's Law PPDS Label & Allergen Suite",
+        title: "Takeaway Commission Recovery Simulator",
         category: "Live Production Web App",
-        description: "Working client-side browser application generating compliant UK food labels with all 14 allergens bolded live.",
-        tech: ["React 19", "LocalState", "Print Engine"],
+        description: "Interactive React 19 savings calculator modelling delivery platform commissions vs direct websites.",
+        tech: ["React 19", "LocalState", "Interactive ROI"],
         metrics: "Live on Site",
-        demoUrl: "/tools/ppds-label-generator",
+        demoUrl: "/tools/commission-savings-calculator",
       },
       {
-        title: "Recipe Batch & Commercial Food Costing Engine",
+        title: "Studio Project Scope & Cost Estimator",
         category: "Interactive Calculation App",
-        description: "Real-time unit conversion, VAT stripping, yield waste calculation, and target GP% pricing calculator.",
-        tech: ["TypeScript", "Local Persistence", "Mobile UX"],
+        description: "Real-time scope builder estimating fixed-price Next.js timelines and deliverables transparently.",
+        tech: ["TypeScript", "Interactive State", "Mobile UX"],
         metrics: "Live on Site",
-        demoUrl: "/tools/recipe-batch-calculator",
+        demoUrl: "/overview",
       },
       {
         title: "Bespoke Leather Jacket Product Configurator",
@@ -1927,9 +1927,9 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
     },
     relatedServices: [
       {
-        name: "Live Interactive UK Tools",
-        href: "/tools",
-        desc: "Test working React 19 calculation and label apps we built natively.",
+        name: "Takeaway Commission Calculator",
+        href: "/tools/commission-savings-calculator",
+        desc: "Test working React 19 interactive calculation tools we engineered natively.",
       },
       {
         name: "Next.js eCommerce Stores",

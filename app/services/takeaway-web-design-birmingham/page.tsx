@@ -195,14 +195,14 @@ export default function BirminghamTakeawayWebDesignPage() {
               tag: "Allergens",
               tagValue: "Dairy / Nut Clear",
               summary: "Explicit ghee, almond, mustard, and gluten dish tagging matching Birmingham City Council checks.",
-              href: "/tools/allergen-matrix-generator",
+              href: "/blog/natashas-law-ppds-food-labelling-guide",
             },
             {
-              label: "Free GP% Cost Tool",
+              label: "Commission Calculator",
               tag: "Margin Control",
               tagValue: "Platter Profit",
-              summary: "Price mixed grill and lamb curry trays profitably with our free UK kitchen cost calculator.",
-              href: "/tools/food-cost-calculator",
+              summary: "Calculate savings across £40–£65 mixed grill family orders moving off 30% delivery apps.",
+              href: "/tools/commission-savings-calculator",
             },
           ]}
         />
@@ -272,9 +272,9 @@ export default function BirminghamTakeawayWebDesignPage() {
             "Sutton Coldfield B72–B76",
             "Wolverhampton, West Brom & Coventry",
           ]}
-          toolsHeading="West Midlands Kitchen Costing & Compliance Tools"
-          toolsDescription="Use our free UK Food Cost Percentage calculator to cost mixed grill platters accurately before locking your direct online prices."
-          toolsCtaLabel="Run GP% & Allergen Tools"
+          toolsHeading="West Midlands Commission Recovery Calculator"
+          toolsDescription="Calculate annual savings on Birmingham family platter and Balti delivery orders moving away from 30% app fees."
+          toolsCtaLabel="Run Commission Calculator"
           faqEyebrow="Birmingham Operator FAQ"
           faqHeading="Birmingham Takeaway Website FAQ"
           faqs={birminghamFaqs}
@@ -330,7 +330,7 @@ export default function BirminghamTakeawayWebDesignPage() {
               title: "Midlands LocalBusiness Schema",
               description: "Rich JSON-LD metadata paired with printable SFBB records supporting 5-star Council inspections.",
               tags: ["Birmingham Geo", "FHRS Ready", "SFBB Templates"],
-              href: "/tools",
+              href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
             },
           ]}
         />

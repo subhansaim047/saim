@@ -4,7 +4,7 @@ const siteNavigationSchema = {
   "name": "Main Navigation",
   "hasPart": [
     { "@type": "WebPage", "name": "Services", "url": "https://www.saimdev.site/#services" },
-    { "@type": "WebPage", "name": "Tools", "url": "https://www.saimdev.site/tools" },
+    { "@type": "WebPage", "name": "Commission Calculator", "url": "https://www.saimdev.site/tools/commission-savings-calculator" },
     { "@type": "WebPage", "name": "Demos", "url": "https://www.saimdev.site/demos" },
     { "@type": "WebPage", "name": "Pricing", "url": "https://www.saimdev.site/pricing" },
     { "@type": "WebPage", "name": "Case Studies", "url": "https://www.saimdev.site/case-studies" },

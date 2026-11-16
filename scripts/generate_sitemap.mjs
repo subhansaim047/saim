@@ -1,7 +1,4 @@
 import fs from "fs";
-import path from "path";
-
-const pagePlan = JSON.parse(fs.readFileSync("src/data/page_plan.json", "utf8"));
 
 // Helper function to escape XML entities
 function xmlEscape(str) {
@@ -12,19 +9,6 @@ function xmlEscape(str) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
-}
-
-// Extract template metadata from saim_templates.ts
-const tsContent = fs.readFileSync("src/data/saim_templates.ts", "utf8");
-const equalsIdx = tsContent.indexOf("=", tsContent.indexOf("FOOD_SAFETY_TEMPLATES"));
-const arrayStart = tsContent.indexOf("[", equalsIdx);
-const catIdx = tsContent.indexOf("export const ALL_CATEGORIES");
-const arrayEnd = tsContent.lastIndexOf("];", catIdx);
-const templates = JSON.parse(tsContent.slice(arrayStart, arrayEnd + 1));
-
-const templateMap = {};
-for (const t of templates) {
-  templateMap[t.slug] = t;
 }
 
 // 13 Demo Previews for Google Image Indexing
@@ -131,12 +115,7 @@ const staticPages = [
     ]
   },
   { url: "https://www.saimdev.site/overview", priority: "0.9", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/tools", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/tools/commission-savings-calculator", priority: "0.9", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/tools/ppds-label-generator", priority: "0.9", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/tools/food-cost-calculator", priority: "0.9", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/tools/allergen-matrix-generator", priority: "0.9", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/tools/recipe-batch-calculator", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services/takeaway-web-design", priority: "0.95", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services/takeaway-web-design-london", priority: "0.9", changefreq: "monthly" },
   { url: "https://www.saimdev.site/services/takeaway-web-design-manchester", priority: "0.9", changefreq: "monthly" },
@@ -170,81 +149,15 @@ const staticPages = [
   { url: "https://www.saimdev.site/blog/why-small-business-needs-website", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blog/free-website-for-local-business", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blog/50-percent-off-agency-launch", priority: "0.85", changefreq: "monthly" },
-  {
-    url: "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
-    priority: "0.85",
-    changefreq: "weekly",
-    images: [
-      {
-        loc: "https://www.saimdev.site/templates/posters/template-146.webp",
-        title: "14 Statutory Food Allergens Reference Chart for UK Food Businesses",
-        caption: "Statutory 14 allergens checklist layout for UK commercial kitchens and takeaways"
-      }
-    ]
-  },
-  { url: "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator", priority: "0.85", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator", priority: "0.85", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide", priority: "0.85", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step", priority: "0.85", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide", priority: "0.85", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist", priority: "0.85", changefreq: "weekly" },
-  {
-    url: "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
-    priority: "0.85",
-    changefreq: "weekly",
-    images: [
-      {
-        loc: "https://www.saimdev.site/templates/posters/template-121.webp",
-        title: "UK PPDS Food Allergen Chart and Packaging Reference Guide",
-        caption: "Statutory allergen identification and PPDS packaging label reference layout for UK caterers"
-      }
-    ]
-  },
-  {
-    url: "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide",
-    priority: "0.85",
-    changefreq: "weekly",
-    images: [
-      {
-        loc: "https://www.saimdev.site/templates/charts/template-128.webp",
-        title: "Commercial Kitchen Food Cooling Time and Temperature Curve Chart",
-        caption: "Safe food cooling temperature progression curve for commercial kitchens"
-      }
-    ]
-  },
+  { url: "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/terms", priority: "0.6", changefreq: "monthly" },
   { url: "https://www.saimdev.site/privacy", priority: "0.6", changefreq: "monthly" },
   { url: "https://www.saimdev.site/cookie-policy", priority: "0.6", changefreq: "monthly" },
   { url: "https://www.saimdev.site/disclaimer", priority: "0.6", changefreq: "monthly" },
 ];
 
-// Add only KEEP and IMPROVE pages
-const keepAndImproveSlugs = Object.keys(pagePlan).filter(
-  slug => pagePlan[slug].bucket === "KEEP" || pagePlan[slug].bucket === "IMPROVE"
-);
-
-console.log(`Adding ${keepAndImproveSlugs.length} indexable food-safety templates to sitemap.xml`);
-
-const templateEntries = keepAndImproveSlugs.map(slug => {
-  const tmpl = templateMap[slug];
-  const images = [];
-  if (tmpl && tmpl.imgUrl) {
-    images.push({
-      loc: `https://www.saimdev.site${tmpl.imgUrl}`,
-      title: `${tmpl.title} Template`,
-      caption: `Free printable ${tmpl.title} for UK commercial kitchens and food businesses`
-    });
-  }
-
-  return {
-    url: `https://www.saimdev.site/food-safety-templates/${slug}`,
-    priority: slug === "food-allergen-chart" || slug === "allergy-matrix" ? "0.9" : "0.8",
-    changefreq: "weekly",
-    images
-  };
-});
-
-const allEntries = [...staticPages, ...templateEntries];
+const allEntries = [...staticPages];
 const today = new Date().toISOString().split("T")[0];
 
 function renderUrlEntry(p) {
@@ -269,11 +182,8 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
         http://www.google.com/schemas/sitemap-image/1.1
         http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 
-  <!-- Core Agency & Editorial Pages -->
+  <!-- Core Agency, Commercial Tools & Kept Guides -->
 ${staticPages.map(renderUrlEntry).join("\n")}
-
-  <!-- Verified UK Food Safety Templates (KEEP & IMPROVE Indexable Pages) -->
-${templateEntries.map(renderUrlEntry).join("\n")}
 
 </urlset>
 `;

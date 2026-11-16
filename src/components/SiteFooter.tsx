@@ -419,11 +419,11 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               </li>
               <li>
                 <Link
-                  href="/tools"
+                  href="/blog/uk-food-hygiene-rating-scheme-5-star-checklist"
                   prefetch={false}
                   className="hover:text-white transition-colors"
                 >
-                  160+ Free UK Kitchen Tools
+                  5-Star Hygiene Checklist UK
                 </Link>
               </li>
               <li>

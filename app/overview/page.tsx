@@ -184,10 +184,9 @@ const REGIONAL_AND_TOOL_HUBS = [
   { href: "/services/takeaway-web-design-london", label: "Takeaway Web Design London" },
   { href: "/services/takeaway-web-design-manchester", label: "Takeaway Web Design Manchester" },
   { href: "/services/takeaway-web-design-birmingham", label: "Takeaway Web Design Birmingham" },
-  { href: "/tools", label: "160+ Free UK Kitchen Tools" },
-  { href: "/tools/ppds-label-generator", label: "PPDS Label Generator" },
-  { href: "/tools/allergen-matrix-generator", label: "14 Allergen Matrix" },
-  { href: "/tools/food-cost-calculator", label: "Food Cost GP% Calculator" },
+  { href: "/tools/commission-savings-calculator", label: "Takeaway Commission Calculator" },
+  { href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist", label: "5-Star Food Hygiene Guide" },
+  { href: "/blog/natashas-law-ppds-food-labelling-guide", label: "Natasha's Law PPDS Guide" },
   { href: "/blogs", label: "UK Engineering & Hospitality Guides" },
 ];
 
@@ -301,11 +300,11 @@ export default function StudioOverviewPage() {
               href: "/services/takeaway-web-design",
             },
             {
-              label: "160+ Kitchen Tools",
-              tag: "Open Utility",
-              tagValue: "UK Food Safety",
-              summary: "Live client-side tools covering 14-allergen filters, PPDS labels, GP%, and SFBB templates.",
-              href: "/tools",
+              label: "Commission Calculator",
+              tag: "ROI Tool",
+              tagValue: "0% Fee Audit",
+              summary: "Calculate annual money kept by moving repeat orders off 30% Just Eat & Deliveroo fees.",
+              href: "/tools/commission-savings-calculator",
             },
           ]}
         />
@@ -530,14 +529,14 @@ export default function StudioOverviewPage() {
                 tags: ["Reference Spec", "95+ Target CWV", "Schema"],
               },
               {
-                id: "food-safety-tools",
-                category: "FREE COMPLIANCE TOOLS",
-                title: "Allergen Matrix & SFBB Diary Suite",
+                id: "commission-roi-tool",
+                category: "HOSPITALITY MARGIN UTILITY",
+                title: "Takeaway Commission Savings Calculator",
                 description:
-                  "160+ printable UK food safety checklists, PPDS label makers, and margin calculators with instant browser export.",
-                href: "/tools",
-                metric: "160+ templates",
-                tags: ["UK FSA", "SFBB", "Free Tools"],
+                  "Interactive browser ROI simulator quantifying savings when switching repeat delivery orders onto an owned Next.js site.",
+                href: "/tools/commission-savings-calculator",
+                metric: "£250 Payback",
+                tags: ["0% Commission", "Takeaway ROI", "Free Utility"],
               },
               {
                 id: "tech-profile",
@@ -858,17 +857,17 @@ export default function StudioOverviewPage() {
               >
                 <div className="space-y-2 max-w-2xl">
                   <div className="text-[11px] font-mono-tech uppercase tracking-[0.14em] text-[#666666] font-semibold">
-                    FREE UK HOSPITALITY &amp; FOOD SAFETY SUITE
+                    FREE UK HOSPITALITY TOOLS &amp; GUIDES
                   </div>
                   <h2 className="font-display-rh text-2xl sm:text-4xl font-semibold tracking-tight text-[#0D0D0D]">
-                    Interactive compliance &amp; margin tools — zero login required.
+                    Interactive commission audit &amp; UK compliance guides — zero login required.
                   </h2>
                 </div>
                 <Link
-                  href="/tools"
+                  href="/tools/commission-savings-calculator"
                   className="rh-btn-pill bg-white text-[#0D0D0D] border border-[#CCCCCC] hover:border-[#0D0D0D] px-5 py-2.5 text-xs font-semibold inline-flex items-center gap-2 self-start"
                 >
-                  <span>Open All UK Tools</span>
+                  <span>Run Commission Calculator</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -879,28 +878,28 @@ export default function StudioOverviewPage() {
               >
                 {[
                   {
-                    href: "/tools/allergen-matrix-generator",
-                    title: "Allergen Matrix Generator",
-                    desc: "14 UK statutory allergen chart compliant with Natasha's Law.",
-                    icon: ShieldCheck,
-                  },
-                  {
                     href: "/tools/commission-savings-calculator",
                     title: "Commission Savings Audit",
                     desc: "Calculate annual money recovered leaving 30% delivery apps.",
                     icon: Gauge,
                   },
                   {
-                    href: "/tools",
-                    title: "SFBB & Free UK Kitchen Tools",
-                    desc: "Instant FSA Safer Food Better Business temperature, allergen, and cost logs.",
-                    icon: FileCheck2,
+                    href: "/services/takeaway-web-design",
+                    title: "0% Commission Ordering",
+                    desc: "Owned £250 Next.js takeaway website with 14-allergen filters.",
+                    icon: Wrench,
                   },
                   {
-                    href: "/tools/food-cost-calculator",
-                    title: "Menu Profit & GP Calculator",
-                    desc: "Live dish gross profit margins and menu pricing breakdown.",
-                    icon: Wrench,
+                    href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+                    title: "5-Star Hygiene Checklist",
+                    desc: "Complete UK EHO preparation guide for restaurants & takeaways.",
+                    icon: ShieldCheck,
+                  },
+                  {
+                    href: "/blog/natashas-law-ppds-food-labelling-guide",
+                    title: "Natasha's Law PPDS Guide",
+                    desc: "Statutory ingredients & 14-allergen emphasis rules explained.",
+                    icon: FileCheck2,
                   },
                 ].map((tool) => {
                   const Icon = tool.icon;

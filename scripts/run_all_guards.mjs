@@ -31,12 +31,12 @@ const forbiddenPatterns = [
 ];
 
 const filesToScan = [
-  "src/data/saim_templates.ts",
-  "src/components/FoodSafetyTemplatesPage.tsx",
-  "src/components/TemplateDetailPage.tsx",
-  "app/tools/page.tsx",
-  "app/food-safety-templates/page.tsx",
-  "src/components/tools/AllergenMatrixTool.tsx"
+  "src/components/blog/BlogPostFhrsChecklist.tsx",
+  "src/components/blog/BlogPostNatashasLaw.tsx",
+  "app/tools/commission-savings-calculator/page.tsx",
+  "app/blog/uk-food-hygiene-rating-scheme-5-star-checklist/page.tsx",
+  "app/blog/natashas-law-ppds-food-labelling-guide/page.tsx",
+  "src/components/rh/RhModernSections.tsx"
 ];
 
 for (const file of filesToScan) {
@@ -106,24 +106,29 @@ for (const slug of keepAndImprove) {
 }
 
 // -----------------------------------------------------------------
-// GUARD 4: Sitemap & Noindex Alignment
+// GUARD 4: Sitemap Hygiene (Zero Removed Tools/Templates Leak)
 // -----------------------------------------------------------------
-console.log("\n--- Guard 4: Sitemap & Noindex Alignment ---");
+console.log("\n--- Guard 4: Sitemap & Pruned Hub Alignment ---");
 const sitemapContent = fs.readFileSync("public/sitemap.xml", "utf8");
 
-let noindexLeakInSitemap = 0;
-for (const [slug, plan] of Object.entries(pagePlan)) {
-  const urlEntry = `https://www.saimdev.site/food-safety-templates/${slug}`;
-  if (plan.bucket === "NOINDEX" || plan.bucket === "MERGE") {
-    if (sitemapContent.includes(urlEntry)) {
-      noindexLeakInSitemap++;
-      console.error(`NOINDEX page "${slug}" leaked into sitemap.xml!`);
-    }
-  } else if (plan.bucket === "KEEP" || plan.bucket === "IMPROVE") {
-    assert(sitemapContent.includes(urlEntry), `Indexed page "${slug}" is present in sitemap.xml`);
-  }
+assert(!sitemapContent.includes("/food-safety-templates/"), "Zero /food-safety-templates/ URLs appear in sitemap.xml");
+assert(!sitemapContent.includes("<loc>https://www.saimdev.site/tools</loc>"), "Removed /tools hub does not appear in sitemap.xml");
+for (const removedTool of [
+  "/tools/ppds-label-generator",
+  "/tools/food-cost-calculator",
+  "/tools/allergen-matrix-generator",
+  "/tools/recipe-batch-calculator"
+]) {
+  assert(!sitemapContent.includes(removedTool), `Removed tool ${removedTool} is absent from sitemap.xml`);
 }
-assert(noindexLeakInSitemap === 0, `Zero NOINDEX or MERGE pages appear in sitemap.xml`);
+for (const keptUrl of [
+  "https://www.saimdev.site/overview",
+  "https://www.saimdev.site/tools/commission-savings-calculator",
+  "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+  "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide"
+]) {
+  assert(sitemapContent.includes(keptUrl), `Kept URL "${keptUrl}" is present in sitemap.xml`);
+}
 
 // -----------------------------------------------------------------
 // GUARD 5: Allergen chart demo data safety & UI terminology
@@ -252,7 +257,7 @@ assert(privacyPolicyContent.includes("Information Commissioner's Office") || pri
 // GUARD 11: Static Core Pages Bespoke Metadata Quality
 // -----------------------------------------------------------------
 console.log("\n--- Guard 11: Static Core Pages Bespoke Metadata Quality ---");
-const corePages = ["about", "contact", "cookie-policy", "disclaimer", "privacy", "tools"];
+const corePages = ["about", "contact", "cookie-policy", "disclaimer", "privacy", "tools/commission-savings-calculator"];
 const coreTitles = new Set();
 const coreDescs = new Set();
 

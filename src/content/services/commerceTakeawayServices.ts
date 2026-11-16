@@ -1484,7 +1484,7 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
         tag: "FSA Compliance",
         tagValue: "14 Allergens",
         summary: "Dietary allergen tags per menu dish aligned with UK FSA transparency standards.",
-        href: "/tools/allergen-matrix-generator",
+        href: "/blog/natashas-law-ppds-food-labelling-guide",
       },
       {
         label: "Fixed £250 Package",
@@ -1501,11 +1501,11 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
         href: "/hotbite/index.html",
       },
       {
-        label: "Free Kitchen Tools",
-        tag: "Bonus Utility",
-        tagValue: "PPDS + Costing",
-        summary: "Use our free UK Food Cost Calculator, PPDS Label PDF engine, and 160+ SFBB templates.",
-        href: "/tools/food-cost-calculator",
+        label: "Commission Calculator",
+        tag: "ROI Utility",
+        tagValue: "0% App Fee",
+        summary: "Calculate annual delivery commission savings + read our 5-star Hygiene and Natasha's Law guides.",
+        href: "/tools/commission-savings-calculator",
       },
     ],
     painPoints: [
@@ -1647,7 +1647,7 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
       {
         feature: "Free Built-In UK Compliance Utilities",
         benefit: "Save on Admin Tools",
-        description: "Bookmark our free /tools/commission-savings-calculator, /tools/food-cost-calculator, and 160+ EHO log templates.",
+        description: "Bookmark our free /tools/commission-savings-calculator along with our 5-star UK Hygiene and Natasha's Law guides.",
       },
       {
         feature: "Clean Post-Code Coverage Boundaries",

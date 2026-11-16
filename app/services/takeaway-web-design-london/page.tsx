@@ -163,8 +163,8 @@ export default function LondonTakeawayWebDesignPage() {
             href: "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20London%20takeaway%20website",
           }}
           secondaryCta={{
-            label: "Try 14-Allergen Matrix",
-            href: "/tools/allergen-matrix-generator",
+            label: "Commission Calculator",
+            href: "/tools/commission-savings-calculator",
           }}
           videoType="mobile"
           stripLabel="London Borough Ordering Specs"
@@ -188,7 +188,7 @@ export default function LondonTakeawayWebDesignPage() {
               tag: "FSA Hygiene",
               tagValue: "14 Allergens",
               summary: "Clear dish-level allergen tags aligned with strict London borough environmental inspections.",
-              href: "/tools/allergen-matrix-generator",
+              href: "/blog/natashas-law-ppds-food-labelling-guide",
             },
             {
               label: "Fixed £250 Setup",
@@ -272,9 +272,9 @@ export default function LondonTakeawayWebDesignPage() {
             "Ealing, Acton & W3",
             "Stratford, Barking & IG/E",
           ]}
-          toolsHeading="Free Statutory Tools for London Food Operators"
-          toolsDescription="Download PPDS pre-packed direct sale label makers, allergen charts, and GP% menu pricing tools trusted ahead of council checks."
-          toolsCtaLabel="Open Kitchen Compliance Suite"
+          toolsHeading="Takeaway ROI Calculator & UK Hygiene Guides"
+          toolsDescription="Estimate delivery commission savings cleanly, then review our 5-star EHO hygiene and Natasha's Law PPDS compliance checklists."
+          toolsCtaLabel="Run Commission Calculator"
           faqEyebrow="London Operator Questions"
           faqHeading="London Takeaway Website FAQ"
           faqs={londonFaqs}
@@ -323,7 +323,7 @@ export default function LondonTakeawayWebDesignPage() {
               title: "14-Allergen Menu Search Filter",
               description: "Interactive allergen matrix tagging nuts, gluten, dairy, sesame, and mustard cleanly beside dishes.",
               tags: ["Borough EHO", "FSA Guidance", "Clean Matrix"],
-              href: "/tools/allergen-matrix-generator",
+              href: "/blog/natashas-law-ppds-food-labelling-guide",
             },
             {
               num: "03",

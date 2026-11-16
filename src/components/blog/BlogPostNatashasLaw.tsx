@@ -60,10 +60,10 @@ export const BlogPostNatashasLaw: React.FC = () => {
           <span>return to the Saim Dev blog</span>
         </Link>
         <Link
-          href="/tools/ppds-label-generator"
+          href="/blog/uk-food-hygiene-rating-scheme-5-star-checklist"
           className="text-xs bg-primary/10 border border-primary/20 text-primary px-3 py-1.5 rounded-full font-mono hover:bg-primary/20 transition-all"
         >
-          Free PPDS Label Generator
+          5-Star Hygiene Checklist
         </Link>
       </header>
 
@@ -135,7 +135,7 @@ export const BlogPostNatashasLaw: React.FC = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary font-bold">•</span>
-                <span><strong>Free Digital Generator:</strong> Generate, format, and print compliant adhesive labels instantly using our <Link href="/tools/ppds-label-generator" className="text-primary underline font-medium">Free PPDS Label Generator</Link>.</span>
+                <span><strong>Online Ordering Allergens:</strong> Pair compliant in-store labelling with our <Link href="/services/takeaway-web-design" className="text-primary underline font-medium">Commission-Free Takeaway Ordering Systems</Link> featuring built-in 14-allergen filters and read our <Link href="/blog/uk-food-hygiene-rating-scheme-5-star-checklist" className="text-primary underline font-medium">5-Star Hygiene Checklist</Link>.</span>
               </li>
             </ul>
           </div>
@@ -292,7 +292,7 @@ export const BlogPostNatashasLaw: React.FC = () => {
             </div>
 
             <p className="text-xs text-white/70 pt-1">
-              Allergens must be identified when present as ingredients or sub-ingredients. Explore our free <Link href="/food-safety-templates/food-allergen-chart" className="text-primary hover:underline font-semibold">food allergen chart</Link> and structured <Link href="/food-safety-templates/allergy-matrix" className="text-primary hover:underline font-semibold">14-allergen matrix</Link>.
+              Allergens must be identified when present as ingredients or sub-ingredients. If you also accept remote takeaway orders online, see how our <Link href="/services/takeaway-web-design" className="text-primary hover:underline font-semibold">direct takeaway menus</Link> display all 14 allergens before checkout.
             </p>
           </section>
 
@@ -473,45 +473,42 @@ export const BlogPostNatashasLaw: React.FC = () => {
             </ul>
 
             <p className="text-xs text-white/60">
-              Read our guide on <Link href="/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants" className="text-primary hover:underline font-semibold">how to create a compliant 14-allergen matrix</Link>.
+              Also preparing for council inspections? Review our <Link href="/blog/uk-food-hygiene-rating-scheme-5-star-checklist" className="text-primary hover:underline font-semibold">5-star UK Food Hygiene Rating inspection checklist</Link>.
             </p>
           </section>
 
-          {/* ── SECTION 9: Use the Free PPDS Label Generator ── */}
+          {/* ── SECTION 9: Direct Takeaway Allergen Compliance & Resources ── */}
           <section className="p-6 sm:p-8 rounded-3xl bg-amber-500/10 border border-amber-400/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="space-y-2">
               <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold block">
-                Free Interactive Compliance Tool
+                UK Hospitality Web &amp; Compliance Stack
               </span>
               <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                Use the Free PPDS Label Generator
+                Keep Your 5-Star Rating &amp; Stop Paying 30% App Commissions
               </h2>
               <p className="text-xs sm:text-sm text-white/80 max-w-xl leading-relaxed">
-                Use our <Link href="/tools/ppds-label-generator" className="text-amber-300 font-bold underline hover:text-white transition-colors">free PPDS label generator</Link> to create clean, printable labels with automated 14-allergen bolding for standard adhesive sticker sheets.
-              </p>
-              <p className="text-xs text-white/60 max-w-xl leading-relaxed">
-                While this PPDS labelling tool assists with formatting, food businesses remain responsible for verifying ingredients, supplier data, and official guidance.
+                Alongside accurate supplier and recipe verification, our <Link href="/services/takeaway-web-design" className="text-amber-300 font-bold underline hover:text-white transition-colors">0% commission direct ordering websites</Link> include interactive 14-allergen dish warnings for UK takeaways from £250 fixed.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">
               <Link
-                href="/tools/ppds-label-generator"
+                href="/blog/uk-food-hygiene-rating-scheme-5-star-checklist"
                 className="w-full sm:w-auto text-center bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs sm:text-sm px-6 py-3 rounded-full inline-flex items-center justify-center gap-2 transition-all shadow-lg"
               >
-                <span>Launch PPDS Label Tool</span>
+                <span>5-Star Hygiene Checklist</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/tools"
+                href="/tools/commission-savings-calculator"
                 className="w-full sm:w-auto text-center bg-white/10 hover:bg-white/15 text-white text-xs sm:text-sm font-medium px-5 py-3 rounded-full transition-all border border-white/15"
               >
-                <span>All Kitchen Tools</span>
+                <span>Commission Calculator</span>
               </Link>
               <Link
                 href="/blogs"
                 className="w-full sm:w-auto text-center bg-white/10 hover:bg-white/15 text-white text-xs sm:text-sm font-medium px-5 py-3 rounded-full transition-all border border-white/15"
               >
-                <span>All Food Safety Blog Articles</span>
+                <span>All Guides</span>
               </Link>
             </div>
           </section>

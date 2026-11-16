@@ -1669,10 +1669,10 @@ export const GROWTH_OPTIMIZATION_SERVICES: Record<string, ServicePageData> = {
         demoUrl: "/demos/medspa/index.html",
       },
       {
-        industry: "High-Volume Template & Directory Sites",
-        description: "Programmatic differentiation turning thin templated hubs into genuinely valuable deep guides.",
-        exampleProject: "160+ Template Architecture",
-        demoUrl: "/tools",
+        industry: "Editorial & Resource Hubs",
+        description: "Topic clusters turning operational guides into high-converting service authority.",
+        exampleProject: "Hospitality & Web Guides",
+        demoUrl: "/blogs",
       },
       {
         industry: "D2C & Custom eCommerce Brands",
@@ -1689,8 +1689,8 @@ export const GROWTH_OPTIMIZATION_SERVICES: Record<string, ServicePageData> = {
       {
         industry: "Interactive Free Tool Funnels",
         description: "Linkable browser utilities designed cleanly to attract organic bookmarks and citations.",
-        exampleProject: "Free UK Food Safety Tools",
-        demoUrl: "/tools",
+        exampleProject: "Commission Savings Calculator",
+        demoUrl: "/tools/commission-savings-calculator",
       },
     ],
     process: [
@@ -1737,12 +1737,12 @@ export const GROWTH_OPTIMIZATION_SERVICES: Record<string, ServicePageData> = {
         demoUrl: "/overview",
       },
       {
-        title: "160-Page Compliance Template Hub",
-        category: "Programmatic Content Model",
-        description: "Category-specific statutory data modules eliminating boilerplate overlap across niche food hygiene pages.",
-        tech: ["Dynamic Modules", "Clean Links", "UK Regulatory"],
+        title: "Interactive ROI & Knowledge Hub",
+        category: "Clean Site Architecture",
+        description: "Structured internal linking from calculators and compliance guides directly to commercial service pages.",
+        tech: ["Dynamic Modules", "Clean Links", "UK Schema"],
         metrics: "Live on Site",
-        demoUrl: "/tools",
+        demoUrl: "/tools/commission-savings-calculator",
       },
       {
         title: "UK Local City Service Cluster",

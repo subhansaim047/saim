@@ -269,7 +269,7 @@ export function RhTakeawayCityBody({
               </p>
             </div>
             <Link
-              href="/tools"
+              href="/tools/commission-savings-calculator"
               className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] text-xs font-semibold px-5 py-2.5 inline-flex items-center gap-2 flex-shrink-0 hover:bg-white transition-colors"
             >
               <span>{toolsCtaLabel}</span>

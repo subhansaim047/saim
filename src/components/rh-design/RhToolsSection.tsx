@@ -7,29 +7,29 @@ import { ShieldAlert, Calculator, Tag, ArrowUpRight } from "lucide-react";
 
 const TOOLS = [
   {
-    slug: "allergen-matrix-generator",
-    href: "/tools/allergen-matrix-generator",
-    title: "14-Allergen Matrix Generator",
-    tagline: "Natasha's Law Compliance",
-    desc: "Generate compliant allergen matrices for UK food businesses. Filter all 14 mandatory EU/UK allergens with instant printable PDF output.",
+    slug: "commission-savings-calculator",
+    href: "/tools/commission-savings-calculator",
+    title: "Commission Savings Calculator",
+    tagline: "0% Commission Takeaway ROI",
+    desc: "Calculate annual money kept by shifting repeat delivery orders off Just Eat, Deliveroo & Uber Eats onto a £250 direct site.",
     badge: "Free Utility",
-    icon: ShieldAlert
-  },
-  {
-    slug: "food-cost-calculator",
-    href: "/tools/food-cost-calculator",
-    title: "Commercial Food Cost Calculator",
-    tagline: "Gross Profit & Margins",
-    desc: "Calculate commercial recipe costings, portion control, and food cost percentages to protect your restaurant's bottom line.",
-    badge: "Hospitality Tool",
     icon: Calculator
   },
   {
-    slug: "ppds-label-generator",
-    href: "/tools/ppds-label-generator",
-    title: "PPDS Food Label Generator",
+    slug: "uk-food-hygiene-rating-scheme-5-star-checklist",
+    href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+    title: "5-Star Food Hygiene Checklist",
+    tagline: "UK EHO Inspection Guide",
+    desc: "Complete UK checklist covering food hygiene handling, structural cleanliness, and documented SFBB management.",
+    badge: "Compliance Guide",
+    icon: ShieldAlert
+  },
+  {
+    slug: "natashas-law-ppds-food-labelling-guide",
+    href: "/blog/natashas-law-ppds-food-labelling-guide",
+    title: "Natasha's Law PPDS Guide",
     tagline: "Prepacked for Direct Sale",
-    desc: "Generate professional Natasha's Law compliant labels with highlighted allergen ingredients ready for commercial kitchen thermal printing.",
+    desc: "Practical walkthrough on mandatory ingredients lists, compound ingredients, and 14-allergen highlighting rules.",
     badge: "UK Food Standard",
     icon: Tag
   }
@@ -43,21 +43,21 @@ export const RhToolsSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
             <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#b5f900] mb-3">
-              FREE UTILITIES
+              FREE UTILITIES &amp; GUIDES
             </div>
             <h2
               className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-[1.15]"
               style={{ letterSpacing: "-0.03em" }}
             >
-              Free business &amp; kitchen tools. <br />
+              Hospitality ROI tools &amp; guides. <br />
               <span className="text-[#a1a1a1]">Built by Saim Dev for UK commercial operators.</span>
             </h2>
           </div>
           <Link
-            href="/tools"
+            href="/tools/commission-savings-calculator"
             className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#b5f900] hover:underline"
           >
-            <span>View All Kitchen Tools</span>
+            <span>Open Commission Calculator</span>
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>

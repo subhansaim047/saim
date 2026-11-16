@@ -195,7 +195,7 @@ export default function ManchesterTakeawayWebDesignPage() {
               tag: "FSA Hygiene",
               tagValue: "14 Allergens",
               summary: "Built-in dietary warnings matching Manchester City Council food inspection readiness.",
-              href: "/tools/allergen-matrix-generator",
+              href: "/blog/natashas-law-ppds-food-labelling-guide",
             },
             {
               label: "One-Time £250 Cost",
@@ -272,9 +272,9 @@ export default function ManchesterTakeawayWebDesignPage() {
             "Stockport & Cheadle SK1–SK8",
             "Bury, Bolton, Oldham & Wigan",
           ]}
-          toolsHeading="Manchester Food Prep & Recipe Scaling Calculators"
-          toolsDescription="Scale overnight curry bases, garlic mayo batches, and smash-burger prep accurately with our free UK Recipe Batch & GP% Calculators."
-          toolsCtaLabel="Launch Batch & Margin Tools"
+          toolsHeading="Manchester Direct Margin & Commission Calculator"
+          toolsDescription="Model how much cash your Greater Manchester kitchen saves each month by moving repeat orders onto a £250 direct website."
+          toolsCtaLabel="Run Commission Calculator"
           faqEyebrow="Manchester Operator Questions"
           faqHeading="Manchester Takeaway Website FAQ"
           faqs={manchesterFaqs}
@@ -323,7 +323,7 @@ export default function ManchesterTakeawayWebDesignPage() {
               title: "14-Allergen Safety Filtering",
               description: "Instant ingredient transparency plus mandatory order allergy check boxes guarding overnight shifts.",
               tags: ["Natasha's Law", "M-Council EHO", "Zero Ambiguity"],
-              href: "/tools/allergen-matrix-generator",
+              href: "/blog/natashas-law-ppds-food-labelling-guide",
             },
             {
               num: "03",
