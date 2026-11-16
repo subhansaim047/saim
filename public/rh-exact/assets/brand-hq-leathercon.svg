@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="184" height="32" viewBox="0 0 184 32" fill="none" role="img" aria-label="HQ Leathercon">
+  <rect x="0.5" y="3" width="26" height="26" rx="6" fill="#0D0D0D"/>
+  <path d="M8.5 9.5V22.5M18.5 9.5V22.5M8.5 16H18.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="21" cy="8.5" r="2.2" fill="#CCFF00"/>
+  <text x="36" y="21.5" fill="#0D0D0D" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="0.06em">HQ LEATHERCON</text>
+</svg>

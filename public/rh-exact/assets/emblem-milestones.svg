@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88" fill="none" role="img" aria-label="Free Concept and 50/50 Milestones">
+  <circle cx="44" cy="44" r="42" fill="#0D0D0D"/>
+  <circle cx="44" cy="44" r="35" stroke="#262626" stroke-width="1.5"/>
+  <path d="M44 21L60 27.5V41.5C60 52.3 53.1 61.3 44 65C34.9 61.3 28 52.3 28 41.5V27.5L44 21Z" fill="#18181B" stroke="#CCFF00" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M36.5 43.2L41.5 48.2L52.2 37.5" stroke="#CCFF00" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="29" y="63" width="30" height="12.5" rx="6.25" fill="#CCFF00"/>
+  <text x="44" y="71.8" text-anchor="middle" fill="#0D0D0D" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="7.8" font-weight="800" letter-spacing="0.04em">50 / 50</text>
+</svg>

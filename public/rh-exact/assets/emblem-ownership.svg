@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88" fill="none" role="img" aria-label="100% Source Code Ownership">
+  <circle cx="44" cy="44" r="42" fill="#0D0D0D"/>
+  <circle cx="44" cy="44" r="35" stroke="#262626" stroke-width="1.5"/>
+  <circle cx="44" cy="44" r="35" stroke="#CCFF00" stroke-width="1.5" stroke-dasharray="14 206" stroke-linecap="round" transform="rotate(-35 44 44)"/>
+  <path d="M31 35L22.5 44L31 53" stroke="#CCFF00" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M57 35L65.5 44L57 53" stroke="#CCFF00" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M47.5 31L40.5 57" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round"/>
+  <rect x="27" y="62" width="34" height="13" rx="6.5" fill="#1F1F23" stroke="#3F3F46" stroke-width="1"/>
+  <text x="44" y="71.2" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="7.8" font-weight="800" letter-spacing="0.06em">100% OWN</text>
+</svg>
