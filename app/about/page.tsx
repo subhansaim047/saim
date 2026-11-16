@@ -1,6 +1,7 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import { RhHeader } from "@/components/rh/RhHeader";
 import {
+  RhConversionBanner,
   RhHeroPinned,
   RhProblemSolutionDeck,
   RhSystemRows,
@@ -387,6 +388,16 @@ export default function AboutPage() {
             href: "/case-studies",
           },
         ]}
+      />
+
+      <RhConversionBanner
+        overline="09 / WORK DIRECTLY WITH THE ENGINEER"
+        title="Ready to build without"
+        titleMuted="agency middlemen?"
+        description="Connect directly with Saim on WhatsApp or via our project form to lock scope, pricing, and your 5–10 day build timeline."
+        primaryLabel="Message Saim on WhatsApp"
+        secondaryLabel="View Pricing Tiers"
+        secondaryHref="/pricing"
       />
       </main>
 

@@ -303,80 +303,82 @@ export default function LondonTakeawayWebDesignPage() {
           ctaHeading="Keep Your London Kitchen Margin at Home"
           ctaSubtitle="Send your flyer photo on WhatsApp for a crisp mobile concept layout, £250 fixed quote, and 4-day turnaround."
           whatsappHref="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20launch%20a%20direct%20London%20takeaway%20website"
-        />
-
-        <RhSystemRows
-          overline="LONDON MENU ARCHITECTURE"
-          title="Built to convert"
-          titleMuted="first-time app diners into site regulars."
-          subtitle="Structured around fast high-street takeaway collections, meal-deal combos, and clean postcode dispatch."
-          rows={[
-            {
-              num: "01",
-              title: "Click & Collect Commuter Promos",
-              description: "Show automated 10% collection perks above delivery prices so local pedestrians skip delivery delays cleanly.",
-              tags: ["Zone 1–6", "Express Pickup", "High Margin"],
-              href: "/hotbite/index.html",
-            },
-            {
-              num: "02",
-              title: "14-Allergen Menu Search Filter",
-              description: "Interactive allergen matrix tagging nuts, gluten, dairy, sesame, and mustard cleanly beside dishes.",
-              tags: ["Borough EHO", "FSA Guidance", "Clean Matrix"],
-              href: "/blog/natashas-law-ppds-food-labelling-guide",
-            },
-            {
-              num: "03",
-              title: "Stripe Apple Pay & WhatsApp Docket",
-              description: "Accept cards directly via Stripe (£390 tier) or dispatch formatted cash-on-delivery tickets cleanly (£250).",
-              tags: ["0% App Commission", "Direct Receipts", "Own Domain"],
-              href: "/pricing",
-            },
-          ]}
-        />
-
-        <RhProcessCarousel
-          overline="LONDON LAUNCH SPRINT"
-          title="From paper flyer"
-          titleMuted="to weekend direct trading."
-          stagesSummaryCount="4"
-          stagesSummaryTitle="Sprints"
-          stagesSummaryText="Zero manual menu entry — snap photos of your London leaflet and we digitise the rest."
-          stages={[
-            {
-              stage: "01",
-              duration: "Day 1",
-              title: "Leaflet Capture & Postcode Plan",
-              description: "Review London delivery zones, collection timings, spicy modifiers, and mandatory allergen details.",
-              deliverables: ["Borough Matrix", "Full Dish JSON", "Fixed Scope"],
-            },
-            {
-              stage: "02",
-              duration: "Days 2–3",
-              title: "Tube-Speed Mobile Ordering UI",
-              description: "Build crisp dark menu layout with instant +/- basket drawers optimised for iOS & Android.",
-              deliverables: ["Thumb Navigation", "Combo Modifiers", "Staging Preview"],
-            },
-            {
-              stage: "03",
-              duration: "Day 4",
-              title: "A6 Flyer QR Code & Docket Tests",
-              description: "Export high-resolution print QR bag-stuffer graphics and verify live test tickets cleanly.",
-              deliverables: ["Print QR Vector", "Ticket Format", "Mobile Trace"],
-            },
-            {
-              stage: "04",
-              duration: "Day 5",
-              title: "Domain Cutover & Maps Integration",
-              description: "Wire your Google Business Profile Order Direct link onto your new London domain.",
-              deliverables: [".co.uk Routing", "GBP Order Link", "Repo Ownership"],
-            },
-          ]}
-          quote="Reference London Scenario: Moving just 35 weekly borough repeat orders from 30% apps onto an owned QR website saves over £1,100 a month on typical £28 baskets."
-          author="London Direct-Order Model"
-          role="Zone 2 Takeaway Blueprint"
-          ctaHref="/contact"
-          ctaLabel="Start London Build"
+          architectureSection={
+            <RhSystemRows
+              overline="04 / LONDON MENU ARCHITECTURE"
+              title="Built to convert"
+              titleMuted="first-time app diners into site regulars."
+              subtitle="Structured around fast high-street takeaway collections, meal-deal combos, and clean postcode dispatch."
+              rows={[
+                {
+                  num: "01",
+                  title: "Click & Collect Commuter Promos",
+                  description: "Show automated 10% collection perks above delivery prices so local pedestrians skip delivery delays cleanly.",
+                  tags: ["Zone 1–6", "Express Pickup", "High Margin"],
+                  href: "/hotbite/index.html",
+                },
+                {
+                  num: "02",
+                  title: "14-Allergen Menu Search Filter",
+                  description: "Interactive allergen matrix tagging nuts, gluten, dairy, sesame, and mustard cleanly beside dishes.",
+                  tags: ["Borough EHO", "FSA Guidance", "Clean Matrix"],
+                  href: "/blog/natashas-law-ppds-food-labelling-guide",
+                },
+                {
+                  num: "03",
+                  title: "Stripe Apple Pay & WhatsApp Docket",
+                  description: "Accept cards directly via Stripe (£390 tier) or dispatch formatted cash-on-delivery tickets cleanly (£250).",
+                  tags: ["0% App Commission", "Direct Receipts", "Own Domain"],
+                  href: "/pricing",
+                },
+              ]}
+            />
+          }
+          processSection={
+            <RhProcessCarousel
+              overline="06 / LONDON LAUNCH SPRINT"
+              title="From paper flyer"
+              titleMuted="to weekend direct trading."
+              stagesSummaryCount="4"
+              stagesSummaryTitle="Sprints"
+              stagesSummaryText="Zero manual menu entry — snap photos of your London leaflet and we digitise the rest."
+              stages={[
+                {
+                  stage: "01",
+                  duration: "Day 1",
+                  title: "Leaflet Capture & Postcode Plan",
+                  description: "Review London delivery zones, collection timings, spicy modifiers, and mandatory allergen details.",
+                  deliverables: ["Borough Matrix", "Full Dish JSON", "Fixed Scope"],
+                },
+                {
+                  stage: "02",
+                  duration: "Days 2–3",
+                  title: "Tube-Speed Mobile Ordering UI",
+                  description: "Build crisp dark menu layout with instant +/- basket drawers optimised for iOS & Android.",
+                  deliverables: ["Thumb Navigation", "Combo Modifiers", "Staging Preview"],
+                },
+                {
+                  stage: "03",
+                  duration: "Day 4",
+                  title: "A6 Flyer QR Code & Docket Tests",
+                  description: "Export high-resolution print QR bag-stuffer graphics and verify live test tickets cleanly.",
+                  deliverables: ["Print QR Vector", "Ticket Format", "Mobile Trace"],
+                },
+                {
+                  stage: "04",
+                  duration: "Day 5",
+                  title: "Domain Cutover & Maps Integration",
+                  description: "Wire your Google Business Profile Order Direct link onto your new London domain.",
+                  deliverables: [".co.uk Routing", "GBP Order Link", "Repo Ownership"],
+                },
+              ]}
+              quote="Reference London Scenario: Moving just 35 weekly borough repeat orders from 30% apps onto an owned QR website saves over £1,100 a month on typical £28 baskets."
+              author="London Direct-Order Model"
+              role="Zone 2 Takeaway Blueprint"
+              ctaHref="/contact"
+              ctaLabel="Start London Build"
+            />
+          }
         />
       </main>
 

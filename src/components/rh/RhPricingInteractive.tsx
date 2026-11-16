@@ -7,6 +7,7 @@ import { ArrowRight, ArrowUpRight, CheckCircle2, Plus } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RhHeader } from "@/components/rh/RhHeader";
 import {
+  RhConversionBanner,
   RhHeroPinned,
   RhOdometerNumber,
   RhProcessCarousel,
@@ -605,6 +606,15 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
           </div>
         </div>
       </section>
+
+      <RhConversionBanner
+        overline="09 / LOCK YOUR FIXED PACKAGE"
+        title="Ready to start your"
+        titleMuted="50/50 milestone build?"
+        description="Send your site brief or reference URL on WhatsApp for a confirmed fixed GBP/USD scope and staging preview schedule within 24 hours."
+        primaryLabel="Lock Quote on WhatsApp (+92 319 6526604)"
+        secondaryLabel="Submit Brief Online"
+      />
       </main>
 
       <SiteFooter theme="dark" />

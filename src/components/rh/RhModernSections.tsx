@@ -1231,7 +1231,10 @@ export function RhBentoWorkGrid({
           onMouseLeave={() => setCursor((c) => ({ ...c, on: false }))}
         >
           {items.map((item, idx) => {
-            const isFullWidth = idx % 3 === 2;
+            const isFullWidth =
+              items.length === 4
+                ? false
+                : idx % 3 === 2 || (idx === items.length - 1 && idx % 3 === 0);
             const CardTag = item.external ? "a" : Link;
             const cardProps = item.external
               ? { href: item.href, target: "_blank", rel: "noopener noreferrer" }
@@ -1373,5 +1376,65 @@ export function RhOdometerNumber({
       })}
       {suffix && <span>{suffix}</span>}
     </span>
+  );
+}
+
+/* ============================================================================
+   7. RhConversionBanner — Closing 09 / Get Started CTA Strip (Light Framing Dark)
+   ============================================================================ */
+
+export function RhConversionBanner({
+  overline = "09 / START YOUR PROJECT",
+  title = "Ready to ship with",
+  titleMuted = "zero agency bloat?",
+  description = "Message Saim directly on WhatsApp or submit a brief. Receive a fixed milestone quote, delivery sprint schedule, and optional prototype preview within 24 hours.",
+  primaryLabel = "Start on WhatsApp (+92 319 6526604)",
+  whatsappHref = "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20web%20development%20project",
+  secondaryLabel = "Submit Brief Online",
+  secondaryHref = "/contact",
+}: {
+  overline?: string;
+  title?: string;
+  titleMuted?: string;
+  description?: string;
+  primaryLabel?: string;
+  whatsappHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}) {
+  return (
+    <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-20 sm:py-24 px-5 border-t border-[#E6E6E6]">
+      <div
+        data-gsap-reveal=""
+        className="max-w-[1168px] mx-auto rounded-3xl bg-black border border-[#222222] text-white p-8 sm:p-14 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
+      >
+        <div className="max-w-2xl">
+          <div className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] mb-3">
+            {overline}
+          </div>
+          <h2 className="text-[clamp(28px,3.8vw,44px)] font-medium tracking-[-0.03em] leading-[1.1] text-white">
+            {title} <span className="text-[#939393]">{titleMuted}</span>
+          </h2>
+          <p className="mt-3 text-[15px] text-[#939393] leading-[1.6]">{description}</p>
+        </div>
+        <div className="flex flex-wrap items-center gap-4 shrink-0">
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] font-semibold text-[15px] px-7 py-4 hover:bg-white transition-colors"
+          >
+            <span>{primaryLabel}</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
+          <Link
+            href={secondaryHref}
+            className="px-6 py-4 rounded-full border border-[#333333] text-white hover:border-[#BAFF00] hover:text-[#BAFF00] text-[14px] font-medium transition-colors"
+          >
+            {secondaryLabel}
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }

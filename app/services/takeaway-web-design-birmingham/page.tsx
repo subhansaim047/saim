@@ -303,80 +303,82 @@ export default function BirminghamTakeawayWebDesignPage() {
           ctaHeading="Stop Paying Third-Party Cuts on £50 Birmingham Family Orders"
           ctaSubtitle="Send your menu photos via WhatsApp. Go live cleanly with a £250 fixed site built around West Midlands diners."
           whatsappHref="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20launch%20a%20direct%20Birmingham%20takeaway%20website"
-        />
-
-        <RhSystemRows
-          overline="WEST MIDLANDS STACK"
-          title="Custom menu selectors"
-          titleMuted="without aggregator lease lock-in."
-          subtitle="Built to highlight mixed grills, set-meal bundles, and allergen safety across Birmingham family kitchens."
-          rows={[
-            {
-              num: "01",
-              title: "Set-Meal & Platter Customiser UI",
-              description: "Allow guests to select base curry, spice level, bread swaps, and chutney pots in clean step rows.",
-              tags: ["Platter Upsells", "Fast Mobile UI", "Clean Tickets"],
-              href: "/anzaar/index.html",
-            },
-            {
-              num: "02",
-              title: "Suburban Radius Minimum-Order Rules",
-              description: "Prevent drivers losing fuel on low-margin outer B-postcode runs via clear postcode-matched spend thresholds.",
-              tags: ["B1–B98 Rules", "Driver Friendly", "0% App Fees"],
-              href: "/pricing",
-            },
-            {
-              num: "03",
-              title: "Midlands LocalBusiness Schema",
-              description: "Rich JSON-LD metadata paired with printable SFBB records supporting 5-star Council inspections.",
-              tags: ["Birmingham Geo", "FHRS Ready", "SFBB Templates"],
-              href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
-            },
-          ]}
-        />
-
-        <RhProcessCarousel
-          overline="MIDLANDS ROLLOUT TIMELINE"
-          title="Digitise your menu"
-          titleMuted="cleanly across 4 rapid steps."
-          stagesSummaryCount="4"
-          stagesSummaryTitle="Sprints"
-          stagesSummaryText="Send paper menu leaflets or app screenshots — we build your complete ordering web app."
-          stages={[
-            {
-              stage: "01",
-              duration: "Day 1",
-              title: "Platter, Spice & Allergen Audit",
-              description: "Capture family deals, halal certifications, allergen columns, and Birmingham postcode pricing zones.",
-              deliverables: ["Deal Structure", "14-Allergen Tags", "Postcode Matrix"],
-            },
-            {
-              stage: "02",
-              duration: "Days 2–3",
-              title: "Branded Storefront & Basket Build",
-              description: "Construct fast mobile ordering drawer supporting meal-for-4 combos and instant pickup toggles.",
-              deliverables: ["Mobile Cart", "Combo Flow", "Staging URL"],
-            },
-            {
-              stage: "03",
-              duration: "Day 4",
-              title: "WhatsApp / Stripe Docket QA",
-              description: "Run test orders verifying kitchen ticket readability, allergy notes, and B-postcode math.",
-              deliverables: ["Flyer QR PNG", "Live Ticket QA", "Allergen Prompt"],
-            },
-            {
-              stage: "04",
-              duration: "Day 5",
-              title: "Launch & Repeat-Order Loop",
-              description: "Connect your domain cleanly, print promo QRs on takeaway bags, and own every returning family.",
-              deliverables: ["Domain Launch", "GBP Menu Link", "Source Handover"],
-            },
-          ]}
-          quote="Reference Midlands Scenario: Retaining 28% platform commission across 20 weekly £55 family grill orders puts ~£1,230 extra cash monthly directly into kitchen payroll and stock."
-          author="West Midlands Margin Model"
-          role="Birmingham Platter Blueprint"
-          ctaHref="/contact"
-          ctaLabel="Scope Birmingham Build"
+          architectureSection={
+            <RhSystemRows
+              overline="04 / WEST MIDLANDS STACK"
+              title="Custom menu selectors"
+              titleMuted="without aggregator lease lock-in."
+              subtitle="Built to highlight mixed grills, set-meal bundles, and allergen safety across Birmingham family kitchens."
+              rows={[
+                {
+                  num: "01",
+                  title: "Set-Meal & Platter Customiser UI",
+                  description: "Allow guests to select base curry, spice level, bread swaps, and chutney pots in clean step rows.",
+                  tags: ["Platter Upsells", "Fast Mobile UI", "Clean Tickets"],
+                  href: "/anzaar/index.html",
+                },
+                {
+                  num: "02",
+                  title: "Suburban Radius Minimum-Order Rules",
+                  description: "Prevent drivers losing fuel on low-margin outer B-postcode runs via clear postcode-matched spend thresholds.",
+                  tags: ["B1–B98 Rules", "Driver Friendly", "0% App Fees"],
+                  href: "/pricing",
+                },
+                {
+                  num: "03",
+                  title: "Midlands LocalBusiness Schema",
+                  description: "Rich JSON-LD metadata paired with printable SFBB records supporting 5-star Council inspections.",
+                  tags: ["Birmingham Geo", "FHRS Ready", "SFBB Templates"],
+                  href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+                },
+              ]}
+            />
+          }
+          processSection={
+            <RhProcessCarousel
+              overline="06 / MIDLANDS ROLLOUT TIMELINE"
+              title="Digitise your menu"
+              titleMuted="cleanly across 4 rapid steps."
+              stagesSummaryCount="4"
+              stagesSummaryTitle="Sprints"
+              stagesSummaryText="Send paper menu leaflets or app screenshots — we build your complete ordering web app."
+              stages={[
+                {
+                  stage: "01",
+                  duration: "Day 1",
+                  title: "Platter, Spice & Allergen Audit",
+                  description: "Capture family deals, halal certifications, allergen columns, and Birmingham postcode pricing zones.",
+                  deliverables: ["Deal Structure", "14-Allergen Tags", "Postcode Matrix"],
+                },
+                {
+                  stage: "02",
+                  duration: "Days 2–3",
+                  title: "Branded Storefront & Basket Build",
+                  description: "Construct fast mobile ordering drawer supporting meal-for-4 combos and instant pickup toggles.",
+                  deliverables: ["Mobile Cart", "Combo Flow", "Staging URL"],
+                },
+                {
+                  stage: "03",
+                  duration: "Day 4",
+                  title: "WhatsApp / Stripe Docket QA",
+                  description: "Run test orders verifying kitchen ticket readability, allergy notes, and B-postcode math.",
+                  deliverables: ["Flyer QR PNG", "Live Ticket QA", "Allergen Prompt"],
+                },
+                {
+                  stage: "04",
+                  duration: "Day 5",
+                  title: "Launch & Repeat-Order Loop",
+                  description: "Connect your domain cleanly, print promo QRs on takeaway bags, and own every returning family.",
+                  deliverables: ["Domain Launch", "GBP Menu Link", "Source Handover"],
+                },
+              ]}
+              quote="Reference Midlands Scenario: Retaining 28% platform commission across 20 weekly £55 family grill orders puts ~£1,230 extra cash monthly directly into kitchen payroll and stock."
+              author="West Midlands Margin Model"
+              role="Birmingham Platter Blueprint"
+              ctaHref="/contact"
+              ctaLabel="Scope Birmingham Build"
+            />
+          }
         />
       </main>
 

@@ -303,80 +303,82 @@ export default function ManchesterTakeawayWebDesignPage() {
           ctaHeading="Turn Manchester Box Scans Into Permanent Direct Regulars"
           ctaSubtitle="Message your menu flyer photos over WhatsApp. Launch an owned commission-free storefront in 4–5 days for £250 fixed."
           whatsappHref="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20launch%20a%20direct%20Manchester%20takeaway%20website"
-        />
-
-        <RhSystemRows
-          overline="MANCHESTER ORDER ARCHITECTURE"
-          title="Built for group halls,"
-          titleMuted="late queues, and direct reorders."
-          subtitle="Structured specifically around burger, wrap, pizza, dessert, and curry house workflows across M-postcodes."
-          rows={[
-            {
-              num: "01",
-              title: "Group-Order Quick Meal Bundles",
-              description: "Streamlined shared box deals and meal upgrades tailored for fast late-evening checkouts on phones.",
-              tags: ["Group Cart UX", "Fast Taps", "Upsell Combos"],
-              href: "/burger-garage/index.html",
-            },
-            {
-              num: "02",
-              title: "14-Allergen Safety Filtering",
-              description: "Instant ingredient transparency plus mandatory order allergy check boxes guarding overnight shifts.",
-              tags: ["Natasha's Law", "M-Council EHO", "Zero Ambiguity"],
-              href: "/blog/natashas-law-ppds-food-labelling-guide",
-            },
-            {
-              num: "03",
-              title: "Direct WhatsApp & Stripe Payments",
-              description: "Start free of card portal overhead on £250 cash/WhatsApp tickets or wire instant Stripe Apple Pay (£390).",
-              tags: ["0% App Cut", "Apple Pay Option", "Full Ownership"],
-              href: "/pricing",
-            },
-          ]}
-        />
-
-        <RhProcessCarousel
-          overline="MANCHESTER DEPLOYMENT SPRINT"
-          title="Menu photo to late-shift"
-          titleMuted="live site in 4–5 days."
-          stagesSummaryCount="4"
-          stagesSummaryTitle="Sprints"
-          stagesSummaryText="Keep service uninterrupted in kitchen while we build and QA your new direct domain."
-          stages={[
-            {
-              stage: "01",
-              duration: "Day 1",
-              title: "Menu, Bundles & Zone Ingestion",
-              description: "Capture spice variants, loaded fry toppings, student deal combinations, and Greater Manc delivery fees.",
-              deliverables: ["Deal JSON", "M1–M90 Fees", "Allergen Tags"],
-            },
-            {
-              stage: "02",
-              duration: "Days 2–3",
-              title: "Dark Mobile Storefront Engineering",
-              description: "Assemble tactile dark UI built for thumb navigation and late-night mobile clarity.",
-              deliverables: ["Thumb Cart UI", "Modifier Swatches", "Staging Build"],
-            },
-            {
-              stage: "03",
-              duration: "Day 4",
-              title: "Box-Lid QR Flyers & Docket Tests",
-              description: "Generate pizza-box & bag flyer QR graphics alongside live kitchen ticket stress checks.",
-              deliverables: ["Box QR Graphic", "WhatsApp Ticket", "Allergy Alert QA"],
-            },
-            {
-              stage: "04",
-              duration: "Day 5",
-              title: "Custom Domain & Local Pack Cutover",
-              description: "Publish onto your own domain cleanly and link your Google Business Profile Order Direct button.",
-              deliverables: ["Own .co.uk", "GBP Order Setup", "Repo Handover"],
-            },
-          ]}
-          quote="Reference Manchester Scenario: Moving 12 weekly £32 student housemate orders from 30% delivery portals onto box-flyer direct reorders puts ~£460 monthly extra profit straight back into the kitchen."
-          author="North West Takeaway Model"
-          role="M13–M14 Student Trade Blueprint"
-          ctaHref="/contact"
-          ctaLabel="Start Manchester Build"
+          architectureSection={
+            <RhSystemRows
+              overline="04 / MANCHESTER ORDER ARCHITECTURE"
+              title="Built for group halls,"
+              titleMuted="late queues, and direct reorders."
+              subtitle="Structured specifically around burger, wrap, pizza, dessert, and curry house workflows across M-postcodes."
+              rows={[
+                {
+                  num: "01",
+                  title: "Group-Order Quick Meal Bundles",
+                  description: "Streamlined shared box deals and meal upgrades tailored for fast late-evening checkouts on phones.",
+                  tags: ["Group Cart UX", "Fast Taps", "Upsell Combos"],
+                  href: "/burger-garage/index.html",
+                },
+                {
+                  num: "02",
+                  title: "14-Allergen Safety Filtering",
+                  description: "Instant ingredient transparency plus mandatory order allergy check boxes guarding overnight shifts.",
+                  tags: ["Natasha's Law", "M-Council EHO", "Zero Ambiguity"],
+                  href: "/blog/natashas-law-ppds-food-labelling-guide",
+                },
+                {
+                  num: "03",
+                  title: "Direct WhatsApp & Stripe Payments",
+                  description: "Start free of card portal overhead on £250 cash/WhatsApp tickets or wire instant Stripe Apple Pay (£390).",
+                  tags: ["0% App Cut", "Apple Pay Option", "Full Ownership"],
+                  href: "/pricing",
+                },
+              ]}
+            />
+          }
+          processSection={
+            <RhProcessCarousel
+              overline="06 / MANCHESTER DEPLOYMENT SPRINT"
+              title="Menu photo to late-shift"
+              titleMuted="live site in 4–5 days."
+              stagesSummaryCount="4"
+              stagesSummaryTitle="Sprints"
+              stagesSummaryText="Keep service uninterrupted in kitchen while we build and QA your new direct domain."
+              stages={[
+                {
+                  stage: "01",
+                  duration: "Day 1",
+                  title: "Menu, Bundles & Zone Ingestion",
+                  description: "Capture spice variants, loaded fry toppings, student deal combinations, and Greater Manc delivery fees.",
+                  deliverables: ["Deal JSON", "M1–M90 Fees", "Allergen Tags"],
+                },
+                {
+                  stage: "02",
+                  duration: "Days 2–3",
+                  title: "Dark Mobile Storefront Engineering",
+                  description: "Assemble tactile dark UI built for thumb navigation and late-night mobile clarity.",
+                  deliverables: ["Thumb Cart UI", "Modifier Swatches", "Staging Build"],
+                },
+                {
+                  stage: "03",
+                  duration: "Day 4",
+                  title: "Box-Lid QR Flyers & Docket Tests",
+                  description: "Generate pizza-box & bag flyer QR graphics alongside live kitchen ticket stress checks.",
+                  deliverables: ["Box QR Graphic", "WhatsApp Ticket", "Allergy Alert QA"],
+                },
+                {
+                  stage: "04",
+                  duration: "Day 5",
+                  title: "Custom Domain & Local Pack Cutover",
+                  description: "Publish onto your own domain cleanly and link your Google Business Profile Order Direct button.",
+                  deliverables: ["Own .co.uk", "GBP Order Setup", "Repo Handover"],
+                },
+              ]}
+              quote="Reference Manchester Scenario: Moving 12 weekly £32 student housemate orders from 30% delivery portals onto box-flyer direct reorders puts ~£460 monthly extra profit straight back into the kitchen."
+              author="North West Takeaway Model"
+              role="M13–M14 Student Trade Blueprint"
+              ctaHref="/contact"
+              ctaLabel="Start Manchester Build"
+            />
+          }
         />
       </main>
 

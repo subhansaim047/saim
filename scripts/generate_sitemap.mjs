@@ -160,15 +160,22 @@ const staticPages = [
 const allEntries = [...staticPages];
 const today = new Date().toISOString().split("T")[0];
 
+function renderImageTags(images) {
+  return images
+    .map(
+      (img) =>
+        `\n    <image:image>\n      <image:loc>${xmlEscape(img.loc)}</image:loc>\n      <image:title>${xmlEscape(img.title)}</image:title>\n      <image:caption>${xmlEscape(img.caption)}</image:caption>\n    </image:image>`
+    )
+    .join("");
+}
+
 function renderUrlEntry(p) {
   let xml = `  <url>\n    <loc>${p.url}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>`;
-  
+
   if (p.images && p.images.length > 0) {
-    for (const img of p.images) {
-      xml += `\n    <image:image>\n      <image:loc>${xmlEscape(img.loc)}</image:loc>\n      <image:title>${xmlEscape(img.title)}</image:title>\n      <image:caption>${xmlEscape(img.caption)}</image:caption>\n    </image:image>`;
-    }
+    xml += renderImageTags(p.images);
   }
-  
+
   xml += `\n  </url>`;
   return xml;
 }
@@ -188,5 +195,108 @@ ${staticPages.map(renderUrlEntry).join("\n")}
 </urlset>
 `;
 
+const imageSitemapEntries = [
+  {
+    url: "https://www.saimdev.site/",
+    images: [
+      ...staticPages[0].images,
+      {
+        loc: "https://www.saimdev.site/saim-dev-logo.jpg",
+        title: "Saim Dev - Lead Next.js Developer & Takeaway Web Specialist",
+        caption: "Official brand logo and profile of Saim Dev studio for UK restaurants and takeaways"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/services/takeaway-web-design",
+    images: [
+      {
+        loc: "https://www.saimdev.site/og-image.png",
+        title: "Takeaway Website Design UK Showcase",
+        caption: "Custom online ordering systems with 0% commission and POS integration for UK takeaways"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/demos",
+    images: demoImages
+  },
+  {
+    url: "https://www.saimdev.site/tools/commission-savings-calculator",
+    images: [
+      {
+        loc: "https://www.saimdev.site/og-image.png",
+        title: "UK Takeaway Commission Savings Calculator",
+        caption: "Calculate annual delivery app commission loss and ROI of switching to direct takeaway ordering"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
+    images: [
+      {
+        loc: "https://www.saimdev.site/og-image.png",
+        title: "5-Star Food Hygiene Rating UK Checklist",
+        caption: "Complete guide to achieving a 5-star Food Hygiene Rating from UK environmental health officers"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
+    images: [
+      {
+        loc: "https://www.saimdev.site/og-image.png",
+        title: "Natasha's Law PPDS Food Labelling Guide",
+        caption: "Prepacked for Direct Sale allergen labelling regulations and compliant kitchen workflow"
+      },
+      {
+        loc: "https://www.saimdev.site/templates/posters/template-121.webp",
+        title: "Natasha's Law PPDS Allergen Warning Visual",
+        caption: "Reference visual guide covering full ingredients and 14 UK allergen emphasis rules on PPDS labels"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/blog/why-small-business-needs-website",
+    images: [
+      {
+        loc: "https://www.saimdev.site/og-image.png",
+        title: "Why UK Small Businesses Need a Modern Website in 2026",
+        caption: "Benefits of mobile-first fast loading websites over social media pages for local businesses"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/blog/free-website-for-local-business",
+    images: [
+      {
+        loc: "https://www.saimdev.site/og-image.png",
+        title: "Free Website Options for UK Local Businesses",
+        caption: "Evaluating website builders versus bespoke high-converting websites"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/blog/50-percent-off-agency-launch",
+    images: [
+      {
+        loc: "https://www.saimdev.site/og-image.png",
+        title: "Saim Dev Agency Launch Offer",
+        caption: "Special promotion on custom Next.js takeaway websites and SEO setup"
+      }
+    ]
+  }
+];
+
+const imageSitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${imageSitemapEntries
+  .map((entry) => `  <url>\n    <loc>${entry.url}</loc>${renderImageTags(entry.images)}\n  </url>`)
+  .join("\n")}
+</urlset>
+`;
+
 fs.writeFileSync("public/sitemap.xml", sitemapXml, "utf8");
-console.log(`Generated public/sitemap.xml with ${allEntries.length} total URLs and rich Google Image extensions.`);
+fs.writeFileSync("public/image-sitemap.xml", imageSitemapXml, "utf8");
+console.log(`Generated public/sitemap.xml (${allEntries.length} URLs) and public/image-sitemap.xml (${imageSitemapEntries.length} URLs).`);

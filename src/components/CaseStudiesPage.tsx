@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { RhHeader } from "./rh/RhHeader";
 import { SiteFooter } from "./SiteFooter";
 import {
+  RhConversionBanner,
   RhHeroPinned,
   RhProblemSolutionDeck,
   RhSystemRows,
@@ -475,6 +476,16 @@ export const CaseStudiesPage = () => {
           ],
           href: "/contact",
         }))}
+      />
+
+      <RhConversionBanner
+        overline="09 / START YOUR BENCHMARK BUILD"
+        title="Want sub-second speed for"
+        titleMuted="your own brand?"
+        description="Share your current domain or niche on WhatsApp to get a fixed milestone scope, prototype option, and Next.js launch schedule."
+        primaryLabel="Discuss Your Build on WhatsApp"
+        secondaryLabel="Explore Packages"
+        secondaryHref="/pricing"
       />
       </main>
 

@@ -42,6 +42,10 @@ const MOBILE_VIDEO_SLUGS = new Set([
   "ecommerce-shopify",
 ]);
 
+function formatFunnelOverline(step: string, text: string): string {
+  return `${step} / ${text.replace(/^\d{1,2}\s*\/\s*/, "")}`;
+}
+
 function splitPriceForOdometer(raw: string): {
   prefix: string;
   amount: number | null;
@@ -331,7 +335,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             03 — INTERACTIVE SVG LINE-DRAW DELIVERABLES SYSTEM
         =============================================================== */}
         <RhSystemRows
-          overline={data.deliverablesMeta?.overline || "02 / SCOPE OF WORK"}
+          overline={formatFunnelOverline("03", data.deliverablesMeta?.overline || "SCOPE OF WORK")}
           title={data.deliverablesMeta?.title || "Core Deliverables for"}
           titleMuted={data.deliverablesMeta?.titleMuted || data.serviceName}
           subtitle={
@@ -351,7 +355,50 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
         />
 
         {/* ==============================================================
-            04 — FEATURES & BENEFITS + 05 — INDUSTRY APPLICATIONS (Light #F5F5F7)
+            03B — PRODUCTION TECH STACK BAR (Dark #0D0D0D Transition)
+        =============================================================== */}
+        <section
+          data-nav="dark"
+          className="py-16 px-5 bg-[#0D0D0D] text-white border-t border-[#202020]"
+        >
+          <div className="max-w-[1168px] mx-auto">
+            <div data-gsap-reveal="" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+              <div>
+                <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-2.5">
+                  {formatFunnelOverline("03", h?.stackOverline || "TECHNICAL STACK")}
+                </span>
+                <h2 className="text-[clamp(26px,3.2vw,38px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  {h?.stackTitle || "Production Tooling for"}{" "}
+                  <span className="text-[#939393]">
+                    {h?.stackMuted || data.serviceName}
+                  </span>
+                </h2>
+              </div>
+              <Link
+                href="/technologies"
+                className="text-[14px] text-[#CBCBCB] hover:text-[#BAFF00] transition-colors"
+              >
+                Inspect full technology architecture →
+              </Link>
+            </div>
+
+            <div data-gsap-stagger="" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+              {data.techStack.map((tech, idx) => (
+                <div
+                  key={idx}
+                  className="rh-edge-orbit-card is-lime p-5 bg-[#161616] border border-[#242424] text-center flex flex-col items-center justify-center"
+                >
+                  <Code2 className="w-5 h-5 text-[#BAFF00] mb-2.5" />
+                  <p className="text-[15px] font-medium text-white">{tech.name}</p>
+                  <p className="text-[12px] text-[#939393] mt-0.5">{tech.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ==============================================================
+            04 — VALUE: FEATURES & BENEFITS + SECTOR APPLICATIONS (Light #F5F5F7)
         =============================================================== */}
         <section className="py-20 sm:py-28 px-5 bg-[#F5F5F7] text-[#0D0D0D]">
           <div className="max-w-[1168px] mx-auto space-y-24">
@@ -359,7 +406,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             <div>
               <div data-gsap-reveal="" className="max-w-3xl mb-14">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
-                  {h?.valueOverline || "03 / Commercial Outcomes"}
+                  {formatFunnelOverline("04", h?.valueOverline || "Commercial Outcomes")}
                 </span>
                 <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
                   {h?.valueTitle || "Engineering Standards for"}{" "}
@@ -371,7 +418,7 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                 {data.featuresAndBenefits.map((item, idx) => (
                   <div
                     key={idx}
-                    className="p-8 rounded-3xl bg-white border border-[#E6E6E6] flex flex-col justify-between"
+                    className="rh-edge-orbit-card p-8 rounded-3xl bg-white border border-[#E6E6E6] flex flex-col justify-between transition-colors hover:border-[#0D0D0D]"
                   >
                     <div>
                       <div className="inline-block px-3.5 py-1 rounded-full bg-[#0D0D0D] text-[#BAFF00] text-[12px] font-medium mb-5">
@@ -391,9 +438,9 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
 
             {/* Industry Applications */}
             <div>
-              <div className="max-w-3xl mb-14">
+              <div data-gsap-reveal="" className="max-w-3xl mb-14">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
-                  {h?.marketOverline || "04 / Sector Applications"}
+                  {formatFunnelOverline("04", h?.marketOverline || "Sector Applications")}
                 </span>
                 <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
                   {h?.marketTitle || "Industries Built With"}{" "}
@@ -401,11 +448,11 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div data-gsap-stagger="" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {data.industries.map((ind, idx) => (
                   <div
                     key={idx}
-                    className="p-7 rounded-3xl bg-white border border-[#E6E6E6] flex flex-col justify-between"
+                    className="rh-edge-orbit-card p-7 rounded-3xl bg-white border border-[#E6E6E6] flex flex-col justify-between transition-colors hover:border-[#0D0D0D]"
                   >
                     <div>
                       <div className="w-11 h-11 rounded-2xl bg-[#BAFF00] flex items-center justify-center mb-5">
@@ -437,10 +484,192 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
         </section>
 
         {/* ==============================================================
-            06 — DARK HORIZONTAL DRAG PROCESS CAROUSEL + CONIC DIVIDER
+            05A — TRUST: COMMITMENTS, SCENARIOS & ARCHITECTURE COMPARISON (Dark #0D0D0D)
+        =============================================================== */}
+        <section
+          id="architecture-comparison"
+          data-nav="dark"
+          className="py-20 sm:py-28 px-5 bg-[#0D0D0D] text-white border-t border-[#202020]"
+        >
+          <div className="max-w-[1168px] mx-auto space-y-24">
+            {/* Why Choose Us */}
+            <div>
+              <div data-gsap-reveal="" className="max-w-3xl mb-14">
+                <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-3">
+                  {formatFunnelOverline("05", h?.advantageOverline || "Engineering Commitments")}
+                </span>
+                <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  {h?.advantageTitle || "Built Around Ownership &"}{" "}
+                  <span className="text-[#939393]">{h?.advantageMuted || "Code Quality"}</span>
+                </h2>
+              </div>
+
+              <div data-gsap-stagger="" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {data.whyChooseUs.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="rh-edge-orbit-card is-lime p-7 rounded-3xl bg-[#161616] border border-[#242424] transition-colors hover:border-[#BAFF00]/60"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-bold text-[13px] mb-4">
+                      ✓
+                    </div>
+                    <h3 className="text-[18px] font-medium text-white mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-[14px] text-[#939393] leading-[1.6]">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Reference Scenarios */}
+            <div>
+              <div data-gsap-reveal="" className="max-w-3xl mb-14">
+                <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-3">
+                  {formatFunnelOverline("05", h?.feedbackOverline || "Target Reference Scenarios")}
+                </span>
+                <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  {h?.feedbackTitle || "Architecture Profiles for"}{" "}
+                  <span className="text-[#939393]">{h?.feedbackMuted || data.serviceName}</span>
+                </h2>
+              </div>
+
+              <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {data.testimonials.map((t, idx) => (
+                  <div
+                    key={idx}
+                    className="rh-edge-orbit-card is-lime p-8 rounded-3xl bg-[#161616] border border-[#242424] flex flex-col justify-between"
+                  >
+                    <p className="text-[15px] text-[#CBCBCB] leading-[1.65] mb-6">
+                      {t.quote}
+                    </p>
+                    <div className="pt-4 border-t border-[#242424]">
+                      <p className="text-[15px] font-medium text-white">
+                        {t.client}
+                      </p>
+                      <p className="text-[13px] text-[#939393]">
+                        {t.role} · {t.company}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Competitor Comparison & Technical Audit Checklist */}
+            {data.competitorComparison && (
+              <div>
+                <div data-gsap-reveal="" className="max-w-3xl mb-10">
+                  <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-3">
+                    {formatFunnelOverline("05", data.competitorComparison.overline || "ARCHITECTURE DECISION MATRIX")}
+                  </span>
+                  <h2 className="text-[clamp(28px,3.8vw,44px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                    {data.competitorComparison.title}{" "}
+                    <span className="text-[#939393]">
+                      {data.competitorComparison.titleMuted}
+                    </span>
+                  </h2>
+                  <p className="text-[15px] text-[#939393] mt-3 leading-[1.6]">
+                    {data.competitorComparison.subtitle}
+                  </p>
+                </div>
+
+                <div data-gsap-reveal="" className="overflow-x-auto rounded-2xl border border-[#242424] bg-[#141414]">
+                  <table className="w-full text-left border-collapse text-[14px]">
+                    <thead>
+                      <tr className="border-b border-[#242424] bg-[#191919]">
+                        <th className="py-4 px-5 font-medium text-[#CBCBCB]">
+                          {data.competitorComparison.columns[0]}
+                        </th>
+                        <th className="py-4 px-5 font-medium text-[#BAFF00]">
+                          {data.competitorComparison.columns[1]}
+                        </th>
+                        <th className="py-4 px-5 font-medium text-[#939393]">
+                          {data.competitorComparison.columns[2]}
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-[#202020]">
+                      {data.competitorComparison.rows.map((row, idx) => (
+                        <tr key={idx} className="hover:bg-[#181818] transition-colors">
+                          <td className="py-4 px-5 font-medium text-white">
+                            {row.criteria}
+                          </td>
+                          <td className="py-4 px-5 text-[#E5E5E5]">{row.saim}</td>
+                          <td className="py-4 px-5 text-[#939393]">
+                            {row.alternative}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {data.engineeringChecklist && (
+              <div data-gsap-reveal="" className="p-8 sm:p-10 rounded-3xl bg-[#161616] border border-[#242424]">
+                <div className="max-w-3xl mb-6">
+                  <h3 className="text-[22px] sm:text-[26px] font-medium tracking-[-0.02em] text-white">
+                    {data.engineeringChecklist.title}
+                  </h3>
+                  {data.engineeringChecklist.subtitle && (
+                    <p className="text-[14px] text-[#939393] mt-2 leading-[1.6]">
+                      {data.engineeringChecklist.subtitle}
+                    </p>
+                  )}
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                  {data.engineeringChecklist.items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-start gap-2.5 text-[14px] text-[#CBCBCB] leading-[1.55]"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* ==============================================================
+            05B — TRUST: PROOF BENTO + FLOATING LIME CURSOR DEPLOYMENTS (Light #FFFFFF)
+        =============================================================== */}
+        <div id="case-studies">
+          <RhBentoWorkGrid
+            overline={formatFunnelOverline("05", h?.proofOverline || "INTERACTIVE REFERENCE DEMOS")}
+            title={h?.proofTitle || "Live Concept Builds"}
+            titleMuted={h?.proofMuted || `& ${data.mainKeyword}`}
+            quotes={data.testimonials.map((t) => ({
+              quote: t.quote,
+              author: t.client,
+              role: t.role,
+              company: t.company,
+            }))}
+            items={data.caseStudies.map((study, idx) => ({
+              id: `cs-${idx}-${study.title}`,
+              title: study.title,
+              category: study.category,
+              metric: study.metrics,
+              description: study.description,
+              href: study.demoUrl,
+              external: study.demoUrl.startsWith("/") || study.demoUrl.startsWith("http"),
+              tags: study.tech,
+            }))}
+            cursorLabel="Open Interactive Demo"
+          />
+        </div>
+
+        {/* ==============================================================
+            06 — PROCESS: DARK HORIZONTAL DRAG CAROUSEL + CONIC DIVIDER
         =============================================================== */}
         <RhProcessCarousel
-          overline={h?.processOverline || "05 / DELIVERY WORKFLOW"}
+          overline={formatFunnelOverline("06", h?.processOverline || "DELIVERY WORKFLOW")}
           title={h?.processTitle || "Milestone-Led"}
           titleMuted={h?.processMuted || "Engineering Timeline"}
           stagesSummaryCount={String(data.process.length)}
@@ -471,172 +700,15 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
           ctaHref="/contact"
         />
 
-        {/* 07 — TECH STACK BAR */}
-        <section
-          data-nav="dark"
-          className="py-16 px-5 bg-[#0D0D0D] text-white border-t border-[#202020]"
-        >
-          <div className="max-w-[1168px] mx-auto">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-              <div>
-                <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-2.5">
-                  {h?.stackOverline || "06 / TECHNICAL STACK"}
-                </span>
-                <h2 className="text-[clamp(26px,3.2vw,38px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  {h?.stackTitle || "Production Tooling for"}{" "}
-                  <span className="text-[#939393]">
-                    {h?.stackMuted || data.serviceName}
-                  </span>
-                </h2>
-              </div>
-              <Link
-                href="/technologies"
-                className="text-[14px] text-[#CBCBCB] hover:text-[#BAFF00] transition-colors"
-              >
-                Inspect full technology architecture →
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {data.techStack.map((tech, idx) => (
-                <div
-                  key={idx}
-                  className="rh-edge-orbit-card is-lime p-5 bg-[#161616] border border-[#242424] text-center flex flex-col items-center justify-center"
-                >
-                  <Code2 className="w-5 h-5 text-[#BAFF00] mb-2.5" />
-                  <p className="text-[15px] font-medium text-white">{tech.name}</p>
-                  <p className="text-[12px] text-[#939393] mt-0.5">{tech.role}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ==============================================================
-            08 — PROOF BENTO + FLOATING LIME CURSOR DEPLOYMENTS
-        =============================================================== */}
-        <div id="case-studies">
-          <RhBentoWorkGrid
-            overline={h?.proofOverline || "07 / INTERACTIVE REFERENCE DEMOS"}
-            title={h?.proofTitle || "Live Concept Builds"}
-            titleMuted={h?.proofMuted || `& ${data.mainKeyword}`}
-            quotes={data.testimonials.map((t) => ({
-              quote: t.quote,
-              author: t.client,
-              role: t.role,
-              company: t.company,
-            }))}
-            items={data.caseStudies.map((study, idx) => ({
-              id: `cs-${idx}-${study.title}`,
-              title: study.title,
-              category: study.category,
-              metric: study.metrics,
-              description: study.description,
-              href: study.demoUrl,
-              external: study.demoUrl.startsWith("/") || study.demoUrl.startsWith("http"),
-              tags: study.tech,
-            }))}
-            cursorLabel="Open Interactive Demo"
-          />
-        </div>
-
-        {/* ==============================================================
-            08B — COMPETITOR COMPARISON & TECHNICAL AUDIT CHECKLIST
-        =============================================================== */}
-        {(data.competitorComparison || data.engineeringChecklist) && (
-          <section
-            id="architecture-comparison"
-            className="py-20 sm:py-24 px-5 bg-[#0D0D0D] text-white border-t border-[#202020]"
-          >
-            <div className="max-w-[1168px] mx-auto space-y-14">
-              {data.competitorComparison && (
-                <div>
-                  <div className="max-w-3xl mb-10">
-                    <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-3">
-                      {data.competitorComparison.overline || "ARCHITECTURE DECISION MATRIX"}
-                    </span>
-                    <h2 className="text-[clamp(28px,3.8vw,44px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                      {data.competitorComparison.title}{" "}
-                      <span className="text-[#939393]">
-                        {data.competitorComparison.titleMuted}
-                      </span>
-                    </h2>
-                    <p className="text-[15px] text-[#939393] mt-3 leading-[1.6]">
-                      {data.competitorComparison.subtitle}
-                    </p>
-                  </div>
-
-                  <div className="overflow-x-auto rounded-2xl border border-[#242424] bg-[#141414]">
-                    <table className="w-full text-left border-collapse text-[14px]">
-                      <thead>
-                        <tr className="border-b border-[#242424] bg-[#191919]">
-                          <th className="py-4 px-5 font-medium text-[#CBCBCB]">
-                            {data.competitorComparison.columns[0]}
-                          </th>
-                          <th className="py-4 px-5 font-medium text-[#BAFF00]">
-                            {data.competitorComparison.columns[1]}
-                          </th>
-                          <th className="py-4 px-5 font-medium text-[#939393]">
-                            {data.competitorComparison.columns[2]}
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-[#202020]">
-                        {data.competitorComparison.rows.map((row, idx) => (
-                          <tr key={idx} className="hover:bg-[#181818] transition-colors">
-                            <td className="py-4 px-5 font-medium text-white">
-                              {row.criteria}
-                            </td>
-                            <td className="py-4 px-5 text-[#E5E5E5]">{row.saim}</td>
-                            <td className="py-4 px-5 text-[#939393]">
-                              {row.alternative}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              )}
-
-              {data.engineeringChecklist && (
-                <div className="p-8 sm:p-10 rounded-3xl bg-[#161616] border border-[#242424]">
-                  <div className="max-w-3xl mb-6">
-                    <h3 className="text-[22px] sm:text-[26px] font-medium tracking-[-0.02em] text-white">
-                      {data.engineeringChecklist.title}
-                    </h3>
-                    {data.engineeringChecklist.subtitle && (
-                      <p className="text-[14px] text-[#939393] mt-2 leading-[1.6]">
-                        {data.engineeringChecklist.subtitle}
-                      </p>
-                    )}
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-                    {data.engineeringChecklist.items.map((item, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-start gap-2.5 text-[14px] text-[#CBCBCB] leading-[1.55]"
-                      >
-                        <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </section>
-        )}
-
-        {/* ==============================================================
-            09 — PRICING / INVESTMENT (Odometer Digit-Roll rh.design style)
+            07 — INVESTMENT / PRICING (Odometer Digit-Roll rh.design style)
         =============================================================== */}
         <section className="py-20 sm:py-28 px-5 bg-[#F5F5F7] text-[#0D0D0D]">
           <div className="max-w-[1168px] mx-auto">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
               <div>
                 <span className="text-[11px] font-mono-tech uppercase tracking-[0.3em] text-[#595959] block mb-3">
-                  {h?.pricingOverline || "08 / TRANSPARENT FIXED PRICING"}
+                  {formatFunnelOverline("07", h?.pricingOverline || "TRANSPARENT FIXED PRICING")}
                 </span>
                 <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
                   {h?.pricingTitle || data.serviceName}{" "}
@@ -791,139 +863,80 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
         </section>
 
         {/* ==============================================================
-            10 — WHY CHOOSE US & 11 — TESTIMONIALS (Dark #0D0D0D)
+            08 — OBJECTIONS: TECHNICAL FAQ ACCORDION (Dark #0D0D0D)
         =============================================================== */}
-        <section className="py-20 sm:py-28 px-5 bg-[#0D0D0D] text-white border-t border-[#202020]">
-          <div className="max-w-[1168px] mx-auto space-y-24">
-            {/* Why Choose Us */}
-            <div>
-              <div className="max-w-3xl mb-14">
-                <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-3">
-                  {h?.advantageOverline || "09 / Engineering Commitments"}
-                </span>
-                <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  {h?.advantageTitle || "Built Around Ownership &"}{" "}
-                  <span className="text-[#939393]">{h?.advantageMuted || "Code Quality"}</span>
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {data.whyChooseUs.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="p-7 rounded-3xl bg-[#161616] border border-[#242424]"
-                  >
-                    <div className="w-8 h-8 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-bold text-[13px] mb-4">
-                      ✓
-                    </div>
-                    <h3 className="text-[18px] font-medium text-white mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-[14px] text-[#939393] leading-[1.6]">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
+        <section
+          data-nav="dark"
+          className="py-20 sm:py-28 px-5 bg-[#0D0D0D] text-white border-t border-[#202020]"
+        >
+          <div className="max-w-[1168px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div data-gsap-reveal="" className="lg:col-span-5">
+              <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-3">
+                {formatFunnelOverline("08", h?.faqOverline || "Technical FAQ")}
+              </span>
+              <h2 className="text-[clamp(30px,4vw,46px)] font-medium tracking-[-0.03em] leading-[1.1] text-white">
+                Frequently Asked{" "}
+                <span className="text-[#939393]">Questions</span>
+              </h2>
+              <p className="mt-4 text-[15px] text-[#939393] leading-[1.6]">
+                {h?.faqIntro ||
+                  `Answers covering scope, turnaround, source ownership, and milestone payments for ${data.serviceName}.`}
+              </p>
             </div>
 
-            {/* Reference Scenarios */}
-            <div>
-              <div className="max-w-3xl mb-14">
-                <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-3">
-                  {h?.feedbackOverline || "10 / Target Reference Scenarios"}
-                </span>
-                <h2 className="text-[clamp(30px,4vw,48px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  {h?.feedbackTitle || "Architecture Profiles for"}{" "}
-                  <span className="text-[#939393]">{h?.feedbackMuted || data.serviceName}</span>
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {data.testimonials.map((t, idx) => (
-                  <div
-                    key={idx}
-                    className="p-8 rounded-3xl bg-[#161616] border border-[#242424] flex flex-col justify-between"
+            <div className="lg:col-span-7 divide-y divide-[#222222] border-t border-b border-[#222222]">
+              {data.faqs.map((faq, idx) => (
+                <div key={idx} className="py-6">
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(idx)}
+                    aria-expanded={openFaq === idx}
+                    className="w-full text-left flex items-center justify-between gap-4 cursor-pointer group"
                   >
-                    <p className="text-[15px] text-[#CBCBCB] leading-[1.65] mb-6">
-                      {t.quote}
-                    </p>
-                    <div className="pt-4 border-t border-[#242424]">
-                      <p className="text-[15px] font-medium text-white">
-                        {t.client}
-                      </p>
-                      <p className="text-[13px] text-[#939393]">
-                        {t.role} · {t.company}
-                      </p>
-                    </div>
+                    <span className="text-[18px] font-medium text-white group-hover:text-[#BAFF00] transition-colors">
+                      {faq.question}
+                    </span>
+                    <span
+                      className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                        openFaq === idx
+                          ? "bg-[#BAFF00] border-[#BAFF00] text-[#0D0D0D]"
+                          : "border-[#2A2A2A] text-white group-hover:border-[#BAFF00]"
+                      }`}
+                    >
+                      {openFaq === idx ? "−" : "+"}
+                    </span>
+                  </button>
+                  <div
+                    className={
+                      openFaq === idx
+                        ? "mt-3 text-[15px] text-[#CBCBCB] leading-[1.65] pr-8"
+                        : "hidden"
+                    }
+                  >
+                    {faq.answer}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* ==============================================================
-            12 — FAQS & 13 — RELATED SERVICES (Light #F5F5F7)
+            09 — CONVERSION: GET STARTED & RELATED SERVICES (Light #F5F5F7)
         =============================================================== */}
         <section className="py-20 sm:py-28 px-5 bg-[#F5F5F7] text-[#0D0D0D]">
           <div className="max-w-[1168px] mx-auto space-y-20">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-              <div className="lg:col-span-5">
-                <span className="text-[12px] uppercase tracking-[0.88px] text-[#595959] block mb-3">
-                  {h?.faqOverline || "11 / Technical FAQ"}
-                </span>
-                <h2 className="text-[clamp(30px,4vw,46px)] font-medium tracking-[-0.03em] leading-[1.1]">
-                  Frequently Asked{" "}
-                  <span className="text-[#939393]">Questions</span>
-                </h2>
-                <p className="mt-4 text-[15px] text-[#595959] leading-[1.6]">
-                  {h?.faqIntro ||
-                    `Answers covering scope, turnaround, source ownership, and milestone payments for ${data.serviceName}.`}
-                </p>
-              </div>
-
-              <div className="lg:col-span-7 divide-y divide-[#E6E6E6] border-t border-b border-[#E6E6E6]">
-                {data.faqs.map((faq, idx) => (
-                  <div key={idx} className="py-6">
-                    <button
-                      type="button"
-                      onClick={() => toggleFaq(idx)}
-                      aria-expanded={openFaq === idx}
-                      className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
-                    >
-                      <span className="text-[18px] font-medium text-[#0D0D0D]">
-                        {faq.question}
-                      </span>
-                      <span
-                        className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
-                          openFaq === idx
-                            ? "bg-[#0D0D0D] border-[#0D0D0D] text-[#BAFF00]"
-                            : "border-[#CCCCCC] text-[#0D0D0D]"
-                        }`}
-                      >
-                        {openFaq === idx ? "−" : "+"}
-                      </span>
-                    </button>
-                    <div
-                      className={
-                        openFaq === idx
-                          ? "mt-3 text-[15px] text-[#595959] leading-[1.65] pr-8"
-                          : "hidden"
-                      }
-                    >
-                      {faq.answer}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Final Conversion Banner inside Service Page */}
-            <div className="rounded-3xl bg-black border border-[#222222] text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8" data-gsap-reveal="">
+            <div
+              className="rounded-3xl bg-black border border-[#222222] text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
+              data-gsap-reveal=""
+            >
               <div className="max-w-2xl">
                 <span className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] block mb-2">
-                  {h?.bannerTag || "Fixed Quote • 50/50 Milestones • Full Code Handover"}
+                  {formatFunnelOverline(
+                    "09",
+                    h?.bannerTag || "Fixed Quote • 50/50 Milestones • Full Code Handover"
+                  )}
                 </span>
                 <h2 className="text-[clamp(26px,3.4vw,40px)] font-medium tracking-[-0.025em] leading-[1.15]">
                   {data.finalCta.headline}
@@ -937,16 +950,16 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-[#BAFF00] text-[#0D0D0D] font-medium text-[15px] px-7 py-4 rounded-full hover:bg-[#c8ff33] transition-colors"
+                  className="rh-btn-pill inline-flex items-center gap-3 bg-[#BAFF00] text-[#0D0D0D] font-medium text-[15px] px-7 py-4 rounded-full hover:bg-[#c8ff33] transition-colors"
                 >
                   <span>{data.finalCta.primaryButtonText}</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <Link
-                  href="/services"
-                  className="px-6 py-4 rounded-full border border-[#2A2A2A] text-white hover:border-white text-[14px] transition-colors"
+                  href="/contact"
+                  className="px-6 py-4 rounded-full border border-[#2A2A2A] text-white hover:border-[#BAFF00] hover:text-[#BAFF00] text-[14px] transition-colors"
                 >
-                  Compare Services
+                  Submit Brief
                 </Link>
               </div>
             </div>

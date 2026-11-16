@@ -1,6 +1,8 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
-import { ArrowRight, MapPin, Percent, Plus, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, ExternalLink, MapPin, Percent, Plus, ShieldCheck, Zap } from "lucide-react";
 import { CommissionSavingsCalculator } from "@/components/CommissionSavingsCalculator";
+import { RhOdometerNumber } from "@/components/rh/RhModernSections";
 
 export interface TakeawayCityStat {
   value: string;
@@ -61,6 +63,8 @@ export interface RhTakeawayCityBodyProps {
   ctaHeading: string;
   ctaSubtitle: string;
   whatsappHref: string;
+  architectureSection?: ReactNode;
+  processSection?: ReactNode;
 }
 
 const MARKET_ICONS = {
@@ -69,10 +73,36 @@ const MARKET_ICONS = {
   zap: Zap,
 } as const;
 
+const LIVE_TAKEAWAY_DEMOS = [
+  {
+    tag: "Direct Ordering",
+    title: "HotBite — Takeaway Ordering Storefront",
+    metric: "0% Commission",
+    desc: "Fast burger & wing basket with instant collection/delivery toggle and formatted kitchen WhatsApp docket.",
+    href: "/hotbite/index.html",
+  },
+  {
+    tag: "Indian & Grill",
+    title: "Anzaar — Mixed Grill & Platter Menu",
+    metric: "Spice + Allergy Tiers",
+    desc: "Set-meal box builders, allergen badges beside dishes, and crisp mobile category jump bar.",
+    href: "/anzaar/index.html",
+  },
+  {
+    tag: "QSR Late-Night",
+    title: "Burger Garage — High-Contrast Night UI",
+    metric: "<0.8s Load Time",
+    desc: "Built for mobile late-night reorders with combo upsells and instant loyalty flyer QR landing.",
+    href: "/burger-garage/index.html",
+  },
+] as const;
+
 /**
- * Shared Robin-Holmborn architectural body for UK takeaway city landing pages
- * (London, Birmingham, Manchester). Preserves city-specific AEO/SEO copy while
- * rendering alternating #000000 / #F5F5F7 bands, #BAFF00 accents, and GSAP hooks.
+ * Shared architectural body for UK takeaway city landing pages (London,
+ * Birmingham, Manchester). Orders sections cleanly along the 9-step funnel:
+ * Stats & AEO -> Problem & Market -> Deliverables Architecture -> Live Proof
+ * Showcase -> Delivery Process -> ROI Calculator & Investment -> FAQs & Hubs
+ * -> Conversion CTA.
  */
 export function RhTakeawayCityBody({
   stats,
@@ -88,7 +118,7 @@ export function RhTakeawayCityBody({
   coverageSubtitle,
   coverageAreas,
   toolsHeading = "Commission-Free Menu Compliance & Cost Utilities",
-  toolsDescription = "Explore our free 14-allergen matrix generator, GP% food cost calculator, and EHO checklist templates.",
+  toolsDescription = "Explore our live UK commission savings calculator and food hygiene compliance resources.",
   toolsCtaLabel = "Open Free Kitchen Tools",
   faqEyebrow,
   faqHeading = "Frequently Asked Questions",
@@ -99,10 +129,12 @@ export function RhTakeawayCityBody({
   ctaHeading,
   ctaSubtitle,
   whatsappHref,
+  architectureSection,
+  processSection,
 }: RhTakeawayCityBodyProps) {
   return (
     <div className="saim-city-body">
-      {/* Band 1: Dark #000000 KPI Row, AEO Direct Answer & Calculator */}
+      {/* 02 & 03 — PROBLEM & SOLUTION SNAPSHOT: Dark #000000 KPI Row & AEO Direct Answer */}
       <section className="relative z-10 bg-black text-white border-t border-[#1D1D1D] py-16 md:py-24">
         <div className="max-w-[1168px] mx-auto px-5 space-y-12 md:space-y-14">
           <div
@@ -140,14 +172,10 @@ export function RhTakeawayCityBody({
               </dd>
             </dl>
           </div>
-
-          <div data-gsap-reveal="">
-            <CommissionSavingsCalculator />
-          </div>
         </div>
       </section>
 
-      {/* Band 2: Light #F5F5F7 Market Landscape, Borough Coverage & Free Tools */}
+      {/* 02B & 04 — PROBLEM / MARKET LANDSCAPE + LOCAL BOROUGH VALUE (Light #F5F5F7) */}
       <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-20 md:py-28 border-y border-[#E6E6E6]">
         <div className="max-w-[1168px] mx-auto px-5 space-y-14">
           <div
@@ -279,8 +307,163 @@ export function RhTakeawayCityBody({
         </div>
       </section>
 
-      {/* Band 3: Dark #000000 FAQs, UK Regional Network & Closing CTA */}
-      <section className="relative z-10 bg-black text-white py-20 md:py-28 border-b border-[#1D1D1D]">
+      {/* 04B — VALUE ARCHITECTURE SLOT (RhSystemRows from city page) */}
+      {architectureSection}
+
+      {/* 05 — TRUST: LIVE HOSPITALITY CONCEPT DEMOS (Dark #0D0D0D Showcase) */}
+      <section data-nav="dark" className="relative z-10 bg-[#0D0D0D] text-white py-20 md:py-24 border-t border-[#202020]">
+        <div className="max-w-[1168px] mx-auto px-5 space-y-12">
+          <div data-gsap-reveal="" className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div className="max-w-2xl space-y-2.5">
+              <div className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#BAFF00]">
+                05 / INTERACTIVE TAKEAWAY PROOF
+              </div>
+              <h2 className="font-display-rh text-3xl sm:text-4xl font-semibold tracking-tight text-white">
+                Test live hospitality ordering menus{" "}
+                <span className="text-[#939393]">right in your browser.</span>
+              </h2>
+            </div>
+            <Link
+              href="/demos"
+              className="text-xs sm:text-sm font-medium text-[#BAFF00] hover:underline shrink-0 inline-flex items-center gap-1.5"
+            >
+              <span>Explore All Interactive Demos</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {LIVE_TAKEAWAY_DEMOS.map((demo) => (
+              <a
+                key={demo.href}
+                href={demo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rh-edge-orbit-card is-lime rounded-3xl border border-[#242424] bg-[#141414] p-7 flex flex-col justify-between gap-6 hover:border-[#BAFF00]/60 transition-colors group"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-4">
+                    <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#939393]">
+                      {demo.tag}
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#BAFF00] text-[#0D0D0D] text-[10px] font-mono-tech font-semibold uppercase">
+                      {demo.metric}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white group-hover:text-[#BAFF00] transition-colors mb-2">
+                    {demo.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#939393] leading-relaxed font-light">
+                    {demo.desc}
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-[#222222] inline-flex items-center gap-2 text-xs font-medium text-white group-hover:text-[#BAFF00]">
+                  <span>Test Live Menu Concept</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 06 — PROCESS SLOT (RhProcessCarousel from city page) */}
+      {processSection}
+
+      {/* 07 — INVESTMENT: COMMISSION SAVINGS ROI CALCULATOR & FIXED PACKAGES (Light #F5F5F7) */}
+      <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-20 md:py-28 border-t border-[#E6E6E6]">
+        <div className="max-w-[1168px] mx-auto px-5 space-y-16">
+          <CommissionSavingsCalculator />
+
+          <div>
+            <div data-gsap-reveal="" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+              <div>
+                <div className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#595959] mb-2">
+                  07 / TRANSPARENT DIRECT ORDERING INVESTMENT
+                </div>
+                <h2 className="font-display-rh text-3xl sm:text-4xl font-semibold tracking-tight text-[#0D0D0D]">
+                  One-time takeaway build,{" "}
+                  <span className="text-[#939393]">zero order cuts forever.</span>
+                </h2>
+              </div>
+              <Link
+                href="/pricing"
+                className="text-xs sm:text-sm font-medium text-[#0D0D0D] underline underline-offset-4 hover:opacity-70 shrink-0"
+              >
+                Inspect full £/$ package comparison →
+              </Link>
+            </div>
+
+            <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="rh-edge-orbit-card rounded-3xl bg-white border border-[#E6E6E6] p-8 flex flex-col justify-between">
+                <div>
+                  <div className="text-[11px] font-mono-tech uppercase tracking-wider text-[#595959] mb-2">
+                    Tier 01 · WhatsApp Kitchen Docket
+                  </div>
+                  <h3 className="text-xl font-semibold text-[#0D0D0D] mb-2">
+                    Commission-Free Direct Menu
+                  </h3>
+                  <div className="text-[38px] font-medium tracking-[-0.04em] text-[#0D0D0D] font-display-rh pb-5 mb-5 border-b border-[#E6E6E6]">
+                    <RhOdometerNumber prefix="£" value={250} />{" "}
+                    <span className="text-xs font-normal text-[#595959]">fixed one-time</span>
+                  </div>
+                  <ul className="space-y-2 text-xs sm:text-sm text-[#555555] mb-7">
+                    <li>• Full digitised menu uploaded from flyer photo</li>
+                    <li>• Collection &amp; cash/pay-at-door WhatsApp ticket routing</li>
+                    <li>• 14-Allergen filter tags + print bag-flyer QR code</li>
+                  </ul>
+                </div>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rh-btn-pill justify-center bg-[#0D0D0D] text-white text-xs sm:text-sm font-medium py-3.5 px-6 hover:bg-[#222222] transition-colors"
+                >
+                  <span>Lock £250 Scope on WhatsApp</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+
+              <div className="rh-edge-orbit-card is-lime rounded-3xl bg-[#0D0D0D] text-white border border-[#222222] p-8 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#BAFF00]">
+                      Tier 02 · Stripe Apple Pay / Card Checkout
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#BAFF00] text-[#0D0D0D] text-[10px] font-mono-tech font-semibold uppercase">
+                      Most Popular
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Full Direct Card &amp; Postcode Ordering
+                  </h3>
+                  <div className="text-[38px] font-medium tracking-[-0.04em] text-[#BAFF00] font-display-rh pb-5 mb-5 border-b border-white/10">
+                    <RhOdometerNumber prefix="£" value={390} />{" "}
+                    <span className="text-xs font-normal text-[#939393]">fixed one-time</span>
+                  </div>
+                  <ul className="space-y-2 text-xs sm:text-sm text-[#CBCBCB] mb-7">
+                    <li>• Direct Stripe Apple Pay / Google Pay / card settlements to your bank</li>
+                    <li>• Automated radius &amp; postcode delivery minimums</li>
+                    <li>• 100% domain &amp; GitHub source ownership with 0% portal cut</li>
+                  </ul>
+                </div>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rh-btn-pill justify-center bg-[#BAFF00] text-[#0D0D0D] text-xs sm:text-sm font-bold py-3.5 px-6 hover:bg-white transition-colors"
+                >
+                  <span>Start £390 Card Storefront</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 08 — OBJECTIONS: Dark #000000 FAQs & UK Regional Network */}
+      <section className="relative z-10 bg-black text-white py-20 md:py-28 border-t border-[#1D1D1D]">
         <div className="max-w-[1168px] mx-auto px-5 space-y-16">
           <div data-gsap-reveal="" className="space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-2">
@@ -353,34 +536,40 @@ export function RhTakeawayCityBody({
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          <div
-            data-gsap-reveal=""
-            className="text-center p-8 sm:p-12 rounded-3xl border border-[#222222] bg-[#0D0D0D] space-y-6"
-          >
-            <h2 className="font-display-rh text-2xl sm:text-4xl font-semibold tracking-tight text-white">
-              {ctaHeading}
-            </h2>
-            <p className="text-xs sm:text-sm text-[#A1A1AA] max-w-xl mx-auto font-light leading-relaxed">
-              {ctaSubtitle}
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] font-bold text-xs sm:text-sm px-8 py-3.5 inline-flex items-center gap-2 hover:bg-white transition-colors"
-              >
-                <span>Chat on WhatsApp (+92 319 6526604)</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <Link
-                href="/contact"
-                className="rh-btn-pill bg-black text-white font-medium text-xs sm:text-sm px-6 py-3.5 border border-[#333333] hover:border-[#BAFF00] transition-colors"
-              >
-                Submit Project Enquiry
-              </Link>
-            </div>
+      {/* 09 — CONVERSION: Final CTA Card (Light #F5F5F7 Framing Dark Conversion Card) */}
+      <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-20 md:py-24 px-5 border-t border-[#E6E6E6]">
+        <div
+          data-gsap-reveal=""
+          className="max-w-[1168px] mx-auto text-center p-8 sm:p-14 rounded-3xl border border-[#222222] bg-black space-y-6 text-white"
+        >
+          <div className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#BAFF00]">
+            09 / KEEP 100% DIRECT ORDERS
+          </div>
+          <h2 className="font-display-rh text-2xl sm:text-4xl font-semibold tracking-tight text-white">
+            {ctaHeading}
+          </h2>
+          <p className="text-xs sm:text-sm text-[#A1A1AA] max-w-xl mx-auto font-light leading-relaxed">
+            {ctaSubtitle}
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] font-bold text-xs sm:text-sm px-8 py-3.5 inline-flex items-center gap-2 hover:bg-white transition-colors"
+            >
+              <span>Chat on WhatsApp (+92 319 6526604)</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link
+              href="/contact"
+              className="rh-btn-pill bg-[#0D0D0D] text-white font-medium text-xs sm:text-sm px-6 py-3.5 border border-[#333333] hover:border-[#BAFF00] transition-colors"
+            >
+              Submit Project Enquiry
+            </Link>
           </div>
         </div>
       </section>

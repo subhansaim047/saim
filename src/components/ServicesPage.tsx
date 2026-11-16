@@ -3,7 +3,10 @@
 import { SiteFooter } from "./SiteFooter";
 import { RhHeader } from "./rh/RhHeader";
 import {
+  RhBentoWorkGrid,
+  RhConversionBanner,
   RhHeroPinned,
+  RhOdometerNumber,
   RhProblemSolutionDeck,
   RhProcessCarousel,
   RhSystemRows,
@@ -584,8 +587,68 @@ export const ServicesPage = () => {
         </div>
       </section>
 
-      {/* 5. DARK HORIZONTAL DRAG PROCESS CAROUSEL + PULSING CONIC CIRCLE DIVIDER */}
+      {/* 05 — TRUST: PORTFOLIO BENTO + FLOATING LIME CURSOR SHOWCASE */}
+      <RhBentoWorkGrid
+        overline="05 / LIVE REFERENCE ARCHITECTURE"
+        title="Inspect working concept builds"
+        titleMuted="engineered from scratch."
+        proofStat="<0.8s"
+        proofLabel="Target First Contentful Paint across edge-cached Next.js 16 production builds"
+        highlightMetric="100%"
+        highlightTitle="Full GitHub Repository & Source Code Ownership"
+        highlightHref="/case-studies"
+        cursorLabel="Open Live Demo"
+        items={[
+          {
+            id: "hq-leathercon",
+            title: "HQ Leathercon — Export Manufacturing Showcase",
+            category: "Industrial B2B",
+            metric: "99+ Performance Target",
+            description:
+              "Multi-language B2B product catalogue built on Next.js App Router with instant category filtering and zero third-party theme bloat.",
+            href: "/hq-leathercon/index.html",
+            external: true,
+            tags: ["Next.js 16", "TypeScript", "B2B Export"],
+          },
+          {
+            id: "hotbite-takeaway",
+            title: "HotBite — Zero-Commission Ordering Concept",
+            category: "UK Hospitality",
+            metric: "0% Platform Fees",
+            description:
+              "Mobile-first takeaway menu with live item modifiers, 14-allergen badges, and instant WhatsApp docket routing.",
+            href: "/hotbite/index.html",
+            external: true,
+            tags: ["Direct Ordering", "WhatsApp Ticket", "Allergen Matrix"],
+          },
+          {
+            id: "frenchyse-bistro",
+            title: "Frenchyse — Hospitality Reservation System",
+            category: "Restaurant Brand",
+            metric: "Sub-Second FCP",
+            description:
+              "High-contrast editorial dining showcase engineered for rapid table enquiries, gift voucher flows, and mobile speed.",
+            href: "/frenchyse/index.html",
+            external: true,
+            tags: ["Editorial UI", "Mobile First", "SEO Schema"],
+          },
+          {
+            id: "burger-garage",
+            title: "Burger Garage — Direct Food Commerce UI",
+            category: "QSR & Takeaway",
+            metric: "Instant Basket",
+            description:
+              "High-conversion quick-service menu flow designed to switch repeat local diners off 30% delivery commission apps.",
+            href: "/burger-garage/index.html",
+            external: true,
+            tags: ["QSR Ordering", "Dark UI", "Direct Checkout"],
+          },
+        ]}
+      />
+
+      {/* 06 — PROCESS: DARK HORIZONTAL DRAG CAROUSEL + PULSING CONIC CIRCLE DIVIDER */}
       <RhProcessCarousel
+        overline="06 / ENGINEERING WORKFLOW"
         title="How we build it in days,"
         titleMuted="not months"
         stages={[
@@ -640,12 +703,125 @@ export const ServicesPage = () => {
         ]}
       />
 
-      {/* 3. DARK FAQ ACCORDION (rh.design style) */}
+      {/* 07 — INVESTMENT: TRANSPARENT STARTING PACKAGES (Light #F5F5F7) */}
+      <section className="bg-[#F5F5F7] text-[#0D0D0D] py-20 sm:py-28 border-t border-[#E6E6E6]">
+        <div className="max-w-[1168px] mx-auto px-5">
+          <div data-gsap-reveal="" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <div className="max-w-2xl">
+              <div className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#595959] mb-3">
+                07 / TRANSPARENT INVESTMENT
+              </div>
+              <h2 className="text-[clamp(30px,4vw,48px)] font-medium leading-[1.08] tracking-[-0.03em] text-[#0D0D0D]">
+                Fixed milestone pricing,{" "}
+                <span className="text-[#939393]">zero monthly retainers.</span>
+              </h2>
+            </div>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-[#0D0D0D] underline underline-offset-4 hover:opacity-70 shrink-0"
+            >
+              <span>Inspect full package comparison</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rh-edge-orbit-card rounded-3xl bg-white border border-[#E6E6E6] p-8 flex flex-col justify-between">
+              <div>
+                <div className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#595959] mb-3">
+                  Starter Launch
+                </div>
+                <h3 className="text-[22px] font-medium text-[#0D0D0D] mb-2">
+                  High-Speed Business Site
+                </h3>
+                <p className="text-[14px] text-[#595959] leading-[1.6] mb-6">
+                  Bespoke mobile-first Next.js website or direct takeaway starter menu engineered for sub-second speed and local SEO.
+                </p>
+                <div className="text-[40px] font-medium tracking-[-0.04em] text-[#0D0D0D] font-display-rh pb-6 mb-6 border-b border-[#E6E6E6]">
+                  <RhOdometerNumber prefix="£" value={250} suffix="+" />
+                </div>
+                <ul className="space-y-2.5 text-[14px] text-[#595959] mb-8">
+                  <li>• Mobile-first custom design system</li>
+                  <li>• Local SEO Schema &amp; metadata ready</li>
+                  <li>• 50/50 milestone payment protection</li>
+                </ul>
+              </div>
+              <Link
+                href="/contact"
+                className="rh-btn-pill w-full justify-center bg-[#0D0D0D] text-white text-[14px] font-medium py-3.5 px-6 hover:bg-[#222222] transition-colors"
+              >
+                <span>Lock £250 Scope</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="rh-edge-orbit-card is-lime rounded-3xl bg-[#0D0D0D] text-white border border-[#222222] p-8 flex flex-col justify-between shadow-xl">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-mono-tech font-semibold uppercase tracking-[0.15em] mb-4">
+                  Most Popular · Zero Fees
+                </div>
+                <h3 className="text-[22px] font-medium text-white mb-2">
+                  Growth Commerce &amp; Ordering
+                </h3>
+                <p className="text-[14px] text-[#939393] leading-[1.6] mb-6">
+                  Full direct-to-customer takeaway ordering platform, Stripe payment gateway, or multi-page commercial storefront.
+                </p>
+                <div className="text-[40px] font-medium tracking-[-0.04em] text-[#BAFF00] font-display-rh pb-6 mb-6 border-b border-white/10">
+                  <RhOdometerNumber prefix="£" value={390} suffix="+" />
+                </div>
+                <ul className="space-y-2.5 text-[14px] text-[#CBCBCB] mb-8">
+                  <li>• 0% per-order platform commission forever</li>
+                  <li>• Stripe Apple Pay / Google Pay or Shopify headless</li>
+                  <li>• 100% GitHub repository ownership</li>
+                </ul>
+              </div>
+              <Link
+                href="/pricing"
+                className="rh-btn-pill w-full justify-center bg-[#BAFF00] text-[#0D0D0D] text-[14px] font-semibold py-3.5 px-6 hover:bg-white transition-colors"
+              >
+                <span>Compare Growth Tiers</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="rh-edge-orbit-card rounded-3xl bg-white border border-[#E6E6E6] p-8 flex flex-col justify-between">
+              <div>
+                <div className="text-[11px] font-mono-tech uppercase tracking-[0.2em] text-[#595959] mb-3">
+                  Enterprise &amp; 1:1 Clones
+                </div>
+                <h3 className="text-[22px] font-medium text-[#0D0D0D] mb-2">
+                  Bespoke Web App / Clone
+                </h3>
+                <p className="text-[14px] text-[#595959] leading-[1.6] mb-6">
+                  Custom SaaS dashboards, interactive tools, or pixel-exact 1:1 Next.js recreation of any reference site (flat $1,900 USD).
+                </p>
+                <div className="text-[40px] font-medium tracking-[-0.04em] text-[#0D0D0D] font-display-rh pb-6 mb-6 border-b border-[#E6E6E6]">
+                  <RhOdometerNumber prefix="£" value={790} suffix="+" />
+                </div>
+                <ul className="space-y-2.5 text-[14px] text-[#595959] mb-8">
+                  <li>• Full auth, Supabase / PostgreSQL &amp; APIs</li>
+                  <li>• 1:1 Webflow/Framer reconstruction available</li>
+                  <li>• Dedicated post-launch engineering warranty</li>
+                </ul>
+              </div>
+              <Link
+                href="/contact"
+                className="rh-btn-pill w-full justify-center bg-[#0D0D0D] text-white text-[14px] font-medium py-3.5 px-6 hover:bg-[#222222] transition-colors"
+              >
+                <span>Request Custom Quote</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 08 — OBJECTIONS: DARK FAQ ACCORDION (rh.design style) */}
       <section className="bg-black text-white py-20 sm:py-28 border-t border-[#1D1D1D]">
         <div className="max-w-[1168px] mx-auto px-5 grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-5">
-            <div className="text-[12px] uppercase tracking-[0.88px] text-[#939393] mb-3">
-              Common Questions
+          <div data-gsap-reveal="" className="lg:col-span-5">
+            <div className="text-[12px] uppercase tracking-[0.88px] text-[#BAFF00] mb-3">
+              08 / Common Questions
             </div>
             <h2 className="text-[clamp(32px,4vw,48px)] font-medium leading-[1.1] tracking-[-0.03em]">
               <span className="text-white">Services &amp; Delivery </span>
@@ -695,6 +871,9 @@ export const ServicesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* 09 — CONVERSION: GET STARTED CTA BANNER */}
+      <RhConversionBanner />
       </main>
 
       <SiteFooter theme="dark" />

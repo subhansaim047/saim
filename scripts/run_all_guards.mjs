@@ -130,6 +130,25 @@ for (const keptUrl of [
   assert(sitemapContent.includes(keptUrl), `Kept URL "${keptUrl}" is present in sitemap.xml`);
 }
 
+const imageSitemapContent = fs.readFileSync("public/image-sitemap.xml", "utf8");
+assert(!imageSitemapContent.includes("/food-safety-templates"), "Zero /food-safety-templates URLs appear in image-sitemap.xml");
+assert(!imageSitemapContent.includes("<loc>https://www.saimdev.site/tools</loc>"), "Removed /tools hub absent from image-sitemap.xml");
+for (const removedPath of [
+  "/tools/ppds-label-generator",
+  "/tools/food-cost-calculator",
+  "/tools/allergen-matrix-generator",
+  "/tools/recipe-batch-calculator",
+  "/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
+  "/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
+  "/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
+  "/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
+  "/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
+  "/blog/commercial-kitchen-food-cooling-temperature-guide",
+  "/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide"
+]) {
+  assert(!imageSitemapContent.includes(removedPath), `Removed route ${removedPath} is absent from image-sitemap.xml`);
+}
+
 // -----------------------------------------------------------------
 // GUARD 5: Allergen chart demo data safety & UI terminology
 // -----------------------------------------------------------------
