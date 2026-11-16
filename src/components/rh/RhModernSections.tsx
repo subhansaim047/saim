@@ -581,11 +581,14 @@ export function RhProblemSolutionDeck({
           obs.disconnect();
         }
       },
-      { threshold: 0.25 }
+      { threshold: 0.08 }
     );
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
+
+  const maxBarHeightPx = Math.max(...bars.map((b) => b.heightPx), 1);
+  const colCount = Math.max(bars.length, 1);
 
   return (
     <section className="relative z-10 bg-white text-[#0D0D0D] py-20 md:py-28 border-b border-[#E6E6E6]">
@@ -677,10 +680,10 @@ export function RhProblemSolutionDeck({
                 <p className="text-[14px] md:text-[15px] text-[#939393] leading-[1.6] mb-6">
                   {solutionDesc}
                 </p>
-                <div className="grid grid-cols-3 gap-4 pt-5 border-t border-white/10">
+                <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-5 border-t border-white/10">
                   {solutionMetrics.map((m) => (
                     <div key={m.label}>
-                      <div className="text-[22px] md:text-[26px] font-medium tracking-[-0.03em] text-[#BAFF00] font-mono-tech">
+                      <div className="text-[19px] sm:text-[22px] md:text-[26px] font-medium tracking-[-0.03em] text-[#BAFF00] font-mono-tech">
                         {m.value}
                       </div>
                       <div className="text-[11px] text-[#939393] mt-0.5">{m.label}</div>
@@ -693,67 +696,95 @@ export function RhProblemSolutionDeck({
 
           {/* Right: Animated Scroll-Triggered Benchmark Bar Chart (.chart-retention-mad) */}
           <div className="lg:col-span-6 rh-bezel-shell-light flex flex-col">
-            <div className="rh-bezel-core-light p-7 md:p-10 flex-1 flex flex-col justify-between">
+            <div className="rh-bezel-core-light p-4 sm:p-7 md:p-10 flex-1 flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between gap-4 mb-2">
-                  <h3 className="text-[20px] font-medium tracking-[-0.02em] text-[#0D0D0D]">
+                <div className="flex flex-wrap items-center justify-between gap-2.5 mb-2">
+                  <h3 className="text-[18px] sm:text-[20px] font-medium tracking-[-0.02em] text-[#0D0D0D]">
                     {chartTitle}
                   </h3>
-                  <span className="text-[11px] font-mono-tech uppercase tracking-wider px-2.5 py-1 bg-[#F5F5F7] border border-[#E6E6E6] text-[#0D0D0D] rounded-full">
+                  <span className="shrink-0 whitespace-nowrap text-[11px] font-mono-tech uppercase tracking-wider px-2.5 py-1 bg-[#F5F5F7] border border-[#E6E6E6] text-[#0D0D0D] rounded-full">
                     {chartBadge}
                   </span>
                 </div>
-                <p className="text-[14px] text-[#595959] leading-[1.55] mb-8">{chartCaption}</p>
+                <p className="text-[13px] sm:text-[14px] text-[#595959] leading-[1.55] mb-6 sm:mb-8">
+                  {chartCaption}
+                </p>
               </div>
 
               <div
                 ref={chartRef}
-                className={`chart-retention-mad relative pt-8 pb-10 pl-10 pr-2 border-l border-b border-dashed border-[#CBCBCB] ${
+                className={`chart-retention-mad relative flex flex-col ${
                   chartInView ? "" : "is-pre-mad"
                 }`}
-                style={{ width: "100%", height: "auto" }}
               >
-                {/* Y-Axis Label */}
-                <div className="absolute left-[-28px] top-1/2 -translate-y-1/2 -rotate-90 text-[11px] font-mono-tech uppercase tracking-widest text-[#939393] whitespace-nowrap">
-                  {chartYAxis}
-                </div>
+                <div className="flex items-stretch gap-2 sm:gap-3">
+                  {/* Dedicated Y-axis strip so rotated label never collides with bar #1 or values */}
+                  <div className="w-4 sm:w-5 shrink-0 flex items-center justify-center select-none">
+                    <span
+                      className="text-[10px] sm:text-[11px] font-mono-tech uppercase tracking-[0.14em] text-[#737373] whitespace-nowrap"
+                      style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+                    >
+                      {chartYAxis}
+                    </span>
+                  </div>
 
-                <div className="grid grid-cols-3 gap-4 items-end h-[360px]">
-                  {bars.map((bar, idx) => (
-                    <div key={bar.label} className="flex flex-col items-center justify-end h-full">
-                      <div
-                        className={`bar-num-mad text-[26px] md:text-[32px] font-medium tracking-[-0.03em] mb-3 font-mono-tech tabular-nums ${
-                          bar.isHighlight ? "text-[#0D0D0D]" : "text-[#939393]"
-                        }`}
-                        style={{ transitionDelay: `${500 + idx * 220}ms` }}
-                      >
-                        {bar.value}
-                      </div>
-                      <div
-                        className={`bar-mad w-full rounded-t-2xl flex items-end justify-center pb-4 transition-all ${
-                          bar.isHighlight
-                            ? "bg-[#0D0D0D] text-[#BAFF00] border border-[#0D0D0D] shadow-[0_-8px_30px_-8px_rgba(186,255,0,0.28)]"
-                            : "bg-[#E6E6E6] text-[#0D0D0D]"
-                        }`}
-                        style={{
-                          height: `${bar.heightPx}px`,
-                          transitionDelay: `${idx * 220}ms`,
-                        }}
-                      >
-                        <span
-                          className={`bar-label-mad text-[12px] md:text-[13px] font-medium px-2 text-center ${
-                            bar.isHighlight ? "text-[#BAFF00]" : "text-[#0D0D0D]"
-                          }`}
-                          style={{ transitionDelay: `${500 + idx * 220}ms` }}
-                        >
-                          {bar.label}
-                        </span>
-                      </div>
+                  {/* Bounded plot canvas scaling cleanly for 3, 4, or N bars without wrapping */}
+                  <div className="flex-1 min-w-0 pt-6 sm:pt-8 pb-3 sm:pb-4 pl-2.5 sm:pl-4 pr-1 border-l border-b border-dashed border-[#CBCBCB]">
+                    <div
+                      className="grid gap-1.5 sm:gap-3 md:gap-4 items-end min-h-[268px] sm:min-h-[308px]"
+                      style={{
+                        gridTemplateColumns: `repeat(${colCount}, minmax(0, 1fr))`,
+                      }}
+                    >
+                      {bars.map((bar, idx) => {
+                        const normalizedHeight = Math.round(
+                          Math.max(82, (bar.heightPx / maxBarHeightPx) * 244)
+                        );
+                        return (
+                          <div
+                            key={bar.label}
+                            className="flex flex-col items-center justify-end min-w-0"
+                          >
+                            <div
+                              className={`bar-num-mad font-medium tracking-[-0.03em] mb-2 sm:mb-3 font-mono-tech tabular-nums whitespace-nowrap ${
+                                colCount >= 4
+                                  ? "text-[16px] sm:text-[24px] md:text-[28px]"
+                                  : "text-[22px] sm:text-[26px] md:text-[32px]"
+                              } ${bar.isHighlight ? "text-[#0D0D0D]" : "text-[#737373]"}`}
+                              style={{ transitionDelay: `${180 + idx * 90}ms` }}
+                            >
+                              {bar.value}
+                            </div>
+                            <div
+                              className={`bar-mad w-full rounded-t-xl sm:rounded-t-2xl flex items-end justify-center pb-2.5 sm:pb-4 transition-all ${
+                                bar.isHighlight
+                                  ? "bg-[#0D0D0D] text-[#BAFF00] border border-[#0D0D0D] shadow-[0_-8px_30px_-8px_rgba(186,255,0,0.28)]"
+                                  : "bg-[#E6E6E6] text-[#0D0D0D]"
+                              }`}
+                              style={{
+                                height: `${normalizedHeight}px`,
+                                transitionDelay: `${idx * 90}ms`,
+                              }}
+                            >
+                              <span
+                                className={`bar-label-mad font-medium text-center leading-[1.2] ${
+                                  colCount >= 4
+                                    ? "text-[9.5px] sm:text-[12px] md:text-[13px] px-1 sm:px-2"
+                                    : "text-[11px] sm:text-[12px] md:text-[13px] px-1.5 sm:px-2"
+                                } ${bar.isHighlight ? "text-[#BAFF00]" : "text-[#0D0D0D]"}`}
+                                style={{ transitionDelay: `${180 + idx * 90}ms` }}
+                              >
+                                {bar.label}
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
-                  ))}
+                  </div>
                 </div>
 
-                <div className="mt-4 text-center text-[11px] font-mono-tech uppercase tracking-widest text-[#939393]">
+                <div className="mt-3 pl-6 sm:pl-8 text-center text-[10px] sm:text-[11px] font-mono-tech uppercase tracking-[0.16em] text-[#737373]">
                   {chartXAxis}
                 </div>
               </div>

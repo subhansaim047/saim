@@ -154,16 +154,16 @@ export const CommissionSavingsCalculator: React.FC<CommissionSavingsCalculatorPr
 
             {/* Commission Rate Selector */}
             <div className="p-6 bg-[#141414] border border-white/10 flex flex-col justify-between gap-3">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-2">
                 <span className="text-xs font-mono-tech uppercase tracking-wider text-[#939393]">
                   Aggregator Fee Structure
                 </span>
-                <span className="text-xs font-mono-tech font-semibold text-[#BAFF00] bg-white/[0.06] border border-white/15 px-2.5 py-0.5">
+                <span className="shrink-0 whitespace-nowrap text-xs font-mono-tech font-semibold text-[#BAFF00] bg-white/[0.06] border border-white/15 px-2.5 py-0.5">
                   {commissionRate}% Platform Cut
                 </span>
               </div>
 
-              <div className="grid grid-cols-3 gap-1.5 bg-black p-1 border border-white/10">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5 bg-black p-1 border border-white/10">
                 {[
                   { label: "Just Eat (28%)", rate: 28 },
                   { label: "Deliveroo (30%)", rate: 30 },

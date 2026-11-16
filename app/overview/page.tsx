@@ -192,8 +192,69 @@ const REGIONAL_AND_TOOL_HUBS = [
 ];
 
 export default function StudioOverviewPage() {
+  const overviewWebPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.saimdev.site/overview/#webpage",
+    url: "https://www.saimdev.site/overview",
+    name: "Full Studio Overview & Project Scope Cost Estimator | Saim Dev",
+    description:
+      "Complete engineering specifications, interactive project scope cost estimator, fixed-price comparisons, and technical deliverables from Saim Dev.",
+    inLanguage: "en-GB",
+    isPartOf: { "@id": "https://www.saimdev.site/#website" },
+    about: { "@id": "https://www.saimdev.site/#organization" },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2"],
+    },
+  };
+
+  const overviewBreadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.saimdev.site/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Studio Overview & Estimator",
+        item: "https://www.saimdev.site/overview",
+      },
+    ],
+  };
+
+  const overviewFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: OVERVIEW_FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <div className="rh-page min-h-screen flex flex-col bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(overviewWebPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(overviewBreadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(overviewFaqSchema) }}
+      />
       <RhHeader theme="dark" />
 
       <main className="flex-grow">
@@ -830,9 +891,9 @@ export default function StudioOverviewPage() {
                     icon: Gauge,
                   },
                   {
-                    href: "/tools/sfbb-daily-diary",
-                    title: "SFBB Daily Log Generator",
-                    desc: "Instant FSA Safer Food Better Business temperature & checklist logs.",
+                    href: "/tools",
+                    title: "SFBB & Free UK Kitchen Tools",
+                    desc: "Instant FSA Safer Food Better Business temperature, allergen, and cost logs.",
                     icon: FileCheck2,
                   },
                   {

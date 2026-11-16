@@ -1672,7 +1672,7 @@ export const GROWTH_OPTIMIZATION_SERVICES: Record<string, ServicePageData> = {
         industry: "High-Volume Template & Directory Sites",
         description: "Programmatic differentiation turning thin templated hubs into genuinely valuable deep guides.",
         exampleProject: "160+ Template Architecture",
-        demoUrl: "/food-safety-templates",
+        demoUrl: "/tools",
       },
       {
         industry: "D2C & Custom eCommerce Brands",
@@ -1742,7 +1742,7 @@ export const GROWTH_OPTIMIZATION_SERVICES: Record<string, ServicePageData> = {
         description: "Category-specific statutory data modules eliminating boilerplate overlap across niche food hygiene pages.",
         tech: ["Dynamic Modules", "Clean Links", "UK Regulatory"],
         metrics: "Live on Site",
-        demoUrl: "/food-safety-templates",
+        demoUrl: "/tools",
       },
       {
         title: "UK Local City Service Cluster",

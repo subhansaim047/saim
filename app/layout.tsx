@@ -170,6 +170,7 @@ const professionalServiceSchema = {
   "email": "contact@saimdev.site",
   "areaServed": [
     { "@type": "Country", "name": "United Kingdom", "identifier": "GB" },
+    { "@type": "Country", "name": "United States", "identifier": "US" },
     { "@type": "AdministrativeArea", "name": "European Union" }
   ],
   "hasMap": "https://maps.google.com/maps?q=United+Kingdom",
@@ -239,7 +240,6 @@ export default function RootLayout({
         <meta name="revised" content="Wednesday, November 11, 2026" />
         <meta property="article:modified_time" content="2026-11-11T15:30:00Z" />
         <meta name="image" content="https://www.saimdev.site/hero-shots/shot-4.webp" />
-        <meta name="og:image" content="https://www.saimdev.site/hero-shots/shot-4.webp" />
         <link rel="image_src" href="https://www.saimdev.site/hero-shots/shot-4.webp" />
         {/* Microsoft Clarity Analytics (Deferred to idle to preserve 100 mobile PageSpeed) */}
         <script

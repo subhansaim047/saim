@@ -3,7 +3,7 @@ import { BlogPost1Page } from '@/components/BlogPost1Page';
 
 export const metadata: Metadata = {
   title: 'Why Small Businesses Need a Website UK | Saim Dev',
-  description: 'Discover why small businesses need a website in the UK to turn local searches into paying customers, build trust, and avoid monthly platform subscription fees.',
+  description: 'Why small businesses need a custom website in the UK & US to turn local searches into leads, build trust, and escape monthly platform subscriptions.',
   robots: {
     index: true,
     follow: true,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Why Small Businesses Need a Website UK | Saim Dev',
-    description: 'Discover why small businesses need a website in the UK to turn local searches into paying customers, build trust, and avoid monthly platform subscription fees.',
+    description: 'Why small businesses need a custom website in the UK & US to turn local searches into leads, build trust, and escape monthly platform subscriptions.',
     url: 'https://www.saimdev.site/blog/why-small-business-needs-website',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: '@saimwebdev',
     title: 'Why Small Businesses Need a Website UK | Saim Dev',
-    description: 'Discover why small businesses need a website in the UK to turn local searches into paying customers, build trust, and avoid monthly platform subscription fees.',
+    description: 'Why small businesses need a custom website in the UK & US to turn local searches into leads, build trust, and escape monthly platform subscriptions.',
     images: ['https://www.saimdev.site/og-image.png']
   }
 };
@@ -40,7 +40,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Why UK Small Businesses Need a Professional Website | Saim Dev",
-    "description": "Discover why small businesses need a website in the UK to turn local searches into paying customers, build trust, and avoid monthly platform subscription fees.",
+    "description": "Why small businesses need a custom website in the UK & US to turn local searches into leads, build trust, and escape monthly platform subscriptions.",
     "url": "https://www.saimdev.site/blog/why-small-business-needs-website",
     "datePublished": "2026-08-11",
     "dateModified": "2026-10-31",

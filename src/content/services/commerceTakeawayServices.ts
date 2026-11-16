@@ -1505,7 +1505,7 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
         tag: "Bonus Utility",
         tagValue: "PPDS + Costing",
         summary: "Use our free UK Food Cost Calculator, PPDS Label PDF engine, and 160+ SFBB templates.",
-        href: "/food-cost-calculator",
+        href: "/tools/food-cost-calculator",
       },
     ],
     painPoints: [
@@ -1647,7 +1647,7 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
       {
         feature: "Free Built-In UK Compliance Utilities",
         benefit: "Save on Admin Tools",
-        description: "Bookmark our free /tools/ppds-label-generator, /food-cost-calculator, and 160+ EHO log templates anytime.",
+        description: "Bookmark our free /tools/commission-savings-calculator, /tools/food-cost-calculator, and 160+ EHO log templates.",
       },
       {
         feature: "Clean Post-Code Coverage Boundaries",

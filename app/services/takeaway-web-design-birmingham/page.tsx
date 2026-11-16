@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = {
   title: "Takeaway Web Design Birmingham | Direct Site | Saim Dev",
   description:
-    "Birmingham takeaway websites from £250 fixed. Bypass Just Eat commissions in the Balti Triangle and West Midlands with 14-allergen menus and WhatsApp dispatch.",
+    "Birmingham takeaway websites from £250 fixed. Cut Just Eat fees across the West Midlands with 14-allergen menus, B-postcode zones & WhatsApp orders.",
   robots: {
     index: true,
     follow: true,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Takeaway Web Design Birmingham | Direct Site | Saim Dev",
     description:
-      "Birmingham takeaway websites from £250 fixed. Bypass Just Eat commissions in the Balti Triangle and West Midlands with 14-allergen menus and WhatsApp dispatch.",
+      "Birmingham takeaway websites from £250 fixed. Cut Just Eat fees across the West Midlands with 14-allergen menus, B-postcode zones & WhatsApp orders.",
     url: "https://www.saimdev.site/services/takeaway-web-design-birmingham",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     creator: "@saimwebdev",
     title: "Takeaway Web Design Birmingham | Direct Site | Saim Dev",
     description:
-      "Birmingham takeaway websites from £250 fixed. Bypass Just Eat commissions in the Balti Triangle and West Midlands with 14-allergen menus and WhatsApp dispatch.",
+      "Birmingham takeaway websites from £250 fixed. Cut Just Eat fees across the West Midlands with 14-allergen menus, B-postcode zones & WhatsApp orders.",
     images: ["https://www.saimdev.site/og-services.png"],
   },
 };
@@ -95,7 +95,7 @@ export default function BirminghamTakeawayWebDesignPage() {
     "@id": `${canonicalUrl}#service`,
     name: "Takeaway Web Design Birmingham - Saim Dev",
     description:
-      "Birmingham takeaway websites from £250 fixed. Bypass Just Eat commissions in the Balti Triangle and West Midlands with 14-allergen menus and WhatsApp dispatch.",
+      "Birmingham takeaway websites from £250 fixed. Cut Just Eat fees across the West Midlands with 14-allergen menus, B-postcode zones & WhatsApp orders.",
     url: canonicalUrl,
     priceRange: "£250",
     areaServed: { "@type": "City", name: "Birmingham" },
@@ -202,7 +202,7 @@ export default function BirminghamTakeawayWebDesignPage() {
               tag: "Margin Control",
               tagValue: "Platter Profit",
               summary: "Price mixed grill and lamb curry trays profitably with our free UK kitchen cost calculator.",
-              href: "/food-cost-calculator",
+              href: "/tools/food-cost-calculator",
             },
           ]}
         />
@@ -330,7 +330,7 @@ export default function BirminghamTakeawayWebDesignPage() {
               title: "Midlands LocalBusiness Schema",
               description: "Rich JSON-LD metadata paired with printable SFBB records supporting 5-star Council inspections.",
               tags: ["Birmingham Geo", "FHRS Ready", "SFBB Templates"],
-              href: "/food-safety-templates",
+              href: "/tools",
             },
           ]}
         />

@@ -1,6 +1,6 @@
 # Saim Dev — Custom Web Development, E-Commerce & UK Takeaway Systems
 
-> Saim Dev is a specialized Next.js software engineering studio based in Pakistan that builds bespoke, high-performance websites, custom web applications, e-commerce stores, and commission-free digital takeaway systems for businesses across the United Kingdom, European Union, and globally. All projects are delivered remotely with transparent fixed GBP pricing, sub-second page performance, 100% code ownership, and built-in technical SEO.
+> Saim Dev is a specialized Next.js software engineering studio serving businesses across the United Kingdom, United States, European Union, and globally. All projects are delivered remotely with transparent fixed pricing in GBP (£250–£1,500) and USD ($300–$1,800+), sub-second performance, 100% code ownership, and built-in technical SEO.
 
 ## Studio Overview & Commercial Details
 
@@ -12,10 +12,10 @@
 - **Email**: contact@saimdev.site
 - **WhatsApp**: +92 319 6526604
 - **Fixed Pricing Model (50/50 Milestone Protection, Zero Monthly Lock-In)**:
-  - **Landing Page Plan**: £250 (Single high-converting page, 3–5 business days delivery)
-  - **Starter Website Plan**: £390 (Multi-page bespoke business website, 5–7 business days delivery)
-  - **Business / Takeaway Plan**: £790 (Full custom platform or 0% commission online ordering system, 7–10 business days delivery)
-  - **Custom Web Apps & E-Commerce Stores**: £1,250 – £2,500 (SaaS MVPs, client portals, bespoke Shopify / headless commerce)
+  - **Landing Page Plan**: £250 / €290 / $300 (Single high-converting page, 3–5 business days delivery)
+  - **Starter Website Plan**: £390 / €460 / $500 (Multi-page bespoke business website, 5–7 business days delivery)
+  - **Business / Takeaway Plan**: £790 / €920 / $999 (Full custom platform or 0% commission online ordering system, 7–10 business days delivery)
+  - **Custom Web Apps, 1:1 UI Rebuilds & E-Commerce Stores**: £1,250–£2,500 / $1,500–$3,000 (SaaS MVPs, client portals, Figma/Webflow-to-Next.js rebuilds, bespoke Shopify / headless commerce)
 
 ## Core Technologies
 
@@ -32,14 +32,20 @@
 ## Canonical Pages, Services, Demos & Compliance Resources
 
 ### Core Studio & Commercial Pages
-1. [Saim Dev Homepage](https://www.saimdev.site/): Bespoke Next.js websites, e-commerce stores, and web apps for UK and European businesses from £250.
-2. [Web Development Services Hub](https://www.saimdev.site/services): Full-stack web development, online ordering systems, e-commerce, speed optimization, and technical SEO architecture.
-   - [Custom Web Applications & SaaS MVPs](https://www.saimdev.site/services/website-clone): Full-stack web software, client portals, and real-time dashboards built on Next.js and PostgreSQL.
-   - [E-Commerce & Shopify Development](https://www.saimdev.site/services/ecommerce-shopify): High-converting Shopify, WooCommerce, and headless commerce storefronts with sub-second checkout flows.
-   - [Bespoke Business Websites](https://www.saimdev.site/services/business-websites): Custom digital flagships for B2B, healthcare, legal, and professional service firms.
-   - [WordPress & Headless CMS Engineering](https://www.saimdev.site/services/wordpress-headless-cms): Lightweight custom WordPress, Sanity, and Strapi headless architectures with zero plugin bloat.
+1. [Saim Dev Homepage](https://www.saimdev.site/): Bespoke Next.js websites, headless Shopify stores, and commission-free ordering for UK, US & EU brands from £250 / $300.
+2. [Full Studio Overview & Scope Estimator](https://www.saimdev.site/overview): Interactive project cost calculator, full service directory, and side-by-side platform comparisons.
+3. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings vs 28%–34% Just Eat, Deliveroo & Uber Eats fees.
+4. [Web Development Services Hub](https://www.saimdev.site/services): Full-stack web development, online ordering systems, e-commerce, speed optimization, and technical SEO architecture.
+   - [Custom Web Applications & SaaS MVPs](https://www.saimdev.site/services/custom-web-apps): Full-stack web software, client portals, and real-time dashboards built on Next.js, Supabase & PostgreSQL.
+   - [1:1 Website Rebuild & Webflow/Figma UI Port](https://www.saimdev.site/services/website-clone): Fixed-price rebuild of legacy Webflow, Framer, or HTML sites into clean Next.js 16 code.
+   - [Custom Next.js E-Commerce Stores](https://www.saimdev.site/services/ecommerce-development): Bespoke Stripe Checkout storefronts and custom product configurators with zero SaaS platform fees.
+   - [Headless Shopify & Storefront API](https://www.saimdev.site/services/ecommerce-shopify): High-converting Shopify and headless commerce storefronts eliminating expensive monthly app bloat.
+   - [Bespoke Business Websites](https://www.saimdev.site/services/business-websites): Custom digital flagships for UK & US B2B, healthcare, legal, and professional service firms.
+   - [WordPress to Next.js Migration & Headless CMS](https://www.saimdev.site/services/wordpress-headless-cms): Migrate slow WordPress sites onto static-edge Next.js with Sanity or WPGraphQL and full 301 preservation.
    - [High-Converting Landing Pages & CRO](https://www.saimdev.site/services/landing-pages-cro): Conversion-engineered landing pages built for Google Ads, Meta Ads, and PPC campaigns.
-   - [Website Speed Optimization & Core Web Vitals](https://www.saimdev.site/services/website-speed-optimization): Performance remediation delivering sub-1.2s LCP, 0.00 CLS, and 95+ mobile PageSpeed scores.
+   - [Website Speed Optimization & Core Web Vitals](https://www.saimdev.site/services/website-speed-optimization): Performance remediation targeting sub-1.2s LCP, 0.00 CLS, and 95+ mobile scores.
+   - [Website Redesign & Migration](https://www.saimdev.site/services/website-redesign): Modernize legacy sites cleanly with 301 redirect protection.
+   - [Technical SEO Engineering](https://www.saimdev.site/services/seo-services): Schema.org @graph architecture, canonical hygiene, and crawl engineering.
 3. [Takeaway Website Design UK](https://www.saimdev.site/services/takeaway-web-design): Commission-free direct ordering websites for UK takeaways & restaurants with built-in Natasha's Law allergen filters.
    - [Takeaway Website Design London](https://www.saimdev.site/services/takeaway-web-design-london): Direct ordering websites for London restaurants and food operators across all 32 boroughs.
    - [Takeaway Website Design Manchester](https://www.saimdev.site/services/takeaway-web-design-manchester): Bespoke takeaway websites for Greater Manchester eateries and Curry Mile venues.
@@ -49,10 +55,10 @@
 6. [4-Stage Engineering Process](https://www.saimdev.site/process): Transparent 4-stage delivery sprint from discovery brief and wireframing to staging approval and live deployment.
 7. [Live Interactive Demos Hub](https://www.saimdev.site/demos): Interactive production-grade demo storefronts and restaurant ordering systems engineered by Saim Dev:
    - [HQ Leathercon Bespoke Leather E-Commerce Demo](https://www.saimdev.site/hq-leathercon/index.html): Full-scale luxury leather jackets, shoes, bags, belts & wallets storefront with live search, custom jacket builder, and WhatsApp order dispatch.
-   - [Burger Garage Interactive Demo](https://www.saimdev.site/burger-garage): Craft burger takeaway ordering demo with live cart and category navigation.
-   - [Frenchyse Fast-Casual Demo](https://www.saimdev.site/frenchyse): Modern fast-casual restaurant digital menu and ordering experience.
-   - [Anzaar Fine Dining & Takeaway Demo](https://www.saimdev.site/anzaar): Multi-category restaurant menu and direct ordering showcase.
-   - [HotBite Pizza & Grill Demo](https://www.saimdev.site/hotbite): High-converting takeaway storefront with deal builders and mobile-first UX.
+   - [Burger Garage Interactive Demo](https://www.saimdev.site/burger-garage/index.html): Craft burger takeaway ordering demo with live cart and category navigation.
+   - [Frenchyse Fast-Casual Demo](https://www.saimdev.site/frenchyse/index.html): Modern fast-casual restaurant digital menu and ordering experience.
+   - [Anzaar Fine Dining & Takeaway Demo](https://www.saimdev.site/anzaar/index.html): Multi-category restaurant menu and direct ordering showcase.
+   - [HotBite Pizza & Grill Demo](https://www.saimdev.site/hotbite/index.html): High-converting takeaway storefront with deal builders and mobile-first UX.
 8. [Case Studies & Results](https://www.saimdev.site/case-studies): Real business website case studies showing sub-second speed metrics and organic conversion improvements.
 9. [Modern Tech Stack](https://www.saimdev.site/technologies): Architectural breakdown of Next.js App Router, Tailwind CSS, TypeScript, and edge infrastructure.
 10. [About Saim Dev](https://www.saimdev.site/about): Overview of our Next.js engineering studio serving UK, EU, and international clients remotely.

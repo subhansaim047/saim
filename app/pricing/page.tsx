@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.saimdev.site/pricing",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Website Development Pricing & Packages UK | Saim Dev",
     description:

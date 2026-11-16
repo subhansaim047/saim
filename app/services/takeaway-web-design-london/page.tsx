@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = {
   title: "Takeaway Website Design London | Direct Site | Saim Dev",
   description:
-    "Direct takeaway ordering websites for London kitchens from £250 fixed. Cut Just Eat & Deliveroo commissions with 14-allergen filters across all 32 boroughs.",
+    "London takeaway ordering websites from £250 fixed. Cut Just Eat & Deliveroo fees with 14-allergen menus and postcode zones across all 32 boroughs.",
   robots: {
     index: true,
     follow: true,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Takeaway Website Design London | Direct Site | Saim Dev",
     description:
-      "Direct takeaway ordering websites for London kitchens from £250 fixed. Cut Just Eat & Deliveroo commissions with 14-allergen filters across all 32 boroughs.",
+      "London takeaway ordering websites from £250 fixed. Cut Just Eat & Deliveroo fees with 14-allergen menus and postcode zones across all 32 boroughs.",
     url: "https://www.saimdev.site/services/takeaway-web-design-london",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     creator: "@saimwebdev",
     title: "Takeaway Website Design London | Direct Site | Saim Dev",
     description:
-      "Direct takeaway ordering websites for London kitchens from £250 fixed. Cut Just Eat & Deliveroo commissions with 14-allergen filters across all 32 boroughs.",
+      "London takeaway ordering websites from £250 fixed. Cut Just Eat & Deliveroo fees with 14-allergen menus and postcode zones across all 32 boroughs.",
     images: ["https://www.saimdev.site/og-services.png"],
   },
 };
@@ -95,7 +95,7 @@ export default function LondonTakeawayWebDesignPage() {
     "@id": `${canonicalUrl}#service`,
     name: "Takeaway Website Design London - Saim Dev",
     description:
-      "Direct takeaway ordering websites for London kitchens from £250 fixed. Cut Just Eat & Deliveroo commissions with 14-allergen filters across all 32 boroughs.",
+      "London takeaway ordering websites from £250 fixed. Cut Just Eat & Deliveroo fees with 14-allergen menus and postcode zones across all 32 boroughs.",
     url: canonicalUrl,
     priceRange: "£250",
     areaServed: { "@type": "City", name: "London" },

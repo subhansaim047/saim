@@ -985,7 +985,7 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
     mainKeyword: "Headless WordPress & Next.js Migration",
     seoTitle: "WordPress to Next.js Migration | Headless CMS | Saim Dev",
     seoDescription:
-      "Migrate off slow, vulnerable WordPress plugins onto static-edge Next.js 16 with headless Sanity or GraphQL CMS, zero downtime DNS switch and 301 preservation.",
+      "Migrate slow WordPress sites to static-edge Next.js 16 with headless Sanity or WPGraphQL CMS, 301 URL preservation and zero downtime.",
     canonicalUrl: "https://www.saimdev.site/services/wordpress-headless-cms",
     badge: "De-Bloat & Headless CMS Migration",
     h1: "Migrate WordPress to Next.js 16 — Keep Your Editorial Workflow, Drop Plugin Bloat",
@@ -1697,7 +1697,7 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
         industry: "Compliance & Template Marketplaces",
         description: "Searchable high-volume interactive libraries with printable downloads and category filtering.",
         exampleProject: "160+ Template Library",
-        demoUrl: "/food-safety-templates",
+        demoUrl: "/tools",
       },
     ],
     process: [

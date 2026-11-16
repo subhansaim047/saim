@@ -428,11 +428,11 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               </li>
               <li>
                 <Link
-                  href="/food-safety-templates"
+                  href="/tools/commission-savings-calculator"
                   prefetch={false}
                   className="hover:text-white transition-colors"
                 >
-                  Food Safety Templates Hub
+                  Takeaway Commission Calculator
                 </Link>
               </li>
             </ul>

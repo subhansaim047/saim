@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.saimdev.site/process",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Web Development Process & Delivery Workflow | Saim Dev",
     description: "Transparent 4-stage website engineering workflow: discovery, architecture, Next.js build, and zero-downtime deployment.",

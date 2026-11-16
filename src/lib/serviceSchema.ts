@@ -27,6 +27,7 @@ export function generateServiceSchemas(data: ServicePageData) {
     },
     "areaServed": [
       { "@type": "Country", "name": "United Kingdom", "identifier": "GB" },
+      { "@type": "Country", "name": "United States", "identifier": "US" },
       { "@type": "AdministrativeArea", "name": "European Union" },
     ],
     "speakable": {

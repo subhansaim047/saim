@@ -130,7 +130,9 @@ const staticPages = [
       }
     ]
   },
+  { url: "https://www.saimdev.site/overview", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/tools", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/tools/commission-savings-calculator", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/tools/ppds-label-generator", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/tools/food-cost-calculator", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/tools/allergen-matrix-generator", priority: "0.9", changefreq: "weekly" },
@@ -214,10 +216,6 @@ const staticPages = [
   { url: "https://www.saimdev.site/privacy", priority: "0.6", changefreq: "monthly" },
   { url: "https://www.saimdev.site/cookie-policy", priority: "0.6", changefreq: "monthly" },
   { url: "https://www.saimdev.site/disclaimer", priority: "0.6", changefreq: "monthly" },
-  { url: "https://www.saimdev.site/burger-garage", priority: "0.8", changefreq: "monthly" },
-  { url: "https://www.saimdev.site/frenchyse", priority: "0.8", changefreq: "monthly" },
-  { url: "https://www.saimdev.site/anzaar", priority: "0.8", changefreq: "monthly" },
-  { url: "https://www.saimdev.site/hotbite", priority: "0.8", changefreq: "monthly" },
 ];
 
 // Add only KEEP and IMPROVE pages

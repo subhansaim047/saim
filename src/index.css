@@ -1650,12 +1650,12 @@ input[type="range"].sybiosme-slider::-moz-range-thumb:active {
 
 .chart-retention-mad .bar-mad {
   clip-path: inset(0 0 0 0);
-  transition: clip-path 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: clip-path 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .chart-retention-mad .bar-label-mad,
 .chart-retention-mad .bar-num-mad {
-  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* 6. Odometer Digit Roll (.pr-odo) */
