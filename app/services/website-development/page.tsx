@@ -4,13 +4,19 @@ import { SERVICES_CATALOG } from "@/content/servicesData";
 import { generateServiceSchemas } from "@/lib/serviceSchema";
 
 const data = SERVICES_CATALOG["website-development"];
-const { serviceSchema, breadcrumbSchema, faqSchema } = generateServiceSchemas(data);
+const { schemaGraph } = generateServiceSchemas(data);
 
 export const metadata: Metadata = {
   title: data.seoTitle,
   description: data.seoDescription,
   alternates: {
     canonical: data.canonicalUrl,
+    languages: {
+      "en": data.canonicalUrl,
+      "en-GB": data.canonicalUrl,
+      "en-US": data.canonicalUrl,
+      "x-default": data.canonicalUrl,
+    },
   },
   robots: {
     index: true,
@@ -22,13 +28,15 @@ export const metadata: Metadata = {
     url: data.canonicalUrl,
     siteName: "Saim Dev",
     locale: "en_GB",
+    alternateLocale: ["en_US"],
     type: "website",
     images: [
       {
-        url: "https://www.saimdev.site/hero-shots/shot-4.webp",
+        url: "https://www.saimdev.site/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Bespoke Next.js Website Development Services UK - Saim Dev",
+        alt: "Next.js Website Development UK & US Services - Saim Dev",
+        type: "image/png",
       },
     ],
   },
@@ -37,7 +45,7 @@ export const metadata: Metadata = {
     title: data.seoTitle,
     description: data.seoDescription,
     creator: "@saimwebdev",
-    images: ["https://www.saimdev.site/hero-shots/shot-4.webp"],
+    images: ["https://www.saimdev.site/og-image.png"],
   },
 };
 
@@ -46,15 +54,7 @@ export default function WebsiteDevelopmentPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
       <ServicePageTemplate data={data} />
     </>

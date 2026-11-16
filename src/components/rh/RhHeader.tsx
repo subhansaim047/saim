@@ -344,8 +344,8 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                     className="group text-white hover:text-[#BAFF00] text-[clamp(30px,2.6vw,40px)] font-medium leading-[1.16] tracking-[-1.6px] whitespace-nowrap transition-colors"
                   >
                     <span className="rh-roll-wrap">
-                      <span>Web Design</span>
-                      <span>Web Design</span>
+                      <span>Next.js Websites</span>
+                      <span>Next.js Websites</span>
                     </span>
                   </Link>
                   <Link
@@ -481,7 +481,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                       href="/nextjs-developer-uk"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
-                      Full-Stack Next.js
+                      Hire Next.js Developer
                     </Link>
                   </li>
                 </ul>
@@ -649,7 +649,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   onClick={() => setMobileOpen(false)}
                   className="text-[18px] text-[#B3B3B3]"
                 >
-                  Web Design &amp; Next.js
+                  Next.js Website Development
                 </Link>
                 <Link
                   prefetch={false}

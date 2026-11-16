@@ -334,10 +334,10 @@ export const BlogPost3Page = () => {
               <span className="text-primary text-xs font-mono">&rarr;</span>
             </Link>
             <Link
-              href="/nextjs-developer-uk"
+              href="/services/website-development"
               className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
             >
-              <span>Next.js websites for UK businesses</span>
+              <span>Next.js website development UK &amp; US</span>
               <span className="text-primary text-xs font-mono">&rarr;</span>
             </Link>
             <Link

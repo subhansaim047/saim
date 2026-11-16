@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, ShieldCheck, Zap, X } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Zap, X } from "lucide-react";
 import { FooterSection } from "@/components/FooterSection";
 import { RhHeader } from "@/components/rh/RhHeader";
 import {
@@ -12,8 +12,8 @@ import {
 } from "@/components/rh/RhModernSections";
 
 export const metadata: Metadata = {
-  title: 'Freelance Next.js Developer UK | Fast Websites | Saim Dev',
-  description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
+  title: 'Freelance Next.js Developer UK | Direct Sprints | Saim Dev',
+  description: 'Work directly with a senior React & App Router engineer on rapid UI builds, migrations, and technical audits across UK & US timezones. Book a sprint.',
   robots: {
     index: true,
     follow: true,
@@ -21,87 +21,136 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.saimdev.site/nextjs-developer-uk",
     languages: {
+      "en": "https://www.saimdev.site/nextjs-developer-uk",
       "en-GB": "https://www.saimdev.site/nextjs-developer-uk",
+      "en-US": "https://www.saimdev.site/nextjs-developer-uk",
+      "x-default": "https://www.saimdev.site/nextjs-developer-uk",
     },
   },
   openGraph: {
-    title: 'Freelance Next.js Developer UK | Fast Websites | Saim Dev',
-    description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
+    title: 'Freelance Next.js Developer UK | Direct Sprints | Saim Dev',
+    description: 'Work directly with a senior React & App Router engineer on rapid UI builds, migrations, and technical audits across UK & US timezones. Book a sprint.',
     url: "https://www.saimdev.site/nextjs-developer-uk",
     siteName: "Saim Dev",
     locale: "en_GB",
+    alternateLocale: ["en_US"],
     type: "website",
-    images: [{ url: "https://www.saimdev.site/og-image.png", width: 1200, height: 630, alt: "Next.js Developer UK" }]
+    images: [{ url: "https://www.saimdev.site/og-image.png", width: 1200, height: 630, alt: "Freelance Next.js Developer UK & US - Saim Dev" }]
   },
   twitter: {
     card: "summary_large_image",
     creator: "@saimwebdev",
-    title: 'Freelance Next.js Developer UK | Fast Websites | Saim Dev',
-    description: 'Specialist freelance Next.js developer for UK businesses. Sub-second performance, 100/100 Core Web Vitals, and bespoke web architecture from £250.',
+    title: 'Freelance Next.js Developer UK | Direct Sprints | Saim Dev',
+    description: 'Work directly with a senior React & App Router engineer on rapid UI builds, migrations, and technical audits across UK & US timezones. Book a sprint.',
     images: ["https://www.saimdev.site/og-image.png"]
   }
 };
 
-const ukFaqSchema = {
+const developerGraphSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Why choose Next.js over WordPress for a UK business?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Traditional WordPress sites are plagued by plugin bloat, database queries, and slow load times (often 3–5 seconds), which kills conversions and Google rankings in the UK. Next.js delivers statically generated, sub-second pages with Optimised Core Web Vitals and zero security maintenance overhead."
-      }
+      "@type": "WebPage",
+      "@id": "https://www.saimdev.site/nextjs-developer-uk#webpage",
+      "url": "https://www.saimdev.site/nextjs-developer-uk",
+      "name": "Freelance Next.js Developer UK | Direct Sprints | Saim Dev",
+      "description": "Work directly with a senior React & App Router engineer on rapid UI builds, migrations, and technical audits across UK & US timezones.",
+      "isPartOf": { "@id": "https://www.saimdev.site/#website" },
+      "about": { "@id": "https://www.saimdev.site/nextjs-developer-uk#service" },
+      "author": { "@id": "https://www.saimdev.site/#person" },
+      "breadcrumb": { "@id": "https://www.saimdev.site/nextjs-developer-uk#breadcrumb" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.saimdev.site/og-image.png",
+        "width": 1200,
+        "height": 630
+      },
+      "inLanguage": ["en-GB", "en-US"]
     },
     {
-      "@type": "Question",
-      "name": "How does pricing and invoicing work for UK & European clients?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "All projects feature transparent, fixed pricing in GBP (£) or EUR (€) with zero hidden fees or monthly lock-in retainers. We provide full invoices compliant with UK and European reverse-charge VAT accounting."
-      }
+      "@type": "Service",
+      "@id": "https://www.saimdev.site/nextjs-developer-uk#service",
+      "name": "Freelance Next.js Developer & Engineering Sprints",
+      "serviceType": "Freelance Next.js Developer UK & US",
+      "url": "https://www.saimdev.site/nextjs-developer-uk",
+      "provider": { "@id": "https://www.saimdev.site/#organization" },
+      "areaServed": [
+        { "@type": "Country", "name": "United Kingdom", "identifier": "GB" },
+        { "@type": "Country", "name": "United States", "identifier": "US" },
+        { "@type": "AdministrativeArea", "name": "European Union" }
+      ],
+      "offers": [
+        {
+          "@type": "AggregateOffer",
+          "priceCurrency": "GBP",
+          "lowPrice": "250",
+          "highPrice": "790",
+          "offerCount": 3
+        },
+        {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "300",
+          "highPrice": "999",
+          "offerCount": 3
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Are your Next.js websites fully Privacy-conscious?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Every website is built with strict adherence to UK GDPR and EU data protection standards, including privacy-friendly cookie consent banners, SSL encryption, and zero unauthorized third-party trackers."
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://www.saimdev.site/nextjs-developer-uk#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.saimdev.site/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Freelance Next.js Developer UK",
+          "item": "https://www.saimdev.site/nextjs-developer-uk"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "What is the typical project delivery timeline?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Starter business sites are delivered in 5–7 working days. Full multi-page business websites take 7–10 working days from project kickoff to live production deployment."
-      }
-    }
-  ]
-};
-
-const ukBreadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.saimdev.site/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://www.saimdev.site/services"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Next.js Developer UK",
-      "item": "https://www.saimdev.site/nextjs-developer-uk"
+      "@type": "FAQPage",
+      "@id": "https://www.saimdev.site/nextjs-developer-uk#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why hire a dedicated freelance Next.js developer over a multi-layer UK agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional agencies pass briefs through account managers before a junior edits a WordPress theme. Working directly with a senior freelance Next.js developer removes communication lag, enforces strict TypeScript App Router patterns, and ships fixed-milestone code with zero retainers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does sprint pricing and invoicing work for UK & US clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sprints operate on fixed GBP (£) or USD ($) milestones with zero recurring retainers. We issue clean commercial invoices ready for UK Ltd, European VAT reverse-charge, and US business bookkeeping."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle privacy and Core Web Vitals engineering?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every sprint pairs PECR-aware consent patterns and security headers with React Server Components, tree-shaken CSS, image dimension enforcement, and Lighthouse QA before production handover."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the typical sprint delivery timeline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Single-route UI sprints take 3–5 working days, while full 5-to-15-page Next.js engineering sprints run 5–10 working days from written specification to GitHub handover."
+          }
+        }
+      ]
     }
   ]
 };
@@ -111,11 +160,7 @@ export default function NextJsDeveloperUkPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ukFaqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ukBreadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(developerGraphSchema) }}
       />
       <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
         <RhHeader theme="dark" />
@@ -123,48 +168,48 @@ export default function NextJsDeveloperUkPage() {
         <main>
         {/* 1. PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
         <RhHeroPinned
-          badge="UK & European Next.js Engineering Specialist"
+          badge="Senior Freelance Next.js Engineer · UK & US Timezones"
           title={
             <>
-              High-Performance Next.js Web Development{" "}
-              <span className="text-[#939393]">for UK Businesses.</span>
+              Freelance Next.js Developer{" "}
+              <span className="text-[#939393]">for UK &amp; US Product Teams.</span>
             </>
           }
-          subtitle="Saim Dev provides specialist freelance Next.js web development for UK businesses from £250. Sub-second React platforms engineered for 95+ Core Web Vitals, local Google visibility, and 100% source code ownership with zero agency retainers."
+          subtitle="Direct senior React 19 and Next.js 16 engineering sprints for UK and US businesses, product teams, and design agencies. Rapid feature shipping, Core Web Vitals optimization, and full GitHub code ownership from £250 / $300 fixed."
           primaryCta={{
             label: "Start on WhatsApp (+92 319 6526604)",
-            href: "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20a%20Next.js%20website%20for%20my%20UK%20business",
+            href: "https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20discuss%20hiring%20a%20freelance%20Next.js%20developer",
           }}
-          secondaryCta={{ label: "View Website Case Studies", href: "/case-studies" }}
+          secondaryCta={{ label: "Full Website Development Service", href: "/services/website-development" }}
           videoType="cube"
-          stripLabel="Fixed GBP Pricing · Zero Agency Retainers"
+          stripLabel="Direct Freelance Sprints · Zero Agency Retainers"
           stripItems={[
             {
-              label: "01. UK GBP Packages",
-              tag: "From £250",
-              tagValue: "No VAT Lock-In",
-              summary: "Fixed GBP quotes (£250 landing, £390 starter, £790 business) with 50/50 milestones.",
+              label: "01. UK & US Milestones",
+              tag: "From £250 / $300",
+              tagValue: "No Retainer Lock-In",
+              summary: "Fixed GBP/USD sprint quotes (£250/$300 UI, £390/$500 starter, £790/$999 scale) with 50/50 split.",
               href: "/pricing",
             },
             {
-              label: "02. Edge Speed",
-              tag: "CWV Target",
-              tagValue: "95+ Target",
-              summary: "Next.js 16 App Router and CDN caching built to clear Google LCP & INP on 4G.",
+              label: "02. Edge Architecture",
+              tag: "App Router",
+              tagValue: "RSC + ISR",
+              summary: "Next.js 16 React Server Components and CDN caching engineered cleanly for mobile 4G.",
               href: "/services/website-speed-optimization",
             },
             {
-              label: "03. UK Local SEO",
-              tag: "Structured Data",
-              tagValue: "JSON-LD Ready",
-              summary: "Semantic HTML5, en-GB regional metadata, and full schema graphs out of the box.",
-              href: "/services/seo-services",
+              label: "03. Turnkey Builds",
+              tag: "Full Service",
+              tagValue: "Web Dev Hub",
+              summary: "Need complete Next.js website development UK & US delivery? Inspect our flagship build service.",
+              href: "/services/website-development",
             },
             {
               label: "04. Repo Ownership",
               tag: "Code Handoff",
               tagValue: "100% Yours",
-              summary: "Complete GitHub repository transfer with zero proprietary CMS or monthly retainers.",
+              summary: "Clean GitHub PRs or full repository transfer with zero proprietary CMS dependencies.",
               href: "/process",
             },
           ]}
@@ -225,11 +270,11 @@ export default function NextJsDeveloperUkPage() {
                   <ul className="space-y-4 text-[14px] text-white/85">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-1" />
-                      <span><strong className="text-white">Fixed pricing from £250 / £390</strong> with zero monthly agency retainers.</span>
+                      <span><strong className="text-white">Fixed pricing from £250 / $300</strong> with zero monthly agency retainers.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-1" />
-                      <span>Pure Next.js 16 + React 19 code loading in under 1 second globally.</span>
+                      <span>Pure Next.js 16 + React 19 static &amp; edge architecture built to minimize blocking JS.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 text-[#BAFF00] shrink-0 mt-1" />
@@ -275,24 +320,24 @@ export default function NextJsDeveloperUkPage() {
           </div>
         </section>
 
-        {/* 04 — VALUE: UK ARCHITECTURE & FEATURES */}
+        {/* 04 — VALUE: UK & US FREELANCE ARCHITECTURE & FEATURES */}
         <RhSystemRows
-          overline="04 / UK NEXT.JS ARCHITECTURE"
-          title="Engineered for UK scale."
-          titleMuted="Zero WordPress bloat."
-          subtitle="Every UK deployment ships with App Router edge rendering, strict TypeScript safety, and 100% repository ownership."
+          overline="04 / DIRECT FREELANCE ENGINEERING"
+          title="Senior Next.js delivery."
+          titleMuted="Without agency middlemen."
+          subtitle="Every sprint ships App Router Server Components, strict TypeScript interfaces, and clean GitHub PRs."
           rows={[
             {
               num: "01",
-              title: "Edge SSR & <0.8s LCP",
-              description: "Server components and Vercel edge caching built to clear Google Core Web Vitals across 4G mobile networks nationwide.",
-              tags: ["Next.js 16", "Edge SSR", "LCP < 0.8s"],
+              title: "Edge SSR & App Router Speed",
+              description: "Server components and edge caching structured to pass Google Core Web Vitals thresholds across UK and US 4G networks.",
+              tags: ["Next.js 16", "React 19", "Edge SSR"],
             },
             {
               num: "02",
-              title: "Technical UK SEO & Schema",
-              description: "Automated JSON-LD LocalBusiness, Service, and FAQPage schemas with canonical en-GB hreflang tags.",
-              tags: ["JSON-LD", "en-GB SEO", "OpenGraph"],
+              title: "Technical SEO & Schema @graph",
+              description: "Validated JSON-LD Service, Organization, and BreadcrumbList graphs paired with multi-region UK & US metadata.",
+              tags: ["JSON-LD", "UK & US SEO", "OpenGraph"],
             },
             {
               num: "03",
@@ -303,31 +348,31 @@ export default function NextJsDeveloperUkPage() {
           ]}
         />
 
-        {/* 05A — TRUST: VERIFIED UK METRIC BENCHMARKS (Light #F5F5F7 Framing Dark Orbit Cards) */}
+        {/* 05A — TRUST: VERIFIABLE ENGINEERING STANDARDS (Light #F5F5F7 Framing Dark Orbit Cards) */}
         <section className="relative z-10 bg-[#F5F5F7] text-[#0D0D0D] py-16 sm:py-20 px-5 border-t border-[#E6E6E6]">
           <div className="max-w-[1168px] mx-auto">
             <div data-gsap-reveal="" className="max-w-[720px] mb-10">
               <div className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#595959] mb-2">
-                05 / VERIFIED UK BENCHMARKS
+                05 / ENGINEERING BENCHMARKS
               </div>
               <h2 className="text-[30px] sm:text-[42px] font-medium tracking-[-0.04em] leading-[1.08] text-[#0D0D0D]">
-                Measurable engineering speed{" "}
-                <span className="text-[#939393]">you can test live.</span>
+                Measurable engineering discipline{" "}
+                <span className="text-[#939393]">verified before handover.</span>
               </h2>
             </div>
 
             <div data-gsap-stagger="" className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="rh-edge-orbit-card is-lime p-6 bg-[#0D0D0D] border border-[#222222] text-white">
                 <div className="text-[32px] sm:text-[40px] font-medium tracking-[-0.04em] text-[#BAFF00] font-mono-tech leading-none mb-2">
-                  90+
+                  RSC
                 </div>
-                <div className="text-[12px] text-[#CBCBCB]">Google Core Web Vitals</div>
+                <div className="text-[12px] text-[#CBCBCB]">Server-First Bundle Budget</div>
               </div>
               <div className="rh-edge-orbit-card is-lime p-6 bg-[#0D0D0D] border border-[#222222] text-white">
                 <div className="text-[32px] sm:text-[40px] font-medium tracking-[-0.04em] text-white font-mono-tech leading-none mb-2">
-                  &lt;0.8s
+                  0-Lock
                 </div>
-                <div className="text-[12px] text-[#CBCBCB]">Sub-Second Load Time</div>
+                <div className="text-[12px] text-[#CBCBCB]">100% GitHub Source Owned</div>
               </div>
               <div className="rh-edge-orbit-card is-lime p-6 bg-[#0D0D0D] border border-[#222222] text-white">
                 <div className="text-[32px] sm:text-[40px] font-medium tracking-[-0.04em] text-white font-mono-tech leading-none mb-2">
@@ -339,7 +384,7 @@ export default function NextJsDeveloperUkPage() {
                 <div className="text-[32px] sm:text-[40px] font-medium tracking-[-0.04em] text-[#BAFF00] font-mono-tech leading-none mb-2">
                   £250+
                 </div>
-                <div className="text-[12px] text-[#CBCBCB]">Fixed GBP Pricing</div>
+                <div className="text-[12px] text-[#CBCBCB]">From $300 USD Fixed Sprints</div>
               </div>
             </div>
           </div>
@@ -358,7 +403,7 @@ export default function NextJsDeveloperUkPage() {
               id: "uk-rh-clone",
               title: "RH Studio Flagship Clone",
               category: "High-Craft Agency UI",
-              metric: "<0.8s LCP Target",
+              metric: "Edge Static RSC",
               description: "Smooth Lenis scrolling, GSAP timelines, and editorial light/dark contrast replicated cleanly in Next.js.",
               href: "/rh-clone/index.html",
               external: true,
@@ -471,9 +516,9 @@ export default function NextJsDeveloperUkPage() {
                     Ideal for Google Ads campaigns, London service promotions, and product launches.
                   </p>
                   <ul className="space-y-2.5 text-[13px] text-[#333333] mb-8">
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> 1 High-Converting Page</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> 1 High-Converting Route</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> WhatsApp &amp; Call Integration</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> Sub-Second Loading Speed</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> Static Edge Rendering ($300 USD)</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> 3–5 Days Turnaround</li>
                   </ul>
                 </div>
@@ -505,7 +550,7 @@ export default function NextJsDeveloperUkPage() {
                   <ul className="space-y-2.5 text-[13px] text-[#333333] mb-8">
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> Up to 5 Custom Pages</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> Local UK SEO &amp; Schema Markup</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> GDPR Cookie Banner Included</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> PECR Consent Banner Ready</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> 5–7 Days Turnaround</li>
                   </ul>
                 </div>
@@ -574,20 +619,20 @@ export default function NextJsDeveloperUkPage() {
             <div data-gsap-stagger="" className="space-y-3">
               {[
                 {
-                  q: "Why choose Next.js over WordPress for a UK business?",
-                  a: "Traditional WordPress sites suffer from plugin bloat and slow server response times (often 3–5 seconds), which hurts conversions and UK search engine rankings. Next.js serves pre-rendered static content instantly across global edge servers with 95+ PageSpeed scores.",
+                  q: "Why hire a dedicated freelance Next.js developer over a multi-layer UK agency?",
+                  a: "Traditional agencies pass briefs through account managers before a junior edits a WordPress theme. Working directly with a senior freelance Next.js developer removes communication lag, enforces strict TypeScript App Router patterns, and ships fixed-milestone code with zero retainers.",
                 },
                 {
-                  q: "How does pricing and invoicing work for UK & European clients?",
-                  a: "All projects feature transparent, fixed pricing in GBP (£) or EUR (€) with zero hidden fees. We provide compliant invoices formatted for UK Ltd and European reverse-charge VAT accounting.",
+                  q: "How does sprint pricing and invoicing work for UK & US clients?",
+                  a: "Sprints operate on fixed GBP (£) or USD ($) milestones with zero recurring retainers. We issue clean commercial invoices ready for UK Ltd, European VAT reverse-charge, and US business bookkeeping.",
                 },
                 {
-                  q: "Are your websites fully Privacy-conscious?",
-                  a: "Yes. Every website is built with strict adherence to UK GDPR and EU data protection standards, including privacy-friendly cookie consent banners, SSL encryption, and zero unauthorized third-party trackers.",
+                  q: "How do you handle privacy and Core Web Vitals engineering?",
+                  a: "Every sprint pairs PECR-aware consent patterns and security headers with React Server Components, tree-shaken CSS, image dimension enforcement, and Lighthouse QA before production handover.",
                 },
                 {
-                  q: "What is the typical project delivery timeline?",
-                  a: "Starter business sites are delivered in 5–7 working days. Full multi-page business websites take 7–10 working days from project kickoff to live production deployment.",
+                  q: "What is the typical sprint delivery timeline?",
+                  a: "Single-route UI sprints take 3–5 working days, while full 5-to-15-page Next.js engineering sprints run 5–10 working days from written specification to GitHub handover.",
                 },
               ].map((item, idx) => (
                 <details
@@ -660,10 +705,10 @@ export default function NextJsDeveloperUkPage() {
               </div>
               <div className="flex flex-wrap items-center gap-3 shrink-0">
                 <Link
-                  href="/services"
+                  href="/services/website-development"
                   className="text-[13px] font-medium px-5 py-2.5 rounded-full border border-[#0D0D0D] text-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-white transition-colors"
                 >
-                  Explore our web development services
+                  Next.js Website Development UK &amp; US
                 </Link>
                 <Link
                   href="/pricing"

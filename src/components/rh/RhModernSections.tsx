@@ -109,6 +109,9 @@ export interface BentoWorkItem {
   href: string;
   external?: boolean;
   previewImage?: string;
+  previewAlt?: string;
+  previewWidth?: number;
+  previewHeight?: number;
   tags: string[];
 }
 
@@ -1258,8 +1261,11 @@ export function RhBentoWorkGrid({
                   >
                     <img
                       src={item.previewImage}
-                      alt={item.title}
+                      alt={item.previewAlt || item.title}
+                      width={item.previewWidth || 1200}
+                      height={item.previewHeight || 714}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                     />
                   </div>

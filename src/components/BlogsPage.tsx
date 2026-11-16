@@ -23,6 +23,50 @@ interface BlogItem {
 
 const blogs: BlogItem[] = [
   {
+    id: 16,
+    title: "Next.js Website Development Cost in the UK & US (2026 Breakdown)",
+    excerpt: "Compare real UK GBP (£250–£1,450) and US USD ($300–$1,850) fixed-milestone Next.js build quotes vs traditional agency retainers and 24-month CMS TCO.",
+    date: "Nov 16, 2026",
+    readTime: "10 min read",
+    tag: "Next.js Pricing",
+    category: "web",
+    tagColor: "#BAFF00",
+    url: "/blog/nextjs-website-development-cost-uk-us",
+  },
+  {
+    id: 15,
+    title: "Next.js App Router vs WordPress for UK & US Google SEO",
+    excerpt: "Deep technical breakdown comparing React Server Components, mobile Core Web Vitals, JSON-LD @graph schemas, and plugin security vs WordPress.",
+    date: "Nov 16, 2026",
+    readTime: "11 min read",
+    tag: "Next.js SEO",
+    category: "web",
+    tagColor: "#5C8DFF",
+    url: "/blog/nextjs-app-router-vs-wordpress-uk-seo",
+  },
+  {
+    id: 14,
+    title: "How to Migrate WordPress or Webflow to Next.js Without Losing Google Rankings",
+    excerpt: "Step-by-step zero-traffic-loss blueprint covering permanent 301 redirect matrices, canonical parity, sitemap cleanup, and pre-cutover verification.",
+    date: "Nov 16, 2026",
+    readTime: "12 min read",
+    tag: "SEO Migration",
+    category: "web",
+    tagColor: "#38BDF8",
+    url: "/blog/migrate-wordpress-webflow-to-nextjs-seo-guide",
+  },
+  {
+    id: 13,
+    title: "Next.js Website Development Blueprint for UK & US Startups (2026)",
+    excerpt: "Select cleanly between Static SSG, ISR, Headless CMS, dual GBP/USD signals, and London/US Edge PoPs before launching your marketing flagship.",
+    date: "Nov 16, 2026",
+    readTime: "10 min read",
+    tag: "Architecture",
+    category: "web",
+    tagColor: "#BAFF00",
+    url: "/blog/nextjs-website-development-guide-uk-us-startups",
+  },
+  {
     id: 12,
     title: "How to Get a 5-Star Food Hygiene Rating in the UK: Complete EHO Inspection Checklist",
     excerpt: "Comprehensive guide for independent UK restaurants, takeaways, and caterers on passing council Environmental Health inspections across food handling, facilities, and HACCP records.",
@@ -120,7 +164,7 @@ export const BlogsPage = () => {
                 Restaurant Tech &amp; Web Development Guides
               </h1>
               <p className="text-sm text-gray-500 mt-1 max-w-lg">
-                Practical operational guides and engineering playbooks on Next.js web development, Natasha&apos;s Law 14-allergen compliance, SFBB kitchen logs, and commercial restaurant profitability for UK business owners.
+                Practical operational guides and engineering playbooks on Next.js website development, technical SEO migrations, Natasha&apos;s Law 14-allergen compliance, and commercial profitability for UK &amp; US business owners.
               </p>
             </div>
 

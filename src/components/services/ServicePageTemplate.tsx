@@ -90,11 +90,16 @@ export interface CaseStudy {
   tech: string[];
   metrics?: string;
   demoUrl: string;
+  previewImage?: string;
+  previewAlt?: string;
+  previewWidth?: number;
+  previewHeight?: number;
 }
 
 export interface PricingTier {
   name: string;
   price: string;
+  usdEquivalent?: string;
   description: string;
   badge?: string;
   features: string[];
@@ -208,6 +213,20 @@ export interface ServicePageData {
     faqIntro?: string;
     bannerTag?: string;
   };
+  geoCoverage?: {
+    overline?: string;
+    title: string;
+    titleMuted: string;
+    subtitle: string;
+    regions: {
+      code: string;
+      name: string;
+      timezone: string;
+      compliance: string;
+      edgeNodes: string;
+      summary: string;
+    }[];
+  };
   finalCta: {
     headline: string;
     description: string;
@@ -215,6 +234,7 @@ export interface ServicePageData {
     whatsappText: string;
   };
   relatedServices: { name: string; href: string; desc: string }[];
+  relatedGuides?: { title: string; href: string; tag: string; desc: string }[];
 }
 
 const getIndustryIcon = (name: string) => {
@@ -659,6 +679,10 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
               description: study.description,
               href: study.demoUrl,
               external: study.demoUrl.startsWith("/") || study.demoUrl.startsWith("http"),
+              previewImage: study.previewImage,
+              previewAlt: study.previewAlt,
+              previewWidth: study.previewWidth,
+              previewHeight: study.previewHeight,
               tags: study.tech,
             }))}
             cursorLabel="Open Interactive Demo"
@@ -699,6 +723,68 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
           ctaLabel={data.finalCta.primaryButtonText}
           ctaHref="/contact"
         />
+
+        {/* ==============================================================
+            06B — OPTIONAL REGIONAL COVERAGE (UK + US DELIVERY SPECS)
+        =============================================================== */}
+        {data.geoCoverage && (
+          <section className="py-20 px-5 bg-black text-white border-t border-[#202020]">
+            <div className="max-w-[1168px] mx-auto">
+              <div data-gsap-reveal="" className="max-w-3xl mb-12">
+                <span className="text-[11px] font-mono-tech uppercase tracking-[0.25em] text-[#BAFF00] block mb-3">
+                  {data.geoCoverage.overline || "GLOBAL EDGE DELIVERY · UK & US"}
+                </span>
+                <h2 className="text-[clamp(28px,3.8vw,44px)] font-medium tracking-[-0.03em] leading-[1.1]">
+                  {data.geoCoverage.title}{" "}
+                  <span className="text-[#939393]">{data.geoCoverage.titleMuted}</span>
+                </h2>
+                <p className="mt-3 text-[15px] text-[#939393] leading-[1.6]">
+                  {data.geoCoverage.subtitle}
+                </p>
+              </div>
+
+              <div data-gsap-stagger="" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {data.geoCoverage.regions.map((region) => (
+                  <div
+                    key={region.code}
+                    className="rh-edge-orbit-card is-lime p-8 rounded-3xl bg-[#111111] border border-[#242424] flex flex-col justify-between gap-6"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-3 mb-4">
+                        <span className="px-3 py-1 bg-[#BAFF00] text-[#0D0D0D] text-[11px] font-mono-tech font-semibold uppercase tracking-wider">
+                          {region.code}
+                        </span>
+                        <span className="text-[12px] font-mono-tech text-[#939393]">
+                          {region.edgeNodes}
+                        </span>
+                      </div>
+                      <h3 className="text-[22px] font-medium text-white mb-2 tracking-[-0.02em]">
+                        {region.name}
+                      </h3>
+                      <p className="text-[14px] text-[#CBCBCB] leading-[1.65]">
+                        {region.summary}
+                      </p>
+                    </div>
+                    <dl className="pt-4 border-t border-[#242424] grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px]">
+                      <div>
+                        <dt className="text-[11px] font-mono-tech uppercase tracking-wider text-[#939393]">
+                          Overlap &amp; Billing
+                        </dt>
+                        <dd className="text-white mt-0.5">{region.timezone}</dd>
+                      </div>
+                      <div>
+                        <dt className="text-[11px] font-mono-tech uppercase tracking-wider text-[#939393]">
+                          Standards &amp; Compliance
+                        </dt>
+                        <dd className="text-white mt-0.5">{region.compliance}</dd>
+                      </div>
+                    </dl>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ==============================================================
             07 — INVESTMENT / PRICING (Odometer Digit-Roll rh.design style)
@@ -818,7 +904,9 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                           tier.popular ? "text-[#939393]" : "text-[#595959]"
                         }`}
                       >
-                        {h?.pricingNote || "Fixed quote • 50/50 milestone terms"}
+                        {currencyMode === "native" && tier.usdEquivalent
+                          ? `${tier.usdEquivalent} · ${h?.pricingNote || "Fixed quote • 50/50 milestone terms"}`
+                          : h?.pricingNote || "Fixed quote • 50/50 milestone terms"}
                       </span>
                     </div>
 
@@ -983,6 +1071,39 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                       <p className="text-[14px] text-[#595959] mt-1.5 leading-[1.5]">
                         {rel.desc}
                       </p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Deep Technical Guides */}
+            {data.relatedGuides && data.relatedGuides.length > 0 && (
+              <div>
+                <p className="text-[12px] uppercase tracking-[0.88px] text-[#595959] mb-5">
+                  Next.js Engineering &amp; Cost Guides
+                </p>
+                <div data-gsap-stagger="" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {data.relatedGuides.map((guide, i) => (
+                    <Link
+                      key={i}
+                      href={guide.href}
+                      className="p-5 rounded-2xl bg-white border border-[#E6E6E6] hover:border-[#0D0D0D] transition-colors flex flex-col justify-between gap-3 group"
+                    >
+                      <div>
+                        <span className="text-[10px] font-mono-tech uppercase tracking-wider text-[#595959] block mb-1.5">
+                          {guide.tag}
+                        </span>
+                        <p className="text-[15px] font-medium text-[#0D0D0D] group-hover:underline leading-snug">
+                          {guide.title}
+                        </p>
+                        <p className="text-[13px] text-[#595959] mt-1.5 leading-[1.5]">
+                          {guide.desc}
+                        </p>
+                      </div>
+                      <span className="text-[12px] font-medium text-[#0D0D0D] inline-flex items-center gap-1 pt-2 border-t border-[#E6E6E6]">
+                        Read technical guide <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
                     </Link>
                   ))}
                 </div>

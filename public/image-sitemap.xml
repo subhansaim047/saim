@@ -35,6 +35,24 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.saimdev.site/services/website-development</loc>
+    <image:image>
+      <image:loc>https://www.saimdev.site/og-image.png</image:loc>
+      <image:title>Next.js Website Development UK &amp; US Architecture</image:title>
+      <image:caption>Custom Next.js 16 &amp; React 19 website development services for UK and US businesses from £390 / $500 fixed</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.saimdev.site/demos/previews/architecture-interior-studio-design.webp</image:loc>
+      <image:title>Custom Next.js Studio Portfolio Reference</image:title>
+      <image:caption>Responsive Next.js 16 architecture studio showcase website built with Tailwind CSS</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.saimdev.site/demos/previews/hq-leathercon-ecommerce-storefront.webp</image:loc>
+      <image:title>HQ Leathercon Custom Next.js Catalog Build</image:title>
+      <image:caption>Custom Next.js storefront catalog concept with edge CDN delivery</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.saimdev.site/services/takeaway-web-design</loc>
     <image:image>
       <image:loc>https://www.saimdev.site/og-image.png</image:loc>

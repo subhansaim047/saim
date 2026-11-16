@@ -9,10 +9,34 @@ export interface BlogSiloNavProps {
 
 const GROWTH_POSTS = [
   {
+    slug: "nextjs-website-development-cost-uk-us",
+    href: "/blog/nextjs-website-development-cost-uk-us",
+    title: "Next.js Website Development Cost UK & US (2026 Breakdown)",
+    summary: "Real fixed-fee vs agency retainer TCO numbers across UK GBP and US USD builds."
+  },
+  {
+    slug: "nextjs-app-router-vs-wordpress-uk-seo",
+    href: "/blog/nextjs-app-router-vs-wordpress-uk-seo",
+    title: "Next.js App Router vs WordPress for UK & US SEO",
+    summary: "Compare Server Components, mobile Core Web Vitals, schema @graphs, and plugin risk."
+  },
+  {
+    slug: "migrate-wordpress-webflow-to-nextjs-seo-guide",
+    href: "/blog/migrate-wordpress-webflow-to-nextjs-seo-guide",
+    title: "Migrating WordPress or Webflow to Next.js Without SEO Loss",
+    summary: "Strict 301 redirect mapping, canonical parity, and automated prebuild guardrails."
+  },
+  {
+    slug: "nextjs-website-development-guide-uk-us-startups",
+    href: "/blog/nextjs-website-development-guide-uk-us-startups",
+    title: "Next.js Website Development Guide for UK & US Startups",
+    summary: "Select SSG, ISR, Headless CMS, and London/US edge deployment cleanly before launch."
+  },
+  {
     slug: "why-small-business-needs-website",
     href: "/blog/why-small-business-needs-website",
     title: "Why Small Businesses Need a Custom Website",
-    summary: "Turn local searchers into customers with sub-second mobile performance and zero monthly platform lock-ins."
+    summary: "Turn local searchers into customers with fast mobile performance and zero monthly platform lock-ins."
   },
   {
     slug: "free-website-for-local-business",

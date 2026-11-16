@@ -40,6 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogSlugs = [
+    'nextjs-website-development-cost-uk-us',
+    'nextjs-app-router-vs-wordpress-uk-seo',
+    'migrate-wordpress-webflow-to-nextjs-seo-guide',
+    'nextjs-website-development-guide-uk-us-startups',
     'why-small-business-needs-website',
     'free-website-for-local-business',
     '50-percent-off-agency-launch',

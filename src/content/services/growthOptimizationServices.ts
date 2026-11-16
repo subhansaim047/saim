@@ -1925,9 +1925,9 @@ export const GROWTH_OPTIMIZATION_SERVICES: Record<string, ServicePageData> = {
         desc: "Eliminate LCP, INP, and CLS issues dragging mobile Search Console health.",
       },
       {
-        name: "Next.js Developer UK Pillar",
-        href: "/nextjs-developer-uk",
-        desc: "Full UK engineering overview pairing architecture, speed, and ownership.",
+        name: "Next.js Website Development UK & US",
+        href: "/services/website-development",
+        desc: "Turnkey App Router builds pairing technical SEO schema, speed, and full code ownership.",
       },
       {
         name: "Insights & Guides",

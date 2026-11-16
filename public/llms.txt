@@ -1,6 +1,6 @@
 # Saim Dev — Custom Web Development, E-Commerce & UK Takeaway Systems
 
-> Saim Dev is a specialized Next.js software engineering studio serving businesses across the United Kingdom, United States, European Union, and globally. All projects are delivered remotely with transparent fixed pricing in GBP (£250–£1,500) and USD ($300–$1,800+), sub-second performance, 100% code ownership, and built-in technical SEO.
+> Saim Dev is a specialized Next.js software engineering studio serving businesses across the United Kingdom, United States, European Union, and globally. All projects are delivered remotely with transparent fixed pricing in GBP (£250–£1,500) and USD ($300–$1,850+), edge-compiled React 19 performance, 100% GitHub code ownership, and built-in technical SEO.
 
 ## Studio Overview & Commercial Details
 
@@ -36,6 +36,7 @@
 2. [Full Studio Overview & Scope Estimator](https://www.saimdev.site/overview): Interactive project cost calculator, full service directory, and side-by-side platform comparisons.
 3. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings vs 28%–34% Just Eat, Deliveroo & Uber Eats fees.
 4. [Web Development Services Hub](https://www.saimdev.site/services): Full-stack web development, online ordering systems, e-commerce, speed optimization, and technical SEO architecture.
+   - [Next.js Website Development UK & US](https://www.saimdev.site/services/website-development): Flagship Next.js 16 & React 19 website development for UK and US businesses from £390 ($500 USD) fixed, full GitHub code ownership, and unified Schema.org SEO.
    - [Custom Web Applications & SaaS MVPs](https://www.saimdev.site/services/custom-web-apps): Full-stack web software, client portals, and real-time dashboards built on Next.js, Supabase & PostgreSQL.
    - [1:1 Website Rebuild & Webflow/Figma UI Port](https://www.saimdev.site/services/website-clone): Fixed-price rebuild of legacy Webflow, Framer, or HTML sites into clean Next.js 16 code.
    - [Custom Next.js E-Commerce Stores](https://www.saimdev.site/services/ecommerce-development): Bespoke Stripe Checkout storefronts and custom product configurators with zero SaaS platform fees.
@@ -50,7 +51,7 @@
    - [Takeaway Website Design London](https://www.saimdev.site/services/takeaway-web-design-london): Direct ordering websites for London restaurants and food operators across all 32 boroughs.
    - [Takeaway Website Design Manchester](https://www.saimdev.site/services/takeaway-web-design-manchester): Bespoke takeaway websites for Greater Manchester eateries and Curry Mile venues.
    - [Takeaway Website Design Birmingham](https://www.saimdev.site/services/takeaway-web-design-birmingham): Custom websites for Birmingham, Balti Triangle, and West Midlands takeaways.
-4. [Next.js Developer UK](https://www.saimdev.site/nextjs-developer-uk): Specialist freelance Next.js web development for UK businesses seeking 95+ PageSpeed and sub-second load times.
+4. [Freelance Next.js Developer UK](https://www.saimdev.site/nextjs-developer-uk): Direct senior freelance Next.js developer engineering sprints for UK & US product teams from £250 / $300 fixed.
 5. [Transparent Website Pricing & Packages](https://www.saimdev.site/pricing): Fixed-fee UK web development packages (£250 to £2,500) with 50/50 milestone protection and 100% code ownership.
 6. [4-Stage Engineering Process](https://www.saimdev.site/process): Transparent 4-stage delivery sprint from discovery brief and wireframing to staging approval and live deployment.
 7. [Live Interactive Demos Hub](https://www.saimdev.site/demos): Interactive production-grade demo storefronts and restaurant ordering systems engineered by Saim Dev:
@@ -68,8 +69,12 @@
 ### Interactive ROI Utility & Kept UK Compliance Guides
 13. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings when switching repeat delivery orders onto a 0% commission direct site.
 
-### Top Business & Compliance Guides
-14. [Why Every Small Business Needs a Website](https://www.saimdev.site/blog/why-small-business-needs-website): Commercial ROI analysis of custom websites vs social-only presence for UK & US local businesses.
+### Top Business, Next.js & Compliance Guides
+14. [Next.js Website Development Cost UK & US (2026)](https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us): Detailed GBP and USD Next.js project pricing breakdown vs traditional UK & US agencies.
+15. [Next.js App Router vs WordPress for UK & US SEO](https://www.saimdev.site/blog/nextjs-app-router-vs-wordpress-uk-seo): Technical analysis comparing React Server Components, Core Web Vitals, and schema graphs against WordPress plugins.
+16. [Migrating WordPress or Webflow to Next.js Without SEO Loss](https://www.saimdev.site/blog/migrate-wordpress-webflow-to-nextjs-seo-guide): Step-by-step permanent 301 mapping, canonical alignment, and prebuild verification checklist.
+17. [Next.js Startup Architecture Blueprint (UK & US)](https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups): Choosing SSG, ISR, Headless CMS, and multi-region London/US edge deployment cleanly.
+18. [Why Every Small Business Needs a Website](https://www.saimdev.site/blog/why-small-business-needs-website): Commercial ROI analysis of custom websites vs social-only presence for UK & US local businesses.
 15. [Free Website Builders vs Custom Websites: Hidden Costs](https://www.saimdev.site/blog/free-website-for-local-business): Breakdown of platform lock-in, renewal hikes, and SEO limitations of DIY builders.
 16. [50% Off Agency Launch Offer](https://www.saimdev.site/blog/50-percent-off-agency-launch): Details on Saim Dev's fixed-fee introductory packages for small businesses.
 17. [5-Star Food Hygiene Rating Checklist](https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist): Comprehensive UK EHO inspection preparation checklist covering food handling, cleanliness, and SFBB management records.

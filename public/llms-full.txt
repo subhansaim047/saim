@@ -1,6 +1,6 @@
 # Saim Dev — Comprehensive Technical Knowledge, Web Engineering & Compliance Corpus
 
-> Saim Dev is a specialized Next.js web development studio, e-commerce engineering partner, and restaurant digital architecture specialist. We build custom, sub-second websites, SaaS web applications, bespoke storefronts, and commission-free online ordering systems for UK and international businesses. Additionally, Saim Dev publishes the UK's leading collection of 160+ free statutory food safety templates, SFBB checklists, 14-allergen matrices, and interactive compliance calculators aligned with the Food Standards Agency (FSA) and Natasha's Law regulations.
+> Saim Dev is a specialized Next.js web development studio, e-commerce engineering partner, and restaurant digital architecture specialist. We build bespoke Next.js 16 & React 19 websites, SaaS web applications, bespoke storefronts, and commission-free online ordering systems for UK, US, and European businesses. Additionally, Saim Dev publishes interactive UK kitchen compliance guides covering Food Standards Agency (FSA) hygiene standards, Natasha's Law PPDS rules, and an interactive Takeaway Commission Savings Calculator.
 
 ---
 
@@ -29,7 +29,11 @@
 ## 2. Core Web Development & Digital Engineering Services
 
 - **Services Hub**: https://www.saimdev.site/services
-- **Custom Web Applications & SaaS MVPs**: https://www.saimdev.site/services/website-clone
+- **Next.js Website Development UK & US (Flagship)**: https://www.saimdev.site/services/website-development
+  Bespoke Next.js 16 App Router and React 19 websites engineered for UK & US brands from £390 ($500 USD) fixed scope, full GitHub code ownership, edge PoPs in London (lhr1) & US East (iad1), and unified Schema.org @graph SEO.
+- **Freelance Next.js Developer UK (Sprint Hire)**: https://www.saimdev.site/nextjs-developer-uk
+  Direct 1:1 senior React & Next.js engineering sprints for UK & US product teams from £250 ($300 USD).
+- **Custom Web Applications & SaaS MVPs**: https://www.saimdev.site/services/custom-web-apps
   Full-stack web applications, authenticated client portals, booking engines, and real-time dashboards built on Next.js App Router, TypeScript, Node.js, and PostgreSQL/Supabase.
 - **E-Commerce & Shopify Storefronts**: https://www.saimdev.site/services/ecommerce-shopify
   Bespoke Shopify themes, headless commerce, faceted product search, custom product builders, and WhatsApp/Stripe checkout flows.
@@ -135,8 +139,12 @@ Saim Dev provides dedicated takeaway and restaurant website design services acro
 
 ---
 
-## 7. Focused UK Hospitality Compliance Guides
+## 7. Next.js Engineering & Focused UK Hospitality Guides
 
-Saim Dev maintains two focused statutory compliance articles alongside its commercial takeaway ordering engineering work:
+Saim Dev maintains technical Next.js engineering guides for UK & US teams alongside focused hospitality compliance articles:
+- **Next.js Website Development Cost UK & US**: https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us
+- **Next.js App Router vs WordPress for UK & US SEO**: https://www.saimdev.site/blog/nextjs-app-router-vs-wordpress-uk-seo
+- **Migrate WordPress or Webflow to Next.js Safely**: https://www.saimdev.site/blog/migrate-wordpress-webflow-to-nextjs-seo-guide
+- **Next.js Startup Architecture Blueprint (UK & US)**: https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups
 - **5-Star Food Hygiene Rating EHO Checklist**: https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist
 - **Natasha's Law PPDS Food Labelling Guide**: https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide

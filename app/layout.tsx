@@ -43,7 +43,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.saimdev.site',
     languages: {
+      'en': 'https://www.saimdev.site',
       'en-GB': 'https://www.saimdev.site',
+      'en-US': 'https://www.saimdev.site',
       'x-default': 'https://www.saimdev.site',
     },
   },
@@ -51,28 +53,29 @@ export const metadata: Metadata = {
     google: 'google0191625097e7b0a7',
   },
   openGraph: {
-    title: 'Next.js Websites for UK Small Businesses | Saim Dev',
-    description: 'Custom Next.js websites for UK small businesses from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
+    title: 'Next.js Websites for UK & US Businesses | Saim Dev',
+    description: 'Custom Next.js websites for UK & US small businesses from £250 / $300. Fast edge delivery, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
     url: 'https://www.saimdev.site',
     siteName: 'Saim Dev',
     locale: 'en_GB',
+    alternateLocale: ['en_US'],
     type: 'website',
     images: [
       {
-        url: 'https://www.saimdev.site/hero-shots/shot-4.webp',
+        url: 'https://www.saimdev.site/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Saim Dev - Next.js Websites for UK & EU Small Businesses',
+        alt: 'Saim Dev - Custom Next.js Websites for UK, US & EU Businesses',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Next.js Websites for UK Small Businesses | Saim Dev',
-    description: 'Custom Next.js websites for UK small businesses from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
+    title: 'Next.js Websites for UK & US Businesses | Saim Dev',
+    description: 'Custom Next.js websites for UK & US small businesses from £250 / $300. Fast edge delivery, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
     creator: '@saimwebdev',
     site: '@saimwebdev',
-    images: ['https://www.saimdev.site/hero-shots/shot-4.webp'],
+    images: ['https://www.saimdev.site/og-image.png'],
   },
   icons: {
     icon: [
@@ -87,7 +90,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   other: {
-    'thumbnail': 'https://www.saimdev.site/hero-shots/shot-4.webp',
+    'thumbnail': 'https://www.saimdev.site/og-image.png',
     'build-sha': process.env.VERCEL_GIT_COMMIT_SHA ? process.env.VERCEL_GIT_COMMIT_SHA.slice(0, 7) : 'local',
   },
 };
@@ -108,8 +111,8 @@ const organizationSchema = {
     "width": 512,
     "height": 512
   },
-  "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
-  "description": "Custom, high-performance Next.js websites, e-commerce stores, and takeaway ordering systems for UK and European businesses. Transparent fixed pricing from £250.",
+  "image": "https://www.saimdev.site/og-image.png",
+  "description": "Custom Next.js websites, e-commerce stores, custom web applications, and takeaway ordering systems for UK, US, and European businesses. Transparent fixed pricing from £250 / $300.",
   "knowsAbout": [
     "Next.js Web Development",
     "Custom Web Applications & SaaS MVPs",
@@ -164,8 +167,8 @@ const professionalServiceSchema = {
   "@id": "https://www.saimdev.site/#professionalservice",
   "name": "Saim Dev - Custom Web Development & Digital Engineering Studio",
   "url": "https://www.saimdev.site",
-  "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
-  "priceRange": "£250 - £2500",
+  "image": "https://www.saimdev.site/og-image.png",
+  "priceRange": "£250 - £2,500 / $300 - $3,000",
   "telephone": "+923196526604",
   "email": "contact@saimdev.site",
   "areaServed": [
@@ -215,7 +218,7 @@ const webSiteSchema = {
   "publisher": {
     "@id": "https://www.saimdev.site/#organization"
   },
-  "inLanguage": "en-GB"
+  "inLanguage": ["en-GB", "en-US"]
 };
 
 export default function RootLayout({
@@ -224,7 +227,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB" className="dark" data-theme="dark" style={{ colorScheme: "dark" }}>
+    <html lang="en" className="dark" data-theme="dark" style={{ colorScheme: "dark" }}>
       <head>
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Summary Context" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Knowledge Corpus" />
@@ -236,11 +239,8 @@ export default function RootLayout({
         />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="author" content="Saim Dev" />
-        <meta name="date" content="2026-11-11" />
-        <meta name="revised" content="Wednesday, November 11, 2026" />
-        <meta property="article:modified_time" content="2026-11-11T15:30:00Z" />
-        <meta name="image" content="https://www.saimdev.site/hero-shots/shot-4.webp" />
-        <link rel="image_src" href="https://www.saimdev.site/hero-shots/shot-4.webp" />
+        <meta name="image" content="https://www.saimdev.site/og-image.png" />
+        <link rel="image_src" href="https://www.saimdev.site/og-image.png" />
         {/* Microsoft Clarity Analytics (Deferred to idle to preserve 100 mobile PageSpeed) */}
         <script
           dangerouslySetInnerHTML={{

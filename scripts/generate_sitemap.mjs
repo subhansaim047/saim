@@ -146,6 +146,10 @@ const staticPages = [
   { url: "https://www.saimdev.site/about", priority: "0.8", changefreq: "monthly" },
   { url: "https://www.saimdev.site/contact", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blogs", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/nextjs-app-router-vs-wordpress-uk-seo", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/migrate-wordpress-webflow-to-nextjs-seo-guide", priority: "0.85", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups", priority: "0.85", changefreq: "weekly" },
   { url: "https://www.saimdev.site/blog/why-small-business-needs-website", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blog/free-website-for-local-business", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blog/50-percent-off-agency-launch", priority: "0.85", changefreq: "monthly" },
@@ -204,6 +208,26 @@ const imageSitemapEntries = [
         loc: "https://www.saimdev.site/saim-dev-logo.jpg",
         title: "Saim Dev - Lead Next.js Developer & Takeaway Web Specialist",
         caption: "Official brand logo and profile of Saim Dev studio for UK restaurants and takeaways"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/services/website-development",
+    images: [
+      {
+        loc: "https://www.saimdev.site/og-image.png",
+        title: "Next.js Website Development UK & US Architecture",
+        caption: "Custom Next.js 16 & React 19 website development services for UK and US businesses from £390 / $500 fixed"
+      },
+      {
+        loc: "https://www.saimdev.site/demos/previews/architecture-interior-studio-design.webp",
+        title: "Custom Next.js Studio Portfolio Reference",
+        caption: "Responsive Next.js 16 architecture studio showcase website built with Tailwind CSS"
+      },
+      {
+        loc: "https://www.saimdev.site/demos/previews/hq-leathercon-ecommerce-storefront.webp",
+        title: "HQ Leathercon Custom Next.js Catalog Build",
+        caption: "Custom Next.js storefront catalog concept with edge CDN delivery"
       }
     ]
   },

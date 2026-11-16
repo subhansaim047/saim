@@ -148,8 +148,8 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
             </a>
             <p className="text-[14px] text-[#939393] leading-relaxed max-w-sm">
               Senior-led Next.js 16, React 19, Shopify, and bespoke web
-              application engineering for ambitious UK, European, and global
-              brands. Fixed pricing, sub-second speed, and 100% source code
+              application engineering for ambitious UK, US, and European
+              brands. Fixed GBP &amp; USD pricing and 100% source code
               ownership.
             </p>
             <div className="pt-1 flex items-center gap-3">
@@ -279,7 +279,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
                   prefetch={false}
                   className="hover:text-white transition-colors"
                 >
-                  Custom Website Development
+                  Next.js Website Development
                 </Link>
               </li>
               <li>
@@ -360,7 +360,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
           {/* UK Hubs, Tools & Resources Column */}
           <div className="md:col-span-3 space-y-3">
             <div className="text-[12px] uppercase tracking-[0.88px] text-[#939393]">
-              UK Hubs &amp; Free Tools
+              UK &amp; US Hubs &amp; Free Tools
             </div>
             <ul className="space-y-2.5 text-[15px] text-[#CBCBCB]">
               <li>

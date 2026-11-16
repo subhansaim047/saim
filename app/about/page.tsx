@@ -49,45 +49,62 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const aboutPersonSchema = {
+  const aboutGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://www.saimdev.site/#person",
-    "name": "Saim Dev",
-    "jobTitle": "Founder & Lead Next.js Architect",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Saim Dev",
-      "url": "https://www.saimdev.site"
-    },
-    "url": "https://www.saimdev.site/about",
-    "image": "https://www.saimdev.site/saim-dev-logo.jpg",
-    "sameAs": [
-      "https://github.com/subhansaim047",
-      "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
-      "https://x.com/saimwebdev",
-      "https://www.instagram.com/saim_agency/",
-      "https://saimswebagency.quora.com/",
-      "https://www.tiktok.com/@saimdev.site",
-      "https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog"
-    ]
-  };
-
-  const aboutBreadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.saimdev.site/"
+        "@type": "ProfilePage",
+        "@id": "https://www.saimdev.site/about#profilepage",
+        "url": "https://www.saimdev.site/about",
+        "name": "About Saim Dev | Remote Next.js Studio for UK & US",
+        "description": "Independent Next.js web engineering studio serving UK, US, and European businesses remotely.",
+        "isPartOf": { "@id": "https://www.saimdev.site/#website" },
+        "mainEntity": { "@id": "https://www.saimdev.site/#person" },
+        "breadcrumb": { "@id": "https://www.saimdev.site/about#breadcrumb" },
+        "inLanguage": ["en-GB", "en-US"]
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About",
-        "item": "https://www.saimdev.site/about"
+        "@type": "Person",
+        "@id": "https://www.saimdev.site/#person",
+        "name": "Saim Dev",
+        "jobTitle": "Founder & Lead Next.js Architect",
+        "worksFor": { "@id": "https://www.saimdev.site/#organization" },
+        "url": "https://www.saimdev.site/about",
+        "image": "https://www.saimdev.site/saim-dev-logo.jpg",
+        "knowsAbout": [
+          "Next.js 16 App Router",
+          "React 19",
+          "TypeScript",
+          "Technical SEO & Schema.org",
+          "Core Web Vitals Engineering"
+        ],
+        "sameAs": [
+          "https://github.com/subhansaim047",
+          "https://contra.com/SAIMDEVELOPER/work?r=SAIMDEVELOPER",
+          "https://x.com/saimwebdev",
+          "https://www.instagram.com/saim_agency/",
+          "https://saimswebagency.quora.com/",
+          "https://www.tiktok.com/@saimdev.site",
+          "https://www.threads.com/@saimdev.site?xmt=AQG0v6sjyGGlkQuy3_cq9N-v_-agRzwH4eLztiXxRA4Izog"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.saimdev.site/about#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.saimdev.site/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://www.saimdev.site/about"
+          }
+        ]
       }
     ]
   };
@@ -96,11 +113,7 @@ export default function AboutPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPersonSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutBreadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutGraphSchema) }}
       />
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <RhHeader theme="dark" />

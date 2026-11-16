@@ -388,7 +388,7 @@ export const TechnologiesPage = () => {
             <div data-gsap-stagger="" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { k: "Fixed-Price Plans", label: "Web Development Services", href: "/services" },
-                { k: "Specialist UK Build", label: "Next.js Web Development", href: "/nextjs-developer-uk" },
+                { k: "UK & US Pillar", label: "Next.js Website Development", href: "/services/website-development" },
                 { k: "Client Proof", label: "Website Case Studies", href: "/case-studies" },
                 { k: "Direct Briefing", label: "Discuss Your Project", href: "/contact" },
               ].map((item) => (
