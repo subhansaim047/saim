@@ -46,9 +46,13 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Wireframe Video + Laser-Draw Strip) */}
       <RhHeroPinned
         badge="Clear Fixed Investment · 50/50 Milestones"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Pricing" },
+        ]}
         title={
           <>
-            Transparent pricing.{" "}
+            Website Development Pricing &amp; Packages.{" "}
             <span className="text-[#939393]">Zero monthly lock-in.</span>
           </>
         }
@@ -333,6 +337,8 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
                   src="/rh-exact/pd/pd-case-glow.svg"
                   alt=""
                   aria-hidden="true"
+                  width={288}
+                  height={288}
                   className="pointer-events-none absolute -top-12 -right-12 w-72 h-72 opacity-60"
                 />
                 <div className="relative z-10">
@@ -564,7 +570,23 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
               <span className="text-[#939393]">Pricing Questions</span>
             </h2>
             <p className="mt-4 text-[15px] text-[#595959] leading-[1.6]">
-              UK CAP Code &amp; ASA compliant fixed pricing with zero hidden retainers.
+              UK CAP Code &amp; ASA compliant fixed pricing with zero hidden retainers. Covered by our{" "}
+              <Link href="/terms" className="underline text-[#0D0D0D] hover:opacity-80">
+                50/50 Milestone Terms
+              </Link>
+              . Still comparing options? Read our{" "}
+              <Link href="/blog/small-business-website-packages-guide" className="underline text-[#0D0D0D] hover:opacity-80">
+                Website Packages Guide
+              </Link>
+              ,{" "}
+              <Link href="/blog/free-website-for-local-business" className="underline text-[#0D0D0D] hover:opacity-80">
+                DIY vs Custom Cost Breakdown
+              </Link>
+              , or{" "}
+              <Link href="/blog/why-small-business-needs-website" className="underline text-[#0D0D0D] hover:opacity-80">
+                Small Business Website ROI Analysis
+              </Link>
+              .
             </p>
           </div>
 

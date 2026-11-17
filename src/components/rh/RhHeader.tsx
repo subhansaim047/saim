@@ -530,11 +530,15 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
               <img
                 src="/rh-exact/nav/squire-logo.svg"
                 alt="Featured Work"
+                width={69}
+                height={24}
                 className="w-[68.58px] h-6 relative z-10"
               />
               <img
                 src="/rh-exact/nav/squire-ipad.webp"
                 alt="Interactive Live Demos Preview"
+                width={420}
+                height={420}
                 className="w-[135.7%] max-w-none h-auto absolute -top-[9px] left-[15.44%] -z-10 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-x-3 group-hover:-translate-y-2.5 group-hover:scale-[1.035]"
               />
               <div className="absolute inset-x-0 bottom-0 h-[67.4%] bg-gradient-to-b from-transparent via-black/40 to-black/85 -z-[5]" />
@@ -580,6 +584,8 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             <img
               src="/saim-dev-logo.png"
               alt="Saim Dev"
+              width={48}
+              height={48}
               className="w-full h-full object-cover"
             />
           </a>

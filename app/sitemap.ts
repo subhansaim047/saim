@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://www.saimdev.site';
-const LAST_MOD = '2026-11-16';
+const LAST_MOD = new Date().toISOString().split('T')[0];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const corePages: MetadataRoute.Sitemap = [
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'nextjs-website-development-guide-uk-us-startups',
     'why-small-business-needs-website',
     'free-website-for-local-business',
-    '50-percent-off-agency-launch',
+    'small-business-website-packages-guide',
     'uk-food-hygiene-rating-scheme-5-star-checklist',
     'natashas-law-ppds-food-labelling-guide',
   ];

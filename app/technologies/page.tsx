@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.saimdev.site/technologies',
     languages: {
+      'en': 'https://www.saimdev.site/technologies',
       'en-GB': 'https://www.saimdev.site/technologies',
+      'en-US': 'https://www.saimdev.site/technologies',
+      'x-default': 'https://www.saimdev.site/technologies',
     },
   },
   openGraph: {
@@ -20,6 +23,7 @@ export const metadata: Metadata = {
     url: 'https://www.saimdev.site/technologies',
     siteName: 'Saim Dev',
     locale: 'en_GB',
+    alternateLocale: ['en_US'],
     type: 'website',
     images: [{ url: 'https://www.saimdev.site/og-image.png', width: 1200, height: 630, alt: 'Saim Dev Tech Stack' }]
   },
@@ -33,27 +37,43 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const breadcrumbSchema = {
+  const techGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.saimdev.site/"
+        "@type": "WebPage",
+        "@id": "https://www.saimdev.site/technologies#webpage",
+        "url": "https://www.saimdev.site/technologies",
+        "name": "Modern Next.js 16, React & Edge Hosting Stack | Saim Dev",
+        "description": "Explore our high-performance web development stack: Next.js 16 App Router, React, Tailwind CSS, TypeScript, and edge cloud hosting for speed.",
+        "inLanguage": "en-GB",
+        "isPartOf": { "@id": "https://www.saimdev.site/#website" },
+        "about": { "@id": "https://www.saimdev.site/#organization" },
+        "breadcrumb": { "@id": "https://www.saimdev.site/technologies#breadcrumb" }
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://www.saimdev.site/services"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Technologies & Expertise",
-        "item": "https://www.saimdev.site/technologies"
+        "@type": "BreadcrumbList",
+        "@id": "https://www.saimdev.site/technologies#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.saimdev.site/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.saimdev.site/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Technologies & Expertise",
+            "item": "https://www.saimdev.site/technologies"
+          }
+        ]
       }
     ]
   };
@@ -62,7 +82,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(techGraphSchema) }}
       />
       <TechnologiesPage />
     </>

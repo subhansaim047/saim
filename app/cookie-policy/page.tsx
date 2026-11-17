@@ -14,7 +14,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.saimdev.site/cookie-policy",
     languages: {
+      "en": "https://www.saimdev.site/cookie-policy",
       "en-GB": "https://www.saimdev.site/cookie-policy",
+      "en-US": "https://www.saimdev.site/cookie-policy",
+      "x-default": "https://www.saimdev.site/cookie-policy",
     },
   },
   openGraph: {
@@ -23,6 +26,7 @@ export const metadata: Metadata = {
     url: "https://www.saimdev.site/cookie-policy",
     siteName: "Saim Dev",
     locale: "en_GB",
+    alternateLocale: ["en_US"],
     type: "website",
     images: [
       {
@@ -44,27 +48,43 @@ export const metadata: Metadata = {
 };
 
 export default function CookiePolicyPage() {
-  const breadcrumbSchema = {
+  const cookieGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.saimdev.site/"
+        "@type": "WebPage",
+        "@id": "https://www.saimdev.site/cookie-policy#webpage",
+        "url": "https://www.saimdev.site/cookie-policy",
+        "name": "Cookie Policy | Saim Dev",
+        "description": "Comprehensive cookie and browser storage inventory for Saim Dev. Learn how our essential technical storage and interactive kitchen tools save data locally.",
+        "inLanguage": "en-GB",
+        "isPartOf": { "@id": "https://www.saimdev.site/#website" },
+        "about": { "@id": "https://www.saimdev.site/#organization" },
+        "breadcrumb": { "@id": "https://www.saimdev.site/cookie-policy#breadcrumb" }
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Cookie Policy",
-        "item": "https://www.saimdev.site/cookie-policy"
+        "@type": "BreadcrumbList",
+        "@id": "https://www.saimdev.site/cookie-policy#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.saimdev.site/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Cookie Policy",
+            "item": "https://www.saimdev.site/cookie-policy"
+          }
+        ]
       }
     ]
   };
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cookieGraphSchema) }} />
       <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
         <RhHeader theme="dark" />
 

@@ -90,14 +90,14 @@ const blogs: BlogItem[] = [
   },
   {
     id: 3,
-    title: "I Just Launched My Web Agency — And I'm Offering 50% Off to My First Clients",
-    excerpt: "Premium web development at half the price. Find out why I am offering this massive discount and how it can act as the ultimate growth engine for your business.",
-    date: "Sep 20, 2026",
-    readTime: "5 min read",
-    tag: "Launch Special",
+    title: "Small Business Website Packages: What Fixed-Price Scopes Should Include",
+    excerpt: "Understand exactly what separates reliable bespoke Next.js packages from bloated monthly templates, hidden plugin renewals, and unclear agency quotes.",
+    date: "Oct 31, 2026",
+    readTime: "6 min read",
+    tag: "Buyer Guide",
     category: "web",
     tagColor: "#F59E0B",
-    url: "/blog/50-percent-off-agency-launch",
+    url: "/blog/small-business-website-packages-guide",
   },
   {
     id: 2,
@@ -160,9 +160,9 @@ export const BlogsPage = () => {
               <span className="inline-block bg-[#f4f4f4] text-[#555] text-xs font-semibold px-2.5 py-1 rounded-md mb-2">
                 Knowledge Library
               </span>
-              <h1 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#0a0a0a]" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                Restaurant Tech &amp; Web Development Guides
-              </h1>
+              <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#0a0a0a]" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                All Engineering &amp; Operational Playbooks
+              </h2>
               <p className="text-sm text-gray-500 mt-1 max-w-lg">
                 Practical operational guides and engineering playbooks on Next.js website development, technical SEO migrations, Natasha&apos;s Law 14-allergen compliance, and commercial profitability for UK &amp; US business owners.
               </p>
@@ -207,9 +207,9 @@ export const BlogsPage = () => {
                 </span>
 
                 {/* Title */}
-                <h4 className="text-[17px] font-semibold text-[#0a0a0a] leading-snug mb-2.5 group-hover:text-black transition-colors duration-200 flex-1" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                <h3 className="text-[17px] font-semibold text-[#0a0a0a] leading-snug mb-2.5 group-hover:text-black transition-colors duration-200 flex-1" style={{ fontFamily: 'Outfit, sans-serif' }}>
                   {blog.title}
-                </h4>
+                </h3>
 
                 {/* Excerpt */}
                 <p className="text-xs text-gray-500 leading-relaxed mb-5 line-clamp-3">

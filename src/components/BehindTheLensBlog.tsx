@@ -41,6 +41,8 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
         <img
           src={displayImage}
           alt={title}
+          width={800}
+          height={500}
           decoding="async"
           className="btl-tool-img btl-tool-ambient-motion"
         />
@@ -128,7 +130,7 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
         {/* ── Section Header ── */}
         <header>
           <span className="btl-badge">Blog &amp; Insights</span>
-          <h2 className="btl-heading">Behind the lens</h2>
+          <h1 className="btl-heading">Web Development &amp; Hospitality Guides</h1>
           <div className="btl-header-bottom">
             <p className="btl-subtitle">
               Thoughts, insights, and stories from our creative journey. Take a peek into our development process, compliance playbooks, and recent client systems.
@@ -169,14 +171,14 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
                 <span className="btl-must-read-badge">{featuredPost.badge}</span>
               )}
 
-              <h3 className="btl-featured-title">
+              <h2 className="btl-featured-title">
                 <Link
                   href={featuredPost.url}
                   className="hover:text-black transition-colors"
                 >
                   {featuredPost.title}
                 </Link>
-              </h3>
+              </h2>
 
               {featuredPost.description && (
                 <p className="btl-featured-desc">{featuredPost.description}</p>
@@ -216,14 +218,14 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
                 />
               </Link>
               <div className="btl-grid-meta">
-                <h4 className="btl-grid-title">
+                <h3 className="btl-grid-title">
                   <Link
                     href={post.url}
                     className="hover:text-black transition-colors"
                   >
                     {post.title}
                   </Link>
-                </h4>
+                </h3>
                 <span
                   className="btl-category-badge"
                   style={{ backgroundColor: post.category_color }}

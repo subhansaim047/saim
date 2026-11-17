@@ -270,10 +270,14 @@ export const ServicesPage = () => {
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Wireframe Video + Laser-Draw Strip + Curtain Parallax) */}
       <RhHeroPinned
         badge="Next.js 16 & Full-Stack Engineering Studio"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Services" },
+        ]}
         title={
           <>
-            Next.js Web Engineering{" "}
-            <span className="text-[#939393]">Services UK</span>
+            Next.js Web Development{" "}
+            <span className="text-[#939393]">Services UK &amp; US</span>
           </>
         }
         subtitle="Fixed-price Next.js 16 web engineering targeting sub-second speeds and 95+ Core Web Vitals. Custom business sites, headless e-commerce, takeaway systems, and 1:1 rebuilds with 100% source code ownership and zero monthly retainers."

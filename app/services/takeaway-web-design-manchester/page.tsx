@@ -19,7 +19,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.saimdev.site/services/takeaway-web-design-manchester",
     languages: {
+      "en": "https://www.saimdev.site/services/takeaway-web-design-manchester",
       "en-GB": "https://www.saimdev.site/services/takeaway-web-design-manchester",
+      "en-US": "https://www.saimdev.site/services/takeaway-web-design-manchester",
+      "x-default": "https://www.saimdev.site/services/takeaway-web-design-manchester",
     },
   },
   openGraph: {
@@ -29,6 +32,7 @@ export const metadata: Metadata = {
     url: "https://www.saimdev.site/services/takeaway-web-design-manchester",
     siteName: "Saim Dev",
     locale: "en_GB",
+    alternateLocale: ["en_US"],
     type: "website",
     images: [
       {
@@ -72,78 +76,84 @@ const manchesterFaqs = [
 export default function ManchesterTakeawayWebDesignPage() {
   const canonicalUrl = "https://www.saimdev.site/services/takeaway-web-design-manchester";
 
-  const breadcrumbSchema = {
+  const manchesterGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": `${canonicalUrl}#breadcrumb`,
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.saimdev.site/" },
-      { "@type": "ListItem", position: 2, name: "Services", item: "https://www.saimdev.site/services" },
+    "@graph": [
       {
-        "@type": "ListItem",
-        position: 3,
-        name: "Takeaway Web Design",
-        item: "https://www.saimdev.site/services/takeaway-web-design",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: "Takeaway Web Design Manchester | Direct Site | Saim Dev",
+        description:
+          "Manchester direct takeaway websites from £250 fixed. Bypass aggregator fees across Rusholme, Northern Quarter & Greater Manchester with 14-allergen menus.",
+        inLanguage: "en-GB",
+        isPartOf: { "@id": "https://www.saimdev.site/#website" },
+        about: { "@id": `${canonicalUrl}#service` },
+        breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
       },
-      { "@type": "ListItem", position: 4, name: "Manchester", item: canonicalUrl },
-    ],
-  };
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": `${canonicalUrl}#service`,
-    name: "Takeaway Web Design Manchester - Saim Dev",
-    description:
-      "Manchester direct takeaway websites from £250 fixed. Bypass aggregator fees across Rusholme, Northern Quarter & Greater Manchester with 14-allergen menus.",
-    url: canonicalUrl,
-    priceRange: "£250",
-    areaServed: { "@type": "City", name: "Manchester" },
-    provider: {
-      "@type": "Organization",
-      "@id": "https://www.saimdev.site/#organization",
-      name: "Saim Dev",
-      url: "https://www.saimdev.site",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Manchester Takeaway Web Design Packages",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          name: "Manchester Direct Takeaway Storefront",
-          price: "250",
-          priceCurrency: "GBP",
-          description:
-            "Commission-free Next.js takeaway menu supporting late-night student trade, M-postcode pricing tiers, and 14-allergen transparency.",
+      {
+        "@type": "ProfessionalService",
+        "@id": `${canonicalUrl}#service`,
+        name: "Takeaway Web Design Manchester - Saim Dev",
+        description:
+          "Manchester direct takeaway websites from £250 fixed. Bypass aggregator fees across Rusholme, Northern Quarter & Greater Manchester with 14-allergen menus.",
+        url: canonicalUrl,
+        priceRange: "£250",
+        areaServed: { "@type": "City", name: "Manchester" },
+        provider: {
+          "@type": "Organization",
+          "@id": "https://www.saimdev.site/#organization",
+          name: "Saim Dev",
+          url: "https://www.saimdev.site",
         },
-      ],
-    },
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: manchesterFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Manchester Takeaway Web Design Packages",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              name: "Manchester Direct Takeaway Storefront",
+              price: "250",
+              priceCurrency: "GBP",
+              description:
+                "Commission-free Next.js takeaway menu supporting late-night student trade, M-postcode pricing tiers, and 14-allergen transparency.",
+            },
+          ],
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.saimdev.site/" },
+          { "@type": "ListItem", position: 2, name: "Services", item: "https://www.saimdev.site/services" },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Takeaway Web Design",
+            item: "https://www.saimdev.site/services/takeaway-web-design",
+          },
+          { "@type": "ListItem", position: 4, name: "Manchester", item: canonicalUrl },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${canonicalUrl}#faq`,
+        isPartOf: { "@id": `${canonicalUrl}#webpage` },
+        mainEntity: manchesterFaqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+    ],
   };
 
   return (
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(manchesterGraphSchema) }}
       />
 
       <RhHeader theme="dark" />
@@ -151,6 +161,12 @@ export default function ManchesterTakeawayWebDesignPage() {
       <main>
         <RhHeroPinned
           badge="Greater Manchester & Curry Mile · 0% Commission"
+          breadcrumb={[
+            { label: "Home", href: "/" },
+            { label: "Services", href: "/services" },
+            { label: "Takeaway Web Design", href: "/services/takeaway-web-design" },
+            { label: "Manchester" },
+          ]}
           title={
             <>
               Takeaway Web Design{" "}

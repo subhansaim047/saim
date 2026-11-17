@@ -42,12 +42,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.saimdev.site'),
   alternates: {
     canonical: 'https://www.saimdev.site',
-    languages: {
-      'en': 'https://www.saimdev.site',
-      'en-GB': 'https://www.saimdev.site',
-      'en-US': 'https://www.saimdev.site',
-      'x-default': 'https://www.saimdev.site',
-    },
   },
   verification: {
     google: 'google0191625097e7b0a7',
@@ -114,12 +108,12 @@ const organizationSchema = {
   "image": "https://www.saimdev.site/og-image.png",
   "description": "Custom Next.js websites, e-commerce stores, custom web applications, and takeaway ordering systems for UK, US, and European businesses. Transparent fixed pricing from £250 / $300.",
   "knowsAbout": [
-    "Next.js Web Development",
+    "Next.js 16 & React 19 Web Engineering",
     "Custom Web Applications & SaaS MVPs",
-    "E-Commerce & Shopify Storefront Engineering",
-    "UK Restaurant & Takeaway Direct Ordering Systems",
-    "Core Web Vitals & Website Speed Optimization",
-    "UK Food Safety, SFBB & Natasha's Law Digital Compliance Tools"
+    "Headless Shopify & Custom eCommerce Storefronts",
+    "Commission-Free UK Takeaway & Restaurant Ordering Systems",
+    "Technical SEO, Canonicalization & Schema.org @graph",
+    "Core Web Vitals & Website Speed Optimization"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
@@ -221,6 +215,18 @@ const webSiteSchema = {
   "inLanguage": ["en-GB", "en-US"]
 };
 
+const stripContext = <T extends Record<string, unknown>>({ "@context": _ctx, ...rest }: T) => rest;
+
+const rootSchemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    stripContext(organizationSchema),
+    stripContext(personSchema),
+    stripContext(webSiteSchema),
+    stripContext(professionalServiceSchema),
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -249,19 +255,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(rootSchemaGraph) }}
         />
       </head>
       <body className={`${inter.variable} ${jakarta.variable} ${bricolage.variable} ${jetbrainsMono.variable} ${outfit.variable} bg-[#050505] text-[#E8E4D9] antialiased selection:bg-[#2F6CE1] selection:text-white`}>

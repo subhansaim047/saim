@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   description: "Our transparent 4-stage engineering workflow: discovery, technical architecture, Next.js development, and deployment with 100% code ownership.",
   alternates: {
     canonical: "https://www.saimdev.site/process",
+    languages: {
+      en: "https://www.saimdev.site/process",
+      "en-GB": "https://www.saimdev.site/process",
+      "en-US": "https://www.saimdev.site/process",
+      "x-default": "https://www.saimdev.site/process",
+    },
   },
   robots: {
     index: true,
@@ -25,6 +31,7 @@ export const metadata: Metadata = {
     url: "https://www.saimdev.site/process",
     siteName: "Saim Dev",
     locale: "en_GB",
+    alternateLocale: ["en_US"],
     type: "website",
     images: [
       {
@@ -44,90 +51,97 @@ export const metadata: Metadata = {
   },
 };
 
-const processSchema = {
+const processGraphSchema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://www.saimdev.site/process/#webpage",
-  "name": "Saim Dev 4-Stage Website Engineering Process",
-  "description": "Step-by-step bespoke website engineering workflow from brief to zero-downtime edge deployment.",
-  "url": "https://www.saimdev.site/process",
-  "inLanguage": "en-GB",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": ["h1", "h2"]
-  },
-  "mainEntity": {
-    "@type": "ItemList",
-    "name": "4-Stage Website Engineering Sprint",
-    "itemListOrder": "https://schema.org/ItemListOrderAscending",
-    "numberOfItems": 4,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Stage 01: Discovery & Strategic Brief (Day 1–2)",
-        "description": "Define commercial objectives, target audience personas, feature requirements, and fixed delivery schedule."
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Stage 02: Information Architecture & Wireframing (Day 2–4)",
-        "description": "Map information architecture, user journeys, Schema.org JSON-LD data structures, and conversion wireframes."
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Stage 03: Design & Next.js Full-Stack Engineering (Day 4–8)",
-        "description": "Develop bespoke UI components with Next.js App Router, Tailwind CSS, TypeScript, and interactive staging preview."
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Stage 04: Testing, Edge Deployment & Full Code Handover (Day 8–10)",
-        "description": "Execute Core Web Vitals audit, cross-browser validation, DNS/SSL launch, and transfer 100% GitHub repository ownership."
-      }
-    ]
-  }
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.saimdev.site"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Engineering Process",
-      "item": "https://www.saimdev.site/process"
-    }
-  ]
-};
-
-const processFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How long does the 4-stage website development process take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Landing pages take 3–5 business days, multi-page starter websites take 5–7 business days, and full custom web applications or online ordering systems take 7–10 business days from initial brief to live deployment."
+      "@type": "WebPage",
+      "@id": "https://www.saimdev.site/process#webpage",
+      "name": "Saim Dev 4-Stage Website Engineering Process",
+      "description": "Step-by-step bespoke website engineering workflow from brief to zero-downtime edge deployment.",
+      "url": "https://www.saimdev.site/process",
+      "inLanguage": "en-GB",
+      "isPartOf": { "@id": "https://www.saimdev.site/#website" },
+      "about": { "@id": "https://www.saimdev.site/#organization" },
+      "breadcrumb": { "@id": "https://www.saimdev.site/process#breadcrumb" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2"]
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "@id": "https://www.saimdev.site/process#stages",
+        "name": "4-Stage Website Engineering Sprint",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Stage 01: Discovery & Strategic Brief (Day 1–2)",
+            "description": "Define commercial objectives, target audience personas, feature requirements, and fixed delivery schedule."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Stage 02: Information Architecture & Wireframing (Day 2–4)",
+            "description": "Map information architecture, user journeys, Schema.org JSON-LD data structures, and conversion wireframes."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Stage 03: Design & Next.js Full-Stack Engineering (Day 4–8)",
+            "description": "Develop bespoke UI components with Next.js App Router, Tailwind CSS, TypeScript, and interactive staging preview."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Stage 04: Testing, Edge Deployment & Full Code Handover (Day 8–10)",
+            "description": "Execute Core Web Vitals audit, cross-browser validation, DNS/SSL launch, and transfer 100% GitHub repository ownership."
+          }
+        ]
       }
     },
     {
-      "@type": "Question",
-      "name": "Can I review and test the website before paying the final 50% balance?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. During Stage 03 we deploy your website to a private staging link so you can test every page, form, and mobile interaction before approving production launch and paying the final 50% milestone."
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://www.saimdev.site/process#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.saimdev.site/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Engineering Process",
+          "item": "https://www.saimdev.site/process"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.saimdev.site/process#faq",
+      "isPartOf": { "@id": "https://www.saimdev.site/process#webpage" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does the 4-stage website development process take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Landing pages take 3–5 business days, multi-page starter websites take 5–7 business days, and full custom web applications or online ordering systems take 7–10 business days from initial brief to live deployment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I review and test the website before paying the final 50% balance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. During Stage 03 we deploy your website to a private staging link so you can test every page, form, and mobile interaction before approving production launch and paying the final 50% milestone."
+          }
+        }
+      ]
     }
   ]
 };
@@ -137,15 +151,7 @@ export default function ProcessPage() {
     <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(processSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(processFaqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(processGraphSchema) }}
       />
 
       <RhHeader theme="dark" />
@@ -153,10 +159,14 @@ export default function ProcessPage() {
       <main>
       <RhHeroPinned
         badge="Proven Delivery Methodology · 4-Stage Sprint"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Process" },
+        ]}
         title={
           <>
-            How We Build &amp; Deploy{" "}
-            <span className="text-[#939393]">Your Website</span>
+            Web Development Process —{" "}
+            <span className="text-[#939393]">Spec to Launch</span>
           </>
         }
         subtitle="No missed deadlines, no surprise invoices, and no bloated agency middlemen. A transparent 4-stage Next.js engineering sprint with direct engineer communication from brief to production launch in 5–12 days."

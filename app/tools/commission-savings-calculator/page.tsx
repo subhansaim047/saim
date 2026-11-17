@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.saimdev.site/tools/commission-savings-calculator",
+    languages: {
+      en: "https://www.saimdev.site/tools/commission-savings-calculator",
+      "en-GB": "https://www.saimdev.site/tools/commission-savings-calculator",
+      "en-US": "https://www.saimdev.site/tools/commission-savings-calculator",
+      "x-default": "https://www.saimdev.site/tools/commission-savings-calculator",
+    },
   },
   openGraph: {
     title: "Takeaway Commission Calculator UK | 0% Fees | Saim Dev",
@@ -24,6 +30,7 @@ export const metadata: Metadata = {
     url: "https://www.saimdev.site/tools/commission-savings-calculator",
     siteName: "Saim Dev",
     locale: "en_GB",
+    alternateLocale: ["en_US"],
     type: "website",
     images: [
       {
@@ -91,78 +98,86 @@ const MODEL_COMPARISON = [
 export default function CommissionSavingsCalculatorPage() {
   const canonicalUrl = "https://www.saimdev.site/tools/commission-savings-calculator";
 
-  const webAppSchema = {
+  const calculatorGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "@id": `${canonicalUrl}/#webapp`,
-    name: "Takeaway Commission Savings Calculator",
-    url: canonicalUrl,
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Any",
-    isAccessibleForFree: true,
-    description:
-      "Interactive ROI calculator comparing third-party delivery app commissions against a 0% commission Next.js direct takeaway ordering website.",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "GBP",
-    },
-    provider: {
-      "@id": "https://www.saimdev.site/#organization",
-    },
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
+    "@graph": [
       {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.saimdev.site/",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: "Takeaway Commission Calculator UK | 0% Fees | Saim Dev",
+        description:
+          "Interactive ROI calculator comparing third-party delivery app commissions against a 0% commission Next.js direct takeaway ordering website.",
+        inLanguage: "en-GB",
+        isPartOf: { "@id": "https://www.saimdev.site/#website" },
+        about: { "@id": "https://www.saimdev.site/#organization" },
+        breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+        mainEntity: { "@id": `${canonicalUrl}#webapp` },
       },
       {
-        "@type": "ListItem",
-        position: 2,
-        name: "Takeaway Web Design",
-        item: "https://www.saimdev.site/services/takeaway-web-design",
+        "@type": "WebApplication",
+        "@id": `${canonicalUrl}#webapp`,
+        name: "Takeaway Commission Savings Calculator",
+        url: canonicalUrl,
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Any",
+        isAccessibleForFree: true,
+        description:
+          "Interactive ROI calculator comparing third-party delivery app commissions against a 0% commission Next.js direct takeaway ordering website.",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "GBP",
+        },
+        provider: {
+          "@id": "https://www.saimdev.site/#organization",
+        },
       },
       {
-        "@type": "ListItem",
-        position: 3,
-        name: "Commission Savings Calculator",
-        item: canonicalUrl,
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://www.saimdev.site/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Takeaway Web Design",
+            item: "https://www.saimdev.site/services/takeaway-web-design",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Commission Savings Calculator",
+            item: canonicalUrl,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${canonicalUrl}#faq`,
+        isPartOf: { "@id": `${canonicalUrl}#webpage` },
+        mainEntity: CALCULATOR_FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
       },
     ],
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: CALCULATOR_FAQS.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.a,
-      },
-    })),
   };
 
   return (
     <div className="rh-page min-h-screen flex flex-col bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] overflow-x-hidden">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(calculatorGraphSchema) }}
       />
 
       <RhHeader theme="dark" />
@@ -170,10 +185,15 @@ export default function CommissionSavingsCalculatorPage() {
       <main className="flex-grow">
         <RhHeroPinned
           badge="0% Commission ROI Simulator · UK & US Kitchens"
+          breadcrumb={[
+            { label: "Home", href: "/" },
+            { label: "Takeaway Web Design", href: "/services/takeaway-web-design" },
+            { label: "Commission Calculator" },
+          ]}
           title={
             <>
-              Stop Paying 30% App Cuts.{" "}
-              <span className="text-[#939393]">Calculate Your Savings.</span>
+              Takeaway Commission Calculator —{" "}
+              <span className="text-[#939393]">Keep 100% of Sales</span>
             </>
           }
           subtitle="Model your exact weekly, monthly, and annual cash retained by redirecting repeat Just Eat, Deliveroo, Uber Eats, or DoorDash regulars onto your own fast Next.js ordering site."

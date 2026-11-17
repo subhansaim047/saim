@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.saimdev.site/terms',
     languages: {
+      'en': 'https://www.saimdev.site/terms',
       'en-GB': 'https://www.saimdev.site/terms',
+      'en-US': 'https://www.saimdev.site/terms',
+      'x-default': 'https://www.saimdev.site/terms',
     },
   },
   openGraph: {
@@ -20,8 +23,8 @@ export const metadata: Metadata = {
     url: 'https://www.saimdev.site/terms',
     siteName: 'Saim Dev',
     locale: 'en_GB',
-    type: 'website'
-  ,
+    alternateLocale: ['en_US'],
+    type: 'website',
     images: [
       {
         url: "https://www.saimdev.site/og-image.png",
@@ -43,21 +46,37 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const breadcrumbSchema = {
+  const termsGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.saimdev.site/"
+        "@type": "WebPage",
+        "@id": "https://www.saimdev.site/terms#webpage",
+        "url": "https://www.saimdev.site/terms",
+        "name": "Terms of Service | Saim Dev",
+        "description": "Terms of Service for Saim Dev web architecture and digital resources. Review service delivery, client terms, intellectual property, and usage.",
+        "inLanguage": "en-GB",
+        "isPartOf": { "@id": "https://www.saimdev.site/#website" },
+        "about": { "@id": "https://www.saimdev.site/#organization" },
+        "breadcrumb": { "@id": "https://www.saimdev.site/terms#breadcrumb" }
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Terms of Service",
-        "item": "https://www.saimdev.site/terms"
+        "@type": "BreadcrumbList",
+        "@id": "https://www.saimdev.site/terms#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.saimdev.site/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Terms of Service",
+            "item": "https://www.saimdev.site/terms"
+          }
+        ]
       }
     ]
   };
@@ -66,7 +85,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(termsGraphSchema) }}
       />
       <TermsOfService />
     </>

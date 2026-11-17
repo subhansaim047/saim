@@ -786,6 +786,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   <Link
                     href="/tools/allergen-matrix-generator"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold"
                   >
                     <span>Open in new tab</span>
@@ -796,6 +797,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   <Link
                     href="/tools/food-cost-calculator"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold"
                   >
                     <span>Open in new tab</span>
@@ -806,6 +808,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
                   <Link
                     href="/tools/recipe-batch-calculator"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold"
                   >
                     <span>Open in new tab</span>

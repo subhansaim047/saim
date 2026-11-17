@@ -163,7 +163,7 @@ export const PrivacyPolicy: React.FC = () => {
             <div className="bg-[#F5F5F7] border border-black/10 rounded-2xl p-5 mt-3 text-xs sm:text-sm space-y-1 text-[#0D0D0D]/80">
               <p className="font-semibold text-[#0D0D0D]">Information Commissioner&apos;s Office (ICO)</p>
               <p>Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF</p>
-              <p>Website: <a href="https://ico.org.uk" target="_blank" rel="noreferrer" className="underline font-medium text-[#0D0D0D]">ico.org.uk</a> · Telephone: 0303 123 1113</p>
+              <p>Website: <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="underline font-medium text-[#0D0D0D]">ico.org.uk</a> · Telephone: 0303 123 1113</p>
             </div>
           </section>
 

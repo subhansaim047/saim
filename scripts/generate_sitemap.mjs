@@ -152,7 +152,7 @@ const staticPages = [
   { url: "https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups", priority: "0.85", changefreq: "weekly" },
   { url: "https://www.saimdev.site/blog/why-small-business-needs-website", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blog/free-website-for-local-business", priority: "0.85", changefreq: "monthly" },
-  { url: "https://www.saimdev.site/blog/50-percent-off-agency-launch", priority: "0.85", changefreq: "monthly" },
+  { url: "https://www.saimdev.site/blog/small-business-website-packages-guide", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/terms", priority: "0.6", changefreq: "monthly" },
@@ -301,12 +301,12 @@ const imageSitemapEntries = [
     ]
   },
   {
-    url: "https://www.saimdev.site/blog/50-percent-off-agency-launch",
+    url: "https://www.saimdev.site/blog/small-business-website-packages-guide",
     images: [
       {
         loc: "https://www.saimdev.site/og-image.png",
-        title: "Saim Dev Agency Launch Offer",
-        caption: "Special promotion on custom Next.js takeaway websites and SEO setup"
+        title: "Small Business Website Packages Guide UK & US",
+        caption: "Buyer comparison of what a fixed-price custom Next.js website package includes without agency retainers"
       }
     ]
   }

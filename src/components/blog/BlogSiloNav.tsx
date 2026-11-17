@@ -45,10 +45,10 @@ const GROWTH_POSTS = [
     summary: "True cost breakdown of Wix, Squarespace, and Shopify recurring fees vs bespoke code ownership."
   },
   {
-    slug: "50-percent-off-agency-launch",
-    href: "/blog/50-percent-off-agency-launch",
-    title: "Saim Dev Agency Launch: 50% Off Fixed-Price Websites",
-    summary: "Transparent bespoke web architecture from £250 for UK small businesses and local operators."
+    slug: "small-business-website-packages-guide",
+    href: "/blog/small-business-website-packages-guide",
+    title: "Small Business Website Packages: UK Buyer Guide",
+    summary: "Compare bespoke Next.js build deliverables, milestone protections, and full code ownership."
   }
 ];
 

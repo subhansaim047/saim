@@ -748,6 +748,12 @@ export const BlogPostFhrsChecklist: React.FC = () => {
               >
                 Takeaway Web Design Services
               </Link>
+              <Link
+                href="/disclaimer"
+                className="text-xs text-white/60 hover:text-white underline underline-offset-4 px-2 py-2"
+              >
+                Guidance &amp; Regulatory Disclaimer
+              </Link>
             </div>
           </section>
 

@@ -20,6 +20,7 @@ export interface RhHeroPinnedProps {
   badge: string;
   title: React.ReactNode;
   subtitle: string;
+  breadcrumb?: { label: string; href?: string }[];
   primaryCta: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   videoType?: "cube" | "mobile";
@@ -207,6 +208,7 @@ export function RhHeroPinned({
   badge,
   title,
   subtitle,
+  breadcrumb,
   primaryCta,
   secondaryCta,
   videoType = "cube",
@@ -383,6 +385,28 @@ export function RhHeroPinned({
             <div className="grid lg:grid-cols-[1.12fr_0.88fr] gap-10 lg:gap-16 items-center">
               {/* Left Copy Column */}
               <div className="flex flex-col gap-7">
+                {breadcrumb && breadcrumb.length > 0 && (
+                  <nav aria-label="Breadcrumb">
+                    <ol className="flex flex-wrap items-center gap-1.5 text-[12px] text-[#939393]">
+                      {breadcrumb.map((item, idx) => (
+                        <React.Fragment key={`${item.label}-${idx}`}>
+                          {idx > 0 && <li aria-hidden="true">/</li>}
+                          <li>
+                            {item.href ? (
+                              <Link href={item.href} prefetch={false} className="hover:text-white transition-colors">
+                                {item.label}
+                              </Link>
+                            ) : (
+                              <span className="text-white font-medium" aria-current="page">
+                                {item.label}
+                              </span>
+                            )}
+                          </li>
+                        </React.Fragment>
+                      ))}
+                    </ol>
+                  </nav>
+                )}
                 <div className="rh-hero-enter-badge inline-flex items-center gap-2.5 self-start px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                   <span className="w-2 h-2 rounded-full bg-[#BAFF00] animate-pulse" />
                   <span className="text-[11px] font-mono-tech tracking-[0.2em] uppercase text-[#BAFF00]">
@@ -670,6 +694,8 @@ export function RhProblemSolutionDeck({
                 src="/rh-exact/pd/pd-case-glow.svg"
                 alt=""
                 aria-hidden="true"
+                width={256}
+                height={256}
                 className="pointer-events-none absolute -top-10 -right-10 w-64 h-64 opacity-70"
               />
               <div className="relative z-10">
@@ -1090,6 +1116,8 @@ export function RhProcessCarousel({
               src="/rh-exact/pd/pd-cta-glow.svg"
               alt=""
               aria-hidden="true"
+              width={288}
+              height={288}
               className="pointer-events-none absolute -inset-12 w-72 h-72 opacity-80"
             />
             <Link

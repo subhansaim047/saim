@@ -581,10 +581,16 @@ export const BlogPostNatashasLaw: React.FC = () => {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <Link
-                href="/services"
+                href="/services/takeaway-web-design"
                 className="bg-white/10 hover:bg-white/15 text-white text-xs sm:text-sm font-medium px-5 py-3 rounded-full transition-all"
               >
-                Explore Web Services
+                Commission-Free Takeaway Ordering
+              </Link>
+              <Link
+                href="/disclaimer"
+                className="text-xs text-white/60 hover:text-white underline underline-offset-4 px-2 py-2"
+              >
+                Food Safety Disclaimer
               </Link>
             </div>
           </section>

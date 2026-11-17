@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.saimdev.site/privacy',
     languages: {
+      'en': 'https://www.saimdev.site/privacy',
       'en-GB': 'https://www.saimdev.site/privacy',
+      'en-US': 'https://www.saimdev.site/privacy',
+      'x-default': 'https://www.saimdev.site/privacy',
     },
   },
   openGraph: {
@@ -20,8 +23,8 @@ export const metadata: Metadata = {
     url: 'https://www.saimdev.site/privacy',
     siteName: 'Saim Dev',
     locale: 'en_GB',
-    type: 'website'
-  ,
+    alternateLocale: ['en_US'],
+    type: 'website',
     images: [
       {
         url: "https://www.saimdev.site/og-image.png",
@@ -43,21 +46,37 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const breadcrumbSchema = {
+  const privacyGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.saimdev.site/"
+        "@type": "WebPage",
+        "@id": "https://www.saimdev.site/privacy#webpage",
+        "url": "https://www.saimdev.site/privacy",
+        "name": "Privacy Policy | Saim Dev",
+        "description": "Read how Saim Dev collects, uses, and protects personal data from enquiries and free tools in compliance with UK GDPR and the Data Protection Act 2018.",
+        "inLanguage": "en-GB",
+        "isPartOf": { "@id": "https://www.saimdev.site/#website" },
+        "about": { "@id": "https://www.saimdev.site/#organization" },
+        "breadcrumb": { "@id": "https://www.saimdev.site/privacy#breadcrumb" }
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Privacy Policy",
-        "item": "https://www.saimdev.site/privacy"
+        "@type": "BreadcrumbList",
+        "@id": "https://www.saimdev.site/privacy#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.saimdev.site/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy Policy",
+            "item": "https://www.saimdev.site/privacy"
+          }
+        ]
       }
     ]
   };
@@ -66,7 +85,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyGraphSchema) }}
       />
       <PrivacyPolicy />
     </>

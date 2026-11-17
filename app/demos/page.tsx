@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.saimdev.site/demos',
     languages: {
+      'en': 'https://www.saimdev.site/demos',
       'en-GB': 'https://www.saimdev.site/demos',
+      'en-US': 'https://www.saimdev.site/demos',
+      'x-default': 'https://www.saimdev.site/demos',
     },
   },
   openGraph: {
@@ -21,6 +24,7 @@ export const metadata: Metadata = {
     url: 'https://www.saimdev.site/demos',
     siteName: 'Saim Dev',
     locale: 'en_GB',
+    alternateLocale: ['en_US'],
     images: [
       {
         url: 'https://www.saimdev.site/og-demos.png',
@@ -41,27 +45,43 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const breadcrumbSchema = {
+  const demosGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.saimdev.site/"
+        "@type": "CollectionPage",
+        "@id": "https://www.saimdev.site/demos#webpage",
+        "url": "https://www.saimdev.site/demos",
+        "name": "Interactive Takeaway & Business Web Demos | Saim Dev",
+        "description": "Test live interactive Next.js website demos, online ordering menus, allergen filters, and digital food-safety tools built for UK businesses.",
+        "inLanguage": "en-GB",
+        "isPartOf": { "@id": "https://www.saimdev.site/#website" },
+        "about": { "@id": "https://www.saimdev.site/#organization" },
+        "breadcrumb": { "@id": "https://www.saimdev.site/demos#breadcrumb" }
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://www.saimdev.site/services"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Live Demos",
-        "item": "https://www.saimdev.site/demos"
+        "@type": "BreadcrumbList",
+        "@id": "https://www.saimdev.site/demos#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.saimdev.site/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.saimdev.site/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Live Demos",
+            "item": "https://www.saimdev.site/demos"
+          }
+        ]
       }
     ]
   };
@@ -70,7 +90,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(demosGraphSchema) }}
       />
       <DemosPage />
     </>

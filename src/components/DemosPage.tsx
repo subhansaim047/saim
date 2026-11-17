@@ -288,10 +288,15 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Mobile WebM + Laser-Draw Strip) */}
       <RhHeroPinned
         badge="9 Reference Production Builds"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Live Demos" },
+        ]}
         title={
           <>
-            Restaurant Website Demos{" "}
-            <span className="text-[#939393]">&amp; Live Projects</span>
+            Takeaway, Restaurant{" "}
+            <span className="text-[#939393]">&amp; Business Website Demos</span>
           </>
         }
         subtitle="Explore interactive restaurant website demos, bespoke e-commerce storefronts, and production Next.js applications built by Saim Dev. Test live ordering flows, GSAP scroll choreography, sub-second mobile speed, and Natasha's Law allergen filters."
@@ -436,7 +441,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
                     <a
                       href={demo.demoUrl}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       aria-label={`Open ${demo.title} interactive demo`}
                       className="bg-[#BAFF00] hover:bg-white text-[#0D0D0D] p-2.5 rounded-full transition-all cursor-pointer"
                       title={`Open ${demo.title} Demo`}
@@ -494,7 +499,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
                       <a
                         href={demo.demoUrl}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         aria-label={`View live site for ${demo.title}`}
                         className="w-full bg-[#BAFF00] hover:bg-white text-[#0D0D0D] text-[13px] font-medium py-2.5 px-3 rounded-full transition-colors flex items-center justify-center gap-1.5 cursor-pointer active:scale-[0.98]"
                       >
@@ -705,7 +710,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
                 <a
                   href={selectedDemo.demoUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="hidden sm:flex items-center gap-1 text-xs text-[#BAFF00] hover:underline font-medium"
                 >
                   Fullscreen <ExternalLink className="w-3.5 h-3.5" />

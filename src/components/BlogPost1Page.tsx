@@ -352,7 +352,7 @@ export const BlogPost1Page = () => {
           <section id="section-7" className="mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">Addressing Common Objections</h2>
             <p className="text-white/65 text-base mb-7">
-              These are the four objections I hear most often from small business owners who don't yet have a website — and the honest responses to each.
+              These are the four objections our team hears most often from small business owners who don't yet have a website — and the honest responses to each.
             </p>
             <div className="space-y-4">
               {objections.map((obj, i) => (
@@ -522,15 +522,15 @@ export const BlogPost1Page = () => {
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="rounded-2xl border border-primary/20 bg-primary/5 p-7 mb-10">
           <p className="text-white font-bold text-xl mb-2">Is your business losing customers online?</p>
           <p className="text-white/55 text-sm leading-relaxed mb-6">
-            I offer a free website audit for small businesses. You'll get a clear, honest review of your current online presence — covering your website performance, Google visibility, mobile experience, and the specific steps that would generate more leads. No sales pitch. Just a straight assessment.
+            We offer a free website audit for small businesses. You'll get a clear, honest review of your current online presence — covering Core Web Vitals speed, Google visibility, mobile experience, and concrete conversion fixes. No sales pitch — just a straight technical assessment.
           </p>
           <div className="flex flex-wrap gap-3">
-            <button onClick={() => router.push('/')} className="inline-flex items-center gap-2 bg-primary text-black font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors text-sm cursor-pointer">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-primary text-black font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors text-sm cursor-pointer">
               Request a Free Audit
-            </button>
-            <button onClick={() => router.push('/')} className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-medium px-6 py-3 rounded-xl transition-colors text-sm cursor-pointer">
-              View Pricing
-            </button>
+            </Link>
+            <Link href="/pricing" className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-medium px-6 py-3 rounded-xl transition-colors text-sm cursor-pointer">
+              View Fixed-Price Packages
+            </Link>
           </div>
         </motion.div>
 
@@ -540,28 +540,28 @@ export const BlogPost1Page = () => {
         <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 mb-10">
           <p className="text-xs font-bold tracking-widest uppercase text-primary/80 mb-2">Related resources</p>
           <p className="text-white/60 text-xs sm:text-sm mb-5 font-light">
-            Explore our engineering services, performance results, and direct project consultation:
+            Explore our engineering services, starter guides, and direct project consultation:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             <Link
-              href="/services"
+              href="/services/business-websites"
               className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
             >
-              <span>fixed-price website development</span>
+              <span>custom small business websites</span>
               <span className="text-primary text-xs font-mono">&rarr;</span>
             </Link>
             <Link
-              href="/services/website-development"
+              href="/blog/free-website-for-local-business"
               className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
             >
-              <span>Next.js website development UK &amp; US</span>
+              <span>free website builder vs starter guide</span>
               <span className="text-primary text-xs font-mono">&rarr;</span>
             </Link>
             <Link
-              href="/case-studies"
+              href="/blog/small-business-website-packages-guide"
               className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
             >
-              <span>website case studies</span>
+              <span>small business website packages guide</span>
               <span className="text-primary text-xs font-mono">&rarr;</span>
             </Link>
             <Link

@@ -57,6 +57,10 @@ const nextConfig = {
             value: 'camera=(), microphone=(), geolocation=()',
           },
           {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin-allow-popups',
+          },
+          {
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://framerusercontent.com https://*.framerusercontent.com https://framer.com https://*.framer.com https://app.framerstatic.com https://*.framerstatic.com https://events.framer.com https://cdn.prod.website-files.com https://assets-global.website-files.com https://d3e54v103j8qbb.cloudfront.net https://ajax.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net https://use.fontawesome.com https://lottie.host https://*.lottie.host https://cdn.trustindex.io https://dilicious-demo.pbminfotech.com https://*.pbminfotech.com; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:; connect-src 'self' https:; frame-src 'self' https://framer.com https://*.framer.com https://www.google.com https://maps.google.com https://player.vimeo.com https://www.youtube.com https://www.openstreetmap.org; worker-src 'self' blob:; object-src 'none'; base-uri 'self';",
           },
@@ -102,10 +106,22 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Host Canonicalization (apex saimdev.site -> www.saimdev.site)
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'saimdev.site' }],
+        destination: 'https://www.saimdev.site/:path*',
+        permanent: true,
+      },
       // Evergreen Blog Migration
       {
         source: '/blog/why-small-business-needs-website-2026',
         destination: '/blog/why-small-business-needs-website',
+        permanent: true,
+      },
+      {
+        source: '/blog/50-percent-off-agency-launch',
+        destination: '/blog/small-business-website-packages-guide',
         permanent: true,
       },
       // Demo Showcase Routes

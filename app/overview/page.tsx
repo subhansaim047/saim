@@ -27,6 +27,39 @@ export const metadata: Metadata = {
     "Explore Saim Dev's complete engineering breakdown, interactive project scope cost estimator, live demos, architecture comparison, and full FAQ.",
   alternates: {
     canonical: "https://www.saimdev.site/overview",
+    languages: {
+      en: "https://www.saimdev.site/overview",
+      "en-GB": "https://www.saimdev.site/overview",
+      "en-US": "https://www.saimdev.site/overview",
+      "x-default": "https://www.saimdev.site/overview",
+    },
+  },
+  openGraph: {
+    title: "Full Studio Overview, Specs & Cost Estimator | Saim Dev",
+    description:
+      "Explore Saim Dev's complete engineering breakdown, interactive project scope cost estimator, live demos, architecture comparison, and full FAQ.",
+    url: "https://www.saimdev.site/overview",
+    siteName: "Saim Dev",
+    locale: "en_GB",
+    alternateLocale: ["en_US"],
+    type: "website",
+    images: [
+      {
+        url: "https://www.saimdev.site/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Saim Dev Studio Overview and Project Scope Estimator",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Full Studio Overview, Specs & Cost Estimator | Saim Dev",
+    description:
+      "Explore Saim Dev's complete engineering breakdown, interactive project scope cost estimator, live demos, architecture comparison, and full FAQ.",
+    creator: "@saimwebdev",
+    images: ["https://www.saimdev.site/og-image.png"],
   },
   robots: {
     index: true,
@@ -191,74 +224,90 @@ const REGIONAL_AND_TOOL_HUBS = [
 ];
 
 export default function StudioOverviewPage() {
-  const overviewWebPageSchema = {
+  const overviewGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.saimdev.site/overview/#webpage",
-    url: "https://www.saimdev.site/overview",
-    name: "Full Studio Overview & Project Scope Cost Estimator | Saim Dev",
-    description:
-      "Complete engineering specifications, interactive project scope cost estimator, fixed-price comparisons, and technical deliverables from Saim Dev.",
-    inLanguage: "en-GB",
-    isPartOf: { "@id": "https://www.saimdev.site/#website" },
-    about: { "@id": "https://www.saimdev.site/#organization" },
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "h2"],
-    },
-  };
-
-  const overviewBreadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
+    "@graph": [
       {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.saimdev.site/",
+        "@type": "WebPage",
+        "@id": "https://www.saimdev.site/overview#webpage",
+        url: "https://www.saimdev.site/overview",
+        name: "Full Studio Overview & Project Scope Cost Estimator | Saim Dev",
+        description:
+          "Complete engineering specifications, interactive project scope cost estimator, fixed-price comparisons, and technical deliverables from Saim Dev.",
+        inLanguage: "en-GB",
+        isPartOf: { "@id": "https://www.saimdev.site/#website" },
+        about: { "@id": "https://www.saimdev.site/#organization" },
+        breadcrumb: { "@id": "https://www.saimdev.site/overview#breadcrumb" },
+        mainEntity: { "@id": "https://www.saimdev.site/overview#estimator" },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", "h2"],
+        },
       },
       {
-        "@type": "ListItem",
-        position: 2,
-        name: "Studio Overview & Estimator",
-        item: "https://www.saimdev.site/overview",
+        "@type": "WebApplication",
+        "@id": "https://www.saimdev.site/overview#estimator",
+        name: "Saim Dev Interactive Project Scope & Cost Estimator",
+        url: "https://www.saimdev.site/overview#estimator",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Any",
+        browserRequirements: "Requires JavaScript",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "GBP",
+        },
+        provider: { "@id": "https://www.saimdev.site/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.saimdev.site/overview#breadcrumb",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://www.saimdev.site/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Studio Overview & Estimator",
+            item: "https://www.saimdev.site/overview",
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.saimdev.site/overview#faq",
+        isPartOf: { "@id": "https://www.saimdev.site/overview#webpage" },
+        mainEntity: OVERVIEW_FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
       },
     ],
-  };
-
-  const overviewFaqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: OVERVIEW_FAQS.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.a,
-      },
-    })),
   };
 
   return (
     <div className="rh-page min-h-screen flex flex-col bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] overflow-x-hidden">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(overviewWebPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(overviewBreadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(overviewFaqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(overviewGraphSchema) }}
       />
       <RhHeader theme="dark" />
 
       <main className="flex-grow">
         <RhHeroPinned
           badge="Detailed Engineering Specs & Scope Calculator"
+          breadcrumb={[
+            { label: "Home", href: "/" },
+            { label: "Studio Overview & Estimator" },
+          ]}
           title={
             <>
               Full Studio Overview{" "}

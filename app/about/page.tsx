@@ -20,7 +20,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.saimdev.site/about",
     languages: {
+      "en": "https://www.saimdev.site/about",
       "en-GB": "https://www.saimdev.site/about",
+      "en-US": "https://www.saimdev.site/about",
+      "x-default": "https://www.saimdev.site/about",
     },
   },
   openGraph: {
@@ -29,6 +32,7 @@ export const metadata: Metadata = {
     url: "https://www.saimdev.site/about",
     siteName: "Saim Dev",
     locale: "en_GB",
+    alternateLocale: ["en_US"],
     type: "website",
     images: [
       {

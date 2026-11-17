@@ -8,30 +8,30 @@ import { ArrowLeft, ArrowRight, Share2, ChevronDown, ChevronUp, CheckCircle, Sma
 
 const faqs = [
   {
-    q: "Is this a recurring discount or a one-time fee?",
-    a: "This is a one-time flat 50% discount on the entire project development cost. There are no hidden monthly retainer fees or mandatory ongoing contracts.",
+    q: "Is a fixed-price website package a one-time fee or monthly contract?",
+    a: "Our website packages operate on clear one-off fixed fees (£250 to £790 GBP / $300 to $999 USD) split into 50/50 milestone payments. There are zero mandatory monthly agency retainers or recurring maintenance traps.",
   },
   {
-    q: "Will the website be fully custom or a template?",
-    a: "100% custom. Even at half price, I do not use cheap, bloated templates. I engineer the layout, structure, and design from the ground up to fit your exact brand and business goals.",
+    q: "Will the website be fully custom or a bloated WordPress template?",
+    a: "100% custom. We do not re-skin cheap templates or pile up fragile plugins. We engineer the UI layout, responsive structure, and technical SEO schema directly in Next.js 16 to fit your business goals.",
   },
   {
     q: "How long will the project take?",
-    a: "Depending on the scope, most standard business websites are launched within 5 to 10 days.",
+    a: "Landing pages ship in 3 to 5 business days, and standard 5-to-15-page small business websites launch within 5 to 10 business days.",
   },
   {
-    q: "Do I need to pay for hosting and domain?",
-    a: "Yes, you are responsible for your own domain name and hosting plan. I will guide you on the best and most affordable platforms to use.",
+    q: "Do we keep full control of our domain, hosting, and code?",
+    a: "Yes. Your domain registrar, Vercel or Cloudflare hosting plan, and complete GitHub source code remain in your business's own name from launch day onward.",
   }
 ];
 
 const sections = [
-  "The Announcement",
-  "Why Am I Cutting Prices in Half?",
-  "What You Actually Get",
-  "Who I Want to Work With",
+  "Why Fixed-Scope Packages Matter",
+  "What Traditional Agencies Hide",
+  "What a Complete Package Includes",
+  "Who Fixed Packages Fit Best",
   "Frequently Asked Questions",
-  "How to Claim This Offer",
+  "How to Lock Your Fixed Scope",
 ];
 
 export const BlogPost3Page = () => {
@@ -71,22 +71,22 @@ export const BlogPost3Page = () => {
             <li aria-hidden="true">/</li>
             <li><Link href="/blogs" className="hover:text-white transition-colors">Blog</Link></li>
             <li aria-hidden="true">/</li>
-            <li className="text-white font-medium truncate" aria-current="page">Fixed-Price Bespoke Website Design Package UK</li>
+            <li className="text-white font-medium truncate" aria-current="page">Small Business Website Packages Guide</li>
           </ol>
         </nav>
 
 <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <div className="flex items-center gap-3 mb-6">
             <span className="bg-primary/20 text-primary border border-primary/20 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
-              Launch Special
+              Buyer&apos;s Scope Guide
             </span>
-            <span className="text-white/40 text-sm font-medium">5 Min Read</span>
+            <span className="text-white/40 text-sm font-medium">6 Min Read</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-bold text-white mb-6 leading-[1.15] tracking-tight">
-            Fixed-Price Bespoke Website Design Package UK (<span className="text-primary">50% Off Launch</span>)
+            Small Business Website Packages Guide: <span className="text-primary">What Fixed Scopes Actually Include</span>
           </h1>
           <div className="p-4 rounded-xl border border-primary/20 bg-primary/5 text-white/90 text-sm sm:text-base leading-relaxed mb-6">
-            <strong>Direct Answer:</strong> A fixed-price bespoke website design package provides UK businesses with custom-engineered Next.js architecture, complete mobile responsiveness, local SEO schema, and fast turnaround without the uncertainty of hourly billing or costly agency retainers. Our limited launch special offers full custom development at half the standard agency cost.
+            <strong>Direct Answer:</strong> A reliable fixed-price small business website package should guarantee bespoke Next.js code, mobile-first layout clarity, Schema.org local SEO setup, transparent 50/50 milestone protection, and full GitHub repository ownership — without hidden monthly retainers or bloated WordPress plugins. Compare all <Link href="/pricing" className="underline text-primary font-semibold">published package tiers here</Link>.
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-4 py-4 px-5 rounded-xl border border-white/10 bg-white/[0.02] mb-6 text-xs text-white/70">
@@ -140,7 +140,7 @@ export const BlogPost3Page = () => {
           
           {/* Table of Contents */}
           <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 mb-12">
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Inside This Post</h3>
+            <h2 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Inside This Guide</h2>
             <ul className="space-y-3">
               {sections.map((sec, idx) => (
                 <li key={idx}>
@@ -154,39 +154,43 @@ export const BlogPost3Page = () => {
 
           {/* Section 1 */}
           <section id="section-1" className="mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">The Announcement</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">Why Fixed-Scope Packages Matter</h2>
             <p className="text-white/70 text-base leading-relaxed mb-4">
-              It is official. After months of intense preparation, late-night coding sessions, and refining my process, I have launched my own web development agency.
+              Most small businesses hesitate to invest in a bespoke website because traditional agency quotes feel open-ended: vague hourly estimates, unexpected change-order invoices, and multi-month waits just to see a first working draft.
             </p>
             <p className="text-white/70 text-base leading-relaxed">
-              My core mission? To help businesses succeed in their local markets with high-performance, custom-built websites that don't just look pretty, but actually convert visitors into paying customers. And to celebrate this milestone, I am doing something crazy: I am offering a flat <strong>50% discount</strong> on new website projects.
+              Our engineering studio structures every engagement around clear fixed deliverables (£250 to £790 UK / $300 to $999 US), transparent 50/50 milestone sign-offs, and direct WhatsApp communication with the engineer building your codebase. You can inspect all <Link href="/services/business-websites" className="text-primary hover:underline">business website specs</Link> before starting.
             </p>
           </section>
 
           {/* Section 2 */}
           <section id="section-2" className="mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">Why Am I Cutting Prices in Half?</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">What Traditional Agencies &amp; DIY Builders Hide</h2>
             <p className="text-white/70 text-base leading-relaxed mb-6">
-              When people see a 50% discount, they instantly assume the quality is being cut in half too. Let me be clear: <strong>That is NOT the case here.</strong> 
+              Lower upfront pricing on rental platforms almost always hides higher multi-year costs. Watch for recurring builder lock-in vs 100% owned code.
             </p>
             <div className="rounded-xl border-l-4 border-primary bg-primary/5 p-5 mb-6">
               <p className="text-white font-medium italic text-lg leading-relaxed">
-                "As a newly launched agency, my most valuable asset right now isn't short-term profit—it is trust."
+                &ldquo;True value comes from speed, clean search architecture, and owning your production codebase outright — never from hidden monthly plugin subscriptions.&rdquo;
               </p>
             </div>
             <p className="text-white/70 text-base leading-relaxed mb-4">
-              I want to build a powerhouse portfolio of incredible case studies. I am willing to sacrifice my profit margins today in exchange for a glowing testimonial and a lifelong client relationship tomorrow. 
-            </p>
-            <p className="text-white/70 text-base leading-relaxed">
-              You get an enterprise-grade website at half the price, and I get to showcase your success story to the world. It is a perfect win-win.
+              If you are still weighing cheap DIY builders against custom starter packages, read our comparison on{" "}
+              <Link href="/blog/free-website-for-local-business" className="text-primary hover:underline">
+                free small business websites and hidden platform fees
+              </Link>{" "}
+              alongside our full{" "}
+              <Link href="/blog/nextjs-website-development-cost-uk-us" className="text-primary hover:underline">
+                Next.js UK &amp; US pricing breakdown
+              </Link>.
             </p>
           </section>
 
           {/* Section 3 */}
           <section id="section-3" className="mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">What You Actually Get</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">What a Complete Package Includes</h2>
             <p className="text-white/70 text-base leading-relaxed mb-6">
-              Even with the discount, you are getting the full, uncompromised premium package. A website that works like your best 24/7 salesperson:
+              Every fixed-price build includes core engineering deliverables built for fast load speed and search discoverability:
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="bg-white/[0.03] border border-white/10 p-5 rounded-xl">
@@ -252,16 +256,16 @@ export const BlogPost3Page = () => {
 
           {/* Section 4 */}
           <section id="section-4" className="mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">Who I Want to Work With</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">Who Fixed Packages Fit Best</h2>
             <p className="text-white/70 text-base leading-relaxed mb-4">
-              I am looking for serious, visionary business owners who understand the value of a strong digital presence.
+              We build specifically for independent founders and service operators who value direct technical quality over bloated agency retainers:
             </p>
             <ul className="space-y-3 mb-6">
               {[
-                "Local service providers (plumbers, electricians, salons) looking to grow in their area.",
-                "Startups & Entrepreneurs who need a professional look to secure funding or clients.",
-                "E-commerce brands wanting a smooth, high-converting checkout experience.",
-                "Established businesses looking to replace an outdated, slow website."
+                "Local UK & US service providers (clinics, trades, restaurants, hospitality) needing direct enquiries.",
+                "Startups & SaaS founders shipping fast validation sites without locking equity into monthly retainers.",
+                "E-commerce brands replacing slow liquid or plugin-heavy storefronts with smooth Next.js checkouts.",
+                "Established companies migrating away from dated WordPress builds via 301-safe architecture."
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -270,7 +274,7 @@ export const BlogPost3Page = () => {
               ))}
             </ul>
             <p className="text-white/70 text-base leading-relaxed">
-              If you fall into any of these categories and are ready to scale, I am ready to build your digital foundation.
+              Explore our full <Link href="/pricing" className="text-primary hover:underline">transparent pricing packages</Link> or <Link href="/services/website-development" className="text-primary hover:underline">Next.js website development specifications</Link> to see the exact deliverables per tier.
             </p>
           </section>
 
@@ -302,22 +306,24 @@ export const BlogPost3Page = () => {
             <div className="absolute top-0 right-0 p-4 opacity-10 blur-xl">
               <Zap className="w-32 h-32 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold text-white mb-4 relative z-10">How to Claim This Offer</h2>
+            <h2 className="text-2xl font-bold text-white mb-4 relative z-10">How to Lock Your Fixed Scope</h2>
             <p className="text-white/70 text-base mb-8 max-w-lg mx-auto relative z-10">
-              Because I am offering premium engineering at half the rate, I can only take on a very limited number of projects before my schedule fills up and prices return to normal. If you need a website, do not wait.
+              Share your target website goals or reference URLs on WhatsApp. We review the scope, provide a fixed GBP/USD milestone quote, and can prepare a focused concept preview before production kickoff.
             </p>
             <a
-              href="https://wa.me/923196526604?text=Hi%20Saim,%20I%27m%20interested%20in%20discussing%20a%20website%20project"
+              href="https://wa.me/923196526604?text=Hi%20Saim%20Dev,%20we%27d%20like%20a%20fixed-price%20website%20package%20quote"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary text-black font-bold px-8 py-4 rounded-xl hover:bg-white transition-all shadow-lg hover:shadow-primary/25 cursor-pointer relative z-10"
             >
-              Claim 50% Off — WhatsApp Me Now
+              Request Fixed Quote on WhatsApp
               <ArrowRight className="w-4 h-4" />
             </a>
           </section>
 
         </motion.article>
 
-        <BlogSiloNav currentSlug="50-percent-off-agency-launch" category="growth" />
+        <BlogSiloNav currentSlug="small-business-website-packages-guide" category="growth" />
 
         {/* ── Related resources ── */}
         <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 mb-8">

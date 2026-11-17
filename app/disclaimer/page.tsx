@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.saimdev.site/disclaimer",
     languages: {
+      "en": "https://www.saimdev.site/disclaimer",
       "en-GB": "https://www.saimdev.site/disclaimer",
+      "en-US": "https://www.saimdev.site/disclaimer",
+      "x-default": "https://www.saimdev.site/disclaimer",
     },
   },
   openGraph: {
@@ -22,6 +25,7 @@ export const metadata: Metadata = {
     url: "https://www.saimdev.site/disclaimer",
     siteName: "Saim Dev",
     locale: "en_GB",
+    alternateLocale: ["en_US"],
     type: "website",
     images: [
       {
@@ -43,27 +47,43 @@ export const metadata: Metadata = {
 };
 
 export default function DisclaimerPage() {
-  const breadcrumbSchema = {
+  const disclaimerGraphSchema = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.saimdev.site/"
+        "@type": "WebPage",
+        "@id": "https://www.saimdev.site/disclaimer#webpage",
+        "url": "https://www.saimdev.site/disclaimer",
+        "name": "Food Safety Disclaimer | Saim Dev",
+        "description": "Regulatory and guidance notice for kitchen templates, checklists, and calculators. General reference only and not official advice from the FSA.",
+        "inLanguage": "en-GB",
+        "isPartOf": { "@id": "https://www.saimdev.site/#website" },
+        "about": { "@id": "https://www.saimdev.site/#organization" },
+        "breadcrumb": { "@id": "https://www.saimdev.site/disclaimer#breadcrumb" }
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Food Safety Disclaimer",
-        "item": "https://www.saimdev.site/disclaimer"
+        "@type": "BreadcrumbList",
+        "@id": "https://www.saimdev.site/disclaimer#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.saimdev.site/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Food Safety Disclaimer",
+            "item": "https://www.saimdev.site/disclaimer"
+          }
+        ]
       }
     ]
   };
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(disclaimerGraphSchema) }} />
       <div className="rh-page min-h-screen bg-black text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
         <RhHeader theme="dark" />
 

@@ -9,27 +9,27 @@ import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, ChevronDown, ChevronUp
 const faqs = [
   {
     q: "Is there really no cost at all?",
-    a: "The website design and development are free. You may still need to pay for your own domain and hosting. These accounts will remain in your business's name, and I'll help you set them up.",
+    a: "The website design and development are free under our 5 starter slots. You still cover your own third-party domain and hosting accounts directly so those accounts remain in your business's name, and our studio helps you set them up cleanly.",
   },
   {
     q: "How long does it take to build the website?",
-    a: "A complete website typically takes 5–10 business days from the point we agree on what you need. I'll send you a clear timeline at the start so you know exactly what to expect and when.",
+    a: "A complete website typically takes 5–10 business days from the point we agree on what you need. We send you a clear timeline at the start so you know exactly what to expect and when.",
   },
   {
     q: "What do I need to provide?",
-    a: "Your business name, logo (if you have one), a short description of what you do, your contact details, and any photos you'd like to use. If you don't have photos, I'll advise you on free options. I'll guide you through everything step by step.",
+    a: "Your business name, logo (if you have one), a short description of what you do, your contact details, and any photos you'd like to use. If you don't have photos, we'll advise you on licensed free options and guide you step by step.",
   },
   {
     q: "What if I already have a website but it's outdated?",
-    a: "That still qualifies. If your current site is slow, doesn't look professional on mobile, or isn't generating any enquiries, a rebuild is exactly what this offer covers. Most of the businesses I help already have something — it just isn't working.",
+    a: "That still qualifies. If your current site is slow, doesn't look professional on mobile, or isn't generating any enquiries, a rebuild is exactly what this offer covers. Most of the businesses we help already have something — it just isn't converting.",
   },
   {
     q: "How do I know this is legitimate?",
-    a: "You can view my portfolio and previous work at saimdev.site. I've been building websites since 2020. There is no payment for the included design and development work. Before starting, I'll provide a simple written project summary covering the pages, timeline, revisions, domain, hosting, and ownership.",
+    a: "You can view our live portfolio and case studies at www.saimdev.site. Our team has been building business websites since 2020. There is no payment for the included design and development work, and before starting we provide a written project summary covering pages, timeline, domain, hosting, and ownership.",
   },
   {
     q: "What happens after the free website is delivered?",
-    a: "Nothing, unless you want something. If you'd like additional pages, SEO work, or ongoing maintenance in the future, we can discuss that — but there is zero obligation. The free website is yours, complete, with no strings attached.",
+    a: "Nothing, unless you want something. If you'd like additional pages, SEO work, or ongoing maintenance in the future, we can discuss that — or review our transparent pricing — with zero obligation. The starter website is yours, complete, with full Git ownership.",
   },
 ];
 
@@ -41,7 +41,7 @@ const included = [
   { item: "SEO basics setup", detail: "Title tags, meta descriptions, and local keywords configured from day one" },
   { item: "Google Maps integration", detail: "So customers can find your location instantly" },
   { item: "SSL certificate (HTTPS)", detail: "Secure and trusted — Google flags non-HTTPS sites as 'Not Secure'" },
-  { item: "Hosting setup guidance", detail: "I'll walk you through getting it live, start to finish" },
+  { item: "Hosting setup guidance", detail: "We'll walk you through getting it live on your own account, start to finish" },
 ];
 
 const businessTypes = [
@@ -55,11 +55,11 @@ const businessTypes = [
 ];
 
 const sections = [
-  "Why I'm Doing This",
+  "Why We Offer 5 Free Starter Builds",
   "What You'll Actually Get",
   "Who This Is For",
   "Why Online Presence Matters",
-  "What I Ask In Return",
+  "What We Ask In Return",
   "Why Only 5 Slots",
   "Frequently Asked Questions",
   "How to Claim One of the 5 Slots",
@@ -181,19 +181,23 @@ export const BlogPost2Page = () => {
 
           {/* Section 1 */}
           <section id="section-1" className="mb-14">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">Why I'm Doing This</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">Why We Offer 5 Free Starter Builds</h2>
             <p className="text-white/65 text-base mb-4">
-              Most local businesses I talk to already know they need a better website. The conversation usually goes the same way: they agree the site is outdated, they know it's costing them customers, but they've been putting it off because they're unsure about the cost, the process, or whether it'll actually make a difference.
+              Most local businesses we speak with already know they need a better website. The conversation usually goes the same way: they agree their existing site feels outdated, they know it is costing them enquiries, and they have put off a rebuild because they are unsure about the cost, the timeline, or whether it will actually bring new customers.
             </p>
             <p className="text-white/65 text-base mb-4">
-              So I decided to remove all three of those barriers at once.
+              So we decided to remove all three barriers at once for qualified starter builds — alongside our{" "}
+              <Link href="/pricing" className="text-primary underline hover:text-white transition-colors">
+                fixed-price website packages
+              </Link>{" "}
+              for expanding teams.
             </p>
             <p className="text-white/65 text-base mb-4">
-              I'm allocating five project slots to build complete, professional websites for local businesses — at no cost. There are no hidden upgrades or mandatory monthly contracts. The only thing I ask in return is honest feedback after the project is done.
+              Saim Dev allocates five starter project slots to engineer complete, clean websites for local businesses at £0 labour cost. There are no hidden upgrades or mandatory monthly retainers. All we ask in return is honest feedback once your website goes live.
             </p>
             <div className="rounded-2xl border border-primary/15 bg-primary/5 p-6">
               <p className="text-white/80 text-sm font-medium italic leading-relaxed">
-                "This is how I build proof. Feedback helps me grow. Your business gets a real website. It's a straightforward exchange — and genuinely one of the most risk-free opportunities a local business owner will come across."
+                "This is how our studio builds verifiable case studies. Honest feedback helps us grow. Your business gets a real website you own outright — one of the lowest-risk upgrades a local business owner can claim."
               </p>
             </div>
           </section>
@@ -202,7 +206,11 @@ export const BlogPost2Page = () => {
           <section id="section-2" className="mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">What You'll Actually Get</h2>
             <p className="text-white/65 text-base mb-4">
-              This is not a template dropped onto a free hosting plan. Every free website I build is custom — designed, developed, and delivered with the same standard as a paid project.
+              This is not a cookie-cutter template dropped onto ad-supported free hosting. Every starter site we engineer is custom-coded — designed, developed, and tested to the same production standard as our paid{" "}
+              <Link href="/services/business-websites" className="text-primary underline hover:text-white transition-colors">
+                custom business website builds
+              </Link>
+              .
             </p>
             <p className="text-white/65 text-base mb-7">
               <strong className="text-white">This offer includes a simple business website of up to 5 pages, such as Home, About, Services, Contact, and FAQ.</strong> Here's exactly what's included:
@@ -304,17 +312,17 @@ export const BlogPost2Page = () => {
             </p>
           </section>
 
-          {/* Section 5 — What I Ask */}
+          {/* Section 5 — What We Ask */}
           <section id="section-5" className="mb-14">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">What I Ask In Return</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">What We Ask In Return</h2>
             <p className="text-white/65 text-base mb-6">
               Just one thing: <strong className="text-white">honest feedback</strong>.
             </p>
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-6 space-y-4">
               {[
-                { n: "01", t: "After delivery", d: "Once your website is live, I'll ask you to share a short written review — what the process was like and what you think of the result." },
-                { n: "02", t: "Completely voluntary", d: "You will never be required to leave a positive review. I want genuine feedback so I know what worked and what I can improve." },
-                { n: "03", t: "No other requirements", d: "No referral requirement. No obligation to hire me again. No monthly payment. No ad spend. Nothing else." },
+                { n: "01", t: "After delivery", d: "Once your website is live, we'll ask you to share a short written review covering how the delivery process felt and what you think of the result." },
+                { n: "02", t: "Completely voluntary", d: "You are never required to leave a glowing review. We want candid feedback so we know what worked and where we can keep improving." },
+                { n: "03", t: "No other requirements", d: "No referral requirement. No obligation to hire us again. No monthly retainer, no ad spend, and full code ownership from day one." },
               ].map((item) => (
                 <div key={item.n} className="flex gap-4">
                   <span className="text-primary font-mono font-bold text-sm flex-shrink-0 mt-0.5">{item.n}</span>
@@ -326,7 +334,11 @@ export const BlogPost2Page = () => {
               ))}
             </div>
             <p className="text-white/65 text-base">
-              That's the entire deal. A professional website delivered at no cost, in exchange for a few sentences about your experience.
+              That's the entire arrangement. A professionally engineered starter site delivered at zero build fee, in exchange for an honest note on your experience. If you need custom integrations, multi-service SEO pages, or ongoing features later, see our{" "}
+              <Link href="/blog/small-business-website-packages-guide" className="text-primary underline hover:text-white transition-colors">
+                small business website packages guide
+              </Link>
+              .
             </p>
           </section>
 
@@ -334,10 +346,10 @@ export const BlogPost2Page = () => {
           <section id="section-6" className="mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">Why Only 5 Slots</h2>
             <p className="text-white/65 text-base mb-4">
-              I build every website myself. That means every site gets proper attention — not outsourced, not automated, not templated.
+              Our lead engineers build every website in-house without outsourcing or generic page-builder shortcuts. That keeps code clean and Core Web Vitals fast.
             </p>
             <p className="text-white/65 text-base mb-4">
-              Five is the number of projects I can take on alongside existing client work without letting quality slip. Each slot gets the same focus and care as a fully paid project.
+              Five is the capacity our studio can allocate alongside paid client builds without compromising turnaround speed or quality. Each starter build receives the same care as a full-fee engagement.
             </p>
             <div className="rounded-xl border border-orange-500/20 bg-orange-500/5 p-5">
               <p className="text-orange-400 text-sm font-semibold mb-1">⚠️ When these five slots are filled, the offer closes.</p>
@@ -372,7 +384,7 @@ export const BlogPost2Page = () => {
           <section id="section-8" className="mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">How to Claim One of the 5 Slots</h2>
             <p className="text-white/65 text-base mb-6">
-              To apply, send me:
+              To apply via our project brief form, share:
             </p>
             <div className="space-y-4 mb-7">
               {[
@@ -387,7 +399,7 @@ export const BlogPost2Page = () => {
               ))}
             </div>
             <p className="text-white/65 text-base">
-              I’ll review suitable applications and select five businesses based on project fit and availability.
+              We review suitable applications and confirm five local businesses based on project fit and schedule availability.
             </p>
           </section>
 
@@ -409,13 +421,13 @@ export const BlogPost2Page = () => {
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-xs font-bold tracking-widest uppercase text-primary">Five free website projects available</span>
           </div>
-          <a
-            href="https://saimdev.site/"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-2 bg-primary text-black font-bold px-8 py-3.5 rounded-xl hover:bg-primary/90 transition-colors text-base cursor-pointer"
           >
-            Apply here
+            Apply for a Starter Slot
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </motion.div>
 
         <BlogSiloNav currentSlug="free-website-for-local-business" category="growth" />
@@ -426,26 +438,33 @@ export const BlogPost2Page = () => {
           <p className="text-white/60 text-xs sm:text-sm mb-5 font-light">
             Looking to grow your business online? Explore our development services, verified results, and quotes:
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             <Link
-              href="/services"
+              href="/pricing"
               className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
             >
-              <span>fixed-price website development</span>
+              <span>fixed-price website packages</span>
               <span className="text-primary text-xs font-mono">&rarr;</span>
             </Link>
             <Link
-              href="/case-studies"
+              href="/services/business-websites"
               className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
             >
-              <span>website case studies</span>
+              <span>custom small business websites</span>
               <span className="text-primary text-xs font-mono">&rarr;</span>
             </Link>
             <Link
-              href="/contact"
+              href="/blog/small-business-website-packages-guide"
               className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
             >
-              <span>discuss your website project</span>
+              <span>website packages &amp; milestones guide</span>
+              <span className="text-primary text-xs font-mono">&rarr;</span>
+            </Link>
+            <Link
+              href="/blog/why-small-business-needs-website"
+              className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 text-white/90 hover:text-white transition-colors flex items-center justify-between"
+            >
+              <span>why UK small businesses need a website</span>
               <span className="text-primary text-xs font-mono">&rarr;</span>
             </Link>
           </div>

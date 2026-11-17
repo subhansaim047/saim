@@ -299,6 +299,11 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
         =============================================================== */}
         <RhHeroPinned
           badge={data.badge}
+          breadcrumb={[
+            { label: "Home", href: "/" },
+            { label: "Services", href: "/services" },
+            { label: data.serviceName },
+          ]}
           title={data.h1}
           subtitle={data.subheading}
           primaryCta={{
@@ -1055,9 +1060,18 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
             {/* Related Services */}
             {data.relatedServices && data.relatedServices.length > 0 && (
               <div>
-                <p className="text-[12px] uppercase tracking-[0.88px] text-[#595959] mb-5">
-                  Explore Related Services
-                </p>
+                <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
+                  <p className="text-[12px] uppercase tracking-[0.88px] text-[#595959]">
+                    Explore Related Services
+                  </p>
+                  <Link
+                    href="/services"
+                    className="text-[13px] font-medium text-[#0D0D0D] hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>View All Web Development Services</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
                 <div data-gsap-stagger="" className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                   {data.relatedServices.map((rel, i) => (
                     <Link

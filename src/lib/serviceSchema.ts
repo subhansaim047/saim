@@ -1,4 +1,53 @@
+import type { Metadata } from "next";
 import { ServicePageData } from "@/components/services/ServicePageTemplate";
+
+export function buildServicePageMetadata(
+  data: ServicePageData,
+  ogImage = "https://www.saimdev.site/og-image.png"
+): Metadata {
+  return {
+    title: data.seoTitle,
+    description: data.seoDescription,
+    alternates: {
+      canonical: data.canonicalUrl,
+      languages: {
+        en: data.canonicalUrl,
+        "en-GB": data.canonicalUrl,
+        "en-US": data.canonicalUrl,
+        "x-default": data.canonicalUrl,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: data.seoTitle,
+      description: data.seoDescription,
+      url: data.canonicalUrl,
+      siteName: "Saim Dev",
+      locale: "en_GB",
+      alternateLocale: ["en_US"],
+      type: "website",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${data.serviceName} - Saim Dev`,
+          type: "image/png",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.seoTitle,
+      description: data.seoDescription,
+      creator: "@saimwebdev",
+      images: [ogImage],
+    },
+  };
+}
 
 function parseOfferPrice(raw: string): string {
   const m = raw.match(/\d[\d,]*/);

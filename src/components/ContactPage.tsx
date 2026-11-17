@@ -58,7 +58,7 @@ export const ContactPage = () => {
       const url = `https://wa.me/923196526604?text=${encodedText}`;
       setIgLink(url);
       setSubmitted(true);
-      window.open(url, "_blank");
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -70,11 +70,15 @@ export const ContactPage = () => {
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Video + Laser-Draw Strip) */}
       <RhHeroPinned
         badge="1 of 3 Weekly Build Slots Open · Free Concept Preview"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Contact" },
+        ]}
         title={
           <>
-            <span className="text-[#939393]">Ready to dive in?</span>
+            <span className="text-[#939393]">Contact Saim Dev —</span>
             <br />
-            Start your project today
+            Fixed-Price Website Quote
           </>
         }
         subtitle="Message Saim Dev on WhatsApp or submit your brief below. We respond within studio working hours and outline your fixed GBP/EUR/USD quote with milestone protection and a free concept option."
@@ -132,6 +136,8 @@ export const ContactPage = () => {
                   <img
                     src="/saim-dev-logo.png"
                     alt="Saim Dev"
+                    width={48}
+                    height={48}
                     className="w-full h-full object-cover"
                   />
                 </span>
@@ -376,6 +382,17 @@ export const ContactPage = () => {
                     ↗
                   </span>
                 </button>
+                <p className="text-[12px] text-[#595959] leading-relaxed">
+                  By submitting your brief, you accept our{" "}
+                  <Link href="/privacy" className="underline text-[#0D0D0D] hover:opacity-80">
+                    Privacy Policy
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="/terms" className="underline text-[#0D0D0D] hover:opacity-80">
+                    Terms of Service
+                  </Link>
+                  . Zero spam or recurring retainers.
+                </p>
               </form>
             )}
           </div>

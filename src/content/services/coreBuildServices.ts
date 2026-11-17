@@ -1055,6 +1055,32 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
         desc: "Modernise an older business website while keeping Google rankings intact.",
       },
     ],
+    relatedGuides: [
+      {
+        tag: "SME Growth ROI",
+        title: "Why UK Small Businesses Need a Custom Website",
+        href: "/blog/why-small-business-needs-website",
+        desc: "Compare local search lead capture against social-only pages.",
+      },
+      {
+        tag: "DIY Cost Breakdown",
+        title: "Free Website Builders vs Custom Starter Websites",
+        href: "/blog/free-website-for-local-business",
+        desc: "Hidden subdomain, ad-lock, and plugin renewal costs explained.",
+      },
+      {
+        tag: "Packages Guide",
+        title: "What Fixed-Price Small Business Website Packages Include",
+        href: "/blog/small-business-website-packages-guide",
+        desc: "Transparent breakdown of scope, SEO setup, and 50/50 milestones.",
+      },
+      {
+        tag: "UK & US Costs",
+        title: "Next.js Website Development Cost UK & US Breakdown",
+        href: "/blog/nextjs-website-development-cost-uk-us",
+        desc: "Side-by-side GBP/USD build budgets vs agency monthly retainers.",
+      },
+    ],
   },
 
   // ==============================================================
@@ -1062,14 +1088,14 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
   // ==============================================================
   "wordpress-headless-cms": {
     slug: "wordpress-headless-cms",
-    serviceName: "WordPress to Next.js Migration",
-    mainKeyword: "Headless WordPress & Next.js Migration",
-    seoTitle: "WordPress to Next.js Migration | Headless CMS | Saim Dev",
+    serviceName: "Headless WordPress & Next.js CMS",
+    mainKeyword: "Headless WordPress & Sanity Next.js Development",
+    seoTitle: "Headless WordPress & Sanity Next.js Builds | Saim Dev",
     seoDescription:
-      "Migrate slow WordPress sites to static-edge Next.js 16 with headless Sanity or WPGraphQL CMS, 301 URL preservation and zero downtime.",
+      "Bespoke headless WordPress (WPGraphQL) & Sanity CMS development powered by Next.js 16. Keep your editorial tools while dropping slow PHP themes & plugins.",
     canonicalUrl: "https://www.saimdev.site/services/wordpress-headless-cms",
-    badge: "De-Bloat & Headless CMS Migration",
-    h1: "Migrate WordPress to Next.js 16 — Keep Your Editorial Workflow, Drop Plugin Bloat",
+    badge: "Headless CMS & WPGraphQL Engineering",
+    h1: "Headless WordPress & Next.js CMS Engineering — Keep Your CMS, Drop Theme Bloat",
     subheading:
       "Tired of broken Elementor updates, WooCommerce sluggishness, and constant security scanner alerts? Keep effortless article and page editing via Sanity CMS, MDX, or Headless WP GraphQL while upgrading your frontend to edge-cached React 19.",
     primaryCtaText: "Audit Your WordPress Migration",

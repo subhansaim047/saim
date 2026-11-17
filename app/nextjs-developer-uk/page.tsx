@@ -169,6 +169,11 @@ export default function NextJsDeveloperUkPage() {
         {/* 1. PAGE-OPEN HERO (3D Cube + Laser-Draw Strip) */}
         <RhHeroPinned
           badge="Senior Freelance Next.js Engineer · UK & US Timezones"
+          breadcrumb={[
+            { label: "Home", href: "/" },
+            { label: "Services", href: "/services" },
+            { label: "Freelance Next.js Developer UK" },
+          ]}
           title={
             <>
               Freelance Next.js Developer{" "}
@@ -401,13 +406,12 @@ export default function NextJsDeveloperUkPage() {
           items={[
             {
               id: "uk-rh-clone",
-              title: "RH Studio Flagship Clone",
+              title: "1:1 Editorial UI Architecture",
               category: "High-Craft Agency UI",
               metric: "Edge Static RSC",
-              description: "Smooth Lenis scrolling, GSAP timelines, and editorial light/dark contrast replicated cleanly in Next.js.",
-              href: "/rh-clone/index.html",
-              external: true,
-              tags: ["Next.js 16", "GSAP", "Editorial UI"],
+              description: "Smooth Lenis scrolling, GSAP timelines, and editorial light/dark contrast reconstructed cleanly in Next.js.",
+              href: "/services/website-clone",
+              tags: ["Next.js 16", "GSAP", "1:1 Rebuild"],
             },
             {
               id: "uk-hotbite",
@@ -525,7 +529,7 @@ export default function NextJsDeveloperUkPage() {
                 <a
                   href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Landing%20Page%20package%20(£250)"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="w-full text-center py-3 rounded-full border border-[#0D0D0D] text-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-[#BAFF00] transition-colors text-[13px] font-medium"
                 >
                   Order on WhatsApp
@@ -557,7 +561,7 @@ export default function NextJsDeveloperUkPage() {
                 <a
                   href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Starter%20Plan%20(£390)"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="w-full text-center py-3 rounded-full border border-[#0D0D0D] text-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-[#BAFF00] transition-colors text-[13px] font-medium"
                 >
                   Order on WhatsApp
@@ -594,7 +598,7 @@ export default function NextJsDeveloperUkPage() {
                 <a
                   href="https://wa.me/923196526604?text=Hi%20Saim,%20I'd%20like%20to%20order%20the%20Business%20Plan%20(£790)"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="w-full text-center py-3 rounded-full bg-[#BAFF00] text-[#0D0D0D] hover:brightness-95 transition-all text-[13px] font-semibold"
                 >
                   Order on WhatsApp
@@ -676,7 +680,7 @@ export default function NextJsDeveloperUkPage() {
                   <a
                     href="https://wa.me/923196526604?text=Hi%20Saim,%20I'm%20interested%20in%20a%20Next.js%20website%20for%20my%20UK%20business"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="rh-btn-pill bg-[#BAFF00] text-[#0D0D0D] font-medium text-[14px] px-7 py-3.5 transition-all"
                   >
                     Chat on WhatsApp (+92 319 6526604)
