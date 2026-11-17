@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="156" height="32" viewBox="0 0 156 32" fill="none" role="img" aria-label="Reid Auto">
+  <path d="M3 8H19L25 16L19 24H3L9 16L3 8Z" fill="#0D0D0D"/>
+  <path d="M12.5 11.5L17.5 16L12.5 20.5" stroke="#CCFF00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="33" y="21.5" fill="#0D0D0D" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="0.05em">REID AUTO</text>
+</svg>

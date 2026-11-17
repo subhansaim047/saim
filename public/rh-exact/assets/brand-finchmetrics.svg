@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="174" height="32" viewBox="0 0 174 32" fill="none" role="img" aria-label="FinchMetrics">
+  <rect x="1" y="4" width="24" height="24" rx="6" fill="#0D0D0D"/>
+  <rect x="7" y="16" width="2.8" height="6" rx="1.2" fill="#FFFFFF"/>
+  <rect x="11.6" y="12.5" width="2.8" height="9.5" rx="1.2" fill="#CCFF00"/>
+  <rect x="16.2" y="9" width="2.8" height="13" rx="1.2" fill="#FFFFFF"/>
+  <text x="33" y="21.5" fill="#0D0D0D" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="0.04em">FINCHMETRICS</text>
+</svg>

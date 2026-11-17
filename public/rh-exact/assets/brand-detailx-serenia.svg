@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="196" height="32" viewBox="0 0 196 32" fill="none" role="img" aria-label="DetailX and SERENIA">
-  <rect x="4" y="6.5" width="19" height="19" rx="4" transform="rotate(45 13.5 16)" fill="#0D0D0D"/>
-  <path d="M13.5 10.2L15 14.5L19.3 16L15 17.5L13.5 21.8L12 17.5L7.7 16L12 14.5L13.5 10.2Z" fill="#CCFF00"/>
-  <text x="36" y="21.5" fill="#0D0D0D" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="0.04em">DETAILX</text>
-  <circle cx="110.5" cy="16.5" r="2" fill="#939393"/>
-  <text x="119" y="21.5" fill="#52525B" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" letter-spacing="0.08em">SERENIA</text>
-</svg>
