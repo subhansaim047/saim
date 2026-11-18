@@ -1,21 +1,50 @@
-# Saim Dev — Custom Web Development, E-Commerce & UK Takeaway Systems
+# Saim Dev — Custom Next.js Web Development, Headless Shopify & Zero-Commission Takeaway Systems
 
-> Saim Dev is a specialized Next.js software engineering studio serving businesses across the United Kingdom, United States, European Union, and globally. All projects are delivered remotely with transparent fixed pricing in GBP (£250–£1,500) and USD ($300–$1,850+), edge-compiled React 19 performance, 100% GitHub code ownership, and built-in technical SEO.
+> We are web architects, engineering high-converting digital platforms. Specialized in bespoke web design, lead conversion, and performance optimization. Over the last seven years, our studio has engineered fast, modern, high-converting platforms for service leaders and ambitious brands across the UK, US, and Europe — dentists, mechanics, auto detailing studios, salons, contractors, private clinics, headless Shopify retailers, SaaS startups, and zero-commission takeaway operators. Together, we craft digital platforms designed to rank on Google, load almost instantly, and turn visitors into loyal, paying clients.
+>
+> Saim Dev is a bespoke web engineering studio specializing in custom business websites, high-converting landing pages, SEO-friendly Next.js 16 development, Core Web Vitals performance optimization, headless Shopify storefronts, zero-commission takeaway ordering systems, and AI-powered web solutions.
+
+## What Makes Saim Dev Different (Our Unfair Advantage)
+
+1. **Free Live Concept Preview Before You Pay**: Share your brief or existing site first; we engineer a live interactive homepage concept preview in the browser, and you only proceed with the 50% milestone deposit if you like the direction.
+2. **Fixed Prices (From £250 / $300 USD) & £0 Monthly Retainer**: Transparent 50/50 milestone billing with zero recurring agency retainer lock-in.
+3. **100% GitHub Repository & Source Code Ownership**: Upon completion you receive full custody of the clean Next.js 16, React 19, and TypeScript repository and cloud deployment.
+4. **Free Public ROI & Compliance Utilities**: Includes our free [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator) for takeaway owners auditing 28%–35% delivery app fees, plus 15+ inspectable live reference builds at [https://www.saimdev.site/demos](https://www.saimdev.site/demos).
 
 ## Studio Overview & Commercial Details
 
 - **Studio Name**: Saim Dev
-- **Founder & Lead Architect**: Saim (Full Stack Next.js Web Developer & Digital Commerce Specialist)
+- **Founder & Lead Architect**: Saim Dev (Founder & Lead Next.js 16 Architect)
 - **Primary Domain**: https://www.saimdev.site
 - **Full Knowledge Corpus**: https://www.saimdev.site/llms-full.txt
 - **Geographic Focus**: United Kingdom, European Union, United States, Canada & Australia (remote delivery)
+- **Industries Engineered (7+ Years)**: Dentists & Private Clinics, Mechanics & Auto Detailing Studios, Luxury Salons & Spas, Commercial Contractors & Trades, Zero-Commission UK Takeaways & Restaurants, Headless Shopify D2C Brands, and B2B SaaS Startups
 - **Email**: contact@saimdev.site
 - **WhatsApp**: +92 319 6526604
 - **Fixed Pricing Model (50/50 Milestone Protection, Zero Monthly Lock-In)**:
-  - **Landing Page Plan**: £250 / €290 / $300 (Single high-converting page, 3–5 business days delivery)
-  - **Starter Website Plan**: £390 / €460 / $500 (Multi-page bespoke business website, 5–7 business days delivery)
-  - **Business / Takeaway Plan**: £790 / €920 / $999 (Full custom platform or 0% commission online ordering system, 7–10 business days delivery)
-  - **Custom Web Apps, 1:1 UI Rebuilds & E-Commerce Stores**: £1,250–£2,500 / $1,500–$3,000 (SaaS MVPs, client portals, Figma/Webflow-to-Next.js rebuilds, bespoke Shopify / headless commerce)
+  - **Landing Page / Direct Takeaway Plan**: £250 / €290 / $300 (High-converting landing page or 0% commission takeaway ordering site, 3–7 business days delivery)
+  - **Starter Website Plan**: £390 / €460 / $500 (Multi-page bespoke business website for service leaders, 5–7 business days delivery)
+  - **Business Flagship Plan**: £790 / €920 / $999 (Full 10–15 page custom Next.js platform, blog architecture, or multi-branch ordering system, 7–14 business days delivery)
+  - **Custom Web Apps, 1:1 UI Rebuilds & Headless Shopify Stores**: £1,490–£2,500 / $1,850–$3,000 (SaaS MVPs, client portals, 1:1 Webflow/Framer/Figma-to-Next.js rebuilds, bespoke headless commerce)
+
+## Topic Silo Architecture (Parent Pillars & Connected Clusters)
+
+- **Silo 01 — Next.js 16 Website Engineering & Custom Web Apps**:
+  - Parent Pillar: `https://www.saimdev.site/services/website-development`
+  - Subtopics: `/services/business-websites`, `/services/custom-web-apps`, `/services/website-clone`, `/services/website-redesign`, `/services/wordpress-headless-cms`, `/nextjs-developer-uk`
+  - Supporting Guides: `/blog/nextjs-website-development-cost-uk-us`, `/blog/nextjs-website-development-guide-uk-us-startups`, `/blog/small-business-website-packages-guide`, `/blog/why-small-business-needs-website`, `/blog/free-website-for-local-business`
+- **Silo 02 — Headless Shopify, Custom E-Commerce & Conversion (CRO)**:
+  - Parent Pillar: `https://www.saimdev.site/services/ecommerce-development`
+  - Subtopics: `/services/ecommerce-shopify`, `/services/landing-pages-cro`, `/services/website-speed-optimization`
+  - Proof & Benchmarks: `/case-studies`, `/demos`, `/pricing`
+- **Silo 03 — Zero-Commission UK Takeaway & Hospitality Ordering Systems**:
+  - Parent Pillar: `https://www.saimdev.site/services/takeaway-web-design`
+  - City Hubs: `/services/takeaway-web-design-london`, `/services/takeaway-web-design-manchester`, `/services/takeaway-web-design-birmingham`
+  - Free ROI Tool & Compliance Guides: `/tools/commission-savings-calculator`, `/blog/uk-food-hygiene-rating-scheme-5-star-checklist`, `/blog/natashas-law-ppds-food-labelling-guide`
+- **Silo 04 — Technical SEO, Core Web Vitals & Legacy CMS Migration**:
+  - Parent Pillar: `https://www.saimdev.site/services/seo-services`
+  - Subtopics: `/services/website-speed-optimization`, `/services/wordpress-headless-cms`, `/services/website-redesign`
+  - Supporting Guides: `/blog/nextjs-app-router-vs-wordpress-uk-seo`, `/blog/migrate-wordpress-webflow-to-nextjs-seo-guide`
 
 ## Core Technologies
 

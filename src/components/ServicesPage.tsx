@@ -15,6 +15,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Clock } from "lucide-react";
+import { TopicSiloNavigator } from "@/components/ui/EditorialVisualPack";
 
 interface ServiceDetail {
   id: string;
@@ -873,6 +874,14 @@ export const ServicesPage = () => {
               );
             })}
           </div>
+        </div>
+        <div className="max-w-[1168px] mx-auto px-5 mt-16">
+          <TopicSiloNavigator
+            siloId="nextjs-core"
+            currentPath="/services"
+            theme="dark"
+            showAllSilosSummary={true}
+          />
         </div>
       </section>
 

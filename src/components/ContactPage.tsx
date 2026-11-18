@@ -135,7 +135,7 @@ export const ContactPage = () => {
                 <span className="w-12 h-12 rounded-full overflow-hidden border border-white/20 bg-white flex items-center justify-center shrink-0">
                   <img
                     src="/saim-dev-logo.png"
-                    alt="Saim Dev"
+                    alt="Saim Dev Direct Next.js 16 Architect Logo — Fixed-Price Website & App Quotes"
                     width={48}
                     height={48}
                     className="w-full h-full object-cover"

@@ -7,6 +7,7 @@ import {
   ArchitecturalDiagram,
   EngineeringMediaFigure,
   EngineeringVerificationBadge,
+  TopicSiloNavigator,
 } from "@/components/ui/EditorialVisualPack";
 import {
   RhBentoWorkGrid,
@@ -741,6 +742,12 @@ export default function NextJsDeveloperUkPage() {
                 </Link>
               </div>
             </div>
+
+            <TopicSiloNavigator
+              siloId="nextjs-core"
+              currentPath="/nextjs-developer-uk"
+              theme="light"
+            />
           </div>
         </section>
         </main>

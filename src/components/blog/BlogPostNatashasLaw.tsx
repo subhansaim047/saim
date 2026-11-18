@@ -97,7 +97,7 @@ export const BlogPostNatashasLaw: React.FC = () => {
 
           <div className="flex flex-wrap items-center justify-between gap-4 py-4 px-5 rounded-xl border border-white/10 bg-white/[0.02] mb-6 text-xs text-white/70">
             <div className="flex items-center gap-3">
-              <img src="/saim-dev-logo.jpg" alt="Saim Dev" className="w-9 h-9 rounded-full border border-white/20 object-cover" width={36} height={36} />
+              <img src="/saim-dev-logo.jpg" alt="Saim Dev — UK Takeaway 14-Allergen & Natasha's Law Digital Menu Engineer" className="w-9 h-9 rounded-full border border-white/20 object-cover" width={36} height={36} />
               <div>
                 <Link href="/about" className="font-semibold text-white hover:text-primary transition-colors">
                   Saim Dev

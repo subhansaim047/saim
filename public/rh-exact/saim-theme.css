@@ -651,3 +651,87 @@
   color: #b5f900;
   text-decoration-color: #b5f900;
 }
+
+/* 8. GPU Video/Slider Compositing + Smooth "Drag me" Cursor & Responsive Slick Cards */
+.wrapper-slider,
+.wrapper-slider .slide,
+.wrapper-slider .slide video,
+.wrapper-slider .slide img,
+#cms-slider .slick-track,
+#cms-slider .slick-slide {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.wrapper-slider {
+  cursor: grab;
+  will-change: transform;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.wrapper-slider.grabbing,
+.wrapper-slider.dragging {
+  cursor: grabbing !important;
+}
+
+#cms-slider,
+#cms-slider .slick-list {
+  cursor: grab;
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+}
+
+#cms-slider .slick-list.dragging,
+#cms-slider:active {
+  cursor: grabbing;
+}
+
+#cms-slider img,
+#cms-slider a,
+.wrapper-slider img,
+.wrapper-slider video {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.mouse-wrapper,
+.mouse-wrapper-project {
+  pointer-events: none !important;
+}
+
+.mouse-wrapper .mouse {
+  pointer-events: none !important;
+  will-change: transform, opacity;
+  transition: opacity 0.18s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.mouse-wrapper .mouse.saim-drag-active {
+  opacity: 1 !important;
+}
+
+.mouse-wrapper .mouse.saim-drag-pressed .button-base-book {
+  transform: scale(0.9);
+}
+
+.mouse-wrapper .mouse .button-base-book {
+  transition: transform 0.16s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 991px) {
+  .mouse-wrapper,
+  .mouse-wrapper-project {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .section-testimonials .card-slider_item,
+  .section-testimonials .card-1,
+  .section-testimonials .card-2,
+  .section-testimonials .card-5 {
+    max-width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { BookOpen, ArrowRight, ArrowLeft, ShieldCheck, Calculator, Tag, FileText } from "lucide-react";
+import { BookOpen, ArrowRight } from "lucide-react";
+import { TopicSiloNavigator } from "@/components/ui/EditorialVisualPack";
 
 export interface BlogSiloNavProps {
   currentSlug: string;
@@ -115,6 +116,11 @@ export const BlogSiloNav: React.FC<BlogSiloNavProps> = ({ currentSlug, category 
           </Link>
         ))}
       </div>
+
+      <TopicSiloNavigator
+        currentPath={`/blog/${currentSlug}`}
+        theme="dark"
+      />
     </section>
   );
 };

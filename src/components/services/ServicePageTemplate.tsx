@@ -22,6 +22,7 @@ import {
   EngineeringMediaFigure,
   EngineeringVerificationBadge,
   ServiceFitMatrix,
+  TopicSiloNavigator,
 } from "@/components/ui/EditorialVisualPack";
 import {
   RhBentoWorkGrid,
@@ -1176,6 +1177,12 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                 </div>
               </div>
             )}
+
+            {/* Topic Silo Architecture & AI Knowledge Cluster */}
+            <TopicSiloNavigator
+              currentPath={`/services/${data.slug}`}
+              theme="light"
+            />
           </div>
         </section>
       </main>

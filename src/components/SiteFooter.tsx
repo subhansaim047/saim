@@ -131,7 +131,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               <span className="w-12 h-12 rounded-full overflow-hidden border border-white/20 bg-white flex items-center justify-center">
                 <img
                   src="/saim-dev-logo.png"
-                  alt="Saim Dev"
+                  alt="Saim Dev Bespoke Next.js 16 Web Engineering & Headless Shopify Studio Logo"
                   width={48}
                   height={48}
                   className="w-full h-full object-cover"

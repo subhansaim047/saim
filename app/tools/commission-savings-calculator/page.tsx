@@ -5,6 +5,10 @@ import { CommissionSavingsCalculator } from "@/components/CommissionSavingsCalcu
 import { RhHeader } from "@/components/rh/RhHeader";
 import { RhHeroPinned } from "@/components/rh/RhModernSections";
 import { SiteFooter } from "@/components/SiteFooter";
+import {
+  EngineeringVerificationBadge,
+  TopicSiloNavigator,
+} from "@/components/ui/EditorialVisualPack";
 
 export const metadata: Metadata = {
   title: "Takeaway Commission Calculator UK | 0% Fees | Saim Dev",
@@ -466,6 +470,16 @@ export default function CommissionSavingsCalculatorPage() {
                 </Link>
               </div>
             </div>
+
+            <TopicSiloNavigator
+              siloId="hospitality-takeaway"
+              currentPath="/tools/commission-savings-calculator"
+              theme="dark"
+            />
+            <EngineeringVerificationBadge
+              contextLabel="Verified ROI model for UK, US & European direct takeaway ordering vs 14%–35% aggregator deductions"
+              theme="dark"
+            />
           </div>
         </section>
       </main>

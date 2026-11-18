@@ -56,13 +56,14 @@ export function SmoothScroll() {
     if (!prefersReducedMotion) {
       ScrollTrigger.config({ ignoreMobileResize: true });
       lenis = new Lenis({
-        lerp: 0.14,
+        lerp: 0.12,
         orientation: "vertical",
         gestureOrientation: "vertical",
         smoothWheel: true,
         wheelMultiplier: 1.0,
         touchMultiplier: 1.0,
         infinite: false,
+        autoResize: true,
       });
       lenisRef.current = lenis;
       (window as any).__lenis = lenis;
@@ -176,9 +177,15 @@ export function SmoothScroll() {
         }, 160);
       };
 
-      const mutationObserver = new MutationObserver(() => {
-        registerReveals(document);
-        sweepVisibleReveals();
+      let mutationRaf = 0;
+      const mutationObserver = new MutationObserver((mutations) => {
+        if (!mutations.some((m) => m.addedNodes.length > 0)) return;
+        if (mutationRaf) return;
+        mutationRaf = window.requestAnimationFrame(() => {
+          mutationRaf = 0;
+          registerReveals(document);
+          sweepVisibleReveals();
+        });
       });
       if (document.body) {
         mutationObserver.observe(document.body, { childList: true, subtree: true });
@@ -198,19 +205,14 @@ export function SmoothScroll() {
         lenis?.resize();
       };
 
-      window.addEventListener("scroll", sweepVisibleReveals, { passive: true });
       window.addEventListener("resize", onWindowResize, { passive: true });
-      if (lenis) {
-        lenis.on("scroll", sweepVisibleReveals);
-      }
 
       cleanups.push(() => {
+        if (mutationRaf) window.cancelAnimationFrame(mutationRaf);
         revealObserver.disconnect();
         mutationObserver.disconnect();
         resizeObserver.disconnect();
-        window.removeEventListener("scroll", sweepVisibleReveals);
         window.removeEventListener("resize", onWindowResize);
-        if (lenis) lenis.off("scroll", sweepVisibleReveals);
         if (resizeTimer) window.clearTimeout(resizeTimer);
         trackedContainers.forEach((node) => revealNode(node, true));
       });

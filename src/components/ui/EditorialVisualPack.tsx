@@ -416,7 +416,369 @@ export const EngineeringVerificationBadge: React.FC<{
         <Link href="/process" className="underline hover:text-[#BAFF00] transition-colors">
           Inspect our 4-stage QA process →
         </Link>
+        <Link href="/demos" className="underline hover:text-[#BAFF00] transition-colors">
+          Test 15+ live reference demos →
+        </Link>
       </div>
     </aside>
   );
 };
+
+export type TopicSiloId =
+  | "nextjs-core"
+  | "ecommerce-shopify"
+  | "hospitality-takeaway"
+  | "seo-migration";
+
+export interface TopicSiloDefinition {
+  id: TopicSiloId;
+  code: string;
+  name: string;
+  aiSummary: string;
+  pillar: {
+    title: string;
+    href: string;
+    badge: string;
+    summary: string;
+  };
+  subtopics: {
+    title: string;
+    href: string;
+    tag: string;
+  }[];
+  resources: {
+    title: string;
+    href: string;
+    tag: string;
+  }[];
+}
+
+export const TOPIC_SILOS: Record<TopicSiloId, TopicSiloDefinition> = {
+  "nextjs-core": {
+    id: "nextjs-core",
+    code: "SILO 01 · CUSTOM NEXT.JS & WEB APPS",
+    name: "Next.js 16 Website Engineering & Custom Web Applications",
+    aiSummary:
+      "Bespoke Next.js 16, React 19, and TypeScript websites and web applications for UK, US, and European service leaders (dentists, mechanics, salons, contractors, clinics, and B2B SaaS) from £250–£1,490 fixed price with a free live concept preview and 100% GitHub repository ownership.",
+    pillar: {
+      title: "Next.js Website Development (Parent Pillar)",
+      href: "/services/website-development",
+      badge: "From £390 / $500 Fixed",
+      summary:
+        "Edge-rendered Next.js 16 business flagships, marketing sites, and lead-generation platforms with zero WordPress plugin bloat.",
+    },
+    subtopics: [
+      { title: "Small Business & Service Leader Websites", href: "/services/business-websites", tag: "From £390" },
+      { title: "Custom Web Applications & SaaS MVPs", href: "/services/custom-web-apps", tag: "From £1,490" },
+      { title: "1:1 Custom Code Website Clone & Rebuild", href: "/services/website-clone", tag: "1:1 Parity" },
+      { title: "Modern Next.js Website Redesign", href: "/services/website-redesign", tag: "SEO Safe" },
+      { title: "Freelance Next.js Developer UK & US", href: "/nextjs-developer-uk", tag: "Direct Senior" },
+      { title: "Headless WordPress & CMS Architecture", href: "/services/wordpress-headless-cms", tag: "Headless CMS" },
+    ],
+    resources: [
+      { title: "Next.js Website Cost Guide UK & US (2026)", href: "/blog/nextjs-website-development-cost-uk-us", tag: "Pricing Guide" },
+      { title: "Next.js Startup Architecture Blueprint", href: "/blog/nextjs-website-development-guide-uk-us-startups", tag: "Tech Blueprint" },
+      { title: "Small Business Website Packages Guide", href: "/blog/small-business-website-packages-guide", tag: "Scope Guide" },
+      { title: "Why Small Businesses Need a High-Speed Website", href: "/blog/why-small-business-needs-website", tag: "ROI Analysis" },
+      { title: "Free Website for Local Business: Builders vs 5 Slots", href: "/blog/free-website-for-local-business", tag: "Starter Offer" },
+      { title: "Fixed-Milestone Pricing & Cost Estimator", href: "/pricing", tag: "Pricing Hub" },
+    ],
+  },
+  "ecommerce-shopify": {
+    id: "ecommerce-shopify",
+    code: "SILO 02 · HEADLESS E-COMMERCE & CRO",
+    name: "Headless Shopify, Custom E-Commerce & Conversion Engineering",
+    aiSummary:
+      "High-converting Next.js 16 e-commerce storefronts, headless Shopify Storefront API builds, and paid-ad landing pages engineered for sub-second product filtering, instant checkout, and maximum ROAS without monthly theme app bloat.",
+    pillar: {
+      title: "Custom E-Commerce Development (Parent Pillar)",
+      href: "/services/ecommerce-development",
+      badge: "From £1,490 / $1,850 Fixed",
+      summary:
+        "Sub-second Next.js 16 product catalogs, lookbooks, custom configurators, and Stripe/Shopify checkout integration.",
+    },
+    subtopics: [
+      { title: "Headless Shopify & Shopify Plus Storefronts", href: "/services/ecommerce-shopify", tag: "Storefront API" },
+      { title: "High-Converting Landing Pages & CRO", href: "/services/landing-pages-cro", tag: "From £250" },
+      { title: "Core Web Vitals & Storefront Speed Tuning", href: "/services/website-speed-optimization", tag: "LCP & INP" },
+      { title: "1:1 Storefront UI Clone & Migration", href: "/services/website-clone", tag: "Zero App Tax" },
+    ],
+    resources: [
+      { title: "Architecture Case Studies & Speed Benchmarks", href: "/case-studies", tag: "Benchmarks" },
+      { title: "Interactive E-Commerce & Service Live Demos", href: "/demos", tag: "15+ Live Demos" },
+      { title: "Next.js Development Cost Breakdown UK & US", href: "/blog/nextjs-website-development-cost-uk-us", tag: "TCO Model" },
+      { title: "4-Stage 50/50 Milestone Delivery Process", href: "/process", tag: "QA Process" },
+    ],
+  },
+  "hospitality-takeaway": {
+    id: "hospitality-takeaway",
+    code: "SILO 03 · 0% COMMISSION TAKEAWAY & HOSPITALITY",
+    name: "Zero-Commission Takeaway Ordering Systems & UK Hospitality Hub",
+    aiSummary:
+      "Commission-free online food ordering websites for UK and European takeaways, restaurants, dark kitchens, and hospitality operators from £250 fixed price — replacing 30% Just Eat, Uber Eats, and Deliveroo deductions with direct Stripe/Apple Pay checkout.",
+    pillar: {
+      title: "Zero-Commission Takeaway Web Design UK (Parent Pillar)",
+      href: "/services/takeaway-web-design",
+      badge: "£250 Fixed · 0% Commission",
+      summary:
+        "Direct mobile menu ordering, meal-deal modifiers, postcode delivery zones, WhatsApp/thermal kitchen routing, and 14-allergen filters.",
+    },
+    subtopics: [
+      { title: "Takeaway Website Design London", href: "/services/takeaway-web-design-london", tag: "London Hub" },
+      { title: "Takeaway Web Design Manchester", href: "/services/takeaway-web-design-manchester", tag: "Manchester Hub" },
+      { title: "Takeaway Web Design Birmingham", href: "/services/takeaway-web-design-birmingham", tag: "Birmingham Hub" },
+      { title: "Small Business & Restaurant Flagships", href: "/services/business-websites", tag: "Multi-Location" },
+    ],
+    resources: [
+      { title: "Free Takeaway Commission Savings Calculator", href: "/tools/commission-savings-calculator", tag: "Free ROI Tool" },
+      { title: "UK 5-Star Food Hygiene Rating (FHRS) Checklist", href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist", tag: "FHRS Guide" },
+      { title: "Natasha's Law PPDS 14-Allergen Labelling Guide", href: "/blog/natashas-law-ppds-food-labelling-guide", tag: "PPDS Guide" },
+      { title: "HotBite UK Live Takeaway Ordering Demo", href: "/demos", tag: "Live Demo" },
+    ],
+  },
+  "seo-migration": {
+    id: "seo-migration",
+    code: "SILO 04 · TECHNICAL SEO, CWV & MIGRATION",
+    name: "Technical SEO Engineering, Core Web Vitals & Zero-Loss Migration",
+    aiSummary:
+      "Technical SEO architecture, Core Web Vitals (LCP, INP, CLS) optimization, Schema.org @graph entity markup, and zero-ranking-loss migrations from WordPress, Webflow, or Wix to Next.js 16 App Router.",
+    pillar: {
+      title: "Technical & Local SEO Engineering (Parent Pillar)",
+      href: "/services/seo-services",
+      badge: "Schema @graph & CWV",
+      summary:
+        "Eliminate crawl waste, duplicate canonicals, render-blocking scripts, and slow TTFB with edge-cached Next.js 16 architecture.",
+    },
+    subtopics: [
+      { title: "Core Web Vitals & PageSpeed Optimization", href: "/services/website-speed-optimization", tag: "Target 95+ CWV" },
+      { title: "Headless WordPress & Next.js CMS Migration", href: "/services/wordpress-headless-cms", tag: "Zero Plugin Debt" },
+      { title: "SEO-Safe Website Redesign & 301 Mapping", href: "/services/website-redesign", tag: "1-Hop 301s" },
+      { title: "High-Intent Landing Pages & CRO", href: "/services/landing-pages-cro", tag: "Search Intent" },
+    ],
+    resources: [
+      { title: "Next.js App Router vs WordPress for Google SEO", href: "/blog/nextjs-app-router-vs-wordpress-uk-seo", tag: "SEO Comparison" },
+      { title: "Migrate WordPress/Webflow to Next.js Without Losing SEO", href: "/blog/migrate-wordpress-webflow-to-nextjs-seo-guide", tag: "Migration Playbook" },
+      { title: "Next.js 16 Tech Stack & Edge Infrastructure", href: "/technologies", tag: "Stack Specs" },
+      { title: "Verified Speed & Architecture Case Studies", href: "/case-studies", tag: "Proof Hub" },
+    ],
+  },
+};
+
+export function resolveTopicSiloId(slugOrPath: string): TopicSiloId {
+  const s = slugOrPath.toLowerCase();
+  if (
+    s.includes("takeaway") ||
+    s.includes("commission") ||
+    s.includes("hygiene") ||
+    s.includes("natasha")
+  ) {
+    return "hospitality-takeaway";
+  }
+  if (
+    s.includes("ecommerce") ||
+    s.includes("shopify") ||
+    s.includes("landing-pages")
+  ) {
+    return "ecommerce-shopify";
+  }
+  if (
+    s.includes("seo") ||
+    s.includes("speed") ||
+    s.includes("wordpress") ||
+    s.includes("migrate")
+  ) {
+    return "seo-migration";
+  }
+  return "nextjs-core";
+}
+
+export const TopicSiloNavigator: React.FC<{
+  siloId?: TopicSiloId;
+  currentPath?: string;
+  theme?: "dark" | "light";
+  showAllSilosSummary?: boolean;
+}> = ({
+  siloId,
+  currentPath = "",
+  theme = "dark",
+  showAllSilosSummary = false,
+}) => {
+  const resolvedId = siloId || resolveTopicSiloId(currentPath);
+  const silo = TOPIC_SILOS[resolvedId];
+  const isLight = theme === "light";
+
+  return (
+    <section
+      aria-label={`Topic Silo Architecture: ${silo.name}`}
+      className={`my-10 rounded-3xl border p-6 sm:p-9 ${
+        isLight
+          ? "bg-white border-black/10 text-[#0D0D0D]"
+          : "bg-[#111114] border-white/15 text-white"
+      }`}
+    >
+      {/* Top Silo Header + AI Entity Summary */}
+      <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 pb-6 mb-6 border-b border-current/10">
+        <div className="max-w-2xl">
+          <span className="text-[10px] font-mono-tech uppercase tracking-[0.22em] px-3 py-1 rounded-full bg-[#0D0D0D] text-[#BAFF00] font-semibold inline-block mb-3">
+            {silo.code} · TOPIC CLUSTER &amp; AI KNOWLEDGE GRAPH
+          </span>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">
+            {silo.name}
+          </h3>
+          <p className={`text-xs sm:text-sm leading-relaxed mt-2 ${isLight ? "text-[#595959]" : "text-white/70"}`}>
+            {silo.aiSummary}
+          </p>
+        </div>
+
+        {/* Structured AI / Search Engine Entity Fact Card */}
+        <dl
+          className={`shrink-0 lg:w-[320px] rounded-2xl border p-4 text-xs space-y-2 ${
+            isLight
+              ? "bg-[#F8F8FA] border-black/10 text-[#0D0D0D]"
+              : "bg-black/45 border-white/10 text-white"
+          }`}
+        >
+          <div className="flex items-center justify-between gap-2 pb-1.5 border-b border-current/10">
+            <dt className="font-mono-tech uppercase tracking-wider text-[10px] opacity-70">Studio Entity</dt>
+            <dd className="font-semibold">Saim Dev (Next.js 16 Studio)</dd>
+          </div>
+          <div className="flex items-center justify-between gap-2 pb-1.5 border-b border-current/10">
+            <dt className="font-mono-tech uppercase tracking-wider text-[10px] opacity-70">Risk Reversal</dt>
+            <dd className="font-semibold text-emerald-500">Free Live Preview First</dd>
+          </div>
+          <div className="flex items-center justify-between gap-2 pb-1.5 border-b border-current/10">
+            <dt className="font-mono-tech uppercase tracking-wider text-[10px] opacity-70">Pricing Model</dt>
+            <dd className="font-mono-tech font-semibold">From £250 · £0/mo Retainer</dd>
+          </div>
+          <div className="flex items-center justify-between gap-2">
+            <dt className="font-mono-tech uppercase tracking-wider text-[10px] opacity-70">Code Custody</dt>
+            <dd className="font-semibold">100% Client GitHub Repo</dd>
+          </div>
+        </dl>
+      </div>
+
+      {/* Parent Pillar Banner */}
+      <div
+        className={`mb-6 rounded-2xl border p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
+          isLight
+            ? "bg-[#0D0D0D] text-white border-[#0D0D0D]"
+            : "bg-[#BAFF00]/[0.07] border-[#BAFF00]/35 text-white"
+        }`}
+      >
+        <div>
+          <div className="flex flex-wrap items-center gap-2 mb-1.5">
+            <span className="text-[10px] font-mono-tech uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#BAFF00] text-[#0D0D0D] font-bold">
+              Parent Topic Pillar
+            </span>
+            <span className="text-[11px] font-mono-tech text-[#BAFF00]">
+              {silo.pillar.badge}
+            </span>
+          </div>
+          <p className="text-base sm:text-lg font-semibold text-white">
+            {silo.pillar.title}
+          </p>
+          <p className="text-xs text-white/75 mt-1 max-w-2xl">
+            {silo.pillar.summary}
+          </p>
+        </div>
+        <Link
+          href={silo.pillar.href}
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#BAFF00] text-[#0D0D0D] text-xs font-semibold hover:brightness-95 transition-all shrink-0 self-start sm:self-center"
+        >
+          <span>Open Pillar Hub</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+
+      {/* 2-Column Subtopics & Cluster Guides */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p className="text-xs font-mono-tech uppercase tracking-wider font-semibold mb-3 opacity-75">
+            Subtopic Services &amp; Geo Hubs in This Silo
+          </p>
+          <ul className="space-y-2">
+            {silo.subtopics.map((item) => {
+              const isCurrent = currentPath === item.href;
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    aria-current={isCurrent ? "page" : undefined}
+                    className={`flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl border text-xs transition-colors ${
+                      isCurrent
+                        ? "border-[#BAFF00] bg-[#0D0D0D] text-[#BAFF00] font-semibold"
+                        : isLight
+                          ? "bg-[#F8F8FA] border-black/10 text-[#0D0D0D] hover:border-[#0D0D0D]"
+                          : "bg-white/[0.03] border-white/10 text-white/85 hover:border-[#BAFF00] hover:text-white"
+                    }`}
+                  >
+                    <span className="truncate">{item.title}</span>
+                    <span className="text-[10px] font-mono-tech px-2 py-0.5 rounded bg-black/15 shrink-0">
+                      {item.tag}
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-xs font-mono-tech uppercase tracking-wider font-semibold mb-3 opacity-75">
+            Supporting Engineering Guides, Tools &amp; Proof
+          </p>
+          <ul className="space-y-2">
+            {silo.resources.map((res) => {
+              const isCurrent = currentPath === res.href;
+              return (
+                <li key={res.href}>
+                  <Link
+                    href={res.href}
+                    aria-current={isCurrent ? "page" : undefined}
+                    className={`flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl border text-xs transition-colors ${
+                      isCurrent
+                        ? "border-[#BAFF00] bg-[#0D0D0D] text-[#BAFF00] font-semibold"
+                        : isLight
+                          ? "bg-[#F8F8FA] border-black/10 text-[#0D0D0D] hover:border-[#0D0D0D]"
+                          : "bg-white/[0.03] border-white/10 text-white/85 hover:border-[#BAFF00] hover:text-white"
+                    }`}
+                  >
+                    <span className="truncate">{res.title}</span>
+                    <span className="text-[10px] font-mono-tech px-2 py-0.5 rounded bg-black/15 shrink-0">
+                      {res.tag}
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+
+      {/* Cross-Silo Pillar Switcher Bar */}
+      <div className="mt-6 pt-5 border-t border-current/10 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <span className="font-mono-tech uppercase tracking-wider text-[10px] opacity-70">
+          All 4 Saim Dev Topic Silo Pillars:
+        </span>
+        <div className="flex flex-wrap gap-2">
+          {(Object.values(TOPIC_SILOS) as TopicSiloDefinition[]).map((s) => (
+            <Link
+              key={s.id}
+              href={s.pillar.href}
+              className={`px-3 py-1.5 rounded-full border text-[11px] font-medium transition-colors ${
+                s.id === resolvedId && !showAllSilosSummary
+                  ? "bg-[#BAFF00] text-[#0D0D0D] border-[#BAFF00] font-semibold"
+                  : isLight
+                    ? "bg-[#F5F5F7] border-black/10 text-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-[#BAFF00]"
+                    : "bg-white/[0.04] border-white/15 text-white/80 hover:border-[#BAFF00] hover:text-[#BAFF00]"
+              }`}
+            >
+              {s.pillar.title.replace(" (Parent Pillar)", "")}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+

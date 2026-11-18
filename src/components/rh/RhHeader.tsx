@@ -107,7 +107,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             >
               <img
                 src="/saim-dev-logo.png"
-                alt="Saim Dev"
+                alt="Saim Dev Next.js 16 Web Development Studio Logo — UK, US & EU Fixed-Price Websites"
                 width={48}
                 height={48}
                 className="w-full h-full object-cover rounded-full"
@@ -529,14 +529,14 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
             >
               <img
                 src="/rh-exact/nav/squire-logo.svg"
-                alt="Featured Work"
+                alt="Saim Dev Featured Next.js Interactive Live Reference Build Badge"
                 width={69}
                 height={24}
                 className="w-[68.58px] h-6 relative z-10"
               />
               <img
                 src="/rh-exact/nav/squire-ipad.webp"
-                alt="Interactive Live Demos Preview"
+                alt="Saim Dev Next.js 16 Interactive Live Website Demos & Booking Calendar Tablet Interface Preview"
                 width={420}
                 height={420}
                 className="w-[135.7%] max-w-none h-auto absolute -top-[9px] left-[15.44%] -z-10 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-x-3 group-hover:-translate-y-2.5 group-hover:scale-[1.035]"
@@ -583,7 +583,7 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
           >
             <img
               src="/saim-dev-logo.png"
-              alt="Saim Dev"
+              alt="Saim Dev Custom Next.js Website Development Studio Logo"
               width={48}
               height={48}
               className="w-full h-full object-cover"

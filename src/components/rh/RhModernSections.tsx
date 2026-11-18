@@ -458,13 +458,14 @@ export function RhHeroPinned({
                     className={`hero-cube-video w-full h-auto block select-none pointer-events-none ${
                       isMobileVideo ? "" : "contrast-110"
                     }`}
+                    style={{ transform: "translateZ(0)", backfaceVisibility: "hidden" }}
                     autoPlay
                     muted
                     loop
                     playsInline
-                    preload="metadata"
+                    preload="auto"
                     poster={videoPoster}
-                    aria-label="Animated 3D engineering wireframe"
+                    aria-label="Animated 3D Next.js web engineering wireframe architecture"
                   >
                     <source
                       src={videoSrc}
@@ -938,10 +939,60 @@ export function RhProcessCarousel({
   ctaHref = "/contact",
 }: RhProcessCarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const draggingRef = useRef({ active: false, startX: 0, scrollLeft: 0 });
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0, active: false, dragging: false });
+  const cursorBubbleRef = useRef<HTMLDivElement>(null);
+  const draggingRef = useRef({
+    active: false,
+    startX: 0,
+    scrollLeft: 0,
+    lastX: 0,
+    lastTime: 0,
+    velocity: 0,
+    momentumRaf: 0,
+  });
+  const [cursorState, setCursorState] = useState({ active: false, dragging: false });
+
+  useEffect(() => {
+    const state = draggingRef.current;
+    return () => {
+      if (state.momentumRaf) window.cancelAnimationFrame(state.momentumRaf);
+    };
+  }, []);
+
+  const stopMomentum = () => {
+    if (draggingRef.current.momentumRaf) {
+      window.cancelAnimationFrame(draggingRef.current.momentumRaf);
+      draggingRef.current.momentumRaf = 0;
+    }
+  };
+
+  const startMomentum = () => {
+    stopMomentum();
+    const el = trackRef.current;
+    if (!el) return;
+    const step = () => {
+      if (!trackRef.current) return;
+      if (Math.abs(draggingRef.current.velocity) > 0.04) {
+        trackRef.current.scrollLeft -= draggingRef.current.velocity * 16;
+        draggingRef.current.velocity *= 0.93;
+        draggingRef.current.momentumRaf = window.requestAnimationFrame(step);
+      } else {
+        draggingRef.current.velocity = 0;
+        draggingRef.current.momentumRaf = 0;
+      }
+    };
+    if (Math.abs(draggingRef.current.velocity) > 0.04) {
+      draggingRef.current.momentumRaf = window.requestAnimationFrame(step);
+    }
+  };
+
+  const updateCursorPosition = (x: number, y: number) => {
+    const bubble = cursorBubbleRef.current;
+    if (!bubble) return;
+    bubble.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+  };
 
   const scrollByCard = (dir: -1 | 1) => {
+    stopMomentum();
     const el = trackRef.current;
     if (!el) return;
     el.scrollBy({ left: dir * 380, behavior: "smooth" });
@@ -988,32 +1039,58 @@ export function RhProcessCarousel({
       {/* Horizontal Draggable Slider Track */}
       <div
         ref={trackRef}
-        onMouseEnter={() => setCursorPos((p) => ({ ...p, active: true }))}
+        style={{ touchAction: "pan-y" }}
+        onMouseEnter={(e) => {
+          updateCursorPosition(e.clientX, e.clientY);
+          setCursorState((p) => ({ ...p, active: true }));
+        }}
         onMouseLeave={() => {
-          draggingRef.current.active = false;
-          setCursorPos((p) => ({ ...p, active: false, dragging: false }));
+          if (draggingRef.current.active) {
+            draggingRef.current.active = false;
+            startMomentum();
+          }
+          setCursorState({ active: false, dragging: false });
         }}
         onMouseMove={(e) => {
-          setCursorPos((p) => ({ ...p, x: e.clientX, y: e.clientY }));
+          updateCursorPosition(e.clientX, e.clientY);
           if (!draggingRef.current.active || !trackRef.current) return;
           e.preventDefault();
+          const now = performance.now();
+          const dt = now - draggingRef.current.lastTime;
+          if (dt > 1) {
+            const instVel = (e.clientX - draggingRef.current.lastX) / dt;
+            draggingRef.current.velocity = draggingRef.current.velocity * 0.35 + instVel * 0.65;
+            draggingRef.current.lastX = e.clientX;
+            draggingRef.current.lastTime = now;
+          }
           const dx = e.clientX - draggingRef.current.startX;
           trackRef.current.scrollLeft = draggingRef.current.scrollLeft - dx;
         }}
         onMouseDown={(e) => {
-          if (!trackRef.current) return;
+          if (!trackRef.current || e.button !== 0) return;
+          stopMomentum();
           draggingRef.current = {
+            ...draggingRef.current,
             active: true,
             startX: e.clientX,
             scrollLeft: trackRef.current.scrollLeft,
+            lastX: e.clientX,
+            lastTime: performance.now(),
+            velocity: 0,
           };
-          setCursorPos((p) => ({ ...p, dragging: true }));
+          setCursorState((p) => ({ ...p, dragging: true }));
         }}
         onMouseUp={() => {
-          draggingRef.current.active = false;
-          setCursorPos((p) => ({ ...p, dragging: false }));
+          if (draggingRef.current.active) {
+            draggingRef.current.active = false;
+            if (performance.now() - draggingRef.current.lastTime > 90) {
+              draggingRef.current.velocity = 0;
+            }
+            startMomentum();
+          }
+          setCursorState((p) => ({ ...p, dragging: false }));
         }}
-        className="relative z-10 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing select-none"
+        className="relative z-10 overflow-x-auto overflow-y-hidden no-scrollbar cursor-grab active:cursor-grabbing select-none"
       >
         <div className="flex gap-5 px-5 lg:pl-[max(20px,calc((100vw-1168px)/2+20px))] pr-10 min-w-max">
           {/* Lime Summary Card (matching .card-stages-pd on rh.design) */}
@@ -1070,14 +1147,15 @@ export function RhProcessCarousel({
         </div>
       </div>
 
-      {/* Custom Floating "Drag me" Cursor (desktop mouse only) */}
+      {/* Custom Floating "Drag me" Cursor (desktop mouse only, ref-driven for zero React re-renders) */}
       <div
+        ref={cursorBubbleRef}
         aria-hidden="true"
         className={`hidden lg:flex fixed top-0 left-0 z-40 pointer-events-none w-[96px] h-[96px] rounded-full bg-[#BAFF00] text-[#0D0D0D] items-center justify-center text-[13px] font-medium tracking-[-0.02em] transition-[opacity,scale] duration-150 ${
-          cursorPos.active ? "opacity-100 scale-100" : "opacity-0 scale-50"
-        } ${cursorPos.dragging ? "scale-90" : ""}`}
+          cursorState.active ? "opacity-100 scale-100" : "opacity-0 scale-50"
+        } ${cursorState.dragging ? "scale-90" : ""}`}
         style={{
-          transform: `translate3d(${cursorPos.x}px, ${cursorPos.y}px, 0) translate(-50%, -50%)`,
+          transform: "translate3d(-200px, -200px, 0) translate(-50%, -50%)",
           willChange: "transform",
         }}
       >
@@ -1175,7 +1253,15 @@ export function RhBentoWorkGrid({
   items,
 }: RhBentoWorkGridProps) {
   const [quoteIdx, setQuoteIdx] = useState(0);
-  const [cursor, setCursor] = useState({ x: 0, y: 0, on: false });
+  const [cursorOn, setCursorOn] = useState(false);
+  const bentoCursorRef = useRef<HTMLDivElement>(null);
+
+  const moveBentoCursor = (x: number, y: number) => {
+    const el = bentoCursorRef.current;
+    if (!el) return;
+    el.style.left = `${x}px`;
+    el.style.top = `${y}px`;
+  };
 
   useEffect(() => {
     if (quotes.length <= 1) return;
@@ -1258,8 +1344,8 @@ export function RhBentoWorkGrid({
         <div
           data-gsap-stagger=""
           className="grid md:grid-cols-2 gap-4"
-          onMouseMove={(e) => setCursor((c) => ({ ...c, x: e.clientX, y: e.clientY }))}
-          onMouseLeave={() => setCursor((c) => ({ ...c, on: false }))}
+          onMouseMove={(e) => moveBentoCursor(e.clientX, e.clientY)}
+          onMouseLeave={() => setCursorOn(false)}
         >
           {items.map((item, idx) => {
             const isFullWidth =
@@ -1275,8 +1361,11 @@ export function RhBentoWorkGrid({
               <CardTag
                 key={item.id}
                 {...cardProps}
-                onMouseEnter={() => setCursor((c) => ({ ...c, on: true }))}
-                onMouseLeave={() => setCursor((c) => ({ ...c, on: false }))}
+                onMouseEnter={(e: React.MouseEvent) => {
+                  moveBentoCursor(e.clientX, e.clientY);
+                  setCursorOn(true);
+                }}
+                onMouseLeave={() => setCursorOn(false)}
                 className={`rh-edge-orbit-card group relative overflow-hidden rounded-3xl border border-[#E6E6E6] bg-[#FAFAFA] hover:border-[#0D0D0D] transition-colors flex flex-col justify-between ${
                   isFullWidth ? "md:col-span-2 min-h-[340px]" : "min-h-[320px]"
                 }`}
@@ -1344,9 +1433,10 @@ export function RhBentoWorkGrid({
 
       {/* Global floating #BAFF00 cursor matching .proof-cursor-pd */}
       <div
+        ref={bentoCursorRef}
         aria-hidden="true"
-        className={`hidden lg:flex proof-cursor-pd ${cursor.on ? "is-on" : ""}`}
-        style={{ left: `${cursor.x}px`, top: `${cursor.y}px` }}
+        className={`hidden lg:flex proof-cursor-pd ${cursorOn ? "is-on" : ""}`}
+        style={{ left: "-200px", top: "-200px" }}
       >
         <span className="text-[13px] font-medium tracking-[-0.02em] text-[#0D0D0D]">
           {cursorLabel}

@@ -35,7 +35,7 @@ export const MarqueeSection: React.FC = () => {
       <div className="flex gap-3 w-max animate-[marquee_30s_linear_infinite]">
         {[...marqueeImagesRow1, ...marqueeImagesRow1, ...marqueeImagesRow1].map((src, idx) => (
           <div key={idx} className="w-[300px] sm:w-[400px] h-[190px] sm:h-[250px] rounded-2xl overflow-hidden shrink-0 border border-white/10 shadow-lg">
-            <img src={src} alt="Showcase preview" className="w-full h-full object-cover" loading="lazy" />
+            <img src={src} alt="Bespoke Next.js 16 high-converting business website and e-commerce storefront UI preview" className="w-full h-full object-cover" loading="lazy" />
           </div>
         ))}
       </div>
@@ -44,7 +44,7 @@ export const MarqueeSection: React.FC = () => {
       <div className="flex gap-3 w-max animate-[marquee-reverse_35s_linear_infinite]">
         {[...marqueeImagesRow2, ...marqueeImagesRow2, ...marqueeImagesRow2].map((src, idx) => (
           <div key={idx} className="w-[300px] sm:w-[400px] h-[190px] sm:h-[250px] rounded-2xl overflow-hidden shrink-0 border border-white/10 shadow-lg">
-            <img src={src} alt="Showcase preview" className="w-full h-full object-cover" loading="lazy" />
+            <img src={src} alt="Bespoke Next.js 16 high-converting business website and e-commerce storefront UI preview" className="w-full h-full object-cover" loading="lazy" />
           </div>
         ))}
       </div>

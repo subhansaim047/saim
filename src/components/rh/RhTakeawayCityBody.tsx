@@ -3,6 +3,10 @@ import Link from "next/link";
 import { ArrowRight, ExternalLink, MapPin, Percent, Plus, ShieldCheck, Zap } from "lucide-react";
 import { CommissionSavingsCalculator } from "@/components/CommissionSavingsCalculator";
 import { RhOdometerNumber } from "@/components/rh/RhModernSections";
+import {
+  EngineeringVerificationBadge,
+  TopicSiloNavigator,
+} from "@/components/ui/EditorialVisualPack";
 
 export interface TakeawayCityStat {
   value: string;
@@ -536,6 +540,12 @@ export function RhTakeawayCityBody({
               ))}
             </div>
           </div>
+
+          <TopicSiloNavigator siloId="hospitality-takeaway" theme="dark" />
+          <EngineeringVerificationBadge
+            contextLabel="Verified for UK takeaway direct ordering, 14-allergen menu filters & zero-commission checkout"
+            theme="dark"
+          />
         </div>
       </section>
 

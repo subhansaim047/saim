@@ -4,54 +4,51 @@
   try {
 document.addEventListener('DOMContentLoaded', function() {
   const navbar = document.querySelector('.navbar');
-  // Dark sections: legacy class list + any element opted in via data-nav="dark" (used by new service pages)
-  const darkSections = document.querySelectorAll('.section-case, .section-services, .section-founder, .section-footer, [data-nav="dark"]');
-  
-  let lastScrollY = window.scrollY;
-  
+  if (!navbar) return;
+  const darkSections = Array.from(document.querySelectorAll('.section-case, .section-services, .section-founder, .section-footer, [data-nav="dark"]'));
+  let rafPending = false;
+
   function checkNavbarPosition() {
+    rafPending = false;
     const currentScrollY = window.scrollY;
     const navbarRect = navbar.getBoundingClientRect();
     const navbarCenter = navbarRect.top + (navbarRect.height / 2);
-    
-    // Toggle scrolled frosted glass state on both desktop and mobile viewports
+
     if (currentScrollY > 24) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
-    
+
     let isInDarkSection = false;
-    
-    darkSections.forEach(section => {
-      const sectionRect = section.getBoundingClientRect();
-      
-      // Перевіряємо чи центр навбару знаходиться в межах секції
+    for (let i = 0; i < darkSections.length; i++) {
+      const sectionRect = darkSections[i].getBoundingClientRect();
       if (navbarCenter >= sectionRect.top && navbarCenter <= sectionRect.bottom) {
         isInDarkSection = true;
+        break;
       }
-    });
-    
-    // Додаємо або видаляємо клас dark-mode
+    }
+
     if (isInDarkSection) {
       navbar.classList.add('dark-mode');
     } else {
       navbar.classList.remove('dark-mode');
     }
-    
-    lastScrollY = currentScrollY;
   }
-  
-  // Початкова перевірка — без анімації, щоб при завантаженні сторінки
-  // navbar одразу стояв на потрібній позиції, не "виїжджаючи".
-  // Далі transition повертається, і скрол лишається плавним.
+
+  function onScroll() {
+    if (!rafPending) {
+      rafPending = true;
+      requestAnimationFrame(checkNavbarPosition);
+    }
+  }
+
   navbar.style.setProperty('transition', 'none', 'important');
   checkNavbarPosition();
   void navbar.offsetHeight;
   navbar.style.removeProperty('transition');
-  
-  // Перевірка при скролі
-  window.addEventListener('scroll', checkNavbarPosition);
+
+  window.addEventListener('scroll', onScroll, { passive: true });
 });
   } catch (err) {
     if (window.console) console.error('[saim-home-runtime #6]', err);
@@ -60,67 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ;(function () {
   try {
-(function () {
-  if (window.__lazySliderVideos) return; // the slider clones this embed; run once
-  window.__lazySliderVideos = true;
-
-  window.__rhHomeVideosArmed = window.__rhHomeVideosArmed || false;
-  function load(v) { if (!v.getAttribute('src') && v.getAttribute('data-lazy-src')) { v.src = v.getAttribute('data-lazy-src'); v.load(); } }
-  function play(v) {
-    if (!window.__rhHomeVideosArmed) return;
-    load(v);
-    var p = v.play();
-    if (p && p.catch) p.catch(function () {});
-  }
-
-  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      e.target.__inSliderView = e.isIntersecting;
-      if (e.isIntersecting && window.__rhHomeVideosArmed) play(e.target);
-      else if (e.target.getAttribute('src') && !e.target.paused) e.target.pause();
-    });
-  }, { rootMargin: '150px 250px' }) : null;
-
-  function armVideos() {
-    if (window.__rhHomeVideosArmed) return;
+    // Immediate arming for homepage slider videos — managed solely by InfiniteSlider.setupVideoObserver
+    // so video.load() is never invoked twice by competing observers.
+    window.__lazySliderVideos = true;
     window.__rhHomeVideosArmed = true;
-    [].slice.call(document.querySelectorAll('video[data-lazy-src]')).forEach(function (v) {
-      if (v.__inSliderView || !io) play(v);
-    });
-  }
-  function scheduleArmVideos() {
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(armVideos, { timeout: 600 });
-    } else {
-      setTimeout(armVideos, 200);
-    }
-  }
-  if (document.readyState === 'complete') scheduleArmVideos();
-  else window.addEventListener('load', scheduleArmVideos, { once: true });
-  ['pointerenter', 'touchstart', 'pointerdown'].forEach(function (ev) {
-    document.addEventListener(ev, function (e) {
-      if (e.target && e.target.closest && e.target.closest('.wrapper-slider')) armVideos();
-    }, { passive: true });
-  });
-
-  function scan() {
-    [].slice.call(document.querySelectorAll('video[data-lazy-src]')).forEach(function (v) {
-      if (v.__lazySeen) return;
-      v.__lazySeen = true;
-      if (io) io.observe(v); else play(v);
-    });
-  }
-
-  var timer = null;
-  function scanSoon() { if (!timer) timer = setTimeout(function () { timer = null; scan(); }, 100); }
-
-  function boot() {
-    scan();
-    if ('MutationObserver' in window) new MutationObserver(scanSoon).observe(document.body, { childList: true, subtree: true });
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
-  if (document.readyState === 'complete') scan(); else window.addEventListener('load', scan, { once: true });
-})();
   } catch (err) {
     if (window.console) console.error('[saim-home-runtime #7]', err);
   }
@@ -131,25 +71,25 @@ document.addEventListener('DOMContentLoaded', function() {
 class InfiniteSlider {
         constructor(wrapperSelector) {
             this.wrapper = document.querySelector(wrapperSelector);
+            if (!this.wrapper) return;
             this.slides = Array.from(this.wrapper.children);
             this.originalCount = this.slides.length;
             this.slideWidth = 0;
             this.totalWidth = 0;
             this.isDragging = false;
             this.startX = 0;
+            this.startY = 0;
+            this.touchAxis = null;
             this.currentTranslate = 0;
             this.prevTranslate = 0;
             this.animationID = null;
-            this.autoScrollSpeed = 0.5;
+            this.autoScrollSpeed = 0.55;
             this.velocity = 0;
             this.lastX = 0;
-            this.lastTime = Date.now();
+            this.lastTime = performance.now();
             this.momentumID = null;
             this.resizeTimeout = null;
 
-            // ---- FIX: слайдер виден или нет (scroll вне экрана / вкладка
-            // свёрнута) — используется, чтобы не крутить autoScroll и не
-            // декодировать видео впустую, когда их всё равно никто не видит.
             this.isSliderVisible = true;
             this.isPageVisible = document.visibilityState !== 'hidden';
             this.videoObserver = null;
@@ -162,7 +102,8 @@ class InfiniteSlider {
                 this.createLoadingOverlay();
                 this.waitForLoaderThenReveal();
             }
-            if (this.wrapper) this.wrapper.style.touchAction = 'pan-y';
+            this.wrapper.style.touchAction = 'pan-y';
+            this.wrapper.style.willChange = 'transform';
             this.setupVideoObserver();
             this.observeSlideVideos(this.slides);
             this.cloneSlides();
@@ -172,7 +113,7 @@ class InfiniteSlider {
             this.setupVisibilityObserver();
             this.startAutoScroll();
 
-            window.addEventListener('resize', () => this.handleResize());
+            window.addEventListener('resize', () => this.handleResize(), { passive: true });
             document.addEventListener('visibilitychange', () => this.handlePageVisibility());
         }
 
@@ -224,12 +165,12 @@ class InfiniteSlider {
             }, 450);
         }
 
-        // Запускает воспроизведение видео вручную с обработкой ошибок
-        // автовоспроизведения (например, если браузер заблокировал autoplay)
         playVideoSafely(video) {
             video.muted = true;
+            video.defaultMuted = true;
             video.setAttribute('muted', '');
             video.playsInline = true;
+            if (!video.paused) return;
             var playPromise = video.play();
             if (playPromise !== undefined) {
                 playPromise.catch(function () {
@@ -238,41 +179,40 @@ class InfiniteSlider {
                         document.removeEventListener('touchstart', retry);
                         document.removeEventListener('click', retry);
                     };
-                    document.addEventListener('touchstart', retry, { once: true });
+                    document.addEventListener('touchstart', retry, { once: true, passive: true });
                     document.addEventListener('click', retry, { once: true });
                 });
             }
         }
 
-        // ---- FIX: единый IntersectionObserver на все видео слайдера
-        // (и оригинальные, и клоны). Пока видео не попало в кадр — оно не
-        // грузится и не декодируется вообще. Как только уходит из кадра —
-        // ставится на паузу. Одновременно "живых" декодеров видео теперь
-        // столько, сколько реально видно на экране (2-4), а не втрое больше.
         setupVideoObserver() {
             this.videoObserver = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     const video = entry.target;
                     video.__inSliderView = entry.isIntersecting;
                     if (entry.isIntersecting) {
-                        if (!window.__rhHomeVideosArmed) return;
                         if (!video.__loaderSliderLoaded) {
                             video.__loaderSliderLoaded = true;
-                            if (!video.getAttribute('src') && video.getAttribute('data-lazy-src')) {
-                                video.src = video.getAttribute('data-lazy-src');
+                            video.preload = 'auto';
+                            video.setAttribute('preload', 'auto');
+                            const lazySrc = video.getAttribute('data-lazy-src');
+                            if (!video.getAttribute('src') && lazySrc) {
+                                video.src = lazySrc;
+                                video.load();
                             }
-                            video.load();
                         }
                         this.playVideoSafely(video);
-                    } else {
+                    } else if (!video.paused) {
                         video.pause();
                     }
                 });
-            }, { root: null, rootMargin: '200px', threshold: 0 });
+            }, { root: null, rootMargin: '400px 800px', threshold: 0 });
         }
 
         observeSlideVideos(slides) {
             slides.forEach(slide => {
+                var imgs = slide.querySelectorAll('img');
+                imgs.forEach(img => img.setAttribute('draggable', 'false'));
                 var videos = slide.querySelectorAll('video');
                 videos.forEach(video => {
                     video.setAttribute('draggable', 'false');
@@ -289,13 +229,11 @@ class InfiniteSlider {
                     const clone = slide.cloneNode(true);
                     const img = clone.querySelector('img');
                     if (img) img.setAttribute('draggable', 'false');
-
-                    // Клонированные <video> с autoplay браузер не запускает
-                    // сам по себе (autoplay срабатывает только при парсинге
-                    // "родного" HTML, а не при вставке через appendChild).
-                    // load() + play() теперь вызываются лениво, только когда
-                    // конкретный клон реально попадёт в область видимости —
-                    // см. setupVideoObserver().
+                    const vid = clone.querySelector('video');
+                    if (vid) {
+                        vid.__loaderSliderLoaded = false;
+                        vid.removeAttribute('src');
+                    }
                     this.wrapper.appendChild(clone);
                 });
             }
@@ -308,7 +246,7 @@ class InfiniteSlider {
             if (this.slides.length > 0) {
                 const slide = this.slides[0];
                 const style = window.getComputedStyle(slide);
-                this.slideWidth = slide.offsetWidth + parseFloat(style.marginRight) + 20;
+                this.slideWidth = slide.offsetWidth + (parseFloat(style.marginRight) || 0) + 20;
             }
             this.totalWidth = this.slideWidth * this.originalCount;
         }
@@ -321,29 +259,25 @@ class InfiniteSlider {
 
         addEventListeners() {
             this.wrapper.addEventListener('mousedown', (e) => this.dragStart(e));
-            window.addEventListener('mousemove', (e) => this.drag(e));
-            window.addEventListener('mouseup', () => this.dragEnd());
+            window.addEventListener('mousemove', (e) => this.drag(e), { passive: true });
+            window.addEventListener('mouseup', () => this.dragEnd(), { passive: true });
 
+            // Scoped to wrapper so vertical page touch scrolling outside or on the slider never stalls
             this.wrapper.addEventListener('touchstart', (e) => this.dragStart(e), { passive: true });
-            window.addEventListener('touchmove', (e) => this.drag(e), { passive: false });
-            window.addEventListener('touchend', () => this.dragEnd(), { passive: true });
-            window.addEventListener('touchcancel', () => this.dragEnd(), { passive: true });
+            this.wrapper.addEventListener('touchmove', (e) => this.drag(e), { passive: false });
+            this.wrapper.addEventListener('touchend', () => this.dragEnd(), { passive: true });
+            this.wrapper.addEventListener('touchcancel', () => this.dragEnd(), { passive: true });
 
             this.wrapper.addEventListener('contextmenu', (e) => e.preventDefault());
         }
 
-        // ---- FIX: отдельный IntersectionObserver на сам слайдер целиком.
-        // Если пользователь проскроллил дальше по странице и слайдера не
-        // видно — останавливаем бесконечный requestAnimationFrame автоскролла.
-        // Он и так ничего не рисует полезного, но продолжает грузить
-        // главный поток каждый кадр без остановки.
         setupVisibilityObserver() {
             const sliderVisibilityObserver = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     this.isSliderVisible = entry.isIntersecting;
                     this.syncAutoScrollState();
                 });
-            }, { root: null, rootMargin: '0px', threshold: 0 });
+            }, { root: null, rootMargin: '150px 0px', threshold: 0 });
 
             sliderVisibilityObserver.observe(this.wrapper);
         }
@@ -352,12 +286,11 @@ class InfiniteSlider {
             this.isPageVisible = document.visibilityState !== 'hidden';
             this.syncAutoScrollState();
 
-            // на паузу/возобновление видимых видео при сворачивании вкладки
             const videos = this.wrapper.querySelectorAll('video');
             videos.forEach(video => {
                 if (!this.isPageVisible) {
                     video.pause();
-                } else if (this.isSliderVisible && video.__loaderSliderLoaded) {
+                } else if (this.isSliderVisible && video.__loaderSliderLoaded && video.__inSliderView) {
                     this.playVideoSafely(video);
                 }
             });
@@ -375,13 +308,15 @@ class InfiniteSlider {
         }
 
         dragStart(e) {
+            if (e.type === 'mousedown' && e.button !== 0) return;
             this.isDragging = true;
             this.touchAxis = e.type.includes('mouse') ? 'x' : null;
             this.startX = this.getPositionX(e);
             this.startY = e.touches && e.touches[0] ? e.touches[0].clientY : 0;
             this.lastX = this.startX;
-            this.lastTime = Date.now();
+            this.lastTime = performance.now();
             this.velocity = 0;
+            this.prevTranslate = this.currentTranslate;
 
             if (e.type.includes('mouse')) {
                 this.wrapper.classList.add('grabbing', 'dragging');
@@ -398,7 +333,7 @@ class InfiniteSlider {
                 if (this.touchAxis === null) {
                     const dx = Math.abs(e.touches[0].clientX - this.startX);
                     const dy = Math.abs(e.touches[0].clientY - this.startY);
-                    if (dy > dx && dy > 4) {
+                    if (dy >= dx && dy > 4) {
                         this.isDragging = false;
                         this.touchAxis = 'y';
                         return;
@@ -410,23 +345,23 @@ class InfiniteSlider {
                     this.cancelAutoScroll();
                 }
                 if (this.touchAxis !== 'x') return;
+                if (e.cancelable) e.preventDefault();
             }
 
-            if (e.cancelable) e.preventDefault();
-
             const currentPosition = this.getPositionX(e);
-            const currentTime = Date.now();
+            const currentTime = performance.now();
             const diff = currentPosition - this.startX;
             const timeDiff = currentTime - this.lastTime;
 
-            if (timeDiff > 0) {
-                this.velocity = (currentPosition - this.lastX) / timeDiff;
+            if (timeDiff > 1) {
+                const instVel = (currentPosition - this.lastX) / timeDiff;
+                this.velocity = this.velocity * 0.35 + instVel * 0.65;
+                this.lastX = currentPosition;
+                this.lastTime = currentTime;
             }
 
-            this.lastX = currentPosition;
-            this.lastTime = currentTime;
-
             this.currentTranslate = this.prevTranslate + diff;
+            this.checkPosition();
             this.setSliderPosition();
         }
 
@@ -441,12 +376,17 @@ class InfiniteSlider {
             this.wrapper.classList.remove('grabbing', 'dragging');
             this.prevTranslate = this.currentTranslate;
 
+            // Decay velocity if user held pointer stationary before releasing
+            if (performance.now() - this.lastTime > 90) {
+                this.velocity = 0;
+            }
+
             this.applyMomentum();
         }
 
         applyMomentum() {
-            const friction = 0.95;
-            const minVelocity = 0.1;
+            const friction = 0.94;
+            const minVelocity = 0.04;
 
             const momentum = () => {
                 if (Math.abs(this.velocity) > minVelocity) {
@@ -470,9 +410,7 @@ class InfiniteSlider {
             } else {
                 this.velocity = 0;
                 this.checkPosition();
-                setTimeout(() => {
-                    this.startAutoScroll();
-                }, 50);
+                this.startAutoScroll();
             }
         }
 
@@ -484,14 +422,13 @@ class InfiniteSlider {
         }
 
         getPositionX(e) {
-            if (e.type.includes('mouse')) return e.pageX;
+            if (e.type.includes('mouse')) return e.clientX;
             const pt = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]);
             return pt ? pt.clientX : (typeof e.clientX === 'number' ? e.clientX : this.lastX);
         }
 
         setSliderPosition() {
-            // Округлення до цілого піксела прибирає мікро-тремтіння
-            this.wrapper.style.transform = `translate3d(${Math.round(this.currentTranslate)}px, 0, 0)`;
+            this.wrapper.style.transform = `translate3d(${this.currentTranslate.toFixed(2)}px, 0, 0)`;
         }
 
         checkPosition() {
@@ -1003,8 +940,8 @@ function boot(){
     function toggle(e){
       if(e){e.preventDefault();e.stopPropagation();}
       var open=!dd.classList.contains('is-open');
-      if(open){list.style.height=list.scrollHeight+'px';list.addEventListener('transitionend',function f(){if(dd.classList.contains('is-open'))list.style.height='auto';list.removeEventListener('transitionend',f);});}
-      else{list.style.height=list.scrollHeight+'px';list.offsetHeight;list.style.height='0px';}
+      if(open){list.style.height=list.scrollHeight+'px';list.addEventListener('transitionend',function f(){if(dd.classList.contains('is-open'))list.style.height='auto';if(window.__saimLenis)window.__saimLenis.resize();list.removeEventListener('transitionend',f);});}
+      else{list.style.height=list.scrollHeight+'px';list.offsetHeight;list.style.height='0px';setTimeout(function(){if(window.__saimLenis)window.__saimLenis.resize();},360);}
       dd.classList.toggle('is-open',open);top.setAttribute('aria-expanded',open?'true':'false');
     }
     top.addEventListener('click',toggle,true);
@@ -1266,6 +1203,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         isAnimating = false;
         refreshMobileLayout();
+        if (window.__saimLenis) window.__saimLenis.resize();
       }, 520);
     }
 
@@ -1290,6 +1228,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         isAnimating = false;
         refreshMobileLayout();
+        if (window.__saimLenis) window.__saimLenis.resize();
       }, 500);
     }
 
@@ -1397,11 +1336,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.documentElement.style.overflow = '';
   document.body.style.overflow = '';
   let lenis = new Lenis({
-    lerp: 0.14,
+    lerp: 0.12,
     wheelMultiplier: 1.0,
     gestureOrientation: "vertical",
     smoothWheel: true,
     smoothTouch: false,
+    autoResize: true,
   });
   window.__saimLenis = lenis;
   window.addEventListener('load', function () {
@@ -1409,6 +1349,14 @@ document.addEventListener('DOMContentLoaded', function () {
     lenis.resize();
   });
   setTimeout(function () { lenis.resize(); }, 450);
+  setTimeout(function () { lenis.resize(); }, 1200);
+  if ('ResizeObserver' in window && document.body) {
+    var roTimer = null;
+    new ResizeObserver(function () {
+      if (roTimer) clearTimeout(roTimer);
+      roTimer = setTimeout(function () { lenis.resize(); }, 120);
+    }).observe(document.body);
+  }
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
@@ -1441,55 +1389,86 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function() {
     if (!window.jQuery || !$.fn || !$.fn.slick) return;
     $(function() {
-        //-------- Filter functionality ----------
-        // Add class name of category slug to each slider item
         $('.card-slider_item').addClass(function() {
-            return $(this).find('.card-category_slug').text() //class of element hidden in slider collection with category slug
+            return $(this).find('.card-category_slug').text();
         });
-        // When you click a dropdown link, filter the slider
         $(".dropdown-link").click(function() {
-            if ($(this).hasClass("cc-selected")) { //if the dropdown link is already selected, unselect and unfilter the slider
+            if ($(this).hasClass("cc-selected")) {
                 $("#cms-slider").slick('slickUnfilter');
                 $(this).removeClass("cc-selected");
-            } else { //if the dropdown link isn't selected, add selected class and filter the slider
+            } else {
                 $(".dropdown-link").removeClass("cc-selected");
                 $(this).addClass("cc-selected");
-                var filter = $(this).find('.dropdown-link_slug').text(); //class of element hidden in dropdown link with category slug
-                var filterClass = '.' + filter; //add '.' before slug name to associate it as a class
-                $("#cms-slider").slick('slickUnfilter'); //clear previous filter on slider
-                $("#cms-slider").slick('slickFilter', filterClass); //filter the slider by the selected dropdown link's slug
+                var filter = $(this).find('.dropdown-link_slug').text();
+                var filterClass = '.' + filter;
+                $("#cms-slider").slick('slickUnfilter');
+                $("#cms-slider").slick('slickFilter', filterClass);
             }
         });
-        //-------- Configure slider ----------
+        // Prevent native browser image/link ghost drag inside #cms-slider while keeping tap/click links working
+        $('#cms-slider img, #cms-slider a').attr('draggable', 'false');
+        var cmsDragStartX = 0;
+        var cmsDidDrag = false;
+        $('#cms-slider').on('mousedown touchstart', function(ev) {
+            var pt = (ev.originalEvent && ev.originalEvent.touches && ev.originalEvent.touches[0]) || ev;
+            cmsDragStartX = pt.clientX || 0;
+            cmsDidDrag = false;
+        }).on('mousemove touchmove', function(ev) {
+            if (!cmsDragStartX) return;
+            var pt = (ev.originalEvent && ev.originalEvent.touches && ev.originalEvent.touches[0]) || ev;
+            if (Math.abs((pt.clientX || 0) - cmsDragStartX) > 10) cmsDidDrag = true;
+        }).on('mouseup touchend', function() {
+            setTimeout(function() { cmsDragStartX = 0; cmsDidDrag = false; }, 60);
+        });
+        $('#cms-slider a').on('click', function(ev) {
+            if (cmsDidDrag) {
+                ev.preventDefault();
+                ev.stopImmediatePropagation();
+            }
+        });
+
         $('#cms-slider').slick({
             arrows: false,
             infinite: false,
             autoplay: false,
             autoplaySpeed: 8000,
-            speed: 300,
+            speed: 380,
+            cssEase: 'cubic-bezier(0.22, 1, 0.36, 1)',
             slidesToShow: 3,
             slidesToScroll: 1,
+            swipeToSlide: true,
+            draggable: true,
+            swipe: true,
+            touchMove: true,
+            touchThreshold: 14,
+            edgeFriction: 0.18,
             responsive: [{
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3
+                        slidesToShow: 3,
+                        swipeToSlide: true,
+                        touchThreshold: 14
                     }
                 },
                 {
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 2,
+                        swipeToSlide: true,
+                        touchThreshold: 14
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 1
+                        slidesToShow: 1,
+                        swipeToSlide: true,
+                        touchThreshold: 14
                     }
                 }
             ]
         });
-        //--------- Set custom nav ---------
+        if (window.__saimLenis) window.__saimLenis.resize();
         $('#cms-slider-right').click(function() {
             $('#cms-slider').slick('slickNext');
         });
@@ -1497,6 +1476,44 @@ document.addEventListener('DOMContentLoaded', function() {
             $('#cms-slider').slick('slickPrev');
         });
     });
+
+    // Unified 60fps/120fps GPU "Drag me" cursor stabilizer across .container-slide and #cms-slider
+    (function initSmoothDragMeCursor() {
+        if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+        var mouseWrap = document.querySelector('.mouse-wrapper');
+        var mouseBubble = mouseWrap && mouseWrap.querySelector('.mouse');
+        if (!mouseWrap || !mouseBubble) return;
+
+        var zones = Array.from(document.querySelectorAll('.section-slider .container-slide, .section-testimonials #cms-slider'));
+        if (!zones.length) return;
+
+        var isInside = false;
+        var isPressed = false;
+
+        zones.forEach(function(zone) {
+            zone.addEventListener('mouseenter', function() {
+                isInside = true;
+                mouseBubble.classList.add('saim-drag-active');
+            }, { passive: true });
+            zone.addEventListener('mouseleave', function() {
+                isInside = false;
+                isPressed = false;
+                mouseBubble.classList.remove('saim-drag-active', 'saim-drag-pressed');
+            }, { passive: true });
+            zone.addEventListener('mousedown', function() {
+                if (!isInside) return;
+                isPressed = true;
+                mouseBubble.classList.add('saim-drag-pressed');
+            }, { passive: true });
+        });
+
+        window.addEventListener('mouseup', function() {
+            if (isPressed) {
+                isPressed = false;
+                mouseBubble.classList.remove('saim-drag-pressed');
+            }
+        }, { passive: true });
+    })();
     });
   } catch (err) {
     if (window.console) console.error('[saim-home-runtime #31]', err);
@@ -1737,21 +1754,37 @@ document.addEventListener('DOMContentLoaded', function() {
       var SPEED = 0.08;
       var desktop = window.matchMedia('(min-width: 992px) and (hover: hover) and (pointer: fine)');
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-      var doc = document.documentElement, FH = 0, on = false;
+      var doc = document.documentElement, FH = 0, cachedMaxScroll = 0, on = false;
       function apply() {
         if (!on) return;
-        var r = doc.scrollHeight - window.innerHeight - window.scrollY;
+        var r = cachedMaxScroll - window.scrollY;
         r = r < 0 ? 0 : r > FH ? FH : r;
         footer.style.transform = r ? 'translate3d(0,' + (-r * (1 - SPEED)).toFixed(2) + 'px,0)' : '';
       }
       function sync() {
         var want = desktop.matches && !reduce.matches;
-        if (want) { on = true; FH = footer.offsetHeight; apply(); }
-        else if (on) { on = false; footer.style.transform = ''; }
+        if (want) {
+          on = true;
+          FH = footer.offsetHeight;
+          cachedMaxScroll = doc.scrollHeight - window.innerHeight;
+          apply();
+        } else if (on) {
+          on = false;
+          footer.style.transform = '';
+        }
       }
       window.addEventListener('scroll', apply, { passive: true });
-      window.addEventListener('resize', sync);
+      window.addEventListener('resize', sync, { passive: true });
       window.addEventListener('load', sync);
+      if ('ResizeObserver' in window && document.body) {
+        new ResizeObserver(function () {
+          if (on) {
+            FH = footer.offsetHeight;
+            cachedMaxScroll = doc.scrollHeight - window.innerHeight;
+            apply();
+          }
+        }).observe(document.body);
+      }
       if (desktop.addEventListener) { desktop.addEventListener('change', sync); reduce.addEventListener('change', sync); }
       sync();
     }

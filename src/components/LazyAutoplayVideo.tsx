@@ -20,7 +20,7 @@ export const LazyAutoplayVideo = ({
   poster,
   sources,
   className,
-  rootMargin = "300px 0px",
+  rootMargin = "650px 0px",
 }: LazyAutoplayVideoProps) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -33,16 +33,20 @@ export const LazyAutoplayVideo = ({
 
     let loaded = false;
     const loadAndPlay = () => {
-      if (loaded) return;
-      loaded = true;
-      for (const s of sources) {
-        const sourceEl = document.createElement("source");
-        sourceEl.src = s.src;
-        sourceEl.type = s.type;
-        el.appendChild(sourceEl);
+      if (!loaded) {
+        loaded = true;
+        el.preload = "auto";
+        for (const s of sources) {
+          const sourceEl = document.createElement("source");
+          sourceEl.src = s.src;
+          sourceEl.type = s.type;
+          el.appendChild(sourceEl);
+        }
+        el.load();
       }
-      el.load();
-      el.play().catch(() => {});
+      if (el.paused) {
+        el.play().catch(() => {});
+      }
     };
 
     if (typeof IntersectionObserver === "undefined") {
@@ -52,9 +56,12 @@ export const LazyAutoplayVideo = ({
 
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          loadAndPlay();
-          observer.disconnect();
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            loadAndPlay();
+          } else if (loaded && !el.paused) {
+            el.pause();
+          }
         }
       },
       { rootMargin }
@@ -74,6 +81,7 @@ export const LazyAutoplayVideo = ({
       playsInline
       preload="none"
       poster={poster}
+      style={{ transform: "translateZ(0)", backfaceVisibility: "hidden" }}
       className={className}
     />
   );
