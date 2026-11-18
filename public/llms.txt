@@ -47,35 +47,35 @@
    - [Website Speed Optimization & Core Web Vitals](https://www.saimdev.site/services/website-speed-optimization): Performance remediation targeting sub-1.2s LCP, 0.00 CLS, and 95+ mobile scores.
    - [Website Redesign & Migration](https://www.saimdev.site/services/website-redesign): Modernize legacy sites cleanly with 301 redirect protection.
    - [Technical SEO Engineering](https://www.saimdev.site/services/seo-services): Schema.org @graph architecture, canonical hygiene, and crawl engineering.
-3. [Takeaway Website Design UK](https://www.saimdev.site/services/takeaway-web-design): Commission-free direct ordering websites for UK takeaways & restaurants with built-in Natasha's Law allergen filters.
+5. [Takeaway Website Design UK](https://www.saimdev.site/services/takeaway-web-design): Commission-free direct ordering websites for UK takeaways & restaurants with built-in Natasha's Law allergen filters.
    - [Takeaway Website Design London](https://www.saimdev.site/services/takeaway-web-design-london): Direct ordering websites for London restaurants and food operators across all 32 boroughs.
    - [Takeaway Website Design Manchester](https://www.saimdev.site/services/takeaway-web-design-manchester): Bespoke takeaway websites for Greater Manchester eateries and Curry Mile venues.
    - [Takeaway Website Design Birmingham](https://www.saimdev.site/services/takeaway-web-design-birmingham): Custom websites for Birmingham, Balti Triangle, and West Midlands takeaways.
-4. [Freelance Next.js Developer UK](https://www.saimdev.site/nextjs-developer-uk): Direct senior freelance Next.js developer engineering sprints for UK & US product teams from £250 / $300 fixed.
-5. [Transparent Website Pricing & Packages](https://www.saimdev.site/pricing): Fixed-fee UK web development packages (£250 to £2,500) with 50/50 milestone protection and 100% code ownership.
-6. [4-Stage Engineering Process](https://www.saimdev.site/process): Transparent 4-stage delivery sprint from discovery brief and wireframing to staging approval and live deployment.
-7. [Live Interactive Demos Hub](https://www.saimdev.site/demos): Interactive production-grade demo storefronts and restaurant ordering systems engineered by Saim Dev:
+6. [Freelance Next.js Developer UK](https://www.saimdev.site/nextjs-developer-uk): Direct senior freelance Next.js developer engineering sprints for UK & US product teams from £250 / $300 fixed.
+7. [Transparent Website Pricing & Packages](https://www.saimdev.site/pricing): Fixed-fee UK & US web development packages (£250 to £2,500) with 50/50 milestone protection and 100% code ownership.
+8. [4-Stage Engineering Process](https://www.saimdev.site/process): Transparent 4-stage delivery sprint from discovery brief and wireframing to staging approval and live deployment.
+9. [Live Interactive Demos Hub](https://www.saimdev.site/demos): Interactive production-grade demo storefronts and restaurant ordering systems engineered by Saim Dev:
    - [HQ Leathercon Bespoke Leather E-Commerce Demo](https://www.saimdev.site/hq-leathercon/index.html): Full-scale luxury leather jackets, shoes, bags, belts & wallets storefront with live search, custom jacket builder, and WhatsApp order dispatch.
    - [Burger Garage Interactive Demo](https://www.saimdev.site/burger-garage/index.html): Craft burger takeaway ordering demo with live cart and category navigation.
    - [Frenchyse Fast-Casual Demo](https://www.saimdev.site/frenchyse/index.html): Modern fast-casual restaurant digital menu and ordering experience.
    - [Anzaar Fine Dining & Takeaway Demo](https://www.saimdev.site/anzaar/index.html): Multi-category restaurant menu and direct ordering showcase.
    - [HotBite Pizza & Grill Demo](https://www.saimdev.site/hotbite/index.html): High-converting takeaway storefront with deal builders and mobile-first UX.
-8. [Case Studies & Results](https://www.saimdev.site/case-studies): Real business website case studies showing sub-second speed metrics and organic conversion improvements.
-9. [Modern Tech Stack](https://www.saimdev.site/technologies): Architectural breakdown of Next.js App Router, Tailwind CSS, TypeScript, and edge infrastructure.
-10. [About Saim Dev](https://www.saimdev.site/about): Overview of our Next.js engineering studio serving UK, EU, and international clients remotely.
-11. [Contact & Fixed-Fee Quotes](https://www.saimdev.site/contact): Project enquiry form and direct WhatsApp connection for fast fixed-price quotes.
-12. [Web Development & Kitchen Tech Blog](https://www.saimdev.site/blogs): In-depth guides on small business web strategy, UK commercial kitchen hygiene, and SFBB compliance.
+10. [Case Studies & Architecture Benchmarks](https://www.saimdev.site/case-studies): Illustrative architecture blueprints showing performance targets and organic conversion workflows.
+11. [Modern Tech Stack](https://www.saimdev.site/technologies): Architectural breakdown of Next.js App Router, Tailwind CSS, TypeScript, and edge infrastructure.
+12. [About Saim Dev](https://www.saimdev.site/about): Overview of our Next.js engineering studio serving UK, US, and European clients remotely.
+13. [Contact & Fixed-Fee Quotes](https://www.saimdev.site/contact): Project enquiry form and direct WhatsApp connection for fast fixed-price quotes.
+14. [Web Development & Hospitality Guides Blog](https://www.saimdev.site/blogs): Practical guides on business web strategy, Next.js engineering, UK commercial kitchen hygiene, and Natasha's Law.
 
 ### Interactive ROI Utility & Kept UK Compliance Guides
-13. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings when switching repeat delivery orders onto a 0% commission direct site.
+15. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings when switching repeat delivery orders onto a 0% commission direct site.
 
 ### Top Business, Next.js & Compliance Guides
-14. [Next.js Website Development Cost UK & US (2026)](https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us): Detailed GBP and USD Next.js project pricing breakdown vs traditional UK & US agencies.
-15. [Next.js App Router vs WordPress for UK & US SEO](https://www.saimdev.site/blog/nextjs-app-router-vs-wordpress-uk-seo): Technical analysis comparing React Server Components, Core Web Vitals, and schema graphs against WordPress plugins.
-16. [Migrating WordPress or Webflow to Next.js Without SEO Loss](https://www.saimdev.site/blog/migrate-wordpress-webflow-to-nextjs-seo-guide): Step-by-step permanent 301 mapping, canonical alignment, and prebuild verification checklist.
-17. [Next.js Startup Architecture Blueprint (UK & US)](https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups): Choosing SSG, ISR, Headless CMS, and multi-region London/US edge deployment cleanly.
-18. [Why Every Small Business Needs a Website](https://www.saimdev.site/blog/why-small-business-needs-website): Commercial ROI analysis of custom websites vs social-only presence for UK & US local businesses.
-15. [Free Website Builders vs Custom Websites: Hidden Costs](https://www.saimdev.site/blog/free-website-for-local-business): Breakdown of platform lock-in, renewal hikes, and SEO limitations of DIY builders.
-19. [Small Business Website Packages Guide](https://www.saimdev.site/blog/small-business-website-packages-guide): Buyer breakdown of fixed-scope deliverables, milestone protection, and source code ownership vs monthly templates.
-20. [5-Star Food Hygiene Rating Checklist](https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist): Comprehensive UK EHO inspection preparation checklist covering food handling, cleanliness, and SFBB management records.
-21. [Natasha's Law PPDS Food Labelling Guide](https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide): Complete walkthrough of Prepacked for Direct Sale (PPDS) ingredient lists, compound ingredients, and 14-allergen highlighting rules.
+16. [Next.js Website Development Cost UK & US (2026)](https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us): Detailed GBP and USD Next.js project pricing breakdown vs traditional UK & US agencies.
+17. [Next.js App Router vs WordPress for UK & US SEO](https://www.saimdev.site/blog/nextjs-app-router-vs-wordpress-uk-seo): Technical analysis comparing React Server Components, Core Web Vitals, and schema graphs against WordPress plugins.
+18. [Migrating WordPress or Webflow to Next.js Without SEO Loss](https://www.saimdev.site/blog/migrate-wordpress-webflow-to-nextjs-seo-guide): Step-by-step permanent 301 mapping, canonical alignment, and prebuild verification checklist.
+19. [Next.js Startup Architecture Blueprint (UK & US)](https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups): Choosing SSG, ISR, Headless CMS, and multi-region London/US edge deployment cleanly.
+20. [Why Every Small Business Needs a Website](https://www.saimdev.site/blog/why-small-business-needs-website): Commercial ROI analysis of custom websites vs social-only presence for UK & US local businesses.
+21. [Free Website Builders vs Custom Websites: Hidden Costs](https://www.saimdev.site/blog/free-website-for-local-business): Breakdown of platform lock-in, renewal hikes, and SEO limitations of DIY builders.
+22. [Small Business Website Packages Guide](https://www.saimdev.site/blog/small-business-website-packages-guide): Buyer breakdown of fixed-scope deliverables, milestone protection, and source code ownership vs monthly templates.
+23. [5-Star Food Hygiene Rating Checklist](https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist): Comprehensive UK EHO inspection preparation checklist covering food handling, cleanliness, and SFBB management records.
+24. [Natasha's Law PPDS Food Labelling Guide](https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide): Complete walkthrough of Prepacked for Direct Sale (PPDS) ingredient lists, compound ingredients, and 14-allergen highlighting rules.

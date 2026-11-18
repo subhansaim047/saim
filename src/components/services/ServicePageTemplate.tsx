@@ -19,6 +19,11 @@ import {
 import { SiteFooter } from "@/components/SiteFooter";
 import { RhHeader } from "@/components/rh/RhHeader";
 import {
+  EngineeringMediaFigure,
+  EngineeringVerificationBadge,
+  ServiceFitMatrix,
+} from "@/components/ui/EditorialVisualPack";
+import {
   RhBentoWorkGrid,
   RhHeroPinned,
   RhOdometerNumber,
@@ -419,6 +424,35 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                 </div>
               ))}
             </div>
+
+            {(() => {
+              const isMigration = ["website-redesign", "website-clone", "wordpress-headless-cms"].includes(data.slug);
+              const isCostStack = ["ecommerce-development", "ecommerce-shopify", "landing-pages-cro", "business-websites"].includes(data.slug);
+              const figSrc = isMigration
+                ? "/images/guides/zero-loss-migration-flow.webp"
+                : isCostStack
+                ? "/images/guides/nextjs-tco-comparison.webp"
+                : "/images/guides/nextjs-edge-architecture.webp";
+              const figAlt = isMigration
+                ? `${data.serviceName} zero-loss edge migration architecture visualization`
+                : isCostStack
+                ? `${data.serviceName} performance and total cost efficiency visual`
+                : `${data.serviceName} edge CDN architecture diagram`;
+              const figCaption = isMigration
+                ? `Every ${data.serviceName} sprint maps legacy URLs onto clean Next.js 16 routing with single-hop 301 safety and full Schema.org continuity.`
+                : isCostStack
+                ? `${data.serviceName} removes recurring app bloat and monthly builder taxes with owned TypeScript components built around speed and conversion.`
+                : `Global edge routing pairs React 19 Server Components with London and US CDN nodes for responsive mobile interactions and crawl clarity.`;
+              return (
+                <EngineeringMediaFigure
+                  src={figSrc}
+                  alt={figAlt}
+                  caption={figCaption}
+                  tag={`${data.serviceName} · Visual Architecture`}
+                  theme="dark"
+                />
+              );
+            })()}
           </div>
         </section>
 
@@ -659,6 +693,25 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                 </div>
               </div>
             )}
+
+            <ServiceFitMatrix
+              title={`Is ${data.serviceName} the Right Fit for Your Business?`}
+              idealFor={[
+                `UK, US, or European brands needing ${data.serviceName} delivered cleanly on written fixed milestones.`,
+                "Founders replacing slow WordPress themes, heavy SaaS builders, or expensive monthly agency retainers.",
+                "Teams wanting full GitHub repository custody, strict TypeScript hygiene, and Schema.org structured data.",
+              ]}
+              notFor={[
+                "Businesses wanting drag-and-drop DIY template editors without structured software engineering.",
+                "Projects demanding unverified overnight promises or black-hat SEO link schemes.",
+              ]}
+              theme="dark"
+            />
+
+            <EngineeringVerificationBadge
+              contextLabel={`All ${data.serviceName} builds undergo pre-launch CI type, canonical, mobile 390px, and schema verification`}
+              theme="dark"
+            />
           </div>
         </section>
 

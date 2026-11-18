@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { BlogSiloNav } from "@/components/blog/BlogSiloNav";
 import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
+import { ArchitecturalDiagram, EngineeringMediaFigure, EngineeringVerificationBadge } from "@/components/ui/EditorialVisualPack";
 
 const faqs = [
   {
@@ -28,8 +29,8 @@ const faqs = [
     a: "You can view our live portfolio and case studies at www.saimdev.site. Our team has been building business websites since 2020. There is no payment for the included design and development work, and before starting we provide a written project summary covering pages, timeline, domain, hosting, and ownership.",
   },
   {
-    q: "What happens after the free website is delivered?",
-    a: "Nothing, unless you want something. If you'd like additional pages, SEO work, or ongoing maintenance in the future, we can discuss that — or review our transparent pricing — with zero obligation. The starter website is yours, complete, with full Git ownership.",
+    q: "What happens after we launch the free starter website?",
+    a: "Nothing changes unless your business asks for new features. If you want additional service pages, SEO sprints, or CMS workflows later, explore our fixed pricing with zero ongoing obligations. You own your starter website and full Git code cleanly from launch day.",
   },
 ];
 
@@ -85,7 +86,7 @@ export const BlogPost2Page = () => {
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>return to the Saim Dev blog</span>
+          <span>Return to the Saim Dev Blog</span>
         </Link>
         <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={28} height={28} decoding="async" className="w-7 h-7 rounded-full object-cover border border-white/15" />
@@ -138,7 +139,7 @@ export const BlogPost2Page = () => {
           <div className="rounded-2xl border border-primary/25 bg-primary/5 p-6 mb-8">
             <p className="text-xs font-bold tracking-widest uppercase text-primary mb-3 flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-primary" />
-              Key Takeaways for UK Business Owners
+              Key Takeaways for Local &amp; Growth Business Owners
             </p>
             <ul className="space-y-2.5 text-xs sm:text-sm text-white/80">
               <li className="flex items-start gap-2">
@@ -183,7 +184,7 @@ export const BlogPost2Page = () => {
           <section id="section-1" className="mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">Why We Offer 5 Free Starter Builds</h2>
             <p className="text-white/65 text-base mb-4">
-              Most local businesses we speak with already know they need a better website. The conversation usually goes the same way: they agree their existing site feels outdated, they know it is costing them enquiries, and they have put off a rebuild because they are unsure about the cost, the timeline, or whether it will actually bring new customers.
+              Many local businesses we speak with already want a stronger online presence. Owners agree their older site feels dated and costs them enquiries. Still, unclear pricing and confusing timelines delay action.
             </p>
             <p className="text-white/65 text-base mb-4">
               So we decided to remove all three barriers at once for qualified starter builds — alongside our{" "}
@@ -410,11 +411,26 @@ export const BlogPost2Page = () => {
               There's no reason not to claim this. You get a professionally built website at no cost. The only thing at stake is your time — a few messages and some basic business information.
             </p>
             <p className="text-white/65 text-base">
-              In return, you get an online presence that works for your business 24 hours a day, positions you professionally, and gives customers a reason to choose you over a competitor who offers no better service — just a better first impression.
+              In return, your business owns a 24/7 digital asset that builds instant credibility. Visitors choose you over competitors who rely purely on generic social pages.
             </p>
           </section>
 
         </motion.article>
+
+        <EngineeringMediaFigure
+          src="/images/guides/nextjs-tco-comparison.webp"
+          alt="Bespoke starter Next.js site compared visually against bloated subscription builders"
+          caption="Avoid locked subdomains and recurring builder upgrades — build equity directly on your own custom domain from day one."
+          tag="Starter Ownership Model"
+          theme="dark"
+        />
+
+        <ArchitecturalDiagram kind="tco" theme="dark" />
+
+        <EngineeringVerificationBadge
+          contextLabel="Starter slots follow the exact same TypeScript quality, schema hygiene, and Git custody standards as our flagship builds"
+          theme="dark"
+        />
 
         {/* ── CTA — Claim Your Slot ── */}
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.3 }} className="rounded-2xl border border-primary/20 bg-primary/5 p-7 mb-6 text-center">
@@ -486,7 +502,7 @@ export const BlogPost2Page = () => {
         <div className="text-center">
           <Link href="/blogs" className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
             <ArrowLeft className="w-4 h-4" />
-            <span>return to the Saim Dev blog</span>
+            <span>Return to the Saim Dev Blog</span>
           </Link>
         </div>
       </main>

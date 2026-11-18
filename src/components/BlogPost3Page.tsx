@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { BlogSiloNav } from "@/components/blog/BlogSiloNav";
 import { ArrowLeft, ArrowRight, Share2, ChevronDown, ChevronUp, CheckCircle, Smartphone, Zap, Search, Layout } from "lucide-react";
+import { ArchitecturalDiagram, EngineeringMediaFigure, EngineeringVerificationBadge } from "@/components/ui/EditorialVisualPack";
 
 const faqs = [
   {
@@ -52,7 +53,7 @@ export const BlogPost3Page = () => {
           className="flex items-center gap-2 text-sm font-semibold text-white/70 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>return to the Saim Dev blog</span>
+          <span>Return to the Saim Dev Blog</span>
         </Link>
         <div className="flex items-center gap-3">
           <button className="flex items-center gap-1.5 text-xs font-semibold text-white/50 hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-full cursor-pointer">
@@ -86,8 +87,17 @@ export const BlogPost3Page = () => {
             Small Business Website Packages Guide: <span className="text-primary">What Fixed Scopes Actually Include</span>
           </h1>
           <div className="p-4 rounded-xl border border-primary/20 bg-primary/5 text-white/90 text-sm sm:text-base leading-relaxed mb-6">
-            <strong>Direct Answer:</strong> A reliable fixed-price small business website package should guarantee bespoke Next.js code, mobile-first layout clarity, Schema.org local SEO setup, transparent 50/50 milestone protection, and full GitHub repository ownership — without hidden monthly retainers or bloated WordPress plugins. Compare all <Link href="/pricing" className="underline text-primary font-semibold">published package tiers here</Link>.
+            <strong>Direct Answer:</strong> A reliable fixed-price small business website package delivers bespoke Next.js code, mobile-first clarity, and Schema.org local SEO setup upfront. It also enforces transparent 50/50 milestone protection and full GitHub repository ownership with zero monthly retainers. Compare all <Link href="/pricing" className="underline text-primary font-semibold">published package tiers here</Link>.
           </div>
+
+          <EngineeringMediaFigure
+            src="/images/guides/nextjs-tco-comparison.webp"
+            alt="Fixed-scope Next.js package structure compared against bloated agency retainers"
+            caption="Fixed-scope engineering eliminates monthly CMS tax and plugin bloat while handing full source ownership to UK, US, and European business owners."
+            tag="Package Scope Comparison"
+            theme="dark"
+            priority={true}
+          />
 
           <div className="flex flex-wrap items-center justify-between gap-4 py-4 px-5 rounded-xl border border-white/10 bg-white/[0.02] mb-6 text-xs text-white/70">
             <div className="flex items-center gap-3">
@@ -110,7 +120,7 @@ export const BlogPost3Page = () => {
           <div className="rounded-2xl border border-primary/25 bg-primary/5 p-6 mb-8">
             <p className="text-xs font-bold tracking-widest uppercase text-primary mb-3 flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-primary" />
-              Key Takeaways for UK Business Owners
+              Key Takeaways for UK, US &amp; European Business Owners
             </p>
             <ul className="space-y-2.5 text-xs sm:text-sm text-white/80">
               <li className="flex items-start gap-2">
@@ -276,6 +286,11 @@ export const BlogPost3Page = () => {
             <p className="text-white/70 text-base leading-relaxed">
               Explore our full <Link href="/pricing" className="text-primary hover:underline">transparent pricing packages</Link> or <Link href="/services/website-development" className="text-primary hover:underline">Next.js website development specifications</Link> to see the exact deliverables per tier.
             </p>
+            <ArchitecturalDiagram kind="tco" theme="dark" />
+            <EngineeringVerificationBadge
+              contextLabel="Published fixed-milestone terms aligned with active GBP & USD studio tiers"
+              theme="dark"
+            />
           </section>
 
           {/* Section 5 - FAQ */}
@@ -372,7 +387,7 @@ export const BlogPost3Page = () => {
         <div className="text-center mt-6">
           <Link href="/blogs" className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
             <ArrowLeft className="w-4 h-4" />
-            <span>return to the Saim Dev blog</span>
+            <span>Return to the Saim Dev Blog</span>
           </Link>
         </div>
       </div>

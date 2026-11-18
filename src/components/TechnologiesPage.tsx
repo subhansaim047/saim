@@ -135,8 +135,8 @@ export const TechnologiesPage = () => {
             num: "03",
             title: "Core Web Vitals & Technical SEO",
             description:
-              "Guaranteed 90+ Lighthouse scores, automated sitemaps, canonical hygiene, and full Schema.org structured data.",
-            tags: ["LCP < 0.8s", "CLS 0.00", "JSON-LD"],
+              "Engineered to target 95+ Lighthouse scores alongside automated XML sitemaps, strict canonical hygiene, and full Schema.org graphs.",
+            tags: ["LCP <= 2.5s Target", "CLS 0.00", "JSON-LD"],
             href: "/case-studies",
           },
         ]}

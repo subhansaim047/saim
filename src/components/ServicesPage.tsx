@@ -163,10 +163,10 @@ const detailedServices: ServiceDetail[] = [
     description:
       "Transform outdated, slow legacy websites into ultra-fast modern Next.js flagships. We map all existing URLs with 301 redirects while elevating your brand aesthetic with clear milestone staging.",
     benefits: [
-      "100% SEO, backlink, and URL ranking preservation guarantee",
+      "Complete URL, metadata, canonical, and 301 redirect parity checks",
       "Eliminate slow loading times and outdated visual branding",
       "Migrate away from fragile WordPress/Wix to Next.js",
-      "Strict side-by-side comparison before any payment",
+      "Strict side-by-side staging review before final milestone approval",
       "Zero monthly agency maintenance retainers",
     ],
     deliverables: [
@@ -183,14 +183,14 @@ const detailedServices: ServiceDetail[] = [
     title: "Website Speed & Core Web Vitals Optimization",
     price: "From £199",
     dedicatedLink: "/services/website-speed-optimization",
-    badge: "95+ PageSpeed",
+    badge: "95+ Target CWV",
     description:
-      "Sluggish websites kill conversion rates and harm your Google rankings. We permanently resolve LCP, INP, and CLS bottlenecks to guarantee a 95+ Google PageSpeed score — pay only after verified performance improvement.",
+      "Sluggish websites kill conversion rates and drag down search visibility. We fix LCP, INP, and CLS bottlenecks to target 95+ Google PageSpeed scores — payable only after verified audit improvement.",
     benefits: [
-      "Sub-second mobile load times passing Core Web Vitals",
-      "Lower mobile bounce rates and higher conversion rates",
-      "Pay Only After Verified Results (Google PageSpeed verified)",
-      "Zero collateral damage: all forms, checkouts and trackers intact",
+      "Fast mobile load speeds tuned for Core Web Vitals",
+      "Lower mobile bounce rates and higher enquiry conversion",
+      "Milestone release tied to verified PageSpeed audit deltas",
+      "Zero collateral damage: forms, checkouts, and analytics stay intact",
       "One-time architectural fix with zero ongoing fees",
     ],
     deliverables: [

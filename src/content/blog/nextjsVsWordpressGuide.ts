@@ -8,8 +8,27 @@ export const NEXTJS_VS_WORDPRESS_GUIDE: NextjsGuideData = {
   directAnswer:
     "Next.js 16 App Router consistently outperforms standard plugin-heavy WordPress builds on mobile Core Web Vitals, clean HTML output, JSON-LD @graph precision, and crawl efficiency because routes pre-render into static or edge-cached markup without executing PHP queries and 30+ plugin scripts per request.",
   publishedDisplay: "Nov 16, 2026",
-  updatedDisplay: "Nov 16, 2026",
+  updatedDisplay: "Nov 18, 2026",
   readTime: "11 min read",
+  heroFigure: {
+    src: "/images/guides/nextjs-edge-architecture.webp",
+    alt: "Distributed Next.js edge nodes serving compiled HTML globally without database latency",
+    caption: "Edge-cached static and React Server Component nodes route UK, US, and European traffic in one fast round-trip without PHP or MySQL worker delays.",
+    tag: "Edge Architecture Diagram",
+  },
+  diagramKind: "rendering",
+  fitComparison: {
+    title: "Next.js App Router vs WordPress: Quick Decision Matrix",
+    idealFor: [
+      "Commercial sites competing on mobile Core Web Vitals (LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1).",
+      "Businesses eliminating plugin vulnerabilities, SQL injections, and bloated Elementor markup.",
+      "Content teams ready to combine fast frontends with Sanity CMS or clean Headless WordPress.",
+    ],
+    notFor: [
+      "Micro-blogs or hobby sites relying strictly on free shared hosting cPanel installers.",
+      "Organizations unwilling to move away from tightly coupled legacy WooCommerce PHP plugins.",
+    ],
+  },
   keyTakeaways: [
     "Google rewards fast, reliable mobile page delivery (LCP <= 2.5s, INP <= 200ms, CLS <= 0.1) — areas where stacked WordPress page builders routinely struggle.",
     "Next.js Server Components execute data fetching and component rendering on the server or at build time, drastically shrinking client JavaScript payloads.",

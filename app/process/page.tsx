@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, GitBranch, RefreshCw } from "lucide-react";
 import { SiteFooter } from "../../src/components/SiteFooter";
 import { RhHeader } from "../../src/components/rh/RhHeader";
+import { ArchitecturalDiagram, EngineeringVerificationBadge } from "@/components/ui/EditorialVisualPack";
 import {
   RhHeroPinned,
   RhProcessCarousel,
@@ -252,8 +253,8 @@ export default function ProcessPage() {
             title: "Testing, Launch & Complete Handover",
             description:
               "Cross-browser QA, Core Web Vitals verification (95+), DNS/SSL cutover, Google Search Console indexing, and GitHub IP transfer.",
-            deliverables: [
-              "99+ Lighthouse performance check",
+              deliverables: [
+              "Target 95+ Lighthouse Core Web Vitals QA",
               "Custom domain, SSL & CDN cache",
               "100% GitHub repo + 30d warranty",
             ],
@@ -363,11 +364,17 @@ export default function ProcessPage() {
                   Post-Launch Warranty
                 </h3>
                 <p className="text-[14px] text-[#595959] leading-[1.6]">
-                  14 to 30 days of direct senior engineering support after go-live to guarantee zero regressions across traffic spikes.
+                  We provide 14 to 30 days of direct senior engineering support after go-live so your UK, US, or EU site handles traffic cleanly.
                 </p>
               </div>
             </div>
           </div>
+
+          <ArchitecturalDiagram kind="sprint" theme="light" />
+          <EngineeringVerificationBadge
+            contextLabel="Every stage completes with a verifiable staging preview or CI check prior to invoice release"
+            theme="light"
+          />
         </div>
       </section>
 

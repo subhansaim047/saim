@@ -289,7 +289,7 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-7">
                     {[
                       "Up to 5 custom Next.js pages",
-                      "Sub-second page speeds (99+ CWV)",
+                      "Engineered for 95+ Core Web Vitals",
                       "Interactive quote or booking flow",
                       "Local SEO metadata & JSON-LD",
                       "100% GitHub repo ownership",

@@ -307,6 +307,61 @@ const imageSitemapEntries = [
         loc: "https://www.saimdev.site/og-image.png",
         title: "Small Business Website Packages Guide UK & US",
         caption: "Buyer comparison of what a fixed-price custom Next.js website package includes without agency retainers"
+      },
+      {
+        loc: "https://www.saimdev.site/images/guides/nextjs-tco-comparison.webp",
+        title: "24-Month Website Total Cost Comparison Visual",
+        caption: "Visual contrast comparing streamlined fixed-scope Next.js builds against recurring CMS retainer stacks"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us",
+    images: [
+      {
+        loc: "https://www.saimdev.site/images/guides/nextjs-tco-comparison.webp",
+        title: "Next.js Development Cost Breakdown UK & US Visual",
+        caption: "Visual comparison of 24-month Next.js total cost of ownership versus WordPress retainers"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/blog/nextjs-app-router-vs-wordpress-uk-seo",
+    images: [
+      {
+        loc: "https://www.saimdev.site/images/guides/nextjs-edge-architecture.webp",
+        title: "Next.js 16 Edge CDN Architecture Diagram",
+        caption: "Distributed Next.js server rendering nodes across UK London and US East edge PoPs"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/blog/migrate-wordpress-webflow-to-nextjs-seo-guide",
+    images: [
+      {
+        loc: "https://www.saimdev.site/images/guides/zero-loss-migration-flow.webp",
+        title: "Zero-Loss WordPress & Webflow to Next.js Migration Flow",
+        caption: "Single-hop 301 edge routing preserving backlinks and Google indexing during platform migration"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups",
+    images: [
+      {
+        loc: "https://www.saimdev.site/images/guides/senior-engineering-workspace.webp",
+        title: "Saim Dev Next.js Engineering Studio Workspace",
+        caption: "Senior Next.js architecture and real-time Core Web Vitals optimization environment"
+      }
+    ]
+  },
+  {
+    url: "https://www.saimdev.site/about",
+    images: [
+      {
+        loc: "https://www.saimdev.site/images/guides/senior-engineering-workspace.webp",
+        title: "Saim Dev Engineering Studio",
+        caption: "Independent Next.js 16 development studio serving UK, US, and European companies"
       }
     ]
   }

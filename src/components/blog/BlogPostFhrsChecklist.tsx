@@ -201,7 +201,7 @@ export const BlogPostFhrsChecklist: React.FC = () => {
               <span>Direct Answer: How EHOs Score a 5-Star Food Hygiene Rating</span>
             </div>
             <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
-              Under the UK Food Hygiene Rating Scheme (FHRS), an unannounced inspection by an Environmental Health Officer (EHO) evaluates three areas: <strong>(1) Food Handling &amp; Temperatures</strong>, <strong>(2) Kitchen Cleanliness &amp; Structure</strong>, and <strong>(3) Confidence in Management (SFBB/HACCP diary logs)</strong>. To achieve a 5-star rating, your business must score between 0 and 5 penalty points in every single pillar. A single failure in management records will instantly cap your rating at 3 or lower, regardless of how clean your kitchen surfaces are.
+              Under the UK Food Hygiene Rating Scheme (FHRS), an unannounced Environmental Health Officer (EHO) inspects three statutory pillars: <strong>(1) Food Handling &amp; Temperatures</strong>, <strong>(2) Kitchen Cleanliness &amp; Structure</strong>, and <strong>(3) Confidence in Management</strong> (SFBB/HACCP diary logs). To earn a 5-star rating, a kitchen must score between 0 and 5 penalty points in every pillar. A weak management log caps your rating at 3 or lower, even when kitchen surfaces sparkle.
             </p>
           </div>
 
@@ -215,7 +215,7 @@ export const BlogPostFhrsChecklist: React.FC = () => {
             </div>
 
             <p className="text-xs sm:text-sm text-white/70">
-              Unlike consumer review sites, council inspection scores are calculated using penalty points (where 0 points is a perfect score). Here is what each star tier represents and how it directly impacts customer orders:
+              Unlike consumer review apps, local authorities score kitchens using penalty points (where 0 penalty points represents zero contraventions). Review what each star tier signals and how it shapes customer orders:
             </p>
 
             {/* Desktop & Mobile Card/Table Grid */}
@@ -270,7 +270,7 @@ export const BlogPostFhrsChecklist: React.FC = () => {
                 The 3 Core EHO Inspection Pillars Explained
               </h2>
               <p className="text-xs sm:text-sm text-white/70 mt-1">
-                Your final score is calculated across three distinct legal criteria. A major failure in any single pillar acts as a hard ceiling on your maximum score:
+                Inspectors tally penalty points independently across three legal criteria. A serious contravention in any single area puts a hard ceiling on your overall rating:
               </p>
             </div>
 

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { BlogSiloNav } from "@/components/blog/BlogSiloNav";
+import { EngineeringMediaFigure, EngineeringVerificationBadge } from "@/components/ui/EditorialVisualPack";
 
 import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, XCircle, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -30,7 +31,7 @@ const faqs = [
   },
   {
     q: "What's the most important thing a small business website needs?",
-    a: "A clear, single call-to-action on every key page. Most small business websites fail because they confuse visitors. Your site must immediately answer: what do you offer, who is it for, and what should I do next? Everything else supports those three answers.",
+    a: "A clear, single call-to-action on every key page. Most small business websites fail because they confuse visitors. Your site must answer three questions immediately: what do you offer, who is it for, and how should visitors contact you next?",
   },
 ];
 
@@ -126,7 +127,7 @@ export const BlogPost1Page = () => {
           className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>return to the Saim Dev blog</span>
+          <span>Return to the Saim Dev Blog</span>
         </Link>
         <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={28} height={28} decoding="async" className="w-7 h-7 rounded-full object-cover border border-white/15" />
@@ -179,7 +180,7 @@ export const BlogPost1Page = () => {
           <div className="rounded-2xl border border-primary/25 bg-primary/5 p-6 mb-8">
             <p className="text-xs font-bold tracking-widest uppercase text-primary mb-3 flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-primary" />
-              Key Takeaways for UK Business Owners
+              Key Takeaways for UK, US &amp; European Business Owners
             </p>
             <ul className="space-y-2.5 text-xs sm:text-sm text-white/80">
               <li className="flex items-start gap-2">
@@ -329,7 +330,7 @@ export const BlogPost1Page = () => {
             <div className="rounded-2xl border border-primary/15 bg-primary/5 p-6 mb-2">
               <p className="text-[10px] font-bold tracking-widest uppercase text-primary/60 mb-3">Real Example</p>
               <p className="text-white/75 text-sm leading-relaxed">
-                A plumbing company in a mid-sized city relied entirely on word-of-mouth and a basic Facebook page for three years. After launching a professionally built website with a service area page, a contact form, and basic local SEO, the owner reported receiving seven to ten new enquiries per month directly from Google — without running a single paid ad. Most came in during evenings and weekends when the office was closed.
+                A regional plumbing firm relied purely on word-of-mouth and Facebook for three years. After launching an owned website with service area pages and local schema, the owner earned seven to ten organic Google enquiries monthly without paid ads. Most leads arrived during evenings when phones went unanswered.
               </p>
             </div>
           </section>
@@ -400,7 +401,7 @@ export const BlogPost1Page = () => {
                 },
                 {
                   type: "Independent Hair Salon",
-                  story: "A hair salon with 12 years of loyal clients had no website and managed bookings through phone calls only. After building a site with an integrated booking system and a page optimised for local search terms, 34% of their new client bookings in the first quarter came directly through the website — many from people who had never heard of the salon before finding it on Google.",
+                  story: "A salon with 12 years of returning guests operated without a website, booking strictly over phone calls. After adding integrated online booking and dedicated treatment pages, 34% of first-quarter new clients booked straight from Google Search.",
                 },
                 {
                   type: "Home Cleaning Service",
@@ -506,6 +507,19 @@ export const BlogPost1Page = () => {
 
         </motion.article>
 
+        <EngineeringMediaFigure
+          src="/images/guides/nextjs-edge-architecture.webp"
+          alt="High-speed Next.js edge node network serving custom business websites across UK and US"
+          caption="Modern custom websites run cleanly at global CDN edges, loading swiftly over 4G mobile networks while keeping full domain and source control in your hands."
+          tag="Owned Web Asset Architecture"
+          theme="dark"
+        />
+
+        <EngineeringVerificationBadge
+          contextLabel="Verified commercial insights aligned with our UK, US & European small-business engineering standards"
+          theme="dark"
+        />
+
         {/* ── Author Card ── */}
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.3 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-6">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={56} height={56} decoding="async" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
@@ -578,7 +592,7 @@ export const BlogPost1Page = () => {
         <div className="text-center">
           <Link href="/blogs" className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors mx-auto cursor-pointer">
             <ArrowLeft className="w-4 h-4" />
-            <span>return to the Saim Dev blog</span>
+            <span>Return to the Saim Dev Blog</span>
           </Link>
         </div>
       </main>

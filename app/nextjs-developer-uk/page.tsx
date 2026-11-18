@@ -4,6 +4,11 @@ import { CheckCircle2, ShieldCheck, Zap, X } from "lucide-react";
 import { FooterSection } from "@/components/FooterSection";
 import { RhHeader } from "@/components/rh/RhHeader";
 import {
+  ArchitecturalDiagram,
+  EngineeringMediaFigure,
+  EngineeringVerificationBadge,
+} from "@/components/ui/EditorialVisualPack";
+import {
   RhBentoWorkGrid,
   RhHeroPinned,
   RhProcessCarousel,
@@ -392,6 +397,19 @@ export default function NextJsDeveloperUkPage() {
                 <div className="text-[12px] text-[#CBCBCB]">From $300 USD Fixed Sprints</div>
               </div>
             </div>
+
+            <EngineeringMediaFigure
+              src="/images/guides/nextjs-edge-architecture.webp"
+              alt="Distributed Next.js edge CDN routing architecture for UK and US product teams"
+              caption="Senior Next.js 16 sprints deploy cleanly onto global London and US edge networks with zero monthly plugin maintenance retainers."
+              tag="Freelance Sprint Architecture"
+              theme="light"
+            />
+            <ArchitecturalDiagram kind="sprint" theme="light" />
+            <EngineeringVerificationBadge
+              contextLabel="Direct TypeScript PRs and production builds verified with automated CI checks before launch"
+              theme="light"
+            />
           </div>
         </section>
 
@@ -549,11 +567,11 @@ export default function NextJsDeveloperUkPage() {
                     <span className="text-[12px] font-normal text-[#595959]">one-time</span>
                   </div>
                   <p className="text-[13px] text-[#595959] mb-6 leading-[1.55]">
-                    Complete 5-page digital presence for UK clinics, tradesmen, consultants, and boutiques.
+                    Complete 5-page digital presence for UK &amp; US clinics, consultants, trades, and boutiques ($500 USD).
                   </p>
                   <ul className="space-y-2.5 text-[13px] text-[#333333] mb-8">
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> Up to 5 Custom Pages</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> Local UK SEO &amp; Schema Markup</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> UK &amp; US Technical SEO Schema</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> PECR Consent Banner Ready</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#0D0D0D] shrink-0" /> 5–7 Days Turnaround</li>
                   </ul>
@@ -575,7 +593,7 @@ export default function NextJsDeveloperUkPage() {
                       Full Scale
                     </span>
                     <span className="bg-[#BAFF00] text-[#0D0D0D] text-[10px] font-mono-tech font-semibold px-2.5 py-0.5 uppercase">
-                      Best Value UK
+                      Most Popular · $999 USD
                     </span>
                   </div>
                   <h3 className="text-[22px] font-medium tracking-[-0.02em] text-white mt-1 mb-3">
@@ -613,7 +631,7 @@ export default function NextJsDeveloperUkPage() {
           <div className="max-w-[1168px] mx-auto">
             <div data-gsap-reveal="" className="max-w-[720px] mb-10">
               <span className="text-[11px] font-mono-tech uppercase tracking-[0.35em] text-[#BAFF00] block mb-3">
-                08 / UK BUSINESS QUESTIONS
+                08 / UK &amp; US ENGINEERING QUESTIONS
               </span>
               <h2 className="text-[32px] sm:text-[42px] font-medium tracking-[-0.04em] leading-[1.08] text-white">
                 Frequently Asked Questions

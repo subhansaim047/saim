@@ -8,8 +8,27 @@ export const NEXTJS_STARTUP_GUIDE: NextjsGuideData = {
   directAnswer:
     "For UK and US startups launching commercial websites or SaaS marketing flagships, pairing Next.js 16 App Router (Server Components + Static/ISR hybrid rendering), TypeScript, Tailwind CSS tokens, edge CDN caching across London (lhr1) and Virginia (iad1), and unified Schema.org graphs creates an ownable growth engine without enterprise agency retainers.",
   publishedDisplay: "Nov 16, 2026",
-  updatedDisplay: "Nov 16, 2026",
+  updatedDisplay: "Nov 18, 2026",
   readTime: "10 min read",
+  heroFigure: {
+    src: "/images/guides/senior-engineering-workspace.webp",
+    alt: "Senior engineer workstation inspecting clean Next.js App Router performance telemetry and dark UI layouts",
+    caption: "Clean Next.js 16 repositories let growing UK and US product teams ship landing routes, interactive tools, and docs cleanly without waiting on external retainers.",
+    tag: "Production Engineering Setup",
+  },
+  diagramKind: "sprint",
+  fitComparison: {
+    title: "Architecture Alignment for Seed to Series-B Founders",
+    idealFor: [
+      "UK, US, and European startups targeting transatlantic buyers from one high-authority domain.",
+      "SaaS teams decoupling public SEO marketing routes from authenticated dashboard applications.",
+      "Founders shipping interactive ROI tools, documentation hubs, and dual GBP/USD conversion flows.",
+    ],
+    notFor: [
+      "Teams splitting identical English copy across multiple regional ccTLDs without distinct regional teams.",
+      "Founders seeking experimental single-page React CSR frameworks without SSR SEO support.",
+    ],
+  },
   keyTakeaways: [
     "Separate heavy commercial content (SSG/ISR) from authenticated product workflows so marketing pages stay fast, indexable, and decoupled from SaaS database load.",
     "Serve both UK and US buyers cleanly from one global Next.js build by displaying dual GBP (£) / USD ($) clarity and deploying to global edge regions.",

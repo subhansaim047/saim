@@ -8,8 +8,27 @@ export const NEXTJS_MIGRATION_GUIDE: NextjsGuideData = {
   directAnswer:
     "Migrating an established UK or US site from WordPress or Webflow to Next.js preserves and often strengthens organic rankings when every legacy URL gets a single-hop permanent 301 redirect in next.config.mjs and vercel.json, self-referencing canonicals match the new hierarchy, XML sitemaps exclude redirecting URLs, and automated prebuild scripts catch regressions before DNS switchover.",
   publishedDisplay: "Nov 16, 2026",
-  updatedDisplay: "Nov 16, 2026",
+  updatedDisplay: "Nov 18, 2026",
   readTime: "12 min read",
+  heroFigure: {
+    src: "/images/guides/zero-loss-migration-flow.webp",
+    alt: "Seamless light bridge transferring indexed website equity from legacy blocks into clean Next.js architecture",
+    caption: "A clean migration preserves 100% of backlink authority and URL rankings through 1-hop 301 edge redirects and strict canonical parity before DNS cutover.",
+    tag: "Zero-Loss Migration Map",
+  },
+  diagramKind: "migration",
+  fitComparison: {
+    title: "When to Migrate to Next.js Immediately vs Wait",
+    idealFor: [
+      "Established WordPress or Webflow sites losing rankings to Core Web Vitals failures or mobile lag.",
+      "Scaling startups hitting Webflow CMS item limits, localization paywalls, or slow page builders.",
+      "Rebrands needing strict 1-hop 301 redirect enforcement and unified Schema.org graphs.",
+    ],
+    notFor: [
+      "Sites changing domain brand names AND rewriting every URL topic simultaneously without SEO buffer.",
+      "Campaign microsites scheduled to expire within 30 days.",
+    ],
+  },
   keyTakeaways: [
     "Export every indexed URL from Google Search Console, sitemap.xml, and Analytics before touching designs so zero ranking URLs become 404 errors.",
     "Configure clean permanent HTTP redirects at the edge (next.config.mjs + vercel.json) with maximum 1 hop directly to canonical destinations.",

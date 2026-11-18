@@ -8,8 +8,27 @@ export const NEXTJS_COST_GUIDE: NextjsGuideData = {
   directAnswer:
     "Custom Next.js website development ranges from £250–£1,450 ($300–$1,850 USD) through direct senior engineering studios with written fixed scope, compared with £4,000–£15,000+ at traditional UK agencies or $6,000–$25,000+ across US consultancies. Total ownership cost drops significantly once recurring CMS plugin fees and monthly retainers are removed.",
   publishedDisplay: "Nov 16, 2026",
-  updatedDisplay: "Nov 16, 2026",
+  updatedDisplay: "Nov 18, 2026",
   readTime: "10 min read",
+  heroFigure: {
+    src: "/images/guides/nextjs-tco-comparison.webp",
+    alt: "Streamlined fixed-scope Next.js architecture compared with stacked legacy CMS overhead",
+    caption: "Visual comparison: legacy page-builder stacks accumulate recurring plugin & maintenance overhead, while fixed-scope Next.js keeps 24-month operating costs flat.",
+    tag: "24-Month TCO Visual",
+  },
+  diagramKind: "tco",
+  fitComparison: {
+    title: "Should You Invest in Fixed-Scope Next.js Development?",
+    idealFor: [
+      "UK, US, or European SMEs wanting sub-second speed without a £5,000+ agency invoice.",
+      "Founders tired of recurring £150–£600/mo WordPress or SaaS website builder maintenance fees.",
+      "Product teams requiring clean React 19, TypeScript, and 100% GitHub repository custody.",
+    ],
+    notFor: [
+      "Teams needing 24/7 on-site enterprise IT consulting inside proprietary corporate networks.",
+      "Owners who prefer dragging/dropping ad-hoc Wix layouts daily without a structured codebase.",
+    ],
+  },
   keyTakeaways: [
     "Traditional UK & US agencies price Next.js builds high due to account managers, discovery workshops, and multi-month retainers rather than engineering hours alone.",
     "Direct fixed-scope Next.js 16 sprints start around £250 ($300 USD) for focused landing pages, £390 ($500 USD) for 5-page sites, and £790 ($999 USD) for full business hubs.",

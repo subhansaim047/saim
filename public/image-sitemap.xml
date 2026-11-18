@@ -180,5 +180,50 @@
       <image:title>Small Business Website Packages Guide UK &amp; US</image:title>
       <image:caption>Buyer comparison of what a fixed-price custom Next.js website package includes without agency retainers</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://www.saimdev.site/images/guides/nextjs-tco-comparison.webp</image:loc>
+      <image:title>24-Month Website Total Cost Comparison Visual</image:title>
+      <image:caption>Visual contrast comparing streamlined fixed-scope Next.js builds against recurring CMS retainer stacks</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us</loc>
+    <image:image>
+      <image:loc>https://www.saimdev.site/images/guides/nextjs-tco-comparison.webp</image:loc>
+      <image:title>Next.js Development Cost Breakdown UK &amp; US Visual</image:title>
+      <image:caption>Visual comparison of 24-month Next.js total cost of ownership versus WordPress retainers</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.saimdev.site/blog/nextjs-app-router-vs-wordpress-uk-seo</loc>
+    <image:image>
+      <image:loc>https://www.saimdev.site/images/guides/nextjs-edge-architecture.webp</image:loc>
+      <image:title>Next.js 16 Edge CDN Architecture Diagram</image:title>
+      <image:caption>Distributed Next.js server rendering nodes across UK London and US East edge PoPs</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.saimdev.site/blog/migrate-wordpress-webflow-to-nextjs-seo-guide</loc>
+    <image:image>
+      <image:loc>https://www.saimdev.site/images/guides/zero-loss-migration-flow.webp</image:loc>
+      <image:title>Zero-Loss WordPress &amp; Webflow to Next.js Migration Flow</image:title>
+      <image:caption>Single-hop 301 edge routing preserving backlinks and Google indexing during platform migration</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups</loc>
+    <image:image>
+      <image:loc>https://www.saimdev.site/images/guides/senior-engineering-workspace.webp</image:loc>
+      <image:title>Saim Dev Next.js Engineering Studio Workspace</image:title>
+      <image:caption>Senior Next.js architecture and real-time Core Web Vitals optimization environment</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.saimdev.site/about</loc>
+    <image:image>
+      <image:loc>https://www.saimdev.site/images/guides/senior-engineering-workspace.webp</image:loc>
+      <image:title>Saim Dev Engineering Studio</image:title>
+      <image:caption>Independent Next.js 16 development studio serving UK, US, and European companies</image:caption>
+    </image:image>
   </url>
 </urlset>

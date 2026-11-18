@@ -9,6 +9,7 @@ import {
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Code2, Rocket, Globe, UserCheck, CheckCircle2 } from "lucide-react";
+import { EngineeringMediaFigure, EngineeringVerificationBadge } from "@/components/ui/EditorialVisualPack";
 
 export const metadata: Metadata = {
   title: 'About Saim Dev | Remote Next.js Studio for UK & EU',
@@ -124,14 +125,18 @@ export default function AboutPage() {
 
       <main>
         <RhHeroPinned
-          badge="UK & European Next.js Studio · Direct Engineering"
+          badge="UK, US & European Next.js Studio · Direct Engineering"
+          breadcrumb={[
+            { label: "Home", href: "/" },
+            { label: "About" },
+          ]}
           title={
             <>
               About Saim Dev{" "}
               <span className="text-[#939393]">Engineering Studio</span>
             </>
           }
-          subtitle="Saim Dev is an independent Next.js 16 web engineering studio serving UK and European businesses remotely. Direct engineer-led builds from £250 fixed pricing, Free Concept Preview options, full GitHub source handover, and zero agency retainers."
+          subtitle="Saim Dev is a senior-led Next.js 16 engineering studio serving UK, US, and European companies remotely. Fixed-milestone delivery from £250 ($300 USD), Free Concept Preview options, full GitHub source custody, and zero monthly retainers."
           primaryCta={{ label: "Start a Project", href: "/contact" }}
           secondaryCta={{ label: "Explore Studio Demos", href: "/demos" }}
           videoType="cube"
@@ -210,7 +215,7 @@ export default function AboutPage() {
                 </div>
 
                 <p className="text-[15px] text-[#333333] leading-[1.65] mt-6">
-                  As the founder of Saim Dev, I personally architect, write, and deploy every client website and food safety tool. With a sharp focus on Next.js Server Components, lightweight React UI, and technical SEO, I help UK and EU business owners launch digital systems that load in under 1 second and convert traffic without bloated monthly retainers.
+                  Led by founder and principal Next.js architect Saim Dev, our studio scopes, writes, tests, and deploys every client website and hospitality utility in-house. We pair React Server Components, lightweight Tailwind CSS, and verifiable Schema.org markup so UK, US, and European companies load pages swiftly and convert traffic without monthly agency retainers.
                 </p>
               </div>
 
@@ -307,13 +312,13 @@ export default function AboutPage() {
                 },
                 {
                   icon: Rocket,
-                  title: "Sub-Second Speed",
-                  desc: "Engineered for instant loading on 4G/5G mobile networks with 95+ Core Web Vitals.",
+                  title: "Core Web Vitals Speed",
+                  desc: "We tune routes for responsive mobile delivery across 4G/5G networks targeting 95+ Lighthouse scores.",
                 },
                 {
                   icon: Globe,
-                  title: "UK Hospitality Focus",
-                  desc: "Tailored digital systems for UK takeaways, restaurants, and local commercial brands.",
+                  title: "UK, US & E-Commerce Sectors",
+                  desc: "Tailored digital systems for B2B SaaS startups, Shopify merchants, service companies, and UK takeaways.",
                 },
               ].map((pillar) => {
                 const Icon = pillar.icon;
@@ -361,6 +366,19 @@ export default function AboutPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+
+          <EngineeringMediaFigure
+            src="/images/guides/senior-engineering-workspace.webp"
+            alt="Saim Dev Next.js engineering workspace showing clean architecture telemetry"
+            caption="Inside Saim Dev: direct senior-led engineering focusing on strict TypeScript, fast edge routing, and 100% client GitHub custody across UK, US, and European launches."
+            tag="Studio Environment"
+            theme="light"
+          />
+
+          <EngineeringVerificationBadge
+            contextLabel="Every Saim Dev build and interactive tool distinguishes clearly between concept demos and production client launches"
+            theme="light"
+          />
         </div>
       </section>
 

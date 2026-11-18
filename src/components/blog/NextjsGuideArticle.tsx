@@ -5,6 +5,13 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Calendar, CheckCircle2, ChevronDown, ChevronUp, Clock } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogSiloNav } from "@/components/blog/BlogSiloNav";
+import {
+  ArchitecturalDiagram,
+  ArchitecturalDiagramKind,
+  EngineeringMediaFigure,
+  EngineeringVerificationBadge,
+  ServiceFitMatrix,
+} from "@/components/ui/EditorialVisualPack";
 
 export interface NextjsGuideSection {
   id: string;
@@ -32,8 +39,20 @@ export interface NextjsGuideData {
   publishedDisplay: string;
   updatedDisplay: string;
   readTime: string;
+  heroFigure?: {
+    src: string;
+    alt: string;
+    caption: string;
+    tag?: string;
+  };
+  diagramKind?: ArchitecturalDiagramKind;
   keyTakeaways: string[];
   sections: NextjsGuideSection[];
+  fitComparison?: {
+    title?: string;
+    idealFor: string[];
+    notFor: string[];
+  };
   conclusionHeading: string;
   conclusionParagraphs: string[];
   faqs: NextjsGuideFaq[];
@@ -106,6 +125,18 @@ export const NextjsGuideArticle: React.FC<{ data: NextjsGuideData }> = ({ data }
                 </span>
               </div>
             </div>
+
+            {/* Hero Editorial Visual (Helpful Media) */}
+            {data.heroFigure && (
+              <EngineeringMediaFigure
+                src={data.heroFigure.src}
+                alt={data.heroFigure.alt}
+                caption={data.heroFigure.caption}
+                tag={data.heroFigure.tag}
+                theme="dark"
+                priority={true}
+              />
+            )}
 
             {/* Key Takeaways Box */}
             <div className="rounded-2xl border border-white/15 bg-white/[0.03] p-6 mb-8">
@@ -228,8 +259,28 @@ export const NextjsGuideArticle: React.FC<{ data: NextjsGuideData }> = ({ data }
                     {section.callout}
                   </div>
                 )}
+
+                {idx === 1 && data.diagramKind && (
+                  <ArchitecturalDiagram kind={data.diagramKind} theme="dark" />
+                )}
               </section>
             ))}
+
+            {/* Unique Fit Qualifier Element */}
+            {data.fitComparison && (
+              <ServiceFitMatrix
+                title={data.fitComparison.title}
+                idealFor={data.fitComparison.idealFor}
+                notFor={data.fitComparison.notFor}
+                theme="dark"
+              />
+            )}
+
+            {/* E-E-A-T Verification & Methodology Block */}
+            <EngineeringVerificationBadge
+              contextLabel="Prepared & verified by Saim Dev Senior Next.js Architects against production build telemetry"
+              theme="dark"
+            />
 
             {/* FAQ Section */}
             <section id="faq-section" className="scroll-mt-28 space-y-5">

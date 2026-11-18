@@ -151,7 +151,7 @@ export const BlogPostNatashasLaw: React.FC = () => {
               <span>Direct Answer: What Is Natasha’s Law and PPDS?</span>
             </div>
             <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
-              Prepacked for Direct Sale (PPDS) food is food packaged on the premises before a customer selects or orders it. Under Natasha’s Law (the Food Information Amendment Regulations 2019), any UK food business selling PPDS food—including cafes, bakeries, delis, restaurants, and takeaways—must clearly label each item with the name of the food, a complete ingredients list, and any of the 14 statutory allergens emphasised. Businesses must verify current official guidance for their specific operational circumstances.
+              Food operators pack Prepacked for Direct Sale (PPDS) items on-site before customers select or order them. Under Natasha’s Law (Food Information Amendment Regulations 2019), UK takeaways, bakeries, cafes, and delis must label every PPDS pack with its food name, full ingredients list, and bolded allergen emphasis across all 14 statutory allergens. Always verify official local authority guidance for your specific kitchen operations.
             </p>
           </div>
 

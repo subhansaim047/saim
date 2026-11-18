@@ -71,7 +71,7 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
       },
       {
         problem: "Opaque hourly agency billing inflates original budgets and pushes commercial launch dates back by months.",
-        solution: "Every route, Schema.org entity graph, and integration is fixed upfront in GBP (£) or USD ($) with 5–14 day build sprints.",
+        solution: "We lock every route, Schema.org entity graph, and integration upfront in GBP (£) or USD ($) with 5–14 day build sprints.",
       },
     ],
     problemSection: {
@@ -95,7 +95,7 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
       chartYAxis: "Lab Optimization Target",
       chartXAxis: "Stack Architecture",
       chartCaption:
-        "Comparing compiled Next.js 16 App Router static output against heavily plugined CMS page builders.",
+        "Comparing compiled Next.js 16 App Router static output against plugin-heavy CMS page builders.",
       bars: [
         { value: "52", label: "Legacy Theme", heightPx: 74 },
         { value: "66", label: "Page Builder", heightPx: 112 },
@@ -476,7 +476,7 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
     ],
     testimonials: [
       {
-        quote: "Illustrative target scenario: Replacing a 4-second plugined WordPress brochure site with a 6-route Next.js build hosted cleanly without monthly PHP maintenance.",
+        quote: "Illustrative target scenario: Replacing a 4-second plugin-heavy WordPress brochure site with a 6-route Next.js build hosted cleanly without monthly PHP maintenance.",
         client: "Multi-Service UK Practice",
         role: "Target Architecture Pattern",
         company: "Reference Specification",
@@ -1023,7 +1023,7 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
       {
         question: "How do I update phone numbers, prices, or opening hours later?",
         answer:
-          "Minor occasional tweaks can be handled quickly via clear typed data files, or we can add an intuitive content dashboard if your team expects weekly menu or blog updates.",
+          "Your team handles occasional edits easily through clean typed data files, or our engineers connect a visual Headless CMS if you expect weekly menu or blog publishing.",
       },
       {
         question: "Can I see what the site could look like before paying?",

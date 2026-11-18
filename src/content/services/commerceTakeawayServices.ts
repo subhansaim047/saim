@@ -334,7 +334,7 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
     engineeringChecklist: {
       title: "Legal, Aesthetic & Technical Parity Checklist",
       subtitle:
-        "Every UI reconstruction project is verified against clean engineering and ownership standards:",
+        "We verify every UI reconstruction project against strict engineering, accessibility, and ownership standards:",
       items: [
         "All client brand logos, copy, legal pages, and favicons cleanly substituted (zero leftover source marks)",
         "Pixel typography hierarchy & spacing checked across mobile (360px), tablet (768px), and laptop (1440px)",
