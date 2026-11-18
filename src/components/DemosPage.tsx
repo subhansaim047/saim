@@ -410,7 +410,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
                 <div className="relative aspect-[16/10] overflow-hidden bg-[#0A0A0A] border-b border-white/[0.07]">
                   <img
                     src={demo.previewImage}
-                    alt={`${demo.title} - Modern bespoke web design & engineering showcase`}
+                    alt={`${demo.title} — ${demo.category} Next.js 16 interactive website demo & bespoke web design UK & US`}
                     width={1200}
                     height={675}
                     loading={idx < 6 ? "eager" : "lazy"}

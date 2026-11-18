@@ -435,10 +435,10 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
                 ? "/images/guides/nextjs-tco-comparison.webp"
                 : "/images/guides/nextjs-edge-architecture.webp";
               const figAlt = isMigration
-                ? `${data.serviceName} zero-loss edge migration architecture visualization`
+                ? `${data.mainKeyword} — ${data.serviceName} zero-loss Next.js 16 edge migration architecture visualization`
                 : isCostStack
-                ? `${data.serviceName} performance and total cost efficiency visual`
-                : `${data.serviceName} edge CDN architecture diagram`;
+                ? `${data.mainKeyword} — ${data.serviceName} Core Web Vitals performance and 24-month total cost efficiency visual`
+                : `${data.mainKeyword} — ${data.serviceName} Next.js 16 edge CDN routing architecture diagram`;
               const figCaption = isMigration
                 ? `Every ${data.serviceName} sprint maps legacy URLs onto clean Next.js 16 routing with single-hop 301 safety and full Schema.org continuity.`
                 : isCostStack
@@ -739,7 +739,9 @@ export const ServicePageTemplate: React.FC<{ data: ServicePageData }> = ({
               href: study.demoUrl,
               external: study.demoUrl.startsWith("/") || study.demoUrl.startsWith("http"),
               previewImage: study.previewImage,
-              previewAlt: study.previewAlt,
+              previewAlt: study.previewAlt
+                ? `${study.previewAlt} — ${data.mainKeyword} (${data.serviceName})`
+                : `${study.title} — ${data.mainKeyword} & ${data.serviceName} Next.js 16 live reference build by Saim Dev`,
               previewWidth: study.previewWidth,
               previewHeight: study.previewHeight,
               tags: study.tech,

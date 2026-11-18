@@ -99,7 +99,7 @@ export const NextjsGuideArticle: React.FC<{ data: NextjsGuideData }> = ({ data }
               <div className="flex items-center gap-3">
                 <img
                   src="/saim-dev-logo.jpg"
-                  alt="Saim Dev — Lead Next.js Architect"
+                  alt={`Saim Dev — Lead Next.js 16 Web Architect (${data.h1})`}
                   className="w-9 h-9 rounded-full border border-white/20 object-cover"
                   width={36}
                   height={36}

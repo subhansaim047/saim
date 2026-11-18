@@ -360,7 +360,7 @@ export const CaseStudiesPage = () => {
                       <div className="relative h-56 sm:h-64 overflow-hidden group">
                         <img
                           src={study.previewImage}
-                          alt={`${study.archetypeName} Preview - ${study.headline}`}
+                          alt={`${study.archetypeName} — Next.js 16 web architecture case study & Core Web Vitals benchmark (${study.headline})`}
                           width={1200}
                           height={675}
                           decoding="async"

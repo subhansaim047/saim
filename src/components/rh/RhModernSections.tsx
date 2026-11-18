@@ -693,7 +693,7 @@ export function RhProblemSolutionDeck({
             <div className="relative overflow-hidden rounded-3xl bg-[#0D0D0D] text-white p-7 md:p-8 border border-[#222222] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)]">
               <img
                 src="/rh-exact/pd/pd-case-glow.svg"
-                alt=""
+                alt="Next.js 16 Core Web Vitals speed and performance architecture accent"
                 aria-hidden="true"
                 width={256}
                 height={256}
@@ -1192,7 +1192,7 @@ export function RhProcessCarousel({
           <div className="relative shrink-0">
             <img
               src="/rh-exact/pd/pd-cta-glow.svg"
-              alt=""
+              alt="Fixed-price Next.js 16 milestone web development process highlight"
               aria-hidden="true"
               width={288}
               height={288}
@@ -1378,7 +1378,10 @@ export function RhBentoWorkGrid({
                   >
                     <img
                       src={item.previewImage}
-                      alt={item.previewAlt || item.title}
+                      alt={
+                        item.previewAlt ||
+                        `${item.title} — ${item.category} Next.js 16 custom web development & Core Web Vitals showcase`
+                      }
                       width={item.previewWidth || 1200}
                       height={item.previewHeight || 714}
                       loading="lazy"

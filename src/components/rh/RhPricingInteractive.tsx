@@ -335,7 +335,7 @@ export function RhPricingInteractive({ faqs }: { faqs: FaqItem[] }) {
               <div className="rh-bezel-core rh-edge-orbit-card is-lime p-8 sm:p-12 text-white flex-1 flex flex-col justify-between relative overflow-hidden">
                 <img
                   src="/rh-exact/pd/pd-case-glow.svg"
-                  alt=""
+                  alt="Fixed-price Next.js 16 website packages UK & US — zero monthly retainer highlight"
                   aria-hidden="true"
                   width={288}
                   height={288}
