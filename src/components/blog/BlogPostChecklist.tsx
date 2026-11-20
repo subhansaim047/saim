@@ -140,7 +140,7 @@ export const BlogPostChecklist: React.FC = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary font-bold">•</span>
-                <span><strong>Free Print Templates:</strong> Download our free printable <Link href="/food-safety-templates/cleaning-schedule" className="text-primary underline font-medium">Cleaning Schedule Template</Link> and <Link href="/food-safety-templates/fridge-temperature-record-sheet-pdf" className="text-primary underline font-medium">Fridge Temperature Log Sheet</Link>.</span>
+                <span><strong>Free Print Templates:</strong> Download our free printable <Link href="/blog/uk-food-hygiene-rating-scheme-5-star-checklist" className="text-primary underline font-medium">Cleaning Schedule Template</Link> and <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-primary underline font-medium">Fridge Temperature Log Sheet</Link>.</span>
               </li>
             </ul>
           </div>
@@ -294,7 +294,7 @@ export const BlogPostChecklist: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
             <Link
-              href="/food-safety-templates/opening-and-closing-checklist-template"
+              href="/blog/sfbb-daily-kitchen-opening-closing-checklist-guide"
               className="p-3.5 rounded-xl bg-primary text-black font-bold text-xs sm:text-sm flex items-center justify-between shadow-xl hover:brightness-110 transition-all"
             >
               <span>opening and closing checklist</span>
@@ -302,7 +302,7 @@ export const BlogPostChecklist: React.FC = () => {
             </Link>
 
             <Link
-              href="/food-safety-templates/cleaning-schedule"
+              href="/blog/uk-food-hygiene-rating-scheme-5-star-checklist"
               className="p-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm flex items-center justify-between border border-white/15 transition-all"
             >
               <span>cleaning schedule</span>
@@ -310,7 +310,7 @@ export const BlogPostChecklist: React.FC = () => {
             </Link>
 
             <Link
-              href="/food-safety-templates/fridge-temperature-record-sheet-pdf"
+              href="/blog/commercial-kitchen-food-cooling-temperature-guide"
               className="p-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm flex items-center justify-between border border-white/15 transition-all"
             >
               <span>kitchen temperature log</span>

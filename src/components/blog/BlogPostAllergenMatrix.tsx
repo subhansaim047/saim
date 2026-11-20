@@ -324,7 +324,7 @@ export const BlogPostAllergenMatrix: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
-              href="/food-safety-templates/allergy-matrix"
+              href="/tools/allergen-matrix-generator"
               className="bg-primary hover:brightness-110 text-black font-bold text-xs sm:text-sm px-5 py-3.5 rounded-full flex items-center gap-2 transition-all shadow-xl"
             >
               <span>free 14-allergen matrix</span>
@@ -332,7 +332,7 @@ export const BlogPostAllergenMatrix: React.FC = () => {
             </Link>
 
             <Link
-              href="/food-safety-templates/food-allergen-chart"
+              href="/tools/allergen-matrix-generator"
               className="bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm px-5 py-3.5 rounded-full flex items-center gap-2 transition-all border border-white/20"
             >
               <span>food allergen chart</span>

@@ -56,7 +56,7 @@ export const BlogPostCoolingGuide: React.FC = () => {
           <span>Back to Articles</span>
         </Link>
         <Link
-          href="/food-safety-templates/food-cooling-poster"
+          href="/blog/commercial-kitchen-food-cooling-temperature-guide"
           className="text-xs bg-primary/10 border border-primary/20 text-primary px-3 py-1.5 rounded-full font-mono hover:bg-primary/20 transition-all"
         >
           Print Food Cooling Poster
@@ -132,7 +132,7 @@ export const BlogPostCoolingGuide: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary font-bold">•</span>
-                  <span><strong>Free Poster &amp; Logs:</strong> Download our free printable <Link href="/food-safety-templates/food-cooling-poster" className="text-primary underline font-medium">Food Cooling Poster</Link> and <Link href="/food-safety-templates/fridge-temperature-record-sheet-pdf" className="text-primary underline font-medium">Fridge Temperature Record Sheet</Link>.</span>
+                  <span><strong>Free Poster &amp; Logs:</strong> Download our free printable <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-primary underline font-medium">Food Cooling Poster</Link> and <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-primary underline font-medium">Fridge Temperature Record Sheet</Link>.</span>
                 </li>
               </ul>
             </div>
@@ -167,7 +167,7 @@ export const BlogPostCoolingGuide: React.FC = () => {
               In UK food safety, 8°C to 63°C is the temperature danger zone, where bacteria like <em>Salmonella</em> multiply rapidly.
             </p>
             <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-              Under Schedule 4 of the Food Safety and Hygiene (England) Regulations 2013 and devolved equivalents, cold holding requires 8°C or below, while hot holding requires 63°C or above (logged in a <Link href="/food-safety-templates/hot-holding-food-temperature-log" className="text-primary hover:underline font-medium">hot holding food temperature log</Link>). This danger zone is an operational benchmark rather than a blanket statutory rule for every stage. Caterers must follow validated HACCP controls referencing official FSA guidance and the <Link href="/food-safety-templates/reheating-food-temperature-guide" className="text-primary hover:underline font-medium">reheating food temperature guide</Link>.
+              Under Schedule 4 of the Food Safety and Hygiene (England) Regulations 2013 and devolved equivalents, cold holding requires 8°C or below, while hot holding requires 63°C or above (logged in a <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-primary hover:underline font-medium">hot holding food temperature log</Link>). This danger zone is an operational benchmark rather than a blanket statutory rule for every stage. Caterers must follow validated HACCP controls referencing official FSA guidance and the <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-primary hover:underline font-medium">reheating food temperature guide</Link>.
             </p>
           </section>
 
@@ -189,7 +189,7 @@ export const BlogPostCoolingGuide: React.FC = () => {
               <li><strong className="text-white">Probe core:</strong> Check internal temperatures with a sanitised digital probe.</li>
               <li><strong className="text-white">Cold storage:</strong> Move batches into cold storage once below 8°C.</li>
               <li><strong className="text-white">Corrective action:</strong> If cooling lags, subdivide, refresh ice, or discard.</li>
-              <li><strong className="text-white">Review procedures:</strong> Re-evaluate cooling in your <Link href="/food-safety-templates/haccp-plan-builder" className="text-primary hover:underline font-medium">HACCP plan builder</Link> whenever recipes or equipment change.</li>
+              <li><strong className="text-white">Review procedures:</strong> Re-evaluate cooling in your <Link href="/blog/how-to-write-haccp-plan-uk-food-business-step-by-step" className="text-primary hover:underline font-medium">HACCP plan builder</Link> whenever recipes or equipment change.</li>
             </ol>
 
             <figure className="my-6 rounded-2xl overflow-hidden border border-white/10 bg-[#141414] p-4 text-center">
@@ -244,7 +244,7 @@ export const BlogPostCoolingGuide: React.FC = () => {
               Temperature Monitoring and Records
             </h2>
             <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-              Disinfect probe thermometers with food-safe antibacterial wipes before inserting them into the core where cooling is slowest. Log batch names, cooling times, core temperatures, and staff initials on a <Link href="/food-safety-templates/fridge-temperature-record-sheet-pdf" className="text-primary hover:underline font-medium">fridge temperature record sheet</Link> or <Link href="/food-safety-templates/freezer-temperature-chart" className="text-primary hover:underline font-medium">freezer temperature chart</Link>. Maintaining accurate cooling logs provides essential due-diligence evidence for local authority inspections.
+              Disinfect probe thermometers with food-safe antibacterial wipes before inserting them into the core where cooling is slowest. Log batch names, cooling times, core temperatures, and staff initials on a <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-primary hover:underline font-medium">fridge temperature record sheet</Link> or <Link href="/blog/commercial-kitchen-food-cooling-temperature-guide" className="text-primary hover:underline font-medium">freezer temperature chart</Link>. Maintaining accurate cooling logs provides essential due-diligence evidence for local authority inspections.
             </p>
           </section>
 
@@ -264,7 +264,7 @@ export const BlogPostCoolingGuide: React.FC = () => {
               Cooling Checklist for Commercial Kitchens
             </h2>
             <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-              Maintain cooling standards across kitchen shifts using this concise checklist, paired with your daily <Link href="/food-safety-templates/opening-and-closing-checklist-template" className="text-primary hover:underline font-medium">opening and closing checklist template</Link>:
+              Maintain cooling standards across kitchen shifts using this concise checklist, paired with your daily <Link href="/blog/sfbb-daily-kitchen-opening-closing-checklist-guide" className="text-primary hover:underline font-medium">opening and closing checklist template</Link>:
             </p>
             <ul className="space-y-2 text-sm sm:text-base text-white/80 list-disc list-inside bg-white/[0.02] p-5 rounded-2xl border border-white/10 leading-relaxed">
               <li>Batches split into shallow pans under 50mm depth.</li>
@@ -310,49 +310,49 @@ export const BlogPostCoolingGuide: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-2">
               <Link
-                href="/food-safety-templates/food-cooling-poster"
+                href="/blog/commercial-kitchen-food-cooling-temperature-guide"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
                 <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">food cooling poster</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
               <Link
-                href="/food-safety-templates/fridge-temperature-record-sheet-pdf"
+                href="/blog/commercial-kitchen-food-cooling-temperature-guide"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
                 <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">fridge temperature record sheet</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
               <Link
-                href="/food-safety-templates/freezer-temperature-chart"
+                href="/blog/commercial-kitchen-food-cooling-temperature-guide"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
                 <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">freezer temperature chart</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
               <Link
-                href="/food-safety-templates/hot-holding-food-temperature-log"
+                href="/blog/commercial-kitchen-food-cooling-temperature-guide"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
                 <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">hot holding food temperature log</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
               <Link
-                href="/food-safety-templates/reheating-food-temperature-guide"
+                href="/blog/commercial-kitchen-food-cooling-temperature-guide"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
                 <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">reheating food temperature guide</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
               <Link
-                href="/food-safety-templates/haccp-plan-builder"
+                href="/blog/how-to-write-haccp-plan-uk-food-business-step-by-step"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
                 <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">HACCP plan builder</span>
                 <ArrowRight className="w-4 h-4 text-primary shrink-0" />
               </Link>
               <Link
-                href="/food-safety-templates/opening-and-closing-checklist-template"
+                href="/blog/sfbb-daily-kitchen-opening-closing-checklist-guide"
                 className="p-3.5 rounded-xl bg-black/60 border border-white/10 hover:border-primary/40 transition-all flex items-center justify-between group"
               >
                 <span className="text-xs font-semibold text-white group-hover:text-primary transition-colors">opening and closing checklist</span>

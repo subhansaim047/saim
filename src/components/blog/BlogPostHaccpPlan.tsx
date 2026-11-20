@@ -159,7 +159,7 @@ export const BlogPostHaccpPlan: React.FC = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary font-bold">•</span>
-                <span><strong>Downloadable Templates:</strong> Build your hazard tables using our free <Link href="/food-safety-templates/haccp-plan-builder" className="text-primary underline font-medium">HACCP Plan Builder</Link> and <Link href="/food-safety-templates/haccp-flow-chart-template" className="text-primary underline font-medium">Process Flow Chart</Link>.</span>
+                <span><strong>Downloadable Templates:</strong> Build your hazard tables using our free <Link href="/blog/how-to-write-haccp-plan-uk-food-business-step-by-step" className="text-primary underline font-medium">HACCP Plan Builder</Link> and <Link href="/blog/how-to-write-haccp-plan-uk-food-business-step-by-step" className="text-primary underline font-medium">Process Flow Chart</Link>.</span>
               </li>
             </ul>
           </div>
@@ -343,7 +343,7 @@ export const BlogPostHaccpPlan: React.FC = () => {
             </Link>
 
             <Link
-              href="/food-safety-templates/haccp-plan-builder"
+              href="/blog/how-to-write-haccp-plan-uk-food-business-step-by-step"
               className="border border-white/20 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm px-5 py-3.5 rounded-full transition-all"
             >
               <span>HACCP Plan Template</span>

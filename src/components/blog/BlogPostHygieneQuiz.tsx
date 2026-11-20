@@ -144,7 +144,7 @@ export const BlogPostHygieneQuiz: React.FC = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary font-bold">•</span>
-                <span><strong>Full Mock Quiz:</strong> Test your staff knowledge with our printable <Link href="/food-safety-templates/food-safety-quiz" className="text-primary underline font-medium">Food Safety Practice Quiz Template</Link>.</span>
+                <span><strong>Full Mock Quiz:</strong> Test your staff knowledge with our printable <Link href="/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide" className="text-primary underline font-medium">Food Safety Practice Quiz Template</Link>.</span>
               </li>
             </ul>
           </div>
@@ -286,7 +286,7 @@ export const BlogPostHygieneQuiz: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link
-              href="/food-safety-templates/food-safety-quiz"
+              href="/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide"
               className="bg-primary hover:brightness-110 text-black font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full flex items-center gap-2 transition-all shadow-xl"
             >
               <span>Launch Food Hygiene Quiz</span>

@@ -95,7 +95,7 @@ const nextConfig = {
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
       {
-        source: '/demos/:path*',
+        source: '/demos/:path+',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
       {
@@ -150,70 +150,10 @@ const nextConfig = {
         destination: '/hq-leathercon/:path*',
         permanent: true,
       },
-      // Consolidated Redirects: Removed 160 Templates, Food-Safety Calculators & Legacy Posts -> Kept Guides / ROI Calculator
-      {
-        source: '/tools',
-        destination: '/tools/commission-savings-calculator',
-        permanent: true,
-      },
-      {
-        source: '/tools/food-cost-calculator',
-        destination: '/tools/commission-savings-calculator',
-        permanent: true,
-      },
-      {
-        source: '/tools/recipe-batch-calculator',
-        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
-        permanent: true,
-      },
-      {
-        source: '/tools/ppds-label-generator',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
-        permanent: true,
-      },
-      {
-        source: '/tools/allergen-matrix-generator',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
-        permanent: true,
-      },
+      // Consolidated Redirects: Removed 160 Templates -> Exact Matching Interactive Tools & UK Compliance Guides
       {
         source: '/tools/food-allergen-chart',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/commercial-kitchen-food-cooling-temperature-guide',
-        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
-        permanent: true,
-      },
-      {
-        source: '/blog/mastering-food-cost-percentage-commercial-kitchen-calculator',
-        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-to-scale-recipes-commercial-catering-batch-calculator',
-        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
-        permanent: true,
-      },
-      {
-        source: '/blog/sfbb-daily-kitchen-opening-closing-checklist-guide',
-        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-to-write-haccp-plan-uk-food-business-step-by-step',
-        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
-        permanent: true,
-      },
-      {
-        source: '/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide',
-        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+        destination: '/tools/allergen-matrix-generator',
         permanent: true,
       },
       {
@@ -221,44 +161,93 @@ const nextConfig = {
         destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
         permanent: true,
       },
-      // Allergen & Natasha template slugs -> Kept Natasha's Law PPDS Guide (before catch-all)
       {
         source: '/food-safety-templates/natashas-law',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        destination: '/tools/ppds-label-generator',
         permanent: true,
       },
       {
         source: '/food-safety-templates/food-allergen-chart',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        destination: '/tools/allergen-matrix-generator',
         permanent: true,
       },
       {
         source: '/food-safety-templates/allergy-matrix',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        destination: '/tools/allergen-matrix-generator',
         permanent: true,
       },
       {
         source: '/food-safety-templates/allergen-poster',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        destination: '/tools/allergen-matrix-generator',
         permanent: true,
       },
       {
         source: '/food-safety-templates/allergen-control-sop',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        destination: '/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants',
         permanent: true,
       },
       {
         source: '/food-safety-templates/food-allergy-warning',
-        destination: '/blog/natashas-law-ppds-food-labelling-guide',
+        destination: '/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/food-cost-calculator',
+        destination: '/tools/food-cost-calculator',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/recipe-calculator',
+        destination: '/tools/recipe-batch-calculator',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/haccp-plan-builder',
+        destination: '/blog/how-to-write-haccp-plan-uk-food-business-step-by-step',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/haccp-flow-chart-template',
+        destination: '/blog/how-to-write-haccp-plan-uk-food-business-step-by-step',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/opening-and-closing-checklist-template',
+        destination: '/blog/sfbb-daily-kitchen-opening-closing-checklist-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/food-safety-quiz',
+        destination: '/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/food-cooling-poster',
+        destination: '/blog/commercial-kitchen-food-cooling-temperature-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/fridge-temperature-record-sheet-pdf',
+        destination: '/blog/commercial-kitchen-food-cooling-temperature-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/freezer-temperature-chart',
+        destination: '/blog/commercial-kitchen-food-cooling-temperature-guide',
+        permanent: true,
+      },
+      {
+        source: '/food-safety-templates/hot-holding-food-temperature-log',
+        destination: '/blog/commercial-kitchen-food-cooling-temperature-guide',
         permanent: true,
       },
       {
         source: '/food-safety-templates',
-        destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
+        destination: '/tools',
         permanent: true,
       },
       {
-        source: '/food-safety-templates/:path*',
+        source: '/food-safety-templates/:path+',
         destination: '/blog/uk-food-hygiene-rating-scheme-5-star-checklist',
         permanent: true,
       },

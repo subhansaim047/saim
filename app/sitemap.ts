@@ -7,7 +7,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const corePages: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${BASE_URL}/overview`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/tools/commission-savings-calculator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/tools`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/commission-savings-calculator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/allergen-matrix-generator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/ppds-label-generator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/food-cost-calculator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/tools/recipe-batch-calculator`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/services/takeaway-web-design`, lastModified: LAST_MOD, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/services/takeaway-web-design-london`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/services/takeaway-web-design-manchester`, lastModified: LAST_MOD, changeFrequency: 'monthly', priority: 0.9 },
@@ -49,6 +54,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'small-business-website-packages-guide',
     'uk-food-hygiene-rating-scheme-5-star-checklist',
     'natashas-law-ppds-food-labelling-guide',
+    'how-to-create-compliant-14-allergen-matrix-uk-restaurants',
+    'commercial-kitchen-food-cooling-temperature-guide',
+    'mastering-food-cost-percentage-commercial-kitchen-calculator',
+    'how-to-scale-recipes-commercial-catering-batch-calculator',
+    'sfbb-daily-kitchen-opening-closing-checklist-guide',
+    'how-to-write-haccp-plan-uk-food-business-step-by-step',
+    'level-2-food-hygiene-practice-test-kitchen-staff-guide',
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({

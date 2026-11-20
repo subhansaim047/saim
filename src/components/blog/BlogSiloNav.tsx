@@ -65,6 +65,48 @@ const COMPLIANCE_POSTS = [
     href: "/blog/natashas-law-ppds-food-labelling-guide",
     title: "Natasha's Law PPDS Food Labelling Complete Guide",
     summary: "Statutory rules for prepacked food for direct sale, 1.2mm x-height typography, and allergen bolding."
+  },
+  {
+    slug: "how-to-create-compliant-14-allergen-matrix-uk-restaurants",
+    href: "/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
+    title: "How to Create a 14-Allergen Matrix for UK Restaurants",
+    summary: "Step-by-step recipe audit workflow, cross-contamination protocols, and printable A4 matrix setup."
+  },
+  {
+    slug: "level-2-food-hygiene-practice-test-kitchen-staff-guide",
+    href: "/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide",
+    title: "Level 2 Food Hygiene Practice Test & Revision Guide",
+    summary: "10 essential UK food hygiene exam questions and answers for chefs and kitchen handlers."
+  },
+  {
+    slug: "how-to-write-haccp-plan-uk-food-business-step-by-step",
+    href: "/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
+    title: "How to Write a HACCP Plan for a UK Food Business",
+    summary: "All 7 codex HACCP principles explained in plain English with Critical Control Point (CCP) examples."
+  },
+  {
+    slug: "sfbb-daily-kitchen-opening-closing-checklist-guide",
+    href: "/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
+    title: "SFBB Daily Kitchen Opening & Closing Checklists",
+    summary: "Master the 4 Cs and daily kitchen verification logs expected during unannounced council inspections."
+  },
+  {
+    slug: "commercial-kitchen-food-cooling-temperature-guide",
+    href: "/blog/commercial-kitchen-food-cooling-temperature-guide",
+    title: "Commercial Kitchen Food Cooling & 90-Minute Rule",
+    summary: "Safe chilling limits, danger-zone thresholds, and rapid cooling methods for UK commercial kitchens."
+  },
+  {
+    slug: "mastering-food-cost-percentage-commercial-kitchen-calculator",
+    href: "/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
+    title: "How to Calculate Food Cost Percentage & Protect 70% GP",
+    summary: "CoGS math, shrinkage allowance, menu engineering quadrants, and interactive GP% margin tools."
+  },
+  {
+    slug: "how-to-scale-recipes-commercial-catering-batch-calculator",
+    href: "/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
+    title: "How to Scale Commercial Recipes from 10 to 500 Portions",
+    summary: "Recipe Conversion Factor (RCF) formulas, metric weight scaling, and non-linear seasoning rules."
   }
 ];
 

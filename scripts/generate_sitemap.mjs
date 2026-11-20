@@ -88,34 +88,39 @@ const staticPages = [
     changefreq: "weekly",
     images: [
       {
-        loc: "https://www.saimdev.site/hero-shots/shot-1.webp",
-        title: "Fresh and Reddy Dark Web Architecture",
-        caption: "Bespoke Next.js restaurant web design and fast digital menu architecture"
+        loc: "https://www.saimdev.site/demos/previews/hq-leathercon-ecommerce-storefront.webp",
+        title: "HQ Leathercon Custom Headless Shopify E-Commerce Storefront",
+        caption: "Bespoke Next.js 16 and headless Shopify luxury e-commerce storefront engineered by Saim Dev"
       },
       {
-        loc: "https://www.saimdev.site/hero-shots/shot-2.webp",
-        title: "Evora Luxury Real Estate Web Platform",
-        caption: "Sub-second load speed luxury property showcase engineered for UK small businesses"
+        loc: "https://www.saimdev.site/demos/previews/hotbite-street-food-takeaway.webp",
+        title: "HotBite Zero-Commission UK Takeaway Online Ordering System",
+        caption: "Commission-free direct restaurant and takeaway online ordering web platform built in Next.js"
       },
       {
-        loc: "https://www.saimdev.site/hero-shots/shot-3.webp",
-        title: "GAZU High-Conversion Fashion E-Commerce",
-        caption: "Modern high-conversion fashion store built on Next.js with zero monthly fees"
+        loc: "https://www.saimdev.site/demos/previews/detailx-car-detailing-auto-repair.webp",
+        title: "DetailX Automotive Detailing & Local Service Booking Website",
+        caption: "High-converting custom Next.js lead generation and booking website for local service brands"
+      },
+      {
+        loc: "https://www.saimdev.site/demos/previews/serenia-luxury-wellness-spa.webp",
+        title: "SERENIA Luxury Clinic & Wellness Spa Booking Platform",
+        caption: "Sub-second Next.js 16 booking platform and bespoke web architecture for UK and US clinics"
       },
       {
         loc: "https://www.saimdev.site/hero-shots/shot-4.webp",
-        title: "Interactive Digital SaaS Showcase",
-        caption: "Bespoke SaaS platform with custom micro-animations and Google SEO optimization"
-      },
-      {
-        loc: "https://www.saimdev.site/og-image.png",
-        title: "Saim Dev Next.js Web Development Agency",
-        caption: "Affordable high-performance Next.js websites for UK small businesses and takeaways"
+        title: "Saim Dev Custom Next.js Web Agency UK & US",
+        caption: "Fixed-price custom Next.js websites, headless Shopify stores, and 0% commission ordering platforms from £250"
       }
     ]
   },
   { url: "https://www.saimdev.site/overview", priority: "0.9", changefreq: "weekly" },
-  { url: "https://www.saimdev.site/tools/commission-savings-calculator", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/tools", priority: "0.95", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/tools/commission-savings-calculator", priority: "0.95", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/tools/allergen-matrix-generator", priority: "0.95", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/tools/ppds-label-generator", priority: "0.95", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/tools/food-cost-calculator", priority: "0.95", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/tools/recipe-batch-calculator", priority: "0.95", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services/takeaway-web-design", priority: "0.95", changefreq: "weekly" },
   { url: "https://www.saimdev.site/services/takeaway-web-design-london", priority: "0.9", changefreq: "monthly" },
   { url: "https://www.saimdev.site/services/takeaway-web-design-manchester", priority: "0.9", changefreq: "monthly" },
@@ -155,6 +160,13 @@ const staticPages = [
   { url: "https://www.saimdev.site/blog/small-business-website-packages-guide", priority: "0.85", changefreq: "monthly" },
   { url: "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step", priority: "0.9", changefreq: "weekly" },
+  { url: "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide", priority: "0.9", changefreq: "weekly" },
   { url: "https://www.saimdev.site/terms", priority: "0.6", changefreq: "monthly" },
   { url: "https://www.saimdev.site/privacy", priority: "0.6", changefreq: "monthly" },
   { url: "https://www.saimdev.site/cookie-policy", priority: "0.6", changefreq: "monthly" },

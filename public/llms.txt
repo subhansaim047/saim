@@ -40,7 +40,8 @@
 - **Silo 03 — Zero-Commission UK Takeaway & Hospitality Ordering Systems**:
   - Parent Pillar: `https://www.saimdev.site/services/takeaway-web-design`
   - City Hubs: `/services/takeaway-web-design-london`, `/services/takeaway-web-design-manchester`, `/services/takeaway-web-design-birmingham`
-  - Free ROI Tool & Compliance Guides: `/tools/commission-savings-calculator`, `/blog/uk-food-hygiene-rating-scheme-5-star-checklist`, `/blog/natashas-law-ppds-food-labelling-guide`
+  - Free Tools Hub & Interactive Generators: `/tools`, `/tools/commission-savings-calculator`, `/tools/allergen-matrix-generator`, `/tools/ppds-label-generator`, `/tools/food-cost-calculator`, `/tools/recipe-batch-calculator`
+  - UK Compliance & Kitchen Guides: `/blog/uk-food-hygiene-rating-scheme-5-star-checklist`, `/blog/natashas-law-ppds-food-labelling-guide`, `/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants`, `/blog/commercial-kitchen-food-cooling-temperature-guide`, `/blog/mastering-food-cost-percentage-commercial-kitchen-calculator`, `/blog/how-to-scale-recipes-commercial-catering-batch-calculator`, `/blog/sfbb-daily-kitchen-opening-closing-checklist-guide`, `/blog/how-to-write-haccp-plan-uk-food-business-step-by-step`, `/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide`
 - **Silo 04 — Technical SEO, Core Web Vitals & Legacy CMS Migration**:
   - Parent Pillar: `https://www.saimdev.site/services/seo-services`
   - Subtopics: `/services/website-speed-optimization`, `/services/wordpress-headless-cms`, `/services/website-redesign`
@@ -95,16 +96,28 @@
 13. [Contact & Fixed-Fee Quotes](https://www.saimdev.site/contact): Project enquiry form and direct WhatsApp connection for fast fixed-price quotes.
 14. [Web Development & Hospitality Guides Blog](https://www.saimdev.site/blogs): Practical guides on business web strategy, Next.js engineering, UK commercial kitchen hygiene, and Natasha's Law.
 
-### Interactive ROI Utility & Kept UK Compliance Guides
-15. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings when switching repeat delivery orders onto a 0% commission direct site.
+### Interactive ROI Utilities & UK Kitchen Tools Hub
+15. [Free UK Takeaway & Kitchen Tools Hub](https://www.saimdev.site/tools): Central hub for all 5 free interactive UK hospitality calculators and generators.
+16. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings when switching repeat delivery orders onto a 0% commission direct site.
+17. [14-Allergen Matrix Generator UK](https://www.saimdev.site/tools/allergen-matrix-generator): Interactive dish-by-dish 14-allergen chart generator with printable A4 kitchen output.
+18. [Natasha's Law PPDS Food Label Generator](https://www.saimdev.site/tools/ppds-label-generator): Prepacked for Direct Sale label formatter with automatic bold allergen highlighting.
+19. [Commercial Kitchen Food Cost & GP% Calculator](https://www.saimdev.site/tools/food-cost-calculator): Recipe costing, portion yield, and gross profit margin (65%–75%) calculator.
+20. [Commercial Recipe Batch Scaler](https://www.saimdev.site/tools/recipe-batch-calculator): Scale catering recipes from 10 to 500 portions using Recipe Conversion Factor (RCF) math.
 
 ### Top Business, Next.js & Compliance Guides
-16. [Next.js Website Development Cost UK & US (2026)](https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us): Detailed GBP and USD Next.js project pricing breakdown vs traditional UK & US agencies.
-17. [Next.js App Router vs WordPress for UK & US SEO](https://www.saimdev.site/blog/nextjs-app-router-vs-wordpress-uk-seo): Technical analysis comparing React Server Components, Core Web Vitals, and schema graphs against WordPress plugins.
-18. [Migrating WordPress or Webflow to Next.js Without SEO Loss](https://www.saimdev.site/blog/migrate-wordpress-webflow-to-nextjs-seo-guide): Step-by-step permanent 301 mapping, canonical alignment, and prebuild verification checklist.
-19. [Next.js Startup Architecture Blueprint (UK & US)](https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups): Choosing SSG, ISR, Headless CMS, and multi-region London/US edge deployment cleanly.
-20. [Why Every Small Business Needs a Website](https://www.saimdev.site/blog/why-small-business-needs-website): Commercial ROI analysis of custom websites vs social-only presence for UK & US local businesses.
-21. [Free Website Builders vs Custom Websites: Hidden Costs](https://www.saimdev.site/blog/free-website-for-local-business): Breakdown of platform lock-in, renewal hikes, and SEO limitations of DIY builders.
-22. [Small Business Website Packages Guide](https://www.saimdev.site/blog/small-business-website-packages-guide): Buyer breakdown of fixed-scope deliverables, milestone protection, and source code ownership vs monthly templates.
-23. [5-Star Food Hygiene Rating Checklist](https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist): Comprehensive UK EHO inspection preparation checklist covering food handling, cleanliness, and SFBB management records.
-24. [Natasha's Law PPDS Food Labelling Guide](https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide): Complete walkthrough of Prepacked for Direct Sale (PPDS) ingredient lists, compound ingredients, and 14-allergen highlighting rules.
+21. [Next.js Website Development Cost UK & US (2026)](https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us): Detailed GBP and USD Next.js project pricing breakdown vs traditional UK & US agencies.
+22. [Next.js App Router vs WordPress for UK & US SEO](https://www.saimdev.site/blog/nextjs-app-router-vs-wordpress-uk-seo): Technical analysis comparing React Server Components, Core Web Vitals, and schema graphs against WordPress plugins.
+23. [Migrating WordPress or Webflow to Next.js Without SEO Loss](https://www.saimdev.site/blog/migrate-wordpress-webflow-to-nextjs-seo-guide): Step-by-step permanent 301 mapping, canonical alignment, and prebuild verification checklist.
+24. [Next.js Startup Architecture Blueprint (UK & US)](https://www.saimdev.site/blog/nextjs-website-development-guide-uk-us-startups): Choosing SSG, ISR, Headless CMS, and multi-region London/US edge deployment cleanly.
+25. [Why Every Small Business Needs a Website](https://www.saimdev.site/blog/why-small-business-needs-website): Commercial ROI analysis of custom websites vs social-only presence for UK & US local businesses.
+26. [Free Website Builders vs Custom Websites: Hidden Costs](https://www.saimdev.site/blog/free-website-for-local-business): Breakdown of platform lock-in, renewal hikes, and SEO limitations of DIY builders.
+27. [Small Business Website Packages Guide](https://www.saimdev.site/blog/small-business-website-packages-guide): Buyer breakdown of fixed-scope deliverables, milestone protection, and source code ownership vs monthly templates.
+28. [5-Star Food Hygiene Rating Checklist](https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist): Comprehensive UK EHO inspection preparation checklist covering food handling, cleanliness, and SFBB management records.
+29. [Natasha's Law PPDS Food Labelling Guide](https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide): Complete walkthrough of Prepacked for Direct Sale (PPDS) ingredient lists, compound ingredients, and 14-allergen highlighting rules.
+30. [How to Create a 14-Allergen Matrix for UK Restaurants](https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants): Step-by-step recipe audit workflow and allergen matrix guide.
+31. [Commercial Kitchen Food Cooling & 90-Minute Rule Guide](https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide): Safe chilling limits, danger-zone rules, and rapid cooling methods.
+32. [How to Calculate Food Cost Percentage & Protect 70%+ Gross Margins](https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator): Commercial kitchen CoGS formulas, shrinkage math, and menu engineering.
+33. [How to Scale Recipes for Commercial Catering (10 to 500 Portions)](https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator): Recipe Conversion Factor (RCF) math and non-linear seasoning rules.
+34. [SFBB Daily Kitchen Opening & Closing Checklists](https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide): Daily 4 Cs routine and temperature verification records for UK kitchens.
+35. [How to Write a HACCP Plan for a UK Food Business](https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step): All 7 HACCP principles and Critical Control Points explained step-by-step.
+36. [Level 2 Food Hygiene Practice Test & Answers UK](https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide): Interactive revision quiz and answers for UK food handlers and chefs.

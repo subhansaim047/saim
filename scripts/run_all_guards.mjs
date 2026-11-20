@@ -106,48 +106,35 @@ for (const slug of keepAndImprove) {
 }
 
 // -----------------------------------------------------------------
-// GUARD 4: Sitemap Hygiene (Zero Removed Tools/Templates Leak)
+// GUARD 4: Sitemap Hygiene (Zero Removed Templates Leak + All 5 Tools & 9 Compliance Guides Present)
 // -----------------------------------------------------------------
-console.log("\n--- Guard 4: Sitemap & Pruned Hub Alignment ---");
+console.log("\n--- Guard 4: Sitemap & Restored Tools/Guides Alignment ---");
 const sitemapContent = fs.readFileSync("public/sitemap.xml", "utf8");
 
 assert(!sitemapContent.includes("/food-safety-templates/"), "Zero /food-safety-templates/ URLs appear in sitemap.xml");
-assert(!sitemapContent.includes("<loc>https://www.saimdev.site/tools</loc>"), "Removed /tools hub does not appear in sitemap.xml");
-for (const removedTool of [
-  "/tools/ppds-label-generator",
-  "/tools/food-cost-calculator",
-  "/tools/allergen-matrix-generator",
-  "/tools/recipe-batch-calculator"
-]) {
-  assert(!sitemapContent.includes(removedTool), `Removed tool ${removedTool} is absent from sitemap.xml`);
-}
 for (const keptUrl of [
   "https://www.saimdev.site/overview",
+  "https://www.saimdev.site/tools",
   "https://www.saimdev.site/tools/commission-savings-calculator",
+  "https://www.saimdev.site/tools/ppds-label-generator",
+  "https://www.saimdev.site/tools/food-cost-calculator",
+  "https://www.saimdev.site/tools/allergen-matrix-generator",
+  "https://www.saimdev.site/tools/recipe-batch-calculator",
   "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
-  "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide"
+  "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
+  "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
+  "https://www.saimdev.site/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
+  "https://www.saimdev.site/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
+  "https://www.saimdev.site/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
+  "https://www.saimdev.site/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
+  "https://www.saimdev.site/blog/commercial-kitchen-food-cooling-temperature-guide",
+  "https://www.saimdev.site/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide"
 ]) {
-  assert(sitemapContent.includes(keptUrl), `Kept URL "${keptUrl}" is present in sitemap.xml`);
+  assert(sitemapContent.includes(`<loc>${keptUrl}</loc>`), `Indexed URL "${keptUrl}" is present in sitemap.xml`);
 }
 
 const imageSitemapContent = fs.readFileSync("public/image-sitemap.xml", "utf8");
 assert(!imageSitemapContent.includes("/food-safety-templates"), "Zero /food-safety-templates URLs appear in image-sitemap.xml");
-assert(!imageSitemapContent.includes("<loc>https://www.saimdev.site/tools</loc>"), "Removed /tools hub absent from image-sitemap.xml");
-for (const removedPath of [
-  "/tools/ppds-label-generator",
-  "/tools/food-cost-calculator",
-  "/tools/allergen-matrix-generator",
-  "/tools/recipe-batch-calculator",
-  "/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
-  "/blog/mastering-food-cost-percentage-commercial-kitchen-calculator",
-  "/blog/how-to-scale-recipes-commercial-catering-batch-calculator",
-  "/blog/sfbb-daily-kitchen-opening-closing-checklist-guide",
-  "/blog/how-to-write-haccp-plan-uk-food-business-step-by-step",
-  "/blog/commercial-kitchen-food-cooling-temperature-guide",
-  "/blog/level-2-food-hygiene-practice-test-kitchen-staff-guide"
-]) {
-  assert(!imageSitemapContent.includes(removedPath), `Removed route ${removedPath} is absent from image-sitemap.xml`);
-}
 
 // -----------------------------------------------------------------
 // GUARD 5: Allergen chart demo data safety & UI terminology
