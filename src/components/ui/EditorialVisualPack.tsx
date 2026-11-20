@@ -572,11 +572,22 @@ export const TOPIC_SILOS: Record<TopicSiloId, TopicSiloDefinition> = {
 
 export function resolveTopicSiloId(slugOrPath: string): TopicSiloId {
   const s = slugOrPath.toLowerCase();
+  if (s.includes("website-cost-calculator")) {
+    return "nextjs-core";
+  }
   if (
     s.includes("takeaway") ||
     s.includes("commission") ||
     s.includes("hygiene") ||
-    s.includes("natasha")
+    s.includes("natasha") ||
+    s.includes("allergen") ||
+    s.includes("ppds") ||
+    s.includes("food-cost") ||
+    s.includes("recipe") ||
+    s.includes("cooling") ||
+    s.includes("sfbb") ||
+    s.includes("haccp") ||
+    s === "/tools"
   ) {
     return "hospitality-takeaway";
   }

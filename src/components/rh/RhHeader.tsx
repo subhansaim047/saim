@@ -511,10 +511,10 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
                   <li>
                     <Link
                       prefetch={false}
-                      href="/tools/commission-savings-calculator"
+                      href="/tools/website-cost-calculator"
                       className="text-[#CBCBCB] hover:text-white text-[15px] leading-[24px] tracking-[-0.3px] transition-colors"
                     >
-                      Commission Calculator
+                      Website Cost Calculator
                     </Link>
                   </li>
                 </ul>

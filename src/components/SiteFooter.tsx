@@ -2,10 +2,17 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FazierBadge } from "./FazierBadge";
 
 export function SiteFooter(props?: { theme?: "dark" | "light"; className?: string }) {
   const [copied, setCopied] = useState(false);
+  const pathname = usePathname() || "";
+  const isHospitalitySilo =
+    !pathname.includes("website-cost-calculator") &&
+    /takeaway|commission|hygiene|natasha|allergen|ppds|food-cost|recipe|cooling|sfbb|haccp|^\/tools$/i.test(
+      pathname
+    );
 
   const handleCopyEmail = () => {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
@@ -357,139 +364,218 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
             </ul>
           </div>
 
-          {/* UK Hubs, Tools & Resources Column */}
+          {/* Context-Isolated Silo Column (Prevents Cross-Silo Contextual Dilution) */}
           <div className="md:col-span-3 space-y-3">
             <div className="text-[12px] uppercase tracking-[0.88px] text-[#939393]">
-              UK &amp; US Hubs &amp; Free Tools
+              {isHospitalitySilo
+                ? "UK Takeaway Hubs & Kitchen Tools"
+                : "UK & US Engineering Hubs & Tools"}
             </div>
-            <ul className="space-y-2.5 text-[15px] text-[#CBCBCB]">
-              <li>
-                <Link
-                  href="/nextjs-developer-uk"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Next.js Developer UK
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/takeaway-web-design"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Takeaway Web Design UK
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/takeaway-web-design-london"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Takeaway Websites London
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/takeaway-web-design-manchester"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Takeaway Websites Manchester
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/takeaway-web-design-birmingham"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Takeaway Websites Birmingham
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blogs"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Engineering &amp; UK Hospitality Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog/uk-food-hygiene-rating-scheme-5-star-checklist"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  5-Star Hygiene Checklist UK
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tools"
-                  prefetch={false}
-                  className="text-white hover:text-[#BAFF00] transition-colors"
-                >
-                  Free UK &amp; Web Tools Hub →
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tools/website-cost-calculator"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Website Cost Calculator UK
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tools/commission-savings-calculator"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Takeaway Commission Calculator
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tools/allergen-matrix-generator"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  14-Allergen Matrix Generator
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tools/ppds-label-generator"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Natasha&apos;s Law PPDS Label Maker
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tools/food-cost-calculator"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Kitchen Food Cost &amp; GP% Calculator
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tools/recipe-batch-calculator"
-                  prefetch={false}
-                  className="hover:text-white transition-colors"
-                >
-                  Commercial Recipe Batch Scaler
-                </Link>
-              </li>
-            </ul>
+            {isHospitalitySilo ? (
+              <ul className="space-y-2.5 text-[15px] text-[#CBCBCB]">
+                <li>
+                  <Link
+                    href="/services/takeaway-web-design"
+                    prefetch={false}
+                    className="text-white hover:text-[#BAFF00] transition-colors"
+                  >
+                    Takeaway Web Design UK →
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/takeaway-web-design-london"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Takeaway Websites London
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/takeaway-web-design-manchester"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Takeaway Websites Manchester
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/takeaway-web-design-birmingham"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Takeaway Websites Birmingham
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools"
+                    prefetch={false}
+                    className="text-white hover:text-[#BAFF00] transition-colors"
+                  >
+                    Free UK Kitchen Tools Hub →
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/commission-savings-calculator"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Takeaway Commission Calculator
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/allergen-matrix-generator"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    14-Allergen Matrix Generator
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/ppds-label-generator"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Natasha&apos;s Law PPDS Label Maker
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/food-cost-calculator"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Kitchen Food Cost &amp; GP% Calculator
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/recipe-batch-calculator"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Commercial Recipe Batch Scaler
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog/zero-commission-takeaway-online-ordering-system-uk-guide"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    0% Commission Ordering Guide
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog/uk-food-hygiene-rating-scheme-5-star-checklist"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    5-Star Hygiene Checklist UK
+                  </Link>
+                </li>
+              </ul>
+            ) : (
+              <ul className="space-y-2.5 text-[15px] text-[#CBCBCB]">
+                <li>
+                  <Link
+                    href="/nextjs-developer-uk"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Next.js Developer UK
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/website-cost-calculator"
+                    prefetch={false}
+                    className="text-white hover:text-[#BAFF00] transition-colors"
+                  >
+                    Website Cost Calculator UK →
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/wordpress-headless-cms"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Headless WordPress &amp; Sanity CMS
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/website-speed-optimization"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Core Web Vitals Optimization
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/takeaway-web-design"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Direct Ordering Web Systems
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Interactive Calculators Hub
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blogs"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Next.js &amp; SEO Engineering Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog/nextjs-website-development-cost-uk-us"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Next.js Cost Guide UK &amp; US
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog/nextjs-app-router-vs-wordpress-uk-seo"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Next.js vs WordPress SEO Guide
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog/migrate-wordpress-webflow-to-nextjs-seo-guide"
+                    prefetch={false}
+                    className="hover:text-white transition-colors"
+                  >
+                    Zero-Loss CMS Migration Guide
+                  </Link>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
 

@@ -118,9 +118,7 @@ const COMPLIANCE_POSTS = [
 
 export const BlogSiloNav: React.FC<BlogSiloNavProps> = ({ currentSlug, category }) => {
   const isGrowth = category === "growth";
-  const postsPool = isGrowth
-    ? GROWTH_POSTS
-    : [...COMPLIANCE_POSTS, GROWTH_POSTS[0], GROWTH_POSTS[1]];
+  const postsPool = isGrowth ? GROWTH_POSTS : COMPLIANCE_POSTS;
   const siblingPosts = postsPool.filter((p) => p.slug !== currentSlug).slice(0, 6);
 
   return (
@@ -129,7 +127,7 @@ export const BlogSiloNav: React.FC<BlogSiloNavProps> = ({ currentSlug, category 
         <div className="flex items-center gap-2.5">
           <BookOpen className="w-5 h-5 text-primary" />
           <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
-            Related {isGrowth ? "Small Business Growth" : "Commercial Kitchen & Agency"} Guides
+            Related {isGrowth ? "Next.js & Web Strategy" : "UK Hospitality & Kitchen Compliance"} Guides
           </h2>
         </div>
         <Link
