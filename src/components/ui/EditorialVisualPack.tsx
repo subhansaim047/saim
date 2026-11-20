@@ -476,6 +476,7 @@ export const TOPIC_SILOS: Record<TopicSiloId, TopicSiloDefinition> = {
       { title: "Headless WordPress & CMS Architecture", href: "/services/wordpress-headless-cms", tag: "Headless CMS" },
     ],
     resources: [
+      { title: "Website Cost Calculator UK, Europe & US", href: "/tools/website-cost-calculator", tag: "Instant Quote Tool" },
       { title: "Next.js Website Cost Guide UK & US (2026)", href: "/blog/nextjs-website-development-cost-uk-us", tag: "Pricing Guide" },
       { title: "Next.js Startup Architecture Blueprint", href: "/blog/nextjs-website-development-guide-uk-us-startups", tag: "Tech Blueprint" },
       { title: "Small Business Website Packages Guide", href: "/blog/small-business-website-packages-guide", tag: "Scope Guide" },
@@ -530,10 +531,15 @@ export const TOPIC_SILOS: Record<TopicSiloId, TopicSiloDefinition> = {
       { title: "Small Business & Restaurant Flagships", href: "/services/business-websites", tag: "Multi-Location" },
     ],
     resources: [
+      { title: "Free UK Takeaway & Kitchen Tools Hub (All 6 Tools)", href: "/tools", tag: "Tools Hub" },
       { title: "Free Takeaway Commission Savings Calculator", href: "/tools/commission-savings-calculator", tag: "Free ROI Tool" },
+      { title: "14-Allergen Matrix Generator UK", href: "/tools/allergen-matrix-generator", tag: "Allergen Tool" },
+      { title: "Natasha's Law PPDS Food Label Generator", href: "/tools/ppds-label-generator", tag: "PPDS Maker" },
+      { title: "Commercial Kitchen Food Cost & GP% Calculator", href: "/tools/food-cost-calculator", tag: "GP% Tool" },
+      { title: "Commercial Recipe Batch Scaler", href: "/tools/recipe-batch-calculator", tag: "Batch Scaler" },
+      { title: "Zero Commission Takeaway Ordering System UK Guide", href: "/blog/zero-commission-takeaway-online-ordering-system-uk-guide", tag: "Ordering Blueprint" },
       { title: "UK 5-Star Food Hygiene Rating (FHRS) Checklist", href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist", tag: "FHRS Guide" },
       { title: "Natasha's Law PPDS 14-Allergen Labelling Guide", href: "/blog/natashas-law-ppds-food-labelling-guide", tag: "PPDS Guide" },
-      { title: "HotBite UK Live Takeaway Ordering Demo", href: "/demos", tag: "Live Demo" },
     ],
   },
   "seo-migration": {

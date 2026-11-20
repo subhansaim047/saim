@@ -61,6 +61,14 @@ export const metadata: Metadata = {
 
 const INTERACTIVE_TOOLS = [
   {
+    href: "/tools/website-cost-calculator",
+    badge: "GBP • EUR • USD Estimator",
+    title: "Website Cost Calculator UK & Europe",
+    desc: "Estimate custom Next.js website, headless Shopify, and web app build pricing in GBP (£), EUR (€), and USD ($) with 24-month agency vs CMS TCO math.",
+    bullets: ["Instant GBP / EUR / USD Fixed Quotes", "24-Month Agency & CMS TCO Comparison", "Free Live Preview Milestone Breakdown"],
+    icon: Calculator,
+  },
+  {
     href: "/tools/commission-savings-calculator",
     badge: "Takeaway Margin ROI",
     title: "Takeaway Commission Savings Calculator",
@@ -103,6 +111,12 @@ const INTERACTIVE_TOOLS = [
 ];
 
 const COMPLIANCE_GUIDES = [
+  {
+    href: "/blog/zero-commission-takeaway-online-ordering-system-uk-guide",
+    tag: "0% Commission Ordering",
+    title: "Zero Commission Takeaway Ordering System UK: Direct Ordering Blueprint",
+    desc: "How UK takeaways transition repeat customers off 30% Just Eat & Deliveroo fees using QR bag flyers and direct Apple Pay menus.",
+  },
   {
     href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
     tag: "5-Star FHRS Rating",

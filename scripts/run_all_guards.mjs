@@ -115,11 +115,13 @@ assert(!sitemapContent.includes("/food-safety-templates/"), "Zero /food-safety-t
 for (const keptUrl of [
   "https://www.saimdev.site/overview",
   "https://www.saimdev.site/tools",
+  "https://www.saimdev.site/tools/website-cost-calculator",
   "https://www.saimdev.site/tools/commission-savings-calculator",
   "https://www.saimdev.site/tools/ppds-label-generator",
   "https://www.saimdev.site/tools/food-cost-calculator",
   "https://www.saimdev.site/tools/allergen-matrix-generator",
   "https://www.saimdev.site/tools/recipe-batch-calculator",
+  "https://www.saimdev.site/blog/zero-commission-takeaway-online-ordering-system-uk-guide",
   "https://www.saimdev.site/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
   "https://www.saimdev.site/blog/natashas-law-ppds-food-labelling-guide",
   "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",

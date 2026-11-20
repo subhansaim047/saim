@@ -428,11 +428,65 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               </li>
               <li>
                 <Link
+                  href="/tools"
+                  prefetch={false}
+                  className="text-white hover:text-[#BAFF00] transition-colors"
+                >
+                  Free UK &amp; Web Tools Hub →
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools/website-cost-calculator"
+                  prefetch={false}
+                  className="hover:text-white transition-colors"
+                >
+                  Website Cost Calculator UK
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/tools/commission-savings-calculator"
                   prefetch={false}
                   className="hover:text-white transition-colors"
                 >
                   Takeaway Commission Calculator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools/allergen-matrix-generator"
+                  prefetch={false}
+                  className="hover:text-white transition-colors"
+                >
+                  14-Allergen Matrix Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools/ppds-label-generator"
+                  prefetch={false}
+                  className="hover:text-white transition-colors"
+                >
+                  Natasha&apos;s Law PPDS Label Maker
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools/food-cost-calculator"
+                  prefetch={false}
+                  className="hover:text-white transition-colors"
+                >
+                  Kitchen Food Cost &amp; GP% Calculator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools/recipe-batch-calculator"
+                  prefetch={false}
+                  className="hover:text-white transition-colors"
+                >
+                  Commercial Recipe Batch Scaler
                 </Link>
               </li>
             </ul>

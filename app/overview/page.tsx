@@ -22,9 +22,9 @@ const ProjectScopeEstimator = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: "Full Studio Overview, Specs & Cost Estimator | Saim Dev",
+  title: "Next.js Studio Technical Overview & Specs | Saim Dev",
   description:
-    "Explore Saim Dev's complete engineering breakdown, interactive project scope cost estimator, live demos, architecture comparison, and full FAQ.",
+    "Explore Saim Dev's complete Next.js 16 engineering specifications, platform architecture comparisons, deliverable matrix, live demos, and scope planner.",
   alternates: {
     canonical: "https://www.saimdev.site/overview",
     languages: {
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Full Studio Overview, Specs & Cost Estimator | Saim Dev",
+    title: "Next.js Studio Technical Overview & Specs | Saim Dev",
     description:
-      "Explore Saim Dev's complete engineering breakdown, interactive project scope cost estimator, live demos, architecture comparison, and full FAQ.",
+      "Explore Saim Dev's complete Next.js 16 engineering specifications, platform architecture comparisons, deliverable matrix, live demos, and scope planner.",
     url: "https://www.saimdev.site/overview",
     siteName: "Saim Dev",
     locale: "en_GB",
@@ -48,16 +48,16 @@ export const metadata: Metadata = {
         url: "https://www.saimdev.site/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Saim Dev Studio Overview and Project Scope Estimator",
+        alt: "Saim Dev Next.js Studio Technical Overview and Architecture Specifications",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Full Studio Overview, Specs & Cost Estimator | Saim Dev",
+    title: "Next.js Studio Technical Overview & Specs | Saim Dev",
     description:
-      "Explore Saim Dev's complete engineering breakdown, interactive project scope cost estimator, live demos, architecture comparison, and full FAQ.",
+      "Explore Saim Dev's complete Next.js 16 engineering specifications, platform architecture comparisons, deliverable matrix, live demos, and scope planner.",
     creator: "@saimwebdev",
     images: ["https://www.saimdev.site/og-image.png"],
   },
@@ -217,7 +217,11 @@ const REGIONAL_AND_TOOL_HUBS = [
   { href: "/services/takeaway-web-design-london", label: "Takeaway Web Design London" },
   { href: "/services/takeaway-web-design-manchester", label: "Takeaway Web Design Manchester" },
   { href: "/services/takeaway-web-design-birmingham", label: "Takeaway Web Design Birmingham" },
+  { href: "/tools", label: "Free UK & Web Tools Hub" },
+  { href: "/tools/website-cost-calculator", label: "Website Cost Calculator UK" },
   { href: "/tools/commission-savings-calculator", label: "Takeaway Commission Calculator" },
+  { href: "/tools/allergen-matrix-generator", label: "14-Allergen Matrix Generator" },
+  { href: "/tools/ppds-label-generator", label: "Natasha's Law PPDS Label Maker" },
   { href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist", label: "5-Star Food Hygiene Guide" },
   { href: "/blog/natashas-law-ppds-food-labelling-guide", label: "Natasha's Law PPDS Guide" },
   { href: "/blogs", label: "UK Engineering & Hospitality Guides" },
@@ -310,8 +314,8 @@ export default function StudioOverviewPage() {
           ]}
           title={
             <>
-              Full Studio Overview{" "}
-              <span className="text-[#939393]">&amp; Cost Estimator</span>
+              Next.js Studio Technical Overview{" "}
+              <span className="text-[#939393]">&amp; Architecture Specs</span>
             </>
           }
           subtitle="Complete technical specifications, interactive project scope cost estimator, architecture comparisons, and full deliverables for every Saim Dev service."

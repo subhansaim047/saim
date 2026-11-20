@@ -23,6 +23,17 @@ interface BlogItem {
 
 const blogs: BlogItem[] = [
   {
+    id: 17,
+    title: "Zero Commission Takeaway Ordering System UK: Complete Direct Ordering Blueprint",
+    excerpt: "Actionable 2026 playbook for UK takeaways and restaurants cutting 30% Just Eat & Deliveroo fees with direct Apple Pay checkout, postcode delivery zones, and QR bag flyers.",
+    date: "Nov 20, 2026",
+    readTime: "10 min read",
+    tag: "0% Commission Ordering",
+    category: "economics",
+    tagColor: "#BAFF00",
+    url: "/blog/zero-commission-takeaway-online-ordering-system-uk-guide",
+  },
+  {
     id: 16,
     title: "Next.js Website Development Cost in the UK & US (2026 Breakdown)",
     excerpt: "Compare real UK GBP (£250–£1,450) and US USD ($300–$1,850) fixed-milestone Next.js build quotes vs traditional agency retainers and 24-month CMS TCO.",

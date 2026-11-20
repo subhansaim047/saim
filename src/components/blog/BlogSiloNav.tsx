@@ -55,6 +55,12 @@ const GROWTH_POSTS = [
 
 const COMPLIANCE_POSTS = [
   {
+    slug: "zero-commission-takeaway-online-ordering-system-uk-guide",
+    href: "/blog/zero-commission-takeaway-online-ordering-system-uk-guide",
+    title: "Zero Commission Takeaway Ordering System UK Blueprint",
+    summary: "How UK takeaways replace 30% Just Eat fees with direct Apple Pay ordering and QR bag flyers."
+  },
+  {
     slug: "uk-food-hygiene-rating-scheme-5-star-checklist",
     href: "/blog/uk-food-hygiene-rating-scheme-5-star-checklist",
     title: "UK Food Hygiene Rating Scheme: 5-Star Checklist",
@@ -115,7 +121,7 @@ export const BlogSiloNav: React.FC<BlogSiloNavProps> = ({ currentSlug, category 
   const postsPool = isGrowth
     ? GROWTH_POSTS
     : [...COMPLIANCE_POSTS, GROWTH_POSTS[0], GROWTH_POSTS[1]];
-  const siblingPosts = postsPool.filter((p) => p.slug !== currentSlug).slice(0, 3);
+  const siblingPosts = postsPool.filter((p) => p.slug !== currentSlug).slice(0, 6);
 
   return (
     <section className="my-10 p-6 sm:p-8 rounded-3xl bg-white/[0.03] border border-white/10 space-y-6">
