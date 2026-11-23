@@ -141,6 +141,14 @@ export default function WebsiteCostCalculatorPage() {
           text: "Yes. Use the GBP (£), EUR (€), and USD ($) currency toggle at the top of the calculator to view instant fixed-milestone pricing for UK, European Union, and United States projects.",
         },
       },
+      {
+        "@type": "Question",
+        name: "Can I use this free website price calculator for restaurants or custom web apps?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes — this website price calculator is 100% free with no forced email gate. Select Tier 1 (£250 / $300) to use it as a website cost calculator for restaurants and takeaways with zero-commission direct ordering, or select Tier 5 (£1,490 / $1,850) to use it as a web app development cost calculator for client portals, interactive calculators, and SaaS MVPs.",
+        },
+      },
     ],
   };
 

@@ -79,6 +79,14 @@ const faqEntities = [
       text: "Traditional UK digital agencies have high office overheads, account managers, and sales commissions, typically charging £3,000 to £15,000+ for standard websites. Because you work directly with a senior full-stack engineer remotely, you receive agency-grade Next.js engineering at a fraction of the traditional cost.",
     },
   },
+  {
+    "@type": "Question",
+    name: "Do you offer website design one time payment and fixed price website design worldwide?",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "Yes. Every Saim Dev tier is structured as fixed price website design with a clear one-time payment split 50/50 across milestones — starting at £250 ($300 USD) for landing or takeaway sites, £390 ($500 USD) for starter business sites, and £790 ($999 USD) for multi-page flagships for clients across the UK, US, Canada, Australia, and Europe, with £0/$0 mandatory monthly studio fees.",
+    },
+  },
 ];
 
 const pricingGraphSchema = {

@@ -15,7 +15,7 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
     badge: "Pixel-Accurate Frontend Reconstruction",
     h1: "1:1 Frontend UI Reconstruction — Port Framer, Webflow or Figma Specs to Next.js 16",
     subheading:
-      "Port your existing brand design, approved design mockup, or bloated Framer/Webflow layout into a clean Next.js 16 and Tailwind CSS repository. Keep exact layout geometry and 60fps interaction while dropping platform runtime lock-in.",
+      "Convert Framer to Next.js, convert Webflow to Next.js, or convert Figma to Next.js Tailwind code by hand. We rebuild your approved design mockup or legacy builder site into a clean Next.js 16 repository — keeping exact layout geometry and 60fps interaction while dropping recurring platform lock-in.",
     primaryCtaText: "Submit Reference URL or Figma",
     secondaryCtaText: "View Concept Rebuilds",
     stripLabel: "1:1 UI Port Precision",
@@ -457,6 +457,16 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
         question: "How long does a full multi-page UI port take?",
         answer:
           "Single landing ports complete in 4–5 days; multi-page £1,500 rebuilds typically deliver to staging within 7–10 working days.",
+      },
+      {
+        question: "Can you convert Framer to Next.js or export Webflow to Next.js without breaking animations?",
+        answer:
+          "Yes. Automated Webflow to Next.js converters and Framer export scripts routinely break IX2 scroll timelines, output messy absolute CSS, and hurt Core Web Vitals. We hand-code every Framer export to Next.js and convert Webflow to Next.js 16 + Framer Motion / GSAP cleanly for a fixed £750–£2,200 ($950–$2,500 USD) fee instead of $5,000–$15,000 agency retainers.",
+      },
+      {
+        question: "Do you convert Figma to Next.js Tailwind code by hand instead of using AI code plugins?",
+        answer:
+          "Yes — every Figma to Next.js Tailwind conversion is written manually in strict TypeScript and semantic HTML using reusable Tailwind tokens, responsive grid breakpoints, and clean App Router Server Components ready for UK, US, Canadian, and European engineering teams.",
       },
     ],
     finalCta: {
@@ -942,6 +952,16 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
         answer:
           "Yes. We map old /product/* URLs using explicit 301 rules inside next.config so Google Shopping history and organic links carry straight across.",
       },
+      {
+        question: "Can you build a custom Stripe checkout page in Next.js with zero monthly SaaS tax?",
+        answer:
+          "Yes. We engineer custom Stripe checkout page Next.js flows (embedded Stripe Elements or hosted Checkout Sessions with Apple Pay, Google Pay, and verified webhooks) so UK, US, Canadian, and EU brands pay zero monthly platform fees beyond standard Stripe card processing.",
+      },
+      {
+        question: "Do you build WooCommerce headless Next.js storefronts for existing WordPress stores?",
+        answer:
+          "Yes. If your operations team relies on WooCommerce inventory or shipping plugins, we can decouple your frontend into a fast WooCommerce headless Next.js storefront (via WPGraphQL or WooCommerce REST API) or migrate you cleanly onto pure Next.js + Stripe.",
+      },
     ],
     finalCta: {
       headline: "Build an Online Storefront Engineered Around How Your Product Sells",
@@ -1426,6 +1446,11 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
         answer:
           "We configure a clean checkout subdomain (e.g. checkout.yourbrand.co.uk) inside Shopify Domains so customers never see an unfamiliar .myshopify.com URL during payment.",
       },
+      {
+        question: "How much does a Headless Shopify Next.js storefront cost compared to enterprise agencies?",
+        answer:
+          "Traditional agencies frequently quote $30,000–$150,000 (£25,000+) for headless Shopify cost scopes bundled with unnecessary Shopify Plus upgrades. Saim Dev engineers custom headless Shopify Next.js storefronts on the official Next.js Shopify Storefront API starting from £1,490 ($1,850 USD) fixed — working on standard Shopify Basic, Grow, or Advanced plans with zero agency retainer.",
+      },
     ],
     finalCta: {
       headline: "Keep Shopify Operations. Unlock Custom Next.js Speed & Freedom.",
@@ -1848,8 +1873,8 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
         desc: "Explore dedicated local insights on London, Birmingham, and Manchester takeaway markets linked right from your hub.",
       },
       {
-        title: "Natasha's Law & EHO Tool Ecosystem",
-        desc: "Only agency giving UK kitchens 160+ free Food Safety & SFBB downloadable templates alongside their storefront.",
+        title: "Natasha's Law & Kitchen Tool Ecosystem",
+        desc: "Only studio giving kitchens 6 free interactive browser calculators & compliance generators (14-Allergen Matrix, PPDS Label Maker, Food Cost & Commission ROI) alongside their storefront.",
       },
       {
         title: "QR Bag-Flyer Conversion Strategy",
@@ -1909,6 +1934,16 @@ export const COMMERCE_TAKEAWAY_SERVICES: Record<string, ServicePageData> = {
         question: "Do you offer city-specific local setup guidance for London, Birmingham, or Manchester?",
         answer:
           "Yes — view our dedicated UK city guides at /services/takeaway-web-design-london, /services/takeaway-web-design-birmingham, and /services/takeaway-web-design-manchester for local postcode, EHO rating, and cost breakdowns.",
+      },
+      {
+        question: "Do you build zero commission restaurant ordering systems with no monthly fee worldwide?",
+        answer:
+          "Yes. Unlike subscription ordering portals that advertise zero commission while charging $49–$150/month forever, Saim Dev builds a true zero commission restaurant ordering system with no monthly fee for independent restaurants and takeaways across the UK (£250 fixed), US ($300 fixed), Canada, and Australia — with full source code ownership.",
+      },
+      {
+        question: "How does your WhatsApp restaurant ordering system work without expensive POS hardware?",
+        answer:
+          "Our built-in WhatsApp restaurant ordering system lets diners browse mobile menus, customise meal deals, choose collection or delivery, and send clean itemised order tickets straight to your kitchen WhatsApp or optional Stripe card checkout — zero new counter terminals required.",
       },
     ],
     finalCta: {

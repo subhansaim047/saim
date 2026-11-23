@@ -1030,6 +1030,11 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
         answer:
           "Yes — browse any relevant live build inside /demos or send your business details via /contact to request a Free Concept Preview prior to formal milestone kickoff.",
       },
+      {
+        question: "Do you build specialist trade sites like car detailing and mobile car detailing website design?",
+        answer:
+          "Yes. We build conversion-focused car detailing website design and mobile car detailing website design packages (inspect our live DetailX Auto concept at /demos/akdetailing/index.html) featuring ceramic coating package tables, WhatsApp photo quote buttons, and postcode/service-area coverage across the UK, US, Canada, and Australia from £250 ($300 USD) fixed.",
+      },
     ],
     finalCta: {
       headline: "Give Your Local Business a Website That Wins Higher-Value Quotes",
@@ -1539,6 +1544,16 @@ export const CORE_BUILD_SERVICES: Record<string, ServicePageData> = {
         question: "What if my WordPress site uses WooCommerce?",
         answer:
           "We either migrate your store to Stripe Checkout / headless architecture on our eCommerce package or keep WooCommerce strictly on a headless checkout subdomain.",
+      },
+      {
+        question: "What is the typical WordPress to Next.js migration cost compared to traditional agencies?",
+        answer:
+          "Enterprise agencies routinely quote $8,000–$38,000 (£6,500–£30,000) for a WordPress to Next.js migration cost. Saim Dev scopes fixed-milestone migrations cleanly at £790 ($999 USD) for up to 15 static/MDX routes and £1,150–£1,650 ($1,450–$2,100 USD) for Sanity CMS or WPGraphQL architectures — including full 301 redirect verification and zero ongoing retainer.",
+      },
+      {
+        question: "How does using headless WordPress with Next.js and Vercel work for daily publishing?",
+        answer:
+          "When using headless WordPress with Next.js and Vercel, your marketing staff keep publishing posts inside familiar wp-admin while Next.js fetches content via WPGraphQL or REST and triggers on-demand Incremental Static Regeneration (ISR) webhooks on Vercel's global edge network — keeping your wp-admin completely shielded from public visitors.",
       },
     ],
     finalCta: {

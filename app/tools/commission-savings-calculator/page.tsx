@@ -73,6 +73,14 @@ const CALCULATOR_FAQS = [
     q: "Can repeat customers pay by card, Apple Pay, or dispatch directly to WhatsApp?",
     a: "Yes. Orders can route directly via Stripe Checkout, Apple Pay/Google Pay (paying only standard processor card fees of ~1.4% + 20p in the UK), cash on collection, or formatted WhatsApp kitchen dockets with postcode delivery radius verification.",
   },
+  {
+    q: "Does this work as a Just Eat commission calculator for UK, Ireland, Canada, and Australia?",
+    a: "Yes. Use the preset sliders as an instant Just Eat commission calculator to model how much commission Just Eat charges restaurants (typically 14% for own-driver orders up to 30%–35% + VAT for marketplace courier dispatch) and calculate exact annual cash retained when regulars reorder direct.",
+  },
+  {
+    q: "Can US, Canadian, and Australian kitchens use this as an Uber Eats and DoorDash commission calculator?",
+    a: "Yes. Switch the currency toggle to USD ($) to use it as an Uber Eats and DoorDash commission calculator covering standard 15% Lite, 25% Plus, and 30% Premier marketplace commission tiers — comparing annual delivery app drain against a $300 one-time direct ordering site.",
+  },
 ];
 
 const MODEL_COMPARISON = [
