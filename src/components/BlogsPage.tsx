@@ -281,7 +281,7 @@ export const BlogsPage = () => {
             {filteredBlogs.map((blog, i) => (
               <motion.article
                 key={blog.id}
-                initial={{ opacity: 0, y: 16 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: i * 0.04 }}
                 className="group relative flex flex-col rounded-2xl border border-[#ececec] bg-white p-6 hover:border-gray-300 hover:shadow-lg transition-all duration-300 overflow-hidden"

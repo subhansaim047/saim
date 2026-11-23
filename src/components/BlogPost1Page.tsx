@@ -149,7 +149,7 @@ export const BlogPost1Page = () => {
           </ol>
         </nav>
 
-<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-10">
+<motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-10">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold tracking-widest uppercase text-primary/80 mb-5">
             Business Growth
           </span>
@@ -204,7 +204,7 @@ export const BlogPost1Page = () => {
         </motion.div>
 
         {/* ── Table of Contents ── */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.1 }} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-12">
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.1 }} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-12">
           <p className="text-xs font-bold tracking-widest uppercase text-white/40 mb-4">In this article</p>
           <ol className="space-y-2">
             {sections.map((s, i) => (
@@ -219,7 +219,7 @@ export const BlogPost1Page = () => {
         </motion.div>
 
         {/* ── Article Body ── */}
-        <motion.article initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.15 }} style={{ lineHeight: 1.85 }}>
+        <motion.article initial={false} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.15 }} style={{ lineHeight: 1.85 }}>
 
           {/* Section 1 — Stats */}
           <section id="section-1" className="mb-14">
@@ -521,7 +521,7 @@ export const BlogPost1Page = () => {
         />
 
         {/* ── Author Card ── */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.3 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-6">
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.3 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-6">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev — Why Small Businesses Need a High-Converting Next.js 16 Website UK & US" width={56} height={56} decoding="async" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
           <div>
             <p className="text-white font-semibold text-sm mb-0.5">Saim Dev</p>
@@ -533,7 +533,7 @@ export const BlogPost1Page = () => {
         </motion.div>
 
         {/* ── Lead Gen CTA — Free Audit ── */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="rounded-2xl border border-primary/20 bg-primary/5 p-7 mb-10">
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="rounded-2xl border border-primary/20 bg-primary/5 p-7 mb-10">
           <p className="text-white font-bold text-xl mb-2">Is your business losing customers online?</p>
           <p className="text-white/55 text-sm leading-relaxed mb-6">
             We offer a free website audit for small businesses. You'll get a clear, honest review of your current online presence — covering Core Web Vitals speed, Google visibility, mobile experience, and concrete conversion fixes. No sales pitch — just a straight technical assessment.

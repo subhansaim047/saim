@@ -108,7 +108,7 @@ export const BlogPost2Page = () => {
           </ol>
         </nav>
 
-<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-10">
+<motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-10">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-bold tracking-widest uppercase text-primary mb-5">
             Special Offer
           </span>
@@ -163,7 +163,7 @@ export const BlogPost2Page = () => {
         </motion.div>
 
         {/* ── Table of Contents ── */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.1 }} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-12">
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.1 }} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-12">
           <p className="text-xs font-bold tracking-widest uppercase text-white/40 mb-4">In this article</p>
           <ol className="space-y-2">
             {sections.map((s, i) => (
@@ -178,7 +178,7 @@ export const BlogPost2Page = () => {
         </motion.div>
 
         {/* ── Article Body ── */}
-        <motion.article initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.15 }} style={{ lineHeight: 1.85 }}>
+        <motion.article initial={false} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.15 }} style={{ lineHeight: 1.85 }}>
 
           {/* Section 1 */}
           <section id="section-1" className="mb-14">
@@ -433,7 +433,7 @@ export const BlogPost2Page = () => {
         />
 
         {/* ── CTA — Claim Your Slot ── */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.3 }} className="rounded-2xl border border-primary/20 bg-primary/5 p-7 mb-6 text-center">
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.3 }} className="rounded-2xl border border-primary/20 bg-primary/5 p-7 mb-6 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-xs font-bold tracking-widest uppercase text-primary">Five free website projects available</span>
           </div>
@@ -487,7 +487,7 @@ export const BlogPost2Page = () => {
         </div>
 
         {/* ── Author Card ── */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-10">
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-10">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev — Free Website for Small Business & Fixed-Price Next.js Starter Slots UK & US" width={56} height={56} decoding="async" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
           <div>
             <p className="text-white font-semibold text-sm mb-0.5">Saim Dev</p>

@@ -76,7 +76,7 @@ export const BlogPost3Page = () => {
           </ol>
         </nav>
 
-<motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+<motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <div className="flex items-center gap-3 mb-6">
             <span className="bg-primary/20 text-primary border border-primary/20 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
               Buyer&apos;s Scope Guide
@@ -146,7 +146,7 @@ export const BlogPost3Page = () => {
 
       {/* ── Content Body ── */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-24">
-        <motion.article initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }}>
+        <motion.article initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }}>
           
           {/* Table of Contents */}
           <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 mb-12">
@@ -372,7 +372,7 @@ export const BlogPost3Page = () => {
         </div>
 
         {/* ── Author Card ── */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-10">
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.35 }} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 mb-10">
           <img src="/saim-dev-logo.jpg" alt="Saim Dev — Small Business Website Packages & Fixed-Price Next.js 16 Scope Guide UK & US" width={56} height={56} decoding="async" className="w-14 h-14 rounded-full object-cover border border-white/15 flex-shrink-0" />
           <div>
             <p className="text-white font-semibold text-sm mb-0.5">Saim Dev</p>
