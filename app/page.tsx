@@ -115,7 +115,7 @@ const professionalServiceSchema = {
   "image": "https://www.saimdev.site/hero-shots/shot-4.webp",
   "priceRange": "£250 - £2500",
   "telephone": "+923196526604",
-  "email": "contact@saimdev.site",
+  "email": "agency@saimdev.site",
   "areaServed": [
     { "@type": "Country", "name": "United Kingdom" },
     { "@type": "Country", "name": "United States" },
@@ -275,6 +275,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
       />
       <script
         type="application/ld+json"

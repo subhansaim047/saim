@@ -1,35 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useId } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { IconTile } from "./icons/IconTile";
 // clean icons aligned with ProcessSection
-import {
-  Calculator,
-  ShieldAlert,
-  DollarSign,
-  ChefHat,
-  ClipboardCheck,
-  Thermometer,
-  Printer,
-  Download,
-  Plus,
-  Trash2,
-  Search,
-  Filter,
-  Check,
-  Tag,
-  ShieldCheck,
-  ArrowRight,
-  RefreshCw,
-  Copy,
-  Info,
-  Calendar,
-  Building,
-  User,
-  Sliders,
-  AlertCircle
-} from "lucide-react";
+import { Calculator, ShieldAlert, ChefHat, ClipboardCheck, Thermometer, Printer, Download, Plus, Trash2, Search, Check, Tag, ShieldCheck, ArrowRight, RefreshCw, Copy, Calendar, Building, User, Sliders, AlertCircle } from "lucide-react";
 
 // ── 14 OFFICIAL UK / EU REGULATED ALLERGENS ──
 export interface AllergenDef {

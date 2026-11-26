@@ -1,22 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Flame,
-  Snowflake,
-  Sparkles,
-  ClipboardCheck,
-  Building2,
-  UserCheck,
-  RefreshCw,
-  SlidersHorizontal,
-  ChevronRight
-} from "lucide-react";
+import { Printer, ShieldCheck, CheckCircle2, AlertTriangle, Flame, Snowflake, Sparkles, ClipboardCheck, UserCheck } from "lucide-react";
 
 interface PrepStation {
   id: string;
@@ -249,7 +234,7 @@ const AUDIT_ITEMS: ReadinessAuditItem[] = [
   }
 ];
 
-export function SafeFoodPrepRulesTool({ templateId }: { templateId?: string }) {
+export function SafeFoodPrepRulesTool({ templateId: _templateId }: { templateId?: string }) {
   const [selectedStationId, setSelectedStationId] = useState<string>("master");
   const [jurisdiction, setJurisdiction] = useState<"uk" | "scotland">("uk");
   const [businessName, setBusinessName] = useState<string>("The Crown Gastro & Kitchen");

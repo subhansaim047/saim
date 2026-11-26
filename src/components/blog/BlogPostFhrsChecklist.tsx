@@ -2,13 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { BlogSiloNav } from "./BlogSiloNav";
-import { 
-  ArrowLeft, ArrowRight, ShieldCheck, CheckCircle2, AlertTriangle, 
-  FileText, ChevronDown, ChevronUp, Scale, Clock, Award, Star,
-  Info, AlertOctagon, HelpCircle, ExternalLink, Flame, ShieldAlert,
-  XCircle, TrendingUp, Smartphone, Utensils
-} from "lucide-react";
+import { RhHeader } from "../rh/RhHeader";
+import { ArrowRight, ShieldCheck, CheckCircle2, AlertTriangle, FileText, ChevronDown, ChevronUp, Clock, Award, Star, Info, Flame, XCircle, TrendingUp, Smartphone } from "lucide-react";
 import { SiteFooter } from "../SiteFooter";
 
 const FAQS = [
@@ -99,26 +94,12 @@ export const BlogPostFhrsChecklist: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-black text-[#E1E0CC]">
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-[#E1E0CC] selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <Link
-          href="/blogs"
-          className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Articles</span>
-        </Link>
-        <Link
-          href="/blog/natashas-law-ppds-food-labelling-guide"
-          className="text-xs bg-primary/10 border border-primary/20 text-primary px-3 py-1.5 rounded-full font-mono hover:bg-primary/20 transition-all"
-        >
-          Natasha&apos;s Law PPDS Guide
-        </Link>
-      </header>
+      <RhHeader theme="dark" />
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-16">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-1.5 text-xs text-white/50 flex-wrap">

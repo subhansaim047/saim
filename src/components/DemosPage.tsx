@@ -1,10 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowLeft, ArrowRight, X } from "lucide-react";
+import { ExternalLink, Eye, Monitor, Tablet, Smartphone, CheckCircle2, ArrowRight, X } from "lucide-react";
 import { FooterSection } from "./FooterSection";
 import { RhHeader } from "./rh/RhHeader";
 import {
@@ -101,12 +100,12 @@ const demos: DemoItem[] = [
     description: "A bespoke culinary web platform showcasing dynamic scroll animations, luxury styling, and fully animated food visualizers.",
     demoUrl: "/anzaar/index.html",
     previewImage: "/demos/previews/anzaar-rooftop-restaurant-banner.webp",
-    tags: ["Restaurant", "Luxury", "GSAP Scroll", "HTML5"],
+    tags: ["Restaurant", "Luxury", "GSAP Scroll", "Rooftop Dining"],
     features: [
-      "Scroll-Triggered Burger Animation",
-      "Interactive Food Menus",
-      "Parallax & Animations",
-      "Fully Responsive Design"
+      "Rooftop Dining & Lounge Atmosphere",
+      "Animated Culinary Dish Visualizers",
+      "Table Reservation & Menu Showcase",
+      "60fps GSAP Scroll Choreography"
     ],
     badge: "New Release"
   },
@@ -249,6 +248,22 @@ const demos: DemoItem[] = [
       "Mobile-First Responsive Layout & Fast Loading"
     ],
     badge: "Featured Live Demo"
+  },
+  {
+    id: "medspa",
+    title: "MedSpa – Private Aesthetics & Healthcare Clinic",
+    category: "Healthcare & Aesthetics Clinic",
+    description: "A calm, high-trust medical aesthetics and private clinic platform featuring structured treatment menus, practitioner credentials, patient FAQs, and consultation booking pathways.",
+    demoUrl: "/demos/medspa/index.html",
+    previewImage: "/demos/previews/medspa-clinic-aesthetic-practice.webp",
+    tags: ["Healthcare", "Aesthetics Clinic", "Patient Booking", "High Trust"],
+    features: [
+      "Structured Treatment & Procedure Catalog",
+      "Practitioner Credentials & Clinical Proof",
+      "Direct Consultation & Appointment Pathways",
+      "Responsive Mobile Patient Experience"
+    ],
+    badge: "Healthcare Blueprint"
   }
 ];
 
@@ -258,8 +273,25 @@ interface DemosPageProps {
 
 export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
   const [selectedDemo, setSelectedDemo] = useState<DemoItem | null>(null);
+  const [iframeLoaded, setIframeLoaded] = useState<boolean>(false);
   const [viewportMode, setViewportMode] = useState<"desktop" | "tablet" | "mobile">("desktop");
   const [activeCategory, setActiveCategory] = useState<string>("All");
+  const prefetchedUrls = useRef<Set<string>>(new Set());
+
+  const prefetchDemo = (url: string) => {
+    if (typeof document === "undefined" || prefetchedUrls.current.has(url)) return;
+    prefetchedUrls.current.add(url);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.href = url;
+    link.as = "document";
+    document.head.appendChild(link);
+  };
+
+  const openDemoModal = (demo: DemoItem) => {
+    setIframeLoaded(false);
+    setSelectedDemo(demo);
+  };
 
   useEffect(() => {
     if (!selectedDemo) return;
@@ -270,15 +302,18 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [selectedDemo]);
 
-  const categories = ["All", "E-Commerce", "Restaurant", "Corporate", "Portfolio"];
+  const categories = ["All", "E-Commerce", "Restaurant", "Beauty & Clinic", "Automotive & Corporate"];
   const filteredDemos =
     activeCategory === "All"
       ? demos
-      : demos.filter(
-          (d) =>
-            d.category.toLowerCase().includes(activeCategory.toLowerCase()) ||
-            d.tags.some((t) => t.toLowerCase().includes(activeCategory.toLowerCase()))
-        );
+      : demos.filter((d) => {
+          const hay = `${d.category} ${d.tags.join(" ")} ${d.title}`.toLowerCase();
+          if (activeCategory === "E-Commerce") return hay.includes("e-commerce") || hay.includes("shopify");
+          if (activeCategory === "Restaurant") return hay.includes("restaurant") || hay.includes("food");
+          if (activeCategory === "Beauty & Clinic") return hay.includes("beauty") || hay.includes("spa") || hay.includes("wellness") || hay.includes("salon") || hay.includes("clinic") || hay.includes("healthcare");
+          if (activeCategory === "Automotive & Corporate") return hay.includes("car") || hay.includes("auto") || hay.includes("architecture") || hay.includes("interior") || hay.includes("business") || hay.includes("corporate");
+          return true;
+        });
 
   return (
     <div className="rh-page min-h-screen bg-[#0D0D0D] text-white selection:bg-[#BAFF00] selection:text-[#0D0D0D] flex flex-col justify-between">
@@ -287,7 +322,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
       <main className="flex-1">
       {/* 1. EXACT rh.design PAGE-OPEN HERO (3D Mobile WebM + Laser-Draw Strip) */}
       <RhHeroPinned
-        badge="9 Reference Production Builds"
+        badge="15 Interactive Production Builds"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },
@@ -388,6 +423,8 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: Math.min(idx * 0.04, 0.2), ease: [0.22, 1, 0.36, 1] }}
               key={demo.id}
+              onMouseEnter={() => prefetchDemo(demo.demoUrl)}
+              onFocus={() => prefetchDemo(demo.demoUrl)}
               className="rh-bezel-shell group"
             >
               <div className="rh-bezel-core rh-edge-orbit-card is-lime overflow-hidden hover:border-[#BAFF00]/70 transition-colors duration-300 flex flex-col h-full">
@@ -432,7 +469,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
 
                   <div className="absolute bottom-3.5 right-3.5 flex items-center gap-2">
                     <button
-                      onClick={() => setSelectedDemo(demo)}
+                      onClick={() => openDemoModal(demo)}
                       className="bg-[#0D0D0D]/85 backdrop-blur-md hover:bg-white hover:text-[#0D0D0D] text-white p-2.5 rounded-full border border-white/20 transition-all cursor-pointer"
                       title="Interactive Modal Preview"
                     >
@@ -491,7 +528,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
 
                     <div className="grid grid-cols-2 gap-2.5">
                       <button
-                        onClick={() => setSelectedDemo(demo)}
+                        onClick={() => openDemoModal(demo)}
                         className="w-full bg-white/[0.06] hover:bg-white/[0.12] text-white text-[13px] font-medium py-2.5 px-3 rounded-full border border-white/10 transition-colors flex items-center justify-center gap-1.5 cursor-pointer active:scale-[0.98]"
                       >
                         <Eye className="w-3.5 h-3.5" /> Interactive
@@ -731,7 +768,7 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                 className={
-                  "transition-[width] duration-300 bg-white rounded-2xl overflow-hidden shadow-2xl border border-white/20 h-full " +
+                  "relative transition-[width] duration-300 bg-[#0D0D0D] rounded-2xl overflow-hidden shadow-2xl border border-white/20 h-full " +
                   (viewportMode === "desktop"
                     ? "w-full"
                     : viewportMode === "tablet"
@@ -739,10 +776,19 @@ export const DemosPage: React.FC<DemosPageProps> = ({ onBack: _onBack }) => {
                     : "w-[390px] max-w-full")
                 }
               >
+                {!iframeLoaded && (
+                  <div className="absolute inset-0 z-10 bg-[#0D0D0D] flex flex-col items-center justify-center gap-3">
+                    <span className="w-9 h-9 rounded-full border-2 border-white/15 border-t-[#BAFF00] animate-spin" />
+                    <span className="text-xs font-mono uppercase tracking-widest text-[#939393]">
+                      Loading Live Architecture…
+                    </span>
+                  </div>
+                )}
                 <iframe
                   src={selectedDemo.demoUrl}
                   title={selectedDemo.title}
-                  className="w-full h-full border-none"
+                  onLoad={() => setIframeLoaded(true)}
+                  className="w-full h-full border-none bg-white"
                 />
               </motion.div>
             </div>

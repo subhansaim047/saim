@@ -4,25 +4,7 @@ import { SiteFooter } from "./SiteFooter";
 import React, { useState } from "react";
 import Link from "next/link";
 import { ToolIconRenderer } from "./icons/ToolIcons";
-import {
-  ArrowLeft,
-  Printer,
-  ShieldCheck,
-  CheckCircle2,
-  ArrowRight,
-  ExternalLink,
-  Thermometer,
-  Clock,
-  Award,
-  Info,
-  Edit3,
-  HelpCircle,
-  ChevronDown,
-  FileText,
-  BookOpen,
-  Calendar,
-  AlertTriangle
-} from "lucide-react";
+import { ArrowLeft, Printer, ShieldCheck, CheckCircle2, ArrowRight, ExternalLink, Thermometer, Clock, Info, HelpCircle, ChevronDown, FileText, BookOpen } from "lucide-react";
 import { FoodSafetyTemplate, FOOD_SAFETY_TEMPLATES } from "@/data/saim_templates";
 import { CORE_PAGES_METADATA } from "@/data/core_metadata";
 import pagePlanData from "@/data/page_plan.json";
@@ -38,8 +20,6 @@ import { FoodCoolingPosterTool } from "./tools/FoodCoolingPosterTool";
 import { WalkInCoolerStorageChartTool } from "./tools/WalkInCoolerStorageChartTool";
 import { FridgeTemperatureRecordTool } from "./tools/FridgeTemperatureRecordTool";
 import { FoodTraceabilityLogTool } from "./tools/FoodTraceabilityLogTool";
-import { HamCookingTemperatureTool } from "./tools/HamCookingTemperatureTool";
-import { FreezeDryingChartTool } from "./tools/FreezeDryingChartTool";
 import { MeatCookingTemperatureChartTool, MeatCategory } from "./tools/MeatCookingTemperatureChartTool";
 import { MasterFoodTemperatureChartTool } from "./tools/MasterFoodTemperatureChartTool";
 import { ConsumerAdvisoryNoticeTool } from "./tools/ConsumerAdvisoryNoticeTool";
@@ -189,7 +169,7 @@ export const TemplateDetailPage: React.FC<Props> = ({ template }) => {
     template.slug.includes("food-cooling") ||
     template.slug.includes("cooling-poster");
 
-  const isFreezeDryingTool =
+  const _isFreezeDryingTool =
     template.slug === "freeze-drying-time-chart" ||
     template.slug.includes("freeze-drying");
 

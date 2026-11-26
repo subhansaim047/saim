@@ -9,6 +9,7 @@ const inter = localFont({
   weight: '400 700',
   variable: '--font-inter-orig',
   display: 'swap',
+  preload: false,
 });
 const jakarta = localFont({
   src: '../src/fonts/plus-jakarta-sans-latin.woff2',
@@ -34,6 +35,7 @@ const outfit = localFont({
   weight: '700 900',
   variable: '--font-display',
   display: 'swap',
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -118,7 +120,7 @@ const organizationSchema = {
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-    "email": "contact@saimdev.site",
+    "email": "agency@saimdev.site",
     "url": "https://wa.me/923196526604",
     "availableLanguage": ["English"]
   },
@@ -164,7 +166,7 @@ const professionalServiceSchema = {
   "image": "https://www.saimdev.site/og-image.png",
   "priceRange": "£250 - £2,500 / $300 - $3,000",
   "telephone": "+923196526604",
-  "email": "contact@saimdev.site",
+  "email": "agency@saimdev.site",
   "areaServed": [
     { "@type": "Country", "name": "United Kingdom", "identifier": "GB" },
     { "@type": "Country", "name": "United States", "identifier": "US" },

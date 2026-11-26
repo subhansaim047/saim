@@ -15,7 +15,7 @@ export const CtaSection = () => {
   });
 
   const dashboardY = useTransform(scrollYProgress, [0, 1], ["120px", "-120px"]);
-  const grassY = useTransform(
+  const _grassY = useTransform(
     scrollYProgress,
     [0, 1],
     isMobile ? ["80px", "-40px"] : ["200px", "-200px"]

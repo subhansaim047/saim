@@ -1,19 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Search,
-  Sparkles,
-  Layers,
-  Thermometer,
-  Snowflake,
-  ArrowDown
-} from "lucide-react";
+import { Printer, CheckCircle2, Info, Search, Snowflake, ArrowDown } from "lucide-react";
 
 interface StorageShelf {
   shelfNumber: number;
@@ -113,7 +101,7 @@ const SHELVES: StorageShelf[] = [
   }
 ];
 
-export function WalkInCoolerStorageChartTool({ templateId }: { templateId?: string }) {
+export function WalkInCoolerStorageChartTool({ templateId: _templateId }: { templateId?: string }) {
   const [businessName, setBusinessName] = useState<string>("The Crown Restaurant & Kitchen");
   const [coolerIdentifier, setCoolerIdentifier] = useState<string>("Walk-In Chiller 1 (Main Cold Store)");
   const [searchQuery, setSearchQuery] = useState<string>("");

@@ -31,6 +31,7 @@ export const ContactPage = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [igLink, setIgLink] = useState("");
+  const [mailtoLink, setMailtoLink] = useState("");
 
   const validateForm = () => {
     const errs: Record<string, string> = {};
@@ -42,23 +43,43 @@ export const ContactPage = () => {
     return Object.keys(errs).length === 0;
   };
 
+  const buildBriefText = () => `Hi Saim Dev! I would like to enquire about a website project:
+
+• Name: ${formData.name}
+• Business: ${formData.businessName || "N/A"}
+• Email: ${formData.email}
+• Website: ${formData.website || "N/A"}
+• Budget: ${formData.budget}
+• Project Details: ${formData.details}`;
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      const text = `Hi Saim Dev! I would like to enquire about a website project:
-
-• *Name*: ${formData.name}
-• *Business*: ${formData.businessName || "N/A"}
-• *Email*: ${formData.email}
-• *Website*: ${formData.website || "N/A"}
-• *Budget*: ${formData.budget}
-• *Project Details*: ${formData.details}`;
-
+      const text = buildBriefText();
       const encodedText = encodeURIComponent(text);
       const url = `https://wa.me/923196526604?text=${encodedText}`;
+      const mailUrl = `mailto:agency@saimdev.site?subject=${encodeURIComponent(
+        `Project Enquiry — ${formData.businessName || formData.name}`
+      )}&body=${encodedText}`;
       setIgLink(url);
+      setMailtoLink(mailUrl);
       setSubmitted(true);
       window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+
+  const handleEmailSubmit = () => {
+    if (validateForm()) {
+      const text = buildBriefText();
+      const encodedText = encodeURIComponent(text);
+      const url = `https://wa.me/923196526604?text=${encodedText}`;
+      const mailUrl = `mailto:agency@saimdev.site?subject=${encodeURIComponent(
+        `Project Enquiry — ${formData.businessName || formData.name}`
+      )}&body=${encodedText}`;
+      setIgLink(url);
+      setMailtoLink(mailUrl);
+      setSubmitted(true);
+      window.location.href = mailUrl;
     }
   };
 
@@ -184,17 +205,17 @@ export const ContactPage = () => {
                 </a>
 
                 <a
-                  href="mailto:contact@saimdev.site"
+                  href="mailto:agency@saimdev.site"
                   className="flex items-center justify-between p-4 rounded-2xl bg-[#161616] border border-[#262626] hover:border-[#BAFF00] transition-colors group"
                 >
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-[#BAFF00]" />
                     <div>
                       <span className="block text-[14px] font-medium text-white">
-                        Direct Studio Email
+                        Official Business Email
                       </span>
                       <span className="block text-[12px] text-[#939393]">
-                        contact@saimdev.site
+                        agency@saimdev.site
                       </span>
                     </div>
                   </div>
@@ -238,6 +259,15 @@ export const ContactPage = () => {
                     <span>Open WhatsApp with My Brief</span>
                     <span className="text-[#BAFF00]">↗</span>
                   </a>
+                  {mailtoLink && (
+                    <a
+                      href={mailtoLink}
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#E6E6E6] bg-[#F5F5F7] text-[#0D0D0D] font-medium text-[14px] hover:border-[#0D0D0D] transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>Or Send via Email (agency@saimdev.site)</span>
+                    </a>
+                  )}
                   <button
                     type="button"
                     onClick={() => setSubmitted(false)}
@@ -371,17 +401,27 @@ export const ContactPage = () => {
                   )}
                 </div>
 
-                <button
-                  type="submit"
-                  className="group w-full bg-[#0D0D0D] hover:bg-[#1a1a1c] text-white rounded-full py-2.5 pl-7 pr-2.5 flex items-center justify-between transition-colors cursor-pointer active:scale-[0.99]"
-                >
-                  <span className="text-[15px] font-medium">
-                    Submit Project Enquiry via WhatsApp
-                  </span>
-                  <span className="w-10 h-10 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-bold transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105">
-                    ↗
-                  </span>
-                </button>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button
+                    type="submit"
+                    className="group flex-1 bg-[#0D0D0D] hover:bg-[#1a1a1c] text-white rounded-full py-2.5 pl-6 pr-2.5 flex items-center justify-between transition-colors cursor-pointer active:scale-[0.99]"
+                  >
+                    <span className="text-[15px] font-medium">
+                      Submit Brief via WhatsApp
+                    </span>
+                    <span className="w-10 h-10 rounded-full bg-[#BAFF00] text-[#0D0D0D] flex items-center justify-center font-bold transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 shrink-0">
+                      ↗
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleEmailSubmit}
+                    className="px-6 py-3.5 rounded-full border border-[#E6E6E6] bg-[#F5F5F7] hover:border-[#0D0D0D] text-[#0D0D0D] text-[14px] font-medium inline-flex items-center justify-center gap-2 transition-colors cursor-pointer shrink-0"
+                  >
+                    <Mail className="w-4 h-4" />
+                    <span>Send via Email</span>
+                  </button>
+                </div>
                 <p className="text-[12px] text-[#595959] leading-relaxed">
                   By submitting your brief, you accept our{" "}
                   <Link href="/privacy" className="underline text-[#0D0D0D] hover:opacity-80">

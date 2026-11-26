@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Gauge, Zap, ShieldCheck, Award, ArrowUpRight } from "lucide-react";
+import { Zap } from "lucide-react";
 
 const VITALS = [
   { metric: "100/100", label: "Performance Score", desc: "Mobile & Desktop Google Lighthouse" },

@@ -234,12 +234,13 @@ export const FanGallery = forwardRef<FanGalleryHandle, FanGalleryProps>(function
   // link), and when the trigger or heading change; every other prop updates
   // it in place without restarting anything.
   const cardKinds = items.map((item) => (item.href ? 'a' : 'b')).join('');
+  const itemCount = items.length;
   useEffect(() => {
     const element = root.current,
       field = stage.current;
-    if (!element || !field || !items.length) return;
+    if (!element || !field || !itemCount) return;
     const nodes = cards.current
-      .slice(0, items.length)
+      .slice(0, itemCount)
       .filter((node): node is HTMLButtonElement | HTMLAnchorElement => !!node);
     const controller = createFanPlayback(element, field, nodes, latest.current, pending, (info) =>
       layoutCallback.current?.(info),
@@ -249,7 +250,7 @@ export const FanGallery = forwardRef<FanGalleryHandle, FanGalleryProps>(function
       controller.destroy();
       playback.current = null;
     };
-  }, [cardKinds, showTitle, title, subtitle, trigger, viewportStart, viewportStartUp, once]);
+  }, [cardKinds, itemCount, showTitle, title, subtitle, trigger, viewportStart, viewportStartUp, once]);
   const optionsKey = JSON.stringify(motionOptions);
   const appliedKey = useRef(optionsKey);
   useEffect(() => {
@@ -311,7 +312,9 @@ export const FanGallery = forwardRef<FanGalleryHandle, FanGalleryProps>(function
               }
               if (event.key === 'Escape') {
                 playback.current?.activate(-1);
-                event.currentTarget instanceof HTMLElement && event.currentTarget.blur();
+                if (event.currentTarget instanceof HTMLElement) {
+                  event.currentTarget.blur();
+                }
               }
             },
           };

@@ -1,18 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Plus,
-  Trash2,
-  Printer,
-  ShieldCheck,
-  CheckCircle2,
-  AlertOctagon,
-  RotateCcw,
-  Edit3,
-  FileSpreadsheet,
-  BookOpen
-} from "lucide-react";
+import { Plus, Trash2, Printer, ShieldCheck, RotateCcw, Edit3 } from "lucide-react";
 
 export interface HaccpStep {
   id: string;
@@ -130,7 +119,7 @@ export const HaccpPlanBuilderTool: React.FC<{ templateId?: string }> = () => {
     setSteps(prev => prev.map(s => (s.id === id ? { ...s, [field]: val } : s)));
   };
 
-    const exportHaccpCSV = () => {
+    const _exportHaccpCSV = () => {
     let csv = "Business Name,Food Category,Supervisor,Audit Date\n";
     csv += `"${businessName || "Commercial Kitchen"}","${foodCategory}","${managerName || "Head Chef"}","${auditDate}"\n\n`;
     csv += "Step,Hazard Type,Hazard Description,Is CCP,CCP #,Critical Limit,Monitoring Procedure,Corrective Action\n";

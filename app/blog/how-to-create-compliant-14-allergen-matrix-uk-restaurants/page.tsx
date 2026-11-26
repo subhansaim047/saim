@@ -40,7 +40,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "How to Create a Compliant 14-Allergen Matrix for UK Restaurants & Takeaways | Saim Dev",
-    "description": "Step-by-step guide on how to create a 14 allergen matrix for restaurants and takeaways in the UK under Natasha\'s Law and Food Information Regulations.",
+    "description": "Step-by-step guide on how to create a 14 allergen matrix for restaurants and takeaways in the UK under Natasha's Law and Food Information Regulations.",
     "url": "https://www.saimdev.site/blog/how-to-create-compliant-14-allergen-matrix-uk-restaurants",
     "datePublished": "2026-10-23",
     "dateModified": "2026-10-31",

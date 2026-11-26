@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Zap, ShieldAlert, ShoppingBag, Layers, CheckCircle2 } from "lucide-react";
+import { Zap, ShoppingBag, Layers, CheckCircle2 } from "lucide-react";
 
 export const RhBenefitsSection: React.FC = () => {
   return (

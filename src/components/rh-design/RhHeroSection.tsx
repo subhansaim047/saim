@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ArrowRight, ShieldCheck, Zap, Star } from "lucide-react";
+import { ArrowUpRight, ArrowRight, ShieldCheck, Star } from "lucide-react";
 
 export const RhHeroSection = () => {
   return (

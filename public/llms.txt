@@ -19,7 +19,7 @@
 - **Full Knowledge Corpus**: https://www.saimdev.site/llms-full.txt
 - **Geographic Focus**: United Kingdom, European Union, United States, Canada & Australia (remote delivery)
 - **Industries Engineered (7+ Years)**: Dentists & Private Clinics, Mechanics & Auto Detailing Studios, Luxury Salons & Spas, Commercial Contractors & Trades, Zero-Commission UK Takeaways & Restaurants, Headless Shopify D2C Brands, and B2B SaaS Startups
-- **Email**: contact@saimdev.site
+- **Email**: agency@saimdev.site
 - **WhatsApp**: +92 319 6526604
 - **Fixed Pricing Model (50/50 Milestone Protection, Zero Monthly Lock-In)**:
   - **Landing Page / Direct Takeaway Plan**: £250 / €290 / $300 (High-converting landing page or 0% commission takeaway ordering site, 3–7 business days delivery)
@@ -97,12 +97,13 @@
 14. [Web Development & Hospitality Guides Blog](https://www.saimdev.site/blogs): Practical guides on business web strategy, Next.js engineering, UK commercial kitchen hygiene, and Natasha's Law.
 
 ### Interactive ROI Utilities & UK Kitchen Tools Hub
-15. [Free UK Takeaway & Kitchen Tools Hub](https://www.saimdev.site/tools): Central hub for all 5 free interactive UK hospitality calculators and generators.
-16. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings when switching repeat delivery orders onto a 0% commission direct site.
-17. [14-Allergen Matrix Generator UK](https://www.saimdev.site/tools/allergen-matrix-generator): Interactive dish-by-dish 14-allergen chart generator with printable A4 kitchen output.
-18. [Natasha's Law PPDS Food Label Generator](https://www.saimdev.site/tools/ppds-label-generator): Prepacked for Direct Sale label formatter with automatic bold allergen highlighting.
-19. [Commercial Kitchen Food Cost & GP% Calculator](https://www.saimdev.site/tools/food-cost-calculator): Recipe costing, portion yield, and gross profit margin (65%–75%) calculator.
-20. [Commercial Recipe Batch Scaler](https://www.saimdev.site/tools/recipe-batch-calculator): Scale catering recipes from 10 to 500 portions using Recipe Conversion Factor (RCF) math.
+15. [Free UK Takeaway & Kitchen Tools Hub](https://www.saimdev.site/tools): Central hub for all 6 free interactive web cost, takeaway ROI, and UK hospitality compliance calculators.
+16. [Website Cost Calculator UK & Europe](https://www.saimdev.site/tools/website-cost-calculator): Interactive GBP/EUR/USD website, headless Shopify, restaurant ordering, and web app cost estimator with 24-month TCO comparison.
+17. [Takeaway Commission Savings Calculator](https://www.saimdev.site/tools/commission-savings-calculator): Interactive ROI calculator quantifying annual savings when switching repeat delivery orders onto a 0% commission direct site.
+18. [14-Allergen Matrix Generator UK](https://www.saimdev.site/tools/allergen-matrix-generator): Interactive dish-by-dish 14-allergen chart generator with printable A4 kitchen output.
+19. [Natasha's Law PPDS Food Label Generator](https://www.saimdev.site/tools/ppds-label-generator): Prepacked for Direct Sale label formatter with automatic bold allergen highlighting.
+20. [Commercial Kitchen Food Cost & GP% Calculator](https://www.saimdev.site/tools/food-cost-calculator): Recipe costing, portion yield, and gross profit margin (65%–75%) calculator.
+21. [Commercial Recipe Batch Scaler](https://www.saimdev.site/tools/recipe-batch-calculator): Scale catering recipes from 10 to 500 portions using Recipe Conversion Factor (RCF) math.
 
 ### Top Business, Next.js & Compliance Guides
 21. [Next.js Website Development Cost UK & US (2026)](https://www.saimdev.site/blog/nextjs-website-development-cost-uk-us): Detailed GBP and USD Next.js project pricing breakdown vs traditional UK & US agencies.

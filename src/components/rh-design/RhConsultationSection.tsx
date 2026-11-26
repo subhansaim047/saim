@@ -12,7 +12,7 @@ export const RhConsultationSection = () => {
 
       <div className="max-w-[1130px] mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="p-8 sm:p-14 rounded-3xl bg-[#141414] border border-[#2c2c2c] text-center flex flex-col items-center justify-center relative overflow-hidden shadow-2xl"
@@ -46,16 +46,16 @@ export const RhConsultationSection = () => {
             </a>
 
             <a
-              href="mailto:contact@saimdev.site"
+              href="mailto:agency@saimdev.site"
               className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-[#181818] hover:bg-[#222222] border border-[#2c2c2c] text-white font-medium text-sm transition-all"
             >
-              <span>Email Scope Directly</span>
+              <span>Email agency@saimdev.site</span>
             </a>
           </div>
 
           <div className="mt-8 flex items-center gap-2 text-xs text-[#cbcbcb]">
             <ShieldCheck className="w-4 h-4 text-[#b5f900]" />
-            <span>UK Registered Agency • Senior Full-Stack Engineering Studio</span>
+            <span>UK, US &amp; EU Engineering Studio • Senior Full-Stack Architecture</span>
           </div>
         </motion.div>
       </div>

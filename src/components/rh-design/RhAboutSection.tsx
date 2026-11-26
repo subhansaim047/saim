@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, MapPin, Code2, Sparkles, Check, ArrowUpRight } from "lucide-react";
+import { ShieldCheck, MapPin, Code2, Check } from "lucide-react";
 
 export const RhAboutSection: React.FC = () => {
   return (

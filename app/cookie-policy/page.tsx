@@ -192,7 +192,11 @@ export default function CookiePolicyPage() {
             <section className="space-y-3">
               <h2 className="text-xl sm:text-2xl font-medium tracking-[-0.02em] text-[#0D0D0D]">5. Contact Information</h2>
               <p>
-                For questions regarding our technical storage policies, please message us on WhatsApp at +92 319 6526604 or visit our{" "}
+                For questions regarding our technical storage policies, please email{" "}
+                <a href="mailto:agency@saimdev.site" className="underline font-semibold text-[#0D0D0D]">
+                  agency@saimdev.site
+                </a>
+                , message us on WhatsApp at +92 319 6526604, or visit our{" "}
                 <Link href="/contact" className="underline font-semibold text-[#0D0D0D]">
                   Contact Page
                 </Link>.

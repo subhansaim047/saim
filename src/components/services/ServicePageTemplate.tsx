@@ -2,20 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import {
-  ArrowRight,
-  CheckCircle2,
-  ExternalLink,
-  Code2,
-  Check,
-  X,
-  Building,
-  Utensils,
-  Stethoscope,
-  Scissors,
-  Briefcase,
-  Laptop,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, ExternalLink, Code2, Building, Utensils, Stethoscope, Scissors, Briefcase, Laptop } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RhHeader } from "@/components/rh/RhHeader";
 import {

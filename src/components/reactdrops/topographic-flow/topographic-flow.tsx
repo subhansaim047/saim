@@ -270,7 +270,7 @@ export const TopographicFlow = forwardRef<TopographicFlowHandle, TopographicFlow
         instance.destroy();
         renderer.current = null;
       };
-    }, [createTopographicRenderer]);
+    }, []);
     useEffect(() => renderer.current?.update(config), [config]);
     useEffect(() => {
       const syncTheme = () => renderer.current?.update(latest.current);

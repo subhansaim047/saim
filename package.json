@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "oxlint app src",
     "test": "node scripts/run_all_guards.mjs",
     "prebuild": "node scripts/generate_sitemap.mjs"
   },

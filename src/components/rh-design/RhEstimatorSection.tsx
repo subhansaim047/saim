@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Calculator, Check, ArrowUpRight, ShieldCheck, Clock } from "lucide-react";
+import { Check, ArrowUpRight, Clock } from "lucide-react";
 
 interface ProjectType {
   id: string;

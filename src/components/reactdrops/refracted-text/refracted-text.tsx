@@ -699,6 +699,11 @@ export function RefractedText({
     typography.extraBold,
     typography.fontHeight,
     typography.cornerRounding,
+    virtualWidth,
+    theme,
+    duration,
+    paused,
+    animateBeam,
   ]);
 
   useEffect(

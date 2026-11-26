@@ -1,20 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import {
-  Plus,
-  Trash2,
-  Printer,
-  Scale,
-  Clock,
-  ChefHat,
-  CheckCircle2,
-  Image as ImageIcon,
-  RotateCcw,
-  Sliders,
-  Edit3,
-  FileSpreadsheet
-} from "lucide-react";
+import { Plus, Trash2, Printer, ChefHat, Image as ImageIcon, RotateCcw, Edit3, FileSpreadsheet } from "lucide-react";
 
 export interface RecipeIngredient {
   id: string;

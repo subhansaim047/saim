@@ -745,10 +745,10 @@ export function RhHeader({ theme = "dark" }: RhHeaderProps) {
 
         <div className="pt-5 border-t border-white/15 flex items-center justify-between">
           <a
-            href="mailto:contact@saimdev.site"
-            className="text-[15px] text-[#939393]"
+            href="mailto:agency@saimdev.site"
+            className="text-[15px] text-[#939393] hover:text-white transition-colors"
           >
-            contact@saimdev.site
+            agency@saimdev.site
           </a>
           <Link
             prefetch={false}

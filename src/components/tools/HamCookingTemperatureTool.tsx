@@ -1,20 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Flame,
-  Snowflake,
-  Thermometer,
-  Clock,
-  Sparkles,
-  Layers,
-  Scale
-} from "lucide-react";
+import { Printer, ShieldCheck, Flame, Snowflake, Thermometer, Scale } from "lucide-react";
 
 interface HamCut {
   id: string;
@@ -80,7 +67,7 @@ const HAM_CUTS: HamCut[] = [
   }
 ];
 
-export function HamCookingTemperatureTool({ templateId }: { templateId?: string }) {
+export function HamCookingTemperatureTool({ templateId: _templateId }: { templateId?: string }) {
   const [businessName, setBusinessName] = useState<string>("The Crown Carvery & Kitchen");
   const [stationIdentifier, setStationIdentifier] = useState<string>("Carvery Roast Line - Oven 2");
   const [chefName, setChefName] = useState<string>("Head Chef J. Morgan");

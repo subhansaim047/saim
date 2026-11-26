@@ -16,7 +16,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
 
   const handleCopyEmail = () => {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
-      navigator.clipboard.writeText("contact@saimdev.site");
+      navigator.clipboard.writeText("agency@saimdev.site");
       setCopied(true);
       setTimeout(() => setCopied(false), 2600);
     }
@@ -98,7 +98,7 @@ export function SiteFooter(props?: { theme?: "dark" | "light"; className?: strin
               onClick={handleCopyEmail}
               className="group inline-flex items-center gap-2.5 text-[clamp(20px,2.5vw,28px)] font-medium text-white hover:text-[#BAFF00] transition-colors cursor-pointer"
             >
-              <span>contact@saimdev.site</span>
+              <span>agency@saimdev.site</span>
               <span className="w-8 h-8 rounded-full border border-white/15 bg-white/[0.05] group-hover:border-[#BAFF00] flex items-center justify-center">
                 <svg
                   viewBox="0 0 16 16"

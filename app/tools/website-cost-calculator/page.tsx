@@ -1,15 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Calculator,
-  CheckCircle2,
-  HelpCircle,
-  Layers,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Calculator, HelpCircle } from "lucide-react";
 import { RhHeader } from "@/components/rh/RhHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WebsiteCostCalculatorTool } from "@/components/tools/WebsiteCostCalculatorTool";

@@ -142,10 +142,13 @@ export const ContactSection = () => {
 
             {/* Quick Channels & Trust Indicators */}
             <div className="py-6 border-b border-[#020612]/[0.08] grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-medium text-[#020612]/80">
-              <div className="flex items-center gap-2.5">
+              <a
+                href="mailto:agency@saimdev.site"
+                className="flex items-center gap-2.5 hover:text-[#2F6CE1] transition-colors"
+              >
                 <Mail className="w-4 h-4 text-[#2F6CE1] flex-shrink-0" />
-                <span>contact@saimdev.site</span>
-              </div>
+                <span>agency@saimdev.site</span>
+              </a>
               <div className="flex items-center gap-2.5">
                 <MessageSquare className="w-4 h-4 text-[#2F6CE1] flex-shrink-0" />
                 <span>WhatsApp: +92 319 6526604</span>

@@ -2,25 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import {
-  Plus,
-  Trash2,
-  Printer,
-  DollarSign,
-  Percent,
-  TrendingUp,
-  AlertTriangle,
-  CheckCircle2,
-  RotateCcw,
-  Scale,
-  ChefHat,
-  Edit3,
-  FileSpreadsheet,
-  ArrowRight,
-  ShieldCheck,
-  Smartphone,
-  Info
-} from "lucide-react";
+import { Plus, Trash2, Printer, TrendingUp, RotateCcw, Edit3, FileSpreadsheet, ArrowRight, Smartphone, Info } from "lucide-react";
 
 export interface CostItem {
   id: string;
@@ -52,7 +34,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
 
   // UK Specific VAT & Delivery App States
   const [vatIncluded, setVatIncluded] = useState(true);
-  const [showDeliveryCalc, setShowDeliveryCalc] = useState(true);
+  const [_showDeliveryCalc, _setShowDeliveryCalc] = useState(true);
   const [deliveryPlatform, setDeliveryPlatform] = useState<"justeat" | "deliveroo" | "ubereats" | "custom">("deliveroo");
   const [customCommissionPct, setCustomCommissionPct] = useState<number | "">(30);
 
@@ -117,7 +99,7 @@ export const FoodCostCalculatorTool: React.FC<{ templateId?: string }> = () => {
   // Net money received by takeaway after delivery app fee and VAT
   const netRevenueAfterDelivery = netSalesPrice - deliveryCommissionTaken;
   const profitAfterDelivery = netRevenueAfterDelivery - portionCost;
-  const marginPctAfterDelivery = netSalesPrice > 0 ? (profitAfterDelivery / netSalesPrice) * 100 : 0;
+  const _marginPctAfterDelivery = netSalesPrice > 0 ? (profitAfterDelivery / netSalesPrice) * 100 : 0;
 
   // Recommended price on delivery apps to protect the same cash profit (£) as in-store:
   // We need Net_after_delivery - portionCost = grossProfit

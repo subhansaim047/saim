@@ -1,23 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  Clock,
-  Sparkles,
-  Search,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Thermometer,
-  Layers,
-  ArrowRight,
-  Flame,
-  Snowflake,
-  PackageCheck,
-  FileText
-} from "lucide-react";
+import { Printer, ShieldCheck, Clock, Search, CheckCircle2, AlertTriangle, Thermometer, Layers, Flame, Snowflake, PackageCheck, FileText } from "lucide-react";
 
 interface FreezeDryItem {
   id: string;
@@ -177,7 +161,7 @@ const FREEZE_DRY_DATABASE: FreezeDryItem[] = [
   }
 ];
 
-export const FreezeDryingChartTool: React.FC<{ templateId?: string }> = ({ templateId }) => {
+export const FreezeDryingChartTool: React.FC<{ templateId?: string }> = ({ templateId: _templateId }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedItem, setSelectedItem] = useState<FreezeDryItem>(FREEZE_DRY_DATABASE[0]);
   const [searchTerm, setSearchTerm] = useState<string>("");

@@ -1,19 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  ShieldAlert,
-  AlertTriangle,
-  Info,
-  CheckCircle2,
-  Fish,
-  Flame,
-  Egg,
-  Milk,
-  Beef,
-  Sparkles
-} from "lucide-react";
+import { Printer, ShieldAlert, AlertTriangle, Fish, Flame, Egg, Milk, Beef } from "lucide-react";
 
 interface AdvisoryItem {
   id: string;
@@ -82,9 +70,7 @@ const ADVISORY_ITEMS: AdvisoryItem[] = [
   }
 ];
 
-export function ConsumerAdvisoryNoticeTool({
-  templateId
-}: {
+export function ConsumerAdvisoryNoticeTool({ templateId: _templateId }: {
   templateId?: string;
 }) {
   const [establishmentName, setEstablishmentName] = useState("The Metropolitan Bistro & Grill");

@@ -173,7 +173,11 @@ export const PrivacyPolicy: React.FC = () => {
               For any questions regarding this policy or our privacy practices:
             </p>
             <p className="mt-2 text-[#0D0D0D] font-mono text-xs sm:text-sm">
-              WhatsApp: +92 319 6526604 · Instagram: @saim_agency · Web: saimdev.site
+              WhatsApp: +92 319 6526604 · Email:{" "}
+              <a href="mailto:agency@saimdev.site" className="underline font-semibold">
+                agency@saimdev.site
+              </a>{" "}
+              · Web: saimdev.site
             </p>
           </section>
         </div>

@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Calculator,
-  CheckCircle2,
-  Clock,
-  HelpCircle,
-  QrCode,
-  ShieldAlert,
-  Sparkles,
-  Tag,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Sparkles } from "lucide-react";
 import { RhHeader } from "@/components/rh/RhHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogSiloNav } from "@/components/blog/BlogSiloNav";

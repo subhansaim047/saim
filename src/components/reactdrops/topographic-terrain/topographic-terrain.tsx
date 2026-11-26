@@ -234,7 +234,6 @@ export const TopographicTerrain = forwardRef<TopographicTerrainHandle, Topograph
       }),
       [
         palette,
-        preset,
         followsTheme,
         scale,
         density,

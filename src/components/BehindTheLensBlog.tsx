@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import "@/styles/behindTheLens.css";
 import { BlogPost, DEFAULT_BLOG_POSTS, fetchBlogPosts } from "@/lib/supabaseBlog";
@@ -125,7 +125,7 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
   const standardPosts = posts.filter((p) => p !== featuredPost).slice(0, 3);
 
   return (
-    <section className="behind-the-lens-root" aria-label="Behind the Lens Photography & Tech Blog">
+    <section className="behind-the-lens-root" aria-label="Saim Dev Web Engineering & Hospitality Playbooks">
       <div className="behind-the-lens-container">
         {/* ── Section Header ── */}
         <header>
@@ -133,7 +133,7 @@ export const BehindTheLensBlog: React.FC<BehindTheLensBlogProps> = ({ onViewAllC
           <h1 className="btl-heading">Web Development &amp; Hospitality Guides</h1>
           <div className="btl-header-bottom">
             <p className="btl-subtitle">
-              Thoughts, insights, and stories from our creative journey. Take a peek into our development process, compliance playbooks, and recent client systems.
+              Actionable Next.js 16 engineering benchmarks, CMS migration blueprints, zero-commission takeaway playbooks, and UK kitchen compliance guides.
             </p>
             <button
               type="button"

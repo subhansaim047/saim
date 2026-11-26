@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { motion } from "framer-motion";import Link from "next/link";
+import { RhHeader } from "./rh/RhHeader";
+import { SiteFooter } from "./SiteFooter";
 import { BlogSiloNav } from "@/components/blog/BlogSiloNav";
-import { ArrowLeft, ArrowRight, Share2, ChevronDown, ChevronUp, CheckCircle, Smartphone, Zap, Search, Layout } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronDown, ChevronUp, CheckCircle, Smartphone, Zap, Search, Layout } from "lucide-react";
 import { ArchitecturalDiagram, EngineeringMediaFigure, EngineeringVerificationBadge } from "@/components/ui/EditorialVisualPack";
 
 const faqs = [
@@ -35,9 +35,7 @@ const sections = [
   "How to Lock Your Fixed Scope",
 ];
 
-export const BlogPost3Page = () => {
-  const router = useRouter();
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+export const BlogPost3Page = () => {  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -45,26 +43,13 @@ export const BlogPost3Page = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-[#E1E0CC]">
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-[#E1E0CC] selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       {/* ── Sticky Header ── */}
-      <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <Link
-          href="/blogs"
-          className="flex items-center gap-2 text-sm font-semibold text-white/70 hover:text-white transition-colors cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Return to the Saim Dev Blog</span>
-        </Link>
-        <div className="flex items-center gap-3">
-          <button className="flex items-center gap-1.5 text-xs font-semibold text-white/50 hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-full cursor-pointer">
-            <Share2 className="w-3.5 h-3.5" /> Share
-          </button>
-        </div>
-      </header>
+      <RhHeader theme="dark" />
 
       {/* ── Hero Article Header ── */}
       <main>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-16 pb-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-10">
                 {/* Visible Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-1.5 text-xs text-white/50 flex-wrap">
@@ -392,6 +377,7 @@ export const BlogPost3Page = () => {
         </div>
       </div>
       </main>
+      <SiteFooter theme="dark" />
     </div>
   );
 };

@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { RhHeader } from "./rh/RhHeader";
+import { SiteFooter } from "./SiteFooter";
 import { BlogSiloNav } from "@/components/blog/BlogSiloNav";
 import { EngineeringMediaFigure, EngineeringVerificationBadge } from "@/components/ui/EditorialVisualPack";
 
-import { ArrowLeft, Calendar, Clock, Share2, CheckCircle, XCircle, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, CheckCircle, XCircle, ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
@@ -19,7 +20,7 @@ const faqs = [
   },
   {
     q: "How much does a professional small business website cost?",
-    a: "A professionally built, custom website typically starts from £500–£1,000 for small businesses. That's a one-time investment. Compare that to the revenue you lose each month without one — most businesses recover the cost within weeks through a single new customer.",
+    a: "A professionally built, custom website typically starts from £250–£790 fixed for small businesses. That's a one-time investment. Compare that to the revenue you lose each month without one — most businesses recover the cost within weeks through a single new customer.",
   },
   {
     q: "How long does it take to build a small business website?",
@@ -94,7 +95,6 @@ const websiteVsSocial = [
 ];
 
 export const BlogPost1Page = () => {
-  const router = useRouter();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const sections = [
@@ -118,24 +118,12 @@ export const BlogPost1Page = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-[#E1E0CC]">
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-[#E1E0CC] selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       
       {/* ── Sticky Header ── */}
-      <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <Link
-          href="/blogs"
-          className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Return to the Saim Dev Blog</span>
-        </Link>
-        <button onClick={() => router.push('/')} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer text-left" title="Go to Homepage">
-          <img src="/saim-dev-logo.jpg" alt="Saim Dev — Why Small Businesses Need a High-Converting Next.js 16 Website UK & US" width={28} height={28} decoding="async" className="w-7 h-7 rounded-full object-cover border border-white/15" />
-          <span className="text-sm font-semibold text-white hidden sm:block">Saim Dev</span>
-        </button>
-      </header>
+      <RhHeader theme="dark" />
 
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-16">
 
         {/* ── Article Header ── */}
                 {/* Visible Breadcrumb Navigation */}
@@ -596,6 +584,7 @@ export const BlogPost1Page = () => {
           </Link>
         </div>
       </main>
+      <SiteFooter theme="dark" />
     </div>
   );
 };

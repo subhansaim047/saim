@@ -28,17 +28,15 @@ interface TempZoneInfo {
   pathogens: string;
 }
 
-export function MasterFoodTemperatureChartTool({
-  templateId
-}: {
+export function MasterFoodTemperatureChartTool({ templateId: _templateId }: {
   templateId?: string;
 }) {
   const [selectedTempC, setSelectedTempC] = useState<number>(75);
   const [unit, setUnit] = useState<"C" | "F">("C");
   const [jurisdiction, setJurisdiction] = useState<"uk" | "scotland">("uk");
-  const [premisesName, setPremisesName] = useState<string>("The Crown Restaurant & Kitchen");
-  const [managerName, setManagerName] = useState<string>("Executive Chef R. Taylor");
-  const [stationName, setStationName] = useState<string>("Main Kitchen Cook Line & Hot Pass");
+  const [premisesName, _setPremisesName] = useState<string>("The Crown Restaurant & Kitchen");
+  const [managerName, _setManagerName] = useState<string>("Executive Chef R. Taylor");
+  const [stationName, _setStationName] = useState<string>("Main Kitchen Cook Line & Hot Pass");
 
   const toF = (c: number) => Math.round((c * 9) / 5 + 32);
   const displayTemp = unit === "C" ? `${selectedTempC}°C` : `${toF(selectedTempC)}°F`;

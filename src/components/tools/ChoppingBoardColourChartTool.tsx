@@ -1,16 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  Search,
-  ShieldCheck,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Layers,
-  Sparkles
-} from "lucide-react";
+import { Printer, Search, ShieldCheck, AlertTriangle } from "lucide-react";
 
 interface BoardColour {
   id: string;

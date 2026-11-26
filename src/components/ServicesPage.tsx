@@ -86,7 +86,7 @@ const detailedServices: ServiceDetail[] = [
   {
     id: "custom-web",
     title: "Bespoke Next.js Website Development (WP Alternative)",
-    price: "From £450",
+    price: "From £390",
     dedicatedLink: "/services/website-development",
     badge: "No WordPress Bloat",
     description:
@@ -109,8 +109,8 @@ const detailedServices: ServiceDetail[] = [
   },
   {
     id: "ecommerce-headless",
-    title: "Custom Next.js Headless eCommerce (Shopify Alternative)",
-    price: "From £750",
+    title: "Custom Next.js Headless eCommerce (Shopify & Stripe)",
+    price: "From £1,490",
     dedicatedLink: "/services/ecommerce-shopify",
     badge: "Zero App Fees",
     description:

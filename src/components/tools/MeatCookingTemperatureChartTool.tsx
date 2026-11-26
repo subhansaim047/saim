@@ -1,20 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Flame,
-  Snowflake,
-  Thermometer,
-  Clock,
-  Sparkles,
-  Layers,
-  Scale
-} from "lucide-react";
+import { Printer, Flame, Snowflake, Thermometer, Clock, Scale } from "lucide-react";
 
 export type MeatCategory = "chicken" | "beef" | "lamb" | "duck" | "venison" | "ham" | "pork" | "fish" | "burger" | "turkey" | "poultry";
 
@@ -719,7 +706,7 @@ const MEAT_PROFILES: Record<MeatCategory, MeatProfile> = {
 };
 
 export function MeatCookingTemperatureChartTool({
-  templateId,
+  templateId: _templateId,
   initialMeat
 }: {
   templateId?: string;
@@ -747,7 +734,7 @@ export function MeatCookingTemperatureChartTool({
     if (profile.cuts.length > 0) {
       setSelectedCutId(profile.cuts[0].id);
     }
-  }, [selectedMeat]);
+  }, [profile.cuts]);
 
   const currentCut = profile.cuts.find(c => c.id === selectedCutId) || profile.cuts[0];
 

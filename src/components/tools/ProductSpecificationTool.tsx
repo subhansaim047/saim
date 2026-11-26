@@ -1,19 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  FileSpreadsheet,
-  AlertTriangle,
-  Info,
-  CheckCircle2,
-  Package,
-  Layers,
-  Thermometer,
-  Clock,
-  Sparkles
-} from "lucide-react";
+import { Printer, FileSpreadsheet } from "lucide-react";
 
 interface IngredientLine {
   id: string;
@@ -24,22 +12,20 @@ interface IngredientLine {
   countryOfOrigin: string;
 }
 
-export function ProductSpecificationTool({
-  templateId
-}: {
+export function ProductSpecificationTool({ templateId: _templateId }: {
   templateId?: string;
 }) {
   const [productName, setProductName] = useState("Artisan Slow-Cooked Beef Bourguignon");
   const [productCode, setProductCode] = useState("SKU-BF-402");
-  const [category, setCategory] = useState("Cook-Chill Prepared Catering Entrée");
+  const [category, _setCategory] = useState("Cook-Chill Prepared Catering Entrée");
   const [manufacturer, setManufacturer] = useState("The Crown Kitchens & Central Production Unit");
-  const [shelfLifeDays, setShelfLifeDays] = useState(5);
-  const [storageTemp, setStorageTemp] = useState("Keep refrigerated at 1°C to 5°C");
-  const [targetPH, setTargetPH] = useState("5.2 – 5.6");
-  const [packagingType, setPackagingType] = useState("Recyclable CPET tray with barrier film top lidding");
+  const [shelfLifeDays, _setShelfLifeDays] = useState(5);
+  const [storageTemp, _setStorageTemp] = useState("Keep refrigerated at 1°C to 5°C");
+  const [targetPH, _setTargetPH] = useState("5.2 – 5.6");
+  const [_packagingType, _setPackagingType] = useState("Recyclable CPET tray with barrier film top lidding");
   const [qaManager, setQaManager] = useState("Technical QA Lead E. Jenkins");
 
-  const [ingredients, setIngredients] = useState<IngredientLine[]>([
+  const [ingredients, _setIngredients] = useState<IngredientLine[]>([
     { id: "1", name: "Diced British Beef Chuck Steak", quidPercentage: 45, isAllergen: false, countryOfOrigin: "United Kingdom" },
     { id: "2", name: "Red Wine Reduction Sauce (Contains Sulphites)", quidPercentage: 25, isAllergen: true, allergenName: "Sulphur dioxide/sulphites", countryOfOrigin: "France" },
     { id: "3", name: "Shallots & Button Mushrooms", quidPercentage: 15, isAllergen: false, countryOfOrigin: "United Kingdom" },

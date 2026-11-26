@@ -159,6 +159,17 @@ export default function DisclaimerPage() {
                   Saim Dev, its developers, and contributors shall not be liable for any direct, indirect, incidental, or consequential damages, inspection failures, enforcement actions, allergy incidents, or business disruptions arising from the use of or reliance on any template, calculator, or content made available on this website.
                 </p>
               </section>
+
+              <section className="pt-6 border-t border-black/10 space-y-2">
+                <h2 className="text-xl sm:text-2xl font-medium tracking-[-0.02em] text-[#0D0D0D]">5. Contact Us</h2>
+                <p>
+                  For questions about this regulatory disclaimer or our digital kitchen utilities, email{" "}
+                  <a href="mailto:agency@saimdev.site" className="underline font-semibold text-[#0D0D0D]">
+                    agency@saimdev.site
+                  </a>{" "}
+                  or reach us on WhatsApp at +92 319 6526604.
+                </p>
+              </section>
             </div>
           </div>
         </main>

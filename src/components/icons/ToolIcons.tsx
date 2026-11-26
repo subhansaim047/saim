@@ -1,20 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Tag,
-  ShieldAlert,
-  Calculator,
-  ChefHat,
-  ClipboardCheck,
-  Snowflake,
-  Droplets,
-  Award,
-  Truck,
-  Flame,
-  FileText,
-  Thermometer,
-} from "lucide-react";
+import { Tag, ShieldAlert, Calculator, ChefHat, ClipboardCheck, Snowflake, Droplets, Award, Truck, Flame, FileText } from "lucide-react";
 import { IconTile, IconColor } from "./IconTile";
 
 export interface ToolIconInfo {

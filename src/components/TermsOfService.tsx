@@ -43,7 +43,7 @@ export const TermsOfService = () => {
           <section>
             <h2 className="text-[#0D0D0D] text-xl sm:text-2xl font-medium tracking-[-0.02em] mb-3">3. Revisions &amp; Technical Support</h2>
             <p>
-              Revisions included on staging until the agreed scope is delivered. Starter Plan includes 2 rounds of design revisions and 14 days of dedicated post-launch support. Business Plan includes 5 rounds of revisions and 30 days of post-launch technical support. Additional feature requests outside the agreed project brief will be quoted separately. (DRAFT for owner review)
+              Revisions included on staging until the agreed scope is delivered. Starter Plan includes 2 rounds of design revisions and 14 days of dedicated post-launch support. Business Plan includes 5 rounds of revisions and 30 days of post-launch technical support. Additional feature requests outside the agreed project brief will be quoted separately.
             </p>
           </section>
 
@@ -67,7 +67,11 @@ export const TermsOfService = () => {
               If you have any questions regarding these Terms of Service, please reach out directly:
             </p>
             <p className="mt-2 text-[#0D0D0D] font-mono text-xs sm:text-sm">
-              WhatsApp: +92 319 6526604 · Instagram: @saim_agency · Web: saimdev.site
+              Email:{" "}
+              <a href="mailto:agency@saimdev.site" className="underline font-semibold">
+                agency@saimdev.site
+              </a>{" "}
+              · WhatsApp: +92 319 6526604 · Web: saimdev.site
             </p>
           </section>
         </div>

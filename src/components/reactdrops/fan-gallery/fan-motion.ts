@@ -248,7 +248,7 @@ export function createFanMotion(
       rotateY = 0,
       opacity = 1;
     const p = progress;
-    if (p < 1 || p > 1) {
+    if (p !== 1) {
       const h = layout.height;
       // Arcs travel around a virtual pivot below the fan.
       const pivot = h * 3.2;

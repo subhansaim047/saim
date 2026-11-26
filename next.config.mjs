@@ -10,9 +10,13 @@ const nextConfig = {
   },
   reactStrictMode: true,
   poweredByHeader: false,
+  compress: true,
   async headers() {
     const immutableStatic = [
       { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+    ];
+    const fastDemoCache = [
+      { key: 'Cache-Control', value: 'public, max-age=604800, stale-while-revalidate=2592000' },
     ];
     return [
       { source: '/rh-exact/assets/:path*', headers: immutableStatic },
@@ -28,6 +32,12 @@ const nextConfig = {
       { source: '/hero-shots/:path*', headers: immutableStatic },
       { source: '/saim-dev-logo.png', headers: immutableStatic },
       { source: '/saim-dev-logo.jpg', headers: immutableStatic },
+      { source: '/demos/:slug/:asset+', headers: fastDemoCache },
+      { source: '/hotbite/:path+', headers: fastDemoCache },
+      { source: '/burger-garage/:path+', headers: fastDemoCache },
+      { source: '/frenchyse/:path+', headers: fastDemoCache },
+      { source: '/anzaar/:path+', headers: fastDemoCache },
+      { source: '/hq-leathercon/:path+', headers: fastDemoCache },
       {
         source: '/(.*)',
         headers: [

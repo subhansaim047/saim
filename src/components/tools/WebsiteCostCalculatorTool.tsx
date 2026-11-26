@@ -2,16 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import {
-  Calculator,
-  CheckCircle2,
-  ArrowRight,
-  Sparkles,
-  Globe,
-  ShieldCheck,
-  Clock,
-  Layers,
-} from "lucide-react";
+import { CheckCircle2, ArrowRight, Sparkles, Clock, Layers } from "lucide-react";
 
 type CurrencyCode = "GBP" | "EUR" | "USD";
 

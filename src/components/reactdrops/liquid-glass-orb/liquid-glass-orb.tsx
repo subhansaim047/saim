@@ -2528,27 +2528,33 @@ export const FluidGlassGradient = forwardRef<FluidGlassGradientHandle, FluidGlas
       [],
     );
 
+    const tuningRef = useRef(tuning);
+    tuningRef.current = tuning;
+    const materialAnimRef = useRef(materialAnimation);
+    materialAnimRef.current = materialAnimation;
+    const hasOnFrame = Boolean(onFrame);
+
     useEffect(() => {
       const canvas = canvasRef.current;
       if (!canvas) return;
 
       const engine = createFlowEngine(
         canvas,
-        tuning,
-        onFrame
+        tuningRef.current,
+        hasOnFrame
           ? (base, now, moving, dt, host) => frameObserver.current?.(base, now, moving, dt, host)
           : undefined,
-        materialAnimation,
+        materialAnimRef.current,
       );
       engineRef.current = engine;
       return () => {
         engine?.dispose();
         engineRef.current = null;
       };
-    }, []);
+    }, [hasOnFrame]);
 
     useEffect(() => {
-      engineRef.current?.update(tuning);
+      engineRef.current?.update(tuningRef.current);
     }, [tuningKey]);
 
     const isBackground = shape === 'background';

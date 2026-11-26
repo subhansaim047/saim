@@ -1,22 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Flame,
-  Snowflake,
-  Timer,
-  Clock,
-  Sparkles,
-  Layers,
-  Thermometer,
-  RotateCcw,
-  FileSpreadsheet
-} from "lucide-react";
+import { Printer, CheckCircle2, AlertTriangle, Snowflake, Timer, Clock, Sparkles, Thermometer, RotateCcw, FileSpreadsheet } from "lucide-react";
 
 interface CoolingBatch {
   id: string;
@@ -52,7 +37,7 @@ const DEFAULT_BATCHES: CoolingBatch[] = [
   }
 ];
 
-export function FoodCoolingPosterTool({ templateId }: { templateId?: string }) {
+export function FoodCoolingPosterTool({ templateId: _templateId }: { templateId?: string }) {
   const [businessName, setBusinessName] = useState<string>("The Crown Gastro Kitchen");
   const [stationIdentifier, setStationIdentifier] = useState<string>("Hot Prep & Blast Chiller Bay");
   const [chefSupervisor, setChefSupervisor] = useState<string>("Head Chef J. Morgan");
@@ -64,7 +49,7 @@ export function FoodCoolingPosterTool({ templateId }: { templateId?: string }) {
   const [newInitialTemp, setNewInitialTemp] = useState<number>(85);
   const [newFinalTemp, setNewFinalTemp] = useState<number>(4.5);
   const [newDuration, setNewDuration] = useState<number>(80);
-  const [newMethod, setNewMethod] = useState<string>("Shallow Gastronorms (< 5cm)");
+  const [newMethod, _setNewMethod] = useState<string>("Shallow Gastronorms (< 5cm)");
 
   // Interactive Stopwatch
   const [timerSeconds, setTimerSeconds] = useState<number>(0);

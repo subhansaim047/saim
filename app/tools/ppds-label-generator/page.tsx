@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { IconTile } from "@/components/icons/IconTile";
-import { Tag, ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, FileText, CheckCircle2, ChevronDown } from "lucide-react";
+import { Tag, ArrowLeft, ArrowRight, ShieldCheck, HelpCircle, CheckCircle2 } from "lucide-react";
 import { PpdsLabelGeneratorTool } from "@/components/tools/PpdsLabelGeneratorTool";
 import { FoodSafetyDisclaimer } from "@/components/FoodSafetyDisclaimer";
+import { RhHeader } from "@/components/rh/RhHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ToolsSiloNav } from "@/components/tools/ToolsSiloNav";
 
@@ -118,13 +119,6 @@ export default function PpdsLabelGeneratorPage() {
       name: "Saim Dev",
       url: "https://www.saimdev.site",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      bestRating: "5",
-      worstRating: "1",
-      ratingCount: "48",
-    },
   };
 
   // 3. FAQPage Schema
@@ -177,7 +171,7 @@ export default function PpdsLabelGeneratorPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FBFBFA] text-[#1D1D1F] font-sans">
+    <div className="rh-page min-h-screen bg-[#F5F5F7] text-[#1D1D1F] font-sans selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       {/* Schema Markup */}
       <script
         type="application/ld+json"
@@ -197,31 +191,31 @@ export default function PpdsLabelGeneratorPage() {
       />
 
 
-      {/* Navigation Header */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E5EA] px-4 sm:px-8 py-3.5 flex items-center justify-between no-print">
-        <Link
-          href="/tools"
-          className="flex items-center gap-2 text-xs font-bold text-gray-700 hover:text-black transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Return to All Kitchen Tools</span>
-        </Link>
-        <div className="flex items-center gap-3">
-          <Link
-            href="/services"
-            className="text-xs font-bold text-amber-700 hover:text-amber-900 hidden sm:inline-block"
-          >
-            £250 Takeaway Websites
-          </Link>
-        </div>
-      </header>
+      <div className="no-print">
+        <RhHeader theme="dark" />
+      </div>
 
-      {/* Main Content Area */}
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-10">
-        {/* Visible Breadcrumb Navigation */}
-        <div className="no-print space-y-3">
+      {/* Modern Studio Dark Hero Band */}
+      <section className="no-print bg-[#0D0D0D] text-white pt-28 pb-12 sm:pt-32 sm:pb-16 px-4 sm:px-6 border-b border-white/10">
+        <div className="max-w-5xl mx-auto space-y-4">
+          <div className="flex items-center justify-between flex-wrap gap-2 pb-1">
+            <Link
+              href="/tools"
+              className="inline-flex items-center gap-1.5 text-xs font-mono text-[#BAFF00] hover:underline"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>All Free Tools &amp; Calculators</span>
+            </Link>
+            <Link
+              href="/services/takeaway-web-design"
+              className="text-xs font-mono text-white/70 hover:text-[#BAFF00] transition-colors"
+            >
+              £250 Direct Ordering Websites →
+            </Link>
+          </div>
+
           <nav aria-label="Breadcrumb">
-            <ol className="flex items-center gap-1.5 text-xs text-neutral-500 font-mono flex-wrap">
+            <ol className="flex items-center gap-1.5 text-xs text-white/55 font-mono flex-wrap">
               <li>
                 <Link href="/" className="hover:underline">Home</Link>
               </li>
@@ -230,7 +224,7 @@ export default function PpdsLabelGeneratorPage() {
                 <Link href="/tools" className="hover:underline">Tools</Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-neutral-900 font-bold" aria-current="page">
+              <li className="text-[#BAFF00] font-semibold" aria-current="page">
                 PPDS Label Generator
               </li>
             </ol>
@@ -239,42 +233,46 @@ export default function PpdsLabelGeneratorPage() {
           <div className="flex items-center gap-3.5 mb-1">
             <IconTile color="amber" size="md"><Tag className="w-5 h-5" /></IconTile>
             <div className="flex items-center gap-2 flex-wrap">
-            <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-mono font-bold uppercase">
+            <span className="px-3 py-1 rounded-full bg-[#BAFF00]/15 text-[#BAFF00] border border-[#BAFF00]/35 text-xs font-mono font-bold uppercase">
               UK Compliance Tool
             </span>
-            <span className="text-xs text-neutral-500 font-mono">
+            <span className="text-xs text-white/55 font-mono">
               Food Standards Agency (FSA) & FIR 2020 Aligned
             </span>
             </div>
           </div>
-          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-neutral-950">
+          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
             PPDS Label Generator: Free Natasha's Law Food Labels
           </h1>
 
           {/* Byline & Verification Date */}
-          <div className="flex items-center gap-2 text-xs text-neutral-500 pt-1">
+          <div className="flex items-center gap-2 text-xs text-white/55 pt-1">
             <span>By <strong>Saim Dev</strong></span>
             <span>·</span>
             <span>Last Reviewed: <strong>27 October 2026</strong></span>
             <span>·</span>
-            <span className="inline-flex items-center gap-1 text-emerald-700 font-semibold">
+            <span className="inline-flex items-center gap-1 text-[#BAFF00] font-semibold">
               <CheckCircle2 className="w-3.5 h-3.5" />
               <span>Verified against FSA Natasha's Law Guidance</span>
             </span>
           </div>
 
           {/* 40-60 Word Direct Answer Box */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/80 border border-amber-200/90 text-xs sm:text-sm text-neutral-900 leading-relaxed space-y-2">
-            <div className="font-bold text-amber-950 flex items-center gap-1.5 uppercase font-mono text-[11px] tracking-wide">
-              <ShieldCheck className="w-4 h-4 text-amber-700" />
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#141414] border border-white/10 text-xs sm:text-sm text-white/85 shadow-xl leading-relaxed space-y-2">
+            <div className="font-bold text-[#BAFF00] flex items-center gap-1.5 uppercase font-mono text-[11px] tracking-wide">
+              <ShieldCheck className="w-4 h-4 text-[#BAFF00]" />
               <span>Direct Compliance Answer</span>
             </div>
             <p>
               Under Natasha&apos;s Law (FIR 2020), UK food businesses selling prepacked for direct sale (PPDS) food must display the food name and full ingredients list with all 14 statutory allergens highlighted in bold. This free interactive tool automatically detects and bolds allergens, calculates dates, and formats standard adhesive labels ready for printing.
             </p>
           </div>
+        
         </div>
+      </section>
 
+      {/* Main Content Area */}
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-12">
         {/* ── INTERACTIVE TOOL ── */}
         <PpdsLabelGeneratorTool />
 

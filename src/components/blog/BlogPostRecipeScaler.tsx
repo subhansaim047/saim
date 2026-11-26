@@ -1,14 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { RhHeader } from "../rh/RhHeader";
+import { SiteFooter } from "../SiteFooter";
 import { BlogSiloNav } from "./BlogSiloNav";
-import { 
-  ArrowLeft, ArrowRight, UtensilsCrossed, Scale, AlertTriangle, 
-  CheckCircle2, Printer, ChevronDown, ChevronUp, Clock, MessageSquare 
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, AlertTriangle, CheckCircle2, ChevronDown, ChevronUp, Clock, MessageSquare } from "lucide-react";
 
 const SCALING_PITFALLS = [
   {
@@ -48,30 +45,16 @@ const FAQS = [
   }
 ];
 
-export const BlogPostRecipeScaler: React.FC = () => {
-  const router = useRouter();
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+export const BlogPostRecipeScaler: React.FC = () => {  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-black text-[#E1E0CC]">
+    <div className="rh-page min-h-screen bg-[#0D0D0D] text-[#E1E0CC] selection:bg-[#BAFF00] selection:text-[#0D0D0D]">
       {/* ── Top Header ── */}
-      <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-white/10 px-4 sm:px-8 py-4 flex items-center justify-between">
-        <Link
-          href="/blogs"
-          className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>return to the Saim Dev blog</span>
-        </Link>
-        <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
-          <img src="/saim-dev-logo.jpg" alt="Saim Dev - Full Stack Web Developer & Restaurant Tech Specialist" width={28} height={28} loading="lazy" decoding="async" className="w-7 h-7 rounded-full object-cover border border-white/15" />
-          <span className="text-sm font-semibold text-white">Saim Dev Hospitality Systems</span>
-        </Link>
-      </header>
+      <RhHeader theme="dark" />
 
       {/* ── Hero / Article Header ── */}
       <main>
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 pt-16 pb-24">
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-20">
         <header className="mb-12 border-b border-white/10 pb-10">
                   {/* Visible Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6">
@@ -354,6 +337,7 @@ export const BlogPostRecipeScaler: React.FC = () => {
         </div>
       </article>
       </main>
+      <SiteFooter theme="dark" />
     </div>
   );
 };

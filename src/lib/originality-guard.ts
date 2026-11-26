@@ -19,7 +19,7 @@ export function getRouteOriginalityStatus(route: string): string | null {
           }
         }
       }
-    } catch (e) {
+    } catch (_ee) {
       // In production/edge, fallback gracefully
     }
   }

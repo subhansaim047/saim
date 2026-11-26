@@ -1,24 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  FileSpreadsheet,
-  AlertTriangle,
-  Info,
-  CheckCircle2,
-  Package,
-  Layers,
-  Thermometer,
-  Sparkles,
-  Plus,
-  Trash2,
-  Filter,
-  RefreshCw,
-  ShoppingBag,
-  SlidersHorizontal
-} from "lucide-react";
+import { Printer, ShieldCheck, FileSpreadsheet, Sparkles, RefreshCw } from "lucide-react";
 
 export interface UtensilItem {
   id: string;
@@ -299,7 +282,7 @@ const DEFAULT_UTENSILS: UtensilItem[] = [
   }
 ];
 
-export default function KitchenUtensilsTool({ templateId }: { templateId?: string }) {
+export default function KitchenUtensilsTool({ templateId: _templateId }: { templateId?: string }) {
   const [items, setItems] = useState<UtensilItem[]>(DEFAULT_UTENSILS);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [onlyDeficit, setOnlyDeficit] = useState<boolean>(false);

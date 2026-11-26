@@ -1,23 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  Thermometer,
-  ShieldCheck,
-  AlertTriangle,
-  CheckCircle2,
-  Printer,
-  Download,
-  Plus,
-  Trash2,
-  Calendar,
-  RotateCcw,
-  Info,
-  Clock,
-  Sparkles,
-  HelpCircle,
-  FileSpreadsheet
-} from "lucide-react";
+import { Thermometer, ShieldCheck, AlertTriangle, CheckCircle2, Printer, Plus, Trash2, FileSpreadsheet } from "lucide-react";
 
 interface DailyRecord {
   day: string;
@@ -57,7 +41,7 @@ const INITIAL_UNITS = [
 ];
 
 export const FreezerTemperatureChartTool: React.FC<{ templateId?: string }> = ({
-  templateId
+  templateId: _templateId
 }) => {
   // Establishment details for EHO printable compliance
   const [establishment, setEstablishment] = useState("The Crown & Anchor Catering Ltd");

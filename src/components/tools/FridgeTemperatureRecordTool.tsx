@@ -1,20 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Calendar,
-  Thermometer,
-  Clock,
-  Sparkles,
-  FileSpreadsheet,
-  Building2,
-  UserCheck
-} from "lucide-react";
+import { Printer, ShieldCheck, AlertTriangle, Thermometer, FileSpreadsheet } from "lucide-react";
 
 interface FridgeUnit {
   id: string;
@@ -86,7 +73,7 @@ const DEFAULT_FRIDGE_UNITS: FridgeUnit[] = [
   }
 ];
 
-export function FridgeTemperatureRecordTool({ templateId }: { templateId?: string }) {
+export function FridgeTemperatureRecordTool({ templateId: _templateId }: { templateId?: string }) {
   const [businessName, setBusinessName] = useState<string>("The Crown Restaurant & Kitchen");
   const [logMonth, setLogMonth] = useState<string>("October 2026");
   const [supervisorName, setSupervisorName] = useState<string>("Head Chef J. Morgan");

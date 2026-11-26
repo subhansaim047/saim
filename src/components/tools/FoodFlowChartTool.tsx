@@ -1,22 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  AlertTriangle,
-  ArrowRight,
-  CheckCircle2,
-  Clock,
-  Thermometer,
-  Layers,
-  Truck,
-  Refrigerator,
-  Flame,
-  Snowflake,
-  PackageCheck,
-  UtensilsCrossed
-} from "lucide-react";
+import { Printer, Clock, Layers, Truck, Refrigerator, Flame, Snowflake, PackageCheck, UtensilsCrossed } from "lucide-react";
 
 interface FlowStep {
   id: string;
@@ -161,9 +146,7 @@ const FLOW_STEPS: FlowStep[] = [
   }
 ];
 
-export function FoodFlowChartTool({
-  templateId
-}: {
+export function FoodFlowChartTool({ templateId: _templateId }: {
   templateId?: string;
 }) {
   const [activeStepId, setActiveStepId] = useState<string>("step-6");

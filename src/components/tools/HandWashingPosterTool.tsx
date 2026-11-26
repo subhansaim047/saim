@@ -1,18 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  Printer,
-  Timer,
-  Play,
-  Pause,
-  RotateCcw,
-  ShieldCheck,
-  CheckCircle2,
-  AlertCircle,
-  Sparkles,
-  Info
-} from "lucide-react";
+import { Printer, Timer, Play, Pause, RotateCcw, ShieldCheck, CheckCircle2, AlertCircle } from "lucide-react";
 
 interface HandWashingPosterToolProps {
   templateId?: string;

@@ -5,42 +5,8 @@ import { RhHeader } from "./rh/RhHeader";
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { IconTile } from "./icons/IconTile";
-import {
-  Tag,
-  ShieldAlert,
-  Calculator,
-  ChefHat,
-  ClipboardCheck,
-  Snowflake,
-  Droplets,
-  Award,
-  Search,
-  Filter,
-  Printer,
-  UtensilsCrossed,
-  ArrowRight,
-  ExternalLink,
-  ShieldCheck,
-  CheckCircle2,
-  FileText,
-  SlidersHorizontal,
-  ChevronDown,
-  X,
-  Plus,
-  RefreshCw,
-  Copy,
-  Building,
-  User,
-  Calendar,
-  Thermometer,
-  DollarSign,
-  AlertCircle,
-  Sliders,
-  Check,
-  HelpCircle,
-} from "lucide-react";
+import { Tag, ShieldAlert, Calculator, ChefHat, ClipboardCheck, Snowflake, Droplets, Award, Search, Printer, ArrowRight, ExternalLink, ShieldCheck, FileText, SlidersHorizontal, ChevronDown, X, RefreshCw, HelpCircle } from "lucide-react";
 import { FOOD_SAFETY_TEMPLATES, FoodSafetyTemplate } from "@/data/saim_templates";
-import { ALLERGENS, MenuItem, AllergenStatus } from "./ToolsPage";
 import { AllergenMatrixTool } from "./tools/AllergenMatrixTool";
 import { FoodCostCalculatorTool } from "./tools/FoodCostCalculatorTool";
 import { RecipeCalculatorTool } from "./tools/RecipeCalculatorTool";
@@ -96,7 +62,7 @@ export const FoodSafetyTemplatesPage: React.FC = () => {
 
       return true;
     });
-  }, [selectedType, selectedActivity, selectedPurpose, searchTerm]);
+  }, [selectedType, selectedActivity, searchTerm]);
 
   const { coreTemplates, offAudienceTemplates } = useMemo(() => {
     const core: FoodSafetyTemplate[] = [];

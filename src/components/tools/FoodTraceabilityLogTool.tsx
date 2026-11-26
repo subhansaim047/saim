@@ -1,22 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Printer,
-  ShieldCheck,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
-  Calendar,
-  Thermometer,
-  Clock,
-  Sparkles,
-  FileSpreadsheet,
-  Truck,
-  Building2,
-  Search,
-  Package
-} from "lucide-react";
+import { Printer, ShieldCheck, CheckCircle2, FileSpreadsheet, Truck, Search, Package } from "lucide-react";
 
 interface DeliveryLogEntry {
   id: string;
@@ -78,10 +63,10 @@ const DEFAULT_DELIVERIES: DeliveryLogEntry[] = [
   }
 ];
 
-export function FoodTraceabilityLogTool({ templateId }: { templateId?: string }) {
+export function FoodTraceabilityLogTool({ templateId: _templateId }: { templateId?: string }) {
   const [businessName, setBusinessName] = useState<string>("The Crown Restaurant & Kitchen");
   const [premisesLicenseNo, setPremisesLicenseNo] = useState<string>("FSA/EHO-99410-LON");
-  const [supervisorName, setSupervisorName] = useState<string>("Head Chef J. Morgan");
+  const [supervisorName, _setSupervisorName] = useState<string>("Head Chef J. Morgan");
   const [searchFilter, setSearchFilter] = useState<string>("");
 
   const [deliveries, setDeliveries] = useState<DeliveryLogEntry[]>(DEFAULT_DELIVERIES);
@@ -94,9 +79,9 @@ export function FoodTraceabilityLogTool({ templateId }: { templateId?: string })
   const [category, setCategory] = useState<DeliveryLogEntry["category"]>("Chilled Meat");
   const [tempArrival, setTempArrival] = useState<number>(3.5);
   const [useByDate, setUseByDate] = useState<string>("");
-  const [conditionStatus, setConditionStatus] = useState<"Accepted" | "Rejected">("Accepted");
-  const [receiverInitials, setReceiverInitials] = useState<string>("JM");
-  const [notes, setNotes] = useState<string>("Vehicle clean; packaging intact");
+  const [conditionStatus, _setConditionStatus] = useState<"Accepted" | "Rejected">("Accepted");
+  const [receiverInitials, _setReceiverInitials] = useState<string>("JM");
+  const [notes, _setNotes] = useState<string>("Vehicle clean; packaging intact");
 
   const addDeliveryEntry = (e: React.FormEvent) => {
     e.preventDefault();

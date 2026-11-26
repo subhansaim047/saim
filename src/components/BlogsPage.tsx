@@ -4,9 +4,7 @@ import Link from "next/link";
 import { SiteFooter } from "./SiteFooter";
 import { RhHeader } from "./rh/RhHeader";
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
-import { ArrowLeft, Calendar, Clock, Tag, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";import { Calendar, Clock, Tag, ArrowRight } from "lucide-react";
 import { BehindTheLensBlog } from "./BehindTheLensBlog";
 
 interface BlogItem {
@@ -219,9 +217,7 @@ const CATEGORIES = [
   { id: "web", label: "Web Strategy & Growth", count: blogs.filter((b) => b.category === "web").length },
 ];
 
-export const BlogsPage = () => {
-  const router = useRouter();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+export const BlogsPage = () => {  const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const filteredBlogs =
     selectedCategory === "all" ? blogs : blogs.filter((b) => b.category === selectedCategory);
@@ -243,11 +239,11 @@ export const BlogsPage = () => {
       </div>
 
       {/* ── Additional Web & Operational Guides Directory ── */}
-      <section id="all-posts" className="bg-[#fcfcfc] border-t border-[#f0f0f0] px-4 sm:px-8 py-20">
+      <section id="all-posts" className="bg-[#F5F5F7] border-t border-black/[0.08] px-4 sm:px-8 py-20 sm:py-24">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-6 border-b border-[#ececec]">
             <div>
-              <span className="inline-block bg-[#f4f4f4] text-[#555] text-xs font-semibold px-2.5 py-1 rounded-md mb-2">
+              <span className="inline-block bg-[#0D0D0D] text-[#BAFF00] text-[11px] font-mono uppercase tracking-widest px-3 py-1 rounded-full mb-3">
                 Knowledge Library
               </span>
               <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-[#0a0a0a]" style={{ fontFamily: 'Outfit, sans-serif' }}>
@@ -266,8 +262,8 @@ export const BlogsPage = () => {
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
                     selectedCategory === cat.id
-                      ? "bg-black text-white font-semibold shadow-sm"
-                      : "bg-[#f0f0f0] text-gray-600 hover:text-black hover:bg-[#e4e4e4]"
+                      ? "bg-[#0D0D0D] text-[#BAFF00] font-semibold shadow-sm"
+                      : "bg-white border border-black/[0.08] text-[#555555] hover:text-[#0D0D0D] hover:border-black/25"
                   }`}
                 >
                   {cat.label} ({cat.count})
@@ -284,7 +280,7 @@ export const BlogsPage = () => {
                 initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: i * 0.04 }}
-                className="group relative flex flex-col rounded-2xl border border-[#ececec] bg-white p-6 hover:border-gray-300 hover:shadow-lg transition-all duration-300 overflow-hidden"
+                className="group relative flex flex-col rounded-3xl border border-black/[0.08] bg-white p-7 hover:border-[#0D0D0D]/30 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.06)] transition-all duration-300 overflow-hidden"
               >
                 <Link href={blog.url} prefetch={false} className="absolute inset-0 z-10" aria-label={blog.title}>
                   <span className="sr-only">{blog.title}</span>

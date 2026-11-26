@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import { HelpCircle, CheckCircle2, XCircle, RotateCcw, Printer, Award, ArrowRight, BookOpen, Clock, ShieldCheck, Check, Filter } from "lucide-react";
+import { CheckCircle2, XCircle, RotateCcw, Printer, Award, ArrowRight, ShieldCheck } from "lucide-react";
 
 interface Question {
   id: number;
@@ -228,7 +228,7 @@ const ALL_QUESTIONS: Question[] = [
 
 type CategoryFilter = "All" | "Temperatures & Cooking" | "Allergens & Natasha's Law" | "Cross-Contamination" | "Personal Hygiene" | "Cleaning & Chemicals" | "HACCP & EHO Law";
 
-export const FoodSafetyQuizTool: React.FC<{ templateId?: string }> = ({ templateId }) => {
+export const FoodSafetyQuizTool: React.FC<{ templateId?: string }> = ({ templateId: _templateId }) => {
   const [candidateName, setCandidateName] = useState("");
   const [businessName, setBusinessName] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>("All");

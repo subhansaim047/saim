@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Check, X, ShieldCheck, Zap } from "lucide-react";
+import { Check, X, ShieldCheck } from "lucide-react";
 
 const INDUSTRIES = [
   "E-Commerce Flagships",

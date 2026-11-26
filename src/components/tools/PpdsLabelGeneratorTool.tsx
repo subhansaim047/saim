@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useId } from "react";
-import { Printer, ShieldCheck, Plus, RotateCcw, AlertTriangle, CheckCircle, Info, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { Printer, AlertTriangle, CheckCircle, Info, ArrowUpRight } from "lucide-react";
 
 export interface PpdsPreset {
   name: string;
