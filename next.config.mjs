@@ -18,7 +18,16 @@ const nextConfig = {
     const fastDemoCache = [
       { key: 'Cache-Control', value: 'public, max-age=604800, stale-while-revalidate=2592000' },
     ];
+    const instantCrawlerCache = [
+      { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800' },
+      { key: 'Access-Control-Allow-Origin', value: '*' },
+    ];
     return [
+      { source: '/robots.txt', headers: instantCrawlerCache },
+      { source: '/sitemap.xml', headers: instantCrawlerCache },
+      { source: '/image-sitemap.xml', headers: instantCrawlerCache },
+      { source: '/llms.txt', headers: instantCrawlerCache },
+      { source: '/llms-full.txt', headers: instantCrawlerCache },
       { source: '/rh-exact/assets/:path*', headers: immutableStatic },
       { source: '/rh-exact/vendor/:path*', headers: immutableStatic },
       { source: '/rh-exact/nav/:path*', headers: immutableStatic },

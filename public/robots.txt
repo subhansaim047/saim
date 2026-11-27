@@ -5,93 +5,31 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-# Search Engine Crawlers
-User-agent: Googlebot
-Allow: /
-Disallow: /api/
-
 User-agent: Googlebot-Image
+Allow: /
 Disallow: /scroll-frames/
-Allow: /
 Disallow: /api/
 
+User-agent: Googlebot
 User-agent: Bingbot
-Allow: /
-Disallow: /api/
-
-# AI Search & LLM Engine Crawlers (Explicitly Allowed for GEO/AEO Citations)
 User-agent: OAI-SearchBot
-Allow: /
-Disallow: /api/
-
 User-agent: ChatGPT-User
-Allow: /
-Disallow: /api/
-
 User-agent: GPTBot
-Allow: /
-Disallow: /api/
-
 User-agent: ClaudeBot
-Allow: /
-Disallow: /api/
-
 User-agent: Claude-SearchBot
-Allow: /
-Disallow: /api/
-
 User-agent: Claude-User
-Allow: /
-Disallow: /api/
-
 User-agent: PerplexityBot
-Allow: /
-Disallow: /api/
-
 User-agent: Perplexity-User
-Allow: /
-Disallow: /api/
-
 User-agent: Applebot
-Allow: /
-Disallow: /api/
-
 User-agent: Applebot-Extended
-Allow: /
-Disallow: /api/
-
 User-agent: Google-Extended
-Allow: /
-Disallow: /api/
-
 User-agent: GoogleOther
-Allow: /
-Disallow: /api/
-
 User-agent: Meta-ExternalAgent
-Allow: /
-Disallow: /api/
-
 User-agent: Meta-ExternalFetcher
-Allow: /
-Disallow: /api/
-
 User-agent: DeepSeekBot
-Allow: /
-Disallow: /api/
-
 User-agent: Amazonbot
-Allow: /
-Disallow: /api/
-
 User-agent: Bytespider
-Allow: /
-Disallow: /api/
-
 User-agent: CCBot
-Allow: /
-Disallow: /api/
-
 User-agent: cohere-ai
 Allow: /
 Disallow: /api/

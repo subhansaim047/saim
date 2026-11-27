@@ -237,6 +237,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" data-theme="dark" style={{ colorScheme: "dark" }}>
       <head>
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.saimdev.site/sitemap.xml" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Summary Context" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Knowledge Corpus" />
         {/* Google Consent Mode v2 Default Signals (Default Denied) */}

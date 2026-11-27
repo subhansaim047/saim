@@ -34,6 +34,19 @@
       ]
     },
     {
+      "source": "/(robots\\.txt|sitemap\\.xml|image-sitemap\\.xml|llms\\.txt|llms-full\\.txt)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
       "source": "/_next/static/(.*)",
       "headers": [
         {
