@@ -45,6 +45,10 @@ const nextConfig = {
             key: 'Strict-Transport-Security',
             value: 'max-age=63072000; includeSubDomains; preload',
           },
+          {
+            key: 'Access-Control-Expose-Headers',
+            value: 'Strict-Transport-Security, X-Robots-Tag',
+          },
 
           {
             key: 'X-Content-Type-Options',

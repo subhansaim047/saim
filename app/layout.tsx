@@ -40,7 +40,7 @@ const outfit = localFont({
 
 export const metadata: Metadata = {
   title: 'Next.js Websites for UK Small Businesses | Saim Dev',
-  description: 'Custom Next.js websites for UK small businesses from £250. Sub-second load speeds, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
+  description: 'From £250 / $300 fixed: custom Next.js websites for UK, US & EU brands. Sub-second load speeds, 100% code ownership & built-in SEO.',
   metadataBase: new URL('https://www.saimdev.site'),
   alternates: {
     canonical: 'https://www.saimdev.site',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Next.js Websites for UK & US Businesses | Saim Dev',
-    description: 'Custom Next.js websites for UK & US small businesses from £250 / $300. Fast edge delivery, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
+    description: 'From £250 / $300 fixed: custom Next.js websites for UK, US & EU brands. Sub-second load speeds, 100% code ownership & built-in SEO.',
     url: 'https://www.saimdev.site',
     siteName: 'Saim Dev',
     locale: 'en_GB',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Next.js Websites for UK & US Businesses | Saim Dev',
-    description: 'Custom Next.js websites for UK & US small businesses from £250 / $300. Fast edge delivery, clean code ownership, built-in SEO, and zero monthly agency lock-in.',
+    description: 'From £250 / $300 fixed: custom Next.js websites for UK, US & EU brands. Sub-second load speeds, 100% code ownership & built-in SEO.',
     creator: '@saimwebdev',
     site: '@saimwebdev',
     images: ['https://www.saimdev.site/og-image.png'],
@@ -249,6 +249,16 @@ export default function RootLayout({
         <meta name="author" content="Saim Dev" />
         <meta name="image" content="https://www.saimdev.site/og-image.png" />
         <link rel="image_src" href="https://www.saimdev.site/og-image.png" />
+        {process.env.NEXT_PUBLIC_GA_ID ? (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `gtag('js',new Date());gtag('config','${process.env.NEXT_PUBLIC_GA_ID}',{anonymize_ip:true});`,
+              }}
+            />
+          </>
+        ) : null}
         {/* Microsoft Clarity Analytics (Deferred to idle to preserve 100 mobile PageSpeed) */}
         <script
           dangerouslySetInnerHTML={{

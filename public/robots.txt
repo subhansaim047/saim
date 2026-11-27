@@ -97,8 +97,8 @@ Allow: /
 Disallow: /api/
 
 # Sitemaps
-Sitemap: https://www.saimdev.site/sitemap.xml
 Sitemap: https://www.saimdev.site/image-sitemap.xml
+Sitemap: https://www.saimdev.site/sitemap.xml
 
 # AI & LLM Knowledge Corpus (LLMO / GEO)
 # LLMs.txt: https://www.saimdev.site/llms.txt

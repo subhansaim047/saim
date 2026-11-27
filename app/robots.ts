@@ -44,8 +44,8 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      'https://www.saimdev.site/sitemap.xml',
       'https://www.saimdev.site/image-sitemap.xml',
+      'https://www.saimdev.site/sitemap.xml',
     ],
   };
 }

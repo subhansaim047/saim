@@ -93,6 +93,7 @@ class InfiniteSlider {
             this.isSliderVisible = true;
             this.isPageVisible = document.visibilityState !== 'hidden';
             this.videoObserver = null;
+            this.videosArmed = false;
 
             this.init();
         }
@@ -111,6 +112,7 @@ class InfiniteSlider {
             this.setInitialPosition();
             this.addEventListeners();
             this.setupVisibilityObserver();
+            this.setupDeferredVideoHydration();
             this.startAutoScroll();
 
             window.addEventListener('resize', () => this.handleResize(), { passive: true });
@@ -185,28 +187,65 @@ class InfiniteSlider {
             }
         }
 
+        hydrateAndPlayVideo(video) {
+            if (!video.__loaderSliderLoaded) {
+                video.__loaderSliderLoaded = true;
+                video.preload = 'metadata';
+                video.setAttribute('preload', 'metadata');
+                const lazySrc = video.getAttribute('data-lazy-src');
+                if (!video.getAttribute('src') && lazySrc) {
+                    video.src = lazySrc;
+                    video.load();
+                }
+            }
+            this.playVideoSafely(video);
+        }
+
+        setupDeferredVideoHydration() {
+            const armVideos = () => {
+                if (this.videosArmed) return;
+                this.videosArmed = true;
+                window.removeEventListener('wheel', armVideos);
+                window.removeEventListener('touchstart', armVideos);
+                window.removeEventListener('pointerdown', armVideos);
+                window.removeEventListener('keydown', armVideos);
+                window.removeEventListener('scroll', onScrollArm);
+                this.wrapper.removeEventListener('mouseenter', armVideos);
+
+                const allVideos = this.wrapper.querySelectorAll('video');
+                allVideos.forEach((video) => {
+                    if (video.__inSliderView && this.isPageVisible) {
+                        this.hydrateAndPlayVideo(video);
+                    }
+                });
+            };
+
+            const onScrollArm = () => {
+                if (window.scrollY > 12) armVideos();
+            };
+
+            window.addEventListener('wheel', armVideos, { once: true, passive: true });
+            window.addEventListener('touchstart', armVideos, { once: true, passive: true });
+            window.addEventListener('pointerdown', armVideos, { once: true, passive: true });
+            window.addEventListener('keydown', armVideos, { once: true, passive: true });
+            window.addEventListener('scroll', onScrollArm, { passive: true });
+            this.wrapper.addEventListener('mouseenter', armVideos, { once: true, passive: true });
+        }
+
         setupVideoObserver() {
             this.videoObserver = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     const video = entry.target;
                     video.__inSliderView = entry.isIntersecting;
                     if (entry.isIntersecting) {
-                        if (!video.__loaderSliderLoaded) {
-                            video.__loaderSliderLoaded = true;
-                            video.preload = 'auto';
-                            video.setAttribute('preload', 'auto');
-                            const lazySrc = video.getAttribute('data-lazy-src');
-                            if (!video.getAttribute('src') && lazySrc) {
-                                video.src = lazySrc;
-                                video.load();
-                            }
+                        if (this.videosArmed) {
+                            this.hydrateAndPlayVideo(video);
                         }
-                        this.playVideoSafely(video);
                     } else if (!video.paused) {
                         video.pause();
                     }
                 });
-            }, { root: null, rootMargin: '400px 800px', threshold: 0 });
+            }, { root: null, rootMargin: '0px 60px', threshold: 0.2 });
         }
 
         observeSlideVideos(slides) {
@@ -597,56 +636,37 @@ window.addEventListener('load', function() {
 const collectionList = document.querySelector('.collection-list-2');
 
 if (collectionList) {
-  // Знаходимо всі видимі елементи колекції
   const visibleItems = collectionList.querySelectorAll('.w-dyn-item:not([style*="display: none"])');
-  
-  console.log('Знайдено видимих елементів:', visibleItems.length);
-  
-  // Шукаємо потрібний елемент по слагу або тексту
   let targetElement = null;
-  
+
   visibleItems.forEach(item => {
-    // Перевіряємо по слагу в посиланні
     const link = item.querySelector('a[href*="elumity-is-an-ai-powered-knowledge-management-platform"]');
-    
-    // Або перевіряємо по тексту заголовка
     const heading = item.querySelector('h3, h2, h1, .heading');
     const hasMatchingText = heading && heading.textContent.includes('Elumity is an AI-powered knowledge management platform');
-    
+
     if (link || hasMatchingText) {
       targetElement = item;
-      console.log('Знайдено потрібний елемент:', item);
     }
   });
-  
-  // Якщо знайшли елемент, додаємо обробники подій
+
   if (targetElement) {
     const mouseProject = document.querySelector('.mouse-project');
-    
-    // Встановлюємо дефолтний курсор на картку
     targetElement.style.cursor = 'default';
-    
-    // Також встановлюємо дефолтний курсор на всі дочірні елементи
+
     const allChildren = targetElement.querySelectorAll('*');
     allChildren.forEach(child => {
       child.style.cursor = 'default';
     });
-    
+
     if (mouseProject) {
       targetElement.addEventListener('mouseenter', () => {
         mouseProject.style.setProperty('display', 'none', 'important');
-        console.log('Mouse project прихований');
       });
-      
+
       targetElement.addEventListener('mouseleave', () => {
         mouseProject.style.removeProperty('display');
-        console.log('Mouse project відображається знову');
       });
-    } else {
-      console.log('Елемент .mouse-project не знайдено');
     }
-  } else {
-    console.log('Елемент з слагом elumity не знайдено');
   }
 }
   } catch (err) {
@@ -1849,7 +1869,7 @@ document.addEventListener('DOMContentLoaded', function() {
         phone.setAttribute('aria-label', 'Explore Live Interactive Demos');
         var cur = document.createElement('div');
         cur.className = 'proof-cursor-pd'; cur.setAttribute('aria-hidden', 'true');
-        cur.innerHTML = '<span></span><img alt="" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab80bdb875181062419f2d6_pd-icon-arrow-up-right-dark.svg">';
+        cur.innerHTML = '<span></span><img alt="Open live interactive demos" src="/rh-exact/assets/6909ed375ee6ef22dffa47c2__6ab80bdb875181062419f2d6_pd-icon-arrow-up-right-dark.svg">';
         cur.firstChild.textContent = 'View Live Demos';
         phone.appendChild(cur);
         var fine = window.matchMedia('(hover: hover) and (pointer: fine)');
